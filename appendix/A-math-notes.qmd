@@ -5,8 +5,437 @@ lang: ja
 
 # 付録 A　数学補章 {#sec-math-notes .unnumbered}
 
-TODO：本書で使う数学の最低限の整理。
-- 立体角と球面積分
-- 統計力学のための組合せ論
-- フーリエ変換と Voigt 線形
-- 演算子の交換関係
+::: {.appendix-overview}
+**この付録の主題**：本書で使う数学の最低限の整理。本文の論旨を追うのに必要な道具を、定義 → 結果 → 物理的意味の順でまとめる。厳密な証明や一般論は数学の専門書（小平、Arfken & Weber、Reed & Simon 等）に譲り、ここでは **本書のどの章のどの式で使われるか** を併記する実用版とする。
+:::
+
+---
+
+## A.1 立体角と球面積分 {#sec-math-solid-angle}
+
+### A.1.1 立体角の定義
+
+**立体角**（**solid angle**, $\Omega$）は、点から見た面積の「広がり」を表す無次元量。単位は **ステラジアン**（**steradian**, **sr**）。
+
+半径 $r$ の球面上で、面積 $dA$ を覆う部分の立体角は
+
+$$
+d\Omega = \frac{dA}{r^2}
+$$ {#eq-solid-angle-def}
+
+球全体の立体角は $4\pi$ sr。
+
+球面座標 $(\theta, \phi)$ を用いると、
+
+$$
+d\Omega = \sin\theta\, d\theta\, d\phi
+$$ {#eq-solid-angle-spherical}
+
+### A.1.2 半球での積分（Stefan-Boltzmann の $\pi$ 因子）
+
+第4章 §4.4 で出てくる **半球フラックス積分**：
+
+$$
+F = \int_\text{半球} I \cos\theta\, d\Omega = \int_0^{2\pi}\int_0^{\pi/2} I \cos\theta \sin\theta\, d\theta\, d\phi
+$$ {#eq-hemisphere-flux}
+
+等方放射場 $I = $ const の場合：
+
+$$
+F = 2\pi I \int_0^{\pi/2} \cos\theta \sin\theta\, d\theta = 2\pi I \cdot \frac{1}{2} = \pi I
+$$ {#eq-hemisphere-flux-result}
+
+この $\pi$ が、Stefan-Boltzmann 則 $F = \sigma T^4 = \pi B(T)$ に現れる。
+
+::: {.appendix-tip}
+**本文での使用**：第4章 §4.4（Stefan-Boltzmann の $\pi$ 因子）、第14章 §14.5（$B_\nu = c u_\nu/4\pi$）
+:::
+
+### A.1.3 立体角と方向余弦
+
+平面平行近似の放射輸送（第5章）では、$z$ 軸方向の余弦 $\mu \equiv \cos\theta$ を変数とし、
+
+$$
+d\mu = -\sin\theta\, d\theta, \quad d\Omega = -d\mu\, d\phi
+$$
+
+積分は $\mu \in [-1, 1]$ に対して行う。等方放射場の平均強度
+
+$$
+J \equiv \frac{1}{4\pi}\int I\, d\Omega = \frac{1}{2}\int_{-1}^{1} I\, d\mu
+$$ {#eq-mean-intensity}
+
+これが第4章 §4.5 の $J_\nu$ の定義。
+
+---
+
+## A.2 ガウス積分とガンマ関数 {#sec-math-gaussian}
+
+### A.2.1 ガウス積分
+
+$$
+\int_{-\infty}^{\infty} e^{-x^2}\, dx = \sqrt{\pi}
+$$ {#eq-gaussian-basic}
+
+より一般に、
+
+$$
+\int_{-\infty}^{\infty} e^{-ax^2}\, dx = \sqrt{\pi/a}, \quad \int_{-\infty}^{\infty} x^2 e^{-ax^2}\, dx = \frac{1}{2a}\sqrt{\pi/a}
+$$ {#eq-gaussian-moments}
+
+::: {.appendix-tip}
+**本文での使用**：第22章 §22.2（Doppler 線形 Gaussian の規格化）、第3章（Maxwell-Boltzmann 速度分布）
+:::
+
+### A.2.2 ガンマ関数
+
+ガンマ関数の定義：
+
+$$
+\Gamma(s) \equiv \int_0^\infty x^{s-1} e^{-x}\, dx, \quad \text{Re}(s) > 0
+$$ {#eq-gamma-function}
+
+性質：
+
+- $\Gamma(n) = (n-1)!$ for positive integer $n$
+- $\Gamma(1/2) = \sqrt{\pi}$
+- $\Gamma(s+1) = s\Gamma(s)$（再帰関係）
+
+### A.2.3 Riemann ゼータ関数
+
+$$
+\zeta(s) \equiv \sum_{n=1}^\infty \frac{1}{n^s} = \frac{1}{\Gamma(s)}\int_0^\infty \frac{x^{s-1}}{e^x - 1}\, dx
+$$ {#eq-zeta-function}
+
+代表値：
+
+- $\zeta(2) = \pi^2/6$
+- $\zeta(3) \simeq 1.20206$
+- $\zeta(4) = \pi^4/90$
+
+### A.2.4 プランク積分
+
+Stefan-Boltzmann 則（第14章 §14.5）で使う積分：
+
+$$
+\int_0^\infty \frac{x^3}{e^x - 1}\, dx = \Gamma(4)\zeta(4) = 6 \cdot \frac{\pi^4}{90} = \frac{\pi^4}{15}
+$$ {#eq-planck-integral}
+
+これからプランク分布の全エネルギー密度
+
+$$
+u(T) = \int_0^\infty u_\nu\, d\nu = \frac{8\pi^5 k_B^4}{15 h^3 c^3} T^4 = aT^4
+$$ {#eq-energy-density-T4}
+
+放射定数 $a \simeq 7.566 \times 10^{-16}$ J m$^{-3}$ K$^{-4}$。フラックス側では $\sigma = ac/4$ で Stefan-Boltzmann 定数。
+
+::: {.appendix-tip}
+**本文での使用**：第4章 §4.4、第14章 §14.5、第17章 §17.1（恒星の有効温度）
+:::
+
+---
+
+## A.3 統計力学のための組合せ論 {#sec-math-combinatorics}
+
+### A.3.1 三つの分布
+
+第7-8章で扱った三つの統計分布：
+
+**Maxwell-Boltzmann**（**MB**, 古典）：
+
+$$
+\bar{n}_\text{MB}(\epsilon) = e^{-(\epsilon - \mu)/k_BT}
+$$ {#eq-MB-distribution}
+
+**Bose-Einstein**（**BE**, ボソン）：
+
+$$
+\bar{n}_\text{BE}(\epsilon) = \frac{1}{e^{(\epsilon - \mu)/k_BT} - 1}
+$$ {#eq-BE-distribution}
+
+**Fermi-Dirac**（**FD**, フェルミオン）：
+
+$$
+\bar{n}_\text{FD}(\epsilon) = \frac{1}{e^{(\epsilon - \mu)/k_BT} + 1}
+$$ {#eq-FD-distribution}
+
+光子（$\mu = 0$、ボソン）では @eq-BE-distribution が中心地図プランク関数の指数部分。
+
+### A.3.2 Boltzmann 分布の導出（簡単版）
+
+孤立系のエネルギー保存を考慮した状態数を最大化する手続き（Lagrange 未定乗数）から、
+
+$$
+\frac{n_u}{n_l} = \frac{g_u}{g_l} e^{-(\epsilon_u - \epsilon_l)/k_BT}
+$$ {#eq-boltzmann-ratio}
+
+これが第20章 §20.4 で LTE 線形成に使った Boltzmann 比。
+
+### A.3.3 Saha の式（電離平衡）
+
+イオン化反応 $X \leftrightarrow X^+ + e^-$ の電離平衡：
+
+$$
+\frac{n_{X^+} n_e}{n_X} = \left(\frac{2\pi m_e k_B T}{h^2}\right)^{3/2} \cdot 2 \cdot \frac{g_{X^+}}{g_X} e^{-\chi/k_BT}
+$$ {#eq-saha}
+
+$\chi$ は電離エネルギー、$g$ は各状態の縮重度。
+
+::: {.appendix-tip}
+**本文での使用**：第19章 §19.2（恒星スペクトル分類 OBAFGKM での水素線強度ピーク）、第23章 §23.4（電離度診断）
+:::
+
+---
+
+## A.4 Fourier 変換と Voigt 関数 {#sec-math-fourier}
+
+### A.4.1 Fourier 変換の規約
+
+時間 ↔ 振動数の Fourier 変換（本書での規約）：
+
+$$
+\tilde{f}(\nu) = \int_{-\infty}^\infty f(t) e^{-2\pi i \nu t}\, dt, \quad f(t) = \int_{-\infty}^\infty \tilde{f}(\nu) e^{2\pi i \nu t}\, d\nu
+$$ {#eq-fourier-pair}
+
+### A.4.2 畳み込み定理（Voigt プロファイルへの応用）
+
+二つの関数の **畳み込み**：
+
+$$
+(f \otimes g)(x) \equiv \int f(x') g(x - x')\, dx'
+$$ {#eq-convolution-def}
+
+Fourier 変換は畳み込みを積に変換：
+
+$$
+\widetilde{f \otimes g} = \tilde{f} \cdot \tilde{g}
+$$ {#eq-convolution-theorem}
+
+### A.4.3 Voigt プロファイル
+
+第22章 §22.4 で出てきた **Voigt プロファイル** $\phi_V = \phi_L \otimes \phi_D$ は、Lorentzian と Gaussian の畳み込み：
+
+$$
+\phi_V(\nu) = \int_{-\infty}^\infty \phi_L(\nu - \nu') \phi_D(\nu')\, d\nu'
+$$ {#eq-voigt-convolution-A}
+
+無次元パラメータ
+
+$$
+a = \frac{\gamma}{2\Delta\nu_D}, \quad u = \frac{\nu - \nu_0}{\Delta\nu_D}
+$$
+
+を使うと、Voigt 関数 $H(a, u)$ で表される：
+
+$$
+H(a, u) = \frac{a}{\pi}\int_{-\infty}^\infty \frac{e^{-y^2}}{(u-y)^2 + a^2}\, dy
+$$ {#eq-voigt-H}
+
+特殊極限：
+
+- $a \to 0$：Doppler コア $H(0, u) = e^{-u^2}$
+- $|u| \gg 1$：Lorentz 翼 $H(a, u) \to a/[\pi(u^2 + a^2)]$
+
+数値評価は Faddeeva 関数 $w(z) = e^{-z^2}\text{erfc}(-iz)$ を介して行うのが標準（SciPy `scipy.special.wofz`）。
+
+::: {.appendix-tip}
+**本文での使用**：第22章 §22.4（線形の合成）
+:::
+
+---
+
+## A.5 演算子の交換関係 ― 量子力学の基礎道具 {#sec-math-commutators}
+
+### A.5.1 基本交換関係
+
+位置・運動量の正準交換関係：
+
+$$
+[\hat{x}, \hat{p}] = i\hbar
+$$ {#eq-canonical-commutator}
+
+これから生まれる不確定性関係：
+
+$$
+\Delta x \cdot \Delta p \ge \frac{\hbar}{2}
+$$ {#eq-uncertainty}
+
+### A.5.2 生成消滅演算子
+
+調和振動子の生成・消滅演算子 $\hat{a}^\dagger, \hat{a}$ の交換関係：
+
+$$
+[\hat{a}, \hat{a}^\dagger] = 1, \quad [\hat{a}, \hat{a}] = [\hat{a}^\dagger, \hat{a}^\dagger] = 0
+$$ {#eq-bosonic-commutator}
+
+これが Bose 統計の根本。光子は **電磁場モードの調和振動子の励起** として現れる（第24章 §24.2）。
+
+### A.5.3 数演算子
+
+$\hat{n} \equiv \hat{a}^\dagger \hat{a}$ を **数演算子**（**number operator**）と呼ぶ。固有値は非負整数 $0, 1, 2, \ldots$ で、各々が「そのモードに $n$ 個の光子が存在する状態」を表す。
+
+$$
+\hat{n}|n\rangle = n|n\rangle, \quad \hat{a}^\dagger|n\rangle = \sqrt{n+1}\,|n+1\rangle, \quad \hat{a}|n\rangle = \sqrt{n}\,|n-1\rangle
+$$ {#eq-number-action}
+
+### A.5.4 Bose 増強因子
+
+@eq-number-action の係数 $\sqrt{n+1}$ が、**Bose 増強**（**Bose enhancement**）の起源。誘導放出率 $B_{ul}$ がモード光子数 $n$ に比例することの数学的表現：
+
+$$
+|\langle n+1|\hat{a}^\dagger|n\rangle|^2 = n + 1
+$$ {#eq-bose-enhancement}
+
+「$+1$」が自発放出（真空 $|0\rangle$ からの $|1\rangle$ への遷移）に、「$n$」が誘導放出に対応する。
+
+::: {.appendix-tip}
+**本文での使用**：第8章（光子の Bose 統計）、第24章 §24.2-§24.3（モード ＝ 量子調和振動子、真空状態）、第25章 §25.2（自発放出と誘導放出の統一）
+:::
+
+---
+
+## A.6 Maxwell 方程式と波動方程式 ― ベクトル解析の道具 {#sec-math-vector-calc}
+
+### A.6.1 真空中の Maxwell 方程式（SI）
+
+第13章 §13.1 と同じ：
+
+$$
+\nabla \cdot \mathbf{E} = 0, \quad \nabla \cdot \mathbf{B} = 0
+$$
+$$
+\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}, \quad \nabla \times \mathbf{B} = \mu_0\epsilon_0 \frac{\partial \mathbf{E}}{\partial t}
+$$ {#eq-maxwell-vacuum-app}
+
+### A.6.2 ベクトル恒等式
+
+$$
+\nabla \times (\nabla \times \mathbf{A}) = \nabla(\nabla \cdot \mathbf{A}) - \nabla^2 \mathbf{A}
+$$ {#eq-curl-curl}
+
+これを @eq-maxwell-vacuum-app の curl-of-curl に使うと、波動方程式
+
+$$
+\nabla^2 \mathbf{E} - \frac{1}{c^2}\frac{\partial^2 \mathbf{E}}{\partial t^2} = 0, \quad c = \frac{1}{\sqrt{\mu_0\epsilon_0}}
+$$ {#eq-wave-equation-app}
+
+が出る。これが第13章 §13.2 の出発点。
+
+### A.6.3 球面波と平面波
+
+無限遠から見れば球面波は平面波で近似できる。平面波解
+
+$$
+\mathbf{E}(\mathbf{r}, t) = \mathbf{E}_0 e^{i(\mathbf{k}\cdot\mathbf{r} - \omega t)}, \quad \omega = c|\mathbf{k}|
+$$ {#eq-plane-wave-app}
+
+これが第13章 §13.3 の中心式。
+
+---
+
+## A.7 球面調和関数 ― 水素原子と回転状態 {#sec-math-spherical-harmonics}
+
+### A.7.1 球面調和関数の定義
+
+$$
+Y_{lm}(\theta, \phi) = \sqrt{\frac{(2l+1)}{4\pi}\frac{(l-m)!}{(l+m)!}} P_l^m(\cos\theta) e^{im\phi}
+$$ {#eq-spherical-harmonics}
+
+$P_l^m$ は Legendre 陪関数、$l = 0, 1, 2, \ldots$ は角運動量量子数、$m = -l, \ldots, l$ は磁気量子数。
+
+### A.7.2 直交性と完備性
+
+$$
+\int Y_{l'm'}^* Y_{lm}\, d\Omega = \delta_{l'l} \delta_{m'm}, \quad \sum_{l, m} Y_{lm}(\theta, \phi) Y_{lm}^*(\theta', \phi') = \delta(\Omega - \Omega')
+$$
+
+### A.7.3 水素原子と回転分子への応用
+
+- **水素原子**（第21章 §21.3）：波動関数 $\psi_{nlm} = R_{nl}(r) Y_{lm}(\theta, \phi)$
+- **二原子分子の回転**：エネルギー $E_J = \hbar^2 J(J+1)/(2I)$、$J$ は回転量子数
+
+選択則 $\Delta l = \pm 1$（第21章 §21.5）は、球面調和関数の積分 $\int Y_{l'm'}^* \mathbf{r} Y_{lm}\, d\Omega$ がいつ非零かで決まる。
+
+::: {.appendix-tip}
+**本文での使用**：第21章 §21.3-§21.5（水素原子の波動関数と選択則）、第22章 §22.6（Zeeman 分裂）
+:::
+
+---
+
+## A.8 不確定性原理と寿命幅 {#sec-math-uncertainty-lifetime}
+
+### A.8.1 エネルギー-時間の不確定性
+
+正準対 $[\hat{x}, \hat{p}] = i\hbar$ から $\Delta x\Delta p \ge \hbar/2$ が出るのに対し、エネルギー-時間の関係はやや異なる文脈で：
+
+$$
+\Delta E \cdot \tau \gtrsim \hbar
+$$ {#eq-energy-time-uncertainty}
+
+ここで $\tau$ は **励起状態の寿命**、$\Delta E$ はエネルギー幅。これが本文の自然幅（第22章 §22.1）：
+
+$$
+\Gamma_\text{nat} = \frac{1}{2\pi\tau} = \frac{A_{ul}}{2\pi}
+$$ {#eq-natural-width-app}
+
+### A.8.2 Lorentzian の Fourier 起源
+
+寿命 $\tau$ で指数減衰する古典場 $E(t) \propto e^{-t/(2\tau)} \cos(\omega_0 t)$ の Fourier 変換は **Lorentzian**：
+
+$$
+|\tilde{E}(\omega)|^2 \propto \frac{1}{(\omega - \omega_0)^2 + (1/2\tau)^2}
+$$ {#eq-lorentzian-fourier}
+
+これが第22章 §22.1 の自然幅 Lorentzian の **古典的起源**。QED では真空揺らぎが減衰を駆動する（第25章 §25.4）。
+
+::: {.appendix-tip}
+**本文での使用**：第22章 §22.1（自然幅）、第25章 §25.4（真空揺らぎと自然幅）
+:::
+
+---
+
+## A.9 数値計算の常識 {#sec-math-numerical}
+
+本書の各章で出てくる計算を実際に行うときの実用メモ。
+
+### A.9.1 プランク関数の数値評価
+
+指数因子 $h\nu/k_BT$ が大きいとき（Wien 側、$h\nu/k_BT \gtrsim 50$）はオーバーフローしないよう注意：
+
+```python
+import numpy as np
+def planck_safe(nu, T, h=6.626e-34, k=1.381e-23, c=2.998e8):
+    x = h*nu/(k*T)
+    # オーバーフロー防止
+    x = np.where(x > 700, 700, x)
+    return 2*h*nu**3/c**2 / (np.exp(x) - 1)
+```
+
+### A.9.2 Voigt プロファイルの数値評価
+
+`scipy.special.wofz` を使う：
+
+```python
+from scipy.special import wofz
+def voigt_profile(nu, nu0, sigma, gamma):
+    z = ((nu - nu0) + 1j*gamma) / (sigma*np.sqrt(2))
+    return np.real(wofz(z)) / (sigma*np.sqrt(2*np.pi))
+```
+
+### A.9.3 単位系の混在に注意
+
+CGS と SI の混在は計算ミスの典型源。本書の数値例は **SI を基本** にする（付録 B）。文献によっては CGS（電磁気学では特に）が使われるので、論文との比較時には常に単位系を確認すること。
+
+::: {.appendix-tip}
+**実装例**：本書付属のコード `code/planck_curve.py`、`code/voigt_profile.py` 等を参照
+:::
+
+---
+
+## A.10 さらに進むための参考文献 {#sec-math-references .unnumbered}
+
+- Arfken, Weber & Harris, *Mathematical Methods for Physicists* (Academic Press, 7th ed., 2012) — 物理学者のための数学の標準書
+- 小平邦彦『複素解析』『微分積分学』（岩波書店）— 厳密な数学基礎
+- 河村哲也『数値計算のためのFortran77/90/95』— 数値計算の実装面
+- Press et al., *Numerical Recipes* (Cambridge, 3rd ed., 2007) — 物理計算アルゴリズム集
+- Olver et al., *NIST Handbook of Mathematical Functions* (Cambridge, 2010) — Voigt 関数等の特殊関数の定本（<https://dlmf.nist.gov>）

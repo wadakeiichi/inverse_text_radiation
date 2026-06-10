@@ -1,6 +1,6 @@
 ---
 title: "宇宙の熱的スペクトル"
-subtitle: "観測から基礎物理への逆引き"
+subtitle: "黒体放射から基礎物理への逆引き"
 title-en: "Thermal Spectra of the Universe"
 subtitle-en: "An Inverse Approach to Fundamental Physics"
 lang: ja
@@ -51,7 +51,7 @@ date: today
 
 ## 読者タイプ別おすすめルート {#sec-routes .unnumbered}
 
-通読も可能だが、目的に応じて読む順序を変えられる。詳細は [付録 C](appendix/C-reading-routes.qmd) 参照。
+通読も可能だが、目的に応じて読む順序を変えられる。詳細は [序章 §0.4](00-prologue.qmd#sec-prologue-reading-routes) 参照。
 
 | ルート | 想定読者 | おおまかな順序 |
 |---|---|---|

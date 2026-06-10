@@ -1,4 +1,4 @@
-# 宇宙の熱的スペクトル ― 観測から基礎物理への逆引き
+# 宇宙の熱的スペクトル ― 黒体放射から基礎物理への逆引き
 
 *Thermal Spectra of the Universe: An Inverse Approach to Fundamental Physics*
 
@@ -106,7 +106,7 @@ GitHub Pages で公開予定。`main` ブランチへの push で自動的に再
 
 つまり、適切なクレジットを示せば、共有・改変・商用利用も自由に行えます。引用例：
 
-> 和田 桂一 (Keiichi Wada), 『宇宙の熱的スペクトル ― 観測から基礎物理への逆引き』 (*Thermal Spectra of the Universe: An Inverse Approach to Fundamental Physics*), 2026. Licensed under CC BY 4.0. Source: <https://github.com/wadakeiichi/inverse_text_radiation>
+> 和田 桂一 (Keiichi Wada), 『宇宙の熱的スペクトル ― 黒体放射から基礎物理への逆引き』 (*Thermal Spectra of the Universe: An Inverse Approach to Fundamental Physics*), 2026. Licensed under CC BY 4.0. Source: <https://github.com/wadakeiichi/inverse_text_radiation>
 
 詳しくは [`LICENSE`](LICENSE) と [`CITATION.cff`](CITATION.cff) を参照してください。
 

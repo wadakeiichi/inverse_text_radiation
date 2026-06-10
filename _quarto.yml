@@ -7,7 +7,7 @@ project:
 
 book:
   title: "宇宙の熱的スペクトル"
-  subtitle: "観測から基礎物理への逆引き"
+  subtitle: "黒体放射から基礎物理への逆引き"
   # 英題（参考、英語版で正式採用）：
   # title-en: "Thermal Spectra of the Universe"
   # subtitle-en: "An Inverse Approach to Fundamental Physics"
@@ -87,7 +87,6 @@ book:
   appendices:
     - appendix/A-math-notes.qmd
     - appendix/B-units-constants.qmd
-    - appendix/C-reading-routes.qmd
 
 bibliography: references.bib
 

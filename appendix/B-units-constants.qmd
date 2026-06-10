@@ -5,4 +5,258 @@ lang: ja
 
 # 付録 B　単位と基本定数 {#sec-units-constants .unnumbered}
 
-TODO：CGS と SI の換算、物理基本定数、よく使う天文単位（pc, AU, M⊙, L⊙）、Rydberg 定数、Bohr 半径など。
+::: {.appendix-overview}
+**この付録の主題**：本書で使う物理基本定数、天文単位、エネルギー・振動数・波長の相互換算、CGS と SI の対応をまとめる。値は CODATA 2018 と IAU 2015 を基準とする。本文中の数値例で「自分で計算したい」読者のために、桁感覚も含めて整理する。
+:::
+
+---
+
+## B.1 物理基本定数 {#sec-fundamental-constants}
+
+### B.1.1 SI 単位での値（CODATA 2018）
+
+| 定数 | 記号 | SI 値 | 単位 |
+|---|---|---|---|
+| 光速度 | $c$ | $2.998 \times 10^8$ | m s$^{-1}$ |
+| Planck 定数 | $h$ | $6.626 \times 10^{-34}$ | J s |
+| 換算 Planck 定数 | $\hbar = h/2\pi$ | $1.055 \times 10^{-34}$ | J s |
+| Boltzmann 定数 | $k_B$ | $1.381 \times 10^{-23}$ | J K$^{-1}$ |
+| 電気素量 | $e$ | $1.602 \times 10^{-19}$ | C |
+| 電子質量 | $m_e$ | $9.109 \times 10^{-31}$ | kg |
+| 陽子質量 | $m_p$ | $1.673 \times 10^{-27}$ | kg |
+| 原子質量単位 | $u$ | $1.661 \times 10^{-27}$ | kg |
+| Avogadro 定数 | $N_A$ | $6.022 \times 10^{23}$ | mol$^{-1}$ |
+| 真空誘電率 | $\epsilon_0$ | $8.854 \times 10^{-12}$ | F m$^{-1}$ |
+| 真空透磁率 | $\mu_0$ | $1.257 \times 10^{-6}$ | H m$^{-1}$ |
+
+### B.1.2 天体物理でよく使う組合せ定数
+
+| 定数 | 記号 | 値 | 単位 |
+|---|---|---|---|
+| Stefan-Boltzmann 定数 | $\sigma = \pi^2 k_B^4 / (60 \hbar^3 c^2)$ | $5.670 \times 10^{-8}$ | W m$^{-2}$ K$^{-4}$ |
+| 放射定数 | $a = 4\sigma/c$ | $7.566 \times 10^{-16}$ | J m$^{-3}$ K$^{-4}$ |
+| Wien 変位定数 | $b = h c / (4.965 k_B)$ | $2.898 \times 10^{-3}$ | m K |
+| Wien 変位（振動数版） | $b_\nu = 2.821 k_B/h$ | $5.879 \times 10^{10}$ | Hz K$^{-1}$ |
+| 微細構造定数 | $\alpha = e^2/(4\pi\epsilon_0 \hbar c)$ | $7.297 \times 10^{-3}$ | (無次元、$\simeq 1/137$) |
+| Bohr 半径 | $a_0 = 4\pi\epsilon_0 \hbar^2/(m_e e^2)$ | $5.292 \times 10^{-11}$ | m |
+| Rydberg エネルギー | $\text{Ry} = m_e c^2 \alpha^2/2$ | $13.606$ | eV |
+| Rydberg 定数 | $R_\infty = \text{Ry}/(hc)$ | $1.097 \times 10^7$ | m$^{-1}$ |
+| Compton 波長（電子） | $\lambda_C = h/(m_e c)$ | $2.426 \times 10^{-12}$ | m |
+| 古典電子半径 | $r_e = e^2/(4\pi\epsilon_0 m_e c^2)$ | $2.818 \times 10^{-15}$ | m |
+| Thomson 断面積 | $\sigma_T = 8\pi r_e^2/3$ | $6.652 \times 10^{-29}$ | m$^2$ |
+
+::: {.appendix-tip}
+**本文での使用**：
+
+- $\sigma$, $a$：第4章 §4.4（Stefan-Boltzmann 則）、第17章 §17.1（恒星有効温度）
+- $b$, $b_\nu$：第1章、第7章（Wien 変位則）
+- $\alpha$：第21章 §21.5（電気四重極/磁気双極子遷移強度の見積もり）
+- $a_0$, Ry：第21章 §21.1-§21.3（Rydberg 公式と Bohr 模型）
+- $r_e$, $\sigma_T$：第18章 §18.3（Compton 散乱）
+:::
+
+---
+
+## B.2 天文単位 {#sec-astronomical-units}
+
+### B.2.1 距離・時間
+
+| 単位 | 記号 | 値 | 由来 |
+|---|---|---|---|
+| 天文単位 | au | $1.496 \times 10^{11}$ m | 地球-太陽平均距離（IAU 定義値） |
+| 光年 | ly | $9.461 \times 10^{15}$ m | 光が真空中で 1 年に進む距離 |
+| パーセク | pc | $3.086 \times 10^{16}$ m | 地球軌道半径が 1 秒角に見える距離 |
+| キロパーセク | kpc | $10^3$ pc | 銀河系スケール |
+| メガパーセク | Mpc | $10^6$ pc | 銀河間距離 |
+| ギガパーセク | Gpc | $10^9$ pc | 観測可能宇宙のスケール |
+| ユリウス年 | yr | $3.156 \times 10^7$ s | $= 365.25 \cdot 86400$ s |
+
+### B.2.2 質量・光度・半径
+
+太陽値を基準にとる：
+
+| 量 | 記号 | 値 |
+|---|---|---|
+| 太陽質量 | $M_\odot$ | $1.989 \times 10^{30}$ kg |
+| 太陽光度 | $L_\odot$ | $3.828 \times 10^{26}$ W |
+| 太陽半径 | $R_\odot$ | $6.957 \times 10^8$ m |
+| 太陽有効温度 | $T_{\text{eff},\odot}$ | $5772$ K |
+| 太陽絶対等級 | $M_{V,\odot}$ | $+4.83$ |
+
+その他の天体スケール：
+
+| 天体 | 質量 | 半径 |
+|---|---|---|
+| 木星 | $M_J \simeq 1.9 \times 10^{27}$ kg $\simeq 10^{-3} M_\odot$ | $7.15 \times 10^7$ m |
+| 地球 | $M_\oplus \simeq 5.97 \times 10^{24}$ kg | $6.37 \times 10^6$ m |
+| 白色矮星 | $\sim 0.6 M_\odot$ | $\sim 10^7$ m |
+| 中性子星 | $\sim 1.4 M_\odot$ | $\sim 10^4$ m |
+| 超巨大ブラックホール | $10^6$〜$10^{10} M_\odot$ | $r_s = 2GM/c^2$ |
+
+### B.2.3 宇宙論パラメータ（Planck 2018）
+
+| パラメータ | 記号 | 値 |
+|---|---|---|
+| Hubble 定数 | $H_0$ | $67.4$ km s$^{-1}$ Mpc$^{-1}$ |
+| 物質密度比 | $\Omega_m$ | $0.315$ |
+| 暗黒エネルギー密度比 | $\Omega_\Lambda$ | $0.685$ |
+| バリオン密度比 | $\Omega_b$ | $0.049$ |
+| CMB 温度 | $T_\text{CMB}$ | $2.7255$ K |
+| 宇宙年齢 | $t_0$ | $1.38 \times 10^{10}$ yr |
+
+::: {.appendix-tip}
+**本文での使用**：
+
+- $au, pc, M_\odot$：第17章（恒星・惑星）、第18章（降着円盤）
+- $L_\odot, R_\odot, T_{\text{eff},\odot}$：第17章 §17.1-§17.2（恒星と惑星平衡温度）
+- $T_\text{CMB}$：第16章（CMB）
+:::
+
+---
+
+## B.3 振動数・波長・エネルギーの相互換算 {#sec-conversions}
+
+電磁波の同じ「色」を、目的に応じて違う変数で書く。基本関係：
+
+$$
+\nu = \frac{c}{\lambda}, \quad E = h\nu = \frac{hc}{\lambda} = k_B T_E
+$$ {#eq-em-conversions}
+
+ここで $T_E \equiv E/k_B$ は「**特性温度**」（ある光子エネルギーに対応する温度）。
+
+### B.3.1 換算定数
+
+| 量の換算 | 計算式 | 数値 |
+|---|---|---|
+| $hc$ | | $1240$ eV nm $= 1.24$ µm eV |
+| $h/k_B$ | | $4.80 \times 10^{-11}$ K Hz$^{-1}$ |
+| $k_B$ (温度 → エネルギー) | | $1$ K $= 8.617 \times 10^{-5}$ eV |
+| $hc/k_B$ (波長 → 温度) | | $\lambda T$ [µm K] $= 14388/$ (光子エネルギー [µm$^{-1}$]) |
+| 1 eV $\to$ 振動数 | $E/h$ | $2.418 \times 10^{14}$ Hz |
+| 1 eV $\to$ 波長 | $hc/E$ | $1239.8$ nm |
+| 1 eV $\to$ 温度 | $E/k_B$ | $1.160 \times 10^4$ K |
+
+### B.3.2 電磁波帯域の対応表
+
+| 帯域 | 波長 | 振動数 | エネルギー | 特性温度 | 主な天体 |
+|---|---|---|---|---|---|
+| 電波 | $> 1$ mm | $< 300$ GHz | $< 10^{-3}$ eV | $< 15$ K | 21cm 線、分子線、シンクロトロン |
+| マイクロ波 | 1 mm–1 m | 300 MHz–300 GHz | $10^{-6}$–$10^{-3}$ eV | $\sim 1$ K | **CMB**、低温ダスト |
+| 遠赤外 | 30–300 µm | 1–10 THz | $\sim 0.01$ eV | $\sim 100$ K | 冷たいダスト、Herschel |
+| 中赤外 | 3–30 µm | 10–100 THz | $\sim 0.1$ eV | $\sim 1000$ K | 暖かいダスト、JWST |
+| 近赤外 | 0.7–3 µm | $\sim 10^{14}$ Hz | $\sim 1$ eV | $\sim 3000$ K | 冷たい恒星、ダスト透過 |
+| 可視 | 380–750 nm | $\sim 5 \times 10^{14}$ Hz | $\sim 2$ eV | $\sim 6000$ K | 太陽・恒星 |
+| 紫外 | 10–380 nm | $\sim 10^{15}$–$10^{16}$ Hz | 3–100 eV | $\sim 10^5$ K | OB 型恒星、HII 領域励起 |
+| X 線 | 0.01–10 nm | $10^{16}$–$10^{19}$ Hz | 0.1–100 keV | $10^6$–$10^9$ K | コロナ、降着円盤、中性子星 |
+| ガンマ線 | $< 0.01$ nm | $> 10^{19}$ Hz | $> 100$ keV | $> 10^9$ K | GRB、パルサー、ブラックホール |
+
+::: {.appendix-tip}
+**本文での使用**：第17章 §17.4（赤外線天文学の波長帯）、第18章（X線天体）、第19章（CMB から GRB まで）
+:::
+
+---
+
+## B.4 SI ↔ CGS の換算 ― 電磁気学の落とし穴 {#sec-si-cgs}
+
+電磁気学では、SI（国際単位系）と CGS（ガウス単位系）で **式の形そのものが違う**。本書は SI を基本とするが、論文（特に天体物理の古典文献）では CGS が標準なので、両者の対応を押さえておく。
+
+### B.4.1 力学・熱の換算
+
+| 量 | SI | CGS | 換算 |
+|---|---|---|---|
+| 長さ | m | cm | $1\,\text{m} = 10^2$ cm |
+| 質量 | kg | g | $1\,\text{kg} = 10^3$ g |
+| 時間 | s | s | 同じ |
+| 力 | N | dyne | $1\,\text{N} = 10^5$ dyne |
+| エネルギー | J | erg | $1\,\text{J} = 10^7$ erg |
+| 圧力 | Pa | dyne cm$^{-2}$ | $1\,\text{Pa} = 10$ dyne cm$^{-2}$ |
+
+### B.4.2 電磁気の換算（注意）
+
+| 量 | SI | CGS (Gaussian) | 換算 |
+|---|---|---|---|
+| 電荷 | C | esu | $1$ C $= 3 \times 10^9$ esu |
+| 電場 | V m$^{-1}$ | statvolt cm$^{-1}$ | $1$ V m$^{-1}$ $\simeq 3.34 \times 10^{-5}$ statvolt cm$^{-1}$ |
+| 磁場 | T (Tesla) | G (Gauss) | $1$ T $= 10^4$ G |
+
+### B.4.3 式の形の違い
+
+**Coulomb 法則**：
+
+$$
+\text{SI:}\quad F = \frac{1}{4\pi\epsilon_0}\frac{q_1 q_2}{r^2}, \quad \text{CGS:}\quad F = \frac{q_1 q_2}{r^2}
+$$
+
+**Maxwell 方程式（CGS、第13章 SI 版と比較）**：
+
+$$
+\nabla \cdot \mathbf{E} = 4\pi\rho, \quad \nabla \times \mathbf{B} = \frac{4\pi}{c}\mathbf{J} + \frac{1}{c}\frac{\partial \mathbf{E}}{\partial t}
+$$
+
+CGS では $4\pi$ と $1/c$ が露わに出る。本文の SI 表現では $\epsilon_0, \mu_0$ の中に隠れている。
+
+**Rydberg エネルギー**（一例として）：
+
+$$
+\text{SI:}\quad \text{Ry} = \frac{m_e e^4}{2(4\pi\epsilon_0)^2 \hbar^2}, \quad \text{CGS:}\quad \text{Ry} = \frac{m_e e^4}{2\hbar^2}
+$$
+
+::: {.callout-warning appearance="simple"}
+**注意**：天文学の論文では断りなく CGS が使われていることが多い。数値を比較するときは **必ず単位系を確認** すること。特に電磁気が絡む量（断面積、磁場、Stefan-Boltzmann 定数、…）は要注意
+:::
+
+---
+
+## B.5 数値の桁感覚 ― オーダー推定のための定数 {#sec-order-of-magnitude}
+
+「ざっくり計算」のための桁感覚。
+
+### B.5.1 エネルギー目盛り
+
+| 現象 | エネルギー | 特性温度 | 対応波長 |
+|---|---|---|---|
+| 室温の熱運動 | $0.025$ eV | 300 K | 50 µm |
+| 水素 21 cm 超微細構造 | $5.9 \times 10^{-6}$ eV | $0.07$ K | 21 cm |
+| CMB 光子（典型） | $6.6 \times 10^{-4}$ eV | 2.725 K | 1 mm |
+| 可視光（H$\alpha$） | $1.89$ eV | $2.2 \times 10^4$ K | 656 nm |
+| 水素 Lyα | $10.2$ eV | $1.2 \times 10^5$ K | 121.6 nm |
+| 水素電離 | $13.6$ eV | $1.6 \times 10^5$ K | 91.2 nm |
+| 鉄 K$\alpha$（中性鉄）| $6.4$ keV | $7.4 \times 10^7$ K | 0.19 nm |
+| 電子静止質量 | $0.511$ MeV | $5.9 \times 10^9$ K | $\lambda_C = 2.4$ pm |
+| 陽子静止質量 | $938$ MeV | $1.1 \times 10^{13}$ K | $\sim 1.3$ fm |
+
+### B.5.2 重力スケール
+
+| 量 | 計算 | 例 |
+|---|---|---|
+| Schwarzschild 半径 | $r_s = 2GM/c^2$ | $r_{s,\odot} \simeq 3$ km, $r_{s,M87} \simeq 2 \times 10^{13}$ m |
+| 表面重力（恒星） | $g = GM/R^2$ | 太陽 $g_\odot = 274$ m s$^{-2}$, 白色矮星 $\sim 10^6$ m s$^{-2}$ |
+| 自由落下時間 | $t_\text{ff} = \sqrt{1/G\rho}$ | 太陽密度 $1.4$ g/cc → $t_\text{ff} \sim 30$ min |
+
+### B.5.3 観測的密度
+
+| 環境 | 数密度 [cm$^{-3}$] | 温度 [K] |
+|---|---|---|
+| 銀河間媒質 | $10^{-6}$ | $10^5$–$10^7$ |
+| 暖かい星間ガス（WIM） | $10^{-1}$ | $10^4$ |
+| HII 領域 | $10^2$–$10^4$ | $10^4$ |
+| 暗黒分子雲 | $10^3$–$10^5$ | $10$–$20$ |
+| 原始惑星系円盤 | $10^{10}$–$10^{12}$ | $20$–$1000$ |
+| 恒星光球 | $\sim 10^{17}$ | $\sim 6000$ |
+| 太陽コロナ | $10^8$–$10^{10}$ | $10^6$–$10^7$ |
+
+::: {.appendix-tip}
+**本文での使用**：第15章以降の応用章で「桁感覚」が必要なとき、本表を参照
+:::
+
+---
+
+## B.6 さらに進むための参考文献・データソース {#sec-data-references .unnumbered}
+
+- CODATA 2018 fundamental physical constants（<https://physics.nist.gov/cuu/Constants>）
+- IAU 2015 nominal values for solar and planetary properties（IAU Resolution B3）
+- NIST Atomic Spectra Database（<https://physics.nist.gov/asd>）
+- NIST Molecular Spectroscopy Database
+- *Allen's Astrophysical Quantities* (4th ed., Springer, 2000) — 天文定数の定番一覧
+- *Particle Data Group*, *Review of Particle Physics* — 素粒子・宇宙論定数（<https://pdg.lbl.gov>）
+- Planck Collaboration 2018 results — 宇宙論パラメータ
