@@ -1,0 +1,9 @@
+---
+title: "参考文献"
+lang: ja
+---
+
+# 参考文献 {#sec-references .unnumbered}
+
+::: {#refs}
+:::

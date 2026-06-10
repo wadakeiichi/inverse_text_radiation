@@ -1,0 +1,127 @@
+/*-- scss:defaults --*/
+
+// 色 ─ 言語非依存
+$primary: #1f4e79;
+$secondary: #a23b3b;
+$accent-gold: #c9a227;
+$ink: #1f2933;
+$muted: #5a6573;
+$paper: #ffffff;
+$bg: #fbfaf6;
+$soft: #eef1f6;
+$line: #d8dde6;
+
+// フォント変数（言語別 SCSS で上書き）
+$font-family-serif: serif !default;
+$font-family-sans: sans-serif !default;
+$font-family-monospace: 'SF Mono', 'Menlo', 'Consolas', monospace;
+
+$body-bg: $bg;
+$body-color: $ink;
+
+/*-- scss:rules --*/
+
+// 三原則カード
+.three-principles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+
+  .principle {
+    padding: 16px 18px;
+    border-radius: 8px;
+    border-left: 5px solid;
+
+    h4 {
+      margin-top: 0;
+      font-size: 1.05rem;
+    }
+
+    &.principle-1 {
+      background: #f0f6ff;
+      border-color: $primary;
+    }
+    &.principle-2 {
+      background: #fff8e6;
+      border-color: $accent-gold;
+    }
+    &.principle-3 {
+      background: #fff4f0;
+      border-color: $secondary;
+    }
+  }
+}
+
+// 中心地図ボックス
+.central-map {
+  background: #fdfcf3;
+  border: 1px solid #e6dba8;
+  border-radius: 8px;
+  padding: 18px 22px;
+  margin: 18px 0;
+
+  &.planck-map { border-left: 6px solid $primary; }
+  &.hydrogen-map { border-left: 6px solid $secondary; }
+  &.einstein-map { border-left: 6px solid $accent-gold; }
+
+  table {
+    margin: 12px 0;
+    font-size: 0.92rem;
+  }
+}
+
+// 章概要バッジ
+.chapter-overview {
+  background: $soft;
+  border-left: 5px solid $primary;
+  padding: 12px 16px;
+  margin: 16px 0;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+// 難易度☆スパン（Lua filter で生成）
+.difficulty {
+  display: inline-block;
+  font-family: $font-family-sans;
+  font-size: 0.85em;
+  color: $accent-gold;
+  margin-left: 0.5em;
+  letter-spacing: 0.1em;
+}
+
+// 節タグ（[形] [線] etc.）
+.tag {
+  display: inline-block;
+  padding: 2px 8px;
+  margin: 2px 4px 2px 0;
+  border-radius: 10px;
+  background: #eaf2fb;
+  color: $primary;
+  font-size: 0.78em;
+  font-family: $font-family-sans;
+}
+
+// 中央地図の数式の boxed 因子
+.boxed-factor {
+  border: 1.5px solid $secondary;
+  background: #fff4f0;
+  border-radius: 3px;
+  padding: 1px 4px;
+  margin: 0 1px;
+}
+
+// callout カスタム
+.callout-question {
+  border-left-color: $primary !important;
+  background: #f0f6ff;
+}
+.callout-summary {
+  border-left-color: $accent-gold !important;
+  background: #fff8e6;
+}
+.callout-derive {
+  border-left-color: $muted !important;
+  background: #f5f5f7;
+}

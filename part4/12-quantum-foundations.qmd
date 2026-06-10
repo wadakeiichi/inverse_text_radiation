@@ -1,0 +1,202 @@
+---
+title: "第12章　量子力学の基礎へ戻る"
+lang: ja
+---
+
+::: {.chapter-overview}
+**この章の主題**：第10章では Planck の量子仮説、第11章では Einstein の係数法でプランク分布を導いた。これらは量子論の入口を別々に切り開く議論だったが、両者を統一的に整理する枠組みが **量子力学** である。本章では、観測スペクトルから第10・11章を経て要請された量子論的描像 ―「量子化された調和振動子」「生成消滅演算子」「零点エネルギー」― を量子力学の言葉で再定式化する。これは第V部の電磁モード密度の議論と、第VIII部の電磁場量子化（QED の入口）への直接的な準備でもある。
+:::
+
+## この章の中心地図 {#sec-quantum-foundations-map .unnumbered}
+
+{{< include ../_includes/_planck-map-quantum.qmd >}}
+
+::: {.callout-note}
+**方針**：本章は第IV部の総まとめである。量子力学の数学的形式 ― ヒルベルト空間、エルミート演算子、固有値問題 ― を最低限導入し、それが Planck の振動子と Einstein の光量子を統一的に扱える枠組みであることを示す。本書は量子力学の体系的教科書ではないので、必要最小限に絞る。
+:::
+
+## この章で答える問い {#sec-quantum-foundations-questions .unnumbered}
+
+::: {.callout-question}
+- 量子力学の「状態」と「観測量」は、観測スペクトルの何に対応するのか
+- 調和振動子の量子化は、なぜ電磁場の量子化と同型なのか
+- 生成消滅演算子はどんな物理操作に対応するのか
+- 零点エネルギーは観測可能なのか（→ Casimir 効果・自発放出）
+:::
+
+## 到達目標 {#sec-quantum-foundations-goals .unnumbered}
+
+この章を読み終えると、読者は次のことができるようになる：
+
+- 量子力学の基本枠組み（状態・観測量・固有値問題）を、本書の流れに位置づけて理解できる
+- 調和振動子の量子化を、電磁場各モードの量子化へ自然に拡張できる準備を整える
+- 生成消滅演算子の言葉で、光子の生成・消滅を語れる
+
+---
+
+## 12.1 状態と観測量 ― 量子力学の最小限の言葉 {#sec-quantum-foundations-states}
+
+[本文目安：B3]
+
+量子力学を、観測スペクトルとの関係に絞って最小限の言葉で整理する。
+
+**状態**（**state**）：系の状態を、複素ベクトル空間（**Hilbert space**）の要素 $|\psi\rangle$ で表す。古典力学では位相空間の点（座標と運動量の組）が状態だったが、量子力学ではより抽象的なベクトル。
+
+**観測量**（**observable**）：観測される物理量は、Hilbert 空間上の **エルミート演算子**（**Hermitian operator**, **self-adjoint operator**）$\hat{O}$ で表される。古典的なエネルギー、運動量、位置などは、すべて対応する演算子（$\hat{H}, \hat{p}, \hat{x}$）として再定義される。
+
+**固有値問題**：観測量を測定すると、対応する演算子の**固有値**（**eigenvalue**）のどれかが結果として得られる。
+
+$$
+\hat{O} |o\rangle = o\, |o\rangle
+$$ {#eq-eigenvalue-problem}
+
+ここで $|o\rangle$ は固有ベクトル（**eigenstate**）、$o$ は固有値。たとえばエネルギー演算子 $\hat{H}$ の固有値 $E_n$ がエネルギー準位を与える。
+
+**確率振幅**：系が状態 $|\psi\rangle$ にあるとき、観測値 $o$ が出る確率は $|\langle o | \psi \rangle|^2$。これが量子論の確率解釈である。
+
+::: {.callout-note}
+**観測との対応**：本書のこれまでの議論で、観測スペクトル → 原子・分子のエネルギー準位 → 量子化 という流れがあった。「準位」とは具体的にエネルギー演算子 $\hat{H}$ の固有値である。観測される線スペクトルの振動数 $\nu_{ul}$ は、上下準位の固有値差 $\nu_{ul} = (E_u - E_l)/h$ で決まる。これが第21章で本格的に扱う水素原子のリュードベリ系列の起源である。
+:::
+
+## 12.2 調和振動子の量子化 ― 構造の核心 {#sec-quantum-foundations-oscillator}
+
+[本文目安：B3]
+
+第10章で見た「振動子のエネルギーが $h\nu$ の整数倍に量子化される」という現象を、量子力学の言葉で再定式化する。
+
+質量 $m$、固有振動数 $\omega = 2\pi\nu$ の調和振動子の Hamiltonian は
+
+$$
+\hat{H} = \frac{\hat{p}^2}{2m} + \frac{1}{2} m\omega^2 \hat{x}^2
+$$ {#eq-harmonic-hamiltonian}
+
+ここで $\hat{x}$ と $\hat{p}$ は位置と運動量の演算子で、交換関係 $[\hat{x}, \hat{p}] = i\hbar$（$\hbar = h/2\pi$）を満たす。
+
+@eq-harmonic-hamiltonian の固有値問題を解くと、エネルギー準位は
+
+$$
+E_n = \hbar\omega \left( n + \frac{1}{2} \right), \qquad n = 0, 1, 2, \ldots
+$$ {#eq-harmonic-eigenvalues}
+
+となる。これが Planck の量子化に対応する離散エネルギーである。
+
+**等間隔の準位**：隣接準位の差は $E_{n+1} - E_n = \hbar\omega = h\nu$。これが Planck の「エネルギー量子 $h\nu$」の正体である。
+
+**零点エネルギー**（**zero-point energy**）：最低エネルギー（$n = 0$）でも $E_0 = \hbar\omega/2 \neq 0$。古典では振動子が完全に止まる状態がエネルギーゼロだったが、量子では**不確定性原理**（$\Delta x \cdot \Delta p \geq \hbar/2$）から完全な静止が許されない。これが「真空でもエネルギーを持つ」という量子の特徴で、第VIII部・第24章で本格的に扱う。
+
+::: {.callout-tip appearance="simple"}
+**問い**：零点エネルギーは観測できるのか？
+
+**短答**：絶対値（Hamiltonian の零点）は観測不能だが、**差**は観測可能。たとえば二つの調和振動子の零点エネルギー差や、真空のモード構造変化（**Casimir 効果**）として現れる。
+
+**もう一歩**：自発放出も零点エネルギーの観測的帰結である ― 真空の電磁場揺らぎが励起原子に「ちょっかい」をかけて光子を放出させる。第VIII部・第25章で扱う。CMB の存在 ― そのものは古典電磁場として観測されるが ― も、究極的には零点エネルギーから出発した宇宙史を映している。
+:::
+
+## 12.3 生成消滅演算子 ― 量子の最小公倍数 {#sec-quantum-foundations-operators}
+
+[本文目安：B4｜導出：M1]
+
+@eq-harmonic-hamiltonian は次のエレガントな形に書き直せる。**生成消滅演算子**（**creation and annihilation operators**）を
+
+$$
+\hat{a} = \sqrt{\frac{m\omega}{2\hbar}} \left( \hat{x} + \frac{i}{m\omega} \hat{p} \right), \qquad \hat{a}^\dagger = \sqrt{\frac{m\omega}{2\hbar}} \left( \hat{x} - \frac{i}{m\omega} \hat{p} \right)
+$$ {#eq-creation-annihilation-def}
+
+と定義すると、Hamiltonian は
+
+$$
+\hat{H} = \hbar\omega \left( \hat{a}^\dagger \hat{a} + \frac{1}{2} \right) = \hbar\omega \left( \hat{n} + \frac{1}{2} \right)
+$$ {#eq-hamiltonian-number}
+
+ここで $\hat{n} = \hat{a}^\dagger \hat{a}$ は **数演算子**（**number operator**）で、固有値が $n = 0, 1, 2, \ldots$。
+
+$\hat{a}^\dagger$ は数を一つ増やし（**creation**, 生成）、$\hat{a}$ は一つ減らす（**annihilation**, 消滅）：
+
+$$
+\hat{a}^\dagger |n\rangle = \sqrt{n+1}\, |n+1\rangle, \qquad \hat{a} |n\rangle = \sqrt{n}\, |n-1\rangle
+$$ {#eq-creation-annihilation-action}
+
+これらの交換関係 $[\hat{a}, \hat{a}^\dagger] = 1$ から、すべてが綺麗に整う。
+
+**物理的解釈**：生成消滅演算子は、振動子のエネルギー準位を一段階上げ下げする。電磁場の文脈では、$\hat{a}^\dagger$ が**光子を一つ生成**し、$\hat{a}$ が**光子を一つ消滅**させる。これが第VIII部の電磁場量子化の核心である。
+
+::: {.callout-note}
+**用語**：「生成」「消滅」は粒子の数を増やしたり減らしたりする操作の名前である。文献によっては「上昇/下降演算子」（ladder operators）とも呼ばれる。本書では「生成消滅演算子」を主に用いる。
+:::
+
+## 12.4 真空状態と数状態 ― 量子場の入口 {#sec-quantum-foundations-vacuum}
+
+[本文目安：B4｜導出：M1]
+
+数演算子の固有状態 $|n\rangle$ は **数状態**（**number state**, **Fock state**）と呼ばれ、粒子数が確定した状態を表す。最低エネルギー状態 $|0\rangle$ を **真空**（**vacuum**）と呼ぶ。
+
+真空 $|0\rangle$ の特性：
+
+- $\hat{a} |0\rangle = 0$（消滅は無効）
+- $\hat{n} |0\rangle = 0$（粒子数ゼロ）
+- $\hat{H} |0\rangle = \frac{1}{2}\hbar\omega |0\rangle$（零点エネルギー）
+
+真空は「粒子がいない」状態だが、**ゼロ点振動**を持つ。物理的には：
+
+- 位置・運動量がともに不確定（$\Delta x \neq 0$, $\Delta p \neq 0$）
+- 真空のエネルギー揺らぎが、励起状態にある原子に**自発放出**を引き起こす（第11章 §11.3 で導入した $A_{ul}$ の起源）
+
+電磁場の場合、各モードがこの調和振動子に対応する。すべてのモードが真空にある状態 $|0\rangle_\text{EM}$ が「電磁真空」で、$\hat{a}^\dagger_{\nu, \mathbf{k}, \sigma}$ が振動数 $\nu$、波数 $\mathbf{k}$、偏光 $\sigma$ の光子を一つ生成する。これが第VIII部・第24章で本格的に扱う「電磁場の量子化」である。
+
+::: {.callout-note}
+**対応（観測）**：真空エネルギーは観測スペクトルにも顔を出す。第11章で見た自発放出率 $A_{ul}$ は真空電磁場揺らぎが励起原子を「揺さぶる」効果として理解される。観測される線の自然幅 $\Gamma_{\text{nat}} = A_{ul}/(2\pi)$（第22章）は、究極的には真空ゼロ点振動の観測的痕跡である。CMB の黒体スペクトルも、光子という量子場の励起状態が宇宙膨張で温度を下げてきた歴史の表れである。
+:::
+
+## 12.5 第V部・第VIII部への準備 {#sec-quantum-foundations-preview}
+
+[本文目安：B3]
+
+本章で導入した道具は、第V部以降の議論の前提になる：
+
+**第V部（電磁モード）**：第V部で電磁場のモード密度 $g(\nu) = 8\pi\nu^2/c^3$ を本格的に導出する。各モードは本章の調和振動子に対応し、量子化されると光子の集まりとして扱える。
+
+**第VII部（線スペクトル）**：第21章で水素原子のエネルギー準位を Schrödinger 方程式から導く。これは本章 §12.1 で導入した固有値問題 @eq-eigenvalue-problem の具体例である。第22章で線の自然幅を扱うが、その起源は本章で導入した零点エネルギー（→ 自発放出）にある。
+
+**第VIII部（QED）**：第24章で電磁場の量子化を扱う。これは本章 §12.3 の生成消滅演算子を、空間の各点での電磁モードに対して並べたものに等しい。第25章で Einstein 係数の関係式 @eq-einstein-A-B-ratio を QED の言葉で再構成する。
+
+::: {.callout-note}
+**使えるようになった道具**（§12.1〜12.5）：
+
+- 量子力学の最小限の枠組み（状態・観測量・固有値問題）
+- 調和振動子の固有値 $E_n = (n+1/2)\hbar\omega$ と等間隔準位 ― これが第10章で Planck が要請した「エネルギー量子 $h\nu$」の量子力学的根拠
+- 生成消滅演算子と数演算子 ― これが第VIII部の電磁場量子化の準備
+- 真空の零点エネルギーと、それが自発放出・線の自然幅・Casimir 効果として観測される構造
+:::
+
+---
+
+## この章で何がわかったか {#sec-quantum-foundations-summary .unnumbered}
+
+::: {.callout-summary}
+**中心地図に戻る**
+
+第IV部全体（第9〜12章）で、中心地図プランク関数の **Planck 定数 $h$** が、観測される黒体スペクトルから三つの異なるルートで必然として要請されることを示した：
+
+1. 古典の破綻（第9章）から、エネルギーが離散単位であることが必要
+2. Planck の量子仮説（第10章）から、その単位が $h\nu$ であり、振動子の量子化が等分配を破る
+3. Einstein の方法（第11章）から、詳細釣り合いだけで $A_{ul}/B_{ul} = 2h\nu^3/c^2$ が出る
+
+そして本章（第12章）で、これらをすべて統一する量子力学の枠組み ― 調和振動子の固有値、生成消滅演算子、零点エネルギー ― を整えた。
+
+中心地図プランク関数の **指数の中の $h$** と **前因子の $h$** が、これでほぼ説明される。残るは前因子の $\nu^3/c^2$（電磁モード密度の振動数依存）であり、これが第V部の主題になる。
+
+**次部へ**：第V部（第13〜14章）では、本章で借用していた電磁モード密度 $g(\nu) = 8\pi\nu^2/c^3$ を、Maxwell 方程式と空洞の境界条件から本格的に導出する。これでプランク分布の全因子が「観測 → 物理」の逆引きで完全に説明される。
+:::
+
+## 演習問題 {#sec-quantum-foundations-exercises .unnumbered}
+
+::: {.callout-note appearance="simple"}
+演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。
+:::
+
+## さらに学ぶための参考文献 {#sec-quantum-foundations-further .unnumbered}
+
+- Sakurai & Napolitano, *Modern Quantum Mechanics* (Cambridge, 3rd ed., 2020) — 標準的な量子力学教科書、調和振動子と生成消滅演算子の体系的扱い
+- Griffiths, *Introduction to Quantum Mechanics* (Cambridge, 3rd ed., 2018) — 学部向け平易な入門
+- 猪木慶治・川合光『量子力学 I・II』（講談社, 1994）— 日本語の標準的な量子力学教科書
+- Cohen-Tannoudji et al., *Quantum Mechanics* (Wiley, 1977) — 詳細な計算とアプリケーション豊富

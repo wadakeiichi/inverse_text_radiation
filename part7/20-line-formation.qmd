@@ -1,0 +1,76 @@
+---
+title: "第20章　線形成と線輸送"
+lang: ja
+---
+
+::: {.chapter-overview}
+**この章の主題**：線吸収係数、線輸送方程式、線のソース関数、等価幅、成長曲線、LTE/非LTE線形成
+:::
+
+## この章の中心地図 {#sec-line-formation-map .unnumbered}
+
+{{< include ../_includes/_hydrogen-map.qmd >}}
+
+## この章で答える問い {#sec-line-formation-questions .unnumbered}
+
+::: {.callout-question}
+- 線吸収係数は連続吸収係数とどう違い、何が新しいのか
+- 等価幅は観測の何を測り、なぜ便利な量なのか
+- 成長曲線は、観測される線強度から何を引き出すための道具なのか
+- LTE と非 LTE で、線の見え方はどう違うのか
+- 散乱主体の線（共鳴散乱）と吸収主体の線は、観測でどう区別するのか
+:::
+
+## 到達目標 {#sec-line-formation-goals .unnumbered}
+
+この章を読み終えると、読者は次のことができるようになる：
+
+- 線吸収係数を、連続吸収係数と並べて構造的に書き下せる
+- 等価幅と成長曲線を用いて、観測線から下準位の柱密度を引き出せる
+- LTE と非 LTE の線形成の違いを、ソース関数の言葉で説明できる
+
+---
+
+## 20.1 （節タイトル） {#sec-line-formation-s1}
+
+[本文目安：B3-B4]
+
+TODO：本文。三原則（① 逆引き／② 背景物理を曖昧にしない／③ 天下り的に式を与えない）に従って執筆する。
+
+::: {.callout-derive collapse="true"}
+## 導出ノート（オンライン版限定）
+
+TODO：本文では結果を示すにとどめ、丁寧な導出はここに置く。
+:::
+
+## 20.2 （節タイトル） {#sec-line-formation-s2}
+
+[本文目安：B3-B4]
+
+TODO：本文
+
+## 20.3 （節タイトル） {#sec-line-formation-s3}
+
+[本文目安：B3-B4]
+
+TODO：本文
+
+---
+
+## この章で何がわかったか {#sec-line-formation-summary .unnumbered}
+
+::: {.callout-summary}
+**中心地図に戻る**
+
+TODO：この章で、中心地図（プランク関数または水素線吸収係数）のどの因子・どの構造が解き明かされたかを 3〜5 行で書く。次章へのつながりも示す。
+:::
+
+## 演習問題 {#sec-line-formation-exercises .unnumbered}
+
+::: {.callout-note appearance="simple"}
+演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。
+:::
+
+## さらに学ぶための参考文献 {#sec-line-formation-further .unnumbered}
+
+- TODO：本書を超えて学びたい読者のための参考文献

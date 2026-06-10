@@ -1,0 +1,75 @@
+---
+title: "第14章　空洞中の電磁モード"
+lang: ja
+---
+
+::: {.chapter-overview}
+**この章の主題**：定在波、状態密度、モード密度とν²、空洞放射とのつながり
+:::
+
+## この章の中心地図 {#sec-cavity-modes-map .unnumbered}
+
+{{< include ../_includes/_planck-map-modes.qmd >}}
+
+## この章で答える問い {#sec-cavity-modes-questions .unnumbered}
+
+::: {.callout-question}
+- 空洞中の電磁波には、どんな「許される」状態が何個あるのか
+- なぜ三次元空間ではモード密度が $\nu^2$ に比例するのか
+- プランク分布の前因子 $2h\nu^3/c^2$ は、モード密度と何の積から来るのか
+- 偏光自由度がモードの数え上げにどう効くのか
+:::
+
+## 到達目標 {#sec-cavity-modes-goals .unnumbered}
+
+この章を読み終えると、読者は次のことができるようになる：
+
+- 空洞中の電磁モードを境界条件のもとで列挙し、状態密度を導出できる
+- モード密度 $\propto \nu^2$ が三次元の幾何から来ることを示せる
+- プランク分布の三層構造（熱平衡・量子化・モード密度）の最後のピースを埋められる
+
+---
+
+## 14.1 （節タイトル） {#sec-cavity-modes-s1}
+
+[本文目安：B3]
+
+TODO：本文。三原則（① 逆引き／② 背景物理を曖昧にしない／③ 天下り的に式を与えない）に従って執筆する。
+
+::: {.callout-derive collapse="true"}
+## 導出ノート（オンライン版限定）
+
+TODO：本文では結果を示すにとどめ、丁寧な導出はここに置く。
+:::
+
+## 14.2 （節タイトル） {#sec-cavity-modes-s2}
+
+[本文目安：B3]
+
+TODO：本文
+
+## 14.3 （節タイトル） {#sec-cavity-modes-s3}
+
+[本文目安：B3]
+
+TODO：本文
+
+---
+
+## この章で何がわかったか {#sec-cavity-modes-summary .unnumbered}
+
+::: {.callout-summary}
+**中心地図に戻る**
+
+TODO：この章で、中心地図（プランク関数または水素線吸収係数）のどの因子・どの構造が解き明かされたかを 3〜5 行で書く。次章へのつながりも示す。
+:::
+
+## 演習問題 {#sec-cavity-modes-exercises .unnumbered}
+
+::: {.callout-note appearance="simple"}
+演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。
+:::
+
+## さらに学ぶための参考文献 {#sec-cavity-modes-further .unnumbered}
+
+- TODO：本書を超えて学びたい読者のための参考文献

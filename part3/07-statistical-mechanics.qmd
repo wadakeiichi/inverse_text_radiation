@@ -1,0 +1,266 @@
+---
+title: "第07章　統計力学の基本"
+lang: ja
+---
+
+::: {.chapter-overview}
+**この章の主題**：第6章で立ち上げた「最大エントロピー状態が熱平衡」という原理を、具体的な計算道具として整える。状態数・分配関数・Boltzmann 分布・揺らぎ ― これらは古典統計力学の中心的な道具立てであり、第8章で光子の統計（Bose–Einstein）へ拡張するための土台となる。最後に、古典統計を放射場にそのまま適用すると何が起きるかを予告する。これは第IV部・第9章「古典論ではなぜ失敗するのか」への入口でもある。
+:::
+
+## この章の中心地図 {#sec-statistical-mechanics-map .unnumbered}
+
+{{< include ../_includes/_planck-map-occupation.qmd >}}
+
+::: {.callout-note}
+**方針**：本章で扱う **Boltzmann 分布** は、プランク分布の親戚であり、量子効果が無視できる極限では Boltzmann 分布に近づく。中心地図の指数関数因子 $1/(e^{h\nu/kT}-1)$ の「指数の中身」がここで準備される。
+:::
+
+## この章で答える問い {#sec-statistical-mechanics-questions .unnumbered}
+
+::: {.callout-question}
+- なぜ多数の粒子の集団は、熱力学量（温度・圧力）のような少数の変数で記述できてしまうのか
+- 分配関数を計算すると、なぜ観測されるスペクトル形が出てくるのか
+- 古典統計を放射場にそのまま適用すると、何が起こるのか（→ 第9章への伏線）
+- 揺らぎは観測スペクトルにどんな形で現れるのか
+:::
+
+## 到達目標 {#sec-statistical-mechanics-goals .unnumbered}
+
+この章を読み終えると、読者は次のことができるようになる：
+
+- 状態数・分配関数・Boltzmann 分布の論理を整理して述べられる
+- 平均値と揺らぎが熱力学量とどう結びつくかを説明できる
+- 古典統計を放射場に適用したときに何が起こるかを予告的に把握できる
+
+---
+
+## 7.1 状態数と確率 ― 等確率の原理 {#sec-statistical-mechanics-states}
+
+[本文目安：B3]
+
+統計力学の出発点は、ミクロ状態に対する**等確率の仮定**である：
+
+> 孤立系のミクロ状態のうち、与えられたエネルギー $E$ を満たすものは、すべて等しい確率で実現する。
+
+これだけで多くの結果が出る。粒子数 $N$、体積 $V$、エネルギー $E$ が指定されたマクロ状態に対応するミクロ状態の数 $\Omega(E, V, N)$ を計算すれば、エントロピー $S = k_B \ln \Omega$（@eq-entropy-boltzmann）からすべての熱力学量が導かれる。
+
+これを **ミクロカノニカル分布** と呼ぶ。
+
+しかし実用上はもう一段使いやすい設定が便利である。系を**熱浴**（温度 $T$ で固定）と接触させた状況を考える。エネルギー $E_i$ のミクロ状態が実現する確率は
+
+$$
+P_i = \frac{1}{Z}\, e^{-E_i / k_B T}
+$$ {#eq-boltzmann-prob}
+
+となる。これが **Boltzmann 分布**（**Boltzmann distribution**, あるいは canonical distribution）で、$Z$ は規格化定数：
+
+$$
+Z = \sum_i e^{-E_i / k_B T}
+$$ {#eq-partition-function}
+
+これが **分配関数**（**partition function**, あるいは独語 *Zustandssumme*「状態和」）。$Z$ は系のすべての情報を含む量で、ここから物理量がすべて引き出せる。
+
+::: {.callout-note}
+**用語**：「分配関数」は statistics の英訳が分かりにくい。ドイツ語の Zustandssumme（状態和）の方が物理的意味が明快である：エネルギー重み $e^{-E_i/k_B T}$ を全状態にわたって足し上げた量、という意味。
+:::
+
+## 7.2 分配関数 ― すべての熱力学量を生成する母関数 {#sec-statistical-mechanics-partition}
+
+[本文目安：B3]
+
+分配関数 $Z(T, V, N)$ から、平均エネルギーは
+
+$$
+\langle E \rangle = -\frac{\partial \ln Z}{\partial \beta}
+$$ {#eq-mean-energy}
+
+ただし $\beta = 1/k_B T$。同様に他の熱力学量も：
+
+| 物理量 | 分配関数からの計算式 |
+|---|---|
+| 平均エネルギー $\langle E \rangle$ | $-\partial \ln Z / \partial \beta$ |
+| Helmholtz 自由エネルギー $F$ | $-k_B T \ln Z$ |
+| エントロピー $S$ | $-\partial F / \partial T$ |
+| 圧力 $P$ | $-\partial F / \partial V$ |
+| 比熱 $C_V$ | $\partial \langle E \rangle / \partial T$ |
+
+つまり、**分配関数を計算できれば熱力学はほぼ完結する**。逆に言えば、計算の本丸はミクロ状態の和 @eq-partition-function を実行する点にある。
+
+**例：N 個の独立な調和振動子**
+
+エネルギー $\epsilon_n = (n + 1/2)\hbar\omega$ を持つ独立な振動子 $N$ 個の系では、
+
+$$
+Z = \prod_{i=1}^N Z_1, \quad Z_1 = \sum_{n=0}^\infty e^{-\beta(n + 1/2)\hbar\omega} = \frac{e^{-\beta\hbar\omega/2}}{1 - e^{-\beta\hbar\omega}}
+$$ {#eq-partition-oscillator}
+
+ここから平均エネルギー：
+
+$$
+\langle E \rangle = N \left( \frac{\hbar\omega}{2} + \frac{\hbar\omega}{e^{\beta\hbar\omega} - 1} \right)
+$$ {#eq-mean-energy-oscillator}
+
+第二項に **$1/(e^{\hbar\omega/k_B T} - 1)$** という形が現れていることに注意。これがプランク分布の占有因子に他ならない。プランクが量子仮説でこの式に辿り着いたのは、第10章で本格的に扱う。
+
+::: {.callout-tip appearance="simple"}
+**問い**：いま導いた振動子の式 @eq-mean-energy-oscillator は、プランク分布そのものではないのか？
+
+**短答**：構造はほぼ同じだが、まだプランク分布ではない。@eq-mean-energy-oscillator は「ある **一つの** モードの平均エネルギー」を与える式である。プランク分布 $B_\nu(T)$ は、これに「振動数 $\nu$ 近傍にどれだけのモードがあるか」（モード密度）を掛けたもの。
+
+**もう一歩**：モード密度の話は第V部・第14章で扱う。中心地図のプランク関数の **指数関数因子**（占有因子）が本章で説明され、**前因子** $2h\nu^3/c^2$ は第V部で説明される、という構造になっている。
+:::
+
+::: {.callout-note}
+**使えるようになった道具**（§7.1〜7.2）：
+
+- 分配関数 $Z$ から、平均エネルギー・自由エネルギー・エントロピー・圧力・比熱までを微分一発で取り出せる
+- 量子化された調和振動子の平均エネルギー @eq-mean-energy-oscillator に、観測されるプランク分布の指数関数因子 $1/(e^{\hbar\omega/k_BT}-1)$ がすでに現れる ― 観測される高振動数の指数減衰の起源がここに芽生えている
+:::
+
+## 7.3 Boltzmann 分布 ― 古典統計の中心定理 {#sec-statistical-mechanics-boltzmann}
+
+[本文目安：B3]
+
+@eq-boltzmann-prob を観測量で表すと、$N$ 個の同種粒子のうち、エネルギー $E_i$ の状態 $i$ にある粒子数の平均は
+
+$$
+\langle n_i \rangle = N \cdot \frac{g_i e^{-E_i/k_B T}}{\sum_j g_j e^{-E_j/k_B T}}
+$$ {#eq-boltzmann-distribution}
+
+ここで $g_i$ は状態 $i$ の**縮退度**（**degeneracy**）。これが（古典）**Boltzmann 分布** である。
+
+**例：水素原子の準位占有数**
+
+水素原子の主量子数 $n$ の準位は、エネルギー $E_n = -13.6 \text{ eV} / n^2$ をもち、縮退度は $g_n = 2 n^2$（電子スピン込み）。温度 $T$ の熱浴と平衡にあるとき、
+
+$$
+\frac{n_2}{n_1} = \frac{g_2}{g_1} e^{-(E_2 - E_1)/k_B T}
+$$ {#eq-boltzmann-hydrogen}
+
+この比は、第VII部で線スペクトルの強度比から温度を求める基本式になる。
+
+::: {.callout-note}
+**対応（観測）**：観測される線スペクトル強度比から温度を読むのは、まさにこの Boltzmann 分布が成り立っているという仮定（LTE）に基づいている。LTE が破れる場面（non-LTE、第5章 §5.5）では @eq-boltzmann-hydrogen は使えない。
+:::
+
+::: {.callout-note}
+**使えるようになった道具**（§7.3）：Boltzmann 分布 @eq-boltzmann-distribution は、観測される複数の線の強度比から温度を読み出す「**励起温度**」推定の基礎式である。第VII部・第23章で本格的に応用する。
+:::
+
+## 7.4 平均値と揺らぎ {#sec-statistical-mechanics-fluctuations}
+
+[本文目安：B3]
+
+統計力学は平均値だけでなく、**揺らぎ**（**fluctuations**, 統計的なばらつき）も予言する。揺らぎは温度・密度・エネルギー・光子数などのあらゆる量に現れる。
+
+エネルギー揺らぎは分配関数からこう求まる：
+
+$$
+\langle (\Delta E)^2 \rangle = \langle E^2 \rangle - \langle E \rangle^2 = k_B T^2 \frac{\partial \langle E \rangle}{\partial T} = k_B T^2 C_V
+$$ {#eq-energy-fluctuation}
+
+$C_V$ は定積熱容量。$N \sim 10^{23}$ では、相対的な揺らぎは $\Delta E / \langle E \rangle \sim 1/\sqrt{N} \sim 10^{-11}$ で、観測に出てこない（マクロ熱力学が成り立つ理由）。
+
+しかし**少数粒子系**や**特定の振動数帯**では揺らぎが重要になる。
+
+**CMB のスペクトル歪み**：CMB の黒体スペクトルは完璧だが、初期宇宙の様々な過程（粒子崩壊、再結合、Compton 散乱の不完全さ）がスペクトルに微小な歪みを残しうる。これらの歪みは「光子数の揺らぎ」「エネルギーの揺らぎ」を反映する量であり、第16章で扱う。
+
+::: {.callout-tip appearance="simple"}
+**問い**：揺らぎが小さいのは、なぜ「自然法則」のように見えるのか？
+
+**短答**：$N$ が大きいから。揺らぎは $1/\sqrt{N}$ で減衰するので、アボガドロ数規模の系では事実上ゼロに見える。
+
+**もう一歩**：宇宙論的スケールの観測では話が違う。空間的に異なる場所の CMB 温度ゆらぎは $\Delta T / T \sim 10^{-5}$ で観測されているが、これは「熱平衡の揺らぎ」ではなく、初期宇宙の量子ゆらぎが膨張で増幅された結果である（第16章）。両者は混同しないこと。
+:::
+
+## 7.5 熱力学関数とのつながり {#sec-statistical-mechanics-thermodynamics}
+
+[本文目安：B3-B4｜導出：M1]
+
+ここまで導入した分配関数 $Z$ は、熱力学の標準的関数とすべて対応している。鍵となる関係：
+
+$$
+F = -k_B T \ln Z
+$$ {#eq-free-energy}
+
+ここから
+
+$$
+S = -\frac{\partial F}{\partial T}, \quad P = -\frac{\partial F}{\partial V}, \quad \mu = \frac{\partial F}{\partial N}
+$$
+
+**化学ポテンシャル**（**chemical potential**）$\mu$ は粒子数に対する Lagrange 乗数で、@eq-lagrange の $\alpha = -\mu/k_B T$ に対応する。
+
+**化学ポテンシャルの物理的意味**：粒子を一つ加えたときの自由エネルギーの変化。「粒子数を保存しないといけない系」では化学ポテンシャルが現れ、保存しない系（光子のように）では $\mu = 0$ になる。
+
+なぜ光子は粒子数を保存しないか。電磁場のモードと物質の相互作用（吸収・放出）で光子は生成・消滅し、その数は決まっていない。エネルギーは保存するが個数は保存しない。これが**光子の化学ポテンシャルがゼロ**になる物理的理由で、第8章で詳しく扱う。
+
+## 7.6 古典統計の限界 ― 放射場での破綻 {#sec-statistical-mechanics-classical-limit}
+
+[本文目安：B3]
+
+古典統計力学を放射場にそのまま適用すると、本書が逆引きで辿る**最初の決定的な失敗**に遭遇する。
+
+**古典の結論（Rayleigh–Jeans）**：振動数 $\nu$ あたりのモード数を $g(\nu)$ とすると、エネルギー等分配定理から各モードには平均エネルギー $k_B T$ が配分される。よって振動数 $\nu$ あたりの放射エネルギー密度は
+
+$$
+u_\nu^\text{RJ} = g(\nu) \cdot k_B T = \frac{8\pi \nu^2}{c^3} k_B T
+$$ {#eq-rj-classical}
+
+これは振動数の二乗に比例して増加し、全エネルギー $\int u_\nu d\nu$ は発散する。
+
+**観測との矛盾**：実際の黒体スペクトルは、高振動数で指数関数的に減衰し、全エネルギー $u = aT^4$ は有限である。古典統計は決定的に間違っている。
+
+**何が問題か**：
+
+- 古典統計の**エネルギー等分配定理**（**equipartition theorem**, 各自由度に $k_B T$）は、エネルギーが**連続的に**やりとりされる前提に立つ
+- 高振動数のモード（$h\nu \gg k_B T$）では、エネルギー $h\nu$ という大きな単位でしかエネルギーが分配されえない → 等分配が成り立たない
+
+これを正確に取り扱うには、**量子的な性質**（エネルギー量子化＋粒子の区別不能性）が必要である。第8章で「光子の統計」として導入し、これがプランク分布の占有因子 $1/(e^{h\nu/kT}-1)$ を生む。
+
+::: {.callout-note}
+**注意（理論）**：古典統計の破綻は「**紫外線破綻**」（**ultraviolet catastrophe**）と呼ばれる。これは決定的な歴史的契機で、量子論誕生（Planck 1900, Einstein 1905）に直結した。第9章で本格的に扱う。
+:::
+
+::: {.callout-tip appearance="simple"}
+**問い**：Rayleigh–Jeans 則は完全に間違いなのか？
+
+**短答**：いいえ、低振動数極限（$h\nu \ll k_B T$）では正しい。電波天文学ではほぼ常にこの極限で観測しており、Rayleigh–Jeans は実用的に最も使われる近似である（第2章 §2.5）。
+
+**もう一歩**：プランク分布の物理を学ぶときは、「古典で完全に間違っている」ではなく「**低振動数では古典が正しく、高振動数で量子効果が効く**」というニュアンスで理解するのが正確である。これが第IV部全体の論点になる。
+:::
+
+::: {.callout-note}
+**使えるようになった道具**（§7.4〜7.6）：
+
+- 揺らぎ $\Delta E / \langle E \rangle \sim 1/\sqrt{N}$ から、観測上いつ熱力学的決定論が信用できるかを判断できる
+- 古典統計の枠組みでは観測される Rayleigh–Jeans 形（低振動数）は説明できる。観測される高振動数の指数減衰は古典では出ない ― これが量子論を要請する観測上の根拠
+:::
+
+---
+
+## この章で何がわかったか {#sec-statistical-mechanics-summary .unnumbered}
+
+::: {.callout-summary}
+**中心地図に戻る**
+
+本章で、古典統計力学の主要道具 ― 分配関数 $Z$、Boltzmann 分布 $\langle n_i \rangle \propto g_i e^{-E_i/k_B T}$、揺らぎ、熱力学関数 ― が整った。
+
+中心地図 $B_\nu(T)$ の **「式が成り立つ条件」**（第6章）に続き、本章では **「指数の中身 $E/k_B T$」が温度の正体である**ことが言語化された。
+
+しかし古典統計をそのまま放射場に適用しようとすると、Rayleigh–Jeans 則の発散という決定的な破綻に出会う。**指数関数因子 $1/(e^{h\nu/kT}-1)$ が出てこない**のである。
+
+**次章へ**：第8章で「光子の統計」 ― 区別できない Bose 粒子の統計力学 ― を扱う。ここで初めて、プランク分布の指数関数因子（占有因子）が必然として現れる。光子の化学ポテンシャルがなぜゼロかも、ここで明らかになる。これが第III部全体のクライマックスである。
+:::
+
+## 演習問題 {#sec-statistical-mechanics-exercises .unnumbered}
+
+::: {.callout-note appearance="simple"}
+演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。
+:::
+
+## さらに学ぶための参考文献 {#sec-statistical-mechanics-further .unnumbered}
+
+- Reif, *Fundamentals of Statistical and Thermal Physics* (McGraw-Hill, 1965) — Boltzmann 分布と分配関数の標準教科書
+- Pathria & Beale, *Statistical Mechanics* (Academic Press, 3rd ed., 2011) — より現代的な体系化
+- 久保亮五『大学演習　熱学・統計力学』（裳華房, 1961）— 古典的な日本の教科書、演習豊富

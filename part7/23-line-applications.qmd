@@ -1,0 +1,76 @@
+---
+title: "第23章　線スペクトルから天体物理を読む"
+lang: ja
+---
+
+::: {.chapter-overview}
+**この章の主題**：元素組成、視線速度・赤方偏移、温度・密度・電離状態の診断、星間物質、AGN/QSOの線、CMB前後の再結合線
+:::
+
+## この章の中心地図 {#sec-line-applications-map .unnumbered}
+
+{{< include ../_includes/_hydrogen-map.qmd >}}
+
+## この章で答える問い {#sec-line-applications-questions .unnumbered}
+
+::: {.callout-question}
+- 恒星の元素組成は、観測される線スペクトルからどうやって決まるのか
+- 視線速度・赤方偏移は線位置のどんなずれから求めるのか
+- 温度・密度・電離状態はどの線比（line ratio）で診断できるのか
+- AGN の輝線は、ブラックホール近傍の何を測っているのか
+- CMB 直前の再結合線は、宇宙の電離史をどう刻んでいるのか
+:::
+
+## 到達目標 {#sec-line-applications-goals .unnumbered}
+
+この章を読み終えると、読者は次のことができるようになる：
+
+- 観測線から元素組成・運動・温度・密度を引き出す典型的な手法を整理して述べられる
+- 線スペクトルが連続スペクトル（第VI部）と相補的な情報を与えることを具体例で示せる
+- 線スペクトル地図の全因子を、観測手順と対応づけられる
+
+---
+
+## 23.1 （節タイトル） {#sec-line-applications-s1}
+
+[本文目安：B4]
+
+TODO：本文。三原則（① 逆引き／② 背景物理を曖昧にしない／③ 天下り的に式を与えない）に従って執筆する。
+
+::: {.callout-derive collapse="true"}
+## 導出ノート（オンライン版限定）
+
+TODO：本文では結果を示すにとどめ、丁寧な導出はここに置く。
+:::
+
+## 23.2 （節タイトル） {#sec-line-applications-s2}
+
+[本文目安：B4]
+
+TODO：本文
+
+## 23.3 （節タイトル） {#sec-line-applications-s3}
+
+[本文目安：B4]
+
+TODO：本文
+
+---
+
+## この章で何がわかったか {#sec-line-applications-summary .unnumbered}
+
+::: {.callout-summary}
+**中心地図に戻る**
+
+TODO：この章で、中心地図（プランク関数または水素線吸収係数）のどの因子・どの構造が解き明かされたかを 3〜5 行で書く。次章へのつながりも示す。
+:::
+
+## 演習問題 {#sec-line-applications-exercises .unnumbered}
+
+::: {.callout-note appearance="simple"}
+演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。
+:::
+
+## さらに学ぶための参考文献 {#sec-line-applications-further .unnumbered}
+
+- TODO：本書を超えて学びたい読者のための参考文献

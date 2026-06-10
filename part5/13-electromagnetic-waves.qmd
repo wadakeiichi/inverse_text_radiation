@@ -1,0 +1,75 @@
+---
+title: "第13章　電磁波としての光"
+lang: ja
+---
+
+::: {.chapter-overview}
+**この章の主題**：Maxwell方程式、波動方程式、平面波、偏光、ポインティングベクトル
+:::
+
+## この章の中心地図 {#sec-electromagnetic-waves-map .unnumbered}
+
+{{< include ../_includes/_planck-map-modes.qmd >}}
+
+## この章で答える問い {#sec-electromagnetic-waves-questions .unnumbered}
+
+::: {.callout-question}
+- Maxwell 方程式から波動方程式が出てくることは、観測される光のどの性質を保証するのか
+- 偏光は観測の言葉では何を意味し、どんな天文学的情報を持つのか
+- Poynting ベクトルとフラックスの関係は何か
+- 境界条件と空洞放射のスペクトルは、どこで結びつくのか
+:::
+
+## 到達目標 {#sec-electromagnetic-waves-goals .unnumbered}
+
+この章を読み終えると、読者は次のことができるようになる：
+
+- Maxwell 方程式から平面波解を導き、振幅と偏光の自由度を説明できる
+- Poynting ベクトルを、観測量としてのフラックスに対応づけられる
+- 境界条件の指定が、次章のモード密度議論の出発点になることを把握できる
+
+---
+
+## 13.1 （節タイトル） {#sec-electromagnetic-waves-s1}
+
+[本文目安：B3]
+
+TODO：本文。三原則（① 逆引き／② 背景物理を曖昧にしない／③ 天下り的に式を与えない）に従って執筆する。
+
+::: {.callout-derive collapse="true"}
+## 導出ノート（オンライン版限定）
+
+TODO：本文では結果を示すにとどめ、丁寧な導出はここに置く。
+:::
+
+## 13.2 （節タイトル） {#sec-electromagnetic-waves-s2}
+
+[本文目安：B3]
+
+TODO：本文
+
+## 13.3 （節タイトル） {#sec-electromagnetic-waves-s3}
+
+[本文目安：B3]
+
+TODO：本文
+
+---
+
+## この章で何がわかったか {#sec-electromagnetic-waves-summary .unnumbered}
+
+::: {.callout-summary}
+**中心地図に戻る**
+
+TODO：この章で、中心地図（プランク関数または水素線吸収係数）のどの因子・どの構造が解き明かされたかを 3〜5 行で書く。次章へのつながりも示す。
+:::
+
+## 演習問題 {#sec-electromagnetic-waves-exercises .unnumbered}
+
+::: {.callout-note appearance="simple"}
+演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。
+:::
+
+## さらに学ぶための参考文献 {#sec-electromagnetic-waves-further .unnumbered}
+
+- TODO：本書を超えて学びたい読者のための参考文献

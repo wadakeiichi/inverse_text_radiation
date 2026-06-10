@@ -1,0 +1,76 @@
+---
+title: "第15章　現実の天体は完全な黒体ではない"
+lang: ja
+---
+
+::: {.chapter-overview}
+**この章の主題**：恒星大気と吸収線、灰色大気、振動数依存不透明度、修正黒体、散乱、非熱的放射
+:::
+
+## この章の中心地図 {#sec-non-blackbody-map .unnumbered}
+
+{{< include ../_includes/_planck-map-deviations.qmd >}}
+
+## この章で答える問い {#sec-non-blackbody-questions .unnumbered}
+
+::: {.callout-question}
+- なぜ恒星のスペクトルには深い吸収線が刻まれているのに、全体としては黒体に近いのか
+- 灰色大気近似はどのくらい良い近似で、どこから破綻するのか
+- 振動数依存の不透明度は、観測スペクトルの形をどう歪めるのか
+- 「修正黒体」とは何で、なぜダストのスペクトルがそう呼ばれるのか
+- 非熱的放射（シンクロトロンなど）は熱的放射からどう区別するのか
+:::
+
+## 到達目標 {#sec-non-blackbody-goals .unnumbered}
+
+この章を読み終えると、読者は次のことができるようになる：
+
+- 黒体スペクトルからのずれを引き起こす主要な物理機構を分類できる
+- 灰色大気近似と振動数依存不透明度の違いを、観測との対応で説明できる
+- 修正黒体スペクトルの形を、ダストの放射効率から導ける
+
+---
+
+## 15.1 （節タイトル） {#sec-non-blackbody-s1}
+
+[本文目安：B3-B4]
+
+TODO：本文。三原則（① 逆引き／② 背景物理を曖昧にしない／③ 天下り的に式を与えない）に従って執筆する。
+
+::: {.callout-derive collapse="true"}
+## 導出ノート（オンライン版限定）
+
+TODO：本文では結果を示すにとどめ、丁寧な導出はここに置く。
+:::
+
+## 15.2 （節タイトル） {#sec-non-blackbody-s2}
+
+[本文目安：B3-B4]
+
+TODO：本文
+
+## 15.3 （節タイトル） {#sec-non-blackbody-s3}
+
+[本文目安：B3-B4]
+
+TODO：本文
+
+---
+
+## この章で何がわかったか {#sec-non-blackbody-summary .unnumbered}
+
+::: {.callout-summary}
+**中心地図に戻る**
+
+TODO：この章で、中心地図（プランク関数または水素線吸収係数）のどの因子・どの構造が解き明かされたかを 3〜5 行で書く。次章へのつながりも示す。
+:::
+
+## 演習問題 {#sec-non-blackbody-exercises .unnumbered}
+
+::: {.callout-note appearance="simple"}
+演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。
+:::
+
+## さらに学ぶための参考文献 {#sec-non-blackbody-further .unnumbered}
+
+- TODO：本書を超えて学びたい読者のための参考文献

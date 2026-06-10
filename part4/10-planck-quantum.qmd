@@ -1,0 +1,209 @@
+---
+title: "第10章　プランクの量子仮説"
+lang: ja
+---
+
+::: {.chapter-overview}
+**この章の主題**：第9章で見たように、古典論で黒体スペクトルを説明しようとすると紫外線破綻を起こす。Planck (1900) はこの破綻を救うために、**振動子のエネルギーが $h\nu$ の整数倍にしか取れない**という思い切った仮定を立てた。本章では、この仮定 ― **エネルギー量子化**（**energy quantization**）― がプランク分布を必然的に与えることを示す。第8章で Bose 統計から導いた占有因子と、ここで導く Planck のオリジナルな計算は、別の出発点から同じゴールに到達する。Planck の歴史的歩みと、現代的解釈の両方を示す。
+:::
+
+## この章の中心地図 {#sec-planck-quantum-map .unnumbered}
+
+{{< include ../_includes/_planck-map-quantum.qmd >}}
+
+::: {.callout-note}
+**方針**：本章で扱う **Planck 定数 $h$**（中心地図の強調因子）は、本書全体で最も重要な量子論的定数である。本章は「$h$ を導入する」と「$h$ がスペクトルの形に責任を持つ」ことを示す章である。
+:::
+
+## この章で答える問い {#sec-planck-quantum-questions .unnumbered}
+
+::: {.callout-question}
+- プランクは何を「やむを得ず」仮定したのか
+- なぜ $h\nu$ という離散単位が必要だったのか
+- プランクの量子仮説は、観測スペクトルのどの部分を救ったのか
+- 振動子のエネルギー量子化と、光子の存在は同じことを言っているのか
+:::
+
+## 到達目標 {#sec-planck-quantum-goals .unnumbered}
+
+この章を読み終えると、読者は次のことができるようになる：
+
+- プランクの量子仮説を出発点として、プランク分布を導ける
+- $h\nu$ が高振動数側の指数関数的減衰を生む仕組みを説明できる
+- プランクの歴史的試行錯誤と、現代的解釈（光子の存在）の関係を整理できる
+
+---
+
+## 10.1 エネルギー量子 ― Planck の大胆な仮定 {#sec-planck-quantum-energy-quantum}
+
+[本文目安：B3]
+
+第9章で見た古典の破綻を救うには、エネルギーの離散単位 $\epsilon(\nu)$ を導入する必要があった。Planck (1900) はこの単位として
+
+$$
+\epsilon = h\nu
+$$ {#eq-planck-quantum-epsilon}
+
+を仮定した。$h$ は新しい普遍定数で、後に **Planck 定数**（**Planck constant**）と呼ばれる。現在の値は
+
+$$
+h = 6.626 \times 10^{-27}\ \mathrm{erg \cdot s} = 6.626 \times 10^{-34}\ \mathrm{J \cdot s}
+$$
+
+である。Planck はこの値を、彼の式が黒体スペクトルの観測データを再現するように決定した。
+
+**仮定の内容**を正確に述べると次のようになる：
+
+> 振動数 $\nu$ で振動する電磁モード（あるいは空洞壁の振動子）のエネルギーは、$0, h\nu, 2h\nu, 3h\nu, \ldots$ という離散的な値しかとらない。
+
+これは古典物理から見ると不自然な仮定である。古典では振動子のエネルギーは任意の連続値をとれるはずだから。しかしこの仮定なしには、観測される黒体スペクトルの高振動数側の減衰は出てこない。
+
+::: {.callout-note}
+**歴史**：Planck 自身は当初、この量子仮説を**計算上の便法**として導入した。「振動子のエネルギーが本質的に離散である」という物理的解釈には、彼自身ためらいがあった。エネルギー量子の物理的実在性を主張したのは、後の Einstein (1905) ― 光電効果の論文 ― である。第11章で扱う。
+:::
+
+## 10.2 振動子の量子化 ― 統計力学の組み直し {#sec-planck-quantum-oscillator}
+
+[本文目安：B3]
+
+エネルギー量子 @eq-planck-quantum-epsilon を仮定すると、第7章 §7.2 の手順で振動子の分配関数を組み直せる。エネルギー準位が $E_n = n h\nu$（$n = 0, 1, 2, \ldots$）で離散化された場合、分配関数は
+
+$$
+Z_1(\beta) = \sum_{n=0}^{\infty} e^{-\beta n h\nu} = \frac{1}{1 - e^{-\beta h\nu}}
+$$ {#eq-partition-quantized-oscillator}
+
+ここで $\beta = 1/k_B T$。これは無限等比級数の和である（古典の連続積分なら $\int_0^\infty e^{-\beta E} dE = 1/\beta = k_B T$ が出る）。
+
+分配関数の対数から平均エネルギーが求まる（第7章 §7.2 の手法）：
+
+$$
+\langle E \rangle = -\frac{\partial \ln Z_1}{\partial \beta} = \frac{h\nu}{e^{h\nu/k_B T} - 1}
+$$ {#eq-mean-energy-quantized}
+
+これが**量子化された振動子のひとつあたりの平均エネルギー**である。第7章 §7.2 の @eq-mean-energy-oscillator で既に見た形だが、ここでは Planck の量子仮説から直接出ている。
+
+@eq-mean-energy-quantized を古典の等分配 $\langle E \rangle_\text{classical} = k_B T$ と比較すると：
+
+- 低振動数極限（$h\nu \ll k_B T$）：$\langle E \rangle \to k_B T$ ― **古典と一致**
+- 高振動数極限（$h\nu \gg k_B T$）：$\langle E \rangle \to h\nu \, e^{-h\nu/k_B T} \to 0$ ― **古典より遥かに小さい**
+
+これが**高振動数モードの「凍結」**である。エネルギー単位 $h\nu$ が熱エネルギー $k_B T$ より遥かに大きい場合、そのモードを励起するための熱が手に入らず、平均エネルギーが指数関数的に小さくなる。
+
+::: {.callout-tip appearance="simple"}
+**問い**：なぜ「凍結」と呼ぶのか？
+
+**短答**：高振動数モードに熱的にアクセスできない ― つまり熱エネルギーがそのモードに「行けない」 ― 状態を、低温物理の言葉で「凍結」（freeze-out）と呼ぶ。
+
+**もう一歩**：同じ概念は、二原子分子の回転・振動自由度の低温での凍結、固体の比熱が低温で $T^3$ に従う Debye 則、宇宙論的にニュートリノが脱結合する状況など、さまざまな場面で再登場する。Planck の議論は、その最初の例である。
+:::
+
+## 10.3 プランク分布の導出 ― 量子振動子 × モード密度 {#sec-planck-quantum-derivation}
+
+[本文目安：B3-B4｜導出：M1]
+
+@eq-mean-energy-quantized と、第9章 @eq-mode-density-borrowed のモード密度 $g(\nu) = 8\pi\nu^2/c^3$ を組み合わせると、放射場の振動数あたりエネルギー密度は
+
+$$
+u_\nu(T) = g(\nu) \cdot \langle E \rangle = \frac{8\pi h \nu^3}{c^3} \cdot \frac{1}{e^{h\nu/k_B T} - 1}
+$$ {#eq-planck-energy-density-quantum}
+
+比強度に直すと
+
+$$
+B_\nu(T) = \frac{c}{4\pi} u_\nu = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/k_B T} - 1}
+$$ {#eq-planck-quantum-rederived}
+
+**プランク分布が、振動子の量子化から導かれた**。これが Planck (1900) の歴史的論文の核心である。
+
+第8章で Bose 統計から導いた占有因子と、本章でエネルギー量子化から導いた占有因子は、**全く同じ形**になる：
+
+| 出発点 | 占有因子 |
+|---|---|
+| 第8章：光子の Bose 統計（$\mu = 0$） | $\bar{n} = 1/(e^{h\nu/k_B T} - 1)$ |
+| 第10章：振動子のエネルギー量子化 | $\langle E \rangle / h\nu = 1/(e^{h\nu/k_B T} - 1)$ |
+
+これは偶然ではない。両者は同じ物理（電磁場の各モードを量子化された調和振動子と見る）の二つの言い方である。第12章 §12.6 で「電磁場の量子化」として整理し直す。
+
+::: {.callout-note}
+**対応（観測）**：高振動数で $1/(e^{h\nu/k_B T}-1) \sim e^{-h\nu/k_B T}$ が出ることが、観測される黒体スペクトルの**指数減衰**（第1章で見た）の起源である。これが Planck の量子仮説が「観測の必然」として要請された理由である。
+:::
+
+## 10.4 Wien・Rayleigh–Jeans 両極限の再導出 {#sec-planck-quantum-limits}
+
+[本文目安：B3-B4｜導出：M1]
+
+@eq-planck-quantum-rederived から、第2章 §2.5 で見た両極限がきれいに出る。
+
+**低振動数極限**（$h\nu \ll k_B T$）：分母 $e^{h\nu/k_B T} - 1 \simeq h\nu/k_B T$ なので
+
+$$
+B_\nu \to \frac{2\nu^2}{c^2} k_B T
+$$ {#eq-rj-from-planck}
+
+これは第9章 @eq-rayleigh-jeans-bnu の Rayleigh–Jeans 則と一致する。**$h$ が消える**ことに注意。この極限では古典統計が正しい。
+
+**高振動数極限**（$h\nu \gg k_B T$）：分母 $e^{h\nu/k_B T} - 1 \simeq e^{h\nu/k_B T}$ なので
+
+$$
+B_\nu \to \frac{2h\nu^3}{c^2} e^{-h\nu/k_B T}
+$$ {#eq-wien-from-planck}
+
+これが **Wien の式**である（**Wien's distribution law**）。**$h$ が指数の中と前因子の両方に現れる**ことに注意。
+
+両極限の境目は $h\nu \sim k_B T$、すなわち $\nu \sim k_B T/h \simeq 2 \times 10^{10} (T/\text{K})$ Hz である。太陽光（$T \sim 5800$ K）なら境界は近赤外、CMB（2.7 K）なら境界はマイクロ波領域。
+
+::: {.callout-tip appearance="simple"}
+**問い**：なぜ Wien は Planck より先に Wien の式（経験式として）を発見できたのか？
+
+**短答**：Wien (1896) は熱力学と次元解析だけで $B_\nu = A\nu^3 f(\nu/T)$ という形（**Wien displacement function**）まで絞り、観測データに当てはめて $f(x) = e^{-\beta x}$ という近似を得た。これが高振動数側に正しい形だが、低振動数では Rayleigh–Jeans の方が観測と合うことが後に判明した。
+
+**もう一歩**：Planck の真の貢献は、Wien 式（高振動数で正しい）と Rayleigh–Jeans 式（低振動数で正しい）の**両方を補間する単一の式**を、量子仮説という物理的根拠つきで提示したこと。経験式の補間ではなく、物理的に正しい全振動数スペクトルを与えた。
+:::
+
+## 10.5 歴史的背景と現代的解釈 {#sec-planck-quantum-history}
+
+[本文目安：B3]
+
+Planck の量子仮説の歴史的・物理的位置づけを整理する。
+
+**Planck (1900)** ― 黒体スペクトルを再現するために、空洞壁の物質振動子のエネルギーが $h\nu$ の整数倍に限られると仮定。Planck 自身は当初これを**計算上の便法**と見なし、エネルギーが本質的に離散である物理的解釈は留保した。
+
+**Einstein (1905)** ― 光電効果の解析から、電磁場そのものが量子化された光（**光量子**, light quanta）から成ることを主張。Planck の振動子の量子化と物理的に等価だが、解釈の強度がより強い。第11章で扱う。
+
+**現代的解釈（場の量子論）**：電磁場の各モードを**量子化された調和振動子**として扱う（第VIII部・第24章）。各モードのエネルギー準位が $E_n = (n + 1/2) h\nu$（零点エネルギー込み）となり、$n$ が「そのモードに含まれる光子の数」を表す。Planck の振動子と Einstein の光量子は、この描像の中で統一される。
+
+**観測の意義**：Planck (1900) の論文は、20世紀物理学の出発点と広く認められている。一つの**観測**（黒体スペクトル）から、自然界に普遍的な定数 $h$ が導入され、量子力学・場の量子論が立ち上がる流れの起点となった。本書の三原則「① 逆引き」の象徴的な瞬間とも言える ― 観測が理論を駆動した、その典型例である。
+
+::: {.callout-note}
+**使えるようになった道具**（§10.1〜10.5）：
+
+- エネルギー量子 $\epsilon = h\nu$ という仮定から、量子化振動子の平均エネルギー @eq-mean-energy-quantized が出る
+- これにモード密度を組み合わせると、観測されるプランク分布全体形が再構成される
+- Wien・Rayleigh–Jeans の両極限が一つの式から自然に出る ― 観測される異なる振動数帯のスペクトルが、単一の量子仮説で説明される
+:::
+
+---
+
+## この章で何がわかったか {#sec-planck-quantum-summary .unnumbered}
+
+::: {.callout-summary}
+**中心地図に戻る**
+
+本章で、中心地図プランク関数の **指数の中の $h$**（$h\nu/k_B T$ の項）と、**前因子の $h$**（$2h\nu^3/c^2$）の両方が、Planck の量子仮説 $\epsilon = h\nu$ から必然として出ることを示した。これは中心地図の指数関数因子の量子論的起源を明らかにする。
+
+ただし、Planck の議論は「空洞壁の物質振動子のエネルギーが量子化される」という形であり、**光そのものが量子化されているかどうか**は留保されたままだった。これを明確にするのが、第11章で扱う Einstein の方法である。
+
+**次章へ**：第11章では Einstein (1905, 1916) の議論をたどる。光量子の導入と、自発放出・誘導放出・誘導吸収による詳細釣り合いから、プランク分布を再度導出する。Einstein 係数は線スペクトル（第VII部）の中心概念にもなり、本書の二つの地図（プランク関数地図と水素線地図）をつなぐ要となる。
+:::
+
+## 演習問題 {#sec-planck-quantum-exercises .unnumbered}
+
+::: {.callout-note appearance="simple"}
+演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。
+:::
+
+## さらに学ぶための参考文献 {#sec-planck-quantum-further .unnumbered}
+
+- Planck, "Ueber das Gesetz der Energieverteilung im Normalspectrum", *Annalen der Physik* 309 (1901) — 量子仮説の原論文（独語）
+- Pais, *Subtle is the Lord* (Oxford, 1982) — Planck・Einstein の物理学的位置づけ
+- Reif, *Fundamentals of Statistical and Thermal Physics* (McGraw-Hill, 1965) — 量子化振動子の標準的扱い

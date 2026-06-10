@@ -1,0 +1,76 @@
+---
+title: "第19章　線スペクトルはどこに現れるか"
+lang: ja
+---
+
+::: {.chapter-overview}
+**この章の主題**：太陽の吸収線、恒星のスペクトル分類、星雲の輝線、21cm線、再結合線、分子線、AGN/QSOの線
+:::
+
+## この章の中心地図 {#sec-where-lines-map .unnumbered}
+
+{{< include ../_includes/_hydrogen-map.qmd >}}
+
+## この章で答える問い {#sec-where-lines-questions .unnumbered}
+
+::: {.callout-question}
+- なぜ太陽光のスペクトルには細い暗線（Fraunhofer 線）が見えるのか
+- 同じ水素から、ある天体では吸収線、別の天体では輝線が見えるのはなぜか
+- 21 cm 線は何の遷移で、なぜ宇宙物理で特別な役割を持つのか
+- 分子線は原子線とどう違い、何を診断するのに使えるのか
+- AGN・クェーサーの幅広い輝線は、何を語っているのか
+:::
+
+## 到達目標 {#sec-where-lines-goals .unnumbered}
+
+この章を読み終えると、読者は次のことができるようになる：
+
+- 宇宙のさまざまな天体に現れる線スペクトル（Fraunhofer 線・輝線・21 cm・分子線・AGN 線）を例示できる
+- 同じ遷移から吸収線にも輝線にもなる条件を、放射輸送の観点から説明できる
+- 線スペクトルが連続スペクトルと並んで、宇宙物理の二本目の主柱であることを位置づけられる
+
+---
+
+## 19.1 （節タイトル） {#sec-where-lines-s1}
+
+[本文目安：B3]
+
+TODO：本文。三原則（① 逆引き／② 背景物理を曖昧にしない／③ 天下り的に式を与えない）に従って執筆する。
+
+::: {.callout-derive collapse="true"}
+## 導出ノート（オンライン版限定）
+
+TODO：本文では結果を示すにとどめ、丁寧な導出はここに置く。
+:::
+
+## 19.2 （節タイトル） {#sec-where-lines-s2}
+
+[本文目安：B3]
+
+TODO：本文
+
+## 19.3 （節タイトル） {#sec-where-lines-s3}
+
+[本文目安：B3]
+
+TODO：本文
+
+---
+
+## この章で何がわかったか {#sec-where-lines-summary .unnumbered}
+
+::: {.callout-summary}
+**中心地図に戻る**
+
+TODO：この章で、中心地図（プランク関数または水素線吸収係数）のどの因子・どの構造が解き明かされたかを 3〜5 行で書く。次章へのつながりも示す。
+:::
+
+## 演習問題 {#sec-where-lines-exercises .unnumbered}
+
+::: {.callout-note appearance="simple"}
+演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。
+:::
+
+## さらに学ぶための参考文献 {#sec-where-lines-further .unnumbered}
+
+- TODO：本書を超えて学びたい読者のための参考文献

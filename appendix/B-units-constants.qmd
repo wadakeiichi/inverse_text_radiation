@@ -1,0 +1,8 @@
+---
+title: "付録 B　単位と基本定数"
+lang: ja
+---
+
+# 付録 B　単位と基本定数 {#sec-units-constants .unnumbered}
+
+TODO：CGS と SI の換算、物理基本定数、よく使う天文単位（pc, AU, M⊙, L⊙）、Rydberg 定数、Bohr 半径など。

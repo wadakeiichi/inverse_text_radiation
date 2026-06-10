@@ -1,0 +1,22 @@
+/*-- scss:defaults --*/
+
+// 和文セリフ・サンセリフ
+$font-family-serif: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", "ヒラギノ明朝 ProN", serif;
+$font-family-sans: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", "メイリオ", sans-serif;
+
+/*-- scss:rules --*/
+
+body {
+  font-family: $font-family-serif;
+  line-height: 1.85;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-sans;
+  font-weight: 700;
+}
+
+// 和文と数式の間に微小スペース
+.math {
+  margin: 0 0.1em;
+}

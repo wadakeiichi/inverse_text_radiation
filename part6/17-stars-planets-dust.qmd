@@ -1,0 +1,75 @@
+---
+title: "第17章　恒星・惑星・ダストの熱放射"
+lang: ja
+---
+
+::: {.chapter-overview}
+**この章の主題**：恒星の有効温度、惑星平衡温度、ダストの熱放射、赤外線天文学、多温度成分
+:::
+
+## この章の中心地図 {#sec-stars-planets-dust-map .unnumbered}
+
+{{< include ../_includes/_planck-map-deviations.qmd >}}
+
+## この章で答える問い {#sec-stars-planets-dust-questions .unnumbered}
+
+::: {.callout-question}
+- 恒星のスペクトル分類（OBAFGKM）は何を反映しているのか
+- 惑星の平衡温度を求めるとき、何を仮定し、何を無視しているのか
+- ダストの放射スペクトルが赤外で「黒体に似ているがずれている」のはなぜか
+- 多温度成分（恒星表層と内部、HII 領域と中性領域）は観測スペクトルにどう現れるのか
+:::
+
+## 到達目標 {#sec-stars-planets-dust-goals .unnumbered}
+
+この章を読み終えると、読者は次のことができるようになる：
+
+- 恒星の有効温度・惑星の平衡温度・ダストの色温度を、適切な近似のもとで計算できる
+- 修正黒体スペクトルからダストの性質（放射効率・温度・量）を読み取れる
+- 多温度合成スペクトルから、主要な温度成分を見分けられる
+
+---
+
+## 17.1 （節タイトル） {#sec-stars-planets-dust-s1}
+
+[本文目安：B3]
+
+TODO：本文。三原則（① 逆引き／② 背景物理を曖昧にしない／③ 天下り的に式を与えない）に従って執筆する。
+
+::: {.callout-derive collapse="true"}
+## 導出ノート（オンライン版限定）
+
+TODO：本文では結果を示すにとどめ、丁寧な導出はここに置く。
+:::
+
+## 17.2 （節タイトル） {#sec-stars-planets-dust-s2}
+
+[本文目安：B3]
+
+TODO：本文
+
+## 17.3 （節タイトル） {#sec-stars-planets-dust-s3}
+
+[本文目安：B3]
+
+TODO：本文
+
+---
+
+## この章で何がわかったか {#sec-stars-planets-dust-summary .unnumbered}
+
+::: {.callout-summary}
+**中心地図に戻る**
+
+TODO：この章で、中心地図（プランク関数または水素線吸収係数）のどの因子・どの構造が解き明かされたかを 3〜5 行で書く。次章へのつながりも示す。
+:::
+
+## 演習問題 {#sec-stars-planets-dust-exercises .unnumbered}
+
+::: {.callout-note appearance="simple"}
+演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。
+:::
+
+## さらに学ぶための参考文献 {#sec-stars-planets-dust-further .unnumbered}
+
+- TODO：本書を超えて学びたい読者のための参考文献

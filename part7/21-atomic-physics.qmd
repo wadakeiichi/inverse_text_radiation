@@ -1,0 +1,76 @@
+---
+title: "第21章　逆引き4：線スペクトルから原子物理へ"
+lang: ja
+---
+
+::: {.chapter-overview}
+**この章の主題**：水素原子のエネルギー準位、多電子原子と項記号、選択則、振動子強度、Einstein係数の再訪
+:::
+
+## この章の中心地図 {#sec-atomic-physics-map .unnumbered}
+
+{{< include ../_includes/_hydrogen-map.qmd >}}
+
+## この章で答える問い {#sec-atomic-physics-questions .unnumbered}
+
+::: {.callout-question}
+- なぜ水素のスペクトル線は、特定の波長にだけ現れるのか
+- リュードベリ公式の各項は、量子力学のどの結果から来るのか
+- 振動子強度 $f_{lu}$ は、観測の何と何の比から決まる量なのか
+- なぜ「許される遷移」と「禁制遷移」が存在し、後者がどんな天文学的情報を持つのか
+- Einstein 係数 A・B と振動子強度はどうつながるのか
+:::
+
+## 到達目標 {#sec-atomic-physics-goals .unnumbered}
+
+この章を読み終えると、読者は次のことができるようになる：
+
+- 水素原子のエネルギー準位とリュードベリ公式を、Schrödinger 方程式の帰結として理解できる
+- 振動子強度を、古典極限・量子論・Einstein 係数の三つの視点で結びつけられる
+- 選択則を電気双極子遷移の行列要素から説明し、許容遷移と禁制遷移の天文学的意味を述べられる
+
+---
+
+## 21.1 （節タイトル） {#sec-atomic-physics-s1}
+
+[本文目安：B3-B4]
+
+TODO：本文。三原則（① 逆引き／② 背景物理を曖昧にしない／③ 天下り的に式を与えない）に従って執筆する。
+
+::: {.callout-derive collapse="true"}
+## 導出ノート（オンライン版限定）
+
+TODO：本文では結果を示すにとどめ、丁寧な導出はここに置く。
+:::
+
+## 21.2 （節タイトル） {#sec-atomic-physics-s2}
+
+[本文目安：B3-B4]
+
+TODO：本文
+
+## 21.3 （節タイトル） {#sec-atomic-physics-s3}
+
+[本文目安：B3-B4]
+
+TODO：本文
+
+---
+
+## この章で何がわかったか {#sec-atomic-physics-summary .unnumbered}
+
+::: {.callout-summary}
+**中心地図に戻る**
+
+TODO：この章で、中心地図（プランク関数または水素線吸収係数）のどの因子・どの構造が解き明かされたかを 3〜5 行で書く。次章へのつながりも示す。
+:::
+
+## 演習問題 {#sec-atomic-physics-exercises .unnumbered}
+
+::: {.callout-note appearance="simple"}
+演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。
+:::
+
+## さらに学ぶための参考文献 {#sec-atomic-physics-further .unnumbered}
+
+- TODO：本書を超えて学びたい読者のための参考文献

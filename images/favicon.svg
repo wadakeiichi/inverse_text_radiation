@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- 宇宙の熱的スペクトル ― favicon プレースホルダ
+       連続スペクトル（虹色の帯）と離散線（短い縦線）を併置した
+       本書の主題を象徴する小型シンボル -->
+
+  <defs>
+    <linearGradient id="bgF" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0e1a"/>
+      <stop offset="100%" stop-color="#1f4e79"/>
+    </linearGradient>
+    <linearGradient id="planckF" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#a23b3b"/>
+      <stop offset="30%"  stop-color="#e6913e"/>
+      <stop offset="55%"  stop-color="#d4c241"/>
+      <stop offset="80%"  stop-color="#5fb0a0"/>
+      <stop offset="100%" stop-color="#2e6ca6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="64" height="64" rx="8" fill="url(#bgF)"/>
+
+  <!-- 連続スペクトル帯（上部） -->
+  <rect x="8" y="16" width="48" height="8" rx="2" fill="url(#planckF)" opacity="0.95"/>
+
+  <!-- 離散線（下部、Lyman/Balmer 系列風） -->
+  <g stroke-linecap="round">
+    <line x1="12" y1="34" x2="12" y2="50" stroke="#c43f6b" stroke-width="2"/>
+    <line x1="20" y1="34" x2="20" y2="50" stroke="#e6913e" stroke-width="1.8"/>
+    <line x1="28" y1="34" x2="28" y2="50" stroke="#d4c241" stroke-width="1.5"/>
+    <line x1="34" y1="34" x2="34" y2="50" stroke="#5fb0a0" stroke-width="1.3"/>
+    <line x1="40" y1="34" x2="40" y2="50" stroke="#2e6ca6" stroke-width="1.1"/>
+    <line x1="45" y1="34" x2="45" y2="50" stroke="#2e6ca6" stroke-width="0.9"/>
+    <line x1="49" y1="34" x2="49" y2="50" stroke="#2e6ca6" stroke-width="0.7"/>
+    <line x1="52" y1="34" x2="52" y2="50" stroke="#2e6ca6" stroke-width="0.5"/>
+  </g>
+
+  <!-- 中央の小矢印（逆引きを示唆） -->
+  <g transform="translate(32, 30)">
+    <line x1="-3" y1="0" x2="3" y2="0" stroke="#ffd97a" stroke-width="1.2"/>
+    <polygon points="-3,0 -1.5,-1.5 -1.5,1.5" fill="#ffd97a"/>
+  </g>
+</svg>

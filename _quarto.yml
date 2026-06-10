@@ -1,0 +1,170 @@
+project:
+  type: book
+  output-dir: _book
+  preview:
+    port: 4848
+    browser: true
+
+book:
+  title: "宇宙の熱的スペクトル"
+  subtitle: "観測から基礎物理への逆引き"
+  # 英題（参考、英語版で正式採用）：
+  # title-en: "Thermal Spectra of the Universe"
+  # subtitle-en: "An Inverse Approach to Fundamental Physics"
+  author:
+    - name: "和田 桂一"
+      email: wada@astrophysics.jp
+      orcid: ""
+  date: today
+  date-format: "YYYY-MM-DD"
+  language: ja
+
+  cover-image: images/cover.svg
+  favicon: images/favicon.svg
+
+  search:
+    location: sidebar
+    type: textbox
+
+  page-navigation: true
+  back-to-top-navigation: true
+  reader-mode: false
+  sidebar:
+    style: docked
+    collapse-level: 1
+
+  repo-url: https://github.com/wadakeiichi/inverse_text_radiation
+  repo-actions: [edit, source, issue]
+  repo-branch: main
+  downloads: [pdf, epub]
+
+  chapters:
+    - index.qmd
+    - 00-prologue.qmd
+    - part: "第I部　宇宙に満ちる黒体放射"
+      chapters:
+        - part1/01-where-blackbody.qmd
+        - part1/02-reading-spectra.qmd
+        - part1/03-universality.qmd
+    - part: "第II部　放射をどう記述するか"
+      chapters:
+        - part2/04-radiation-field.qmd
+        - part2/05-radiative-transfer.qmd
+    - part: "第III部　逆引き1：熱力学・統計力学へ"
+      chapters:
+        - part3/06-thermal-equilibrium.qmd
+        - part3/07-statistical-mechanics.qmd
+        - part3/08-photon-statistics.qmd
+    - part: "第IV部　逆引き2：量子論へ"
+      chapters:
+        - part4/09-classical-failure.qmd
+        - part4/10-planck-quantum.qmd
+        - part4/11-einstein-method.qmd
+        - part4/12-quantum-foundations.qmd
+    - part: "第V部　逆引き3：電磁気学へ"
+      chapters:
+        - part5/13-electromagnetic-waves.qmd
+        - part5/14-cavity-modes.qmd
+    - part: "第VI部　現実の宇宙へ戻る"
+      chapters:
+        - part6/15-non-blackbody.qmd
+        - part6/16-cmb.qmd
+        - part6/17-stars-planets-dust.qmd
+        - part6/18-accretion-high-energy.qmd
+    - part: "第VII部　線スペクトル ― もう一つの逆引き"
+      chapters:
+        - part7/19-where-lines.qmd
+        - part7/20-line-formation.qmd
+        - part7/21-atomic-physics.qmd
+        - part7/22-line-shape.qmd
+        - part7/23-line-applications.qmd
+    - part: "第VIII部　QEDからの俯瞰 ― 連続と線を結ぶ見通し"
+      chapters:
+        - part8/24-em-field-quantization.qmd
+        - part8/25-qed-minimum.qmd
+    - references.qmd
+
+  appendices:
+    - appendix/A-math-notes.qmd
+    - appendix/B-units-constants.qmd
+    - appendix/C-reading-routes.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      - cosmo
+      - _assets/theme.scss
+      - _assets/ja-theme.scss
+    toc: true
+    toc-depth: 3
+    toc-location: right
+    number-sections: false
+    number-depth: 0
+    code-fold: true
+    code-tools:
+      source: true        # 各ページ右上に「</>」ボタン → ソース表示
+      toggle: true
+      caption: "Source"
+    code-link: true
+    fig-cap-location: bottom
+    tbl-cap-location: top
+    link-external-newwindow: true
+    citations-hover: true
+    crossrefs-hover: true
+    smooth-scroll: true
+    html-math-method: katex
+    include-in-header:
+      - text: |
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+  pdf:
+    documentclass: scrreprt
+    pdf-engine: lualatex
+    papersize: a4
+    number-sections: false
+    number-depth: 0
+    geometry:
+      - margin=25mm
+    keep-tex: false
+    fig-pos: 'H'
+    fig-cap-location: bottom
+    tbl-cap-location: top
+    include-in-header:
+      - text: |
+          \usepackage{luatexja-fontspec}
+          \setmainjfont{Noto Serif CJK JP}
+          \setsansjfont{Noto Sans CJK JP}
+          \usepackage{xcolor}
+          \usepackage{tcolorbox}
+          \usepackage{amsmath,amssymb,physics}
+
+  epub:
+    toc: true
+    cover-image: images/cover.svg
+
+filters:
+  - _filters/difficulty-stars.lua
+  - _filters/tags.lua
+  - _filters/boxed-factor.lua
+
+execute:
+  freeze: auto
+  echo: true
+  warning: false
+  message: false
+
+crossref:
+  eq-prefix: "式"
+  fig-prefix: "図"
+  tbl-prefix: "表"
+  sec-prefix: "節"
+  chapters: true
+
+# 三原則 reminder（コメント、ビルドには影響しない）
+# ① 逆引き：観測スペクトル → 基礎物理を逆向きにたどる
+# ② 背景物理を曖昧にしない：各観測量の背後にある物理を章を横断して明示
+# ③ 天下り的に式を与えない：式を観測から逆向きに辿って必然性として理解させる

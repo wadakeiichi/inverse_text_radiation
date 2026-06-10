@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1100" width="800" height="1100">
+  <!-- ===================================================================
+       宇宙の熱的スペクトル ― 観測から基礎物理への逆引き
+       Thermal Spectra of the Universe: An Inverse Approach to Fundamental Physics
+       表紙プレースホルダ（CC BY 4.0）
+       ================================================================ -->
+
+  <!-- 背景：深い宇宙の濃紺グラデーション -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0e1a"/>
+      <stop offset="60%" stop-color="#162242"/>
+      <stop offset="100%" stop-color="#1f4e79"/>
+    </linearGradient>
+
+    <!-- 連続スペクトル（プランク曲線）の虹グラデーション -->
+    <linearGradient id="planckGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#7d1f55"/>
+      <stop offset="15%"  stop-color="#c43f6b"/>
+      <stop offset="35%"  stop-color="#e6913e"/>
+      <stop offset="55%"  stop-color="#d4c241"/>
+      <stop offset="75%"  stop-color="#5fb0a0"/>
+      <stop offset="100%" stop-color="#2e6ca6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="1100" fill="url(#bg)"/>
+
+  <!-- 散らばる星 -->
+  <g fill="#ffffff" opacity="0.6">
+    <circle cx="80" cy="120" r="1.5"/>
+    <circle cx="180" cy="55" r="1"/>
+    <circle cx="250" cy="180" r="1.8"/>
+    <circle cx="420" cy="80" r="1.2"/>
+    <circle cx="560" cy="150" r="2"/>
+    <circle cx="640" cy="60" r="1.4"/>
+    <circle cx="720" cy="200" r="1.8"/>
+    <circle cx="100" cy="320" r="1.3"/>
+    <circle cx="700" cy="350" r="1.5"/>
+    <circle cx="60" cy="900" r="1.2"/>
+    <circle cx="740" cy="950" r="1.8"/>
+    <circle cx="200" cy="1010" r="1.4"/>
+    <circle cx="500" cy="1040" r="1.2"/>
+    <circle cx="380" cy="1060" r="1.6"/>
+  </g>
+
+  <!-- ===================================================================
+       上部：連続スペクトル（プランク曲線）の象徴
+       === 横長の虹色グラデーション帯 + 重ねた曲線
+       ================================================================ -->
+  <g transform="translate(100, 380)">
+    <!-- スペクトル帯 -->
+    <rect x="0" y="0" width="600" height="50" fill="url(#planckGrad)" opacity="0.85" rx="3"/>
+
+    <!-- プランク曲線（黒体放射の輪郭） -->
+    <path d="M 0,180
+             C 100,180 180,170 230,120
+             S 320,20 380,10
+             S 470,40 520,90
+             S 590,170 600,180"
+          fill="none" stroke="#fff5dd" stroke-width="3" opacity="0.95"/>
+
+    <!-- 数式ラベル -->
+    <text x="300" y="220" text-anchor="middle"
+          font-family="serif" font-style="italic"
+          font-size="22" fill="#fff5dd" opacity="0.9">
+      B<tspan baseline-shift="-30%" font-size="14">ν</tspan>(T)
+    </text>
+  </g>
+
+  <!-- ===================================================================
+       下部：線スペクトル（リュードベリ系列）の象徴
+       === 縦線（離散線）の並び
+       ================================================================ -->
+  <g transform="translate(100, 700)" stroke-linecap="round">
+    <!-- Lyman / Balmer 系列風の離散線（短から長へ集積） -->
+    <line x1="40"  y1="0" x2="40"  y2="80" stroke="#a23b3b" stroke-width="3"/>
+    <line x1="120" y1="0" x2="120" y2="80" stroke="#a23b3b" stroke-width="2.5"/>
+    <line x1="200" y1="0" x2="200" y2="80" stroke="#c43f6b" stroke-width="2.5"/>
+    <line x1="280" y1="0" x2="280" y2="80" stroke="#c43f6b" stroke-width="2"/>
+    <line x1="340" y1="0" x2="340" y2="80" stroke="#e6913e" stroke-width="2"/>
+    <line x1="390" y1="0" x2="390" y2="80" stroke="#e6913e" stroke-width="1.8"/>
+    <line x1="430" y1="0" x2="430" y2="80" stroke="#d4c241" stroke-width="1.6"/>
+    <line x1="465" y1="0" x2="465" y2="80" stroke="#d4c241" stroke-width="1.4"/>
+    <line x1="495" y1="0" x2="495" y2="80" stroke="#5fb0a0" stroke-width="1.2"/>
+    <line x1="520" y1="0" x2="520" y2="80" stroke="#5fb0a0" stroke-width="1"/>
+    <line x1="540" y1="0" x2="540" y2="80" stroke="#2e6ca6" stroke-width="0.9"/>
+    <line x1="555" y1="0" x2="555" y2="80" stroke="#2e6ca6" stroke-width="0.8"/>
+    <line x1="567" y1="0" x2="567" y2="80" stroke="#2e6ca6" stroke-width="0.7"/>
+
+    <!-- リュードベリ公式 -->
+    <text x="300" y="125" text-anchor="middle"
+          font-family="serif" font-style="italic"
+          font-size="20" fill="#fff5dd" opacity="0.9">
+      1/λ = R<tspan baseline-shift="-30%" font-size="14">H</tspan>
+      (1/n<tspan baseline-shift="-30%" font-size="14">1</tspan><tspan baseline-shift="40%" font-size="12">2</tspan>
+       − 1/n<tspan baseline-shift="-30%" font-size="14">2</tspan><tspan baseline-shift="40%" font-size="12">2</tspan>)
+    </text>
+  </g>
+
+  <!-- ===================================================================
+       中央：逆向き矢印（観測 → 物理）
+       ================================================================ -->
+  <g transform="translate(400, 640)">
+    <text x="0" y="-5" text-anchor="middle"
+          font-family="sans-serif" font-size="14" fill="#ffd97a" opacity="0.85"
+          letter-spacing="0.2em">
+      INVERSE
+    </text>
+    <line x1="-40" y1="20" x2="40" y2="20" stroke="#ffd97a" stroke-width="2"/>
+    <polygon points="-40,20 -32,15 -32,25" fill="#ffd97a"/>
+  </g>
+
+  <!-- ===================================================================
+       タイトル
+       ================================================================ -->
+  <g transform="translate(400, 90)">
+    <text x="0" y="0" text-anchor="middle"
+          font-family="'Hiragino Mincho ProN', serif"
+          font-size="56" font-weight="700" fill="#ffffff"
+          letter-spacing="0.08em">
+      宇宙の熱的スペクトル
+    </text>
+    <text x="0" y="40" text-anchor="middle"
+          font-family="'Hiragino Sans', sans-serif"
+          font-size="20" fill="#dde9f5"
+          letter-spacing="0.15em">
+      観測から基礎物理への逆引き
+    </text>
+  </g>
+
+  <!-- ===================================================================
+       下部：英題
+       ================================================================ -->
+  <g transform="translate(400, 970)">
+    <line x1="-200" y1="-20" x2="200" y2="-20" stroke="#ffd97a" stroke-width="0.5" opacity="0.6"/>
+    <text x="0" y="0" text-anchor="middle"
+          font-family="'EB Garamond', 'Garamond', serif"
+          font-style="italic" font-size="26" fill="#ffd97a">
+      Thermal Spectra of the Universe
+    </text>
+    <text x="0" y="28" text-anchor="middle"
+          font-family="'EB Garamond', 'Garamond', serif"
+          font-style="italic" font-size="16" fill="#dde9f5" opacity="0.85">
+      An Inverse Approach to Fundamental Physics
+    </text>
+  </g>
+
+  <!-- 著者と年 -->
+  <text x="400" y="1050" text-anchor="middle"
+        font-family="'Hiragino Sans', sans-serif"
+        font-size="13" fill="#9fb6cf" letter-spacing="0.15em">
+    和田 桂一 ／ KEIICHI WADA ／ 2026
+  </text>
+</svg>

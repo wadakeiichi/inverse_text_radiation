@@ -1,0 +1,45 @@
+# Quarto build output
+_book/
+_site/
+.quarto/
+*.html.tmp
+
+# Jupyter / Python
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.python-version
+
+# LaTeX intermediate
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Quarto freeze cache (keep this in git for reproducibility)
+_freeze/
+
+/.quarto/
+**/*.quarto_ipynb
+_freeze/
+_freeze/
+_book/
+.quarto/
+*.quarto_ipynb
