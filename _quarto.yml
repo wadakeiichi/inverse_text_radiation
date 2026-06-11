@@ -139,6 +139,9 @@ format:
           \setsansjfont{Noto Sans CJK JP}
           \usepackage{xcolor}
           \usepackage{tcolorbox}
+          % Quarto の callout が要求するライブラリ群
+          % （enhanced jigsaw / breakable / theorems / raster / skins）
+          \tcbuselibrary{skins,breakable,theorems,raster}
           \usepackage{amsmath,amssymb,physics}
 
   epub:
