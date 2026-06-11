@@ -82,7 +82,7 @@ $$
 F_\nu = \int_{R_\text{in}}^{R_\text{out}} 2\pi R \cdot B_\nu(T(R)) dR
 $$ {#eq-disk-total-flux}
 
-ここで重要なのは **中間振動数帯** の振る舞い。$T(R_\text{in}) \gg k_B T_\nu \gg T(R_\text{out})$ となる振動数では、温度分布が積分を支配する。
+ここで重要なのは **中間振動数帯** の振る舞い。$k_B T(R_\text{in}) \gg h\nu \gg k_B T(R_\text{out})$（あるいは同値に $T(R_\text{in}) \gg h\nu/k_B \gg T(R_\text{out})$）となる振動数では、温度分布が積分を支配する。
 
 @eq-disk-temperature-profile を使って変数変換すると、
 

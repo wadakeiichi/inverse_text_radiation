@@ -42,7 +42,7 @@ $B_\nu(T) = (2h\nu^3/c^2)\cdot 1/(e^{h\nu/kT}-1)$
 
 [本文目安：B2]
 
-電磁気学の基本方程式 ― **Maxwell 方程式**（**Maxwell's equations**） ― を出発点として受け入れる。真空中（電荷・電流なし）では Gauss 単位系で
+電磁気学の基本方程式 ― **Maxwell 方程式**（**Maxwell's equations**） ― を出発点として受け入れる。真空中（電荷・電流なし）では **SI 単位系で**
 
 $$
 \nabla \cdot \mathbf{E} = 0, \quad
@@ -50,11 +50,16 @@ $$
 $$ {#eq-maxwell-divergence}
 
 $$
-\nabla \times \mathbf{E} = -\frac{1}{c}\frac{\partial \mathbf{B}}{\partial t}, \quad
-\nabla \times \mathbf{B} = \frac{1}{c}\frac{\partial \mathbf{E}}{\partial t}
+\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}, \quad
+\nabla \times \mathbf{B} = \mu_0\epsilon_0\frac{\partial \mathbf{E}}{\partial t} = \frac{1}{c^2}\frac{\partial \mathbf{E}}{\partial t}
 $$ {#eq-maxwell-curl}
 
-$\mathbf{E}$ は電場（**electric field**）、$\mathbf{B}$ は磁場（**magnetic field**）、$c$ は真空中の光速度。
+$\mathbf{E}$ は電場（**electric field**）、$\mathbf{B}$ は磁場（**magnetic field**）、$c = 1/\sqrt{\mu_0\epsilon_0}$ は真空中の光速度。
+
+::: {.callout-note}
+**単位系について**：本書は SI を基本とする（付録 B §B.4 参照）。Gauss 単位系で書かれた古典文献（Jackson, Rybicki & Lightman など）と比較する際は、上式の各項に対し $\mathbf{B}_\text{SI} \leftrightarrow \mathbf{B}_\text{Gauss}/c$、$\epsilon_0 \to 1/(4\pi)$ の置き換えで Gauss 形 $\nabla \times \mathbf{B} = (1/c)\partial \mathbf{E}/\partial t$ に対応する。
+:::
+
 
 ::: {.callout-note}
 **方針**：Maxwell 方程式そのものの導出は本書の射程外（標準的な学部電磁気学教科書を参照）。本書ではこれを与えられた出発点として、**光がここから出てくる**ことを示すことに集中する。

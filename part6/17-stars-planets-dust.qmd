@@ -57,9 +57,9 @@ $$ {#eq-stefan-boltzmann-star}
 
 **短答**：Wien 則 $\lambda_\text{peak} \propto 1/T$ から、Vega のピークは太陽より短波長側。同一波長での比 $B_\nu(T_1)/B_\nu(T_2)$ は
 
-- 可視（500 nm）：Vega が 約 5 倍明るい
-- 紫外（250 nm）：Vega が 約 100 倍明るい（Wien 側の指数差が支配）
-- 赤外（5 µm）：Vega が 約 1.7 倍明るい（Rayleigh-Jeans 側、温度比のみ効く）
+- 可視（500 nm）：Vega が 約 7.6 倍明るい
+- 紫外（250 nm）：Vega が 約 53 倍明るい（Wien 側の指数差が支配）
+- 赤外（5 µm）：Vega が 約 1.85 倍明るい（Rayleigh-Jeans 側、温度比のみ効く）
 
 紫外側ほど温度差が劇的に効くのが「Wien 側の急峻性」の現れ
 :::

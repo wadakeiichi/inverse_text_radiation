@@ -54,10 +54,14 @@ lang: ja
 
 [本文目安：M1]
 
-QED の言葉で、原子と電磁場の相互作用は次の Hamiltonian で記述される（最低次、非相対論的）：
+::: {.callout-warning}
+**本章の単位系について**：本章は **QED の構造を見通すことが主目的** であり、係数の前因子（$4\pi\epsilon_0$、$1/c$ など）は単位系依存である。本書は SI を基本とするが、QED の標準文献は Gauss/Heaviside-Lorentz のものも多いため、本章では **式の構造のみを示し、係数の細部は専門書（Loudon、Sakurai、Cohen-Tannoudji）を参照する立場をとる**。前因子の単位系を厳密に追いたい読者は、付録 B §B.4 と Loudon 第 4 章を併読してほしい。本章中の式 @eq-interaction-hamiltonian、@eq-vector-potential-quantized、@eq-A-coefficient-QED は SI 表記の代表的形だが、論文との比較時は単位系を確認すること。
+:::
+
+QED の言葉で、原子と電磁場の相互作用は次の Hamiltonian で記述される（最低次、非相対論的、SI 系の代表形）：
 
 $$
-\hat{H}_\text{int} = -\frac{e}{m_e c} \hat{\mathbf{A}} \cdot \hat{\mathbf{p}} + (\text{higher orders})
+\hat{H}_\text{int} = -\frac{e}{m_e} \hat{\mathbf{A}} \cdot \hat{\mathbf{p}} + (\text{higher orders})
 $$ {#eq-interaction-hamiltonian}
 
 ここで：
@@ -159,7 +163,7 @@ QED の直観：
 つまり **線の自然幅は真空揺らぎの存在を観測している**。第22章で「線形機構の一つ」として挙げた自然幅は、QED の核心 ― 真空が「空ではない」こと ― と直結する。
 
 ::: {.callout-tip}
-**例（数値）**：水素 Ly$\alpha$ 線（$\lambda = 121.6$ nm, $\nu = 2.47 \times 10^{15}$ Hz）の自発放出率 $A_{ul} = 6.27 \times 10^8$ s$^{-1}$ から、自然幅 $\Gamma_\text{nat} \simeq 10^8$ Hz、波長単位で約 $1.2 \times 10^{-4}$ Å。
+**例（数値）**：水素 Ly$\alpha$ 線（$\lambda = 121.6$ nm, $\nu = 2.47 \times 10^{15}$ Hz）の自発放出率 $A_{ul} = 6.27 \times 10^8$ s$^{-1}$ から、自然幅は $\gamma_\text{nat} = A_{ul}/(2\pi) \simeq 10^8$ Hz、波長単位で $\Delta\lambda_\text{nat} = \lambda^2 \gamma_\text{nat}/c \simeq 4.9 \times 10^{-5}$ Å（第22章 §22.1 と同値）。
 
 これは **「水素原子が真空揺らぎに揺さぶられる強さ」を観測量にしたもの**。観測される QSO の damped Lyα 系の減衰翼は、まさにこの自然幅起源の Lorentzian 翼を、地球上の分光計で測っている
 :::

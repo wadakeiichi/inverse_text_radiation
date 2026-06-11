@@ -38,28 +38,35 @@ lang: ja
 
 [本文目安：B3-B4]
 
-第11章 §11.2 と第12章で見たように、励起準位 $u$ には有限の寿命 $\tau_u = 1/A_{ul}$ がある。不確定性原理 $\Delta E \cdot \Delta t \gtrsim \hbar/2$ から、エネルギー準位そのものが幅を持つ：
+第11章 §11.2 と第12章で見たように、励起準位 $u$ には有限の寿命 $\tau_u = 1/A_{ul}$ がある。励起状態の量子振幅が $e^{-A_{ul} t / 2}$ で減衰することから、エネルギー準位そのものが Lorentzian の形でエネルギー幅を持つ。
+
+::: {.callout-note}
+**記号の規約**（混同しやすいので注意）：
+
+- $A_{ul}$ ：自発放出率（**寿命の減衰率**）。次元 [s$^{-1}$]
+- $\Gamma_\text{nat} \equiv A_{ul}$ ：**角振動数単位** の自然幅（**FWHM**, $\omega$ 軸）
+- $\gamma_\text{nat} \equiv A_{ul}/(2\pi)$ ：**振動数単位** の自然幅（**FWHM**, $\nu$ 軸、Hz）
+- HWHM（半値半幅）はこれらの半分：$\Gamma_\text{nat}/2 = A_{ul}/2$（$\omega$）、$\gamma_\text{nat}/2 = A_{ul}/(4\pi)$（$\nu$）
+
+これらは「**寿命 $\tau_u$ → 振幅減衰 → エネルギー Lorentzian の幅**」という一連の関係から出るもので、$\Delta E \cdot \tau_u \gtrsim \hbar$ という不確定性原理の不等式は **オーダー推定** にすぎず、厳密には等号にならない（古典的減衰振動子の Fourier 変換が Lorentzian になることが厳密な起源、付録 §A.8.2 参照）。
+:::
+
+これに対応する規格化された線形関数（**Lorentzian**）は
 
 $$
-\Gamma_\text{nat} = A_{ul}
-$$ {#eq-natural-width}
-
-これに対応する線形は **Lorentzian**：
-
-$$
-\phi_L(\nu - \nu_0) = \frac{1}{\pi} \frac{\gamma/2}{(\nu - \nu_0)^2 + (\gamma/2)^2}, \quad \gamma = \Gamma_\text{nat}/(2\pi)
+\phi_L(\nu - \nu_0) = \frac{1}{\pi} \frac{\gamma_\text{nat}/2}{(\nu - \nu_0)^2 + (\gamma_\text{nat}/2)^2}
 $$ {#eq-lorentzian}
 
 特徴：
 
-- 中心 $\nu = \nu_0$ で最大、幅 $\gamma$ で半値
-- **翼**（wing）が遠くまでべき的に減衰（$\propto 1/\Delta\nu^2$）― これが Voigt 線の遠方を決める
-- $\int \phi_L d\nu = 1$（規格化）
+- 中心 $\nu = \nu_0$ で最大、$|\nu - \nu_0| = \gamma_\text{nat}/2$（HWHM）で半値
+- **翼**（wing）が遠くまでべき的に減衰（$\propto 1/(\Delta\nu)^2$）― これが Voigt 線の遠方を決める
+- $\int \phi_L\, d\nu = 1$（規格化）
 
 第12章で扱った **古典的調和振動子の減衰モデル** が同じ Lorentzian を与えることが、振動子強度モデルの古典-量子対応を示す。
 
 ::: {.callout-note}
-**対応（観測）**：水素 Ly$\alpha$ の自然幅は $\sim 10^{-2}$ Å。多くの場合、自然幅は他の拡がり（Doppler、衝突）に比べて小さいが、**線の翼**（damping wing）には自然幅の Lorentzian の寄与が現れる。QSO の Ly$\alpha$ 強吸収系で観測される **減衰翼** がその例
+**対応（観測）**：水素 Ly$\alpha$（$\lambda = 121.6$ nm、$A_{ul} = 6.27 \times 10^8$ s$^{-1}$）の自然幅は、波長単位で $\Delta\lambda_\text{nat} = \lambda^2 A_{ul}/(2\pi c) \simeq 4.9 \times 10^{-5}$ Å。多くの場合、自然幅は他の拡がり（Doppler、衝突）に比べて小さいが、**線の翼**（damping wing）には自然幅の Lorentzian の寄与が現れる。QSO の Ly$\alpha$ 強吸収系（damped Ly$\alpha$ system）で観測される **減衰翼** がその例
 :::
 
 ## 22.2 Doppler 拡がり ― Gaussian の起源 {#sec-line-shape-doppler}
