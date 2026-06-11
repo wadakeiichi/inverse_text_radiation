@@ -9,6 +9,8 @@ lang: ja
 
 ## この章の中心地図 {#sec-where-blackbody-map .unnumbered}
 
+![プランク関数 $B_\nu(T)$ の各因子と、それを解き明かす章群の対応。第III部が占有因子、第IV部がエネルギー量子 $h\nu$、第V部がモード密度＋偏光自由度、第VI部が現実の天体での「ずれ」を担当する。第I-II 部が観測の入口、第VIII 部が QED による統一の出口にあたる。](../images/planck-map.svg){#fig-planck-map width=92%}
+
 {{< include ../_includes/_planck-map.qmd >}}
 
 ## この章で答える問い {#sec-where-blackbody-questions .unnumbered}
@@ -95,7 +97,7 @@ lang: ja
 
 | 天体 | 温度 [K] | 主な放射帯 |
 |---|---|---|
-| 地球の昼面 | $\sim 290$ | 中赤外（10–15 μm）|
+| 地球の昼面 | $\sim 290$ | 中間赤外（10–15 μm）|
 | 木星 | $\sim 130$ | 遠赤外 |
 | 太陽系外縁天体 | 30–50 | 遠赤外 |
 | 星間ダスト | 10–30 | 遠赤外〜サブミリ |

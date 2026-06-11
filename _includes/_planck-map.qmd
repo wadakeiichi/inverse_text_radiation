@@ -2,7 +2,14 @@
 
 **プランク関数（連続スペクトルの地図）**
 
-![プランク関数 $B_\nu(T)$ の各因子と、それを解き明かす章群の対応。第III部が占有因子、第IV部がエネルギー量子 $h\nu$、第V部がモード密度＋偏光自由度、第VI部が現実の天体での「ずれ」を担当する。第I-II 部が観測の入口、第VIII 部が QED による統一の出口にあたる。](../images/planck-map.svg){#fig-planck-map width=92%}
+<!--
+  Note: the visual map (images/planck-map.svg) is NOT embedded here.
+  Including images from inside a Quarto include resolves the
+  relative path against the *caller*, which differs between
+  index.qmd (project root) and part?/chapter.qmd (subdirectory).
+  Until a project-resource-based solution lands, the SVG is
+  inserted from each calling chapter on its own.
+-->
 
 $$
 B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
