@@ -5,6 +5,10 @@ rydberg-series.py — 水素のリュードベリ系列（Lyman, Balmer, Paschen
 天文観測でよく出会う Lyα・Hα・21cm との対応を見せる。
 """
 import numpy as np
+import matplotlib
+matplotlib.use("Agg")  # PDF backend を回避（CJK フォント名のASCIIエンコード問題を避ける）
+matplotlib.rcParams["pdf.fonttype"] = 42
+matplotlib.rcParams["ps.fonttype"] = 42
 import matplotlib.pyplot as plt
 from astropy import constants as const
 from astropy import units as u

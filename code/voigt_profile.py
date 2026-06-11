@@ -5,6 +5,10 @@ voigt-profile.py — 自然線形・ドップラー線形・Voigt 線形
 自然幅 → ドップラー → 圧力 → Voigt の順に逆引きで構築する。
 """
 import numpy as np
+import matplotlib
+matplotlib.use("Agg")  # PDF backend を回避（CJK フォント名のASCIIエンコード問題を避ける）
+matplotlib.rcParams["pdf.fonttype"] = 42
+matplotlib.rcParams["ps.fonttype"] = 42
 import matplotlib.pyplot as plt
 from scipy.special import wofz
 

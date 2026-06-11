@@ -132,6 +132,10 @@ format:
     fig-pos: 'H'
     fig-cap-location: bottom
     tbl-cap-location: top
+    # matplotlib の PDF backend がCJKフォント名を ASCII エンコードできない
+    # 問題を回避するため、コード由来の図は PNG で出力する（dpi 200 で高解像）。
+    fig-format: png
+    fig-dpi: 200
     include-in-header:
       - text: |
           \usepackage{luatexja-fontspec}
