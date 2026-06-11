@@ -80,7 +80,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-6acc544bc6b266166f93717a0814bb05.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-84b9d0451ceb30bdeea41a205600fe27.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-5fd26cb3c5ba3a2f0d2c20445dd4bff2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -428,7 +428,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">目次</h2>
    
   <ul>
-  <li><a href="#sec-prologue-purpose" id="toc-sec-prologue-purpose" class="nav-link active" data-scroll-target="#sec-prologue-purpose">0.1 黒体放射と線スペクトルから何を学ぶのか</a></li>
+  <li><a href="#sec-prologue-purpose" id="toc-sec-prologue-purpose" class="nav-link active" data-scroll-target="#sec-prologue-purpose">0.1 宇宙の熱的放射から何を学ぶのか</a></li>
   <li><a href="#sec-prologue-audience" id="toc-sec-prologue-audience" class="nav-link" data-scroll-target="#sec-prologue-audience">0.2 対象読者と前提知識</a></li>
   <li><a href="#sec-prologue-structure" id="toc-sec-prologue-structure" class="nav-link" data-scroll-target="#sec-prologue-structure">0.3 本書の構成</a></li>
   <li><a href="#sec-prologue-reading-routes" id="toc-sec-prologue-reading-routes" class="nav-link" data-scroll-target="#sec-prologue-reading-routes">0.4 読者タイプ別おすすめルート</a>
@@ -468,10 +468,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <section id="sec-prologue-purpose" class="level2">
-<h2 class="anchored" data-anchor-id="sec-prologue-purpose">0.1 黒体放射と線スペクトルから何を学ぶのか</h2>
-<p>黒体放射は、物理学と天文学の多くの分野をつなぐ、きわめて基本的な現象である。太陽や恒星の連続スペクトル、惑星や星間塵の熱放射、宇宙マイクロ波背景放射（CMB）に至るまで、宇宙には黒体放射、あるいはそれに近いスペクトルがさまざまな形で現れる。これらは熱平衡、放射輸送、量子論、統計力学、電磁気学といった基礎物理の結果として現れている。</p>
-<p>宇宙のスペクトルにはもう一つの主柱がある――<strong>線スペクトル</strong>である。恒星大気の吸収線、星雲の輝線、中性水素の 21 cm 線、分子線、AGN・クェーサーの輝線・吸収線などは、宇宙の物理状態を診断する情報の多くを担っている。線スペクトルにも「観測 → 線輸送 → 原子・分子の量子論 → 遷移確率と線形」という逆引きの道筋がある。本書は連続と線を同じ哲学で並行に扱う。</p>
-<p>本書の目的は、これらを暗記すべき公式として扱うことではない。観測されるスペクトルの形・強度・線位置・線形から出発し、その背後の物理を逆向きにたどることによって、放射の記述、熱平衡、光子の統計、量子化、電磁波のモード構造、原子の量子状態、線形成、最終的には QED に至るまでを、一つの見通しの中で理解することを目指す。</p>
+<h2 class="anchored" data-anchor-id="sec-prologue-purpose">0.1 宇宙の熱的放射から何を学ぶのか</h2>
+<p>夜空の天体をスペクトルに分解すると、そこにはほぼ例外なく二種類の成分が現れる。振動数に対して滑らかに変化する <strong>連続スペクトル</strong> と、原子や分子の離散的なエネルギー準位間の遷移に由来し、特定の振動数の周りに集中して現れる <strong>線スペクトル</strong> である。後者は、水素のバルマー線のように鋭い線として見えることもあれば、多数の線が密集して分子バンドを形作ることも、PAH（多環芳香族炭化水素）の放射のように幅の広い山や谷として現れることもある。太陽や恒星の連続光、惑星や星間塵の赤外放射、宇宙マイクロ波背景放射（CMB）は前者の、恒星大気の吸収線、星雲の輝線、中性水素の 21 cm 線、分子線、AGN・クェーサーの輝線・吸収線は後者の代表例であり、宇宙の物理状態について私たちが知っていることの大半は、この二つの成分を読み解くことから得られてきた。</p>
+<p>本書が扱うのは、このうち <strong>熱的放射</strong> ― おおまかに言えば、熱平衡（またはそれに近い状態）にある物質が出す放射 ― である。連続側の典型が黒体放射であり、線側も多くは熱的なガスの中で形成される。なぜ「熱的」に絞るのか。熱的放射はスペクトルの形が温度というただ一つの量で（線ならば温度・密度・組成という少数の量で）統制されており、その背後には熱平衡・統計力学・量子論・電磁気学という基礎物理の構造が、最も純粋な形で現れているからである。シンクロトロン放射に代表される非熱的放射は、観測スペクトルの解釈に必要な範囲で触れるにとどめる（この区別の正確な定義は第1章 §1.9 で与える）。</p>
+<p>本書の目的は、これらの放射を支配する式を、暗記すべき公式として与えることではない。観測されるスペクトルの形・強度・線位置・線形から出発し、「<strong>なぜこの形なのか</strong>」を逆向きにたどる。連続側ではプランク関数を、線側では水素の線吸収係数を道しるべとして、放射の記述、熱平衡、光子の統計、エネルギー量子化、電磁波のモード構造、原子の量子状態、線形成をへて、最終的には両者が QED の中で一つに合流するところまでを、一つの見通しの中で理解することを目指す。</p>
 </section>
 <section id="sec-prologue-audience" class="level2">
 <h2 class="anchored" data-anchor-id="sec-prologue-audience">0.2 対象読者と前提知識</h2>
@@ -1047,13 +1047,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">lang:</span><span class="co"> ja</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## 0.1 黒体放射と線スペクトルから何を学ぶのか {#sec-prologue-purpose}</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## 0.1 宇宙の熱的放射から何を学ぶのか {#sec-prologue-purpose}</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>黒体放射は、物理学と天文学の多くの分野をつなぐ、きわめて基本的な現象である。太陽や恒星の連続スペクトル、惑星や星間塵の熱放射、宇宙マイクロ波背景放射（CMB）に至るまで、宇宙には黒体放射、あるいはそれに近いスペクトルがさまざまな形で現れる。これらは熱平衡、放射輸送、量子論、統計力学、電磁気学といった基礎物理の結果として現れている。</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>夜空の天体をスペクトルに分解すると、そこにはほぼ例外なく二種類の成分が現れる。振動数に対して滑らかに変化する **連続スペクトル** と、原子や分子の離散的なエネルギー準位間の遷移に由来し、特定の振動数の周りに集中して現れる **線スペクトル** である。後者は、水素のバルマー線のように鋭い線として見えることもあれば、多数の線が密集して分子バンドを形作ることも、PAH（多環芳香族炭化水素）の放射のように幅の広い山や谷として現れることもある。太陽や恒星の連続光、惑星や星間塵の赤外放射、宇宙マイクロ波背景放射（CMB）は前者の、恒星大気の吸収線、星雲の輝線、中性水素の 21 cm 線、分子線、AGN・クェーサーの輝線・吸収線は後者の代表例であり、宇宙の物理状態について私たちが知っていることの大半は、この二つの成分を読み解くことから得られてきた。</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>宇宙のスペクトルにはもう一つの主柱がある――**線スペクトル**である。恒星大気の吸収線、星雲の輝線、中性水素の 21 cm 線、分子線、AGN・クェーサーの輝線・吸収線などは、宇宙の物理状態を診断する情報の多くを担っている。線スペクトルにも「観測 → 線輸送 → 原子・分子の量子論 → 遷移確率と線形」という逆引きの道筋がある。本書は連続と線を同じ哲学で並行に扱う。</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>本書が扱うのは、このうち **熱的放射** ― おおまかに言えば、熱平衡（またはそれに近い状態）にある物質が出す放射 ― である。連続側の典型が黒体放射であり、線側も多くは熱的なガスの中で形成される。なぜ「熱的」に絞るのか。熱的放射はスペクトルの形が温度というただ一つの量で（線ならば温度・密度・組成という少数の量で）統制されており、その背後には熱平衡・統計力学・量子論・電磁気学という基礎物理の構造が、最も純粋な形で現れているからである。シンクロトロン放射に代表される非熱的放射は、観測スペクトルの解釈に必要な範囲で触れるにとどめる（この区別の正確な定義は第1章 §1.9 で与える）。</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>本書の目的は、これらを暗記すべき公式として扱うことではない。観測されるスペクトルの形・強度・線位置・線形から出発し、その背後の物理を逆向きにたどることによって、放射の記述、熱平衡、光子の統計、量子化、電磁波のモード構造、原子の量子状態、線形成、最終的には QED に至るまでを、一つの見通しの中で理解することを目指す。</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>本書の目的は、これらの放射を支配する式を、暗記すべき公式として与えることではない。観測されるスペクトルの形・強度・線位置・線形から出発し、「**なぜこの形なのか**」を逆向きにたどる。連続側ではプランク関数を、線側では水素の線吸収係数を道しるべとして、放射の記述、熱平衡、光子の統計、エネルギー量子化、電磁波のモード構造、原子の量子状態、線形成をへて、最終的には両者が QED の中で一つに合流するところまでを、一つの見通しの中で理解することを目指す。</span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## 0.2 対象読者と前提知識 {#sec-prologue-audience}</span></span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
