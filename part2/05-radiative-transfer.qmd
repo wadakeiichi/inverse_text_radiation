@@ -87,7 +87,7 @@ $$ {#eq-optical-depth}
 
 - **光学的に厚い**（**optically thick**, $\tau_\nu \gg 1$）：光は完全に吸収・再放出を繰り返し、起源を忘れる
 - **光学的に薄い**（**optically thin**, $\tau_\nu \ll 1$）：光はほぼ通過し、背景の光がほとんど見える
-- **平均自由行程**（**mean free path**）：$\ell_{\rm mfp} = 1/\alpha_\nu$
+- **平均自由行程**（**mean free path**）：$\ell_{\mathrm{mfp}} = 1/\alpha_\nu$
 
 ::: {.callout-tip}
 **目安**：太陽の光球で可視光の $\tau \sim 1$ となる深さが「光球表面」の定義。これが「太陽の表面」と呼ぶ場所である。地表の大気では晴天時に $\tau_\text{可視} \sim 0.1$、曇天で $\tau \sim 1$ 以上。

@@ -143,6 +143,16 @@ format:
           % （enhanced jigsaw / breakable / theorems / raster / skins）
           \tcbuselibrary{skins,breakable,theorems,raster}
           \usepackage{amsmath,amssymb,physics}
+          % 旧 TeX フォント切替コマンド（\rm \bf \it \sf \tt）の互換性確保。
+          % scrreprt は標準でこれらをエラー化するため、無条件で再定義する。
+          % 数式モード内に混入していても \mathrm 等として扱われる。
+          \AtBeginDocument{%
+            \let\rm\mathrm
+            \let\bf\mathbf
+            \let\it\mathit
+            \let\sf\mathsf
+            \let\tt\mathtt
+          }
 
   epub:
     toc: true
