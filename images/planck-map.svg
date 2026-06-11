@@ -1,55 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" width="900" height="580" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" width="900" height="620" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Noto Sans JP', sans-serif">
   <!-- =============================================================
        Central Map (Continuous Side): Planck Function
-       中心地図（連続側）― 各因子と章の対応
-       Base version (no factor highlighted).
-       Labels in English; Japanese caption goes in body .qmd.
+       中心地図（連続側）― 各因子と部の対応
+       Design: 因子の色 ＝ 担当する部の色（矢印に頼らない対応付け）
+         blue   #1f4e79 = Part V  (モード密度・偏光 → 前因子)
+         amber  #d4a017 = Part III (占有因子)
+         orange #c25e00 = Part IV (エネルギー量子 h)
+         teal   #2e7d8c = Part VI (式全体のずれ)
+         rose   #c43f6b = Parts I–II (観測 = 出発点)
+         purple #5e2d91 = Part VIII (QED 統一)
+       Math glyphs are absolutely positioned (no tspan dx/dy).
        License: CC BY 4.0
        ============================================================= -->
 
   <defs>
-    <!-- Arrowhead marker for factor-to-part arrows -->
-    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5"
+    <marker id="arrow-rose" viewBox="0 0 10 10" refX="9" refY="5"
             markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1f4e79"/>
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c43f6b"/>
     </marker>
-    <marker id="arrow-thin" viewBox="0 0 10 10" refX="9" refY="5"
-            markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#7a91ad"/>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5e2d91"/>
     </marker>
   </defs>
 
   <!-- Background -->
-  <rect width="900" height="580" fill="#fafbfc"/>
+  <rect width="900" height="620" fill="#fafbfc"/>
 
   <!-- ============================================================
        Top title strip
        ============================================================ -->
-  <text x="450" y="38" text-anchor="middle"
-        font-size="20" font-weight="700" fill="#0a1929"
-        letter-spacing="0.08em">
-    CENTRAL MAP — Continuous Spectrum
+  <text x="450" y="40" text-anchor="middle"
+        font-size="23" font-weight="700" fill="#0a1929"
+        letter-spacing="0.06em">
+    中心地図 ― 連続スペクトル
   </text>
-  <text x="450" y="60" text-anchor="middle"
-        font-size="13" fill="#5a6a7a">
-    Planck function and its inverse-derivation path
+  <text x="450" y="66" text-anchor="middle"
+        font-size="14" fill="#5a6a7a">
+    プランク関数の各因子と、それを逆引きする部の対応（因子の色 ＝ 部の色）
   </text>
 
   <!-- ============================================================
-       Center: Planck function box
+       Part boxes: top row (V, III)
        ============================================================ -->
-  <g transform="translate(450, 200)">
-    <!-- Outer frame -->
-    <rect x="-260" y="-50" width="520" height="130" rx="10"
-          fill="#ffffff" stroke="#1f4e79" stroke-width="2"/>
+  <g>
+    <rect x="140" y="90" width="240" height="85" rx="10"
+          fill="#e8f0fa" stroke="#1f4e79" stroke-width="2"/>
+    <text x="260" y="113" text-anchor="middle"
+          font-size="13" font-weight="700" fill="#1f4e79"
+          letter-spacing="0.08em">第V部</text>
+    <text x="260" y="136" text-anchor="middle"
+          font-size="16" fill="#0a1929">電磁気学</text>
+    <text x="260" y="158" text-anchor="middle"
+          font-size="11" fill="#5a6a7a">13–14章 ― モード密度 8πν²/c³・偏光 2</text>
+  </g>
 
-    <!-- The Planck function.
-         Math set in serif italic. Every glyph run is an absolutely
-         positioned <text> (no tspan dx/dy) so the layout is identical
-         in browsers, cairosvg, librsvg and PDF builds.
-         Layout: LHS -168..-99, "=" at -75, prefactor bar -45..35,
-         dot at 47, occupation bar 60..190. Fraction bars at y=0. -->
+  <g>
+    <rect x="520" y="90" width="240" height="85" rx="10"
+          fill="#fff9e6" stroke="#d4a017" stroke-width="2"/>
+    <text x="640" y="113" text-anchor="middle"
+          font-size="13" font-weight="700" fill="#9a7400"
+          letter-spacing="0.08em">第III部</text>
+    <text x="640" y="136" text-anchor="middle"
+          font-size="16" fill="#0a1929">統計力学</text>
+    <text x="640" y="158" text-anchor="middle"
+          font-size="11" fill="#5a6a7a">6–8章 ― Bose 統計・光子の μ = 0</text>
+  </g>
+
+  <!-- ============================================================
+       Central frame + equation (scaled 1.2)
+       ============================================================ -->
+  <rect x="230" y="208" width="470" height="164" rx="10"
+        fill="#ffffff" stroke="#7a91ad" stroke-width="1.5"/>
+
+  <g transform="translate(450, 255) scale(1.2)">
+    <!-- Math glyphs (serif italic, absolutely positioned).
+         Fraction bars at y=0. -->
     <g font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif"
        fill="#0a1929">
       <!-- LHS: B_ν(T) = -->
@@ -58,199 +85,145 @@
       <text x="-139" y="9"  font-size="26" font-style="italic">(T)</text>
       <text x="-75"  y="8"  font-size="24" text-anchor="middle">=</text>
 
-      <!-- Prefactor 2hν³/c² -->
+      <!-- Prefactor 2hν³/c²  (h coloured = Part IV, rest = Part V) -->
       <g id="factor-prefactor">
-        <text x="-27" y="-10" font-size="20" font-style="italic">2hν</text>
-        <text x="6"   y="-17" font-size="14" font-style="italic">3</text>
+        <text x="-27" y="-10" font-size="20" font-style="italic">2</text>
+        <text x="-16" y="-10" font-size="20" font-style="italic"
+              fill="#c25e00" font-weight="600">h</text>
+        <text x="-5"  y="-10" font-size="20" font-style="italic">ν</text>
+        <text x="5"   y="-17" font-size="14" font-style="italic">3</text>
         <line x1="-45" y1="0" x2="35" y2="0"
               stroke="#0a1929" stroke-width="1.5"/>
         <text x="-13" y="24" font-size="20" font-style="italic">c</text>
         <text x="-3"  y="17" font-size="14" font-style="italic">2</text>
       </g>
 
-      <!-- multiplication sign (vertically centred on the fraction bars) -->
+      <!-- multiplication sign -->
       <text x="47" y="7" text-anchor="middle" font-size="22">·</text>
 
-      <!-- Occupation factor 1/(e^(hν/kT) − 1) -->
+      <!-- Occupation factor 1/(e^(hν/kT) − 1)  (hν coloured = Part IV) -->
       <g id="factor-occupation">
         <text x="125" y="-10" text-anchor="middle" font-size="20">1</text>
         <line x1="60" y1="0" x2="190" y2="0"
               stroke="#0a1929" stroke-width="1.5"/>
         <text x="88"  y="24" font-size="19" font-style="italic">e</text>
-        <text x="99"  y="14" font-size="13" font-style="italic">hν/kT</text>
+        <text x="99"  y="14" font-size="13" font-style="italic"
+              fill="#c25e00" font-weight="600">hν</text>
+        <text x="114" y="14" font-size="13" font-style="italic">/kT</text>
         <text x="136" y="24" font-size="19">− 1</text>
       </g>
     </g>
 
-    <!-- Factor underlines (aligned with the fraction bars above;
-         default: all gray; variants override these) -->
+    <!-- Factor underlines, colour-matched to part boxes -->
     <g id="factor-underlines">
-      <!-- Prefactor underline -->
-      <line id="ul-prefactor"
-            x1="-45" y1="44" x2="35" y2="44"
-            stroke="#a8c5e0" stroke-width="3" stroke-linecap="round"/>
-      <!-- Occupation underline -->
-      <line id="ul-occupation"
-            x1="60" y1="44" x2="190" y2="44"
-            stroke="#a8c5e0" stroke-width="3" stroke-linecap="round"/>
+      <line id="ul-prefactor" x1="-45" y1="42" x2="35" y2="42"
+            stroke="#1f4e79" stroke-width="4" stroke-linecap="round"/>
+      <line id="ul-occupation" x1="60" y1="42" x2="190" y2="42"
+            stroke="#d4a017" stroke-width="4" stroke-linecap="round"/>
     </g>
 
-    <!-- Factor labels under each factor (centred on the underlines) -->
-    <text x="-5" y="64" text-anchor="middle"
-          font-size="10" fill="#5a6a7a" letter-spacing="0.05em">
-      MODES + QUANTUM
-    </text>
-    <text x="125" y="64" text-anchor="middle"
-          font-size="10" fill="#5a6a7a" letter-spacing="0.05em">
-      BOSE OCCUPATION
-    </text>
+    <!-- Factor labels (Japanese, colour-matched, with explicit 行き先) -->
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Noto Sans JP', sans-serif"
+       font-weight="600">
+      <text x="-5"  y="64" text-anchor="middle" font-size="10.5"
+            fill="#1f4e79">モード密度・偏光 → 第V部</text>
+      <text x="125" y="64" text-anchor="middle" font-size="10.5"
+            fill="#9a7400">占有因子 → 第III部</text>
+      <text x="60"  y="86" text-anchor="middle" font-size="10.5"
+            fill="#c25e00">エネルギー量子 h → 第IV部</text>
+    </g>
   </g>
 
-  <!-- ============================================================
-       Four part-boxes around the central function
-       (Top-Left, Top-Right, Bottom-Left, Bottom-Right)
-       ============================================================ -->
-
-  <!-- Part III: Bose statistics (top-right) -->
-  <g transform="translate(700, 130)">
-    <rect x="-80" y="-30" width="160" height="65" rx="8"
-          fill="#fff9e6" stroke="#d4a017" stroke-width="1.5"/>
-    <text x="0" y="-10" text-anchor="middle"
-          font-size="11" font-weight="700" fill="#7a5a00"
-          letter-spacing="0.08em">PART III</text>
-    <text x="0" y="8" text-anchor="middle"
-          font-size="12" fill="#0a1929">Statistical Mechanics</text>
-    <text x="0" y="24" text-anchor="middle"
-          font-size="10" fill="#5a6a7a">Ch. 6–8 · Bose statistics, μ = 0</text>
-  </g>
-
-  <!-- Part IV: Quantum (bottom-right) -->
-  <g transform="translate(700, 290)">
-    <rect x="-80" y="-30" width="160" height="65" rx="8"
-          fill="#fff9e6" stroke="#d4a017" stroke-width="1.5"/>
-    <text x="0" y="-10" text-anchor="middle"
-          font-size="11" font-weight="700" fill="#7a5a00"
-          letter-spacing="0.08em">PART IV</text>
-    <text x="0" y="8" text-anchor="middle"
-          font-size="12" fill="#0a1929">Quantum Theory</text>
-    <text x="0" y="24" text-anchor="middle"
-          font-size="10" fill="#5a6a7a">Ch. 9–12 · Energy quantum hν</text>
-  </g>
-
-  <!-- Part V: EM modes (top-left) -->
-  <g transform="translate(200, 130)">
-    <rect x="-80" y="-30" width="160" height="65" rx="8"
-          fill="#e8f0fa" stroke="#1f4e79" stroke-width="1.5"/>
-    <text x="0" y="-10" text-anchor="middle"
-          font-size="11" font-weight="700" fill="#0a3260"
-          letter-spacing="0.08em">PART V</text>
-    <text x="0" y="8" text-anchor="middle"
-          font-size="12" fill="#0a1929">Electromagnetism</text>
-    <text x="0" y="24" text-anchor="middle"
-          font-size="9" fill="#5a6a7a">Ch. 13–14 · Modes 8πν²/c³ · 2 pol.</text>
-  </g>
-
-  <!-- Part VI: Deviations (bottom-left) -->
-  <g transform="translate(200, 290)">
-    <rect x="-80" y="-30" width="160" height="65" rx="8"
-          fill="#e8f0fa" stroke="#1f4e79" stroke-width="1.5"/>
-    <text x="0" y="-10" text-anchor="middle"
-          font-size="11" font-weight="700" fill="#0a3260"
-          letter-spacing="0.08em">PART VI</text>
-    <text x="0" y="8" text-anchor="middle"
-          font-size="12" fill="#0a1929">Real-Universe Deviations</text>
-    <text x="0" y="24" text-anchor="middle"
-          font-size="10" fill="#5a6a7a">Ch. 15–18 · CMB, stars, disks</text>
-  </g>
-
-  <!-- ============================================================
-       Arrows from factors to parts (inverse direction: factor ← part)
-       The arrow shows "Part III explains the occupation factor", etc.
-       ============================================================ -->
-
-  <!-- From PART III (top-right) → occupation factor (tip above the "1") -->
-  <path d="M 618 148 Q 545 150 573 176"
-        fill="none" stroke="#1f4e79" stroke-width="1.5"
-        marker-end="url(#arrow)"/>
-  <text x="622" y="170" text-anchor="start" font-size="9"
-        fill="#5a6a7a" font-style="italic">explains</text>
-
-  <!-- From PART IV (bottom-right) → quantum factor (tip beside the exponent e^hν/kT) -->
-  <path d="M 622 270 Q 600 248 645 226"
-        fill="none" stroke="#1f4e79" stroke-width="1.5"
-        marker-end="url(#arrow)"/>
-  <text x="622" y="252" text-anchor="start" font-size="9"
-        fill="#5a6a7a" font-style="italic">hν origin</text>
-
-  <!-- From PART V (top-left) → prefactor 2hν³/c² (tip above the numerator) -->
-  <path d="M 282 148 Q 370 150 432 176"
-        fill="none" stroke="#1f4e79" stroke-width="1.5"
-        marker-end="url(#arrow)"/>
-  <text x="278" y="170" text-anchor="end" font-size="9"
-        fill="#5a6a7a" font-style="italic">modes + pol.</text>
-
-  <!-- From PART VI (bottom-left) → entire B_ν (tip below the B_ν(T) symbol) -->
-  <path d="M 282 272 Q 320 252 330 226"
-        fill="none" stroke="#1f4e79" stroke-width="1.5"
-        marker-end="url(#arrow)"/>
-  <text x="278" y="252" text-anchor="end" font-size="9"
-        fill="#5a6a7a" font-style="italic">deviations</text>
-
-  <!-- ============================================================
-       Bottom: I-II observation side, VIII unification side
-       ============================================================ -->
-
-  <!-- Observation: Part I-II input -->
-  <g transform="translate(150, 470)">
-    <rect x="-95" y="-25" width="190" height="60" rx="8"
-          fill="#fbe9eb" stroke="#c43f6b" stroke-width="1.5"/>
-    <text x="0" y="-7" text-anchor="middle"
-          font-size="11" font-weight="700" fill="#8a1f3e"
-          letter-spacing="0.08em">PARTS I–II</text>
-    <text x="0" y="10" text-anchor="middle"
-          font-size="12" fill="#0a1929">Observed continuous spectra</text>
-    <text x="0" y="24" text-anchor="middle"
-          font-size="10" fill="#5a6a7a">Sun · CMB · dust · accretion disks</text>
-  </g>
-
-  <!-- Arrow: observation → central function (input) -->
-  <path d="M 245 460 Q 360 380 390 250"
-        fill="none" stroke="#c43f6b" stroke-width="1.5"
-        marker-end="url(#arrow-thin)"
-        stroke-dasharray="5,3"/>
-  <text x="295" y="395" text-anchor="middle"
-        font-size="10" fill="#8a1f3e" font-style="italic">
-    starting point
-  </text>
-
-  <!-- Unification: Part VIII output -->
-  <g transform="translate(750, 470)">
-    <rect x="-95" y="-25" width="190" height="60" rx="8"
-          fill="#ede5f7" stroke="#5e2d91" stroke-width="1.5"/>
-    <text x="0" y="-7" text-anchor="middle"
-          font-size="11" font-weight="700" fill="#3e1a6a"
-          letter-spacing="0.08em">PART VIII</text>
-    <text x="0" y="10" text-anchor="middle"
-          font-size="12" fill="#0a1929">QED unification</text>
-    <text x="0" y="24" text-anchor="middle"
-          font-size="10" fill="#5a6a7a">also unifies with line spectrum</text>
-  </g>
-
-  <!-- Arrow: central function → Part VIII (synthesis) -->
-  <path d="M 655 250 Q 720 380 655 460"
-        fill="none" stroke="#5e2d91" stroke-width="1.5"
-        marker-end="url(#arrow-thin)"
-        stroke-dasharray="5,3"/>
-  <text x="715" y="395" text-anchor="middle"
-        font-size="10" fill="#3e1a6a" font-style="italic">
-    synthesis
+  <!-- Whole-equation deviation note (Part VI, teal) -->
+  <text x="450" y="394" text-anchor="middle"
+        font-size="12" font-weight="600" fill="#2e7d8c">
+    現実の天体では式全体が少しずつずれる → 第VI部
   </text>
 
   <!-- ============================================================
-       Footer caption (English; Japanese in body .qmd caption)
+       Part boxes: bottom row (VI, IV)
        ============================================================ -->
-  <text x="450" y="555" text-anchor="middle"
-        font-size="11" fill="#5a6a7a" font-style="italic">
-    Inverse-derivation map: each factor of B_ν(T) traces to a chapter group; Part VIII unifies all.
+  <g>
+    <rect x="140" y="405" width="240" height="85" rx="10"
+          fill="#e6f2f4" stroke="#2e7d8c" stroke-width="2"/>
+    <text x="260" y="427" text-anchor="middle"
+          font-size="13" font-weight="700" fill="#2e7d8c"
+          letter-spacing="0.08em">第VI部</text>
+    <text x="260" y="449" text-anchor="middle"
+          font-size="16" fill="#0a1929">現実の宇宙へ</text>
+    <text x="260" y="467" text-anchor="middle"
+          font-size="11" fill="#5a6a7a">15–18章 ― 黒体からのずれ</text>
+    <text x="260" y="481" text-anchor="middle"
+          font-size="11" fill="#5a6a7a">（CMB・恒星・ダスト・降着円盤）</text>
+  </g>
+
+  <g>
+    <rect x="520" y="405" width="240" height="85" rx="10"
+          fill="#fdf0e3" stroke="#c25e00" stroke-width="2"/>
+    <text x="640" y="427" text-anchor="middle"
+          font-size="13" font-weight="700" fill="#c25e00"
+          letter-spacing="0.08em">第IV部</text>
+    <text x="640" y="449" text-anchor="middle"
+          font-size="16" fill="#0a1929">量子論</text>
+    <text x="640" y="471" text-anchor="middle"
+          font-size="11" fill="#5a6a7a">9–12章 ― エネルギー量子 hν</text>
+  </g>
+
+  <!-- ============================================================
+       Bottom row: input (Parts I–II) and output (Part VIII)
+       ============================================================ -->
+  <g>
+    <rect x="30" y="505" width="190" height="80" rx="10"
+          fill="#fbe9eb" stroke="#c43f6b" stroke-width="2"/>
+    <text x="125" y="528" text-anchor="middle"
+          font-size="13" font-weight="700" fill="#8a1f3e"
+          letter-spacing="0.08em">第I–II部</text>
+    <text x="125" y="550" text-anchor="middle"
+          font-size="14" fill="#0a1929">観測されるスペクトル</text>
+    <text x="125" y="570" text-anchor="middle"
+          font-size="11" fill="#5a6a7a">太陽・CMB・ダスト・円盤</text>
+  </g>
+
+  <!-- starting point: observation → the equation -->
+  <path d="M 140 502 Q 80 380 224 300"
+        fill="none" stroke="#c43f6b" stroke-width="2"
+        stroke-dasharray="6,4" marker-end="url(#arrow-rose)"/>
+  <text x="88" y="404" text-anchor="middle"
+        font-size="12" font-weight="600" fill="#8a1f3e">出発点</text>
+
+  <g>
+    <rect x="680" y="505" width="190" height="80" rx="10"
+          fill="#ede5f7" stroke="#5e2d91" stroke-width="2"/>
+    <text x="775" y="528" text-anchor="middle"
+          font-size="13" font-weight="700" fill="#3e1a6a"
+          letter-spacing="0.08em">第VIII部</text>
+    <text x="775" y="550" text-anchor="middle"
+          font-size="14" fill="#0a1929">QED による統一</text>
+    <text x="775" y="570" text-anchor="middle"
+          font-size="11" fill="#5a6a7a">線スペクトルの地図と合流</text>
+  </g>
+
+  <!-- synthesis: the equation → Part VIII -->
+  <path d="M 702 300 Q 820 380 778 502"
+        fill="none" stroke="#5e2d91" stroke-width="2"
+        stroke-dasharray="6,4" marker-end="url(#arrow-purple)"/>
+  <text x="828" y="404" text-anchor="middle"
+        font-size="12" font-weight="600" fill="#3e1a6a">統一へ</text>
+
+  <!-- ============================================================
+       Reading hint + footer
+       ============================================================ -->
+  <text x="450" y="540" text-anchor="middle"
+        font-size="12" fill="#5a6a7a">
+    読み方：式の中の色つき因子は、同じ色の部で
+  </text>
+  <text x="450" y="558" text-anchor="middle"
+        font-size="12" fill="#5a6a7a">
+    「なぜこの形か」が逆引きされる
+  </text>
+
+  <text x="450" y="606" text-anchor="middle"
+        font-size="11" fill="#8a99a8">
+    各部の冒頭でこの地図が再掲され、その部が担当する因子が強調表示される
   </text>
 </svg>
