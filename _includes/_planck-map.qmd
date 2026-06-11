@@ -2,6 +2,8 @@
 
 **プランク関数（連続スペクトルの地図）**
 
+![プランク関数 $B_\nu(T)$ の各因子と、それを解き明かす章群の対応。第III部が占有因子、第IV部がエネルギー量子 $h\nu$、第V部がモード密度＋偏光自由度、第VI部が現実の天体での「ずれ」を担当する。第I-II 部が観測の入口、第VIII 部が QED による統一の出口にあたる。](../images/planck-map.svg){#fig-planck-map width=92%}
+
 $$
 B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 $$ {#eq-planck-function}

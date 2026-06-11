@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" width="900" height="460" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <!-- =============================================================
+       Three elementary processes (Ch. 11 §11.2; reused in Ch. 20 §20.2)
+       三つの素過程 ― 自発放出・誘導吸収・誘導放出と Einstein 係数
+       Style matched to planck-map.svg.
+       All math glyphs are absolutely positioned <text> elements
+       (no tspan dx/dy) for renderer-independent layout.
+       Labels in English; Japanese caption goes in body .qmd.
+       License: CC BY 4.0
+       ============================================================= -->
+
+  <defs>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1f4e79"/>
+    </marker>
+    <marker id="arrow-rose" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c43f6b"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="460" fill="#fafbfc"/>
+
+  <!-- ============================================================
+       Top title strip
+       ============================================================ -->
+  <text x="450" y="38" text-anchor="middle"
+        font-size="20" font-weight="700" fill="#0a1929"
+        letter-spacing="0.08em">
+    THREE ELEMENTARY PROCESSES
+  </text>
+  <text x="450" y="60" text-anchor="middle"
+        font-size="13" fill="#5a6a7a">
+    Matter–radiation interaction and the Einstein coefficients (Ch. 11; reused in Ch. 20)
+  </text>
+
+  <!-- ============================================================
+       Panel 1: SPONTANEOUS EMISSION  (u → l, no external field)
+       ============================================================ -->
+  <g transform="translate(165, 110)">
+    <rect x="-122" y="0" width="244" height="260" rx="10"
+          fill="#ffffff" stroke="#d8e2ec" stroke-width="1.5"/>
+    <text x="0" y="24" text-anchor="middle"
+          font-size="11" font-weight="700" fill="#0a3260"
+          letter-spacing="0.08em">1 · SPONTANEOUS EMISSION</text>
+    <text x="0" y="44" text-anchor="middle"
+          font-size="9" font-style="italic" fill="#5a6a7a">
+      no external photon needed
+    </text>
+
+    <!-- levels -->
+    <line x1="-90" y1="80" x2="90" y2="80"
+          stroke="#0a1929" stroke-width="2"/>
+    <line x1="-90" y1="190" x2="90" y2="190"
+          stroke="#0a1929" stroke-width="2"/>
+    <g font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif"
+       font-style="italic" fill="#0a1929">
+      <text x="-104" y="85" font-size="16">u</text>
+      <text x="-102" y="195" font-size="16">l</text>
+    </g>
+
+    <!-- atom: initial (filled, on u) and final (open, on l) -->
+    <circle cx="-30" cy="80" r="5" fill="#0a1929"/>
+    <circle cx="-30" cy="190" r="5" fill="none"
+            stroke="#0a1929" stroke-width="1.5" stroke-dasharray="2,2"/>
+
+    <!-- transition arrow u → l -->
+    <line x1="-30" y1="90" x2="-30" y2="180"
+          stroke="#1f4e79" stroke-width="2.5"
+          marker-end="url(#arrow-blue)"/>
+
+    <!-- emitted photon (wavy, down-right) -->
+    <g transform="translate(-12, 128) rotate(18)">
+      <path d="m 0 0 q 5 -7 10 0 q 5 7 10 0 q 5 -7 10 0 q 5 7 10 0 q 5 -7 10 0 q 5 7 10 0 q 5 -7 10 0 q 5 7 10 0 l 8 0"
+            fill="none" stroke="#c43f6b" stroke-width="2"
+            marker-end="url(#arrow-rose)"/>
+    </g>
+    <g font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif"
+       font-style="italic" fill="#c43f6b">
+      <text x="58" y="125" font-size="14">hν</text>
+    </g>
+
+    <!-- rate pill -->
+    <rect x="-55" y="215" width="110" height="32" rx="8"
+          fill="#fbe9eb" stroke="#c43f6b" stroke-width="1"/>
+    <text x="-40" y="236" font-size="10" fill="#8a1f3e"
+          letter-spacing="0.05em">RATE</text>
+    <g font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif"
+       font-style="italic" fill="#0a1929">
+      <text x="14" y="237" font-size="17">A</text>
+      <text x="26" y="242" font-size="11">ul</text>
+    </g>
+  </g>
+
+  <!-- ============================================================
+       Panel 2: STIMULATED ABSORPTION  (l → u)
+       ============================================================ -->
+  <g transform="translate(450, 110)">
+    <rect x="-122" y="0" width="244" height="260" rx="10"
+          fill="#ffffff" stroke="#d8e2ec" stroke-width="1.5"/>
+    <text x="0" y="24" text-anchor="middle"
+          font-size="11" font-weight="700" fill="#0a3260"
+          letter-spacing="0.08em">2 · ABSORPTION</text>
+    <text x="0" y="44" text-anchor="middle"
+          font-size="9" font-style="italic" fill="#5a6a7a">
+      photon absorbed from the field J
+    </text>
+
+    <!-- levels -->
+    <line x1="-90" y1="80" x2="90" y2="80"
+          stroke="#0a1929" stroke-width="2"/>
+    <line x1="-90" y1="190" x2="90" y2="190"
+          stroke="#0a1929" stroke-width="2"/>
+    <g font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif"
+       font-style="italic" fill="#0a1929">
+      <text x="-104" y="85" font-size="16">u</text>
+      <text x="-102" y="195" font-size="16">l</text>
+    </g>
+
+    <!-- atom: initial (filled, on l) and final (open, on u) -->
+    <circle cx="30" cy="190" r="5" fill="#0a1929"/>
+    <circle cx="30" cy="80" r="5" fill="none"
+            stroke="#0a1929" stroke-width="1.5" stroke-dasharray="2,2"/>
+
+    <!-- incoming photon (wavy, from left; ends at the atom = absorbed) -->
+    <g transform="translate(-98, 135)">
+      <path d="m 0 0 q 5 -7 10 0 q 5 7 10 0 q 5 -7 10 0 q 5 7 10 0 q 5 -7 10 0 q 5 7 10 0 q 5 -7 10 0 q 5 7 10 0 q 5 -7 10 0 q 5 7 10 0 l 8 0"
+            fill="none" stroke="#c43f6b" stroke-width="2"
+            marker-end="url(#arrow-rose)"/>
+    </g>
+    <g font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif"
+       font-style="italic" fill="#c43f6b">
+      <text x="-86" y="120" font-size="14">hν</text>
+    </g>
+
+    <!-- transition arrow l → u -->
+    <line x1="30" y1="180" x2="30" y2="90"
+          stroke="#1f4e79" stroke-width="2.5"
+          marker-end="url(#arrow-blue)"/>
+
+    <!-- rate pill -->
+    <rect x="-55" y="215" width="110" height="32" rx="8"
+          fill="#fbe9eb" stroke="#c43f6b" stroke-width="1"/>
+    <text x="-40" y="236" font-size="10" fill="#8a1f3e"
+          letter-spacing="0.05em">RATE</text>
+    <g font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif"
+       font-style="italic" fill="#0a1929">
+      <text x="4" y="237" font-size="17">B</text>
+      <text x="16" y="242" font-size="11">lu</text>
+      <text x="28" y="237" font-size="17">J</text>
+      <text x="38" y="242" font-size="11">ν</text>
+    </g>
+  </g>
+
+  <!-- ============================================================
+       Panel 3: STIMULATED EMISSION  (u → l, photon cloned into same mode)
+       ============================================================ -->
+  <g transform="translate(735, 110)">
+    <rect x="-122" y="0" width="244" height="260" rx="10"
+          fill="#ffffff" stroke="#d8e2ec" stroke-width="1.5"/>
+    <text x="0" y="24" text-anchor="middle"
+          font-size="11" font-weight="700" fill="#0a3260"
+          letter-spacing="0.08em">3 · STIMULATED EMISSION</text>
+    <text x="0" y="44" text-anchor="middle"
+          font-size="9" font-style="italic" fill="#5a6a7a">
+      2 identical photons leave, same mode
+    </text>
+
+    <!-- levels -->
+    <line x1="-90" y1="80" x2="90" y2="80"
+          stroke="#0a1929" stroke-width="2"/>
+    <line x1="-90" y1="190" x2="90" y2="190"
+          stroke="#0a1929" stroke-width="2"/>
+    <g font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif"
+       font-style="italic" fill="#0a1929">
+      <text x="-104" y="85" font-size="16">u</text>
+      <text x="-102" y="195" font-size="16">l</text>
+    </g>
+
+    <!-- atom: initial (filled, on u) and final (open, on l) -->
+    <circle cx="-10" cy="80" r="5" fill="#0a1929"/>
+    <circle cx="-10" cy="190" r="5" fill="none"
+            stroke="#0a1929" stroke-width="1.5" stroke-dasharray="2,2"/>
+
+    <!-- incoming photon (wavy, from left) -->
+    <g transform="translate(-98, 125)">
+      <path d="m 0 0 q 5 -7 10 0 q 5 7 10 0 q 5 -7 10 0 q 5 7 10 0 q 5 -7 10 0 q 5 7 10 0 l 8 0"
+            fill="none" stroke="#c43f6b" stroke-width="2"
+            marker-end="url(#arrow-rose)"/>
+    </g>
+    <g font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif"
+       font-style="italic" fill="#c43f6b">
+      <text x="-86" y="110" font-size="14">hν</text>
+    </g>
+
+    <!-- transition arrow u → l -->
+    <line x1="-10" y1="90" x2="-10" y2="180"
+          stroke="#1f4e79" stroke-width="2.5"
+          marker-end="url(#arrow-blue)"/>
+
+    <!-- two outgoing identical photons (parallel, same direction) -->
+    <g transform="translate(8, 117)">
+      <path d="m 0 0 q 5 -7 10 0 q 5 7 10 0 q 5 -7 10 0 q 5 7 10 0 q 5 -7 10 0 q 5 7 10 0 q 5 -7 10 0 q 5 7 10 0 l 8 0"
+            fill="none" stroke="#c43f6b" stroke-width="2"
+            marker-end="url(#arrow-rose)"/>
+    </g>
+    <g transform="translate(8, 140)">
+      <path d="m 0 0 q 5 -7 10 0 q 5 7 10 0 q 5 -7 10 0 q 5 7 10 0 q 5 -7 10 0 q 5 7 10 0 q 5 -7 10 0 q 5 7 10 0 l 8 0"
+            fill="none" stroke="#c43f6b" stroke-width="2"
+            marker-end="url(#arrow-rose)"/>
+    </g>
+    <g font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif"
+       font-style="italic" fill="#c43f6b">
+      <text x="58" y="104" font-size="14">2hν</text>
+    </g>
+
+    <!-- rate pill -->
+    <rect x="-55" y="215" width="110" height="32" rx="8"
+          fill="#fbe9eb" stroke="#c43f6b" stroke-width="1"/>
+    <text x="-40" y="236" font-size="10" fill="#8a1f3e"
+          letter-spacing="0.05em">RATE</text>
+    <g font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif"
+       font-style="italic" fill="#0a1929">
+      <text x="4" y="237" font-size="17">B</text>
+      <text x="16" y="242" font-size="11">ul</text>
+      <text x="30" y="237" font-size="17">J</text>
+      <text x="40" y="242" font-size="11">ν</text>
+    </g>
+  </g>
+
+  <!-- ============================================================
+       Shared energy-gap annotation (centred between title and panels)
+       ============================================================ -->
+  <g font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif"
+     font-style="italic" fill="#5a6a7a">
+    <text x="412" y="92" font-size="13">E</text>
+    <text x="422" y="96" font-size="9">u</text>
+    <text x="431" y="92" font-size="13">−</text>
+    <text x="443" y="92" font-size="13">E</text>
+    <text x="453" y="96" font-size="9">l</text>
+    <text x="462" y="92" font-size="13">=</text>
+    <text x="475" y="92" font-size="13">hν</text>
+  </g>
+
+  <!-- ============================================================
+       Footer caption
+       ============================================================ -->
+  <text x="450" y="408" text-anchor="middle"
+        font-size="11" fill="#5a6a7a" font-style="italic">
+    Detailed balance among these three processes in thermal equilibrium reproduces the Planck distribution
+  </text>
+  <text x="280" y="426" text-anchor="end"
+        font-size="11" fill="#5a6a7a" font-style="italic">
+    and fixes the Einstein relations (§11.3):
+  </text>
+  <!-- Einstein relations with true subscripts (absolutely positioned) -->
+  <g font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif"
+     fill="#5a6a7a">
+    <g font-style="italic">
+      <text x="296" y="426" font-size="13">g</text>
+      <text x="304" y="430" font-size="9">l</text>
+      <text x="312" y="426" font-size="13">B</text>
+      <text x="322" y="430" font-size="9">lu</text>
+      <text x="352" y="426" font-size="13">g</text>
+      <text x="360" y="430" font-size="9">u</text>
+      <text x="369" y="426" font-size="13">B</text>
+      <text x="379" y="430" font-size="9">ul</text>
+      <text x="416" y="426" font-size="13">A</text>
+      <text x="426" y="430" font-size="9">ul</text>
+      <text x="447" y="426" font-size="13">B</text>
+      <text x="457" y="430" font-size="9">ul</text>
+      <text x="494" y="426" font-size="13">2hν³/c²</text>
+    </g>
+    <text x="338" y="425" font-size="12">=</text>
+    <text x="394" y="425" font-size="12">,</text>
+    <text x="438" y="426" font-size="13">/</text>
+    <text x="476" y="425" font-size="12">=</text>
+  </g>
+</svg>

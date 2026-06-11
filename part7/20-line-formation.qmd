@@ -60,7 +60,9 @@ $$ {#eq-equivalent-width}
 
 [本文目安：B3]
 
-第11章 §11.2 で導入した **Einstein 係数**：
+第11章 §11.2 で導入した **Einstein 係数**（同じ図を再掲、@fig-einstein-three-processes-line）：
+
+![三つの素過程の準位図（再掲）。連続スペクトル側（第IV部）で導入した同じ図が、線スペクトル側でも線形成の出発点となる。両中心地図が共通の Hamiltonian の二側面であることを示す最初の表れ。](../images/einstein-processes.svg){#fig-einstein-three-processes-line width=88%}
 
 - $A_{ul}$：**自発放出**（**spontaneous emission**）― $u \to l$ で光子放出。確率 [s$^{-1}$]
 - $B_{lu}$：**誘導吸収**（**induced absorption**）― $l \to u$ で光子吸収
