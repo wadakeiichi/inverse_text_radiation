@@ -5,6 +5,9 @@ title-en: "Thermal Radiation in the Universe"
 subtitle-en: "An Inverse Approach to the Physics"
 lang: ja
 date: today
+number-sections: false
+crossref:
+  chapters: false   # 表紙は crossref 連番から外す
 ---
 
 # はじめに ― この本の三つの原則 {#sec-three-principles .unnumbered}

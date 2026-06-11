@@ -1,6 +1,9 @@
 ---
 title: "序章　この本の目的と歩き方"
 lang: ja
+number-sections: false
+crossref:
+  chapters: false   # 序章は crossref 連番から外す（第1章を Ch.1 に揃えるため）
 ---
 
 ## 0.1 宇宙の熱的放射から何を学ぶのか {#sec-prologue-purpose}
