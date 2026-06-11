@@ -9,7 +9,7 @@ lang: ja
 
 ## この章の中心地図 {#sec-where-blackbody-map .unnumbered}
 
-![プランク関数 $B_\nu(T)$ の各因子と、それを解き明かす章群の対応。第III部が占有因子、第IV部がエネルギー量子 $h\nu$、第V部がモード密度＋偏光自由度、第VI部が現実の天体での「ずれ」を担当する。第I-II 部が観測の入口、第VIII 部が QED による統一の出口にあたる。](../images/planck-map.svg){#fig-planck-map width=92%}
+![プランク関数の各因子と、それを逆引きする各部の対応。**因子の色＝担当する部の色**で結ばれており、矢印に頼らず読み取れる設計になっている。観測（第I-II部）から出発し、各因子の物理を逆引きしたうえで、最終的に第VIII部 QED で同じ式が「電磁場の熱状態」として書き直される。各部の冒頭でこの地図が再掲され、その部が担当する因子のハイライトが切り替わる。](../images/planck-map.svg){#fig-planck-map width=90%}
 
 {{< include ../_includes/_planck-map.qmd >}}
 
