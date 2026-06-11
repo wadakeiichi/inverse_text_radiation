@@ -80,7 +80,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-6acc544bc6b266166f93717a0814bb05.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-71a226fbabcdaee70e64ad0b938af009.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-ff0bbcb3b1d9a5abcb18e9945927b451.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -1045,95 +1045,98 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "序章　この本の目的と歩き方"</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">lang:</span><span class="co"> ja</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## 0.1 宇宙の熱的放射から何を学ぶのか {#sec-prologue-purpose}</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>夜空の天体をスペクトルに分解すると、そこにはほぼ例外なく二種類の成分が現れる。振動数に対して滑らかに変化する **連続スペクトル** と、原子や分子の離散的なエネルギー準位間の遷移に由来し、特定の振動数の周りに集中して現れる **線スペクトル** である。後者は、水素のバルマー線のように鋭い線として見えることもあれば、多数の線が密集して分子バンドを形作ることも、PAH（多環芳香族炭化水素）の放射のように幅の広い山や谷として現れることもある。太陽や恒星の連続光、惑星や星間塵の赤外放射、宇宙マイクロ波背景放射（CMB）は前者の、恒星大気の吸収線、星雲の輝線、中性水素の 21 cm 線、分子線、AGN・クェーサーの輝線・吸収線は後者の代表例であり、宇宙の物理状態について私たちが知っていることの大半は、この二つの成分を読み解くことから得られてきた。</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>本書が扱うのは、このうち **熱的放射** ― おおまかに言えば、熱平衡（またはそれに近い状態）にある物質が出す放射 ― である。連続側の典型が黒体放射であり、線側も多くは熱的なガスの中で形成される。なぜ「熱的」に絞るのか。熱的放射はスペクトルの形が温度というただ一つの量で（線ならば温度・密度・組成という少数の量で）統制されており、その背後には熱平衡・統計力学・量子論・電磁気学という基礎物理の構造が、最も純粋な形で現れているからである。シンクロトロン放射に代表される非熱的放射は、観測スペクトルの解釈に必要な範囲で触れるにとどめる（この区別の正確な定義は第1章 §1.9 で与える）。</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>本書の目的は、これらの放射を支配する式を、暗記すべき公式として与えることではない。観測されるスペクトルの形・強度・線位置・線形から出発し、「**なぜこの形なのか**」を逆向きにたどる。連続側ではプランク関数を、線側では水素の線吸収係数を道しるべとして、放射の記述、熱平衡、光子の統計、エネルギー量子化、電磁波のモード構造、原子の量子状態、線形成をへて、最終的には両者が QED の中で一つに合流するところまでを、一つの見通しの中で理解することを目指す。</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## 0.2 対象読者と前提知識 {#sec-prologue-audience}</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>本書は、物理学科、天文学科、宇宙物理学科などの学部学生、および大学院修士課程の学生を主な対象とする。観測スペクトル（連続・線の両方）と基礎物理を結びつけて理解したい読者、既存教科書で個々の式を学んだあと「結局この式はなぜこうなのか」を観測現象から再確認したい読者にも向いている。</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>前提知識としては、微積分、指数関数と対数、基本的な力学、初歩的な電磁気学。熱力学・量子力学・原子物理の素養があると望ましいが、第I・II部から第III部以降への遡り方は読者の進度に合わせて調整できる。</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="fu">## 0.3 本書の構成 {#sec-prologue-structure}</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>本書は次の構造をとる。</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**第I・II部**：宇宙のスペクトル（連続＋線）の現象論と、放射場の記述</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**第III〜V部**：連続スペクトル（黒体放射）の逆引き ― 統計力学・量子論・電磁気学へ</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**第VI部**：現実の天体で連続放射がどう現れ、どうずれるか</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**第VII部**：線スペクトルの逆引き ― 線形成・原子物理・線形・観測応用</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**第VIII部**：QED で連続と線を統一する</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="fu">## 0.4 読者タイプ別おすすめルート {#sec-prologue-reading-routes}</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>本書は通読も可能だが、目的に応じて読み方を変えられる。各部の **どこから入るか** ・ **どこで深掘りするか** を、読者の関心に合わせて選んでほしい。</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="fu">### ルート A：まず宇宙の現象をつかみたい</span></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>**第I → II → VI → VII（19・23章）→ 必要に応じて III〜V・VII の理論章へ**</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>観測される宇宙のスペクトル（連続も線も）の **現象論** を先に押さえ、必要になったら基礎物理に戻る。「逆引き」の精神そのままを、より大胆に実践するルート。</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="fu">### ルート B：標準的に一通り学びたい</span></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>**第I 〜 VI（線も読むなら VII）**</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>本書の章番号順に通読。連続スペクトル側を完結させてから、必要に応じて線スペクトル側（第VII部）へ進む。</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="fu">### ルート C：場の量子論まで見通したい</span></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>**第I 〜 V → VIII（連続と線の統一視点で読むなら VII 経由）**</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>QED で連続と線が統一される第VIII部までを **見通す** ルート。第VI部の応用章を後回しにし、骨格となる理論部分（I-V）と最終章（VIII）の二点で本書の構造を把握する。</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="fu">### ルート D：連続スペクトルを実践的に</span></span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>**第I（1〜3章）→ II（4〜5章）→ VI**</span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>CMB・恒星・降着円盤の **実践的な解析** にすぐ取り組みたい読者向け。理論章（III〜V）を最小限の参照に留め、観測解析の道具立てだけを先に固める。</span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="fu">### ルート E：分光学・線スペクトルから</span></span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>**第I（1章 特に §1.8）→ II（4〜5章）→ VII（→ IV・VIII で深掘り）**</span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>線スペクトル（恒星吸収線・星雲輝線・分子線等）を中心に学びたい読者向け。第VII部を主軸とし、必要に応じて量子論（第IV部）と QED（第VIII部）に遡る。</span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="fu">### どのルートでも</span></span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>中心地図（プランク関数と水素線吸収係数）は、ほぼすべての章で再登場する。**どの章から読み始めても、まずは中心地図に戻る** ことを習慣にしてほしい。これが本書の三原則（① 逆引き ② 背景物理を曖昧にしない ③ 天下り的に与えない）を読者の側から実装する最も簡単な方法である。</span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="fu">## 0.5 難易度表示と本文・導出・発展の区別 {#sec-prologue-difficulty}</span></span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>各節見出しに、その節の **読み手のレベル目安** を物理学科の標準的な学年スケールで示す：</span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 表記 <span class="pp">|</span> レベル <span class="pp">|</span></span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|</span></span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **高校** <span class="pp">|</span> 高校物理 <span class="pp">|</span></span>
-<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **B1**〜**B2** <span class="pp">|</span> 学部 1〜2 年（力学・電磁気学・熱力学の基礎） <span class="pp">|</span></span>
-<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **B3**〜**B4** <span class="pp">|</span> 学部 3〜4 年（量子力学・統計力学の基礎を経た段階） <span class="pp">|</span></span>
-<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **M1**〜**M2+** <span class="pp">|</span> 大学院修士課程 <span class="pp">|</span></span>
-<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **D** <span class="pp">|</span> 博士後期課程 <span class="pp">|</span></span>
-<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>そして節ごとに、本書の三段の役割を区別する：</span>
-<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**本文目安：X** ― その節の本文を理解できる学年レベル</span>
-<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**導出：Y** ― 厳密な導出を追うのに必要な学年レベル（本文目安より高いことが多い）</span>
-<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**発展** ― 飛ばしても本筋を追える、より深い議論を含む節</span>
-<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>例：「<span class="co">[</span><span class="ot">本文目安：B3／導出：M1</span><span class="co">]</span>」は、本文は学部 3 年で読めるが、導出を逐一追うには修士 1 年の道具が必要、の意。「<span class="co">[</span><span class="ot">本文目安：B4／発展：M2+</span><span class="co">]</span>」のように **本文目安と発展レベル** を併記している場合もある。</span>
-<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>「本文目安：X」のみの節は、本文と導出のレベルがほぼ等しい節である。</span>
-<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a><span class="fu">## 0.6 オンライン版の使い方 {#sec-prologue-online}</span></span>
-<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>オンライン版では、用語・記号・主要な式にリンクを付し、関連節へ移動できるようにする。本文のほかに、導出を丁寧にたどるノート、観測データの実例、演習問題の補助解説、必要な数学への短い解説を階層的に配置する。本書のねらいの一つである「**背景物理を曖昧にしない**」を支える仕組みでもある。</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">number-sections:</span><span class="co"> false</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">crossref:</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">  chapters: false   # 序章は crossref 連番から外す（第1章を Ch.1 に揃えるため）</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## 0.1 宇宙の熱的放射から何を学ぶのか {#sec-prologue-purpose}</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>夜空の天体をスペクトルに分解すると、そこにはほぼ例外なく二種類の成分が現れる。振動数に対して滑らかに変化する **連続スペクトル** と、原子や分子の離散的なエネルギー準位間の遷移に由来し、特定の振動数の周りに集中して現れる **線スペクトル** である。後者は、水素のバルマー線のように鋭い線として見えることもあれば、多数の線が密集して分子バンドを形作ることも、PAH（多環芳香族炭化水素）の放射のように幅の広い山や谷として現れることもある。太陽や恒星の連続光、惑星や星間塵の赤外放射、宇宙マイクロ波背景放射（CMB）は前者の、恒星大気の吸収線、星雲の輝線、中性水素の 21 cm 線、分子線、AGN・クェーサーの輝線・吸収線は後者の代表例であり、宇宙の物理状態について私たちが知っていることの大半は、この二つの成分を読み解くことから得られてきた。</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>本書が扱うのは、このうち **熱的放射** ― おおまかに言えば、熱平衡（またはそれに近い状態）にある物質が出す放射 ― である。連続側の典型が黒体放射であり、線側も多くは熱的なガスの中で形成される。なぜ「熱的」に絞るのか。熱的放射はスペクトルの形が温度というただ一つの量で（線ならば温度・密度・組成という少数の量で）統制されており、その背後には熱平衡・統計力学・量子論・電磁気学という基礎物理の構造が、最も純粋な形で現れているからである。シンクロトロン放射に代表される非熱的放射は、観測スペクトルの解釈に必要な範囲で触れるにとどめる（この区別の正確な定義は第1章 §1.9 で与える）。</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>本書の目的は、これらの放射を支配する式を、暗記すべき公式として与えることではない。観測されるスペクトルの形・強度・線位置・線形から出発し、「**なぜこの形なのか**」を逆向きにたどる。連続側ではプランク関数を、線側では水素の線吸収係数を道しるべとして、放射の記述、熱平衡、光子の統計、エネルギー量子化、電磁波のモード構造、原子の量子状態、線形成をへて、最終的には両者が QED の中で一つに合流するところまでを、一つの見通しの中で理解することを目指す。</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## 0.2 対象読者と前提知識 {#sec-prologue-audience}</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>本書は、物理学科、天文学科、宇宙物理学科などの学部学生、および大学院修士課程の学生を主な対象とする。観測スペクトル（連続・線の両方）と基礎物理を結びつけて理解したい読者、既存教科書で個々の式を学んだあと「結局この式はなぜこうなのか」を観測現象から再確認したい読者にも向いている。</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>前提知識としては、微積分、指数関数と対数、基本的な力学、初歩的な電磁気学。熱力学・量子力学・原子物理の素養があると望ましいが、第I・II部から第III部以降への遡り方は読者の進度に合わせて調整できる。</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="fu">## 0.3 本書の構成 {#sec-prologue-structure}</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>本書は次の構造をとる。</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**第I・II部**：宇宙のスペクトル（連続＋線）の現象論と、放射場の記述</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**第III〜V部**：連続スペクトル（黒体放射）の逆引き ― 統計力学・量子論・電磁気学へ</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**第VI部**：現実の天体で連続放射がどう現れ、どうずれるか</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**第VII部**：線スペクトルの逆引き ― 線形成・原子物理・線形・観測応用</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**第VIII部**：QED で連続と線を統一する</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="fu">## 0.4 読者タイプ別おすすめルート {#sec-prologue-reading-routes}</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>本書は通読も可能だが、目的に応じて読み方を変えられる。各部の **どこから入るか** ・ **どこで深掘りするか** を、読者の関心に合わせて選んでほしい。</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="fu">### ルート A：まず宇宙の現象をつかみたい</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>**第I → II → VI → VII（19・23章）→ 必要に応じて III〜V・VII の理論章へ**</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>観測される宇宙のスペクトル（連続も線も）の **現象論** を先に押さえ、必要になったら基礎物理に戻る。「逆引き」の精神そのままを、より大胆に実践するルート。</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="fu">### ルート B：標準的に一通り学びたい</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>**第I 〜 VI（線も読むなら VII）**</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>本書の章番号順に通読。連続スペクトル側を完結させてから、必要に応じて線スペクトル側（第VII部）へ進む。</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="fu">### ルート C：場の量子論まで見通したい</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>**第I 〜 V → VIII（連続と線の統一視点で読むなら VII 経由）**</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>QED で連続と線が統一される第VIII部までを **見通す** ルート。第VI部の応用章を後回しにし、骨格となる理論部分（I-V）と最終章（VIII）の二点で本書の構造を把握する。</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="fu">### ルート D：連続スペクトルを実践的に</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>**第I（1〜3章）→ II（4〜5章）→ VI**</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>CMB・恒星・降着円盤の **実践的な解析** にすぐ取り組みたい読者向け。理論章（III〜V）を最小限の参照に留め、観測解析の道具立てだけを先に固める。</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="fu">### ルート E：分光学・線スペクトルから</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>**第I（1章 特に §1.8）→ II（4〜5章）→ VII（→ IV・VIII で深掘り）**</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>線スペクトル（恒星吸収線・星雲輝線・分子線等）を中心に学びたい読者向け。第VII部を主軸とし、必要に応じて量子論（第IV部）と QED（第VIII部）に遡る。</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="fu">### どのルートでも</span></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>中心地図（プランク関数と水素線吸収係数）は、ほぼすべての章で再登場する。**どの章から読み始めても、まずは中心地図に戻る** ことを習慣にしてほしい。これが本書の三原則（① 逆引き ② 背景物理を曖昧にしない ③ 天下り的に与えない）を読者の側から実装する最も簡単な方法である。</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="fu">## 0.5 難易度表示と本文・導出・発展の区別 {#sec-prologue-difficulty}</span></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>各節見出しに、その節の **読み手のレベル目安** を物理学科の標準的な学年スケールで示す：</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 表記 <span class="pp">|</span> レベル <span class="pp">|</span></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|</span></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **高校** <span class="pp">|</span> 高校物理 <span class="pp">|</span></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **B1**〜**B2** <span class="pp">|</span> 学部 1〜2 年（力学・電磁気学・熱力学の基礎） <span class="pp">|</span></span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **B3**〜**B4** <span class="pp">|</span> 学部 3〜4 年（量子力学・統計力学の基礎を経た段階） <span class="pp">|</span></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **M1**〜**M2+** <span class="pp">|</span> 大学院修士課程 <span class="pp">|</span></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **D** <span class="pp">|</span> 博士後期課程 <span class="pp">|</span></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>そして節ごとに、本書の三段の役割を区別する：</span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**本文目安：X** ― その節の本文を理解できる学年レベル</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**導出：Y** ― 厳密な導出を追うのに必要な学年レベル（本文目安より高いことが多い）</span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**発展** ― 飛ばしても本筋を追える、より深い議論を含む節</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>例：「<span class="co">[</span><span class="ot">本文目安：B3／導出：M1</span><span class="co">]</span>」は、本文は学部 3 年で読めるが、導出を逐一追うには修士 1 年の道具が必要、の意。「<span class="co">[</span><span class="ot">本文目安：B4／発展：M2+</span><span class="co">]</span>」のように **本文目安と発展レベル** を併記している場合もある。</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>「本文目安：X」のみの節は、本文と導出のレベルがほぼ等しい節である。</span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="fu">## 0.6 オンライン版の使い方 {#sec-prologue-online}</span></span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>オンライン版では、用語・記号・主要な式にリンクを付し、関連節へ移動できるようにする。本文のほかに、導出を丁寧にたどるノート、観測データの実例、演習問題の補助解説、必要な数学への短い解説を階層的に配置する。本書のねらいの一つである「**背景物理を曖昧にしない**」を支える仕組みでもある。</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
