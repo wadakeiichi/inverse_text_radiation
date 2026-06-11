@@ -1,5 +1,5 @@
 ---
-title: "第21章　逆引き4：線スペクトルから原子物理へ"
+title: "第21章　線スペクトルから原子物理へ"
 lang: ja
 ---
 
@@ -132,9 +132,85 @@ $$ {#eq-oscillator-strength}
 - 遷移行列要素は波動関数の重なりで決まる ― Bohr 模型では計算不可能
 
 ::: {.callout-note}
-**用語**：$\pi e^2 / m_e c$ という前因子は **古典電子の散乱断面積の特性**（Thomson 散乱と同類の係数）。これに無次元の $f_{lu}$ を掛けることで、量子論的補正を含んだ吸収断面積になる ― **古典 + 量子論の橋** の典型例
+**用語**：$\pi e^2 / m_e c$ という前因子は **古典 Lorentz 振動子の積分吸収断面積**（次元は cm$^2 \cdot$ Hz）に対応する量で、振動数積分した吸収係数 $\int \sigma\, d\nu = \pi e^2 f_{lu}/(m_e c)$ の形で現れる。線形 $\phi(\nu-\nu_0)$ を掛けて積分すると規格化条件 $\int \phi\, d\nu = 1$ により全積分が $\pi e^2 f_{lu}/(m_e c)$ に戻る ― **古典 + 量子論の橋** の典型例（Thomson 散乱断面積 $\sigma_T = 8\pi r_e^2/3$ とは別物なので混同しないこと）
 
 **対応（観測）**：$f_{lu}$ の値は理論計算・実験室で精密に求められており、原子物理の標準データ（NIST Atomic Spectra Database 等）として整備されている。観測線強度 → 柱密度の換算（第20章 curve of growth）にはこのデータが必須
+:::
+
+## 21.4b $\pi e^2/m_e c$ の逆引き ― 古典 Lorentz 振動子から {#sec-atomic-lorentz-prefactor}
+
+[本文目安：B3／導出：M1]
+
+中心地図 $\alpha_\nu = (\pi e^2/m_e c) f_{lu} n_l \phi(\nu-\nu_0)$ の **前因子 $\pi e^2/m_e c$** は、第VII部の中心地図のうち、まだ逆引きを明示していなかった因子である。本節でその起源を、古典 Lorentz 振動子（damped harmonic oscillator）モデルから示し、Einstein 係数との関係を通じて量子論との橋を完成させる。
+
+### 古典 Lorentz 振動子の吸収断面積
+
+電場 $\mathbf{E}(t) = \mathbf{E}_0 e^{-i\omega t}$ に弱く減衰する束縛電子（質量 $m_e$、電荷 $-e$、固有角振動数 $\omega_0$、減衰率 $\gamma$）の運動方程式：
+
+$$
+\ddot{\mathbf{r}} + \gamma \dot{\mathbf{r}} + \omega_0^2 \mathbf{r} = -\frac{e}{m_e}\mathbf{E}(t)
+$$ {#eq-lorentz-oscillator}
+
+定常解の振幅から、放電子による双極子モーメント $\mathbf{p}(t)$ を求め、これに対する **吸収断面積**（時間平均パワー吸収率を入射エネルギーフラックスで割ったもの）を計算すると、振動数積分された値は
+
+$$
+\int_0^\infty \sigma_\text{cl}(\nu)\, d\nu = \frac{\pi e^2}{m_e c}
+$$ {#eq-classical-integrated-cross-section}
+
+ここで前因子 $\pi e^2/m_e c$ は **減衰率 $\gamma$ にも線形ぴーくの位置にもよらない普遍量**。古典電磁気の力学パラメータのみで決まる。
+
+### 量子論への橋 ― 振動子強度 $f_{lu}$ の登場
+
+実際の原子は古典振動子ではなく、量子的な多準位系である。各遷移 $l \to u$ の **実効的な吸収強度** は、古典的振動子の振動数積分断面積に **無次元の補正係数** $f_{lu}$（振動子強度、第21.4節）を掛けたものとして書ける：
+
+$$
+\int_0^\infty \sigma_{lu}(\nu)\, d\nu = \frac{\pi e^2}{m_e c} \cdot f_{lu}
+$$ {#eq-quantum-integrated-cross-section}
+
+$f_{lu}$ は量子力学の遷移行列要素 @eq-oscillator-strength から計算される。Thomas-Reiche-Kuhn 和則 $\sum_u f_{lu} = N_\text{electrons}$ は、「すべての遷移を足し合わせると、古典的に予想される総吸収量に戻る」という意味で、古典-量子対応を定量的に保証する。
+
+線形 $\phi(\nu-\nu_0)$（規格化 $\int \phi\, d\nu = 1$）を使って、吸収断面積を振動数依存の形に展開：
+
+$$
+\sigma_{lu}(\nu) = \frac{\pi e^2}{m_e c} f_{lu}\, \phi(\nu - \nu_0)
+$$ {#eq-cross-section-line}
+
+これを **柱密度 × 断面積 = 吸収係数** の関係に代入して、中心地図
+
+$$
+\boxed{
+\alpha_\nu = \frac{\pi e^2}{m_e c}\, f_{lu}\, n_l\, \phi(\nu - \nu_0)
+}
+$$ {#eq-line-absorption-coefficient-complete}
+
+を再現する（第VII部冒頭で経験式として受け入れていたこの式が、いま完全に逆引きされた）。
+
+### Einstein $B$ 係数との換算
+
+第20章 §20.2 で導入した Einstein 関係 $\alpha_\nu = (h\nu_0/4\pi) n_l B_{lu} \phi(\nu-\nu_0)$ と本節の @eq-line-absorption-coefficient-complete を比べると、両者は **同一の物理量を別の言葉で書いたもの** であり、
+
+$$
+B_{lu} = \frac{4\pi^2 e^2}{m_e c h\nu_0}\, f_{lu}
+$$ {#eq-B-f-conversion}
+
+の換算で結ばれる（$J_\nu$ 規約、§11.3）。さらに Einstein 関係 $A_{ul} = (2h\nu^3/c^2) B_{ul} = (2h\nu^3/c^2)(g_l/g_u) B_{lu}$ と組合せて、自発放出率 $A_{ul}$ も振動子強度から：
+
+$$
+A_{ul} = \frac{8\pi^2 e^2 \nu_0^2}{m_e c^3}\, \frac{g_l}{g_u}\, f_{lu}
+$$ {#eq-A-f-conversion}
+
+::: {.callout-note}
+**第VII部中心地図の完成**：これで線スペクトル中心地図の全因子（$\pi e^2/m_e c$, $f_{lu}$, $n_l$, $\phi$, $\nu_0$）が逆引きされた：
+
+| 因子 | 起源 | 章 |
+|---|---|---|
+| $\pi e^2 / m_e c$ | 古典 Lorentz 振動子の積分吸収断面積 | **本節（§21.4b）** |
+| $f_{lu}$ | 遷移行列要素 $|\langle u|\mathbf{r}|l\rangle|^2$（量子論的補正） | §21.4 |
+| $n_l$ | LTE（Boltzmann/Saha）または non-LTE 統計平衡 | §20.4-§20.5 |
+| $\phi(\nu - \nu_0)$ | 自然幅・Doppler・衝突幅・Voigt | 第22章 |
+| $\nu_0$ | 原子・分子のエネルギー準位 | §21.1-§21.3 |
+
+連続スペクトル側（第14章で逆引き完了）と並んで、**第VII部の中心地図も完全に逆引きされた**。第VIII部の QED で両中心地図が統一されるとき、$\pi e^2/m_e c$ と $2h\nu^3/c^2$ の両前因子が、同じ電磁場–物質相互作用 Hamiltonian から生じることが明らかになる
 :::
 
 ## 21.5 選択則と禁制線 ― なぜ「許されない」遷移が見えるか {#sec-atomic-selection-rules}

@@ -79,7 +79,7 @@ $$ {#eq-deviation-factor}
 
 恒星大気から放射輸送を解いて連続スペクトルを得る最も簡単な近似が **灰色大気**（**grey atmosphere**）。「灰色」とは「振動数によらず吸収率が一定」の意味（**$\kappa_\nu = \kappa$ for all $\nu$**）。
 
-放射輸送方程式（第5章）から、灰色大気で得られる **Eddington 近似** の解は
+放射輸送方程式（第5章）から、灰色大気で得られる **Eddington 近似** の解は（導出は Mihalas 1978 §3 や Hubeny & Mihalas 2014 第 17 章参照、本書では結果のみ引く）
 
 $$
 T^4(\tau) = \frac{3}{4} T_\text{eff}^4 \left(\tau + \frac{2}{3}\right)
@@ -158,7 +158,7 @@ $$ {#eq-modified-blackbody}
 ::: {.callout-tip appearance="simple"}
 **問い**：$\beta = 2$ のとき、Rayleigh-Jeans 側で観測される $I_\nu$ は $\nu$ の何乗に比例するか？
 
-**短答**：黒体の Rayleigh-Jeans 側は $B_\nu \propto \nu^2$（第7章）。これに $Q_\nu \propto \nu^2$ を掛けるので、$I_\nu \propto \nu^4$。
+**短答**：黒体の Rayleigh-Jeans 側は $B_\nu \propto \nu^2$（第2章 §2.5）。これに $Q_\nu \propto \nu^2$ を掛けるので、$I_\nu \propto \nu^4$。
 
 **もう一歩**：Wien 側（指数で減衰）では、$Q_\nu$ の振動数依存はほぼ効かず、依然として指数的減衰が支配する。**Rayleigh-Jeans 側でのみ $\beta$ が見える** という非対称性が、観測解析の鍵となる
 :::
@@ -172,7 +172,7 @@ $$ {#eq-modified-blackbody}
 - **吸収では局所熱平衡**：物質が光を熱に変え、再びプランク関数で放出する
 - **散乱では非局所**：光子が遠くで作られて、ここで方向を変えるだけ
 
-散乱が支配的な系では、観測される光は **「源泉関数（第6章）が局所のプランク関数とは大きく違う」** 状態になる。具体的には、源泉関数 $S_\nu$ は
+散乱が支配的な系では、観測される光は **「ソース関数（第5章 §5.4）が局所のプランク関数とは大きく違う」** 状態になる。具体的には、ソース関数 $S_\nu$ は
 
 $$
 S_\nu = \frac{\kappa_\nu^\text{abs} B_\nu(T) + \sigma_\nu \langle J_\nu \rangle}{\kappa_\nu^\text{abs} + \sigma_\nu}
@@ -194,7 +194,7 @@ $$
 \frac{dn}{dE} \propto E^{-p}
 $$ {#eq-nonthermal-distribution}
 
-このような非熱的電子からの **シンクロトロン放射**（第VIII部の本格議論）や **逆コンプトン放射** は、観測スペクトルもべき則となる：$I_\nu \propto \nu^{-\alpha}$。
+このような非熱的電子からの **シンクロトロン放射** や **逆コンプトン放射** は、観測スペクトルもべき則となる：$I_\nu \propto \nu^{-\alpha}$。これらの本格的な扱いは本書の主軸（熱的放射）の射程外であり、Rybicki & Lightman、Longair 等の専門書を参照してほしい（第18章 §18.3 でも降着円盤と共存する非熱的成分との関連で軽く触れる）。
 
 **熱的 vs 非熱的の見分け方**：
 

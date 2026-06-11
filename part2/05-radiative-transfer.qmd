@@ -57,6 +57,14 @@ lang: ja
 
 ::: {.callout-note}
 **方針**：本章では純粋な吸収・放出を主に扱い、散乱は形式的にしか入れない。散乱が本質的に効く場面（共鳴散乱、コンプトン化、Thomson 散乱）は第15章・第18章・第VII部で個別に扱う。
+
+参考までに、散乱込みの放射輸送方程式は
+
+$$
+\mu\frac{dI_\nu}{ds} = -(\alpha_\nu + \sigma_\nu) I_\nu + j_\nu + \sigma_\nu \langle J_\nu \rangle
+$$
+
+の形で、右辺の最後の項が「他方向から来た光が散乱で本方向へ振り向けられる」効果（$\langle J_\nu \rangle$ は等方平均強度、散乱角分布が等方の場合）。これに対応するソース関数 $S_\nu = (\alpha_\nu B_\nu + \sigma_\nu \langle J_\nu \rangle)/(\alpha_\nu + \sigma_\nu)$ が第15章 §15.5 で再登場する。
 :::
 
 ::: {.callout-note}
@@ -130,7 +138,7 @@ $$ {#eq-source-function}
 :::
 
 
-- 光学的に薄い極限（$\tau \ll 1$）：$I_\nu \approx I_\nu(0) + S_\nu\, \tau$（背景光に放出を重ねたもの）
+- 光学的に薄い極限（$\tau \ll 1$）：$I_\nu \approx I_\nu(0)(1 - \tau_\nu) + S_\nu\, \tau_\nu$ ＝ $I_\nu(0) + \tau_\nu (S_\nu - I_\nu(0))$（背景光の少しの吸収＋少しの放出。$I_\nu(0)$ と $S_\nu$ の大小関係で **吸収線か輝線か** が決まる）
 - 光学的に厚い極限（$\tau \gg 1$）：$I_\nu \to S_\nu$（**ソース関数の値そのもの**になる）
 
 つまり $S_\nu$ とは「比強度が漸近する目標値」である。

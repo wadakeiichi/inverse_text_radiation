@@ -214,7 +214,7 @@ QED の構造から：
 | モード密度 | $\nu^2/c^3$（電磁場側） | $\nu^2/c^3$（同じ！）→ $A_{ul}$ の前因子 |
 | 偏光自由度 | 2 | 2（同じ） |
 | QED 解釈 | 電磁場の熱状態 | 物質と電磁場の遷移（真空揺らぎが自発放出を駆動） |
-| 相互作用 | $\hat{H}_\text{int} = 0$（自由場の熱状態） | $\hat{H}_\text{int} \neq 0$（双極子遷移） |
+| 相互作用 | 平衡確立後は $\hat{H}_\text{int}$ を切って **自由場の熱状態** として記述（実際の熱化過程では物質との相互作用が不可欠、第16章 §16.2） | $\hat{H}_\text{int} \neq 0$（双極子遷移を明示的に扱う） |
 
 最終的に、$2h\nu^3/c^2$ という前因子が両者に共通して現れることが、この統合の **数学的な印**：
 
@@ -295,7 +295,7 @@ $$ {#eq-prefactor-unification}
 
 ## さらに学ぶための参考文献 {#sec-qed-minimum-further .unnumbered}
 
-- Sakurai & Napolitano, *Modern Quantum Mechanics* (Cambridge, 2nd ed., 2017) — 放射場と物質の相互作用の章、本章のレベルから一段深く
+- Sakurai & Napolitano, *Modern Quantum Mechanics* (Cambridge, 3rd ed., 2020) — 放射場と物質の相互作用の章、本章のレベルから一段深く
 - Loudon, *The Quantum Theory of Light* (Oxford, 3rd ed., 2000) — 自発放出・自然幅の QED 的扱い、本書と相性が良い
 - Cohen-Tannoudji, Dupont-Roc & Grynberg, *Photons and Atoms* / *Atom-Photon Interactions* (Wiley, 1989/1992) — 光と原子の相互作用の体系的扱い
 - Rybicki & Lightman, *Radiative Processes in Astrophysics* (Wiley, 1979) — 天体物理応用での放射理論の標準教科書

@@ -44,7 +44,7 @@ $$
 L_\star = 4\pi R_\star^2 \sigma T_\text{eff}^4
 $$ {#eq-stefan-boltzmann-star}
 
-ここで $L_\star$ は全光度、$R_\star$ は恒星半径、$T_\text{eff}$ は **有効温度**。これは Stefan-Boltzmann 則（第4章 §4.4）の観測的応用：「もし恒星表面が温度 $T_\text{eff}$ の理想黒体だったとしたら、観測される全光度が同じになるような温度」と定義する。
+ここで $L_\star$ は全光度、$R_\star$ は恒星半径、$T_\text{eff}$ は **有効温度**。これは Stefan-Boltzmann 則（第2章 §2.4）の観測的応用：「もし恒星表面が温度 $T_\text{eff}$ の理想黒体だったとしたら、観測される全光度が同じになるような温度」と定義する。
 
 ::: {.callout-warning appearance="simple"}
 **注意（観測）**：「有効温度」は **観測上の便利な定義量** であって、恒星の物理的温度ではない。表層は温度勾配を持っており、紫外側で「より深く」、赤外側で「より浅く」見えている（Eddington-Barbier、第15章 §15.3）。有効温度は **積分量**（全光度）からの逆算値で、振動数ごとに違う「色温度」とは別概念
@@ -151,7 +151,7 @@ $\beta$ の値はダストの物理を反映する：
 全 SED は
 
 $$
-I_\nu^\text{total} = \sum_i I_\nu^\text{star},i + \sum_j Q_\nu(\beta_j) B_\nu(T_j) M_j + I_\nu^\text{lines} + I_\nu^\text{ff} + \ldots
+I_\nu^\text{total} = \sum_i I_{\nu, \text{star}, i} + \sum_j Q_\nu(\beta_j)\, B_\nu(T_j)\, M_j + I_\nu^\text{lines} + I_\nu^\text{ff} + \ldots
 $$ {#eq-multi-temperature-sed}
 
 の形で組み立てる。フィッティングは温度・質量・$\beta$ の組合せを観測波長点と適合させ、$\chi^2$ 最小化や Bayesian inference で求める。

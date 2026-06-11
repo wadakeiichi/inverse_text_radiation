@@ -112,7 +112,7 @@ $$
 
 **密度診断の例（電子密度）**：
 
-- **[S II] $\lambda$6716 / $\lambda$6731**：両者の上準位エネルギーは近いが、励起断面積（と衝突脱励起）が密度依存
+- **[S II] $\lambda$6716 / $\lambda$6731**：両者の上準位エネルギーは近いが、各上準位の **臨界密度**（**critical density** ― 衝突脱励起率と自発放出率が拮抗する電子密度）が異なるため、両線の強度比は密度に応じて変わる。低密度極限と高密度極限の中間 ($n_e \sim 10^2$〜$10^4$ cm$^{-3}$) で診断感度が高い
 - 観測 $\lambda$6716/$\lambda$6731 比 → $n_e \sim 10^2$〜$10^4$ cm$^{-3}$
 
 ::: {.callout-note}
@@ -170,7 +170,7 @@ $$
 
 - 大気組成 → 惑星形成過程の手がかり
 - バイオシグナチャー（O$_2$、CH$_4$ の共存）の探査
-- 地球型惑星の hability 評価
+- 地球型惑星の habitability 評価
 
 ::: {.callout-note}
 **対応（観測）**：系外惑星の大気観測は **線スペクトル道具の現代応用の白眉**。本書の第19-22章で整備した枠組み（Einstein 係数 → 振動子強度 → 線形フィッティング）が、すべて動員される
@@ -236,4 +236,4 @@ $$
 - Osterbrock & Ferland, *Astrophysics of Gaseous Nebulae and Active Galactic Nuclei* (Univ. Science Books, 2nd ed., 2006) — 線比診断の標準書
 - Prochaska, "Quasar Absorption Line Spectroscopy" レビュー — QSO 吸収系の網羅的解説
 - Madhusudhan, "Exoplanetary Atmospheres," ARA&A 57 (2019) 617 — 系外惑星大気観測のレビュー
-- Wolniewicz et al., *Spectroscopy of Astrophysical Plasmas* (Cambridge, 1987) — 線比診断の体系的記述
+- Dalgarno & Layzer (eds.), *Spectroscopy of Astrophysical Plasmas* (Cambridge, 1987) — 線比診断の体系的記述

@@ -97,7 +97,7 @@ $$ {#eq-line-absorption-einstein}
 
 [本文目安：B3]
 
-第6章 §6.4 で定義した **源泉関数** $S_\nu$ は、線スペクトルでは
+第5章 §5.4 で定義した **ソース関数** $S_\nu$ は、線スペクトルでは
 
 $$
 S_\nu^\text{line} = \frac{j_\nu^\text{line}}{\alpha_\nu^\text{line}}
@@ -170,7 +170,7 @@ non-LTE 線形成を扱う数値的枠組み：
 これが non-LTE radiative transfer の標準枠組み。
 
 ::: {.callout-warning appearance="simple"}
-**注意（観測）**：「LTE 解析からの偏差」は、観測者が誤った結論に至る源。一例：太陽コロナ（$T \sim 10^6$ K, 希薄）の鉄線を LTE で解析すると、鉄の存在量を $10^2$ 倍も過小評価する。non-LTE 補正は線スペクトル解析の必須現代道具
+**注意（観測）**：「LTE 解析からの偏差」は、観測者が誤った結論に至る源。一例として、**恒星大気の Fe I 線** を LTE で解析すると、紫外側で **Fe の over-ionization（過電離）** により占有数が Saha 予測を下回り、組成決定で 0.1〜0.4 dex のずれが生じることが知られている（Asplund 2005 のレビュー）。non-LTE 補正は現代の線スペクトル解析の必須道具となっている
 :::
 
 ::: {.callout-note}
