@@ -43,12 +43,32 @@ jobs:
         with:
           tinytex: true
 
-      - name: Install Japanese fonts and SVG renderer (rsvg-convert)
+      - name: Install Japanese fonts, IBM Plex, and SVG renderer
         run: |
           sudo apt-get update
+          # Noto CJK は fallback として残す
           sudo apt-get install -y \
             fonts-noto-cjk fonts-noto-cjk-extra \
-            librsvg2-bin
+            librsvg2-bin \
+            fontconfig unzip
+          # IBM Plex（公式 GitHub Release から OTF を取得）
+          mkdir -p /tmp/ibm-plex
+          cd /tmp/ibm-plex
+          curl -sL -o ibm-plex.zip \
+            https://github.com/IBM/plex/releases/download/%40ibm%2Fplex-sans-jp%401.1.0/ibm-plex-sans-jp.zip
+          unzip -q ibm-plex.zip
+          curl -sL -o ibm-plex-sans.zip \
+            https://github.com/IBM/plex/releases/download/%40ibm%2Fplex-sans%401.1.0/ibm-plex-sans.zip
+          unzip -q ibm-plex-sans.zip
+          curl -sL -o ibm-plex-mono.zip \
+            https://github.com/IBM/plex/releases/download/%40ibm%2Fplex-mono%401.1.0/ibm-plex-mono.zip
+          unzip -q ibm-plex-mono.zip
+          # システムフォントとして配置
+          sudo mkdir -p /usr/local/share/fonts/ibm-plex
+          sudo find . -name "*.otf" -exec cp {} /usr/local/share/fonts/ibm-plex/ \;
+          sudo find . -name "*.ttf" -exec cp {} /usr/local/share/fonts/ibm-plex/ \;
+          sudo fc-cache -fv
+          fc-list | grep -i "plex" | head -5 || echo "IBM Plex not registered (will fall back to Noto)"
 
       - name: Render Quarto book (HTML + PDF + EPUB)
         run: quarto render

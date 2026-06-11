@@ -118,7 +118,7 @@ format:
       - text: |
           <link rel="preconnect" href="https://fonts.googleapis.com">
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-          <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@300;400;500;600;700&family=IBM+Plex+Serif:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   pdf:
     documentclass: scrreprt
@@ -139,8 +139,30 @@ format:
     include-in-header:
       - text: |
           \usepackage{luatexja-fontspec}
-          \setmainjfont{Noto Serif CJK JP}
-          \setsansjfont{Noto Sans CJK JP}
+          % 本文：IBM Plex Sans JP（モダンサンセリフ）、無ければ Noto Sans CJK JP に fallback
+          \IfFontExistsTF{IBM Plex Sans JP}{%
+            \setmainjfont{IBM Plex Sans JP}[
+              UprightFont    = *-Regular,
+              BoldFont       = *-SemiBold,
+              ItalicFont     = *-Regular,
+              BoldItalicFont = *-SemiBold]%
+          }{%
+            \setmainjfont{Noto Sans CJK JP}%
+          }
+          \IfFontExistsTF{IBM Plex Sans JP}{%
+            \setsansjfont{IBM Plex Sans JP}[
+              UprightFont    = *-Regular,
+              BoldFont       = *-SemiBold]%
+          }{%
+            \setsansjfont{Noto Sans CJK JP}%
+          }
+          % 欧文側も IBM Plex に合わせる（こちらは TeX Live にあれば使う、無ければ既定）
+          \usepackage{ifluatex}
+          \ifluatex
+            \usepackage{fontspec}
+            \IfFontExistsTF{IBM Plex Sans}{\setmainfont{IBM Plex Sans}}{}
+            \IfFontExistsTF{IBM Plex Mono}{\setmonofont{IBM Plex Mono}}{}
+          \fi
           \usepackage{xcolor}
           \usepackage{tcolorbox}
           % Quarto の callout が要求するライブラリ群

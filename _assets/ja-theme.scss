@@ -1,22 +1,37 @@
 /*-- scss:defaults --*/
 
-// 和文セリフ・サンセリフ
-$font-family-serif: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", "ヒラギノ明朝 ProN", serif;
-$font-family-sans: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", "メイリオ", sans-serif;
+// 和文セリフ・サンセリフ（IBM Plex JP を主、システムフォントを fallback）
+$font-family-serif: "IBM Plex Serif JP", "IBM Plex Serif", "Noto Serif JP",
+                    "Hiragino Mincho ProN", "Yu Mincho", "ヒラギノ明朝 ProN", serif;
+$font-family-sans:  "IBM Plex Sans JP",  "IBM Plex Sans",  "Noto Sans JP",
+                    "Hiragino Sans", "Yu Gothic", "メイリオ", sans-serif;
 
 /*-- scss:rules --*/
 
 body {
-  font-family: $font-family-serif;
+  font-family: $font-family-sans;     // 本文はサンセリフ（IBM Plex Sans JP）に変更
   line-height: 1.85;
+  font-weight: 400;
+  font-feature-settings: "palt";      // 和文プロポーショナルメトリクスで字間を最適化
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $font-family-sans;
-  font-weight: 700;
+  font-family: $font-family-sans;     // 見出しもサンセリフで統一感
+  font-weight: 600;                   // 本文400 / 見出し600 でコントラスト
+  letter-spacing: 0.01em;
+}
+
+// 引用・式の説明など、セリフでアクセントを付けたいときに使う
+.serif-jp {
+  font-family: $font-family-serif;
 }
 
 // 和文と数式の間に微小スペース
 .math {
   margin: 0 0.1em;
+}
+
+// callout タイトル・コードブロック用にやや太めで
+.callout-title, .callout-header {
+  font-weight: 600;
 }
