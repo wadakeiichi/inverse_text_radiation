@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1100" width="800" height="1100">
+  <!-- ===================================================================
+       宇宙の熱的放射 ― 連続放射と線スペクトルの背景物理
+       Thermal Radiation in the Universe:
+       An Inverse Approach to the Physics
+       表紙（CC BY 4.0）
+       ================================================================ -->
+
+  <!-- 背景：深い宇宙の濃紺グラデーション -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0e1a"/>
+      <stop offset="60%" stop-color="#162242"/>
+      <stop offset="100%" stop-color="#1f4e79"/>
+    </linearGradient>
+
+    <!-- 連続スペクトル（プランク曲線）の虹グラデーション -->
+    <linearGradient id="planckGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#7d1f55"/>
+      <stop offset="15%"  stop-color="#c43f6b"/>
+      <stop offset="35%"  stop-color="#e6913e"/>
+      <stop offset="55%"  stop-color="#d4c241"/>
+      <stop offset="75%"  stop-color="#5fb0a0"/>
+      <stop offset="100%" stop-color="#2e6ca6"/>
+    </linearGradient>
+
+    <!-- 線スペクトル用：黒地に離散線を見せるグラデーション -->
+    <linearGradient id="lineBgGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#1a1224"/>
+      <stop offset="50%"  stop-color="#221638"/>
+      <stop offset="100%" stop-color="#1a1224"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="1100" fill="url(#bg)"/>
+
+  <!-- 散らばる星 -->
+  <g fill="#ffffff" opacity="0.55">
+    <circle cx="80" cy="120" r="1.5"/>
+    <circle cx="180" cy="55" r="1"/>
+    <circle cx="250" cy="180" r="1.8"/>
+    <circle cx="420" cy="80" r="1.2"/>
+    <circle cx="560" cy="150" r="2"/>
+    <circle cx="640" cy="60" r="1.4"/>
+    <circle cx="720" cy="200" r="1.8"/>
+    <circle cx="100" cy="320" r="1.3"/>
+    <circle cx="700" cy="350" r="1.5"/>
+    <circle cx="60" cy="900" r="1.2"/>
+    <circle cx="740" cy="950" r="1.8"/>
+    <circle cx="200" cy="1010" r="1.4"/>
+    <circle cx="500" cy="1040" r="1.2"/>
+    <circle cx="380" cy="1060" r="1.6"/>
+    <circle cx="150" cy="700" r="1.0"/>
+    <circle cx="650" cy="720" r="1.2"/>
+  </g>
+
+  <!-- ===================================================================
+       タイトル（最上段）
+       ================================================================ -->
+  <g transform="translate(400, 100)">
+    <text x="0" y="0" text-anchor="middle"
+          font-family="'Hiragino Mincho ProN', serif"
+          font-size="58" font-weight="700" fill="#ffffff"
+          letter-spacing="0.08em">
+      宇宙の熱的放射
+    </text>
+    <text x="0" y="46" text-anchor="middle"
+          font-family="'Hiragino Sans', sans-serif"
+          font-size="22" fill="#dde9f5"
+          letter-spacing="0.12em">
+      連続放射と線スペクトルの背景物理
+    </text>
+  </g>
+
+  <!-- ===================================================================
+       中央：左右並置の二つのスペクトル
+       === 左：連続スペクトル（プランク曲線）
+       === 右：線スペクトル（水素バルマー系列風）
+       ================================================================ -->
+
+  <!-- 中央のセパレータ（薄い縦線） -->
+  <line x1="400" y1="280" x2="400" y2="780"
+        stroke="#ffd97a" stroke-width="0.5" opacity="0.25"/>
+
+  <!-- ===== 左：連続スペクトル ===== -->
+  <g transform="translate(60, 300)">
+    <!-- 見出し -->
+    <text x="160" y="0" text-anchor="middle"
+          font-family="'Hiragino Sans', sans-serif"
+          font-size="16" fill="#ffd97a" letter-spacing="0.18em">
+      連続放射
+    </text>
+    <text x="160" y="22" text-anchor="middle"
+          font-family="'EB Garamond', 'Garamond', serif"
+          font-style="italic" font-size="13" fill="#a8c5e0" opacity="0.85">
+      Continuous radiation
+    </text>
+
+    <!-- 虹色帯（プランク連続光のメタファー） -->
+    <rect x="20" y="50" width="280" height="36"
+          fill="url(#planckGrad)" opacity="0.85" rx="3"/>
+
+    <!-- プランク曲線（B_ν(T) の形） -->
+    <g transform="translate(20, 110)">
+      <!-- 軸 -->
+      <line x1="0" y1="200" x2="280" y2="200"
+            stroke="#9fb6cf" stroke-width="1" opacity="0.5"/>
+      <line x1="0" y1="0" x2="0" y2="200"
+            stroke="#9fb6cf" stroke-width="1" opacity="0.5"/>
+      <!-- 曲線（Planck 形を視覚化） -->
+      <path d="M 0,200
+               C 30,200 50,195 70,170
+               S 110,40 140,20
+               S 200,80 230,140
+               S 270,195 280,200"
+            fill="none" stroke="#fff5dd" stroke-width="3" opacity="0.95"/>
+      <!-- 軸ラベル -->
+      <text x="280" y="218" text-anchor="end"
+            font-family="serif" font-style="italic" font-size="13"
+            fill="#dde9f5" opacity="0.75">ν</text>
+      <text x="-8" y="6" text-anchor="end"
+            font-family="serif" font-style="italic" font-size="13"
+            fill="#dde9f5" opacity="0.75">B<tspan baseline-shift="-30%" font-size="10">ν</tspan></text>
+    </g>
+
+    <!-- 中心式 -->
+    <text x="160" y="380" text-anchor="middle"
+          font-family="serif" font-style="italic" font-size="18"
+          fill="#fff5dd" opacity="0.92">
+      B<tspan baseline-shift="-30%" font-size="12">ν</tspan>(T) =
+      <tspan font-style="normal">2hν³/c²</tspan>
+    </text>
+    <text x="160" y="402" text-anchor="middle"
+          font-family="serif" font-style="italic" font-size="14"
+          fill="#dde9f5" opacity="0.78">
+      × 1 / (e^(hν/kT) − 1)
+    </text>
+
+    <!-- 観測の代表例 -->
+    <text x="160" y="440" text-anchor="middle"
+          font-family="'Hiragino Sans', sans-serif"
+          font-size="11" fill="#a8c5e0" letter-spacing="0.05em" opacity="0.85">
+      CMB ・ 恒星 ・ ダスト ・ 降着円盤
+    </text>
+  </g>
+
+  <!-- ===== 右：線スペクトル ===== -->
+  <g transform="translate(440, 300)">
+    <!-- 見出し -->
+    <text x="160" y="0" text-anchor="middle"
+          font-family="'Hiragino Sans', sans-serif"
+          font-size="16" fill="#ffd97a" letter-spacing="0.18em">
+      線スペクトル
+    </text>
+    <text x="160" y="22" text-anchor="middle"
+          font-family="'EB Garamond', 'Garamond', serif"
+          font-style="italic" font-size="13" fill="#a8c5e0" opacity="0.85">
+      Line spectrum
+    </text>
+
+    <!-- 黒地の帯に水素バルマー風の離散線 -->
+    <rect x="20" y="50" width="280" height="36"
+          fill="url(#lineBgGrad)" rx="3"/>
+    <g stroke-linecap="round">
+      <!-- バルマー系列：Hα(赤), Hβ(青緑), Hγ(青紫), Hδ, ... 集積 -->
+      <line x1="50"  y1="50" x2="50"  y2="86" stroke="#ff6b6b" stroke-width="2.5"/>
+      <line x1="135" y1="50" x2="135" y2="86" stroke="#7fb3ff" stroke-width="2.2"/>
+      <line x1="190" y1="50" x2="190" y2="86" stroke="#a48cff" stroke-width="2.0"/>
+      <line x1="225" y1="50" x2="225" y2="86" stroke="#b69aff" stroke-width="1.7"/>
+      <line x1="248" y1="50" x2="248" y2="86" stroke="#c2a8ff" stroke-width="1.4"/>
+      <line x1="263" y1="50" x2="263" y2="86" stroke="#cbb4ff" stroke-width="1.2"/>
+      <line x1="273" y1="50" x2="273" y2="86" stroke="#d4bfff" stroke-width="1.0"/>
+      <line x1="280" y1="50" x2="280" y2="86" stroke="#d8c5ff" stroke-width="0.8"/>
+    </g>
+
+    <!-- 線吸収係数の形（離散ピークの強度プロット） -->
+    <g transform="translate(20, 110)">
+      <!-- 軸 -->
+      <line x1="0" y1="200" x2="280" y2="200"
+            stroke="#9fb6cf" stroke-width="1" opacity="0.5"/>
+      <line x1="0" y1="0" x2="0" y2="200"
+            stroke="#9fb6cf" stroke-width="1" opacity="0.5"/>
+      <!-- 離散的ピーク（Voigt 風） -->
+      <g fill="#fff5dd" opacity="0.95">
+        <path d="M 30,200 Q 32,40 34,200 Z"/>
+        <path d="M 105,200 Q 107,70 109,200 Z"/>
+        <path d="M 160,200 Q 162,100 164,200 Z"/>
+        <path d="M 200,200 Q 202,130 204,200 Z"/>
+        <path d="M 228,200 Q 230,150 232,200 Z"/>
+        <path d="M 250,200 Q 251,165 252,200 Z"/>
+        <path d="M 265,200 Q 266,175 267,200 Z"/>
+      </g>
+      <!-- 軸ラベル -->
+      <text x="280" y="218" text-anchor="end"
+            font-family="serif" font-style="italic" font-size="13"
+            fill="#dde9f5" opacity="0.75">ν</text>
+      <text x="-8" y="6" text-anchor="end"
+            font-family="serif" font-style="italic" font-size="13"
+            fill="#dde9f5" opacity="0.75">α<tspan baseline-shift="-30%" font-size="10">ν</tspan></text>
+    </g>
+
+    <!-- 中心式 -->
+    <text x="160" y="380" text-anchor="middle"
+          font-family="serif" font-style="italic" font-size="17"
+          fill="#fff5dd" opacity="0.92">
+      α<tspan baseline-shift="-30%" font-size="11">ν</tspan> =
+      <tspan font-style="normal">(πe²/m</tspan><tspan baseline-shift="-30%" font-size="11">e</tspan><tspan font-style="normal">c)</tspan>
+    </text>
+    <text x="160" y="402" text-anchor="middle"
+          font-family="serif" font-style="italic" font-size="14"
+          fill="#dde9f5" opacity="0.78">
+      × f<tspan baseline-shift="-30%" font-size="11">lu</tspan> n<tspan baseline-shift="-30%" font-size="11">l</tspan> φ(ν − ν<tspan baseline-shift="-30%" font-size="11">0</tspan>)
+    </text>
+
+    <!-- 観測の代表例 -->
+    <text x="160" y="440" text-anchor="middle"
+          font-family="'Hiragino Sans', sans-serif"
+          font-size="11" fill="#a8c5e0" letter-spacing="0.05em" opacity="0.85">
+      Fraunhofer 線 ・ 21 cm ・ 分子線 ・ AGN
+    </text>
+  </g>
+
+  <!-- ===================================================================
+       下部：「背景物理」へ向かう逆向き矢印群
+       ================================================================ -->
+  <g transform="translate(400, 800)">
+    <text x="0" y="0" text-anchor="middle"
+          font-family="sans-serif" font-size="12" fill="#ffd97a"
+          opacity="0.85" letter-spacing="0.3em">
+      INVERSE APPROACH
+    </text>
+    <!-- 左右から中央下へ集まる矢印 -->
+    <g stroke="#ffd97a" stroke-width="1.5" fill="none" opacity="0.7">
+      <path d="M -220,15 C -160,25 -80,35 0,40"/>
+      <path d="M  220,15 C  160,25  80,35 0,40"/>
+    </g>
+    <!-- 中央の下向き矢印 -->
+    <g stroke="#ffd97a" stroke-width="1.8" fill="#ffd97a" opacity="0.85">
+      <line x1="0" y1="40" x2="0" y2="68"/>
+      <polygon points="0,75 -6,65 6,65"/>
+    </g>
+    <text x="0" y="98" text-anchor="middle"
+          font-family="'Hiragino Mincho ProN', serif"
+          font-size="18" fill="#ffd97a" letter-spacing="0.2em">
+      背景物理
+    </text>
+    <text x="0" y="118" text-anchor="middle"
+          font-family="'EB Garamond', 'Garamond', serif"
+          font-style="italic" font-size="12" fill="#dde9f5" opacity="0.75"
+          letter-spacing="0.1em">
+      Statistical Mech · QM · EM · Atomic · QED
+    </text>
+  </g>
+
+  <!-- ===================================================================
+       下部：英題
+       ================================================================ -->
+  <g transform="translate(400, 970)">
+    <line x1="-220" y1="-20" x2="220" y2="-20"
+          stroke="#ffd97a" stroke-width="0.5" opacity="0.6"/>
+    <text x="0" y="0" text-anchor="middle"
+          font-family="'EB Garamond', 'Garamond', serif"
+          font-style="italic" font-size="26" fill="#ffd97a">
+      Thermal Radiation in the Universe
+    </text>
+    <text x="0" y="28" text-anchor="middle"
+          font-family="'EB Garamond', 'Garamond', serif"
+          font-style="italic" font-size="15" fill="#dde9f5" opacity="0.85">
+      An Inverse Approach to the Physics
+    </text>
+  </g>
+
+  <!-- 著者と年 -->
+  <text x="400" y="1050" text-anchor="middle"
+        font-family="'Hiragino Sans', sans-serif"
+        font-size="13" fill="#9fb6cf" letter-spacing="0.15em">
+    和田 桂一 ／ KEIICHI WADA ／ 2026
+  </text>
+</svg>

@@ -1,0 +1,1797 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>第02章　黒体スペクトルをどう読むか – 宇宙の熱的放射</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../part1/03-universality.html" rel="next">
+<link href="../part1/01-where-blackbody.html" rel="prev">
+<link href="../images/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-6acc544bc6b266166f93717a0814bb05.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-84b9d0451ceb30bdeea41a205600fe27.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "一致なし",
+    "search-matching-documents-text": "一致した文書",
+    "search-copy-link-title": "検索へのリンクをコピー",
+    "search-hide-matches-text": "追加の検索結果を非表示",
+    "search-more-match-text": "追加の検索結果",
+    "search-more-matches-text": "追加の検索結果",
+    "search-clear-button-title": "消去",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "取消",
+    "search-submit-button-title": "検索",
+    "search-label": "サーチ"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&amp;family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet">
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="サイドバーを切り替える" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part1/01-where-blackbody.html">第I部　宇宙に満ちる黒体放射</a></li><li class="breadcrumb-item"><a href="../part1/02-reading-spectra.html"><span class="chapter-title">第02章　黒体スペクトルをどう読むか</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="サイドバーを切り替える" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="サーチ" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">宇宙の熱的放射</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/wadakeiichi/inverse_text_radiation" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <div class="dropdown">
+      <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../宇宙の熱的放射.pdf">
+              <i class="bi bi-file-pdf pe-1"></i>
+            Download PDF
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../宇宙の熱的放射.epub">
+              <i class="bi bi-journal pe-1"></i>
+            Download ePub
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="サーチ"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">宇宙の熱的放射</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../00-prologue.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">序章　この本の目的と歩き方</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">第I部　宇宙に満ちる黒体放射</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part1/01-where-blackbody.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第01章　宇宙で黒体放射はどこに現れるか</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part1/02-reading-spectra.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">第02章　黒体スペクトルをどう読むか</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part1/03-universality.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第03章　黒体放射はなぜ普遍的なのか</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">第II部　放射をどう記述するか</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2/04-radiation-field.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第04章　放射場の基本量</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2/05-radiative-transfer.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第05章　放射輸送の基礎</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">第III部　逆引き1：熱力学・統計力学へ</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3/06-thermal-equilibrium.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第06章　熱平衡とは何か</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3/07-statistical-mechanics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第07章　統計力学の基本</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3/08-photon-statistics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第08章　光子の統計</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">第IV部　逆引き2：量子論へ</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4/09-classical-failure.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第09章　古典論ではなぜ失敗するのか</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4/10-planck-quantum.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第10章　プランクの量子仮説</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4/11-einstein-method.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第11章　アインシュタインの方法</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4/12-quantum-foundations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第12章　量子力学の基礎へ戻る</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">第V部　逆引き3：電磁気学へ</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5/13-electromagnetic-waves.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第13章　電磁波としての光</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5/14-cavity-modes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第14章　空洞中の電磁モード</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">第VI部　現実の宇宙へ戻る</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6/15-non-blackbody.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第15章　現実の天体は完全な黒体ではない</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6/16-cmb.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第16章　宇宙マイクロ波背景放射</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6/17-stars-planets-dust.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第17章　恒星・惑星・ダストの熱放射</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6/18-accretion-high-energy.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第18章　降着円盤と高エネルギー天体</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">第VII部　線スペクトル ― もう一つの逆引き</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part7/19-where-lines.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第19章　線スペクトルはどこに現れるか</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part7/20-line-formation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第20章　線形成 ― 吸収線と輝線の物理</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part7/21-atomic-physics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第21章　線スペクトルから原子物理へ</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part7/22-line-shape.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第22章　線形（line shape）の物理</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part7/23-line-applications.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第23章　線スペクトルから天体物理を読む</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">第VIII部　QEDからの俯瞰 ― 連続と線を結ぶ見通し</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part8/24-em-field-quantization.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第24章　電磁場を量子化するとは何か ― 直観的描像</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part8/25-qed-minimum.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第25章　Einstein係数・自然幅・選択則を QED で見通す</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">参考文献</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendix/A-math-notes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">付録 A　数学補章</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendix/B-units-constants.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">付録 B　単位と基本定数</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">目次</h2>
+   
+  <ul>
+  <li><a href="#sec-reading-spectra-map" id="toc-sec-reading-spectra-map" class="nav-link active" data-scroll-target="#sec-reading-spectra-map">この章の中心地図</a></li>
+  <li><a href="#sec-reading-spectra-questions" id="toc-sec-reading-spectra-questions" class="nav-link" data-scroll-target="#sec-reading-spectra-questions">この章で答える問い</a></li>
+  <li><a href="#sec-reading-spectra-goals" id="toc-sec-reading-spectra-goals" class="nav-link" data-scroll-target="#sec-reading-spectra-goals">到達目標</a></li>
+  <li><a href="#sec-reading-spectra-shape" id="toc-sec-reading-spectra-shape" class="nav-link" data-scroll-target="#sec-reading-spectra-shape">2.1 プランク分布の形</a></li>
+  <li><a href="#sec-reading-spectra-nu-lambda" id="toc-sec-reading-spectra-nu-lambda" class="nav-link" data-scroll-target="#sec-reading-spectra-nu-lambda">2.2 振動数表示と波長表示 ― 同じ物理、異なる関数形</a></li>
+  <li><a href="#sec-reading-spectra-wien" id="toc-sec-reading-spectra-wien" class="nav-link" data-scroll-target="#sec-reading-spectra-wien">2.3 ピークと温度 ― Wien の変位則</a></li>
+  <li><a href="#sec-reading-spectra-stefan-boltzmann" id="toc-sec-reading-spectra-stefan-boltzmann" class="nav-link" data-scroll-target="#sec-reading-spectra-stefan-boltzmann">2.4 面積と全放射 ― Stefan–Boltzmann 則</a></li>
+  <li><a href="#sec-reading-spectra-limits" id="toc-sec-reading-spectra-limits" class="nav-link" data-scroll-target="#sec-reading-spectra-limits">2.5 低振動数極限と高振動数極限 ― 古典側と量子側</a>
+  <ul class="collapse">
+  <li><a href="#低振動数極限rayleighjeans-則" id="toc-低振動数極限rayleighjeans-則" class="nav-link" data-scroll-target="#低振動数極限rayleighjeans-則">低振動数極限：Rayleigh–Jeans 則</a></li>
+  <li><a href="#高振動数極限wien-の式" id="toc-高振動数極限wien-の式" class="nav-link" data-scroll-target="#高振動数極限wien-の式">高振動数極限：Wien の式</a></li>
+  <li><a href="#この二つの極限から見える物理の対立" id="toc-この二つの極限から見える物理の対立" class="nav-link" data-scroll-target="#この二つの極限から見える物理の対立">この二つの極限から見える「物理の対立」</a></li>
+  </ul></li>
+  <li><a href="#sec-reading-spectra-temperatures" id="toc-sec-reading-spectra-temperatures" class="nav-link" data-scroll-target="#sec-reading-spectra-temperatures">2.6 色温度・有効温度・輝度温度 ― どの温度か</a></li>
+  <li><a href="#sec-reading-spectra-deviation" id="toc-sec-reading-spectra-deviation" class="nav-link" data-scroll-target="#sec-reading-spectra-deviation">2.7 黒体からのずれ ― 観測スペクトルが教えてくれるもの</a></li>
+  <li><a href="#sec-reading-spectra-estimation" id="toc-sec-reading-spectra-estimation" class="nav-link" data-scroll-target="#sec-reading-spectra-estimation">2.8 観測データから温度・半径・光度を推定する</a></li>
+  <li><a href="#sec-reading-spectra-summary" id="toc-sec-reading-spectra-summary" class="nav-link" data-scroll-target="#sec-reading-spectra-summary">この章で何がわかったか</a></li>
+  <li><a href="#sec-reading-spectra-exercises" id="toc-sec-reading-spectra-exercises" class="nav-link" data-scroll-target="#sec-reading-spectra-exercises">演習問題</a></li>
+  <li><a href="#sec-reading-spectra-further" id="toc-sec-reading-spectra-further" class="nav-link" data-scroll-target="#sec-reading-spectra-further">さらに学ぶための参考文献</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/edit/main/part1/02-reading-spectra.qmd" class="toc-action"><i class="bi bi-github"></i>編集</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/blob/main/part1/02-reading-spectra.qmd" class="toc-action"><i class="bi empty"></i>ソースコード</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/issues/new" class="toc-action"><i class="bi empty"></i>問題を報告</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part1/01-where-blackbody.html">第I部　宇宙に満ちる黒体放射</a></li><li class="breadcrumb-item"><a href="../part1/02-reading-spectra.html"><span class="chapter-title">第02章　黒体スペクトルをどう読むか</span></a></li></ol></nav>
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-title">第02章　黒体スペクトルをどう読むか</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Source</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="chapter-overview">
+<p><strong>この章の主題</strong>：プランク分布の基本的な形と振る舞いを観測の言葉で読み解く。観測スペクトルから温度・半径・光度を引き出すための道具（Wien の法則、Stefan–Boltzmann 則、色温度など）を、観測の必要から立ち上げていく。</p>
+<p>本章では、第1章で「観測される事実」として並べた黒体スペクトルを、<strong>どう測り、どう読むか</strong>という観測の側に踏み込む。式は「なぜそうなるか」（第III〜V部）に踏み込む前に、まず「観測量との対応関係」だけで扱う。</p>
+</div>
+<section id="sec-reading-spectra-map" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sec-reading-spectra-map">この章の中心地図</h2>
+<div class="central-map planck-map">
+<p><strong>プランク関数（連続スペクトルの地図）</strong></p>
+<p><span id="eq-planck-function"><span class="math display">
+B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
+\tag{4.1}</span></span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>因子</th>
+<th>物理的意味</th>
+<th>結びつく部</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">B_\nu</span></td>
+<td>観測量（比強度）</td>
+<td>第II部</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">1/(e^{h\nu/kT}-1)</span></td>
+<td>熱平衡・光子統計</td>
+<td>第III部</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">h\nu</span></td>
+<td>エネルギー量子</td>
+<td>第IV部</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\nu^3/c^2</span></td>
+<td>電磁場のモード密度</td>
+<td>第V部</td>
+</tr>
+<tr class="odd">
+<td>黒体からのずれ</td>
+<td>現実の天体</td>
+<td>第VI部</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="callout callout-style-simple callout-tip no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>地図の使い方</strong>：各部の冒頭でこの式が再掲され、その部で扱う因子が強調表示される。読者は自分が今どこを学んでいるかをこの式の上で確認できる。</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+ヒント
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>本章では、地図のプランク関数 <span class="math inline">B_\nu(T)</span> そのものを「観測される曲線」として扱う。各因子の物理的起源は第III〜V部で逆引きしていく。本章はその準備として、<strong>曲線の形と読み方</strong>を共通言語にする。</p>
+</div>
+</div>
+</section>
+<section id="sec-reading-spectra-questions" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sec-reading-spectra-questions">この章で答える問い</h2>
+<div class="callout-question">
+<ul>
+<li>観測スペクトルのピーク位置から、その天体の温度がわかるのはなぜか</li>
+<li>スペクトルの面積（全エネルギー）と温度の関係は、観測で何の役に立つのか</li>
+<li>振動数表示 <span class="math inline">B_\nu</span> と波長表示 <span class="math inline">B_\lambda</span> でピーク位置がずれるのはなぜか</li>
+<li>「色温度」「有効温度」「輝度温度」は何が違い、どれを使うべきか</li>
+<li>観測されるスペクトルからどうやって温度・半径・光度を引き出すのか</li>
+</ul>
+</div>
+</section>
+<section id="sec-reading-spectra-goals" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sec-reading-spectra-goals">到達目標</h2>
+<p>この章を読み終えると、読者は次のことができるようになる：</p>
+<ul>
+<li>プランク分布の形を見て、温度を一桁の精度で推定できる</li>
+<li>ウィーンの法則と Stefan–Boltzmann 則を、観測量から温度・光度を逆算する道具として使える</li>
+<li>振動数表示と波長表示の違いを理解し、観測データを正しい単位系で扱える</li>
+</ul>
+<hr>
+</section>
+<section id="sec-reading-spectra-shape" class="level2">
+<h2 class="anchored" data-anchor-id="sec-reading-spectra-shape">2.1 プランク分布の形</h2>
+<p>[本文目安：B2]</p>
+<p>第1章では、宇宙のさまざまな天体が「同じ関数族」に属する連続スペクトルを示すことを観察した。この関数族は、振動数 <span class="math inline">\nu</span> の関数として書くと次の形をもつ：</p>
+<p><span id="eq-planck-nu"><span class="math display">
+B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu / kT} - 1}
+\tag{4.2}</span></span></p>
+<p>ここで <span class="math inline">B_\nu</span> は<strong>比強度</strong>（<strong>specific intensity</strong>）、つまり「単位面積・単位時間・単位立体角・単位振動数あたりのエネルギー」である。単位は erg s<span class="math inline">^{-1}</span> cm<span class="math inline">^{-2}</span> Hz<span class="math inline">^{-1}</span> sr<span class="math inline">^{-1}</span>（SI なら W m<span class="math inline">^{-2}</span> Hz<span class="math inline">^{-1}</span> sr<span class="math inline">^{-1}</span>）。本章では「面を通過するエネルギーの目安」として簡略に用いるが、<strong>正式な定義</strong> ― 面要素を法線から <span class="math inline">\theta</span> 傾けて通過する成分に対する <span class="math inline">\cos\theta</span> を含む形 ― は第4章 §4.1 で扱う。</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+重要
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>本章での扱い方</strong>：率直に言えば、本章では <span class="math inline">B_\nu</span>（<a href="#eq-planck-nu" class="quarto-xref">式&nbsp;<span>4.2</span></a>）を<strong>一度ひとつの経験式・観測曲線として受け入れる</strong>。第1章で「観測される現象」として温度ごとに同じ形をとることを確認したので、いまはその観測される曲線を表す式が上のように書ける、という事実だけ使う。式の各因子（<span class="math inline">2h\nu^3/c^2</span>、<span class="math inline">1/(e^{h\nu/kT}-1)</span>）がなぜこの形になるかは、第8章（光子統計）、第10章（プランクの量子仮説）、第14章（モード密度）で順に逆引きする。</p>
+</div>
+</div>
+<p>この曲線の特徴を、まず観測の言葉で整理しよう：</p>
+<ol type="1">
+<li><strong>低振動数側</strong>：<span class="math inline">B_\nu \propto \nu^2</span> で立ち上がる</li>
+<li><strong>ピーク</strong>：<span class="math inline">h\nu \simeq 2.82\, kT</span> 付近に最大値</li>
+<li><strong>高振動数側</strong>：<span class="math inline">e^{-h\nu/kT}</span> で指数関数的に減衰</li>
+</ol>
+<p>温度を変えると、曲線全体がピークごと平行移動し、面積が急激に変わる。</p>
+<div id="fig-planck-three-temps" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="1">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-planck-three-temps-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<details class="code-fold">
+<summary>コード</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys<span class="op">;</span> sys.path.insert(<span class="dv">0</span>, <span class="st">"../code"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> planck_curve <span class="im">import</span> plot_planck_with_limits</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plot_planck_with_limits(temperatures<span class="op">=</span>(<span class="dv">3000</span>, <span class="dv">5800</span>, <span class="dv">10000</span>))</span></code></pre></div><button title="コピー" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-planck-three-temps-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+図&nbsp;4.1
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="sec-reading-spectra-nu-lambda" class="level2">
+<h2 class="anchored" data-anchor-id="sec-reading-spectra-nu-lambda">2.2 振動数表示と波長表示 ― 同じ物理、異なる関数形</h2>
+<p>[本文目安：B3｜導出：B3]</p>
+<p>スペクトルは振動数 <span class="math inline">\nu</span> で表すこともあれば、波長 <span class="math inline">\lambda</span> で表すこともある。同じ物理現象なのだから、同じ放射エネルギーを表しているはずだが、<span class="math inline">B_\nu</span> と <span class="math inline">B_\lambda</span> の関数形は異なる。</p>
+<p>両者は<strong>同じエネルギー</strong>を<strong>異なる変数の刻み</strong>で表現している：</p>
+<p><span id="eq-nu-lambda-conversion"><span class="math display">
+B_\nu \, d\nu = -B_\lambda \, d\lambda
+\tag{4.3}</span></span></p>
+<p>ここで <span class="math inline">\nu = c/\lambda</span> から <span class="math inline">d\nu = -c/\lambda^2 \, d\lambda</span> なので、</p>
+<p><span id="eq-planck-lambda"><span class="math display">
+B_\lambda(T) = B_\nu(T) \cdot \frac{c}{\lambda^2} = \frac{2 h c^2}{\lambda^5} \cdot \frac{1}{e^{hc/\lambda kT} - 1}
+\tag{4.4}</span></span></p>
+<p>ジャコビアン <span class="math inline">c/\lambda^2</span> がかかることで、<span class="math inline">B_\lambda</span> の関数形は <span class="math inline">B_\nu</span> と異なる。</p>
+<p><strong>ピーク位置のずれ</strong>：</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>表示</th>
+<th>ピーク条件</th>
+<th>太陽（<span class="math inline">T = 5778</span> K）での値</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">B_\nu</span></td>
+<td><span class="math inline">h\nu / kT \simeq 2.82</span></td>
+<td><span class="math inline">\nu_{\max} \simeq 3.4 \times 10^{14}</span> Hz（<span class="math inline">\lambda \simeq 880</span> nm）</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">B_\lambda</span></td>
+<td><span class="math inline">hc/\lambda kT \simeq 4.97</span></td>
+<td><span class="math inline">\lambda_{\max} \simeq 502</span> nm</td>
+</tr>
+</tbody>
+</table>
+<p>この<strong>「ピーク位置がずれる」</strong>現象は、観測のミスを生みやすい。同じ温度の太陽について、振動数で見ると「赤外にピーク」、波長で見ると「可視（緑）にピーク」となる。両者に矛盾はない。<strong>スペクトルのピーク位置を語るときは、必ずどちらの変数で語っているかを明示する</strong>のが鉄則である。</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+警告
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>本書の流儀</strong>：本書では特に断らない限り、振動数表示 <span class="math inline">B_\nu(T)</span> を主とする。理由は、放射輸送方程式やモード密度の議論（第II・V部）が振動数表示で素直に書けるからである。波長表示が便利な場面（観測装置の特性、可視光天文学）では適宜変換する。</p>
+</div>
+</div>
+</section>
+<section id="sec-reading-spectra-wien" class="level2">
+<h2 class="anchored" data-anchor-id="sec-reading-spectra-wien">2.3 ピークと温度 ― Wien の変位則</h2>
+<p>[本文目安：B2]</p>
+<p><a href="#eq-planck-lambda" class="quarto-xref">式&nbsp;<span>4.4</span></a> のピーク条件から、波長表示のピーク <span class="math inline">\lambda_{\max}</span> と温度 <span class="math inline">T</span> の間に簡単な関係が成り立つ：</p>
+<p><span id="eq-wien-displacement"><span class="math display">
+\lambda_{\max} \cdot T = b \simeq 2.898 \times 10^{-3}\ \mathrm{m \cdot K}
+\tag{4.5}</span></span></p>
+<p>これが <strong>Wien の変位則</strong>（<strong>Wien’s displacement law</strong>）である。<span class="math inline">b</span> は Wien の変位定数。</p>
+<p>実例：</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>天体</th>
+<th>温度 <span class="math inline">T</span> [K]</th>
+<th><span class="math inline">\lambda_{\max}</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CMB</td>
+<td>2.7</td>
+<td><span class="math inline">\sim 1.07</span> mm（マイクロ波）</td>
+</tr>
+<tr class="even">
+<td>星間ダスト</td>
+<td>30</td>
+<td><span class="math inline">\sim 100</span> μm（遠赤外）</td>
+</tr>
+<tr class="odd">
+<td>木星</td>
+<td>130</td>
+<td><span class="math inline">\sim 22</span> μm（中赤外）</td>
+</tr>
+<tr class="even">
+<td>地球</td>
+<td>290</td>
+<td><span class="math inline">\sim 10</span> μm（中赤外）</td>
+</tr>
+<tr class="odd">
+<td>太陽</td>
+<td>5800</td>
+<td><span class="math inline">\sim 500</span> nm（可視）</td>
+</tr>
+<tr class="even">
+<td>O 型星</td>
+<td>30000</td>
+<td><span class="math inline">\sim 100</span> nm（紫外）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>対応（観測）</strong>：可視光から赤外までで観測した SED（spectral energy distribution）のピーク波長を読み取れば、Wien の式で逆算するだけで、温度を一桁の精度で推定できる。これが天文学で最もよく使う「色から温度」のステップである。</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+ヒント
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>振動数表示の Wien</strong>：振動数表示のピーク位置 <span class="math inline">\nu_{\max}/T \simeq 5.88 \times 10^{10}</span> Hz/K も Wien の式の別表現として有用。ただし上述のとおり、波長表示と振動数表示でピーク位置の温度依存は同じ「逆比例」だが、定数の値が違うので両者を混ぜないように。</p>
+</div>
+</div>
+</section>
+<section id="sec-reading-spectra-stefan-boltzmann" class="level2">
+<h2 class="anchored" data-anchor-id="sec-reading-spectra-stefan-boltzmann">2.4 面積と全放射 ― Stefan–Boltzmann 則</h2>
+<p>[本文目安：B2]</p>
+<p>プランク曲線 <span class="math inline">B_\nu(T)</span> から、黒体表面の単位面積・単位時間あたりに放出される全エネルギー（全放射フラックス）が得られる。手順は二段階：</p>
+<p><strong>(i) 振動数別フラックス <span class="math inline">F_\nu</span></strong>：黒体表面は等方放出をするが、観測者がいるのは<strong>外向きの半球</strong>である。表面から半球の全方向に立体角積分すると、射影因子 <span class="math inline">\cos\theta</span> がかかって（<a href="../part2/04-radiation-field.html#eq-flux-def" class="quarto-xref">式&nbsp;<span>6.6</span></a> 参照）</p>
+<p><span id="eq-fnu-pi-bnu"><span class="math display">
+F_\nu = \int_{\text{半球}} B_\nu \cos\theta\, d\Omega = \pi B_\nu(T)
+\tag{4.6}</span></span></p>
+<p>ここで「全立体角 <span class="math inline">4\pi</span> ではなく <span class="math inline">\pi</span>」になるのは、<strong>半球積分</strong>かつ<strong><span class="math inline">\cos\theta</span> 射影</strong>の二つの効果（<span class="math inline">\int_0^{2\pi} d\varphi \int_0^{\pi/2} \cos\theta \sin\theta\, d\theta = \pi</span>）から。第II部・第4章で改めて整理する。</p>
+<p><strong>(ii) 全振動数積分</strong>：<span class="math inline">F = \int_0^\infty F_\nu d\nu = \pi \int_0^\infty B_\nu d\nu</span> を実行すると</p>
+<p><span id="eq-stefan-boltzmann"><span class="math display">
+F = \sigma T^4
+\tag{4.7}</span></span></p>
+<p>ここで <span class="math inline">\sigma = 5.670 \times 10^{-5}</span> erg s<span class="math inline">^{-1}</span> cm<span class="math inline">^{-2}</span> K<span class="math inline">^{-4}</span> は <strong>Stefan–Boltzmann 定数</strong>（<strong>Stefan–Boltzmann constant</strong>）である。</p>
+<p>「<span class="math inline">T^4</span>」という強い温度依存性は天文学のスケール感を支配する：</p>
+<ul>
+<li>太陽（<span class="math inline">T_\odot = 5778</span> K）の単位面積あたりフラックス：<span class="math inline">\sigma T_\odot^4 \simeq 6.3 \times 10^{10}</span> erg s<span class="math inline">^{-1}</span> cm<span class="math inline">^{-2}</span></li>
+<li>2 倍温度の星（<span class="math inline">T = 11560</span> K）：単位面積あたり <span class="math inline">2^4 = 16</span> 倍</li>
+<li>半分温度の星（<span class="math inline">T = 2900</span> K）：単位面積あたり <span class="math inline">1/16</span></li>
+</ul>
+<p>光度（luminosity, 単位時間に天体全体から放出されるエネルギー）は、半径 <span class="math inline">R</span> の球を仮定すれば</p>
+<p><span id="eq-luminosity-sb"><span class="math display">
+L = 4\pi R^2 \cdot \sigma T^4
+\tag{4.8}</span></span></p>
+<p>これと観測される光度から、半径と温度の組み合わせ <span class="math inline">R^2 T^4</span> を読み出せる。距離が分かっていれば、観測されるフラックス <span class="math inline">f</span> と光度の関係 <span class="math inline">L = 4\pi d^2 f</span> から、独立に <span class="math inline">L</span> を決められる。</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+ノート
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong><span class="math inline">T^4</span> の物理</strong>：Stefan–Boltzmann 則の温度依存 <span class="math inline">T^4</span> は、本章では「観測事実」として受け入れる。理由は第6章（熱平衡における放射場のエネルギー密度 <span class="math inline">u = aT^4</span>）と第8章（光子の統計力学）で逆引きする。</p>
+</div>
+</div>
+</section>
+<section id="sec-reading-spectra-limits" class="level2">
+<h2 class="anchored" data-anchor-id="sec-reading-spectra-limits">2.5 低振動数極限と高振動数極限 ― 古典側と量子側</h2>
+<p>[本文目安：B3｜導出：B3]</p>
+<p>プランク分布の両端の極限は、それぞれ別個の式として古典物理の中で扱われていた。本書ではこれを「同じプランク分布の両極限」として統一的に見る。</p>
+<section id="低振動数極限rayleighjeans-則" class="level3">
+<h3 class="anchored" data-anchor-id="低振動数極限rayleighjeans-則">低振動数極限：Rayleigh–Jeans 則</h3>
+<p><span class="math inline">h\nu \ll kT</span> では、<span class="math inline">e^{h\nu/kT} - 1 \simeq h\nu/kT</span> なので</p>
+<p><span id="eq-rayleigh-jeans"><span class="math display">
+B_\nu(T) \xrightarrow[h\nu \ll kT]{} \frac{2 \nu^2}{c^2} kT
+\tag{4.9}</span></span></p>
+<p>ここに <strong><span class="math inline">h</span> が現れていない</strong>ことに注意。これは古典物理から（量子論なしで）導ける式である。電波天文学ではほぼ常にこの極限で観測している。</p>
+</section>
+<section id="高振動数極限wien-の式" class="level3">
+<h3 class="anchored" data-anchor-id="高振動数極限wien-の式">高振動数極限：Wien の式</h3>
+<p><span class="math inline">h\nu \gg kT</span> では、<span class="math inline">e^{h\nu/kT} - 1 \simeq e^{h\nu/kT}</span> なので</p>
+<p><span id="eq-wien-limit"><span class="math display">
+B_\nu(T) \xrightarrow[h\nu \gg kT]{} \frac{2 h \nu^3}{c^2} e^{-h\nu/kT}
+\tag{4.10}</span></span></p>
+<p>こちらは指数関数で急激に落ちる側。<strong><span class="math inline">h</span> が現れる</strong>ことが本質的で、古典物理だけでは出てこない。</p>
+</section>
+<section id="この二つの極限から見える物理の対立" class="level3">
+<h3 class="anchored" data-anchor-id="この二つの極限から見える物理の対立">この二つの極限から見える「物理の対立」</h3>
+<p>低振動数では <span class="math inline">h</span> なしで OK、高振動数では <span class="math inline">h</span> が本質的に効く ― この事実は、<strong>古典統計と量子の境目</strong>を観測スペクトルが直接示していることを意味する。第IV部・第9章で「古典論ではなぜ失敗するのか（紫外線破綻）」を本格的に扱うが、そこへの伏線がここに置かれている。</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+ヒント
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>目安</strong>：<span class="math inline">h\nu/kT \sim 1</span>、つまり <span class="math inline">\nu \sim kT/h</span> を境に、Rayleigh–Jeans 側か Wien 側かが切り替わる。太陽光（<span class="math inline">T \sim 5800</span> K）なら境界は <span class="math inline">\nu \sim 10^{14}</span> Hz（近赤外）。電波域は完全に RJ 側、可視光は遷移域、紫外〜X 線は Wien 側。</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>問い</strong>：なぜ古典論で導けるのは Rayleigh–Jeans 側だけなのか？</p>
+<p><strong>短答</strong>：古典論ではエネルギー等分配定理が成り立ち、放射場の各モードに <span class="math inline">kT</span> のエネルギーが分配される。これがそのまま <span class="math inline">B_\nu \propto \nu^2\, kT</span> という RJ 形を生む。一方、Wien 側で必要な指数関数的減衰は、エネルギーが <span class="math inline">h\nu</span> という離散単位でやりとりされるという量子的性質がないと出てこない。</p>
+<p><strong>もう一歩</strong>：高振動数側で古典論を信じ続けると、全エネルギーが発散する。これが「<strong>紫外線破綻</strong>」で、観測される黒体スペクトルの形と決定的に矛盾する。この矛盾こそが量子論を要請した歴史的契機である。詳しくは第9章。</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="sec-reading-spectra-temperatures" class="level2">
+<h2 class="anchored" data-anchor-id="sec-reading-spectra-temperatures">2.6 色温度・有効温度・輝度温度 ― どの温度か</h2>
+<p>[本文目安：B3｜導出：B3]</p>
+<p>「天体の温度」と言っても、現実の天体は完全な黒体ではない。観測値から「温度」を引き出す手段はいくつかあり、それぞれ別物として扱う必要がある。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>温度</th>
+<th>定義</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>色温度</strong> <span class="math inline">T_c</span>（<strong>color temperature</strong>）</td>
+<td>観測スペクトルの<strong>形</strong>（特に二点の比）が一致する黒体の温度</td>
+<td>連続スペクトル形を黒体と比較するとき</td>
+</tr>
+<tr class="even">
+<td><strong>有効温度</strong> <span class="math inline">T_\mathrm{eff}</span>（<strong>effective temperature</strong>）</td>
+<td>全光度が等しくなる黒体の温度。<span class="math inline">L = 4\pi R^2 \sigma T_\mathrm{eff}^4</span> で定義</td>
+<td>恒星の全放射エネルギーを基準にするとき</td>
+</tr>
+<tr class="odd">
+<td><strong>輝度温度</strong> <span class="math inline">T_b</span>（<strong>brightness temperature</strong>）</td>
+<td>ある振動数 <span class="math inline">\nu</span> で観測される比強度 <span class="math inline">I_\nu</span> が、その振動数のプランク関数と等しくなる温度。<span class="math inline">I_\nu = B_\nu(T_b)</span></td>
+<td>電波観測でほぼ常用</td>
+</tr>
+</tbody>
+</table>
+<p>完全な黒体ならこれら三つはすべて一致する。<strong>ずれの大きさが、その天体がどれだけ黒体からはずれているかの指標</strong>にもなる。</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+ノート
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>注意（観測）</strong>：太陽の場合、色温度・有効温度・輝度温度はおおよそ似た値（5500〜5800 K）になるが、波長帯によって 100 K 程度のずれが現れる。これは「太陽が完全な黒体ではない」ことの定量的な証拠であり、第15章（恒星大気と吸収線）でこのずれの起源を扱う。</p>
+</div>
+</div>
+</section>
+<section id="sec-reading-spectra-deviation" class="level2">
+<h2 class="anchored" data-anchor-id="sec-reading-spectra-deviation">2.7 黒体からのずれ ― 観測スペクトルが教えてくれるもの</h2>
+<p>[本文目安：B3｜導出：B3]</p>
+<p>第1章 1.7 でみたように、現実の天体スペクトルは黒体から多少なりともずれる。観測で出会う主な「ずれ」を整理しておく：</p>
+<ol type="1">
+<li><strong>吸収線・輝線</strong>：連続スペクトルに細い線が重なる（第VII部）</li>
+<li><strong>連続不透明度の振動数依存性</strong>：滑らかな形が振動数によって変形（第15章、修正黒体）</li>
+<li><strong>多温度合成</strong>：複数の温度成分が重なって、単一の <span class="math inline">T</span> では再現できない（第17・18章）</li>
+<li><strong>光学的に薄い領域からの放射</strong>：黒体まで熱化していない（第5章、第8章）</li>
+<li><strong>非熱的放射の混入</strong>：シンクロトロン（磁場中の相対論的電子）、逆 Compton 散乱、曲率放射など。<strong>べき則分布</strong>の高エネルギー電子から出るため、温度 <span class="math inline">T</span> ではなく粒子分布で決まる。第1章 §1.9 で見たように、これは「黒体からの単なる量的ずれ」を超えた<strong>質的に異なる放射</strong>である（第15章 §15.6、第18章）</li>
+</ol>
+<p><strong>重要なポイント</strong>は、1〜4 のずれを測ることが<strong>観測天文学の主要な仕事</strong>である、ということである。黒体スペクトルは「比較の基準」として、ずれの定量化を可能にしてくれる。5 の非熱的放射は本書の中心テーマではないが、観測スペクトルに重なる場面では明示的に区別する必要がある。</p>
+</section>
+<section id="sec-reading-spectra-estimation" class="level2">
+<h2 class="anchored" data-anchor-id="sec-reading-spectra-estimation">2.8 観測データから温度・半径・光度を推定する</h2>
+<p>[本文目安：B3｜導出：B3]</p>
+<p>ここまでの道具を使って、実際に観測データから物理量を引き出す手順を整理する。</p>
+<p><strong>典型的なワークフロー</strong>（恒星を例に）：</p>
+<ol type="1">
+<li><strong>観測</strong>：複数の波長帯でフラックス <span class="math inline">f_\nu</span> または <span class="math inline">f_\lambda</span> を測る（SED の構築）</li>
+<li><strong>温度の推定</strong>：
+<ul>
+<li>Wien の式（<a href="#eq-wien-displacement" class="quarto-xref">式&nbsp;<span>4.5</span></a>）でピーク波長から <span class="math inline">T</span> を概算、または</li>
+<li>色（バンド間のフラックス比）を黒体と比較して色温度 <span class="math inline">T_c</span> を決定</li>
+</ul></li>
+<li><strong>距離の特定</strong>：年周視差、その他の距離指標を使う</li>
+<li><strong>光度の計算</strong>：観測フラックスと距離から <span class="math inline">L = 4\pi d^2 f</span></li>
+<li><strong>半径の推定</strong>：Stefan–Boltzmann (<a href="#eq-luminosity-sb" class="quarto-xref">式&nbsp;<span>4.8</span></a>) を逆算して <span class="math inline">R = \sqrt{L / (4\pi \sigma T^4)}</span></li>
+</ol>
+<p>この一連の手順は、<strong>プランク分布が中心地図として</strong>機能しているからこそ意味を持つ。観測量と物理量を結ぶ橋渡しが、すべて <span class="math inline">B_\nu(T)</span> の形（とそのモーメント）に集約される。</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+ヒント
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>例（数値）：太陽</strong></p>
+<ul>
+<li>観測されるピーク波長：約 500 nm → Wien の式から <span class="math inline">T \simeq 5800</span> K</li>
+<li>観測される地球での太陽定数：<span class="math inline">f_\odot \simeq 1.4 \times 10^6</span> erg s<span class="math inline">^{-1}</span> cm<span class="math inline">^{-2}</span></li>
+<li>距離：<span class="math inline">d = 1</span> AU <span class="math inline">= 1.5 \times 10^{13}</span> cm</li>
+<li>光度：<span class="math inline">L_\odot = 4\pi d^2 f_\odot \simeq 3.8 \times 10^{33}</span> erg/s</li>
+<li>半径：<span class="math inline">R_\odot = \sqrt{L_\odot / (4\pi \sigma T^4)} \simeq 7 \times 10^{10}</span> cm</li>
+</ul>
+<p>実測値ともよく一致する。これが「太陽が黒体に近い」ことの定量的な証拠になっている。</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="sec-reading-spectra-summary" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sec-reading-spectra-summary">この章で何がわかったか</h2>
+<div class="callout-summary">
+<p><strong>中心地図に戻る</strong></p>
+<p>本章で、中心地図のプランク関数 <span class="math inline">B_\nu(T)</span> について、<strong>観測の側からの「読み方」が一通り定まった</strong>：</p>
+<ul>
+<li><strong>ピーク</strong>（Wien）→ 温度を引き出す</li>
+<li><strong>面積</strong>（Stefan–Boltzmann）→ 光度と半径を引き出す</li>
+<li><strong>両極限</strong>（RJ・Wien）→ 古典と量子の境目を見せる</li>
+<li><strong>三種の温度</strong>（<span class="math inline">T_c, T_\mathrm{eff}, T_b</span>）→ 黒体からのずれを定量化する</li>
+</ul>
+<p>ただし「なぜそうなるか」は、まだ何も答えていない。なぜプランク分布の前因子が <span class="math inline">2h\nu^3/c^2</span> なのか、なぜ指数関数因子が <span class="math inline">1/(e^{h\nu/kT}-1)</span> なのか、なぜ Stefan–Boltzmann の指数が <span class="math inline">T^4</span> なのか。これらは第III部（統計力学）以降の逆引きで明らかになる。</p>
+<p><strong>次章へ</strong>：第3章では、もう一つの観測事実 ―「<strong>なぜ材質によらず同じスペクトル形になるのか</strong>」― を扱う。この「普遍性」が、第III部の熱平衡・統計力学への入口になる。</p>
+</div>
+</section>
+<section id="sec-reading-spectra-exercises" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sec-reading-spectra-exercises">演習問題</h2>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。</p>
+</div>
+</div>
+</div>
+</section>
+<section id="sec-reading-spectra-further" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sec-reading-spectra-further">さらに学ぶための参考文献</h2>
+<ul>
+<li>Rybicki &amp; Lightman, <em>Radiative Processes in Astrophysics</em> (Wiley, 1979) — 1.5 節「Blackbody Radiation」</li>
+<li>嶺重 慎 編『宇宙流体力学の基礎』（日本評論社, 2014）— 放射場の記述に関する章</li>
+<li>Karttunen et al., <em>Fundamental Astronomy</em> (Springer, 6th ed., 2017) — 黒体放射と光度・色温度の基礎</li>
+</ul>
+
+
+<!-- -->
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "コピーしました");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "コピーしました");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../part1/01-where-blackbody.html" class="pagination-link" aria-label="第01章　宇宙で黒体放射はどこに現れるか">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">第01章　宇宙で黒体放射はどこに現れるか</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../part1/03-universality.html" class="pagination-link" aria-label="第03章　黒体放射はなぜ普遍的なのか">
+        <span class="nav-page-text"><span class="chapter-title">第03章　黒体放射はなぜ普遍的なのか</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">ソースコード</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "第02章　黒体スペクトルをどう読むか"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="an">lang:</span><span class="co"> ja</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>::: {.chapter-overview}</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>**この章の主題**：プランク分布の基本的な形と振る舞いを観測の言葉で読み解く。観測スペクトルから温度・半径・光度を引き出すための道具（Wien の法則、Stefan–Boltzmann 則、色温度など）を、観測の必要から立ち上げていく。</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>本章では、第1章で「観測される事実」として並べた黒体スペクトルを、**どう測り、どう読むか**という観測の側に踏み込む。式は「なぜそうなるか」（第III〜V部）に踏み込む前に、まず「観測量との対応関係」だけで扱う。</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章の中心地図 {#sec-reading-spectra-map .unnumbered}</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_includes/_planck-map.qmd &gt;}}</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>本章では、地図のプランク関数 $B_\nu(T)$ そのものを「観測される曲線」として扱う。各因子の物理的起源は第III〜V部で逆引きしていく。本章はその準備として、**曲線の形と読み方**を共通言語にする。</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で答える問い {#sec-reading-spectra-questions .unnumbered}</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>::: {.callout-question}</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>観測スペクトルのピーク位置から、その天体の温度がわかるのはなぜか</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>スペクトルの面積（全エネルギー）と温度の関係は、観測で何の役に立つのか</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>振動数表示 $B_\nu$ と波長表示 $B_\lambda$ でピーク位置がずれるのはなぜか</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>「色温度」「有効温度」「輝度温度」は何が違い、どれを使うべきか</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>観測されるスペクトルからどうやって温度・半径・光度を引き出すのか</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="fu">## 到達目標 {#sec-reading-spectra-goals .unnumbered}</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>この章を読み終えると、読者は次のことができるようになる：</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>プランク分布の形を見て、温度を一桁の精度で推定できる</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>ウィーンの法則と Stefan–Boltzmann 則を、観測量から温度・光度を逆算する道具として使える</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>振動数表示と波長表示の違いを理解し、観測データを正しい単位系で扱える</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2.1 プランク分布の形 {#sec-reading-spectra-shape}</span></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B2</span><span class="co">]</span></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>第1章では、宇宙のさまざまな天体が「同じ関数族」に属する連続スペクトルを示すことを観察した。この関数族は、振動数 $\nu$ の関数として書くと次の形をもつ：</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu / kT} - 1}</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>$$ {#eq-planck-nu}</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>ここで $B_\nu$ は**比強度**（**specific intensity**）、つまり「単位面積・単位時間・単位立体角・単位振動数あたりのエネルギー」である。単位は erg s$^{-1}$ cm$^{-2}$ Hz$^{-1}$ sr$^{-1}$（SI なら W m$^{-2}$ Hz$^{-1}$ sr$^{-1}$）。本章では「面を通過するエネルギーの目安」として簡略に用いるが、**正式な定義** ― 面要素を法線から $\theta$ 傾けて通過する成分に対する $\cos\theta$ を含む形 ― は第4章 §4.1 で扱う。</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>::: {.callout-important}</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>**本章での扱い方**：率直に言えば、本章では $B_\nu$（@eq-planck-nu）を**一度ひとつの経験式・観測曲線として受け入れる**。第1章で「観測される現象」として温度ごとに同じ形をとることを確認したので、いまはその観測される曲線を表す式が上のように書ける、という事実だけ使う。式の各因子（$2h\nu^3/c^2$、$1/(e^{h\nu/kT}-1)$）がなぜこの形になるかは、第8章（光子統計）、第10章（プランクの量子仮説）、第14章（モード密度）で順に逆引きする。</span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>この曲線の特徴を、まず観測の言葉で整理しよう：</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**低振動数側**：$B_\nu \propto \nu^2$ で立ち上がる</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**ピーク**：$h\nu \simeq 2.82\, kT$ 付近に最大値</span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**高振動数側**：$e^{-h\nu/kT}$ で指数関数的に減衰</span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>温度を変えると、曲線全体がピークごと平行移動し、面積が急激に変わる。</span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-planck-three-temps</span></span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "三つの温度のプランク曲線。温度上昇でピークは高振動数側に移り、面積（全エネルギー）は $T^4$ に比例して大きくなる。"</span></span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: true</span></span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys<span class="op">;</span> sys.path.insert(<span class="dv">0</span>, <span class="st">"../code"</span>)</span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> planck_curve <span class="im">import</span> plot_planck_with_limits</span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plot_planck_with_limits(temperatures<span class="op">=</span>(<span class="dv">3000</span>, <span class="dv">5800</span>, <span class="dv">10000</span>))</span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2.2 振動数表示と波長表示 ― 同じ物理、異なる関数形 {#sec-reading-spectra-nu-lambda}</span></span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3｜導出：B3</span><span class="co">]</span></span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>スペクトルは振動数 $\nu$ で表すこともあれば、波長 $\lambda$ で表すこともある。同じ物理現象なのだから、同じ放射エネルギーを表しているはずだが、$B_\nu$ と $B_\lambda$ の関数形は異なる。</span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a>両者は**同じエネルギー**を**異なる変数の刻み**で表現している：</span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a>B_\nu \, d\nu = -B_\lambda \, d\lambda</span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a>$$ {#eq-nu-lambda-conversion}</span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a>ここで $\nu = c/\lambda$ から $d\nu = -c/\lambda^2 \, d\lambda$ なので、</span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a>B_\lambda(T) = B_\nu(T) \cdot \frac{c}{\lambda^2} = \frac{2 h c^2}{\lambda^5} \cdot \frac{1}{e^{hc/\lambda kT} - 1}</span>
+<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a>$$ {#eq-planck-lambda}</span>
+<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a>ジャコビアン $c/\lambda^2$ がかかることで、$B_\lambda$ の関数形は $B_\nu$ と異なる。</span>
+<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a>**ピーク位置のずれ**：</span>
+<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 表示 <span class="pp">|</span> ピーク条件 <span class="pp">|</span> 太陽（$T = 5778$ K）での値 <span class="pp">|</span></span>
+<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $B_\nu$ <span class="pp">|</span> $h\nu / kT \simeq 2.82$ <span class="pp">|</span> $\nu_{\max} \simeq 3.4 \times 10^{14}$ Hz（$\lambda \simeq 880$ nm）<span class="pp">|</span></span>
+<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $B_\lambda$ <span class="pp">|</span> $hc/\lambda kT \simeq 4.97$ <span class="pp">|</span> $\lambda_{\max} \simeq 502$ nm <span class="pp">|</span></span>
+<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a>この**「ピーク位置がずれる」**現象は、観測のミスを生みやすい。同じ温度の太陽について、振動数で見ると「赤外にピーク」、波長で見ると「可視（緑）にピーク」となる。両者に矛盾はない。**スペクトルのピーク位置を語るときは、必ずどちらの変数で語っているかを明示する**のが鉄則である。</span>
+<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning}</span>
+<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a>**本書の流儀**：本書では特に断らない限り、振動数表示 $B_\nu(T)$ を主とする。理由は、放射輸送方程式やモード密度の議論（第II・V部）が振動数表示で素直に書けるからである。波長表示が便利な場面（観測装置の特性、可視光天文学）では適宜変換する。</span>
+<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2.3 ピークと温度 ― Wien の変位則 {#sec-reading-spectra-wien}</span></span>
+<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B2</span><span class="co">]</span></span>
+<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@eq-planck-lambda</span><span class="co">]</span> のピーク条件から、波長表示のピーク $\lambda_{\max}$ と温度 $T$ の間に簡単な関係が成り立つ：</span>
+<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a>\lambda_{\max} \cdot T = b \simeq 2.898 \times 10^{-3}\ \mathrm{m \cdot K}</span>
+<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a>$$ {#eq-wien-displacement}</span>
+<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a>これが **Wien の変位則**（**Wien's displacement law**）である。$b$ は Wien の変位定数。</span>
+<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a>実例：</span>
+<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 天体 <span class="pp">|</span> 温度 $T$ <span class="co">[</span><span class="ot">K</span><span class="co">]</span> <span class="pp">|</span> $\lambda_{\max}$ <span class="pp">|</span></span>
+<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> CMB <span class="pp">|</span> 2.7 <span class="pp">|</span> $\sim 1.07$ mm（マイクロ波）<span class="pp">|</span></span>
+<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 星間ダスト <span class="pp">|</span> 30 <span class="pp">|</span> $\sim 100$ μm（遠赤外）<span class="pp">|</span></span>
+<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 木星 <span class="pp">|</span> 130 <span class="pp">|</span> $\sim 22$ μm（中赤外）<span class="pp">|</span></span>
+<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 地球 <span class="pp">|</span> 290 <span class="pp">|</span> $\sim 10$ μm（中赤外）<span class="pp">|</span></span>
+<span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 太陽 <span class="pp">|</span> 5800 <span class="pp">|</span> $\sim 500$ nm（可視）<span class="pp">|</span></span>
+<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> O 型星 <span class="pp">|</span> 30000 <span class="pp">|</span> $\sim 100$ nm（紫外）<span class="pp">|</span></span>
+<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a>**対応（観測）**：可視光から赤外までで観測した SED（spectral energy distribution）のピーク波長を読み取れば、Wien の式で逆算するだけで、温度を一桁の精度で推定できる。これが天文学で最もよく使う「色から温度」のステップである。</span>
+<span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a>**振動数表示の Wien**：振動数表示のピーク位置 $\nu_{\max}/T \simeq 5.88 \times 10^{10}$ Hz/K も Wien の式の別表現として有用。ただし上述のとおり、波長表示と振動数表示でピーク位置の温度依存は同じ「逆比例」だが、定数の値が違うので両者を混ぜないように。</span>
+<span id="cb2-137"><a href="#cb2-137" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-138"><a href="#cb2-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-139"><a href="#cb2-139" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2.4 面積と全放射 ― Stefan–Boltzmann 則 {#sec-reading-spectra-stefan-boltzmann}</span></span>
+<span id="cb2-140"><a href="#cb2-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-141"><a href="#cb2-141" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B2</span><span class="co">]</span></span>
+<span id="cb2-142"><a href="#cb2-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a>プランク曲線 $B_\nu(T)$ から、黒体表面の単位面積・単位時間あたりに放出される全エネルギー（全放射フラックス）が得られる。手順は二段階：</span>
+<span id="cb2-144"><a href="#cb2-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-145"><a href="#cb2-145" aria-hidden="true" tabindex="-1"></a>**(i) 振動数別フラックス $F_\nu$**：黒体表面は等方放出をするが、観測者がいるのは**外向きの半球**である。表面から半球の全方向に立体角積分すると、射影因子 $\cos\theta$ がかかって（@eq-flux-def 参照）</span>
+<span id="cb2-146"><a href="#cb2-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-147"><a href="#cb2-147" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb2-148"><a href="#cb2-148" aria-hidden="true" tabindex="-1"></a>F_\nu = \int_{\text{半球}} B_\nu \cos\theta\, d\Omega = \pi B_\nu(T)</span>
+<span id="cb2-149"><a href="#cb2-149" aria-hidden="true" tabindex="-1"></a>$$ {#eq-fnu-pi-bnu}</span>
+<span id="cb2-150"><a href="#cb2-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-151"><a href="#cb2-151" aria-hidden="true" tabindex="-1"></a>ここで「全立体角 $4\pi$ ではなく $\pi$」になるのは、**半球積分**かつ**$\cos\theta$ 射影**の二つの効果（$\int_0^{2\pi} d\varphi \int_0^{\pi/2} \cos\theta \sin\theta\, d\theta = \pi$）から。第II部・第4章で改めて整理する。</span>
+<span id="cb2-152"><a href="#cb2-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a>**(ii) 全振動数積分**：$F = \int_0^\infty F_\nu d\nu = \pi \int_0^\infty B_\nu d\nu$ を実行すると</span>
+<span id="cb2-154"><a href="#cb2-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-155"><a href="#cb2-155" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a>F = \sigma T^4</span>
+<span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a>$$ {#eq-stefan-boltzmann}</span>
+<span id="cb2-158"><a href="#cb2-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-159"><a href="#cb2-159" aria-hidden="true" tabindex="-1"></a>ここで $\sigma = 5.670 \times 10^{-5}$ erg s$^{-1}$ cm$^{-2}$ K$^{-4}$ は **Stefan–Boltzmann 定数**（**Stefan–Boltzmann constant**）である。</span>
+<span id="cb2-160"><a href="#cb2-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-161"><a href="#cb2-161" aria-hidden="true" tabindex="-1"></a>「$T^4$」という強い温度依存性は天文学のスケール感を支配する：</span>
+<span id="cb2-162"><a href="#cb2-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-163"><a href="#cb2-163" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>太陽（$T_\odot = 5778$ K）の単位面積あたりフラックス：$\sigma T_\odot^4 \simeq 6.3 \times 10^{10}$ erg s$^{-1}$ cm$^{-2}$</span>
+<span id="cb2-164"><a href="#cb2-164" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>2 倍温度の星（$T = 11560$ K）：単位面積あたり $2^4 = 16$ 倍</span>
+<span id="cb2-165"><a href="#cb2-165" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>半分温度の星（$T = 2900$ K）：単位面積あたり $1/16$</span>
+<span id="cb2-166"><a href="#cb2-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-167"><a href="#cb2-167" aria-hidden="true" tabindex="-1"></a>光度（luminosity, 単位時間に天体全体から放出されるエネルギー）は、半径 $R$ の球を仮定すれば</span>
+<span id="cb2-168"><a href="#cb2-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-169"><a href="#cb2-169" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb2-170"><a href="#cb2-170" aria-hidden="true" tabindex="-1"></a>L = 4\pi R^2 \cdot \sigma T^4</span>
+<span id="cb2-171"><a href="#cb2-171" aria-hidden="true" tabindex="-1"></a>$$ {#eq-luminosity-sb}</span>
+<span id="cb2-172"><a href="#cb2-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-173"><a href="#cb2-173" aria-hidden="true" tabindex="-1"></a>これと観測される光度から、半径と温度の組み合わせ $R^2 T^4$ を読み出せる。距離が分かっていれば、観測されるフラックス $f$ と光度の関係 $L = 4\pi d^2 f$ から、独立に $L$ を決められる。</span>
+<span id="cb2-174"><a href="#cb2-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-175"><a href="#cb2-175" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb2-176"><a href="#cb2-176" aria-hidden="true" tabindex="-1"></a>**$T^4$ の物理**：Stefan–Boltzmann 則の温度依存 $T^4$ は、本章では「観測事実」として受け入れる。理由は第6章（熱平衡における放射場のエネルギー密度 $u = aT^4$）と第8章（光子の統計力学）で逆引きする。</span>
+<span id="cb2-177"><a href="#cb2-177" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-178"><a href="#cb2-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-179"><a href="#cb2-179" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2.5 低振動数極限と高振動数極限 ― 古典側と量子側 {#sec-reading-spectra-limits}</span></span>
+<span id="cb2-180"><a href="#cb2-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-181"><a href="#cb2-181" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3｜導出：B3</span><span class="co">]</span></span>
+<span id="cb2-182"><a href="#cb2-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-183"><a href="#cb2-183" aria-hidden="true" tabindex="-1"></a>プランク分布の両端の極限は、それぞれ別個の式として古典物理の中で扱われていた。本書ではこれを「同じプランク分布の両極限」として統一的に見る。</span>
+<span id="cb2-184"><a href="#cb2-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-185"><a href="#cb2-185" aria-hidden="true" tabindex="-1"></a><span class="fu">### 低振動数極限：Rayleigh–Jeans 則</span></span>
+<span id="cb2-186"><a href="#cb2-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-187"><a href="#cb2-187" aria-hidden="true" tabindex="-1"></a>$h\nu \ll kT$ では、$e^{h\nu/kT} - 1 \simeq h\nu/kT$ なので</span>
+<span id="cb2-188"><a href="#cb2-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-189"><a href="#cb2-189" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb2-190"><a href="#cb2-190" aria-hidden="true" tabindex="-1"></a>B_\nu(T) \xrightarrow<span class="co">[</span><span class="ot">h\nu \ll kT</span><span class="co">]</span>{} \frac{2 \nu^2}{c^2} kT</span>
+<span id="cb2-191"><a href="#cb2-191" aria-hidden="true" tabindex="-1"></a>$$ {#eq-rayleigh-jeans}</span>
+<span id="cb2-192"><a href="#cb2-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-193"><a href="#cb2-193" aria-hidden="true" tabindex="-1"></a>ここに **$h$ が現れていない**ことに注意。これは古典物理から（量子論なしで）導ける式である。電波天文学ではほぼ常にこの極限で観測している。</span>
+<span id="cb2-194"><a href="#cb2-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-195"><a href="#cb2-195" aria-hidden="true" tabindex="-1"></a><span class="fu">### 高振動数極限：Wien の式</span></span>
+<span id="cb2-196"><a href="#cb2-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-197"><a href="#cb2-197" aria-hidden="true" tabindex="-1"></a>$h\nu \gg kT$ では、$e^{h\nu/kT} - 1 \simeq e^{h\nu/kT}$ なので</span>
+<span id="cb2-198"><a href="#cb2-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-199"><a href="#cb2-199" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb2-200"><a href="#cb2-200" aria-hidden="true" tabindex="-1"></a>B_\nu(T) \xrightarrow<span class="co">[</span><span class="ot">h\nu \gg kT</span><span class="co">]</span>{} \frac{2 h \nu^3}{c^2} e^{-h\nu/kT}</span>
+<span id="cb2-201"><a href="#cb2-201" aria-hidden="true" tabindex="-1"></a>$$ {#eq-wien-limit}</span>
+<span id="cb2-202"><a href="#cb2-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-203"><a href="#cb2-203" aria-hidden="true" tabindex="-1"></a>こちらは指数関数で急激に落ちる側。**$h$ が現れる**ことが本質的で、古典物理だけでは出てこない。</span>
+<span id="cb2-204"><a href="#cb2-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-205"><a href="#cb2-205" aria-hidden="true" tabindex="-1"></a><span class="fu">### この二つの極限から見える「物理の対立」</span></span>
+<span id="cb2-206"><a href="#cb2-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-207"><a href="#cb2-207" aria-hidden="true" tabindex="-1"></a>低振動数では $h$ なしで OK、高振動数では $h$ が本質的に効く ― この事実は、**古典統計と量子の境目**を観測スペクトルが直接示していることを意味する。第IV部・第9章で「古典論ではなぜ失敗するのか（紫外線破綻）」を本格的に扱うが、そこへの伏線がここに置かれている。</span>
+<span id="cb2-208"><a href="#cb2-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-209"><a href="#cb2-209" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb2-210"><a href="#cb2-210" aria-hidden="true" tabindex="-1"></a>**目安**：$h\nu/kT \sim 1$、つまり $\nu \sim kT/h$ を境に、Rayleigh–Jeans 側か Wien 側かが切り替わる。太陽光（$T \sim 5800$ K）なら境界は $\nu \sim 10^{14}$ Hz（近赤外）。電波域は完全に RJ 側、可視光は遷移域、紫外〜X 線は Wien 側。</span>
+<span id="cb2-211"><a href="#cb2-211" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-212"><a href="#cb2-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-213"><a href="#cb2-213" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
+<span id="cb2-214"><a href="#cb2-214" aria-hidden="true" tabindex="-1"></a>**問い**：なぜ古典論で導けるのは Rayleigh–Jeans 側だけなのか？</span>
+<span id="cb2-215"><a href="#cb2-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-216"><a href="#cb2-216" aria-hidden="true" tabindex="-1"></a>**短答**：古典論ではエネルギー等分配定理が成り立ち、放射場の各モードに $kT$ のエネルギーが分配される。これがそのまま $B_\nu \propto \nu^2\, kT$ という RJ 形を生む。一方、Wien 側で必要な指数関数的減衰は、エネルギーが $h\nu$ という離散単位でやりとりされるという量子的性質がないと出てこない。</span>
+<span id="cb2-217"><a href="#cb2-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-218"><a href="#cb2-218" aria-hidden="true" tabindex="-1"></a>**もう一歩**：高振動数側で古典論を信じ続けると、全エネルギーが発散する。これが「**紫外線破綻**」で、観測される黒体スペクトルの形と決定的に矛盾する。この矛盾こそが量子論を要請した歴史的契機である。詳しくは第9章。</span>
+<span id="cb2-219"><a href="#cb2-219" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-220"><a href="#cb2-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-221"><a href="#cb2-221" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2.6 色温度・有効温度・輝度温度 ― どの温度か {#sec-reading-spectra-temperatures}</span></span>
+<span id="cb2-222"><a href="#cb2-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-223"><a href="#cb2-223" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3｜導出：B3</span><span class="co">]</span></span>
+<span id="cb2-224"><a href="#cb2-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-225"><a href="#cb2-225" aria-hidden="true" tabindex="-1"></a>「天体の温度」と言っても、現実の天体は完全な黒体ではない。観測値から「温度」を引き出す手段はいくつかあり、それぞれ別物として扱う必要がある。</span>
+<span id="cb2-226"><a href="#cb2-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-227"><a href="#cb2-227" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 温度 <span class="pp">|</span> 定義 <span class="pp">|</span> 用途 <span class="pp">|</span></span>
+<span id="cb2-228"><a href="#cb2-228" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb2-229"><a href="#cb2-229" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **色温度** $T_c$（**color temperature**）| 観測スペクトルの**形**（特に二点の比）が一致する黒体の温度 <span class="pp">|</span> 連続スペクトル形を黒体と比較するとき <span class="pp">|</span></span>
+<span id="cb2-230"><a href="#cb2-230" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **有効温度** $T_\mathrm{eff}$（**effective temperature**）<span class="pp">|</span> 全光度が等しくなる黒体の温度。$L = 4\pi R^2 \sigma T_\mathrm{eff}^4$ で定義 <span class="pp">|</span> 恒星の全放射エネルギーを基準にするとき <span class="pp">|</span></span>
+<span id="cb2-231"><a href="#cb2-231" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **輝度温度** $T_b$（**brightness temperature**）<span class="pp">|</span> ある振動数 $\nu$ で観測される比強度 $I_\nu$ が、その振動数のプランク関数と等しくなる温度。$I_\nu = B_\nu(T_b)$ <span class="pp">|</span> 電波観測でほぼ常用 <span class="pp">|</span></span>
+<span id="cb2-232"><a href="#cb2-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-233"><a href="#cb2-233" aria-hidden="true" tabindex="-1"></a>完全な黒体ならこれら三つはすべて一致する。**ずれの大きさが、その天体がどれだけ黒体からはずれているかの指標**にもなる。</span>
+<span id="cb2-234"><a href="#cb2-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-235"><a href="#cb2-235" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb2-236"><a href="#cb2-236" aria-hidden="true" tabindex="-1"></a>**注意（観測）**：太陽の場合、色温度・有効温度・輝度温度はおおよそ似た値（5500〜5800 K）になるが、波長帯によって 100 K 程度のずれが現れる。これは「太陽が完全な黒体ではない」ことの定量的な証拠であり、第15章（恒星大気と吸収線）でこのずれの起源を扱う。</span>
+<span id="cb2-237"><a href="#cb2-237" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-238"><a href="#cb2-238" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-239"><a href="#cb2-239" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2.7 黒体からのずれ ― 観測スペクトルが教えてくれるもの {#sec-reading-spectra-deviation}</span></span>
+<span id="cb2-240"><a href="#cb2-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-241"><a href="#cb2-241" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3｜導出：B3</span><span class="co">]</span></span>
+<span id="cb2-242"><a href="#cb2-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-243"><a href="#cb2-243" aria-hidden="true" tabindex="-1"></a>第1章 1.7 でみたように、現実の天体スペクトルは黒体から多少なりともずれる。観測で出会う主な「ずれ」を整理しておく：</span>
+<span id="cb2-244"><a href="#cb2-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-245"><a href="#cb2-245" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**吸収線・輝線**：連続スペクトルに細い線が重なる（第VII部）</span>
+<span id="cb2-246"><a href="#cb2-246" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**連続不透明度の振動数依存性**：滑らかな形が振動数によって変形（第15章、修正黒体）</span>
+<span id="cb2-247"><a href="#cb2-247" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**多温度合成**：複数の温度成分が重なって、単一の $T$ では再現できない（第17・18章）</span>
+<span id="cb2-248"><a href="#cb2-248" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**光学的に薄い領域からの放射**：黒体まで熱化していない（第5章、第8章）</span>
+<span id="cb2-249"><a href="#cb2-249" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**非熱的放射の混入**：シンクロトロン（磁場中の相対論的電子）、逆 Compton 散乱、曲率放射など。**べき則分布**の高エネルギー電子から出るため、温度 $T$ ではなく粒子分布で決まる。第1章 §1.9 で見たように、これは「黒体からの単なる量的ずれ」を超えた**質的に異なる放射**である（第15章 §15.6、第18章）</span>
+<span id="cb2-250"><a href="#cb2-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-251"><a href="#cb2-251" aria-hidden="true" tabindex="-1"></a>**重要なポイント**は、1〜4 のずれを測ることが**観測天文学の主要な仕事**である、ということである。黒体スペクトルは「比較の基準」として、ずれの定量化を可能にしてくれる。5 の非熱的放射は本書の中心テーマではないが、観測スペクトルに重なる場面では明示的に区別する必要がある。</span>
+<span id="cb2-252"><a href="#cb2-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-253"><a href="#cb2-253" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2.8 観測データから温度・半径・光度を推定する {#sec-reading-spectra-estimation}</span></span>
+<span id="cb2-254"><a href="#cb2-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-255"><a href="#cb2-255" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3｜導出：B3</span><span class="co">]</span></span>
+<span id="cb2-256"><a href="#cb2-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-257"><a href="#cb2-257" aria-hidden="true" tabindex="-1"></a>ここまでの道具を使って、実際に観測データから物理量を引き出す手順を整理する。</span>
+<span id="cb2-258"><a href="#cb2-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-259"><a href="#cb2-259" aria-hidden="true" tabindex="-1"></a>**典型的なワークフロー**（恒星を例に）：</span>
+<span id="cb2-260"><a href="#cb2-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-261"><a href="#cb2-261" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**観測**：複数の波長帯でフラックス $f_\nu$ または $f_\lambda$ を測る（SED の構築）</span>
+<span id="cb2-262"><a href="#cb2-262" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**温度の推定**：</span>
+<span id="cb2-263"><a href="#cb2-263" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Wien の式（<span class="co">[</span><span class="ot">@eq-wien-displacement</span><span class="co">]</span>）でピーク波長から $T$ を概算、または</span>
+<span id="cb2-264"><a href="#cb2-264" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>色（バンド間のフラックス比）を黒体と比較して色温度 $T_c$ を決定</span>
+<span id="cb2-265"><a href="#cb2-265" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**距離の特定**：年周視差、その他の距離指標を使う</span>
+<span id="cb2-266"><a href="#cb2-266" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**光度の計算**：観測フラックスと距離から $L = 4\pi d^2 f$</span>
+<span id="cb2-267"><a href="#cb2-267" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**半径の推定**：Stefan–Boltzmann (<span class="co">[</span><span class="ot">@eq-luminosity-sb</span><span class="co">]</span>) を逆算して $R = \sqrt{L / (4\pi \sigma T^4)}$</span>
+<span id="cb2-268"><a href="#cb2-268" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-269"><a href="#cb2-269" aria-hidden="true" tabindex="-1"></a>この一連の手順は、**プランク分布が中心地図として**機能しているからこそ意味を持つ。観測量と物理量を結ぶ橋渡しが、すべて $B_\nu(T)$ の形（とそのモーメント）に集約される。</span>
+<span id="cb2-270"><a href="#cb2-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-271"><a href="#cb2-271" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb2-272"><a href="#cb2-272" aria-hidden="true" tabindex="-1"></a>**例（数値）：太陽**</span>
+<span id="cb2-273"><a href="#cb2-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-274"><a href="#cb2-274" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>観測されるピーク波長：約 500 nm → Wien の式から $T \simeq 5800$ K</span>
+<span id="cb2-275"><a href="#cb2-275" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>観測される地球での太陽定数：$f_\odot \simeq 1.4 \times 10^6$ erg s$^{-1}$ cm$^{-2}$</span>
+<span id="cb2-276"><a href="#cb2-276" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>距離：$d = 1$ AU $= 1.5 \times 10^{13}$ cm</span>
+<span id="cb2-277"><a href="#cb2-277" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>光度：$L_\odot = 4\pi d^2 f_\odot \simeq 3.8 \times 10^{33}$ erg/s</span>
+<span id="cb2-278"><a href="#cb2-278" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>半径：$R_\odot = \sqrt{L_\odot / (4\pi \sigma T^4)} \simeq 7 \times 10^{10}$ cm</span>
+<span id="cb2-279"><a href="#cb2-279" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-280"><a href="#cb2-280" aria-hidden="true" tabindex="-1"></a>実測値ともよく一致する。これが「太陽が黒体に近い」ことの定量的な証拠になっている。</span>
+<span id="cb2-281"><a href="#cb2-281" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-282"><a href="#cb2-282" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-283"><a href="#cb2-283" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb2-284"><a href="#cb2-284" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-285"><a href="#cb2-285" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-reading-spectra-summary .unnumbered}</span></span>
+<span id="cb2-286"><a href="#cb2-286" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-287"><a href="#cb2-287" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
+<span id="cb2-288"><a href="#cb2-288" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る**</span>
+<span id="cb2-289"><a href="#cb2-289" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-290"><a href="#cb2-290" aria-hidden="true" tabindex="-1"></a>本章で、中心地図のプランク関数 $B_\nu(T)$ について、**観測の側からの「読み方」が一通り定まった**：</span>
+<span id="cb2-291"><a href="#cb2-291" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-292"><a href="#cb2-292" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**ピーク**（Wien）→ 温度を引き出す</span>
+<span id="cb2-293"><a href="#cb2-293" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**面積**（Stefan–Boltzmann）→ 光度と半径を引き出す</span>
+<span id="cb2-294"><a href="#cb2-294" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**両極限**（RJ・Wien）→ 古典と量子の境目を見せる</span>
+<span id="cb2-295"><a href="#cb2-295" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**三種の温度**（$T_c, T_\mathrm{eff}, T_b$）→ 黒体からのずれを定量化する</span>
+<span id="cb2-296"><a href="#cb2-296" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-297"><a href="#cb2-297" aria-hidden="true" tabindex="-1"></a>ただし「なぜそうなるか」は、まだ何も答えていない。なぜプランク分布の前因子が $2h\nu^3/c^2$ なのか、なぜ指数関数因子が $1/(e^{h\nu/kT}-1)$ なのか、なぜ Stefan–Boltzmann の指数が $T^4$ なのか。これらは第III部（統計力学）以降の逆引きで明らかになる。</span>
+<span id="cb2-298"><a href="#cb2-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-299"><a href="#cb2-299" aria-hidden="true" tabindex="-1"></a>**次章へ**：第3章では、もう一つの観測事実 ―「**なぜ材質によらず同じスペクトル形になるのか**」― を扱う。この「普遍性」が、第III部の熱平衡・統計力学への入口になる。</span>
+<span id="cb2-300"><a href="#cb2-300" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-301"><a href="#cb2-301" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-302"><a href="#cb2-302" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-reading-spectra-exercises .unnumbered}</span></span>
+<span id="cb2-303"><a href="#cb2-303" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-304"><a href="#cb2-304" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple"}</span>
+<span id="cb2-305"><a href="#cb2-305" aria-hidden="true" tabindex="-1"></a>演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。</span>
+<span id="cb2-306"><a href="#cb2-306" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-307"><a href="#cb2-307" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-308"><a href="#cb2-308" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-reading-spectra-further .unnumbered}</span></span>
+<span id="cb2-309"><a href="#cb2-309" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-310"><a href="#cb2-310" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rybicki &amp; Lightman, *Radiative Processes in Astrophysics* (Wiley, 1979) — 1.5 節「Blackbody Radiation」</span>
+<span id="cb2-311"><a href="#cb2-311" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>嶺重 慎 編『宇宙流体力学の基礎』（日本評論社, 2014）— 放射場の記述に関する章</span>
+<span id="cb2-312"><a href="#cb2-312" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Karttunen et al., *Fundamental Astronomy* (Springer, 6th ed., 2017) — 黒体放射と光度・色温度の基礎</span>
+</code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/edit/main/part1/02-reading-spectra.qmd" class="toc-action"><i class="bi bi-github"></i>編集</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/blob/main/part1/02-reading-spectra.qmd" class="toc-action"><i class="bi empty"></i>ソースコード</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/issues/new" class="toc-action"><i class="bi empty"></i>問題を報告</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

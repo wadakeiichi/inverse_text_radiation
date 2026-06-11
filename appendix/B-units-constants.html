@@ -1,0 +1,2210 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>付録 B — 付録 B 単位と基本定数 – 宇宙の熱的放射</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../appendix/A-math-notes.html" rel="prev">
+<link href="../images/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-6acc544bc6b266166f93717a0814bb05.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-84b9d0451ceb30bdeea41a205600fe27.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "一致なし",
+    "search-matching-documents-text": "一致した文書",
+    "search-copy-link-title": "検索へのリンクをコピー",
+    "search-hide-matches-text": "追加の検索結果を非表示",
+    "search-more-match-text": "追加の検索結果",
+    "search-more-matches-text": "追加の検索結果",
+    "search-clear-button-title": "消去",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "取消",
+    "search-submit-button-title": "検索",
+    "search-label": "サーチ"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&amp;family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet">
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="サイドバーを切り替える" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix/A-math-notes.html">Appendices</a></li><li class="breadcrumb-item"><a href="../appendix/B-units-constants.html"><span class="chapter-title">付録 B　単位と基本定数</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="サイドバーを切り替える" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="サーチ" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">宇宙の熱的放射</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/wadakeiichi/inverse_text_radiation" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <div class="dropdown">
+      <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../宇宙の熱的放射.pdf">
+              <i class="bi bi-file-pdf pe-1"></i>
+            Download PDF
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../宇宙の熱的放射.epub">
+              <i class="bi bi-journal pe-1"></i>
+            Download ePub
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="サーチ"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">宇宙の熱的放射</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../00-prologue.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">序章　この本の目的と歩き方</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">第I部　宇宙に満ちる黒体放射</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part1/01-where-blackbody.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第01章　宇宙で黒体放射はどこに現れるか</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part1/02-reading-spectra.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第02章　黒体スペクトルをどう読むか</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part1/03-universality.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第03章　黒体放射はなぜ普遍的なのか</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">第II部　放射をどう記述するか</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2/04-radiation-field.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第04章　放射場の基本量</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2/05-radiative-transfer.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第05章　放射輸送の基礎</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">第III部　逆引き1：熱力学・統計力学へ</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3/06-thermal-equilibrium.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第06章　熱平衡とは何か</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3/07-statistical-mechanics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第07章　統計力学の基本</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3/08-photon-statistics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第08章　光子の統計</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">第IV部　逆引き2：量子論へ</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4/09-classical-failure.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第09章　古典論ではなぜ失敗するのか</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4/10-planck-quantum.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第10章　プランクの量子仮説</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4/11-einstein-method.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第11章　アインシュタインの方法</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4/12-quantum-foundations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第12章　量子力学の基礎へ戻る</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">第V部　逆引き3：電磁気学へ</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5/13-electromagnetic-waves.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第13章　電磁波としての光</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5/14-cavity-modes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第14章　空洞中の電磁モード</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">第VI部　現実の宇宙へ戻る</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6/15-non-blackbody.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第15章　現実の天体は完全な黒体ではない</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6/16-cmb.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第16章　宇宙マイクロ波背景放射</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6/17-stars-planets-dust.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第17章　恒星・惑星・ダストの熱放射</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6/18-accretion-high-energy.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第18章　降着円盤と高エネルギー天体</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">第VII部　線スペクトル ― もう一つの逆引き</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part7/19-where-lines.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第19章　線スペクトルはどこに現れるか</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part7/20-line-formation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第20章　線形成 ― 吸収線と輝線の物理</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part7/21-atomic-physics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第21章　線スペクトルから原子物理へ</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part7/22-line-shape.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第22章　線形（line shape）の物理</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part7/23-line-applications.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第23章　線スペクトルから天体物理を読む</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">第VIII部　QEDからの俯瞰 ― 連続と線を結ぶ見通し</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part8/24-em-field-quantization.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第24章　電磁場を量子化するとは何か ― 直観的描像</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part8/25-qed-minimum.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第25章　Einstein係数・自然幅・選択則を QED で見通す</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">参考文献</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendix/A-math-notes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">付録 A　数学補章</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendix/B-units-constants.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">付録 B　単位と基本定数</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">目次</h2>
+   
+  <ul>
+  <li><a href="#sec-units-constants" id="toc-sec-units-constants" class="nav-link active" data-scroll-target="#sec-units-constants">付録 B　単位と基本定数</a>
+  <ul class="collapse">
+  <li><a href="#sec-fundamental-constants" id="toc-sec-fundamental-constants" class="nav-link" data-scroll-target="#sec-fundamental-constants">B.1 物理基本定数</a>
+  <ul class="collapse">
+  <li><a href="#b.1.1-si-単位での値codata-2018" id="toc-b.1.1-si-単位での値codata-2018" class="nav-link" data-scroll-target="#b.1.1-si-単位での値codata-2018">B.1.1 SI 単位での値（CODATA 2018）</a></li>
+  <li><a href="#b.1.2-天体物理でよく使う組合せ定数" id="toc-b.1.2-天体物理でよく使う組合せ定数" class="nav-link" data-scroll-target="#b.1.2-天体物理でよく使う組合せ定数">B.1.2 天体物理でよく使う組合せ定数</a></li>
+  </ul></li>
+  <li><a href="#sec-astronomical-units" id="toc-sec-astronomical-units" class="nav-link" data-scroll-target="#sec-astronomical-units">B.2 天文単位</a>
+  <ul class="collapse">
+  <li><a href="#b.2.1-距離時間" id="toc-b.2.1-距離時間" class="nav-link" data-scroll-target="#b.2.1-距離時間">B.2.1 距離・時間</a></li>
+  <li><a href="#b.2.2-質量光度半径" id="toc-b.2.2-質量光度半径" class="nav-link" data-scroll-target="#b.2.2-質量光度半径">B.2.2 質量・光度・半径</a></li>
+  <li><a href="#b.2.3-宇宙論パラメータplanck-2018" id="toc-b.2.3-宇宙論パラメータplanck-2018" class="nav-link" data-scroll-target="#b.2.3-宇宙論パラメータplanck-2018">B.2.3 宇宙論パラメータ（Planck 2018）</a></li>
+  </ul></li>
+  <li><a href="#sec-conversions" id="toc-sec-conversions" class="nav-link" data-scroll-target="#sec-conversions">B.3 振動数・波長・エネルギーの相互換算</a>
+  <ul class="collapse">
+  <li><a href="#b.3.1-換算定数" id="toc-b.3.1-換算定数" class="nav-link" data-scroll-target="#b.3.1-換算定数">B.3.1 換算定数</a></li>
+  <li><a href="#b.3.2-電磁波帯域の対応表" id="toc-b.3.2-電磁波帯域の対応表" class="nav-link" data-scroll-target="#b.3.2-電磁波帯域の対応表">B.3.2 電磁波帯域の対応表</a></li>
+  </ul></li>
+  <li><a href="#sec-si-cgs" id="toc-sec-si-cgs" class="nav-link" data-scroll-target="#sec-si-cgs">B.4 SI ↔︎ CGS の換算 ― 電磁気学の落とし穴</a>
+  <ul class="collapse">
+  <li><a href="#b.4.1-力学熱の換算" id="toc-b.4.1-力学熱の換算" class="nav-link" data-scroll-target="#b.4.1-力学熱の換算">B.4.1 力学・熱の換算</a></li>
+  <li><a href="#b.4.2-電磁気の換算注意" id="toc-b.4.2-電磁気の換算注意" class="nav-link" data-scroll-target="#b.4.2-電磁気の換算注意">B.4.2 電磁気の換算（注意）</a></li>
+  <li><a href="#b.4.3-式の形の違い" id="toc-b.4.3-式の形の違い" class="nav-link" data-scroll-target="#b.4.3-式の形の違い">B.4.3 式の形の違い</a></li>
+  </ul></li>
+  <li><a href="#sec-order-of-magnitude" id="toc-sec-order-of-magnitude" class="nav-link" data-scroll-target="#sec-order-of-magnitude">B.5 数値の桁感覚 ― オーダー推定のための定数</a>
+  <ul class="collapse">
+  <li><a href="#b.5.1-エネルギー目盛り" id="toc-b.5.1-エネルギー目盛り" class="nav-link" data-scroll-target="#b.5.1-エネルギー目盛り">B.5.1 エネルギー目盛り</a></li>
+  <li><a href="#b.5.2-重力スケール" id="toc-b.5.2-重力スケール" class="nav-link" data-scroll-target="#b.5.2-重力スケール">B.5.2 重力スケール</a></li>
+  <li><a href="#b.5.3-観測的密度" id="toc-b.5.3-観測的密度" class="nav-link" data-scroll-target="#b.5.3-観測的密度">B.5.3 観測的密度</a></li>
+  </ul></li>
+  <li><a href="#sec-data-references" id="toc-sec-data-references" class="nav-link" data-scroll-target="#sec-data-references">B.6 さらに進むための参考文献・データソース</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/edit/main/appendix/B-units-constants.qmd" class="toc-action"><i class="bi bi-github"></i>編集</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/blob/main/appendix/B-units-constants.qmd" class="toc-action"><i class="bi empty"></i>ソースコード</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/issues/new" class="toc-action"><i class="bi empty"></i>問題を報告</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix/A-math-notes.html">Appendices</a></li><li class="breadcrumb-item"><a href="../appendix/B-units-constants.html"><span class="chapter-title">付録 B　単位と基本定数</span></a></li></ol></nav>
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">付録 B — 付録 B　単位と基本定数</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Source</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="sec-units-constants" class="level1 unnumbered">
+<h1 class="unnumbered">付録 B　単位と基本定数</h1>
+<div class="appendix-overview">
+<p><strong>この付録の主題</strong>：本書で使う物理基本定数、天文単位、エネルギー・振動数・波長の相互換算、CGS と SI の対応をまとめる。値は CODATA 2018 と IAU 2015 を基準とする。本文中の数値例で「自分で計算したい」読者のために、桁感覚も含めて整理する。</p>
+</div>
+<hr>
+<section id="sec-fundamental-constants" class="level2">
+<h2 class="anchored" data-anchor-id="sec-fundamental-constants">B.1 物理基本定数</h2>
+<section id="b.1.1-si-単位での値codata-2018" class="level3">
+<h3 class="anchored" data-anchor-id="b.1.1-si-単位での値codata-2018">B.1.1 SI 単位での値（CODATA 2018）</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>定数</th>
+<th>記号</th>
+<th>SI 値</th>
+<th>単位</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>光速度</td>
+<td><span class="math inline">c</span></td>
+<td><span class="math inline">2.998 \times 10^8</span></td>
+<td>m s<span class="math inline">^{-1}</span></td>
+</tr>
+<tr class="even">
+<td>Planck 定数</td>
+<td><span class="math inline">h</span></td>
+<td><span class="math inline">6.626 \times 10^{-34}</span></td>
+<td>J s</td>
+</tr>
+<tr class="odd">
+<td>換算 Planck 定数</td>
+<td><span class="math inline">\hbar = h/2\pi</span></td>
+<td><span class="math inline">1.055 \times 10^{-34}</span></td>
+<td>J s</td>
+</tr>
+<tr class="even">
+<td>Boltzmann 定数</td>
+<td><span class="math inline">k_B</span></td>
+<td><span class="math inline">1.381 \times 10^{-23}</span></td>
+<td>J K<span class="math inline">^{-1}</span></td>
+</tr>
+<tr class="odd">
+<td>電気素量</td>
+<td><span class="math inline">e</span></td>
+<td><span class="math inline">1.602 \times 10^{-19}</span></td>
+<td>C</td>
+</tr>
+<tr class="even">
+<td>電子質量</td>
+<td><span class="math inline">m_e</span></td>
+<td><span class="math inline">9.109 \times 10^{-31}</span></td>
+<td>kg</td>
+</tr>
+<tr class="odd">
+<td>陽子質量</td>
+<td><span class="math inline">m_p</span></td>
+<td><span class="math inline">1.673 \times 10^{-27}</span></td>
+<td>kg</td>
+</tr>
+<tr class="even">
+<td>原子質量単位</td>
+<td><span class="math inline">u</span></td>
+<td><span class="math inline">1.661 \times 10^{-27}</span></td>
+<td>kg</td>
+</tr>
+<tr class="odd">
+<td>Avogadro 定数</td>
+<td><span class="math inline">N_A</span></td>
+<td><span class="math inline">6.022 \times 10^{23}</span></td>
+<td>mol<span class="math inline">^{-1}</span></td>
+</tr>
+<tr class="even">
+<td>真空誘電率</td>
+<td><span class="math inline">\epsilon_0</span></td>
+<td><span class="math inline">8.854 \times 10^{-12}</span></td>
+<td>F m<span class="math inline">^{-1}</span></td>
+</tr>
+<tr class="odd">
+<td>真空透磁率</td>
+<td><span class="math inline">\mu_0</span></td>
+<td><span class="math inline">1.257 \times 10^{-6}</span></td>
+<td>H m<span class="math inline">^{-1}</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="b.1.2-天体物理でよく使う組合せ定数" class="level3">
+<h3 class="anchored" data-anchor-id="b.1.2-天体物理でよく使う組合せ定数">B.1.2 天体物理でよく使う組合せ定数</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>定数</th>
+<th>記号</th>
+<th>値</th>
+<th>単位</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Stefan-Boltzmann 定数</td>
+<td><span class="math inline">\sigma = \pi^2 k_B^4 / (60 \hbar^3 c^2)</span></td>
+<td><span class="math inline">5.670 \times 10^{-8}</span></td>
+<td>W m<span class="math inline">^{-2}</span> K<span class="math inline">^{-4}</span></td>
+</tr>
+<tr class="even">
+<td>放射定数</td>
+<td><span class="math inline">a = 4\sigma/c</span></td>
+<td><span class="math inline">7.566 \times 10^{-16}</span></td>
+<td>J m<span class="math inline">^{-3}</span> K<span class="math inline">^{-4}</span></td>
+</tr>
+<tr class="odd">
+<td>Wien 変位定数</td>
+<td><span class="math inline">b = h c / (4.965 k_B)</span></td>
+<td><span class="math inline">2.898 \times 10^{-3}</span></td>
+<td>m K</td>
+</tr>
+<tr class="even">
+<td>Wien 変位（振動数版）</td>
+<td><span class="math inline">b_\nu = 2.821 k_B/h</span></td>
+<td><span class="math inline">5.879 \times 10^{10}</span></td>
+<td>Hz K<span class="math inline">^{-1}</span></td>
+</tr>
+<tr class="odd">
+<td>微細構造定数</td>
+<td><span class="math inline">\alpha = e^2/(4\pi\epsilon_0 \hbar c)</span></td>
+<td><span class="math inline">7.297 \times 10^{-3}</span></td>
+<td>(無次元、<span class="math inline">\simeq 1/137</span>)</td>
+</tr>
+<tr class="even">
+<td>Bohr 半径</td>
+<td><span class="math inline">a_0 = 4\pi\epsilon_0 \hbar^2/(m_e e^2)</span></td>
+<td><span class="math inline">5.292 \times 10^{-11}</span></td>
+<td>m</td>
+</tr>
+<tr class="odd">
+<td>Rydberg エネルギー</td>
+<td><span class="math inline">\text{Ry} = m_e c^2 \alpha^2/2</span></td>
+<td><span class="math inline">13.606</span></td>
+<td>eV</td>
+</tr>
+<tr class="even">
+<td>Rydberg 定数</td>
+<td><span class="math inline">R_\infty = \text{Ry}/(hc)</span></td>
+<td><span class="math inline">1.097 \times 10^7</span></td>
+<td>m<span class="math inline">^{-1}</span></td>
+</tr>
+<tr class="odd">
+<td>Compton 波長（電子）</td>
+<td><span class="math inline">\lambda_C = h/(m_e c)</span></td>
+<td><span class="math inline">2.426 \times 10^{-12}</span></td>
+<td>m</td>
+</tr>
+<tr class="even">
+<td>古典電子半径</td>
+<td><span class="math inline">r_e = e^2/(4\pi\epsilon_0 m_e c^2)</span></td>
+<td><span class="math inline">2.818 \times 10^{-15}</span></td>
+<td>m</td>
+</tr>
+<tr class="odd">
+<td>Thomson 断面積</td>
+<td><span class="math inline">\sigma_T = 8\pi r_e^2/3</span></td>
+<td><span class="math inline">6.652 \times 10^{-29}</span></td>
+<td>m<span class="math inline">^2</span></td>
+</tr>
+</tbody>
+</table>
+<div class="appendix-tip">
+<p><strong>本文での使用</strong>：</p>
+<ul>
+<li><span class="math inline">\sigma</span>, <span class="math inline">a</span>：第2章 §2.4（Stefan-Boltzmann 則の初出）、第4章 §4.4（半球フラックスでの <span class="math inline">\pi</span> 因子）、第17章 §17.1（恒星有効温度）</li>
+<li><span class="math inline">b</span>, <span class="math inline">b_\nu</span>：第1章、第2章 §2.3（Wien 変位則）</li>
+<li><span class="math inline">\alpha</span>：第21章 §21.5（電気四重極/磁気双極子遷移強度の見積もり）</li>
+<li><span class="math inline">a_0</span>, Ry：第21章 §21.1-§21.3（Rydberg 公式と Bohr 模型）</li>
+<li><span class="math inline">r_e</span>, <span class="math inline">\sigma_T</span>：第18章 §18.3（Compton 散乱）</li>
+</ul>
+</div>
+<hr>
+</section>
+</section>
+<section id="sec-astronomical-units" class="level2">
+<h2 class="anchored" data-anchor-id="sec-astronomical-units">B.2 天文単位</h2>
+<section id="b.2.1-距離時間" class="level3">
+<h3 class="anchored" data-anchor-id="b.2.1-距離時間">B.2.1 距離・時間</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>単位</th>
+<th>記号</th>
+<th>値</th>
+<th>由来</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>天文単位</td>
+<td>au</td>
+<td><span class="math inline">1.496 \times 10^{11}</span> m</td>
+<td>地球-太陽平均距離（IAU 定義値）</td>
+</tr>
+<tr class="even">
+<td>光年</td>
+<td>ly</td>
+<td><span class="math inline">9.461 \times 10^{15}</span> m</td>
+<td>光が真空中で 1 年に進む距離</td>
+</tr>
+<tr class="odd">
+<td>パーセク</td>
+<td>pc</td>
+<td><span class="math inline">3.086 \times 10^{16}</span> m</td>
+<td>地球軌道半径が 1 秒角に見える距離</td>
+</tr>
+<tr class="even">
+<td>キロパーセク</td>
+<td>kpc</td>
+<td><span class="math inline">10^3</span> pc</td>
+<td>銀河系スケール</td>
+</tr>
+<tr class="odd">
+<td>メガパーセク</td>
+<td>Mpc</td>
+<td><span class="math inline">10^6</span> pc</td>
+<td>銀河間距離</td>
+</tr>
+<tr class="even">
+<td>ギガパーセク</td>
+<td>Gpc</td>
+<td><span class="math inline">10^9</span> pc</td>
+<td>観測可能宇宙のスケール</td>
+</tr>
+<tr class="odd">
+<td>ユリウス年</td>
+<td>yr</td>
+<td><span class="math inline">3.156 \times 10^7</span> s</td>
+<td><span class="math inline">= 365.25 \cdot 86400</span> s</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="b.2.2-質量光度半径" class="level3">
+<h3 class="anchored" data-anchor-id="b.2.2-質量光度半径">B.2.2 質量・光度・半径</h3>
+<p>太陽値を基準にとる：</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>量</th>
+<th>記号</th>
+<th>値</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>太陽質量</td>
+<td><span class="math inline">M_\odot</span></td>
+<td><span class="math inline">1.989 \times 10^{30}</span> kg</td>
+</tr>
+<tr class="even">
+<td>太陽光度</td>
+<td><span class="math inline">L_\odot</span></td>
+<td><span class="math inline">3.828 \times 10^{26}</span> W</td>
+</tr>
+<tr class="odd">
+<td>太陽半径</td>
+<td><span class="math inline">R_\odot</span></td>
+<td><span class="math inline">6.957 \times 10^8</span> m</td>
+</tr>
+<tr class="even">
+<td>太陽有効温度</td>
+<td><span class="math inline">T_{\text{eff},\odot}</span></td>
+<td><span class="math inline">5772</span> K</td>
+</tr>
+<tr class="odd">
+<td>太陽絶対等級</td>
+<td><span class="math inline">M_{V,\odot}</span></td>
+<td><span class="math inline">+4.83</span></td>
+</tr>
+</tbody>
+</table>
+<p>その他の天体スケール：</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>天体</th>
+<th>質量</th>
+<th>半径</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>木星</td>
+<td><span class="math inline">M_J \simeq 1.9 \times 10^{27}</span> kg <span class="math inline">\simeq 10^{-3} M_\odot</span></td>
+<td><span class="math inline">7.15 \times 10^7</span> m</td>
+</tr>
+<tr class="even">
+<td>地球</td>
+<td><span class="math inline">M_\oplus \simeq 5.97 \times 10^{24}</span> kg</td>
+<td><span class="math inline">6.37 \times 10^6</span> m</td>
+</tr>
+<tr class="odd">
+<td>白色矮星</td>
+<td><span class="math inline">\sim 0.6 M_\odot</span></td>
+<td><span class="math inline">\sim 10^7</span> m</td>
+</tr>
+<tr class="even">
+<td>中性子星</td>
+<td><span class="math inline">\sim 1.4 M_\odot</span></td>
+<td><span class="math inline">\sim 10^4</span> m</td>
+</tr>
+<tr class="odd">
+<td>超巨大ブラックホール</td>
+<td><span class="math inline">10^6</span>〜<span class="math inline">10^{10} M_\odot</span></td>
+<td><span class="math inline">r_s = 2GM/c^2</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="b.2.3-宇宙論パラメータplanck-2018" class="level3">
+<h3 class="anchored" data-anchor-id="b.2.3-宇宙論パラメータplanck-2018">B.2.3 宇宙論パラメータ（Planck 2018）</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>パラメータ</th>
+<th>記号</th>
+<th>値</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Hubble 定数</td>
+<td><span class="math inline">H_0</span></td>
+<td><span class="math inline">67.4</span> km s<span class="math inline">^{-1}</span> Mpc<span class="math inline">^{-1}</span></td>
+</tr>
+<tr class="even">
+<td>物質密度比</td>
+<td><span class="math inline">\Omega_m</span></td>
+<td><span class="math inline">0.315</span></td>
+</tr>
+<tr class="odd">
+<td>暗黒エネルギー密度比</td>
+<td><span class="math inline">\Omega_\Lambda</span></td>
+<td><span class="math inline">0.685</span></td>
+</tr>
+<tr class="even">
+<td>バリオン密度比</td>
+<td><span class="math inline">\Omega_b</span></td>
+<td><span class="math inline">0.049</span></td>
+</tr>
+<tr class="odd">
+<td>CMB 温度</td>
+<td><span class="math inline">T_\text{CMB}</span></td>
+<td><span class="math inline">2.7255</span> K</td>
+</tr>
+<tr class="even">
+<td>宇宙年齢</td>
+<td><span class="math inline">t_0</span></td>
+<td><span class="math inline">1.38 \times 10^{10}</span> yr</td>
+</tr>
+</tbody>
+</table>
+<div class="appendix-tip">
+<p><strong>本文での使用</strong>：</p>
+<ul>
+<li><span class="math inline">au, pc, M_\odot</span>：第17章（恒星・惑星）、第18章（降着円盤）</li>
+<li><span class="math inline">L_\odot, R_\odot, T_{\text{eff},\odot}</span>：第17章 §17.1-§17.2（恒星と惑星平衡温度）</li>
+<li><span class="math inline">T_\text{CMB}</span>：第16章（CMB）</li>
+</ul>
+</div>
+<hr>
+</section>
+</section>
+<section id="sec-conversions" class="level2">
+<h2 class="anchored" data-anchor-id="sec-conversions">B.3 振動数・波長・エネルギーの相互換算</h2>
+<p>電磁波の同じ「色」を、目的に応じて違う変数で書く。基本関係：</p>
+<p><span id="eq-em-conversions"><span class="math display">
+\nu = \frac{c}{\lambda}, \quad E = h\nu = \frac{hc}{\lambda} = k_B T_E
+\tag{B.1}</span></span></p>
+<p>ここで <span class="math inline">T_E \equiv E/k_B</span> は「<strong>特性温度</strong>」（ある光子エネルギーに対応する温度）。</p>
+<section id="b.3.1-換算定数" class="level3">
+<h3 class="anchored" data-anchor-id="b.3.1-換算定数">B.3.1 換算定数</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>量の換算</th>
+<th>計算式</th>
+<th>数値</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">hc</span></td>
+<td></td>
+<td><span class="math inline">1240</span> eV nm <span class="math inline">= 1.24</span> µm eV</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">h/k_B</span></td>
+<td></td>
+<td><span class="math inline">4.80 \times 10^{-11}</span> K Hz<span class="math inline">^{-1}</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">k_B</span> (温度 → エネルギー)</td>
+<td></td>
+<td><span class="math inline">1</span> K <span class="math inline">= 8.617 \times 10^{-5}</span> eV</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">hc/k_B</span> (波長 ↔︎ 温度)</td>
+<td></td>
+<td><span class="math inline">\lambda \cdot T_E = hc/k_B \simeq 14388</span> µm·K（つまり「波長 [µm] × 特性温度 [K]」が一定）</td>
+</tr>
+<tr class="odd">
+<td>1 eV <span class="math inline">\to</span> 振動数</td>
+<td><span class="math inline">E/h</span></td>
+<td><span class="math inline">2.418 \times 10^{14}</span> Hz</td>
+</tr>
+<tr class="even">
+<td>1 eV <span class="math inline">\to</span> 波長</td>
+<td><span class="math inline">hc/E</span></td>
+<td><span class="math inline">1239.8</span> nm</td>
+</tr>
+<tr class="odd">
+<td>1 eV <span class="math inline">\to</span> 温度</td>
+<td><span class="math inline">E/k_B</span></td>
+<td><span class="math inline">1.160 \times 10^4</span> K</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="b.3.2-電磁波帯域の対応表" class="level3">
+<h3 class="anchored" data-anchor-id="b.3.2-電磁波帯域の対応表">B.3.2 電磁波帯域の対応表</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>帯域</th>
+<th>波長</th>
+<th>振動数</th>
+<th>エネルギー</th>
+<th>特性温度</th>
+<th>主な天体</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>電波（広義）</td>
+<td><span class="math inline">&gt; 1</span> mm（〜長波長まで）</td>
+<td><span class="math inline">&lt; 300</span> GHz</td>
+<td><span class="math inline">&lt; 10^{-3}</span> eV</td>
+<td><span class="math inline">&lt; 15</span> K</td>
+<td>21cm 線、分子線、シンクロトロン（電波天文学全般）</td>
+</tr>
+<tr class="even">
+<td>―うち マイクロ波</td>
+<td>1 mm – 1 m</td>
+<td>300 MHz – 300 GHz</td>
+<td><span class="math inline">10^{-6}</span> – <span class="math inline">10^{-3}</span> eV</td>
+<td><span class="math inline">\sim 1</span> K</td>
+<td><strong>CMB</strong>、低温ダスト</td>
+</tr>
+<tr class="odd">
+<td>―うちサブミリ波</td>
+<td>0.3 – 1 mm</td>
+<td>300 GHz – 1 THz</td>
+<td><span class="math inline">\sim 10^{-3}</span> eV</td>
+<td><span class="math inline">\sim 30</span> K</td>
+<td>ALMA、原始惑星系円盤</td>
+</tr>
+<tr class="even">
+<td>遠赤外</td>
+<td>30–300 µm</td>
+<td>1–10 THz</td>
+<td><span class="math inline">\sim 0.01</span> eV</td>
+<td><span class="math inline">\sim 100</span> K</td>
+<td>冷たいダスト、Herschel</td>
+</tr>
+<tr class="odd">
+<td>中赤外</td>
+<td>3–30 µm</td>
+<td>10–100 THz</td>
+<td><span class="math inline">\sim 0.1</span> eV</td>
+<td><span class="math inline">\sim 1000</span> K</td>
+<td>暖かいダスト、JWST</td>
+</tr>
+<tr class="even">
+<td>近赤外</td>
+<td>0.7–3 µm</td>
+<td><span class="math inline">\sim 10^{14}</span> Hz</td>
+<td><span class="math inline">\sim 1</span> eV</td>
+<td><span class="math inline">\sim 3000</span> K</td>
+<td>冷たい恒星、ダスト透過</td>
+</tr>
+<tr class="odd">
+<td>可視</td>
+<td>380–750 nm</td>
+<td><span class="math inline">\sim 5 \times 10^{14}</span> Hz</td>
+<td><span class="math inline">\sim 2</span> eV</td>
+<td><span class="math inline">\sim 6000</span> K</td>
+<td>太陽・恒星</td>
+</tr>
+<tr class="even">
+<td>紫外</td>
+<td>10–380 nm</td>
+<td><span class="math inline">\sim 10^{15}</span>–<span class="math inline">10^{16}</span> Hz</td>
+<td>3–100 eV</td>
+<td><span class="math inline">\sim 10^5</span> K</td>
+<td>OB 型恒星、HII 領域励起</td>
+</tr>
+<tr class="odd">
+<td>X 線</td>
+<td>0.01–10 nm</td>
+<td><span class="math inline">10^{16}</span>–<span class="math inline">10^{19}</span> Hz</td>
+<td>0.1–100 keV</td>
+<td><span class="math inline">10^6</span>–<span class="math inline">10^9</span> K</td>
+<td>コロナ、降着円盤、中性子星</td>
+</tr>
+<tr class="even">
+<td>ガンマ線</td>
+<td><span class="math inline">&lt; 0.01</span> nm</td>
+<td><span class="math inline">&gt; 10^{19}</span> Hz</td>
+<td><span class="math inline">&gt; 100</span> keV</td>
+<td><span class="math inline">&gt; 10^9</span> K</td>
+<td>GRB、パルサー、ブラックホール</td>
+</tr>
+</tbody>
+</table>
+<div class="appendix-tip">
+<p><strong>本文での使用</strong>：第17章 §17.4（赤外線天文学の波長帯）、第18章（X線天体）、第19章（CMB から GRB まで）</p>
+</div>
+<hr>
+</section>
+</section>
+<section id="sec-si-cgs" class="level2">
+<h2 class="anchored" data-anchor-id="sec-si-cgs">B.4 SI ↔︎ CGS の換算 ― 電磁気学の落とし穴</h2>
+<p>電磁気学では、SI（国際単位系）と CGS（ガウス単位系）で <strong>式の形そのものが違う</strong>。論文（特に天体物理の古典文献）では CGS が標準なので、両者の対応を押さえておく。</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+警告
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>本書の単位系方針（重要）</strong></p>
+<p>本書は <strong>SI を基本</strong> とするが、章・節の出自と慣用に応じて以下のように使い分ける：</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>章</th>
+<th>単位系</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>第1〜10章</td>
+<td>SI</td>
+<td>力学・統計力学・量子論の入門</td>
+</tr>
+<tr class="even">
+<td>第11章</td>
+<td>SI（Einstein 係数）</td>
+<td>標準教科書との整合</td>
+</tr>
+<tr class="odd">
+<td>第13章（電磁気・Maxwell 方程式）</td>
+<td><strong>SI</strong> に統一（旧稿の Gauss 表記は SI に置換予定）</td>
+<td>学部電磁気の標準</td>
+</tr>
+<tr class="even">
+<td>第14章（モード密度）</td>
+<td>SI</td>
+<td>第13章との整合</td>
+</tr>
+<tr class="odd">
+<td>第21章（Bohr 模型・水素原子）</td>
+<td>SI（<span class="math inline">4\pi\epsilon_0</span> を露わに）</td>
+<td>線吸収係数 <span class="math inline">\alpha_\nu</span> の SI 形</td>
+</tr>
+<tr class="even">
+<td>第25章（QED）</td>
+<td><strong>構造のみ提示</strong>、係数は単位系依存と明示</td>
+<td>見通し重視、Loudon／Sakurai 等の専門書を参照</td>
+</tr>
+</tbody>
+</table>
+<p>各節の冒頭または初出式で、単位系が SI から外れる場合は <strong>「(CGS)」「(Gauss)」</strong> を明記する。論文との比較時にも、必ず単位系を確認すること。</p>
+</div>
+</div>
+<section id="b.4.1-力学熱の換算" class="level3">
+<h3 class="anchored" data-anchor-id="b.4.1-力学熱の換算">B.4.1 力学・熱の換算</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>量</th>
+<th>SI</th>
+<th>CGS</th>
+<th>換算</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>長さ</td>
+<td>m</td>
+<td>cm</td>
+<td><span class="math inline">1\,\text{m} = 10^2</span> cm</td>
+</tr>
+<tr class="even">
+<td>質量</td>
+<td>kg</td>
+<td>g</td>
+<td><span class="math inline">1\,\text{kg} = 10^3</span> g</td>
+</tr>
+<tr class="odd">
+<td>時間</td>
+<td>s</td>
+<td>s</td>
+<td>同じ</td>
+</tr>
+<tr class="even">
+<td>力</td>
+<td>N</td>
+<td>dyne</td>
+<td><span class="math inline">1\,\text{N} = 10^5</span> dyne</td>
+</tr>
+<tr class="odd">
+<td>エネルギー</td>
+<td>J</td>
+<td>erg</td>
+<td><span class="math inline">1\,\text{J} = 10^7</span> erg</td>
+</tr>
+<tr class="even">
+<td>圧力</td>
+<td>Pa</td>
+<td>dyne cm<span class="math inline">^{-2}</span></td>
+<td><span class="math inline">1\,\text{Pa} = 10</span> dyne cm<span class="math inline">^{-2}</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="b.4.2-電磁気の換算注意" class="level3">
+<h3 class="anchored" data-anchor-id="b.4.2-電磁気の換算注意">B.4.2 電磁気の換算（注意）</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>量</th>
+<th>SI</th>
+<th>CGS (Gaussian)</th>
+<th>換算</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>電荷</td>
+<td>C</td>
+<td>esu</td>
+<td><span class="math inline">1</span> C <span class="math inline">= 3 \times 10^9</span> esu</td>
+</tr>
+<tr class="even">
+<td>電場</td>
+<td>V m<span class="math inline">^{-1}</span></td>
+<td>statvolt cm<span class="math inline">^{-1}</span></td>
+<td><span class="math inline">1</span> V m<span class="math inline">^{-1}</span> <span class="math inline">\simeq 3.34 \times 10^{-5}</span> statvolt cm<span class="math inline">^{-1}</span></td>
+</tr>
+<tr class="odd">
+<td>磁場</td>
+<td>T (Tesla)</td>
+<td>G (Gauss)</td>
+<td><span class="math inline">1</span> T <span class="math inline">= 10^4</span> G</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="b.4.3-式の形の違い" class="level3">
+<h3 class="anchored" data-anchor-id="b.4.3-式の形の違い">B.4.3 式の形の違い</h3>
+<p><strong>Coulomb 法則</strong>：</p>
+<p><span class="math display">
+\text{SI:}\quad F = \frac{1}{4\pi\epsilon_0}\frac{q_1 q_2}{r^2}, \quad \text{CGS:}\quad F = \frac{q_1 q_2}{r^2}
+</span></p>
+<p><strong>Maxwell 方程式（CGS、第13章 SI 版と比較）</strong>：</p>
+<p><span class="math display">
+\nabla \cdot \mathbf{E} = 4\pi\rho, \quad \nabla \times \mathbf{B} = \frac{4\pi}{c}\mathbf{J} + \frac{1}{c}\frac{\partial \mathbf{E}}{\partial t}
+</span></p>
+<p>CGS では <span class="math inline">4\pi</span> と <span class="math inline">1/c</span> が露わに出る。本文の SI 表現では <span class="math inline">\epsilon_0, \mu_0</span> の中に隠れている。</p>
+<p><strong>Rydberg エネルギー</strong>（一例として）：</p>
+<p><span class="math display">
+\text{SI:}\quad \text{Ry} = \frac{m_e e^4}{2(4\pi\epsilon_0)^2 \hbar^2}, \quad \text{CGS:}\quad \text{Ry} = \frac{m_e e^4}{2\hbar^2}
+</span></p>
+<div class="callout callout-style-simple callout-warning">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>注意</strong>：天文学の論文では断りなく CGS が使われていることが多い。数値を比較するときは <strong>必ず単位系を確認</strong> すること。特に電磁気が絡む量（断面積、磁場、Stefan-Boltzmann 定数、…）は要注意</p>
+</div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="sec-order-of-magnitude" class="level2">
+<h2 class="anchored" data-anchor-id="sec-order-of-magnitude">B.5 数値の桁感覚 ― オーダー推定のための定数</h2>
+<p>「ざっくり計算」のための桁感覚。</p>
+<section id="b.5.1-エネルギー目盛り" class="level3">
+<h3 class="anchored" data-anchor-id="b.5.1-エネルギー目盛り">B.5.1 エネルギー目盛り</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>現象</th>
+<th>エネルギー</th>
+<th>特性温度</th>
+<th>対応波長</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>室温の熱運動</td>
+<td><span class="math inline">0.025</span> eV</td>
+<td>300 K</td>
+<td>50 µm</td>
+</tr>
+<tr class="even">
+<td>水素 21 cm 超微細構造</td>
+<td><span class="math inline">5.9 \times 10^{-6}</span> eV</td>
+<td><span class="math inline">0.07</span> K</td>
+<td>21 cm</td>
+</tr>
+<tr class="odd">
+<td>CMB 光子（典型）</td>
+<td><span class="math inline">6.6 \times 10^{-4}</span> eV</td>
+<td>2.725 K</td>
+<td>1 mm</td>
+</tr>
+<tr class="even">
+<td>可視光（H<span class="math inline">\alpha</span>）</td>
+<td><span class="math inline">1.89</span> eV</td>
+<td><span class="math inline">2.2 \times 10^4</span> K</td>
+<td>656 nm</td>
+</tr>
+<tr class="odd">
+<td>水素 Lyα</td>
+<td><span class="math inline">10.2</span> eV</td>
+<td><span class="math inline">1.2 \times 10^5</span> K</td>
+<td>121.6 nm</td>
+</tr>
+<tr class="even">
+<td>水素電離</td>
+<td><span class="math inline">13.6</span> eV</td>
+<td><span class="math inline">1.6 \times 10^5</span> K</td>
+<td>91.2 nm</td>
+</tr>
+<tr class="odd">
+<td>鉄 K<span class="math inline">\alpha</span>（中性鉄）</td>
+<td><span class="math inline">6.4</span> keV</td>
+<td><span class="math inline">7.4 \times 10^7</span> K</td>
+<td>0.19 nm</td>
+</tr>
+<tr class="even">
+<td>電子静止質量</td>
+<td><span class="math inline">0.511</span> MeV</td>
+<td><span class="math inline">5.9 \times 10^9</span> K</td>
+<td><span class="math inline">\lambda_C = 2.4</span> pm</td>
+</tr>
+<tr class="odd">
+<td>陽子静止質量</td>
+<td><span class="math inline">938</span> MeV</td>
+<td><span class="math inline">1.1 \times 10^{13}</span> K</td>
+<td><span class="math inline">\sim 1.3</span> fm</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="b.5.2-重力スケール" class="level3">
+<h3 class="anchored" data-anchor-id="b.5.2-重力スケール">B.5.2 重力スケール</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>量</th>
+<th>計算</th>
+<th>例</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Schwarzschild 半径</td>
+<td><span class="math inline">r_s = 2GM/c^2</span></td>
+<td><span class="math inline">r_{s,\odot} \simeq 3</span> km, <span class="math inline">r_{s,M87} \simeq 2 \times 10^{13}</span> m</td>
+</tr>
+<tr class="even">
+<td>表面重力（恒星）</td>
+<td><span class="math inline">g = GM/R^2</span></td>
+<td>太陽 <span class="math inline">g_\odot = 274</span> m s<span class="math inline">^{-2}</span>, 白色矮星 <span class="math inline">\sim 10^6</span> m s<span class="math inline">^{-2}</span></td>
+</tr>
+<tr class="odd">
+<td>自由落下時間</td>
+<td><span class="math inline">t_\text{ff} = \sqrt{1/G\rho}</span></td>
+<td>太陽密度 <span class="math inline">1.4</span> g/cc → <span class="math inline">t_\text{ff} \sim 30</span> min</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="b.5.3-観測的密度" class="level3">
+<h3 class="anchored" data-anchor-id="b.5.3-観測的密度">B.5.3 観測的密度</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>環境</th>
+<th>数密度 [cm<span class="math inline">^{-3}</span>]</th>
+<th>温度 [K]</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>銀河間媒質</td>
+<td><span class="math inline">10^{-6}</span></td>
+<td><span class="math inline">10^5</span>–<span class="math inline">10^7</span></td>
+</tr>
+<tr class="even">
+<td>暖かい星間ガス（WIM）</td>
+<td><span class="math inline">10^{-1}</span></td>
+<td><span class="math inline">10^4</span></td>
+</tr>
+<tr class="odd">
+<td>HII 領域</td>
+<td><span class="math inline">10^2</span>–<span class="math inline">10^4</span></td>
+<td><span class="math inline">10^4</span></td>
+</tr>
+<tr class="even">
+<td>暗黒分子雲</td>
+<td><span class="math inline">10^3</span>–<span class="math inline">10^5</span></td>
+<td><span class="math inline">10</span>–<span class="math inline">20</span></td>
+</tr>
+<tr class="odd">
+<td>原始惑星系円盤</td>
+<td><span class="math inline">10^{10}</span>–<span class="math inline">10^{12}</span></td>
+<td><span class="math inline">20</span>–<span class="math inline">1000</span></td>
+</tr>
+<tr class="even">
+<td>恒星光球</td>
+<td><span class="math inline">\sim 10^{17}</span></td>
+<td><span class="math inline">\sim 6000</span></td>
+</tr>
+<tr class="odd">
+<td>太陽コロナ</td>
+<td><span class="math inline">10^8</span>–<span class="math inline">10^{10}</span></td>
+<td><span class="math inline">10^6</span>–<span class="math inline">10^7</span></td>
+</tr>
+</tbody>
+</table>
+<div class="appendix-tip">
+<p><strong>本文での使用</strong>：第15章以降の応用章で「桁感覚」が必要なとき、本表を参照</p>
+</div>
+<hr>
+</section>
+</section>
+<section id="sec-data-references" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sec-data-references">B.6 さらに進むための参考文献・データソース</h2>
+<ul>
+<li>CODATA 2018 fundamental physical constants（<a href="https://physics.nist.gov/cuu/Constants" class="uri">https://physics.nist.gov/cuu/Constants</a>）</li>
+<li>IAU 2015 nominal values for solar and planetary properties（IAU Resolution B3）</li>
+<li>NIST Atomic Spectra Database（<a href="https://physics.nist.gov/asd" class="uri">https://physics.nist.gov/asd</a>）</li>
+<li>NIST Molecular Spectroscopy Database</li>
+<li><em>Allen’s Astrophysical Quantities</em> (4th ed., Springer, 2000) — 天文定数の定番一覧</li>
+<li><em>Particle Data Group</em>, <em>Review of Particle Physics</em> — 素粒子・宇宙論定数（<a href="https://pdg.lbl.gov" class="uri">https://pdg.lbl.gov</a>）</li>
+<li>Planck Collaboration 2018 results — 宇宙論パラメータ</li>
+</ul>
+
+
+<!-- -->
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "コピーしました");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "コピーしました");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../appendix/A-math-notes.html" class="pagination-link" aria-label="付録 A　数学補章">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">付録 A　数学補章</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">ソースコード</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "付録 B　単位と基本定数"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">lang:</span><span class="co"> ja</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu"># 付録 B　単位と基本定数 {#sec-units-constants .unnumbered}</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>::: {.appendix-overview}</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>**この付録の主題**：本書で使う物理基本定数、天文単位、エネルギー・振動数・波長の相互換算、CGS と SI の対応をまとめる。値は CODATA 2018 と IAU 2015 を基準とする。本文中の数値例で「自分で計算したい」読者のために、桁感覚も含めて整理する。</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## B.1 物理基本定数 {#sec-fundamental-constants}</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">### B.1.1 SI 単位での値（CODATA 2018）</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 定数 <span class="pp">|</span> 記号 <span class="pp">|</span> SI 値 <span class="pp">|</span> 単位 <span class="pp">|</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|---|</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 光速度 <span class="pp">|</span> $c$ <span class="pp">|</span> $2.998 \times 10^8$ <span class="pp">|</span> m s$^{-1}$ <span class="pp">|</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Planck 定数 <span class="pp">|</span> $h$ <span class="pp">|</span> $6.626 \times 10^{-34}$ <span class="pp">|</span> J s <span class="pp">|</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 換算 Planck 定数 <span class="pp">|</span> $\hbar = h/2\pi$ <span class="pp">|</span> $1.055 \times 10^{-34}$ <span class="pp">|</span> J s <span class="pp">|</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Boltzmann 定数 <span class="pp">|</span> $k_B$ <span class="pp">|</span> $1.381 \times 10^{-23}$ <span class="pp">|</span> J K$^{-1}$ <span class="pp">|</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 電気素量 <span class="pp">|</span> $e$ <span class="pp">|</span> $1.602 \times 10^{-19}$ <span class="pp">|</span> C <span class="pp">|</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 電子質量 <span class="pp">|</span> $m_e$ <span class="pp">|</span> $9.109 \times 10^{-31}$ <span class="pp">|</span> kg <span class="pp">|</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 陽子質量 <span class="pp">|</span> $m_p$ <span class="pp">|</span> $1.673 \times 10^{-27}$ <span class="pp">|</span> kg <span class="pp">|</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 原子質量単位 <span class="pp">|</span> $u$ <span class="pp">|</span> $1.661 \times 10^{-27}$ <span class="pp">|</span> kg <span class="pp">|</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Avogadro 定数 <span class="pp">|</span> $N_A$ <span class="pp">|</span> $6.022 \times 10^{23}$ <span class="pp">|</span> mol$^{-1}$ <span class="pp">|</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 真空誘電率 <span class="pp">|</span> $\epsilon_0$ <span class="pp">|</span> $8.854 \times 10^{-12}$ <span class="pp">|</span> F m$^{-1}$ <span class="pp">|</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 真空透磁率 <span class="pp">|</span> $\mu_0$ <span class="pp">|</span> $1.257 \times 10^{-6}$ <span class="pp">|</span> H m$^{-1}$ <span class="pp">|</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="fu">### B.1.2 天体物理でよく使う組合せ定数</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 定数 <span class="pp">|</span> 記号 <span class="pp">|</span> 値 <span class="pp">|</span> 単位 <span class="pp">|</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|---|</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Stefan-Boltzmann 定数 <span class="pp">|</span> $\sigma = \pi^2 k_B^4 / (60 \hbar^3 c^2)$ <span class="pp">|</span> $5.670 \times 10^{-8}$ <span class="pp">|</span> W m$^{-2}$ K$^{-4}$ <span class="pp">|</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 放射定数 <span class="pp">|</span> $a = 4\sigma/c$ <span class="pp">|</span> $7.566 \times 10^{-16}$ <span class="pp">|</span> J m$^{-3}$ K$^{-4}$ <span class="pp">|</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Wien 変位定数 <span class="pp">|</span> $b = h c / (4.965 k_B)$ <span class="pp">|</span> $2.898 \times 10^{-3}$ <span class="pp">|</span> m K <span class="pp">|</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Wien 変位（振動数版） <span class="pp">|</span> $b_\nu = 2.821 k_B/h$ <span class="pp">|</span> $5.879 \times 10^{10}$ <span class="pp">|</span> Hz K$^{-1}$ <span class="pp">|</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 微細構造定数 <span class="pp">|</span> $\alpha = e^2/(4\pi\epsilon_0 \hbar c)$ <span class="pp">|</span> $7.297 \times 10^{-3}$ <span class="pp">|</span> (無次元、$\simeq 1/137$) <span class="pp">|</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Bohr 半径 <span class="pp">|</span> $a_0 = 4\pi\epsilon_0 \hbar^2/(m_e e^2)$ <span class="pp">|</span> $5.292 \times 10^{-11}$ <span class="pp">|</span> m <span class="pp">|</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Rydberg エネルギー <span class="pp">|</span> $\text{Ry} = m_e c^2 \alpha^2/2$ <span class="pp">|</span> $13.606$ <span class="pp">|</span> eV <span class="pp">|</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Rydberg 定数 <span class="pp">|</span> $R_\infty = \text{Ry}/(hc)$ <span class="pp">|</span> $1.097 \times 10^7$ <span class="pp">|</span> m$^{-1}$ <span class="pp">|</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Compton 波長（電子） <span class="pp">|</span> $\lambda_C = h/(m_e c)$ <span class="pp">|</span> $2.426 \times 10^{-12}$ <span class="pp">|</span> m <span class="pp">|</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 古典電子半径 <span class="pp">|</span> $r_e = e^2/(4\pi\epsilon_0 m_e c^2)$ <span class="pp">|</span> $2.818 \times 10^{-15}$ <span class="pp">|</span> m <span class="pp">|</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Thomson 断面積 <span class="pp">|</span> $\sigma_T = 8\pi r_e^2/3$ <span class="pp">|</span> $6.652 \times 10^{-29}$ <span class="pp">|</span> m$^2$ <span class="pp">|</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>::: {.appendix-tip}</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>**本文での使用**：</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$\sigma$, $a$：第2章 §2.4（Stefan-Boltzmann 則の初出）、第4章 §4.4（半球フラックスでの $\pi$ 因子）、第17章 §17.1（恒星有効温度）</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$b$, $b_\nu$：第1章、第2章 §2.3（Wien 変位則）</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$\alpha$：第21章 §21.5（電気四重極/磁気双極子遷移強度の見積もり）</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$a_0$, Ry：第21章 §21.1-§21.3（Rydberg 公式と Bohr 模型）</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$r_e$, $\sigma_T$：第18章 §18.3（Compton 散乱）</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="fu">## B.2 天文単位 {#sec-astronomical-units}</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="fu">### B.2.1 距離・時間</span></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 単位 <span class="pp">|</span> 記号 <span class="pp">|</span> 値 <span class="pp">|</span> 由来 <span class="pp">|</span></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|---|</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 天文単位 <span class="pp">|</span> au <span class="pp">|</span> $1.496 \times 10^{11}$ m <span class="pp">|</span> 地球-太陽平均距離（IAU 定義値） <span class="pp">|</span></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 光年 <span class="pp">|</span> ly <span class="pp">|</span> $9.461 \times 10^{15}$ m <span class="pp">|</span> 光が真空中で 1 年に進む距離 <span class="pp">|</span></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> パーセク <span class="pp">|</span> pc <span class="pp">|</span> $3.086 \times 10^{16}$ m <span class="pp">|</span> 地球軌道半径が 1 秒角に見える距離 <span class="pp">|</span></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> キロパーセク <span class="pp">|</span> kpc <span class="pp">|</span> $10^3$ pc <span class="pp">|</span> 銀河系スケール <span class="pp">|</span></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> メガパーセク <span class="pp">|</span> Mpc <span class="pp">|</span> $10^6$ pc <span class="pp">|</span> 銀河間距離 <span class="pp">|</span></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> ギガパーセク <span class="pp">|</span> Gpc <span class="pp">|</span> $10^9$ pc <span class="pp">|</span> 観測可能宇宙のスケール <span class="pp">|</span></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> ユリウス年 <span class="pp">|</span> yr <span class="pp">|</span> $3.156 \times 10^7$ s <span class="pp">|</span> $= 365.25 \cdot 86400$ s <span class="pp">|</span></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="fu">### B.2.2 質量・光度・半径</span></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>太陽値を基準にとる：</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 量 <span class="pp">|</span> 記号 <span class="pp">|</span> 値 <span class="pp">|</span></span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 太陽質量 <span class="pp">|</span> $M_\odot$ <span class="pp">|</span> $1.989 \times 10^{30}$ kg <span class="pp">|</span></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 太陽光度 <span class="pp">|</span> $L_\odot$ <span class="pp">|</span> $3.828 \times 10^{26}$ W <span class="pp">|</span></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 太陽半径 <span class="pp">|</span> $R_\odot$ <span class="pp">|</span> $6.957 \times 10^8$ m <span class="pp">|</span></span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 太陽有効温度 <span class="pp">|</span> $T_{\text{eff},\odot}$ <span class="pp">|</span> $5772$ K <span class="pp">|</span></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 太陽絶対等級 <span class="pp">|</span> $M_{V,\odot}$ <span class="pp">|</span> $+4.83$ <span class="pp">|</span></span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>その他の天体スケール：</span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 天体 <span class="pp">|</span> 質量 <span class="pp">|</span> 半径 <span class="pp">|</span></span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 木星 <span class="pp">|</span> $M_J \simeq 1.9 \times 10^{27}$ kg $\simeq 10^{-3} M_\odot$ <span class="pp">|</span> $7.15 \times 10^7$ m <span class="pp">|</span></span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 地球 <span class="pp">|</span> $M_\oplus \simeq 5.97 \times 10^{24}$ kg <span class="pp">|</span> $6.37 \times 10^6$ m <span class="pp">|</span></span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 白色矮星 <span class="pp">|</span> $\sim 0.6 M_\odot$ <span class="pp">|</span> $\sim 10^7$ m <span class="pp">|</span></span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 中性子星 <span class="pp">|</span> $\sim 1.4 M_\odot$ <span class="pp">|</span> $\sim 10^4$ m <span class="pp">|</span></span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 超巨大ブラックホール <span class="pp">|</span> $10^6$〜$10^{10} M_\odot$ <span class="pp">|</span> $r_s = 2GM/c^2$ <span class="pp">|</span></span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a><span class="fu">### B.2.3 宇宙論パラメータ（Planck 2018）</span></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> パラメータ <span class="pp">|</span> 記号 <span class="pp">|</span> 値 <span class="pp">|</span></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Hubble 定数 <span class="pp">|</span> $H_0$ <span class="pp">|</span> $67.4$ km s$^{-1}$ Mpc$^{-1}$ <span class="pp">|</span></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 物質密度比 <span class="pp">|</span> $\Omega_m$ <span class="pp">|</span> $0.315$ <span class="pp">|</span></span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 暗黒エネルギー密度比 <span class="pp">|</span> $\Omega_\Lambda$ <span class="pp">|</span> $0.685$ <span class="pp">|</span></span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> バリオン密度比 <span class="pp">|</span> $\Omega_b$ <span class="pp">|</span> $0.049$ <span class="pp">|</span></span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> CMB 温度 <span class="pp">|</span> $T_\text{CMB}$ <span class="pp">|</span> $2.7255$ K <span class="pp">|</span></span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 宇宙年齢 <span class="pp">|</span> $t_0$ <span class="pp">|</span> $1.38 \times 10^{10}$ yr <span class="pp">|</span></span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>::: {.appendix-tip}</span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>**本文での使用**：</span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$au, pc, M_\odot$：第17章（恒星・惑星）、第18章（降着円盤）</span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$L_\odot, R_\odot, T_{\text{eff},\odot}$：第17章 §17.1-§17.2（恒星と惑星平衡温度）</span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$T_\text{CMB}$：第16章（CMB）</span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a><span class="fu">## B.3 振動数・波長・エネルギーの相互換算 {#sec-conversions}</span></span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>電磁波の同じ「色」を、目的に応じて違う変数で書く。基本関係：</span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>\nu = \frac{c}{\lambda}, \quad E = h\nu = \frac{hc}{\lambda} = k_B T_E</span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>$$ {#eq-em-conversions}</span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a>ここで $T_E \equiv E/k_B$ は「**特性温度**」（ある光子エネルギーに対応する温度）。</span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a><span class="fu">### B.3.1 換算定数</span></span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 量の換算 <span class="pp">|</span> 計算式 <span class="pp">|</span> 数値 <span class="pp">|</span></span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $hc$ <span class="pp">|</span> <span class="pp">|</span> $1240$ eV nm $= 1.24$ µm eV <span class="pp">|</span></span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $h/k_B$ <span class="pp">|</span> <span class="pp">|</span> $4.80 \times 10^{-11}$ K Hz$^{-1}$ <span class="pp">|</span></span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $k_B$ (温度 → エネルギー) <span class="pp">|</span> <span class="pp">|</span> $1$ K $= 8.617 \times 10^{-5}$ eV <span class="pp">|</span></span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $hc/k_B$ (波長 ↔ 温度) <span class="pp">|</span> <span class="pp">|</span> $\lambda \cdot T_E = hc/k_B \simeq 14388$ µm·K（つまり「波長 <span class="co">[</span><span class="ot">µm</span><span class="co">]</span> × 特性温度 <span class="co">[</span><span class="ot">K</span><span class="co">]</span>」が一定） <span class="pp">|</span></span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 1 eV $\to$ 振動数 <span class="pp">|</span> $E/h$ <span class="pp">|</span> $2.418 \times 10^{14}$ Hz <span class="pp">|</span></span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 1 eV $\to$ 波長 <span class="pp">|</span> $hc/E$ <span class="pp">|</span> $1239.8$ nm <span class="pp">|</span></span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 1 eV $\to$ 温度 <span class="pp">|</span> $E/k_B$ <span class="pp">|</span> $1.160 \times 10^4$ K <span class="pp">|</span></span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a><span class="fu">### B.3.2 電磁波帯域の対応表</span></span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 帯域 <span class="pp">|</span> 波長 <span class="pp">|</span> 振動数 <span class="pp">|</span> エネルギー <span class="pp">|</span> 特性温度 <span class="pp">|</span> 主な天体 <span class="pp">|</span></span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|---|---|---|</span></span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 電波（広義） <span class="pp">|</span> $&gt; 1$ mm（〜長波長まで） <span class="pp">|</span> $&lt; 300$ GHz <span class="pp">|</span> $&lt; 10^{-3}$ eV <span class="pp">|</span> $&lt; 15$ K <span class="pp">|</span> 21cm 線、分子線、シンクロトロン（電波天文学全般） <span class="pp">|</span></span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> ―うち マイクロ波 <span class="pp">|</span> 1 mm – 1 m <span class="pp">|</span> 300 MHz – 300 GHz <span class="pp">|</span> $10^{-6}$ – $10^{-3}$ eV <span class="pp">|</span> $\sim 1$ K <span class="pp">|</span> **CMB**、低温ダスト <span class="pp">|</span></span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> ―うちサブミリ波 <span class="pp">|</span> 0.3 – 1 mm <span class="pp">|</span> 300 GHz – 1 THz <span class="pp">|</span> $\sim 10^{-3}$ eV <span class="pp">|</span> $\sim 30$ K <span class="pp">|</span> ALMA、原始惑星系円盤 <span class="pp">|</span></span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 遠赤外 <span class="pp">|</span> 30–300 µm <span class="pp">|</span> 1–10 THz <span class="pp">|</span> $\sim 0.01$ eV <span class="pp">|</span> $\sim 100$ K <span class="pp">|</span> 冷たいダスト、Herschel <span class="pp">|</span></span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 中赤外 <span class="pp">|</span> 3–30 µm <span class="pp">|</span> 10–100 THz <span class="pp">|</span> $\sim 0.1$ eV <span class="pp">|</span> $\sim 1000$ K <span class="pp">|</span> 暖かいダスト、JWST <span class="pp">|</span></span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 近赤外 <span class="pp">|</span> 0.7–3 µm <span class="pp">|</span> $\sim 10^{14}$ Hz <span class="pp">|</span> $\sim 1$ eV <span class="pp">|</span> $\sim 3000$ K <span class="pp">|</span> 冷たい恒星、ダスト透過 <span class="pp">|</span></span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 可視 <span class="pp">|</span> 380–750 nm <span class="pp">|</span> $\sim 5 \times 10^{14}$ Hz <span class="pp">|</span> $\sim 2$ eV <span class="pp">|</span> $\sim 6000$ K <span class="pp">|</span> 太陽・恒星 <span class="pp">|</span></span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 紫外 <span class="pp">|</span> 10–380 nm <span class="pp">|</span> $\sim 10^{15}$–$10^{16}$ Hz <span class="pp">|</span> 3–100 eV <span class="pp">|</span> $\sim 10^5$ K <span class="pp">|</span> OB 型恒星、HII 領域励起 <span class="pp">|</span></span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> X 線 <span class="pp">|</span> 0.01–10 nm <span class="pp">|</span> $10^{16}$–$10^{19}$ Hz <span class="pp">|</span> 0.1–100 keV <span class="pp">|</span> $10^6$–$10^9$ K <span class="pp">|</span> コロナ、降着円盤、中性子星 <span class="pp">|</span></span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> ガンマ線 <span class="pp">|</span> $&lt; 0.01$ nm <span class="pp">|</span> $&gt; 10^{19}$ Hz <span class="pp">|</span> $&gt; 100$ keV <span class="pp">|</span> $&gt; 10^9$ K <span class="pp">|</span> GRB、パルサー、ブラックホール <span class="pp">|</span></span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>::: {.appendix-tip}</span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a>**本文での使用**：第17章 §17.4（赤外線天文学の波長帯）、第18章（X線天体）、第19章（CMB から GRB まで）</span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a><span class="fu">## B.4 SI ↔ CGS の換算 ― 電磁気学の落とし穴 {#sec-si-cgs}</span></span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>電磁気学では、SI（国際単位系）と CGS（ガウス単位系）で **式の形そのものが違う**。論文（特に天体物理の古典文献）では CGS が標準なので、両者の対応を押さえておく。</span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning}</span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a>**本書の単位系方針（重要）**</span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>本書は **SI を基本** とするが、章・節の出自と慣用に応じて以下のように使い分ける：</span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 章 <span class="pp">|</span> 単位系 <span class="pp">|</span> 理由 <span class="pp">|</span></span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 第1〜10章 <span class="pp">|</span> SI <span class="pp">|</span> 力学・統計力学・量子論の入門 <span class="pp">|</span></span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 第11章 <span class="pp">|</span> SI（Einstein 係数） <span class="pp">|</span> 標準教科書との整合 <span class="pp">|</span></span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 第13章（電磁気・Maxwell 方程式） <span class="pp">|</span> **SI** に統一（旧稿の Gauss 表記は SI に置換予定） <span class="pp">|</span> 学部電磁気の標準 <span class="pp">|</span></span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 第14章（モード密度） <span class="pp">|</span> SI <span class="pp">|</span> 第13章との整合 <span class="pp">|</span></span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 第21章（Bohr 模型・水素原子） <span class="pp">|</span> SI（$4\pi\epsilon_0$ を露わに） <span class="pp">|</span> 線吸収係数 $\alpha_\nu$ の SI 形 <span class="pp">|</span></span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 第25章（QED） <span class="pp">|</span> **構造のみ提示**、係数は単位系依存と明示 <span class="pp">|</span> 見通し重視、Loudon／Sakurai 等の専門書を参照 <span class="pp">|</span></span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>各節の冒頭または初出式で、単位系が SI から外れる場合は **「(CGS)」「(Gauss)」** を明記する。論文との比較時にも、必ず単位系を確認すること。</span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a><span class="fu">### B.4.1 力学・熱の換算</span></span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 量 <span class="pp">|</span> SI <span class="pp">|</span> CGS <span class="pp">|</span> 換算 <span class="pp">|</span></span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|---|</span></span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 長さ <span class="pp">|</span> m <span class="pp">|</span> cm <span class="pp">|</span> $1\,\text{m} = 10^2$ cm <span class="pp">|</span></span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 質量 <span class="pp">|</span> kg <span class="pp">|</span> g <span class="pp">|</span> $1\,\text{kg} = 10^3$ g <span class="pp">|</span></span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 時間 <span class="pp">|</span> s <span class="pp">|</span> s <span class="pp">|</span> 同じ <span class="pp">|</span></span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 力 <span class="pp">|</span> N <span class="pp">|</span> dyne <span class="pp">|</span> $1\,\text{N} = 10^5$ dyne <span class="pp">|</span></span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> エネルギー <span class="pp">|</span> J <span class="pp">|</span> erg <span class="pp">|</span> $1\,\text{J} = 10^7$ erg <span class="pp">|</span></span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 圧力 <span class="pp">|</span> Pa <span class="pp">|</span> dyne cm$^{-2}$ <span class="pp">|</span> $1\,\text{Pa} = 10$ dyne cm$^{-2}$ <span class="pp">|</span></span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a><span class="fu">### B.4.2 電磁気の換算（注意）</span></span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 量 <span class="pp">|</span> SI <span class="pp">|</span> CGS (Gaussian) <span class="pp">|</span> 換算 <span class="pp">|</span></span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|---|</span></span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 電荷 <span class="pp">|</span> C <span class="pp">|</span> esu <span class="pp">|</span> $1$ C $= 3 \times 10^9$ esu <span class="pp">|</span></span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 電場 <span class="pp">|</span> V m$^{-1}$ <span class="pp">|</span> statvolt cm$^{-1}$ <span class="pp">|</span> $1$ V m$^{-1}$ $\simeq 3.34 \times 10^{-5}$ statvolt cm$^{-1}$ <span class="pp">|</span></span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 磁場 <span class="pp">|</span> T (Tesla) <span class="pp">|</span> G (Gauss) <span class="pp">|</span> $1$ T $= 10^4$ G <span class="pp">|</span></span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="fu">### B.4.3 式の形の違い</span></span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a>**Coulomb 法則**：</span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>\text{SI:}\quad F = \frac{1}{4\pi\epsilon_0}\frac{q_1 q_2}{r^2}, \quad \text{CGS:}\quad F = \frac{q_1 q_2}{r^2}</span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a>**Maxwell 方程式（CGS、第13章 SI 版と比較）**：</span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>\nabla \cdot \mathbf{E} = 4\pi\rho, \quad \nabla \times \mathbf{B} = \frac{4\pi}{c}\mathbf{J} + \frac{1}{c}\frac{\partial \mathbf{E}}{\partial t}</span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>CGS では $4\pi$ と $1/c$ が露わに出る。本文の SI 表現では $\epsilon_0, \mu_0$ の中に隠れている。</span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>**Rydberg エネルギー**（一例として）：</span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>\text{SI:}\quad \text{Ry} = \frac{m_e e^4}{2(4\pi\epsilon_0)^2 \hbar^2}, \quad \text{CGS:}\quad \text{Ry} = \frac{m_e e^4}{2\hbar^2}</span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning appearance="simple"}</span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>**注意**：天文学の論文では断りなく CGS が使われていることが多い。数値を比較するときは **必ず単位系を確認** すること。特に電磁気が絡む量（断面積、磁場、Stefan-Boltzmann 定数、…）は要注意</span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a><span class="fu">## B.5 数値の桁感覚 ― オーダー推定のための定数 {#sec-order-of-magnitude}</span></span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>「ざっくり計算」のための桁感覚。</span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a><span class="fu">### B.5.1 エネルギー目盛り</span></span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 現象 <span class="pp">|</span> エネルギー <span class="pp">|</span> 特性温度 <span class="pp">|</span> 対応波長 <span class="pp">|</span></span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|---|</span></span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 室温の熱運動 <span class="pp">|</span> $0.025$ eV <span class="pp">|</span> 300 K <span class="pp">|</span> 50 µm <span class="pp">|</span></span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 水素 21 cm 超微細構造 <span class="pp">|</span> $5.9 \times 10^{-6}$ eV <span class="pp">|</span> $0.07$ K <span class="pp">|</span> 21 cm <span class="pp">|</span></span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> CMB 光子（典型） <span class="pp">|</span> $6.6 \times 10^{-4}$ eV <span class="pp">|</span> 2.725 K <span class="pp">|</span> 1 mm <span class="pp">|</span></span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 可視光（H$\alpha$） <span class="pp">|</span> $1.89$ eV <span class="pp">|</span> $2.2 \times 10^4$ K <span class="pp">|</span> 656 nm <span class="pp">|</span></span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 水素 Lyα <span class="pp">|</span> $10.2$ eV <span class="pp">|</span> $1.2 \times 10^5$ K <span class="pp">|</span> 121.6 nm <span class="pp">|</span></span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 水素電離 <span class="pp">|</span> $13.6$ eV <span class="pp">|</span> $1.6 \times 10^5$ K <span class="pp">|</span> 91.2 nm <span class="pp">|</span></span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 鉄 K$\alpha$（中性鉄）<span class="pp">|</span> $6.4$ keV <span class="pp">|</span> $7.4 \times 10^7$ K <span class="pp">|</span> 0.19 nm <span class="pp">|</span></span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 電子静止質量 <span class="pp">|</span> $0.511$ MeV <span class="pp">|</span> $5.9 \times 10^9$ K <span class="pp">|</span> $\lambda_C = 2.4$ pm <span class="pp">|</span></span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 陽子静止質量 <span class="pp">|</span> $938$ MeV <span class="pp">|</span> $1.1 \times 10^{13}$ K <span class="pp">|</span> $\sim 1.3$ fm <span class="pp">|</span></span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a><span class="fu">### B.5.2 重力スケール</span></span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 量 <span class="pp">|</span> 計算 <span class="pp">|</span> 例 <span class="pp">|</span></span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Schwarzschild 半径 <span class="pp">|</span> $r_s = 2GM/c^2$ <span class="pp">|</span> $r_{s,\odot} \simeq 3$ km, $r_{s,M87} \simeq 2 \times 10^{13}$ m <span class="pp">|</span></span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 表面重力（恒星） <span class="pp">|</span> $g = GM/R^2$ <span class="pp">|</span> 太陽 $g_\odot = 274$ m s$^{-2}$, 白色矮星 $\sim 10^6$ m s$^{-2}$ <span class="pp">|</span></span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 自由落下時間 <span class="pp">|</span> $t_\text{ff} = \sqrt{1/G\rho}$ <span class="pp">|</span> 太陽密度 $1.4$ g/cc → $t_\text{ff} \sim 30$ min <span class="pp">|</span></span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a><span class="fu">### B.5.3 観測的密度</span></span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 環境 <span class="pp">|</span> 数密度 <span class="co">[</span><span class="ot">cm$^{-3}$</span><span class="co">]</span> <span class="pp">|</span> 温度 <span class="co">[</span><span class="ot">K</span><span class="co">]</span> <span class="pp">|</span></span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 銀河間媒質 <span class="pp">|</span> $10^{-6}$ <span class="pp">|</span> $10^5$–$10^7$ <span class="pp">|</span></span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 暖かい星間ガス（WIM） <span class="pp">|</span> $10^{-1}$ <span class="pp">|</span> $10^4$ <span class="pp">|</span></span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> HII 領域 <span class="pp">|</span> $10^2$–$10^4$ <span class="pp">|</span> $10^4$ <span class="pp">|</span></span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 暗黒分子雲 <span class="pp">|</span> $10^3$–$10^5$ <span class="pp">|</span> $10$–$20$ <span class="pp">|</span></span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 原始惑星系円盤 <span class="pp">|</span> $10^{10}$–$10^{12}$ <span class="pp">|</span> $20$–$1000$ <span class="pp">|</span></span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 恒星光球 <span class="pp">|</span> $\sim 10^{17}$ <span class="pp">|</span> $\sim 6000$ <span class="pp">|</span></span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 太陽コロナ <span class="pp">|</span> $10^8$–$10^{10}$ <span class="pp">|</span> $10^6$–$10^7$ <span class="pp">|</span></span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a>::: {.appendix-tip}</span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>**本文での使用**：第15章以降の応用章で「桁感覚」が必要なとき、本表を参照</span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a><span class="fu">## B.6 さらに進むための参考文献・データソース {#sec-data-references .unnumbered}</span></span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>CODATA 2018 fundamental physical constants（<span class="ot">&lt;https://physics.nist.gov/cuu/Constants&gt;</span>）</span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>IAU 2015 nominal values for solar and planetary properties（IAU Resolution B3）</span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>NIST Atomic Spectra Database（<span class="ot">&lt;https://physics.nist.gov/asd&gt;</span>）</span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>NIST Molecular Spectroscopy Database</span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>*Allen's Astrophysical Quantities* (4th ed., Springer, 2000) — 天文定数の定番一覧</span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>*Particle Data Group*, *Review of Particle Physics* — 素粒子・宇宙論定数（<span class="ot">&lt;https://pdg.lbl.gov&gt;</span>）</span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Planck Collaboration 2018 results — 宇宙論パラメータ</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/edit/main/appendix/B-units-constants.qmd" class="toc-action"><i class="bi bi-github"></i>編集</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/blob/main/appendix/B-units-constants.qmd" class="toc-action"><i class="bi empty"></i>ソースコード</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/issues/new" class="toc-action"><i class="bi empty"></i>問題を報告</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

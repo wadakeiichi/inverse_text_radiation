@@ -1,0 +1,1841 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>付録 A — 付録 A 数学補章 – 宇宙の熱的放射</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../appendix/B-units-constants.html" rel="next">
+<link href="../references.html" rel="prev">
+<link href="../images/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-6acc544bc6b266166f93717a0814bb05.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-84b9d0451ceb30bdeea41a205600fe27.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "一致なし",
+    "search-matching-documents-text": "一致した文書",
+    "search-copy-link-title": "検索へのリンクをコピー",
+    "search-hide-matches-text": "追加の検索結果を非表示",
+    "search-more-match-text": "追加の検索結果",
+    "search-more-matches-text": "追加の検索結果",
+    "search-clear-button-title": "消去",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "取消",
+    "search-submit-button-title": "検索",
+    "search-label": "サーチ"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&amp;family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet">
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="サイドバーを切り替える" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix/A-math-notes.html">Appendices</a></li><li class="breadcrumb-item"><a href="../appendix/A-math-notes.html"><span class="chapter-title">付録 A　数学補章</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="サイドバーを切り替える" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="サーチ" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">宇宙の熱的放射</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/wadakeiichi/inverse_text_radiation" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <div class="dropdown">
+      <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../宇宙の熱的放射.pdf">
+              <i class="bi bi-file-pdf pe-1"></i>
+            Download PDF
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../宇宙の熱的放射.epub">
+              <i class="bi bi-journal pe-1"></i>
+            Download ePub
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="サーチ"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">宇宙の熱的放射</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../00-prologue.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">序章　この本の目的と歩き方</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">第I部　宇宙に満ちる黒体放射</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part1/01-where-blackbody.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第01章　宇宙で黒体放射はどこに現れるか</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part1/02-reading-spectra.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第02章　黒体スペクトルをどう読むか</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part1/03-universality.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第03章　黒体放射はなぜ普遍的なのか</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">第II部　放射をどう記述するか</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2/04-radiation-field.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第04章　放射場の基本量</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2/05-radiative-transfer.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第05章　放射輸送の基礎</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">第III部　逆引き1：熱力学・統計力学へ</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3/06-thermal-equilibrium.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第06章　熱平衡とは何か</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3/07-statistical-mechanics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第07章　統計力学の基本</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3/08-photon-statistics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第08章　光子の統計</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">第IV部　逆引き2：量子論へ</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4/09-classical-failure.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第09章　古典論ではなぜ失敗するのか</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4/10-planck-quantum.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第10章　プランクの量子仮説</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4/11-einstein-method.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第11章　アインシュタインの方法</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4/12-quantum-foundations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第12章　量子力学の基礎へ戻る</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">第V部　逆引き3：電磁気学へ</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5/13-electromagnetic-waves.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第13章　電磁波としての光</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5/14-cavity-modes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第14章　空洞中の電磁モード</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">第VI部　現実の宇宙へ戻る</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6/15-non-blackbody.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第15章　現実の天体は完全な黒体ではない</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6/16-cmb.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第16章　宇宙マイクロ波背景放射</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6/17-stars-planets-dust.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第17章　恒星・惑星・ダストの熱放射</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6/18-accretion-high-energy.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第18章　降着円盤と高エネルギー天体</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">第VII部　線スペクトル ― もう一つの逆引き</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part7/19-where-lines.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第19章　線スペクトルはどこに現れるか</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part7/20-line-formation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第20章　線形成 ― 吸収線と輝線の物理</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part7/21-atomic-physics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第21章　線スペクトルから原子物理へ</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part7/22-line-shape.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第22章　線形（line shape）の物理</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part7/23-line-applications.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第23章　線スペクトルから天体物理を読む</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">第VIII部　QEDからの俯瞰 ― 連続と線を結ぶ見通し</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part8/24-em-field-quantization.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第24章　電磁場を量子化するとは何か ― 直観的描像</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part8/25-qed-minimum.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第25章　Einstein係数・自然幅・選択則を QED で見通す</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">参考文献</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendix/A-math-notes.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">付録 A　数学補章</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendix/B-units-constants.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">付録 B　単位と基本定数</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">目次</h2>
+   
+  <ul>
+  <li><a href="#sec-math-notes" id="toc-sec-math-notes" class="nav-link active" data-scroll-target="#sec-math-notes">付録 A　数学補章</a>
+  <ul class="collapse">
+  <li><a href="#sec-math-solid-angle" id="toc-sec-math-solid-angle" class="nav-link" data-scroll-target="#sec-math-solid-angle">A.1 立体角と球面積分</a>
+  <ul class="collapse">
+  <li><a href="#a.1.1-立体角の定義" id="toc-a.1.1-立体角の定義" class="nav-link" data-scroll-target="#a.1.1-立体角の定義">A.1.1 立体角の定義</a></li>
+  <li><a href="#a.1.2-半球での積分stefan-boltzmann-の-pi-因子" id="toc-a.1.2-半球での積分stefan-boltzmann-の-pi-因子" class="nav-link" data-scroll-target="#a.1.2-半球での積分stefan-boltzmann-の-pi-因子">A.1.2 半球での積分（Stefan-Boltzmann の <span class="math inline">\pi</span> 因子）</a></li>
+  <li><a href="#a.1.3-立体角と方向余弦" id="toc-a.1.3-立体角と方向余弦" class="nav-link" data-scroll-target="#a.1.3-立体角と方向余弦">A.1.3 立体角と方向余弦</a></li>
+  </ul></li>
+  <li><a href="#sec-math-gaussian" id="toc-sec-math-gaussian" class="nav-link" data-scroll-target="#sec-math-gaussian">A.2 ガウス積分とガンマ関数</a>
+  <ul class="collapse">
+  <li><a href="#a.2.1-ガウス積分" id="toc-a.2.1-ガウス積分" class="nav-link" data-scroll-target="#a.2.1-ガウス積分">A.2.1 ガウス積分</a></li>
+  <li><a href="#a.2.2-ガンマ関数" id="toc-a.2.2-ガンマ関数" class="nav-link" data-scroll-target="#a.2.2-ガンマ関数">A.2.2 ガンマ関数</a></li>
+  <li><a href="#a.2.3-riemann-ゼータ関数" id="toc-a.2.3-riemann-ゼータ関数" class="nav-link" data-scroll-target="#a.2.3-riemann-ゼータ関数">A.2.3 Riemann ゼータ関数</a></li>
+  <li><a href="#a.2.4-プランク積分" id="toc-a.2.4-プランク積分" class="nav-link" data-scroll-target="#a.2.4-プランク積分">A.2.4 プランク積分</a></li>
+  </ul></li>
+  <li><a href="#sec-math-combinatorics" id="toc-sec-math-combinatorics" class="nav-link" data-scroll-target="#sec-math-combinatorics">A.3 統計力学のための組合せ論</a>
+  <ul class="collapse">
+  <li><a href="#a.3.1-三つの分布" id="toc-a.3.1-三つの分布" class="nav-link" data-scroll-target="#a.3.1-三つの分布">A.3.1 三つの分布</a></li>
+  <li><a href="#a.3.2-boltzmann-分布の導出簡単版" id="toc-a.3.2-boltzmann-分布の導出簡単版" class="nav-link" data-scroll-target="#a.3.2-boltzmann-分布の導出簡単版">A.3.2 Boltzmann 分布の導出（簡単版）</a></li>
+  <li><a href="#a.3.3-saha-の式電離平衡" id="toc-a.3.3-saha-の式電離平衡" class="nav-link" data-scroll-target="#a.3.3-saha-の式電離平衡">A.3.3 Saha の式（電離平衡）</a></li>
+  </ul></li>
+  <li><a href="#sec-math-fourier" id="toc-sec-math-fourier" class="nav-link" data-scroll-target="#sec-math-fourier">A.4 Fourier 変換と Voigt 関数</a>
+  <ul class="collapse">
+  <li><a href="#a.4.1-fourier-変換の規約" id="toc-a.4.1-fourier-変換の規約" class="nav-link" data-scroll-target="#a.4.1-fourier-変換の規約">A.4.1 Fourier 変換の規約</a></li>
+  <li><a href="#a.4.2-畳み込み定理voigt-プロファイルへの応用" id="toc-a.4.2-畳み込み定理voigt-プロファイルへの応用" class="nav-link" data-scroll-target="#a.4.2-畳み込み定理voigt-プロファイルへの応用">A.4.2 畳み込み定理（Voigt プロファイルへの応用）</a></li>
+  <li><a href="#a.4.3-voigt-プロファイル" id="toc-a.4.3-voigt-プロファイル" class="nav-link" data-scroll-target="#a.4.3-voigt-プロファイル">A.4.3 Voigt プロファイル</a></li>
+  </ul></li>
+  <li><a href="#sec-math-commutators" id="toc-sec-math-commutators" class="nav-link" data-scroll-target="#sec-math-commutators">A.5 演算子の交換関係 ― 量子力学の基礎道具</a>
+  <ul class="collapse">
+  <li><a href="#a.5.1-基本交換関係" id="toc-a.5.1-基本交換関係" class="nav-link" data-scroll-target="#a.5.1-基本交換関係">A.5.1 基本交換関係</a></li>
+  <li><a href="#a.5.2-生成消滅演算子" id="toc-a.5.2-生成消滅演算子" class="nav-link" data-scroll-target="#a.5.2-生成消滅演算子">A.5.2 生成消滅演算子</a></li>
+  <li><a href="#a.5.3-数演算子" id="toc-a.5.3-数演算子" class="nav-link" data-scroll-target="#a.5.3-数演算子">A.5.3 数演算子</a></li>
+  <li><a href="#a.5.4-bose-増強因子" id="toc-a.5.4-bose-増強因子" class="nav-link" data-scroll-target="#a.5.4-bose-増強因子">A.5.4 Bose 増強因子</a></li>
+  </ul></li>
+  <li><a href="#sec-math-vector-calc" id="toc-sec-math-vector-calc" class="nav-link" data-scroll-target="#sec-math-vector-calc">A.6 Maxwell 方程式と波動方程式 ― ベクトル解析の道具</a>
+  <ul class="collapse">
+  <li><a href="#a.6.1-真空中の-maxwell-方程式si" id="toc-a.6.1-真空中の-maxwell-方程式si" class="nav-link" data-scroll-target="#a.6.1-真空中の-maxwell-方程式si">A.6.1 真空中の Maxwell 方程式（SI）</a></li>
+  <li><a href="#a.6.2-ベクトル恒等式" id="toc-a.6.2-ベクトル恒等式" class="nav-link" data-scroll-target="#a.6.2-ベクトル恒等式">A.6.2 ベクトル恒等式</a></li>
+  <li><a href="#a.6.3-球面波と平面波" id="toc-a.6.3-球面波と平面波" class="nav-link" data-scroll-target="#a.6.3-球面波と平面波">A.6.3 球面波と平面波</a></li>
+  </ul></li>
+  <li><a href="#sec-math-spherical-harmonics" id="toc-sec-math-spherical-harmonics" class="nav-link" data-scroll-target="#sec-math-spherical-harmonics">A.7 球面調和関数 ― 水素原子と回転状態</a>
+  <ul class="collapse">
+  <li><a href="#a.7.1-球面調和関数の定義" id="toc-a.7.1-球面調和関数の定義" class="nav-link" data-scroll-target="#a.7.1-球面調和関数の定義">A.7.1 球面調和関数の定義</a></li>
+  <li><a href="#a.7.2-直交性と完備性" id="toc-a.7.2-直交性と完備性" class="nav-link" data-scroll-target="#a.7.2-直交性と完備性">A.7.2 直交性と完備性</a></li>
+  <li><a href="#a.7.3-水素原子と回転分子への応用" id="toc-a.7.3-水素原子と回転分子への応用" class="nav-link" data-scroll-target="#a.7.3-水素原子と回転分子への応用">A.7.3 水素原子と回転分子への応用</a></li>
+  </ul></li>
+  <li><a href="#sec-math-uncertainty-lifetime" id="toc-sec-math-uncertainty-lifetime" class="nav-link" data-scroll-target="#sec-math-uncertainty-lifetime">A.8 不確定性原理と寿命幅</a>
+  <ul class="collapse">
+  <li><a href="#a.8.1-エネルギー-時間の不確定性" id="toc-a.8.1-エネルギー-時間の不確定性" class="nav-link" data-scroll-target="#a.8.1-エネルギー-時間の不確定性">A.8.1 エネルギー-時間の不確定性</a></li>
+  <li><a href="#a.8.2-lorentzian-の-fourier-起源" id="toc-a.8.2-lorentzian-の-fourier-起源" class="nav-link" data-scroll-target="#a.8.2-lorentzian-の-fourier-起源">A.8.2 Lorentzian の Fourier 起源</a></li>
+  </ul></li>
+  <li><a href="#sec-math-numerical" id="toc-sec-math-numerical" class="nav-link" data-scroll-target="#sec-math-numerical">A.9 数値計算の常識</a>
+  <ul class="collapse">
+  <li><a href="#a.9.1-プランク関数の数値評価" id="toc-a.9.1-プランク関数の数値評価" class="nav-link" data-scroll-target="#a.9.1-プランク関数の数値評価">A.9.1 プランク関数の数値評価</a></li>
+  <li><a href="#a.9.2-voigt-プロファイルの数値評価" id="toc-a.9.2-voigt-プロファイルの数値評価" class="nav-link" data-scroll-target="#a.9.2-voigt-プロファイルの数値評価">A.9.2 Voigt プロファイルの数値評価</a></li>
+  <li><a href="#a.9.3-単位系の混在に注意" id="toc-a.9.3-単位系の混在に注意" class="nav-link" data-scroll-target="#a.9.3-単位系の混在に注意">A.9.3 単位系の混在に注意</a></li>
+  </ul></li>
+  <li><a href="#sec-math-references" id="toc-sec-math-references" class="nav-link" data-scroll-target="#sec-math-references">A.10 さらに進むための参考文献</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/edit/main/appendix/A-math-notes.qmd" class="toc-action"><i class="bi bi-github"></i>編集</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/blob/main/appendix/A-math-notes.qmd" class="toc-action"><i class="bi empty"></i>ソースコード</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/issues/new" class="toc-action"><i class="bi empty"></i>問題を報告</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix/A-math-notes.html">Appendices</a></li><li class="breadcrumb-item"><a href="../appendix/A-math-notes.html"><span class="chapter-title">付録 A　数学補章</span></a></li></ol></nav>
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">付録 A — 付録 A　数学補章</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Source</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="sec-math-notes" class="level1 unnumbered">
+<h1 class="unnumbered">付録 A　数学補章</h1>
+<div class="appendix-overview">
+<p><strong>この付録の主題</strong>：本書で使う数学の最低限の整理。本文の論旨を追うのに必要な道具を、定義 → 結果 → 物理的意味の順でまとめる。厳密な証明や一般論は数学の専門書（小平、Arfken &amp; Weber、Reed &amp; Simon 等）に譲り、ここでは <strong>本書のどの章のどの式で使われるか</strong> を併記する実用版とする。</p>
+</div>
+<hr>
+<section id="sec-math-solid-angle" class="level2">
+<h2 class="anchored" data-anchor-id="sec-math-solid-angle">A.1 立体角と球面積分</h2>
+<section id="a.1.1-立体角の定義" class="level3">
+<h3 class="anchored" data-anchor-id="a.1.1-立体角の定義">A.1.1 立体角の定義</h3>
+<p><strong>立体角</strong>（<strong>solid angle</strong>, <span class="math inline">\Omega</span>）は、点から見た面積の「広がり」を表す無次元量。単位は <strong>ステラジアン</strong>（<strong>steradian</strong>, <strong>sr</strong>）。</p>
+<p>半径 <span class="math inline">r</span> の球面上で、面積 <span class="math inline">dA</span> を覆う部分の立体角は</p>
+<p><span id="eq-solid-angle-def"><span class="math display">
+d\Omega = \frac{dA}{r^2}
+\tag{A.1}</span></span></p>
+<p>球全体の立体角は <span class="math inline">4\pi</span> sr。</p>
+<p>球面座標 <span class="math inline">(\theta, \phi)</span> を用いると、</p>
+<p><span id="eq-solid-angle-spherical"><span class="math display">
+d\Omega = \sin\theta\, d\theta\, d\phi
+\tag{A.2}</span></span></p>
+</section>
+<section id="a.1.2-半球での積分stefan-boltzmann-の-pi-因子" class="level3">
+<h3 class="anchored" data-anchor-id="a.1.2-半球での積分stefan-boltzmann-の-pi-因子">A.1.2 半球での積分（Stefan-Boltzmann の <span class="math inline">\pi</span> 因子）</h3>
+<p>第4章 §4.4 で出てくる <strong>半球フラックス積分</strong>：</p>
+<p><span id="eq-hemisphere-flux"><span class="math display">
+F = \int_\text{半球} I \cos\theta\, d\Omega = \int_0^{2\pi}\int_0^{\pi/2} I \cos\theta \sin\theta\, d\theta\, d\phi
+\tag{A.3}</span></span></p>
+<p>等方放射場 $I = $ const の場合：</p>
+<p><span id="eq-hemisphere-flux-result"><span class="math display">
+F = 2\pi I \int_0^{\pi/2} \cos\theta \sin\theta\, d\theta = 2\pi I \cdot \frac{1}{2} = \pi I
+\tag{A.4}</span></span></p>
+<p>この <span class="math inline">\pi</span> が、Stefan-Boltzmann 則 <span class="math inline">F = \sigma T^4 = \pi B(T)</span> に現れる。</p>
+<div class="appendix-tip">
+<p><strong>本文での使用</strong>：第4章 §4.4（Stefan-Boltzmann の <span class="math inline">\pi</span> 因子）、第14章 §14.5（<span class="math inline">B_\nu = c u_\nu/4\pi</span>）</p>
+</div>
+</section>
+<section id="a.1.3-立体角と方向余弦" class="level3">
+<h3 class="anchored" data-anchor-id="a.1.3-立体角と方向余弦">A.1.3 立体角と方向余弦</h3>
+<p>平面平行近似の放射輸送（第5章）では、<span class="math inline">z</span> 軸方向の余弦 <span class="math inline">\mu \equiv \cos\theta</span> を変数とし、</p>
+<p><span class="math display">
+d\mu = -\sin\theta\, d\theta, \quad d\Omega = -d\mu\, d\phi
+</span></p>
+<p>積分は <span class="math inline">\mu \in [-1, 1]</span> に対して行う。等方放射場の平均強度</p>
+<p><span id="eq-mean-intensity"><span class="math display">
+J \equiv \frac{1}{4\pi}\int I\, d\Omega = \frac{1}{2}\int_{-1}^{1} I\, d\mu
+\tag{A.5}</span></span></p>
+<p>これが第4章 §4.5 の <span class="math inline">J_\nu</span> の定義。</p>
+<hr>
+</section>
+</section>
+<section id="sec-math-gaussian" class="level2">
+<h2 class="anchored" data-anchor-id="sec-math-gaussian">A.2 ガウス積分とガンマ関数</h2>
+<section id="a.2.1-ガウス積分" class="level3">
+<h3 class="anchored" data-anchor-id="a.2.1-ガウス積分">A.2.1 ガウス積分</h3>
+<p><span id="eq-gaussian-basic"><span class="math display">
+\int_{-\infty}^{\infty} e^{-x^2}\, dx = \sqrt{\pi}
+\tag{A.6}</span></span></p>
+<p>より一般に、</p>
+<p><span id="eq-gaussian-moments"><span class="math display">
+\int_{-\infty}^{\infty} e^{-ax^2}\, dx = \sqrt{\pi/a}, \quad \int_{-\infty}^{\infty} x^2 e^{-ax^2}\, dx = \frac{1}{2a}\sqrt{\pi/a}
+\tag{A.7}</span></span></p>
+<div class="appendix-tip">
+<p><strong>本文での使用</strong>：第22章 §22.2（Doppler 線形 Gaussian の規格化）、第3章（Maxwell-Boltzmann 速度分布）</p>
+</div>
+</section>
+<section id="a.2.2-ガンマ関数" class="level3">
+<h3 class="anchored" data-anchor-id="a.2.2-ガンマ関数">A.2.2 ガンマ関数</h3>
+<p>ガンマ関数の定義：</p>
+<p><span id="eq-gamma-function"><span class="math display">
+\Gamma(s) \equiv \int_0^\infty x^{s-1} e^{-x}\, dx, \quad \text{Re}(s) &gt; 0
+\tag{A.8}</span></span></p>
+<p>性質：</p>
+<ul>
+<li><span class="math inline">\Gamma(n) = (n-1)!</span> for positive integer <span class="math inline">n</span></li>
+<li><span class="math inline">\Gamma(1/2) = \sqrt{\pi}</span></li>
+<li><span class="math inline">\Gamma(s+1) = s\Gamma(s)</span>（再帰関係）</li>
+</ul>
+</section>
+<section id="a.2.3-riemann-ゼータ関数" class="level3">
+<h3 class="anchored" data-anchor-id="a.2.3-riemann-ゼータ関数">A.2.3 Riemann ゼータ関数</h3>
+<p><span id="eq-zeta-function"><span class="math display">
+\zeta(s) \equiv \sum_{n=1}^\infty \frac{1}{n^s} = \frac{1}{\Gamma(s)}\int_0^\infty \frac{x^{s-1}}{e^x - 1}\, dx
+\tag{A.9}</span></span></p>
+<p>代表値：</p>
+<ul>
+<li><span class="math inline">\zeta(2) = \pi^2/6</span></li>
+<li><span class="math inline">\zeta(3) \simeq 1.20206</span></li>
+<li><span class="math inline">\zeta(4) = \pi^4/90</span></li>
+</ul>
+</section>
+<section id="a.2.4-プランク積分" class="level3">
+<h3 class="anchored" data-anchor-id="a.2.4-プランク積分">A.2.4 プランク積分</h3>
+<p>Stefan-Boltzmann 則（第14章 §14.5）で使う積分：</p>
+<p><span id="eq-planck-integral"><span class="math display">
+\int_0^\infty \frac{x^3}{e^x - 1}\, dx = \Gamma(4)\zeta(4) = 6 \cdot \frac{\pi^4}{90} = \frac{\pi^4}{15}
+\tag{A.10}</span></span></p>
+<p>これからプランク分布の全エネルギー密度</p>
+<p><span id="eq-energy-density-T4"><span class="math display">
+u(T) = \int_0^\infty u_\nu\, d\nu = \frac{8\pi^5 k_B^4}{15 h^3 c^3} T^4 = aT^4
+\tag{A.11}</span></span></p>
+<p>放射定数 <span class="math inline">a \simeq 7.566 \times 10^{-16}</span> J m<span class="math inline">^{-3}</span> K<span class="math inline">^{-4}</span>。フラックス側では <span class="math inline">\sigma = ac/4</span> で Stefan-Boltzmann 定数。</p>
+<div class="appendix-tip">
+<p><strong>本文での使用</strong>：第4章 §4.4、第14章 §14.5、第17章 §17.1（恒星の有効温度）</p>
+</div>
+<hr>
+</section>
+</section>
+<section id="sec-math-combinatorics" class="level2">
+<h2 class="anchored" data-anchor-id="sec-math-combinatorics">A.3 統計力学のための組合せ論</h2>
+<section id="a.3.1-三つの分布" class="level3">
+<h3 class="anchored" data-anchor-id="a.3.1-三つの分布">A.3.1 三つの分布</h3>
+<p>第7-8章で扱った三つの統計分布：</p>
+<p><strong>Maxwell-Boltzmann</strong>（<strong>MB</strong>, 古典）：</p>
+<p><span id="eq-MB-distribution"><span class="math display">
+\bar{n}_\text{MB}(\epsilon) = e^{-(\epsilon - \mu)/k_BT}
+\tag{A.12}</span></span></p>
+<p><strong>Bose-Einstein</strong>（<strong>BE</strong>, ボソン）：</p>
+<p><span id="eq-BE-distribution"><span class="math display">
+\bar{n}_\text{BE}(\epsilon) = \frac{1}{e^{(\epsilon - \mu)/k_BT} - 1}
+\tag{A.13}</span></span></p>
+<p><strong>Fermi-Dirac</strong>（<strong>FD</strong>, フェルミオン）：</p>
+<p><span id="eq-FD-distribution"><span class="math display">
+\bar{n}_\text{FD}(\epsilon) = \frac{1}{e^{(\epsilon - \mu)/k_BT} + 1}
+\tag{A.14}</span></span></p>
+<p>光子（<span class="math inline">\mu = 0</span>、ボソン）では <a href="#eq-BE-distribution" class="quarto-xref">式&nbsp;<span>A.13</span></a> が中心地図プランク関数の指数部分。</p>
+</section>
+<section id="a.3.2-boltzmann-分布の導出簡単版" class="level3">
+<h3 class="anchored" data-anchor-id="a.3.2-boltzmann-分布の導出簡単版">A.3.2 Boltzmann 分布の導出（簡単版）</h3>
+<p>孤立系のエネルギー保存を考慮した状態数を最大化する手続き（Lagrange 未定乗数）から、</p>
+<p><span id="eq-boltzmann-ratio"><span class="math display">
+\frac{n_u}{n_l} = \frac{g_u}{g_l} e^{-(\epsilon_u - \epsilon_l)/k_BT}
+\tag{A.15}</span></span></p>
+<p>これが第20章 §20.4 で LTE 線形成に使った Boltzmann 比。</p>
+</section>
+<section id="a.3.3-saha-の式電離平衡" class="level3">
+<h3 class="anchored" data-anchor-id="a.3.3-saha-の式電離平衡">A.3.3 Saha の式（電離平衡）</h3>
+<p>イオン化反応 <span class="math inline">X \leftrightarrow X^+ + e^-</span> の電離平衡：</p>
+<p><span id="eq-saha"><span class="math display">
+\frac{n_{X^+} n_e}{n_X} = \left(\frac{2\pi m_e k_B T}{h^2}\right)^{3/2} \cdot 2 \cdot \frac{g_{X^+}}{g_X} e^{-\chi/k_BT}
+\tag{A.16}</span></span></p>
+<p><span class="math inline">\chi</span> は電離エネルギー、<span class="math inline">g</span> は各状態の縮重度。</p>
+<div class="appendix-tip">
+<p><strong>本文での使用</strong>：第19章 §19.2（恒星スペクトル分類 OBAFGKM での水素線強度ピーク）、第23章 §23.4（電離度診断）</p>
+</div>
+<hr>
+</section>
+</section>
+<section id="sec-math-fourier" class="level2">
+<h2 class="anchored" data-anchor-id="sec-math-fourier">A.4 Fourier 変換と Voigt 関数</h2>
+<section id="a.4.1-fourier-変換の規約" class="level3">
+<h3 class="anchored" data-anchor-id="a.4.1-fourier-変換の規約">A.4.1 Fourier 変換の規約</h3>
+<p>時間 ↔︎ 振動数の Fourier 変換（本書での規約）：</p>
+<p><span id="eq-fourier-pair"><span class="math display">
+\tilde{f}(\nu) = \int_{-\infty}^\infty f(t) e^{-2\pi i \nu t}\, dt, \quad f(t) = \int_{-\infty}^\infty \tilde{f}(\nu) e^{2\pi i \nu t}\, d\nu
+\tag{A.17}</span></span></p>
+</section>
+<section id="a.4.2-畳み込み定理voigt-プロファイルへの応用" class="level3">
+<h3 class="anchored" data-anchor-id="a.4.2-畳み込み定理voigt-プロファイルへの応用">A.4.2 畳み込み定理（Voigt プロファイルへの応用）</h3>
+<p>二つの関数の <strong>畳み込み</strong>：</p>
+<p><span id="eq-convolution-def"><span class="math display">
+(f \otimes g)(x) \equiv \int f(x') g(x - x')\, dx'
+\tag{A.18}</span></span></p>
+<p>Fourier 変換は畳み込みを積に変換：</p>
+<p><span id="eq-convolution-theorem"><span class="math display">
+\widetilde{f \otimes g} = \tilde{f} \cdot \tilde{g}
+\tag{A.19}</span></span></p>
+</section>
+<section id="a.4.3-voigt-プロファイル" class="level3">
+<h3 class="anchored" data-anchor-id="a.4.3-voigt-プロファイル">A.4.3 Voigt プロファイル</h3>
+<p>第22章 §22.4 で出てきた <strong>Voigt プロファイル</strong> <span class="math inline">\phi_V = \phi_L \otimes \phi_D</span> は、Lorentzian と Gaussian の畳み込み：</p>
+<p><span id="eq-voigt-convolution-A"><span class="math display">
+\phi_V(\nu) = \int_{-\infty}^\infty \phi_L(\nu - \nu') \phi_D(\nu')\, d\nu'
+\tag{A.20}</span></span></p>
+<p>無次元パラメータ</p>
+<p><span class="math display">
+a = \frac{\gamma}{2\Delta\nu_D}, \quad u = \frac{\nu - \nu_0}{\Delta\nu_D}
+</span></p>
+<p>を使うと、Voigt 関数 <span class="math inline">H(a, u)</span> で表される：</p>
+<p><span id="eq-voigt-H"><span class="math display">
+H(a, u) = \frac{a}{\pi}\int_{-\infty}^\infty \frac{e^{-y^2}}{(u-y)^2 + a^2}\, dy
+\tag{A.21}</span></span></p>
+<p>特殊極限：</p>
+<ul>
+<li><span class="math inline">a \to 0</span>：Doppler コア <span class="math inline">H(0, u) = e^{-u^2}</span></li>
+<li><span class="math inline">|u| \gg 1</span>：Lorentz 翼 <span class="math inline">H(a, u) \to a/[\pi(u^2 + a^2)]</span></li>
+</ul>
+<p>数値評価は Faddeeva 関数 <span class="math inline">w(z) = e^{-z^2}\text{erfc}(-iz)</span> を介して行うのが標準（SciPy <code>scipy.special.wofz</code>）。</p>
+<div class="appendix-tip">
+<p><strong>本文での使用</strong>：第22章 §22.4（線形の合成）</p>
+</div>
+<hr>
+</section>
+</section>
+<section id="sec-math-commutators" class="level2">
+<h2 class="anchored" data-anchor-id="sec-math-commutators">A.5 演算子の交換関係 ― 量子力学の基礎道具</h2>
+<section id="a.5.1-基本交換関係" class="level3">
+<h3 class="anchored" data-anchor-id="a.5.1-基本交換関係">A.5.1 基本交換関係</h3>
+<p>位置・運動量の正準交換関係：</p>
+<p><span id="eq-canonical-commutator"><span class="math display">
+[\hat{x}, \hat{p}] = i\hbar
+\tag{A.22}</span></span></p>
+<p>これから生まれる不確定性関係：</p>
+<p><span id="eq-uncertainty"><span class="math display">
+\Delta x \cdot \Delta p \ge \frac{\hbar}{2}
+\tag{A.23}</span></span></p>
+</section>
+<section id="a.5.2-生成消滅演算子" class="level3">
+<h3 class="anchored" data-anchor-id="a.5.2-生成消滅演算子">A.5.2 生成消滅演算子</h3>
+<p>調和振動子の生成・消滅演算子 <span class="math inline">\hat{a}^\dagger, \hat{a}</span> の交換関係：</p>
+<p><span id="eq-bosonic-commutator"><span class="math display">
+[\hat{a}, \hat{a}^\dagger] = 1, \quad [\hat{a}, \hat{a}] = [\hat{a}^\dagger, \hat{a}^\dagger] = 0
+\tag{A.24}</span></span></p>
+<p>これが Bose 統計の根本。光子は <strong>電磁場モードの調和振動子の励起</strong> として現れる（第24章 §24.2）。</p>
+</section>
+<section id="a.5.3-数演算子" class="level3">
+<h3 class="anchored" data-anchor-id="a.5.3-数演算子">A.5.3 数演算子</h3>
+<p><span class="math inline">\hat{n} \equiv \hat{a}^\dagger \hat{a}</span> を <strong>数演算子</strong>（<strong>number operator</strong>）と呼ぶ。固有値は非負整数 <span class="math inline">0, 1, 2, \ldots</span> で、各々が「そのモードに <span class="math inline">n</span> 個の光子が存在する状態」を表す。</p>
+<p><span id="eq-number-action"><span class="math display">
+\hat{n}|n\rangle = n|n\rangle, \quad \hat{a}^\dagger|n\rangle = \sqrt{n+1}\,|n+1\rangle, \quad \hat{a}|n\rangle = \sqrt{n}\,|n-1\rangle
+\tag{A.25}</span></span></p>
+</section>
+<section id="a.5.4-bose-増強因子" class="level3">
+<h3 class="anchored" data-anchor-id="a.5.4-bose-増強因子">A.5.4 Bose 増強因子</h3>
+<p><a href="#eq-number-action" class="quarto-xref">式&nbsp;<span>A.25</span></a> の係数 <span class="math inline">\sqrt{n+1}</span> が、<strong>Bose 増強</strong>（<strong>Bose enhancement</strong>）の起源。誘導放出率 <span class="math inline">B_{ul}</span> がモード光子数 <span class="math inline">n</span> に比例することの数学的表現：</p>
+<p><span id="eq-bose-enhancement"><span class="math display">
+|\langle n+1|\hat{a}^\dagger|n\rangle|^2 = n + 1
+\tag{A.26}</span></span></p>
+<p>「<span class="math inline">+1</span>」が自発放出（真空 <span class="math inline">|0\rangle</span> からの <span class="math inline">|1\rangle</span> への遷移）に、「<span class="math inline">n</span>」が誘導放出に対応する。</p>
+<div class="appendix-tip">
+<p><strong>本文での使用</strong>：第8章（光子の Bose 統計）、第24章 §24.2-§24.3（モード ＝ 量子調和振動子、真空状態）、第25章 §25.2（自発放出と誘導放出の統一）</p>
+</div>
+<hr>
+</section>
+</section>
+<section id="sec-math-vector-calc" class="level2">
+<h2 class="anchored" data-anchor-id="sec-math-vector-calc">A.6 Maxwell 方程式と波動方程式 ― ベクトル解析の道具</h2>
+<section id="a.6.1-真空中の-maxwell-方程式si" class="level3">
+<h3 class="anchored" data-anchor-id="a.6.1-真空中の-maxwell-方程式si">A.6.1 真空中の Maxwell 方程式（SI）</h3>
+<p>第13章 §13.1 と同じ：</p>
+<p><span class="math display">
+\nabla \cdot \mathbf{E} = 0, \quad \nabla \cdot \mathbf{B} = 0
+</span> <span id="eq-maxwell-vacuum-app"><span class="math display">
+\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}, \quad \nabla \times \mathbf{B} = \mu_0\epsilon_0 \frac{\partial \mathbf{E}}{\partial t}
+\tag{A.27}</span></span></p>
+</section>
+<section id="a.6.2-ベクトル恒等式" class="level3">
+<h3 class="anchored" data-anchor-id="a.6.2-ベクトル恒等式">A.6.2 ベクトル恒等式</h3>
+<p><span id="eq-curl-curl"><span class="math display">
+\nabla \times (\nabla \times \mathbf{A}) = \nabla(\nabla \cdot \mathbf{A}) - \nabla^2 \mathbf{A}
+\tag{A.28}</span></span></p>
+<p>これを <a href="#eq-maxwell-vacuum-app" class="quarto-xref">式&nbsp;<span>A.27</span></a> の curl-of-curl に使うと、波動方程式</p>
+<p><span id="eq-wave-equation-app"><span class="math display">
+\nabla^2 \mathbf{E} - \frac{1}{c^2}\frac{\partial^2 \mathbf{E}}{\partial t^2} = 0, \quad c = \frac{1}{\sqrt{\mu_0\epsilon_0}}
+\tag{A.29}</span></span></p>
+<p>が出る。これが第13章 §13.2 の出発点。</p>
+</section>
+<section id="a.6.3-球面波と平面波" class="level3">
+<h3 class="anchored" data-anchor-id="a.6.3-球面波と平面波">A.6.3 球面波と平面波</h3>
+<p>無限遠から見れば球面波は平面波で近似できる。平面波解</p>
+<p><span id="eq-plane-wave-app"><span class="math display">
+\mathbf{E}(\mathbf{r}, t) = \mathbf{E}_0 e^{i(\mathbf{k}\cdot\mathbf{r} - \omega t)}, \quad \omega = c|\mathbf{k}|
+\tag{A.30}</span></span></p>
+<p>これが第13章 §13.3 の中心式。</p>
+<hr>
+</section>
+</section>
+<section id="sec-math-spherical-harmonics" class="level2">
+<h2 class="anchored" data-anchor-id="sec-math-spherical-harmonics">A.7 球面調和関数 ― 水素原子と回転状態</h2>
+<section id="a.7.1-球面調和関数の定義" class="level3">
+<h3 class="anchored" data-anchor-id="a.7.1-球面調和関数の定義">A.7.1 球面調和関数の定義</h3>
+<p><span id="eq-spherical-harmonics"><span class="math display">
+Y_{lm}(\theta, \phi) = \sqrt{\frac{(2l+1)}{4\pi}\frac{(l-m)!}{(l+m)!}} P_l^m(\cos\theta) e^{im\phi}
+\tag{A.31}</span></span></p>
+<p><span class="math inline">P_l^m</span> は Legendre 陪関数、<span class="math inline">l = 0, 1, 2, \ldots</span> は角運動量量子数、<span class="math inline">m = -l, \ldots, l</span> は磁気量子数。</p>
+</section>
+<section id="a.7.2-直交性と完備性" class="level3">
+<h3 class="anchored" data-anchor-id="a.7.2-直交性と完備性">A.7.2 直交性と完備性</h3>
+<p><span class="math display">
+\int Y_{l'm'}^* Y_{lm}\, d\Omega = \delta_{l'l} \delta_{m'm}, \quad \sum_{l, m} Y_{lm}(\theta, \phi) Y_{lm}^*(\theta', \phi') = \delta(\Omega - \Omega')
+</span></p>
+</section>
+<section id="a.7.3-水素原子と回転分子への応用" class="level3">
+<h3 class="anchored" data-anchor-id="a.7.3-水素原子と回転分子への応用">A.7.3 水素原子と回転分子への応用</h3>
+<ul>
+<li><strong>水素原子</strong>（第21章 §21.3）：波動関数 <span class="math inline">\psi_{nlm} = R_{nl}(r) Y_{lm}(\theta, \phi)</span></li>
+<li><strong>二原子分子の回転</strong>：エネルギー <span class="math inline">E_J = \hbar^2 J(J+1)/(2I)</span>、<span class="math inline">J</span> は回転量子数</li>
+</ul>
+<p>選択則 <span class="math inline">\Delta l = \pm 1</span>（第21章 §21.5）は、球面調和関数の積分 <span class="math inline">\int Y_{l'm'}^* \mathbf{r} Y_{lm}\, d\Omega</span> がいつ非零かで決まる。</p>
+<div class="appendix-tip">
+<p><strong>本文での使用</strong>：第21章 §21.3-§21.5（水素原子の波動関数と選択則）、第22章 §22.6（Zeeman 分裂）</p>
+</div>
+<hr>
+</section>
+</section>
+<section id="sec-math-uncertainty-lifetime" class="level2">
+<h2 class="anchored" data-anchor-id="sec-math-uncertainty-lifetime">A.8 不確定性原理と寿命幅</h2>
+<section id="a.8.1-エネルギー-時間の不確定性" class="level3">
+<h3 class="anchored" data-anchor-id="a.8.1-エネルギー-時間の不確定性">A.8.1 エネルギー-時間の不確定性</h3>
+<p>正準対 <span class="math inline">[\hat{x}, \hat{p}] = i\hbar</span> から <span class="math inline">\Delta x\Delta p \ge \hbar/2</span> が出るのに対し、エネルギー-時間の関係はやや異なる文脈で：</p>
+<p><span id="eq-energy-time-uncertainty"><span class="math display">
+\Delta E \cdot \tau \gtrsim \hbar
+\tag{A.32}</span></span></p>
+<p>ここで <span class="math inline">\tau</span> は <strong>励起状態の寿命</strong>、<span class="math inline">\Delta E</span> はエネルギー幅。これが本文の自然幅（第22章 §22.1）：</p>
+<p><span id="eq-natural-width-app"><span class="math display">
+\Gamma_\text{nat} = \frac{1}{2\pi\tau} = \frac{A_{ul}}{2\pi}
+\tag{A.33}</span></span></p>
+</section>
+<section id="a.8.2-lorentzian-の-fourier-起源" class="level3">
+<h3 class="anchored" data-anchor-id="a.8.2-lorentzian-の-fourier-起源">A.8.2 Lorentzian の Fourier 起源</h3>
+<p>寿命 <span class="math inline">\tau</span> で指数減衰する古典場 <span class="math inline">E(t) \propto e^{-t/(2\tau)} \cos(\omega_0 t)</span> の Fourier 変換は <strong>Lorentzian</strong>：</p>
+<p><span id="eq-lorentzian-fourier"><span class="math display">
+|\tilde{E}(\omega)|^2 \propto \frac{1}{(\omega - \omega_0)^2 + (1/2\tau)^2}
+\tag{A.34}</span></span></p>
+<p>これが第22章 §22.1 の自然幅 Lorentzian の <strong>古典的起源</strong>。QED では真空揺らぎが減衰を駆動する（第25章 §25.4）。</p>
+<div class="appendix-tip">
+<p><strong>本文での使用</strong>：第22章 §22.1（自然幅）、第25章 §25.4（真空揺らぎと自然幅）</p>
+</div>
+<hr>
+</section>
+</section>
+<section id="sec-math-numerical" class="level2">
+<h2 class="anchored" data-anchor-id="sec-math-numerical">A.9 数値計算の常識</h2>
+<p>本書の各章で出てくる計算を実際に行うときの実用メモ。</p>
+<section id="a.9.1-プランク関数の数値評価" class="level3">
+<h3 class="anchored" data-anchor-id="a.9.1-プランク関数の数値評価">A.9.1 プランク関数の数値評価</h3>
+<p>指数因子 <span class="math inline">h\nu/k_BT</span> が大きいとき（Wien 側、<span class="math inline">h\nu/k_BT \gtrsim 50</span>）はオーバーフローしないよう注意：</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> planck_safe(nu, T, h<span class="op">=</span><span class="fl">6.626e-34</span>, k<span class="op">=</span><span class="fl">1.381e-23</span>, c<span class="op">=</span><span class="fl">2.998e8</span>):</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> h<span class="op">*</span>nu<span class="op">/</span>(k<span class="op">*</span>T)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># オーバーフロー防止</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> np.where(x <span class="op">&gt;</span> <span class="dv">700</span>, <span class="dv">700</span>, x)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">2</span><span class="op">*</span>h<span class="op">*</span>nu<span class="op">**</span><span class="dv">3</span><span class="op">/</span>c<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> (np.exp(x) <span class="op">-</span> <span class="dv">1</span>)</span></code></pre></div><button title="コピー" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="a.9.2-voigt-プロファイルの数値評価" class="level3">
+<h3 class="anchored" data-anchor-id="a.9.2-voigt-プロファイルの数値評価">A.9.2 Voigt プロファイルの数値評価</h3>
+<p><code>scipy.special.wofz</code> を使う：</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.special <span class="im">import</span> wofz</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> voigt_profile(nu, nu0, sigma, gamma):</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    z <span class="op">=</span> ((nu <span class="op">-</span> nu0) <span class="op">+</span> <span class="ot">1j</span><span class="op">*</span>gamma) <span class="op">/</span> (sigma<span class="op">*</span>np.sqrt(<span class="dv">2</span>))</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.real(wofz(z)) <span class="op">/</span> (sigma<span class="op">*</span>np.sqrt(<span class="dv">2</span><span class="op">*</span>np.pi))</span></code></pre></div><button title="コピー" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="a.9.3-単位系の混在に注意" class="level3">
+<h3 class="anchored" data-anchor-id="a.9.3-単位系の混在に注意">A.9.3 単位系の混在に注意</h3>
+<p>CGS と SI の混在は計算ミスの典型源。本書の数値例は <strong>SI を基本</strong> にする（付録 B）。文献によっては CGS（電磁気学では特に）が使われるので、論文との比較時には常に単位系を確認すること。</p>
+<div class="appendix-tip">
+<p><strong>実装例</strong>：本書付属のコード <code>code/planck_curve.py</code>、<code>code/voigt_profile.py</code> 等を参照</p>
+</div>
+<hr>
+</section>
+</section>
+<section id="sec-math-references" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sec-math-references">A.10 さらに進むための参考文献</h2>
+<ul>
+<li>Arfken, Weber &amp; Harris, <em>Mathematical Methods for Physicists</em> (Academic Press, 7th ed., 2012) — 物理学者のための数学の標準書</li>
+<li>小平邦彦『複素解析』『微分積分学』（岩波書店）— 厳密な数学基礎</li>
+<li>河村哲也『数値計算のためのFortran77/90/95』— 数値計算の実装面</li>
+<li>Press et al., <em>Numerical Recipes</em> (Cambridge, 3rd ed., 2007) — 物理計算アルゴリズム集</li>
+<li>Olver et al., <em>NIST Handbook of Mathematical Functions</em> (Cambridge, 2010) — Voigt 関数等の特殊関数の定本（<a href="https://dlmf.nist.gov" class="uri">https://dlmf.nist.gov</a>）</li>
+</ul>
+
+
+<!-- -->
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "コピーしました");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "コピーしました");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../references.html" class="pagination-link" aria-label="参考文献">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">参考文献</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../appendix/B-units-constants.html" class="pagination-link" aria-label="付録 B　単位と基本定数">
+        <span class="nav-page-text"><span class="chapter-title">付録 B　単位と基本定数</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">ソースコード</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "付録 A　数学補章"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="an">lang:</span><span class="co"> ja</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu"># 付録 A　数学補章 {#sec-math-notes .unnumbered}</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>::: {.appendix-overview}</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>**この付録の主題**：本書で使う数学の最低限の整理。本文の論旨を追うのに必要な道具を、定義 → 結果 → 物理的意味の順でまとめる。厳密な証明や一般論は数学の専門書（小平、Arfken &amp; Weber、Reed &amp; Simon 等）に譲り、ここでは **本書のどの章のどの式で使われるか** を併記する実用版とする。</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## A.1 立体角と球面積分 {#sec-math-solid-angle}</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="fu">### A.1.1 立体角の定義</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>**立体角**（**solid angle**, $\Omega$）は、点から見た面積の「広がり」を表す無次元量。単位は **ステラジアン**（**steradian**, **sr**）。</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>半径 $r$ の球面上で、面積 $dA$ を覆う部分の立体角は</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>d\Omega = \frac{dA}{r^2}</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>$$ {#eq-solid-angle-def}</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>球全体の立体角は $4\pi$ sr。</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>球面座標 $(\theta, \phi)$ を用いると、</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>d\Omega = \sin\theta\, d\theta\, d\phi</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>$$ {#eq-solid-angle-spherical}</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a><span class="fu">### A.1.2 半球での積分（Stefan-Boltzmann の $\pi$ 因子）</span></span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>第4章 §4.4 で出てくる **半球フラックス積分**：</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>F = \int_\text{半球} I \cos\theta\, d\Omega = \int_0^{2\pi}\int_0^{\pi/2} I \cos\theta \sin\theta\, d\theta\, d\phi</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>$$ {#eq-hemisphere-flux}</span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>等方放射場 $I = $ const の場合：</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>F = 2\pi I \int_0^{\pi/2} \cos\theta \sin\theta\, d\theta = 2\pi I \cdot \frac{1}{2} = \pi I</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>$$ {#eq-hemisphere-flux-result}</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>この $\pi$ が、Stefan-Boltzmann 則 $F = \sigma T^4 = \pi B(T)$ に現れる。</span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>::: {.appendix-tip}</span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>**本文での使用**：第4章 §4.4（Stefan-Boltzmann の $\pi$ 因子）、第14章 §14.5（$B_\nu = c u_\nu/4\pi$）</span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a><span class="fu">### A.1.3 立体角と方向余弦</span></span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>平面平行近似の放射輸送（第5章）では、$z$ 軸方向の余弦 $\mu \equiv \cos\theta$ を変数とし、</span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>d\mu = -\sin\theta\, d\theta, \quad d\Omega = -d\mu\, d\phi</span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>積分は $\mu \in <span class="co">[</span><span class="ot">-1, 1</span><span class="co">]</span>$ に対して行う。等方放射場の平均強度</span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>J \equiv \frac{1}{4\pi}\int I\, d\Omega = \frac{1}{2}\int_{-1}^{1} I\, d\mu</span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>$$ {#eq-mean-intensity}</span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a>これが第4章 §4.5 の $J_\nu$ の定義。</span>
+<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a><span class="fu">## A.2 ガウス積分とガンマ関数 {#sec-math-gaussian}</span></span>
+<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a><span class="fu">### A.2.1 ガウス積分</span></span>
+<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>\int_{-\infty}^{\infty} e^{-x^2}\, dx = \sqrt{\pi}</span>
+<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a>$$ {#eq-gaussian-basic}</span>
+<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a>より一般に、</span>
+<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a>\int_{-\infty}^{\infty} e^{-ax^2}\, dx = \sqrt{\pi/a}, \quad \int_{-\infty}^{\infty} x^2 e^{-ax^2}\, dx = \frac{1}{2a}\sqrt{\pi/a}</span>
+<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a>$$ {#eq-gaussian-moments}</span>
+<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>::: {.appendix-tip}</span>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>**本文での使用**：第22章 §22.2（Doppler 線形 Gaussian の規格化）、第3章（Maxwell-Boltzmann 速度分布）</span>
+<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a><span class="fu">### A.2.2 ガンマ関数</span></span>
+<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a>ガンマ関数の定義：</span>
+<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a>\Gamma(s) \equiv \int_0^\infty x^{s-1} e^{-x}\, dx, \quad \text{Re}(s) &gt; 0</span>
+<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a>$$ {#eq-gamma-function}</span>
+<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a>性質：</span>
+<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$\Gamma(n) = (n-1)!$ for positive integer $n$</span>
+<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$\Gamma(1/2) = \sqrt{\pi}$</span>
+<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$\Gamma(s+1) = s\Gamma(s)$（再帰関係）</span>
+<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a><span class="fu">### A.2.3 Riemann ゼータ関数</span></span>
+<span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a>\zeta(s) \equiv \sum_{n=1}^\infty \frac{1}{n^s} = \frac{1}{\Gamma(s)}\int_0^\infty \frac{x^{s-1}}{e^x - 1}\, dx</span>
+<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a>$$ {#eq-zeta-function}</span>
+<span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a>代表値：</span>
+<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$\zeta(2) = \pi^2/6$</span>
+<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$\zeta(3) \simeq 1.20206$</span>
+<span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$\zeta(4) = \pi^4/90$</span>
+<span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a><span class="fu">### A.2.4 プランク積分</span></span>
+<span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a>Stefan-Boltzmann 則（第14章 §14.5）で使う積分：</span>
+<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a>\int_0^\infty \frac{x^3}{e^x - 1}\, dx = \Gamma(4)\zeta(4) = 6 \cdot \frac{\pi^4}{90} = \frac{\pi^4}{15}</span>
+<span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a>$$ {#eq-planck-integral}</span>
+<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-124"><a href="#cb3-124" aria-hidden="true" tabindex="-1"></a>これからプランク分布の全エネルギー密度</span>
+<span id="cb3-125"><a href="#cb3-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-126"><a href="#cb3-126" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-127"><a href="#cb3-127" aria-hidden="true" tabindex="-1"></a>u(T) = \int_0^\infty u_\nu\, d\nu = \frac{8\pi^5 k_B^4}{15 h^3 c^3} T^4 = aT^4</span>
+<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a>$$ {#eq-energy-density-T4}</span>
+<span id="cb3-129"><a href="#cb3-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-130"><a href="#cb3-130" aria-hidden="true" tabindex="-1"></a>放射定数 $a \simeq 7.566 \times 10^{-16}$ J m$^{-3}$ K$^{-4}$。フラックス側では $\sigma = ac/4$ で Stefan-Boltzmann 定数。</span>
+<span id="cb3-131"><a href="#cb3-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-132"><a href="#cb3-132" aria-hidden="true" tabindex="-1"></a>::: {.appendix-tip}</span>
+<span id="cb3-133"><a href="#cb3-133" aria-hidden="true" tabindex="-1"></a>**本文での使用**：第4章 §4.4、第14章 §14.5、第17章 §17.1（恒星の有効温度）</span>
+<span id="cb3-134"><a href="#cb3-134" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-135"><a href="#cb3-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-136"><a href="#cb3-136" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb3-137"><a href="#cb3-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-138"><a href="#cb3-138" aria-hidden="true" tabindex="-1"></a><span class="fu">## A.3 統計力学のための組合せ論 {#sec-math-combinatorics}</span></span>
+<span id="cb3-139"><a href="#cb3-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-140"><a href="#cb3-140" aria-hidden="true" tabindex="-1"></a><span class="fu">### A.3.1 三つの分布</span></span>
+<span id="cb3-141"><a href="#cb3-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-142"><a href="#cb3-142" aria-hidden="true" tabindex="-1"></a>第7-8章で扱った三つの統計分布：</span>
+<span id="cb3-143"><a href="#cb3-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-144"><a href="#cb3-144" aria-hidden="true" tabindex="-1"></a>**Maxwell-Boltzmann**（**MB**, 古典）：</span>
+<span id="cb3-145"><a href="#cb3-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-146"><a href="#cb3-146" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-147"><a href="#cb3-147" aria-hidden="true" tabindex="-1"></a>\bar{n}_\text{MB}(\epsilon) = e^{-(\epsilon - \mu)/k_BT}</span>
+<span id="cb3-148"><a href="#cb3-148" aria-hidden="true" tabindex="-1"></a>$$ {#eq-MB-distribution}</span>
+<span id="cb3-149"><a href="#cb3-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-150"><a href="#cb3-150" aria-hidden="true" tabindex="-1"></a>**Bose-Einstein**（**BE**, ボソン）：</span>
+<span id="cb3-151"><a href="#cb3-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-152"><a href="#cb3-152" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-153"><a href="#cb3-153" aria-hidden="true" tabindex="-1"></a>\bar{n}_\text{BE}(\epsilon) = \frac{1}{e^{(\epsilon - \mu)/k_BT} - 1}</span>
+<span id="cb3-154"><a href="#cb3-154" aria-hidden="true" tabindex="-1"></a>$$ {#eq-BE-distribution}</span>
+<span id="cb3-155"><a href="#cb3-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-156"><a href="#cb3-156" aria-hidden="true" tabindex="-1"></a>**Fermi-Dirac**（**FD**, フェルミオン）：</span>
+<span id="cb3-157"><a href="#cb3-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-158"><a href="#cb3-158" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-159"><a href="#cb3-159" aria-hidden="true" tabindex="-1"></a>\bar{n}_\text{FD}(\epsilon) = \frac{1}{e^{(\epsilon - \mu)/k_BT} + 1}</span>
+<span id="cb3-160"><a href="#cb3-160" aria-hidden="true" tabindex="-1"></a>$$ {#eq-FD-distribution}</span>
+<span id="cb3-161"><a href="#cb3-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-162"><a href="#cb3-162" aria-hidden="true" tabindex="-1"></a>光子（$\mu = 0$、ボソン）では @eq-BE-distribution が中心地図プランク関数の指数部分。</span>
+<span id="cb3-163"><a href="#cb3-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-164"><a href="#cb3-164" aria-hidden="true" tabindex="-1"></a><span class="fu">### A.3.2 Boltzmann 分布の導出（簡単版）</span></span>
+<span id="cb3-165"><a href="#cb3-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-166"><a href="#cb3-166" aria-hidden="true" tabindex="-1"></a>孤立系のエネルギー保存を考慮した状態数を最大化する手続き（Lagrange 未定乗数）から、</span>
+<span id="cb3-167"><a href="#cb3-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-168"><a href="#cb3-168" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-169"><a href="#cb3-169" aria-hidden="true" tabindex="-1"></a>\frac{n_u}{n_l} = \frac{g_u}{g_l} e^{-(\epsilon_u - \epsilon_l)/k_BT}</span>
+<span id="cb3-170"><a href="#cb3-170" aria-hidden="true" tabindex="-1"></a>$$ {#eq-boltzmann-ratio}</span>
+<span id="cb3-171"><a href="#cb3-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-172"><a href="#cb3-172" aria-hidden="true" tabindex="-1"></a>これが第20章 §20.4 で LTE 線形成に使った Boltzmann 比。</span>
+<span id="cb3-173"><a href="#cb3-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-174"><a href="#cb3-174" aria-hidden="true" tabindex="-1"></a><span class="fu">### A.3.3 Saha の式（電離平衡）</span></span>
+<span id="cb3-175"><a href="#cb3-175" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-176"><a href="#cb3-176" aria-hidden="true" tabindex="-1"></a>イオン化反応 $X \leftrightarrow X^+ + e^-$ の電離平衡：</span>
+<span id="cb3-177"><a href="#cb3-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-178"><a href="#cb3-178" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-179"><a href="#cb3-179" aria-hidden="true" tabindex="-1"></a>\frac{n_{X^+} n_e}{n_X} = \left(\frac{2\pi m_e k_B T}{h^2}\right)^{3/2} \cdot 2 \cdot \frac{g_{X^+}}{g_X} e^{-\chi/k_BT}</span>
+<span id="cb3-180"><a href="#cb3-180" aria-hidden="true" tabindex="-1"></a>$$ {#eq-saha}</span>
+<span id="cb3-181"><a href="#cb3-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-182"><a href="#cb3-182" aria-hidden="true" tabindex="-1"></a>$\chi$ は電離エネルギー、$g$ は各状態の縮重度。</span>
+<span id="cb3-183"><a href="#cb3-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-184"><a href="#cb3-184" aria-hidden="true" tabindex="-1"></a>::: {.appendix-tip}</span>
+<span id="cb3-185"><a href="#cb3-185" aria-hidden="true" tabindex="-1"></a>**本文での使用**：第19章 §19.2（恒星スペクトル分類 OBAFGKM での水素線強度ピーク）、第23章 §23.4（電離度診断）</span>
+<span id="cb3-186"><a href="#cb3-186" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-187"><a href="#cb3-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-188"><a href="#cb3-188" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb3-189"><a href="#cb3-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-190"><a href="#cb3-190" aria-hidden="true" tabindex="-1"></a><span class="fu">## A.4 Fourier 変換と Voigt 関数 {#sec-math-fourier}</span></span>
+<span id="cb3-191"><a href="#cb3-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-192"><a href="#cb3-192" aria-hidden="true" tabindex="-1"></a><span class="fu">### A.4.1 Fourier 変換の規約</span></span>
+<span id="cb3-193"><a href="#cb3-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-194"><a href="#cb3-194" aria-hidden="true" tabindex="-1"></a>時間 ↔ 振動数の Fourier 変換（本書での規約）：</span>
+<span id="cb3-195"><a href="#cb3-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-196"><a href="#cb3-196" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-197"><a href="#cb3-197" aria-hidden="true" tabindex="-1"></a>\tilde{f}(\nu) = \int_{-\infty}^\infty f(t) e^{-2\pi i \nu t}\, dt, \quad f(t) = \int_{-\infty}^\infty \tilde{f}(\nu) e^{2\pi i \nu t}\, d\nu</span>
+<span id="cb3-198"><a href="#cb3-198" aria-hidden="true" tabindex="-1"></a>$$ {#eq-fourier-pair}</span>
+<span id="cb3-199"><a href="#cb3-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-200"><a href="#cb3-200" aria-hidden="true" tabindex="-1"></a><span class="fu">### A.4.2 畳み込み定理（Voigt プロファイルへの応用）</span></span>
+<span id="cb3-201"><a href="#cb3-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-202"><a href="#cb3-202" aria-hidden="true" tabindex="-1"></a>二つの関数の **畳み込み**：</span>
+<span id="cb3-203"><a href="#cb3-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-204"><a href="#cb3-204" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-205"><a href="#cb3-205" aria-hidden="true" tabindex="-1"></a>(f \otimes g)(x) \equiv \int f(x') g(x - x')\, dx'</span>
+<span id="cb3-206"><a href="#cb3-206" aria-hidden="true" tabindex="-1"></a>$$ {#eq-convolution-def}</span>
+<span id="cb3-207"><a href="#cb3-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-208"><a href="#cb3-208" aria-hidden="true" tabindex="-1"></a>Fourier 変換は畳み込みを積に変換：</span>
+<span id="cb3-209"><a href="#cb3-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-210"><a href="#cb3-210" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-211"><a href="#cb3-211" aria-hidden="true" tabindex="-1"></a>\widetilde{f \otimes g} = \tilde{f} \cdot \tilde{g}</span>
+<span id="cb3-212"><a href="#cb3-212" aria-hidden="true" tabindex="-1"></a>$$ {#eq-convolution-theorem}</span>
+<span id="cb3-213"><a href="#cb3-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-214"><a href="#cb3-214" aria-hidden="true" tabindex="-1"></a><span class="fu">### A.4.3 Voigt プロファイル</span></span>
+<span id="cb3-215"><a href="#cb3-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-216"><a href="#cb3-216" aria-hidden="true" tabindex="-1"></a>第22章 §22.4 で出てきた **Voigt プロファイル** $\phi_V = \phi_L \otimes \phi_D$ は、Lorentzian と Gaussian の畳み込み：</span>
+<span id="cb3-217"><a href="#cb3-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-218"><a href="#cb3-218" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-219"><a href="#cb3-219" aria-hidden="true" tabindex="-1"></a>\phi_V(\nu) = \int_{-\infty}^\infty \phi_L(\nu - \nu') \phi_D(\nu')\, d\nu'</span>
+<span id="cb3-220"><a href="#cb3-220" aria-hidden="true" tabindex="-1"></a>$$ {#eq-voigt-convolution-A}</span>
+<span id="cb3-221"><a href="#cb3-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-222"><a href="#cb3-222" aria-hidden="true" tabindex="-1"></a>無次元パラメータ</span>
+<span id="cb3-223"><a href="#cb3-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-224"><a href="#cb3-224" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-225"><a href="#cb3-225" aria-hidden="true" tabindex="-1"></a>a = \frac{\gamma}{2\Delta\nu_D}, \quad u = \frac{\nu - \nu_0}{\Delta\nu_D}</span>
+<span id="cb3-226"><a href="#cb3-226" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-227"><a href="#cb3-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-228"><a href="#cb3-228" aria-hidden="true" tabindex="-1"></a>を使うと、Voigt 関数 $H(a, u)$ で表される：</span>
+<span id="cb3-229"><a href="#cb3-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-230"><a href="#cb3-230" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-231"><a href="#cb3-231" aria-hidden="true" tabindex="-1"></a>H(a, u) = \frac{a}{\pi}\int_{-\infty}^\infty \frac{e^{-y^2}}{(u-y)^2 + a^2}\, dy</span>
+<span id="cb3-232"><a href="#cb3-232" aria-hidden="true" tabindex="-1"></a>$$ {#eq-voigt-H}</span>
+<span id="cb3-233"><a href="#cb3-233" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-234"><a href="#cb3-234" aria-hidden="true" tabindex="-1"></a>特殊極限：</span>
+<span id="cb3-235"><a href="#cb3-235" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-236"><a href="#cb3-236" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$a \to 0$：Doppler コア $H(0, u) = e^{-u^2}$</span>
+<span id="cb3-237"><a href="#cb3-237" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$|u| \gg 1$：Lorentz 翼 $H(a, u) \to a/<span class="co">[</span><span class="ot">\pi(u^2 + a^2)</span><span class="co">]</span>$</span>
+<span id="cb3-238"><a href="#cb3-238" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-239"><a href="#cb3-239" aria-hidden="true" tabindex="-1"></a>数値評価は Faddeeva 関数 $w(z) = e^{-z^2}\text{erfc}(-iz)$ を介して行うのが標準（SciPy <span class="in">`scipy.special.wofz`</span>）。</span>
+<span id="cb3-240"><a href="#cb3-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-241"><a href="#cb3-241" aria-hidden="true" tabindex="-1"></a>::: {.appendix-tip}</span>
+<span id="cb3-242"><a href="#cb3-242" aria-hidden="true" tabindex="-1"></a>**本文での使用**：第22章 §22.4（線形の合成）</span>
+<span id="cb3-243"><a href="#cb3-243" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-244"><a href="#cb3-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-245"><a href="#cb3-245" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb3-246"><a href="#cb3-246" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-247"><a href="#cb3-247" aria-hidden="true" tabindex="-1"></a><span class="fu">## A.5 演算子の交換関係 ― 量子力学の基礎道具 {#sec-math-commutators}</span></span>
+<span id="cb3-248"><a href="#cb3-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-249"><a href="#cb3-249" aria-hidden="true" tabindex="-1"></a><span class="fu">### A.5.1 基本交換関係</span></span>
+<span id="cb3-250"><a href="#cb3-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-251"><a href="#cb3-251" aria-hidden="true" tabindex="-1"></a>位置・運動量の正準交換関係：</span>
+<span id="cb3-252"><a href="#cb3-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-253"><a href="#cb3-253" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-254"><a href="#cb3-254" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">\hat{x}, \hat{p}</span><span class="co">]</span> = i\hbar</span>
+<span id="cb3-255"><a href="#cb3-255" aria-hidden="true" tabindex="-1"></a>$$ {#eq-canonical-commutator}</span>
+<span id="cb3-256"><a href="#cb3-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-257"><a href="#cb3-257" aria-hidden="true" tabindex="-1"></a>これから生まれる不確定性関係：</span>
+<span id="cb3-258"><a href="#cb3-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-259"><a href="#cb3-259" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-260"><a href="#cb3-260" aria-hidden="true" tabindex="-1"></a>\Delta x \cdot \Delta p \ge \frac{\hbar}{2}</span>
+<span id="cb3-261"><a href="#cb3-261" aria-hidden="true" tabindex="-1"></a>$$ {#eq-uncertainty}</span>
+<span id="cb3-262"><a href="#cb3-262" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-263"><a href="#cb3-263" aria-hidden="true" tabindex="-1"></a><span class="fu">### A.5.2 生成消滅演算子</span></span>
+<span id="cb3-264"><a href="#cb3-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-265"><a href="#cb3-265" aria-hidden="true" tabindex="-1"></a>調和振動子の生成・消滅演算子 $\hat{a}^\dagger, \hat{a}$ の交換関係：</span>
+<span id="cb3-266"><a href="#cb3-266" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-267"><a href="#cb3-267" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-268"><a href="#cb3-268" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">\hat{a}, \hat{a}^\dagger</span><span class="co">]</span> = 1, \quad <span class="co">[</span><span class="ot">\hat{a}, \hat{a}</span><span class="co">]</span> = <span class="co">[</span><span class="ot">\hat{a}^\dagger, \hat{a}^\dagger</span><span class="co">]</span> = 0</span>
+<span id="cb3-269"><a href="#cb3-269" aria-hidden="true" tabindex="-1"></a>$$ {#eq-bosonic-commutator}</span>
+<span id="cb3-270"><a href="#cb3-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-271"><a href="#cb3-271" aria-hidden="true" tabindex="-1"></a>これが Bose 統計の根本。光子は **電磁場モードの調和振動子の励起** として現れる（第24章 §24.2）。</span>
+<span id="cb3-272"><a href="#cb3-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-273"><a href="#cb3-273" aria-hidden="true" tabindex="-1"></a><span class="fu">### A.5.3 数演算子</span></span>
+<span id="cb3-274"><a href="#cb3-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-275"><a href="#cb3-275" aria-hidden="true" tabindex="-1"></a>$\hat{n} \equiv \hat{a}^\dagger \hat{a}$ を **数演算子**（**number operator**）と呼ぶ。固有値は非負整数 $0, 1, 2, \ldots$ で、各々が「そのモードに $n$ 個の光子が存在する状態」を表す。</span>
+<span id="cb3-276"><a href="#cb3-276" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-277"><a href="#cb3-277" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-278"><a href="#cb3-278" aria-hidden="true" tabindex="-1"></a>\hat{n}|n\rangle = n|n\rangle, \quad \hat{a}^\dagger|n\rangle = \sqrt{n+1}\,|n+1\rangle, \quad \hat{a}|n\rangle = \sqrt{n}\,|n-1\rangle</span>
+<span id="cb3-279"><a href="#cb3-279" aria-hidden="true" tabindex="-1"></a>$$ {#eq-number-action}</span>
+<span id="cb3-280"><a href="#cb3-280" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-281"><a href="#cb3-281" aria-hidden="true" tabindex="-1"></a><span class="fu">### A.5.4 Bose 増強因子</span></span>
+<span id="cb3-282"><a href="#cb3-282" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-283"><a href="#cb3-283" aria-hidden="true" tabindex="-1"></a>@eq-number-action の係数 $\sqrt{n+1}$ が、**Bose 増強**（**Bose enhancement**）の起源。誘導放出率 $B_{ul}$ がモード光子数 $n$ に比例することの数学的表現：</span>
+<span id="cb3-284"><a href="#cb3-284" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-285"><a href="#cb3-285" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-286"><a href="#cb3-286" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>\langle n+1<span class="pp">|</span>\hat{a}^\dagger<span class="pp">|</span>n\rangle<span class="pp">|</span>^2 = n + 1</span>
+<span id="cb3-287"><a href="#cb3-287" aria-hidden="true" tabindex="-1"></a>$$ {#eq-bose-enhancement}</span>
+<span id="cb3-288"><a href="#cb3-288" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-289"><a href="#cb3-289" aria-hidden="true" tabindex="-1"></a>「$+1$」が自発放出（真空 $|0\rangle$ からの $|1\rangle$ への遷移）に、「$n$」が誘導放出に対応する。</span>
+<span id="cb3-290"><a href="#cb3-290" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-291"><a href="#cb3-291" aria-hidden="true" tabindex="-1"></a>::: {.appendix-tip}</span>
+<span id="cb3-292"><a href="#cb3-292" aria-hidden="true" tabindex="-1"></a>**本文での使用**：第8章（光子の Bose 統計）、第24章 §24.2-§24.3（モード ＝ 量子調和振動子、真空状態）、第25章 §25.2（自発放出と誘導放出の統一）</span>
+<span id="cb3-293"><a href="#cb3-293" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-294"><a href="#cb3-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-295"><a href="#cb3-295" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb3-296"><a href="#cb3-296" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-297"><a href="#cb3-297" aria-hidden="true" tabindex="-1"></a><span class="fu">## A.6 Maxwell 方程式と波動方程式 ― ベクトル解析の道具 {#sec-math-vector-calc}</span></span>
+<span id="cb3-298"><a href="#cb3-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-299"><a href="#cb3-299" aria-hidden="true" tabindex="-1"></a><span class="fu">### A.6.1 真空中の Maxwell 方程式（SI）</span></span>
+<span id="cb3-300"><a href="#cb3-300" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-301"><a href="#cb3-301" aria-hidden="true" tabindex="-1"></a>第13章 §13.1 と同じ：</span>
+<span id="cb3-302"><a href="#cb3-302" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-303"><a href="#cb3-303" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-304"><a href="#cb3-304" aria-hidden="true" tabindex="-1"></a>\nabla \cdot \mathbf{E} = 0, \quad \nabla \cdot \mathbf{B} = 0</span>
+<span id="cb3-305"><a href="#cb3-305" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-306"><a href="#cb3-306" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-307"><a href="#cb3-307" aria-hidden="true" tabindex="-1"></a>\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}, \quad \nabla \times \mathbf{B} = \mu_0\epsilon_0 \frac{\partial \mathbf{E}}{\partial t}</span>
+<span id="cb3-308"><a href="#cb3-308" aria-hidden="true" tabindex="-1"></a>$$ {#eq-maxwell-vacuum-app}</span>
+<span id="cb3-309"><a href="#cb3-309" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-310"><a href="#cb3-310" aria-hidden="true" tabindex="-1"></a><span class="fu">### A.6.2 ベクトル恒等式</span></span>
+<span id="cb3-311"><a href="#cb3-311" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-312"><a href="#cb3-312" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-313"><a href="#cb3-313" aria-hidden="true" tabindex="-1"></a>\nabla \times (\nabla \times \mathbf{A}) = \nabla(\nabla \cdot \mathbf{A}) - \nabla^2 \mathbf{A}</span>
+<span id="cb3-314"><a href="#cb3-314" aria-hidden="true" tabindex="-1"></a>$$ {#eq-curl-curl}</span>
+<span id="cb3-315"><a href="#cb3-315" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-316"><a href="#cb3-316" aria-hidden="true" tabindex="-1"></a>これを @eq-maxwell-vacuum-app の curl-of-curl に使うと、波動方程式</span>
+<span id="cb3-317"><a href="#cb3-317" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-318"><a href="#cb3-318" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-319"><a href="#cb3-319" aria-hidden="true" tabindex="-1"></a>\nabla^2 \mathbf{E} - \frac{1}{c^2}\frac{\partial^2 \mathbf{E}}{\partial t^2} = 0, \quad c = \frac{1}{\sqrt{\mu_0\epsilon_0}}</span>
+<span id="cb3-320"><a href="#cb3-320" aria-hidden="true" tabindex="-1"></a>$$ {#eq-wave-equation-app}</span>
+<span id="cb3-321"><a href="#cb3-321" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-322"><a href="#cb3-322" aria-hidden="true" tabindex="-1"></a>が出る。これが第13章 §13.2 の出発点。</span>
+<span id="cb3-323"><a href="#cb3-323" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-324"><a href="#cb3-324" aria-hidden="true" tabindex="-1"></a><span class="fu">### A.6.3 球面波と平面波</span></span>
+<span id="cb3-325"><a href="#cb3-325" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-326"><a href="#cb3-326" aria-hidden="true" tabindex="-1"></a>無限遠から見れば球面波は平面波で近似できる。平面波解</span>
+<span id="cb3-327"><a href="#cb3-327" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-328"><a href="#cb3-328" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-329"><a href="#cb3-329" aria-hidden="true" tabindex="-1"></a>\mathbf{E}(\mathbf{r}, t) = \mathbf{E}_0 e^{i(\mathbf{k}\cdot\mathbf{r} - \omega t)}, \quad \omega = c|\mathbf{k}|</span>
+<span id="cb3-330"><a href="#cb3-330" aria-hidden="true" tabindex="-1"></a>$$ {#eq-plane-wave-app}</span>
+<span id="cb3-331"><a href="#cb3-331" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-332"><a href="#cb3-332" aria-hidden="true" tabindex="-1"></a>これが第13章 §13.3 の中心式。</span>
+<span id="cb3-333"><a href="#cb3-333" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-334"><a href="#cb3-334" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb3-335"><a href="#cb3-335" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-336"><a href="#cb3-336" aria-hidden="true" tabindex="-1"></a><span class="fu">## A.7 球面調和関数 ― 水素原子と回転状態 {#sec-math-spherical-harmonics}</span></span>
+<span id="cb3-337"><a href="#cb3-337" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-338"><a href="#cb3-338" aria-hidden="true" tabindex="-1"></a><span class="fu">### A.7.1 球面調和関数の定義</span></span>
+<span id="cb3-339"><a href="#cb3-339" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-340"><a href="#cb3-340" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-341"><a href="#cb3-341" aria-hidden="true" tabindex="-1"></a>Y_{lm}(\theta, \phi) = \sqrt{\frac{(2l+1)}{4\pi}\frac{(l-m)!}{(l+m)!}} P_l^m(\cos\theta) e^{im\phi}</span>
+<span id="cb3-342"><a href="#cb3-342" aria-hidden="true" tabindex="-1"></a>$$ {#eq-spherical-harmonics}</span>
+<span id="cb3-343"><a href="#cb3-343" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-344"><a href="#cb3-344" aria-hidden="true" tabindex="-1"></a>$P_l^m$ は Legendre 陪関数、$l = 0, 1, 2, \ldots$ は角運動量量子数、$m = -l, \ldots, l$ は磁気量子数。</span>
+<span id="cb3-345"><a href="#cb3-345" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-346"><a href="#cb3-346" aria-hidden="true" tabindex="-1"></a><span class="fu">### A.7.2 直交性と完備性</span></span>
+<span id="cb3-347"><a href="#cb3-347" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-348"><a href="#cb3-348" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-349"><a href="#cb3-349" aria-hidden="true" tabindex="-1"></a>\int Y_{l'm'}^* Y_{lm}\, d\Omega = \delta_{l'l} \delta_{m'm}, \quad \sum_{l, m} Y_{lm}(\theta, \phi) Y_{lm}^*(\theta', \phi') = \delta(\Omega - \Omega')</span>
+<span id="cb3-350"><a href="#cb3-350" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-351"><a href="#cb3-351" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-352"><a href="#cb3-352" aria-hidden="true" tabindex="-1"></a><span class="fu">### A.7.3 水素原子と回転分子への応用</span></span>
+<span id="cb3-353"><a href="#cb3-353" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-354"><a href="#cb3-354" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**水素原子**（第21章 §21.3）：波動関数 $\psi_{nlm} = R_{nl}(r) Y_{lm}(\theta, \phi)$</span>
+<span id="cb3-355"><a href="#cb3-355" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**二原子分子の回転**：エネルギー $E_J = \hbar^2 J(J+1)/(2I)$、$J$ は回転量子数</span>
+<span id="cb3-356"><a href="#cb3-356" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-357"><a href="#cb3-357" aria-hidden="true" tabindex="-1"></a>選択則 $\Delta l = \pm 1$（第21章 §21.5）は、球面調和関数の積分 $\int Y_{l'm'}^* \mathbf{r} Y_{lm}\, d\Omega$ がいつ非零かで決まる。</span>
+<span id="cb3-358"><a href="#cb3-358" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-359"><a href="#cb3-359" aria-hidden="true" tabindex="-1"></a>::: {.appendix-tip}</span>
+<span id="cb3-360"><a href="#cb3-360" aria-hidden="true" tabindex="-1"></a>**本文での使用**：第21章 §21.3-§21.5（水素原子の波動関数と選択則）、第22章 §22.6（Zeeman 分裂）</span>
+<span id="cb3-361"><a href="#cb3-361" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-362"><a href="#cb3-362" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-363"><a href="#cb3-363" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb3-364"><a href="#cb3-364" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-365"><a href="#cb3-365" aria-hidden="true" tabindex="-1"></a><span class="fu">## A.8 不確定性原理と寿命幅 {#sec-math-uncertainty-lifetime}</span></span>
+<span id="cb3-366"><a href="#cb3-366" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-367"><a href="#cb3-367" aria-hidden="true" tabindex="-1"></a><span class="fu">### A.8.1 エネルギー-時間の不確定性</span></span>
+<span id="cb3-368"><a href="#cb3-368" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-369"><a href="#cb3-369" aria-hidden="true" tabindex="-1"></a>正準対 $<span class="co">[</span><span class="ot">\hat{x}, \hat{p}</span><span class="co">]</span> = i\hbar$ から $\Delta x\Delta p \ge \hbar/2$ が出るのに対し、エネルギー-時間の関係はやや異なる文脈で：</span>
+<span id="cb3-370"><a href="#cb3-370" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-371"><a href="#cb3-371" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-372"><a href="#cb3-372" aria-hidden="true" tabindex="-1"></a>\Delta E \cdot \tau \gtrsim \hbar</span>
+<span id="cb3-373"><a href="#cb3-373" aria-hidden="true" tabindex="-1"></a>$$ {#eq-energy-time-uncertainty}</span>
+<span id="cb3-374"><a href="#cb3-374" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-375"><a href="#cb3-375" aria-hidden="true" tabindex="-1"></a>ここで $\tau$ は **励起状態の寿命**、$\Delta E$ はエネルギー幅。これが本文の自然幅（第22章 §22.1）：</span>
+<span id="cb3-376"><a href="#cb3-376" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-377"><a href="#cb3-377" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-378"><a href="#cb3-378" aria-hidden="true" tabindex="-1"></a>\Gamma_\text{nat} = \frac{1}{2\pi\tau} = \frac{A_{ul}}{2\pi}</span>
+<span id="cb3-379"><a href="#cb3-379" aria-hidden="true" tabindex="-1"></a>$$ {#eq-natural-width-app}</span>
+<span id="cb3-380"><a href="#cb3-380" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-381"><a href="#cb3-381" aria-hidden="true" tabindex="-1"></a><span class="fu">### A.8.2 Lorentzian の Fourier 起源</span></span>
+<span id="cb3-382"><a href="#cb3-382" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-383"><a href="#cb3-383" aria-hidden="true" tabindex="-1"></a>寿命 $\tau$ で指数減衰する古典場 $E(t) \propto e^{-t/(2\tau)} \cos(\omega_0 t)$ の Fourier 変換は **Lorentzian**：</span>
+<span id="cb3-384"><a href="#cb3-384" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-385"><a href="#cb3-385" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-386"><a href="#cb3-386" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>\tilde{E}(\omega)<span class="pp">|</span>^2 \propto \frac{1}{(\omega - \omega_0)^2 + (1/2\tau)^2}</span>
+<span id="cb3-387"><a href="#cb3-387" aria-hidden="true" tabindex="-1"></a>$$ {#eq-lorentzian-fourier}</span>
+<span id="cb3-388"><a href="#cb3-388" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-389"><a href="#cb3-389" aria-hidden="true" tabindex="-1"></a>これが第22章 §22.1 の自然幅 Lorentzian の **古典的起源**。QED では真空揺らぎが減衰を駆動する（第25章 §25.4）。</span>
+<span id="cb3-390"><a href="#cb3-390" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-391"><a href="#cb3-391" aria-hidden="true" tabindex="-1"></a>::: {.appendix-tip}</span>
+<span id="cb3-392"><a href="#cb3-392" aria-hidden="true" tabindex="-1"></a>**本文での使用**：第22章 §22.1（自然幅）、第25章 §25.4（真空揺らぎと自然幅）</span>
+<span id="cb3-393"><a href="#cb3-393" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-394"><a href="#cb3-394" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-395"><a href="#cb3-395" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb3-396"><a href="#cb3-396" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-397"><a href="#cb3-397" aria-hidden="true" tabindex="-1"></a><span class="fu">## A.9 数値計算の常識 {#sec-math-numerical}</span></span>
+<span id="cb3-398"><a href="#cb3-398" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-399"><a href="#cb3-399" aria-hidden="true" tabindex="-1"></a>本書の各章で出てくる計算を実際に行うときの実用メモ。</span>
+<span id="cb3-400"><a href="#cb3-400" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-401"><a href="#cb3-401" aria-hidden="true" tabindex="-1"></a><span class="fu">### A.9.1 プランク関数の数値評価</span></span>
+<span id="cb3-402"><a href="#cb3-402" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-403"><a href="#cb3-403" aria-hidden="true" tabindex="-1"></a>指数因子 $h\nu/k_BT$ が大きいとき（Wien 側、$h\nu/k_BT \gtrsim 50$）はオーバーフローしないよう注意：</span>
+<span id="cb3-404"><a href="#cb3-404" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-405"><a href="#cb3-405" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb3-406"><a href="#cb3-406" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-407"><a href="#cb3-407" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> planck_safe(nu, T, h<span class="op">=</span><span class="fl">6.626e-34</span>, k<span class="op">=</span><span class="fl">1.381e-23</span>, c<span class="op">=</span><span class="fl">2.998e8</span>):</span>
+<span id="cb3-408"><a href="#cb3-408" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> h<span class="op">*</span>nu<span class="op">/</span>(k<span class="op">*</span>T)</span>
+<span id="cb3-409"><a href="#cb3-409" aria-hidden="true" tabindex="-1"></a>    <span class="co"># オーバーフロー防止</span></span>
+<span id="cb3-410"><a href="#cb3-410" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> np.where(x <span class="op">&gt;</span> <span class="dv">700</span>, <span class="dv">700</span>, x)</span>
+<span id="cb3-411"><a href="#cb3-411" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">2</span><span class="op">*</span>h<span class="op">*</span>nu<span class="op">**</span><span class="dv">3</span><span class="op">/</span>c<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> (np.exp(x) <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb3-412"><a href="#cb3-412" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-413"><a href="#cb3-413" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-414"><a href="#cb3-414" aria-hidden="true" tabindex="-1"></a><span class="fu">### A.9.2 Voigt プロファイルの数値評価</span></span>
+<span id="cb3-415"><a href="#cb3-415" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-416"><a href="#cb3-416" aria-hidden="true" tabindex="-1"></a><span class="in">`scipy.special.wofz`</span> を使う：</span>
+<span id="cb3-417"><a href="#cb3-417" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-418"><a href="#cb3-418" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb3-419"><a href="#cb3-419" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.special <span class="im">import</span> wofz</span>
+<span id="cb3-420"><a href="#cb3-420" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> voigt_profile(nu, nu0, sigma, gamma):</span>
+<span id="cb3-421"><a href="#cb3-421" aria-hidden="true" tabindex="-1"></a>    z <span class="op">=</span> ((nu <span class="op">-</span> nu0) <span class="op">+</span> <span class="ot">1j</span><span class="op">*</span>gamma) <span class="op">/</span> (sigma<span class="op">*</span>np.sqrt(<span class="dv">2</span>))</span>
+<span id="cb3-422"><a href="#cb3-422" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.real(wofz(z)) <span class="op">/</span> (sigma<span class="op">*</span>np.sqrt(<span class="dv">2</span><span class="op">*</span>np.pi))</span>
+<span id="cb3-423"><a href="#cb3-423" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-424"><a href="#cb3-424" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-425"><a href="#cb3-425" aria-hidden="true" tabindex="-1"></a><span class="fu">### A.9.3 単位系の混在に注意</span></span>
+<span id="cb3-426"><a href="#cb3-426" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-427"><a href="#cb3-427" aria-hidden="true" tabindex="-1"></a>CGS と SI の混在は計算ミスの典型源。本書の数値例は **SI を基本** にする（付録 B）。文献によっては CGS（電磁気学では特に）が使われるので、論文との比較時には常に単位系を確認すること。</span>
+<span id="cb3-428"><a href="#cb3-428" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-429"><a href="#cb3-429" aria-hidden="true" tabindex="-1"></a>::: {.appendix-tip}</span>
+<span id="cb3-430"><a href="#cb3-430" aria-hidden="true" tabindex="-1"></a>**実装例**：本書付属のコード <span class="in">`code/planck_curve.py`</span>、<span class="in">`code/voigt_profile.py`</span> 等を参照</span>
+<span id="cb3-431"><a href="#cb3-431" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-432"><a href="#cb3-432" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-433"><a href="#cb3-433" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb3-434"><a href="#cb3-434" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-435"><a href="#cb3-435" aria-hidden="true" tabindex="-1"></a><span class="fu">## A.10 さらに進むための参考文献 {#sec-math-references .unnumbered}</span></span>
+<span id="cb3-436"><a href="#cb3-436" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-437"><a href="#cb3-437" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Arfken, Weber &amp; Harris, *Mathematical Methods for Physicists* (Academic Press, 7th ed., 2012) — 物理学者のための数学の標準書</span>
+<span id="cb3-438"><a href="#cb3-438" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>小平邦彦『複素解析』『微分積分学』（岩波書店）— 厳密な数学基礎</span>
+<span id="cb3-439"><a href="#cb3-439" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>河村哲也『数値計算のためのFortran77/90/95』— 数値計算の実装面</span>
+<span id="cb3-440"><a href="#cb3-440" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Press et al., *Numerical Recipes* (Cambridge, 3rd ed., 2007) — 物理計算アルゴリズム集</span>
+<span id="cb3-441"><a href="#cb3-441" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Olver et al., *NIST Handbook of Mathematical Functions* (Cambridge, 2010) — Voigt 関数等の特殊関数の定本（<span class="ot">&lt;https://dlmf.nist.gov&gt;</span>）</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/edit/main/appendix/A-math-notes.qmd" class="toc-action"><i class="bi bi-github"></i>編集</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/blob/main/appendix/A-math-notes.qmd" class="toc-action"><i class="bi empty"></i>ソースコード</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/issues/new" class="toc-action"><i class="bi empty"></i>問題を報告</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
