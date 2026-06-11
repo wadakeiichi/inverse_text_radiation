@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "宇宙の熱的放射",
     "section": "",
-    "text": "はじめに ― この本の三つの原則\n本書は、宇宙物理の中心的観測対象である 連続スペクトル（黒体放射） と 線スペクトル を入口に、基礎物理を逆向きに学び直すための教科書である。次の三つの原則を貫く。",
+    "text": "版履歴\n詳細な改訂内容は CHANGELOG.md と GitHub Releases。\nオンライン版（GitHub Pages）は main ブランチへの push のたびに自動更新されるため、本ページの内容は 常に最新の作業中ドラフト です。「固定版を引用したい」場合は上記表の DOI（特定の版）を使用してください。",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>宇宙の熱的放射</span>"
     ]
