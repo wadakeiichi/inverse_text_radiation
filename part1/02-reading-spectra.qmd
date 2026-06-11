@@ -70,6 +70,7 @@ import sys; sys.path.insert(0, "../code")
 from planck_curve import plot_planck_with_limits
 
 fig, ax = plot_planck_with_limits(temperatures=(3000, 5800, 10000))
+fig
 ```
 
 ## 2.2 振動数表示と波長表示 ― 同じ物理、異なる関数形 {#sec-reading-spectra-nu-lambda}

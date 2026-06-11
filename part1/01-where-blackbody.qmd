@@ -293,6 +293,7 @@ import sys; sys.path.insert(0, "../code")
 from planck_curve import plot_planck_with_limits
 
 fig, ax = plot_planck_with_limits(temperatures=(2.7, 310, 3000, 5800))
+fig
 ```
 
 ここで重要なのは、4つの曲線が異なる温度（4桁の範囲）にもかかわらず、すべて同じ関数族 $B_\nu(T)$ に属する、という一点である。本書はこの関数族を「中心地図」として、その背後の物理を逆引きで解き明かしていく。
