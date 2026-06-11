@@ -2,6 +2,10 @@
 
 *Thermal Radiation in the Universe: An Inverse Approach to the Physics*
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20635563.svg)](https://doi.org/10.5281/zenodo.20635563)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![Quarto Publish](https://github.com/wadakeiichi/inverse_text_radiation/actions/workflows/publish.yml/badge.svg)](https://github.com/wadakeiichi/inverse_text_radiation/actions/workflows/publish.yml)
+
 学部後半〜大学院修士課程向けの宇宙物理教科書プロジェクト。**連続スペクトル（黒体放射）** と **線スペクトル** という熱的放射を入口に、基礎物理（統計力学・量子論・電磁気・原子物理・QED）を逆向きに学び直す。非熱的放射（シンクロトロン等）は限定的に触れる（第18章等）。
 
 ## 三つの原則
@@ -39,8 +43,9 @@ VS Code を使う場合は、Quarto 拡張をインストールして `.qmd` フ
 - [Quarto](https://quarto.org/docs/get-started/) ≥ 1.4
 - Python 3.10+ と次のパッケージ：
   ```bash
-  pip install jupyter matplotlib numpy scipy astropy sympy
+  pip install -r requirements.txt
   ```
+  内容は `requirements.txt` を参照（jupyter, numpy, scipy, matplotlib, astropy, sympy）
 - （PDF を出すなら）TeX Live + 日本語フォント（Noto CJK JP 推奨）
 
 ## ディレクトリ構造
@@ -90,9 +95,10 @@ spectra-of-the-universe/
 
 ## 公開
 
-GitHub Pages で公開予定。`main` ブランチへの push で自動的に再ビルド・デプロイされる（`.github/workflows/publish.yml`）。
-
-リリース時は Zenodo と連携して DOI を付与する予定。
+- **HTML 版（GitHub Pages）**：<https://wadakeiichi.github.io/inverse_text_radiation/>
+  `main` ブランチへの push で自動的に再ビルド・デプロイされる（`.github/workflows/publish.yml`）
+- **PDF 版 v0.1（Zenodo preprint）**：<https://doi.org/10.5281/zenodo.20635563>
+  DOI: `10.5281/zenodo.20635563`（引用可能）
 
 ## 📣 レビュアー募集中（v0.1, 2026-06）
 
@@ -110,7 +116,7 @@ GitHub Pages で公開予定。`main` ブランチへの push で自動的に再
 ### レビュー方法
 
 1. **ブラウザで読む**：[GitHub Pages 公開 URL](https://wadakeiichi.github.io/inverse_text_radiation/)（公開後）
-2. **PDF をダウンロード**：[Zenodo に登録された preprint](#)（登録後に URL 追加）
+2. **PDF をダウンロード**：[Zenodo v0.1 preprint](https://doi.org/10.5281/zenodo.20635563) (DOI: 10.5281/zenodo.20635563)
 3. **コメントを返す**：以下のいずれか
    - GitHub の [Issues](https://github.com/wadakeiichi/inverse_text_radiation/issues) に章・節を明記して投稿
    - PDF に Acrobat 注釈を入れてメールで返信
@@ -130,7 +136,7 @@ GitHub Pages で公開予定。`main` ブランチへの push で自動的に再
 
 つまり、適切なクレジットを示せば、共有・改変・商用利用も自由に行えます。引用例：
 
-> 和田 桂一 (Keiichi Wada), 『宇宙の熱的放射 ― 連続放射と線スペクトルの背景物理』 (*Thermal Radiation in the Universe: An Inverse Approach to the Physics*), 2026. Licensed under CC BY 4.0. Source: <https://github.com/wadakeiichi/inverse_text_radiation>
+> 和田 桂一 (Keiichi Wada), 『宇宙の熱的放射 ― 連続放射と線スペクトルの背景物理』 (*Thermal Radiation in the Universe: An Inverse Approach to the Physics*), v0.1, 2026. Zenodo. <https://doi.org/10.5281/zenodo.20635563>. Licensed under CC BY 4.0.
 
 詳しくは [`LICENSE`](LICENSE) と [`CITATION.cff`](CITATION.cff) を参照してください。
 

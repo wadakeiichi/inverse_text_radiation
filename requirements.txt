@@ -1,0 +1,17 @@
+# Python dependencies for building the textbook
+# (Quarto code chunks executed via Jupyter)
+#
+# Install: pip install -r requirements.txt
+# CI: GitHub Actions workflow uses this same file with pip cache.
+
+# Notebook execution kernel for Quarto
+jupyter>=1.0
+
+# Numerical / scientific stack used in code/*.py
+numpy>=1.26
+scipy>=1.11
+matplotlib>=3.8
+astropy>=6.0
+
+# Symbolic computation (used in a few derivation examples)
+sympy>=1.12

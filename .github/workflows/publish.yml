@@ -31,11 +31,12 @@ jobs:
         with:
           python-version: '3.11'
           cache: 'pip'
+          cache-dependency-path: 'requirements.txt'
 
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install jupyter matplotlib numpy scipy astropy sympy
+          pip install -r requirements.txt
 
       - name: Set up TeX Live (for PDF build)
         uses: quarto-dev/quarto-actions/setup@v2
