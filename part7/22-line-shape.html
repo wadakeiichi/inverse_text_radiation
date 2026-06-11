@@ -727,6 +727,16 @@ window.Quarto = {
 <section id="sec-line-shape-voigt" class="level2">
 <h2 class="anchored" data-anchor-id="sec-line-shape-voigt">22.4 Voigt プロファイル ― 二つの拡がりの合成</h2>
 <p>[本文目安：B3-B4]</p>
+<div id="fig-voigt-profile" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-voigt-profile-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/voigt-profile.svg" class="img-fluid figure-img" style="width:92.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-voigt-profile-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+図&nbsp;24.1: Voigt プロファイル（黒）と、その元となる Gaussian（赤・点線）／Lorentzian（青・破線）の比較。<strong>線形スケール</strong>ではコアの形が、<strong>対数スケール</strong>では翼の形が比較しやすい。<strong>コアは Gaussian で急速に落ち、翼に行くと Lorentzian がべき則 <span class="math inline">1/\Delta\nu^2</span> で長く伸びる</strong> ― これが Voigt 線の二面性で、観測者がコア（温度）と翼（密度・圧力）を別々のプローブとして使える理由。
+</figcaption>
+</figure>
+</div>
 <p>自然幅 + 衝突幅（合算した Lorentzian、幅 <span class="math inline">\gamma</span>）と Doppler 拡がり（Gaussian、幅 <span class="math inline">\Delta\nu_D</span>）の <strong>両方</strong> が効くのが現実。線形は両者の <strong>畳み込み</strong>：</p>
 <p><span id="eq-voigt-convolution"><span class="math display">
 \phi_V(\nu - \nu_0) = \phi_L \otimes \phi_D = \int \phi_L(\nu - \nu' - \nu_0) \phi_D(\nu' - \nu_0) d\nu'
@@ -1514,132 +1524,134 @@ a = \frac{\gamma}{2\Delta\nu_D}, \quad x = \frac{\nu - \nu_0}{\Delta\nu_D}
 <span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3-B4</span><span class="co">]</span></span>
 <span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>自然幅 + 衝突幅（合算した Lorentzian、幅 $\gamma$）と Doppler 拡がり（Gaussian、幅 $\Delta\nu_D$）の **両方** が効くのが現実。線形は両者の **畳み込み**：</span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a><span class="al">![Voigt プロファイル（黒）と、その元となる Gaussian（赤・点線）／Lorentzian（青・破線）の比較。**線形スケール**ではコアの形が、**対数スケール**では翼の形が比較しやすい。**コアは Gaussian で急速に落ち、翼に行くと Lorentzian がべき則 $1/\Delta\nu^2$ で長く伸びる** ― これが Voigt 線の二面性で、観測者がコア（温度）と翼（密度・圧力）を別々のプローブとして使える理由。](../images/voigt-profile.svg)</span>{#fig-voigt-profile width=92%}</span>
 <span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>\phi_V(\nu - \nu_0) = \phi_L \otimes \phi_D = \int \phi_L(\nu - \nu' - \nu_0) \phi_D(\nu' - \nu_0) d\nu'</span>
-<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>$$ {#eq-voigt-convolution}</span>
-<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>これが **Voigt プロファイル**。閉形式では書けないが、無次元パラメータ</span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>自然幅 + 衝突幅（合算した Lorentzian、幅 $\gamma$）と Doppler 拡がり（Gaussian、幅 $\Delta\nu_D$）の **両方** が効くのが現実。線形は両者の **畳み込み**：</span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a>\phi_V(\nu - \nu_0) = \phi_L \otimes \phi_D = \int \phi_L(\nu - \nu' - \nu_0) \phi_D(\nu' - \nu_0) d\nu'</span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>$$ {#eq-voigt-convolution}</span>
 <span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>a = \frac{\gamma}{2\Delta\nu_D}, \quad x = \frac{\nu - \nu_0}{\Delta\nu_D}</span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>これが **Voigt プロファイル**。閉形式では書けないが、無次元パラメータ</span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>を使って Voigt 関数 $H(a, x)$ で表される。</span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>a = \frac{\gamma}{2\Delta\nu_D}, \quad x = \frac{\nu - \nu_0}{\Delta\nu_D}</span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>**振る舞いの二相**：</span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>を使って Voigt 関数 $H(a, x)$ で表される。</span>
 <span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 領域 <span class="pp">|</span> 支配 <span class="pp">|</span> 振る舞い <span class="pp">|</span></span>
-<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
-<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $<span class="pp">|</span>x<span class="pp">|</span> &lt; $ 数 <span class="pp">|</span> Doppler コア <span class="pp">|</span> Gaussian（急減衰） <span class="pp">|</span></span>
-<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $<span class="pp">|</span>x<span class="pp">|</span> \gg 1$ <span class="pp">|</span> Lorentz 翼 <span class="pp">|</span> $\propto 1/x^2$（緩減衰） <span class="pp">|</span></span>
-<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
-<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>**問い**：Voigt プロファイルで、**コア（Doppler）** が支配する範囲を観測者はどう判別できるか？</span>
-<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a>**短答**：典型的に $|x| &lt; 3$（$|\Delta\nu| &lt; 3 \Delta\nu_D$）でコアが支配。$|x| &gt; 5$ になると、Doppler の Gaussian は $e^{-25} \simeq 10^{-11}$ で消え、Lorentz 翼が浮かび上がる。</span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>**振る舞いの二相**：</span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 領域 <span class="pp">|</span> 支配 <span class="pp">|</span> 振る舞い <span class="pp">|</span></span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $<span class="pp">|</span>x<span class="pp">|</span> &lt; $ 数 <span class="pp">|</span> Doppler コア <span class="pp">|</span> Gaussian（急減衰） <span class="pp">|</span></span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $<span class="pp">|</span>x<span class="pp">|</span> \gg 1$ <span class="pp">|</span> Lorentz 翼 <span class="pp">|</span> $\propto 1/x^2$（緩減衰） <span class="pp">|</span></span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a>**問い**：Voigt プロファイルで、**コア（Doppler）** が支配する範囲を観測者はどう判別できるか？</span>
 <span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>**もう一歩**：観測者は line core と line wing を別々の物理プローブとして使う：</span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>**短答**：典型的に $|x| &lt; 3$（$|\Delta\nu| &lt; 3 \Delta\nu_D$）でコアが支配。$|x| &gt; 5$ になると、Doppler の Gaussian は $e^{-25} \simeq 10^{-11}$ で消え、Lorentz 翼が浮かび上がる。</span>
 <span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Core：温度（Doppler 幅）、視線速度（中心シフト）</span>
-<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Wing：自然幅 + 衝突幅 → 圧力、密度</span>
-<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>両者を **同時にフィット** することで、温度と密度を独立に決められる</span>
-<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a><span class="fu">## 22.5 マクロな速度場 ― 自転、対流、乱流 {#sec-line-shape-macro}</span></span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>**もう一歩**：観測者は line core と line wing を別々の物理プローブとして使う：</span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Core：温度（Doppler 幅）、視線速度（中心シフト）</span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Wing：自然幅 + 衝突幅 → 圧力、密度</span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>両者を **同時にフィット** することで、温度と密度を独立に決められる</span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B2-B3</span><span class="co">]</span></span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a><span class="fu">## 22.5 マクロな速度場 ― 自転、対流、乱流 {#sec-line-shape-macro}</span></span>
 <span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>ミクロな熱運動（Doppler 拡がり）のほかに、**マクロな速度場** も線幅に寄与する：</span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B2-B3</span><span class="co">]</span></span>
 <span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**恒星自転**：表面の一方が近づき他方が遠ざかる → 線が **平頂化**</span>
-<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**対流**（granulation）：恒星表面の上下流 → 線の **非対称化**（線芯青方シフト）</span>
-<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**乱流**（micro/macroturbulence）：等方ランダム速度 → 線幅の **追加 Gaussian 成分**</span>
-<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**吹き出し風**（stellar wind）：青翼が吸収（P Cygni 形）</span>
-<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a>これらマクロ速度場は **熱的線幅と等価な Gaussian** として加算的に効く：</span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>ミクロな熱運動（Doppler 拡がり）のほかに、**マクロな速度場** も線幅に寄与する：</span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**恒星自転**：表面の一方が近づき他方が遠ざかる → 線が **平頂化**</span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**対流**（granulation）：恒星表面の上下流 → 線の **非対称化**（線芯青方シフト）</span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**乱流**（micro/macroturbulence）：等方ランダム速度 → 線幅の **追加 Gaussian 成分**</span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**吹き出し風**（stellar wind）：青翼が吸収（P Cygni 形）</span>
 <span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>\Delta\nu_\text{D,total}^2 = \Delta\nu_\text{D,thermal}^2 + \Delta\nu_\text{D,turb}^2 + \ldots</span>
-<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>$$ {#eq-velocity-quadrature-sum}</span>
-<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>熱的成分と乱流成分の分離は、**元素質量に対する依存性** から行える：熱は $1/\sqrt{m}$ 依存、乱流は元素質量によらない。</span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a>これらマクロ速度場は **熱的線幅と等価な Gaussian** として加算的に効く：</span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>\Delta\nu_\text{D,total}^2 = \Delta\nu_\text{D,thermal}^2 + \Delta\nu_\text{D,turb}^2 + \ldots</span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>$$ {#eq-velocity-quadrature-sum}</span>
 <span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning appearance="simple"}</span>
-<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>**注意**：上の「Gaussian の二乗和」が正当化できるのは、速度場のスケールが光子の **平均自由行程より小さい** 場合 ― すなわち **マイクロ乱流**（**microturbulence**）。この場合は線吸収係数 $\alpha_\nu$ 自体に乱流成分が織り込まれ、$\Delta\nu_D$ の単純な拡張で書ける。</span>
-<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>一方、速度場のスケールが平均自由行程より大きい **マクロ乱流**（**macroturbulence**）では、線形成は局所的に進み、最後に **射出スペクトルへの畳み込み** として速度場が効く。両者の数学的扱いは異なる（前者は線吸収係数の修正、後者は出てきたスペクトルの畳み込み）。Gray (2005) 第 17-18 章の扱いを参照</span>
-<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>**対応（観測）**：太陽の吸収線解析では、$\xi_\text{turb} \simeq 1$〜$2$ km/s のマイクロ乱流と、$\zeta_\text{macro} \simeq 3$〜$5$ km/s のマクロ乱流が経験的に必要。これは対流による速度場の積分量で、3D 数値流体シミュレーションと整合が取れている</span>
-<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a><span class="fu">## 22.6 磁場の効果 ― Zeeman 効果 {#sec-line-shape-zeeman}</span></span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a>熱的成分と乱流成分の分離は、**元素質量に対する依存性** から行える：熱は $1/\sqrt{m}$ 依存、乱流は元素質量によらない。</span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning appearance="simple"}</span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>**注意**：上の「Gaussian の二乗和」が正当化できるのは、速度場のスケールが光子の **平均自由行程より小さい** 場合 ― すなわち **マイクロ乱流**（**microturbulence**）。この場合は線吸収係数 $\alpha_\nu$ 自体に乱流成分が織り込まれ、$\Delta\nu_D$ の単純な拡張で書ける。</span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>一方、速度場のスケールが平均自由行程より大きい **マクロ乱流**（**macroturbulence**）では、線形成は局所的に進み、最後に **射出スペクトルへの畳み込み** として速度場が効く。両者の数学的扱いは異なる（前者は線吸収係数の修正、後者は出てきたスペクトルの畳み込み）。Gray (2005) 第 17-18 章の扱いを参照</span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a>**対応（観測）**：太陽の吸収線解析では、$\xi_\text{turb} \simeq 1$〜$2$ km/s のマイクロ乱流と、$\zeta_\text{macro} \simeq 3$〜$5$ km/s のマクロ乱流が経験的に必要。これは対流による速度場の積分量で、3D 数値流体シミュレーションと整合が取れている</span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a><span class="fu">## 22.6 磁場の効果 ― Zeeman 効果 {#sec-line-shape-zeeman}</span></span>
 <span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a>磁場 $\mathbf{B}$ の下では、原子のエネルギー準位が磁気量子数 $m_J$ に応じて分裂する：**Zeeman 効果**。</span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
 <span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>\Delta E_\text{Zeeman} = g_J \mu_B B m_J</span>
-<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>$$ {#eq-zeeman-energy}</span>
-<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a>ここで $g_J$ は Landé $g$ 因子、$\mu_B = e\hbar/2m_e$ は Bohr 磁子。</span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>磁場 $\mathbf{B}$ の下では、原子のエネルギー準位が磁気量子数 $m_J$ に応じて分裂する：**Zeeman 効果**。</span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>\Delta E_\text{Zeeman} = g_J \mu_B B m_J</span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a>$$ {#eq-zeeman-energy}</span>
 <span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a>観測される線形への影響：</span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a>ここで $g_J$ は Landé $g$ 因子、$\mu_B = e\hbar/2m_e$ は Bohr 磁子。</span>
 <span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>弱磁場：単一線が **三本** に分裂（ノーマル Zeeman）または複数本に分裂（アノーマラス Zeeman）</span>
-<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>線分裂は **円偏光** を伴う（縦磁場成分）または **直線偏光**（横磁場成分）</span>
-<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>分解できない場合でも、線が **広がって見える**（Zeeman broadening）</span>
-<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>**対応（観測）**：太陽黒点の磁場は Fe I $\lambda$6173 線の Zeeman 分裂から測られる。星形成領域での磁場は OH メーザーや CN 線の Zeeman 効果で測られる ― **線スペクトルが磁場の数少ない直接観測手段** であることは、第VII部の応用の重要側面</span>
-<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a><span class="fu">## 22.7 使えるようになった道具 {#sec-line-shape-tools .unnumbered}</span></span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>観測される線形への影響：</span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>弱磁場：単一線が **三本** に分裂（ノーマル Zeeman）または複数本に分裂（アノーマラス Zeeman）</span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>線分裂は **円偏光** を伴う（縦磁場成分）または **直線偏光**（横磁場成分）</span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>分解できない場合でも、線が **広がって見える**（Zeeman broadening）</span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>**対応（観測）**：太陽黒点の磁場は Fe I $\lambda$6173 線の Zeeman 分裂から測られる。星形成領域での磁場は OH メーザーや CN 線の Zeeman 効果で測られる ― **線スペクトルが磁場の数少ない直接観測手段** であることは、第VII部の応用の重要側面</span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>自然幅 ― Lorentzian、$\gamma_\text{nat} = A_{ul}/(2\pi)$</span>
-<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Doppler 幅 ― Gaussian、$\Delta\nu_D = \nu_0 \sqrt{2k_BT/m}/c$</span>
-<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>衝突幅 ― Lorentzian、密度・圧力に比例</span>
-<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Voigt プロファイル ― コア（温度）と翼（密度）を独立にプローブ</span>
-<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>マクロ速度場 ― 自転・対流・乱流、元素質量依存性で分離</span>
-<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Zeeman 効果 ― 線スペクトルから磁場を直接測る</span>
-<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a><span class="fu">## 22.7 使えるようになった道具 {#sec-line-shape-tools .unnumbered}</span></span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>自然幅 ― Lorentzian、$\gamma_\text{nat} = A_{ul}/(2\pi)$</span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Doppler 幅 ― Gaussian、$\Delta\nu_D = \nu_0 \sqrt{2k_BT/m}/c$</span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>衝突幅 ― Lorentzian、密度・圧力に比例</span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Voigt プロファイル ― コア（温度）と翼（密度）を独立にプローブ</span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>マクロ速度場 ― 自転・対流・乱流、元素質量依存性で分離</span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Zeeman 効果 ― 線スペクトルから磁場を直接測る</span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-line-shape-summary .unnumbered}</span></span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
-<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る**</span>
-<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>本章で、中心地図 $\alpha_\nu = (\pi e^2/m_e c) f_{lu} n_l \phi(\nu-\nu_0)$ の最後の因子 $\phi(\nu-\nu_0)$ が物理的に解読された：</span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-line-shape-summary .unnumbered}</span></span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る**</span>
 <span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>自然幅は不確定性原理から → Lorentzian</span>
-<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Doppler 幅は熱運動の Maxwell-Boltzmann 分布から → Gaussian</span>
-<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>衝突幅は密度・圧力から → 追加 Lorentzian</span>
-<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Voigt プロファイルが両者の畳み込み</span>
-<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a>これで中心地図のすべての因子（$\pi e^2/m_e c$, $f_{lu}$, $n_l$, $\phi$）が逆引きされた（前因子 $\pi e^2/m_e c$ は §21.4b の古典 Lorentz 振動子からの導出で完結）。**線スペクトルから物理を読む** ための道具立てが揃った。</span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a>本章で、中心地図 $\alpha_\nu = (\pi e^2/m_e c) f_{lu} n_l \phi(\nu-\nu_0)$ の最後の因子 $\phi(\nu-\nu_0)$ が物理的に解読された：</span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>自然幅は不確定性原理から → Lorentzian</span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Doppler 幅は熱運動の Maxwell-Boltzmann 分布から → Gaussian</span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>衝突幅は密度・圧力から → 追加 Lorentzian</span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Voigt プロファイルが両者の畳み込み</span>
 <span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a>次章では、これらの道具を **実際の観測解析** にどう動員するか ― 視線速度、化学組成、温度・密度診断、宇宙論的応用 ― を見る。</span>
-<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-line-shape-exercises .unnumbered}</span></span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a>これで中心地図のすべての因子（$\pi e^2/m_e c$, $f_{lu}$, $n_l$, $\phi$）が逆引きされた（前因子 $\pi e^2/m_e c$ は §21.4b の古典 Lorentz 振動子からの導出で完結）。**線スペクトルから物理を読む** ための道具立てが揃った。</span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a>次章では、これらの道具を **実際の観測解析** にどう動員するか ― 視線速度、化学組成、温度・密度診断、宇宙論的応用 ― を見る。</span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple"}</span>
-<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a>演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。</span>
-<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-line-shape-further .unnumbered}</span></span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-line-shape-exercises .unnumbered}</span></span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple"}</span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a>演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。</span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sobelman et al., *Excitation of Atoms and Broadening of Spectral Lines* (Springer, 2nd ed., 1995) — 線形の系統的扱い</span>
-<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Gray, *The Observation and Analysis of Stellar Photospheres* (Cambridge, 3rd ed., 2005) — 恒星線形と速度場</span>
-<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>del Toro Iniesta, *Introduction to Spectropolarimetry* (Cambridge, 2003) — Zeeman 効果と偏光分光</span>
-<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mihalas, *Stellar Atmospheres* (Freeman, 2nd ed., 1978) — Voigt プロファイルの解析応用</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-line-shape-further .unnumbered}</span></span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sobelman et al., *Excitation of Atoms and Broadening of Spectral Lines* (Springer, 2nd ed., 1995) — 線形の系統的扱い</span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Gray, *The Observation and Analysis of Stellar Photospheres* (Cambridge, 3rd ed., 2005) — 恒星線形と速度場</span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>del Toro Iniesta, *Introduction to Spectropolarimetry* (Cambridge, 2003) — Zeeman 効果と偏光分光</span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mihalas, *Stellar Atmospheres* (Freeman, 2nd ed., 1978) — Voigt プロファイルの解析応用</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

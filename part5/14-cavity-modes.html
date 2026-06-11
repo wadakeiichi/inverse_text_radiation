@@ -594,6 +594,16 @@ k_x = \frac{n_x \pi}{L}, \quad k_y = \frac{n_y \pi}{L}, \quad k_z = \frac{n_z \p
 <h2 class="anchored" data-anchor-id="sec-cavity-modes-k-counting">14.2 許される波数の数え上げ ― <span class="math inline">k</span> 空間の格子</h2>
 <p>[本文目安：B3]</p>
 <p><a href="#eq-allowed-k" class="quarto-xref">式&nbsp;<span>16.2</span></a> で許される <span class="math inline">(n_x, n_y, n_z)</span> の組は、<strong>正の整数の三つ組</strong>である。これらを <strong>波数空間</strong>（<strong>k-space</strong>）にプロットすると、原点付近に格子点が並ぶ。</p>
+<div id="fig-k-space" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-k-space-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/k-space-counting.svg" class="img-fluid figure-img" style="width:88.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-k-space-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+図&nbsp;16.1: <span class="math inline">k</span> 空間における格子点の並び（格子間隔 <span class="math inline">\pi/L</span>）と、波数 <span class="math inline">k</span> 未満の数え上げに使う <strong>第一象限（1/8 球）の球殻</strong>。プランク分布の前因子 <span class="math inline">8\pi\nu^2/c^3</span> を生む計算の幾何を、本書最大の数え上げの核として示す。
+</figcaption>
+</figure>
+</div>
 <p>格子間隔は各軸方向に <span class="math inline">\pi/L</span>。したがって、波数空間における<strong>単位体積あたりの格子点密度</strong>は</p>
 <p><span id="eq-k-space-density"><span class="math display">
 \rho_{k\text{-space}} = \frac{1}{(\pi/L)^3} = \frac{L^3}{\pi^3} = \frac{V}{\pi^3}
@@ -1391,175 +1401,177 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/k_BT}-1}
 <span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>@eq-allowed-k で許される $(n_x, n_y, n_z)$ の組は、**正の整数の三つ組**である。これらを **波数空間**（**k-space**）にプロットすると、原点付近に格子点が並ぶ。</span>
 <span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>格子間隔は各軸方向に $\pi/L$。したがって、波数空間における**単位体積あたりの格子点密度**は</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="al">![$k$ 空間における格子点の並び（格子間隔 $\pi/L$）と、波数 $k$ 未満の数え上げに使う **第一象限（1/8 球）の球殻**。プランク分布の前因子 $8\pi\nu^2/c^3$ を生む計算の幾何を、本書最大の数え上げの核として示す。](../images/k-space-counting.svg)</span>{#fig-k-space width=88%}</span>
 <span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>\rho_{k\text{-space}} = \frac{1}{(\pi/L)^3} = \frac{L^3}{\pi^3} = \frac{V}{\pi^3}</span>
-<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>$$ {#eq-k-space-density}</span>
-<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>ここで $V = L^3$ は空洞の体積。</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>格子間隔は各軸方向に $\pi/L$。したがって、波数空間における**単位体積あたりの格子点密度**は</span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>\rho_{k\text{-space}} = \frac{1}{(\pi/L)^3} = \frac{L^3}{\pi^3} = \frac{V}{\pi^3}</span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>$$ {#eq-k-space-density}</span>
 <span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>**波数の大きさ** $k = |\mathbf{k}| = \sqrt{k_x^2 + k_y^2 + k_z^2}$ が $k$ 未満であるモードの個数は、波数空間で**半径 $k$ の球の体積**を考えればよい。ただし格子点は正の整数のみなので、**第一象限（octant, 1/8 のみ）**を取る：</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>ここで $V = L^3$ は空洞の体積。</span>
 <span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>N_\text{mode}^{(1)}(&lt;k) = \rho_{k\text{-space}} \cdot \frac{1}{8} \cdot \frac{4\pi k^3}{3} = \frac{V k^3}{6\pi^2}</span>
-<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>$$ {#eq-mode-count-k-onepol}</span>
-<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>ここで指数 (1) は「偏光自由度を考慮していない」ことを表す（次節で考慮）。</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>**波数の大きさ** $k = |\mathbf{k}| = \sqrt{k_x^2 + k_y^2 + k_z^2}$ が $k$ 未満であるモードの個数は、波数空間で**半径 $k$ の球の体積**を考えればよい。ただし格子点は正の整数のみなので、**第一象限（octant, 1/8 のみ）**を取る：</span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>N_\text{mode}^{(1)}(&lt;k) = \rho_{k\text{-space}} \cdot \frac{1}{8} \cdot \frac{4\pi k^3}{3} = \frac{V k^3}{6\pi^2}</span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>$$ {#eq-mode-count-k-onepol}</span>
 <span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
-<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>**問い**：なぜ「1/8 倍」が必要なのか？ 全球面 $4\pi k^3/3$ で何が間違うのか？</span>
-<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>**短答**：許される $\mathbf{k}$ は $n_x, n_y, n_z &gt; 0$ のみ。$\mathbf{k}$ と $-\mathbf{k}$ は同じ定在波を生む（$\cos(k_x x) = \cos(-k_x x)$）ので、両方を独立に数えると過大評価になる。波数空間の第一象限だけが独立なモードを表す。</span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>ここで指数 (1) は「偏光自由度を考慮していない」ことを表す（次節で考慮）。</span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>**問い**：なぜ「1/8 倍」が必要なのか？ 全球面 $4\pi k^3/3$ で何が間違うのか？</span>
 <span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>**もう一歩**：もし周期境界条件（壁ではなく端と端をつなぐ）にすると、$\mathbf{k}$ は正負両方とり、格子間隔は $2\pi/L$ に変わる。両方法は最終的に同じモード密度を与える ― 「壁にどう接続するか」は最終結果に効かない。これは第3章の「黒体放射の普遍性」を逆手にとった計算戦略である。</span>
-<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a><span class="fu">## 14.3 偏光自由度 ― 横波の2倍 {#sec-cavity-modes-polarization}</span></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>**短答**：許される $\mathbf{k}$ は $n_x, n_y, n_z &gt; 0$ のみ。$\mathbf{k}$ と $-\mathbf{k}$ は同じ定在波を生む（$\cos(k_x x) = \cos(-k_x x)$）ので、両方を独立に数えると過大評価になる。波数空間の第一象限だけが独立なモードを表す。</span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>**もう一歩**：もし周期境界条件（壁ではなく端と端をつなぐ）にすると、$\mathbf{k}$ は正負両方とり、格子間隔は $2\pi/L$ に変わる。両方法は最終的に同じモード密度を与える ― 「壁にどう接続するか」は最終結果に効かない。これは第3章の「黒体放射の普遍性」を逆手にとった計算戦略である。</span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B2-B3</span><span class="co">]</span></span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a><span class="fu">## 14.3 偏光自由度 ― 横波の2倍 {#sec-cavity-modes-polarization}</span></span>
 <span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>第13章 §13.4 で見たように、与えられた $\mathbf{k}$ ベクトルに対し、独立な偏光方向は**二つ**ある（横波条件）。</span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B2-B3</span><span class="co">]</span></span>
 <span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>@eq-mode-count-k-onepol に偏光自由度を掛けて：</span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>第13章 §13.4 で見たように、与えられた $\mathbf{k}$ ベクトルに対し、独立な偏光方向は**二つ**ある（横波条件）。</span>
 <span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>N_\text{mode}(&lt;k) = 2 \cdot \frac{V k^3}{6\pi^2} = \frac{V k^3}{3\pi^2}</span>
-<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>$$ {#eq-mode-count-k}</span>
-<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>これが波数 $k$ 未満のモードの総数。$V$ に比例するのは、大きな空洞ほどモード数が多いという当然の結果。</span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>@eq-mode-count-k-onepol に偏光自由度を掛けて：</span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>N_\text{mode}(&lt;k) = 2 \cdot \frac{V k^3}{6\pi^2} = \frac{V k^3}{3\pi^2}</span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>$$ {#eq-mode-count-k}</span>
 <span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>**対応（観測）**：この因子 2 が、プランク分布の前因子 $2h\nu^3/c^2$ の先頭の 2 に直接対応する。観測される黒体スペクトル ― CMB であれ恒星であれ ― は、すべて電磁波が横波であるという**幾何的事実**を反映している。</span>
-<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a><span class="fu">## 14.4 振動数空間に変換 ― モード密度の正体 {#sec-cavity-modes-frequency}</span></span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>これが波数 $k$ 未満のモードの総数。$V$ に比例するのは、大きな空洞ほどモード数が多いという当然の結果。</span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>**対応（観測）**：この因子 2 が、プランク分布の前因子 $2h\nu^3/c^2$ の先頭の 2 に直接対応する。観測される黒体スペクトル ― CMB であれ恒星であれ ― は、すべて電磁波が横波であるという**幾何的事実**を反映している。</span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a><span class="fu">## 14.4 振動数空間に変換 ― モード密度の正体 {#sec-cavity-modes-frequency}</span></span>
 <span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>波数 $k$ と振動数 $\nu$ は第13章の分散関係 @eq-dispersion-relation で結ばれる：$k = 2\pi\nu/c$。@eq-mode-count-k に代入して</span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
 <span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>N_\text{mode}(&lt;\nu) = \frac{V}{3\pi^2} \left(\frac{2\pi\nu}{c}\right)^3 = \frac{8\pi V \nu^3}{3 c^3}</span>
-<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>$$ {#eq-mode-count-nu}</span>
-<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>これが振動数 $\nu$ 未満のモードの総数。微分して **振動数あたり・単位体積あたりのモード密度** を得る：</span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>波数 $k$ と振動数 $\nu$ は第13章の分散関係 @eq-dispersion-relation で結ばれる：$k = 2\pi\nu/c$。@eq-mode-count-k に代入して</span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a>N_\text{mode}(&lt;\nu) = \frac{V}{3\pi^2} \left(\frac{2\pi\nu}{c}\right)^3 = \frac{8\pi V \nu^3}{3 c^3}</span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>$$ {#eq-mode-count-nu}</span>
 <span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>g(\nu) = \frac{1}{V} \frac{dN_\text{mode}}{d\nu} = \frac{8\pi \nu^2}{c^3}</span>
-<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>$$ {#eq-mode-density}</span>
-<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>これが第8章 @eq-photon-energy-density と第9章 @eq-mode-density-borrowed で**借用**していた式である。本章で本格的に逆引きが完了した。</span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>これが振動数 $\nu$ 未満のモードの総数。微分して **振動数あたり・単位体積あたりのモード密度** を得る：</span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>g(\nu) = \frac{1}{V} \frac{dN_\text{mode}}{d\nu} = \frac{8\pi \nu^2}{c^3}</span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>$$ {#eq-mode-density}</span>
 <span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>**$\nu^2$ の起源を辿る**：</span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>これが第8章 @eq-photon-energy-density と第9章 @eq-mode-density-borrowed で**借用**していた式である。本章で本格的に逆引きが完了した。</span>
 <span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 因子 <span class="pp">|</span> 起源 <span class="pp">|</span></span>
-<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|</span></span>
-<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $\nu^2$ <span class="pp">|</span> $k$ 空間の球の体積 $k^3$ を微分（三次元空間） <span class="pp">|</span></span>
-<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $8\pi$ <span class="pp">|</span> $4\pi/3$（球の体積） × $1/8$（第一象限） × $2$（偏光自由度） × $(2\pi)^3/\pi^3$（$k = 2\pi\nu/c$ の三乗が格子密度 $\pi^{-3}$ と打ち消し合い、$2^3$ が残る） <span class="pp">|</span></span>
-<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $1/c^3$ <span class="pp">|</span> 分散関係 $k = 2\pi\nu/c$ から <span class="pp">|</span></span>
-<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
-<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>**問い**：なぜ三次元空間でモード密度が $\nu^2$ なのか？ 他の次元では？</span>
-<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a>**短答**：$d$ 次元空間では、$k$ 空間の球の表面積は $\propto k^{d-1}$。これに対応してモード密度は $\nu^{d-1}$。三次元なら $\nu^2$、二次元なら $\nu$、一次元なら定数。</span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>**$\nu^2$ の起源を辿る**：</span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 因子 <span class="pp">|</span> 起源 <span class="pp">|</span></span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|</span></span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $\nu^2$ <span class="pp">|</span> $k$ 空間の球の体積 $k^3$ を微分（三次元空間） <span class="pp">|</span></span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $8\pi$ <span class="pp">|</span> $4\pi/3$（球の体積） × $1/8$（第一象限） × $2$（偏光自由度） × $(2\pi)^3/\pi^3$（$k = 2\pi\nu/c$ の三乗が格子密度 $\pi^{-3}$ と打ち消し合い、$2^3$ が残る） <span class="pp">|</span></span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $1/c^3$ <span class="pp">|</span> 分散関係 $k = 2\pi\nu/c$ から <span class="pp">|</span></span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a>**問い**：なぜ三次元空間でモード密度が $\nu^2$ なのか？ 他の次元では？</span>
 <span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>**もう一歩**：もし宇宙が二次元空間だったら、モード密度は $g(\nu) \propto \nu/c^2$ となり（$d$ 次元では $\nu^{d-1}/c^d$）、プランク分布の前因子は $2h\nu^3/c^2$ ではなく $\propto h\nu^2/c^2$ の形をとる。黒体スペクトル全体の形（Rayleigh-Jeans 側のべき・ピーク位置・Wien 側の減衰）は完全に違うものになる。**観測される黒体スペクトルの形には、私たちが三次元空間に住んでいるという情報が組み込まれている**。</span>
-<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a><span class="fu">## 14.5 プランク分布の前因子への合流 ― 第I〜V部の総まとめ {#sec-cavity-modes-bnu-derivation}</span></span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>**短答**：$d$ 次元空間では、$k$ 空間の球の表面積は $\propto k^{d-1}$。これに対応してモード密度は $\nu^{d-1}$。三次元なら $\nu^2$、二次元なら $\nu$、一次元なら定数。</span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>**もう一歩**：もし宇宙が二次元空間だったら、モード密度は $g(\nu) \propto \nu/c^2$ となり（$d$ 次元では $\nu^{d-1}/c^d$）、プランク分布の前因子は $2h\nu^3/c^2$ ではなく $\propto h\nu^2/c^2$ の形をとる。黒体スペクトル全体の形（Rayleigh-Jeans 側のべき・ピーク位置・Wien 側の減衰）は完全に違うものになる。**観測される黒体スペクトルの形には、私たちが三次元空間に住んでいるという情報が組み込まれている**。</span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3｜導出：M1</span><span class="co">]</span></span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a><span class="fu">## 14.5 プランク分布の前因子への合流 ― 第I〜V部の総まとめ {#sec-cavity-modes-bnu-derivation}</span></span>
 <span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>モード密度 @eq-mode-density を、第8章で立ち上げた**振動数あたりエネルギー密度**の表式に代入する。第8章 @eq-photon-energy-density から：</span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3｜導出：M1</span><span class="co">]</span></span>
 <span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a>u_\nu(T) = g(\nu) \cdot h\nu \cdot \bar{n}(\nu, T) = \frac{8\pi\nu^2}{c^3} \cdot h\nu \cdot \frac{1}{e^{h\nu/k_BT}-1}</span>
-<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>$$ {#eq-uvalues}</span>
-<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>整理すると</span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a>モード密度 @eq-mode-density を、第8章で立ち上げた**振動数あたりエネルギー密度**の表式に代入する。第8章 @eq-photon-energy-density から：</span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a>u_\nu(T) = g(\nu) \cdot h\nu \cdot \bar{n}(\nu, T) = \frac{8\pi\nu^2}{c^3} \cdot h\nu \cdot \frac{1}{e^{h\nu/k_BT}-1}</span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>$$ {#eq-uvalues}</span>
 <span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>u_\nu(T) = \frac{8\pi h\nu^3}{c^3} \cdot \frac{1}{e^{h\nu/k_BT}-1}</span>
-<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a>$$ {#eq-planck-energy-final}</span>
-<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a>比強度に変換する（等方放射場では $B_\nu = c\, u_\nu / 4\pi$、第4章 §4.3）：</span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a>整理すると</span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>u_\nu(T) = \frac{8\pi h\nu^3}{c^3} \cdot \frac{1}{e^{h\nu/k_BT}-1}</span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a>$$ {#eq-planck-energy-final}</span>
 <span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>\boxed{</span>
-<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a>B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/k_BT}-1}</span>
-<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>$$ {#eq-planck-fully-derived}</span>
-<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>**プランク分布が、観測から逆向きに完全に説明された。** 各因子の起源を一覧にまとめる：</span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>比強度に変換する（等方放射場では $B_\nu = c\, u_\nu / 4\pi$、第4章 §4.3）：</span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>\boxed{</span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/k_BT}-1}</span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>$$ {#eq-planck-fully-derived}</span>
 <span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 因子 <span class="pp">|</span> 起源 <span class="pp">|</span> 章 <span class="pp">|</span></span>
-<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
-<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $1/(e^{h\nu/k_BT}-1)$ <span class="pp">|</span> 光子の Bose 統計＋ $\mu = 0$ <span class="pp">|</span> 第8章 <span class="pp">|</span></span>
-<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $h\nu$（指数中） <span class="pp">|</span> エネルギー量子化（Planck の仮説） <span class="pp">|</span> 第10章 <span class="pp">|</span></span>
-<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $h\nu$（前因子中） <span class="pp">|</span> 各モードの光子エネルギー <span class="pp">|</span> 第10章 <span class="pp">|</span></span>
-<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $\nu^2$（前因子中） <span class="pp">|</span> 三次元空洞のモード密度 <span class="pp">|</span> **本章** <span class="pp">|</span></span>
-<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $1/c^3$（モード密度から） <span class="pp">|</span> Maxwell 方程式の分散関係 <span class="pp">|</span> 第13章 <span class="pp">|</span></span>
-<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $2$（前因子の先頭） <span class="pp">|</span> 偏光自由度（横波） <span class="pp">|</span> 第13章 <span class="pp">|</span></span>
-<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 全体 $1/c^2$（$1/c^3 \cdot c$ から） <span class="pp">|</span> 光速度 ＋ $u_\nu \to B_\nu$ 変換 <span class="pp">|</span> 本章 <span class="pp">|</span></span>
-<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>これで第I〜V部の逆引きが完結する。</span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a>**プランク分布が、観測から逆向きに完全に説明された。** 各因子の起源を一覧にまとめる：</span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 因子 <span class="pp">|</span> 起源 <span class="pp">|</span> 章 <span class="pp">|</span></span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $1/(e^{h\nu/k_BT}-1)$ <span class="pp">|</span> 光子の Bose 統計＋ $\mu = 0$ <span class="pp">|</span> 第8章 <span class="pp">|</span></span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $h\nu$（指数中） <span class="pp">|</span> エネルギー量子化（Planck の仮説） <span class="pp">|</span> 第10章 <span class="pp">|</span></span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $h\nu$（前因子中） <span class="pp">|</span> 各モードの光子エネルギー <span class="pp">|</span> 第10章 <span class="pp">|</span></span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $\nu^2$（前因子中） <span class="pp">|</span> 三次元空洞のモード密度 <span class="pp">|</span> **本章** <span class="pp">|</span></span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $1/c^3$（モード密度から） <span class="pp">|</span> Maxwell 方程式の分散関係 <span class="pp">|</span> 第13章 <span class="pp">|</span></span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $2$（前因子の先頭） <span class="pp">|</span> 偏光自由度（横波） <span class="pp">|</span> 第13章 <span class="pp">|</span></span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 全体 $1/c^2$（$1/c^3 \cdot c$ から） <span class="pp">|</span> 光速度 ＋ $u_\nu \to B_\nu$ 変換 <span class="pp">|</span> 本章 <span class="pp">|</span></span>
 <span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
-<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>**対応（観測）**：観測される黒体スペクトル ― CMB の 2.725 K の完璧な黒体形、太陽の $T \simeq 5800$ K の連続光、降着円盤の多温度合成、ダストの $30$ K 修正黒体 ― これらすべてが、上の表のすべての物理（電磁気・量子・統計）の**同時の結果**であることが、本章までの逆引きで明らかになった。**観測スペクトルの一本の曲線**から、現代物理学の主要分野が逆向きに再構成された。これが本書の方法論の到達点である。</span>
-<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a><span class="fu">## 14.6 空洞放射からの「展望」 ― 第VI〜VIII部への橋 {#sec-cavity-modes-bridge}</span></span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>これで第I〜V部の逆引きが完結する。</span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>**対応（観測）**：観測される黒体スペクトル ― CMB の 2.725 K の完璧な黒体形、太陽の $T \simeq 5800$ K の連続光、降着円盤の多温度合成、ダストの $30$ K 修正黒体 ― これらすべてが、上の表のすべての物理（電磁気・量子・統計）の**同時の結果**であることが、本章までの逆引きで明らかになった。**観測スペクトルの一本の曲線**から、現代物理学の主要分野が逆向きに再構成された。これが本書の方法論の到達点である。</span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3-B4</span><span class="co">]</span></span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a><span class="fu">## 14.6 空洞放射からの「展望」 ― 第VI〜VIII部への橋 {#sec-cavity-modes-bridge}</span></span>
 <span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a>第I〜V部で確立した中心地図プランク分布を出発点として、本書は次の三方向に進む。</span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3-B4</span><span class="co">]</span></span>
 <span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a>**第VI部（現実の宇宙へ戻る）**：プランク分布は理想的な完全熱平衡の式。現実の天体スペクトルがどう・なぜずれるかを扱う。修正黒体（ダスト）、灰色大気近似、多温度成分、コンプトン化、非熱的放射の混入 ― 観測スペクトルの解読に必要なすべての「ずれ」の物理。</span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a>第I〜V部で確立した中心地図プランク分布を出発点として、本書は次の三方向に進む。</span>
 <span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>**第VII部（線スペクトル）**：本書のもう一つの主柱。観測される線スペクトルの逆引き ― 原子物理、線形成、線形、観測応用 ― を、プランク分布と平行な構造で展開する。Einstein 係数（第11章）が二つの地図を結ぶ要として再登場する。</span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>**第VI部（現実の宇宙へ戻る）**：プランク分布は理想的な完全熱平衡の式。現実の天体スペクトルがどう・なぜずれるかを扱う。修正黒体（ダスト）、灰色大気近似、多温度成分、コンプトン化、非熱的放射の混入 ― 観測スペクトルの解読に必要なすべての「ずれ」の物理。</span>
 <span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>**第VIII部（QED の見通し）**：本章で行った「モード密度 × 量子振動子」を本格的に再定式化する。各電磁モードが**量子化された調和振動子**であり、励起準位が光子数。これにより本書の二つの中心地図（プランク関数と水素線吸収係数）が、同じ電磁場–物質相互作用の二側面として統合される。本章で借用していた **「ν² モード密度 × $h\nu$ エネルギー量子」** という組合せが、第24章で「電磁場の量子化」として整理し直される。</span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>**第VII部（線スペクトル）**：本書のもう一つの主柱。観測される線スペクトルの逆引き ― 原子物理、線形成、線形、観測応用 ― を、プランク分布と平行な構造で展開する。Einstein 係数（第11章）が二つの地図を結ぶ要として再登場する。</span>
 <span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a>**使えるようになった道具**（§14.1〜14.6）：</span>
-<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>空洞内の電磁定在波を境界条件のもとで数え上げる方法（k 空間の格子）</span>
-<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>モード密度 $g(\nu) = 8\pi\nu^2/c^3$ ― 第8〜10章で借用していた式が完全に説明された</span>
-<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>プランク分布の**すべての因子**が、観測から逆向きに既知の物理（電磁気＋統計力学＋量子論）で説明されたという事実</span>
-<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>中心地図プランク関数を「観測の言葉」と「物理の言葉」のあいだの橋として完全に理解する</span>
-<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a>**第VIII部（QED の見通し）**：本章で行った「モード密度 × 量子振動子」を本格的に再定式化する。各電磁モードが**量子化された調和振動子**であり、励起準位が光子数。これにより本書の二つの中心地図（プランク関数と水素線吸収係数）が、同じ電磁場–物質相互作用の二側面として統合される。本章で借用していた **「ν² モード密度 × $h\nu$ エネルギー量子」** という組合せが、第24章で「電磁場の量子化」として整理し直される。</span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a>**使えるようになった道具**（§14.1〜14.6）：</span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>空洞内の電磁定在波を境界条件のもとで数え上げる方法（k 空間の格子）</span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>モード密度 $g(\nu) = 8\pi\nu^2/c^3$ ― 第8〜10章で借用していた式が完全に説明された</span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>プランク分布の**すべての因子**が、観測から逆向きに既知の物理（電磁気＋統計力学＋量子論）で説明されたという事実</span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>中心地図プランク関数を「観測の言葉」と「物理の言葉」のあいだの橋として完全に理解する</span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-cavity-modes-summary .unnumbered}</span></span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
-<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る・第I〜V部の総まとめ**</span>
-<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>本章で、プランク分布の前因子 $2h\nu^3/c^2$ の最後のピース ― モード密度 $\nu^2$ ― が逆引きされた。これで中心地図プランク分布の**すべての因子**が、観測から逆向きに既知の物理で説明された。</span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-cavity-modes-summary .unnumbered}</span></span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る・第I〜V部の総まとめ**</span>
 <span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a>第I部で「観測される黒体スペクトル」として現象を確認し、第II部で放射場の記述を整え、第III部で熱平衡と Bose 統計から指数関数因子を、第IV部でエネルギー量子化から $h\nu$ を、第V部で電磁モード密度から $\nu^2/c^3$ を導出した。観測の一本の曲線から、現代物理学の主要分野が逆向きに再構成されたことになる。</span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a>本章で、プランク分布の前因子 $2h\nu^3/c^2$ の最後のピース ― モード密度 $\nu^2$ ― が逆引きされた。これで中心地図プランク分布の**すべての因子**が、観測から逆向きに既知の物理で説明された。</span>
 <span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a>**次部以降**：これで第I〜V部の「連続スペクトル（黒体放射）の逆引き」は完結する。</span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a>第I部で「観測される黒体スペクトル」として現象を確認し、第II部で放射場の記述を整え、第III部で熱平衡と Bose 統計から指数関数因子を、第IV部でエネルギー量子化から $h\nu$ を、第V部で電磁モード密度から $\nu^2/c^3$ を導出した。観測の一本の曲線から、現代物理学の主要分野が逆向きに再構成されたことになる。</span>
 <span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**第VI部** では、現実の天体でこの理想からどうずれるかを扱う</span>
-<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**第VII部** では、もう一つの主柱**線スペクトル**の逆引きを展開する</span>
-<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**第VIII部** では、QED で連続と線の両方の地図を統一する</span>
-<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-cavity-modes-exercises .unnumbered}</span></span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a>**次部以降**：これで第I〜V部の「連続スペクトル（黒体放射）の逆引き」は完結する。</span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**第VI部** では、現実の天体でこの理想からどうずれるかを扱う</span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**第VII部** では、もう一つの主柱**線スペクトル**の逆引きを展開する</span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**第VIII部** では、QED で連続と線の両方の地図を統一する</span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple"}</span>
-<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。</span>
-<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-cavity-modes-further .unnumbered}</span></span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-cavity-modes-exercises .unnumbered}</span></span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple"}</span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a>演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。</span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Reif, *Fundamentals of Statistical and Thermal Physics* (McGraw-Hill, 1965) — 空洞放射と状態数のクラシック</span>
-<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pathria &amp; Beale, *Statistical Mechanics* (Academic Press, 3rd ed., 2011) — モード密度の体系的扱い</span>
-<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mandl, *Statistical Physics* (Wiley, 2nd ed., 1988) — 学部向け、空洞モードと黒体放射の標準的扱い</span>
-<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Loudon, *The Quantum Theory of Light* (Oxford, 3rd ed., 2000) — 第1〜2章で電磁モードと光子の対応を体系的に</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-cavity-modes-further .unnumbered}</span></span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Reif, *Fundamentals of Statistical and Thermal Physics* (McGraw-Hill, 1965) — 空洞放射と状態数のクラシック</span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pathria &amp; Beale, *Statistical Mechanics* (Academic Press, 3rd ed., 2011) — モード密度の体系的扱い</span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mandl, *Statistical Physics* (Wiley, 2nd ed., 1988) — 学部向け、空洞モードと黒体放射の標準的扱い</span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Loudon, *The Quantum Theory of Light* (Oxford, 3rd ed., 2000) — 第1〜2章で電磁モードと光子の対応を体系的に</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

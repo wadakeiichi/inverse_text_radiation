@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" width="900" height="540" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Noto Sans JP', sans-serif">
+  <!-- =============================================================
+       Specific intensity: defining geometry (Ch. 4 §4.1)
+       比強度 I_ν の定義の幾何 ― dA・法線・θ・dΩ・dν
+       Style matched to planck-map.svg. License: CC BY 4.0
+       ============================================================= -->
+
+  <defs>
+    <marker id="si-arrow-blue" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1f4e79"/>
+    </marker>
+    <marker id="si-arrow-gray" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#7a91ad"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="540" fill="#fafbfc"/>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle"
+        font-size="23" font-weight="700" fill="#0a1929" letter-spacing="0.06em">
+    比強度 Iν の定義の幾何
+  </text>
+  <text x="450" y="66" text-anchor="middle" font-size="14" fill="#5a6a7a">
+    面要素 dA を、方向 n のまわりの立体角 dΩ・振動数幅 dν で、単位時間に通過するエネルギー
+  </text>
+
+  <!-- ============================================================
+       Left: geometry drawing
+       ============================================================ -->
+  <g>
+    <!-- surface element dA (parallelogram, light blue) -->
+    <polygon points="160,340 300,378 400,322 260,284"
+             fill="#e8f0fa" stroke="#1f4e79" stroke-width="2"/>
+    <text x="180" y="375" font-size="15" font-weight="600" fill="#1f4e79">
+      面要素 dA
+    </text>
+
+    <!-- centre point of dA -->
+    <circle cx="280" cy="331" r="3.5" fill="#0a1929"/>
+
+    <!-- normal (dashed, vertical) -->
+    <line x1="280" y1="331" x2="280" y2="170"
+          stroke="#7a91ad" stroke-width="2" stroke-dasharray="6,4"
+          marker-end="url(#si-arrow-gray)"/>
+    <text x="280" y="156" text-anchor="middle" font-size="13" fill="#5a6a7a">
+      法線
+    </text>
+
+    <!-- ray direction n (solid blue, at angle θ from normal) -->
+    <line x1="280" y1="331" x2="424" y2="150"
+          stroke="#1f4e79" stroke-width="2.5"
+          marker-end="url(#si-arrow-blue)"/>
+    <text x="438" y="140" font-size="15" font-style="italic"
+          font-family="Georgia, 'Times New Roman', serif" fill="#1f4e79">n</text>
+    <text x="455" y="140" font-size="12" fill="#1f4e79">（光線の方向）</text>
+
+    <!-- solid angle cone dΩ around the ray -->
+    <path d="M 280 331 L 398 132 M 280 331 L 446 172"
+          stroke="#1f4e79" stroke-width="1" opacity="0.5"/>
+    <ellipse cx="422" cy="152" rx="28" ry="13"
+             transform="rotate(-52 422 152)"
+             fill="#1f4e79" fill-opacity="0.12"
+             stroke="#1f4e79" stroke-width="1.2"/>
+    <text x="468" y="178" font-size="14" font-weight="600" fill="#1f4e79">
+      dΩ
+    </text>
+    <text x="468" y="195" font-size="11" fill="#5a6a7a">
+      （方向 n のまわりの立体角素）
+    </text>
+
+    <!-- θ arc between normal and ray -->
+    <path d="M 280 273 A 58 58 0 0 1 312 282"
+          fill="none" stroke="#c25e00" stroke-width="2"/>
+    <text x="299" y="259" font-size="16" font-style="italic"
+          font-family="Georgia, 'Times New Roman', serif" fill="#c25e00">θ</text>
+
+    <!-- projected (effective) area: dashed ellipse ⊥ ray -->
+    <ellipse cx="280" cy="331" rx="62" ry="26"
+             transform="rotate(-52 280 331)"
+             fill="none" stroke="#c25e00" stroke-width="1.5"
+             stroke-dasharray="4,3"/>
+    <text x="120" y="262" font-size="12" font-weight="600" fill="#c25e00">
+      有効面積 dA cos θ
+    </text>
+    <text x="120" y="278" font-size="11" fill="#5a6a7a">
+      （光線に垂直な射影）
+    </text>
+    <line x1="206" y1="282" x2="236" y2="305"
+          stroke="#c25e00" stroke-width="1" stroke-dasharray="3,3"/>
+  </g>
+
+  <!-- ============================================================
+       Right: defining equation with colour-coded factors
+       ============================================================ -->
+  <g transform="translate(0, 0)">
+    <rect x="540" y="220" width="330" height="190" rx="10"
+          fill="#ffffff" stroke="#d8e2ec" stroke-width="1.5"/>
+
+    <!-- dE = I_ν cosθ dA dt dΩ dν -->
+    <g font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif"
+       fill="#0a1929">
+      <text x="558" y="266" font-size="19" font-style="italic">dE</text>
+      <text x="590" y="265" font-size="17">=</text>
+      <text x="608" y="266" font-size="19" font-style="italic"
+            fill="#1f4e79" font-weight="600">I</text>
+      <text x="616" y="271" font-size="12" font-style="italic"
+            fill="#1f4e79" font-weight="600">ν</text>
+      <text x="630" y="266" font-size="18" fill="#c25e00">cos</text>
+      <text x="660" y="266" font-size="18" font-style="italic" fill="#c25e00">θ</text>
+      <text x="676" y="266" font-size="19" font-style="italic">dA</text>
+      <text x="706" y="266" font-size="19" font-style="italic">dt</text>
+      <text x="730" y="266" font-size="19" font-style="italic">dΩ</text>
+      <text x="762" y="266" font-size="19" font-style="italic">dν</text>
+    </g>
+
+    <!-- per-factor labels -->
+    <g font-size="11" fill="#5a6a7a">
+      <text x="612" y="296" text-anchor="middle" font-weight="600" fill="#1f4e79">比強度</text>
+      <text x="612" y="310" text-anchor="middle" fill="#1f4e79">（求める量）</text>
+      <text x="652" y="324" text-anchor="middle" font-weight="600" fill="#c25e00">射影因子</text>
+      <text x="688" y="296" text-anchor="middle">面積</text>
+      <text x="716" y="310" text-anchor="middle">時間</text>
+      <text x="744" y="296" text-anchor="middle">立体角</text>
+      <text x="772" y="310" text-anchor="middle">振動数幅</text>
+    </g>
+
+    <!-- unit -->
+    <text x="705" y="358" text-anchor="middle" font-size="12" fill="#0a1929">
+      単位：erg s⁻¹ cm⁻² Hz⁻¹ sr⁻¹（CGS）
+    </text>
+    <text x="705" y="385" text-anchor="middle" font-size="11.5" fill="#5a6a7a">
+      望遠鏡が「空のある方向」を見て拾うのは、
+    </text>
+    <text x="705" y="401" text-anchor="middle" font-size="11.5" fill="#5a6a7a">
+      本質的にこの I_ν（第4章 §4.8）
+    </text>
+  </g>
+
+  <!-- ============================================================
+       Footer notes
+       ============================================================ -->
+  <text x="450" y="470" text-anchor="middle" font-size="12" fill="#5a6a7a">
+    cos θ は「斜めから通る光線にとって dA は cos θ 倍に見える」という幾何の帰結（橙の破線楕円）
+  </text>
+  <text x="450" y="492" text-anchor="middle" font-size="11" fill="#8a99a8">
+    dA を光線に垂直に取る流儀（dA⊥ = dA cos θ）では cos θ が定義式から消える ― §4.1 の用語注を参照
+  </text>
+</svg>

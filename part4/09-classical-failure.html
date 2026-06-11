@@ -628,6 +628,16 @@ B_\nu^\text{RJ}(T) = \frac{c}{4\pi} u_\nu^\text{RJ} = \frac{2\nu^2}{c^2} k_B T
 <section id="sec-classical-failure-uv-catastrophe" class="level2">
 <h2 class="anchored" data-anchor-id="sec-classical-failure-uv-catastrophe">9.3 紫外線破綻 ― 全エネルギーの発散</h2>
 <p>[本文目安：B3]</p>
+<div id="fig-uv-catastrophe" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-uv-catastrophe-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/uv-catastrophe.svg" class="img-fluid figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-uv-catastrophe-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+図&nbsp;11.1: 紫外線破綻 ― 古典の Rayleigh–Jeans 則（<strong><span class="math inline">u_\nu \propto \nu^2</span>、青破線</strong>）が高振動数で発散する一方、観測されるプランク分布（<strong>黒実線</strong>）は Wien 則的に指数的減衰する。両者は <strong><span class="math inline">h\nu \approx k_B T</span></strong> の境界帯（網かけ）で分かれる。本図は §2.5（Planck/RJ/Wien 比較）と §10 の量子仮説導入とも共用する基準図。
+</figcaption>
+</figure>
+</div>
 <p><a href="#eq-rayleigh-jeans-energy-density" class="quarto-xref">式&nbsp;<span>11.4</span></a> を<strong>全振動数で積分</strong>して、放射場の全エネルギー密度 <span class="math inline">u</span> を計算しようとすると</p>
 <p><span id="eq-uv-catastrophe"><span class="math display">
 u_\text{classical} = \int_0^\infty u_\nu^\text{RJ} \, d\nu = \frac{8\pi k_B T}{c^3} \int_0^\infty \nu^2 \, d\nu = \infty
@@ -1349,103 +1359,105 @@ u_\text{classical} = \int_0^\infty u_\nu^\text{RJ} \, d\nu = \frac{8\pi k_B T}{c
 <span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
 <span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>@eq-rayleigh-jeans-energy-density を**全振動数で積分**して、放射場の全エネルギー密度 $u$ を計算しようとすると</span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a><span class="al">![紫外線破綻 ― 古典の Rayleigh–Jeans 則（**$u_\nu \propto \nu^2$、青破線**）が高振動数で発散する一方、観測されるプランク分布（**黒実線**）は Wien 則的に指数的減衰する。両者は **$h\nu \approx k_B T$** の境界帯（網かけ）で分かれる。本図は §2.5（Planck/RJ/Wien 比較）と §10 の量子仮説導入とも共用する基準図。](../images/uv-catastrophe.svg)</span>{#fig-uv-catastrophe width=90%}</span>
 <span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>u_\text{classical} = \int_0^\infty u_\nu^\text{RJ} \, d\nu = \frac{8\pi k_B T}{c^3} \int_0^\infty \nu^2 \, d\nu = \infty</span>
-<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>$$ {#eq-uv-catastrophe}</span>
-<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>積分は高振動数（紫外〜X線〜ガンマ線）側で**発散**する。これが **紫外線破綻**（**ultraviolet catastrophe**）である。</span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>@eq-rayleigh-jeans-energy-density を**全振動数で積分**して、放射場の全エネルギー密度 $u$ を計算しようとすると</span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>u_\text{classical} = \int_0^\infty u_\nu^\text{RJ} \, d\nu = \frac{8\pi k_B T}{c^3} \int_0^\infty \nu^2 \, d\nu = \infty</span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>$$ {#eq-uv-catastrophe}</span>
 <span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>物理的にこれが意味するのは、「温度 $T$ の空洞は無限大のエネルギー密度を持つ」「電球を点けたら無限の紫外線・X 線が出る」 ― 観測される現実とまったく合わない結論である。</span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>積分は高振動数（紫外〜X線〜ガンマ線）側で**発散**する。これが **紫外線破綻**（**ultraviolet catastrophe**）である。</span>
 <span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>観測との矛盾を具体的に見ると：</span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>物理的にこれが意味するのは、「温度 $T$ の空洞は無限大のエネルギー密度を持つ」「電球を点けたら無限の紫外線・X 線が出る」 ― 観測される現実とまったく合わない結論である。</span>
 <span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 量 <span class="pp">|</span> 観測 <span class="pp">|</span> 古典予言 <span class="pp">|</span></span>
-<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
-<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 全エネルギー密度 $u(T)$ <span class="pp">|</span> $aT^4$（有限）<span class="pp">|</span> 無限大 <span class="pp">|</span></span>
-<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> ピーク振動数 <span class="pp">|</span> $\nu_\text{peak} \propto T$（Wien 則）<span class="pp">|</span> ピーク自体が存在しない <span class="pp">|</span></span>
-<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 高振動数側の振る舞い <span class="pp">|</span> $e^{-h\nu/k_B T}$ で指数減衰 <span class="pp">|</span> $\nu^2$ で単調増加 <span class="pp">|</span></span>
-<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>特に「ピークが存在しない」「指数減衰がない」という二点は、第1章で見た**観測される黒体スペクトル**と決定的に矛盾する。</span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>観測との矛盾を具体的に見ると：</span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 量 <span class="pp">|</span> 観測 <span class="pp">|</span> 古典予言 <span class="pp">|</span></span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 全エネルギー密度 $u(T)$ <span class="pp">|</span> $aT^4$（有限）<span class="pp">|</span> 無限大 <span class="pp">|</span></span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> ピーク振動数 <span class="pp">|</span> $\nu_\text{peak} \propto T$（Wien 則）<span class="pp">|</span> ピーク自体が存在しない <span class="pp">|</span></span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 高振動数側の振る舞い <span class="pp">|</span> $e^{-h\nu/k_B T}$ で指数減衰 <span class="pp">|</span> $\nu^2$ で単調増加 <span class="pp">|</span></span>
 <span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
-<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>**問い**：紫外線破綻はどの観測事実から致命的に証明されるのか？</span>
-<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>**短答**：恒星のスペクトルがピークを持つこと、CMB が完全な黒体形を取ること、地上で測られる空洞放射のスペクトル形 ― いずれも有限のピークと指数減衰を示す。古典論ではこれらが一切説明できない。</span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a>特に「ピークが存在しない」「指数減衰がない」という二点は、第1章で見た**観測される黒体スペクトル**と決定的に矛盾する。</span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>**問い**：紫外線破綻はどの観測事実から致命的に証明されるのか？</span>
 <span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>**もう一歩**：歴史的には Rubens &amp; Kurlbaum (1900) の長波長黒体スペクトルの精密測定が決め手となった。Planck はこのデータを再現するために量子仮説を立てた（第10章）。観測が理論を駆動した古典的な例である。</span>
-<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a><span class="fu">## 9.4 何が足りなかったのか ― 等分配の物理的前提 {#sec-classical-failure-missing}</span></span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>**短答**：恒星のスペクトルがピークを持つこと、CMB が完全な黒体形を取ること、地上で測られる空洞放射のスペクトル形 ― いずれも有限のピークと指数減衰を示す。古典論ではこれらが一切説明できない。</span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>**もう一歩**：歴史的には Rubens &amp; Kurlbaum (1900) の長波長黒体スペクトルの精密測定が決め手となった。Planck はこのデータを再現するために量子仮説を立てた（第10章）。観測が理論を駆動した古典的な例である。</span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a><span class="fu">## 9.4 何が足りなかったのか ― 等分配の物理的前提 {#sec-classical-failure-missing}</span></span>
 <span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>紫外線破綻はどこから来たか。@eq-equipartition-mode の「各モードに $k_B T$」という等分配定理に**穴がある**。等分配定理が成立する前提は：</span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
 <span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**エネルギーが連続的にやりとりできる**：粒子間の衝突や相互作用で、任意の小さなエネルギー単位でやりとりが起きる</span>
-<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**エネルギーが Maxwell-Boltzmann 分布に従う**：状態数密度が均一で、状態間の遷移が自由</span>
-<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>ここで重要なのは前提 1 である。古典物理では「エネルギーは連続量」と暗黙に仮定している。しかしもしエネルギーが**離散単位** $\epsilon$ でしかやりとりできず、しかも $\epsilon \gg k_B T$ となる場面では：</span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>紫外線破綻はどこから来たか。@eq-equipartition-mode の「各モードに $k_B T$」という等分配定理に**穴がある**。等分配定理が成立する前提は：</span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**エネルギーが連続的にやりとりできる**：粒子間の衝突や相互作用で、任意の小さなエネルギー単位でやりとりが起きる</span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**エネルギーが Maxwell-Boltzmann 分布に従う**：状態数密度が均一で、状態間の遷移が自由</span>
 <span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>そのモードを励起するために必要なエネルギー $\epsilon$ がほとんど常に手に入らない</span>
-<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>平均してそのモードに行くエネルギーは $k_B T$ よりも遥かに小さくなる</span>
-<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>高振動数側のモードが「凍結」（freeze out）する</span>
-<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>これが**紫外線破綻を救う鍵**である。すなわち、放射のエネルギーがある離散単位 $\epsilon(\nu)$ でやりとりされ、しかも $\epsilon(\nu)$ が振動数 $\nu$ とともに増える ― 具体的には $\epsilon \propto \nu$ ― なら、高振動数側のモードが熱力学的に届かなくなる。これが Planck (1900) のたどり着いた仮説で、第10章で本格的に扱う。</span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>ここで重要なのは前提 1 である。古典物理では「エネルギーは連続量」と暗黙に仮定している。しかしもしエネルギーが**離散単位** $\epsilon$ でしかやりとりできず、しかも $\epsilon \gg k_B T$ となる場面では：</span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>そのモードを励起するために必要なエネルギー $\epsilon$ がほとんど常に手に入らない</span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>平均してそのモードに行くエネルギーは $k_B T$ よりも遥かに小さくなる</span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>高振動数側のモードが「凍結」（freeze out）する</span>
 <span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>**注意（理論）**：「等分配が破綻する」という現象は、黒体放射以外にも現れる。低温での**固体の比熱**（Debye/Einstein モデル）、二原子分子の**回転・振動自由度の凍結**、Bose–Einstein 凝縮など、量子効果が顔を出すすべての場面で同じ構造が現れる。黒体放射は最も歴史的に重要な例である。</span>
-<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a><span class="fu">## 9.5 量子仮説の必然性 ― 第10・11章への入口 {#sec-classical-failure-necessity}</span></span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>これが**紫外線破綻を救う鍵**である。すなわち、放射のエネルギーがある離散単位 $\epsilon(\nu)$ でやりとりされ、しかも $\epsilon(\nu)$ が振動数 $\nu$ とともに増える ― 具体的には $\epsilon \propto \nu$ ― なら、高振動数側のモードが熱力学的に届かなくなる。これが Planck (1900) のたどり着いた仮説で、第10章で本格的に扱う。</span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>**注意（理論）**：「等分配が破綻する」という現象は、黒体放射以外にも現れる。低温での**固体の比熱**（Debye/Einstein モデル）、二原子分子の**回転・振動自由度の凍結**、Bose–Einstein 凝縮など、量子効果が顔を出すすべての場面で同じ構造が現れる。黒体放射は最も歴史的に重要な例である。</span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a><span class="fu">## 9.5 量子仮説の必然性 ― 第10・11章への入口 {#sec-classical-failure-necessity}</span></span>
 <span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>ここまでの議論をまとめると、観測される黒体スペクトルを古典論で説明できない理由は次のように要約される：</span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
 <span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>空洞の電磁モード密度 $g(\nu) \propto \nu^2$ そのものは古典電磁気で正しく出る（第V部）</span>
-<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>各モードの平均エネルギーを古典統計で $k_B T$ と置く（等分配定理）と、$u_\nu \propto \nu^2$ が出てしまう</span>
-<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>これを全振動数で積分すると $u = \infty$（紫外線破綻）</span>
-<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>観測される高振動数の指数減衰を再現するには、**等分配を破る何か**が必要</span>
-<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a>ここから出る論理的選択肢は限られる。一つは**エネルギー単位の離散化**（Planck の量子仮説、第10章）。もう一つは**光が粒子としてふるまう**こと（Einstein の光量子、第11章）。両者は等価で、結局は同じプランク分布に至るが、思考の出発点が違う。</span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a>ここまでの議論をまとめると、観測される黒体スペクトルを古典論で説明できない理由は次のように要約される：</span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>空洞の電磁モード密度 $g(\nu) \propto \nu^2$ そのものは古典電磁気で正しく出る（第V部）</span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>各モードの平均エネルギーを古典統計で $k_B T$ と置く（等分配定理）と、$u_\nu \propto \nu^2$ が出てしまう</span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>これを全振動数で積分すると $u = \infty$（紫外線破綻）</span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>観測される高振動数の指数減衰を再現するには、**等分配を破る何か**が必要</span>
 <span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>両方のルートは、本書の三原則のうち「② 背景物理を曖昧にしない」を実装する重要な複線である。第10章でプランクの方法を、第11章で Einstein の方法をたどることで、プランク分布の **占有因子 $1/(e^{h\nu/k_B T}-1)$** がどちらのルートからも必然として出ることを確認する。第8章では Bose 統計から導いた占有因子が、二つの別の角度からも再導出される。</span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>ここから出る論理的選択肢は限られる。一つは**エネルギー単位の離散化**（Planck の量子仮説、第10章）。もう一つは**光が粒子としてふるまう**こと（Einstein の光量子、第11章）。両者は等価で、結局は同じプランク分布に至るが、思考の出発点が違う。</span>
 <span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a>**使えるようになった道具**（§9.1〜9.5）：</span>
-<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>空洞の電磁モード密度 $g(\nu) = 8\pi\nu^2/c^3$ は古典電磁気の結果として理解できる（第V部で本格導出）</span>
-<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rayleigh–Jeans 則 @eq-rayleigh-jeans-bnu は等分配定理から出る古典の結果で、低振動数極限では観測と合う</span>
-<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>紫外線破綻は等分配定理が高振動数モードに無条件で適用されることに由来する。これを救う鍵は **エネルギーの離散化**</span>
-<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>両方のルートは、本書の三原則のうち「② 背景物理を曖昧にしない」を実装する重要な複線である。第10章でプランクの方法を、第11章で Einstein の方法をたどることで、プランク分布の **占有因子 $1/(e^{h\nu/k_B T}-1)$** がどちらのルートからも必然として出ることを確認する。第8章では Bose 統計から導いた占有因子が、二つの別の角度からも再導出される。</span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>**使えるようになった道具**（§9.1〜9.5）：</span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>空洞の電磁モード密度 $g(\nu) = 8\pi\nu^2/c^3$ は古典電磁気の結果として理解できる（第V部で本格導出）</span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rayleigh–Jeans 則 @eq-rayleigh-jeans-bnu は等分配定理から出る古典の結果で、低振動数極限では観測と合う</span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>紫外線破綻は等分配定理が高振動数モードに無条件で適用されることに由来する。これを救う鍵は **エネルギーの離散化**</span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-classical-failure-summary .unnumbered}</span></span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
-<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る**</span>
-<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>本章で、中心地図プランク関数の前因子に現れる $\nu^2$ が**古典電磁気のモード密度に由来する**ことを確認した。一方で、各モードの平均エネルギーを古典統計で $k_B T$ と置くと**観測スペクトルが再現できない**（紫外線破綻）。</span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-classical-failure-summary .unnumbered}</span></span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る**</span>
 <span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>中心地図の指数関数因子 $1/(e^{h\nu/k_B T}-1)$（占有因子）には、古典では出てこない**離散的なエネルギー量子 $h\nu$** が含まれる。この $h$ こそが、本部で逆引きする対象である。</span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>本章で、中心地図プランク関数の前因子に現れる $\nu^2$ が**古典電磁気のモード密度に由来する**ことを確認した。一方で、各モードの平均エネルギーを古典統計で $k_B T$ と置くと**観測スペクトルが再現できない**（紫外線破綻）。</span>
 <span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a>**次章へ**：第10章で Planck の量子仮説 ― 振動子のエネルギーが $h\nu$ の整数倍に限られるという思い切った仮定 ― を導入し、これがプランク分布を再現することを示す。歴史的には Planck (1900) の論文に当たる。</span>
-<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-classical-failure-exercises .unnumbered}</span></span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a>中心地図の指数関数因子 $1/(e^{h\nu/k_B T}-1)$（占有因子）には、古典では出てこない**離散的なエネルギー量子 $h\nu$** が含まれる。この $h$ こそが、本部で逆引きする対象である。</span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>**次章へ**：第10章で Planck の量子仮説 ― 振動子のエネルギーが $h\nu$ の整数倍に限られるという思い切った仮定 ― を導入し、これがプランク分布を再現することを示す。歴史的には Planck (1900) の論文に当たる。</span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple"}</span>
-<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。</span>
-<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-classical-failure-further .unnumbered}</span></span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-classical-failure-exercises .unnumbered}</span></span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple"}</span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。</span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pais, *Subtle is the Lord* (Oxford, 1982) — Planck・Einstein の量子論誕生の歴史的精査</span>
-<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rybicki &amp; Lightman, *Radiative Processes in Astrophysics* (Wiley, 1979) — §1.5「Blackbody Radiation」</span>
-<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Kuhn, *Black-Body Theory and the Quantum Discontinuity, 1894-1912* (Oxford, 1978) — 黒体放射と量子論誕生の科学史</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-classical-failure-further .unnumbered}</span></span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pais, *Subtle is the Lord* (Oxford, 1982) — Planck・Einstein の量子論誕生の歴史的精査</span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rybicki &amp; Lightman, *Radiative Processes in Astrophysics* (Wiley, 1979) — §1.5「Blackbody Radiation」</span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Kuhn, *Black-Body Theory and the Quantum Discontinuity, 1894-1912* (Oxford, 1978) — 黒体放射と量子論誕生の科学史</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

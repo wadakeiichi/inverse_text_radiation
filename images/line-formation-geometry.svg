@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 510" width="900" height="510" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Noto Sans JP', sans-serif">
+  <!-- =============================================================
+       Absorption vs emission lines: the geometry (Ch.19 §19.3, Ch.20 §20.4)
+       同じ遷移が吸収線にも輝線にもなる幾何
+       Style matched to planck-map.svg. License: CC BY 4.0
+       ============================================================= -->
+
+  <defs>
+    <marker id="lf-arrow-rose" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c43f6b"/>
+    </marker>
+    <linearGradient id="lf-atmo" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#f0a8b8"/>
+      <stop offset="1" stop-color="#e8f0fa"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="510" fill="#fafbfc"/>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle"
+        font-size="23" font-weight="700" fill="#0a1929" letter-spacing="0.06em">
+    同じ遷移が、吸収線にも輝線にもなる
+  </text>
+  <text x="450" y="66" text-anchor="middle" font-size="14" fill="#5a6a7a">
+    決め手は遷移の種類ではなく、「背景光」と「ガスの源泉関数」の比較
+  </text>
+
+  <!-- ============================================================
+       Panel A: background source + cool gas → absorption line
+       ============================================================ -->
+  <g transform="translate(165, 95)">
+    <rect x="-122" y="0" width="244" height="300" rx="10"
+          fill="#ffffff" stroke="#d8e2ec" stroke-width="1.5"/>
+    <text x="0" y="26" text-anchor="middle" font-size="12" font-weight="700"
+          fill="#0a3260" letter-spacing="0.05em">A · 背景光 ＋ 手前の冷たいガス</text>
+
+    <!-- hot continuum source -->
+    <circle cx="-80" cy="95" r="22" fill="#f6c344" stroke="#d4a017" stroke-width="2"/>
+    <text x="-80" y="138" text-anchor="middle" font-size="10.5" fill="#5a6a7a">連続光源（高温）</text>
+
+    <!-- light beam -->
+    <line x1="-55" y1="95" x2="-45" y2="95" stroke="#c43f6b" stroke-width="2"
+          marker-end="url(#lf-arrow-rose)"/>
+    <line x1="42" y1="95" x2="96" y2="95" stroke="#c43f6b" stroke-width="2"
+          marker-end="url(#lf-arrow-rose)"/>
+
+    <!-- cool gas cloud -->
+    <ellipse cx="0" cy="95" rx="40" ry="27"
+             fill="#e8f0fa" stroke="#1f4e79" stroke-width="1.5"/>
+    <circle cx="-12" cy="88" r="2" fill="#1f4e79"/>
+    <circle cx="8" cy="100" r="2" fill="#1f4e79"/>
+    <circle cx="-2" cy="106" r="2" fill="#1f4e79"/>
+    <circle cx="14" cy="86" r="2" fill="#1f4e79"/>
+    <text x="0" y="60" text-anchor="middle" font-size="10.5" fill="#1f4e79">冷たいガス</text>
+    <text x="104" y="86" text-anchor="end" font-size="10.5" fill="#5a6a7a">観測者へ</text>
+
+    <!-- spectrum inset -->
+    <line x1="-95" y1="245" x2="95" y2="245" stroke="#8a99a8" stroke-width="1"/>
+    <text x="100" y="249" font-size="11" font-style="italic"
+          font-family="Georgia, 'Times New Roman', serif" fill="#5a6a7a">ν</text>
+    <path d="M -95 190 L -30 190 Q -20 190 -14 215 Q -8 240 0 240 Q 8 240 14 215 Q 20 190 30 190 L 95 190"
+          fill="none" stroke="#1f4e79" stroke-width="2.2"/>
+    <line x1="0" y1="245" x2="0" y2="250" stroke="#5a6a7a" stroke-width="1"/>
+    <text x="0" y="262" text-anchor="middle" font-size="10" font-style="italic"
+          font-family="Georgia, 'Times New Roman', serif" fill="#5a6a7a">ν₀</text>
+    <text x="0" y="178" text-anchor="middle" font-size="12" font-weight="700"
+          fill="#1f4e79">吸収線</text>
+
+    <text x="0" y="287" text-anchor="middle" font-size="10.5" fill="#5a6a7a">
+      S_ν（ガス）＜ 背景の強度 → 線で暗くなる
+    </text>
+  </g>
+
+  <!-- ============================================================
+       Panel B: gas only (no background) → emission line
+       ============================================================ -->
+  <g transform="translate(450, 95)">
+    <rect x="-122" y="0" width="244" height="300" rx="10"
+          fill="#ffffff" stroke="#d8e2ec" stroke-width="1.5"/>
+    <text x="0" y="26" text-anchor="middle" font-size="12" font-weight="700"
+          fill="#0a3260" letter-spacing="0.05em">B · ガスのみ（背景光なし）</text>
+
+    <!-- empty background note -->
+    <text x="-80" y="98" text-anchor="middle" font-size="10.5" fill="#8a99a8">背景なし</text>
+    <text x="-80" y="112" text-anchor="middle" font-size="10.5" fill="#8a99a8">（暗黒）</text>
+
+    <!-- gas cloud (excited) -->
+    <ellipse cx="-5" cy="95" rx="40" ry="27"
+             fill="#fbe9eb" stroke="#c43f6b" stroke-width="1.5"/>
+    <circle cx="-17" cy="88" r="2" fill="#c43f6b"/>
+    <circle cx="3" cy="100" r="2" fill="#c43f6b"/>
+    <circle cx="-7" cy="106" r="2" fill="#c43f6b"/>
+    <circle cx="9" cy="86" r="2" fill="#c43f6b"/>
+    <text x="-5" y="60" text-anchor="middle" font-size="10.5" fill="#c43f6b">励起されたガス（HII 領域など）</text>
+
+    <line x1="37" y1="95" x2="96" y2="95" stroke="#c43f6b" stroke-width="2"
+          marker-end="url(#lf-arrow-rose)"/>
+    <text x="104" y="86" text-anchor="end" font-size="10.5" fill="#5a6a7a">観測者へ</text>
+
+    <!-- spectrum inset -->
+    <line x1="-95" y1="245" x2="95" y2="245" stroke="#8a99a8" stroke-width="1"/>
+    <text x="100" y="249" font-size="11" font-style="italic"
+          font-family="Georgia, 'Times New Roman', serif" fill="#5a6a7a">ν</text>
+    <path d="M -95 238 L -16 238 Q -9 238 -6 205 Q -3 182 0 182 Q 3 182 6 205 Q 9 238 16 238 L 38 238 Q 43 238 46 222 Q 49 210 52 210 Q 55 210 58 222 Q 61 238 66 238 L 95 238"
+          fill="none" stroke="#c43f6b" stroke-width="2.2"/>
+    <line x1="0" y1="245" x2="0" y2="250" stroke="#5a6a7a" stroke-width="1"/>
+    <text x="0" y="262" text-anchor="middle" font-size="10" font-style="italic"
+          font-family="Georgia, 'Times New Roman', serif" fill="#5a6a7a">ν₀</text>
+    <text x="0" y="170" text-anchor="middle" font-size="12" font-weight="700"
+          fill="#c43f6b">輝線</text>
+
+    <text x="0" y="287" text-anchor="middle" font-size="10.5" fill="#5a6a7a">
+      背景ゼロ → 自己発光 I ≈ τ S_ν の線だけが見える
+    </text>
+  </g>
+
+  <!-- ============================================================
+       Panel C: temperature gradient atmosphere → absorption line
+       ============================================================ -->
+  <g transform="translate(735, 95)">
+    <rect x="-122" y="0" width="244" height="300" rx="10"
+          fill="#ffffff" stroke="#d8e2ec" stroke-width="1.5"/>
+    <text x="0" y="26" text-anchor="middle" font-size="12" font-weight="700"
+          fill="#0a3260" letter-spacing="0.05em">C · 温度勾配のある大気（恒星）</text>
+
+    <!-- stratified atmosphere -->
+    <rect x="-95" y="55" width="78" height="85" rx="4"
+          fill="url(#lf-atmo)" stroke="#7a91ad" stroke-width="1.2"/>
+    <text x="-56" y="51" text-anchor="middle" font-size="10" fill="#5a6a7a">表層 ― 低温</text>
+    <text x="-56" y="153" text-anchor="middle" font-size="10" fill="#8a1f3e">深部 ― 高温</text>
+
+    <!-- two sightlines: continuum (deep) and line core (shallow) -->
+    <line x1="-30" y1="125" x2="96" y2="125" stroke="#c43f6b" stroke-width="2"
+          marker-end="url(#lf-arrow-rose)"/>
+    <text x="10" y="141" text-anchor="middle" font-size="10" fill="#8a1f3e">連続光：深く熱い層まで</text>
+    <line x1="-62" y1="72" x2="96" y2="72" stroke="#1f4e79" stroke-width="2"
+          stroke-dasharray="5,3" marker-end="url(#lf-arrow-rose)"/>
+    <text x="10" y="63" text-anchor="middle" font-size="10" fill="#1f4e79">線芯：浅く冷たい層まで</text>
+    <text x="104" y="100" text-anchor="end" font-size="10.5" fill="#5a6a7a">観測者へ</text>
+
+    <!-- spectrum inset -->
+    <line x1="-95" y1="245" x2="95" y2="245" stroke="#8a99a8" stroke-width="1"/>
+    <text x="100" y="249" font-size="11" font-style="italic"
+          font-family="Georgia, 'Times New Roman', serif" fill="#5a6a7a">ν</text>
+    <path d="M -95 190 L -30 190 Q -20 190 -14 212 Q -8 234 0 234 Q 8 234 14 212 Q 20 190 30 190 L 95 190"
+          fill="none" stroke="#1f4e79" stroke-width="2.2"/>
+    <line x1="0" y1="245" x2="0" y2="250" stroke="#5a6a7a" stroke-width="1"/>
+    <text x="0" y="262" text-anchor="middle" font-size="10" font-style="italic"
+          font-family="Georgia, 'Times New Roman', serif" fill="#5a6a7a">ν₀</text>
+    <text x="0" y="178" text-anchor="middle" font-size="12" font-weight="700"
+          fill="#1f4e79">吸収線</text>
+
+    <text x="0" y="287" text-anchor="middle" font-size="10.5" fill="#5a6a7a">
+      線芯ほど浅く低温の層を見る → 暗い（太陽の Fraunhofer 線）
+    </text>
+  </g>
+
+  <!-- Footer -->
+  <text x="450" y="440" text-anchor="middle" font-size="12" fill="#5a6a7a">
+    同じ Hα でも、太陽（C 型）では吸収線、HII 領域（B 型）では輝線になる。
+  </text>
+  <text x="450" y="460" text-anchor="middle" font-size="12" fill="#5a6a7a">
+    一般則：S_ν ＞ 背景光なら輝線、S_ν ＜ 背景光なら吸収線（第20章 §20.4）
+  </text>
+  <text x="450" y="488" text-anchor="middle" font-size="11" fill="#8a99a8">
+    放射輸送の形式解 I_ν = I_ν(0) e^(−τ) ＋ ∫ S_ν e^(−(τ−τ′)) dτ′ の二つの項の競争（第5章）
+  </text>
+</svg>

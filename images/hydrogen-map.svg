@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" width="900" height="620" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Noto Sans JP', sans-serif">
+  <!-- =============================================================
+       Central Map (Line Side): Hydrogen line absorption coefficient
+       中心地図（線側）― 水素線吸収係数の各因子と章の対応
+       Companion to planck-map.svg (same design language).
+       Colour code: 因子の色 ＝ 担当する章の色
+         blue   #1f4e79 = Ch.21 (f_lu 振動子強度・ν0 線位置)
+         amber  #d4a017 = Ch.20 + Part III (n_l 占有数)
+         orange #c25e00 = Ch.22 (φ 線形)
+         rose   #c43f6b = Ch.19 (観測 = 出発点)
+         purple #5e2d91 = Part VIII (QED 統一)
+       Math glyphs absolutely positioned (no tspan dx/dy).
+       License: CC BY 4.0
+       ============================================================= -->
+
+  <defs>
+    <marker id="harrow-rose" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c43f6b"/>
+    </marker>
+    <marker id="harrow-purple" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5e2d91"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="620" fill="#fafbfc"/>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle"
+        font-size="23" font-weight="700" fill="#0a1929"
+        letter-spacing="0.06em">
+    中心地図 ― 線スペクトル
+  </text>
+  <text x="450" y="66" text-anchor="middle"
+        font-size="14" fill="#5a6a7a">
+    線吸収係数の各因子と、それを逆引きする章の対応（因子の色 ＝ 章の色）
+  </text>
+
+  <!-- ============================================================
+       First layer: Rydberg formula (iconic anchor), small, top
+       ============================================================ -->
+  <g transform="translate(450, 110)">
+    <rect x="-215" y="-22" width="430" height="56" rx="8"
+          fill="#ffffff" stroke="#d8e2ec" stroke-width="1.5"/>
+    <text x="-200" y="8" font-size="11" fill="#5a6a7a">第一層</text>
+    <!-- 1/λ = R_H (1/n_l² − 1/n_u²) : compact, serif -->
+    <g font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif"
+       fill="#0a1929">
+      <text x="-140" y="-2" font-size="15">1</text>
+      <line x1="-145" y1="3" x2="-130" y2="3" stroke="#0a1929" stroke-width="1.2"/>
+      <text x="-142" y="18" font-size="15" font-style="italic">λ</text>
+      <text x="-118" y="8" font-size="15">=</text>
+      <text x="-102" y="8" font-size="15" font-style="italic">R</text>
+      <text x="-91" y="12" font-size="10" font-style="italic">H</text>
+      <text x="-80" y="8" font-size="16">(</text>
+      <text x="-72" y="-2" font-size="15">1</text>
+      <line x1="-77" y1="3" x2="-58" y2="3" stroke="#0a1929" stroke-width="1.2"/>
+      <text x="-74" y="18" font-size="14" font-style="italic">n</text>
+      <text x="-65" y="22" font-size="9" font-style="italic">l</text>
+      <text x="-61" y="13" font-size="10">2</text>
+      <text x="-50" y="8" font-size="15">−</text>
+      <text x="-34" y="-2" font-size="15">1</text>
+      <line x1="-39" y1="3" x2="-18" y2="3" stroke="#0a1929" stroke-width="1.2"/>
+      <text x="-37" y="18" font-size="14" font-style="italic">n</text>
+      <text x="-27" y="22" font-size="9" font-style="italic">u</text>
+      <text x="-22" y="13" font-size="10">2</text>
+      <text x="-10" y="8" font-size="16">)</text>
+    </g>
+    <text x="120" y="2" text-anchor="middle" font-size="11" fill="#5a6a7a">線が「どこに」出るか</text>
+    <text x="120" y="18" text-anchor="middle" font-size="11" font-weight="600" fill="#1f4e79">リュードベリ公式 → 第21章</text>
+  </g>
+
+  <!-- ============================================================
+       Second layer: line absorption coefficient (structural map)
+       ============================================================ -->
+  <rect x="150" y="180" width="600" height="205" rx="10"
+        fill="#ffffff" stroke="#7a91ad" stroke-width="1.5"/>
+  <text x="170" y="204" font-size="11" fill="#5a6a7a">第二層（構造地図）</text>
+
+  <g transform="translate(450, 255) scale(1.2)">
+    <!-- α_ν = (πe²/m_e c) · f_lu · n_l · φ(ν − ν0) -->
+    <g font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif"
+       fill="#0a1929">
+      <!-- LHS α_ν = -->
+      <text x="-225" y="8"  font-size="24" font-style="italic">α</text>
+      <text x="-209" y="14" font-size="15" font-style="italic">ν</text>
+      <text x="-188" y="8"  font-size="22">=</text>
+
+      <!-- classical prefactor πe²/m_e c (gray = 古典極限, Ch.21+VIII) -->
+      <g id="factor-classical" fill="#41576d">
+        <text x="-162" y="-8" font-size="17" font-style="italic">πe</text>
+        <text x="-141" y="-15" font-size="12">2</text>
+        <line x1="-165" y1="-2" x2="-130" y2="-2" stroke="#41576d" stroke-width="1.4"/>
+        <text x="-163" y="16" font-size="17" font-style="italic">m</text>
+        <text x="-148" y="20" font-size="11" font-style="italic">e</text>
+        <text x="-140" y="16" font-size="17" font-style="italic">c</text>
+      </g>
+
+      <!-- f_lu (blue, Ch.21) -->
+      <text x="-110" y="8" font-size="22" font-style="italic"
+            fill="#1f4e79" font-weight="600">f</text>
+      <text x="-99" y="14" font-size="14" font-style="italic"
+            fill="#1f4e79" font-weight="600">lu</text>
+
+      <!-- n_l (amber, Ch.20) -->
+      <text x="-68" y="8" font-size="22" font-style="italic"
+            fill="#9a7400" font-weight="600">n</text>
+      <text x="-54" y="14" font-size="14" font-style="italic"
+            fill="#9a7400" font-weight="600">l</text>
+
+      <!-- φ(ν − ν0) (orange, Ch.22) -->
+      <text x="-32" y="8" font-size="22" font-style="italic"
+            fill="#c25e00" font-weight="600">φ</text>
+      <text x="-16" y="8" font-size="22" fill="#c25e00">(</text>
+      <text x="-7"  y="8" font-size="20" font-style="italic" fill="#c25e00">ν</text>
+      <text x="7"   y="8" font-size="20" fill="#c25e00">−</text>
+      <text x="24"  y="8" font-size="20" font-style="italic" fill="#c25e00">ν</text>
+      <text x="36"  y="14" font-size="13" fill="#c25e00">0</text>
+      <text x="45"  y="8" font-size="22" fill="#c25e00">)</text>
+    </g>
+
+    <!-- factor underlines -->
+    <g id="hydrogen-underlines">
+      <line x1="-168" y1="32" x2="-128" y2="32"
+            stroke="#41576d" stroke-width="4" stroke-linecap="round"/>
+      <line x1="-114" y1="32" x2="-92" y2="32"
+            stroke="#1f4e79" stroke-width="4" stroke-linecap="round"/>
+      <line x1="-72" y1="32" x2="-48" y2="32"
+            stroke="#d4a017" stroke-width="4" stroke-linecap="round"/>
+      <line x1="-36" y1="32" x2="50" y2="32"
+            stroke="#c25e00" stroke-width="4" stroke-linecap="round"/>
+    </g>
+
+    <!-- factor labels (staggered in two rows to avoid horizontal overlap:
+         columns 1 & 3 on the upper row, columns 2 & 4 on the lower row) -->
+    <g font-weight="600" font-size="10"
+       font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Noto Sans JP', sans-serif">
+      <text x="-148" y="50" text-anchor="middle" fill="#41576d">古典極限の強さ</text>
+      <text x="-148" y="64" text-anchor="middle" fill="#41576d">→ 21章・第VIII部</text>
+      <text x="-103" y="82" text-anchor="middle" fill="#1f4e79">振動子強度</text>
+      <text x="-103" y="96" text-anchor="middle" fill="#1f4e79">→ 21章</text>
+      <text x="-60" y="50" text-anchor="middle" fill="#9a7400">下準位の占有数</text>
+      <text x="-60" y="64" text-anchor="middle" fill="#9a7400">→ 20章・第III部</text>
+      <text x="12" y="82" text-anchor="middle" fill="#c25e00">線形 φ(ν − ν₀)</text>
+      <text x="12" y="96" text-anchor="middle" fill="#c25e00">→ 22章（ν₀ は 21章）</text>
+    </g>
+  </g>
+
+  <!-- ============================================================
+       Chapter boxes: bottom row
+       ============================================================ -->
+  <g>
+    <rect x="60" y="400" width="186" height="85" rx="10"
+          fill="#fff9e6" stroke="#d4a017" stroke-width="2"/>
+    <text x="153" y="423" text-anchor="middle"
+          font-size="13" font-weight="700" fill="#9a7400"
+          letter-spacing="0.08em">第20章</text>
+    <text x="153" y="446" text-anchor="middle"
+          font-size="15" fill="#0a1929">線形成</text>
+    <text x="153" y="466" text-anchor="middle"
+          font-size="10.5" fill="#5a6a7a">吸収線か輝線か・n_l の決まり方</text>
+    <text x="153" y="479" text-anchor="middle"
+          font-size="10.5" fill="#5a6a7a">（LTE / non-LTE・第III部と接続）</text>
+  </g>
+
+  <g>
+    <rect x="262" y="400" width="186" height="85" rx="10"
+          fill="#e8f0fa" stroke="#1f4e79" stroke-width="2"/>
+    <text x="355" y="423" text-anchor="middle"
+          font-size="13" font-weight="700" fill="#1f4e79"
+          letter-spacing="0.08em">第21章</text>
+    <text x="355" y="446" text-anchor="middle"
+          font-size="15" fill="#0a1929">原子物理</text>
+    <text x="355" y="466" text-anchor="middle"
+          font-size="10.5" fill="#5a6a7a">ν₀（リュードベリ）と f_lu</text>
+    <text x="355" y="479" text-anchor="middle"
+          font-size="10.5" fill="#5a6a7a">（Schrödinger・選択則・禁制線）</text>
+  </g>
+
+  <g>
+    <rect x="464" y="400" width="186" height="85" rx="10"
+          fill="#fdf0e3" stroke="#c25e00" stroke-width="2"/>
+    <text x="557" y="423" text-anchor="middle"
+          font-size="13" font-weight="700" fill="#c25e00"
+          letter-spacing="0.08em">第22章</text>
+    <text x="557" y="446" text-anchor="middle"
+          font-size="15" fill="#0a1929">線形（line shape）</text>
+    <text x="557" y="466" text-anchor="middle"
+          font-size="10.5" fill="#5a6a7a">自然幅・Doppler・衝突・Voigt</text>
+    <text x="557" y="479" text-anchor="middle"
+          font-size="10.5" fill="#5a6a7a">（温度・密度・磁場の読み取り）</text>
+  </g>
+
+  <g>
+    <rect x="666" y="400" width="186" height="85" rx="10"
+          fill="#f3f5f7" stroke="#41576d" stroke-width="2"/>
+    <text x="759" y="423" text-anchor="middle"
+          font-size="13" font-weight="700" fill="#41576d"
+          letter-spacing="0.08em">第23章</text>
+    <text x="759" y="446" text-anchor="middle"
+          font-size="15" fill="#0a1929">観測応用</text>
+    <text x="759" y="466" text-anchor="middle"
+          font-size="10.5" fill="#5a6a7a">速度・組成・温度密度診断</text>
+    <text x="759" y="479" text-anchor="middle"
+          font-size="10.5" fill="#5a6a7a">（全因子を組み合わせる）</text>
+  </g>
+
+  <!-- ============================================================
+       Bottom: input (Ch.19 observation) and output (Part VIII)
+       ============================================================ -->
+  <g>
+    <rect x="30" y="510" width="190" height="78" rx="10"
+          fill="#fbe9eb" stroke="#c43f6b" stroke-width="2"/>
+    <text x="125" y="533" text-anchor="middle"
+          font-size="13" font-weight="700" fill="#8a1f3e"
+          letter-spacing="0.08em">第19章</text>
+    <text x="125" y="555" text-anchor="middle"
+          font-size="14" fill="#0a1929">観測される線スペクトル</text>
+    <text x="125" y="574" text-anchor="middle"
+          font-size="11" fill="#5a6a7a">吸収線・輝線・21cm・分子線</text>
+  </g>
+  <path d="M 125 507 Q 110 330 158 268"
+        fill="none" stroke="#c43f6b" stroke-width="2"
+        stroke-dasharray="6,4" marker-end="url(#harrow-rose)"/>
+  <text x="92" y="330" text-anchor="middle"
+        font-size="12" font-weight="600" fill="#8a1f3e">出発点</text>
+
+  <g>
+    <rect x="680" y="510" width="190" height="78" rx="10"
+          fill="#ede5f7" stroke="#5e2d91" stroke-width="2"/>
+    <text x="775" y="533" text-anchor="middle"
+          font-size="13" font-weight="700" fill="#3e1a6a"
+          letter-spacing="0.08em">第VIII部</text>
+    <text x="775" y="555" text-anchor="middle"
+          font-size="14" fill="#0a1929">QED による統一</text>
+    <text x="775" y="574" text-anchor="middle"
+          font-size="11" fill="#5a6a7a">2hν³/c² で連続の地図と合流</text>
+  </g>
+  <path d="M 742 383 Q 800 420 778 507"
+        fill="none" stroke="#5e2d91" stroke-width="2"
+        stroke-dasharray="6,4" marker-end="url(#harrow-purple)"/>
+  <text x="825" y="390" text-anchor="middle"
+        font-size="12" font-weight="600" fill="#3e1a6a">統一へ</text>
+
+  <!-- Reading hint -->
+  <text x="450" y="540" text-anchor="middle" font-size="12" fill="#5a6a7a">
+    読み方：式の中の色つき因子は、同じ色の章で
+  </text>
+  <text x="450" y="558" text-anchor="middle" font-size="12" fill="#5a6a7a">
+    「なぜこの形か」が逆引きされる
+  </text>
+
+  <text x="450" y="606" text-anchor="middle" font-size="11" fill="#8a99a8">
+    第VII部の各章冒頭でこの地図が再掲され、その章が担当する因子が強調表示される
+  </text>
+</svg>

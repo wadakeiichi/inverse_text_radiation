@@ -639,6 +639,16 @@ Z = \prod_{i=1}^N Z_1, \quad Z_1 = \sum_{n=0}^\infty e^{-\beta(n + 1/2)\hbar\ome
 <p><span id="eq-mean-energy-oscillator"><span class="math display">
 \langle E \rangle = N \left( \frac{\hbar\omega}{2} + \frac{\hbar\omega}{e^{\beta\hbar\omega} - 1} \right)
 \tag{9.5}</span></span></p>
+<div id="fig-quantum-freezeout" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-quantum-freezeout-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/quantum-freeze-out.svg" class="img-fluid figure-img" style="width:88.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-quantum-freezeout-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+図&nbsp;9.1: 量子化振動子 1 個の平均エネルギー <span class="math inline">\langle\epsilon\rangle</span> と古典の等分配 <span class="math inline">k_B T</span> の比較。低振動数（<span class="math inline">h\nu \ll k_BT</span>）では古典と一致するが、<strong><span class="math inline">h\nu \approx k_BT</span> 付近から急速に等分配を下回り</strong>、<span class="math inline">h\nu \gg k_BT</span> では指数的に「凍結」する。これが Rayleigh–Jeans 紫外破綻からプランク分布への移行を量子論側から見たもので、第10章 §10.2 で本格的に扱う。
+</figcaption>
+</figure>
+</div>
 <p>第二項に <strong><span class="math inline">1/(e^{\hbar\omega/k_B T} - 1)</span></strong> という形が現れていることに注意。これがプランク分布の占有因子に他ならない。プランクが量子仮説でこの式に辿り着いたのは、第10章で本格的に扱う。</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -1443,178 +1453,180 @@ u_\nu^\text{RJ} = g(\nu) \cdot k_B T = \frac{8\pi \nu^2}{c^3} k_B T
 <span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>\langle E \rangle = N \left( \frac{\hbar\omega}{2} + \frac{\hbar\omega}{e^{\beta\hbar\omega} - 1} \right)</span>
 <span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>$$ {#eq-mean-energy-oscillator}</span>
 <span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>第二項に **$1/(e^{\hbar\omega/k_B T} - 1)$** という形が現れていることに注意。これがプランク分布の占有因子に他ならない。プランクが量子仮説でこの式に辿り着いたのは、第10章で本格的に扱う。</span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a><span class="al">![量子化振動子 1 個の平均エネルギー $\langle\epsilon\rangle$ と古典の等分配 $k_B T$ の比較。低振動数（$h\nu \ll k_BT$）では古典と一致するが、**$h\nu \approx k_BT$ 付近から急速に等分配を下回り**、$h\nu \gg k_BT$ では指数的に「凍結」する。これが Rayleigh–Jeans 紫外破綻からプランク分布への移行を量子論側から見たもので、第10章 §10.2 で本格的に扱う。](../images/quantum-freeze-out.svg)</span>{#fig-quantum-freezeout width=88%}</span>
 <span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>**零点エネルギー $\hbar\omega/2$ の扱いについて**：本章では $\epsilon_n = (n+1/2)\hbar\omega$ と書いて零点項を残したが、Planck の原論文（1900）は $\epsilon_n = n h\nu$ と書いた（第10章でこの形を再現する）。零点項の有無は **観測量である占有因子 $1/(e^{\hbar\omega/k_BT}-1)$ には影響しない**（零点エネルギーは温度によらない定数で、温度微分・分配関数の対数微分で消える）。両者の物理的意味（古典的振動子の量子化 vs エネルギー量子の数え上げ）と、零点項が観測可能になる場面（真空揺らぎ、Casimir 効果、自発放出、§24.3）は第IV部と第VIII部で扱う</span>
-<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning}</span>
-<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>**先取りについて**：本節では「エネルギーが $\hbar\omega$ の整数倍に **量子化されている**」という前提を、第IV部（第9〜10章）の逆引きより **先に** 使っている。これは「観測されるプランク分布の指数因子を、最も簡潔に再現できる仮定として一度受け入れる」立場であり、**第8章のモード密度の借用**（§8.5）と同じ精神の先取りである。なぜ量子化されなくてはならないか（古典統計の破綻 → Rayleigh-Jeans の紫外発散 → Planck 仮説）は第9-10章で逆引きされる。第7章で先取りした分は、第10章で必ず回収される</span>
-<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
-<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>**問い**：いま導いた振動子の式 @eq-mean-energy-oscillator は、プランク分布そのものではないのか？</span>
-<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>**短答**：構造はほぼ同じだが、まだプランク分布ではない。@eq-mean-energy-oscillator は「ある **一つの** モードの平均エネルギー」を与える式である。プランク分布 $B_\nu(T)$ は、これに「振動数 $\nu$ 近傍にどれだけのモードがあるか」（モード密度）を掛けたもの。</span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>第二項に **$1/(e^{\hbar\omega/k_B T} - 1)$** という形が現れていることに注意。これがプランク分布の占有因子に他ならない。プランクが量子仮説でこの式に辿り着いたのは、第10章で本格的に扱う。</span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>**零点エネルギー $\hbar\omega/2$ の扱いについて**：本章では $\epsilon_n = (n+1/2)\hbar\omega$ と書いて零点項を残したが、Planck の原論文（1900）は $\epsilon_n = n h\nu$ と書いた（第10章でこの形を再現する）。零点項の有無は **観測量である占有因子 $1/(e^{\hbar\omega/k_BT}-1)$ には影響しない**（零点エネルギーは温度によらない定数で、温度微分・分配関数の対数微分で消える）。両者の物理的意味（古典的振動子の量子化 vs エネルギー量子の数え上げ）と、零点項が観測可能になる場面（真空揺らぎ、Casimir 効果、自発放出、§24.3）は第IV部と第VIII部で扱う</span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning}</span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>**先取りについて**：本節では「エネルギーが $\hbar\omega$ の整数倍に **量子化されている**」という前提を、第IV部（第9〜10章）の逆引きより **先に** 使っている。これは「観測されるプランク分布の指数因子を、最も簡潔に再現できる仮定として一度受け入れる」立場であり、**第8章のモード密度の借用**（§8.5）と同じ精神の先取りである。なぜ量子化されなくてはならないか（古典統計の破綻 → Rayleigh-Jeans の紫外発散 → Planck 仮説）は第9-10章で逆引きされる。第7章で先取りした分は、第10章で必ず回収される</span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>**問い**：いま導いた振動子の式 @eq-mean-energy-oscillator は、プランク分布そのものではないのか？</span>
 <span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>**もう一歩**：モード密度の話は第V部・第14章で扱う。中心地図のプランク関数の **指数関数因子**（占有因子）が本章で説明され、**前因子** $2h\nu^3/c^2$ は第V部で説明される、という構造になっている。</span>
-<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>**使えるようになった道具**（§7.1〜7.2）：</span>
-<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>分配関数 $Z$ から、平均エネルギー・自由エネルギー・エントロピー・圧力・比熱までを微分一発で取り出せる</span>
-<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>量子化された調和振動子の平均エネルギー @eq-mean-energy-oscillator に、観測されるプランク分布の指数関数因子 $1/(e^{\hbar\omega/k_BT}-1)$ がすでに現れる ― 観測される高振動数の指数減衰の起源がここに芽生えている</span>
-<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a><span class="fu">## 7.3 Boltzmann 分布 ― 古典統計の中心定理 {#sec-statistical-mechanics-boltzmann}</span></span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>**短答**：構造はほぼ同じだが、まだプランク分布ではない。@eq-mean-energy-oscillator は「ある **一つの** モードの平均エネルギー」を与える式である。プランク分布 $B_\nu(T)$ は、これに「振動数 $\nu$ 近傍にどれだけのモードがあるか」（モード密度）を掛けたもの。</span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a>**もう一歩**：モード密度の話は第V部・第14章で扱う。中心地図のプランク関数の **指数関数因子**（占有因子）が本章で説明され、**前因子** $2h\nu^3/c^2$ は第V部で説明される、という構造になっている。</span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>**使えるようになった道具**（§7.1〜7.2）：</span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>分配関数 $Z$ から、平均エネルギー・自由エネルギー・エントロピー・圧力・比熱までを微分一発で取り出せる</span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>量子化された調和振動子の平均エネルギー @eq-mean-energy-oscillator に、観測されるプランク分布の指数関数因子 $1/(e^{\hbar\omega/k_BT}-1)$ がすでに現れる ― 観測される高振動数の指数減衰の起源がここに芽生えている</span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a><span class="fu">## 7.3 Boltzmann 分布 ― 古典統計の中心定理 {#sec-statistical-mechanics-boltzmann}</span></span>
 <span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>@eq-boltzmann-prob を観測量で表すと、$N$ 個の同種粒子のうち、エネルギー $E_i$ の状態 $i$ にある粒子数の平均は</span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
 <span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>\langle n_i \rangle = N \cdot \frac{g_i e^{-E_i/k_B T}}{\sum_j g_j e^{-E_j/k_B T}}</span>
-<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>$$ {#eq-boltzmann-distribution}</span>
-<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>ここで $g_i$ は状態 $i$ の**縮退度**（**degeneracy**）。これが（古典）**Boltzmann 分布** である。</span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>@eq-boltzmann-prob を観測量で表すと、$N$ 個の同種粒子のうち、エネルギー $E_i$ の状態 $i$ にある粒子数の平均は</span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>\langle n_i \rangle = N \cdot \frac{g_i e^{-E_i/k_B T}}{\sum_j g_j e^{-E_j/k_B T}}</span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>$$ {#eq-boltzmann-distribution}</span>
 <span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>**例：水素原子の準位占有数**</span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>ここで $g_i$ は状態 $i$ の**縮退度**（**degeneracy**）。これが（古典）**Boltzmann 分布** である。</span>
 <span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>水素原子の主量子数 $n$ の準位は、エネルギー $E_n = -13.6 \text{ eV} / n^2$ をもち、縮退度は $g_n = 2 n^2$（電子スピン込み）。温度 $T$ の熱浴と平衡にあるとき、</span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>**例：水素原子の準位占有数**</span>
 <span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>\frac{n_2}{n_1} = \frac{g_2}{g_1} e^{-(E_2 - E_1)/k_B T}</span>
-<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>$$ {#eq-boltzmann-hydrogen}</span>
-<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>この比は、第VII部で線スペクトルの強度比から温度を求める基本式になる。</span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>水素原子の主量子数 $n$ の準位は、エネルギー $E_n = -13.6 \text{ eV} / n^2$ をもち、縮退度は $g_n = 2 n^2$（電子スピン込み）。温度 $T$ の熱浴と平衡にあるとき、</span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>\frac{n_2}{n_1} = \frac{g_2}{g_1} e^{-(E_2 - E_1)/k_B T}</span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>$$ {#eq-boltzmann-hydrogen}</span>
 <span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>**対応（観測）**：観測される線スペクトル強度比から温度を読むのは、まさにこの Boltzmann 分布が成り立っているという仮定（LTE）に基づいている。LTE が破れる場面（non-LTE、第5章 §5.5）では @eq-boltzmann-hydrogen は使えない。</span>
-<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a>**使えるようになった道具**（§7.3）：Boltzmann 分布 @eq-boltzmann-distribution は、観測される複数の線の強度比から温度を読み出す「**励起温度**」推定の基礎式である。第VII部・第23章で本格的に応用する。</span>
-<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a><span class="fu">## 7.4 平均値と揺らぎ {#sec-statistical-mechanics-fluctuations}</span></span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>この比は、第VII部で線スペクトルの強度比から温度を求める基本式になる。</span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>**対応（観測）**：観測される線スペクトル強度比から温度を読むのは、まさにこの Boltzmann 分布が成り立っているという仮定（LTE）に基づいている。LTE が破れる場面（non-LTE、第5章 §5.5）では @eq-boltzmann-hydrogen は使えない。</span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>**使えるようになった道具**（§7.3）：Boltzmann 分布 @eq-boltzmann-distribution は、観測される複数の線の強度比から温度を読み出す「**励起温度**」推定の基礎式である。第VII部・第23章で本格的に応用する。</span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a><span class="fu">## 7.4 平均値と揺らぎ {#sec-statistical-mechanics-fluctuations}</span></span>
 <span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>統計力学は平均値だけでなく、**揺らぎ**（**fluctuations**, 統計的なばらつき）も予言する。揺らぎは温度・密度・エネルギー・光子数などのあらゆる量に現れる。</span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
 <span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>エネルギー揺らぎは分配関数からこう求まる：</span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>統計力学は平均値だけでなく、**揺らぎ**（**fluctuations**, 統計的なばらつき）も予言する。揺らぎは温度・密度・エネルギー・光子数などのあらゆる量に現れる。</span>
 <span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>\langle (\Delta E)^2 \rangle = \langle E^2 \rangle - \langle E \rangle^2 = k_B T^2 \frac{\partial \langle E \rangle}{\partial T} = k_B T^2 C_V</span>
-<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a>$$ {#eq-energy-fluctuation}</span>
-<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a>$C_V$ は定積熱容量。$N \sim 10^{23}$ では、相対的な揺らぎは $\Delta E / \langle E \rangle \sim 1/\sqrt{N} \sim 10^{-11}$ で、観測に出てこない（マクロ熱力学が成り立つ理由）。</span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a>エネルギー揺らぎは分配関数からこう求まる：</span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>\langle (\Delta E)^2 \rangle = \langle E^2 \rangle - \langle E \rangle^2 = k_B T^2 \frac{\partial \langle E \rangle}{\partial T} = k_B T^2 C_V</span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a>$$ {#eq-energy-fluctuation}</span>
 <span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>しかし**少数粒子系**や**特定の振動数帯**では揺らぎが重要になる。</span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>$C_V$ は定積熱容量。$N \sim 10^{23}$ では、相対的な揺らぎは $\Delta E / \langle E \rangle \sim 1/\sqrt{N} \sim 10^{-11}$ で、観測に出てこない（マクロ熱力学が成り立つ理由）。</span>
 <span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a>**CMB のスペクトル歪み**：CMB の黒体スペクトルは完璧だが、初期宇宙の様々な過程（粒子崩壊、再結合、Compton 散乱の不完全さ）がスペクトルに微小な歪みを残しうる。これらの歪みは「光子数の揺らぎ」「エネルギーの揺らぎ」を反映する量であり、第16章で扱う。</span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a>しかし**少数粒子系**や**特定の振動数帯**では揺らぎが重要になる。</span>
 <span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
-<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>**問い**：揺らぎが小さいのは、なぜ「自然法則」のように見えるのか？</span>
-<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a>**短答**：$N$ が大きいから。揺らぎは $1/\sqrt{N}$ で減衰するので、アボガドロ数規模の系では事実上ゼロに見える。</span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>**CMB のスペクトル歪み**：CMB の黒体スペクトルは完璧だが、初期宇宙の様々な過程（粒子崩壊、再結合、Compton 散乱の不完全さ）がスペクトルに微小な歪みを残しうる。これらの歪みは「光子数の揺らぎ」「エネルギーの揺らぎ」を反映する量であり、第16章で扱う。</span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a>**問い**：揺らぎが小さいのは、なぜ「自然法則」のように見えるのか？</span>
 <span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>**もう一歩**：宇宙論的スケールの観測では話が違う。空間的に異なる場所の CMB 温度ゆらぎは $\Delta T / T \sim 10^{-5}$ で観測されているが、これは「熱平衡の揺らぎ」ではなく、初期宇宙の量子ゆらぎが膨張で増幅された結果である（第16章）。両者は混同しないこと。</span>
-<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a><span class="fu">## 7.5 熱力学関数とのつながり {#sec-statistical-mechanics-thermodynamics}</span></span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>**短答**：$N$ が大きいから。揺らぎは $1/\sqrt{N}$ で減衰するので、アボガドロ数規模の系では事実上ゼロに見える。</span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>**もう一歩**：宇宙論的スケールの観測では話が違う。空間的に異なる場所の CMB 温度ゆらぎは $\Delta T / T \sim 10^{-5}$ で観測されているが、これは「熱平衡の揺らぎ」ではなく、初期宇宙の量子ゆらぎが膨張で増幅された結果である（第16章）。両者は混同しないこと。</span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3-B4｜導出：M1</span><span class="co">]</span></span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a><span class="fu">## 7.5 熱力学関数とのつながり {#sec-statistical-mechanics-thermodynamics}</span></span>
 <span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a>ここまで導入した分配関数 $Z$ は、熱力学の標準的関数とすべて対応している。鍵となる関係：</span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3-B4｜導出：M1</span><span class="co">]</span></span>
 <span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>F = -k_B T \ln Z</span>
-<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>$$ {#eq-free-energy}</span>
-<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>ここから</span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>ここまで導入した分配関数 $Z$ は、熱力学の標準的関数とすべて対応している。鍵となる関係：</span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>F = -k_B T \ln Z</span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>$$ {#eq-free-energy}</span>
 <span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a>S = -\frac{\partial F}{\partial T}, \quad P = -\frac{\partial F}{\partial V}, \quad \mu = \frac{\partial F}{\partial N}</span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>ここから</span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a>**化学ポテンシャル**（**chemical potential**）$\mu$ は粒子数に対する Lagrange 乗数で、@eq-lagrange の $\alpha = -\mu/k_B T$ に対応する。</span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>S = -\frac{\partial F}{\partial T}, \quad P = -\frac{\partial F}{\partial V}, \quad \mu = \frac{\partial F}{\partial N}</span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a>**化学ポテンシャルの物理的意味**：粒子を一つ加えたときの自由エネルギーの変化。「粒子数を保存しないといけない系」では化学ポテンシャルが現れ、保存しない系（光子のように）では $\mu = 0$ になる。</span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a>**化学ポテンシャル**（**chemical potential**）$\mu$ は粒子数に対する Lagrange 乗数で、@eq-lagrange の $\alpha = -\mu/k_B T$ に対応する。</span>
 <span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>なぜ光子は粒子数を保存しないか。電磁場のモードと物質の相互作用（吸収・放出）で光子は生成・消滅し、その数は決まっていない。エネルギーは保存するが個数は保存しない。これが**光子の化学ポテンシャルがゼロ**になる物理的理由で、第8章で詳しく扱う。</span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>**化学ポテンシャルの物理的意味**：粒子を一つ加えたときの自由エネルギーの変化。「粒子数を保存しないといけない系」では化学ポテンシャルが現れ、保存しない系（光子のように）では $\mu = 0$ になる。</span>
 <span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a><span class="fu">## 7.6 古典統計の限界 ― 放射場での破綻 {#sec-statistical-mechanics-classical-limit}</span></span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>なぜ光子は粒子数を保存しないか。電磁場のモードと物質の相互作用（吸収・放出）で光子は生成・消滅し、その数は決まっていない。エネルギーは保存するが個数は保存しない。これが**光子の化学ポテンシャルがゼロ**になる物理的理由で、第8章で詳しく扱う。</span>
 <span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a><span class="fu">## 7.6 古典統計の限界 ― 放射場での破綻 {#sec-statistical-mechanics-classical-limit}</span></span>
 <span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a>古典統計力学を放射場にそのまま適用すると、本書が逆引きで辿る**最初の決定的な失敗**に遭遇する。</span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
 <span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>**古典の結論（Rayleigh–Jeans）**：振動数 $\nu$ あたりのモード数を $g(\nu)$ とすると、エネルギー等分配定理から各モードには平均エネルギー $k_B T$ が配分される。よって振動数 $\nu$ あたりの放射エネルギー密度は</span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>古典統計力学を放射場にそのまま適用すると、本書が逆引きで辿る**最初の決定的な失敗**に遭遇する。</span>
 <span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>u_\nu^\text{RJ} = g(\nu) \cdot k_B T = \frac{8\pi \nu^2}{c^3} k_B T</span>
-<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>$$ {#eq-rj-classical}</span>
-<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>これは振動数の二乗に比例して増加し、全エネルギー $\int u_\nu d\nu$ は発散する。</span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>**古典の結論（Rayleigh–Jeans）**：振動数 $\nu$ あたりのモード数を $g(\nu)$ とすると、エネルギー等分配定理から各モードには平均エネルギー $k_B T$ が配分される。よって振動数 $\nu$ あたりの放射エネルギー密度は</span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>u_\nu^\text{RJ} = g(\nu) \cdot k_B T = \frac{8\pi \nu^2}{c^3} k_B T</span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>$$ {#eq-rj-classical}</span>
 <span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>**観測との矛盾**：実際の黒体スペクトルは、高振動数で指数関数的に減衰し、全エネルギー $u = aT^4$ は有限である。古典統計は決定的に間違っている。</span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>これは振動数の二乗に比例して増加し、全エネルギー $\int u_\nu d\nu$ は発散する。</span>
 <span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a>**何が問題か**：</span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a>**観測との矛盾**：実際の黒体スペクトルは、高振動数で指数関数的に減衰し、全エネルギー $u = aT^4$ は有限である。古典統計は決定的に間違っている。</span>
 <span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>古典統計の**エネルギー等分配定理**（**equipartition theorem**, 各自由度に $k_B T$）は、エネルギーが**連続的に**やりとりされる前提に立つ</span>
-<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>高振動数のモード（$h\nu \gg k_B T$）では、エネルギー $h\nu$ という大きな単位でしかエネルギーが分配されえない → 等分配が成り立たない</span>
-<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a>これを正確に取り扱うには、**量子的な性質**（エネルギー量子化＋粒子の区別不能性）が必要である。第8章で「光子の統計」として導入し、これがプランク分布の占有因子 $1/(e^{h\nu/kT}-1)$ を生む。</span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>**何が問題か**：</span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>古典統計の**エネルギー等分配定理**（**equipartition theorem**, 各自由度に $k_B T$）は、エネルギーが**連続的に**やりとりされる前提に立つ</span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>高振動数のモード（$h\nu \gg k_B T$）では、エネルギー $h\nu$ という大きな単位でしかエネルギーが分配されえない → 等分配が成り立たない</span>
 <span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a>**注意（理論）**：古典統計の破綻は「**紫外線破綻**」（**ultraviolet catastrophe**）と呼ばれる。これは決定的な歴史的契機で、量子論誕生（Planck 1900, Einstein 1905）に直結した。第9章で本格的に扱う。</span>
-<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
-<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a>**問い**：Rayleigh–Jeans 則は完全に間違いなのか？</span>
-<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a>**短答**：いいえ、低振動数極限（$h\nu \ll k_B T$）では正しい。電波天文学ではほぼ常にこの極限で観測しており、Rayleigh–Jeans は実用的に最も使われる近似である（第2章 §2.5）。</span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>これを正確に取り扱うには、**量子的な性質**（エネルギー量子化＋粒子の区別不能性）が必要である。第8章で「光子の統計」として導入し、これがプランク分布の占有因子 $1/(e^{h\nu/kT}-1)$ を生む。</span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a>**注意（理論）**：古典統計の破綻は「**紫外線破綻**」（**ultraviolet catastrophe**）と呼ばれる。これは決定的な歴史的契機で、量子論誕生（Planck 1900, Einstein 1905）に直結した。第9章で本格的に扱う。</span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a>**問い**：Rayleigh–Jeans 則は完全に間違いなのか？</span>
 <span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>**もう一歩**：プランク分布の物理を学ぶときは、「古典で完全に間違っている」ではなく「**低振動数では古典が正しく、高振動数で量子効果が効く**」というニュアンスで理解するのが正確である。これが第IV部全体の論点になる。</span>
-<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a>**使えるようになった道具**（§7.4〜7.6）：</span>
-<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>揺らぎ $\Delta E / \langle E \rangle \sim 1/\sqrt{N}$ から、観測上いつ熱力学的決定論が信用できるかを判断できる</span>
-<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>古典統計の枠組みでは観測される Rayleigh–Jeans 形（低振動数）は説明できる。観測される高振動数の指数減衰は古典では出ない ― これが量子論を要請する観測上の根拠</span>
-<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>**短答**：いいえ、低振動数極限（$h\nu \ll k_B T$）では正しい。電波天文学ではほぼ常にこの極限で観測しており、Rayleigh–Jeans は実用的に最も使われる近似である（第2章 §2.5）。</span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a>**もう一歩**：プランク分布の物理を学ぶときは、「古典で完全に間違っている」ではなく「**低振動数では古典が正しく、高振動数で量子効果が効く**」というニュアンスで理解するのが正確である。これが第IV部全体の論点になる。</span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a>**使えるようになった道具**（§7.4〜7.6）：</span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>揺らぎ $\Delta E / \langle E \rangle \sim 1/\sqrt{N}$ から、観測上いつ熱力学的決定論が信用できるかを判断できる</span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>古典統計の枠組みでは観測される Rayleigh–Jeans 形（低振動数）は説明できる。観測される高振動数の指数減衰は古典では出ない ― これが量子論を要請する観測上の根拠</span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-statistical-mechanics-summary .unnumbered}</span></span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
-<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る**</span>
-<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a>本章で、古典統計力学の主要道具 ― 分配関数 $Z$、Boltzmann 分布 $\langle n_i \rangle \propto g_i e^{-E_i/k_B T}$、揺らぎ、熱力学関数 ― が整った。</span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-statistical-mechanics-summary .unnumbered}</span></span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る**</span>
 <span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a>中心地図 $B_\nu(T)$ の **「式が成り立つ条件」**（第6章）に続き、本章では **「指数の中身 $E/k_B T$」が温度の正体である**ことが言語化された。</span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a>本章で、古典統計力学の主要道具 ― 分配関数 $Z$、Boltzmann 分布 $\langle n_i \rangle \propto g_i e^{-E_i/k_B T}$、揺らぎ、熱力学関数 ― が整った。</span>
 <span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>しかし古典統計をそのまま放射場に適用しようとすると、Rayleigh–Jeans 則の発散という決定的な破綻に出会う。**指数関数因子 $1/(e^{h\nu/kT}-1)$ が出てこない**のである。</span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>中心地図 $B_\nu(T)$ の **「式が成り立つ条件」**（第6章）に続き、本章では **「指数の中身 $E/k_B T$」が温度の正体である**ことが言語化された。</span>
 <span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a>**次章へ**：第8章で「光子の統計」 ― 区別できない Bose 粒子の統計力学 ― を扱う。ここで初めて、プランク分布の指数関数因子（占有因子）が必然として現れる。光子の化学ポテンシャルがなぜゼロかも、ここで明らかになる。これが第III部全体のクライマックスである。</span>
-<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-statistical-mechanics-exercises .unnumbered}</span></span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a>しかし古典統計をそのまま放射場に適用しようとすると、Rayleigh–Jeans 則の発散という決定的な破綻に出会う。**指数関数因子 $1/(e^{h\nu/kT}-1)$ が出てこない**のである。</span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a>**次章へ**：第8章で「光子の統計」 ― 区別できない Bose 粒子の統計力学 ― を扱う。ここで初めて、プランク分布の指数関数因子（占有因子）が必然として現れる。光子の化学ポテンシャルがなぜゼロかも、ここで明らかになる。これが第III部全体のクライマックスである。</span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple"}</span>
-<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a>演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。</span>
-<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-statistical-mechanics-further .unnumbered}</span></span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-statistical-mechanics-exercises .unnumbered}</span></span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple"}</span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a>演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。</span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Reif, *Fundamentals of Statistical and Thermal Physics* (McGraw-Hill, 1965) — Boltzmann 分布と分配関数の標準教科書</span>
-<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pathria &amp; Beale, *Statistical Mechanics* (Academic Press, 3rd ed., 2011) — より現代的な体系化</span>
-<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>久保亮五『大学演習　熱学・統計力学』（裳華房, 1961）— 古典的な日本の教科書、演習豊富</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-statistical-mechanics-further .unnumbered}</span></span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Reif, *Fundamentals of Statistical and Thermal Physics* (McGraw-Hill, 1965) — Boltzmann 分布と分配関数の標準教科書</span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pathria &amp; Beale, *Statistical Mechanics* (Academic Press, 3rd ed., 2011) — より現代的な体系化</span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>久保亮五『大学演習　熱学・統計力学』（裳華房, 1961）— 古典的な日本の教科書、演習豊富</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
