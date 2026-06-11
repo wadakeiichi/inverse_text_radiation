@@ -5,6 +5,11 @@ on:
     branches: [main]
   workflow_dispatch:
 
+# Node.js 24 への強制移行（2026-06-16〜）に備えて環境変数を設定。
+# 詳細: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
 permissions:
   contents: write
   pages: write
@@ -16,15 +21,16 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
+          cache: 'pip'
 
       - name: Install Python dependencies
         run: |
@@ -36,10 +42,12 @@ jobs:
         with:
           tinytex: true
 
-      - name: Install Japanese fonts (Noto CJK)
+      - name: Install Japanese fonts and SVG renderer (rsvg-convert)
         run: |
           sudo apt-get update
-          sudo apt-get install -y fonts-noto-cjk fonts-noto-cjk-extra
+          sudo apt-get install -y \
+            fonts-noto-cjk fonts-noto-cjk-extra \
+            librsvg2-bin
 
       - name: Render Quarto book (HTML + PDF + EPUB)
         run: quarto render
