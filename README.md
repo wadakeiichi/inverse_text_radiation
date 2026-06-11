@@ -1,6 +1,6 @@
-# 宇宙の熱的スペクトル ― 黒体放射から基礎物理への逆引き
+# 宇宙の熱的放射 ― 連続放射と線スペクトルの背景物理
 
-*Thermal Spectra of the Universe: An Inverse Approach to Fundamental Physics*
+*Thermal Radiation in the Universe: An Inverse Approach to the Physics*
 
 学部後半〜大学院修士課程向けの宇宙物理教科書プロジェクト。**連続スペクトル（黒体放射）** と **線スペクトル** という熱的放射を入口に、基礎物理（統計力学・量子論・電磁気・原子物理・QED）を逆向きに学び直す。非熱的放射（シンクロトロン等）は限定的に触れる（第18章等）。
 
@@ -106,7 +106,7 @@ GitHub Pages で公開予定。`main` ブランチへの push で自動的に再
 
 つまり、適切なクレジットを示せば、共有・改変・商用利用も自由に行えます。引用例：
 
-> 和田 桂一 (Keiichi Wada), 『宇宙の熱的スペクトル ― 黒体放射から基礎物理への逆引き』 (*Thermal Spectra of the Universe: An Inverse Approach to Fundamental Physics*), 2026. Licensed under CC BY 4.0. Source: <https://github.com/wadakeiichi/inverse_text_radiation>
+> 和田 桂一 (Keiichi Wada), 『宇宙の熱的放射 ― 連続放射と線スペクトルの背景物理』 (*Thermal Radiation in the Universe: An Inverse Approach to the Physics*), 2026. Licensed under CC BY 4.0. Source: <https://github.com/wadakeiichi/inverse_text_radiation>
 
 詳しくは [`LICENSE`](LICENSE) と [`CITATION.cff`](CITATION.cff) を参照してください。
 

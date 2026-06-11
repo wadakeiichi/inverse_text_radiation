@@ -6,11 +6,11 @@ project:
     browser: true
 
 book:
-  title: "宇宙の熱的スペクトル"
-  subtitle: "黒体放射から基礎物理への逆引き"
+  title: "宇宙の熱的放射"
+  subtitle: "連続放射と線スペクトルの背景物理"
   # 英題（参考、英語版で正式採用）：
-  # title-en: "Thermal Spectra of the Universe"
-  # subtitle-en: "An Inverse Approach to Fundamental Physics"
+  # title-en: "Thermal Radiation in the Universe"
+  # subtitle-en: "An Inverse Approach to the Physics"
   author:
     - name: "和田 桂一"
       email: wada@astrophysics.jp

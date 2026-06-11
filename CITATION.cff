@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "本書を引用する場合は、以下の情報を使用してください。"
-title: "宇宙の熱的スペクトル ― 黒体放射から基礎物理への逆引き"
+title: "宇宙の熱的放射 ― 連続放射と線スペクトルの背景物理"
 abstract: "学部後半〜大学院修士課程向けの宇宙物理教科書。連続スペクトル（黒体放射）と線スペクトルという熱的放射を入口に、基礎物理を逆向きに学び直す。非熱的放射は限定的に扱う。"
 authors:
   - family-names: "和田"
@@ -12,8 +12,8 @@ license: CC-BY-4.0
 url: "https://github.com/wadakeiichi/inverse_text_radiation"
 preferred-citation:
   type: book
-  title: "宇宙の熱的スペクトル ― 黒体放射から基礎物理への逆引き"
-  title-en: "Thermal Spectra of the Universe: An Inverse Approach to Fundamental Physics"
+  title: "宇宙の熱的放射 ― 連続放射と線スペクトルの背景物理"
+  title-en: "Thermal Radiation in the Universe: An Inverse Approach to the Physics"
   authors:
     - family-names: "和田"
       given-names: "桂一"

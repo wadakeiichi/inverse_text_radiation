@@ -1,8 +1,8 @@
 ---
-title: "宇宙の熱的スペクトル"
-subtitle: "黒体放射から基礎物理への逆引き"
-title-en: "Thermal Spectra of the Universe"
-subtitle-en: "An Inverse Approach to Fundamental Physics"
+title: "宇宙の熱的放射"
+subtitle: "連続放射と線スペクトルの背景物理"
+title-en: "Thermal Radiation in the Universe"
+subtitle-en: "An Inverse Approach to the Physics"
 lang: ja
 date: today
 ---
@@ -10,7 +10,7 @@ date: today
 # はじめに ― この本の三つの原則 {#sec-three-principles .unnumbered}
 
 ::: {.callout-note appearance="simple"}
-**英題（参考）**：*Thermal Spectra of the Universe: An Inverse Approach to Fundamental Physics*
+**英題（参考）**：*Thermal Radiation in the Universe: An Inverse Approach to the Physics*
 :::
 
 本書は、宇宙物理の中心的観測対象である **連続スペクトル（黒体放射）** と **線スペクトル** を入口に、基礎物理を逆向きに学び直すための教科書である。次の三つの原則を貫く。

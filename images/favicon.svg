@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <!-- 宇宙の熱的スペクトル ― favicon プレースホルダ
-       連続スペクトル（虹色の帯）と離散線（短い縦線）を併置した
-       本書の主題を象徴する小型シンボル -->
+  <!-- 宇宙の熱的放射 ― favicon
+       連続放射（虹色の帯）と線スペクトル（短い縦線）を併置した
+       本書の二つの主柱を象徴する小型シンボル -->
 
   <defs>
     <linearGradient id="bgF" x1="0" y1="0" x2="0" y2="1">
