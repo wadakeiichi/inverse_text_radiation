@@ -80,7 +80,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-6acc544bc6b266166f93717a0814bb05.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5fd26cb3c5ba3a2f0d2c20445dd4bff2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-84b9d0451ceb30bdeea41a205600fe27.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -496,7 +496,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part1/01-where-blackbody.html">第I部　宇宙に満ちる黒体放射</a></li><li class="breadcrumb-item"><a href="../part1/01-where-blackbody.html"><span class="chapter-title">第01章　宇宙で黒体放射はどこに現れるか</span></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-title">第01章　宇宙で黒体放射はどこに現れるか</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Source</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-title">第01章　宇宙で黒体放射はどこに現れるか</span></h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Source</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">すべてのコードを表示</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">すべてのコードを非表示</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">ソースコードを表示</a></li></ul></div></div>
 </div>
 
 
@@ -1031,21 +1031,27 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 <p><strong>注意</strong>：プランク関数 <span class="math inline">B_\nu(T)</span> の具体的な式は本章では「天下り的には」与えない。式の構造と各因子の意味は第2章で扱う。ここでは、観測される多種多様な「黒体スペクトル」が一つの曲線族にすぎないことを、視覚的に確認するのが目的である。</p>
 </div>
 </div>
-<div id="fig-planck-curves" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="1">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-planck-curves-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="cell-fig-planck-curves" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>コード</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys<span class="op">;</span> sys.path.insert(<span class="dv">0</span>, <span class="st">"../code"</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> planck_curve <span class="im">import</span> plot_planck_with_limits</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plot_planck_with_limits(temperatures<span class="op">=</span>(<span class="fl">2.7</span>, <span class="dv">310</span>, <span class="dv">3000</span>, <span class="dv">5800</span>))</span></code></pre></div><button title="コピー" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plot_planck_with_limits(temperatures<span class="op">=</span>(<span class="fl">2.7</span>, <span class="dv">310</span>, <span class="dv">3000</span>, <span class="dv">5800</span>))</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>fig</span></code></pre></div><button title="コピー" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
+<div class="cell-output cell-output-display" data-execution_count="1">
+<div id="fig-planck-curves" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-planck-curves-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="01-where-blackbody_files/figure-html/fig-planck-curves-output-1.png" width="756" height="465" class="figure-img">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-planck-curves-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;3.1
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-planck-curves-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+図&nbsp;3.1: 多様な温度のプランク曲線。温度だけが形を決め、すべて同じ関数族に属する。
 </figcaption>
 </figure>
+</div>
+</div>
 </div>
 <p>ここで重要なのは、4つの曲線が異なる温度（4桁の範囲）にもかかわらず、すべて同じ関数族 <span class="math inline">B_\nu(T)</span> に属する、という一点である。本書はこの関数族を「中心地図」として、その背後の物理を逆引きで解き明かしていく。</p>
 <hr>
@@ -1856,41 +1862,42 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 <span id="cb3-295"><a href="#cb3-295" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> planck_curve <span class="im">import</span> plot_planck_with_limits</span>
 <span id="cb3-296"><a href="#cb3-296" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-297"><a href="#cb3-297" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plot_planck_with_limits(temperatures<span class="op">=</span>(<span class="fl">2.7</span>, <span class="dv">310</span>, <span class="dv">3000</span>, <span class="dv">5800</span>))</span>
-<span id="cb3-298"><a href="#cb3-298" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb3-299"><a href="#cb3-299" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-300"><a href="#cb3-300" aria-hidden="true" tabindex="-1"></a>ここで重要なのは、4つの曲線が異なる温度（4桁の範囲）にもかかわらず、すべて同じ関数族 $B_\nu(T)$ に属する、という一点である。本書はこの関数族を「中心地図」として、その背後の物理を逆引きで解き明かしていく。</span>
-<span id="cb3-301"><a href="#cb3-301" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-302"><a href="#cb3-302" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb3-303"><a href="#cb3-303" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-304"><a href="#cb3-304" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-where-blackbody-summary .unnumbered}</span></span>
-<span id="cb3-305"><a href="#cb3-305" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-306"><a href="#cb3-306" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
-<span id="cb3-307"><a href="#cb3-307" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る**</span>
-<span id="cb3-308"><a href="#cb3-308" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-309"><a href="#cb3-309" aria-hidden="true" tabindex="-1"></a>本章では、本書の中心地図であるプランク関数 $B_\nu(T)$ について、その**観測される現れ方**を整理した：</span>
-<span id="cb3-310"><a href="#cb3-310" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-311"><a href="#cb3-311" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>太陽・恒星 ― 数千 K</span>
-<span id="cb3-312"><a href="#cb3-312" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>惑星・ダスト ― 数十〜数百 K</span>
-<span id="cb3-313"><a href="#cb3-313" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>CMB ― 2.7 K</span>
-<span id="cb3-314"><a href="#cb3-314" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>降着円盤・中性子星 ― 数百万〜数億 K</span>
-<span id="cb3-315"><a href="#cb3-315" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-316"><a href="#cb3-316" aria-hidden="true" tabindex="-1"></a>すべてが同じ「黒体に近い」スペクトル形を示し、温度 $T$ だけが形を決めている。ただし「黒体」は実在する物体ではなく、観測スペクトルを比較するための理想化された基準である。</span>
-<span id="cb3-317"><a href="#cb3-317" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-318"><a href="#cb3-318" aria-hidden="true" tabindex="-1"></a>**次章へ**：第2章では、観測スペクトルから温度・半径・光度をどう読み取るかを、Wien 則・Stefan–Boltzmann 則・色温度などの道具を使って具体的に学ぶ。中心地図プランク関数のどの因子がどの観測量に対応するかが、第2章の中心テーマである。</span>
-<span id="cb3-319"><a href="#cb3-319" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-320"><a href="#cb3-320" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-321"><a href="#cb3-321" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-where-blackbody-exercises .unnumbered}</span></span>
-<span id="cb3-322"><a href="#cb3-322" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-323"><a href="#cb3-323" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple"}</span>
-<span id="cb3-324"><a href="#cb3-324" aria-hidden="true" tabindex="-1"></a>演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。</span>
-<span id="cb3-325"><a href="#cb3-325" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-326"><a href="#cb3-326" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-327"><a href="#cb3-327" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-where-blackbody-further .unnumbered}</span></span>
-<span id="cb3-328"><a href="#cb3-328" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-329"><a href="#cb3-329" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>太陽スペクトルの詳細な観測：Stix, *The Sun* (Springer, 2nd ed., 2004)</span>
-<span id="cb3-330"><a href="#cb3-330" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>恒星のスペクトル分類の歴史：Kaler, *Stars and their Spectra* (Cambridge, 2nd ed., 2011)</span>
-<span id="cb3-331"><a href="#cb3-331" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>CMB の黒体性の発見：Partridge, *3K: The Cosmic Microwave Background Radiation* (Cambridge, 1995)</span>
-<span id="cb3-332"><a href="#cb3-332" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>観測天文学全般の入門：縣 秀彦・嶺重 慎 編『シリーズ現代の天文学』各巻</span>
+<span id="cb3-298"><a href="#cb3-298" aria-hidden="true" tabindex="-1"></a>fig</span>
+<span id="cb3-299"><a href="#cb3-299" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-300"><a href="#cb3-300" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-301"><a href="#cb3-301" aria-hidden="true" tabindex="-1"></a>ここで重要なのは、4つの曲線が異なる温度（4桁の範囲）にもかかわらず、すべて同じ関数族 $B_\nu(T)$ に属する、という一点である。本書はこの関数族を「中心地図」として、その背後の物理を逆引きで解き明かしていく。</span>
+<span id="cb3-302"><a href="#cb3-302" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-303"><a href="#cb3-303" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb3-304"><a href="#cb3-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-305"><a href="#cb3-305" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-where-blackbody-summary .unnumbered}</span></span>
+<span id="cb3-306"><a href="#cb3-306" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-307"><a href="#cb3-307" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
+<span id="cb3-308"><a href="#cb3-308" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る**</span>
+<span id="cb3-309"><a href="#cb3-309" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-310"><a href="#cb3-310" aria-hidden="true" tabindex="-1"></a>本章では、本書の中心地図であるプランク関数 $B_\nu(T)$ について、その**観測される現れ方**を整理した：</span>
+<span id="cb3-311"><a href="#cb3-311" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-312"><a href="#cb3-312" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>太陽・恒星 ― 数千 K</span>
+<span id="cb3-313"><a href="#cb3-313" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>惑星・ダスト ― 数十〜数百 K</span>
+<span id="cb3-314"><a href="#cb3-314" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>CMB ― 2.7 K</span>
+<span id="cb3-315"><a href="#cb3-315" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>降着円盤・中性子星 ― 数百万〜数億 K</span>
+<span id="cb3-316"><a href="#cb3-316" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-317"><a href="#cb3-317" aria-hidden="true" tabindex="-1"></a>すべてが同じ「黒体に近い」スペクトル形を示し、温度 $T$ だけが形を決めている。ただし「黒体」は実在する物体ではなく、観測スペクトルを比較するための理想化された基準である。</span>
+<span id="cb3-318"><a href="#cb3-318" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-319"><a href="#cb3-319" aria-hidden="true" tabindex="-1"></a>**次章へ**：第2章では、観測スペクトルから温度・半径・光度をどう読み取るかを、Wien 則・Stefan–Boltzmann 則・色温度などの道具を使って具体的に学ぶ。中心地図プランク関数のどの因子がどの観測量に対応するかが、第2章の中心テーマである。</span>
+<span id="cb3-320"><a href="#cb3-320" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-321"><a href="#cb3-321" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-322"><a href="#cb3-322" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-where-blackbody-exercises .unnumbered}</span></span>
+<span id="cb3-323"><a href="#cb3-323" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-324"><a href="#cb3-324" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple"}</span>
+<span id="cb3-325"><a href="#cb3-325" aria-hidden="true" tabindex="-1"></a>演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。</span>
+<span id="cb3-326"><a href="#cb3-326" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-327"><a href="#cb3-327" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-328"><a href="#cb3-328" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-where-blackbody-further .unnumbered}</span></span>
+<span id="cb3-329"><a href="#cb3-329" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-330"><a href="#cb3-330" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>太陽スペクトルの詳細な観測：Stix, *The Sun* (Springer, 2nd ed., 2004)</span>
+<span id="cb3-331"><a href="#cb3-331" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>恒星のスペクトル分類の歴史：Kaler, *Stars and their Spectra* (Cambridge, 2nd ed., 2011)</span>
+<span id="cb3-332"><a href="#cb3-332" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>CMB の黒体性の発見：Partridge, *3K: The Cosmic Microwave Background Radiation* (Cambridge, 1995)</span>
+<span id="cb3-333"><a href="#cb3-333" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>観測天文学全般の入門：縣 秀彦・嶺重 慎 編『シリーズ現代の天文学』各巻</span>
 </code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
