@@ -139,30 +139,20 @@ format:
     include-in-header:
       - text: |
           \usepackage{luatexja-fontspec}
-          % 本文：IBM Plex Sans JP（モダンサンセリフ）、無ければ Noto Sans CJK JP に fallback
-          \IfFontExistsTF{IBM Plex Sans JP}{%
-            \setmainjfont{IBM Plex Sans JP}[
-              UprightFont    = *-Regular,
-              BoldFont       = *-SemiBold,
-              ItalicFont     = *-Regular,
-              BoldItalicFont = *-SemiBold]%
-          }{%
-            \setmainjfont{Noto Sans CJK JP}%
-          }
-          \IfFontExistsTF{IBM Plex Sans JP}{%
-            \setsansjfont{IBM Plex Sans JP}[
-              UprightFont    = *-Regular,
-              BoldFont       = *-SemiBold]%
-          }{%
-            \setsansjfont{Noto Sans CJK JP}%
-          }
-          % 欧文側も IBM Plex に合わせる（こちらは TeX Live にあれば使う、無ければ既定）
-          \usepackage{ifluatex}
-          \ifluatex
-            \usepackage{fontspec}
-            \IfFontExistsTF{IBM Plex Sans}{\setmainfont{IBM Plex Sans}}{}
-            \IfFontExistsTF{IBM Plex Mono}{\setmonofont{IBM Plex Mono}}{}
-          \fi
+          % PDF 本文の和文：Noto Sans CJK JP（サンセリフ、CI/Mac 共に確実）。
+          % HTML は IBM Plex Sans JP（_assets/ja-theme.scss 経由）で組まれるので、
+          % Web 読者にはモダンサンセリフ、PDF 読者にはサンセリフの Noto という
+          % 二系統だが、いずれも「明朝で読みにくい」問題は解消する。
+          % IBM Plex Sans JP の PDF 直接利用は luatexja-fontspec の
+          % ウェイトサフィックス命名（Family-Bold 等）と
+          % IBM Plex のファイル命名（IBMPlexSansJP-SemiBold）が
+          % 噛み合わず、現状はフォールバック運用とする（v0.3 で再挑戦予定）。
+          \setmainjfont{Noto Sans CJK JP}
+          \setsansjfont{Noto Sans CJK JP}
+          % 欧文側は IBM Plex Sans が CI にあれば使う、無ければ既定。
+          \usepackage{fontspec}
+          \IfFontExistsTF{IBM Plex Sans}{\setmainfont{IBM Plex Sans}}{}
+          \IfFontExistsTF{IBM Plex Mono}{\setmonofont{IBM Plex Mono}}{}
           \usepackage{xcolor}
           \usepackage{tcolorbox}
           % Quarto の callout が要求するライブラリ群
