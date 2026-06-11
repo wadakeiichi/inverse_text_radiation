@@ -133,6 +133,8 @@ $$ {#eq-collision-width}
 
 [本文目安：B3-B4]
 
+![Voigt プロファイル（黒）と、その元となる Gaussian（赤・点線）／Lorentzian（青・破線）の比較。**線形スケール**ではコアの形が、**対数スケール**では翼の形が比較しやすい。**コアは Gaussian で急速に落ち、翼に行くと Lorentzian がべき則 $1/\Delta\nu^2$ で長く伸びる** ― これが Voigt 線の二面性で、観測者がコア（温度）と翼（密度・圧力）を別々のプローブとして使える理由。](../images/voigt-profile.svg){#fig-voigt-profile width=92%}
+
 自然幅 + 衝突幅（合算した Lorentzian、幅 $\gamma$）と Doppler 拡がり（Gaussian、幅 $\Delta\nu_D$）の **両方** が効くのが現実。線形は両者の **畳み込み**：
 
 $$

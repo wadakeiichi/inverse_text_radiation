@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" width="900" height="560" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Noto Sans JP', sans-serif">
+  <!-- =============================================================
+       Mode counting in k-space (Ch. 14 §14.2)
+       k 空間の格子点と 1/8 球殻 ― モード密度 g(ν) = 8πν²/c³ の幾何
+       2D cross-section (k_x–k_y); lattice spacing π/L.
+       Style matched to planck-map.svg. License: CC BY 4.0
+       ============================================================= -->
+
+  <defs>
+    <marker id="ks-arrow" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0a1929"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="560" fill="#fafbfc"/>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle"
+        font-size="23" font-weight="700" fill="#0a1929" letter-spacing="0.06em">
+    k 空間でモードを数える
+  </text>
+  <text x="450" y="66" text-anchor="middle" font-size="14" fill="#5a6a7a">
+    許されるモード ＝ 間隔 π/L の格子点（断面図）。球殻の体積が ν² を生む
+  </text>
+
+  <!-- ============================================================
+       Left: k-space cross-section
+       ============================================================ -->
+  <g>
+    <!-- shell between radius 280 and 312 (k .. k+dk), first quadrant -->
+    <path d="M 432 460 A 312 312 0 0 1 120 148 L 120 180 A 280 280 0 0 0 400 460 Z"
+          fill="#1f4e79" fill-opacity="0.10" stroke="none"/>
+    <!-- inner arc (sphere of radius k) -->
+    <path d="M 400 460 A 280 280 0 0 1 120 180"
+          fill="none" stroke="#1f4e79" stroke-width="2"/>
+    <!-- outer arc (k + dk) -->
+    <path d="M 432 460 A 312 312 0 0 1 120 148"
+          fill="none" stroke="#1f4e79" stroke-width="1.2" stroke-dasharray="5,4"/>
+
+    <!-- axes -->
+    <line x1="120" y1="460" x2="500" y2="460"
+          stroke="#0a1929" stroke-width="1.5" marker-end="url(#ks-arrow)"/>
+    <line x1="120" y1="460" x2="120" y2="115"
+          stroke="#0a1929" stroke-width="1.5" marker-end="url(#ks-arrow)"/>
+    <text x="508" y="465" font-size="15" font-style="italic"
+          font-family="Georgia, 'Times New Roman', serif">k</text>
+    <text x="517" y="470" font-size="10" font-style="italic"
+          font-family="Georgia, 'Times New Roman', serif">x</text>
+    <text x="106" y="106" font-size="15" font-style="italic"
+          font-family="Georgia, 'Times New Roman', serif">k</text>
+    <text x="115" y="111" font-size="10" font-style="italic"
+          font-family="Georgia, 'Times New Roman', serif">y</text>
+
+    <!-- lattice points: spacing 36 px, n_x, n_y = 1..9 -->
+    <g fill="#41576d">
+      <circle cx="156" cy="424" r="3"/><circle cx="192" cy="424" r="3"/><circle cx="228" cy="424" r="3"/><circle cx="264" cy="424" r="3"/><circle cx="300" cy="424" r="3"/><circle cx="336" cy="424" r="3"/><circle cx="372" cy="424" r="3"/><circle cx="408" cy="424" r="3"/><circle cx="444" cy="424" r="3"/>
+      <circle cx="156" cy="388" r="3"/><circle cx="192" cy="388" r="3"/><circle cx="228" cy="388" r="3"/><circle cx="264" cy="388" r="3"/><circle cx="300" cy="388" r="3"/><circle cx="336" cy="388" r="3"/><circle cx="372" cy="388" r="3"/><circle cx="408" cy="388" r="3"/><circle cx="444" cy="388" r="3"/>
+      <circle cx="156" cy="352" r="3"/><circle cx="192" cy="352" r="3"/><circle cx="228" cy="352" r="3"/><circle cx="264" cy="352" r="3"/><circle cx="300" cy="352" r="3"/><circle cx="336" cy="352" r="3"/><circle cx="372" cy="352" r="3"/><circle cx="408" cy="352" r="3"/><circle cx="444" cy="352" r="3"/>
+      <circle cx="156" cy="316" r="3"/><circle cx="192" cy="316" r="3"/><circle cx="228" cy="316" r="3"/><circle cx="264" cy="316" r="3"/><circle cx="300" cy="316" r="3"/><circle cx="336" cy="316" r="3"/><circle cx="372" cy="316" r="3"/><circle cx="408" cy="316" r="3"/>
+      <circle cx="156" cy="280" r="3"/><circle cx="192" cy="280" r="3"/><circle cx="228" cy="280" r="3"/><circle cx="264" cy="280" r="3"/><circle cx="300" cy="280" r="3"/><circle cx="336" cy="280" r="3"/><circle cx="372" cy="280" r="3"/><circle cx="408" cy="280" r="3"/>
+      <circle cx="156" cy="244" r="3"/><circle cx="192" cy="244" r="3"/><circle cx="228" cy="244" r="3"/><circle cx="264" cy="244" r="3"/><circle cx="300" cy="244" r="3"/><circle cx="336" cy="244" r="3"/><circle cx="372" cy="244" r="3"/>
+      <circle cx="156" cy="208" r="3"/><circle cx="192" cy="208" r="3"/><circle cx="228" cy="208" r="3"/><circle cx="264" cy="208" r="3"/><circle cx="300" cy="208" r="3"/><circle cx="336" cy="208" r="3"/>
+      <circle cx="156" cy="172" r="3"/><circle cx="192" cy="172" r="3"/><circle cx="228" cy="172" r="3"/><circle cx="264" cy="172" r="3"/><circle cx="300" cy="172" r="3"/>
+      <circle cx="156" cy="136" r="3"/><circle cx="192" cy="136" r="3"/><circle cx="228" cy="136" r="3"/>
+    </g>
+
+    <!-- lattice spacing bracket (bottom row) -->
+    <line x1="156" y1="440" x2="192" y2="440" stroke="#c25e00" stroke-width="1.5"/>
+    <line x1="156" y1="435" x2="156" y2="445" stroke="#c25e00" stroke-width="1.5"/>
+    <line x1="192" y1="435" x2="192" y2="445" stroke="#c25e00" stroke-width="1.5"/>
+    <text x="174" y="456" text-anchor="middle" font-size="12" font-weight="600"
+          fill="#c25e00">π/L</text>
+
+    <!-- labels for arcs -->
+    <text x="332" y="262" font-size="13" font-weight="600" fill="#1f4e79"
+          transform="rotate(-45 332 262)">半径 k の球面（断面）</text>
+    <text x="404" y="170" font-size="12" font-weight="600" fill="#1f4e79">球殻 k 〜 k + dk</text>
+    <line x1="400" y1="176" x2="368" y2="200"
+          stroke="#1f4e79" stroke-width="1" stroke-dasharray="3,3"/>
+
+    <!-- quadrant note -->
+    <text x="150" y="500" font-size="12" fill="#5a6a7a">
+      n_x, n_y, n_z は正の整数のみ → 球全体の 1/8（第一象限）だけを数える
+    </text>
+  </g>
+
+  <!-- ============================================================
+       Right: counting chain
+       ============================================================ -->
+  <g>
+    <rect x="540" y="110" width="330" height="360" rx="10"
+          fill="#ffffff" stroke="#d8e2ec" stroke-width="1.5"/>
+    <text x="705" y="140" text-anchor="middle"
+          font-size="15" font-weight="700" fill="#0a1929">数え上げの組み立て</text>
+
+    <g font-size="13.5" fill="#0a1929">
+      <circle cx="566" cy="172" r="4" fill="#41576d"/>
+      <text x="582" y="177">格子点の密度　V/π³</text>
+      <text x="582" y="195" font-size="11" fill="#5a6a7a">（間隔 π/L の格子、V = L³）</text>
+
+      <circle cx="566" cy="222" r="4" fill="#1f4e79"/>
+      <text x="582" y="227">× 球の体積　(4π/3) k³</text>
+      <text x="582" y="245" font-size="11" fill="#5a6a7a">（波数 k 未満のモードを集める）</text>
+
+      <circle cx="566" cy="272" r="4" fill="#c25e00"/>
+      <text x="582" y="277">× 1/8　（第一象限のみ）</text>
+
+      <circle cx="566" cy="307" r="4" fill="#9a7400"/>
+      <text x="582" y="312">× 2　（偏光の自由度・第13章）</text>
+    </g>
+
+    <line x1="560" y1="330" x2="850" y2="330" stroke="#d8e2ec" stroke-width="1.5"/>
+
+    <g font-size="14" fill="#0a1929">
+      <text x="705" y="355" text-anchor="middle">N(&lt;k) = V k³ / 3π²</text>
+      <text x="705" y="383" text-anchor="middle" font-size="12" fill="#5a6a7a">
+        k = 2πν/c を代入し、ν で微分すると
+      </text>
+      <text x="705" y="415" text-anchor="middle" font-size="16" font-weight="700"
+            fill="#1f4e79">g(ν) = 8πν²/c³</text>
+      <text x="705" y="443" text-anchor="middle" font-size="12" fill="#5a6a7a">
+        ν² の起源 ＝ 球殻の体積 4πk²dk（三次元空間）
+      </text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <text x="450" y="535" text-anchor="middle" font-size="11" fill="#8a99a8">
+    周期境界条件（間隔 2π/L・全象限）で数えても同じ g(ν) に達する ― §14.2 の「問い」参照。第8・9章で借用した式がここで完結する
+  </text>
+</svg>

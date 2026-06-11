@@ -102,6 +102,8 @@ $$ {#eq-rayleigh-jeans-bnu}
 
 [本文目安：B3]
 
+![紫外線破綻 ― 古典の Rayleigh–Jeans 則（**$u_\nu \propto \nu^2$、青破線**）が高振動数で発散する一方、観測されるプランク分布（**黒実線**）は Wien 則的に指数的減衰する。両者は **$h\nu \approx k_B T$** の境界帯（網かけ）で分かれる。本図は §2.5（Planck/RJ/Wien 比較）と §10 の量子仮説導入とも共用する基準図。](../images/uv-catastrophe.svg){#fig-uv-catastrophe width=90%}
+
 @eq-rayleigh-jeans-energy-density を**全振動数で積分**して、放射場の全エネルギー密度 $u$ を計算しようとすると
 
 $$

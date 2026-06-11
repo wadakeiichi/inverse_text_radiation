@@ -87,6 +87,8 @@ $$ {#eq-mean-energy-quantized}
 - 低振動数極限（$h\nu \ll k_B T$）：$\langle E \rangle \to k_B T$ ― **古典と一致**
 - 高振動数極限（$h\nu \gg k_B T$）：$\langle E \rangle \to h\nu \, e^{-h\nu/k_B T} \to 0$ ― **古典より遥かに小さい**
 
+![量子化振動子 1 個の平均エネルギーと古典の等分配の比較（第7章 §7.2 で初出した図を、Planck 量子仮説の文脈で再掲）。**高振動数モードが「凍結」する仕組み** こそ、紫外破綻（第9章 §9.3）を回避してプランク分布を生む鍵である。](../images/quantum-freeze-out.svg){#fig-quantum-freezeout-ch10 width=88%}
+
 これが**高振動数モードの「凍結」**である。エネルギー単位 $h\nu$ が熱エネルギー $k_B T$ より遥かに大きい場合、そのモードを励起するための熱が手に入らず、平均エネルギーが指数関数的に小さくなる。
 
 ::: {.callout-tip appearance="simple"}

@@ -100,6 +100,8 @@ $$
 \langle E \rangle = N \left( \frac{\hbar\omega}{2} + \frac{\hbar\omega}{e^{\beta\hbar\omega} - 1} \right)
 $$ {#eq-mean-energy-oscillator}
 
+![量子化振動子 1 個の平均エネルギー $\langle\epsilon\rangle$ と古典の等分配 $k_B T$ の比較。低振動数（$h\nu \ll k_BT$）では古典と一致するが、**$h\nu \approx k_BT$ 付近から急速に等分配を下回り**、$h\nu \gg k_BT$ では指数的に「凍結」する。これが Rayleigh–Jeans 紫外破綻からプランク分布への移行を量子論側から見たもので、第10章 §10.2 で本格的に扱う。](../images/quantum-freeze-out.svg){#fig-quantum-freezeout width=88%}
+
 第二項に **$1/(e^{\hbar\omega/k_B T} - 1)$** という形が現れていることに注意。これがプランク分布の占有因子に他ならない。プランクが量子仮説でこの式に辿り着いたのは、第10章で本格的に扱う。
 
 ::: {.callout-note}

@@ -53,6 +53,8 @@ $$ {#eq-specific-intensity-def}
 
 単位は erg s$^{-1}$ cm$^{-2}$ Hz$^{-1}$ sr$^{-1}$（CGS）。
 
+![比強度 $I_\nu$ の定義の幾何。面要素 $dA$ の法線方向 $\hat{\mathbf{k}}$ から角度 $\theta$ の方向 $\mathbf{n}$ に向かう光線束を、立体角素 $d\Omega$・振動数素 $d\nu$ に区切って測る。**$\cos\theta$ は「面に垂直に通過する成分」だけを取り出す射影因子** で、第2章で簡略に扱っていた『面を通過するエネルギー』の正式な定義に対応する。](../images/specific-intensity.svg){#fig-specific-intensity width=85%}
+
 ::: {.callout-note}
 **用語**：$\cos\theta$ という**射影因子**は、「面要素 $dA$ を通過する光線の有効面積は $dA \cos\theta$」という幾何の帰結である。$dA$ の取り方を**光線方向に垂直**にする流儀（$dA_\perp = dA \cos\theta$）もあり、その場合は $\cos\theta$ が定義式から消える。両流儀は等価だが、本書では「空間に固定された面」を使う前者を採る。これによりフラックスの定義式 [@eq-flux-def] に $\cos\theta$ が自然に引き継がれる。
 :::

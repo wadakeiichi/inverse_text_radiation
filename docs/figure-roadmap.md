@@ -25,15 +25,26 @@
 
 | 優先 | 章節 | 図 | 種別 | 状態 |
 |---|---|---|---|---|
-| ◎ | 全体 | **中心地図（連続）** — base 版（v1.0 で 4 変種展開） | SVG | ✅ `images/planck-map.svg`（`_includes/_planck-map.qmd` に埋め込み済） |
+| ◎ | 全体 | **中心地図（連続）** — base 版（v1.0 で 4 変種展開） | SVG | ✅ `images/planck-map.svg`（第1章で埋め込み） |
 | ◎ | §11.2/§20.2 | **三つの素過程の準位図** — Einstein A/B 係数の幾何 | SVG | ✅ `images/einstein-processes.svg`（Ch.11 + Ch.20 で共用） |
-| ◎ | 全体 | **中心地図（線）** — α_ν の各因子→第20-22章対応 | SVG | ⏳ |
-| ◎ | §2.5 | **Planck / RJ / Wien 比較**（log-log、漸近線、境界帯） | matplotlib | ⏳ code/planck_curve.py 拡張予定 |
-| ◎ | §4.1 | **比強度の定義の幾何**（dA, θ, dΩ, cosθ） | SVG | ⏳ |
-| ◎ | §14.2 | **k 空間の格子と 1/8 球殻**（格子間隔 π/L、八分球、球殻 dk） | SVG | ⏳ |
+| ◎ | 全体 | **中心地図（線）** — α_ν の各因子→第20-22章対応 | SVG | ✅ `images/hydrogen-map.svg`（第19章で埋め込み） |
+| ◎ | §2.5/§9.3/§10 | **Planck / RJ / Wien 比較・紫外破綻** | SVG | ✅ `images/uv-catastrophe.svg`（第9章 §9.3 で埋め込み、他章で再利用予定） |
+| ◎ | §4.1 | **比強度の定義の幾何**（dA, θ, dΩ, cosθ） | SVG | ✅ `images/specific-intensity.svg`（第4章で埋め込み） |
+| ◎ | §14.2 | **k 空間の格子と 1/8 球殻** | SVG | ✅ `images/k-space-counting.svg`（第14章で埋め込み） |
 | ◎ | §16.1 | **FIRAS スペクトル**（観測点＋ 2.725K 黒体） | matplotlib | ⏳ code/firas_fit.py 新規予定 |
 
-合計 **8 枚**（中心地図 base のみ）。**進捗：2/8 完了（25%）**。v0.2 で「テンプレ確立」を達成。
+合計 **8 枚**（中心地図 base のみ）。**進捗：7/8 完了（87%）**。v0.2 で「テンプレ確立」を達成。
+
+### v0.3 ターゲットを v0.1.x で先取り
+
+ユーザー作業により以下も追加埋め込み：
+
+| 章節 | 図 | ファイル |
+|---|---|---|
+| §7.2 / §10.2 | 量子振動子の高振動数モード凍結 | `images/quantum-freeze-out.svg` |
+| §19.3 / §20.4 | 吸収線 vs 輝線の幾何（Kirchhoff 三法則） | `images/line-formation-geometry.svg` |
+| §20.1 | 等価幅 $W$ の幾何 | `images/equivalent-width.svg` |
+| §22.4 | Voigt プロファイル（線形・対数軸） | `images/voigt-profile.svg` |
 
 ### 共用設計の実装メモ（既完成2枚から）
 
