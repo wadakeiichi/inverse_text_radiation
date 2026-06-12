@@ -1,0 +1,330 @@
+# 用語索引（和英・英和） {#sec-glossary}
+
+本書で用いた主要用語の和英・英和対照表。天文学に固有の用語は、日本天文学会『[天文学辞典](https://astro-dic.jp/)』（astro-dic.jp）の標準表記に準拠した。物理用語のうち、揺れやすいものは本書全体で次の訳を統一して用いている：**frequency＝振動数**（×周波数）、**neutrino＝ニュートリノ**、**mid-infrared＝中間赤外**。
+
+英語見出しの末尾に付した E1 / M1 / E2 などは多重極遷移の慣用記号、(LTE) / (CMB) などは本文で用いた略号である。
+
+本索引の収録語数：156 語。
+
+## C.1 和英索引（五十音順）
+
+| 日本語 | English |
+|---|---|
+| Einstein 係数 | Einstein coefficients |
+| Einstein の関係式 | Einstein relations |
+| 色温度 | color temperature |
+| Wien の変位則 | Wien's displacement law |
+| 宇宙マイクロ波背景放射 | cosmic microwave background (CMB) |
+| エネルギー密度 | energy density |
+| エネルギー量子 | energy quantum |
+| エントロピー | entropy |
+| 円偏光 | circular polarization |
+| 灰色大気 | grey atmosphere |
+| 化学ポテンシャル | chemical potential |
+| 角振動数 | angular frequency |
+| Casimir 効果 | Casimir effect |
+| 完全熱平衡 | complete thermodynamic equilibrium |
+| 観測量 | observable |
+| Gauss 型 | Gaussian profile |
+| 輝線 | emission line |
+| 輝度温度 | brightness temperature |
+| 吸収 | absorption |
+| 吸収係数 | absorption coefficient |
+| 吸収線 | absorption line |
+| 境界条件 | boundary conditions |
+| 局所熱力学平衡 | local thermodynamic equilibrium (LTE) |
+| 巨視的乱流 | macroturbulence |
+| Kirchhoff の法則 | Kirchhoff's law |
+| 禁制線 | forbidden line |
+| 逆コンプトン散乱 | inverse Compton scattering |
+| 空洞放射 | cavity radiation |
+| 空洞モード | cavity mode |
+| 減衰翼 | damping wing |
+| 光学的厚さ | optical depth |
+| 光学的に厚い | optically thick |
+| 光学的に薄い | optically thin |
+| 項記号 | term symbol |
+| 光子 | photon |
+| 光子気体 | photon gas |
+| 恒星風 | stellar wind |
+| 降着円盤 | accretion disk |
+| 光電効果 | photoelectric effect |
+| 高分散分光 | high-resolution spectroscopy |
+| 光量子 | light quantum |
+| 黒体 | black body |
+| 黒体放射 | blackbody radiation |
+| 固有状態 | eigenstate |
+| 固有値 | eigenvalue |
+| 再結合 | recombination |
+| 最大エントロピー原理 | principle of maximum entropy |
+| 再電離 | reionization |
+| Saha の式 | Saha equation |
+| 散乱 | scattering |
+| 散乱係数 | scattering coefficient |
+| 紫外線破綻 | ultraviolet catastrophe |
+| 自然幅 | natural width |
+| 修正黒体 | modified blackbody |
+| 縮退度 | degeneracy |
+| Stefan–Boltzmann 定数 | Stefan–Boltzmann constant |
+| 主量子数 | principal quantum number |
+| 詳細釣り合い | detailed balance |
+| 衝突脱励起 | collisional de-excitation |
+| 真空状態 | vacuum state |
+| 真空のゆらぎ | vacuum fluctuations |
+| シンクロトロン放射 | synchrotron radiation |
+| 振動子強度 | oscillator strength |
+| 振動数 | frequency |
+| 磁気双極子遷移 | magnetic dipole transition (M1) |
+| 自発放出 | spontaneous emission |
+| 数演算子 | number operator |
+| 数状態 | number state |
+| スペクトル型 | spectral type |
+| スペクトル線 | spectral line |
+| スペクトル歪み | spectral distortion |
+| 生成消滅演算子 | creation and annihilation operators |
+| 成長曲線 | curve of growth |
+| 制動放射 | bremsstrahlung |
+| 赤方偏移 | redshift |
+| 遷移 | transition |
+| 選択則 | selection rule |
+| 占有因子 | occupation factor |
+| 占有数 | occupation number |
+| 占有数反転 | population inversion |
+| 線輪郭 | line profile |
+| ソース関数 | source function |
+| 多温度円盤 | multi-temperature disk |
+| ダスト | dust |
+| 中性水素 | neutral hydrogen |
+| 超微細構造 | hyperfine structure |
+| 調和振動子 | harmonic oscillator |
+| 直線偏光 | linear polarization |
+| 定在波 | standing wave |
+| 電気四重極遷移 | electric quadrupole transition (E2) |
+| 電気双極子遷移 | electric dipole transition (E1) |
+| 等価幅 | equivalent width |
+| 等分配定理 | equipartition theorem |
+| ドップラー効果 | Doppler effect |
+| ドップラー幅 | Doppler width |
+| 21 cm 線 | 21 cm line |
+| ニュートリノ | neutrino |
+| 熱化 | thermalization |
+| 熱化深さ | thermalization depth |
+| 熱的制動放射 | thermal bremsstrahlung |
+| 熱的放射 | thermal radiation |
+| 熱平衡 | thermal equilibrium |
+| 熱力学的平衡 | thermodynamic equilibrium |
+| 波数空間 | k-space |
+| 波数ベクトル | wave vector |
+| 波長 | wavelength |
+| 波動方程式 | wave equation |
+| 場の量子化 | field quantization |
+| 比強度 | specific intensity |
+| 非熱的放射 | non-thermal radiation |
+| 標準降着円盤 | standard accretion disk |
+| 微細構造 | fine structure |
+| 微細構造定数 | fine-structure constant |
+| 微視的乱流 | microturbulence |
+| Fermi の黄金律 | Fermi's golden rule |
+| Voigt プロファイル | Voigt profile |
+| 不透明度 | opacity |
+| フラックス | flux |
+| 分散関係 | dispersion relation |
+| 分配関数 | partition function |
+| プランク関数 | Planck function |
+| Planck 定数 | Planck constant |
+| プランク分布 | Planck distribution |
+| 平均自由行程 | mean free path |
+| 平面波 | plane wave |
+| 偏光 | polarization |
+| べき則 | power law |
+| 放射強度 | radiation intensity |
+| 放射効率 | emissivity |
+| 放射輸送方程式 | radiative transfer equation |
+| 放出 | emission |
+| 放出係数 | emission coefficient |
+| Boltzmann 因子 | Boltzmann factor |
+| Boltzmann 分布 | Boltzmann distribution |
+| Bose–Einstein 分布 | Bose–Einstein distribution |
+| Bose 増強 | Bose enhancement |
+| Poynting ベクトル | Poynting vector |
+| Maxwell 方程式 | Maxwell's equations |
+| Maxwell–Boltzmann 統計 | Maxwell–Boltzmann statistics |
+| マクロ状態 | macrostate |
+| ミクロ状態 | microstate |
+| モード密度 | mode density |
+| 有効温度 | effective temperature |
+| 誘導吸収 | induced absorption |
+| 誘導放出 | stimulated emission |
+| 横波 | transverse wave |
+| 立体角 | solid angle |
+| リュードベリ定数 | Rydberg constant |
+| 量子化 | quantization |
+| 量子数 | quantum number |
+| 臨界密度 | critical density |
+| 励起温度 | excitation temperature |
+| 零点エネルギー | zero-point energy |
+| Rayleigh–Jeans 則 | Rayleigh–Jeans law |
+| 連続スペクトル | continuous spectrum |
+| Lorentz 型 | Lorentzian profile |
+
+## C.2 英和索引（アルファベット順）
+
+| English | 日本語 |
+|---|---|
+| absorption | 吸収 |
+| absorption coefficient | 吸収係数 |
+| absorption line | 吸収線 |
+| accretion disk | 降着円盤 |
+| angular frequency | 角振動数 |
+| black body | 黒体 |
+| blackbody radiation | 黒体放射 |
+| Boltzmann distribution | Boltzmann 分布 |
+| Boltzmann factor | Boltzmann 因子 |
+| Bose enhancement | Bose 増強 |
+| Bose–Einstein distribution | Bose–Einstein 分布 |
+| boundary conditions | 境界条件 |
+| bremsstrahlung | 制動放射 |
+| brightness temperature | 輝度温度 |
+| Casimir effect | Casimir 効果 |
+| cavity mode | 空洞モード |
+| cavity radiation | 空洞放射 |
+| chemical potential | 化学ポテンシャル |
+| circular polarization | 円偏光 |
+| 21 cm line | 21 cm 線 |
+| collisional de-excitation | 衝突脱励起 |
+| color temperature | 色温度 |
+| complete thermodynamic equilibrium | 完全熱平衡 |
+| continuous spectrum | 連続スペクトル |
+| cosmic microwave background (CMB) | 宇宙マイクロ波背景放射 |
+| creation and annihilation operators | 生成消滅演算子 |
+| critical density | 臨界密度 |
+| curve of growth | 成長曲線 |
+| damping wing | 減衰翼 |
+| degeneracy | 縮退度 |
+| detailed balance | 詳細釣り合い |
+| dispersion relation | 分散関係 |
+| Doppler effect | ドップラー効果 |
+| Doppler width | ドップラー幅 |
+| dust | ダスト |
+| effective temperature | 有効温度 |
+| eigenstate | 固有状態 |
+| eigenvalue | 固有値 |
+| Einstein coefficients | Einstein 係数 |
+| Einstein relations | Einstein の関係式 |
+| electric dipole transition (E1) | 電気双極子遷移 |
+| electric quadrupole transition (E2) | 電気四重極遷移 |
+| emission | 放出 |
+| emission coefficient | 放出係数 |
+| emission line | 輝線 |
+| emissivity | 放射効率 |
+| energy density | エネルギー密度 |
+| energy quantum | エネルギー量子 |
+| entropy | エントロピー |
+| equipartition theorem | 等分配定理 |
+| equivalent width | 等価幅 |
+| excitation temperature | 励起温度 |
+| Fermi's golden rule | Fermi の黄金律 |
+| field quantization | 場の量子化 |
+| fine structure | 微細構造 |
+| fine-structure constant | 微細構造定数 |
+| flux | フラックス |
+| forbidden line | 禁制線 |
+| frequency | 振動数 |
+| Gaussian profile | Gauss 型 |
+| grey atmosphere | 灰色大気 |
+| harmonic oscillator | 調和振動子 |
+| high-resolution spectroscopy | 高分散分光 |
+| hyperfine structure | 超微細構造 |
+| induced absorption | 誘導吸収 |
+| inverse Compton scattering | 逆コンプトン散乱 |
+| k-space | 波数空間 |
+| Kirchhoff's law | Kirchhoff の法則 |
+| light quantum | 光量子 |
+| line profile | 線輪郭 |
+| linear polarization | 直線偏光 |
+| local thermodynamic equilibrium (LTE) | 局所熱力学平衡 |
+| Lorentzian profile | Lorentz 型 |
+| macrostate | マクロ状態 |
+| macroturbulence | 巨視的乱流 |
+| magnetic dipole transition (M1) | 磁気双極子遷移 |
+| Maxwell's equations | Maxwell 方程式 |
+| Maxwell–Boltzmann statistics | Maxwell–Boltzmann 統計 |
+| mean free path | 平均自由行程 |
+| microstate | ミクロ状態 |
+| microturbulence | 微視的乱流 |
+| mode density | モード密度 |
+| modified blackbody | 修正黒体 |
+| multi-temperature disk | 多温度円盤 |
+| natural width | 自然幅 |
+| neutral hydrogen | 中性水素 |
+| neutrino | ニュートリノ |
+| non-thermal radiation | 非熱的放射 |
+| number operator | 数演算子 |
+| number state | 数状態 |
+| observable | 観測量 |
+| occupation factor | 占有因子 |
+| occupation number | 占有数 |
+| opacity | 不透明度 |
+| optical depth | 光学的厚さ |
+| optically thick | 光学的に厚い |
+| optically thin | 光学的に薄い |
+| oscillator strength | 振動子強度 |
+| partition function | 分配関数 |
+| photoelectric effect | 光電効果 |
+| photon | 光子 |
+| photon gas | 光子気体 |
+| Planck constant | Planck 定数 |
+| Planck distribution | プランク分布 |
+| Planck function | プランク関数 |
+| plane wave | 平面波 |
+| polarization | 偏光 |
+| population inversion | 占有数反転 |
+| power law | べき則 |
+| Poynting vector | Poynting ベクトル |
+| principal quantum number | 主量子数 |
+| principle of maximum entropy | 最大エントロピー原理 |
+| quantization | 量子化 |
+| quantum number | 量子数 |
+| radiation intensity | 放射強度 |
+| radiative transfer equation | 放射輸送方程式 |
+| Rayleigh–Jeans law | Rayleigh–Jeans 則 |
+| recombination | 再結合 |
+| redshift | 赤方偏移 |
+| reionization | 再電離 |
+| Rydberg constant | リュードベリ定数 |
+| Saha equation | Saha の式 |
+| scattering | 散乱 |
+| scattering coefficient | 散乱係数 |
+| selection rule | 選択則 |
+| solid angle | 立体角 |
+| source function | ソース関数 |
+| specific intensity | 比強度 |
+| spectral distortion | スペクトル歪み |
+| spectral line | スペクトル線 |
+| spectral type | スペクトル型 |
+| spontaneous emission | 自発放出 |
+| standard accretion disk | 標準降着円盤 |
+| standing wave | 定在波 |
+| Stefan–Boltzmann constant | Stefan–Boltzmann 定数 |
+| stellar wind | 恒星風 |
+| stimulated emission | 誘導放出 |
+| synchrotron radiation | シンクロトロン放射 |
+| term symbol | 項記号 |
+| thermal bremsstrahlung | 熱的制動放射 |
+| thermal equilibrium | 熱平衡 |
+| thermal radiation | 熱的放射 |
+| thermalization | 熱化 |
+| thermalization depth | 熱化深さ |
+| thermodynamic equilibrium | 熱力学的平衡 |
+| transition | 遷移 |
+| transverse wave | 横波 |
+| ultraviolet catastrophe | 紫外線破綻 |
+| vacuum fluctuations | 真空のゆらぎ |
+| vacuum state | 真空状態 |
+| Voigt profile | Voigt プロファイル |
+| wave equation | 波動方程式 |
+| wave vector | 波数ベクトル |
+| wavelength | 波長 |
+| Wien's displacement law | Wien の変位則 |
+| zero-point energy | 零点エネルギー |
+

@@ -87,6 +87,7 @@ book:
   appendices:
     - appendix/A-math-notes.qmd
     - appendix/B-units-constants.qmd
+    - appendix/C-glossary.qmd
 
 bibliography: references.bib
 

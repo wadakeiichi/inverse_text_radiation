@@ -43,3 +43,4 @@ _freeze/
 _book/
 .quarto/
 *.quarto_ipynb
+*_files/
