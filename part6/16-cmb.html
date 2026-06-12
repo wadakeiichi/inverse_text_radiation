@@ -459,6 +459,11 @@ window.Quarto = {
   <a href="../appendix/B-units-constants.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">付録 B　単位と基本定数</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendix/C-glossary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">用語索引（和英・英和）</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -624,16 +629,6 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1} \quad \xrightar
 <p><strong>問い</strong>：もし宇宙の元素組成が違っていて（例：水素より重い元素ばかり）、再結合温度が違っていたら、現在観測される CMB 温度 <span class="math inline">T_\text{CMB}^\text{obs}</span> は変わるか？</p>
 <p><strong>短答</strong>：<strong>変わらない</strong>。今日の CMB 温度 <span class="math inline">T_0 \simeq 2.725</span> K は、宇宙の光子のエントロピー密度（と膨張史）で決まるもので、再結合温度には依存しない。<span class="math inline">T \propto 1/(1+z)</span> は <strong>恒等式</strong>（§16.4）であり、「再結合温度 ÷ <span class="math inline">(1+z_\text{rec})</span>」と書いたときの両者は <strong>恒等的に対応</strong> している。</p>
 <p><strong>もう一歩</strong>：仮に元素組成が違って再結合温度 <span class="math inline">T_\text{rec}</span> が違うとすれば、<strong><span class="math inline">z_\text{rec}</span> がそれに応じて変わる</strong> だけで、<span class="math inline">T_0 = T_\text{rec}/(1+z_\text{rec})</span> は恒等的に成り立つ。<span class="math inline">T_0</span> を実際に決めているのは、宇宙の光子数密度の歴史（電子・陽電子対消滅前後の自由度の変化、バリオン-光子比 <span class="math inline">\eta</span> など）であり、再結合の詳細は「最終散乱面の位置」のみを左右する</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-warning">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p><strong>注意（観測）</strong>：「中性微子（neutrino）」は本書のように省略表記される論文もあるが、日本天文学会『天文学辞典』（astro-dic.jp）の標準訳は <strong>「ニュートリノ」</strong>。本書では今後ニュートリノに統一する</p>
 </div>
 </div>
 </div>
@@ -1322,99 +1317,95 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1} \quad \xrightar
 <span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>**もう一歩**：仮に元素組成が違って再結合温度 $T_\text{rec}$ が違うとすれば、**$z_\text{rec}$ がそれに応じて変わる** だけで、$T_0 = T_\text{rec}/(1+z_\text{rec})$ は恒等的に成り立つ。$T_0$ を実際に決めているのは、宇宙の光子数密度の歴史（電子・陽電子対消滅前後の自由度の変化、バリオン-光子比 $\eta$ など）であり、再結合の詳細は「最終散乱面の位置」のみを左右する</span>
 <span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning appearance="simple"}</span>
-<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>**注意（観測）**：「中性微子（neutrino）」は本書のように省略表記される論文もあるが、日本天文学会『天文学辞典』（astro-dic.jp）の標準訳は **「ニュートリノ」**。本書では今後ニュートリノに統一する</span>
-<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a><span class="fu">## 16.4 宇宙膨張と温度 ― なぜ形が崩れないか {#sec-cmb-expansion}</span></span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3-B4</span><span class="co">]</span></span>
 <span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a><span class="fu">## 16.4 宇宙膨張と温度 ― なぜ形が崩れないか {#sec-cmb-expansion}</span></span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>膨張する宇宙では波長は伸びる（**redshift**）：$\lambda \to a(t) \lambda$、ここで $a(t)$ はスケール因子。よって振動数は $\nu \to \nu/a$、エネルギーは $h\nu \to h\nu/a$。</span>
 <span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3-B4</span><span class="co">]</span></span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>プランク分布の指数因子は $h\nu/k_B T$ を含むので、</span>
 <span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>膨張する宇宙では波長は伸びる（**redshift**）：$\lambda \to a(t) \lambda$、ここで $a(t)$ はスケール因子。よって振動数は $\nu \to \nu/a$、エネルギーは $h\nu \to h\nu/a$。</span>
-<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>プランク分布の指数因子は $h\nu/k_B T$ を含むので、</span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>\frac{h\nu}{k_B T}\quad \text{不変が成り立つには}\quad T \propto \frac{1}{a}</span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>$$ {#eq-redshift-temperature}</span>
 <span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>\frac{h\nu}{k_B T}\quad \text{不変が成り立つには}\quad T \propto \frac{1}{a}</span>
-<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>$$ {#eq-redshift-temperature}</span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>すなわち **温度がスケール因子の逆数で減る** ならば、スペクトルの形は変わらない（温度だけが変わる）。これが宇宙膨張下で **黒体形が保たれる** 理由。</span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>**第14章の道具を使う**：モード密度 $g(\nu) = 8\pi\nu^2/c^3$ は **共動座標** で考えると一定。波長が伸びれば、各モードの励起数も自然に変換される。光子数密度は $a^{-3}$ で薄まり、各光子のエネルギーは $a^{-1}$ で減るので、エネルギー密度は $a^{-4}$ で減る ― これは $T \propto a^{-1}$ と $u \propto T^4$（Stefan-Boltzmann）の組合せ。</span>
 <span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>すなわち **温度がスケール因子の逆数で減る** ならば、スペクトルの形は変わらない（温度だけが変わる）。これが宇宙膨張下で **黒体形が保たれる** 理由。</span>
-<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>**第14章の道具を使う**：モード密度 $g(\nu) = 8\pi\nu^2/c^3$ は **共動座標** で考えると一定。波長が伸びれば、各モードの励起数も自然に変換される。光子数密度は $a^{-3}$ で薄まり、各光子のエネルギーは $a^{-1}$ で減るので、エネルギー密度は $a^{-4}$ で減る ― これは $T \propto a^{-1}$ と $u \propto T^4$（Stefan-Boltzmann）の組合せ。</span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>**対応（観測）**：高赤方偏移銀河 ($z \sim 3$) で観測される CMB の温度を、衝突励起遷移の温度計から測定すると、$T_\text{CMB}(z) = (1+z) T_\text{CMB}(z=0) = 4(2.725) = 10.9$ K と一致する。これは「過去ほど宇宙は熱かった」ことの直接観測的確認である</span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>**対応（観測）**：高赤方偏移銀河 ($z \sim 3$) で観測される CMB の温度を、衝突励起遷移の温度計から測定すると、$T_\text{CMB}(z) = (1+z) T_\text{CMB}(z=0) = 4(2.725) = 10.9$ K と一致する。これは「過去ほど宇宙は熱かった」ことの直接観測的確認である</span>
-<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a><span class="fu">## 16.5 スペクトル歪み ― $\mu$ 歪みと $y$ 歪み {#sec-cmb-distortions}</span></span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3-B4</span><span class="co">]</span></span>
 <span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a><span class="fu">## 16.5 スペクトル歪み ― $\mu$ 歪みと $y$ 歪み {#sec-cmb-distortions}</span></span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>§16.2 の三つの熱化プロセスは、宇宙年齢が進むと一つずつ効率を失う：</span>
 <span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3-B4</span><span class="co">]</span></span>
-<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a>§16.2 の三つの熱化プロセスは、宇宙年齢が進むと一つずつ効率を失う：</span>
-<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$z \lesssim 2\times 10^6$：二重コンプトン散乱が無効化 → **光子数を変える能力を失う**</span>
-<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$z \lesssim 10^4$：コンプトン散乱が無効化 → **エネルギーを再分配する能力も失う**</span>
-<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a>それぞれの時期に「もしエネルギーが宇宙に投入されると」、その「歪み」はその後消えずに残る：</span>
-<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**$\mu$ 歪み**（**$\mu$-distortion**）：$z \sim 5 \times 10^4 \to 2 \times 10^6$ の時期に投入されたエネルギーの記録。コンプトン散乱でエネルギー再分配は完了するが、光子数増減が不可能なため、**Bose-Einstein 分布**（化学ポテンシャル $\mu \neq 0$）の形になる</span>
-<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**$y$ 歪み**（**$y$-distortion**, **Sunyaev-Zel'dovich type**）：$z \lesssim 10^4$ の時期、または現在まで含む遅い時期に高温電子と CMB 光子が散乱したときの記録。スペクトル全体が高振動数側へ引きずられる形（**コンプトン化**、第18章 §18.3 で詳述）</span>
-<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>標準的予言は $|\mu|, |y| \sim 10^{-8}$ レベル。これは現在の観測限界（FIRAS：$|\mu| &lt; 9 \times 10^{-5}$、$|y| &lt; 1.5 \times 10^{-5}$）より **3〜4 桁** 下にあり、PIXIE、PRISM 等の将来計画の主標的となっている。</span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$z \lesssim 2\times 10^6$：二重コンプトン散乱が無効化 → **光子数を変える能力を失う**</span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$z \lesssim 10^4$：コンプトン散乱が無効化 → **エネルギーを再分配する能力も失う**</span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>それぞれの時期に「もしエネルギーが宇宙に投入されると」、その「歪み」はその後消えずに残る：</span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**$\mu$ 歪み**（**$\mu$-distortion**）：$z \sim 5 \times 10^4 \to 2 \times 10^6$ の時期に投入されたエネルギーの記録。コンプトン散乱でエネルギー再分配は完了するが、光子数増減が不可能なため、**Bose-Einstein 分布**（化学ポテンシャル $\mu \neq 0$）の形になる</span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**$y$ 歪み**（**$y$-distortion**, **Sunyaev-Zel'dovich type**）：$z \lesssim 10^4$ の時期、または現在まで含む遅い時期に高温電子と CMB 光子が散乱したときの記録。スペクトル全体が高振動数側へ引きずられる形（**コンプトン化**、第18章 §18.3 で詳述）</span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>標準的予言は $|\mu|, |y| \sim 10^{-8}$ レベル。これは現在の観測限界（FIRAS：$|\mu| &lt; 9 \times 10^{-5}$、$|y| &lt; 1.5 \times 10^{-5}$）より **3〜4 桁** 下にあり、PIXIE、PRISM 等の将来計画の主標的となっている。</span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a>**対応（観測）**：銀河団中の高温電子と CMB 光子の散乱による $y$ 歪みは、**個別の銀河団** で観測されている（**Sunyaev-Zel'dovich 効果**）。スペクトル全体が高振動数側へ引きずられるため、CMB 黒体スペクトルから差し引くと **$\sim 217$ GHz より低振動数側では銀河団方向が暗く（ディップ）、高振動数側では明るく（バンプ）** 見える ― 217 GHz が「ヌル点」と呼ばれる境界。銀河団のガス圧の地図を作る道具として確立している。第18章 §18.3 のコンプトン化と同じ物理を、宇宙論的なスケールで見ている</span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>**対応（観測）**：銀河団中の高温電子と CMB 光子の散乱による $y$ 歪みは、**個別の銀河団** で観測されている（**Sunyaev-Zel'dovich 効果**）。スペクトル全体が高振動数側へ引きずられるため、CMB 黒体スペクトルから差し引くと **$\sim 217$ GHz より低振動数側では銀河団方向が暗く（ディップ）、高振動数側では明るく（バンプ）** 見える ― 217 GHz が「ヌル点」と呼ばれる境界。銀河団のガス圧の地図を作る道具として確立している。第18章 §18.3 のコンプトン化と同じ物理を、宇宙論的なスケールで見ている</span>
-<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a><span class="fu">## 16.6 CMB の何を測っているか ― 4つの側面 {#sec-cmb-what-we-measure}</span></span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
 <span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a><span class="fu">## 16.6 CMB の何を測っているか ― 4つの側面 {#sec-cmb-what-we-measure}</span></span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>CMB は **観測量** として、現代宇宙論で最重要のひとつ。本書の射程である **スペクトル** の側面に絞ると、CMB から読み取れることは：</span>
 <span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
-<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>CMB は **観測量** として、現代宇宙論で最重要のひとつ。本書の射程である **スペクトル** の側面に絞ると、CMB から読み取れることは：</span>
-<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**温度 $T_\text{CMB}$** ― 宇宙の現在の温度（$z = 0$）。**完璧に揃った温度**が、宇宙初期の熱化を直接示す</span>
-<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**スペクトル歪み** ― 熱化が完了する前のエネルギー注入履歴。粒子物理（暗黒物質崩壊・原始ブラックホール蒸発など）の宇宙論的制約</span>
-<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**空間温度ゆらぎ** ― $\Delta T/T \sim 10^{-5}$。宇宙の初期密度ゆらぎ。本書の射程外（宇宙論の教科書を参照）</span>
-<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**偏光** ― 再結合期の散乱の残り香。インフレーション理論検証の手段。本書の射程外</span>
-<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>**使えるようになった道具**（§16.1〜§16.6）：</span>
-<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>「黒体スペクトル」と「黒体に見えるスペクトル」を区別する観測精度の物差し</span>
-<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>熱化と再結合の区別 ― 早期物理と後期物理を別軸として扱う</span>
-<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>宇宙膨張下の黒体形保持 ― $T \propto a^{-1}$ の意味</span>
-<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>スペクトル歪み（$\mu$, $y$）の物理的意味と、それが宇宙史のどの時期と対応するか</span>
-<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**温度 $T_\text{CMB}$** ― 宇宙の現在の温度（$z = 0$）。**完璧に揃った温度**が、宇宙初期の熱化を直接示す</span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**スペクトル歪み** ― 熱化が完了する前のエネルギー注入履歴。粒子物理（暗黒物質崩壊・原始ブラックホール蒸発など）の宇宙論的制約</span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**空間温度ゆらぎ** ― $\Delta T/T \sim 10^{-5}$。宇宙の初期密度ゆらぎ。本書の射程外（宇宙論の教科書を参照）</span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**偏光** ― 再結合期の散乱の残り香。インフレーション理論検証の手段。本書の射程外</span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>**使えるようになった道具**（§16.1〜§16.6）：</span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>「黒体スペクトル」と「黒体に見えるスペクトル」を区別する観測精度の物差し</span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>熱化と再結合の区別 ― 早期物理と後期物理を別軸として扱う</span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>宇宙膨張下の黒体形保持 ― $T \propto a^{-1}$ の意味</span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>スペクトル歪み（$\mu$, $y$）の物理的意味と、それが宇宙史のどの時期と対応するか</span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-cmb-summary .unnumbered}</span></span>
 <span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-cmb-summary .unnumbered}</span></span>
-<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
-<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る**</span>
-<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a>CMB は、中心地図プランク分布の **ずれ因子 $f_\text{dev}$ が事実上ゼロ** という極限ケースだった。逆向きに読むと、これは **宇宙が熱化を経た直接の証拠** である。</span>
-<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>熱化は $z \gtrsim 2 \times 10^6$ で完了している（二重コンプトン散乱、第8章の光子数自由生成に対応）</span>
-<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>再結合 $z \simeq 1100$ で「最後の散乱」が起きて CMB は凍結</span>
-<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>宇宙膨張下では $T \propto a^{-1}$ で形が保たれる（モード密度の共動不変性）</span>
-<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>スペクトル歪みは将来観測の主標的、熱化境界より早い宇宙物理を読む手段</span>
-<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a>次章では同じ道具を、もう少し身近な熱放射体 ― 恒星・惑星・ダスト ― に適用する。</span>
-<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-cmb-exercises .unnumbered}</span></span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る**</span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a>CMB は、中心地図プランク分布の **ずれ因子 $f_\text{dev}$ が事実上ゼロ** という極限ケースだった。逆向きに読むと、これは **宇宙が熱化を経た直接の証拠** である。</span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>熱化は $z \gtrsim 2 \times 10^6$ で完了している（二重コンプトン散乱、第8章の光子数自由生成に対応）</span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>再結合 $z \simeq 1100$ で「最後の散乱」が起きて CMB は凍結</span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>宇宙膨張下では $T \propto a^{-1}$ で形が保たれる（モード密度の共動不変性）</span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>スペクトル歪みは将来観測の主標的、熱化境界より早い宇宙物理を読む手段</span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a>次章では同じ道具を、もう少し身近な熱放射体 ― 恒星・惑星・ダスト ― に適用する。</span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-cmb-exercises .unnumbered}</span></span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple"}</span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。</span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple"}</span>
-<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。</span>
-<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-cmb-further .unnumbered}</span></span>
-<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Dodelson &amp; Schmidt, *Modern Cosmology* (Academic Press, 2nd ed., 2020) — CMB と宇宙論の標準教科書</span>
-<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Peebles, *Principles of Physical Cosmology* (Princeton, 1993) — 古典、再結合と熱化の物理を丁寧に</span>
-<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Chluba &amp; Sunyaev, "The evolution of CMB spectral distortions in the early Universe," MNRAS 419 (2012) 1294 — スペクトル歪みの体系的計算</span>
-<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mather et al., "Measurement of the CMB Spectrum by the COBE FIRAS Instrument," ApJ 420 (1994) 439 — FIRAS の原論文</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-cmb-further .unnumbered}</span></span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Dodelson &amp; Schmidt, *Modern Cosmology* (Academic Press, 2nd ed., 2020) — CMB と宇宙論の標準教科書</span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Peebles, *Principles of Physical Cosmology* (Princeton, 1993) — 古典、再結合と熱化の物理を丁寧に</span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Chluba &amp; Sunyaev, "The evolution of CMB spectral distortions in the early Universe," MNRAS 419 (2012) 1294 — スペクトル歪みの体系的計算</span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mather et al., "Measurement of the CMB Spectrum by the COBE FIRAS Instrument," ApJ 420 (1994) 439 — FIRAS の原論文</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
