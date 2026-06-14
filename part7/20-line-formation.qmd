@@ -239,8 +239,106 @@ $$ {#eq-curve-of-growth}
 
 ## 演習問題 {#sec-line-formation-exercises .unnumbered}
 
-::: {.callout-note appearance="simple"}
-演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。
+以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。
+
+### 問題 20-1　線源泉関数が $B_\nu(T_{\rm ex})$ になる {#ex-20-1 .unnumbered}
+
+[★ 難易度：☆☆ ] [tag:導出補完]
+
+§20.3 は線源泉関数を励起温度 $T_{\rm ex}$ のプランク関数に書き換えた。導出を埋める。$S_\nu^{\rm line}=\dfrac{A_{ul}n_u}{B_{lu}n_l-B_{ul}n_u}$、Einstein 関係 $A_{ul}/B_{ul}=2h\nu_0^3/c^2$、$g_lB_{lu}=g_uB_{ul}$。
+
+1. Einstein 関係を使って $S_\nu^{\rm line}=\dfrac{2h\nu_0^3/c^2}{(g_un_l)/(g_ln_u)-1}$ を導け。
+2. 励起温度を $\dfrac{g_un_l}{g_ln_u}=e^{h\nu_0/k_BT_{\rm ex}}$ で定義し、$S_\nu^{\rm line}=B_{\nu_0}(T_{\rm ex})$ を示せ。
+3. $T_{\rm ex}$ が物理的なキネティック温度と一致するのはどんな条件か（LTE）。一致しない場合（non-LTE）に $S_\nu$ がプランク関数でなくなるわけではない理由を述べよ。
+
+**関連**：[§20.3 線源泉関数](#sec-line-source-function)／Einstein 関係の導出は[演習 11-1](../part4/11-einstein-method.qmd#ex-11-1)、ソース関数の基礎は[演習 5-5](../part2/05-radiative-transfer.qmd#ex-5-5)、LTE は[§20.4](#sec-LTE-line-formation)。
+
+::: {.callout-derive collapse="true"}
+## 模範解答（問題 20-1）
+
+**(1)** 分子分母を $B_{ul}n_u$ で割る。$g_lB_{lu}=g_uB_{ul}$ より $B_{lu}=（g_u/g_l)B_{ul}$：
+
+$$S_\nu^{\rm line}=\frac{A_{ul}n_u}{B_{lu}n_l-B_{ul}n_u}=\frac{A_{ul}/B_{ul}}{\dfrac{B_{lu}n_l}{B_{ul}n_u}-1}=\frac{2h\nu_0^3/c^2}{\dfrac{g_un_l}{g_ln_u}-1}.$$
+
+**(2)** $\dfrac{g_un_l}{g_ln_u}=e^{h\nu_0/k_BT_{\rm ex}}$ を代入すると分母が $e^{h\nu_0/k_BT_{\rm ex}}-1$ となり
+
+$$S_\nu^{\rm line}=\frac{2h\nu_0^3/c^2}{e^{h\nu_0/k_BT_{\rm ex}}-1}=B_{\nu_0}(T_{\rm ex}).$$
+
+**(3)** 占有数が局所キネティック温度 $T_{\rm kin}$ の Boltzmann 分布で書ける（LTE）とき $T_{\rm ex}=T_{\rm kin}$。non-LTE では占有数が Boltzmann から外れて $T_{\rm ex}\ne T_{\rm kin}$ になるが、$T_{\rm ex}$ を「占有比を Boltzmann 形で書いたときの温度」と**定義**する限り、$S_\nu=B_\nu(T_{\rm ex})$ は形式的に常に成り立つ。ただし $T_{\rm ex}$ は物理温度を反映しない。
+
+**答え**：$S_\nu^{\rm line}=\dfrac{2h\nu_0^3/c^2}{(g_un_l)/(g_ln_u)-1}=B_{\nu_0}(T_{\rm ex})$。LTE で $T_{\rm ex}=T_{\rm kin}$、non-LTE でも定義上 $B_\nu(T_{\rm ex})$ の形は保たれる。
+:::
+
+### 問題 20-2　誘導放出補正と準位反転（メーザー） {#ex-20-2 .unnumbered}
+
+[★ 難易度：☆☆ ] [tag:導出補完]
+
+§20.2 の線吸収係数 $\alpha_\nu=\dfrac{h\nu_0}{4\pi}n_lB_{lu}\phi\left[1-\dfrac{g_ln_u}{g_un_l}\right]$ の誘導放出補正 $[1-g_ln_u/(g_un_l)]$ を読み解く。
+
+1. 補正項がゼロになる条件（$n_u/g_u=n_l/g_l$）の物理的意味を述べよ。
+2. 補正項が負になる条件（$n_u/g_u>n_l/g_l$）を求め、そのとき $\alpha_\nu<0$（負の吸収＝増幅）になることを示せ。これが何の現象か。
+3. 宇宙メーザー（H$_2$O 22 GHz、OH 1.6 GHz）が観測されることから、何が逆引きできるか述べよ。
+
+**関連**：[§20.2 線の三つの素過程](#sec-line-three-processes)／誘導放出は[§11.2](../part4/11-einstein-method.qmd#sec-einstein-method-three-processes)、自発/誘導放出の比は[演習 11-2](../part4/11-einstein-method.qmd#ex-11-2)。
+
+::: {.callout-derive collapse="true"}
+## 模範解答（問題 20-2）
+
+**(1)** $\dfrac{g_ln_u}{g_un_l}=1$ すなわち $\dfrac{n_u}{g_u}=\dfrac{n_l}{g_l}$ で補正がゼロ。上下準位の縮重度あたりの占有が等しく、誘導放出が誘導吸収を完全に打ち消す。「これ以上正味で吸収できない」状態。
+
+**(2)** $\dfrac{g_ln_u}{g_un_l}>1$ すなわち $\dfrac{n_u}{g_u}>\dfrac{n_l}{g_l}$（**準位反転**）のとき補正項が負になり $\alpha_\nu<0$。負の吸収係数は、光が媒質を通るほど強められる＝**増幅**。これがメーザー／レーザーの原理。
+
+**(3)** 宇宙メーザーが見える＝準位反転 $n_u/g_u>n_l/g_l$ が実現している＝熱平衡では起こらない**非平衡なポンプ機構**（衝突ポンプ・放射ポンプ）が働いていることが逆引きできる。星形成領域・恒星質量放出・銀河中心の特殊な物理環境を示す。
+
+**答え**：補正ゼロ＝占有が等しい。負＝準位反転（$n_u/g_u>n_l/g_l$）→$\alpha_\nu<0$＝増幅＝メーザー。観測は非平衡ポンプ機構の証拠。
+:::
+
+### 問題 20-3　等価幅と curve of growth の三領域 {#ex-20-3 .unnumbered}
+
+[★ 難易度：☆☆ ] [tag:理解を深める]
+
+§20.1・20.6 の等価幅 $W_\lambda=\int\frac{I_c-I_\lambda}{I_c}d\lambda$ と curve of growth を読む。
+
+1. 等価幅が「線の輪郭の詳細によらない積分量」である利点を述べよ。浅く広い線と深く狭い線が同じ $W$ になりうる理由は。
+2. curve of growth の三領域（線形 $W\propto N$、飽和 $W\propto\sqrt{\ln N}$、減衰翼 $W\propto\sqrt{N}$）が、それぞれ光学的深さ $\tau$ のどんな状態に対応するか述べよ。
+3. 飽和領域の線から柱密度 $N$ を精度よく決めるのが難しい理由を述べよ。組成解析で複数の強さの線を使う理由と結びつけよ。
+
+**関連**：[§20.1 等価幅](#sec-line-equivalent-width)、[§20.6 curve of growth](#sec-curve-of-growth)／組成解析は[§23.2](../part7/23-line-applications.qmd#sec-line-applications-abundance)、減衰翼は[§22.1](../part7/22-line-shape.qmd#sec-line-shape-natural)。
+
+::: {.callout-derive collapse="true"}
+## 模範解答（問題 20-3）
+
+**(1)** 等価幅は「線が連続光から引き抜いた光の総量」を波長幅で表した積分量で、装置の分解能で輪郭がぼやけても保存される。同じ総吸収量なら、浅く広い線も深く狭い線も面積が等しく同じ $W$ になる。観測しやすく理論と比べやすい。
+
+**(2)** 線形領域：$\tau<1$（光学的に薄い）、吸収量が柱密度に比例 $W\propto N$。飽和領域：線芯 $\tau\gg1$（完全に黒）で中心はこれ以上吸収できず、$W$ は $\sqrt{\ln N}$ でしか増えない。減衰翼領域：Lorentz 翼（自然幅・衝突幅）が支配し $W\propto\sqrt{N}$。
+
+**(3)** 飽和領域では $W$ が $N$ にほとんど鈍感（$\sqrt{\ln N}$）なので、$W$ の小さな測定誤差が $N$ の大きな誤差になる。だから組成解析では弱い線（線形領域）・中間・強い線（減衰翼）を組み合わせ、curve of growth 全体を観測点で押さえて $N$ を精度よく決める。
+
+**答え**：$W$ は輪郭によらぬ積分量。線形($\tau<1$)→飽和($\tau\gg1$)→減衰翼。飽和域は $N$ に鈍感ゆえ複数の強さの線が必要。
+:::
+
+### 問題 20-4　LTE で吸収線になる条件 ― 温度勾配と背景光 {#ex-20-4 .unnumbered}
+
+[★ 難易度：☆☆ ] [tag:理解を深める]
+
+§20.4 は線が吸収か輝線かが温度構造と背景光で決まると述べた。LTE（$S_\nu=B_\nu(T)$）で考える。
+
+1. 恒星大気のように温度が深さとともに上がる場合、線中心と連続光がそれぞれどの深さ（温度）を見ているか述べ、なぜ吸収線になるか説明せよ。
+2. 彩層・コロナのように温度が外側で上がる、あるいは背景連続光がないガス雲では、なぜ輝線になるか述べよ。
+3. 線の Eddington-Barbier（線で $\tau_\nu=2/3$ になる層の $B_\nu$）が、線中心と連続でなぜ違う温度を与えるか、線中心の方が $\alpha_\nu$ が大きいことと結びつけて述べよ。
+
+**関連**：[§20.4 LTE 線形成](#sec-LTE-line-formation)／吸収線か輝線かは[演習 5-3](../part2/05-radiative-transfer.qmd#ex-5-3)、Eddington-Barbier は[演習 15-1](../part6/15-non-blackbody.qmd#ex-15-1)。
+
+::: {.callout-derive collapse="true"}
+## 模範解答（問題 20-4）
+
+**(1)** 線中心は $\alpha_\nu$ が大きく光学的厚さがすぐ1に達するので**浅い（外側＝低温）層**を見る。連続光は $\alpha_\nu$ が小さく**深い（高温）層**まで見通せる。LTE で $S_\nu=B_\nu(T)$ ゆえ、線中心は低温のプランク関数値（暗い）、連続は高温（明るい）。差し引き線中心が連続より暗く＝吸収線。
+
+**(2)** 温度が外側で上がる（彩層・コロナ）と、線中心が見る浅い層の方が高温になり、線中心が連続より明るく＝輝線。あるいは背景連続光がないガス雲では、ガス自身の放出 $\tau S_\nu$ だけが見え、線中心で強い輝線になる。
+
+**(3)** Eddington-Barbier 近似では、各振動数で $\tau_\nu=2/3$ になる層の $B_\nu(T)$ が出てくる。線中心は $\alpha_\nu$ が大きいので $\tau_\nu=2/3$ に達する幾何的深さが浅い（連続より外側＝別の温度の層）。よって線中心と連続が異なる温度を映し、温度勾配の向きで吸収/輝線が決まる。
+
+**答え**：線中心＝浅い層（$\alpha_\nu$ 大）、連続＝深い層。温度が深さで上がれば吸収線、外側で上がる/背景光なしなら輝線。Eddington-Barbier で別温度を映す。
 :::
 
 ## さらに学ぶための参考文献 {#sec-line-formation-further .unnumbered}

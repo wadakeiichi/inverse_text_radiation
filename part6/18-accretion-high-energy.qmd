@@ -219,8 +219,106 @@ $$ {#eq-grdisk-flux}
 
 ## 演習問題 {#sec-accretion-high-energy-exercises .unnumbered}
 
-::: {.callout-note appearance="simple"}
-演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。
+以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。
+
+### 問題 18-1　多温度円盤の $\nu^{1/3}$ べき則 {#ex-18-1 .unnumbered}
+
+[★ 難易度：☆☆☆ ] [tag:導出補完]
+
+§18.2 は標準降着円盤の中間振動数帯で $F_\nu\propto\nu^{1/3}$ になると述べた。導出の骨子を埋める。温度プロファイル $T(R)\propto R^{-3/4}$、合成フラックス $F_\nu=\displaystyle\int_{R_{\rm in}}^{R_{\rm out}}2\pi R\,B_\nu(T(R))\,dR$。
+
+1. $T\propto R^{-3/4}$ から $R\propto T^{-4/3}$、$2\pi R\,dR\propto T^{-11/3}\,dT$ を示せ。
+2. 中間帯（$kT(R_{\rm in})\gg h\nu\gg kT(R_{\rm out})$）では各半径の Rayleigh-Jeans 側 $B_\nu\propto\nu^2 T$ が効く。$F_\nu\propto\nu^2\displaystyle\int T\cdot T^{-11/3}\,dT=\nu^2\int T^{-8/3}dT$ を変数 $x=h\nu/kT$ に変換し、$F_\nu\propto\nu^{1/3}$ を導け。
+3. 温度プロファイルが一般に $T\propto R^{-\alpha}$ なら $F_\nu\propto\nu^{(3\alpha-2)/\alpha}$ となることを確かめ、$\alpha=3/4$ で $1/3$ になることを示せ。
+
+**関連**：[§18.2 多温度円盤](#sec-disk-multi-temperature)／局所黒体は[§18.1](#sec-disk-local-blackbody)（[演習 18-3](#ex-18-3)）、RJ 極限は[§2.5](../part1/02-reading-spectra.qmd#sec-reading-spectra-limits)。
+
+::: {.callout-derive collapse="true"}
+## 模範解答（問題 18-1）
+
+**(1)** $T\propto R^{-3/4}\Rightarrow R\propto T^{-4/3}$。$dR\propto T^{-7/3}dT$。$2\pi R\,dR\propto T^{-4/3}\cdot T^{-7/3}dT=T^{-11/3}dT$。
+
+**(2)** 中間帯で各半径の RJ 側 $B_\nu\propto\nu^2 T$。よって
+
+$$F_\nu\propto\int\nu^2 T\cdot T^{-11/3}dT=\nu^2\int T^{-8/3}dT.$$
+
+$x=h\nu/kT$ で $T=h\nu/kx$、$dT\propto-\nu\,x^{-2}dx$、$T^{-8/3}\propto\nu^{-8/3}x^{8/3}$。よって $\int T^{-8/3}dT\propto\nu^{-8/3}\cdot\nu\int x^{8/3-2}dx=\nu^{-5/3}\int x^{2/3}dx$。中間帯では積分は $\nu$ に依らない定数（端の寄与が効かない範囲）。したがって $F_\nu\propto\nu^2\cdot\nu^{-5/3}=\nu^{1/3}$。
+
+**(3)** 一般に $T\propto R^{-\alpha}\Rightarrow R\propto T^{-1/\alpha}$、$2\pi R\,dR\propto T^{-2/\alpha}dT$。$F_\nu\propto\nu^2\int T\cdot T^{-2/\alpha}dT=\nu^2\int T^{1-2/\alpha}dT$。$x=h\nu/kT$ 変換で $F_\nu\propto\nu^2\cdot\nu^{(1-2/\alpha)+1}\cdot(\text{const})\cdot\nu^{-1}$… 整理すると指数は $(3\alpha-2)/\alpha$。$\alpha=3/4$ で $(9/4-2)/(3/4)=(1/4)/(3/4)=1/3$。
+
+**答え**：$2\pi R\,dR\propto T^{-11/3}dT$、中間帯で $F_\nu\propto\nu^{1/3}$。一般に $T\propto R^{-\alpha}$ で $F_\nu\propto\nu^{(3\alpha-2)/\alpha}$、$\alpha=3/4$ で $1/3$。
+:::
+
+### 問題 18-2　コンプトン $y$ パラメータ {#ex-18-2 .unnumbered}
+
+[★ 難易度：☆☆ ] [tag:導出補完]
+
+§18.3 のコンプトン化を読み解く。種光子（低温黒体）が高温電子コロナ（$T_e$）を通過する。1回散乱あたりのエネルギー利得 $\dfrac{\Delta\nu}{\nu}\simeq\dfrac{4k_BT_e}{m_ec^2}$、$y\equiv\dfrac{4k_BT_e}{m_ec^2}\max(\tau_e,\tau_e^2)$。$m_ec^2=511$ keV。
+
+1. $T_e=10^9$ K（$k_BT_e\simeq86$ keV）で1回あたりのエネルギー利得 $\Delta\nu/\nu$ を求めよ。
+2. $y\ll1$、$y\gtrsim1$、中間域で観測スペクトルがどう変わるか（弱い Wien テイル／Wien 分布化／べき則）述べよ。
+3. この $y$ パラメータが第16章 CMB の $y$ 歪み（Sunyaev-Zel'dovich 効果）と同じ物理であること、スケールの違いだけであることを述べよ。
+
+**関連**：[§18.3 コンプトン化](#sec-comptonization)／CMB の $y$ 歪みは[§16.5](../part6/16-cmb.qmd#sec-cmb-distortions)（[演習 16-4](../part6/16-cmb.qmd#ex-16-4)）。
+
+::: {.callout-derive collapse="true"}
+## 模範解答（問題 18-2）
+
+**(1)** $\dfrac{\Delta\nu}{\nu}=\dfrac{4k_BT_e}{m_ec^2}=\dfrac{4\times86\ \text{keV}}{511\ \text{keV}}=\dfrac{344}{511}\simeq0.67$。1回の散乱で振動数が約 67% 増える。（$k_BT_e=8.617\times10^{-5}\times10^9=8.6\times10^4$ eV $=86$ keV。）
+
+**(2)** $y\ll1$：光子はわずかにエネルギーを得るだけ＝元の黒体形に弱い Wien 側テイルが付く。$y\gtrsim1$：光子がコロナで完全に再分配され、Wien 分布に近い高温化スペクトル。中間域：べき則 $F_\nu\propto\nu^{-\alpha}$ が現れ、高エネルギー側は Wien カットオフで切れる。
+
+**(3)** どちらも高温電子と光子の逆コンプトン散乱で、$y=\dfrac{4k_BT_e}{m_ec^2}\max(\tau,\tau^2)$ という同じパラメータでスペクトル変形を測る。X 線連星のコロナ（銀河近傍スケール）も、銀河団ガス（宇宙論スケール）も、同じ物理。違うのはスケール（$T_e$、$\tau$ の値と対象の大きさ）だけ。
+
+**答え**：$\Delta\nu/\nu\simeq0.67$（$T_e=10^9$ K）。$y\ll1$ 弱テイル、$y\gtrsim1$ Wien 化、中間でべき則。CMB の $y$ 歪み（SZ 効果）と同物理。
+:::
+
+### 問題 18-3　局所黒体仮定とその限界 {#ex-18-3 .unnumbered}
+
+[★ 難易度：☆☆ ] [tag:理解を深める]
+
+§18.1 は標準降着円盤が「各半径で局所的に黒体」と仮定する。この仮定が成り立つ条件と破れ方を整理する。
+
+1. 各半径が温度 $T(R)$ の黒体として放射するには、第3章・第5章のどんな条件（熱化時間、光学的厚さ、単一温度）が局所的に満たされる必要があるか述べよ。
+2. 実際の円盤で局所黒体から外れる要因を2つ挙げよ（高温コロナ、振動数依存不透明度、電子散乱卓越など）。
+3. 電子散乱が吸収より卓越する高温体では、観測される色温度 $T_{\rm col}$ が実効温度 $T(R)$ より高くなり、補正係数 $f_{\rm col}\simeq1.5$–$2$ が経験的に要る。なぜ散乱卓越が色温度を上げるのか、[演習 15-3](../part6/15-non-blackbody.qmd#ex-15-3) のソース関数と結びつけて一言で述べよ。
+
+**関連**：[§18.1 局所黒体近似](#sec-disk-local-blackbody)／黒体化条件は[§3.6](../part1/03-universality.qmd#sec-universality-real-objects)（[演習 3-4](../part1/03-universality.qmd#ex-3-4)）、LTE は[§5.5](../part2/05-radiative-transfer.qmd#sec-radiative-transfer-lte)、散乱ソース関数は[演習 15-3](../part6/15-non-blackbody.qmd#ex-15-3)。
+
+::: {.callout-derive collapse="true"}
+## 模範解答（問題 18-3）
+
+**(1)** ① 熱化時間が円盤の力学的時間より短い（局所的に熱平衡に達する）、② 各半径で鉛直方向に光学的に厚い（$\tau\gg1$、吸収・再放出が十分）、③ その半径内では単一温度 $T(R)$ で記述できる。これらが満たされれば各半径が $B_\nu(T(R))$ で放射する（第3章 §3.6、第5章 §5.6）。
+
+**(2)** 例：高温・希薄なコロナ層（局所熱平衡を破る）、不透明度の振動数依存（修正黒体的なずれ）、電子散乱が吸収より卓越（純黒体から外れる）。
+
+**(3)** 電子散乱卓越ではソース関数 $S_\nu=(1-\tilde\omega)B_\nu+\tilde\omega\langle J_\nu\rangle$（[演習 15-3](../part6/15-non-blackbody.qmd#ex-15-3)）が局所プランクから外れ、光子は吸収で熱化されにくく深部の高温を反映したまま散乱で抜ける。結果、見かけの色温度が実効温度より高くなり、$f_{\rm col}\simeq1.5$–$2$ の補正が要る。
+
+**答え**：局所熱平衡・光学的厚・単一温度が必要。破れ＝コロナ／振動数依存不透明度／電子散乱卓越。散乱卓越は熱化を妨げ色温度を上げる（$f_{\rm col}\sim1.5$–$2$）。
+:::
+
+### 問題 18-4　中性子星表面の重力赤方偏移 {#ex-18-4 .unnumbered}
+
+[★ 難易度：☆☆ ] [tag:導出補完]
+
+§18.4 は中性子星の観測温度が重力赤方偏移を受けると述べた。$z_g=(1-2GM/Rc^2)^{-1/2}-1$、観測温度 $T_\infty=T/(1+z_g)$。$M=1.4M_\odot=2.78\times10^{30}$ kg、$R=10$ km、$G=6.674\times10^{-11}$、$c=3\times10^8$ m/s。
+
+1. コンパクトネス $2GM/Rc^2$ を計算せよ。
+2. 重力赤方偏移 $z_g$ を求め、$z_g\simeq0.3$ を確かめよ。
+3. 表面温度 $T=10^7$ K の中性子星の観測温度 $T_\infty$ を求めよ。重力赤方偏移と Stefan-Boltzmann を連立すると質量と半径の組合せが制約できる（NICER の戦略）ことに一言触れよ。
+
+**関連**：[§18.4 中性子星表面](#sec-neutron-star-surface)／Fermi 縮退は[§8.2](../part3/08-photon-statistics.qmd#sec-photon-statistics-bose-fermi)、相対論的修正は[§18.5](#sec-black-hole-effects)。
+
+::: {.callout-derive collapse="true"}
+## 模範解答（問題 18-4）
+
+**(1)** $\dfrac{2GM}{Rc^2}=\dfrac{2\times6.674\times10^{-11}\times2.78\times10^{30}}{1.0\times10^4\times(3\times10^8)^2}=\dfrac{3.71\times10^{20}}{9.0\times10^{20}}=0.412$。
+
+**(2)** $z_g=(1-0.412)^{-1/2}-1=(0.588)^{-1/2}-1=1.304-1=0.304\simeq0.30$。
+
+**(3)** $T_\infty=T/(1+z_g)=10^7/1.30=7.7\times10^6$ K。観測される温度は表面温度より約23%低い。重力赤方偏移 $z_g$ は $M/R$ に依存し、Stefan-Boltzmann で得る放射半径は $M,R$ の別の組合せに依存するので、両者を連立すると $M$ と $R$ を独立に制約できる。NICER はこれにパルス時間プロファイルを加えて核物質の状態方程式を制約している。
+
+**答え**：$2GM/Rc^2=0.41$、$z_g\simeq0.30$、$T_\infty=7.7\times10^6$ K。$z_g$ と Stefan-Boltzmann の連立で $M,R$ を制約（NICER）。
 :::
 
 ## さらに学ぶための参考文献 {#sec-accretion-high-energy-further .unnumbered}

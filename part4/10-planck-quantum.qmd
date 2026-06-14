@@ -200,8 +200,128 @@ Planck の量子仮説の歴史的・物理的位置づけを整理する。
 
 ## 演習問題 {#sec-planck-quantum-exercises .unnumbered}
 
-::: {.callout-note appearance="simple"}
-演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。
+以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。
+
+### 問題 10-1　量子化振動子の分配関数と平均エネルギー {#ex-10-1 .unnumbered}
+
+[★ 難易度：☆ ] [tag:導出補完]
+
+§10.2 は分配関数 $Z_1=1/(1-e^{-\beta h\nu})$ と平均エネルギー $\langle E\rangle=h\nu/(e^{h\nu/k_BT}-1)$ を「第7章 §7.2 の手法で」与えた。両式を自力で導け。準位は $E_n=nh\nu\ (n=0,1,2,\ldots)$。
+
+1. 等比級数の和として $Z_1=\sum_{n=0}^\infty e^{-\beta nh\nu}=\dfrac{1}{1-e^{-\beta h\nu}}$ を示せ（収束条件も述べよ）。
+2. $\langle E\rangle=-\partial\ln Z_1/\partial\beta$ を実行して $\langle E\rangle=\dfrac{h\nu}{e^{\beta h\nu}-1}$ を導け。
+3. 古典結果 $\langle E\rangle=k_BT$ と比べ、低振動数極限で一致することを確認せよ。
+
+**関連**：[§10.2 振動子の量子化](#sec-planck-quantum-oscillator)／手法は[第7章 統計力学](../part3/07-statistical-mechanics.qmd)、古典との対比は[演習 9-2](../part4/09-classical-failure.qmd#ex-9-2)。
+
+::: {.callout-derive collapse="true"}
+## 模範解答（問題 10-1）
+
+**(1)** 公比 $r=e^{-\beta h\nu}$ の等比級数。$\beta,h,\nu>0$ より $0<r<1$ で収束し、
+
+$$
+Z_1=\sum_{n=0}^\infty r^n=\frac{1}{1-r}=\frac{1}{1-e^{-\beta h\nu}}.
+$$
+
+**(2)** $\ln Z_1=-\ln(1-e^{-\beta h\nu})$。$\beta$ で微分：
+
+$$
+\langle E\rangle=-\frac{\partial\ln Z_1}{\partial\beta}=\frac{h\nu\,e^{-\beta h\nu}}{1-e^{-\beta h\nu}}=\frac{h\nu}{e^{\beta h\nu}-1}=\frac{h\nu}{e^{h\nu/k_BT}-1}.
+$$
+
+**(3)** 低振動数 $x\equiv h\nu/k_BT\ll1$ で $e^x-1\simeq x$ ゆえ $\langle E\rangle\to h\nu/x=k_BT$。古典の等分配と一致する。
+
+**答え**：$Z_1=1/(1-e^{-\beta h\nu})$、$\langle E\rangle=h\nu/(e^{h\nu/k_BT}-1)\xrightarrow{h\nu\ll k_BT}k_BT$。
+:::
+
+### 問題 10-2　両極限と「最初の量子補正」 {#ex-10-2 .unnumbered}
+
+[★ 難易度：☆☆ ] [tag:導出補完]
+
+§10.4 はプランク分布の低・高振動数極限を示した。導出を埋め、さらに一歩進める。$x\equiv h\nu/k_BT$ とおく。
+
+1. 低振動数（$x\ll1$）で $B_\nu\to\dfrac{2\nu^2}{c^2}k_BT$（Rayleigh–Jeans）を導け。
+2. 平均エネルギー $\langle E\rangle=\dfrac{h\nu}{e^x-1}$ を $x$ の小ささで展開し、古典値 $k_BT$ からの **最初の補正項** を求めよ。補正の符号は何を意味するか。
+3. 高振動数（$x\gg1$）で Wien の式 $B_\nu\to\dfrac{2h\nu^3}{c^2}e^{-h\nu/k_BT}$ を導け。
+
+**関連**：[§10.4 Wien・Rayleigh–Jeans 両極限](#sec-planck-quantum-limits)／RJ の古典導出は[§9.2](../part4/09-classical-failure.qmd#sec-classical-failure-rayleigh-jeans)、観測比較は[§2.5](../part1/02-reading-spectra.qmd#sec-reading-spectra-limits)。
+
+::: {.callout-derive collapse="true"}
+## 模範解答（問題 10-2）
+
+**(1)** $B_\nu=\dfrac{2h\nu^3}{c^2}\dfrac{1}{e^x-1}$。$x\ll1$ で $e^x-1\simeq x=h\nu/k_BT$ ゆえ $B_\nu\to\dfrac{2h\nu^3}{c^2}\cdot\dfrac{k_BT}{h\nu}=\dfrac{2\nu^2}{c^2}k_BT$。$h$ が消える＝古典極限。
+
+**(2)** $e^x-1=x\left(1+\dfrac{x}{2}+\dfrac{x^2}{6}+\cdots\right)$ ゆえ
+
+$$
+\langle E\rangle=\frac{h\nu}{e^x-1}=\frac{k_BT}{1+\frac{x}{2}+\cdots}=k_BT\left(1-\frac{x}{2}+\cdots\right)=k_BT-\frac{h\nu}{2}+\cdots.
+$$
+
+最初の補正は $-h\nu/2$。**負号**は、量子化により各モードが古典の等分配値より小さいエネルギーしか受け取れない（高振動数ほど効く凍結の始まり）ことを意味する。
+
+**(3)** $x\gg1$ で $e^x-1\simeq e^x$ ゆえ $B_\nu\to\dfrac{2h\nu^3}{c^2}e^{-x}=\dfrac{2h\nu^3}{c^2}e^{-h\nu/k_BT}$。これが Wien の式。
+
+**答え**：低：$2\nu^2k_BT/c^2$；補正 $\langle E\rangle\simeq k_BT-\tfrac12 h\nu$（負＝凍結の兆し）；高：$2h\nu^3e^{-h\nu/k_BT}/c^2$。
+:::
+
+### 問題 10-3　プランク分布から Stefan–Boltzmann 則 {#ex-10-3 .unnumbered}
+
+[★ 難易度：☆☆☆ ] [tag:導出補完]
+
+第9章の表で「全エネルギー密度＝$aT^4$（有限）」とあったが、本文は積分を実行していない。プランクのエネルギー密度 $u_\nu=\dfrac{8\pi h\nu^3}{c^3}\dfrac{1}{e^{h\nu/k_BT}-1}$ を全振動数で積分し、$u=aT^4$ を導いて放射定数 $a$ を基本定数で表せ。
+
+1. $x=h\nu/k_BT$ で変数変換し、$u=\dfrac{8\pi h}{c^3}\left(\dfrac{k_BT}{h}\right)^4\displaystyle\int_0^\infty\frac{x^3}{e^x-1}dx$ を導け。
+2. $\displaystyle\int_0^\infty\frac{x^3}{e^x-1}dx=\frac{\pi^4}{15}$ を用いて $a=\dfrac{8\pi^5 k_B^4}{15c^3h^3}$ を示し、数値（SI）を概算せよ。
+3. $u=aT^4$ と射出強度 $j=\sigma T^4$ の関係 $a=4\sigma/c$ から、$\sigma$ の値を確認せよ。
+
+**関連**：[§10.3 プランク分布の導出](#sec-planck-quantum-derivation)／発散する古典版との対比は[演習 9-3](../part4/09-classical-failure.qmd#ex-9-3)、積分公式は[付録A 数学ノート](../appendix/A-math-notes.qmd)。
+
+::: {.callout-derive collapse="true"}
+## 模範解答（問題 10-3）
+
+**(1)** $x=h\nu/k_BT$ より $\nu=k_BTx/h,\ d\nu=(k_BT/h)dx$。代入して
+
+$$
+u=\frac{8\pi h}{c^3}\left(\frac{k_BT}{h}\right)^4\int_0^\infty\frac{x^3}{e^x-1}dx.
+$$
+
+**(2)** 積分 $=\pi^4/15$ を入れて
+
+$$
+u=\frac{8\pi^5 k_B^4}{15c^3h^3}T^4\equiv aT^4,\qquad a=\frac{8\pi^5k_B^4}{15c^3h^3}\approx7.57\times10^{-16}\ \mathrm{J\,m^{-3}\,K^{-4}}.
+$$
+
+**(3)** $a=4\sigma/c$ より $\sigma=ac/4=7.57\times10^{-16}\times3.00\times10^8/4\approx5.67\times10^{-8}\ \mathrm{W\,m^{-2}\,K^{-4}}$。既知の Stefan–Boltzmann 定数と一致する。
+
+**答え**：$a=\dfrac{8\pi^5k_B^4}{15c^3h^3}\approx7.57\times10^{-16}\,\mathrm{J\,m^{-3}K^{-4}}$、$\sigma=ac/4\approx5.67\times10^{-8}\,\mathrm{W\,m^{-2}K^{-4}}$。
+:::
+
+### 問題 10-4　Wien 変位則：ピーク振動数 $\propto T$ {#ex-10-4 .unnumbered}
+
+[★ 難易度：☆☆ ] [tag:理解を深める]
+
+§10.4 は両極限の境目を $\nu\sim k_BT/h$ と見積もった。プランク分布のピークを正確に求めて「変位則」を導く。
+
+1. $B_\nu\propto\dfrac{\nu^3}{e^{x}-1}\ (x=h\nu/k_BT)$ を $\nu$ で微分してゼロにおき、$3(1-e^{-x})=x$ という超越方程式を導け。
+2. 数値解 $x_{\rm peak}\approx2.821$ を用いて $\nu_{\rm peak}=2.821\,k_BT/h$ を示し、$\nu_{\rm peak}\propto T$ を確認せよ。
+3. 太陽 $T\simeq5800$ K について $\nu_{\rm peak}$ と対応波長を概算せよ（$B_\lambda$ のピーク波長とは係数が異なることに触れよ）。
+
+**関連**：[§10.4 両極限と境界](#sec-planck-quantum-limits)／波長表示の Wien 変位則の導出は[演習 2-2](../part1/02-reading-spectra.qmd#ex-2-2)、観測スペクトルのピークは[第1章](../part1/01-where-blackbody.qmd)。
+
+::: {.callout-derive collapse="true"}
+## 模範解答（問題 10-4）
+
+**(1)** $f(\nu)=\nu^3(e^x-1)^{-1}$、$x=h\nu/k_BT$ なので $dx/d\nu=h/k_BT$。積の微分をゼロとおき、$\nu^2/(e^x-1)$ で割って $h\nu/k_BT=x$ を使うと
+
+$$
+3-\frac{x e^x}{e^x-1}=0\ \Longrightarrow\ 3(1-e^{-x})=x.
+$$
+
+**(2)** この超越方程式の非自明解は $x_{\rm peak}\approx2.821$。よって $\nu_{\rm peak}=x_{\rm peak}k_BT/h=2.821\,k_BT/h\propto T$（Wien 変位則）。
+
+**(3)** $T=5800$ K で $\nu_{\rm peak}\approx3.4\times10^{14}$ Hz、$\lambda=c/\nu_{\rm peak}\approx8.8\times10^{2}$ nm（近赤外）。これは $B_\lambda$ を最大化して得る $\lambda_{\rm peak}\approx500$ nm とは別物。$B_\nu$ と $B_\lambda$ ではヤコビアン $d\nu=-(c/\lambda^2)d\lambda$ のため最大化条件が異なり（$\lambda$ 側は $x\approx4.965$）、$\nu_{\rm peak}\lambda_{\rm peak}\ne c$ となる。
+
+**答え**：$3(1-e^{-x})=x\Rightarrow x\approx2.821$、$\nu_{\rm peak}=2.821k_BT/h\propto T$。太陽で $\nu_{\rm peak}\approx3.4\times10^{14}$ Hz（$\sim880$ nm）。$B_\nu$ と $B_\lambda$ のピークは一致しない。
 :::
 
 ## さらに学ぶための参考文献 {#sec-planck-quantum-further .unnumbered}

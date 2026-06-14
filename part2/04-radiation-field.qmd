@@ -312,8 +312,124 @@ $$ {#eq-nu-lambda-conversion-f}
 
 ## 演習問題 {#sec-radiation-field-exercises .unnumbered}
 
-::: {.callout-note appearance="simple"}
-演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。
+以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。
+
+### 問題 4-1　等方場で $u_\nu=\frac{4\pi}{c}I_\nu$、$F_\nu=0$、$P_\nu=\frac{1}{3}u_\nu$ {#ex-4-1 .unnumbered}
+
+[★ 難易度：☆☆ ] [tag:導出補完]
+
+§4.3〜4.5 は等方放射場での値を表で与えた。定義から自分で導く。立体角要素 $d\Omega=\sin\theta\,d\theta\,d\varphi$。等方なら $I_\nu$ は方向に依らず積分の外へ出せる。
+
+1. $u_\nu=\dfrac{1}{c}\displaystyle\oint I_\nu\,d\Omega$ から、等方場で $u_\nu=\dfrac{4\pi}{c}I_\nu$ を示せ。
+2. $F_\nu=\displaystyle\oint I_\nu\cos\theta\,d\Omega$ が等方場でゼロになることを示せ。
+3. $P_\nu=\dfrac{1}{c}\displaystyle\oint I_\nu\cos^2\theta\,d\Omega$ を計算し、$\displaystyle\oint\cos^2\theta\,d\Omega=\dfrac{4\pi}{3}$ を使って $P_\nu=\dfrac{1}{3}u_\nu$ を導け。これは光子気体の状態方程式 $P=u/3$ に対応する。
+
+**関連**：[§4.3 エネルギー密度](#sec-radiation-field-energy-density)、[§4.5 モーメント](#sec-radiation-field-moments)／$P=u/3$ の光子気体としての扱いは[第8章](../part3/08-photon-statistics.qmd)。
+
+::: {.callout-derive collapse="true"}
+## 模範解答（問題 4-1）
+
+**(1)** $I_\nu$ を外に出すと $u_\nu=\dfrac{I_\nu}{c}\displaystyle\oint d\Omega=\dfrac{I_\nu}{c}\cdot4\pi=\dfrac{4\pi}{c}I_\nu$。
+
+**(2)** $\displaystyle\oint\cos\theta\,d\Omega=\int_0^{2\pi}d\varphi\int_0^{\pi}\cos\theta\sin\theta\,d\theta=2\pi\left[\dfrac{\sin^2\theta}{2}\right]_0^{\pi}=2\pi\cdot0=0$。（上半球の正と下半球の負が打ち消す。）よって $F_\nu=I_\nu\cdot0=0$。
+
+**(3)** $\displaystyle\oint\cos^2\theta\,d\Omega=\int_0^{2\pi}d\varphi\int_0^{\pi}\cos^2\theta\sin\theta\,d\theta=2\pi\left[-\dfrac{\cos^3\theta}{3}\right]_0^{\pi}=2\pi\cdot\dfrac{2}{3}=\dfrac{4\pi}{3}$。よって
+
+$$
+P_\nu=\frac{I_\nu}{c}\cdot\frac{4\pi}{3}=\frac{1}{3}\cdot\frac{4\pi}{c}I_\nu=\frac{1}{3}u_\nu.
+$$
+
+**答え**：等方場で $u_\nu=\frac{4\pi}{c}I_\nu$、$F_\nu=0$、$P_\nu=\frac13 u_\nu$。最後は光子気体の状態方程式 $P=u/3$。
+:::
+
+### 問題 4-2　表面輝度は距離によらない ― $I_\nu$ 不変と $F_\nu\propto1/d^2$ {#ex-4-2 .unnumbered}
+
+[★ 難易度：☆☆ ] [tag:理解を深める]
+
+§4.1 は「遠くの星が暗く見えるのは比強度ではなくフラックスが減るから」と述べた。これを定量的に確かめる。
+
+1. 真空中で比強度 $I_\nu$ が経路に沿って保存することを前提に、距離 $d$ にある半径 $R$ の一様な円盤天体について、観測される比強度 $I_\nu$ が $d$ に依らないことを述べよ。
+2. その天体が張る立体角が $\Omega\simeq\pi R^2/d^2\propto1/d^2$ であることを示し、観測フラックス $F_\nu\simeq I_\nu\,\Omega\propto1/d^2$ を導け。
+3. 点光源の式 $F_\nu^{\rm obs}=L_\nu/4\pi d^2$ と (2) が整合することを、$L_\nu$ を $I_\nu$ と $R$ で表して確かめよ。
+
+**関連**：[§4.1 比強度（保存則）](#sec-radiation-field-intensity)、[§4.4 フラックス](#sec-radiation-field-flux)／立体角は[§4.2](#sec-radiation-field-solid-angle)、光度の定義は[§2.4](../part1/02-reading-spectra.qmd#sec-reading-spectra-stefan-boltzmann)。
+
+::: {.callout-derive collapse="true"}
+## 模範解答（問題 4-2）
+
+**(1)** 比強度は真空伝播で保存する（光線一本あたりのエネルギーが不変、位相空間体積保存の帰結）。よって天体表面の比強度と、遠方で観測する比強度は等しく、距離 $d$ に依らない（表面輝度の距離不変）。
+
+**(2)** 半径 $R$ の円盤を距離 $d$ から見ると、見込む角の半径は $\theta\simeq R/d$（$R\ll d$）。立体角は $\Omega\simeq\pi\theta^2=\pi R^2/d^2\propto1/d^2$。観測フラックスは「比強度×天体の立体角」なので $F_\nu\simeq I_\nu\Omega=\pi I_\nu R^2/d^2\propto1/d^2$。
+
+**(3)** 表面フラックス $F_\nu^{\rm surf}=\pi I_\nu$（半球射出、§2.4）、光度 $L_\nu=4\pi R^2\cdot F_\nu^{\rm surf}=4\pi R^2\cdot\pi I_\nu=4\pi^2 R^2 I_\nu$。点光源式に入れると
+
+$$
+F_\nu^{\rm obs}=\frac{L_\nu}{4\pi d^2}=\frac{4\pi^2R^2 I_\nu}{4\pi d^2}=\frac{\pi I_\nu R^2}{d^2},
+$$
+
+これは (2) と完全に一致する。$I_\nu$ は不変、$F_\nu$ だけが $1/d^2$ で落ちる。
+
+**答え**：$I_\nu$ は距離不変、$\Omega\propto1/d^2$ ゆえ $F_\nu=\pi I_\nu R^2/d^2\propto1/d^2$。点光源式とも一致。
+:::
+
+### 問題 4-3　CMB のエネルギー密度を見積もる {#ex-4-3 .unnumbered}
+
+[★ 難易度：☆ ] [tag:理解を深める]
+
+§4.3 は熱平衡で $u=\displaystyle\int u_\nu\,d\nu=aT^4$（$a=4\sigma/c$）になると述べ、CMB で $u\simeq4.2\times10^{-13}$ erg cm$^{-3}$ と見積もった。これを確かめる。
+
+1. 放射定数を CGS で $a=7.566\times10^{-15}$ erg cm$^{-3}$ K$^{-4}$ とし、$T_{\rm CMB}=2.725$ K で $u=aT^4$ を計算せよ。
+2. 等方黒体場では $u_\nu=\dfrac{4\pi}{c}B_\nu(T)$、$J_\nu=B_\nu(T)$ となる。なぜ $J_\nu=B_\nu$ なのに $u_\nu$ には $4\pi/c$ が付くのか、定義の違いから一言で述べよ。
+3. 得られた $u$ が、銀河系内の宇宙線・星間磁場のエネルギー密度（$\sim10^{-12}$ erg cm$^{-3}$）と同程度であることを確認し、その含意を一言。
+
+**関連**：[§4.3 エネルギー密度](#sec-radiation-field-energy-density)、[§4.5 平均強度](#sec-radiation-field-moments)／$u=aT^4$ の導出は[演習 10-3](../part4/10-planck-quantum.qmd#ex-10-3)、[第6章](../part3/06-thermal-equilibrium.qmd)。
+
+::: {.callout-derive collapse="true"}
+## 模範解答（問題 4-3）
+
+**(1)** $T^4=(2.725)^4=55.1$ K$^4$。よって
+
+$$
+u=aT^4=7.566\times10^{-15}\times55.1\simeq4.2\times10^{-13}\ \mathrm{erg\,cm^{-3}}.
+$$
+
+本文の値と一致。
+
+**(2)** $J_\nu$ は比強度の**方向平均**（$\frac{1}{4\pi}\oint I_\nu d\Omega$）なので等方場で $J_\nu=I_\nu=B_\nu$。一方 $u_\nu$ は単位体積あたりの**エネルギー**（$\frac1c\oint I_\nu d\Omega$）で、全立体角の積分 $4\pi$ と $1/c$ が付く。平均か総和か、という定義の違い。実際 $u_\nu=\frac{4\pi}{c}J_\nu$。
+
+**(3)** $4.2\times10^{-13}$ と $10^{-12}$ erg cm$^{-3}$ はオーダーで同程度。CMB・宇宙線・星間磁場のエネルギー密度が拮抗していることは、銀河系の星間媒質がこれらの間でエネルギーをやりとりする「準平衡」的な系であることを示唆する（重要なベースライン）。
+
+**答え**：$u\simeq4.2\times10^{-13}$ erg cm$^{-3}$。$J_\nu$＝方向平均、$u_\nu$＝体積エネルギー（$4\pi/c$ 倍）。宇宙線・磁場と同オーダー。
+:::
+
+### 問題 4-4　点光源か広がった光源か ― 装置との関係で決まる {#ex-4-4 .unnumbered}
+
+[★ 難易度：☆☆ ] [tag:理解を深める]
+
+§4.4・4.8 は「点光源か広がった光源か」は天体固有でなく観測装置との関係で決まると述べた。$\alpha$ Cen A（視直径 $\sim9$ mas）を例に確かめる。
+
+1. $\alpha$ Cen A を円盤とみて立体角 $\Omega_{\rm src}\simeq\pi(\theta/2)^2$ を sr で概算せよ（$\theta=9$ mas）。
+2. 通常の地上望遠鏡（シーイング $\sim1$ arcsec）のビーム立体角 $\Omega_{\rm beam}\simeq\pi(0.5'')^2$ と比べ、点光源として扱える理由を述べよ。
+3. VLTI 干渉計（分解能 $\sim1$ mas）ではどうなるか。同じ天体で扱いが変わることが何を意味するか、観測される量（$F_\nu$ か $I_\nu$ か）の観点から述べよ。
+
+**関連**：[§4.4 フラックス（点光源/広がった光源）](#sec-radiation-field-flux)、[§4.8 装置と放射場](#sec-radiation-field-observation)／立体角の見積りは[§4.2](#sec-radiation-field-solid-angle)。
+
+::: {.callout-derive collapse="true"}
+## 模範解答（問題 4-4）
+
+**(1)** $\theta=9$ mas $=9\times10^{-3}$ arcsec。1 arcsec $=4.85\times10^{-6}$ rad なので $\theta=9\times10^{-3}\times4.85\times10^{-6}=4.4\times10^{-8}$ rad。半径 $\theta/2=2.2\times10^{-8}$ rad。立体角
+
+$$
+\Omega_{\rm src}\simeq\pi(2.2\times10^{-8})^2\simeq1.5\times10^{-15}\ \mathrm{sr}.
+$$
+
+（本文の表の値と一致。）
+
+**(2)** シーイング 1 arcsec のビーム半径 $0.5''=2.4\times10^{-6}$ rad、$\Omega_{\rm beam}\simeq\pi(2.4\times10^{-6})^2\simeq1.8\times10^{-11}$ sr。$\Omega_{\rm src}/\Omega_{\rm beam}\sim10^{-4}\ll1$。天体はビームよりはるかに小さく、空間的に分解できない＝点光源。測れるのはフラックス $F_\nu$ のみ。
+
+**(3)** VLTI の分解能 $\sim1$ mas は天体視直径 9 mas より小さいので、円盤を空間的に分解できる＝広がった光源として扱え、面上の比強度 $I_\nu$（表面輝度分布）が測れる。同じ天体が装置の分解能次第で点光源にも広がった光源にもなる。すなわち「点か広がりか」は天体の性質でなく装置との関係で決まる。
+
+**答え**：$\Omega_{\rm src}\simeq1.5\times10^{-15}$ sr。シーイング1″では $\ll\Omega_{\rm beam}$ ゆえ点光源（$F_\nu$ を測る）。VLTI 1 masでは分解でき広がった光源（$I_\nu$）。装置依存。
 :::
 
 ## さらに学ぶための参考文献 {#sec-radiation-field-further .unnumbered}

@@ -244,8 +244,78 @@ $$ {#eq-nonthermal-distribution}
 
 ## 演習問題 {#sec-non-blackbody-exercises .unnumbered}
 
-::: {.callout-note appearance="simple"}
-演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。
+以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。
+
+### 問題 15-1　灰色大気の温度構造と「見える深さ」 {#ex-15-1 .unnumbered}
+
+[★ 難易度：☆☆ ] [tag:導出補完]
+
+§15.2 は灰色大気の Eddington 近似解 $T^4(\tau)=\dfrac{3}{4}T_{\rm eff}^4(\tau+\dfrac23)$ を結果として引いた。これを読み解く。
+
+1. 表面 $\tau=0$ での温度 $T(0)$ を $T_{\rm eff}$ で表し、$T(0)\simeq0.84\,T_{\rm eff}$ を確かめよ。
+2. $T(\tau)=T_{\rm eff}$ となる光学的深さ $\tau$ を求めよ。
+3. (2) の結果が Eddington-Barbier 近似（emergent flux は $\tau_\nu=2/3$ 層の $S_\nu$ で近似）と整合することを述べ、観測される連続光が「$\tau\simeq2/3$ の層の温度」を映す理由を説明せよ。
+
+**関連**：[§15.2 灰色大気](#sec-non-blackbody-grey)、[§15.3 Eddington-Barbier](#sec-non-blackbody-frequency-opacity) ／ $\tau\sim1$ と光球は[第II部 演習 5-4](../part2/05-radiative-transfer.qmd#ex-5-4)、有効温度は[§17.1](../part6/17-stars-planets-dust.qmd#sec-stars-effective-temperature)。
+
+::: {.callout-derive collapse="true"}
+## 模範解答（問題 15-1）
+
+**(1)** $\tau=0$：$T^4(0)=\dfrac34 T_{\rm eff}^4\cdot\dfrac23=\dfrac12 T_{\rm eff}^4$。よって $T(0)=(1/2)^{1/4}T_{\rm eff}=0.841\,T_{\rm eff}$。表面は有効温度より約16%低い。
+
+**(2)** $T^4(\tau)=T_{\rm eff}^4$ とおく：$\dfrac34(\tau+\dfrac23)=1\Rightarrow\tau+\dfrac23=\dfrac43\Rightarrow\tau=\dfrac23$。
+
+**(3)** emergent flux の Eddington-Barbier 近似 $F_\nu\approx\pi S_\nu(\tau_\nu=2/3)$ は「$\tau=2/3$ 層のソース関数が観測フラックスを代表する」。灰色大気ではちょうどこの層で $T=T_{\rm eff}$ なので、LTE（$S_\nu=B_\nu$）の下で観測される連続光は $B_\nu(T_{\rm eff})$ に近い。観測スペクトルは「$\tau\simeq2/3$ の層」を映している。
+
+**答え**：$T(0)=(1/2)^{1/4}T_{\rm eff}\simeq0.84T_{\rm eff}$、$T=T_{\rm eff}$ は $\tau=2/3$。これが Eddington-Barbier の見える深さ。
+:::
+
+### 問題 15-2　修正黒体のべき ― なぜ $\beta$ は Rayleigh-Jeans 側でしか見えないか {#ex-15-2 .unnumbered}
+
+[★ 難易度：☆☆ ] [tag:理解を深める]
+
+§15.4 の修正黒体 $I_\nu=Q_\nu B_\nu(T)$、$Q_\nu\propto\nu^\beta$（長波長極限）。
+
+1. Rayleigh-Jeans 側（$h\nu\ll kT$、$B_\nu\propto\nu^2$）で、$\beta=2$ のとき観測される $I_\nu$ は $\nu$ の何乗に比例するか。$\beta=1$ なら？
+2. Wien 側（$h\nu\gg kT$）では $Q_\nu\propto\nu^\beta$ の冪は指数減衰に対してほぼ効かないことを説明せよ。
+3. 「$\beta$ は Rayleigh-Jeans 側でのみ見える」という非対称性が、観測でダストの $\beta$ を決めるとき長波長（サブミリ・ミリ）観測を必要とする理由を述べよ。
+
+**関連**：[§15.4 修正黒体](#sec-non-blackbody-modified) ／ 両極限は[§2.5](../part1/02-reading-spectra.qmd#sec-reading-spectra-limits)（[第IV部 演習 10-2](../part4/10-planck-quantum.qmd#ex-10-2)）、ダスト解析は[§17.3](../part6/17-stars-planets-dust.qmd#sec-dust-modified-blackbody)（[演習 17-3](../part6/17-stars-planets-dust.qmd#ex-17-3)）。
+
+::: {.callout-derive collapse="true"}
+## 模範解答（問題 15-2）
+
+**(1)** RJ 側 $B_\nu\propto\nu^2$。$I_\nu=Q_\nu B_\nu\propto\nu^\beta\cdot\nu^2=\nu^{2+\beta}$。$\beta=2$ なら $I_\nu\propto\nu^4$、$\beta=1$ なら $\nu^3$。低振動数側の勾配が黒体（$\nu^2$）より急になる。
+
+**(2)** Wien 側 $B_\nu\propto\nu^3e^{-h\nu/kT}$ で指数減衰が支配的。$Q_\nu\propto\nu^\beta$ の冪は指数関数に比べて緩やかで、スペクトルの落ち方をほとんど変えない。したがって Wien 側の形からは $\beta$ をほぼ読めない。
+
+**(3)** $\beta$ は RJ 側の勾配 $\nu^{2+\beta}$ にしか現れない。ダスト（$T\sim10$–$30$ K）の RJ 側は遠赤外〜サブミリ・ミリ波に来る。よって $\beta$ を測るには、ピークより長波長側のサブミリ・ミリ（Herschel/ALMA）観測点が必要。Wien 側（近赤外）だけでは $\beta$ が決まらない。
+
+**答え**：RJ 側 $I_\nu\propto\nu^{2+\beta}$（$\beta=2$ で $\nu^4$）。Wien 側は指数減衰が支配で $\beta$ が見えない。ゆえに $\beta$ 決定には長波長観測が必須。
+:::
+
+### 問題 15-3　散乱を含むソース関数と偏光 {#ex-15-3 .unnumbered}
+
+[★ 難易度：☆☆ ] [tag:導出補完]
+
+§15.5 のソース関数 $S_\nu=\dfrac{\kappa_\nu^{\rm abs}B_\nu(T)+\sigma_\nu\langle J_\nu\rangle}{\kappa_\nu^{\rm abs}+\sigma_\nu}$ を読み解く。単一散乱アルベド $\tilde\omega_\nu\equiv\dfrac{\sigma_\nu}{\kappa_\nu^{\rm abs}+\sigma_\nu}$。
+
+1. $S_\nu$ を $\tilde\omega_\nu$ で書き直し、$S_\nu=(1-\tilde\omega_\nu)B_\nu+\tilde\omega_\nu\langle J_\nu\rangle$ を示せ。
+2. 純吸収（$\tilde\omega_\nu=0$）と純散乱（$\tilde\omega_\nu=1$）の極限で $S_\nu$ がそれぞれ何になるか述べ、後者で局所プランク関数から外れる理由を述べよ。
+3. 熱平衡放射は無偏光なのに、散乱が偏光を生む。観測される偏光が「散乱が無視できない」ことの直接の証拠になる理由を述べ、例を1つ挙げよ。
+
+**関連**：[§15.5 散乱の効果](#sec-non-blackbody-scattering) ／ ソース関数の基礎は[§5.4](../part2/05-radiative-transfer.qmd#sec-radiative-transfer-source)（[第II部 演習](../part2/05-radiative-transfer.qmd#sec-radiative-transfer-exercises)）、偏光は[第V部 演習 13-4](../part5/13-electromagnetic-waves.qmd#ex-13-4)。
+
+::: {.callout-derive collapse="true"}
+## 模範解答（問題 15-3）
+
+**(1)** 分子分母を $\kappa^{\rm abs}+\sigma$ で割る：$S_\nu=\dfrac{\kappa^{\rm abs}}{\kappa^{\rm abs}+\sigma}B_\nu+\dfrac{\sigma}{\kappa^{\rm abs}+\sigma}\langle J_\nu\rangle=(1-\tilde\omega_\nu)B_\nu+\tilde\omega_\nu\langle J_\nu\rangle$。
+
+**(2)** 純吸収 $\tilde\omega=0$：$S_\nu=B_\nu(T)$（LTE、局所プランク）。純散乱 $\tilde\omega=1$：$S_\nu=\langle J_\nu\rangle$（平均強度そのもの）。後者は局所の温度 $T$ ではなく、媒質全体から散乱されてきた放射場 $\langle J_\nu\rangle$ で決まるので、局所プランク関数 $B_\nu(T_{\rm local})$ から外れる（非局所）。
+
+**(3)** 熱平衡放射は両偏光が等確率で混ざり無偏光。散乱（特に Thomson・Rayleigh 散乱）は散乱角に依存して特定偏光を優先的に散乱し、偏光を生む。よって観測される偏光は、その光が散乱を経たこと＝散乱が無視できないことの直接証拠。例：CMB の偏光（再結合期の Thomson 散乱）、太陽コロナの偏光、惑星間ダストの散乱光。
+
+**答え**：$S_\nu=(1-\tilde\omega)B_\nu+\tilde\omega\langle J_\nu\rangle$。純散乱で $S_\nu=\langle J_\nu\rangle$（非局所）。偏光の存在＝散乱卓越の証拠（CMB 偏光など）。
 :::
 
 ## さらに学ぶための参考文献 {#sec-non-blackbody-further .unnumbered}

@@ -247,8 +247,134 @@ $$ {#eq-detailed-balance}
 
 ## 演習問題 {#sec-thermal-equilibrium-exercises .unnumbered}
 
-::: {.callout-note appearance="simple"}
-演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。
+以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。
+
+### 問題 6-1　多重度の最大と「マクロ状態で十分」な理由 {#ex-6-1 .unnumbered}
+
+[★ 難易度：☆☆ ] [tag:導出補完]
+
+§6.2 は気体分子を左右に分ける多重度 $\Omega(N_L)=\binom{N}{N_L}$ が $N_L=N/2$ で最大になると述べた。これを示し、揺らぎの幅を見積もる。
+
+1. Stirling 近似 $\ln N!\simeq N\ln N-N$ を使い、$\ln\Omega(N_L)$ を最大化して $N_L=N/2$ を導け。
+2. $N_L=N/2+x$ のまわりで $\ln\Omega$ を $x$ の2次まで展開し、$\ln\Omega\simeq\ln\Omega_{\max}-\dfrac{2x^2}{N}$ を示せ（分布が幅 $\sim\sqrt{N}$ のガウス型）。
+3. 相対的な揺らぎ $\sqrt{\langle x^2\rangle}/N\sim1/\sqrt{N}$ が、$N\sim10^{23}$ で $10^{-11}$ 程度になることを確かめ、「マクロ状態だけで温度が語れる」理由を述べよ。
+
+**関連**：[§6.2 マクロ状態とミクロ状態](#sec-thermal-equilibrium-macro-micro)／揺らぎの一般論は[§7.4](../part3/07-statistical-mechanics.qmd#sec-statistical-mechanics-fluctuations)（[演習 7-3](../part3/07-statistical-mechanics.qmd#ex-7-3)）。
+
+::: {.callout-derive collapse="true"}
+## 模範解答（問題 6-1）
+
+**(1)** $\ln\Omega=\ln N!-\ln N_L!-\ln(N-N_L)!$。Stirling で微分（$N$ 固定）：
+
+$$
+\frac{d\ln\Omega}{dN_L}=-\ln N_L+\ln(N-N_L)=\ln\frac{N-N_L}{N_L}=0\ \Rightarrow\ N_L=N-N_L\ \Rightarrow\ N_L=\frac N2.
+$$
+
+**(2)** $N_L=N/2+x$、$N_R=N/2-x$。$\ln\Omega=N\ln N-N_L\ln N_L-N_R\ln N_R$（定数項略）。2次まで展開すると、各 $\ln(N/2\pm x)\simeq\ln(N/2)\pm\frac{2x}{N}-\frac{2x^2}{N^2}$ を使って整理し
+
+$$
+\ln\Omega\simeq\ln\Omega_{\max}-\frac{2x^2}{N}.
+$$
+
+すなわち $\Omega\propto e^{-2x^2/N}$。これはガウス型で標準偏差 $\sigma_x=\sqrt{N}/2$。
+
+**(3)** $\sqrt{\langle x^2\rangle}=\sigma_x=\sqrt N/2$ ゆえ相対揺らぎ $\sigma_x/N=1/(2\sqrt N)\sim1/\sqrt N$。$N=10^{23}$ で $\sim10^{-11.5}$。観測誤差よりはるかに小さく、ほぼすべてのミクロ状態が $N_L\simeq N/2$ のマクロ状態に集中する。だからマクロ状態（最大多重度の状態）だけで物理を語れる。
+
+**答え**：$N_L=N/2$ で最大、$\Omega\propto e^{-2x^2/N}$（幅 $\sqrt N/2$）。相対揺らぎ $\sim1/\sqrt N\sim10^{-11}$ ゆえマクロ状態で十分。
+:::
+
+### 問題 6-2　エントロピーの加法性と $1/T=\partial S/\partial E$ {#ex-6-2 .unnumbered}
+
+[★ 難易度：☆☆ ] [tag:導出補完]
+
+§6.3 はエントロピー $S=k_B\ln\Omega$ の加法性と温度の定義 $1/T=(\partial S/\partial E)_{V,N}$ を与えた。両方を導く。
+
+1. 独立な二系 $\Omega=\Omega_1\Omega_2$ から $S=S_1+S_2$（加法性）を示せ。
+2. エネルギー $E=E_1+E_2$ を分け合う二系を熱接触させ、全多重度 $\Omega_1(E_1)\Omega_2(E_2)$ を最大化する。$\partial S_1/\partial E_1=\partial S_2/\partial E_2$ が平衡条件であることを示せ。
+3. この共通の値を $1/T$ と定義する根拠（「温度が等しいとき平衡」という熱力学的描像との整合）を述べよ。
+
+**関連**：[§6.3 エントロピー](#sec-thermal-equilibrium-entropy)、[§6.1 温度と熱平衡](#sec-thermal-equilibrium-temperature)。
+
+::: {.callout-derive collapse="true"}
+## 模範解答（問題 6-2）
+
+**(1)** 独立な二系の全多重度は積 $\Omega=\Omega_1\Omega_2$。対数をとると $S=k_B\ln(\Omega_1\Omega_2)=k_B\ln\Omega_1+k_B\ln\Omega_2=S_1+S_2$。エントロピーは加法的（示量的）。
+
+**(2)** $E_1$ を変数に全エントロピー $S=S_1(E_1)+S_2(E-E_1)$ を最大化：
+
+$$
+\frac{dS}{dE_1}=\frac{\partial S_1}{\partial E_1}-\frac{\partial S_2}{\partial E_2}=0\ \Rightarrow\ \frac{\partial S_1}{\partial E_1}=\frac{\partial S_2}{\partial E_2}.
+$$
+
+（$dE_2/dE_1=-1$ を使った。）平衡では両系で $\partial S/\partial E$ が一致する。
+
+**(3)** 熱力学では「二系を接触させて正味のエネルギー流が止まる＝温度が等しい」が平衡。(2) の共通量 $\partial S/\partial E$ がまさに平衡で一致する量なので、これを温度と結びつけるのが自然。次元と符号（エネルギーを加えるとエントロピーが増える）から $1/T\equiv\partial S/\partial E$ と定義すると、熱力学の温度と一致する。
+
+**答え**：$\Omega=\Omega_1\Omega_2\Rightarrow S=S_1+S_2$。平衡で $\partial S_1/\partial E_1=\partial S_2/\partial E_2$、これを $1/T$ と定義。
+:::
+
+### 問題 6-3　最大エントロピーから Boltzmann 分布を導く {#ex-6-3 .unnumbered}
+
+[★ 難易度：☆☆☆ ] [tag:導出補完]
+
+§6.4 は Lagrange 未定乗数法で $n_i\propto f(\beta E_i,\alpha)$ になると述べた。識別可能粒子（古典）について具体的に実行する。準位 $\{E_i\}$ に $\{n_i\}$ 個を配る多重度 $\Omega=\dfrac{N!}{\prod_i n_i!}$。
+
+1. $\ln\Omega$ に Stirling を使い、制約 $\sum n_i=N$、$\sum n_i E_i=E$ のもとで $\dfrac{\partial}{\partial n_i}[\ln\Omega-\alpha\sum n_j-\beta\sum n_j E_j]=0$ を解いて $n_i\propto e^{-\beta E_i}$ を導け。
+2. 規格化して $n_i=\dfrac{N e^{-\beta E_i}}{\sum_j e^{-\beta E_j}}$ を示し、分配関数 $Z=\sum_j e^{-\beta E_j}$ が分母に現れることを確認せよ。
+3. $\beta=1/k_BT$ が問題 6-2 の温度定義と整合する理由を一言で。
+
+**関連**：[§6.4 最大エントロピー原理](#sec-thermal-equilibrium-max-entropy)／分配関数の活用は[§7.2](../part3/07-statistical-mechanics.qmd#sec-statistical-mechanics-partition)、Bose 版は[§8.3](../part3/08-photon-statistics.qmd#sec-photon-statistics-bose-einstein)（[演習 8-2](../part3/08-photon-statistics.qmd#ex-8-2)）。
+
+::: {.callout-derive collapse="true"}
+## 模範解答（問題 6-3）
+
+**(1)** $\ln\Omega=\ln N!-\sum_i\ln n_i!\simeq N\ln N-N-\sum_i(n_i\ln n_i-n_i)$。$n_i$ で微分すると $\partial\ln\Omega/\partial n_i=-\ln n_i$。変分条件：
+
+$$
+-\ln n_i-\alpha-\beta E_i=0\ \Rightarrow\ \ln n_i=-\alpha-\beta E_i\ \Rightarrow\ n_i=e^{-\alpha}e^{-\beta E_i}\propto e^{-\beta E_i}.
+$$
+
+**(2)** $\sum_i n_i=N$ より $e^{-\alpha}\sum_j e^{-\beta E_j}=N$、よって $e^{-\alpha}=N/Z$、$Z=\sum_j e^{-\beta E_j}$。したがって
+
+$$
+n_i=\frac{N e^{-\beta E_i}}{\sum_j e^{-\beta E_j}}=\frac{N}{Z}e^{-\beta E_i}.
+$$
+
+分母にちょうど分配関数 $Z$ が現れる。
+
+**(3)** エネルギー制約の Lagrange 乗数 $\beta$ は、エントロピー最大化で「エネルギーを1単位動かしたときのエントロピー変化」に対応する。これは問題 6-2 の $1/T=\partial S/\partial E$ そのもので、$\beta=1/k_BT$ と同定される。
+
+**答え**：変分で $n_i\propto e^{-\beta E_i}$、規格化で $n_i=(N/Z)e^{-\beta E_i}$、$Z=\sum e^{-\beta E_j}$。$\beta=1/k_BT$ は温度定義と整合。
+:::
+
+### 問題 6-4　詳細釣り合いと遷移率の比 {#ex-6-4 .unnumbered}
+
+[★ 難易度：☆☆ ] [tag:理解を深める]
+
+§6.6 は詳細釣り合い $n_i W_{i\to j}=n_j W_{j\to i}$ を導入した。これと Boltzmann 分布を組み合わせる。
+
+1. 熱平衡で $n_i/n_j=(g_i/g_j)e^{-(E_i-E_j)/k_BT}$ を使い、遷移率の比 $W_{i\to j}/W_{j\to i}$ を求めよ。
+2. 「全粒子の正味流れがゼロ」という弱い条件と、「各ペアで個別に釣り合う」詳細釣り合いの違いを、3状態を巡回する流れ（$1\to2\to3\to1$）を例に説明せよ。
+3. この原理が第11章で Einstein 係数の関係式を導くのにどう使われるか、一言で予告せよ。
+
+**関連**：[§6.6 詳細釣り合い](#sec-thermal-equilibrium-detailed-balance)／Einstein への応用は[§11.3](../part4/11-einstein-method.qmd#sec-einstein-method-detailed-balance)（[演習 11-1](../part4/11-einstein-method.qmd#ex-11-1)）、Boltzmann 比は[§7.3](../part3/07-statistical-mechanics.qmd#sec-statistical-mechanics-boltzmann)。
+
+::: {.callout-derive collapse="true"}
+## 模範解答（問題 6-4）
+
+**(1)** 詳細釣り合いから $W_{i\to j}/W_{j\to i}=n_j/n_i$。Boltzmann 比を代入：
+
+$$
+\frac{W_{i\to j}}{W_{j\to i}}=\frac{n_j}{n_i}=\frac{g_j}{g_i}e^{-(E_j-E_i)/k_BT}.
+$$
+
+（上準位ほど占有が少ないので、上向き遷移率と下向き遷移率の比がこの形になる。）
+
+**(2)** 「正味流れゼロ」は、たとえば $1\to2\to3\to1$ と一方向に循環する定常流があっても各状態の占有数が一定なら満たされてしまう。詳細釣り合いはより強く、各ペア（$1\!\leftrightarrow\!2$, $2\!\leftrightarrow\!3$, $3\!\leftrightarrow\!1$）で個別に往復が釣り合うことを要求し、そうした循環流を禁じる。これは微視的時間反転対称性の帰結で、真の熱平衡を特徴づける。
+
+**(3)** 第11章で Einstein は、放射と二準位原子の吸収・自発放出・誘導放出に詳細釣り合いを課し、$J_\nu=B_\nu$ を要求することで Einstein 関係式 $A_{ul}/B_{ul}=2h\nu^3/c^2$ と $g_lB_{lu}=g_uB_{ul}$ を導く。本問の「遷移率の比」が原子と放射の係数の比に具体化される。
+
+**答え**：$W_{i\to j}/W_{j\to i}=(g_j/g_i)e^{-(E_j-E_i)/k_BT}$。詳細釣り合いは循環流を禁じる強い条件。第11章の Einstein 関係式の基礎。
 :::
 
 ## さらに学ぶための参考文献 {#sec-thermal-equilibrium-further .unnumbered}

@@ -231,8 +231,124 @@ $$ {#eq-poynting-time-averaged}
 
 ## 演習問題 {#sec-electromagnetic-waves-exercises .unnumbered}
 
-::: {.callout-note appearance="simple"}
-演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。
+以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。
+
+### 問題 13-1　Maxwell 方程式から波動方程式を導く {#ex-13-1 .unnumbered}
+
+[★ 難易度：☆☆ ] [tag:導出補完]
+
+§13.2 はベクトル恒等式を使うとだけ述べた。真空 Maxwell 方程式から $\mathbf E$ の波動方程式を導く。$\nabla\cdot\mathbf E=0$、$\nabla\times\mathbf E=-\partial_t\mathbf B$、$\nabla\times\mathbf B=\dfrac{1}{c^2}\partial_t\mathbf E$。
+
+1. $\nabla\times\mathbf E=-\partial_t\mathbf B$ の両辺に $\nabla\times$ を作用させ、恒等式 $\nabla\times(\nabla\times\mathbf E)=\nabla(\nabla\cdot\mathbf E)-\nabla^2\mathbf E$ を使って $-\nabla^2\mathbf E=-\partial_t(\nabla\times\mathbf B)$ を示せ。
+2. 右辺に $\nabla\times\mathbf B=\dfrac{1}{c^2}\partial_t\mathbf E$ を代入し、$\nabla^2\mathbf E-\dfrac{1}{c^2}\partial_t^2\mathbf E=0$ を導け。
+3. $c=1/\sqrt{\mu_0\epsilon_0}$ が波の伝播速度としてこの式に現れることの意味（光速が電磁気の基本定数から決まる）を一言で述べよ。
+
+**関連**：[§13.2 波動方程式](#sec-electromagnetic-waves-wave-equation)／前因子の $1/c^2$ の起源は[§14.4](../part5/14-cavity-modes.qmd#sec-cavity-modes-frequency)（[演習 14-1](../part5/14-cavity-modes.qmd#ex-14-1)）。
+
+::: {.callout-derive collapse="true"}
+## 模範解答（問題 13-1）
+
+**(1)** $\nabla\times(\nabla\times\mathbf E)=-\partial_t(\nabla\times\mathbf B)$。左辺に恒等式を使い、$\nabla\cdot\mathbf E=0$（真空）より $\nabla(\nabla\cdot\mathbf E)=0$ ゆえ
+
+$$
+\nabla(\nabla\cdot\mathbf E)-\nabla^2\mathbf E=-\nabla^2\mathbf E=-\partial_t(\nabla\times\mathbf B).
+$$
+
+**(2)** $\nabla\times\mathbf B=\dfrac{1}{c^2}\partial_t\mathbf E$ を代入：
+
+$$
+-\nabla^2\mathbf E=-\partial_t\left(\frac{1}{c^2}\partial_t\mathbf E\right)=-\frac{1}{c^2}\partial_t^2\mathbf E\ \Rightarrow\ \nabla^2\mathbf E-\frac{1}{c^2}\partial_t^2\mathbf E=0.
+$$
+
+**(3)** この波動方程式の波の速さは方程式中の定数 $c=1/\sqrt{\mu_0\epsilon_0}$。電気・磁気の基本定数だけから光速が決まり、光が電磁波であること、その速度が真空中で $c$ であることが Maxwell 方程式に組み込まれている。これがプランク前因子の $c$ の出どころ。
+
+**答え**：$\nabla^2\mathbf E-\frac{1}{c^2}\partial_t^2\mathbf E=0$。波速 $c=1/\sqrt{\mu_0\epsilon_0}$ が電磁気定数から決まる。
+:::
+
+### 問題 13-2　分散関係と横波条件 ― 偏光自由度2 {#ex-13-2 .unnumbered}
+
+[★ 難易度：☆☆ ] [tag:導出補完]
+
+平面波 $\mathbf E=\mathbf E_0\,e^{i(\mathbf k\cdot\mathbf r-\omega t)}$ を使う。
+
+1. 波動方程式に代入して分散関係 $\omega=c|\mathbf k|$（$\nu=c/\lambda$）を導け。
+2. $\nabla\cdot\mathbf E=0$ に代入して $\mathbf k\cdot\mathbf E_0=0$（横波）を示せ。
+3. 横波条件から、与えられた $\mathbf k$ に対し独立な偏光が2つであることを示し、これがプランク前因子 $2h\nu^3/c^2$ の先頭の「2」の起源であることを述べよ。
+
+**関連**：[§13.3 平面波](#sec-electromagnetic-waves-plane-wave)、[§13.4 偏光](#sec-electromagnetic-waves-polarization)／モード数え上げでの2倍は[§14.3](../part5/14-cavity-modes.qmd#sec-cavity-modes-polarization)。
+
+::: {.callout-derive collapse="true"}
+## 模範解答（問題 13-2）
+
+**(1)** $\partial_t\to-i\omega$、$\nabla\to i\mathbf k$ ゆえ $\nabla^2\to-|\mathbf k|^2$、$\partial_t^2\to-\omega^2$。波動方程式は
+
+$$
+\left(-|\mathbf k|^2+\frac{\omega^2}{c^2}\right)\mathbf E_0=0\ \Rightarrow\ \omega^2=c^2|\mathbf k|^2\ \Rightarrow\ \omega=c|\mathbf k|.
+$$
+
+$\omega=2\pi\nu$、$|\mathbf k|=2\pi/\lambda$ より $\nu=c/\lambda$。
+
+**(2)** $\nabla\cdot\mathbf E=i\mathbf k\cdot\mathbf E_0\,e^{i(\cdots)}=0\Rightarrow\mathbf k\cdot\mathbf E_0=0$。電場は伝播方向に垂直＝横波。
+
+**(3)** $\mathbf E_0$ は $\mathbf k$ に垂直な平面（2次元）内で自由。よって独立な基底偏光は2つ（例：直線偏光2方向、または右・左円偏光）。任意の偏光はこの2つの線形結合。この「2」がモード数え上げで各 $\mathbf k$ に2を掛ける根拠となり、プランク前因子の先頭の2になる。
+
+**答え**：$\omega=c|\mathbf k|$、$\mathbf k\cdot\mathbf E_0=0$。横波ゆえ偏光は2自由度＝前因子の「2」。
+:::
+
+### 問題 13-3　Poynting ベクトルの時間平均 {#ex-13-3 .unnumbered}
+
+[★ 難易度：☆☆ ] [tag:導出補完]
+
+§13.5 は時間平均 Poynting ベクトル $\langle\mathbf S\rangle=\dfrac{c}{8\pi}|\mathbf E_0|^2\hat{\mathbf k}$（Gauss 単位）を結果として与えた。導く。実数の平面波 $\mathbf E=\mathbf E_0\cos(\mathbf k\cdot\mathbf r-\omega t)$、電磁波では $|\mathbf B|=|\mathbf E|$ かつ $\mathbf B=\hat{\mathbf k}\times\mathbf E$（Gauss）。
+
+1. $\mathbf S=\dfrac{c}{4\pi}\mathbf E\times\mathbf B$ に代入し、$\mathbf S=\dfrac{c}{4\pi}|\mathbf E_0|^2\cos^2(\mathbf k\cdot\mathbf r-\omega t)\,\hat{\mathbf k}$ を示せ。
+2. $\cos^2$ の時間平均が $1/2$ であることを使い、$\langle\mathbf S\rangle=\dfrac{c}{8\pi}|\mathbf E_0|^2\hat{\mathbf k}$ を導け。
+3. エネルギーが波数ベクトル方向 $\hat{\mathbf k}$ に運ばれること、これが観測量フラックス $F_\nu$ に対応することを一言で述べよ。
+
+**関連**：[§13.5 Poynting ベクトル](#sec-electromagnetic-waves-poynting)／フラックスの定義は[第4章 §4.4](../part2/04-radiation-field.qmd#sec-radiation-field-flux)（[第II部 演習](../part2/04-radiation-field.qmd#sec-radiation-field-exercises)）。
+
+::: {.callout-derive collapse="true"}
+## 模範解答（問題 13-3）
+
+**(1)** $\mathbf B=\hat{\mathbf k}\times\mathbf E$、$\mathbf E\perp\hat{\mathbf k}$ ゆえ $\mathbf E\times\mathbf B=\mathbf E\times(\hat{\mathbf k}\times\mathbf E)=\hat{\mathbf k}|\mathbf E|^2-\mathbf E(\mathbf E\cdot\hat{\mathbf k})=|\mathbf E|^2\hat{\mathbf k}$（$\mathbf E\cdot\hat{\mathbf k}=0$）。$|\mathbf E|^2=|\mathbf E_0|^2\cos^2(\cdots)$。よって
+
+$$
+\mathbf S=\frac{c}{4\pi}|\mathbf E_0|^2\cos^2(\mathbf k\cdot\mathbf r-\omega t)\,\hat{\mathbf k}.
+$$
+
+**(2)** $\langle\cos^2\rangle=1/2$（1周期平均）ゆえ
+
+$$
+\langle\mathbf S\rangle=\frac{c}{4\pi}|\mathbf E_0|^2\cdot\frac12\,\hat{\mathbf k}=\frac{c}{8\pi}|\mathbf E_0|^2\hat{\mathbf k}.
+$$
+
+**(3)** エネルギー流は波数方向 $\hat{\mathbf k}$。これは単位面積・単位時間あたりのエネルギー流密度で、振動数分解すれば観測量フラックス $F_\nu$（第4章）に対応する。望遠鏡が検出するのは本質的にこの量。
+
+**答え**：$\mathbf S=\frac{c}{4\pi}|\mathbf E_0|^2\cos^2(\cdots)\hat{\mathbf k}$、時間平均で $\langle\mathbf S\rangle=\frac{c}{8\pi}|\mathbf E_0|^2\hat{\mathbf k}$。$\hat{\mathbf k}$ 方向のエネルギー流＝フラックス。
+:::
+
+### 問題 13-4　偏光が運ぶ天文情報 ― なぜ黒体は無偏光か {#ex-13-4 .unnumbered}
+
+[★ 難易度：☆☆ ] [tag:理解を深める]
+
+§13.4 は偏光の天文的意義を列挙した。整理する。
+
+1. 偏光自由度が「ちょうど2」になるのは、電磁波が3次元空間で横波だからである。もし縦波成分が許されたら自由度は何個になるか。なぜ実際は2なのか。
+2. シンクロトロン放射・散乱光・Zeeman 効果が、それぞれ偏光からどんな物理量（磁場方向・散乱幾何・磁場強度）を引き出すか述べよ。
+3. 中心地図のプランク分布そのものは等方・無偏光である。なぜ熱平衡放射は無偏光なのか（多数の方向と偏光の平均）を述べよ。
+
+**関連**：[§13.4 偏光](#sec-electromagnetic-waves-polarization)／散乱と偏光は[§15.5](../part6/15-non-blackbody.qmd#sec-non-blackbody-scattering)、Zeeman 効果は[第22章](../part7/22-line-shape.qmd)。
+
+::: {.callout-derive collapse="true"}
+## 模範解答（問題 13-4）
+
+**(1)** 3次元のベクトル場 $\mathbf E_0$ は本来3成分。横波条件 $\mathbf k\cdot\mathbf E_0=0$ が1成分（$\mathbf k$ 方向＝縦波成分）を禁じるので、残り2成分（$\mathbf k$ 垂直面内）が独立。もし縦波が許されれば3自由度だが、Maxwell 方程式（$\nabla\cdot\mathbf E=0$）が縦波を禁じるため実際は2。
+
+**(2)** シンクロトロン：放射の偏光面から磁場の方向（偏光は磁場に垂直）。散乱光：偏光の向き・度合いから散乱体の幾何（散乱角90°で最大偏光）。Zeeman 効果：線が偏光成分に分裂し、その分裂幅から磁場強度。
+
+**(3)** 熱平衡放射は多数の独立な放射体（原子・モード）から、あらゆる方向・あらゆる偏光で等確率に放出される。2つの偏光状態が同じ強度で混ざり、方向平均すると正味の偏光は打ち消されてゼロになる。だから黒体放射は等方・無偏光。観測される偏光は、散乱や磁場など等方性を破る機構の存在を示す。
+
+**答え**：Maxwell が縦波を禁じ自由度2。偏光→磁場方向(シンクロトロン)/散乱幾何/磁場強度(Zeeman)。熱平衡は両偏光が等確率で混ざり無偏光。
 :::
 
 ## さらに学ぶための参考文献 {#sec-electromagnetic-waves-further .unnumbered}

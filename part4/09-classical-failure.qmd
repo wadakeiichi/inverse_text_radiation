@@ -192,8 +192,146 @@ $$ {#eq-uv-catastrophe}
 
 ## 演習問題 {#sec-classical-failure-exercises .unnumbered}
 
-::: {.callout-note appearance="simple"}
-演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。
+以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。
+
+### 問題 9-1　空洞モード密度 $g(\nu)=8\pi\nu^2/c^3$ の数え上げ {#ex-9-1 .unnumbered}
+
+[★ 難易度：☆☆ ] [tag:導出補完]
+
+本文 §9.1 はモード密度 $g(\nu)=8\pi\nu^2/c^3$ を「第14章で本格導出する結果」として借用している。この幾何的な数え上げを自分で再現せよ。辺長 $L$ の立方体（完全導体壁）で許される波数は
+
+$$
+\mathbf{k}=\frac{\pi}{L}(n_x,n_y,n_z),\qquad n_x,n_y,n_z=1,2,3,\dots
+$$
+
+1. 波数の大きさが $k$ 未満のモード総数 $N(k)$ を、$\mathbf{k}$ 空間の「格子セル体積」と「正の八分球の体積」から求めよ。偏光自由度 $\times 2$ を忘れぬこと。
+2. $k=2\pi\nu/c$ を使って単位体積あたりのモード数を $\nu$ の関数で表し、$g(\nu)=dN/(L^3\,d\nu)=8\pi\nu^2/c^3$ を示せ。
+3. 係数 $8\pi$ のうち、どの因子が「3次元」に、どの因子が「偏光」に由来するか説明せよ。
+
+**関連**：[§9.1 空洞モードの数え上げ](#sec-classical-failure-modes)／本格導出は[第14章 空洞モード](../part5/14-cavity-modes.qmd)。
+
+::: {.callout-derive collapse="true"}
+## 模範解答（問題 9-1）
+
+**(1)** 各 $(n_x,n_y,n_z)$ は正の整数なので、許される波数ベクトルは $\mathbf{k}$ 空間で間隔 $\pi/L$ の格子点を、第1八分象限（すべて正）に限って占める。1モードあたりの格子セル体積は $(\pi/L)^3$。大きさ $k$ 未満の領域は半径 $k$ の球の正の八分の一、体積 $\frac{1}{8}\cdot\frac{4}{3}\pi k^3$。偏光2状態を掛けて
+
+$$
+N(k)=2\times\frac{\frac{1}{8}\cdot\frac{4}{3}\pi k^3}{(\pi/L)^3}=2\times\frac{\pi k^3 L^3}{6\pi^3}=\frac{L^3 k^3}{3\pi^2}.
+$$
+
+**(2)** 単位体積あたり $n(k)=N/L^3=k^3/(3\pi^2)$。$k=2\pi\nu/c$ を代入すると
+
+$$
+n(\nu)=\frac{1}{3\pi^2}\left(\frac{2\pi\nu}{c}\right)^3=\frac{8\pi^3\nu^3}{3\pi^2 c^3}=\frac{8\pi\nu^3}{3c^3}.
+$$
+
+$$
+g(\nu)=\frac{dn}{d\nu}=\frac{8\pi\nu^2}{c^3}.
+$$
+
+**(3)** $\nu^2$ は3次元波数空間の球殻 $4\pi k^2\,dk$（次元 $d$ なら $k^{d-1}$）に由来する幾何因子。係数の $2$（$8\pi=2\times4\pi$ の $2$）は電磁波の横波2偏光に由来する。
+
+**答え**：$N(k)=L^3k^3/3\pi^2$、よって $g(\nu)=8\pi\nu^2/c^3$。$\nu^2$＝3次元の幾何、係数の $2$＝偏光自由度。
+:::
+
+### 問題 9-2　古典分配関数から $\langle E_{\rm mode}\rangle=k_BT$ {#ex-9-2 .unnumbered}
+
+[★ 難易度：☆ ] [tag:導出補完]
+
+§9.2 は等分配定理で各モードに $k_BT$ が分配されると述べた。これを古典分配関数から直接導け。モードは調和振動子 $E=\dfrac{p^2}{2m}+\dfrac{1}{2}m\omega^2 q^2$ と等価である。
+
+1. 古典分配関数 $Z=\dfrac{1}{h_0}\displaystyle\int e^{-\beta E}\,dq\,dp$（$\beta=1/k_BT$）を計算し、$Z\propto\beta^{-1}$ を示せ。
+2. $\langle E\rangle=-\partial\ln Z/\partial\beta$ から $\langle E\rangle=k_BT$ を導け。
+3. この「2つの二次形式に各 $\frac12 k_BT$」という結果を、3次元の自由粒子（並進運動エネルギーのみ）の $\frac32 k_BT$ と対比して、なぜ振動子は $k_BT$ なのかを一言で説明せよ。
+
+**関連**：[§9.2 等分配と Rayleigh–Jeans](#sec-classical-failure-rayleigh-jeans)／等分配定理は[第7章 §7.6](../part3/07-statistical-mechanics.qmd)。この古典結果を量子化したものが[§10.2](../part4/10-planck-quantum.qmd#sec-planck-quantum-oscillator)の[演習 10-1](../part4/10-planck-quantum.qmd#ex-10-1)。
+
+::: {.callout-derive collapse="true"}
+## 模範解答（問題 9-2）
+
+**(1)** 位置と運動量の積分が分離する：
+
+$$
+Z=\frac{1}{h_0}\int_{-\infty}^{\infty}e^{-\beta p^2/2m}dp\int_{-\infty}^{\infty}e^{-\beta m\omega^2 q^2/2}dq.
+$$
+
+ガウス積分 $\int e^{-a x^2}dx=\sqrt{\pi/a}$ を用いると、各因子は $\sqrt{2\pi m/\beta}$ と $\sqrt{2\pi/(\beta m\omega^2)}$。積は
+
+$$
+Z=\frac{1}{h_0}\sqrt{\frac{2\pi m}{\beta}}\sqrt{\frac{2\pi}{\beta m\omega^2}}=\frac{2\pi}{h_0\omega}\cdot\frac{1}{\beta}\;\propto\;\beta^{-1}.
+$$
+
+**(2)** $\ln Z=-\ln\beta+\text{const}$ なので
+
+$$
+\langle E\rangle=-\frac{\partial\ln Z}{\partial\beta}=\frac{1}{\beta}=k_BT.
+$$
+
+2つの二次形式（$p^2$ と $q^2$）が各 $\beta^{-1/2}$ を生み、合わせて $\beta^{-1}$ ＝ $k_BT$。
+
+**(3)** 等分配は「ハミルトニアン中の二次形式1つあたり $\frac12 k_BT$」を与える。自由粒子は運動量の二次形式が3つ（$p_x^2,p_y^2,p_z^2$）で $\frac32 k_BT$。振動子は運動量＋位置で二次形式が2つなので $k_BT$。位置に対する復元力（ポテンシャル項）があることが差を生む。
+
+**答え**：$Z\propto\beta^{-1}\Rightarrow\langle E\rangle=k_BT$。二次形式2個（運動＋ポテンシャル）ゆえ自由粒子の $\frac32k_BT$ と異なる。
+:::
+
+### 問題 9-3　紫外発散の「次数」とカットオフ依存性 {#ex-9-3 .unnumbered}
+
+[★ 難易度：☆☆ ] [tag:理解を深める]
+
+§9.3 は $u_{\rm classical}=\int_0^\infty u_\nu^{\rm RJ}d\nu=\infty$ を示した。なぜ「紫外線」破綻と呼ぶのかを定量的に確かめる。
+
+1. 人工的な上限 $\nu_{\max}$ を導入し、全エネルギー密度が $u(\nu_{\max})=\dfrac{8\pi k_BT}{3c^3}\nu_{\max}^3$ となることを示せ。発散は $\nu_{\max}\to\infty$ でどんな冪で増えるか。
+2. エネルギーがどの振動数帯に集中するかを「$d u/d\nu\propto\nu^2$ が単調増加」という事実から論じ、なぜ高振動数（紫外）側が破綻の原因かを述べよ。
+3. プランク分布 $u_\nu\propto\nu^3/(e^{h\nu/k_BT}-1)$ ではこの積分が収束する理由を、被積分関数の $\nu\to\infty$ での振る舞いから説明せよ。
+
+**関連**：[§9.3 紫外線破綻](#sec-classical-failure-uv-catastrophe)／収束する全積分（Stefan–Boltzmann）は[演習 10-3](../part4/10-planck-quantum.qmd#ex-10-3)、本文[§10.3](../part4/10-planck-quantum.qmd#sec-planck-quantum-derivation)。
+
+::: {.callout-derive collapse="true"}
+## 模範解答（問題 9-3）
+
+**(1)** $u_\nu^{\rm RJ}=\dfrac{8\pi\nu^2}{c^3}k_BT$ を $0$ から $\nu_{\max}$ まで積分：
+
+$$
+u(\nu_{\max})=\frac{8\pi k_BT}{c^3}\int_0^{\nu_{\max}}\nu^2 d\nu=\frac{8\pi k_BT}{3c^3}\nu_{\max}^3.
+$$
+
+発散は $\nu_{\max}^3$ の3次冪。カットオフを2倍にすると寄与が8倍になる。
+
+**(2)** エネルギー密度の振動数あたり寄与 $du/d\nu\propto\nu^2$ は $\nu$ とともに単調増加し、上限近傍が積分を支配する。すなわちエネルギーは常に「いちばん高い振動数帯」に集中する。古典論には上限がないので、紫外〜X線〜ガンマ線側がいくらでも寄与を積み増し、発散する。これが「紫外線」破綻の名の由来。
+
+**(3)** プランクでは被積分関数が $\nu\to\infty$ で
+
+$$
+\frac{\nu^3}{e^{h\nu/k_BT}-1}\;\sim\;\nu^3 e^{-h\nu/k_BT}\to 0
+$$
+
+と指数的に抑えられる。指数減衰は任意の冪 $\nu^3$ に勝つので積分は収束し、有限の $u=aT^4$ を与える（[演習 10-3](../part4/10-planck-quantum.qmd#ex-10-3)）。量子化によるエネルギー単位 $h\nu$ が高振動数モードを「凍結」させることが、収束の物理的理由である。
+
+**答え**：$u\propto\nu_{\max}^3$ で発散、寄与は高振動数に集中（＝紫外破綻）。プランクは $\nu^3e^{-h\nu/k_BT}\to0$ で収束。
+:::
+
+### 問題 9-4　破綻の「責任の所在」― モード密度か等分配か {#ex-9-4 .unnumbered}
+
+[★ 難易度：☆☆ ] [tag:理解を深める]
+
+§9.4–9.5 の論理を整理する問いである。
+
+1. Rayleigh–Jeans 則 $u_\nu^{\rm RJ}=g(\nu)\langle E\rangle$ を構成する2因子のうち、量子論で「変えなくてよい」のはどちらで、「変えなければならない」のはどちらか。理由とともに述べよ。
+2. 観測される黒体スペクトル（第1章）が古典論を致命的に否定する2つの特徴を挙げよ。
+3. もしエネルギー単位が $\epsilon=h\nu$（$\propto\nu$）でなく $\nu$ に依らない定数 $\epsilon_0$ だったら、高振動数モードの凍結は起きるか。簡潔に論ぜよ。
+
+**関連**：[§9.4 等分配の前提](#sec-classical-failure-missing)、[§9.5 量子仮説の必然性](#sec-classical-failure-necessity)／観測の特徴は[第1章](../part1/01-where-blackbody.qmd)。
+
+::: {.callout-derive collapse="true"}
+## 模範解答（問題 9-4）
+
+**(1)** **モード密度 $g(\nu)=8\pi\nu^2/c^3$ は変えなくてよい**。これは古典電磁気＋境界条件の幾何的結果で、量子論を要しない（実際プランク分布の前因子 $\nu^2$/$\nu^3$ はこれが起源）。**変えるべきは各モードの平均エネルギー $\langle E\rangle$**。等分配の $k_BT$（エネルギー連続の仮定に依存）を、量子化された $h\nu/(e^{h\nu/k_BT}-1)$ に置き換える必要がある。
+
+**(2)** ① スペクトルに有限のピークが存在する（古典は単調増加でピークなし）。② 高振動数側が指数的に減衰する（古典は $\nu^2$ で増大）。CMB の完全な黒体形や恒星スペクトルがこれを示す。
+
+**(3)** 起きない。凍結は「エネルギー単位 $\epsilon(\nu)$ が高振動数で $k_BT$ を超える」ことで生じる。$\epsilon_0$ が定数なら、$\epsilon_0\ll k_BT$ を満たす限りすべての振動数で等分配 $k_BT$ が回復し、$\nu\to\infty$ でもモードが凍結せず発散は残る。$\epsilon\propto\nu$ という**振動数に比例して増える単位**であることが、高振動数を選択的に止める鍵である。
+
+**答え**：$g(\nu)$ は不変、$\langle E\rangle$ を量子化。否定する観測＝ピークの存在と指数減衰。$\epsilon\propto\nu$ でないと凍結は起きない。
 :::
 
 ## さらに学ぶための参考文献 {#sec-classical-failure-further .unnumbered}
