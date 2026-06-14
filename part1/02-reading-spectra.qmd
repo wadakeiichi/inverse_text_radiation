@@ -302,7 +302,7 @@ $$ {#eq-wien-limit}
 
 以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。
 
-### 問題 2-1　$B_\nu$ から $B_\lambda$ への変換とヤコビアン {#ex-2-1 .unnumbered}
+### 問題 2-1　Bν から Bλ への変換とヤコビアン {#ex-2-1 .unnumbered}
 
 [★ 難易度：☆☆ ] [tag:導出補完]
 
@@ -336,7 +336,7 @@ $$
 **答え**：$B_\lambda=B_\nu c/\lambda^2=\dfrac{2hc^2}{\lambda^5}\dfrac{1}{e^{hc/\lambda kT}-1}$。$\lambda^{-5}$ の「5」はヤコビアン $\lambda^{-2}$ が $\nu^3=\lambda^{-3}$ に掛かるため。
 :::
 
-### 問題 2-2　Wien 変位則の導出 ― 超越方程式と $b$ の値 {#ex-2-2 .unnumbered}
+### 問題 2-2　Wien 変位則の導出 ― 超越方程式と b の値 {#ex-2-2 .unnumbered}
 
 [★ 難易度：☆☆☆ ] [tag:導出補完]
 
@@ -376,7 +376,7 @@ $$
 **答え**：$(5-x)e^x=5\Rightarrow x\approx4.965$、$b=hc/4.965k\approx2.90\times10^{-3}$ m·K。$\lambda_{\max}\nu_{\max}=0.568c\ne c$（ヤコビアンでピークがずれるため）。
 :::
 
-### 問題 2-3　$F_\nu=\pi B_\nu$ ― 半球積分はなぜ $4\pi$ でなく $\pi$ か {#ex-2-3 .unnumbered}
+### 問題 2-3　Fν=πBν ― 半球積分はなぜ 4π でなく π か {#ex-2-3 .unnumbered}
 
 [★ 難易度：☆☆ ] [tag:導出補完]
 
@@ -406,7 +406,7 @@ $$
 **答え**：$\int_{\text{半球}}\cos\theta\,d\Omega=\pi$。半球に限る効果（$2\pi$）×$\cos\theta$ 射影の平均（$1/2$）＝$\pi$。$\cos\theta$ を落とすと $2\pi B_\nu$ となり射影を無視した誤り。
 :::
 
-### 問題 2-4　Stefan–Boltzmann 定数 $\sigma$ を基本定数で表す {#ex-2-4 .unnumbered}
+### 問題 2-4　Stefan–Boltzmann 定数 σ を基本定数で表す {#ex-2-4 .unnumbered}
 
 [★ 難易度：☆☆☆ ] [tag:導出補完]
 

@@ -283,7 +283,7 @@ $$
 **答え**：$N_L=N/2$ で最大、$\Omega\propto e^{-2x^2/N}$（幅 $\sqrt N/2$）。相対揺らぎ $\sim1/\sqrt N\sim10^{-11}$ ゆえマクロ状態で十分。
 :::
 
-### 問題 6-2　エントロピーの加法性と $1/T=\partial S/\partial E$ {#ex-6-2 .unnumbered}
+### 問題 6-2　エントロピーの加法性と温度 1/T=dS/dE {#ex-6-2 .unnumbered}
 
 [★ 難易度：☆☆ ] [tag:導出補完]
 

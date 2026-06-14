@@ -270,7 +270,7 @@ $$ {#eq-nonthermal-distribution}
 **答え**：$T(0)=(1/2)^{1/4}T_{\rm eff}\simeq0.84T_{\rm eff}$、$T=T_{\rm eff}$ は $\tau=2/3$。これが Eddington-Barbier の見える深さ。
 :::
 
-### 問題 15-2　修正黒体のべき ― なぜ $\beta$ は Rayleigh-Jeans 側でしか見えないか {#ex-15-2 .unnumbered}
+### 問題 15-2　修正黒体のべき ― なぜ β は Rayleigh-Jeans 側でしか見えないか {#ex-15-2 .unnumbered}
 
 [★ 難易度：☆☆ ] [tag:理解を深める]
 

@@ -329,7 +329,7 @@ $$
 **答え**：$Z_1=e^{-\beta\hbar\omega/2}/(1-e^{-\beta\hbar\omega})$、$\langle\epsilon\rangle=\tfrac12\hbar\omega+\hbar\omega/(e^{\beta\hbar\omega}-1)$。零点項は定数ゆえ占有因子・比熱に効かず、$nh\nu$ と $(n+\tfrac12)\hbar\omega$ は同じスペクトル。
 :::
 
-### 問題 7-3　エネルギー揺らぎ $\langle(\Delta E)^2\rangle=k_BT^2C_V$ {#ex-7-3 .unnumbered}
+### 問題 7-3　エネルギー揺らぎ (ΔE)²=kBT²Cv {#ex-7-3 .unnumbered}
 
 [★ 難易度：☆☆ ] [tag:導出補完]
 

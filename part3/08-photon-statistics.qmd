@@ -325,7 +325,7 @@ $$
 **答え**：Stirling＋Lagrange で $\ln\frac{N_i+g_i}{N_i}=\alpha+\beta E_i$、解いて $\bar n_i=1/(e^{(E_i-\mu)/k_BT}-1)$。分母の $-1$ が Bose の特徴。
 :::
 
-### 問題 8-3　光子の $\mu=0$ と CMB 光子数密度 $n_\gamma\propto T^3$ {#ex-8-3 .unnumbered}
+### 問題 8-3　光子の μ=0 と CMB 光子数密度（T³ 則） {#ex-8-3 .unnumbered}
 
 [★ 難易度：☆☆☆ ] [tag:理解を深める]
 
@@ -359,7 +359,7 @@ $$
 **答え**：光子数非保存ゆえ $\mu=0$。$n_\gamma=\frac{8\pi}{c^3}(k_BT/h)^3\cdot2.404\approx411$ cm$^{-3}$（$T=2.725$ K）、$\propto T^3$。
 :::
 
-### 問題 8-4　光子気体の $P=u/3$ と放射圧 vs ガス圧 {#ex-8-4 .unnumbered}
+### 問題 8-4　光子気体の P=u/3 と放射圧 vs ガス圧 {#ex-8-4 .unnumbered}
 
 [★ 難易度：☆☆ ] [tag:理解を深める]
 

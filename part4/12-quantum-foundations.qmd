@@ -240,7 +240,7 @@ $$
 **答え**：$\hat H=\hbar\omega(\hat a^\dagger\hat a+\tfrac12)$。零点 $\tfrac12\hbar\omega$ は交換子 $[\hat x,\hat p]=i\hbar$ から出る。$[\hat a,\hat a^\dagger]=1$。
 :::
 
-### 問題 12-2　零点エネルギー $\tfrac12\hbar\omega$ を不確定性原理から {#ex-12-2 .unnumbered}
+### 問題 12-2　零点エネルギーを不確定性原理から導く {#ex-12-2 .unnumbered}
 
 [★ 難易度：☆ ] [tag:導出補完]
 
@@ -307,7 +307,7 @@ $$
 **答え**：$\langle E\rangle=\tfrac12\hbar\omega+\hbar\omega/(e^{\hbar\omega/k_BT}-1)$。零点は $T$ 非依存の定数オフセットで放射の励起分に効かないため $u_\nu$ に出ない。だが差は Casimir 効果・自発放出として観測可能。
 :::
 
-### 問題 12-4　演算子の作用 $\hat a^\dagger|n\rangle=\sqrt{n+1}\,|n+1\rangle$ の係数 {#ex-12-4 .unnumbered}
+### 問題 12-4　生成消滅演算子の作用の係数 {#ex-12-4 .unnumbered}
 
 [★ 難易度：☆☆ ] [tag:導出補完]
 
