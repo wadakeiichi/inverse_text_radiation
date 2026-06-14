@@ -485,7 +485,17 @@ window.Quarto = {
   <li><a href="#sec-quantum-foundations-vacuum" id="toc-sec-quantum-foundations-vacuum" class="nav-link" data-scroll-target="#sec-quantum-foundations-vacuum">12.4 真空状態と数状態 ― 量子場の入口</a></li>
   <li><a href="#sec-quantum-foundations-preview" id="toc-sec-quantum-foundations-preview" class="nav-link" data-scroll-target="#sec-quantum-foundations-preview">12.5 第V部・第VIII部への準備</a></li>
   <li><a href="#sec-quantum-foundations-summary" id="toc-sec-quantum-foundations-summary" class="nav-link" data-scroll-target="#sec-quantum-foundations-summary">この章で何がわかったか</a></li>
-  <li><a href="#sec-quantum-foundations-exercises" id="toc-sec-quantum-foundations-exercises" class="nav-link" data-scroll-target="#sec-quantum-foundations-exercises">演習問題</a></li>
+  <li><a href="#sec-quantum-foundations-exercises" id="toc-sec-quantum-foundations-exercises" class="nav-link" data-scroll-target="#sec-quantum-foundations-exercises">演習問題</a>
+  <ul class="collapse">
+  <li><a href="#ex-12-1" id="toc-ex-12-1" class="nav-link" data-scroll-target="#ex-12-1">問題 12-1　生成消滅演算子でハミルトニアンを対角化</a></li>
+  </ul></li>
+  <li><a href="#模範解答問題-12-1" id="toc-模範解答問題-12-1" class="nav-link" data-scroll-target="#模範解答問題-12-1">模範解答（問題 12-1）</a></li>
+  <li><a href="#ex-12-2" id="toc-ex-12-2" class="nav-link" data-scroll-target="#ex-12-2">問題 12-2　零点エネルギーを不確定性原理から導く</a></li>
+  <li><a href="#模範解答問題-12-2" id="toc-模範解答問題-12-2" class="nav-link" data-scroll-target="#模範解答問題-12-2">模範解答（問題 12-2）</a></li>
+  <li><a href="#ex-12-3" id="toc-ex-12-3" class="nav-link" data-scroll-target="#ex-12-3">問題 12-3　零点エネルギーはなぜプランク分布に現れないのか</a></li>
+  <li><a href="#模範解答問題-12-3" id="toc-模範解答問題-12-3" class="nav-link" data-scroll-target="#模範解答問題-12-3">模範解答（問題 12-3）</a></li>
+  <li><a href="#ex-12-4" id="toc-ex-12-4" class="nav-link" data-scroll-target="#ex-12-4">問題 12-4　生成消滅演算子の作用の係数</a></li>
+  <li><a href="#模範解答問題-12-4" id="toc-模範解答問題-12-4" class="nav-link" data-scroll-target="#模範解答問題-12-4">模範解答（問題 12-4）</a></li>
   <li><a href="#sec-quantum-foundations-further" id="toc-sec-quantum-foundations-further" class="nav-link" data-scroll-target="#sec-quantum-foundations-further">さらに学ぶための参考文献</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/edit/main/part4/12-quantum-foundations.qmd" class="toc-action"><i class="bi bi-github"></i>編集</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/blob/main/part4/12-quantum-foundations.qmd" class="toc-action"><i class="bi empty"></i>ソースコード</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/issues/new" class="toc-action"><i class="bi empty"></i>問題を報告</a></li></ul></div></nav>
@@ -721,16 +731,114 @@ E_n = \hbar\omega \left( n + \frac{1}{2} \right), \qquad n = 0, 1, 2, \ldots
 </section>
 <section id="sec-quantum-foundations-exercises" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-quantum-foundations-exercises">演習問題</h2>
-<div class="callout callout-style-simple callout-note">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。</p>
-</div>
-</div>
-</div>
+<p><span class="tag">[導出補完]</span> <strong>模範解答</strong> は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</p>
+<section id="ex-12-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-12-1">問題 12-1　生成消滅演算子でハミルトニアンを対角化</h3>
+<p>[★ 難易度：☆☆ ] <span class="tag">[導出補完]</span></p>
+<p>§12.3 は <span class="math inline">\hat H=\hbar\omega(\hat a^\dagger\hat a+\tfrac12)</span> を結果として与えた。定義</p>
+<p><span class="math display">
+\hat a=\sqrt{\tfrac{m\omega}{2\hbar}}\left(\hat x+\tfrac{i}{m\omega}\hat p\right),\quad \hat a^\dagger=\sqrt{\tfrac{m\omega}{2\hbar}}\left(\hat x-\tfrac{i}{m\omega}\hat p\right)
+</span></p>
+<p>と <span class="math inline">[\hat x,\hat p]=i\hbar</span> から、<span class="math inline">\hat H=\dfrac{\hat p^2}{2m}+\dfrac12 m\omega^2\hat x^2</span> がこの形になることを示せ。さらに <span class="math inline">[\hat a,\hat a^\dagger]=1</span> を確かめよ。</p>
+<p><strong>関連</strong>：<a href="#sec-quantum-foundations-operators">§12.3 生成消滅演算子</a>、<a href="#sec-quantum-foundations-oscillator">§12.2 調和振動子</a>／準位 <span class="math inline">E_n=(n+\tfrac12)\hbar\omega</span> は第10章のエネルギー量子 <span class="math inline">h\nu</span> の量子力学的根拠（<a href="../part4/10-planck-quantum.html#ex-10-1">演習 10-1</a>）。</p>
+</section>
+</section>
+<section id="模範解答問題-12-1" class="level2 callout-derive" data-collapse="true">
+<h2 class="anchored" data-anchor-id="模範解答問題-12-1">模範解答（問題 12-1）</h2>
+<p><span class="math inline">\hat a^\dagger\hat a</span> を展開する：</p>
+<p><span class="math display">
+\hat a^\dagger\hat a=\frac{m\omega}{2\hbar}\left(\hat x-\frac{i}{m\omega}\hat p\right)\left(\hat x+\frac{i}{m\omega}\hat p\right)=\frac{m\omega}{2\hbar}\left[\hat x^2+\frac{1}{m^2\omega^2}\hat p^2+\frac{i}{m\omega}(\hat x\hat p-\hat p\hat x)\right].
+</span></p>
+<p><span class="math inline">\hat x\hat p-\hat p\hat x=[\hat x,\hat p]=i\hbar</span> なので <span class="math inline">\dfrac{i}{m\omega}(i\hbar)=-\dfrac{\hbar}{m\omega}</span>。代入：</p>
+<p><span class="math display">
+\hat a^\dagger\hat a=\frac{m\omega}{2\hbar}\hat x^2+\frac{1}{2\hbar m\omega}\hat p^2-\frac12.
+</span></p>
+<p>両辺に <span class="math inline">\hbar\omega</span> を掛ける：</p>
+<p><span class="math display">
+\hbar\omega\,\hat a^\dagger\hat a=\frac12 m\omega^2\hat x^2+\frac{\hat p^2}{2m}-\frac12\hbar\omega=\hat H-\frac12\hbar\omega.
+</span></p>
+<p><span class="math display">
+\therefore\ \hat H=\hbar\omega\left(\hat a^\dagger\hat a+\frac12\right).
+</span></p>
+<p><strong>交換関係</strong>：同様に <span class="math inline">\hat a\hat a^\dagger=\dfrac{m\omega}{2\hbar}\hat x^2+\dfrac{1}{2\hbar m\omega}\hat p^2+\dfrac12</span>。差をとると</p>
+<p><span class="math display">
+[\hat a,\hat a^\dagger]=\hat a\hat a^\dagger-\hat a^\dagger\hat a=\frac12-\left(-\frac12\right)=1.
+</span></p>
+<p><strong>答え</strong>：<span class="math inline">\hat H=\hbar\omega(\hat a^\dagger\hat a+\tfrac12)</span>。零点 <span class="math inline">\tfrac12\hbar\omega</span> は交換子 <span class="math inline">[\hat x,\hat p]=i\hbar</span> から出る。<span class="math inline">[\hat a,\hat a^\dagger]=1</span>。</p>
+</section>
+<section id="ex-12-2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-12-2">問題 12-2　零点エネルギーを不確定性原理から導く</h3>
+<p>[★ 難易度：☆ ] <span class="tag">[導出補完]</span></p>
+<p>§12.2 は「不確定性原理から完全静止が許されず <span class="math inline">E_0=\tfrac12\hbar\omega</span>」と述べた。これを最小化問題として導け。基底状態では <span class="math inline">\langle\hat x\rangle=\langle\hat p\rangle=0</span> なので <span class="math inline">\langle\hat x^2\rangle=(\Delta x)^2,\ \langle\hat p^2\rangle=(\Delta p)^2</span>。</p>
+<ol type="1">
+<li>エネルギー期待値 <span class="math inline">E=\dfrac{(\Delta p)^2}{2m}+\dfrac12 m\omega^2(\Delta x)^2</span> に、最小不確定 <span class="math inline">\Delta p=\dfrac{\hbar}{2\Delta x}</span> を代入せよ。</li>
+<li><span class="math inline">\Delta x</span> について最小化し、<span class="math inline">E_{\min}=\tfrac12\hbar\omega</span> と最適な <span class="math inline">\Delta x</span> を求めよ。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-quantum-foundations-oscillator">§12.2 零点エネルギー</a>／零点振動の観測的帰結（自発放出・Casimir）は<a href="#sec-quantum-foundations-vacuum">§12.4</a>、<a href="../part8/24-em-field-quantization.html">第24章</a>。</p>
+</section>
+<section id="模範解答問題-12-2" class="level2 callout-derive" data-collapse="true">
+<h2 class="anchored" data-anchor-id="模範解答問題-12-2">模範解答（問題 12-2）</h2>
+<p><strong>(1)</strong> <span class="math inline">\Delta p=\hbar/(2\Delta x)</span> を代入：</p>
+<p><span class="math display">
+E(\Delta x)=\frac{\hbar^2}{8m(\Delta x)^2}+\frac12 m\omega^2(\Delta x)^2.
+</span></p>
+<p><strong>(2)</strong> <span class="math inline">u=(\Delta x)^2</span> とおいて <span class="math inline">dE/du=0</span>：</p>
+<p><span class="math display">
+-\frac{\hbar^2}{8m u^2}+\frac12 m\omega^2=0\ \Rightarrow\ u^2=\frac{\hbar^2}{4m^2\omega^2}\ \Rightarrow\ u=(\Delta x)^2=\frac{\hbar}{2m\omega}.
+</span></p>
+<p>代入：</p>
+<p><span class="math display">
+E_{\min}=\frac{\hbar^2}{8m}\cdot\frac{2m\omega}{\hbar}+\frac12 m\omega^2\cdot\frac{\hbar}{2m\omega}=\frac{\hbar\omega}{4}+\frac{\hbar\omega}{4}=\frac12\hbar\omega.
+</span></p>
+<p>運動エネルギーとポテンシャルが各 <span class="math inline">\tfrac14\hbar\omega</span> ずつ等分される点が最小。</p>
+<p><strong>答え</strong>：<span class="math inline">(\Delta x)^2=\hbar/2m\omega</span> で <span class="math inline">E_{\min}=\tfrac12\hbar\omega</span>。完全静止（<span class="math inline">\Delta x=0</span>）は不確定性が禁じる。</p>
+</section>
+<section id="ex-12-3" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-12-3">問題 12-3　零点エネルギーはなぜプランク分布に現れないのか</h3>
+<p>[★ 難易度：☆☆ ] <span class="tag">[理解を深める]</span></p>
+<p>第10章の量子化振動子では <span class="math inline">\langle E\rangle=h\nu/(e^x-1)</span> を使ったが、完全な量子力学では <span class="math inline">E_n=(n+\tfrac12)\hbar\omega</span> で零点 <span class="math inline">\tfrac12\hbar\omega</span> がある。両者の整合を考える。</p>
+<ol type="1">
+<li>準位 <span class="math inline">E_n=(n+\tfrac12)\hbar\omega</span> の熱平均が <span class="math inline">\langle E\rangle=\tfrac12\hbar\omega+\dfrac{\hbar\omega}{e^{\hbar\omega/k_BT}-1}</span> となることを、占有数 <span class="math inline">\langle n\rangle=1/(e^{\hbar\omega/k_BT}-1)</span> を使って示せ。</li>
+<li>なぜ観測される放射エネルギー密度 <span class="math inline">u_\nu</span>（プランク分布）に零点項 <span class="math inline">\tfrac12\hbar\omega</span> が現れないのか。物理的理由を述べよ（ヒント：定数オフセット、エネルギーの基準）。</li>
+<li>では零点エネルギーは「観測できない」のか。観測可能な帰結の例を §12.4 から2つ挙げよ。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-quantum-foundations-vacuum">§12.4 真空状態</a>／プランク導出は<a href="../part4/10-planck-quantum.html#sec-planck-quantum-derivation">§10.3</a>（<a href="../part4/10-planck-quantum.html#ex-10-1">演習 10-1</a>）、零点の本格的扱いは<a href="../part8/24-em-field-quantization.html">第24章</a>、<a href="../part8/25-qed-minimum.html">第25章</a>。</p>
+</section>
+<section id="模範解答問題-12-3" class="level2 callout-derive" data-collapse="true">
+<h2 class="anchored" data-anchor-id="模範解答問題-12-3">模範解答（問題 12-3）</h2>
+<p><strong>(1)</strong> Boltzmann 重み <span class="math inline">P_n=e^{-\beta E_n}/Z</span>。<span class="math inline">E_n=(n+\tfrac12)\hbar\omega</span> なので</p>
+<p><span class="math display">
+\langle E\rangle=\sum_n\left(n+\tfrac12\right)\hbar\omega\,P_n=\tfrac12\hbar\omega+\hbar\omega\langle n\rangle=\frac12\hbar\omega+\frac{\hbar\omega}{e^{\hbar\omega/k_BT}-1}.
+</span></p>
+<p>（<span class="math inline">\langle n\rangle=\sum n P_n=1/(e^{\beta\hbar\omega}-1)</span> は問題 10-1 の計算と同じ。）</p>
+<p><strong>(2)</strong> 零点項 <span class="math inline">\tfrac12\hbar\omega</span> は<strong>温度に依らない定数オフセット</strong>。放射場のエネルギー密度や物質との熱的なやりとり（吸収・放出）に効くのは、真空（<span class="math inline">n=0</span>）より上の<strong>励起分</strong> <span class="math inline">\hbar\omega\langle n\rangle</span> だけである。エネルギーの絶対基準（ハミルトニアンの零点）は物理に効かないので、観測される <span class="math inline">u_\nu</span> は励起分すなわちプランク分布になる。零点をすべてのモードで足すと発散するが、これは絶対値として観測不能。</p>
+<p><strong>(3)</strong> 零点の<strong>差</strong>や<strong>変化</strong>は観測可能。例：①境界条件でモード構造を変えると真空エネルギーが変化する <strong>Casimir 効果</strong>。②真空電磁場の揺らぎが励起原子を揺さぶって起こす <strong>自発放出</strong>（<span class="math inline">A_{ul}</span> の起源、第11章）。これらは線の自然幅（第22章）として観測スペクトルにも痕跡を残す。</p>
+<p><strong>答え</strong>：<span class="math inline">\langle E\rangle=\tfrac12\hbar\omega+\hbar\omega/(e^{\hbar\omega/k_BT}-1)</span>。零点は <span class="math inline">T</span> 非依存の定数オフセットで放射の励起分に効かないため <span class="math inline">u_\nu</span> に出ない。だが差は Casimir 効果・自発放出として観測可能。</p>
+</section>
+<section id="ex-12-4" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-12-4">問題 12-4　生成消滅演算子の作用の係数</h3>
+<p>[★ 難易度：☆☆ ] <span class="tag">[導出補完]</span></p>
+<p>§12.3 は係数を結果として与えた。<span class="math inline">[\hat a,\hat a^\dagger]=1</span> と数演算子 <span class="math inline">\hat n=\hat a^\dagger\hat a</span>（<span class="math inline">\hat n|n\rangle=n|n\rangle</span>、<span class="math inline">|n\rangle</span> は規格化）から、上昇・下降の係数を導け。</p>
+<ol type="1">
+<li><span class="math inline">\hat a^\dagger|n\rangle</span> のノルムの2乗 <span class="math inline">\langle n|\hat a\hat a^\dagger|n\rangle</span> を計算し、<span class="math inline">\hat a^\dagger|n\rangle=\sqrt{n+1}\,|n+1\rangle</span> を示せ。</li>
+<li>同様に <span class="math inline">\hat a|n\rangle=\sqrt{n}\,|n-1\rangle</span> を示し、<span class="math inline">\hat a|0\rangle=0</span>（真空は消滅で潰れる）を確認せよ。</li>
+<li>これらが電磁場の文脈で「光子の生成・消滅」に対応することを一言で述べよ。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-quantum-foundations-operators">§12.3 生成消滅演算子</a>、<a href="#sec-quantum-foundations-vacuum">§12.4 数状態・真空</a>／電磁場各モードへの拡張は<a href="../part8/24-em-field-quantization.html">第24章 電磁場の量子化</a>。</p>
+</section>
+<section id="模範解答問題-12-4" class="level2 callout-derive" data-collapse="true">
+<h2 class="anchored" data-anchor-id="模範解答問題-12-4">模範解答（問題 12-4）</h2>
+<p><strong>(1)</strong> <span class="math inline">\hat a\hat a^\dagger=\hat a^\dagger\hat a+[\hat a,\hat a^\dagger]=\hat n+1</span> ゆえ</p>
+<p><span class="math display">
+\big\|\hat a^\dagger|n\rangle\big\|^2=\langle n|\hat a\hat a^\dagger|n\rangle=\langle n|(\hat n+1)|n\rangle=n+1.
+</span></p>
+<p>また <span class="math inline">\hat n(\hat a^\dagger|n\rangle)=(\hat a^\dagger\hat n+\hat a^\dagger)|n\rangle=(n+1)\hat a^\dagger|n\rangle</span> より <span class="math inline">\hat a^\dagger|n\rangle</span> は固有値 <span class="math inline">n+1</span> の状態。規格化して位相を実にとれば</p>
+<p><span class="math display">
+\hat a^\dagger|n\rangle=\sqrt{n+1}\,|n+1\rangle.
+</span></p>
+<p><strong>(2)</strong> 同様に <span class="math inline">\|\hat a|n\rangle\|^2=\langle n|\hat a^\dagger\hat a|n\rangle=\langle n|\hat n|n\rangle=n</span> ゆえ <span class="math inline">\hat a|n\rangle=\sqrt{n}\,|n-1\rangle</span>。<span class="math inline">n=0</span> では係数 <span class="math inline">\sqrt0=0</span> となり <span class="math inline">\hat a|0\rangle=0</span>。真空はこれ以上下げられない。</p>
+<p><strong>(3)</strong> 電磁場の各モードをこの調和振動子と同一視すると、<span class="math inline">\hat a^\dagger</span> はそのモードに光子を1個<strong>生成</strong>し、<span class="math inline">\hat a</span> は1個<strong>消滅</strong>させる。<span class="math inline">|n\rangle</span> は「光子 <span class="math inline">n</span> 個の状態」、<span class="math inline">|0\rangle</span> は光子のない電磁真空に対応する。</p>
+<p><strong>答え</strong>：<span class="math inline">\|\hat a^\dagger|n\rangle\|^2=n+1\Rightarrow\hat a^\dagger|n\rangle=\sqrt{n+1}|n+1\rangle</span>、<span class="math inline">\hat a|n\rangle=\sqrt n|n-1\rangle</span>、<span class="math inline">\hat a|0\rangle=0</span>。電磁場では光子の生成・消滅。</p>
 </section>
 <section id="sec-quantum-foundations-further" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-quantum-foundations-further">さらに学ぶための参考文献</h2>
@@ -1407,16 +1515,163 @@ E_n = \hbar\omega \left( n + \frac{1}{2} \right), \qquad n = 0, 1, 2, \ldots
 <span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-quantum-foundations-exercises .unnumbered}</span></span>
 <span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple"}</span>
-<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。</span>
-<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 12-1　生成消滅演算子でハミルトニアンを対角化 {#ex-12-1 .unnumbered}</span></span>
 <span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-quantum-foundations-further .unnumbered}</span></span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
 <span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sakurai &amp; Napolitano, *Modern Quantum Mechanics* (Cambridge, 3rd ed., 2020) — 標準的な量子力学教科書、調和振動子と生成消滅演算子の体系的扱い</span>
-<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Griffiths, *Introduction to Quantum Mechanics* (Cambridge, 3rd ed., 2018) — 学部向け平易な入門</span>
-<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>猪木慶治・川合光『量子力学 I・II』（講談社, 1994）— 日本語の標準的な量子力学教科書</span>
-<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Cohen-Tannoudji et al., *Quantum Mechanics* (Wiley, 1977) — 詳細な計算とアプリケーション豊富</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>§12.3 は $\hat H=\hbar\omega(\hat a^\dagger\hat a+\tfrac12)$ を結果として与えた。定義</span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a>\hat a=\sqrt{\tfrac{m\omega}{2\hbar}}\left(\hat x+\tfrac{i}{m\omega}\hat p\right),\quad \hat a^\dagger=\sqrt{\tfrac{m\omega}{2\hbar}}\left(\hat x-\tfrac{i}{m\omega}\hat p\right)</span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>と $<span class="co">[</span><span class="ot">\hat x,\hat p</span><span class="co">]</span>=i\hbar$ から、$\hat H=\dfrac{\hat p^2}{2m}+\dfrac12 m\omega^2\hat x^2$ がこの形になることを示せ。さらに $<span class="co">[</span><span class="ot">\hat a,\hat a^\dagger</span><span class="co">]</span>=1$ を確かめよ。</span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§12.3 生成消滅演算子</span><span class="co">](#sec-quantum-foundations-operators)</span>、<span class="co">[</span><span class="ot">§12.2 調和振動子</span><span class="co">](#sec-quantum-foundations-oscillator)</span>／準位 $E_n=(n+\tfrac12)\hbar\omega$ は第10章のエネルギー量子 $h\nu$ の量子力学的根拠（<span class="co">[</span><span class="ot">演習 10-1</span><span class="co">](../part4/10-planck-quantum.qmd#ex-10-1)</span>）。</span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 12-1）</span></span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>$\hat a^\dagger\hat a$ を展開する：</span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>\hat a^\dagger\hat a=\frac{m\omega}{2\hbar}\left(\hat x-\frac{i}{m\omega}\hat p\right)\left(\hat x+\frac{i}{m\omega}\hat p\right)=\frac{m\omega}{2\hbar}\left<span class="co">[</span><span class="ot">\hat x^2+\frac{1}{m^2\omega^2}\hat p^2+\frac{i}{m\omega}(\hat x\hat p-\hat p\hat x)\right</span><span class="co">]</span>.</span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>$\hat x\hat p-\hat p\hat x=<span class="co">[</span><span class="ot">\hat x,\hat p</span><span class="co">]</span>=i\hbar$ なので $\dfrac{i}{m\omega}(i\hbar)=-\dfrac{\hbar}{m\omega}$。代入：</span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a>\hat a^\dagger\hat a=\frac{m\omega}{2\hbar}\hat x^2+\frac{1}{2\hbar m\omega}\hat p^2-\frac12.</span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>両辺に $\hbar\omega$ を掛ける：</span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a>\hbar\omega\,\hat a^\dagger\hat a=\frac12 m\omega^2\hat x^2+\frac{\hat p^2}{2m}-\frac12\hbar\omega=\hat H-\frac12\hbar\omega.</span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>\therefore\ \hat H=\hbar\omega\left(\hat a^\dagger\hat a+\frac12\right).</span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a>**交換関係**：同様に $\hat a\hat a^\dagger=\dfrac{m\omega}{2\hbar}\hat x^2+\dfrac{1}{2\hbar m\omega}\hat p^2+\dfrac12$。差をとると</span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">\hat a,\hat a^\dagger</span><span class="co">]</span>=\hat a\hat a^\dagger-\hat a^\dagger\hat a=\frac12-\left(-\frac12\right)=1.</span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a>**答え**：$\hat H=\hbar\omega(\hat a^\dagger\hat a+\tfrac12)$。零点 $\tfrac12\hbar\omega$ は交換子 $<span class="co">[</span><span class="ot">\hat x,\hat p</span><span class="co">]</span>=i\hbar$ から出る。$<span class="co">[</span><span class="ot">\hat a,\hat a^\dagger</span><span class="co">]</span>=1$。</span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 12-2　零点エネルギーを不確定性原理から導く {#ex-12-2 .unnumbered}</span></span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a>§12.2 は「不確定性原理から完全静止が許されず $E_0=\tfrac12\hbar\omega$」と述べた。これを最小化問題として導け。基底状態では $\langle\hat x\rangle=\langle\hat p\rangle=0$ なので $\langle\hat x^2\rangle=(\Delta x)^2,\ \langle\hat p^2\rangle=(\Delta p)^2$。</span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>エネルギー期待値 $E=\dfrac{(\Delta p)^2}{2m}+\dfrac12 m\omega^2(\Delta x)^2$ に、最小不確定 $\Delta p=\dfrac{\hbar}{2\Delta x}$ を代入せよ。</span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$\Delta x$ について最小化し、$E_{\min}=\tfrac12\hbar\omega$ と最適な $\Delta x$ を求めよ。</span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§12.2 零点エネルギー</span><span class="co">](#sec-quantum-foundations-oscillator)</span>／零点振動の観測的帰結（自発放出・Casimir）は<span class="co">[</span><span class="ot">§12.4</span><span class="co">](#sec-quantum-foundations-vacuum)</span>、<span class="co">[</span><span class="ot">第24章</span><span class="co">](../part8/24-em-field-quantization.qmd)</span>。</span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 12-2）</span></span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a>**(1)** $\Delta p=\hbar/(2\Delta x)$ を代入：</span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a>E(\Delta x)=\frac{\hbar^2}{8m(\Delta x)^2}+\frac12 m\omega^2(\Delta x)^2.</span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a>**(2)** $u=(\Delta x)^2$ とおいて $dE/du=0$：</span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>-\frac{\hbar^2}{8m u^2}+\frac12 m\omega^2=0\ \Rightarrow\ u^2=\frac{\hbar^2}{4m^2\omega^2}\ \Rightarrow\ u=(\Delta x)^2=\frac{\hbar}{2m\omega}.</span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a>代入：</span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a>E_{\min}=\frac{\hbar^2}{8m}\cdot\frac{2m\omega}{\hbar}+\frac12 m\omega^2\cdot\frac{\hbar}{2m\omega}=\frac{\hbar\omega}{4}+\frac{\hbar\omega}{4}=\frac12\hbar\omega.</span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a>運動エネルギーとポテンシャルが各 $\tfrac14\hbar\omega$ ずつ等分される点が最小。</span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a>**答え**：$(\Delta x)^2=\hbar/2m\omega$ で $E_{\min}=\tfrac12\hbar\omega$。完全静止（$\Delta x=0$）は不確定性が禁じる。</span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 12-3　零点エネルギーはなぜプランク分布に現れないのか {#ex-12-3 .unnumbered}</span></span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a>第10章の量子化振動子では $\langle E\rangle=h\nu/(e^x-1)$ を使ったが、完全な量子力学では $E_n=(n+\tfrac12)\hbar\omega$ で零点 $\tfrac12\hbar\omega$ がある。両者の整合を考える。</span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>準位 $E_n=(n+\tfrac12)\hbar\omega$ の熱平均が $\langle E\rangle=\tfrac12\hbar\omega+\dfrac{\hbar\omega}{e^{\hbar\omega/k_BT}-1}$ となることを、占有数 $\langle n\rangle=1/(e^{\hbar\omega/k_BT}-1)$ を使って示せ。</span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>なぜ観測される放射エネルギー密度 $u_\nu$（プランク分布）に零点項 $\tfrac12\hbar\omega$ が現れないのか。物理的理由を述べよ（ヒント：定数オフセット、エネルギーの基準）。</span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>では零点エネルギーは「観測できない」のか。観測可能な帰結の例を §12.4 から2つ挙げよ。</span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§12.4 真空状態</span><span class="co">](#sec-quantum-foundations-vacuum)</span>／プランク導出は<span class="co">[</span><span class="ot">§10.3</span><span class="co">](../part4/10-planck-quantum.qmd#sec-planck-quantum-derivation)</span>（<span class="co">[</span><span class="ot">演習 10-1</span><span class="co">](../part4/10-planck-quantum.qmd#ex-10-1)</span>）、零点の本格的扱いは<span class="co">[</span><span class="ot">第24章</span><span class="co">](../part8/24-em-field-quantization.qmd)</span>、<span class="co">[</span><span class="ot">第25章</span><span class="co">](../part8/25-qed-minimum.qmd)</span>。</span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 12-3）</span></span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>**(1)** Boltzmann 重み $P_n=e^{-\beta E_n}/Z$。$E_n=(n+\tfrac12)\hbar\omega$ なので</span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a>\langle E\rangle=\sum_n\left(n+\tfrac12\right)\hbar\omega\,P_n=\tfrac12\hbar\omega+\hbar\omega\langle n\rangle=\frac12\hbar\omega+\frac{\hbar\omega}{e^{\hbar\omega/k_BT}-1}.</span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>（$\langle n\rangle=\sum n P_n=1/(e^{\beta\hbar\omega}-1)$ は問題 10-1 の計算と同じ。）</span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a>**(2)** 零点項 $\tfrac12\hbar\omega$ は**温度に依らない定数オフセット**。放射場のエネルギー密度や物質との熱的なやりとり（吸収・放出）に効くのは、真空（$n=0$）より上の**励起分** $\hbar\omega\langle n\rangle$ だけである。エネルギーの絶対基準（ハミルトニアンの零点）は物理に効かないので、観測される $u_\nu$ は励起分すなわちプランク分布になる。零点をすべてのモードで足すと発散するが、これは絶対値として観測不能。</span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a>**(3)** 零点の**差**や**変化**は観測可能。例：①境界条件でモード構造を変えると真空エネルギーが変化する **Casimir 効果**。②真空電磁場の揺らぎが励起原子を揺さぶって起こす **自発放出**（$A_{ul}$ の起源、第11章）。これらは線の自然幅（第22章）として観測スペクトルにも痕跡を残す。</span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a>**答え**：$\langle E\rangle=\tfrac12\hbar\omega+\hbar\omega/(e^{\hbar\omega/k_BT}-1)$。零点は $T$ 非依存の定数オフセットで放射の励起分に効かないため $u_\nu$ に出ない。だが差は Casimir 効果・自発放出として観測可能。</span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 12-4　生成消滅演算子の作用の係数 {#ex-12-4 .unnumbered}</span></span>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a>§12.3 は係数を結果として与えた。$<span class="co">[</span><span class="ot">\hat a,\hat a^\dagger</span><span class="co">]</span>=1$ と数演算子 $\hat n=\hat a^\dagger\hat a$（$\hat n|n\rangle=n|n\rangle$、$|n\rangle$ は規格化）から、上昇・下降の係数を導け。</span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$\hat a^\dagger|n\rangle$ のノルムの2乗 $\langle n|\hat a\hat a^\dagger|n\rangle$ を計算し、$\hat a^\dagger|n\rangle=\sqrt{n+1}\,|n+1\rangle$ を示せ。</span>
+<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>同様に $\hat a|n\rangle=\sqrt{n}\,|n-1\rangle$ を示し、$\hat a|0\rangle=0$（真空は消滅で潰れる）を確認せよ。</span>
+<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>これらが電磁場の文脈で「光子の生成・消滅」に対応することを一言で述べよ。</span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§12.3 生成消滅演算子</span><span class="co">](#sec-quantum-foundations-operators)</span>、<span class="co">[</span><span class="ot">§12.4 数状態・真空</span><span class="co">](#sec-quantum-foundations-vacuum)</span>／電磁場各モードへの拡張は<span class="co">[</span><span class="ot">第24章 電磁場の量子化</span><span class="co">](../part8/24-em-field-quantization.qmd)</span>。</span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 12-4）</span></span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>**(1)** $\hat a\hat a^\dagger=\hat a^\dagger\hat a+<span class="co">[</span><span class="ot">\hat a,\hat a^\dagger</span><span class="co">]</span>=\hat n+1$ ゆえ</span>
+<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a>\big<span class="sc">\|</span>\hat a^\dagger|n\rangle\big<span class="sc">\|</span>^2=\langle n|\hat a\hat a^\dagger|n\rangle=\langle n|(\hat n+1)|n\rangle=n+1.</span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a>また $\hat n(\hat a^\dagger|n\rangle)=(\hat a^\dagger\hat n+\hat a^\dagger)|n\rangle=(n+1)\hat a^\dagger|n\rangle$ より $\hat a^\dagger|n\rangle$ は固有値 $n+1$ の状態。規格化して位相を実にとれば</span>
+<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>\hat a^\dagger|n\rangle=\sqrt{n+1}\,|n+1\rangle.</span>
+<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a>**(2)** 同様に $<span class="sc">\|</span>\hat a|n\rangle<span class="sc">\|</span>^2=\langle n|\hat a^\dagger\hat a|n\rangle=\langle n|\hat n|n\rangle=n$ ゆえ $\hat a|n\rangle=\sqrt{n}\,|n-1\rangle$。$n=0$ では係数 $\sqrt0=0$ となり $\hat a|0\rangle=0$。真空はこれ以上下げられない。</span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a>**(3)** 電磁場の各モードをこの調和振動子と同一視すると、$\hat a^\dagger$ はそのモードに光子を1個**生成**し、$\hat a$ は1個**消滅**させる。$|n\rangle$ は「光子 $n$ 個の状態」、$|0\rangle$ は光子のない電磁真空に対応する。</span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a>**答え**：$<span class="sc">\|</span>\hat a^\dagger|n\rangle<span class="sc">\|</span>^2=n+1\Rightarrow\hat a^\dagger|n\rangle=\sqrt{n+1}|n+1\rangle$、$\hat a|n\rangle=\sqrt n|n-1\rangle$、$\hat a|0\rangle=0$。電磁場では光子の生成・消滅。</span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-quantum-foundations-further .unnumbered}</span></span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sakurai &amp; Napolitano, *Modern Quantum Mechanics* (Cambridge, 3rd ed., 2020) — 標準的な量子力学教科書、調和振動子と生成消滅演算子の体系的扱い</span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Griffiths, *Introduction to Quantum Mechanics* (Cambridge, 3rd ed., 2018) — 学部向け平易な入門</span>
+<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>猪木慶治・川合光『量子力学 I・II』（講談社, 1994）— 日本語の標準的な量子力学教科書</span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Cohen-Tannoudji et al., *Quantum Mechanics* (Wiley, 1977) — 詳細な計算とアプリケーション豊富</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

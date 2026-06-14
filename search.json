@@ -280,7 +280,51 @@
     "href": "part1/01-where-blackbody.html#sec-where-blackbody-exercises",
     "title": "第01章　宇宙で黒体放射はどこに現れるか",
     "section": "演習問題",
-    "text": "演習問題\n\n\n\n\n\n\n演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。",
+    "text": "演習問題\n[導出補完] 模範解答 は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。\n\n問題 1-1　散らばったデータから Wien 変位定数を逆算する\n[★ 難易度：☆ ] [理解を深める]\n本章は §1.2〜§1.5 で温度とピーク波長の組を別々に与えている（太陽 T_\\odot\\simeq5778 K で \\lambda_{\\max}\\simeq500 nm、CMB T=2.725 K で \\lambda_{\\max}\\simeq1.06 mm、地球 T\\simeq290 K で中間赤外 \\sim10\\ \\mum）。式を使わずに、これらが一つの法則に従うことを確かめる。\n\n3つの組について積 \\lambda_{\\max}\\cdot T を計算し、ほぼ一定値になることを確かめよ。\nその共通値（経験的な Wien 変位定数）b を概算せよ。\n「温度が4桁違う天体が同じ b を共有する」という事実は、第1章の主張「すべて同じ関数族 B_\\nu(T)」をどう支持するか述べよ。\n\n関連：§1.5 CMB／変位則の正式な扱いは §2.3 Wien の変位則（導出は演習 2-2）。",
+    "crumbs": [
+      "第I部　宇宙に満ちる黒体放射",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>第01章　宇宙で黒体放射はどこに現れるか</span>"
+    ]
+  },
+  {
+    "objectID": "part1/01-where-blackbody.html#模範解答問題-1-1",
+    "href": "part1/01-where-blackbody.html#模範解答問題-1-1",
+    "title": "第01章　宇宙で黒体放射はどこに現れるか",
+    "section": "模範解答（問題 1-1）",
+    "text": "模範解答（問題 1-1）\n(1) 単位を m·K に揃える：\n\n\n\n天体\n\\lambda_{\\max}\nT [K]\n\\lambda_{\\max}T [m·K]\n\n\n\n\n太陽\n5.0\\times10^{-7} m\n5778\n2.89\\times10^{-3}\n\n\nCMB\n1.06\\times10^{-3} m\n2.725\n2.89\\times10^{-3}\n\n\n地球\n1.0\\times10^{-5} m\n290\n2.9\\times10^{-3}\n\n\n\n3桁の精度で同じ値。\n(2) b\\approx2.9\\times10^{-3} m·K。これは §2.3 の Wien 変位定数 b=2.898\\times10^{-3} m·K と一致する。\n(3) もし天体ごとにスペクトルの関数形が違えば、「ピーク波長×温度」が天体ごとにバラバラになるはず。4桁の温度差を超えて単一の b を共有することは、ピーク位置の温度依存が全天体で共通＝同一の関数族 B_\\nu(T) が温度だけを変えて現れている、という第1章の主張を定量的に裏づける。\n答え：\\lambda_{\\max}T\\approx2.9\\times10^{-3} m·K で一定。単一の関数族が温度パラメータだけで全天体を記述することの証拠。",
+    "crumbs": [
+      "第I部　宇宙に満ちる黒体放射",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>第01章　宇宙で黒体放射はどこに現れるか</span>"
+    ]
+  },
+  {
+    "objectID": "part1/01-where-blackbody.html#模範解答問題-1-2",
+    "href": "part1/01-where-blackbody.html#模範解答問題-1-2",
+    "title": "第01章　宇宙で黒体放射はどこに現れるか",
+    "section": "模範解答（問題 1-2）",
+    "text": "模範解答（問題 1-2）\n(1) CMB は ① 再結合期以前に光と物質が密に相互作用して完全吸収・完全熱化に相当する状況を達成、② 長時間・高密度で完璧な熱平衡に到達、③ 宇宙全体が単一温度 2.725 K で記述できる ― 3条件すべてを最もよく満たす。だから \\Delta I/I&lt;10^{-4} という観測精度の限界まで黒体形からずれない。\n(2) 降着円盤は条件③（単一温度）を破る。半径ごとに温度が異なり、各半径の B_\\nu(T(r)) が重なる。観測スペクトルは単一の T では再現できず、ピークが鈍り高振動数側に裾を引く「多温度黒体（多温度円盤スペクトル）」になる。各半径では局所的に黒体近似が成り立つことが前提。\n(3) ダストは条件①（完全吸収）を破る。波長によって放射効率 \\epsilon_\\nu&lt;1 が変化するため、黒体に振動数依存のスペクトル指数を掛けた「修正黒体」として観測される。\n答え：CMB＝3条件すべて満たす。円盤＝③単一温度を破る→多温度合成。ダスト＝①完全吸収を破る→修正黒体。",
+    "crumbs": [
+      "第I部　宇宙に満ちる黒体放射",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>第01章　宇宙で黒体放射はどこに現れるか</span>"
+    ]
+  },
+  {
+    "objectID": "part1/01-where-blackbody.html#模範解答問題-1-3",
+    "href": "part1/01-where-blackbody.html#模範解答問題-1-3",
+    "title": "第01章　宇宙で黒体放射はどこに現れるか",
+    "section": "模範解答（問題 1-3）",
+    "text": "模範解答（問題 1-3）\n(1) 熱的/非熱的を分けるのは 粒子のエネルギー分布（Maxwell 分布なら熱的、べき則など非Maxwellなら非熱的）。LTE/非LTE を分けるのは 原子の準位占有数（局所温度 T だけで決まれば LTE、放射場 J_\\nu にも依存すれば非LTE）。\n(2) 熱的制動放射＝熱的（Maxwell 分布プラズマ）。シンクロトロン＝非熱的（べき則の相対論的電子）。CMB＝熱的（完全な熱平衡）。LTE 線放射＝熱的。\n(3) CMB は各方向で見ると依然として完全なプランク分布（熱的スペクトル）。温度ゆらぎとは「方向ごとに黒体温度がわずかに違う」という 空間的 な差であって、各点の スペクトル形 が非熱的（べき則）になっているわけではない。「非熱的」は強度 vs 振動数のスペクトル形の話、ゆらぎは方向ごとの温度の話で、軸が異なる。ゆらぎの起源（初期宇宙の量子ゆらぎ）も熱平衡の統計ゆらぎとは別物。\n答え：分布関数 vs 準位占有という別軸。制動・CMB・LTE線＝熱的、シンクロトロン＝非熱的。CMB ゆらぎはスペクトルでなく空間温度差なので非熱的とは無関係。",
+    "crumbs": [
+      "第I部　宇宙に満ちる黒体放射",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>第01章　宇宙で黒体放射はどこに現れるか</span>"
+    ]
+  },
+  {
+    "objectID": "part1/01-where-blackbody.html#模範解答問題-1-4",
+    "href": "part1/01-where-blackbody.html#模範解答問題-1-4",
+    "title": "第01章　宇宙で黒体放射はどこに現れるか",
+    "section": "模範解答（問題 1-4）",
+    "text": "模範解答（問題 1-4）\n(1) 熱化：宇宙ごく初期（典型的に宇宙年齢 \\lesssim10^7 秒）に、放射場のスペクトルを Planck 形へ整える過程。自由伝搬の開始（再結合期、約38万年）：電子と陽子が結合して中性水素になり、光が散乱されずに直進できるようになる過程。前者がスペクトルの形を作り、後者がそれを「解放」する。両者は時代も役割も別。\n(2) 二重 Compton 散乱、制動放射、Compton 散乱など、光子と物質の強い相互作用。これらが早期の高密度環境でスペクトルを Planck 形に整えた。\n(3) 宇宙膨張は黒体スペクトルの「形」を保存する（断熱不変量としての性質）。膨張で各光子の振動数が一様に赤方偏移し、温度パラメータ T が下がるだけで、プランク分布の関数形 B_\\nu(T) はそのまま保たれる。だから現在 2.725 K でも完璧な黒体形を示す。\n答え：熱化＝初期にスペクトルを作る、再結合＝それを解放する、で別過程。膨張は形を保存（断熱不変）するので低温でも黒体のまま。",
     "crumbs": [
       "第I部　宇宙に満ちる黒体放射",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>第01章　宇宙で黒体放射はどこに現れるか</span>"
@@ -368,7 +412,7 @@
     "href": "part1/02-reading-spectra.html#sec-reading-spectra-wien",
     "title": "第02章　黒体スペクトルをどう読むか",
     "section": "2.3 ピークと温度 ― Wien の変位則",
-    "text": "2.3 ピークと温度 ― Wien の変位則\n[本文目安：B2]\n式 4.4 のピーク条件から、波長表示のピーク \\lambda_{\\max} と温度 T の間に簡単な関係が成り立つ：\n\n\\lambda_{\\max} \\cdot T = b \\simeq 2.898 \\times 10^{-3}\\ \\mathrm{m \\cdot K}\n\\tag{4.5}\nこれが Wien の変位則（Wien’s displacement law）である。b は Wien の変位定数。\n実例：\n\n\n\n天体\n温度 T [K]\n\\lambda_{\\max}\n\n\n\n\nCMB\n2.7\n\\sim 1.07 mm（マイクロ波）\n\n\n星間ダスト\n30\n\\sim 100 μm（遠赤外）\n\n\n木星\n130\n\\sim 22 μm（中赤外）\n\n\n地球\n290\n\\sim 10 μm（中赤外）\n\n\n太陽\n5800\n\\sim 500 nm（可視）\n\n\nO 型星\n30000\n\\sim 100 nm（紫外）\n\n\n\n対応（観測）：可視光から赤外までで観測した SED（spectral energy distribution）のピーク波長を読み取れば、Wien の式で逆算するだけで、温度を一桁の精度で推定できる。これが天文学で最もよく使う「色から温度」のステップである。\n\n\n\n\n\n\nヒント\n\n\n\n振動数表示の Wien：振動数表示のピーク位置 \\nu_{\\max}/T \\simeq 5.88 \\times 10^{10} Hz/K も Wien の式の別表現として有用。ただし上述のとおり、波長表示と振動数表示でピーク位置の温度依存は同じ「逆比例」だが、定数の値が違うので両者を混ぜないように。",
+    "text": "2.3 ピークと温度 ― Wien の変位則\n[本文目安：B2]\n式 4.4 のピーク条件から、波長表示のピーク \\lambda_{\\max} と温度 T の間に簡単な関係が成り立つ：\n\n\\lambda_{\\max} \\cdot T = b \\simeq 2.898 \\times 10^{-3}\\ \\mathrm{m \\cdot K}\n\\tag{4.5}\nこれが Wien の変位則（Wien’s displacement law）である。b は Wien の変位定数。\n実例：\n\n\n\n天体\n温度 T [K]\n\\lambda_{\\max}\n\n\n\n\nCMB\n2.7\n\\sim 1.07 mm（マイクロ波）\n\n\n星間ダスト\n30\n\\sim 100 μm（遠赤外）\n\n\n木星\n130\n\\sim 22 μm（中間赤外）\n\n\n地球\n290\n\\sim 10 μm（中間赤外）\n\n\n太陽\n5800\n\\sim 500 nm（可視）\n\n\nO 型星\n30000\n\\sim 100 nm（紫外）\n\n\n\n対応（観測）：可視光から赤外までで観測した SED（spectral energy distribution）のピーク波長を読み取れば、Wien の式で逆算するだけで、温度を一桁の精度で推定できる。これが天文学で最もよく使う「色から温度」のステップである。\n\n\n\n\n\n\nヒント\n\n\n\n振動数表示の Wien：振動数表示のピーク位置 \\nu_{\\max}/T \\simeq 5.88 \\times 10^{10} Hz/K も Wien の式の別表現として有用。ただし上述のとおり、波長表示と振動数表示でピーク位置の温度依存は同じ「逆比例」だが、定数の値が違うので両者を混ぜないように。",
     "crumbs": [
       "第I部　宇宙に満ちる黒体放射",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>第02章　黒体スペクトルをどう読むか</span>"
@@ -445,7 +489,62 @@
     "href": "part1/02-reading-spectra.html#sec-reading-spectra-exercises",
     "title": "第02章　黒体スペクトルをどう読むか",
     "section": "演習問題",
-    "text": "演習問題\n\n\n\n\n\n\n演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。",
+    "text": "演習問題\n[導出補完] 模範解答 は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。\n\n問題 2-1　Bν から Bλ への変換とヤコビアン\n[★ 難易度：☆☆ ] [導出補完]\n§2.2 は B_\\lambda=B_\\nu\\cdot c/\\lambda^2 を与えた。これを導く。出発点は「同じエネルギーを異なる変数の刻みで表す」という関係 B_\\nu\\,d\\nu=-B_\\lambda\\,d\\lambda。\n\n\\nu=c/\\lambda から d\\nu=-(c/\\lambda^2)d\\lambda を示し、B_\\lambda=B_\\nu\\,c/\\lambda^2 を導け。負号がなぜ現れ、なぜ最終式で消えるか説明せよ。\nB_\\nu=\\dfrac{2h\\nu^3}{c^2}\\dfrac{1}{e^{h\\nu/kT}-1} に代入して B_\\lambda=\\dfrac{2hc^2}{\\lambda^5}\\dfrac{1}{e^{hc/\\lambda kT}-1} を導け。\nなぜ B_\\nu は \\nu^3、B_\\lambda は \\lambda^{-5} なのか（冪が3と5でずれる理由）をヤコビアンの観点から一言で述べよ。\n\n関連：§2.2 振動数表示と波長表示／ピーク位置のずれは演習 2-2、比強度の定義は 第4章。",
+    "crumbs": [
+      "第I部　宇宙に満ちる黒体放射",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>第02章　黒体スペクトルをどう読むか</span>"
+    ]
+  },
+  {
+    "objectID": "part1/02-reading-spectra.html#模範解答問題-2-1",
+    "href": "part1/02-reading-spectra.html#模範解答問題-2-1",
+    "title": "第02章　黒体スペクトルをどう読むか",
+    "section": "模範解答（問題 2-1）",
+    "text": "模範解答（問題 2-1）\n(1) \\nu=c/\\lambda を微分して d\\nu=-(c/\\lambda^2)d\\lambda。\\nu が増えると \\lambda が減るので負号がつく。物理量（エネルギー）は正なので、刻みの向きを合わせるために B_\\nu\\,d\\nu=-B_\\lambda\\,d\\lambda と書く。これに d\\nu=-(c/\\lambda^2)d\\lambda を入れると\n\nB_\\nu\\left(-\\frac{c}{\\lambda^2}\\right)d\\lambda=-B_\\lambda\\,d\\lambda\\ \\Rightarrow\\ B_\\lambda=B_\\nu\\frac{c}{\\lambda^2}.\n\n両辺の負号が打ち消し、最終式は正になる。\n(2) \\nu=c/\\lambda を代入。前因子：\\dfrac{2h\\nu^3}{c^2}\\cdot\\dfrac{c}{\\lambda^2}=\\dfrac{2h}{c^2}\\dfrac{c^3}{\\lambda^3}\\dfrac{c}{\\lambda^2}=\\dfrac{2hc^2}{\\lambda^5}。指数：h\\nu/kT=hc/\\lambda kT。よって\n\nB_\\lambda=\\frac{2hc^2}{\\lambda^5}\\frac{1}{e^{hc/\\lambda kT}-1}.\n\n(3) B_\\nu\\propto\\nu^3 にヤコビアン c/\\lambda^2\\propto\\lambda^{-2} が掛かる。\\nu^3\\propto\\lambda^{-3} なので \\lambda^{-3}\\cdot\\lambda^{-2}=\\lambda^{-5}。冪の差2はヤコビアン由来。\n答え：B_\\lambda=B_\\nu c/\\lambda^2=\\dfrac{2hc^2}{\\lambda^5}\\dfrac{1}{e^{hc/\\lambda kT}-1}。\\lambda^{-5} の「5」はヤコビアン \\lambda^{-2} が \\nu^3=\\lambda^{-3} に掛かるため。",
+    "crumbs": [
+      "第I部　宇宙に満ちる黒体放射",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>第02章　黒体スペクトルをどう読むか</span>"
+    ]
+  },
+  {
+    "objectID": "part1/02-reading-spectra.html#模範解答問題-2-2",
+    "href": "part1/02-reading-spectra.html#模範解答問題-2-2",
+    "title": "第02章　黒体スペクトルをどう読むか",
+    "section": "模範解答（問題 2-2）",
+    "text": "模範解答（問題 2-2）\n(1) f(\\lambda)=\\lambda^{-5}(e^{x}-1)^{-1}、x=hc/\\lambda kT なので dx/d\\lambda=-x/\\lambda。積の微分：\n\nf'=-5\\lambda^{-6}(e^x-1)^{-1}-\\lambda^{-5}\\frac{e^x}{(e^x-1)^2}\\frac{dx}{d\\lambda}=0.\n\ndx/d\\lambda=-x/\\lambda を代入し、\\lambda^{-6}(e^x-1)^{-1} で割ると\n\n-5+\\frac{x e^x}{e^x-1}=0\\ \\Rightarrow\\ x e^x=5(e^x-1)\\ \\Rightarrow\\ (5-x)e^x=5,\\ \\text{即ち}\\ x=5(1-e^{-x}).\n\n(2) 非自明解は x_{\\max}\\approx4.965。x=hc/\\lambda_{\\max}kT より\n\n\\lambda_{\\max}T=\\frac{hc}{x_{\\max}k}=\\frac{hc}{4.965\\,k}.\n\n数値：hc=6.626\\times10^{-34}\\times3.00\\times10^8=1.988\\times10^{-25} J·m。4.965k=4.965\\times1.381\\times10^{-23}=6.857\\times10^{-23}。よって b=1.988\\times10^{-25}/6.857\\times10^{-23}=2.90\\times10^{-3} m·K。✓\n(3) ピークを与える条件は最大化する関数（B_\\lambda か B_\\nu）で異なる。両者はヤコビアン c/\\lambda^2 だけずれた別関数なので、最大点も別位置になる（x=4.965 と 2.821）。\\lambda_{\\max}=hc/4.965kT、\\nu_{\\max}=2.821kT/h ゆえ \\lambda_{\\max}\\nu_{\\max}=(2.821/4.965)c\\approx0.568\\,c\\ne c。同じスペクトルでも「どの変数でピークを測るか」で答えが変わる。\n答え：(5-x)e^x=5\\Rightarrow x\\approx4.965、b=hc/4.965k\\approx2.90\\times10^{-3} m·K。\\lambda_{\\max}\\nu_{\\max}=0.568c\\ne c（ヤコビアンでピークがずれるため）。",
+    "crumbs": [
+      "第I部　宇宙に満ちる黒体放射",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>第02章　黒体スペクトルをどう読むか</span>"
+    ]
+  },
+  {
+    "objectID": "part1/02-reading-spectra.html#模範解答問題-2-3",
+    "href": "part1/02-reading-spectra.html#模範解答問題-2-3",
+    "title": "第02章　黒体スペクトルをどう読むか",
+    "section": "模範解答（問題 2-3）",
+    "text": "模範解答（問題 2-3）\n(1) 黒体は等方なので B_\\nu は方向に依らず積分の外へ：\n\n\\int_{\\text{半球}}\\cos\\theta\\,d\\Omega=\\int_0^{2\\pi}d\\varphi\\int_0^{\\pi/2}\\cos\\theta\\sin\\theta\\,d\\theta=2\\pi\\left[\\frac{\\sin^2\\theta}{2}\\right]_0^{\\pi/2}=2\\pi\\cdot\\frac12=\\pi.\n\nよって F_\\nu=\\pi B_\\nu。\n(2) （i）表面から外へ出る放射だけを数えるので積分は上半球 2\\pi sr に限る（下向きは表面内部へ向かい射出に寄与しない）。（ii）フラックスは面を 垂直に 通る成分なので、法線から \\theta 傾いた方向の寄与には射影因子 \\cos\\theta が掛かる。\\cos\\theta の角度平均が 1/2 なので、2\\pi\\times\\tfrac12=\\pi となる。\n(3) \\int_{\\text{半球}}d\\Omega=2\\pi なので値は 2\\pi B_\\nu。だがこれは「すべての方向の放射が面を垂直に通る」と誤って数えたことになり、斜め方向の放射が面を通る実効断面が \\cos\\theta で減る効果を無視している。フラックス（面を通過する正味エネルギー流）の定義に反するので物理的に正しくない。\n答え：\\int_{\\text{半球}}\\cos\\theta\\,d\\Omega=\\pi。半球に限る効果（2\\pi）×\\cos\\theta 射影の平均（1/2）＝\\pi。\\cos\\theta を落とすと 2\\pi B_\\nu となり射影を無視した誤り。",
+    "crumbs": [
+      "第I部　宇宙に満ちる黒体放射",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>第02章　黒体スペクトルをどう読むか</span>"
+    ]
+  },
+  {
+    "objectID": "part1/02-reading-spectra.html#模範解答問題-2-4",
+    "href": "part1/02-reading-spectra.html#模範解答問題-2-4",
+    "title": "第02章　黒体スペクトルをどう読むか",
+    "section": "模範解答（問題 2-4）",
+    "text": "模範解答（問題 2-4）\n(1) x=h\\nu/kT、\\nu=kTx/h、d\\nu=(kT/h)dx。前因子 \\dfrac{2h}{c^2}\\nu^3=\\dfrac{2h}{c^2}\\left(\\dfrac{kT}{h}\\right)^3x^3。d\\nu の (kT/h) と合わせて\n\nF=\\pi\\cdot\\frac{2h}{c^2}\\left(\\frac{kT}{h}\\right)^4\\int_0^\\infty\\frac{x^3}{e^x-1}dx=\\frac{2\\pi k^4}{c^2h^3}T^4\\int_0^\\infty\\frac{x^3}{e^x-1}dx.\n\n(2) 積分 =\\pi^4/15 を代入：\n\nF=\\frac{2\\pi k^4}{c^2h^3}\\frac{\\pi^4}{15}T^4=\\underbrace{\\frac{2\\pi^5k^4}{15c^2h^3}}_{\\sigma}T^4.\n\n数値（SI）：分子 2\\pi^5k^4=2\\times306.0\\times(1.381\\times10^{-23})^4=612.0\\times3.64\\times10^{-92}=2.23\\times10^{-89}。分母 15c^2h^3=15\\times(3.00\\times10^8)^2\\times(6.626\\times10^{-34})^3=15\\times9.00\\times10^{16}\\times2.91\\times10^{-100}=3.93\\times10^{-82}。よって \\sigma\\approx5.67\\times10^{-8} W m^{-2}K^{-4}。✓\n(3) \\dfrac{ac}{4}=\\dfrac{1}{4}\\cdot\\dfrac{8\\pi^5k^4}{15c^3h^3}\\cdot c=\\dfrac{2\\pi^5k^4}{15c^2h^3}=\\sigma。確かに \\sigma=ac/4。エネルギー密度 u=aT^4 と射出フラックス F=\\sigma T^4 が \\sigma=ac/4 で結ばれる（等方場 u=4\\pi B/c、F=\\pi B から F=(c/4)u）。\n答え：\\sigma=\\dfrac{2\\pi^5k^4}{15c^2h^3}\\approx5.67\\times10^{-8} W m^{-2}K^{-4}。放射定数とは \\sigma=ac/4。",
+    "crumbs": [
+      "第I部　宇宙に満ちる黒体放射",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>第02章　黒体スペクトルをどう読むか</span>"
+    ]
+  },
+  {
+    "objectID": "part1/02-reading-spectra.html#模範解答問題-2-5",
+    "href": "part1/02-reading-spectra.html#模範解答問題-2-5",
+    "title": "第02章　黒体スペクトルをどう読むか",
+    "section": "模範解答（問題 2-5）",
+    "text": "模範解答（問題 2-5）\n(1) T=b/\\lambda_{\\max}=2.898\\times10^{-3}/5.00\\times10^{-7}=5.80\\times10^3 K。（有効温度 \\simeq5800 K）\n(2) L=4\\pi d^2 f=4\\pi(1.496\\times10^{11})^2\\times1.36\\times10^3。d^2=2.238\\times10^{22}、4\\pi d^2=2.812\\times10^{23}、\\times f=3.82\\times10^{26} W。すなわち L_\\odot\\simeq3.8\\times10^{26} W（既知 3.83\\times10^{26} W と一致）。\n(3) \\sigma T^4=5.67\\times10^{-8}\\times(5800)^4=5.67\\times10^{-8}\\times1.13\\times10^{15}=6.41\\times10^7 W m^{-2}。\n\nR=\\sqrt{\\frac{L}{4\\pi\\sigma T^4}}=\\sqrt{\\frac{3.82\\times10^{26}}{4\\pi\\times6.41\\times10^7}}=\\sqrt{\\frac{3.82\\times10^{26}}{8.05\\times10^8}}=\\sqrt{4.74\\times10^{17}}\\approx6.9\\times10^8\\ \\text{m}.\n\n既知値 6.96\\times10^8 m とよく一致。観測量（ピーク波長・フラックス・距離）だけから太陽の物理量がプランク分布を介して再現できる。\n答え：T\\simeq5800 K、L_\\odot\\simeq3.8\\times10^{26} W、R_\\odot\\simeq6.9\\times10^8 m。いずれも実測とよく一致。",
     "crumbs": [
       "第I部　宇宙に満ちる黒体放射",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>第02章　黒体スペクトルをどう読むか</span>"
@@ -599,7 +698,51 @@
     "href": "part1/03-universality.html#sec-universality-exercises",
     "title": "第03章　黒体放射はなぜ普遍的なのか",
     "section": "演習問題",
-    "text": "演習問題\n\n\n\n\n\n\n演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。",
+    "text": "演習問題\n[導出補完] 模範解答 は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。\n\n問題 3-1　空洞放射の普遍性を第二法則で証明する\n[★ 難易度：☆☆ ] [導出補完]\n§3.3 は背理法の骨子だけ示した。これを各振動数について厳密化する。\n\n異なる材質の空洞 A・B を同じ温度 T に保ち、振動数 [\\nu,\\nu+d\\nu] だけ通すフィルターを挟んで導管でつなぐ。もし u_\\nu^A\\ne u_\\nu^B なら何が起こるか述べよ。\nそれが熱力学第二法則のどの主張に反するか説明せよ（同一温度の二系の間に正味のエネルギー流＝仕事を取り出せる永久機関）。\nフィルターを使う議論が「全エネルギーだけでなく各振動数で u_\\nu が普遍」という強い結論を与える理由を述べよ。\n\n関連：§3.3 空洞放射／熱平衡そのものの起源（最大エントロピー）は 第6章。",
+    "crumbs": [
+      "第I部　宇宙に満ちる黒体放射",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>第03章　黒体放射はなぜ普遍的なのか</span>"
+    ]
+  },
+  {
+    "objectID": "part1/03-universality.html#模範解答問題-3-1",
+    "href": "part1/03-universality.html#模範解答問題-3-1",
+    "title": "第03章　黒体放射はなぜ普遍的なのか",
+    "section": "模範解答（問題 3-1）",
+    "text": "模範解答（問題 3-1）\n(1) フィルターは [\\nu,\\nu+d\\nu] の放射だけを通す。もし u_\\nu^A&gt;u_\\nu^B なら、この帯域で A から B へ正味のエネルギーが流れる（逆なら逆向き）。両空洞は同じ温度 T なのに、放射エネルギーが一方向に流れ続ける。\n(2) 同一温度の二つの系の間に外部からの仕事なしに正味のエネルギー（熱）が流れることになる。この流れを使えば永久に仕事を取り出せ、「外部に変化を残さず、低温部へ熱を移す以外に熱を仕事に変換し続ける機関は作れない」という熱力学第二法則（Clausius/Kelvin の主張）に反する。よって仮定 u_\\nu^A\\ne u_\\nu^B は誤り。\n(3) フィルターで振動数を1つずつ切り出せるので、「もし ある 振動数で u_\\nu が違えば」その帯域だけで第二法則違反が起こる。したがって違反を避けるには すべての 振動数で u_\\nu^A=u_\\nu^B でなければならない。全エネルギー（積分値）の一致よりも強い、スペクトルの各点での普遍性が示せる。\n答え：u_\\nu^A\\ne u_\\nu^B だと同一温度の二系間に正味エネルギー流＝第二法則違反。フィルター議論で各振動数ごとに u_\\nu(T) が材質によらず一意と結論。",
+    "crumbs": [
+      "第I部　宇宙に満ちる黒体放射",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>第03章　黒体放射はなぜ普遍的なのか</span>"
+    ]
+  },
+  {
+    "objectID": "part1/03-universality.html#模範解答問題-3-2",
+    "href": "part1/03-universality.html#模範解答問題-3-2",
+    "title": "第03章　黒体放射はなぜ普遍的なのか",
+    "section": "模範解答（問題 3-2）",
+    "text": "模範解答（問題 3-2）\n(1) 空洞内の入射放射は黒体 B_\\nu(T)。吸収エネルギー（率）は入射のうち吸収される割合：\\propto a_\\nu B_\\nu(T)。放出エネルギーは、完全黒体の放出 B_\\nu(T) に放出率を掛けた \\propto \\epsilon_\\nu B_\\nu(T)。（比例係数＝立体角・面積因子は両者共通。）\n(2) 物体が温度 T を保つには、各振動数で吸収＝放出：\n\na_\\nu B_\\nu(T)=\\epsilon_\\nu B_\\nu(T)\\ \\Rightarrow\\ a_\\nu=\\epsilon_\\nu.\n\nB_\\nu(T)\\ne0 なので約せる。吸収が強い振動数では放出も強い。\n(3) もしある振動数で吸収＞放出、別の振動数で吸収＜放出だと、全体では釣り合っていても、物体は前者の振動数で正味エネルギーを受け取り後者で失う。これは空洞放射のスペクトルを各振動数で変えてしまい（あるいは物体内に振動数間のエネルギー輸送を生み）、平衡と矛盾する。第二法則と整合する平衡（詳細釣り合い）は各振動数ごとの釣り合いを要求するので、a_\\nu=\\epsilon_\\nu は振動数ごとに成り立つ。\n答え：平衡で a_\\nu B_\\nu=\\epsilon_\\nu B_\\nu\\Rightarrow a_\\nu=\\epsilon_\\nu。詳細釣り合いゆえ各振動数で成立。",
+    "crumbs": [
+      "第I部　宇宙に満ちる黒体放射",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>第03章　黒体放射はなぜ普遍的なのか</span>"
+    ]
+  },
+  {
+    "objectID": "part1/03-universality.html#模範解答問題-3-3",
+    "href": "part1/03-universality.html#模範解答問題-3-3",
+    "title": "第03章　黒体放射はなぜ普遍的なのか",
+    "section": "模範解答（問題 3-3）",
+    "text": "模範解答（問題 3-3）\n(1) 平衡の空洞では I_\\nu=B_\\nu(T) が一様等方なので位置によらず dI_\\nu/ds=0。輸送方程式に代入：\n\n0=-\\alpha_\\nu B_\\nu(T)+j_\\nu\\ \\Rightarrow\\ j_\\nu=\\alpha_\\nu B_\\nu(T)\\ \\Rightarrow\\ S_\\nu\\equiv\\frac{j_\\nu}{\\alpha_\\nu}=B_\\nu(T).\n\n(2) Kirchhoff の法則は放出と吸収の比 j_\\nu/\\alpha_\\nu を 物質の温度 T だけ の関数（=B_\\nu(T)）にする。j_\\nu も \\alpha_\\nu も物質の局所状態（温度 T で熱化した占有数）で決まり、その比は放射場 I_\\nu や J_\\nu に依らない。だから周囲の放射場が黒体でなく異方的でも、物質さえ局所温度 T で熱化（LTE）していれば S_\\nu=j_\\nu/\\alpha_\\nu=B_\\nu(T) が成り立つ。\n(3) 希薄ガスや AGN 輝線領域では準位占有数が局所温度だけでは決まらず放射場 J_\\nu に依存する（非LTE）。すると j_\\nu/\\alpha_\\nu が物質温度だけの関数でなくなり S_\\nu\\ne B_\\nu となる。\n答え：平衡 dI_\\nu/ds=0 から S_\\nu=j_\\nu/\\alpha_\\nu=B_\\nu(T)。Kirchhoff により比は物質温度だけの関数なので、LTE なら放射場が黒体でなくても成立。非LTEだと崩れる。",
+    "crumbs": [
+      "第I部　宇宙に満ちる黒体放射",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>第03章　黒体放射はなぜ普遍的なのか</span>"
+    ]
+  },
+  {
+    "objectID": "part1/03-universality.html#模範解答問題-3-4",
+    "href": "part1/03-universality.html#模範解答問題-3-4",
+    "title": "第03章　黒体放射はなぜ普遍的なのか",
+    "section": "模範解答（問題 3-4）",
+    "text": "模範解答（問題 3-4）\n(1) 黒体スペクトルは「放射場と物質が相互作用して熱平衡に達した」結果である。完全鏡は光を吸収も放出もしないので、放射場と壁（物質）がエネルギーをやりとりできない。よって放射場は熱平衡に向かわず、内部のスペクトルは「最初に入っていた光」のまま決まらない。平衡に達するには少なくとも一部の吸収（相互作用）が不可欠。\n(2) レーザー共振器は高反射率ミラーで吸収が極小なので、定常的な黒体放射を出さず、特定モードの非平衡な光を蓄える。一方、空洞に小穴を開けると、入射光は穴から入って内部で何度も反射・吸収されほぼ確実に吸収される＝実効的に完全吸収体（a_\\nu\\to1）。同時に穴からは内部の熱平衡放射＝黒体スペクトルが出る。\n(3) 光学的に厚い（\\tau\\gg1）とは、光が抜ける間に多数回の吸収・再放出を受けること。これにより放射場と物質が十分相互作用して局所的に熱化し、ソース関数が B_\\nu(T) に近づく（演習 3-3）。完全鏡（吸収ゼロ、\\tau=0）は相互作用が皆無で熱化しないのと正反対で、\\tau\\gg1 こそが黒体への接近を保証する。\n答え：吸収ゼロ＝相互作用なし＝熱化せず黒体にならない。小穴空洞は実効完全吸収体で黒体を出す。\\tau\\gg1 は多数回の吸収再放出で熱化を保証し B_\\nu に近づける。",
     "crumbs": [
       "第I部　宇宙に満ちる黒体放射",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>第03章　黒体放射はなぜ普遍的なのか</span>"
@@ -764,7 +907,51 @@
     "href": "part2/04-radiation-field.html#sec-radiation-field-exercises",
     "title": "第04章　放射場の基本量",
     "section": "演習問題",
-    "text": "演習問題\n\n\n\n\n\n\n演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。",
+    "text": "演習問題\n[導出補完] 模範解答 は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。\n\n問題 4-1　等方場で uν=(4π/c)Iν、Fν=0、Pν=uν/3\n[★ 難易度：☆☆ ] [導出補完]\n§4.3〜4.5 は等方放射場での値を表で与えた。定義から自分で導く。立体角要素 d\\Omega=\\sin\\theta\\,d\\theta\\,d\\varphi。等方なら I_\\nu は方向に依らず積分の外へ出せる。\n\nu_\\nu=\\dfrac{1}{c}\\displaystyle\\oint I_\\nu\\,d\\Omega から、等方場で u_\\nu=\\dfrac{4\\pi}{c}I_\\nu を示せ。\nF_\\nu=\\displaystyle\\oint I_\\nu\\cos\\theta\\,d\\Omega が等方場でゼロになることを示せ。\nP_\\nu=\\dfrac{1}{c}\\displaystyle\\oint I_\\nu\\cos^2\\theta\\,d\\Omega を計算し、\\displaystyle\\oint\\cos^2\\theta\\,d\\Omega=\\dfrac{4\\pi}{3} を使って P_\\nu=\\dfrac{1}{3}u_\\nu を導け。これは光子気体の状態方程式 P=u/3 に対応する。\n\n関連：§4.3 エネルギー密度、§4.5 モーメント／P=u/3 の光子気体としての扱いは第8章。",
+    "crumbs": [
+      "第II部　放射をどう記述するか",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>第04章　放射場の基本量</span>"
+    ]
+  },
+  {
+    "objectID": "part2/04-radiation-field.html#模範解答問題-4-1",
+    "href": "part2/04-radiation-field.html#模範解答問題-4-1",
+    "title": "第04章　放射場の基本量",
+    "section": "模範解答（問題 4-1）",
+    "text": "模範解答（問題 4-1）\n(1) I_\\nu を外に出すと u_\\nu=\\dfrac{I_\\nu}{c}\\displaystyle\\oint d\\Omega=\\dfrac{I_\\nu}{c}\\cdot4\\pi=\\dfrac{4\\pi}{c}I_\\nu。\n(2) \\displaystyle\\oint\\cos\\theta\\,d\\Omega=\\int_0^{2\\pi}d\\varphi\\int_0^{\\pi}\\cos\\theta\\sin\\theta\\,d\\theta=2\\pi\\left[\\dfrac{\\sin^2\\theta}{2}\\right]_0^{\\pi}=2\\pi\\cdot0=0。（上半球の正と下半球の負が打ち消す。）よって F_\\nu=I_\\nu\\cdot0=0。\n(3) \\displaystyle\\oint\\cos^2\\theta\\,d\\Omega=\\int_0^{2\\pi}d\\varphi\\int_0^{\\pi}\\cos^2\\theta\\sin\\theta\\,d\\theta=2\\pi\\left[-\\dfrac{\\cos^3\\theta}{3}\\right]_0^{\\pi}=2\\pi\\cdot\\dfrac{2}{3}=\\dfrac{4\\pi}{3}。よって\n\nP_\\nu=\\frac{I_\\nu}{c}\\cdot\\frac{4\\pi}{3}=\\frac{1}{3}\\cdot\\frac{4\\pi}{c}I_\\nu=\\frac{1}{3}u_\\nu.\n\n答え：等方場で u_\\nu=\\frac{4\\pi}{c}I_\\nu、F_\\nu=0、P_\\nu=\\frac13 u_\\nu。最後は光子気体の状態方程式 P=u/3。",
+    "crumbs": [
+      "第II部　放射をどう記述するか",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>第04章　放射場の基本量</span>"
+    ]
+  },
+  {
+    "objectID": "part2/04-radiation-field.html#模範解答問題-4-2",
+    "href": "part2/04-radiation-field.html#模範解答問題-4-2",
+    "title": "第04章　放射場の基本量",
+    "section": "模範解答（問題 4-2）",
+    "text": "模範解答（問題 4-2）\n(1) 比強度は真空伝播で保存する（光線一本あたりのエネルギーが不変、位相空間体積保存の帰結）。よって天体表面の比強度と、遠方で観測する比強度は等しく、距離 d に依らない（表面輝度の距離不変）。\n(2) 半径 R の円盤を距離 d から見ると、見込む角の半径は \\theta\\simeq R/d（R\\ll d）。立体角は \\Omega\\simeq\\pi\\theta^2=\\pi R^2/d^2\\propto1/d^2。観測フラックスは「比強度×天体の立体角」なので F_\\nu\\simeq I_\\nu\\Omega=\\pi I_\\nu R^2/d^2\\propto1/d^2。\n(3) 表面フラックス F_\\nu^{\\rm surf}=\\pi I_\\nu（半球射出、§2.4）、光度 L_\\nu=4\\pi R^2\\cdot F_\\nu^{\\rm surf}=4\\pi R^2\\cdot\\pi I_\\nu=4\\pi^2 R^2 I_\\nu。点光源式に入れると\n\nF_\\nu^{\\rm obs}=\\frac{L_\\nu}{4\\pi d^2}=\\frac{4\\pi^2R^2 I_\\nu}{4\\pi d^2}=\\frac{\\pi I_\\nu R^2}{d^2},\n\nこれは (2) と完全に一致する。I_\\nu は不変、F_\\nu だけが 1/d^2 で落ちる。\n答え：I_\\nu は距離不変、\\Omega\\propto1/d^2 ゆえ F_\\nu=\\pi I_\\nu R^2/d^2\\propto1/d^2。点光源式とも一致。",
+    "crumbs": [
+      "第II部　放射をどう記述するか",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>第04章　放射場の基本量</span>"
+    ]
+  },
+  {
+    "objectID": "part2/04-radiation-field.html#模範解答問題-4-3",
+    "href": "part2/04-radiation-field.html#模範解答問題-4-3",
+    "title": "第04章　放射場の基本量",
+    "section": "模範解答（問題 4-3）",
+    "text": "模範解答（問題 4-3）\n(1) T^4=(2.725)^4=55.1 K^4。よって\n\nu=aT^4=7.566\\times10^{-15}\\times55.1\\simeq4.2\\times10^{-13}\\ \\mathrm{erg\\,cm^{-3}}.\n\n本文の値と一致。\n(2) J_\\nu は比強度の方向平均（\\frac{1}{4\\pi}\\oint I_\\nu d\\Omega）なので等方場で J_\\nu=I_\\nu=B_\\nu。一方 u_\\nu は単位体積あたりのエネルギー（\\frac1c\\oint I_\\nu d\\Omega）で、全立体角の積分 4\\pi と 1/c が付く。平均か総和か、という定義の違い。実際 u_\\nu=\\frac{4\\pi}{c}J_\\nu。\n(3) 4.2\\times10^{-13} と 10^{-12} erg cm^{-3} はオーダーで同程度。CMB・宇宙線・星間磁場のエネルギー密度が拮抗していることは、銀河系の星間媒質がこれらの間でエネルギーをやりとりする「準平衡」的な系であることを示唆する（重要なベースライン）。\n答え：u\\simeq4.2\\times10^{-13} erg cm^{-3}。J_\\nu＝方向平均、u_\\nu＝体積エネルギー（4\\pi/c 倍）。宇宙線・磁場と同オーダー。",
+    "crumbs": [
+      "第II部　放射をどう記述するか",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>第04章　放射場の基本量</span>"
+    ]
+  },
+  {
+    "objectID": "part2/04-radiation-field.html#模範解答問題-4-4",
+    "href": "part2/04-radiation-field.html#模範解答問題-4-4",
+    "title": "第04章　放射場の基本量",
+    "section": "模範解答（問題 4-4）",
+    "text": "模範解答（問題 4-4）\n(1) \\theta=9 mas =9\\times10^{-3} arcsec。1 arcsec =4.85\\times10^{-6} rad なので \\theta=9\\times10^{-3}\\times4.85\\times10^{-6}=4.4\\times10^{-8} rad。半径 \\theta/2=2.2\\times10^{-8} rad。立体角\n\n\\Omega_{\\rm src}\\simeq\\pi(2.2\\times10^{-8})^2\\simeq1.5\\times10^{-15}\\ \\mathrm{sr}.\n\n（本文の表の値と一致。）\n(2) シーイング 1 arcsec のビーム半径 0.5''=2.4\\times10^{-6} rad、\\Omega_{\\rm beam}\\simeq\\pi(2.4\\times10^{-6})^2\\simeq1.8\\times10^{-11} sr。\\Omega_{\\rm src}/\\Omega_{\\rm beam}\\sim10^{-4}\\ll1。天体はビームよりはるかに小さく、空間的に分解できない＝点光源。測れるのはフラックス F_\\nu のみ。\n(3) VLTI の分解能 \\sim1 mas は天体視直径 9 mas より小さいので、円盤を空間的に分解できる＝広がった光源として扱え、面上の比強度 I_\\nu（表面輝度分布）が測れる。同じ天体が装置の分解能次第で点光源にも広がった光源にもなる。すなわち「点か広がりか」は天体の性質でなく装置との関係で決まる。\n答え：\\Omega_{\\rm src}\\simeq1.5\\times10^{-15} sr。シーイング1″では \\ll\\Omega_{\\rm beam} ゆえ点光源（F_\\nu を測る）。VLTI 1 masでは分解でき広がった光源（I_\\nu）。装置依存。",
     "crumbs": [
       "第II部　放射をどう記述するか",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>第04章　放射場の基本量</span>"
@@ -940,7 +1127,62 @@
     "href": "part2/05-radiative-transfer.html#sec-radiative-transfer-exercises",
     "title": "第05章　放射輸送の基礎",
     "section": "演習問題",
-    "text": "演習問題\n\n\n\n\n\n\n演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。",
+    "text": "演習問題\n[導出補完] 模範解答 は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。\n\n問題 5-1　放射輸送方程式の形式解を導く\n[★ 難易度：☆☆ ] [導出補完]\n§5.3 は形式解 I_\\nu(\\tau_\\nu)=I_\\nu(0)e^{-\\tau_\\nu}+\\displaystyle\\int_0^{\\tau_\\nu}S_\\nu(\\tau')e^{-(\\tau_\\nu-\\tau')}d\\tau' を結果として与えた。これを導く。出発点は \\dfrac{dI_\\nu}{d\\tau_\\nu}=-I_\\nu+S_\\nu。\n\n積分因子 e^{\\tau_\\nu} を掛けて左辺を \\dfrac{d}{d\\tau_\\nu}(I_\\nu e^{\\tau_\\nu}) にまとめよ。\n0 から \\tau_\\nu まで積分して形式解を導け。\n第一項と第二項をそれぞれ物理的に解釈せよ（「初期光の減衰」「経路上の放出の積算」）。\n\n関連：§5.3 放射輸送方程式、§5.2 光学的厚さ。",
+    "crumbs": [
+      "第II部　放射をどう記述するか",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>第05章　放射輸送の基礎</span>"
+    ]
+  },
+  {
+    "objectID": "part2/05-radiative-transfer.html#模範解答問題-5-1",
+    "href": "part2/05-radiative-transfer.html#模範解答問題-5-1",
+    "title": "第05章　放射輸送の基礎",
+    "section": "模範解答（問題 5-1）",
+    "text": "模範解答（問題 5-1）\n(1) 両辺に e^{\\tau_\\nu} を掛ける：e^{\\tau_\\nu}\\dfrac{dI_\\nu}{d\\tau_\\nu}+e^{\\tau_\\nu}I_\\nu=e^{\\tau_\\nu}S_\\nu。左辺は積の微分でまとまる：\n\n\\frac{d}{d\\tau_\\nu}\\left(I_\\nu e^{\\tau_\\nu}\\right)=S_\\nu e^{\\tau_\\nu}.\n\n(2) 0 から \\tau_\\nu まで積分：\n\nI_\\nu(\\tau_\\nu)e^{\\tau_\\nu}-I_\\nu(0)=\\int_0^{\\tau_\\nu}S_\\nu(\\tau')e^{\\tau'}d\\tau'.\n\n両辺を e^{\\tau_\\nu} で割る：\n\nI_\\nu(\\tau_\\nu)=I_\\nu(0)e^{-\\tau_\\nu}+\\int_0^{\\tau_\\nu}S_\\nu(\\tau')e^{-(\\tau_\\nu-\\tau')}d\\tau'.\n\n(3) 第一項：入射光 I_\\nu(0) が経路全体の吸収で e^{-\\tau_\\nu} 倍に減衰したもの。第二項：各深さ \\tau' で放出された光 S_\\nu d\\tau' が、そこから観測点までの吸収 e^{-(\\tau_\\nu-\\tau')} で減衰しながら積算されたもの。観測スペクトルが「光が経た歴史」を映すとは、この第二項のこと。\n答え：積分因子 e^{\\tau} で \\frac{d}{d\\tau}(Ie^\\tau)=Se^\\tau、積分して形式解。第一項＝初期光の減衰、第二項＝放出の減衰付き積算。",
+    "crumbs": [
+      "第II部　放射をどう記述するか",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>第05章　放射輸送の基礎</span>"
+    ]
+  },
+  {
+    "objectID": "part2/05-radiative-transfer.html#模範解答問題-5-2",
+    "href": "part2/05-radiative-transfer.html#模範解答問題-5-2",
+    "title": "第05章　放射輸送の基礎",
+    "section": "模範解答（問題 5-2）",
+    "text": "模範解答（問題 5-2）\n(1) S_\\nu 一定なら積分は\n\n\\int_0^{\\tau}S_\\nu e^{-(\\tau-\\tau')}d\\tau'=S_\\nu e^{-\\tau}\\int_0^{\\tau}e^{\\tau'}d\\tau'=S_\\nu e^{-\\tau}(e^{\\tau}-1)=S_\\nu(1-e^{-\\tau}).\n\nよって I_\\nu(\\tau)=I_\\nu(0)e^{-\\tau}+S_\\nu(1-e^{-\\tau})。\n(2) \\tau\\gg1 で e^{-\\tau}\\to0 ゆえ I_\\nu\\to S_\\nu。初期光は完全に消え、比強度はソース関数の値そのものになる。\n(3) \\tau\\ll1 で e^{-\\tau}\\approx1-\\tau：\n\nI_\\nu\\approx I_\\nu(0)(1-\\tau)+S_\\nu\\tau=I_\\nu(0)+\\tau(S_\\nu-I_\\nu(0)).\n\n答え：I_\\nu=I_\\nu(0)e^{-\\tau}+S_\\nu(1-e^{-\\tau})。厚い→S_\\nu、薄い→I_\\nu(0)+\\tau(S_\\nu-I_\\nu(0))。",
+    "crumbs": [
+      "第II部　放射をどう記述するか",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>第05章　放射輸送の基礎</span>"
+    ]
+  },
+  {
+    "objectID": "part2/05-radiative-transfer.html#模範解答問題-5-3",
+    "href": "part2/05-radiative-transfer.html#模範解答問題-5-3",
+    "title": "第05章　放射輸送の基礎",
+    "section": "模範解答（問題 5-3）",
+    "text": "模範解答（問題 5-3）\n(1) S_\\nu&lt;I_\\nu(0) なら S_\\nu-I_\\nu(0)&lt;0。線中心で \\tau_\\nu が大きいほど I_\\nu=I_\\nu(0)+\\tau_\\nu(S_\\nu-I_\\nu(0)) は連続光 I_\\nu(0) より 小さく なる。すなわち連続光を背景にした 吸収線 として見える。\n(2) S_\\nu&gt;I_\\nu(0) なら S_\\nu-I_\\nu(0)&gt;0。線中心で I_\\nu は背景より 大きく、輝線 になる。特に背景光がない（I_\\nu(0)\\approx0）と I_\\nu\\approx\\tau_\\nu S_\\nu で、線中心だけ明るい純粋な輝線スペクトルになる。\n(3) 太陽の Fraunhofer 線：明るい光球（連続光 I_\\nu(0) 大）を背景に、外側の低温層（S_\\nu=B_\\nu(T_{\\rm out})&lt;I_\\nu(0)）が吸収する → S_\\nu&lt;I_\\nu(0)、吸収線。HII 領域：背景となる連続光がほぼなく、ガス自身の放出だけが見える → S_\\nu&gt;I_\\nu(0)\\approx0、輝線。線の出方は線中心のソース関数と背景光の大小で決まる。\n答え：S_\\nu&lt;I_\\nu(0)→吸収線、S_\\nu&gt;I_\\nu(0)→輝線。太陽 Fraunhofer＝前者、HII 領域＝後者。",
+    "crumbs": [
+      "第II部　放射をどう記述するか",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>第05章　放射輸送の基礎</span>"
+    ]
+  },
+  {
+    "objectID": "part2/05-radiative-transfer.html#模範解答問題-5-4",
+    "href": "part2/05-radiative-transfer.html#模範解答問題-5-4",
+    "title": "第05章　放射輸送の基礎",
+    "section": "模範解答（問題 5-4）",
+    "text": "模範解答（問題 5-4）\n(1) 観測点（\\tau_\\nu=0 を外側にとる座標で考えると）に届く放出の重みは e^{-(\\tau_\\nu-\\tau')} で、観測点から光学的厚さが約1以内の層（\\tau\\lesssim1）からの寄与が支配的。それより深い層の光は手前の吸収 e^{-\\tau} で強く減衰して届かない。だから「観測点から \\tau\\sim1 の深さ」が実効的な放出層＝「見える表面」になる。\n(2) \\ell_{\\rm mfp}=1/\\alpha_\\nu は光が一回吸収・散乱されずに進める距離。\\tau\\sim1 は観測点から測って平均自由行程ほぼ1回分の深さで、そこから出た光子はもう吸収されずに脱出できる。それより深い光子は途中で吸収・再放出され「直接は見えない」。よって \\tau\\sim1 が脱出できる最後の深さ＝光球。\n(3) \\tau\\sim1 層が LTE なら S_\\nu=B_\\nu(T(\\tau\\!\\sim\\!1))。その層は内側に向かって光学的に厚い（\\tau\\gg1）ので、問題 5-2(2) の厚い極限により出てくる比強度は I_\\nu\\to S_\\nu=B_\\nu(T(\\tau\\!\\sim\\!1))。すなわち観測スペクトルは \\tau\\sim1 層の温度のプランク関数に近づく。太陽が B_\\nu(5800\\text{K}) に近いのはこのため。\n答え：重み e^{-(\\tau-\\tau')} ゆえ \\tau\\sim1 層が実効放出層＝脱出できる最後の深さ＝光球。そこが LTE＋厚いので I_\\nu\\to B_\\nu(T(\\tau\\!\\sim\\!1))。",
+    "crumbs": [
+      "第II部　放射をどう記述するか",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>第05章　放射輸送の基礎</span>"
+    ]
+  },
+  {
+    "objectID": "part2/05-radiative-transfer.html#模範解答問題-5-5",
+    "href": "part2/05-radiative-transfer.html#模範解答問題-5-5",
+    "title": "第05章　放射輸送の基礎",
+    "section": "模範解答（問題 5-5）",
+    "text": "模範解答（問題 5-5）\n(1) ソース関数は S_\\nu=j_\\nu/\\alpha_\\nu。Kirchhoff の法則により、物質が局所温度 T で熱化していれば、放出と吸収の比 j_\\nu/\\alpha_\\nu は その物質の温度 T だけの関数 B_\\nu(T) になる。j_\\nu も \\alpha_\\nu も局所占有数（Boltzmann 分布、局所 T）で決まり、その比は周囲の放射場 J_\\nu に依らない。だから J_\\nu が異方的でも J_\\nu\\ne B_\\nu でも、物質さえ LTE なら S_\\nu=B_\\nu(T)。\n(2) LTE：物質 の速度分布・電離・励起が局所 T で決まる（Maxwell・Saha・Boltzmann）。放射場 J_\\nu は黒体でも等方でもなくてよい。完全熱平衡：物質も放射場も両方 が同一温度で平衡（J_\\nu=B_\\nu かつ等方、F_\\nu=0）。LTE は物質だけの条件、完全熱平衡は放射場まで含む強い条件。\n(3) 誘導吸収・放出の率は J_\\nu に比例する。形式解が示すように J_\\nu(\\mathbf r) は媒質全体の構造（経路上の温度・密度）を積分した非局所量。だから占有数を決める統計平衡方程式に J_\\nu が入ると、占有数＝媒質全体の関数となり非局所性が入る。一方「熱化深さ」より深い領域では放射場がその場で熱化し J_\\nu\\to B_\\nu(T_{\\rm local}) となるため、統計平衡の解も Boltzmann（局所値）に漸近し S_\\nu\\to B_\\nu(T_{\\rm local})、実質 LTE に戻る。non-LTE が観測に効くのは薄い領域や中程度 \\tau の上層大気。\n答え：Kirchhoff が j/\\alpha を局所 T だけの関数にするので、放射場が黒体でなくても物質 LTE なら S_\\nu=B_\\nu。完全熱平衡は放射場まで黒体な強い条件。J_\\nu 経由で非局所性が入るが、熱化深さより深いと J_\\nu\\to B_\\nu で実質 LTE。",
     "crumbs": [
       "第II部　放射をどう記述するか",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>第05章　放射輸送の基礎</span>"
@@ -1083,7 +1325,51 @@
     "href": "part3/06-thermal-equilibrium.html#sec-thermal-equilibrium-exercises",
     "title": "第06章　熱平衡とは何か",
     "section": "演習問題",
-    "text": "演習問題\n\n\n\n\n\n\n演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。",
+    "text": "演習問題\n[導出補完] 模範解答 は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。\n\n問題 6-1　多重度の最大と「マクロ状態で十分」な理由\n[★ 難易度：☆☆ ] [導出補完]\n§6.2 は気体分子を左右に分ける多重度 \\Omega(N_L)=\\binom{N}{N_L} が N_L=N/2 で最大になると述べた。これを示し、揺らぎの幅を見積もる。\n\nStirling 近似 \\ln N!\\simeq N\\ln N-N を使い、\\ln\\Omega(N_L) を最大化して N_L=N/2 を導け。\nN_L=N/2+x のまわりで \\ln\\Omega を x の2次まで展開し、\\ln\\Omega\\simeq\\ln\\Omega_{\\max}-\\dfrac{2x^2}{N} を示せ（分布が幅 \\sim\\sqrt{N} のガウス型）。\n相対的な揺らぎ \\sqrt{\\langle x^2\\rangle}/N\\sim1/\\sqrt{N} が、N\\sim10^{23} で 10^{-11} 程度になることを確かめ、「マクロ状態だけで温度が語れる」理由を述べよ。\n\n関連：§6.2 マクロ状態とミクロ状態／揺らぎの一般論は§7.4（演習 7-3）。",
+    "crumbs": [
+      "第III部　逆引き1：熱力学・統計力学へ",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>第06章　熱平衡とは何か</span>"
+    ]
+  },
+  {
+    "objectID": "part3/06-thermal-equilibrium.html#模範解答問題-6-1",
+    "href": "part3/06-thermal-equilibrium.html#模範解答問題-6-1",
+    "title": "第06章　熱平衡とは何か",
+    "section": "模範解答（問題 6-1）",
+    "text": "模範解答（問題 6-1）\n(1) \\ln\\Omega=\\ln N!-\\ln N_L!-\\ln(N-N_L)!。Stirling で微分（N 固定）：\n\n\\frac{d\\ln\\Omega}{dN_L}=-\\ln N_L+\\ln(N-N_L)=\\ln\\frac{N-N_L}{N_L}=0\\ \\Rightarrow\\ N_L=N-N_L\\ \\Rightarrow\\ N_L=\\frac N2.\n\n(2) N_L=N/2+x、N_R=N/2-x。\\ln\\Omega=N\\ln N-N_L\\ln N_L-N_R\\ln N_R（定数項略）。2次まで展開すると、各 \\ln(N/2\\pm x)\\simeq\\ln(N/2)\\pm\\frac{2x}{N}-\\frac{2x^2}{N^2} を使って整理し\n\n\\ln\\Omega\\simeq\\ln\\Omega_{\\max}-\\frac{2x^2}{N}.\n\nすなわち \\Omega\\propto e^{-2x^2/N}。これはガウス型で標準偏差 \\sigma_x=\\sqrt{N}/2。\n(3) \\sqrt{\\langle x^2\\rangle}=\\sigma_x=\\sqrt N/2 ゆえ相対揺らぎ \\sigma_x/N=1/(2\\sqrt N)\\sim1/\\sqrt N。N=10^{23} で \\sim10^{-11.5}。観測誤差よりはるかに小さく、ほぼすべてのミクロ状態が N_L\\simeq N/2 のマクロ状態に集中する。だからマクロ状態（最大多重度の状態）だけで物理を語れる。\n答え：N_L=N/2 で最大、\\Omega\\propto e^{-2x^2/N}（幅 \\sqrt N/2）。相対揺らぎ \\sim1/\\sqrt N\\sim10^{-11} ゆえマクロ状態で十分。",
+    "crumbs": [
+      "第III部　逆引き1：熱力学・統計力学へ",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>第06章　熱平衡とは何か</span>"
+    ]
+  },
+  {
+    "objectID": "part3/06-thermal-equilibrium.html#模範解答問題-6-2",
+    "href": "part3/06-thermal-equilibrium.html#模範解答問題-6-2",
+    "title": "第06章　熱平衡とは何か",
+    "section": "模範解答（問題 6-2）",
+    "text": "模範解答（問題 6-2）\n(1) 独立な二系の全多重度は積 \\Omega=\\Omega_1\\Omega_2。対数をとると S=k_B\\ln(\\Omega_1\\Omega_2)=k_B\\ln\\Omega_1+k_B\\ln\\Omega_2=S_1+S_2。エントロピーは加法的（示量的）。\n(2) E_1 を変数に全エントロピー S=S_1(E_1)+S_2(E-E_1) を最大化：\n\n\\frac{dS}{dE_1}=\\frac{\\partial S_1}{\\partial E_1}-\\frac{\\partial S_2}{\\partial E_2}=0\\ \\Rightarrow\\ \\frac{\\partial S_1}{\\partial E_1}=\\frac{\\partial S_2}{\\partial E_2}.\n\n（dE_2/dE_1=-1 を使った。）平衡では両系で \\partial S/\\partial E が一致する。\n(3) 熱力学では「二系を接触させて正味のエネルギー流が止まる＝温度が等しい」が平衡。(2) の共通量 \\partial S/\\partial E がまさに平衡で一致する量なので、これを温度と結びつけるのが自然。次元と符号（エネルギーを加えるとエントロピーが増える）から 1/T\\equiv\\partial S/\\partial E と定義すると、熱力学の温度と一致する。\n答え：\\Omega=\\Omega_1\\Omega_2\\Rightarrow S=S_1+S_2。平衡で \\partial S_1/\\partial E_1=\\partial S_2/\\partial E_2、これを 1/T と定義。",
+    "crumbs": [
+      "第III部　逆引き1：熱力学・統計力学へ",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>第06章　熱平衡とは何か</span>"
+    ]
+  },
+  {
+    "objectID": "part3/06-thermal-equilibrium.html#模範解答問題-6-3",
+    "href": "part3/06-thermal-equilibrium.html#模範解答問題-6-3",
+    "title": "第06章　熱平衡とは何か",
+    "section": "模範解答（問題 6-3）",
+    "text": "模範解答（問題 6-3）\n(1) \\ln\\Omega=\\ln N!-\\sum_i\\ln n_i!\\simeq N\\ln N-N-\\sum_i(n_i\\ln n_i-n_i)。n_i で微分すると \\partial\\ln\\Omega/\\partial n_i=-\\ln n_i。変分条件：\n\n-\\ln n_i-\\alpha-\\beta E_i=0\\ \\Rightarrow\\ \\ln n_i=-\\alpha-\\beta E_i\\ \\Rightarrow\\ n_i=e^{-\\alpha}e^{-\\beta E_i}\\propto e^{-\\beta E_i}.\n\n(2) \\sum_i n_i=N より e^{-\\alpha}\\sum_j e^{-\\beta E_j}=N、よって e^{-\\alpha}=N/Z、Z=\\sum_j e^{-\\beta E_j}。したがって\n\nn_i=\\frac{N e^{-\\beta E_i}}{\\sum_j e^{-\\beta E_j}}=\\frac{N}{Z}e^{-\\beta E_i}.\n\n分母にちょうど分配関数 Z が現れる。\n(3) エネルギー制約の Lagrange 乗数 \\beta は、エントロピー最大化で「エネルギーを1単位動かしたときのエントロピー変化」に対応する。これは問題 6-2 の 1/T=\\partial S/\\partial E そのもので、\\beta=1/k_BT と同定される。\n答え：変分で n_i\\propto e^{-\\beta E_i}、規格化で n_i=(N/Z)e^{-\\beta E_i}、Z=\\sum e^{-\\beta E_j}。\\beta=1/k_BT は温度定義と整合。",
+    "crumbs": [
+      "第III部　逆引き1：熱力学・統計力学へ",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>第06章　熱平衡とは何か</span>"
+    ]
+  },
+  {
+    "objectID": "part3/06-thermal-equilibrium.html#模範解答問題-6-4",
+    "href": "part3/06-thermal-equilibrium.html#模範解答問題-6-4",
+    "title": "第06章　熱平衡とは何か",
+    "section": "模範解答（問題 6-4）",
+    "text": "模範解答（問題 6-4）\n(1) 詳細釣り合いから W_{i\\to j}/W_{j\\to i}=n_j/n_i。Boltzmann 比を代入：\n\n\\frac{W_{i\\to j}}{W_{j\\to i}}=\\frac{n_j}{n_i}=\\frac{g_j}{g_i}e^{-(E_j-E_i)/k_BT}.\n\n（上準位ほど占有が少ないので、上向き遷移率と下向き遷移率の比がこの形になる。）\n(2) 「正味流れゼロ」は、たとえば 1\\to2\\to3\\to1 と一方向に循環する定常流があっても各状態の占有数が一定なら満たされてしまう。詳細釣り合いはより強く、各ペア（1\\!\\leftrightarrow\\!2, 2\\!\\leftrightarrow\\!3, 3\\!\\leftrightarrow\\!1）で個別に往復が釣り合うことを要求し、そうした循環流を禁じる。これは微視的時間反転対称性の帰結で、真の熱平衡を特徴づける。\n(3) 第11章で Einstein は、放射と二準位原子の吸収・自発放出・誘導放出に詳細釣り合いを課し、J_\\nu=B_\\nu を要求することで Einstein 関係式 A_{ul}/B_{ul}=2h\\nu^3/c^2 と g_lB_{lu}=g_uB_{ul} を導く。本問の「遷移率の比」が原子と放射の係数の比に具体化される。\n答え：W_{i\\to j}/W_{j\\to i}=(g_j/g_i)e^{-(E_j-E_i)/k_BT}。詳細釣り合いは循環流を禁じる強い条件。第11章の Einstein 関係式の基礎。",
     "crumbs": [
       "第III部　逆引き1：熱力学・統計力学へ",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>第06章　熱平衡とは何か</span>"
@@ -1226,7 +1512,51 @@
     "href": "part3/07-statistical-mechanics.html#sec-statistical-mechanics-exercises",
     "title": "第07章　統計力学の基本",
     "section": "演習問題",
-    "text": "演習問題\n\n\n\n\n\n\n演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。",
+    "text": "演習問題\n[導出補完] 模範解答 は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。\n\n問題 7-1　熱浴との接触から Boltzmann 確率を導く\n[★ 難易度：☆☆ ] [導出補完]\n§7.1 は P_i=e^{-E_i/k_BT}/Z を結果として与えた。系を温度 T の大きな熱浴と接触させた設定から導く。\n\n系がエネルギー E_i の状態にある確率は、熱浴が残りのエネルギー E_{\\rm tot}-E_i を取る多重度に比例する：P_i\\propto\\Omega_{\\rm bath}(E_{\\rm tot}-E_i)。これを S_{\\rm bath}=k_B\\ln\\Omega_{\\rm bath} で書き換えよ。\nE_i\\ll E_{\\rm tot} として S_{\\rm bath}(E_{\\rm tot}-E_i) を E_i について1次まで展開し、1/T=\\partial S_{\\rm bath}/\\partial E を使って P_i\\propto e^{-E_i/k_BT} を導け。\n規格化して Z=\\sum_i e^{-E_i/k_BT} が現れることを示せ。\n\n関連：§7.1 状態数と確率／温度の定義は§6.3（演習 6-2）。",
+    "crumbs": [
+      "第III部　逆引き1：熱力学・統計力学へ",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>第07章　統計力学の基本</span>"
+    ]
+  },
+  {
+    "objectID": "part3/07-statistical-mechanics.html#模範解答問題-7-1",
+    "href": "part3/07-statistical-mechanics.html#模範解答問題-7-1",
+    "title": "第07章　統計力学の基本",
+    "section": "模範解答（問題 7-1）",
+    "text": "模範解答（問題 7-1）\n(1) 系が状態 i（エネルギー E_i）にあるとき、全体のミクロ状態数は熱浴の多重度 \\Omega_{\\rm bath}(E_{\\rm tot}-E_i) に等しい。等確率の原理から P_i\\propto\\Omega_{\\rm bath}(E_{\\rm tot}-E_i)=e^{S_{\\rm bath}(E_{\\rm tot}-E_i)/k_B}。\n(2) E_i\\ll E_{\\rm tot} で Taylor 展開：\n\nS_{\\rm bath}(E_{\\rm tot}-E_i)\\simeq S_{\\rm bath}(E_{\\rm tot})-E_i\\frac{\\partial S_{\\rm bath}}{\\partial E}=S_{\\rm bath}(E_{\\rm tot})-\\frac{E_i}{T}.\n\nよって P_i\\propto e^{S_{\\rm bath}(E_{\\rm tot})/k_B}e^{-E_i/k_BT}\\propto e^{-E_i/k_BT}。\n(3) \\sum_i P_i=1 より P_i=\\dfrac{e^{-E_i/k_BT}}{\\sum_j e^{-E_j/k_BT}}=\\dfrac{e^{-E_i/k_BT}}{Z}、Z=\\sum_j e^{-E_j/k_BT}。\n答え：P_i\\propto\\Omega_{\\rm bath}(E_{\\rm tot}-E_i) を1次展開し 1/T=\\partial S/\\partial E を使うと P_i=e^{-E_i/k_BT}/Z。",
+    "crumbs": [
+      "第III部　逆引き1：熱力学・統計力学へ",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>第07章　統計力学の基本</span>"
+    ]
+  },
+  {
+    "objectID": "part3/07-statistical-mechanics.html#模範解答問題-7-2",
+    "href": "part3/07-statistical-mechanics.html#模範解答問題-7-2",
+    "title": "第07章　統計力学の基本",
+    "section": "模範解答（問題 7-2）",
+    "text": "模範解答（問題 7-2）\n(1) 共通因子 e^{-\\beta\\hbar\\omega/2} を括り出すと等比級数：\n\nZ_1=e^{-\\beta\\hbar\\omega/2}\\sum_{n=0}^\\infty e^{-\\beta n\\hbar\\omega}=e^{-\\beta\\hbar\\omega/2}\\cdot\\frac{1}{1-e^{-\\beta\\hbar\\omega}}.\n\n(2) \\ln Z_1=-\\dfrac{\\beta\\hbar\\omega}{2}-\\ln(1-e^{-\\beta\\hbar\\omega})。\\beta で微分：\n\n\\langle\\epsilon\\rangle=-\\frac{\\partial\\ln Z_1}{\\partial\\beta}=\\frac{\\hbar\\omega}{2}+\\frac{\\hbar\\omega e^{-\\beta\\hbar\\omega}}{1-e^{-\\beta\\hbar\\omega}}=\\frac{\\hbar\\omega}{2}+\\frac{\\hbar\\omega}{e^{\\beta\\hbar\\omega}-1}.\n\n(3) (i) 第二項 1/(e^{\\beta\\hbar\\omega}-1) が占有因子で、零点項 \\hbar\\omega/2 とは独立に現れる。(ii) \\hbar\\omega/2 は温度に依らない定数なので C=\\partial\\langle\\epsilon\\rangle/\\partial T で微分すると消える。よって観測量（占有因子・比熱・放射スペクトル）は零点項に依らない。Planck（nh\\nu）と Schrödinger（(n+\\tfrac12)\\hbar\\omega）は零点という定数オフセットだけが違い、温度微分・対数微分で消えるので、同じ占有因子＝同じスペクトルを与える。\n答え：Z_1=e^{-\\beta\\hbar\\omega/2}/(1-e^{-\\beta\\hbar\\omega})、\\langle\\epsilon\\rangle=\\tfrac12\\hbar\\omega+\\hbar\\omega/(e^{\\beta\\hbar\\omega}-1)。零点項は定数ゆえ占有因子・比熱に効かず、nh\\nu と (n+\\tfrac12)\\hbar\\omega は同じスペクトル。",
+    "crumbs": [
+      "第III部　逆引き1：熱力学・統計力学へ",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>第07章　統計力学の基本</span>"
+    ]
+  },
+  {
+    "objectID": "part3/07-statistical-mechanics.html#模範解答問題-7-3",
+    "href": "part3/07-statistical-mechanics.html#模範解答問題-7-3",
+    "title": "第07章　統計力学の基本",
+    "section": "模範解答（問題 7-3）",
+    "text": "模範解答（問題 7-3）\n(1) \\langle E^2\\rangle-\\langle E\\rangle^2 を計算する。\\langle E\\rangle=-\\partial_\\beta\\ln Z=-\\dfrac{1}{Z}\\partial_\\beta Z。もう一度微分：\n\n\\frac{\\partial^2\\ln Z}{\\partial\\beta^2}=\\frac{1}{Z}\\frac{\\partial^2 Z}{\\partial\\beta^2}-\\left(\\frac{1}{Z}\\frac{\\partial Z}{\\partial\\beta}\\right)^2=\\langle E^2\\rangle-\\langle E\\rangle^2=\\langle(\\Delta E)^2\\rangle.\n\nまた \\partial^2\\ln Z/\\partial\\beta^2=-\\partial\\langle E\\rangle/\\partial\\beta。\n(2) \\partial_\\beta=-k_BT^2\\partial_T（\\beta=1/k_BT より d\\beta=-dT/k_BT^2）。よって\n\n\\langle(\\Delta E)^2\\rangle=-\\frac{\\partial\\langle E\\rangle}{\\partial\\beta}=k_BT^2\\frac{\\partial\\langle E\\rangle}{\\partial T}=k_BT^2 C_V.\n\n(3) \\langle E\\rangle\\propto N、C_V\\propto N なので \\langle(\\Delta E)^2\\rangle\\propto N、\\sqrt{\\langle(\\Delta E)^2\\rangle}\\propto\\sqrt N。相対揺らぎは \\sqrt N/N=1/\\sqrt N。マクロ系で揺らぎが消える理由。\n答え：\\langle(\\Delta E)^2\\rangle=\\partial^2\\ln Z/\\partial\\beta^2=k_BT^2C_V。相対揺らぎ \\propto1/\\sqrt N。",
+    "crumbs": [
+      "第III部　逆引き1：熱力学・統計力学へ",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>第07章　統計力学の基本</span>"
+    ]
+  },
+  {
+    "objectID": "part3/07-statistical-mechanics.html#模範解答問題-7-4",
+    "href": "part3/07-statistical-mechanics.html#模範解答問題-7-4",
+    "title": "第07章　統計力学の基本",
+    "section": "模範解答（問題 7-4）",
+    "text": "模範解答（問題 7-4）\n(1) E_2-E_1=-13.6/4-(-13.6/1)=-3.4+13.6=10.2 eV。g_2/g_1=2\\cdot2^2/(2\\cdot1^2)=8/2=4。\n(2) T=5800 K：k_BT=8.617\\times10^{-5}\\times5800=0.500 eV。指数 -10.2/0.500=-20.4、e^{-20.4}=1.37\\times10^{-9}。n_2/n_1=4\\times1.37\\times10^{-9}\\approx5.5\\times10^{-9}。 T=10000 K：k_BT=0.862 eV。指数 -10.2/0.862=-11.8、e^{-11.8}=7.2\\times10^{-6}。n_2/n_1=4\\times7.2\\times10^{-6}\\approx2.9\\times10^{-5}。 比は 2.9\\times10^{-5}/5.5\\times10^{-9}\\approx5300 倍。約3〜4桁違う。\n(3) Balmer 線は n=2 にいる原子が吸収して生じる。太陽（5800 K）では n=2 の占有が \\sim10^{-9} と極めて少なく、Balmer 線は弱い。A 型星（\\sim10000 K）では n=2 占有が数千倍に増え、Balmer 線が最強になる。さらに高温（O・B 型）では水素が電離して中性水素自体が減り、Balmer 線は再び弱まる（電離は Saha 式、本問の Boltzmann だけでは表せない別効果）。\n答え：E_2-E_1=10.2 eV、g_2/g_1=4。n_2/n_1\\approx5.5\\times10^{-9}（5800 K）→2.9\\times10^{-5}（10000 K）で約5300倍。Balmer 線は A 型で最強、さらに高温では電離で弱まる。",
     "crumbs": [
       "第III部　逆引き1：熱力学・統計力学へ",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>第07章　統計力学の基本</span>"
@@ -1380,7 +1710,51 @@
     "href": "part3/08-photon-statistics.html#sec-photon-statistics-exercises",
     "title": "第08章　光子の統計",
     "section": "演習問題",
-    "text": "演習問題\n\n\n\n\n\n\n演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。",
+    "text": "演習問題\n[導出補完] 模範解答 は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。\n\n問題 8-1　識別可能 vs 不能 ― 数え上げの違い\n[★ 難易度：☆☆ ] [導出補完]\n§8.1 は2状態2粒子で古典4通り・Bose 3通りになることを示した。一般化する。\n\ng 個の状態に N 個の区別できない Bose 粒子を入れる場合の数が \\dbinom{N+g-1}{N} になることを「仕切り棒（玉と仕切り）」の論法で示せ。\ng=2,N=2 で値が 3 になることを確かめ、古典の g^N=4 と比べよ。\n「1 が A・2 が B」と「1 が B・2 が A」が同一状態に潰れることが、なぜ Boltzmann 統計から Bose 統計へのずれを生むのか述べよ。\n\n関連：§8.1 区別できない粒子、§8.2 Bose と Fermi／識別不能性の量子論的根拠は第12章。",
+    "crumbs": [
+      "第III部　逆引き1：熱力学・統計力学へ",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>第08章　光子の統計</span>"
+    ]
+  },
+  {
+    "objectID": "part3/08-photon-statistics.html#模範解答問題-8-1",
+    "href": "part3/08-photon-statistics.html#模範解答問題-8-1",
+    "title": "第08章　光子の統計",
+    "section": "模範解答（問題 8-1）",
+    "text": "模範解答（問題 8-1）\n(1) N 個の区別できない玉を g 個の状態に分けるのは、N 個の玉と g-1 本の仕切り棒を一列に並べる場合の数に等しい。全 N+g-1 個の位置から玉の位置 N 個を選ぶので \\dbinom{N+g-1}{N}。\n(2) g=2,N=2：\\dbinom{2+2-1}{2}=\\dbinom{3}{2}=3。Bose は3通り（(2,0),(1,1),(0,2)）。古典は各粒子が独立に2状態を選べて 2^2=4。識別不能だと1つ少ない。\n(3) 古典では「1 が A・2 が B」と「1 が B・2 が A」を別状態と数えるが、識別不能だと粒子のラベルに意味がなく同一状態に潰れる。この「数え過ぎの打ち消し」が状態数を変え、最大エントロピー分布が Boltzmann（\\propto e^{-\\beta E}）から Bose（1/(e^{\\beta E}-1) 型）へずれる起源になる。特に同じ状態に複数入れることが許される効果が分母の -1 を生む。\n答え：場合の数 \\binom{N+g-1}{N}（仕切り棒法）、g=N=2 で 3（古典は4）。ラベルの消失が Bose 統計へのずれを生む。",
+    "crumbs": [
+      "第III部　逆引き1：熱力学・統計力学へ",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>第08章　光子の統計</span>"
+    ]
+  },
+  {
+    "objectID": "part3/08-photon-statistics.html#模範解答問題-8-2",
+    "href": "part3/08-photon-statistics.html#模範解答問題-8-2",
+    "title": "第08章　光子の統計",
+    "section": "模範解答（問題 8-2）",
+    "text": "模範解答（問題 8-2）\n(1) \\ln W=\\sum_i[\\ln(N_i+g_i-1)!-\\ln N_i!-\\ln(g_i-1)!]。Stirling \\ln x!\\simeq x\\ln x-x と g_i-1\\approx g_i を使うと、-x の項は制約で打ち消し合い\n\n\\ln W\\simeq\\sum_i\\left[(N_i+g_i)\\ln(N_i+g_i)-N_i\\ln N_i-g_i\\ln g_i\\right].\n\n(2) 変分関数 \\Phi=\\ln W-\\alpha\\sum_j N_j-\\beta\\sum_j N_jE_j。N_i で微分：\n\n\\frac{\\partial\\ln W}{\\partial N_i}=\\ln(N_i+g_i)+1-\\ln N_i-1=\\ln\\frac{N_i+g_i}{N_i}.\n\n\n\\frac{\\partial\\Phi}{\\partial N_i}=\\ln\\frac{N_i+g_i}{N_i}-\\alpha-\\beta E_i=0\\ \\Rightarrow\\ \\ln\\frac{N_i+g_i}{N_i}=\\alpha+\\beta E_i.\n\n(3) \\dfrac{N_i+g_i}{N_i}=1+\\dfrac{g_i}{N_i}=1+\\dfrac{1}{\\bar n_i}=e^{\\alpha+\\beta E_i} ゆえ \\dfrac{1}{\\bar n_i}=e^{\\alpha+\\beta E_i}-1、すなわち\n\n\\bar n_i=\\frac{1}{e^{\\alpha+\\beta E_i}-1}=\\frac{1}{e^{(E_i-\\mu)/k_BT}-1}.\n\n答え：Stirling＋Lagrange で \\ln\\frac{N_i+g_i}{N_i}=\\alpha+\\beta E_i、解いて \\bar n_i=1/(e^{(E_i-\\mu)/k_BT}-1)。分母の -1 が Bose の特徴。",
+    "crumbs": [
+      "第III部　逆引き1：熱力学・統計力学へ",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>第08章　光子の統計</span>"
+    ]
+  },
+  {
+    "objectID": "part3/08-photon-statistics.html#模範解答問題-8-3",
+    "href": "part3/08-photon-statistics.html#模範解答問題-8-3",
+    "title": "第08章　光子の統計",
+    "section": "模範解答（問題 8-3）",
+    "text": "模範解答（問題 8-3）\n(1) 化学ポテンシャルは粒子数 N が保存量のときに意味を持つ「粒子1個追加の自由エネルギー代償」。光子は物質との吸収・放出で生成・消滅し、総数が保存しない。熱平衡では N_\\gamma が温度・体積から自動的に決まる従属量となり、追加の代償がない＝\\mu=0。\n(2) x=h\\nu/k_BT、\\nu=k_BTx/h、d\\nu=(k_BT/h)dx：\n\nn_\\gamma=\\int_0^\\infty\\frac{8\\pi\\nu^2}{c^3}\\frac{d\\nu}{e^{h\\nu/k_BT}-1}=\\frac{8\\pi}{c^3}\\left(\\frac{k_BT}{h}\\right)^3\\int_0^\\infty\\frac{x^2}{e^x-1}dx.\n\n(3) 積分 =2.404。k_BT/h を計算：k_BT=1.381\\times10^{-23}\\times2.725=3.76\\times10^{-23} J、/h=3.76\\times10^{-23}/6.626\\times10^{-34}=5.68\\times10^{10} s^{-1}。3乗 =1.83\\times10^{32}。8\\pi/c^3=25.13/(3.00\\times10^8)^3=9.31\\times10^{-25}。掛け合わせ：\n\nn_\\gamma=9.31\\times10^{-25}\\times1.83\\times10^{32}\\times2.404\\approx4.1\\times10^8\\ \\mathrm{m^{-3}}=411\\ \\mathrm{cm^{-3}}.\n\n観測値とよく一致。n_\\gamma\\propto T^3 は前因子 (k_BT/h)^3 から明らか。\n答え：光子数非保存ゆえ \\mu=0。n_\\gamma=\\frac{8\\pi}{c^3}(k_BT/h)^3\\cdot2.404\\approx411 cm^{-3}（T=2.725 K）、\\propto T^3。",
+    "crumbs": [
+      "第III部　逆引き1：熱力学・統計力学へ",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>第08章　光子の統計</span>"
+    ]
+  },
+  {
+    "objectID": "part3/08-photon-statistics.html#模範解答問題-8-4",
+    "href": "part3/08-photon-statistics.html#模範解答問題-8-4",
+    "title": "第08章　光子の統計",
+    "section": "模範解答（問題 8-4）",
+    "text": "模範解答（問題 8-4）\n(1) 放射圧 P_{\\rm rad}=u/3=aT^4/3 は温度の4乗に効き密度には依らない（光子数自体が T^3 で決まる）。理想気体 P_{\\rm gas}=nk_BT は密度 n に比例し温度には1乗。よって温度を上げ密度を下げるほど放射圧が相対的に強くなる。\n(2) P_{\\rm rad}=P_{\\rm gas} とおく：\\dfrac{aT^4}{3}=nk_BT\\Rightarrow\\dfrac{T^3}{n}=\\dfrac{3k_B}{a}。左辺が大きい（高温・低密度）ほど放射圧優勢。\n(3) P_{\\rm rad}=aT^4/3=7.566\\times10^{-16}\\times(1.5\\times10^7)^4/3。(1.5\\times10^7)^4=5.06\\times10^{28}。\\times7.566\\times10^{-16}=3.83\\times10^{13}、/3=1.28\\times10^{13} Pa。 P_{\\rm gas}=nk_BT=10^{32}\\times1.381\\times10^{-23}\\times1.5\\times10^7=2.07\\times10^{16} Pa。 比 P_{\\rm rad}/P_{\\rm gas}\\approx1.28\\times10^{13}/2.07\\times10^{16}\\approx6\\times10^{-4}。太陽中心では放射圧は約0.06%で支配的でない。質量の大きい星ほど中心温度が高く密度が相対的に低いため放射圧が増し、超大質量星では放射圧が支配的になって Eddington 限界（星の質量上限）を与える。\n答え：P_{\\rm rad}=aT^4/3（密度非依存）、P_{\\rm gas}=nk_BT。等しい条件 T^3/n=3k_B/a。太陽中心で P_{\\rm rad}/P_{\\rm gas}\\approx6\\times10^{-4}（重い星では支配的）。",
     "crumbs": [
       "第III部　逆引き1：熱力学・統計力学へ",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>第08章　光子の統計</span>"
@@ -1512,7 +1886,51 @@
     "href": "part4/09-classical-failure.html#sec-classical-failure-exercises",
     "title": "第09章　古典論ではなぜ失敗するのか",
     "section": "演習問題",
-    "text": "演習問題\n\n\n\n\n\n\n演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。",
+    "text": "演習問題\n[導出補完] 模範解答 は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。\n\n問題 9-1　空洞モード密度 g(ν)=8πν²/c³ の数え上げ\n[★ 難易度：☆☆ ] [導出補完]\n本文 §9.1 はモード密度 g(\\nu)=8\\pi\\nu^2/c^3 を「第14章で本格導出する結果」として借用している。この幾何的な数え上げを自分で再現せよ。辺長 L の立方体（完全導体壁）で許される波数は\n\n\\mathbf{k}=\\frac{\\pi}{L}(n_x,n_y,n_z),\\qquad n_x,n_y,n_z=1,2,3,\\dots\n\n\n波数の大きさが k 未満のモード総数 N(k) を、\\mathbf{k} 空間の「格子セル体積」と「正の八分球の体積」から求めよ。偏光自由度 \\times 2 を忘れぬこと。\nk=2\\pi\\nu/c を使って単位体積あたりのモード数を \\nu の関数で表し、g(\\nu)=dN/(L^3\\,d\\nu)=8\\pi\\nu^2/c^3 を示せ。\n係数 8\\pi のうち、どの因子が「3次元」に、どの因子が「偏光」に由来するか説明せよ。\n\n関連：§9.1 空洞モードの数え上げ／本格導出は第14章 空洞モード。",
+    "crumbs": [
+      "第IV部　逆引き2：量子論へ",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>第09章　古典論ではなぜ失敗するのか</span>"
+    ]
+  },
+  {
+    "objectID": "part4/09-classical-failure.html#模範解答問題-9-1",
+    "href": "part4/09-classical-failure.html#模範解答問題-9-1",
+    "title": "第09章　古典論ではなぜ失敗するのか",
+    "section": "模範解答（問題 9-1）",
+    "text": "模範解答（問題 9-1）\n(1) 各 (n_x,n_y,n_z) は正の整数なので、許される波数ベクトルは \\mathbf{k} 空間で間隔 \\pi/L の格子点を、第1八分象限（すべて正）に限って占める。1モードあたりの格子セル体積は (\\pi/L)^3。大きさ k 未満の領域は半径 k の球の正の八分の一、体積 \\frac{1}{8}\\cdot\\frac{4}{3}\\pi k^3。偏光2状態を掛けて\n\nN(k)=2\\times\\frac{\\frac{1}{8}\\cdot\\frac{4}{3}\\pi k^3}{(\\pi/L)^3}=2\\times\\frac{\\pi k^3 L^3}{6\\pi^3}=\\frac{L^3 k^3}{3\\pi^2}.\n\n(2) 単位体積あたり n(k)=N/L^3=k^3/(3\\pi^2)。k=2\\pi\\nu/c を代入すると\n\nn(\\nu)=\\frac{1}{3\\pi^2}\\left(\\frac{2\\pi\\nu}{c}\\right)^3=\\frac{8\\pi^3\\nu^3}{3\\pi^2 c^3}=\\frac{8\\pi\\nu^3}{3c^3}.\n\n\ng(\\nu)=\\frac{dn}{d\\nu}=\\frac{8\\pi\\nu^2}{c^3}.\n\n(3) \\nu^2 は3次元波数空間の球殻 4\\pi k^2\\,dk（次元 d なら k^{d-1}）に由来する幾何因子。係数の 2（8\\pi=2\\times4\\pi の 2）は電磁波の横波2偏光に由来する。\n答え：N(k)=L^3k^3/3\\pi^2、よって g(\\nu)=8\\pi\\nu^2/c^3。\\nu^2＝3次元の幾何、係数の 2＝偏光自由度。",
+    "crumbs": [
+      "第IV部　逆引き2：量子論へ",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>第09章　古典論ではなぜ失敗するのか</span>"
+    ]
+  },
+  {
+    "objectID": "part4/09-classical-failure.html#模範解答問題-9-2",
+    "href": "part4/09-classical-failure.html#模範解答問題-9-2",
+    "title": "第09章　古典論ではなぜ失敗するのか",
+    "section": "模範解答（問題 9-2）",
+    "text": "模範解答（問題 9-2）\n(1) 位置と運動量の積分が分離する：\n\nZ=\\frac{1}{h_0}\\int_{-\\infty}^{\\infty}e^{-\\beta p^2/2m}dp\\int_{-\\infty}^{\\infty}e^{-\\beta m\\omega^2 q^2/2}dq.\n\nガウス積分 \\int e^{-a x^2}dx=\\sqrt{\\pi/a} を用いると、各因子は \\sqrt{2\\pi m/\\beta} と \\sqrt{2\\pi/(\\beta m\\omega^2)}。積は\n\nZ=\\frac{1}{h_0}\\sqrt{\\frac{2\\pi m}{\\beta}}\\sqrt{\\frac{2\\pi}{\\beta m\\omega^2}}=\\frac{2\\pi}{h_0\\omega}\\cdot\\frac{1}{\\beta}\\;\\propto\\;\\beta^{-1}.\n\n(2) \\ln Z=-\\ln\\beta+\\text{const} なので\n\n\\langle E\\rangle=-\\frac{\\partial\\ln Z}{\\partial\\beta}=\\frac{1}{\\beta}=k_BT.\n\n2つの二次形式（p^2 と q^2）が各 \\beta^{-1/2} を生み、合わせて \\beta^{-1} ＝ k_BT。\n(3) 等分配は「ハミルトニアン中の二次形式1つあたり \\frac12 k_BT」を与える。自由粒子は運動量の二次形式が3つ（p_x^2,p_y^2,p_z^2）で \\frac32 k_BT。振動子は運動量＋位置で二次形式が2つなので k_BT。位置に対する復元力（ポテンシャル項）があることが差を生む。\n答え：Z\\propto\\beta^{-1}\\Rightarrow\\langle E\\rangle=k_BT。二次形式2個（運動＋ポテンシャル）ゆえ自由粒子の \\frac32k_BT と異なる。",
+    "crumbs": [
+      "第IV部　逆引き2：量子論へ",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>第09章　古典論ではなぜ失敗するのか</span>"
+    ]
+  },
+  {
+    "objectID": "part4/09-classical-failure.html#模範解答問題-9-3",
+    "href": "part4/09-classical-failure.html#模範解答問題-9-3",
+    "title": "第09章　古典論ではなぜ失敗するのか",
+    "section": "模範解答（問題 9-3）",
+    "text": "模範解答（問題 9-3）\n(1) u_\\nu^{\\rm RJ}=\\dfrac{8\\pi\\nu^2}{c^3}k_BT を 0 から \\nu_{\\max} まで積分：\n\nu(\\nu_{\\max})=\\frac{8\\pi k_BT}{c^3}\\int_0^{\\nu_{\\max}}\\nu^2 d\\nu=\\frac{8\\pi k_BT}{3c^3}\\nu_{\\max}^3.\n\n発散は \\nu_{\\max}^3 の3次冪。カットオフを2倍にすると寄与が8倍になる。\n(2) エネルギー密度の振動数あたり寄与 du/d\\nu\\propto\\nu^2 は \\nu とともに単調増加し、上限近傍が積分を支配する。すなわちエネルギーは常に「いちばん高い振動数帯」に集中する。古典論には上限がないので、紫外〜X線〜ガンマ線側がいくらでも寄与を積み増し、発散する。これが「紫外線」破綻の名の由来。\n(3) プランクでは被積分関数が \\nu\\to\\infty で\n\n\\frac{\\nu^3}{e^{h\\nu/k_BT}-1}\\;\\sim\\;\\nu^3 e^{-h\\nu/k_BT}\\to 0\n\nと指数的に抑えられる。指数減衰は任意の冪 \\nu^3 に勝つので積分は収束し、有限の u=aT^4 を与える（演習 10-3）。量子化によるエネルギー単位 h\\nu が高振動数モードを「凍結」させることが、収束の物理的理由である。\n答え：u\\propto\\nu_{\\max}^3 で発散、寄与は高振動数に集中（＝紫外破綻）。プランクは \\nu^3e^{-h\\nu/k_BT}\\to0 で収束。",
+    "crumbs": [
+      "第IV部　逆引き2：量子論へ",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>第09章　古典論ではなぜ失敗するのか</span>"
+    ]
+  },
+  {
+    "objectID": "part4/09-classical-failure.html#模範解答問題-9-4",
+    "href": "part4/09-classical-failure.html#模範解答問題-9-4",
+    "title": "第09章　古典論ではなぜ失敗するのか",
+    "section": "模範解答（問題 9-4）",
+    "text": "模範解答（問題 9-4）\n(1) モード密度 g(\\nu)=8\\pi\\nu^2/c^3 は変えなくてよい。これは古典電磁気＋境界条件の幾何的結果で、量子論を要しない（実際プランク分布の前因子 \\nu^2/\\nu^3 はこれが起源）。変えるべきは各モードの平均エネルギー \\langle E\\rangle。等分配の k_BT（エネルギー連続の仮定に依存）を、量子化された h\\nu/(e^{h\\nu/k_BT}-1) に置き換える必要がある。\n(2) ① スペクトルに有限のピークが存在する（古典は単調増加でピークなし）。② 高振動数側が指数的に減衰する（古典は \\nu^2 で増大）。CMB の完全な黒体形や恒星スペクトルがこれを示す。\n(3) 起きない。凍結は「エネルギー単位 \\epsilon(\\nu) が高振動数で k_BT を超える」ことで生じる。\\epsilon_0 が定数なら、\\epsilon_0\\ll k_BT を満たす限りすべての振動数で等分配 k_BT が回復し、\\nu\\to\\infty でもモードが凍結せず発散は残る。\\epsilon\\propto\\nu という振動数に比例して増える単位であることが、高振動数を選択的に止める鍵である。\n答え：g(\\nu) は不変、\\langle E\\rangle を量子化。否定する観測＝ピークの存在と指数減衰。\\epsilon\\propto\\nu でないと凍結は起きない。",
     "crumbs": [
       "第IV部　逆引き2：量子論へ",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>第09章　古典論ではなぜ失敗するのか</span>"
@@ -1644,7 +2062,51 @@
     "href": "part4/10-planck-quantum.html#sec-planck-quantum-exercises",
     "title": "第10章　プランクの量子仮説",
     "section": "演習問題",
-    "text": "演習問題\n\n\n\n\n\n\n演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。",
+    "text": "演習問題\n[導出補完] 模範解答 は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。\n\n問題 10-1　量子化振動子の分配関数と平均エネルギー\n[★ 難易度：☆ ] [導出補完]\n§10.2 は分配関数 Z_1=1/(1-e^{-\\beta h\\nu}) と平均エネルギー \\langle E\\rangle=h\\nu/(e^{h\\nu/k_BT}-1) を「第7章 §7.2 の手法で」与えた。両式を自力で導け。準位は E_n=nh\\nu\\ (n=0,1,2,\\ldots)。\n\n等比級数の和として Z_1=\\sum_{n=0}^\\infty e^{-\\beta nh\\nu}=\\dfrac{1}{1-e^{-\\beta h\\nu}} を示せ（収束条件も述べよ）。\n\\langle E\\rangle=-\\partial\\ln Z_1/\\partial\\beta を実行して \\langle E\\rangle=\\dfrac{h\\nu}{e^{\\beta h\\nu}-1} を導け。\n古典結果 \\langle E\\rangle=k_BT と比べ、低振動数極限で一致することを確認せよ。\n\n関連：§10.2 振動子の量子化／手法は第7章 統計力学、古典との対比は演習 9-2。",
+    "crumbs": [
+      "第IV部　逆引き2：量子論へ",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>第10章　プランクの量子仮説</span>"
+    ]
+  },
+  {
+    "objectID": "part4/10-planck-quantum.html#模範解答問題-10-1",
+    "href": "part4/10-planck-quantum.html#模範解答問題-10-1",
+    "title": "第10章　プランクの量子仮説",
+    "section": "模範解答（問題 10-1）",
+    "text": "模範解答（問題 10-1）\n(1) 公比 r=e^{-\\beta h\\nu} の等比級数。\\beta,h,\\nu&gt;0 より 0&lt;r&lt;1 で収束し、\n\nZ_1=\\sum_{n=0}^\\infty r^n=\\frac{1}{1-r}=\\frac{1}{1-e^{-\\beta h\\nu}}.\n\n(2) \\ln Z_1=-\\ln(1-e^{-\\beta h\\nu})。\\beta で微分：\n\n\\langle E\\rangle=-\\frac{\\partial\\ln Z_1}{\\partial\\beta}=\\frac{h\\nu\\,e^{-\\beta h\\nu}}{1-e^{-\\beta h\\nu}}=\\frac{h\\nu}{e^{\\beta h\\nu}-1}=\\frac{h\\nu}{e^{h\\nu/k_BT}-1}.\n\n(3) 低振動数 x\\equiv h\\nu/k_BT\\ll1 で e^x-1\\simeq x ゆえ \\langle E\\rangle\\to h\\nu/x=k_BT。古典の等分配と一致する。\n答え：Z_1=1/(1-e^{-\\beta h\\nu})、\\langle E\\rangle=h\\nu/(e^{h\\nu/k_BT}-1)\\xrightarrow{h\\nu\\ll k_BT}k_BT。",
+    "crumbs": [
+      "第IV部　逆引き2：量子論へ",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>第10章　プランクの量子仮説</span>"
+    ]
+  },
+  {
+    "objectID": "part4/10-planck-quantum.html#模範解答問題-10-2",
+    "href": "part4/10-planck-quantum.html#模範解答問題-10-2",
+    "title": "第10章　プランクの量子仮説",
+    "section": "模範解答（問題 10-2）",
+    "text": "模範解答（問題 10-2）\n(1) B_\\nu=\\dfrac{2h\\nu^3}{c^2}\\dfrac{1}{e^x-1}。x\\ll1 で e^x-1\\simeq x=h\\nu/k_BT ゆえ B_\\nu\\to\\dfrac{2h\\nu^3}{c^2}\\cdot\\dfrac{k_BT}{h\\nu}=\\dfrac{2\\nu^2}{c^2}k_BT。h が消える＝古典極限。\n(2) e^x-1=x\\left(1+\\dfrac{x}{2}+\\dfrac{x^2}{6}+\\cdots\\right) ゆえ\n\n\\langle E\\rangle=\\frac{h\\nu}{e^x-1}=\\frac{k_BT}{1+\\frac{x}{2}+\\cdots}=k_BT\\left(1-\\frac{x}{2}+\\cdots\\right)=k_BT-\\frac{h\\nu}{2}+\\cdots.\n\n最初の補正は -h\\nu/2。負号は、量子化により各モードが古典の等分配値より小さいエネルギーしか受け取れない（高振動数ほど効く凍結の始まり）ことを意味する。\n(3) x\\gg1 で e^x-1\\simeq e^x ゆえ B_\\nu\\to\\dfrac{2h\\nu^3}{c^2}e^{-x}=\\dfrac{2h\\nu^3}{c^2}e^{-h\\nu/k_BT}。これが Wien の式。\n答え：低：2\\nu^2k_BT/c^2；補正 \\langle E\\rangle\\simeq k_BT-\\tfrac12 h\\nu（負＝凍結の兆し）；高：2h\\nu^3e^{-h\\nu/k_BT}/c^2。",
+    "crumbs": [
+      "第IV部　逆引き2：量子論へ",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>第10章　プランクの量子仮説</span>"
+    ]
+  },
+  {
+    "objectID": "part4/10-planck-quantum.html#模範解答問題-10-3",
+    "href": "part4/10-planck-quantum.html#模範解答問題-10-3",
+    "title": "第10章　プランクの量子仮説",
+    "section": "模範解答（問題 10-3）",
+    "text": "模範解答（問題 10-3）\n(1) x=h\\nu/k_BT より \\nu=k_BTx/h,\\ d\\nu=(k_BT/h)dx。代入して\n\nu=\\frac{8\\pi h}{c^3}\\left(\\frac{k_BT}{h}\\right)^4\\int_0^\\infty\\frac{x^3}{e^x-1}dx.\n\n(2) 積分 =\\pi^4/15 を入れて\n\nu=\\frac{8\\pi^5 k_B^4}{15c^3h^3}T^4\\equiv aT^4,\\qquad a=\\frac{8\\pi^5k_B^4}{15c^3h^3}\\approx7.57\\times10^{-16}\\ \\mathrm{J\\,m^{-3}\\,K^{-4}}.\n\n(3) a=4\\sigma/c より \\sigma=ac/4=7.57\\times10^{-16}\\times3.00\\times10^8/4\\approx5.67\\times10^{-8}\\ \\mathrm{W\\,m^{-2}\\,K^{-4}}。既知の Stefan–Boltzmann 定数と一致する。\n答え：a=\\dfrac{8\\pi^5k_B^4}{15c^3h^3}\\approx7.57\\times10^{-16}\\,\\mathrm{J\\,m^{-3}K^{-4}}、\\sigma=ac/4\\approx5.67\\times10^{-8}\\,\\mathrm{W\\,m^{-2}K^{-4}}。",
+    "crumbs": [
+      "第IV部　逆引き2：量子論へ",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>第10章　プランクの量子仮説</span>"
+    ]
+  },
+  {
+    "objectID": "part4/10-planck-quantum.html#模範解答問題-10-4",
+    "href": "part4/10-planck-quantum.html#模範解答問題-10-4",
+    "title": "第10章　プランクの量子仮説",
+    "section": "模範解答（問題 10-4）",
+    "text": "模範解答（問題 10-4）\n(1) f(\\nu)=\\nu^3(e^x-1)^{-1}、x=h\\nu/k_BT なので dx/d\\nu=h/k_BT。積の微分をゼロとおき、\\nu^2/(e^x-1) で割って h\\nu/k_BT=x を使うと\n\n3-\\frac{x e^x}{e^x-1}=0\\ \\Longrightarrow\\ 3(1-e^{-x})=x.\n\n(2) この超越方程式の非自明解は x_{\\rm peak}\\approx2.821。よって \\nu_{\\rm peak}=x_{\\rm peak}k_BT/h=2.821\\,k_BT/h\\propto T（Wien 変位則）。\n(3) T=5800 K で \\nu_{\\rm peak}\\approx3.4\\times10^{14} Hz、\\lambda=c/\\nu_{\\rm peak}\\approx8.8\\times10^{2} nm（近赤外）。これは B_\\lambda を最大化して得る \\lambda_{\\rm peak}\\approx500 nm とは別物。B_\\nu と B_\\lambda ではヤコビアン d\\nu=-(c/\\lambda^2)d\\lambda のため最大化条件が異なり（\\lambda 側は x\\approx4.965）、\\nu_{\\rm peak}\\lambda_{\\rm peak}\\ne c となる。\n答え：3(1-e^{-x})=x\\Rightarrow x\\approx2.821、\\nu_{\\rm peak}=2.821k_BT/h\\propto T。太陽で \\nu_{\\rm peak}\\approx3.4\\times10^{14} Hz（\\sim880 nm）。B_\\nu と B_\\lambda のピークは一致しない。",
     "crumbs": [
       "第IV部　逆引き2：量子論へ",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>第10章　プランクの量子仮説</span>"
@@ -1776,7 +2238,51 @@
     "href": "part4/11-einstein-method.html#sec-einstein-method-exercises",
     "title": "第11章　アインシュタインの方法",
     "section": "演習問題",
-    "text": "演習問題\n\n\n\n\n\n\n演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。",
+    "text": "演習問題\n[導出補完] 模範解答 は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。\n\n問題 11-1　詳細釣り合いから Einstein 関係式\n[★ 難易度：☆☆ ] [導出補完]\n§11.3 は詳細釣り合いの式から Einstein 関係式を「整理すると」得た。途中代数を完全に埋めよ。出発点：\n\nn_l B_{lu}J_\\nu=n_u(A_{ul}+B_{ul}J_\\nu),\\qquad \\frac{n_u}{n_l}=\\frac{g_u}{g_l}e^{-h\\nu/k_BT}.\n\n\nJ_\\nu について解き、J_\\nu=\\dfrac{A_{ul}/B_{ul}}{(g_l B_{lu}/g_u B_{ul})e^{h\\nu/k_BT}-1} を導け。\nこれが任意の T で観測されるプランク分布 B_\\nu=\\dfrac{2h\\nu^3/c^2}{e^{h\\nu/k_BT}-1} に一致する条件として、2つの Einstein 関係式 g_lB_{lu}=g_uB_{ul} と A_{ul}/B_{ul}=2h\\nu^3/c^2 を導け。\nなぜ「任意の T で」一致させることが2式を同時に要求するのか説明せよ。\n\n関連：§11.3 詳細釣り合い／詳細釣り合いの原理は第6章 §6.6、同じ占有因子の別ルートは第8章と演習 10-1。",
+    "crumbs": [
+      "第IV部　逆引き2：量子論へ",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>第11章　アインシュタインの方法</span>"
+    ]
+  },
+  {
+    "objectID": "part4/11-einstein-method.html#模範解答問題-11-1",
+    "href": "part4/11-einstein-method.html#模範解答問題-11-1",
+    "title": "第11章　アインシュタインの方法",
+    "section": "模範解答（問題 11-1）",
+    "text": "模範解答（問題 11-1）\n(1) J_\\nu の項を集める：\n\nn_l B_{lu}J_\\nu-n_u B_{ul}J_\\nu=n_u A_{ul}\\ \\Rightarrow\\ J_\\nu=\\frac{n_u A_{ul}}{n_l B_{lu}-n_u B_{ul}}=\\frac{A_{ul}/B_{ul}}{\\dfrac{n_l}{n_u}\\dfrac{B_{lu}}{B_{ul}}-1}.\n\nn_l/n_u=(g_l/g_u)e^{+h\\nu/k_BT} を代入：\n\nJ_\\nu=\\frac{A_{ul}/B_{ul}}{\\dfrac{g_lB_{lu}}{g_uB_{ul}}e^{h\\nu/k_BT}-1}.\n\n(2) プランク分布 B_\\nu=\\dfrac{2h\\nu^3/c^2}{e^{h\\nu/k_BT}-1} と項ごとに比較する。分母の指数の係数が 1 であるためには\n\n\\frac{g_lB_{lu}}{g_uB_{ul}}=1\\ \\Longrightarrow\\ g_lB_{lu}=g_uB_{ul}.\n\nこれを使うと分子は A_{ul}/B_{ul}、これがプランクの前因子に等しい：\n\n\\frac{A_{ul}}{B_{ul}}=\\frac{2h\\nu^3}{c^2}.\n\n(3) Einstein 係数は T に依らない原子の固有量。一方 J_\\nu=B_\\nu(T) はすべての T で成り立たねばならない。指数 e^{h\\nu/k_BT} は T で連続的に変わるので、「指数の係数＝1」（T 依存項の一致）と「全体の前因子の一致」（T 非依存項の一致）は独立な条件となり、2式を同時に要求する。\n答え：g_lB_{lu}=g_uB_{ul} かつ A_{ul}/B_{ul}=2h\\nu^3/c^2。T 依存・非依存の両部分を一致させるため2式が必要。",
+    "crumbs": [
+      "第IV部　逆引き2：量子論へ",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>第11章　アインシュタインの方法</span>"
+    ]
+  },
+  {
+    "objectID": "part4/11-einstein-method.html#模範解答問題-11-2",
+    "href": "part4/11-einstein-method.html#模範解答問題-11-2",
+    "title": "第11章　アインシュタインの方法",
+    "section": "模範解答（問題 11-2）",
+    "text": "模範解答（問題 11-2）\n(1) 熱場で J_\\nu=B_\\nu=\\dfrac{2h\\nu^3/c^2}{e^{h\\nu/k_BT}-1}。よって\n\nR=\\frac{A_{ul}}{B_{ul}J_\\nu}=\\frac{A_{ul}/B_{ul}}{B_\\nu}=\\frac{2h\\nu^3/c^2}{\\dfrac{2h\\nu^3/c^2}{e^{h\\nu/k_BT}-1}}=e^{h\\nu/k_BT}-1.\n\n(2) 電波（h\\nu\\ll k_BT）：R\\approx h\\nu/k_BT\\ll1、誘導放出が自発放出を圧倒。可視・紫外（h\\nu\\gg k_BT）：R\\approx e^{h\\nu/k_BT}\\gg1、自発放出が圧倒的に優勢。\n(3) メーザーは誘導放出が自発放出を上回ることで増幅が成立する。R が小さい電波領域では、もともと熱場でも誘導放出が優勢になりやすく、反転分布が少し作られれば誘導放出が雪崩的に効く。一方、可視・紫外では R\\gg1（自発放出優勢）のため、増幅（レーザー）には強い反転分布と共振器が必要になる。よって自然界の「メーザー」は電波領域に多い。\n答え：R=e^{h\\nu/k_BT}-1。電波で R\\ll1（誘導優勢）、可視・紫外で R\\gg1（自発優勢）。宇宙メーザーが電波に多いことと整合。",
+    "crumbs": [
+      "第IV部　逆引き2：量子論へ",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>第11章　アインシュタインの方法</span>"
+    ]
+  },
+  {
+    "objectID": "part4/11-einstein-method.html#模範解答問題-11-3",
+    "href": "part4/11-einstein-method.html#模範解答問題-11-3",
+    "title": "第11章　アインシュタインの方法",
+    "section": "模範解答（問題 11-3）",
+    "text": "模範解答（問題 11-3）\n(1) 同じ物理過程（吸収率 [s^{-1}]）を2つの規約で書いた量は等しい：\n\nB_{lu}J_\\nu=B_{lu}^{(u)}u_\\nu.\n\nu_\\nu=(4\\pi/c)J_\\nu を代入して J_\\nu を消すと\n\nB_{lu}J_\\nu=B_{lu}^{(u)}\\frac{4\\pi}{c}J_\\nu\\ \\Rightarrow\\ B_{lu}^{(u)}=\\frac{c}{4\\pi}B_{lu}.\n\n(2) B_{ul} も同様に B_{ul}^{(u)}=(c/4\\pi)B_{ul}。よって\n\n\\frac{A_{ul}}{B_{ul}^{(u)}}=\\frac{A_{ul}}{(c/4\\pi)B_{ul}}=\\frac{4\\pi}{c}\\cdot\\frac{A_{ul}}{B_{ul}}=\\frac{4\\pi}{c}\\cdot\\frac{2h\\nu^3}{c^2}=\\frac{8\\pi h\\nu^3}{c^3}.\n\nこれは u_\\nu 規約での標準形（量子光学でよく見る 8\\pi h\\nu^3/c^3）と一致する。\n(3) どちらの規約で書かれた B かを取り違えると、係数の数値が c/4\\pi（または逆数）倍ずれ、線吸収係数・振動子強度・遷移率の換算がすべて狂う。論文・教科書を読むときは「B が J_\\nu に掛かるか u_\\nu に掛かるか」を必ず確認する。\n答え：B_{lu}^{(u)}=\\tfrac{c}{4\\pi}B_{lu}、A_{ul}/B_{ul}^{(u)}=8\\pi h\\nu^3/c^3。規約取り違えは係数を 4\\pi/c 倍ずらす。",
+    "crumbs": [
+      "第IV部　逆引き2：量子論へ",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>第11章　アインシュタインの方法</span>"
+    ]
+  },
+  {
+    "objectID": "part4/11-einstein-method.html#模範解答問題-11-4",
+    "href": "part4/11-einstein-method.html#模範解答問題-11-4",
+    "title": "第11章　アインシュタインの方法",
+    "section": "模範解答（問題 11-4）",
+    "text": "模範解答（問題 11-4）\n(1) \\tau=1/A_{ul}=1/10^8=1\\times10^{-8} s =10 ns。\n(2) \\Delta\\nu_{\\rm nat}=A_{ul}/2\\pi=10^8/(2\\pi)\\approx1.6\\times10^7 Hz \\approx16 MHz。\n(3) \\lambda=500 nm、\\lambda^2/c=(5.0\\times10^{-7})^2/(3.0\\times10^8)=2.5\\times10^{-13}/3.0\\times10^8\\approx8.3\\times10^{-22} s·m。よって\n\n\\Delta\\lambda_{\\rm nat}=\\frac{\\lambda^2}{c}\\Delta\\nu_{\\rm nat}\\approx8.3\\times10^{-22}\\times1.6\\times10^7\\approx1.3\\times10^{-14}\\ \\mathrm{m}=1.3\\times10^{-5}\\ \\mathrm{nm}.\n\n相対幅 \\Delta\\lambda/\\lambda\\approx1.3\\times10^{-14}/5.0\\times10^{-7}\\approx2.7\\times10^{-8}。きわめて狭い。理由：実際の星間・恒星大気の線は熱運動によるドップラー幅が支配的で、\\Delta\\nu_D/\\nu\\sim v_{\\rm th}/c\\sim10^{-5} 程度と自然幅より3桁ほど広い。自然幅が見えるのは線の遠い翼（ローレンツ翼）や低温・低速度分散の特殊な状況に限られる。\n答え：\\tau=10 ns、\\Delta\\nu_{\\rm nat}\\approx16 MHz、\\Delta\\lambda_{\\rm nat}\\approx1.3\\times10^{-5} nm（\\Delta\\lambda/\\lambda\\sim3\\times10^{-8}）。通常はドップラー幅が支配的で自然幅は埋もれる。",
     "crumbs": [
       "第IV部　逆引き2：量子論へ",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>第11章　アインシュタインの方法</span>"
@@ -1908,7 +2414,51 @@
     "href": "part4/12-quantum-foundations.html#sec-quantum-foundations-exercises",
     "title": "第12章　量子力学の基礎へ戻る",
     "section": "演習問題",
-    "text": "演習問題\n\n\n\n\n\n\n演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。",
+    "text": "演習問題\n[導出補完] 模範解答 は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。\n\n問題 12-1　生成消滅演算子でハミルトニアンを対角化\n[★ 難易度：☆☆ ] [導出補完]\n§12.3 は \\hat H=\\hbar\\omega(\\hat a^\\dagger\\hat a+\\tfrac12) を結果として与えた。定義\n\n\\hat a=\\sqrt{\\tfrac{m\\omega}{2\\hbar}}\\left(\\hat x+\\tfrac{i}{m\\omega}\\hat p\\right),\\quad \\hat a^\\dagger=\\sqrt{\\tfrac{m\\omega}{2\\hbar}}\\left(\\hat x-\\tfrac{i}{m\\omega}\\hat p\\right)\n\nと [\\hat x,\\hat p]=i\\hbar から、\\hat H=\\dfrac{\\hat p^2}{2m}+\\dfrac12 m\\omega^2\\hat x^2 がこの形になることを示せ。さらに [\\hat a,\\hat a^\\dagger]=1 を確かめよ。\n関連：§12.3 生成消滅演算子、§12.2 調和振動子／準位 E_n=(n+\\tfrac12)\\hbar\\omega は第10章のエネルギー量子 h\\nu の量子力学的根拠（演習 10-1）。",
+    "crumbs": [
+      "第IV部　逆引き2：量子論へ",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>第12章　量子力学の基礎へ戻る</span>"
+    ]
+  },
+  {
+    "objectID": "part4/12-quantum-foundations.html#模範解答問題-12-1",
+    "href": "part4/12-quantum-foundations.html#模範解答問題-12-1",
+    "title": "第12章　量子力学の基礎へ戻る",
+    "section": "模範解答（問題 12-1）",
+    "text": "模範解答（問題 12-1）\n\\hat a^\\dagger\\hat a を展開する：\n\n\\hat a^\\dagger\\hat a=\\frac{m\\omega}{2\\hbar}\\left(\\hat x-\\frac{i}{m\\omega}\\hat p\\right)\\left(\\hat x+\\frac{i}{m\\omega}\\hat p\\right)=\\frac{m\\omega}{2\\hbar}\\left[\\hat x^2+\\frac{1}{m^2\\omega^2}\\hat p^2+\\frac{i}{m\\omega}(\\hat x\\hat p-\\hat p\\hat x)\\right].\n\n\\hat x\\hat p-\\hat p\\hat x=[\\hat x,\\hat p]=i\\hbar なので \\dfrac{i}{m\\omega}(i\\hbar)=-\\dfrac{\\hbar}{m\\omega}。代入：\n\n\\hat a^\\dagger\\hat a=\\frac{m\\omega}{2\\hbar}\\hat x^2+\\frac{1}{2\\hbar m\\omega}\\hat p^2-\\frac12.\n\n両辺に \\hbar\\omega を掛ける：\n\n\\hbar\\omega\\,\\hat a^\\dagger\\hat a=\\frac12 m\\omega^2\\hat x^2+\\frac{\\hat p^2}{2m}-\\frac12\\hbar\\omega=\\hat H-\\frac12\\hbar\\omega.\n\n\n\\therefore\\ \\hat H=\\hbar\\omega\\left(\\hat a^\\dagger\\hat a+\\frac12\\right).\n\n交換関係：同様に \\hat a\\hat a^\\dagger=\\dfrac{m\\omega}{2\\hbar}\\hat x^2+\\dfrac{1}{2\\hbar m\\omega}\\hat p^2+\\dfrac12。差をとると\n\n[\\hat a,\\hat a^\\dagger]=\\hat a\\hat a^\\dagger-\\hat a^\\dagger\\hat a=\\frac12-\\left(-\\frac12\\right)=1.\n\n答え：\\hat H=\\hbar\\omega(\\hat a^\\dagger\\hat a+\\tfrac12)。零点 \\tfrac12\\hbar\\omega は交換子 [\\hat x,\\hat p]=i\\hbar から出る。[\\hat a,\\hat a^\\dagger]=1。",
+    "crumbs": [
+      "第IV部　逆引き2：量子論へ",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>第12章　量子力学の基礎へ戻る</span>"
+    ]
+  },
+  {
+    "objectID": "part4/12-quantum-foundations.html#模範解答問題-12-2",
+    "href": "part4/12-quantum-foundations.html#模範解答問題-12-2",
+    "title": "第12章　量子力学の基礎へ戻る",
+    "section": "模範解答（問題 12-2）",
+    "text": "模範解答（問題 12-2）\n(1) \\Delta p=\\hbar/(2\\Delta x) を代入：\n\nE(\\Delta x)=\\frac{\\hbar^2}{8m(\\Delta x)^2}+\\frac12 m\\omega^2(\\Delta x)^2.\n\n(2) u=(\\Delta x)^2 とおいて dE/du=0：\n\n-\\frac{\\hbar^2}{8m u^2}+\\frac12 m\\omega^2=0\\ \\Rightarrow\\ u^2=\\frac{\\hbar^2}{4m^2\\omega^2}\\ \\Rightarrow\\ u=(\\Delta x)^2=\\frac{\\hbar}{2m\\omega}.\n\n代入：\n\nE_{\\min}=\\frac{\\hbar^2}{8m}\\cdot\\frac{2m\\omega}{\\hbar}+\\frac12 m\\omega^2\\cdot\\frac{\\hbar}{2m\\omega}=\\frac{\\hbar\\omega}{4}+\\frac{\\hbar\\omega}{4}=\\frac12\\hbar\\omega.\n\n運動エネルギーとポテンシャルが各 \\tfrac14\\hbar\\omega ずつ等分される点が最小。\n答え：(\\Delta x)^2=\\hbar/2m\\omega で E_{\\min}=\\tfrac12\\hbar\\omega。完全静止（\\Delta x=0）は不確定性が禁じる。",
+    "crumbs": [
+      "第IV部　逆引き2：量子論へ",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>第12章　量子力学の基礎へ戻る</span>"
+    ]
+  },
+  {
+    "objectID": "part4/12-quantum-foundations.html#模範解答問題-12-3",
+    "href": "part4/12-quantum-foundations.html#模範解答問題-12-3",
+    "title": "第12章　量子力学の基礎へ戻る",
+    "section": "模範解答（問題 12-3）",
+    "text": "模範解答（問題 12-3）\n(1) Boltzmann 重み P_n=e^{-\\beta E_n}/Z。E_n=(n+\\tfrac12)\\hbar\\omega なので\n\n\\langle E\\rangle=\\sum_n\\left(n+\\tfrac12\\right)\\hbar\\omega\\,P_n=\\tfrac12\\hbar\\omega+\\hbar\\omega\\langle n\\rangle=\\frac12\\hbar\\omega+\\frac{\\hbar\\omega}{e^{\\hbar\\omega/k_BT}-1}.\n\n（\\langle n\\rangle=\\sum n P_n=1/(e^{\\beta\\hbar\\omega}-1) は問題 10-1 の計算と同じ。）\n(2) 零点項 \\tfrac12\\hbar\\omega は温度に依らない定数オフセット。放射場のエネルギー密度や物質との熱的なやりとり（吸収・放出）に効くのは、真空（n=0）より上の励起分 \\hbar\\omega\\langle n\\rangle だけである。エネルギーの絶対基準（ハミルトニアンの零点）は物理に効かないので、観測される u_\\nu は励起分すなわちプランク分布になる。零点をすべてのモードで足すと発散するが、これは絶対値として観測不能。\n(3) 零点の差や変化は観測可能。例：①境界条件でモード構造を変えると真空エネルギーが変化する Casimir 効果。②真空電磁場の揺らぎが励起原子を揺さぶって起こす 自発放出（A_{ul} の起源、第11章）。これらは線の自然幅（第22章）として観測スペクトルにも痕跡を残す。\n答え：\\langle E\\rangle=\\tfrac12\\hbar\\omega+\\hbar\\omega/(e^{\\hbar\\omega/k_BT}-1)。零点は T 非依存の定数オフセットで放射の励起分に効かないため u_\\nu に出ない。だが差は Casimir 効果・自発放出として観測可能。",
+    "crumbs": [
+      "第IV部　逆引き2：量子論へ",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>第12章　量子力学の基礎へ戻る</span>"
+    ]
+  },
+  {
+    "objectID": "part4/12-quantum-foundations.html#模範解答問題-12-4",
+    "href": "part4/12-quantum-foundations.html#模範解答問題-12-4",
+    "title": "第12章　量子力学の基礎へ戻る",
+    "section": "模範解答（問題 12-4）",
+    "text": "模範解答（問題 12-4）\n(1) \\hat a\\hat a^\\dagger=\\hat a^\\dagger\\hat a+[\\hat a,\\hat a^\\dagger]=\\hat n+1 ゆえ\n\n\\big\\|\\hat a^\\dagger|n\\rangle\\big\\|^2=\\langle n|\\hat a\\hat a^\\dagger|n\\rangle=\\langle n|(\\hat n+1)|n\\rangle=n+1.\n\nまた \\hat n(\\hat a^\\dagger|n\\rangle)=(\\hat a^\\dagger\\hat n+\\hat a^\\dagger)|n\\rangle=(n+1)\\hat a^\\dagger|n\\rangle より \\hat a^\\dagger|n\\rangle は固有値 n+1 の状態。規格化して位相を実にとれば\n\n\\hat a^\\dagger|n\\rangle=\\sqrt{n+1}\\,|n+1\\rangle.\n\n(2) 同様に \\|\\hat a|n\\rangle\\|^2=\\langle n|\\hat a^\\dagger\\hat a|n\\rangle=\\langle n|\\hat n|n\\rangle=n ゆえ \\hat a|n\\rangle=\\sqrt{n}\\,|n-1\\rangle。n=0 では係数 \\sqrt0=0 となり \\hat a|0\\rangle=0。真空はこれ以上下げられない。\n(3) 電磁場の各モードをこの調和振動子と同一視すると、\\hat a^\\dagger はそのモードに光子を1個生成し、\\hat a は1個消滅させる。|n\\rangle は「光子 n 個の状態」、|0\\rangle は光子のない電磁真空に対応する。\n答え：\\|\\hat a^\\dagger|n\\rangle\\|^2=n+1\\Rightarrow\\hat a^\\dagger|n\\rangle=\\sqrt{n+1}|n+1\\rangle、\\hat a|n\\rangle=\\sqrt n|n-1\\rangle、\\hat a|0\\rangle=0。電磁場では光子の生成・消滅。",
     "crumbs": [
       "第IV部　逆引き2：量子論へ",
       "<span class='chapter-number'>14</span>  <span class='chapter-title'>第12章　量子力学の基礎へ戻る</span>"
@@ -2051,7 +2601,51 @@
     "href": "part5/13-electromagnetic-waves.html#sec-electromagnetic-waves-exercises",
     "title": "第13章　電磁波としての光",
     "section": "演習問題",
-    "text": "演習問題\n\n\n\n\n\n\n演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。",
+    "text": "演習問題\n[導出補完] 模範解答 は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。\n\n問題 13-1　Maxwell 方程式から波動方程式を導く\n[★ 難易度：☆☆ ] [導出補完]\n§13.2 はベクトル恒等式を使うとだけ述べた。真空 Maxwell 方程式から \\mathbf E の波動方程式を導く。\\nabla\\cdot\\mathbf E=0、\\nabla\\times\\mathbf E=-\\partial_t\\mathbf B、\\nabla\\times\\mathbf B=\\dfrac{1}{c^2}\\partial_t\\mathbf E。\n\n\\nabla\\times\\mathbf E=-\\partial_t\\mathbf B の両辺に \\nabla\\times を作用させ、恒等式 \\nabla\\times(\\nabla\\times\\mathbf E)=\\nabla(\\nabla\\cdot\\mathbf E)-\\nabla^2\\mathbf E を使って -\\nabla^2\\mathbf E=-\\partial_t(\\nabla\\times\\mathbf B) を示せ。\n右辺に \\nabla\\times\\mathbf B=\\dfrac{1}{c^2}\\partial_t\\mathbf E を代入し、\\nabla^2\\mathbf E-\\dfrac{1}{c^2}\\partial_t^2\\mathbf E=0 を導け。\nc=1/\\sqrt{\\mu_0\\epsilon_0} が波の伝播速度としてこの式に現れることの意味（光速が電磁気の基本定数から決まる）を一言で述べよ。\n\n関連：§13.2 波動方程式／前因子の 1/c^2 の起源は§14.4（演習 14-1）。",
+    "crumbs": [
+      "第V部　逆引き3：電磁気学へ",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>第13章　電磁波としての光</span>"
+    ]
+  },
+  {
+    "objectID": "part5/13-electromagnetic-waves.html#模範解答問題-13-1",
+    "href": "part5/13-electromagnetic-waves.html#模範解答問題-13-1",
+    "title": "第13章　電磁波としての光",
+    "section": "模範解答（問題 13-1）",
+    "text": "模範解答（問題 13-1）\n(1) \\nabla\\times(\\nabla\\times\\mathbf E)=-\\partial_t(\\nabla\\times\\mathbf B)。左辺に恒等式を使い、\\nabla\\cdot\\mathbf E=0（真空）より \\nabla(\\nabla\\cdot\\mathbf E)=0 ゆえ\n\n\\nabla(\\nabla\\cdot\\mathbf E)-\\nabla^2\\mathbf E=-\\nabla^2\\mathbf E=-\\partial_t(\\nabla\\times\\mathbf B).\n\n(2) \\nabla\\times\\mathbf B=\\dfrac{1}{c^2}\\partial_t\\mathbf E を代入：\n\n-\\nabla^2\\mathbf E=-\\partial_t\\left(\\frac{1}{c^2}\\partial_t\\mathbf E\\right)=-\\frac{1}{c^2}\\partial_t^2\\mathbf E\\ \\Rightarrow\\ \\nabla^2\\mathbf E-\\frac{1}{c^2}\\partial_t^2\\mathbf E=0.\n\n(3) この波動方程式の波の速さは方程式中の定数 c=1/\\sqrt{\\mu_0\\epsilon_0}。電気・磁気の基本定数だけから光速が決まり、光が電磁波であること、その速度が真空中で c であることが Maxwell 方程式に組み込まれている。これがプランク前因子の c の出どころ。\n答え：\\nabla^2\\mathbf E-\\frac{1}{c^2}\\partial_t^2\\mathbf E=0。波速 c=1/\\sqrt{\\mu_0\\epsilon_0} が電磁気定数から決まる。",
+    "crumbs": [
+      "第V部　逆引き3：電磁気学へ",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>第13章　電磁波としての光</span>"
+    ]
+  },
+  {
+    "objectID": "part5/13-electromagnetic-waves.html#模範解答問題-13-2",
+    "href": "part5/13-electromagnetic-waves.html#模範解答問題-13-2",
+    "title": "第13章　電磁波としての光",
+    "section": "模範解答（問題 13-2）",
+    "text": "模範解答（問題 13-2）\n(1) \\partial_t\\to-i\\omega、\\nabla\\to i\\mathbf k ゆえ \\nabla^2\\to-|\\mathbf k|^2、\\partial_t^2\\to-\\omega^2。波動方程式は\n\n\\left(-|\\mathbf k|^2+\\frac{\\omega^2}{c^2}\\right)\\mathbf E_0=0\\ \\Rightarrow\\ \\omega^2=c^2|\\mathbf k|^2\\ \\Rightarrow\\ \\omega=c|\\mathbf k|.\n\n\\omega=2\\pi\\nu、|\\mathbf k|=2\\pi/\\lambda より \\nu=c/\\lambda。\n(2) \\nabla\\cdot\\mathbf E=i\\mathbf k\\cdot\\mathbf E_0\\,e^{i(\\cdots)}=0\\Rightarrow\\mathbf k\\cdot\\mathbf E_0=0。電場は伝播方向に垂直＝横波。\n(3) \\mathbf E_0 は \\mathbf k に垂直な平面（2次元）内で自由。よって独立な基底偏光は2つ（例：直線偏光2方向、または右・左円偏光）。任意の偏光はこの2つの線形結合。この「2」がモード数え上げで各 \\mathbf k に2を掛ける根拠となり、プランク前因子の先頭の2になる。\n答え：\\omega=c|\\mathbf k|、\\mathbf k\\cdot\\mathbf E_0=0。横波ゆえ偏光は2自由度＝前因子の「2」。",
+    "crumbs": [
+      "第V部　逆引き3：電磁気学へ",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>第13章　電磁波としての光</span>"
+    ]
+  },
+  {
+    "objectID": "part5/13-electromagnetic-waves.html#模範解答問題-13-3",
+    "href": "part5/13-electromagnetic-waves.html#模範解答問題-13-3",
+    "title": "第13章　電磁波としての光",
+    "section": "模範解答（問題 13-3）",
+    "text": "模範解答（問題 13-3）\n(1) \\mathbf B=\\hat{\\mathbf k}\\times\\mathbf E、\\mathbf E\\perp\\hat{\\mathbf k} ゆえ \\mathbf E\\times\\mathbf B=\\mathbf E\\times(\\hat{\\mathbf k}\\times\\mathbf E)=\\hat{\\mathbf k}|\\mathbf E|^2-\\mathbf E(\\mathbf E\\cdot\\hat{\\mathbf k})=|\\mathbf E|^2\\hat{\\mathbf k}（\\mathbf E\\cdot\\hat{\\mathbf k}=0）。|\\mathbf E|^2=|\\mathbf E_0|^2\\cos^2(\\cdots)。よって\n\n\\mathbf S=\\frac{c}{4\\pi}|\\mathbf E_0|^2\\cos^2(\\mathbf k\\cdot\\mathbf r-\\omega t)\\,\\hat{\\mathbf k}.\n\n(2) \\langle\\cos^2\\rangle=1/2（1周期平均）ゆえ\n\n\\langle\\mathbf S\\rangle=\\frac{c}{4\\pi}|\\mathbf E_0|^2\\cdot\\frac12\\,\\hat{\\mathbf k}=\\frac{c}{8\\pi}|\\mathbf E_0|^2\\hat{\\mathbf k}.\n\n(3) エネルギー流は波数方向 \\hat{\\mathbf k}。これは単位面積・単位時間あたりのエネルギー流密度で、振動数分解すれば観測量フラックス F_\\nu（第4章）に対応する。望遠鏡が検出するのは本質的にこの量。\n答え：\\mathbf S=\\frac{c}{4\\pi}|\\mathbf E_0|^2\\cos^2(\\cdots)\\hat{\\mathbf k}、時間平均で \\langle\\mathbf S\\rangle=\\frac{c}{8\\pi}|\\mathbf E_0|^2\\hat{\\mathbf k}。\\hat{\\mathbf k} 方向のエネルギー流＝フラックス。",
+    "crumbs": [
+      "第V部　逆引き3：電磁気学へ",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>第13章　電磁波としての光</span>"
+    ]
+  },
+  {
+    "objectID": "part5/13-electromagnetic-waves.html#模範解答問題-13-4",
+    "href": "part5/13-electromagnetic-waves.html#模範解答問題-13-4",
+    "title": "第13章　電磁波としての光",
+    "section": "模範解答（問題 13-4）",
+    "text": "模範解答（問題 13-4）\n(1) 3次元のベクトル場 \\mathbf E_0 は本来3成分。横波条件 \\mathbf k\\cdot\\mathbf E_0=0 が1成分（\\mathbf k 方向＝縦波成分）を禁じるので、残り2成分（\\mathbf k 垂直面内）が独立。もし縦波が許されれば3自由度だが、Maxwell 方程式（\\nabla\\cdot\\mathbf E=0）が縦波を禁じるため実際は2。\n(2) シンクロトロン：放射の偏光面から磁場の方向（偏光は磁場に垂直）。散乱光：偏光の向き・度合いから散乱体の幾何（散乱角90°で最大偏光）。Zeeman 効果：線が偏光成分に分裂し、その分裂幅から磁場強度。\n(3) 熱平衡放射は多数の独立な放射体（原子・モード）から、あらゆる方向・あらゆる偏光で等確率に放出される。2つの偏光状態が同じ強度で混ざり、方向平均すると正味の偏光は打ち消されてゼロになる。だから黒体放射は等方・無偏光。観測される偏光は、散乱や磁場など等方性を破る機構の存在を示す。\n答え：Maxwell が縦波を禁じ自由度2。偏光→磁場方向(シンクロトロン)/散乱幾何/磁場強度(Zeeman)。熱平衡は両偏光が等確率で混ざり無偏光。",
     "crumbs": [
       "第V部　逆引き3：電磁気学へ",
       "<span class='chapter-number'>15</span>  <span class='chapter-title'>第13章　電磁波としての光</span>"
@@ -2194,7 +2788,51 @@
     "href": "part5/14-cavity-modes.html#sec-cavity-modes-exercises",
     "title": "第14章　空洞中の電磁モード",
     "section": "演習問題",
-    "text": "演習問題\n\n\n\n\n\n\n演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。",
+    "text": "演習問題\n[導出補完] 模範解答 は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。\n\n問題 14-1　定在波と境界条件からモード密度 8πν²/c³\n[★ 難易度：☆☆☆ ] [導出補完]\n§14.1〜14.4 の数え上げを通しで再現する。辺長 L の完全導体立方体。定在波 E_x\\propto\\cos(k_xx)\\sin(k_yy)\\sin(k_zz) など。\n\n境界条件 E_\\parallel=0 から許される波数が k_i=n_i\\pi/L（n_i=1,2,\\dots）になることを示せ。\nk 空間の格子点密度 V/\\pi^3、第一象限（1/8 球）、偏光2を使い、|\\mathbf k|&lt;k のモード数 N(&lt;k)=\\dfrac{Vk^3}{3\\pi^2} を導け。\n分散関係 k=2\\pi\\nu/c を代入し N(&lt;\\nu)=\\dfrac{8\\pi V\\nu^3}{3c^3}、微分して g(\\nu)=\\dfrac{1}{V}\\dfrac{dN}{d\\nu}=\\dfrac{8\\pi\\nu^2}{c^3} を導け。\n\n関連：§14.1 定在波、§14.4 モード密度／同じ式を第9章側から導いたのが演習 9-1。",
+    "crumbs": [
+      "第V部　逆引き3：電磁気学へ",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>第14章　空洞中の電磁モード</span>"
+    ]
+  },
+  {
+    "objectID": "part5/14-cavity-modes.html#模範解答問題-14-1",
+    "href": "part5/14-cavity-modes.html#模範解答問題-14-1",
+    "title": "第14章　空洞中の電磁モード",
+    "section": "模範解答（問題 14-1）",
+    "text": "模範解答（問題 14-1）\n(1) 壁 y=0,L と z=0,L で E_x の接線成分がゼロ。E_x\\propto\\sin(k_yy)\\sin(k_zz) が y,z=0 で自動的にゼロ、y,z=L でゼロには \\sin(k_iL)=0\\Rightarrow k_iL=n_i\\pi。よって k_i=n_i\\pi/L（n_i=1,2,\\dots、各軸独立）。\n(2) 格子間隔 \\pi/L ゆえ k 空間の格子点密度 1/(\\pi/L)^3=V/\\pi^3（V=L^3）。n_i&gt;0 なので半径 k の球の第一象限（1/8）のみ：\\frac18\\cdot\\frac{4\\pi k^3}{3}。偏光2を掛けて\n\nN(&lt;k)=2\\cdot\\frac{V}{\\pi^3}\\cdot\\frac18\\cdot\\frac{4\\pi k^3}{3}=\\frac{Vk^3}{3\\pi^2}.\n\n(3) k=2\\pi\\nu/c：\n\nN(&lt;\\nu)=\\frac{V}{3\\pi^2}\\left(\\frac{2\\pi\\nu}{c}\\right)^3=\\frac{8\\pi V\\nu^3}{3c^3},\\qquad g(\\nu)=\\frac1V\\frac{dN}{d\\nu}=\\frac{8\\pi\\nu^2}{c^3}.\n\n答え：k_i=n_i\\pi/L、N(&lt;k)=Vk^3/3\\pi^2、g(\\nu)=8\\pi\\nu^2/c^3。第9章の数え上げ（演習 9-1）と一致。",
+    "crumbs": [
+      "第V部　逆引き3：電磁気学へ",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>第14章　空洞中の電磁モード</span>"
+    ]
+  },
+  {
+    "objectID": "part5/14-cavity-modes.html#模範解答問題-14-2",
+    "href": "part5/14-cavity-modes.html#模範解答問題-14-2",
+    "title": "第14章　空洞中の電磁モード",
+    "section": "模範解答（問題 14-2）",
+    "text": "模範解答（問題 14-2）\n(1) 定在波は \\cos(k_xx) や \\sin(k_xx) の形で、k_x と -k_x は同じ関数（偶／奇の符号差は振幅に吸収）を与え、物理的に同一のモード。n_i を正負両方数えると同じモードを重複して数えることになる。独立なモードは n_i&gt;0 の第一象限のみ。よって全球の 1/8。\n(2) 周期境界条件では許される k_i=2\\pi n_i/L（n_i=0,\\pm1,\\pm2,\\dots）で格子間隔 2\\pi/L（壁の場合の2倍）。格子点密度は (L/2\\pi)^3=V/8\\pi^3（壁の V/\\pi^3 の 1/8）。一方 \\mathbf k は正負両方とるので全球 4\\pi k^3/3（1/8 球の8倍）を使う。密度の 1/8 と全球の \\times8 が打ち消し、N(&lt;k)=2\\cdot\\frac{V}{8\\pi^3}\\cdot\\frac{4\\pi k^3}{3}=\\frac{Vk^3}{3\\pi^2} と同じ。\n(3) 第3章では「空洞放射のスペクトルは壁の材質によらず一意」（熱力学第二法則）と示した。境界条件の選び方（完全導体壁 vs 周期境界）が g(\\nu) を変えないのは、まさにこの普遍性の現れ。計算の便宜でどちらを選んでもよく、これは普遍性を逆手にとった計算戦略。\n答え：\\pm\\mathbf k が同一モードゆえ 1/8 球。周期境界では密度 1/8・全球 ×8 が打ち消し同じ g(\\nu)。境界の選び方に依らないのは黒体の普遍性の現れ。",
+    "crumbs": [
+      "第V部　逆引き3：電磁気学へ",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>第14章　空洞中の電磁モード</span>"
+    ]
+  },
+  {
+    "objectID": "part5/14-cavity-modes.html#模範解答問題-14-3",
+    "href": "part5/14-cavity-modes.html#模範解答問題-14-3",
+    "title": "第14章　空洞中の電磁モード",
+    "section": "模範解答（問題 14-3）",
+    "text": "模範解答（問題 14-3）\n(1) d 次元の球の体積は \\propto k^d。格子密度 \\propto V/\\pi^d、象限因子・偏光因子は定数なので N(&lt;k)\\propto Vk^d。微分して dN/dk\\propto k^{d-1}。k=2\\pi\\nu/c より g(\\nu)\\propto\\nu^{d-1}/c^d。\n(2) 3次元：g\\propto\\nu^2/c^3。2次元：g\\propto\\nu/c^2。1次元：g\\propto\\nu^0= 定数（\\propto1/c）。これは「k 空間の球殻 k^{d-1}」の幾何そのもの。\n(3) 2次元では u_\\nu=g(\\nu)h\\nu\\bar n\\propto\\nu\\cdot h\\nu/(e^{h\\nu/kT}-1)=h\\nu^2/(e^{h\\nu/kT}-1)、前因子は \\nu^2（3次元の \\nu^3 ではない）。スペクトル全体の形（低振動数べき・ピーク位置・全エネルギーの温度依存）が次元で変わる。逆に言えば、観測される黒体スペクトルが \\nu^3 前因子を持つこと自体が、我々が3次元空間に住む証拠を含んでいる。\n答え：g(\\nu)\\propto\\nu^{d-1}/c^d。3D→\\nu^2、2D→\\nu、1D→定数。2次元なら u_\\nu 前因子は \\nu^2。スペクトル形が空間次元を反映。",
+    "crumbs": [
+      "第V部　逆引き3：電磁気学へ",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>第14章　空洞中の電磁モード</span>"
+    ]
+  },
+  {
+    "objectID": "part5/14-cavity-modes.html#模範解答問題-14-4",
+    "href": "part5/14-cavity-modes.html#模範解答問題-14-4",
+    "title": "第14章　空洞中の電磁モード",
+    "section": "模範解答（問題 14-4）",
+    "text": "模範解答（問題 14-4）\n(1) u_\\nu=g(\\nu)\\cdot h\\nu\\cdot\\bar n=\\dfrac{8\\pi\\nu^2}{c^3}\\cdot h\\nu\\cdot\\dfrac{1}{e^{h\\nu/kT}-1}=\\dfrac{8\\pi h\\nu^3}{c^3}\\dfrac{1}{e^{h\\nu/kT}-1}。\n(2) B_\\nu=\\dfrac{c}{4\\pi}u_\\nu=\\dfrac{c}{4\\pi}\\cdot\\dfrac{8\\pi h\\nu^3}{c^3}\\dfrac{1}{e^{h\\nu/kT}-1}=\\dfrac{2h\\nu^3}{c^2}\\dfrac{1}{e^{h\\nu/kT}-1}。（\\frac{c}{4\\pi}\\cdot8\\pi=2c、/c^3=1/c^2。）\n(3) 各因子の起源：\n\n\n\n\n\n\n\n\n因子\n起源\n章/演習\n\n\n\n\n1/(e^{h\\nu/kT}-1)\n光子の Bose 統計＋\\mu=0\n第8章（8-2,8-3）\n\n\nh\\nu（指数中・前因子中）\nエネルギー量子化\n第10章（10-1）\n\n\n\\nu^2\n3次元空洞のモード密度\n第14章（14-1）\n\n\n1/c^3\n分散関係 k=2\\pi\\nu/c\n第13章（13-2）\n\n\n2\n偏光自由度（横波）\n第13章（13-2,13-4）\n\n\n全体 1/c^2\n1/c^3\\times c（u_\\nu\\to B_\\nu 変換）\n第14章/第4章（4-1）\n\n\n\n観測される一本の黒体曲線から、統計力学・量子論・電磁気学が逆向きに再構成された。\n答え：u_\\nu=\\frac{8\\pi h\\nu^3}{c^3}\\frac{1}{e^{h\\nu/kT}-1}、B_\\nu=\\frac{2h\\nu^3}{c^2}\\frac{1}{e^{h\\nu/kT}-1}。全因子が第8・10・13・14章の物理に分解される。",
     "crumbs": [
       "第V部　逆引き3：電磁気学へ",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>第14章　空洞中の電磁モード</span>"
@@ -2348,7 +2986,40 @@
     "href": "part6/15-non-blackbody.html#sec-non-blackbody-exercises",
     "title": "第15章　現実の天体は完全な黒体ではない",
     "section": "演習問題",
-    "text": "演習問題\n\n\n\n\n\n\n演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。",
+    "text": "演習問題\n[導出補完] 模範解答 は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。\n\n問題 15-1　灰色大気の温度構造と「見える深さ」\n[★ 難易度：☆☆ ] [導出補完]\n§15.2 は灰色大気の Eddington 近似解 T^4(\\tau)=\\dfrac{3}{4}T_{\\rm eff}^4(\\tau+\\dfrac23) を結果として引いた。これを読み解く。\n\n表面 \\tau=0 での温度 T(0) を T_{\\rm eff} で表し、T(0)\\simeq0.84\\,T_{\\rm eff} を確かめよ。\nT(\\tau)=T_{\\rm eff} となる光学的深さ \\tau を求めよ。\n\nの結果が Eddington-Barbier 近似（emergent flux は \\tau_\\nu=2/3 層の S_\\nu で近似）と整合することを述べ、観測される連続光が「\\tau\\simeq2/3 の層の温度」を映す理由を説明せよ。\n\n\n関連：§15.2 灰色大気、§15.3 Eddington-Barbier ／ \\tau\\sim1 と光球は第II部 演習 5-4、有効温度は§17.1。",
+    "crumbs": [
+      "第VI部　現実の宇宙へ戻る",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>第15章　現実の天体は完全な黒体ではない</span>"
+    ]
+  },
+  {
+    "objectID": "part6/15-non-blackbody.html#模範解答問題-15-1",
+    "href": "part6/15-non-blackbody.html#模範解答問題-15-1",
+    "title": "第15章　現実の天体は完全な黒体ではない",
+    "section": "模範解答（問題 15-1）",
+    "text": "模範解答（問題 15-1）\n(1) \\tau=0：T^4(0)=\\dfrac34 T_{\\rm eff}^4\\cdot\\dfrac23=\\dfrac12 T_{\\rm eff}^4。よって T(0)=(1/2)^{1/4}T_{\\rm eff}=0.841\\,T_{\\rm eff}。表面は有効温度より約16%低い。\n(2) T^4(\\tau)=T_{\\rm eff}^4 とおく：\\dfrac34(\\tau+\\dfrac23)=1\\Rightarrow\\tau+\\dfrac23=\\dfrac43\\Rightarrow\\tau=\\dfrac23。\n(3) emergent flux の Eddington-Barbier 近似 F_\\nu\\approx\\pi S_\\nu(\\tau_\\nu=2/3) は「\\tau=2/3 層のソース関数が観測フラックスを代表する」。灰色大気ではちょうどこの層で T=T_{\\rm eff} なので、LTE（S_\\nu=B_\\nu）の下で観測される連続光は B_\\nu(T_{\\rm eff}) に近い。観測スペクトルは「\\tau\\simeq2/3 の層」を映している。\n答え：T(0)=(1/2)^{1/4}T_{\\rm eff}\\simeq0.84T_{\\rm eff}、T=T_{\\rm eff} は \\tau=2/3。これが Eddington-Barbier の見える深さ。",
+    "crumbs": [
+      "第VI部　現実の宇宙へ戻る",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>第15章　現実の天体は完全な黒体ではない</span>"
+    ]
+  },
+  {
+    "objectID": "part6/15-non-blackbody.html#模範解答問題-15-2",
+    "href": "part6/15-non-blackbody.html#模範解答問題-15-2",
+    "title": "第15章　現実の天体は完全な黒体ではない",
+    "section": "模範解答（問題 15-2）",
+    "text": "模範解答（問題 15-2）\n(1) RJ 側 B_\\nu\\propto\\nu^2。I_\\nu=Q_\\nu B_\\nu\\propto\\nu^\\beta\\cdot\\nu^2=\\nu^{2+\\beta}。\\beta=2 なら I_\\nu\\propto\\nu^4、\\beta=1 なら \\nu^3。低振動数側の勾配が黒体（\\nu^2）より急になる。\n(2) Wien 側 B_\\nu\\propto\\nu^3e^{-h\\nu/kT} で指数減衰が支配的。Q_\\nu\\propto\\nu^\\beta の冪は指数関数に比べて緩やかで、スペクトルの落ち方をほとんど変えない。したがって Wien 側の形からは \\beta をほぼ読めない。\n(3) \\beta は RJ 側の勾配 \\nu^{2+\\beta} にしか現れない。ダスト（T\\sim10–30 K）の RJ 側は遠赤外〜サブミリ・ミリ波に来る。よって \\beta を測るには、ピークより長波長側のサブミリ・ミリ（Herschel/ALMA）観測点が必要。Wien 側（近赤外）だけでは \\beta が決まらない。\n答え：RJ 側 I_\\nu\\propto\\nu^{2+\\beta}（\\beta=2 で \\nu^4）。Wien 側は指数減衰が支配で \\beta が見えない。ゆえに \\beta 決定には長波長観測が必須。",
+    "crumbs": [
+      "第VI部　現実の宇宙へ戻る",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>第15章　現実の天体は完全な黒体ではない</span>"
+    ]
+  },
+  {
+    "objectID": "part6/15-non-blackbody.html#模範解答問題-15-3",
+    "href": "part6/15-non-blackbody.html#模範解答問題-15-3",
+    "title": "第15章　現実の天体は完全な黒体ではない",
+    "section": "模範解答（問題 15-3）",
+    "text": "模範解答（問題 15-3）\n(1) 分子分母を \\kappa^{\\rm abs}+\\sigma で割る：S_\\nu=\\dfrac{\\kappa^{\\rm abs}}{\\kappa^{\\rm abs}+\\sigma}B_\\nu+\\dfrac{\\sigma}{\\kappa^{\\rm abs}+\\sigma}\\langle J_\\nu\\rangle=(1-\\tilde\\omega_\\nu)B_\\nu+\\tilde\\omega_\\nu\\langle J_\\nu\\rangle。\n(2) 純吸収 \\tilde\\omega=0：S_\\nu=B_\\nu(T)（LTE、局所プランク）。純散乱 \\tilde\\omega=1：S_\\nu=\\langle J_\\nu\\rangle（平均強度そのもの）。後者は局所の温度 T ではなく、媒質全体から散乱されてきた放射場 \\langle J_\\nu\\rangle で決まるので、局所プランク関数 B_\\nu(T_{\\rm local}) から外れる（非局所）。\n(3) 熱平衡放射は両偏光が等確率で混ざり無偏光。散乱（特に Thomson・Rayleigh 散乱）は散乱角に依存して特定偏光を優先的に散乱し、偏光を生む。よって観測される偏光は、その光が散乱を経たこと＝散乱が無視できないことの直接証拠。例：CMB の偏光（再結合期の Thomson 散乱）、太陽コロナの偏光、惑星間ダストの散乱光。\n答え：S_\\nu=(1-\\tilde\\omega)B_\\nu+\\tilde\\omega\\langle J_\\nu\\rangle。純散乱で S_\\nu=\\langle J_\\nu\\rangle（非局所）。偏光の存在＝散乱卓越の証拠（CMB 偏光など）。",
     "crumbs": [
       "第VI部　現実の宇宙へ戻る",
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>第15章　現実の天体は完全な黒体ではない</span>"
@@ -2491,7 +3162,51 @@
     "href": "part6/16-cmb.html#sec-cmb-exercises",
     "title": "第16章　宇宙マイクロ波背景放射",
     "section": "演習問題",
-    "text": "演習問題\n\n\n\n\n\n\n演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。",
+    "text": "演習問題\n[導出補完] 模範解答 は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。\n\n問題 16-1　なぜ宇宙膨張で黒体形が崩れないか ― T は 1/a に比例\n[★ 難易度：☆☆ ] [導出補完]\n§16.4 は膨張下で黒体形が保たれる条件を述べた。確かめる。スケール因子 a(t)、膨張で波長 \\lambda\\to a\\lambda、振動数 \\nu\\to\\nu/a。\n\nプランク分布の指数 h\\nu/k_BT が膨張下で不変であるためには T\\propto1/a が必要であることを示せ。\nT\\propto a^{-1} と Stefan-Boltzmann u\\propto T^4 から、エネルギー密度が u\\propto a^{-4} で減ることを示せ。\nu\\propto a^{-4} を「光子数密度 \\propto a^{-3}」と「1光子あたりのエネルギー \\propto a^{-1}」の積として説明せよ。\n\n関連：§16.4 宇宙膨張と温度／Stefan-Boltzmann は演習 10-3、光子数密度 \\propto T^3 は演習 8-3。",
+    "crumbs": [
+      "第VI部　現実の宇宙へ戻る",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>第16章　宇宙マイクロ波背景放射</span>"
+    ]
+  },
+  {
+    "objectID": "part6/16-cmb.html#模範解答問題-16-1",
+    "href": "part6/16-cmb.html#模範解答問題-16-1",
+    "title": "第16章　宇宙マイクロ波背景放射",
+    "section": "模範解答（問題 16-1）",
+    "text": "模範解答（問題 16-1）\n(1) 膨張で各モードの振動数は \\nu\\to\\nu/a。指数 h\\nu/k_BT が不変であるには、\\nu が 1/a で減るのと同じ割合で T も減らねばならない：T\\propto1/a。このとき各振動数で占有因子 1/(e^{h\\nu/k_BT}-1) が保たれ、スペクトル形（プランク分布）は温度だけが下がる形で保存される。\n(2) u\\propto T^4\\propto(a^{-1})^4=a^{-4}。\n(3) 光子数密度 n_\\gamma\\propto T^3\\propto a^{-3}（体積膨張で薄まる）。1光子あたりのエネルギー h\\nu\\propto a^{-1}（赤方偏移）。積 u=n_\\gamma\\cdot\\langle h\\nu\\rangle\\propto a^{-3}\\cdot a^{-1}=a^{-4}。物質（\\rho\\propto a^{-3}）より1段速く薄まるのが放射の特徴。\n答え：指数不変には T\\propto1/a。すると u\\propto T^4\\propto a^{-4}=a^{-3}(数密度)×a^{-1}(光子エネルギー)。形は保たれ温度だけ下がる。",
+    "crumbs": [
+      "第VI部　現実の宇宙へ戻る",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>第16章　宇宙マイクロ波背景放射</span>"
+    ]
+  },
+  {
+    "objectID": "part6/16-cmb.html#模範解答問題-16-2",
+    "href": "part6/16-cmb.html#模範解答問題-16-2",
+    "title": "第16章　宇宙マイクロ波背景放射",
+    "section": "模範解答（問題 16-2）",
+    "text": "模範解答（問題 16-2）\n(1) T_{\\rm CMB}(3)=(1+3)\\times2.725=4\\times2.725=10.9 K。\n(2) 現在 z=0：\\lambda_{\\rm peak}=2.898\\times10^{-3}/2.725=1.06\\times10^{-3} m =1.06 mm（マイクロ波）。z=3：\\lambda_{\\rm peak}=2.898\\times10^{-3}/10.9=2.66\\times10^{-4} m =266\\ \\mum（遠赤外）。過去はピークが短波長側。比はちょうど (1+z)=4 倍。\n(3) 高赤方偏移銀河中の原子・分子の励起温度（CMB 光子で励起される準位比から測る温度計）が (1+z)T_0 と一致することは、「過去ほど宇宙が熱かった」こと、すなわち T\\propto1/a（膨張で冷える黒体）という標準宇宙論の予言の直接観測的確認になる。\n答え：T(z=3)=10.9 K。\\lambda_{\\rm peak} は 1.06 mm→266 μm（1+z=4 倍短く）。T\\propto1/a の直接確認。",
+    "crumbs": [
+      "第VI部　現実の宇宙へ戻る",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>第16章　宇宙マイクロ波背景放射</span>"
+    ]
+  },
+  {
+    "objectID": "part6/16-cmb.html#模範解答問題-16-3",
+    "href": "part6/16-cmb.html#模範解答問題-16-3",
+    "title": "第16章　宇宙マイクロ波背景放射",
+    "section": "模範解答（問題 16-3）",
+    "text": "模範解答（問題 16-3）\n(1) 熱化：z\\gtrsim2\\times10^6 までに完了。放射のスペクトルを Planck 形（\\mu\\to0）に整える過程。再結合：z\\simeq1100。電子と陽子が中性水素になり光が自由伝搬を始める（最終散乱＝CMB の「撮影時刻」）。前者が黒体スペクトルを作り、後者がそれを解放する。\n(2) 二重コンプトン散乱（e^-+\\gamma\\to e^-+2\\gamma）と制動放射が光子数を変えられる。コンプトン散乱はエネルギー再分配のみで数を変えない。\\mu=0（化学ポテンシャルゼロ＝光子数が自由に調整される）には光子数を増減できる過程が必要なので、二重コンプトン散乱が本質的。\n(3) T_0=T_{\\rm rec}/(1+z_{\\rm rec}) は T\\propto1/a（1+z=1/a）という恒等式。元素組成が変わって再結合温度 T_{\\rm rec} が変われば、それに応じて z_{\\rm rec} も変わり、比 T_{\\rm rec}/(1+z_{\\rm rec})=T_0 は恒等的に保たれる。T_0 を実際に決めるのは光子数密度の歴史（バリオン-光子比など）で、再結合の詳細は最終散乱面の位置だけを左右する。\n答え：熱化（z\\gtrsim2\\times10^6、黒体化）と再結合（z\\simeq1100、撮影）は別過程。二重コンプトンが光子数を変え \\mu=0 を作る。T_0 は T\\propto1/a の恒等式ゆえ再結合温度に依らない。",
+    "crumbs": [
+      "第VI部　現実の宇宙へ戻る",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>第16章　宇宙マイクロ波背景放射</span>"
+    ]
+  },
+  {
+    "objectID": "part6/16-cmb.html#模範解答問題-16-4",
+    "href": "part6/16-cmb.html#模範解答問題-16-4",
+    "title": "第16章　宇宙マイクロ波背景放射",
+    "section": "模範解答（問題 16-4）",
+    "text": "模範解答（問題 16-4）\n(1) \\mu 歪み：z\\sim5\\times10^4〜2\\times10^6 のエネルギー注入を記録。この時期は二重コンプトンが無効化（光子数を変えられない）だがコンプトン散乱は有効（エネルギー再分配可能）。y 歪み：z\\lesssim10^4（コンプトン散乱も非効率化して以降、現在まで含む）の高温電子との散乱を記録。熱化過程が効率を失う順序（光子数生成→エネルギー再分配）に対応する。\n(2) \\mu 歪みの時期は、コンプトン散乱がエネルギーを完全に再分配して平衡分布に達するが、光子数を変えられない。粒子数が保存される Bose 気体の平衡は \\mu\\neq0 の Bose-Einstein 分布（第8章）。だからプランク（\\mu=0）からずれた \\mu\\neq0 の形になる。\n(3) y 歪みは高温電子と CMB 光子の逆コンプトン散乱で、スペクトル全体が高振動数側へ引きずられる。これは銀河団中の高温ガスで起こる Sunyaev-Zel’dovich 効果と同じ物理（スケールが宇宙論的か銀河団かの違いのみ）。低振動数側が暗く（ディップ）、高振動数側が明るく（バンプ）、その境界の約 217 GHz がヌル点。\n答え：\\mu 歪み＝z\\sim5\\times10^4–2\\times10^6（光子数凍結、BE 分布）、y 歪み＝z\\lesssim10^4（高温電子散乱）。y は SZ 効果と同物理、217 GHz がヌル点。",
     "crumbs": [
       "第VI部　現実の宇宙へ戻る",
       "<span class='chapter-number'>18</span>  <span class='chapter-title'>第16章　宇宙マイクロ波背景放射</span>"
@@ -2590,7 +3305,7 @@
     "href": "part6/17-stars-planets-dust.html#sec-infrared-astronomy",
     "title": "第17章　恒星・惑星・ダストの熱放射",
     "section": "17.4 赤外線天文学 ― 多温度天体の現代観測",
-    "text": "17.4 赤外線天文学 ― 多温度天体の現代観測\n[本文目安：B3]\n近代の宇宙論的観測では、赤外線・サブミリ波の天文学が決定的に重要。なぜなら：\n\n銀河の重元素の半分が星間ダストに閉じ込められており、その熱放射は 遠赤外（FIR）に大きなピーク を持つ\n高赤方偏移銀河は、紫外/可視光が宇宙膨張で赤方偏移し、観測波長帯が赤外/サブミリへ移動する\n\n主要観測施設の波長帯：\n\n\n\n観測施設\n波長帯\n主な対象\n\n\n\n\nSpitzer\n3.6〜160 µm\n中赤外〜遠赤外、銀河系・近傍銀河\n\n\nHerschel\n60〜600 µm\n遠赤外〜サブミリ、星形成\n\n\nALMA\n0.3〜3.6 mm\n(サブ)ミリ波、原始惑星系円盤・高赤方偏移銀河\n\n\nJWST\n0.6〜28 µm\n近赤外〜中赤外、高分解能分光・恒星形成\n\n\n\nこれら異なる波長帯の同一天体観測を組み合わせた 多波長 SED を、複数温度のダスト成分でフィットすることで、温度・質量・組成・空間構造を逆引きする。",
+    "text": "17.4 赤外線天文学 ― 多温度天体の現代観測\n[本文目安：B3]\n近代の宇宙論的観測では、赤外線・サブミリ波の天文学が決定的に重要。なぜなら：\n\n銀河の重元素の半分が星間ダストに閉じ込められており、その熱放射は 遠赤外（FIR）に大きなピーク を持つ\n高赤方偏移銀河は、紫外/可視光が宇宙膨張で赤方偏移し、観測波長帯が赤外/サブミリへ移動する\n\n主要観測施設の波長帯：\n\n\n\n観測施設\n波長帯\n主な対象\n\n\n\n\nSpitzer\n3.6〜160 µm\n中間赤外〜遠赤外、銀河系・近傍銀河\n\n\nHerschel\n60〜600 µm\n遠赤外〜サブミリ、星形成\n\n\nALMA\n0.3〜3.6 mm\n(サブ)ミリ波、原始惑星系円盤・高赤方偏移銀河\n\n\nJWST\n0.6〜28 µm\n近赤外〜中間赤外、高分解能分光・恒星形成\n\n\n\nこれら異なる波長帯の同一天体観測を組み合わせた 多波長 SED を、複数温度のダスト成分でフィットすることで、温度・質量・組成・空間構造を逆引きする。",
     "crumbs": [
       "第VI部　現実の宇宙へ戻る",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダストの熱放射</span>"
@@ -2601,7 +3316,7 @@
     "href": "part6/17-stars-planets-dust.html#sec-multi-temperature",
     "title": "第17章　恒星・惑星・ダストの熱放射",
     "section": "17.5 多温度合成 ― SED フィッティング",
-    "text": "17.5 多温度合成 ― SED フィッティング\n[本文目安：B3]\n実際の銀河や星間雲は 複数の温度成分の混合 であることが普通：\n\n銀河の SED：恒星の光（\\sim 10^4 K の準黒体）＋ 暖かいダスト（\\sim 100 K）＋ 冷たいダスト（\\sim 20 K）＋ AGN や活発な星形成があれば中赤外の高温成分\n星形成領域：HII 領域（\\sim 10^4 K のプラズマ自由-自由放射）＋ 高温ダスト（\\sim 100 K）＋ 冷たい分子雲のダスト（\\sim 15 K）＋ 線スペクトル\n\n全 SED は\n\nI_\\nu^\\text{total} = \\sum_i I_{\\nu, \\text{star}, i} + \\sum_j Q_\\nu(\\beta_j)\\, B_\\nu(T_j)\\, M_j + I_\\nu^\\text{lines} + I_\\nu^\\text{ff} + \\ldots\n\\tag{19.5}\nの形で組み立てる。フィッティングは温度・質量・\\beta の組合せを観測波長点と適合させ、\\chi^2 最小化や Bayesian inference で求める。\n\n\n\n\n\n\n注意（観測）：「冷たい成分の質量」を多温度フィットから推定するとき、温度との 強い縮退 に注意。同じピーク位置でも、(高温・少量) と (低温・大量) で同程度の SED を作れる場合がある。長波長側（Rayleigh-Jeans 側）の観測点が、この縮退を解く鍵となる\n\n\n\n\n\n\n\n\n\n問い：温度 T_d = 20 K のダスト成分のピーク波長を Wien 則で求めよ。これは何の観測施設の波長帯か？\n短答：\\lambda_\\text{peak} \\approx 2898\\,\\text{µm·K} / 20\\,\\text{K} \\simeq 145 µm。これは Herschel SPIRE / PACS の主帯域。冷たい星間ダストの観測が Herschel で飛躍的に進んだのはこのため",
+    "text": "17.5 多温度合成 ― SED フィッティング\n[本文目安：B3]\n実際の銀河や星間雲は 複数の温度成分の混合 であることが普通：\n\n銀河の SED：恒星の光（\\sim 10^4 K の準黒体）＋ 暖かいダスト（\\sim 100 K）＋ 冷たいダスト（\\sim 20 K）＋ AGN や活発な星形成があれば中間赤外の高温成分\n星形成領域：HII 領域（\\sim 10^4 K のプラズマ自由-自由放射）＋ 高温ダスト（\\sim 100 K）＋ 冷たい分子雲のダスト（\\sim 15 K）＋ 線スペクトル\n\n全 SED は\n\nI_\\nu^\\text{total} = \\sum_i I_{\\nu, \\text{star}, i} + \\sum_j Q_\\nu(\\beta_j)\\, B_\\nu(T_j)\\, M_j + I_\\nu^\\text{lines} + I_\\nu^\\text{ff} + \\ldots\n\\tag{19.5}\nの形で組み立てる。フィッティングは温度・質量・\\beta の組合せを観測波長点と適合させ、\\chi^2 最小化や Bayesian inference で求める。\n\n\n\n\n\n\n注意（観測）：「冷たい成分の質量」を多温度フィットから推定するとき、温度との 強い縮退 に注意。同じピーク位置でも、(高温・少量) と (低温・大量) で同程度の SED を作れる場合がある。長波長側（Rayleigh-Jeans 側）の観測点が、この縮退を解く鍵となる\n\n\n\n\n\n\n\n\n\n問い：温度 T_d = 20 K のダスト成分のピーク波長を Wien 則で求めよ。これは何の観測施設の波長帯か？\n短答：\\lambda_\\text{peak} \\approx 2898\\,\\text{µm·K} / 20\\,\\text{K} \\simeq 145 µm。これは Herschel SPIRE / PACS の主帯域。冷たい星間ダストの観測が Herschel で飛躍的に進んだのはこのため",
     "crumbs": [
       "第VI部　現実の宇宙へ戻る",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダストの熱放射</span>"
@@ -2634,7 +3349,51 @@
     "href": "part6/17-stars-planets-dust.html#sec-stars-planets-dust-exercises",
     "title": "第17章　恒星・惑星・ダストの熱放射",
     "section": "演習問題",
-    "text": "演習問題\n\n\n\n\n\n\n演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。",
+    "text": "演習問題\n[導出補完] 模範解答 は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。\n\n問題 17-1　惑星の平衡温度を入出力バランスから\n[★ 難易度：☆☆ ] [導出補完]\n§17.2 のエネルギー収支から惑星平衡温度を導く。アルベド A、恒星-惑星距離 d、恒星半径 R_\\star、温度 T_\\star、惑星半径 R_p。\n\n吸収光 (1-A)\\dfrac{L_\\star}{4\\pi d^2}\\pi R_p^2 と再放射 4\\pi R_p^2\\sigma T_{\\rm eq}^4 を等置し、L_\\star=4\\pi R_\\star^2\\sigma T_\\star^4 を使って T_{\\rm eq}=T_\\star\\left(\\dfrac{R_\\star}{2d}\\right)^{1/2}(1-A)^{1/4} を導け。\n断面積 \\pi R_p^2（吸収）と表面積 4\\pi R_p^2（放射）の比 4 が、式のどこに効くか説明せよ。\n地球（T_\\star=5778 K、R_\\star/d=1/214、A=0.3）で T_{\\rm eq} を計算し、実際の地表温度（+15 °C）とのずれの原因を述べよ。\n\n関連：§17.2 惑星の平衡温度／Stefan-Boltzmann と光度は§2.4（演習 2-5）。",
+    "crumbs": [
+      "第VI部　現実の宇宙へ戻る",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダストの熱放射</span>"
+    ]
+  },
+  {
+    "objectID": "part6/17-stars-planets-dust.html#模範解答問題-17-1",
+    "href": "part6/17-stars-planets-dust.html#模範解答問題-17-1",
+    "title": "第17章　恒星・惑星・ダストの熱放射",
+    "section": "模範解答（問題 17-1）",
+    "text": "模範解答（問題 17-1）\n(1) 等置：(1-A)\\dfrac{L_\\star}{4\\pi d^2}\\pi R_p^2=4\\pi R_p^2\\sigma T_{\\rm eq}^4。\\pi R_p^2 を消し、L_\\star=4\\pi R_\\star^2\\sigma T_\\star^4 を代入：\n(1-A)\\frac{4\\pi R_\\star^2\\sigma T_\\star^4}{4\\pi d^2}\\cdot\\frac14=\\sigma T_{\\rm eq}^4\\ \\Rightarrow\\ T_{\\rm eq}^4=(1-A)\\frac{R_\\star^2}{4d^2}T_\\star^4.\nT_{\\rm eq}=T_\\star\\left(\\frac{R_\\star}{2d}\\right)^{1/2}(1-A)^{1/4}.\n(2) 惑星は断面 \\pi R_p^2 で恒星光を受け、全表面 4\\pi R_p^2 から再放射する。比 4\\pi R_p^2/\\pi R_p^2=4 が右辺の 1/4（すなわち \\sqrt{1/4}=1/2 が R_\\star/2d の 2）として効く。自転が速く全球で均一再放射する近似。\n(3) T_{\\rm eq}=5778\\times(1/(2\\times214))^{1/2}\\times(0.7)^{1/4}=5778\\times(2.34\\times10^{-3})^{1/2}\\times0.915=5778\\times0.0483\\times0.915\\simeq255 K（-18°C）。実際の +15°C との 33 K の差は温室効果（大気の赤外不透明度）。この式は大気なし近似。\n答え：T_{\\rm eq}=T_\\star\\sqrt{R_\\star/2d}\\,(1-A)^{1/4}。地球で 255 K。実測との 33 K 差は温室効果。",
+    "crumbs": [
+      "第VI部　現実の宇宙へ戻る",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダストの熱放射</span>"
+    ]
+  },
+  {
+    "objectID": "part6/17-stars-planets-dust.html#模範解答問題-17-2",
+    "href": "part6/17-stars-planets-dust.html#模範解答問題-17-2",
+    "title": "第17章　恒星・惑星・ダストの熱放射",
+    "section": "模範解答（問題 17-2）",
+    "text": "模範解答（問題 17-2）\nx=hc/\\lambda kT、hc/k=1.439\\times10^{-2} m·K。比 =\\dfrac{e^{x_1}-1}{e^{x_2}-1}（x_1＝太陽、x_2＝Vega、x_1&gt;x_2）。\n(1) \\lambda=500 nm：hc/\\lambda k=1.439\\times10^{-2}/5.0\\times10^{-7}=2.88\\times10^4 K。x_1=28800/5778=4.98、x_2=28800/9602=3.00。比 =\\dfrac{e^{4.98}-1}{e^{3.00}-1}=\\dfrac{144.4}{19.1}\\simeq7.6。Vega が約7.6倍明るい。\n(2) \\lambda=250 nm：hc/\\lambda k=5.76\\times10^4 K。x_1=9.96、x_2=5.99。比 =\\dfrac{e^{9.96}-1}{e^{5.99}-1}=\\dfrac{21100}{399}\\simeq53。紫外は両者とも Wien 側で指数 e^{x} が支配し、温度差が指数的に増幅されるため比が大きい。\n(3) \\lambda=5\\ \\mum：hc/\\lambda k=2.88\\times10^3 K。x_1=0.498、x_2=0.300。比 =\\dfrac{e^{0.498}-1}{e^{0.300}-1}=\\dfrac{0.645}{0.350}\\simeq1.85。x\\ll1 で e^x-1\\simeq x ゆえ比 \\simeq x_1/x_2=T_2/T_1=9602/5778=1.66 に近く、Rayleigh-Jeans 側では温度比のみが効く（指数増幅なし）。\n答え：比は可視 7.6、紫外 53、赤外 1.85。Wien 側（紫外）ほど温度差が指数的に効き、RJ 側（赤外）は温度比のみ。",
+    "crumbs": [
+      "第VI部　現実の宇宙へ戻る",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダストの熱放射</span>"
+    ]
+  },
+  {
+    "objectID": "part6/17-stars-planets-dust.html#模範解答問題-17-3",
+    "href": "part6/17-stars-planets-dust.html#模範解答問題-17-3",
+    "title": "第17章　恒星・惑星・ダストの熱放射",
+    "section": "模範解答（問題 17-3）",
+    "text": "模範解答（問題 17-3）\n(1) T_d：Wien 側の指数減衰の鋭さ、または SED のピーク位置（Wien 則）から。\\beta：Rayleigh-Jeans 側（長波長）の勾配の急さ（I_\\nu\\propto\\nu^{2+\\beta}）から。ダスト質量：全光度を B_\\nu(T_d) で割ったときの規格化定数から（不透明度の仮定が必要）。\n(2) \\beta が小さいほど粒子が大きい（粒子サイズ≈波長の極限で \\beta\\to0）。円盤中心部ほど \\beta が小さい＝粒子が大きく成長している。これは円盤内でダストが集積・成長して惑星形成へ向かう過程の直接観測的証拠。\n(3) 同じピーク位置でも（高温・少量）と（低温・大量）で似た SED を作れる縮退がある。RJ 側の勾配 \\nu^{2+\\beta} と絶対強度は温度・質量・\\beta に異なる依存をするので、ピークより長波長（サブミリ・ミリ）の観測点を加えると、RJ 側の形が温度と質量を分離して縮退を解く。だから長波長観測が鍵。\n答え：T_d＝Wien側/ピーク、\\beta＝RJ側勾配、質量＝規格化。中心部の小 \\beta＝粒子成長＝惑星形成の証拠。長波長点が温度-質量縮退を解く。",
+    "crumbs": [
+      "第VI部　現実の宇宙へ戻る",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダストの熱放射</span>"
+    ]
+  },
+  {
+    "objectID": "part6/17-stars-planets-dust.html#模範解答問題-17-4",
+    "href": "part6/17-stars-planets-dust.html#模範解答問題-17-4",
+    "title": "第17章　恒星・惑星・ダストの熱放射",
+    "section": "模範解答（問題 17-4）",
+    "text": "模範解答（問題 17-4）\n(1) \\lambda_{\\rm peak}=2898/20=145\\ \\mum。これは Herschel（SPIRE/PACS、60–600 μm）の主帯域。冷たい星間ダストの観測が Herschel で飛躍したのはこのため。\n(2) T_d=100 K：\\lambda_{\\rm peak}=2898/100=29\\ \\mum（中間赤外、Spitzer/JWST）。T_d=15 K：\\lambda_{\\rm peak}=2898/15=193\\ \\mum（サブミリ、Herschel/ALMA）。\n(3) ダスト（T\\sim15–30 K）の熱放射ピークは遠赤外〜サブミリ。銀河の重元素の半分がダストに閉じ込められているので、可視・紫外だけ見ると物質の半分を見落とす。遠赤外・サブミリ（Herschel/ALMA）でこの放射を捉えて初めて、銀河の星間物質・ダスト質量・星形成の全体像（物質収支）が分かる。\n答え：20 K→145 μm（Herschel）、100 K→29 μm、15 K→193 μm。重元素の半分がダスト＝遠赤外/サブミリ観測が物質収支に必須。",
     "crumbs": [
       "第VI部　現実の宇宙へ戻る",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダストの熱放射</span>"
@@ -2777,7 +3536,51 @@
     "href": "part6/18-accretion-high-energy.html#sec-accretion-high-energy-exercises",
     "title": "第18章　降着円盤と高エネルギー天体",
     "section": "演習問題",
-    "text": "演習問題\n\n\n\n\n\n\n演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。",
+    "text": "演習問題\n[導出補完] 模範解答 は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。\n\n問題 18-1　多温度円盤の 1/3 乗べき則\n[★ 難易度：☆☆☆ ] [導出補完]\n§18.2 は標準降着円盤の中間振動数帯で F_\\nu\\propto\\nu^{1/3} になると述べた。導出の骨子を埋める。温度プロファイル T(R)\\propto R^{-3/4}、合成フラックス F_\\nu=\\displaystyle\\int_{R_{\\rm in}}^{R_{\\rm out}}2\\pi R\\,B_\\nu(T(R))\\,dR。\n\nT\\propto R^{-3/4} から R\\propto T^{-4/3}、2\\pi R\\,dR\\propto T^{-11/3}\\,dT を示せ。\n中間帯（kT(R_{\\rm in})\\gg h\\nu\\gg kT(R_{\\rm out})）では各半径の Rayleigh-Jeans 側 B_\\nu\\propto\\nu^2 T が効く。F_\\nu\\propto\\nu^2\\displaystyle\\int T\\cdot T^{-11/3}\\,dT=\\nu^2\\int T^{-8/3}dT を変数 x=h\\nu/kT に変換し、F_\\nu\\propto\\nu^{1/3} を導け。\n温度プロファイルが一般に T\\propto R^{-\\alpha} なら F_\\nu\\propto\\nu^{(3\\alpha-2)/\\alpha} となることを確かめ、\\alpha=3/4 で 1/3 になることを示せ。\n\n関連：§18.2 多温度円盤／局所黒体は§18.1（演習 18-3）、RJ 極限は§2.5。",
+    "crumbs": [
+      "第VI部　現実の宇宙へ戻る",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>第18章　降着円盤と高エネルギー天体</span>"
+    ]
+  },
+  {
+    "objectID": "part6/18-accretion-high-energy.html#模範解答問題-18-1",
+    "href": "part6/18-accretion-high-energy.html#模範解答問題-18-1",
+    "title": "第18章　降着円盤と高エネルギー天体",
+    "section": "模範解答（問題 18-1）",
+    "text": "模範解答（問題 18-1）\n(1) T\\propto R^{-3/4}\\Rightarrow R\\propto T^{-4/3}。dR\\propto T^{-7/3}dT。2\\pi R\\,dR\\propto T^{-4/3}\\cdot T^{-7/3}dT=T^{-11/3}dT。\n(2) 中間帯で各半径の RJ 側 B_\\nu\\propto\\nu^2 T。よって\nF_\\nu\\propto\\int\\nu^2 T\\cdot T^{-11/3}dT=\\nu^2\\int T^{-8/3}dT.\nx=h\\nu/kT で T=h\\nu/kx、dT\\propto-\\nu\\,x^{-2}dx、T^{-8/3}\\propto\\nu^{-8/3}x^{8/3}。よって \\int T^{-8/3}dT\\propto\\nu^{-8/3}\\cdot\\nu\\int x^{8/3-2}dx=\\nu^{-5/3}\\int x^{2/3}dx。中間帯では積分は \\nu に依らない定数（端の寄与が効かない範囲）。したがって F_\\nu\\propto\\nu^2\\cdot\\nu^{-5/3}=\\nu^{1/3}。\n(3) 一般に T\\propto R^{-\\alpha}\\Rightarrow R\\propto T^{-1/\\alpha}、2\\pi R\\,dR\\propto T^{-2/\\alpha}dT。F_\\nu\\propto\\nu^2\\int T\\cdot T^{-2/\\alpha}dT=\\nu^2\\int T^{1-2/\\alpha}dT。x=h\\nu/kT 変換で F_\\nu\\propto\\nu^2\\cdot\\nu^{(1-2/\\alpha)+1}\\cdot(\\text{const})\\cdot\\nu^{-1}… 整理すると指数は (3\\alpha-2)/\\alpha。\\alpha=3/4 で (9/4-2)/(3/4)=(1/4)/(3/4)=1/3。\n答え：2\\pi R\\,dR\\propto T^{-11/3}dT、中間帯で F_\\nu\\propto\\nu^{1/3}。一般に T\\propto R^{-\\alpha} で F_\\nu\\propto\\nu^{(3\\alpha-2)/\\alpha}、\\alpha=3/4 で 1/3。",
+    "crumbs": [
+      "第VI部　現実の宇宙へ戻る",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>第18章　降着円盤と高エネルギー天体</span>"
+    ]
+  },
+  {
+    "objectID": "part6/18-accretion-high-energy.html#模範解答問題-18-2",
+    "href": "part6/18-accretion-high-energy.html#模範解答問題-18-2",
+    "title": "第18章　降着円盤と高エネルギー天体",
+    "section": "模範解答（問題 18-2）",
+    "text": "模範解答（問題 18-2）\n(1) \\dfrac{\\Delta\\nu}{\\nu}=\\dfrac{4k_BT_e}{m_ec^2}=\\dfrac{4\\times86\\ \\text{keV}}{511\\ \\text{keV}}=\\dfrac{344}{511}\\simeq0.67。1回の散乱で振動数が約 67% 増える。（k_BT_e=8.617\\times10^{-5}\\times10^9=8.6\\times10^4 eV =86 keV。）\n(2) y\\ll1：光子はわずかにエネルギーを得るだけ＝元の黒体形に弱い Wien 側テイルが付く。y\\gtrsim1：光子がコロナで完全に再分配され、Wien 分布に近い高温化スペクトル。中間域：べき則 F_\\nu\\propto\\nu^{-\\alpha} が現れ、高エネルギー側は Wien カットオフで切れる。\n(3) どちらも高温電子と光子の逆コンプトン散乱で、y=\\dfrac{4k_BT_e}{m_ec^2}\\max(\\tau,\\tau^2) という同じパラメータでスペクトル変形を測る。X 線連星のコロナ（銀河近傍スケール）も、銀河団ガス（宇宙論スケール）も、同じ物理。違うのはスケール（T_e、\\tau の値と対象の大きさ）だけ。\n答え：\\Delta\\nu/\\nu\\simeq0.67（T_e=10^9 K）。y\\ll1 弱テイル、y\\gtrsim1 Wien 化、中間でべき則。CMB の y 歪み（SZ 効果）と同物理。",
+    "crumbs": [
+      "第VI部　現実の宇宙へ戻る",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>第18章　降着円盤と高エネルギー天体</span>"
+    ]
+  },
+  {
+    "objectID": "part6/18-accretion-high-energy.html#模範解答問題-18-3",
+    "href": "part6/18-accretion-high-energy.html#模範解答問題-18-3",
+    "title": "第18章　降着円盤と高エネルギー天体",
+    "section": "模範解答（問題 18-3）",
+    "text": "模範解答（問題 18-3）\n(1) ① 熱化時間が円盤の力学的時間より短い（局所的に熱平衡に達する）、② 各半径で鉛直方向に光学的に厚い（\\tau\\gg1、吸収・再放出が十分）、③ その半径内では単一温度 T(R) で記述できる。これらが満たされれば各半径が B_\\nu(T(R)) で放射する（第3章 §3.6、第5章 §5.6）。\n(2) 例：高温・希薄なコロナ層（局所熱平衡を破る）、不透明度の振動数依存（修正黒体的なずれ）、電子散乱が吸収より卓越（純黒体から外れる）。\n(3) 電子散乱卓越ではソース関数 S_\\nu=(1-\\tilde\\omega)B_\\nu+\\tilde\\omega\\langle J_\\nu\\rangle（演習 15-3）が局所プランクから外れ、光子は吸収で熱化されにくく深部の高温を反映したまま散乱で抜ける。結果、見かけの色温度が実効温度より高くなり、f_{\\rm col}\\simeq1.5–2 の補正が要る。\n答え：局所熱平衡・光学的厚・単一温度が必要。破れ＝コロナ／振動数依存不透明度／電子散乱卓越。散乱卓越は熱化を妨げ色温度を上げる（f_{\\rm col}\\sim1.5–2）。",
+    "crumbs": [
+      "第VI部　現実の宇宙へ戻る",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>第18章　降着円盤と高エネルギー天体</span>"
+    ]
+  },
+  {
+    "objectID": "part6/18-accretion-high-energy.html#模範解答問題-18-4",
+    "href": "part6/18-accretion-high-energy.html#模範解答問題-18-4",
+    "title": "第18章　降着円盤と高エネルギー天体",
+    "section": "模範解答（問題 18-4）",
+    "text": "模範解答（問題 18-4）\n(1) \\dfrac{2GM}{Rc^2}=\\dfrac{2\\times6.674\\times10^{-11}\\times2.78\\times10^{30}}{1.0\\times10^4\\times(3\\times10^8)^2}=\\dfrac{3.71\\times10^{20}}{9.0\\times10^{20}}=0.412。\n(2) z_g=(1-0.412)^{-1/2}-1=(0.588)^{-1/2}-1=1.304-1=0.304\\simeq0.30。\n(3) T_\\infty=T/(1+z_g)=10^7/1.30=7.7\\times10^6 K。観測される温度は表面温度より約23%低い。重力赤方偏移 z_g は M/R に依存し、Stefan-Boltzmann で得る放射半径は M,R の別の組合せに依存するので、両者を連立すると M と R を独立に制約できる。NICER はこれにパルス時間プロファイルを加えて核物質の状態方程式を制約している。\n答え：2GM/Rc^2=0.41、z_g\\simeq0.30、T_\\infty=7.7\\times10^6 K。z_g と Stefan-Boltzmann の連立で M,R を制約（NICER）。",
     "crumbs": [
       "第VI部　現実の宇宙へ戻る",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>第18章　降着円盤と高エネルギー天体</span>"
@@ -2931,7 +3734,40 @@
     "href": "part7/19-where-lines.html#sec-where-lines-exercises",
     "title": "第19章　線スペクトルはどこに現れるか",
     "section": "演習問題",
-    "text": "演習問題\n\n\n\n\n\n\n演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。",
+    "text": "演習問題\n[導出補完] 模範解答 は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。\n\n問題 19-1　21 cm 線 ― 極端に弱い遷移がなぜ観測できるか\n[★ 難易度：☆☆ ] [理解を深める]\n§19.4 は 21 cm 線の自発放出率 A_{ul}\\simeq2.9\\times10^{-15} s^{-1} が Ly\\alpha（A\\simeq6.3\\times10^8 s^{-1}）より約 10^{23} 倍小さいと述べた。中心地図 \\alpha_\\nu=(\\pi e^2/m_ec)f_{lu}n_l\\phi で考える。\n\n個々の原子では一千万年に一度しか脱励起しない遷移が、観測可能な信号になる理由を、\\alpha_\\nu のどの因子で説明するか述べよ。\n励起寿命 \\tau=1/A_{ul} を年単位で求めよ。\n21 cm 線が宇宙物理で特別な役割を持つ理由を3つ挙げよ（観測波長帯・ダスト・対象天体の観点から）。\n\n関連：§19.4 21 cm 線／中心地図の n_l は§20.3、超微細構造の M1 遷移は§25.5、宇宙論応用は§23.5。",
+    "crumbs": [
+      "第VII部　線スペクトル ― もう一つの逆引き",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>第19章　線スペクトルはどこに現れるか</span>"
+    ]
+  },
+  {
+    "objectID": "part7/19-where-lines.html#模範解答問題-19-1",
+    "href": "part7/19-where-lines.html#模範解答問題-19-1",
+    "title": "第19章　線スペクトルはどこに現れるか",
+    "section": "模範解答（問題 19-1）",
+    "text": "模範解答（問題 19-1）\n(1) 中心地図 \\alpha_\\nu=(\\pi e^2/m_ec)f_{lu}\\,n_l\\,\\phi の n_l（下準位占有数＝柱密度）。21 cm の振動子強度 f_{lu}（\\propto A_{ul}）は極端に小さいが、宇宙には中性水素が膨大に存在し n_l が桁外れに大きい。両者の積として観測可能な吸収・輝線になる。「弱い遷移＋膨大な物質量」の組合せ。\n(2) \\tau=1/A_{ul}=1/(2.9\\times10^{-15})=3.4\\times10^{14} s。年に直すと 3.4\\times10^{14}/(3.16\\times10^7)\\simeq1.1\\times10^7 年（約一千万年）。\n(3) ① 電波（21 cm）なのでダストに吸収されず銀河系の遠くまで見通せる。② 中性水素は宇宙のどこにでもある（星間ガス・ハロー・銀河間媒質）。③ 銀河回転曲線（ダークマターの証拠）や高赤方偏移の宇宙再電離期（SKA の標的）を探れる。\n答え：n_l（膨大な中性水素）が小さな f_{lu} を補う。\\tau\\simeq1.1\\times10^7 年。ダスト透過・遍在・回転曲線/再電離で特別。",
+    "crumbs": [
+      "第VII部　線スペクトル ― もう一つの逆引き",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>第19章　線スペクトルはどこに現れるか</span>"
+    ]
+  },
+  {
+    "objectID": "part7/19-where-lines.html#模範解答問題-19-2",
+    "href": "part7/19-where-lines.html#模範解答問題-19-2",
+    "title": "第19章　線スペクトルはどこに現れるか",
+    "section": "模範解答（問題 19-2）",
+    "text": "模範解答（問題 19-2）\n(1) 禁制線の上準位は自発放出率 A_{ul} が極端に小さい（長寿命）。高密度では、上準位の原子が自発放出で光子を出す前に、他粒子との衝突で脱励起されてしまう（衝突脱励起）。その結果、線として放出されず見えない。\n(2) 衝突脱励起率は密度 n_e に比例。自発放出率 A_{ul} と衝突脱励起率が拮抗する密度が臨界密度 n_{\\rm crit}\\sim A_{ul}/\\langle\\sigma v\\rangle。星雲は n_e が臨界密度より低いので、衝突より先に自発放出が起こり、禁制線が放出される。\n(3) 禁制線が観測される＝その天体の密度が臨界密度より低い、すなわち極低密度環境であることの直接の証拠。地上では実現できない希薄さの指標になる。\n答え：高密度では衝突脱励起が自発放出に勝ち禁制線が潰れる。星雲は臨界密度以下で自発放出が間に合う。禁制線の存在＝低密度の証拠。",
+    "crumbs": [
+      "第VII部　線スペクトル ― もう一つの逆引き",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>第19章　線スペクトルはどこに現れるか</span>"
+    ]
+  },
+  {
+    "objectID": "part7/19-where-lines.html#模範解答問題-19-3",
+    "href": "part7/19-where-lines.html#模範解答問題-19-3",
+    "title": "第19章　線スペクトルはどこに現れるか",
+    "section": "模範解答（問題 19-3）",
+    "text": "模範解答（問題 19-3）\n(1) 広線の FWHM（ドップラー幅）から BLR ガスの速度分散 v を得る。reverberation mapping は連続光の変動と広線の変動の時間遅れ \\Delta t から R=c\\,\\Delta t（光路差）で BLR 半径を測る。両者を M=v^2R/G に入れる。\n(2) v=5\\times10^6 m/s、R=20\\times2.59\\times10^{13}=5.18\\times10^{14} m。M=\\dfrac{(5\\times10^6)^2\\times5.18\\times10^{14}}{6.67\\times10^{-11}}=\\dfrac{2.5\\times10^{13}\\times5.18\\times10^{14}}{6.67\\times10^{-11}}=\\dfrac{1.30\\times10^{28}}{6.67\\times10^{-11}}=1.94\\times10^{38} kg。太陽質量で 1.94\\times10^{38}/1.99\\times10^{30}\\simeq9.7\\times10^7\\ M_\\odot（約 10^8\\ M_\\odot）。\n(3) 狭線領域（NLR）は中心から \\sim100–1000 pc も外側にあり、その速度はホスト銀河スケールの運動（中心ブラックホールの重力が支配しない）を反映する。よって NLR 速度に M=v^2R/G を当てても中心ブラックホール質量にはならない。中心質量を測るには中心近傍の BLR が必要。\n答え：FWHM→v、時間遅れ→R=c\\Delta t。M_{\\rm BH}\\simeq10^8\\,M_\\odot。狭線は中心重力圏外なので使えない。",
     "crumbs": [
       "第VII部　線スペクトル ― もう一つの逆引き",
       "<span class='chapter-number'>21</span>  <span class='chapter-title'>第19章　線スペクトルはどこに現れるか</span>"
@@ -3085,7 +3921,51 @@
     "href": "part7/20-line-formation.html#sec-line-formation-exercises",
     "title": "第20章　線形成 ― 吸収線と輝線の物理",
     "section": "演習問題",
-    "text": "演習問題\n\n\n\n\n\n\n演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。",
+    "text": "演習問題\n[導出補完] 模範解答 は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。\n\n問題 20-1　線源泉関数が Bν(Tex) になる\n[★ 難易度：☆☆ ] [導出補完]\n§20.3 は線源泉関数を励起温度 T_{\\rm ex} のプランク関数に書き換えた。導出を埋める。S_\\nu^{\\rm line}=\\dfrac{A_{ul}n_u}{B_{lu}n_l-B_{ul}n_u}、Einstein 関係 A_{ul}/B_{ul}=2h\\nu_0^3/c^2、g_lB_{lu}=g_uB_{ul}。\n\nEinstein 関係を使って S_\\nu^{\\rm line}=\\dfrac{2h\\nu_0^3/c^2}{(g_un_l)/(g_ln_u)-1} を導け。\n励起温度を \\dfrac{g_un_l}{g_ln_u}=e^{h\\nu_0/k_BT_{\\rm ex}} で定義し、S_\\nu^{\\rm line}=B_{\\nu_0}(T_{\\rm ex}) を示せ。\nT_{\\rm ex} が物理的なキネティック温度と一致するのはどんな条件か（LTE）。一致しない場合（non-LTE）に S_\\nu がプランク関数でなくなるわけではない理由を述べよ。\n\n関連：§20.3 線源泉関数／Einstein 関係の導出は演習 11-1、ソース関数の基礎は演習 5-5、LTE は§20.4。",
+    "crumbs": [
+      "第VII部　線スペクトル ― もう一つの逆引き",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>第20章　線形成 ― 吸収線と輝線の物理</span>"
+    ]
+  },
+  {
+    "objectID": "part7/20-line-formation.html#模範解答問題-20-1",
+    "href": "part7/20-line-formation.html#模範解答問題-20-1",
+    "title": "第20章　線形成 ― 吸収線と輝線の物理",
+    "section": "模範解答（問題 20-1）",
+    "text": "模範解答（問題 20-1）\n(1) 分子分母を B_{ul}n_u で割る。g_lB_{lu}=g_uB_{ul} より B_{lu}=（g_u/g_l)B_{ul}：\nS_\\nu^{\\rm line}=\\frac{A_{ul}n_u}{B_{lu}n_l-B_{ul}n_u}=\\frac{A_{ul}/B_{ul}}{\\dfrac{B_{lu}n_l}{B_{ul}n_u}-1}=\\frac{2h\\nu_0^3/c^2}{\\dfrac{g_un_l}{g_ln_u}-1}.\n(2) \\dfrac{g_un_l}{g_ln_u}=e^{h\\nu_0/k_BT_{\\rm ex}} を代入すると分母が e^{h\\nu_0/k_BT_{\\rm ex}}-1 となり\nS_\\nu^{\\rm line}=\\frac{2h\\nu_0^3/c^2}{e^{h\\nu_0/k_BT_{\\rm ex}}-1}=B_{\\nu_0}(T_{\\rm ex}).\n(3) 占有数が局所キネティック温度 T_{\\rm kin} の Boltzmann 分布で書ける（LTE）とき T_{\\rm ex}=T_{\\rm kin}。non-LTE では占有数が Boltzmann から外れて T_{\\rm ex}\\ne T_{\\rm kin} になるが、T_{\\rm ex} を「占有比を Boltzmann 形で書いたときの温度」と定義する限り、S_\\nu=B_\\nu(T_{\\rm ex}) は形式的に常に成り立つ。ただし T_{\\rm ex} は物理温度を反映しない。\n答え：S_\\nu^{\\rm line}=\\dfrac{2h\\nu_0^3/c^2}{(g_un_l)/(g_ln_u)-1}=B_{\\nu_0}(T_{\\rm ex})。LTE で T_{\\rm ex}=T_{\\rm kin}、non-LTE でも定義上 B_\\nu(T_{\\rm ex}) の形は保たれる。",
+    "crumbs": [
+      "第VII部　線スペクトル ― もう一つの逆引き",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>第20章　線形成 ― 吸収線と輝線の物理</span>"
+    ]
+  },
+  {
+    "objectID": "part7/20-line-formation.html#模範解答問題-20-2",
+    "href": "part7/20-line-formation.html#模範解答問題-20-2",
+    "title": "第20章　線形成 ― 吸収線と輝線の物理",
+    "section": "模範解答（問題 20-2）",
+    "text": "模範解答（問題 20-2）\n(1) \\dfrac{g_ln_u}{g_un_l}=1 すなわち \\dfrac{n_u}{g_u}=\\dfrac{n_l}{g_l} で補正がゼロ。上下準位の縮重度あたりの占有が等しく、誘導放出が誘導吸収を完全に打ち消す。「これ以上正味で吸収できない」状態。\n(2) \\dfrac{g_ln_u}{g_un_l}&gt;1 すなわち \\dfrac{n_u}{g_u}&gt;\\dfrac{n_l}{g_l}（準位反転）のとき補正項が負になり \\alpha_\\nu&lt;0。負の吸収係数は、光が媒質を通るほど強められる＝増幅。これがメーザー／レーザーの原理。\n(3) 宇宙メーザーが見える＝準位反転 n_u/g_u&gt;n_l/g_l が実現している＝熱平衡では起こらない非平衡なポンプ機構（衝突ポンプ・放射ポンプ）が働いていることが逆引きできる。星形成領域・恒星質量放出・銀河中心の特殊な物理環境を示す。\n答え：補正ゼロ＝占有が等しい。負＝準位反転（n_u/g_u&gt;n_l/g_l）→\\alpha_\\nu&lt;0＝増幅＝メーザー。観測は非平衡ポンプ機構の証拠。",
+    "crumbs": [
+      "第VII部　線スペクトル ― もう一つの逆引き",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>第20章　線形成 ― 吸収線と輝線の物理</span>"
+    ]
+  },
+  {
+    "objectID": "part7/20-line-formation.html#模範解答問題-20-3",
+    "href": "part7/20-line-formation.html#模範解答問題-20-3",
+    "title": "第20章　線形成 ― 吸収線と輝線の物理",
+    "section": "模範解答（問題 20-3）",
+    "text": "模範解答（問題 20-3）\n(1) 等価幅は「線が連続光から引き抜いた光の総量」を波長幅で表した積分量で、装置の分解能で輪郭がぼやけても保存される。同じ総吸収量なら、浅く広い線も深く狭い線も面積が等しく同じ W になる。観測しやすく理論と比べやすい。\n(2) 線形領域：\\tau&lt;1（光学的に薄い）、吸収量が柱密度に比例 W\\propto N。飽和領域：線芯 \\tau\\gg1（完全に黒）で中心はこれ以上吸収できず、W は \\sqrt{\\ln N} でしか増えない。減衰翼領域：Lorentz 翼（自然幅・衝突幅）が支配し W\\propto\\sqrt{N}。\n(3) 飽和領域では W が N にほとんど鈍感（\\sqrt{\\ln N}）なので、W の小さな測定誤差が N の大きな誤差になる。だから組成解析では弱い線（線形領域）・中間・強い線（減衰翼）を組み合わせ、curve of growth 全体を観測点で押さえて N を精度よく決める。\n答え：W は輪郭によらぬ積分量。線形(\\tau&lt;1)→飽和(\\tau\\gg1)→減衰翼。飽和域は N に鈍感ゆえ複数の強さの線が必要。",
+    "crumbs": [
+      "第VII部　線スペクトル ― もう一つの逆引き",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>第20章　線形成 ― 吸収線と輝線の物理</span>"
+    ]
+  },
+  {
+    "objectID": "part7/20-line-formation.html#模範解答問題-20-4",
+    "href": "part7/20-line-formation.html#模範解答問題-20-4",
+    "title": "第20章　線形成 ― 吸収線と輝線の物理",
+    "section": "模範解答（問題 20-4）",
+    "text": "模範解答（問題 20-4）\n(1) 線中心は \\alpha_\\nu が大きく光学的厚さがすぐ1に達するので浅い（外側＝低温）層を見る。連続光は \\alpha_\\nu が小さく深い（高温）層まで見通せる。LTE で S_\\nu=B_\\nu(T) ゆえ、線中心は低温のプランク関数値（暗い）、連続は高温（明るい）。差し引き線中心が連続より暗く＝吸収線。\n(2) 温度が外側で上がる（彩層・コロナ）と、線中心が見る浅い層の方が高温になり、線中心が連続より明るく＝輝線。あるいは背景連続光がないガス雲では、ガス自身の放出 \\tau S_\\nu だけが見え、線中心で強い輝線になる。\n(3) Eddington-Barbier 近似では、各振動数で \\tau_\\nu=2/3 になる層の B_\\nu(T) が出てくる。線中心は \\alpha_\\nu が大きいので \\tau_\\nu=2/3 に達する幾何的深さが浅い（連続より外側＝別の温度の層）。よって線中心と連続が異なる温度を映し、温度勾配の向きで吸収/輝線が決まる。\n答え：線中心＝浅い層（\\alpha_\\nu 大）、連続＝深い層。温度が深さで上がれば吸収線、外側で上がる/背景光なしなら輝線。Eddington-Barbier で別温度を映す。",
     "crumbs": [
       "第VII部　線スペクトル ― もう一つの逆引き",
       "<span class='chapter-number'>22</span>  <span class='chapter-title'>第20章　線形成 ― 吸収線と輝線の物理</span>"
@@ -3217,7 +4097,7 @@
     "href": "part7/21-atomic-physics.html#sec-atomic-multi-electron",
     "title": "第21章　線スペクトルから原子物理へ",
     "section": "21.6 多電子原子と分子 ― 水素原子の枠組みの拡張",
-    "text": "21.6 多電子原子と分子 ― 水素原子の枠組みの拡張\n[本文目安：B3-B4]\n水素以外の原子では、複数の電子が同時に存在するため、\\psi は単一粒子波動関数の積では書けない（Pauli の排他律と電子間相互作用）。代わりに：\n\nHartree-Fock 近似：各電子の波動関数を、他電子の平均場の中で解く\n項記号（term symbol）：原子の状態を ^{2S+1}L_J で表す（例：太陽 D 線の上準位は ^2P_{3/2} と ^2P_{1/2}）\n微細構造：スピン-軌道結合による準位分裂、線分裂の起源\n超微細構造：核スピンとの結合、21 cm 線の起源（§19.4）\n\n分子では、回転・振動準位 が加わる：\n\n回転準位：E_J = \\hbar^2 J(J+1) / 2I、I は慣性モーメント。電波・サブミリ波\n振動準位：E_v = \\hbar \\omega (v + 1/2)、\\omega は分子振動振動数。中赤外\n電子準位：原子と同類。紫外〜可視\n\nこれらの組合せで、分子線スペクトルの 巨大なライン群（rotational band 等） が生まれる。\n\n\n\n\n\n\n注意（観測）：分子線スペクトルは原子線より遥かに複雑だが、回転定数 B と振動定数 \\omega_e の 二つの定数 で大半が記述できる。NIST Molecular Spectroscopy Database 等で公開されており、観測者は分子線同定とパラメータ決定にこれを利用する",
+    "text": "21.6 多電子原子と分子 ― 水素原子の枠組みの拡張\n[本文目安：B3-B4]\n水素以外の原子では、複数の電子が同時に存在するため、\\psi は単一粒子波動関数の積では書けない（Pauli の排他律と電子間相互作用）。代わりに：\n\nHartree-Fock 近似：各電子の波動関数を、他電子の平均場の中で解く\n項記号（term symbol）：原子の状態を ^{2S+1}L_J で表す（例：太陽 D 線の上準位は ^2P_{3/2} と ^2P_{1/2}）\n微細構造：スピン-軌道結合による準位分裂、線分裂の起源\n超微細構造：核スピンとの結合、21 cm 線の起源（§19.4）\n\n分子では、回転・振動準位 が加わる：\n\n回転準位：E_J = \\hbar^2 J(J+1) / 2I、I は慣性モーメント。電波・サブミリ波\n振動準位：E_v = \\hbar \\omega (v + 1/2)、\\omega は分子振動振動数。中間赤外\n電子準位：原子と同類。紫外〜可視\n\nこれらの組合せで、分子線スペクトルの 巨大なライン群（rotational band 等） が生まれる。\n\n\n\n\n\n\n注意（観測）：分子線スペクトルは原子線より遥かに複雑だが、回転定数 B と振動定数 \\omega_e の 二つの定数 で大半が記述できる。NIST Molecular Spectroscopy Database 等で公開されており、観測者は分子線同定とパラメータ決定にこれを利用する",
     "crumbs": [
       "第VII部　線スペクトル ― もう一つの逆引き",
       "<span class='chapter-number'>23</span>  <span class='chapter-title'>第21章　線スペクトルから原子物理へ</span>"
@@ -3250,7 +4130,51 @@
     "href": "part7/21-atomic-physics.html#sec-atomic-physics-exercises",
     "title": "第21章　線スペクトルから原子物理へ",
     "section": "演習問題",
-    "text": "演習問題\n\n\n\n\n\n\n演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。",
+    "text": "演習問題\n[導出補完] 模範解答 は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。\n\n問題 21-1　Rydberg 公式と Hα の波長\n[★ 難易度：☆☆ ] [導出補完]\n§21.1・21.2 の Rydberg 公式 \\dfrac{1}{\\lambda}=R_H\\left(\\dfrac{1}{n_l^2}-\\dfrac{1}{n_u^2}\\right)、R_H=1.097\\times10^7 m^{-1}、Bohr エネルギー E_n=-13.6/n^2 eV。\n\nh\\nu=E_u-E_l から Rydberg 公式の形が出ることを示せ。\nBalmer 系列の H\\alpha（n_l=2\\to n_u=3）の波長を計算し、656 nm を確かめよ。\nLyman 系列の系列極限（n_u\\to\\infty、n_l=1）の波長を求め、これが水素の電離エネルギー 13.6 eV に対応することを確かめよ。\n\n関連：§21.1 Rydberg 公式、§21.2 Bohr 模型／準位の量子力学的起源は§12.1、Boltzmann 占有は演習 7-4。",
+    "crumbs": [
+      "第VII部　線スペクトル ― もう一つの逆引き",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>第21章　線スペクトルから原子物理へ</span>"
+    ]
+  },
+  {
+    "objectID": "part7/21-atomic-physics.html#模範解答問題-21-1",
+    "href": "part7/21-atomic-physics.html#模範解答問題-21-1",
+    "title": "第21章　線スペクトルから原子物理へ",
+    "section": "模範解答（問題 21-1）",
+    "text": "模範解答（問題 21-1）\n(1) h\\nu=E_u-E_l=-\\dfrac{13.6}{n_u^2}-\\left(-\\dfrac{13.6}{n_l^2}\\right)=13.6\\,\\text{eV}\\left(\\dfrac{1}{n_l^2}-\\dfrac{1}{n_u^2}\\right)。\\nu=c/\\lambda より \\dfrac{1}{\\lambda}=\\dfrac{13.6\\,\\text{eV}}{hc}\\left(\\dfrac{1}{n_l^2}-\\dfrac{1}{n_u^2}\\right)=R_H\\left(\\dfrac{1}{n_l^2}-\\dfrac{1}{n_u^2}\\right)。\n(2) \\dfrac{1}{\\lambda}=1.097\\times10^7\\left(\\dfrac14-\\dfrac19\\right)=1.097\\times10^7\\times0.1389=1.524\\times10^6 m^{-1}。\\lambda=6.56\\times10^{-7} m =656 nm。✓（太陽 Fraunhofer C 線）\n(3) n_u\\to\\infty、n_l=1：\\dfrac{1}{\\lambda}=R_H\\times1=1.097\\times10^7 m^{-1}、\\lambda=91.2 nm。対応エネルギー E=hc/\\lambda=1.986\\times10^{-25}/9.12\\times10^{-8}=2.18\\times10^{-18} J =13.6 eV。これは基底状態（n=1）からの電離エネルギーに一致。\n答え：h\\nu=E_u-E_l から Rydberg 公式。H\\alpha＝656 nm。Lyman 極限 91.2 nm＝13.6 eV（電離エネルギー）。",
+    "crumbs": [
+      "第VII部　線スペクトル ― もう一つの逆引き",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>第21章　線スペクトルから原子物理へ</span>"
+    ]
+  },
+  {
+    "objectID": "part7/21-atomic-physics.html#模範解答問題-21-2",
+    "href": "part7/21-atomic-physics.html#模範解答問題-21-2",
+    "title": "第21章　線スペクトルから原子物理へ",
+    "section": "模範解答（問題 21-2）",
+    "text": "模範解答（問題 21-2）\n(1) 両式の n_l\\phi を消して係数を等置：\\dfrac{\\pi e^2}{m_ec}f_{lu}=\\dfrac{h\\nu_0}{4\\pi}B_{lu}。B_{lu} について解く：\nB_{lu}=\\frac{4\\pi}{h\\nu_0}\\cdot\\frac{\\pi e^2}{m_ec}f_{lu}=\\frac{4\\pi^2e^2}{m_ec\\,h\\nu_0}f_{lu}.\n(2) B_{ul}=（g_l/g_u)B_{lu} を A_{ul}=\\dfrac{2h\\nu_0^3}{c^2}B_{ul} に代入：\nA_{ul}=\\frac{2h\\nu_0^3}{c^2}\\frac{g_l}{g_u}\\frac{4\\pi^2e^2}{m_ec\\,h\\nu_0}f_{lu}=\\frac{8\\pi^2e^2\\nu_0^2}{m_ec^3}\\frac{g_l}{g_u}f_{lu}.\n（h が消え、\\nu_0^3/\\nu_0=\\nu_0^2。）\n(3) \\pi e^2/m_ec は古典の減衰調和振動子（Lorentz 振動子）が与える振動数積分吸収断面積で、減衰率にもピーク位置にもよらない普遍量。実際の原子はこれに無次元の量子補正 f_{lu} を掛けたもので、全遷移の和 \\sum_u f_{lu}=N_{\\rm electrons}（TRK 和則）が「すべて足すと古典総吸収量に戻る」ことを保証する。古典-量子の橋。\n答え：B_{lu}=\\dfrac{4\\pi^2e^2}{m_ech\\nu_0}f_{lu}、A_{ul}=\\dfrac{8\\pi^2e^2\\nu_0^2}{m_ec^3}\\dfrac{g_l}{g_u}f_{lu}。\\pi e^2/m_ec＝古典積分断面積、f_{lu}＝量子補正（TRK 和則）。",
+    "crumbs": [
+      "第VII部　線スペクトル ― もう一つの逆引き",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>第21章　線スペクトルから原子物理へ</span>"
+    ]
+  },
+  {
+    "objectID": "part7/21-atomic-physics.html#模範解答問題-21-3",
+    "href": "part7/21-atomic-physics.html#模範解答問題-21-3",
+    "title": "第21章　線スペクトルから原子物理へ",
+    "section": "模範解答（問題 21-3）",
+    "text": "模範解答（問題 21-3）\n(1) E1 遷移強度は電気双極子行列要素 \\langle u|\\mathbf r|l\\rangle で決まる。パリティと角運動量の保存から、\\Delta l=\\pm1 等を満たさない遷移ではこの行列要素がゼロになり、最低次（E1）では遷移が起こらない。これが「禁制」。\n(2) M1・E2 は次数が一つ高い過程で、典型的に振幅が微細構造定数 \\alpha 程度小さく、強度（振幅の2乗）が \\alpha^2\\simeq(1/137)^2\\simeq5.3\\times10^{-5}\\sim10^{-4} 倍。\\alpha は電磁相互作用の結合定数で、より高次の多重極展開の各段で \\alpha のべきが効く。\n(3) 禁制線は A_{ul} が極端に小さく長寿命。地上の高密度では自発放出より衝突脱励起が先に起こり消える（演習 19-2）。星間の極低密度では衝突が稀で自発放出が間に合い観測できる。21 cm 線は水素基底状態の超微細構造の M1 禁制遷移で、A_{ul}\\sim10^{-15} s^{-1} と極小だが膨大な中性水素のおかげで観測される。\n答え：E1 選択則違反＝行列要素ゼロ＝禁制。M1/E2 は \\alpha^2\\sim10^{-4} 倍。低密度の星間でのみ観測（21 cm も M1 禁制）。",
+    "crumbs": [
+      "第VII部　線スペクトル ― もう一つの逆引き",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>第21章　線スペクトルから原子物理へ</span>"
+    ]
+  },
+  {
+    "objectID": "part7/21-atomic-physics.html#模範解答問題-21-4",
+    "href": "part7/21-atomic-physics.html#模範解答問題-21-4",
+    "title": "第21章　線スペクトルから原子物理へ",
+    "section": "模範解答（問題 21-4）",
+    "text": "模範解答（問題 21-4）\n(1) 一致：エネルギー準位 E_n=-13.6/n^2 eV（線振動数を正しく与える）。異なる：Bohr は電子を許される軌道上に「正確に」置く描像で波動関数を持たず、角運動量を L=n\\hbar とする（Schrödinger は L^2=l(l+1)\\hbar^2）。Schrödinger は同じ n で l,m の異なる縮退状態と、空間に広がる存在確率分布（波動関数）を持つ。\n(2) f_{lu} は上下準位の波動関数の重なり \\langle u|\\mathbf r|l\\rangle=\\int\\psi_u^*\\,\\mathbf r\\,\\psi_l\\,d^3r から計算される。Bohr 模型は波動関数を持たないので、この積分を実行できず f_{lu} を予言できない。\n(3) 中心地図 \\alpha_\\nu=(\\pi e^2/m_ec)f_{lu}n_l\\phi(\\nu-\\nu_0) で、\\nu_0（線振動数＝準位差）は Bohr 模型でも出るが、f_{lu}（線強度を決める振動子強度）は波動関数の行列要素ゆえ Schrödinger 方程式が要る。線の「位置」と「強さ」で必要な理論の深さが違う。\n答え：エネルギー（\\nu_0）は一致するが、Bohr は波動関数を持たず f_{lu}=|\\langle u|\\mathbf r|l\\rangle|^2 を計算できない。線強度には Schrödinger が必要。",
     "crumbs": [
       "第VII部　線スペクトル ― もう一つの逆引き",
       "<span class='chapter-number'>23</span>  <span class='chapter-title'>第21章　線スペクトルから原子物理へ</span>"
@@ -3404,7 +4328,51 @@
     "href": "part7/22-line-shape.html#sec-line-shape-exercises",
     "title": "第22章　線形（line shape）の物理",
     "section": "演習問題",
-    "text": "演習問題\n\n\n\n\n\n\n演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。",
+    "text": "演習問題\n[導出補完] 模範解答 は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。\n\n問題 22-1　Doppler 幅 ― 熱運動の Gaussian\n[★ 難易度：☆☆ ] [導出補完]\n§22.2 の Doppler 幅 \\Delta\\nu_D=\\dfrac{\\nu_0}{c}\\sqrt{\\dfrac{2k_BT}{m}}。HII 領域（T=10^4 K）の水素 H\\alpha について。\n\n速度の標準偏差に相当する \\Delta v_D=\\sqrt{2k_BT/m_p} を km/s で求めよ（m_p=1.67\\times10^{-27} kg）。\nFWHM =2\\sqrt{\\ln2}\\,\\Delta v_D を求めよ。\n同じ温度の鉄（m=56\\,m_p）の Doppler 幅は水素の何倍か。観測線幅の元素質量依存性から熱的拡がりと他の拡がりをどう区別できるか述べよ。\n\n関連：§22.2 Doppler 拡がり／Maxwell 分布は第III部 演習、マクロ速度場は§22.5（演習 22-4）。",
+    "crumbs": [
+      "第VII部　線スペクトル ― もう一つの逆引き",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>第22章　線形（line shape）の物理</span>"
+    ]
+  },
+  {
+    "objectID": "part7/22-line-shape.html#模範解答問題-22-1",
+    "href": "part7/22-line-shape.html#模範解答問題-22-1",
+    "title": "第22章　線形（line shape）の物理",
+    "section": "模範解答（問題 22-1）",
+    "text": "模範解答（問題 22-1）\n(1) \\Delta v_D=\\sqrt{2k_BT/m_p}=\\sqrt{2\\times1.381\\times10^{-23}\\times10^4/1.67\\times10^{-27}}=\\sqrt{1.654\\times10^8}=1.29\\times10^4 m/s =12.9 km/s。\n(2) FWHM =2\\sqrt{\\ln2}\\times12.9=2\\times0.833\\times12.9=21.4 km/s。\n(3) \\Delta\\nu_D\\propto1/\\sqrt{m} ゆえ鉄は \\sqrt{56}\\simeq7.5 倍狭い。観測で「重い元素の線ほど狭い」なら熱的拡がりが支配（質量依存）。一方、乱流・自転などマクロ速度場は元素質量に依らないので、異なる質量の元素の線幅を比べると、熱的成分と非熱的（質量無依存）成分を分離できる。\n答え：\\Delta v_D=12.9 km/s、FWHM =21.4 km/s。鉄は \\sqrt{56}\\simeq7.5 倍狭い。質量依存性で熱的と乱流を分離。",
+    "crumbs": [
+      "第VII部　線スペクトル ― もう一つの逆引き",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>第22章　線形（line shape）の物理</span>"
+    ]
+  },
+  {
+    "objectID": "part7/22-line-shape.html#模範解答問題-22-2",
+    "href": "part7/22-line-shape.html#模範解答問題-22-2",
+    "title": "第22章　線形（line shape）の物理",
+    "section": "模範解答（問題 22-2）",
+    "text": "模範解答（問題 22-2）\n(1) \\tau_u=1/A_{ul}=1/(6.27\\times10^8)=1.6\\times10^{-9} s（1.6 ns）。\\gamma_{\\rm nat}=A_{ul}/(2\\pi)=6.27\\times10^8/6.283=9.98\\times10^7\\simeq10^8 Hz。\n(2) \\Delta\\lambda_{\\rm nat}=\\dfrac{\\lambda^2 A_{ul}}{2\\pi c}=\\dfrac{(1.216\\times10^{-7})^2\\times6.27\\times10^8}{2\\pi\\times3\\times10^8}=\\dfrac{1.479\\times10^{-14}\\times6.27\\times10^8}{1.885\\times10^9}=\\dfrac{9.27\\times10^{-6}}{1.885\\times10^9}=4.9\\times10^{-15} m =4.9\\times10^{-5} Å。✓\n(3) 線中心は Doppler の Gaussian コアが支配し（指数減衰で狭い）、自然幅 Lorentzian は埋もれる。しかし Lorentzian の翼は 1/(\\Delta\\nu)^2 でべき的に緩く伸びるため、中心から十分離れた翼では Gaussian（e^{-(\\Delta\\nu)^2}）が先に消えて Lorentzian が浮かび上がる。よって自然幅は線翼（damping wing）で重要。\n答え：\\tau_u=1.6 ns、\\gamma_{\\rm nat}\\simeq10^8 Hz、\\Delta\\lambda_{\\rm nat}=4.9\\times10^{-5} Å。Lorentzian 翼が 1/\\Delta\\nu^2 で伸びるため翼で支配的。",
+    "crumbs": [
+      "第VII部　線スペクトル ― もう一つの逆引き",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>第22章　線形（line shape）の物理</span>"
+    ]
+  },
+  {
+    "objectID": "part7/22-line-shape.html#模範解答問題-22-3",
+    "href": "part7/22-line-shape.html#模範解答問題-22-3",
+    "title": "第22章　線形（line shape）の物理",
+    "section": "模範解答（問題 22-3）",
+    "text": "模範解答（問題 22-3）\n(1) コア（|x|&lt;3 程度）は Gaussian（Doppler）が支配。翼（|x|\\gg1）は Lorentzian が支配。|x|=5 で Gaussian は e^{-x^2}=e^{-25}\\simeq1.4\\times10^{-11} とほぼ消え、1/x^2 で緩く減衰する Lorentz 翼だけが残る。\n(2) コア：Doppler 幅 \\Delta\\nu_D\\propto\\sqrt{T/m} から温度、中心シフトから視線速度。翼：Lorentzian 幅 \\gamma= 自然幅＋衝突幅で、衝突幅が密度・圧力に比例するので翼の形から密度・圧力。\n(3) コアは温度に、翼は密度・圧力に主に依存し、両者は線形の異なる部分に別々に効く。観測されたコアと翼を同時にフィットすると、温度（コア幅）と密度（翼の広がり）を分離して独立に決められる。恒星の表面重力 \\log g は翼の解析から得られる。\n答え：コア＝Gaussian（温度・速度）、翼＝Lorentzian（密度・圧力）。|x|&gt;5 で Gaussian は 10^{-11} に消え翼が浮かぶ。同時フィットで温度と密度を分離。",
+    "crumbs": [
+      "第VII部　線スペクトル ― もう一つの逆引き",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>第22章　線形（line shape）の物理</span>"
+    ]
+  },
+  {
+    "objectID": "part7/22-line-shape.html#模範解答問題-22-4",
+    "href": "part7/22-line-shape.html#模範解答問題-22-4",
+    "title": "第22章　線形（line shape）の物理",
+    "section": "模範解答（問題 22-4）",
+    "text": "模範解答（問題 22-4）\n(1) 熱的 Doppler 幅は \\Delta v_{\\rm th}\\propto1/\\sqrt m で重い元素ほど狭い。乱流は等方ランダム速度で元素質量に依らず一定。複数の元素（軽い H と重い Fe など）の線幅を測り、\\Delta v^2=\\Delta v_{\\rm th}^2(m)+\\xi_{\\rm turb}^2 を質量に対してプロットすると、質量依存部分（熱的）と一定部分（乱流 \\xi_{\\rm turb}）に分離できる。\n(2) 速度場のスケールが光子の平均自由行程より小さい＝マイクロ乱流：線吸収係数 \\alpha_\\nu 自体に織り込まれ、\\Delta\\nu_D の単純拡張で扱える。大きい＝マクロ乱流：線形成は局所的に進み、最後に射出スペクトルへの畳み込みとして効く。扱う段階が違う。\n(3) 磁場は放射スペクトルに直接の連続的痕跡を残しにくいが、Zeeman 効果は準位を m_J に応じて分裂させ（分裂幅 \\propto B）、円偏光・直線偏光を伴うので、線の分裂・偏光から磁場の強度と方向を直接測れる。例：太陽黒点（Fe I $$6173）、星形成領域（OH メーザー・CN 線）。\n答え：熱的（\\propto1/\\sqrt m）と乱流（質量無依存）は元素質量比較で分離。マイクロ/マクロは平均自由行程との大小で扱いが違う。Zeeman 分裂・偏光が磁場の直接手段（太陽黒点など）。",
     "crumbs": [
       "第VII部　線スペクトル ― もう一つの逆引き",
       "<span class='chapter-number'>24</span>  <span class='chapter-title'>第22章　線形（line shape）の物理</span>"
@@ -3558,7 +4526,40 @@
     "href": "part7/23-line-applications.html#sec-line-applications-exercises",
     "title": "第23章　線スペクトルから天体物理を読む",
     "section": "演習問題",
-    "text": "演習問題\n\n\n\n\n\n\n演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。",
+    "text": "演習問題\n[導出補完] 模範解答 は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。\n\n問題 23-1　視線速度と系外惑星の検出\n[★ 難易度：☆☆ ] [導出補完]\n§23.1 の視線速度 \\dfrac{v_\\parallel}{c}=\\dfrac{\\nu_0-\\nu_{\\rm obs}}{\\nu_0} を系外惑星検出に使う。中心星と惑星は共通重心を回り、M_\\star v_\\star=M_p v_p。\n\n地球と同じ軌道半径（1 AU、公転速度 v_p\\simeq30 km/s）を回る木星質量惑星（M_p/M_\\star\\simeq10^{-3}）が中心星に起こす視線速度ゆらぎ v_\\star を求めよ。\nその v_\\star が現在の Doppler 法（HARPS/ESPRESSO、感度サブ m/s〜数 m/s）で検出可能か述べよ。地球質量の検出には何 cm/s 感度が要るか概算せよ。\n宇宙論的赤方偏移 z を単純な v/c と書けるのは低赤方偏移近似に限ることを、1+z=a(t_{\\rm obs})/a(t_{\\rm emit}) に触れて述べよ。\n\n関連：§23.1 視線速度／Doppler シフトは§22.2、宇宙膨張と赤方偏移は演習 16-2。",
+    "crumbs": [
+      "第VII部　線スペクトル ― もう一つの逆引き",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>第23章　線スペクトルから天体物理を読む</span>"
+    ]
+  },
+  {
+    "objectID": "part7/23-line-applications.html#模範解答問題-23-1",
+    "href": "part7/23-line-applications.html#模範解答問題-23-1",
+    "title": "第23章　線スペクトルから天体物理を読む",
+    "section": "模範解答（問題 23-1）",
+    "text": "模範解答（問題 23-1）\n(1) v_\\star=（M_p/M_\\star)v_p=10^{-3}\\times30 km/s =0.03 km/s =30 m/s。\n(2) 30 m/s は HARPS/ESPRESSO（サブ m/s〜数 m/s）で十分検出可能。地球質量惑星なら M_p/M_\\star\\simeq3\\times10^{-6} ゆえ v_\\star\\simeq3\\times10^{-6}\\times30 km/s \\simeq0.09 m/s \\simeq10 cm/s 感度が必要で、これは現在の最先端。\n(3) z\\simeq v/c は z\\ll1 でのみ成立。一般には宇宙論的赤方偏移は時空のスケール因子比 1+z=a(t_{\\rm obs})/a(t_{\\rm emit}) で定義され、単純な後退速度ではない。z\\gtrsim0.1 では特殊相対論的 Doppler 公式や宇宙論モデル依存の距離-赤方偏移関係が要る。\n答え：v_\\star=30 m/s（検出可能）。地球質量には \\sim10 cm/s 感度。z=v/c は低赤方偏移近似のみ、本来は 1+z=a_{\\rm obs}/a_{\\rm emit}。",
+    "crumbs": [
+      "第VII部　線スペクトル ― もう一つの逆引き",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>第23章　線スペクトルから天体物理を読む</span>"
+    ]
+  },
+  {
+    "objectID": "part7/23-line-applications.html#模範解答問題-23-2",
+    "href": "part7/23-line-applications.html#模範解答問題-23-2",
+    "title": "第23章　線スペクトルから天体物理を読む",
+    "section": "模範解答（問題 23-2）",
+    "text": "模範解答（問題 23-2）\n(1) [O III] $$4363 と $$5007 は上準位のエネルギーが大きく異なる。上準位の占有比は Boltzmann 因子 e^{-\\Delta E/k_BT_e} で決まり、エネルギー差 \\Delta E が大きいほど温度に敏感。両線の強度比はこの占有比を反映し、電子温度 T_e に強く依存する。\n(2) [S II] $$6716 と $6731 は上準位エネルギーが近い（温度に鈍感）が、各上準位の臨界密度が異なる。電子密度が両者の臨界密度の中間（n_e102$–$104$ cm^{-3}）にあると、密度に応じて衝突脱励起の効き方が変わり、強度比が密度の関数になる。\n(3) [O III] 比は温度のみ、[S II] 比は密度のみに主に依存し互いに鈍感なので、二つの線比を独立な方程式として連立すれば、温度と密度を別々に解ける。これが星雲の電子温度・密度を分離して測る標準法。\n答え：[O III] は上準位エネルギー差大→温度敏感、[S II] は臨界密度差→密度敏感。互いに鈍感ゆえ温度と密度を分離して測れる。",
+    "crumbs": [
+      "第VII部　線スペクトル ― もう一つの逆引き",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>第23章　線スペクトルから天体物理を読む</span>"
+    ]
+  },
+  {
+    "objectID": "part7/23-line-applications.html#模範解答問題-23-3",
+    "href": "part7/23-line-applications.html#模範解答問題-23-3",
+    "title": "第23章　線スペクトルから天体物理を読む",
+    "section": "模範解答（問題 23-3）",
+    "text": "模範解答（問題 23-3）\n(1) Ly\\alpha 森：低柱密度の中性水素による多数の吸収線＝宇宙のバリオン分布マップ。DLA（damped Ly\\alpha）：高柱密度系＝高赤方偏移銀河の前駆体。金属吸収系（C IV, Mg II 等）：宇宙初期の化学進化・銀河流出の記録。\n(2) \\lambda_{\\rm obs}=(1+z)\\times0.211 m。z=7：8\\times0.211=1.69 m。z=6：7\\times0.211=1.48 m。z=20：21\\times0.211=4.43 m。再電離期は約 1.5〜4.4 m（SKA の標的帯）。\n(3) CMB は連続スペクトル（黒体）で宇宙の温度の歴史（熱化・膨張）を語る。Ly\\alpha/21 cm は線スペクトルで構造形成・電離・化学進化の歴史を語る。両者は宇宙物理学の二つの主柱として相補的に、初期宇宙から現在までの異なる側面を逆引きさせる。\n答え：Ly\\alpha 森＝バリオン分布、DLA＝銀河前駆体、金属系＝化学進化。21 cm(z=7)＝1.69 m（z=6:1.48、z=20:4.43 m）。CMB＝温度史、線＝構造・電離・化学史で相補的。",
     "crumbs": [
       "第VII部　線スペクトル ― もう一つの逆引き",
       "<span class='chapter-number'>25</span>  <span class='chapter-title'>第23章　線スペクトルから天体物理を読む</span>"
@@ -3690,7 +4691,51 @@
     "href": "part8/24-em-field-quantization.html#sec-em-field-quantization-exercises",
     "title": "第24章　電磁場を量子化するとは何か ― 直観的描像",
     "section": "演習問題",
-    "text": "演習問題\n\n\n\n\n\n\n演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。",
+    "text": "演習問題\n[導出補完] 模範解答 は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。\n\n問題 24-1　各モード＝量子調和振動子という置き換え\n[★ 難易度：☆☆ ] [理解を深める]\n§24.2 は「各モードを量子調和振動子に置き換える」一行で第I〜VII部が接続されると述べた。モード Hamiltonian \\hat H_{\\rm mode}=\\hbar\\omega_{\\mathbf k}(\\hat a^\\dagger_{\\mathbf k\\sigma}\\hat a_{\\mathbf k\\sigma}+\\tfrac12)。\n\n\\hat a^\\dagger、\\hat a、\\hat n=\\hat a^\\dagger\\hat a がそれぞれ電磁場の文脈で何を表すか（放出・吸収・光子数）述べよ。\n調和振動子の励起準位 |n\\rangle が「そのモードに n 個の光子がある状態」と読み替えられることを、第10章のエネルギー量子 h\\nu、第8章の Bose 統計、第14章のモード密度と対応づけよ。\n「第I〜VII部で別々の道具と思っていたものが一行で接続される」とはどういう意味か、自分の言葉でまとめよ。\n\n関連：§24.2 各モードは調和振動子／生成消滅演算子は演習 12-1・演習 12-4、モード密度は演習 14-1、Bose 統計は演習 8-2。",
+    "crumbs": [
+      "第VIII部　QEDからの俯瞰 ― 連続と線を結ぶ見通し",
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>第24章　電磁場を量子化するとは何か ― 直観的描像</span>"
+    ]
+  },
+  {
+    "objectID": "part8/24-em-field-quantization.html#模範解答問題-24-1",
+    "href": "part8/24-em-field-quantization.html#模範解答問題-24-1",
+    "title": "第24章　電磁場を量子化するとは何か ― 直観的描像",
+    "section": "模範解答（問題 24-1）",
+    "text": "模範解答（問題 24-1）\n(1) \\hat a^\\dagger_{\\mathbf k\\sigma}：モード (\\mathbf k,\\sigma) に光子を1個生成＝放出。\\hat a_{\\mathbf k\\sigma}：光子を1個消滅＝吸収。\\hat n=\\hat a^\\dagger\\hat a：そのモードの光子数（固有値 n=0,1,2,\\dots）＝観測量。\n(2) 励起準位 |n\\rangle のエネルギーは E_n=(n+\\tfrac12)\\hbar\\omega で、隣接準位差 \\hbar\\omega=h\\nu＝第10章のエネルギー量子。各モードを熱平衡の調和振動子とみた平均励起数 \\langle n\\rangle=1/(e^{h\\nu/kT}-1)＝第8章の Bose 占有数。振動数 \\nu 近傍のモードの個数＝第14章のモード密度 g(\\nu)。\n(3) エネルギー量子化（第10章）、光子の Bose 統計（第8章）、モード密度（第14章）、自発放出（第11章）― これらは別々の物理に見えたが、すべて「各モード＝量子化された調和振動子」という一つの構造の異なる側面である。一行の置き換えで、観測される連続スペクトルの全因子が単一の枠組みに収まる。\n答え：\\hat a^\\dagger＝放出、\\hat a＝吸収、\\hat n＝光子数。|n\\rangle＝光子 n 個。量子化・Bose 統計・モード密度・自発放出がすべて「モード＝量子振動子」の一構造の側面。",
+    "crumbs": [
+      "第VIII部　QEDからの俯瞰 ― 連続と線を結ぶ見通し",
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>第24章　電磁場を量子化するとは何か ― 直観的描像</span>"
+    ]
+  },
+  {
+    "objectID": "part8/24-em-field-quantization.html#模範解答問題-24-2",
+    "href": "part8/24-em-field-quantization.html#模範解答問題-24-2",
+    "title": "第24章　電磁場を量子化するとは何か ― 直観的描像",
+    "section": "模範解答（問題 24-2）",
+    "text": "模範解答（問題 24-2）\n(1) 単一モードの熱平均 \\bar n=\\sum_n n\\,e^{-n\\hbar\\omega/kT}/\\sum_n e^{-n\\hbar\\omega/kT}=1/(e^{\\hbar\\omega/kT}-1)=1/(e^{h\\nu/kT}-1)。これは第III部の Bose 占有数（\\mu=0）と同一。光子は数が保存しない（吸収・放出で生成消滅）ので \\mu=0。\n(2) u_\\nu=g(\\nu)\\cdot h\\nu\\cdot\\bar n=\\dfrac{8\\pi\\nu^2}{c^3}\\cdot h\\nu\\cdot\\dfrac{1}{e^{h\\nu/kT}-1}=\\dfrac{8\\pi h\\nu^3}{c^3}\\dfrac{1}{e^{h\\nu/kT}-1}。等方場で B_\\nu=\\dfrac{c}{4\\pi}u_\\nu=\\dfrac{2h\\nu^3}{c^2}\\dfrac{1}{e^{h\\nu/kT}-1}。\n(3) 「光子気体の Bose 統計」（第8章）、「量子化振動子の熱平均」（第10章）、「モード密度×熱励起」（第14章）は出発点も言葉も違うが、すべて「温度 T の熱浴と平衡にある電磁場（各モード＝調和振動子）の熱状態」を別の角度から記述したもの。同じ密度行列 \\hat\\rho_{\\rm th} から同じプランク分布が出る。\n答え：\\bar n=1/(e^{h\\nu/kT}-1)（\\mu=0）。B_\\nu=\\frac{2h\\nu^3}{c^2}\\frac{1}{e^{h\\nu/kT}-1}。三つの導出は電磁場の熱状態の同一構造の異なる側面。",
+    "crumbs": [
+      "第VIII部　QEDからの俯瞰 ― 連続と線を結ぶ見通し",
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>第24章　電磁場を量子化するとは何か ― 直観的描像</span>"
+    ]
+  },
+  {
+    "objectID": "part8/24-em-field-quantization.html#模範解答問題-24-3",
+    "href": "part8/24-em-field-quantization.html#模範解答問題-24-3",
+    "title": "第24章　電磁場を量子化するとは何か ― 直観的描像",
+    "section": "模範解答（問題 24-3）",
+    "text": "模範解答（問題 24-3）\n(1) 零点エネルギーはエネルギーの絶対基準（定数オフセット）で、その絶対値は観測できない。観測できるのは零点エネルギーの差や変化（境界条件の変化など）で、これは有限。プランク分布に零点項 \\tfrac12\\hbar\\omega が現れないのも、それが温度非依存の定数で放射の励起分（物質とやりとりする部分）に効かないから（演習 12-3）。\n(2) ① 自発放出（真空揺らぎが励起原子を揺さぶる、§25.2）。② 線の自然幅（励起準位の有限寿命、\\Gamma=A_{ul}）。③ Casimir 効果（二枚の金属板間で許されるモードが減り、板間の零点エネルギーが板外より小さくなり引力 F\\propto1/L^4 が生じる）。\n(3) 違う。真空 |0\\rangle は厳密に光子0個の状態（\\hat n|0\\rangle=0）。観測される「揺らぎ」は粒子がいることではなく、[\\hat a,\\hat a^\\dagger]=1 の非可換性から来る電場・磁場の期待値の分散 \\langle(\\Delta E)^2\\rangle\\neq0。粒子数を定めると場の値が揺らぎ、場の値を定めると粒子数が揺らぐ（不確定性関係の双対）。\n答え：零点の絶対値は観測不能、差は有限。帰結＝自発放出・自然幅・Casimir(F\\propto1/L^4)。揺らぎ＝場の分散([\\hat a,\\hat a^\\dagger]=1)で、粒子で満ちているのとは別。",
+    "crumbs": [
+      "第VIII部　QEDからの俯瞰 ― 連続と線を結ぶ見通し",
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>第24章　電磁場を量子化するとは何か ― 直観的描像</span>"
+    ]
+  },
+  {
+    "objectID": "part8/24-em-field-quantization.html#模範解答問題-24-4",
+    "href": "part8/24-em-field-quantization.html#模範解答問題-24-4",
+    "title": "第24章　電磁場を量子化するとは何か ― 直観的描像",
+    "section": "模範解答（問題 24-4）",
+    "text": "模範解答（問題 24-4）\n(1) エネルギー量子化：古典波には離散性がない。自発放出：古典では「ゼロ放射場→放出ゼロ」で減衰の起源がない。自然幅：励起準位の有限寿命を古典電子モデルでは「決め打ち」するしかない。Bose 統計：古典場は数えられる粒子ではなく、識別不能粒子の統計が出てこない。\n(2) 第I〜VII部で別々に逆引きしてきた断片（量子化・統計・自発放出・自然幅）が、「電磁場を量子化する」という一つの枠組みからすべて出る。観測スペクトルから出発した逆引きが、最終的に単一の物理基盤（QED）に収束する ― これが到達点。\n(3) 第IV部は物質（原子）を量子化したが電磁場は古典場、第V部は電磁場を古典的に扱った。第VIII部で電磁場と物質を同時に量子化することで、両者の相互作用（自発放出・Einstein 関係・選択則）が一貫した枠組みで現れ、連続スペクトルと線スペクトルが統一される。\n答え：量子化・自発放出・自然幅・Bose 統計は古典場では出ない。電磁場量子化で全断片が一基盤に収束。第VIII部は電磁場と物質を同時量子化して両スペクトルを統一。",
     "crumbs": [
       "第VIII部　QEDからの俯瞰 ― 連続と線を結ぶ見通し",
       "<span class='chapter-number'>26</span>  <span class='chapter-title'>第24章　電磁場を量子化するとは何か ― 直観的描像</span>"
@@ -3844,7 +4889,51 @@
     "href": "part8/25-qed-minimum.html#sec-qed-minimum-exercises",
     "title": "第25章　Einstein係数・自然幅・選択則を QED で見通す",
     "section": "演習問題",
-    "text": "演習問題\n\n\n\n\n\n\n演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。",
+    "text": "演習問題\n[導出補完] 模範解答 は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。\n\n問題 25-1　Fermi の黄金律から自発放出率 Aul\n[★ 難易度：☆☆ ] [導出補完]\n§25.2 は Fermi の黄金律 \\Gamma_{u\\to l}=\\dfrac{2\\pi}{\\hbar}|\\langle l;1_{\\mathbf k\\sigma}|\\hat H_{\\rm int}|u;0\\rangle|^2\\rho(\\omega) から A_{ul}=\\dfrac{\\omega^3}{3\\pi\\epsilon_0\\hbar c^3}|\\langle l|\\hat{\\mathbf d}|u\\rangle|^2 が出るとした。構造を読む。\n\n自発放出の始状態 |u;0\\rangle（原子上準位＋電磁場真空）と終状態 |l;1_{\\mathbf k\\sigma}\\rangle（原子下準位＋光子1個）を述べ、なぜ「真空から光子を生成する」過程なのか説明せよ。\nA_{ul} の前因子 \\omega^3 が「モード密度 \\propto\\nu^2 × エネルギー量子 h\\nu」の構造から来ることを述べ、これが第24章でプランク前因子に出た 2h\\nu^3/c^2 と同じ構造であることを指摘せよ。\n古典電磁気では自発放出が起こらないのに QED では A_{ul}\\neq0 になる物理的理由（真空揺らぎ）を述べよ。\n\n関連：§25.2 Fermi の黄金律／振動子強度との関係は演習 21-2、Einstein 係数は演習 11-1。",
+    "crumbs": [
+      "第VIII部　QEDからの俯瞰 ― 連続と線を結ぶ見通し",
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>第25章　Einstein係数・自然幅・選択則を QED で見通す</span>"
+    ]
+  },
+  {
+    "objectID": "part8/25-qed-minimum.html#模範解答問題-25-1",
+    "href": "part8/25-qed-minimum.html#模範解答問題-25-1",
+    "title": "第25章　Einstein係数・自然幅・選択則を QED で見通す",
+    "section": "模範解答（問題 25-1）",
+    "text": "模範解答（問題 25-1）\n(1) 始状態 |u;0\\rangle：原子は上準位 u、電磁場は真空（光子0個）。終状態 |l;1_{\\mathbf k\\sigma}\\rangle：原子は下準位 l、電磁場にモード (\\mathbf k,\\sigma) の光子が1個。相互作用 \\hat H_{\\rm int} の生成演算子 \\hat a^\\dagger が真空から光子を1個作る。外部光がない真空からの遷移なので「自発」放出。\n(2) Fermi の黄金律の終状態モード密度 \\rho(\\omega)\\propto\\omega^2（モード密度 \\propto\\nu^2、第14章）と、放出光子のエネルギー \\hbar\\omega=h\\nu が掛かって \\omega^3 が出る。これはプランク前因子 2h\\nu^3/c^2 の \\nu^3（＝モード密度 \\nu^2×エネルギー量子 h\\nu）と同じ構造。\n(3) 古典電磁気では「ゼロ放射場→放出ゼロ」で励起原子が落ちる理由がない。QED では真空に零点揺らぎ（\\hat a^\\dagger が真空から光子を生成しうること）があり、これが励起原子に常にちょっかいをかけて放出を誘起する。だから真空でも A_{ul}\\neq0。\n答え：|u;0\\rangle\\to|l;1\\rangle＝真空から光子生成。\\omega^3＝モード密度 \\nu^2×h\\nu＝プランク前因子と同構造。真空揺らぎが自発放出を駆動。",
+    "crumbs": [
+      "第VIII部　QEDからの俯瞰 ― 連続と線を結ぶ見通し",
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>第25章　Einstein係数・自然幅・選択則を QED で見通す</span>"
+    ]
+  },
+  {
+    "objectID": "part8/25-qed-minimum.html#模範解答問題-25-2",
+    "href": "part8/25-qed-minimum.html#模範解答問題-25-2",
+    "title": "第25章　Einstein係数・自然幅・選択則を QED で見通す",
+    "section": "模範解答（問題 25-2）",
+    "text": "模範解答（問題 25-2）\n(1)\n\n\n\n\n\n\n\n\n因子\nプランク関数\n自発放出率\n\n\n\n\n\\nu^3\nモード密度 \\nu^2 × h\\nu\n終状態モード密度 \\nu^2 × h\\nu\n\n\n1/c^2\n分散関係 k=2\\pi\\nu/c ＋ u_\\nu\\to B_\\nu\n同じ\n\n\n2\n偏光自由度（横波）\n同じ\n\n\nh\nエネルギー量子\n同じ\n\n\n\nどちらも「電磁場の同じモード構造」を見ている。\n(2) Fermi の黄金律で、終状態のモードが既に n 個の光子を持つ場合は |n\\rangle\\to|n+1\\rangle の遷移で Bose 増強因子 \\sqrt{n+1}（→ 誘導放出 B_{ul}、\\propto n 部分）と自発項（+1 部分）が同時に出る。終状態が真空なら n=0 で増強因子1＝自発放出 A_{ul}。両者の比 A_{ul}/B_{ul}=2h\\nu^3/c^2。\n(3) プランク関数は「電磁場の各モードの熱励起」を電磁場側から見たスペクトル、水素線吸収係数は「原子が電磁場のモードと遷移する」のを物質側から見た量。両者に共通する 2h\\nu^3/c^2 は、同じ電磁場のモード構造（モード密度×偏光×エネルギー量子）の現れ。連続も線も、同じ電磁場–物質相互作用 Hamiltonian の二側面。\n答え：2h\\nu^3/c^2 の各因子は両地図で同一物理（モード密度・分散・偏光・量子）。A_{ul}/B_{ul} は Fermi 黄金律の真空/光子有りの二側面（\\sqrt{n+1}）。連続と線は同じモード構造の二つの眺め。",
+    "crumbs": [
+      "第VIII部　QEDからの俯瞰 ― 連続と線を結ぶ見通し",
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>第25章　Einstein係数・自然幅・選択則を QED で見通す</span>"
+    ]
+  },
+  {
+    "objectID": "part8/25-qed-minimum.html#模範解答問題-25-3",
+    "href": "part8/25-qed-minimum.html#模範解答問題-25-3",
+    "title": "第25章　Einstein係数・自然幅・選択則を QED で見通す",
+    "section": "模範解答（問題 25-3）",
+    "text": "模範解答（問題 25-3）\n(1) 量子化された電磁場の真空には各モードに零点揺らぎがある → それが励起原子に常にちょっかいをかけ自発放出を誘起（A_{ul}）→ 励起準位の寿命が有限 \\tau=1/A_{ul} → 不確定性関係でエネルギー幅 \\Delta E\\sim\\hbar A_{ul}、振動数幅 \\gamma_{\\rm nat}=A_{ul}/(2\\pi) が線に現れる。\n(2) 自然幅の物理的起源は真空揺らぎが励起原子を揺さぶること。よって観測される自然幅（Lorentzian の翼）は、真空が「空ではない」ことの直接の観測的痕跡。QSO の damped Ly\\alpha 系の減衰翼は、まさにこの自然幅起源の Lorentzian 翼を地上の分光計で測ったもの。\n(3) 21 cm 線の A_{ul} は極小（自然幅も極小）だが、中心地図 \\alpha_\\nu=(\\pi e^2/m_ec)f_{lu}n_l\\phi の n_l（中性水素の柱密度）が宇宙的スケールで膨大なので、積として観測可能な信号になる（演習 19-1）。真空揺らぎの効果がいかに弱くても、宇宙的物質量では無視できない。\n答え：真空揺らぎ→自発放出 A_{ul}→寿命 \\tau=1/A_{ul}→自然幅 A_{ul}/2\\pi。自然幅＝真空揺らぎの観測（damped Ly\\alpha 翼）。21 cm は膨大な n_l で観測可能。",
+    "crumbs": [
+      "第VIII部　QEDからの俯瞰 ― 連続と線を結ぶ見通し",
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>第25章　Einstein係数・自然幅・選択則を QED で見通す</span>"
+    ]
+  },
+  {
+    "objectID": "part8/25-qed-minimum.html#模範解答問題-25-4",
+    "href": "part8/25-qed-minimum.html#模範解答問題-25-4",
+    "title": "第25章　Einstein係数・自然幅・選択則を QED で見通す",
+    "section": "模範解答（問題 25-4）",
+    "text": "模範解答（問題 25-4）\n(1) 相互作用 \\hat H_{\\rm int} の長波長極限が電気双極子 \\hat{\\mathbf d} を介する（最低次）。\\langle u|\\hat{\\mathbf d}|l\\rangle はパリティと角運動量の保存から \\Delta l=\\pm1、\\Delta m=0,\\pm1 で非ゼロ。これを満たさない遷移は E1 で行列要素ゼロ＝禁制だが、磁気双極子(M1)・電気四重極(E2)など高次過程として弱く残る（強度 \\sim\\alpha^2 倍）。\n(2) 第21章では選択則を観測規則（経験則）として受け入れたが、本章で「電気双極子相互作用の最低次」という QED 構造から必然として導いた。これは本書の原則③「天下り的に式を与えず、必然性として理解させる」を線スペクトル側で最終的に実行したもの。観測規則の背後にある物理が明示された。\n(3) プランク関数（連続）は電磁場の各モードの熱励起を電磁場側から、水素線吸収係数（線）は原子と電磁場モードの遷移を物質側から見た量。両者は同じ相互作用 Hamiltonian \\hat H_{\\rm int}=-(e/m_e)\\hat{\\mathbf A}\\cdot\\hat{\\mathbf p} から出て、共通の前因子 2h\\nu^3/c^2（モード密度×偏光×エネルギー量子）を持つ。観測されるスペクトル ― CMB の黒体、恒星の Fraunhofer 線、AGN の鉄線、21 cm ― はすべて、量子化された電磁場のモード構造の現れであり、観測者は毎日 QED を見ている。これが本書の逆引きの到達点。\n答え：E1 選択則は双極子の最低次＋保存則から、禁制は高次として残る。経験則を QED から導く＝原則③の完成。連続も線も同じ \\hat H_{\\rm int} の二側面、共通前因子 2h\\nu^3/c^2 が統一の印。",
     "crumbs": [
       "第VIII部　QEDからの俯瞰 ― 連続と線を結ぶ見通し",
       "<span class='chapter-number'>27</span>  <span class='chapter-title'>第25章　Einstein係数・自然幅・選択則を QED で見通す</span>"

@@ -487,7 +487,15 @@ window.Quarto = {
   <li><a href="#sec-line-applications-exoplanet" id="toc-sec-line-applications-exoplanet" class="nav-link" data-scroll-target="#sec-line-applications-exoplanet">23.6 系外惑星大気 ― 透過分光と高分散分光</a></li>
   <li><a href="#sec-line-applications-summary" id="toc-sec-line-applications-summary" class="nav-link" data-scroll-target="#sec-line-applications-summary">23.7 まとめ ― 線スペクトル逆引き地図の完成</a></li>
   <li><a href="#sec-line-applications-summary-final" id="toc-sec-line-applications-summary-final" class="nav-link" data-scroll-target="#sec-line-applications-summary-final">この章で何がわかったか</a></li>
-  <li><a href="#sec-line-applications-exercises" id="toc-sec-line-applications-exercises" class="nav-link" data-scroll-target="#sec-line-applications-exercises">演習問題</a></li>
+  <li><a href="#sec-line-applications-exercises" id="toc-sec-line-applications-exercises" class="nav-link" data-scroll-target="#sec-line-applications-exercises">演習問題</a>
+  <ul class="collapse">
+  <li><a href="#ex-23-1" id="toc-ex-23-1" class="nav-link" data-scroll-target="#ex-23-1">問題 23-1　視線速度と系外惑星の検出</a></li>
+  </ul></li>
+  <li><a href="#模範解答問題-23-1" id="toc-模範解答問題-23-1" class="nav-link" data-scroll-target="#模範解答問題-23-1">模範解答（問題 23-1）</a></li>
+  <li><a href="#ex-23-2" id="toc-ex-23-2" class="nav-link" data-scroll-target="#ex-23-2">問題 23-2　線比による温度・密度診断</a></li>
+  <li><a href="#模範解答問題-23-2" id="toc-模範解答問題-23-2" class="nav-link" data-scroll-target="#模範解答問題-23-2">模範解答（問題 23-2）</a></li>
+  <li><a href="#ex-23-3" id="toc-ex-23-3" class="nav-link" data-scroll-target="#ex-23-3">問題 23-3　高赤方偏移宇宙 ― Lyα 森と 21 cm</a></li>
+  <li><a href="#模範解答問題-23-3" id="toc-模範解答問題-23-3" class="nav-link" data-scroll-target="#模範解答問題-23-3">模範解答（問題 23-3）</a></li>
   <li><a href="#sec-line-applications-further" id="toc-sec-line-applications-further" class="nav-link" data-scroll-target="#sec-line-applications-further">さらに学ぶための参考文献</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/edit/main/part7/23-line-applications.qmd" class="toc-action"><i class="bi bi-github"></i>編集</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/blob/main/part7/23-line-applications.qmd" class="toc-action"><i class="bi empty"></i>ソースコード</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/issues/new" class="toc-action"><i class="bi empty"></i>問題を報告</a></li></ul></div></nav>
@@ -902,16 +910,61 @@ window.Quarto = {
 </section>
 <section id="sec-line-applications-exercises" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-line-applications-exercises">演習問題</h2>
-<div class="callout callout-style-simple callout-note">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。</p>
-</div>
-</div>
-</div>
+<p><span class="tag">[導出補完]</span> <strong>模範解答</strong> は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</p>
+<section id="ex-23-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-23-1">問題 23-1　視線速度と系外惑星の検出</h3>
+<p>[★ 難易度：☆☆ ] <span class="tag">[導出補完]</span></p>
+<p>§23.1 の視線速度 <span class="math inline">\dfrac{v_\parallel}{c}=\dfrac{\nu_0-\nu_{\rm obs}}{\nu_0}</span> を系外惑星検出に使う。中心星と惑星は共通重心を回り、<span class="math inline">M_\star v_\star=M_p v_p</span>。</p>
+<ol type="1">
+<li>地球と同じ軌道半径（1 AU、公転速度 <span class="math inline">v_p\simeq30</span> km/s）を回る木星質量惑星（<span class="math inline">M_p/M_\star\simeq10^{-3}</span>）が中心星に起こす視線速度ゆらぎ <span class="math inline">v_\star</span> を求めよ。</li>
+<li>その <span class="math inline">v_\star</span> が現在の Doppler 法（HARPS/ESPRESSO、感度サブ m/s〜数 m/s）で検出可能か述べよ。地球質量の検出には何 cm/s 感度が要るか概算せよ。</li>
+<li>宇宙論的赤方偏移 <span class="math inline">z</span> を単純な <span class="math inline">v/c</span> と書けるのは低赤方偏移近似に限ることを、<span class="math inline">1+z=a(t_{\rm obs})/a(t_{\rm emit})</span> に触れて述べよ。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-line-applications-velocity">§23.1 視線速度</a>／Doppler シフトは<a href="../part7/22-line-shape.html#sec-line-shape-doppler">§22.2</a>、宇宙膨張と赤方偏移は<a href="../part6/16-cmb.html#ex-16-2">演習 16-2</a>。</p>
+</section>
+</section>
+<section id="模範解答問題-23-1" class="level2 callout-derive" data-collapse="true">
+<h2 class="anchored" data-anchor-id="模範解答問題-23-1">模範解答（問題 23-1）</h2>
+<p><strong>(1)</strong> <span class="math inline">v_\star=（M_p/M_\star)v_p=10^{-3}\times30</span> km/s <span class="math inline">=0.03</span> km/s <span class="math inline">=30</span> m/s。</p>
+<p><strong>(2)</strong> 30 m/s は HARPS/ESPRESSO（サブ m/s〜数 m/s）で十分検出可能。地球質量惑星なら <span class="math inline">M_p/M_\star\simeq3\times10^{-6}</span> ゆえ <span class="math inline">v_\star\simeq3\times10^{-6}\times30</span> km/s <span class="math inline">\simeq0.09</span> m/s <span class="math inline">\simeq10</span> cm/s 感度が必要で、これは現在の最先端。</p>
+<p><strong>(3)</strong> <span class="math inline">z\simeq v/c</span> は <span class="math inline">z\ll1</span> でのみ成立。一般には宇宙論的赤方偏移は時空のスケール因子比 <span class="math inline">1+z=a(t_{\rm obs})/a(t_{\rm emit})</span> で定義され、単純な後退速度ではない。<span class="math inline">z\gtrsim0.1</span> では特殊相対論的 Doppler 公式や宇宙論モデル依存の距離-赤方偏移関係が要る。</p>
+<p><strong>答え</strong>：<span class="math inline">v_\star=30</span> m/s（検出可能）。地球質量には <span class="math inline">\sim10</span> cm/s 感度。<span class="math inline">z=v/c</span> は低赤方偏移近似のみ、本来は <span class="math inline">1+z=a_{\rm obs}/a_{\rm emit}</span>。</p>
+</section>
+<section id="ex-23-2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-23-2">問題 23-2　線比による温度・密度診断</h3>
+<p>[★ 難易度：☆☆ ] <span class="tag">[理解を深める]</span></p>
+<p>§23.3 の禁制線比による診断。[O III] $<span class="math inline">4363/</span>$5007（温度）と [S II] $<span class="math inline">6716/</span>$6731（密度）。</p>
+<ol type="1">
+<li>[O III] $<span class="math inline">4363/</span>$5007 比が電子温度に強く依存する理由を、両線の上準位エネルギー差から述べよ。</li>
+<li>[S II] $<span class="math inline">6716/</span>$6731 比が電子密度に依存する理由を、両上準位の臨界密度の違いから述べよ。</li>
+<li>一つの線比が「温度のみ」または「密度のみ」に依存し、もう一方に鈍感だと、なぜ温度と密度を分離して測れるのか述べよ。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-line-applications-diagnostics">§23.3 温度・密度診断</a>／禁制線と臨界密度は<a href="../part7/19-where-lines.html#ex-19-2">演習 19-2</a>、Boltzmann 占有は<a href="../part3/07-statistical-mechanics.html#ex-7-4">演習 7-4</a>。</p>
+</section>
+<section id="模範解答問題-23-2" class="level2 callout-derive" data-collapse="true">
+<h2 class="anchored" data-anchor-id="模範解答問題-23-2">模範解答（問題 23-2）</h2>
+<p><strong>(1)</strong> [O III] $$4363 と $$5007 は上準位のエネルギーが大きく異なる。上準位の占有比は Boltzmann 因子 <span class="math inline">e^{-\Delta E/k_BT_e}</span> で決まり、エネルギー差 <span class="math inline">\Delta E</span> が大きいほど温度に敏感。両線の強度比はこの占有比を反映し、電子温度 <span class="math inline">T_e</span> に強く依存する。</p>
+<p><strong>(2)</strong> [S II] $$6716 と $<span class="math inline">6731 は上準位エネルギーが近い（温度に鈍感）が、各上準位の臨界密度が異なる。電子密度が両者の臨界密度の中間（</span>n_e10<sup>2$–$10</sup>4$ cm<span class="math inline">^{-3}</span>）にあると、密度に応じて衝突脱励起の効き方が変わり、強度比が密度の関数になる。</p>
+<p><strong>(3)</strong> [O III] 比は温度のみ、[S II] 比は密度のみに主に依存し互いに鈍感なので、二つの線比を独立な方程式として連立すれば、温度と密度を別々に解ける。これが星雲の電子温度・密度を分離して測る標準法。</p>
+<p><strong>答え</strong>：[O III] は上準位エネルギー差大→温度敏感、[S II] は臨界密度差→密度敏感。互いに鈍感ゆえ温度と密度を分離して測れる。</p>
+</section>
+<section id="ex-23-3" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-23-3">問題 23-3　高赤方偏移宇宙 ― Lyα 森と 21 cm</h3>
+<p>[★ 難易度：☆☆ ] <span class="tag">[理解を深める]</span></p>
+<p>§23.5 の宇宙論的応用。QSO 吸収系（Ly<span class="math inline">\alpha</span> 森・DLA・金属吸収系）と再電離期の 21 cm 線。</p>
+<ol type="1">
+<li>Ly<span class="math inline">\alpha</span> 森・DLA・金属吸収系が、それぞれ宇宙の何（バリオン分布・銀河前駆体・化学進化）を語るか述べよ。</li>
+<li>再電離期 <span class="math inline">z=7</span> の中性水素 21 cm 線（静止波長 0.211 m）の観測波長を求めよ。<span class="math inline">z=6</span> と <span class="math inline">z=20</span> では何 m か。</li>
+<li>第16章の CMB（連続スペクトル側の宇宙論プローブ）と本問の Ly<span class="math inline">\alpha</span>/21 cm（線スペクトル側）が、宇宙物理の二つの主柱として何の歴史を相補的に語るか述べよ。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-line-applications-cosmology">§23.5 宇宙論的応用</a>／CMB は<a href="../part6/16-cmb.html">第16章</a>（<a href="../part6/16-cmb.html">第VI部 演習</a>）、21 cm の起源は<a href="../part7/19-where-lines.html#sec-where-lines-21cm">§19.4</a>（<a href="../part7/19-where-lines.html#ex-19-1">演習 19-1</a>）。</p>
+</section>
+<section id="模範解答問題-23-3" class="level2 callout-derive" data-collapse="true">
+<h2 class="anchored" data-anchor-id="模範解答問題-23-3">模範解答（問題 23-3）</h2>
+<p><strong>(1)</strong> Ly<span class="math inline">\alpha</span> 森：低柱密度の中性水素による多数の吸収線＝宇宙のバリオン分布マップ。DLA（damped Ly<span class="math inline">\alpha</span>）：高柱密度系＝高赤方偏移銀河の前駆体。金属吸収系（C IV, Mg II 等）：宇宙初期の化学進化・銀河流出の記録。</p>
+<p><strong>(2)</strong> <span class="math inline">\lambda_{\rm obs}=(1+z)\times0.211</span> m。<span class="math inline">z=7</span>：<span class="math inline">8\times0.211=1.69</span> m。<span class="math inline">z=6</span>：<span class="math inline">7\times0.211=1.48</span> m。<span class="math inline">z=20</span>：<span class="math inline">21\times0.211=4.43</span> m。再電離期は約 1.5〜4.4 m（SKA の標的帯）。</p>
+<p><strong>(3)</strong> CMB は連続スペクトル（黒体）で宇宙の<strong>温度の歴史</strong>（熱化・膨張）を語る。Ly<span class="math inline">\alpha</span>/21 cm は線スペクトルで<strong>構造形成・電離・化学進化の歴史</strong>を語る。両者は宇宙物理学の二つの主柱として相補的に、初期宇宙から現在までの異なる側面を逆引きさせる。</p>
+<p><strong>答え</strong>：Ly<span class="math inline">\alpha</span> 森＝バリオン分布、DLA＝銀河前駆体、金属系＝化学進化。21 cm(<span class="math inline">z=7</span>)＝1.69 m（<span class="math inline">z=6</span>:1.48、<span class="math inline">z=20</span>:4.43 m）。CMB＝温度史、線＝構造・電離・化学史で相補的。</p>
 </section>
 <section id="sec-line-applications-further" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-line-applications-further">さらに学ぶための参考文献</h2>
@@ -1625,17 +1678,87 @@ window.Quarto = {
 <span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-line-applications-exercises .unnumbered}</span></span>
 <span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple"}</span>
-<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a>演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。</span>
-<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 23-1　視線速度と系外惑星の検出 {#ex-23-1 .unnumbered}</span></span>
 <span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-line-applications-further .unnumbered}</span></span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
 <span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Asplund, "New Light on Stellar Abundance Analyses," ARA&amp;A 43 (2005) 481 — 恒星化学組成の現代手法</span>
-<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Osterbrock &amp; Ferland, *Astrophysics of Gaseous Nebulae and Active Galactic Nuclei* (Univ. Science Books, 2nd ed., 2006) — 線比診断の標準書</span>
-<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Prochaska, "Quasar Absorption Line Spectroscopy" レビュー — QSO 吸収系の網羅的解説</span>
-<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Madhusudhan, "Exoplanetary Atmospheres," ARA&amp;A 57 (2019) 617 — 系外惑星大気観測のレビュー</span>
-<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Dalgarno &amp; Layzer (eds.), *Spectroscopy of Astrophysical Plasmas* (Cambridge, 1987) — 線比診断の体系的記述</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>§23.1 の視線速度 $\dfrac{v_\parallel}{c}=\dfrac{\nu_0-\nu_{\rm obs}}{\nu_0}$ を系外惑星検出に使う。中心星と惑星は共通重心を回り、$M_\star v_\star=M_p v_p$。</span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>地球と同じ軌道半径（1 AU、公転速度 $v_p\simeq30$ km/s）を回る木星質量惑星（$M_p/M_\star\simeq10^{-3}$）が中心星に起こす視線速度ゆらぎ $v_\star$ を求めよ。</span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>その $v_\star$ が現在の Doppler 法（HARPS/ESPRESSO、感度サブ m/s〜数 m/s）で検出可能か述べよ。地球質量の検出には何 cm/s 感度が要るか概算せよ。</span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>宇宙論的赤方偏移 $z$ を単純な $v/c$ と書けるのは低赤方偏移近似に限ることを、$1+z=a(t_{\rm obs})/a(t_{\rm emit})$ に触れて述べよ。</span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§23.1 視線速度</span><span class="co">](#sec-line-applications-velocity)</span>／Doppler シフトは<span class="co">[</span><span class="ot">§22.2</span><span class="co">](../part7/22-line-shape.qmd#sec-line-shape-doppler)</span>、宇宙膨張と赤方偏移は<span class="co">[</span><span class="ot">演習 16-2</span><span class="co">](../part6/16-cmb.qmd#ex-16-2)</span>。</span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 23-1）</span></span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a>**(1)** $v_\star=（M_p/M_\star)v_p=10^{-3}\times30$ km/s $=0.03$ km/s $=30$ m/s。</span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a>**(2)** 30 m/s は HARPS/ESPRESSO（サブ m/s〜数 m/s）で十分検出可能。地球質量惑星なら $M_p/M_\star\simeq3\times10^{-6}$ ゆえ $v_\star\simeq3\times10^{-6}\times30$ km/s $\simeq0.09$ m/s $\simeq10$ cm/s 感度が必要で、これは現在の最先端。</span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a>**(3)** $z\simeq v/c$ は $z\ll1$ でのみ成立。一般には宇宙論的赤方偏移は時空のスケール因子比 $1+z=a(t_{\rm obs})/a(t_{\rm emit})$ で定義され、単純な後退速度ではない。$z\gtrsim0.1$ では特殊相対論的 Doppler 公式や宇宙論モデル依存の距離-赤方偏移関係が要る。</span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>**答え**：$v_\star=30$ m/s（検出可能）。地球質量には $\sim10$ cm/s 感度。$z=v/c$ は低赤方偏移近似のみ、本来は $1+z=a_{\rm obs}/a_{\rm emit}$。</span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 23-2　線比による温度・密度診断 {#ex-23-2 .unnumbered}</span></span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>§23.3 の禁制線比による診断。<span class="co">[</span><span class="ot">O III</span><span class="co">]</span> $\lambda$4363/$\lambda$5007（温度）と <span class="co">[</span><span class="ot">S II</span><span class="co">]</span> $\lambda$6716/$\lambda$6731（密度）。</span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span><span class="co">[</span><span class="ot">O III</span><span class="co">]</span> $\lambda$4363/$\lambda$5007 比が電子温度に強く依存する理由を、両線の上準位エネルギー差から述べよ。</span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span><span class="co">[</span><span class="ot">S II</span><span class="co">]</span> $\lambda$6716/$\lambda$6731 比が電子密度に依存する理由を、両上準位の臨界密度の違いから述べよ。</span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>一つの線比が「温度のみ」または「密度のみ」に依存し、もう一方に鈍感だと、なぜ温度と密度を分離して測れるのか述べよ。</span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§23.3 温度・密度診断</span><span class="co">](#sec-line-applications-diagnostics)</span>／禁制線と臨界密度は<span class="co">[</span><span class="ot">演習 19-2</span><span class="co">](../part7/19-where-lines.qmd#ex-19-2)</span>、Boltzmann 占有は<span class="co">[</span><span class="ot">演習 7-4</span><span class="co">](../part3/07-statistical-mechanics.qmd#ex-7-4)</span>。</span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 23-2）</span></span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>**(1)** <span class="co">[</span><span class="ot">O III</span><span class="co">]</span> $\lambda$4363 と $\lambda$5007 は上準位のエネルギーが大きく異なる。上準位の占有比は Boltzmann 因子 $e^{-\Delta E/k_BT_e}$ で決まり、エネルギー差 $\Delta E$ が大きいほど温度に敏感。両線の強度比はこの占有比を反映し、電子温度 $T_e$ に強く依存する。</span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a>**(2)** <span class="co">[</span><span class="ot">S II</span><span class="co">]</span> $\lambda$6716 と $\lambda$6731 は上準位エネルギーが近い（温度に鈍感）が、各上準位の臨界密度が異なる。電子密度が両者の臨界密度の中間（$n_e\sim10^2$–$10^4$ cm$^{-3}$）にあると、密度に応じて衝突脱励起の効き方が変わり、強度比が密度の関数になる。</span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a>**(3)** <span class="co">[</span><span class="ot">O III</span><span class="co">]</span> 比は温度のみ、<span class="co">[</span><span class="ot">S II</span><span class="co">]</span> 比は密度のみに主に依存し互いに鈍感なので、二つの線比を独立な方程式として連立すれば、温度と密度を別々に解ける。これが星雲の電子温度・密度を分離して測る標準法。</span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a>**答え**：<span class="co">[</span><span class="ot">O III</span><span class="co">]</span> は上準位エネルギー差大→温度敏感、<span class="co">[</span><span class="ot">S II</span><span class="co">]</span> は臨界密度差→密度敏感。互いに鈍感ゆえ温度と密度を分離して測れる。</span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 23-3　高赤方偏移宇宙 ― Lyα 森と 21 cm {#ex-23-3 .unnumbered}</span></span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a>§23.5 の宇宙論的応用。QSO 吸収系（Ly$\alpha$ 森・DLA・金属吸収系）と再電離期の 21 cm 線。</span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Ly$\alpha$ 森・DLA・金属吸収系が、それぞれ宇宙の何（バリオン分布・銀河前駆体・化学進化）を語るか述べよ。</span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>再電離期 $z=7$ の中性水素 21 cm 線（静止波長 0.211 m）の観測波長を求めよ。$z=6$ と $z=20$ では何 m か。</span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>第16章の CMB（連続スペクトル側の宇宙論プローブ）と本問の Ly$\alpha$/21 cm（線スペクトル側）が、宇宙物理の二つの主柱として何の歴史を相補的に語るか述べよ。</span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§23.5 宇宙論的応用</span><span class="co">](#sec-line-applications-cosmology)</span>／CMB は<span class="co">[</span><span class="ot">第16章</span><span class="co">](../part6/16-cmb.qmd)</span>（<span class="co">[</span><span class="ot">第VI部 演習</span><span class="co">](../part6/16-cmb.qmd)</span>）、21 cm の起源は<span class="co">[</span><span class="ot">§19.4</span><span class="co">](../part7/19-where-lines.qmd#sec-where-lines-21cm)</span>（<span class="co">[</span><span class="ot">演習 19-1</span><span class="co">](../part7/19-where-lines.qmd#ex-19-1)</span>）。</span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 23-3）</span></span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a>**(1)** Ly$\alpha$ 森：低柱密度の中性水素による多数の吸収線＝宇宙のバリオン分布マップ。DLA（damped Ly$\alpha$）：高柱密度系＝高赤方偏移銀河の前駆体。金属吸収系（C IV, Mg II 等）：宇宙初期の化学進化・銀河流出の記録。</span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a>**(2)** $\lambda_{\rm obs}=(1+z)\times0.211$ m。$z=7$：$8\times0.211=1.69$ m。$z=6$：$7\times0.211=1.48$ m。$z=20$：$21\times0.211=4.43$ m。再電離期は約 1.5〜4.4 m（SKA の標的帯）。</span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a>**(3)** CMB は連続スペクトル（黒体）で宇宙の**温度の歴史**（熱化・膨張）を語る。Ly$\alpha$/21 cm は線スペクトルで**構造形成・電離・化学進化の歴史**を語る。両者は宇宙物理学の二つの主柱として相補的に、初期宇宙から現在までの異なる側面を逆引きさせる。</span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a>**答え**：Ly$\alpha$ 森＝バリオン分布、DLA＝銀河前駆体、金属系＝化学進化。21 cm($z=7$)＝1.69 m（$z=6$:1.48、$z=20$:4.43 m）。CMB＝温度史、線＝構造・電離・化学史で相補的。</span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-line-applications-further .unnumbered}</span></span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Asplund, "New Light on Stellar Abundance Analyses," ARA&amp;A 43 (2005) 481 — 恒星化学組成の現代手法</span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Osterbrock &amp; Ferland, *Astrophysics of Gaseous Nebulae and Active Galactic Nuclei* (Univ. Science Books, 2nd ed., 2006) — 線比診断の標準書</span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Prochaska, "Quasar Absorption Line Spectroscopy" レビュー — QSO 吸収系の網羅的解説</span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Madhusudhan, "Exoplanetary Atmospheres," ARA&amp;A 57 (2019) 617 — 系外惑星大気観測のレビュー</span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Dalgarno &amp; Layzer (eds.), *Spectroscopy of Astrophysical Plasmas* (Cambridge, 1987) — 線比診断の体系的記述</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

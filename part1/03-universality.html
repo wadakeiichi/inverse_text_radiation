@@ -492,7 +492,17 @@ window.Quarto = {
   </ul></li>
   <li><a href="#sec-universality-benchmark" id="toc-sec-universality-benchmark" class="nav-link" data-scroll-target="#sec-universality-benchmark">3.7 黒体放射が「特別な基準」になる理由</a></li>
   <li><a href="#sec-universality-summary" id="toc-sec-universality-summary" class="nav-link" data-scroll-target="#sec-universality-summary">この章で何がわかったか</a></li>
-  <li><a href="#sec-universality-exercises" id="toc-sec-universality-exercises" class="nav-link" data-scroll-target="#sec-universality-exercises">演習問題</a></li>
+  <li><a href="#sec-universality-exercises" id="toc-sec-universality-exercises" class="nav-link" data-scroll-target="#sec-universality-exercises">演習問題</a>
+  <ul class="collapse">
+  <li><a href="#ex-3-1" id="toc-ex-3-1" class="nav-link" data-scroll-target="#ex-3-1">問題 3-1　空洞放射の普遍性を第二法則で証明する</a></li>
+  </ul></li>
+  <li><a href="#模範解答問題-3-1" id="toc-模範解答問題-3-1" class="nav-link" data-scroll-target="#模範解答問題-3-1">模範解答（問題 3-1）</a></li>
+  <li><a href="#ex-3-2" id="toc-ex-3-2" class="nav-link" data-scroll-target="#ex-3-2">問題 3-2　Kirchhoff の法則 aν=εν を平衡から導く</a></li>
+  <li><a href="#模範解答問題-3-2" id="toc-模範解答問題-3-2" class="nav-link" data-scroll-target="#模範解答問題-3-2">模範解答（問題 3-2）</a></li>
+  <li><a href="#ex-3-3" id="toc-ex-3-3" class="nav-link" data-scroll-target="#ex-3-3">問題 3-3　LTE でソース関数が Sν=Bν になる</a></li>
+  <li><a href="#模範解答問題-3-3" id="toc-模範解答問題-3-3" class="nav-link" data-scroll-target="#模範解答問題-3-3">模範解答（問題 3-3）</a></li>
+  <li><a href="#ex-3-4" id="toc-ex-3-4" class="nav-link" data-scroll-target="#ex-3-4">問題 3-4　完全鏡の空洞と「平衡に必要な相互作用」</a></li>
+  <li><a href="#模範解答問題-3-4" id="toc-模範解答問題-3-4" class="nav-link" data-scroll-target="#模範解答問題-3-4">模範解答（問題 3-4）</a></li>
   <li><a href="#sec-universality-further" id="toc-sec-universality-further" class="nav-link" data-scroll-target="#sec-universality-further">さらに学ぶための参考文献</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/edit/main/part1/03-universality.qmd" class="toc-action"><i class="bi bi-github"></i>編集</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/blob/main/part1/03-universality.qmd" class="toc-action"><i class="bi empty"></i>ソースコード</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/issues/new" class="toc-action"><i class="bi empty"></i>問題を報告</a></li></ul></div></nav>
@@ -888,16 +898,86 @@ S_\nu = B_\nu(T)
 </section>
 <section id="sec-universality-exercises" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-universality-exercises">演習問題</h2>
-<div class="callout callout-style-simple callout-note">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。</p>
-</div>
-</div>
-</div>
+<p><span class="tag">[導出補完]</span> <strong>模範解答</strong> は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</p>
+<section id="ex-3-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-3-1">問題 3-1　空洞放射の普遍性を第二法則で証明する</h3>
+<p>[★ 難易度：☆☆ ] <span class="tag">[導出補完]</span></p>
+<p>§3.3 は背理法の骨子だけ示した。これを各振動数について厳密化する。</p>
+<ol type="1">
+<li>異なる材質の空洞 A・B を同じ温度 <span class="math inline">T</span> に保ち、振動数 <span class="math inline">[\nu,\nu+d\nu]</span> だけ通すフィルターを挟んで導管でつなぐ。もし <span class="math inline">u_\nu^A\ne u_\nu^B</span> なら何が起こるか述べよ。</li>
+<li>それが熱力学第二法則のどの主張に反するか説明せよ（同一温度の二系の間に正味のエネルギー流＝仕事を取り出せる永久機関）。</li>
+<li>フィルターを使う議論が「全エネルギーだけでなく各振動数で <span class="math inline">u_\nu</span> が普遍」という強い結論を与える理由を述べよ。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-universality-cavity">§3.3 空洞放射</a>／熱平衡そのものの起源（最大エントロピー）は <a href="../part3/06-thermal-equilibrium.html">第6章</a>。</p>
+</section>
+</section>
+<section id="模範解答問題-3-1" class="level2 callout-derive" data-collapse="true">
+<h2 class="anchored" data-anchor-id="模範解答問題-3-1">模範解答（問題 3-1）</h2>
+<p><strong>(1)</strong> フィルターは <span class="math inline">[\nu,\nu+d\nu]</span> の放射だけを通す。もし <span class="math inline">u_\nu^A&gt;u_\nu^B</span> なら、この帯域で A から B へ正味のエネルギーが流れる（逆なら逆向き）。両空洞は同じ温度 <span class="math inline">T</span> なのに、放射エネルギーが一方向に流れ続ける。</p>
+<p><strong>(2)</strong> 同一温度の二つの系の間に外部からの仕事なしに正味のエネルギー（熱）が流れることになる。この流れを使えば永久に仕事を取り出せ、「外部に変化を残さず、低温部へ熱を移す以外に熱を仕事に変換し続ける機関は作れない」という熱力学第二法則（Clausius/Kelvin の主張）に反する。よって仮定 <span class="math inline">u_\nu^A\ne u_\nu^B</span> は誤り。</p>
+<p><strong>(3)</strong> フィルターで振動数を1つずつ切り出せるので、「もし <strong>ある</strong> 振動数で <span class="math inline">u_\nu</span> が違えば」その帯域だけで第二法則違反が起こる。したがって違反を避けるには <strong>すべての</strong> 振動数で <span class="math inline">u_\nu^A=u_\nu^B</span> でなければならない。全エネルギー（積分値）の一致よりも強い、スペクトルの各点での普遍性が示せる。</p>
+<p><strong>答え</strong>：<span class="math inline">u_\nu^A\ne u_\nu^B</span> だと同一温度の二系間に正味エネルギー流＝第二法則違反。フィルター議論で各振動数ごとに <span class="math inline">u_\nu(T)</span> が材質によらず一意と結論。</p>
+</section>
+<section id="ex-3-2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-3-2">問題 3-2　Kirchhoff の法則 aν=εν を平衡から導く</h3>
+<p>[★ 難易度：☆☆ ] <span class="tag">[導出補完]</span></p>
+<p>§3.4–3.5 は <span class="math inline">a_\nu=\epsilon_\nu</span>（吸収率＝放出率）を結果として与えた。空洞内の平衡から導く。温度 <span class="math inline">T</span> の空洞（内部は黒体放射 <span class="math inline">B_\nu(T)</span>）に、吸収率 <span class="math inline">a_\nu</span>・放出率 <span class="math inline">\epsilon_\nu</span> の小物体を置く。</p>
+<ol type="1">
+<li>単位時間・単位面積・単位振動数あたり、この物体が吸収するエネルギーと放出するエネルギーをそれぞれ <span class="math inline">a_\nu, \epsilon_\nu, B_\nu</span> で書け。</li>
+<li>物体が空洞と同じ温度 <span class="math inline">T</span> を保つ（熱平衡）には吸収＝放出が必要。これから <span class="math inline">a_\nu=\epsilon_\nu</span> を導け。</li>
+<li>なぜこの等式が「各振動数ごと」に成り立たねばならないのか（詳細釣り合い）を述べよ。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-universality-perfect-emitter">§3.4 完全吸収体と完全放射体</a>、<a href="#sec-universality-kirchhoff">§3.5 Kirchhoff の法則</a>／詳細釣り合いの一般論は <a href="../part3/06-thermal-equilibrium.html">第6章 §6.6</a>。</p>
+</section>
+<section id="模範解答問題-3-2" class="level2 callout-derive" data-collapse="true">
+<h2 class="anchored" data-anchor-id="模範解答問題-3-2">模範解答（問題 3-2）</h2>
+<p><strong>(1)</strong> 空洞内の入射放射は黒体 <span class="math inline">B_\nu(T)</span>。吸収エネルギー（率）は入射のうち吸収される割合：<span class="math inline">\propto a_\nu B_\nu(T)</span>。放出エネルギーは、完全黒体の放出 <span class="math inline">B_\nu(T)</span> に放出率を掛けた <span class="math inline">\propto \epsilon_\nu B_\nu(T)</span>。（比例係数＝立体角・面積因子は両者共通。）</p>
+<p><strong>(2)</strong> 物体が温度 <span class="math inline">T</span> を保つには、各振動数で吸収＝放出：</p>
+<p><span class="math display">
+a_\nu B_\nu(T)=\epsilon_\nu B_\nu(T)\ \Rightarrow\ a_\nu=\epsilon_\nu.
+</span></p>
+<p><span class="math inline">B_\nu(T)\ne0</span> なので約せる。吸収が強い振動数では放出も強い。</p>
+<p><strong>(3)</strong> もしある振動数で吸収＞放出、別の振動数で吸収＜放出だと、全体では釣り合っていても、物体は前者の振動数で正味エネルギーを受け取り後者で失う。これは空洞放射のスペクトルを各振動数で変えてしまい（あるいは物体内に振動数間のエネルギー輸送を生み）、平衡と矛盾する。第二法則と整合する平衡（詳細釣り合い）は各振動数ごとの釣り合いを要求するので、<span class="math inline">a_\nu=\epsilon_\nu</span> は振動数ごとに成り立つ。</p>
+<p><strong>答え</strong>：平衡で <span class="math inline">a_\nu B_\nu=\epsilon_\nu B_\nu\Rightarrow a_\nu=\epsilon_\nu</span>。詳細釣り合いゆえ各振動数で成立。</p>
+</section>
+<section id="ex-3-3" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-3-3">問題 3-3　LTE でソース関数が Sν=Bν になる</h3>
+<p>[★ 難易度：☆☆ ] <span class="tag">[導出補完]</span></p>
+<p>§3.5 は放射輸送方程式 <span class="math inline">\dfrac{dI_\nu}{ds}=-\alpha_\nu I_\nu+j_\nu</span> とソース関数 <span class="math inline">S_\nu\equiv j_\nu/\alpha_\nu</span> を導入し、LTE で <span class="math inline">S_\nu=B_\nu(T)</span> になると述べた。これを空洞平衡から導く。</p>
+<ol type="1">
+<li>熱平衡の空洞内では放射場が等方かつ一様で <span class="math inline">I_\nu=B_\nu(T)</span>、したがって <span class="math inline">dI_\nu/ds=0</span>。これを輸送方程式に入れて <span class="math inline">j_\nu/\alpha_\nu=B_\nu(T)</span>、すなわち <span class="math inline">S_\nu=B_\nu(T)</span> を示せ。</li>
+<li><span class="math inline">S_\nu=B_\nu</span> が成り立つのは「物質が局所温度 <span class="math inline">T</span> で熱化している（LTE）」ときである。なぜ放射場 <span class="math inline">J_\nu</span> が黒体でなくても <span class="math inline">S_\nu=B_\nu</span> が言えるのか、Kirchhoff の法則（<a href="#ex-3-2">演習 3-2</a>）が <span class="math inline">j_\nu/\alpha_\nu</span> を物質の温度だけの関数にすることに触れて述べよ。</li>
+<li>逆に希薄ガスや AGN 輝線領域で <span class="math inline">S_\nu\ne B_\nu</span> になるのはなぜか、一言で。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-universality-kirchhoff">§3.5 Kirchhoff とソース関数</a>／放射輸送の本格的扱いは <a href="../part2/05-radiative-transfer.html">第5章</a>、線形成での再導出は <a href="../part7/20-line-formation.html">第20章 §20.4</a>。</p>
+</section>
+<section id="模範解答問題-3-3" class="level2 callout-derive" data-collapse="true">
+<h2 class="anchored" data-anchor-id="模範解答問題-3-3">模範解答（問題 3-3）</h2>
+<p><strong>(1)</strong> 平衡の空洞では <span class="math inline">I_\nu=B_\nu(T)</span> が一様等方なので位置によらず <span class="math inline">dI_\nu/ds=0</span>。輸送方程式に代入：</p>
+<p><span class="math display">
+0=-\alpha_\nu B_\nu(T)+j_\nu\ \Rightarrow\ j_\nu=\alpha_\nu B_\nu(T)\ \Rightarrow\ S_\nu\equiv\frac{j_\nu}{\alpha_\nu}=B_\nu(T).
+</span></p>
+<p><strong>(2)</strong> Kirchhoff の法則は放出と吸収の比 <span class="math inline">j_\nu/\alpha_\nu</span> を <strong>物質の温度 <span class="math inline">T</span> だけ</strong> の関数（<span class="math inline">=B_\nu(T)</span>）にする。<span class="math inline">j_\nu</span> も <span class="math inline">\alpha_\nu</span> も物質の局所状態（温度 <span class="math inline">T</span> で熱化した占有数）で決まり、その比は放射場 <span class="math inline">I_\nu</span> や <span class="math inline">J_\nu</span> に依らない。だから周囲の放射場が黒体でなく異方的でも、物質さえ局所温度 <span class="math inline">T</span> で熱化（LTE）していれば <span class="math inline">S_\nu=j_\nu/\alpha_\nu=B_\nu(T)</span> が成り立つ。</p>
+<p><strong>(3)</strong> 希薄ガスや AGN 輝線領域では準位占有数が局所温度だけでは決まらず放射場 <span class="math inline">J_\nu</span> に依存する（非LTE）。すると <span class="math inline">j_\nu/\alpha_\nu</span> が物質温度だけの関数でなくなり <span class="math inline">S_\nu\ne B_\nu</span> となる。</p>
+<p><strong>答え</strong>：平衡 <span class="math inline">dI_\nu/ds=0</span> から <span class="math inline">S_\nu=j_\nu/\alpha_\nu=B_\nu(T)</span>。Kirchhoff により比は物質温度だけの関数なので、LTE なら放射場が黒体でなくても成立。非LTEだと崩れる。</p>
+</section>
+<section id="ex-3-4" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-3-4">問題 3-4　完全鏡の空洞と「平衡に必要な相互作用」</h3>
+<p>[★ 難易度：☆☆ ] <span class="tag">[理解を深める]</span></p>
+<p>§3.3 の問いは「壁が完全鏡（<span class="math inline">a_\nu=0</span>）なら空洞放射はどうなるか」を扱った。これを現実天体の黒体化条件（§3.6）とつなぐ。</p>
+<ol type="1">
+<li>完全鏡の空洞が黒体スペクトルを出さない理由を、平衡に達するメカニズムの有無から説明せよ。</li>
+<li>レーザー共振器（高反射率ミラー）がこれに近いこと、逆に小穴を開けた空洞が実効的な完全吸収体になることを述べよ。</li>
+<li>§3.6 の条件1「光学的に厚い（<span class="math inline">\tau\gg1</span>）」が、なぜ黒体への接近を保証するのか。完全鏡の例（吸収ゼロ）と対比して述べよ。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-universality-cavity">§3.3 空洞放射（完全鏡の問い）</a>、<a href="#sec-universality-real-objects">§3.6 現実の天体が黒体に近づく条件</a>／光学的厚さと放射輸送は <a href="../part2/05-radiative-transfer.html">第5章</a>。</p>
+</section>
+<section id="模範解答問題-3-4" class="level2 callout-derive" data-collapse="true">
+<h2 class="anchored" data-anchor-id="模範解答問題-3-4">模範解答（問題 3-4）</h2>
+<p><strong>(1)</strong> 黒体スペクトルは「放射場と物質が相互作用して熱平衡に達した」結果である。完全鏡は光を吸収も放出もしないので、放射場と壁（物質）がエネルギーをやりとりできない。よって放射場は熱平衡に向かわず、内部のスペクトルは「最初に入っていた光」のまま決まらない。平衡に達するには少なくとも一部の吸収（相互作用）が不可欠。</p>
+<p><strong>(2)</strong> レーザー共振器は高反射率ミラーで吸収が極小なので、定常的な黒体放射を出さず、特定モードの非平衡な光を蓄える。一方、空洞に小穴を開けると、入射光は穴から入って内部で何度も反射・吸収されほぼ確実に吸収される＝実効的に完全吸収体（<span class="math inline">a_\nu\to1</span>）。同時に穴からは内部の熱平衡放射＝黒体スペクトルが出る。</p>
+<p><strong>(3)</strong> 光学的に厚い（<span class="math inline">\tau\gg1</span>）とは、光が抜ける間に多数回の吸収・再放出を受けること。これにより放射場と物質が十分相互作用して局所的に熱化し、ソース関数が <span class="math inline">B_\nu(T)</span> に近づく（<a href="#ex-3-3">演習 3-3</a>）。完全鏡（吸収ゼロ、<span class="math inline">\tau=0</span>）は相互作用が皆無で熱化しないのと正反対で、<span class="math inline">\tau\gg1</span> こそが黒体への接近を保証する。</p>
+<p><strong>答え</strong>：吸収ゼロ＝相互作用なし＝熱化せず黒体にならない。小穴空洞は実効完全吸収体で黒体を出す。<span class="math inline">\tau\gg1</span> は多数回の吸収再放出で熱化を保証し <span class="math inline">B_\nu</span> に近づける。</p>
 </section>
 <section id="sec-universality-further" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-universality-further">さらに学ぶための参考文献</h2>
@@ -1631,15 +1711,119 @@ S_\nu = B_\nu(T)
 <span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-universality-exercises .unnumbered}</span></span>
 <span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple"}</span>
-<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。</span>
-<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 3-1　空洞放射の普遍性を第二法則で証明する {#ex-3-1 .unnumbered}</span></span>
 <span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-universality-further .unnumbered}</span></span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
 <span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rybicki &amp; Lightman, *Radiative Processes in Astrophysics* (Wiley, 1979) — 1.5–1.6 節（Kirchhoff の法則と LTE）</span>
-<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mihalas, *Stellar Atmospheres* (Freeman, 2nd ed., 1978) — LTE と非 LTE の体系的扱い</span>
-<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Reif, *Fundamentals of Statistical and Thermal Physics* (McGraw-Hill, 1965) — 熱力学第二法則と空洞放射</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a>§3.3 は背理法の骨子だけ示した。これを各振動数について厳密化する。</span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>異なる材質の空洞 A・B を同じ温度 $T$ に保ち、振動数 $<span class="co">[</span><span class="ot">\nu,\nu+d\nu</span><span class="co">]</span>$ だけ通すフィルターを挟んで導管でつなぐ。もし $u_\nu^A\ne u_\nu^B$ なら何が起こるか述べよ。</span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>それが熱力学第二法則のどの主張に反するか説明せよ（同一温度の二系の間に正味のエネルギー流＝仕事を取り出せる永久機関）。</span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>フィルターを使う議論が「全エネルギーだけでなく各振動数で $u_\nu$ が普遍」という強い結論を与える理由を述べよ。</span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§3.3 空洞放射</span><span class="co">](#sec-universality-cavity)</span>／熱平衡そのものの起源（最大エントロピー）は <span class="co">[</span><span class="ot">第6章</span><span class="co">](../part3/06-thermal-equilibrium.qmd)</span>。</span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 3-1）</span></span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>**(1)** フィルターは $<span class="co">[</span><span class="ot">\nu,\nu+d\nu</span><span class="co">]</span>$ の放射だけを通す。もし $u_\nu^A&gt;u_\nu^B$ なら、この帯域で A から B へ正味のエネルギーが流れる（逆なら逆向き）。両空洞は同じ温度 $T$ なのに、放射エネルギーが一方向に流れ続ける。</span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>**(2)** 同一温度の二つの系の間に外部からの仕事なしに正味のエネルギー（熱）が流れることになる。この流れを使えば永久に仕事を取り出せ、「外部に変化を残さず、低温部へ熱を移す以外に熱を仕事に変換し続ける機関は作れない」という熱力学第二法則（Clausius/Kelvin の主張）に反する。よって仮定 $u_\nu^A\ne u_\nu^B$ は誤り。</span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a>**(3)** フィルターで振動数を1つずつ切り出せるので、「もし **ある** 振動数で $u_\nu$ が違えば」その帯域だけで第二法則違反が起こる。したがって違反を避けるには **すべての** 振動数で $u_\nu^A=u_\nu^B$ でなければならない。全エネルギー（積分値）の一致よりも強い、スペクトルの各点での普遍性が示せる。</span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a>**答え**：$u_\nu^A\ne u_\nu^B$ だと同一温度の二系間に正味エネルギー流＝第二法則違反。フィルター議論で各振動数ごとに $u_\nu(T)$ が材質によらず一意と結論。</span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 3-2　Kirchhoff の法則 aν=εν を平衡から導く {#ex-3-2 .unnumbered}</span></span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a>§3.4–3.5 は $a_\nu=\epsilon_\nu$（吸収率＝放出率）を結果として与えた。空洞内の平衡から導く。温度 $T$ の空洞（内部は黒体放射 $B_\nu(T)$）に、吸収率 $a_\nu$・放出率 $\epsilon_\nu$ の小物体を置く。</span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>単位時間・単位面積・単位振動数あたり、この物体が吸収するエネルギーと放出するエネルギーをそれぞれ $a_\nu, \epsilon_\nu, B_\nu$ で書け。</span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>物体が空洞と同じ温度 $T$ を保つ（熱平衡）には吸収＝放出が必要。これから $a_\nu=\epsilon_\nu$ を導け。</span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>なぜこの等式が「各振動数ごと」に成り立たねばならないのか（詳細釣り合い）を述べよ。</span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§3.4 完全吸収体と完全放射体</span><span class="co">](#sec-universality-perfect-emitter)</span>、<span class="co">[</span><span class="ot">§3.5 Kirchhoff の法則</span><span class="co">](#sec-universality-kirchhoff)</span>／詳細釣り合いの一般論は <span class="co">[</span><span class="ot">第6章 §6.6</span><span class="co">](../part3/06-thermal-equilibrium.qmd)</span>。</span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 3-2）</span></span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a>**(1)** 空洞内の入射放射は黒体 $B_\nu(T)$。吸収エネルギー（率）は入射のうち吸収される割合：$\propto a_\nu B_\nu(T)$。放出エネルギーは、完全黒体の放出 $B_\nu(T)$ に放出率を掛けた $\propto \epsilon_\nu B_\nu(T)$。（比例係数＝立体角・面積因子は両者共通。）</span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a>**(2)** 物体が温度 $T$ を保つには、各振動数で吸収＝放出：</span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a>a_\nu B_\nu(T)=\epsilon_\nu B_\nu(T)\ \Rightarrow\ a_\nu=\epsilon_\nu.</span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a>$B_\nu(T)\ne0$ なので約せる。吸収が強い振動数では放出も強い。</span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a>**(3)** もしある振動数で吸収＞放出、別の振動数で吸収＜放出だと、全体では釣り合っていても、物体は前者の振動数で正味エネルギーを受け取り後者で失う。これは空洞放射のスペクトルを各振動数で変えてしまい（あるいは物体内に振動数間のエネルギー輸送を生み）、平衡と矛盾する。第二法則と整合する平衡（詳細釣り合い）は各振動数ごとの釣り合いを要求するので、$a_\nu=\epsilon_\nu$ は振動数ごとに成り立つ。</span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a>**答え**：平衡で $a_\nu B_\nu=\epsilon_\nu B_\nu\Rightarrow a_\nu=\epsilon_\nu$。詳細釣り合いゆえ各振動数で成立。</span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 3-3　LTE でソース関数が Sν=Bν になる {#ex-3-3 .unnumbered}</span></span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a>§3.5 は放射輸送方程式 $\dfrac{dI_\nu}{ds}=-\alpha_\nu I_\nu+j_\nu$ とソース関数 $S_\nu\equiv j_\nu/\alpha_\nu$ を導入し、LTE で $S_\nu=B_\nu(T)$ になると述べた。これを空洞平衡から導く。</span>
+<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>熱平衡の空洞内では放射場が等方かつ一様で $I_\nu=B_\nu(T)$、したがって $dI_\nu/ds=0$。これを輸送方程式に入れて $j_\nu/\alpha_\nu=B_\nu(T)$、すなわち $S_\nu=B_\nu(T)$ を示せ。</span>
+<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$S_\nu=B_\nu$ が成り立つのは「物質が局所温度 $T$ で熱化している（LTE）」ときである。なぜ放射場 $J_\nu$ が黒体でなくても $S_\nu=B_\nu$ が言えるのか、Kirchhoff の法則（[演習 3-2](#ex-3-2)）が $j_\nu/\alpha_\nu$ を物質の温度だけの関数にすることに触れて述べよ。</span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>逆に希薄ガスや AGN 輝線領域で $S_\nu\ne B_\nu$ になるのはなぜか、一言で。</span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§3.5 Kirchhoff とソース関数</span><span class="co">](#sec-universality-kirchhoff)</span>／放射輸送の本格的扱いは <span class="co">[</span><span class="ot">第5章</span><span class="co">](../part2/05-radiative-transfer.qmd)</span>、線形成での再導出は <span class="co">[</span><span class="ot">第20章 §20.4</span><span class="co">](../part7/20-line-formation.qmd)</span>。</span>
+<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 3-3）</span></span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a>**(1)** 平衡の空洞では $I_\nu=B_\nu(T)$ が一様等方なので位置によらず $dI_\nu/ds=0$。輸送方程式に代入：</span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>0=-\alpha_\nu B_\nu(T)+j_\nu\ \Rightarrow\ j_\nu=\alpha_\nu B_\nu(T)\ \Rightarrow\ S_\nu\equiv\frac{j_\nu}{\alpha_\nu}=B_\nu(T).</span>
+<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a>**(2)** Kirchhoff の法則は放出と吸収の比 $j_\nu/\alpha_\nu$ を **物質の温度 $T$ だけ** の関数（$=B_\nu(T)$）にする。$j_\nu$ も $\alpha_\nu$ も物質の局所状態（温度 $T$ で熱化した占有数）で決まり、その比は放射場 $I_\nu$ や $J_\nu$ に依らない。だから周囲の放射場が黒体でなく異方的でも、物質さえ局所温度 $T$ で熱化（LTE）していれば $S_\nu=j_\nu/\alpha_\nu=B_\nu(T)$ が成り立つ。</span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a>**(3)** 希薄ガスや AGN 輝線領域では準位占有数が局所温度だけでは決まらず放射場 $J_\nu$ に依存する（非LTE）。すると $j_\nu/\alpha_\nu$ が物質温度だけの関数でなくなり $S_\nu\ne B_\nu$ となる。</span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a>**答え**：平衡 $dI_\nu/ds=0$ から $S_\nu=j_\nu/\alpha_\nu=B_\nu(T)$。Kirchhoff により比は物質温度だけの関数なので、LTE なら放射場が黒体でなくても成立。非LTEだと崩れる。</span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 3-4　完全鏡の空洞と「平衡に必要な相互作用」 {#ex-3-4 .unnumbered}</span></span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a>§3.3 の問いは「壁が完全鏡（$a_\nu=0$）なら空洞放射はどうなるか」を扱った。これを現実天体の黒体化条件（§3.6）とつなぐ。</span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>完全鏡の空洞が黒体スペクトルを出さない理由を、平衡に達するメカニズムの有無から説明せよ。</span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>レーザー共振器（高反射率ミラー）がこれに近いこと、逆に小穴を開けた空洞が実効的な完全吸収体になることを述べよ。</span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>§3.6 の条件1「光学的に厚い（$\tau\gg1$）」が、なぜ黒体への接近を保証するのか。完全鏡の例（吸収ゼロ）と対比して述べよ。</span>
+<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§3.3 空洞放射（完全鏡の問い）</span><span class="co">](#sec-universality-cavity)</span>、<span class="co">[</span><span class="ot">§3.6 現実の天体が黒体に近づく条件</span><span class="co">](#sec-universality-real-objects)</span>／光学的厚さと放射輸送は <span class="co">[</span><span class="ot">第5章</span><span class="co">](../part2/05-radiative-transfer.qmd)</span>。</span>
+<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 3-4）</span></span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a>**(1)** 黒体スペクトルは「放射場と物質が相互作用して熱平衡に達した」結果である。完全鏡は光を吸収も放出もしないので、放射場と壁（物質）がエネルギーをやりとりできない。よって放射場は熱平衡に向かわず、内部のスペクトルは「最初に入っていた光」のまま決まらない。平衡に達するには少なくとも一部の吸収（相互作用）が不可欠。</span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a>**(2)** レーザー共振器は高反射率ミラーで吸収が極小なので、定常的な黒体放射を出さず、特定モードの非平衡な光を蓄える。一方、空洞に小穴を開けると、入射光は穴から入って内部で何度も反射・吸収されほぼ確実に吸収される＝実効的に完全吸収体（$a_\nu\to1$）。同時に穴からは内部の熱平衡放射＝黒体スペクトルが出る。</span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a>**(3)** 光学的に厚い（$\tau\gg1$）とは、光が抜ける間に多数回の吸収・再放出を受けること。これにより放射場と物質が十分相互作用して局所的に熱化し、ソース関数が $B_\nu(T)$ に近づく（<span class="co">[</span><span class="ot">演習 3-3</span><span class="co">](#ex-3-3)</span>）。完全鏡（吸収ゼロ、$\tau=0$）は相互作用が皆無で熱化しないのと正反対で、$\tau\gg1$ こそが黒体への接近を保証する。</span>
+<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a>**答え**：吸収ゼロ＝相互作用なし＝熱化せず黒体にならない。小穴空洞は実効完全吸収体で黒体を出す。$\tau\gg1$ は多数回の吸収再放出で熱化を保証し $B_\nu$ に近づける。</span>
+<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-universality-further .unnumbered}</span></span>
+<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rybicki &amp; Lightman, *Radiative Processes in Astrophysics* (Wiley, 1979) — 1.5–1.6 節（Kirchhoff の法則と LTE）</span>
+<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mihalas, *Stellar Atmospheres* (Freeman, 2nd ed., 1978) — LTE と非 LTE の体系的扱い</span>
+<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Reif, *Fundamentals of Statistical and Thermal Physics* (McGraw-Hill, 1965) — 熱力学第二法則と空洞放射</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

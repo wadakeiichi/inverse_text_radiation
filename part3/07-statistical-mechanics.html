@@ -486,7 +486,17 @@ window.Quarto = {
   <li><a href="#sec-statistical-mechanics-thermodynamics" id="toc-sec-statistical-mechanics-thermodynamics" class="nav-link" data-scroll-target="#sec-statistical-mechanics-thermodynamics">7.5 熱力学関数とのつながり</a></li>
   <li><a href="#sec-statistical-mechanics-classical-limit" id="toc-sec-statistical-mechanics-classical-limit" class="nav-link" data-scroll-target="#sec-statistical-mechanics-classical-limit">7.6 古典統計の限界 ― 放射場での破綻</a></li>
   <li><a href="#sec-statistical-mechanics-summary" id="toc-sec-statistical-mechanics-summary" class="nav-link" data-scroll-target="#sec-statistical-mechanics-summary">この章で何がわかったか</a></li>
-  <li><a href="#sec-statistical-mechanics-exercises" id="toc-sec-statistical-mechanics-exercises" class="nav-link" data-scroll-target="#sec-statistical-mechanics-exercises">演習問題</a></li>
+  <li><a href="#sec-statistical-mechanics-exercises" id="toc-sec-statistical-mechanics-exercises" class="nav-link" data-scroll-target="#sec-statistical-mechanics-exercises">演習問題</a>
+  <ul class="collapse">
+  <li><a href="#ex-7-1" id="toc-ex-7-1" class="nav-link" data-scroll-target="#ex-7-1">問題 7-1　熱浴との接触から Boltzmann 確率を導く</a></li>
+  </ul></li>
+  <li><a href="#模範解答問題-7-1" id="toc-模範解答問題-7-1" class="nav-link" data-scroll-target="#模範解答問題-7-1">模範解答（問題 7-1）</a></li>
+  <li><a href="#ex-7-2" id="toc-ex-7-2" class="nav-link" data-scroll-target="#ex-7-2">問題 7-2　振動子の分配関数と、零点項が占有因子に効かないこと</a></li>
+  <li><a href="#模範解答問題-7-2" id="toc-模範解答問題-7-2" class="nav-link" data-scroll-target="#模範解答問題-7-2">模範解答（問題 7-2）</a></li>
+  <li><a href="#ex-7-3" id="toc-ex-7-3" class="nav-link" data-scroll-target="#ex-7-3">問題 7-3　エネルギー揺らぎ (ΔE)²=kBT²Cv</a></li>
+  <li><a href="#模範解答問題-7-3" id="toc-模範解答問題-7-3" class="nav-link" data-scroll-target="#模範解答問題-7-3">模範解答（問題 7-3）</a></li>
+  <li><a href="#ex-7-4" id="toc-ex-7-4" class="nav-link" data-scroll-target="#ex-7-4">問題 7-4　水素準位の Boltzmann 占有と Balmer 線の温度依存</a></li>
+  <li><a href="#模範解答問題-7-4" id="toc-模範解答問題-7-4" class="nav-link" data-scroll-target="#模範解答問題-7-4">模範解答（問題 7-4）</a></li>
   <li><a href="#sec-statistical-mechanics-further" id="toc-sec-statistical-mechanics-further" class="nav-link" data-scroll-target="#sec-statistical-mechanics-further">さらに学ぶための参考文献</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/edit/main/part3/07-statistical-mechanics.qmd" class="toc-action"><i class="bi bi-github"></i>編集</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/blob/main/part3/07-statistical-mechanics.qmd" class="toc-action"><i class="bi empty"></i>ソースコード</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/issues/new" class="toc-action"><i class="bi empty"></i>問題を報告</a></li></ul></div></nav>
@@ -863,16 +873,96 @@ u_\nu^\text{RJ} = g(\nu) \cdot k_B T = \frac{8\pi \nu^2}{c^3} k_B T
 </section>
 <section id="sec-statistical-mechanics-exercises" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-statistical-mechanics-exercises">演習問題</h2>
-<div class="callout callout-style-simple callout-note">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。</p>
-</div>
-</div>
-</div>
+<p><span class="tag">[導出補完]</span> <strong>模範解答</strong> は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</p>
+<section id="ex-7-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-7-1">問題 7-1　熱浴との接触から Boltzmann 確率を導く</h3>
+<p>[★ 難易度：☆☆ ] <span class="tag">[導出補完]</span></p>
+<p>§7.1 は <span class="math inline">P_i=e^{-E_i/k_BT}/Z</span> を結果として与えた。系を温度 <span class="math inline">T</span> の大きな熱浴と接触させた設定から導く。</p>
+<ol type="1">
+<li>系がエネルギー <span class="math inline">E_i</span> の状態にある確率は、熱浴が残りのエネルギー <span class="math inline">E_{\rm tot}-E_i</span> を取る多重度に比例する：<span class="math inline">P_i\propto\Omega_{\rm bath}(E_{\rm tot}-E_i)</span>。これを <span class="math inline">S_{\rm bath}=k_B\ln\Omega_{\rm bath}</span> で書き換えよ。</li>
+<li><span class="math inline">E_i\ll E_{\rm tot}</span> として <span class="math inline">S_{\rm bath}(E_{\rm tot}-E_i)</span> を <span class="math inline">E_i</span> について1次まで展開し、<span class="math inline">1/T=\partial S_{\rm bath}/\partial E</span> を使って <span class="math inline">P_i\propto e^{-E_i/k_BT}</span> を導け。</li>
+<li>規格化して <span class="math inline">Z=\sum_i e^{-E_i/k_BT}</span> が現れることを示せ。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-statistical-mechanics-states">§7.1 状態数と確率</a>／温度の定義は<a href="../part3/06-thermal-equilibrium.html#sec-thermal-equilibrium-entropy">§6.3</a>（<a href="../part3/06-thermal-equilibrium.html#ex-6-2">演習 6-2</a>）。</p>
+</section>
+</section>
+<section id="模範解答問題-7-1" class="level2 callout-derive" data-collapse="true">
+<h2 class="anchored" data-anchor-id="模範解答問題-7-1">模範解答（問題 7-1）</h2>
+<p><strong>(1)</strong> 系が状態 <span class="math inline">i</span>（エネルギー <span class="math inline">E_i</span>）にあるとき、全体のミクロ状態数は熱浴の多重度 <span class="math inline">\Omega_{\rm bath}(E_{\rm tot}-E_i)</span> に等しい。等確率の原理から <span class="math inline">P_i\propto\Omega_{\rm bath}(E_{\rm tot}-E_i)=e^{S_{\rm bath}(E_{\rm tot}-E_i)/k_B}</span>。</p>
+<p><strong>(2)</strong> <span class="math inline">E_i\ll E_{\rm tot}</span> で Taylor 展開：</p>
+<p><span class="math display">
+S_{\rm bath}(E_{\rm tot}-E_i)\simeq S_{\rm bath}(E_{\rm tot})-E_i\frac{\partial S_{\rm bath}}{\partial E}=S_{\rm bath}(E_{\rm tot})-\frac{E_i}{T}.
+</span></p>
+<p>よって <span class="math inline">P_i\propto e^{S_{\rm bath}(E_{\rm tot})/k_B}e^{-E_i/k_BT}\propto e^{-E_i/k_BT}</span>。</p>
+<p><strong>(3)</strong> <span class="math inline">\sum_i P_i=1</span> より <span class="math inline">P_i=\dfrac{e^{-E_i/k_BT}}{\sum_j e^{-E_j/k_BT}}=\dfrac{e^{-E_i/k_BT}}{Z}</span>、<span class="math inline">Z=\sum_j e^{-E_j/k_BT}</span>。</p>
+<p><strong>答え</strong>：<span class="math inline">P_i\propto\Omega_{\rm bath}(E_{\rm tot}-E_i)</span> を1次展開し <span class="math inline">1/T=\partial S/\partial E</span> を使うと <span class="math inline">P_i=e^{-E_i/k_BT}/Z</span>。</p>
+</section>
+<section id="ex-7-2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-7-2">問題 7-2　振動子の分配関数と、零点項が占有因子に効かないこと</h3>
+<p>[★ 難易度：☆☆ ] <span class="tag">[導出補完]</span></p>
+<p>§7.2 は調和振動子の <span class="math inline">Z_1</span> と <span class="math inline">\langle E\rangle</span> を与え、零点項が観測量に影響しないと注記した。これを確かめる。準位 <span class="math inline">\epsilon_n=(n+\tfrac12)\hbar\omega</span>。</p>
+<ol type="1">
+<li><span class="math inline">Z_1=\displaystyle\sum_{n=0}^\infty e^{-\beta(n+1/2)\hbar\omega}=\dfrac{e^{-\beta\hbar\omega/2}}{1-e^{-\beta\hbar\omega}}</span> を示せ。</li>
+<li><span class="math inline">\langle\epsilon\rangle=-\partial\ln Z_1/\partial\beta=\dfrac{\hbar\omega}{2}+\dfrac{\hbar\omega}{e^{\beta\hbar\omega}-1}</span> を導け。</li>
+<li>零点項 <span class="math inline">\hbar\omega/2</span> は (i) 占有因子 <span class="math inline">1/(e^{\beta\hbar\omega}-1)</span> と (ii) 比熱 <span class="math inline">C=\partial\langle\epsilon\rangle/\partial T</span> のどちらにも影響しないことを示せ。なぜ Planck の <span class="math inline">\epsilon_n=nh\nu</span> と Schrödinger の <span class="math inline">\epsilon_n=(n+\tfrac12)\hbar\omega</span> が同じスペクトルを与えるのか。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-statistical-mechanics-partition">§7.2 分配関数</a>／Planck の量子仮説からの導出は<a href="../part4/10-planck-quantum.html#sec-planck-quantum-oscillator">§10.2</a>（<a href="../part4/10-planck-quantum.html#ex-10-1">演習 10-1</a>）、零点エネルギーは<a href="../part4/12-quantum-foundations.html#sec-quantum-foundations-oscillator">§12.2</a>。</p>
+</section>
+<section id="模範解答問題-7-2" class="level2 callout-derive" data-collapse="true">
+<h2 class="anchored" data-anchor-id="模範解答問題-7-2">模範解答（問題 7-2）</h2>
+<p><strong>(1)</strong> 共通因子 <span class="math inline">e^{-\beta\hbar\omega/2}</span> を括り出すと等比級数：</p>
+<p><span class="math display">
+Z_1=e^{-\beta\hbar\omega/2}\sum_{n=0}^\infty e^{-\beta n\hbar\omega}=e^{-\beta\hbar\omega/2}\cdot\frac{1}{1-e^{-\beta\hbar\omega}}.
+</span></p>
+<p><strong>(2)</strong> <span class="math inline">\ln Z_1=-\dfrac{\beta\hbar\omega}{2}-\ln(1-e^{-\beta\hbar\omega})</span>。<span class="math inline">\beta</span> で微分：</p>
+<p><span class="math display">
+\langle\epsilon\rangle=-\frac{\partial\ln Z_1}{\partial\beta}=\frac{\hbar\omega}{2}+\frac{\hbar\omega e^{-\beta\hbar\omega}}{1-e^{-\beta\hbar\omega}}=\frac{\hbar\omega}{2}+\frac{\hbar\omega}{e^{\beta\hbar\omega}-1}.
+</span></p>
+<p><strong>(3)</strong> (i) 第二項 <span class="math inline">1/(e^{\beta\hbar\omega}-1)</span> が占有因子で、零点項 <span class="math inline">\hbar\omega/2</span> とは独立に現れる。(ii) <span class="math inline">\hbar\omega/2</span> は温度に依らない定数なので <span class="math inline">C=\partial\langle\epsilon\rangle/\partial T</span> で微分すると消える。よって観測量（占有因子・比熱・放射スペクトル）は零点項に依らない。Planck（<span class="math inline">nh\nu</span>）と Schrödinger（<span class="math inline">(n+\tfrac12)\hbar\omega</span>）は零点という定数オフセットだけが違い、温度微分・対数微分で消えるので、同じ占有因子＝同じスペクトルを与える。</p>
+<p><strong>答え</strong>：<span class="math inline">Z_1=e^{-\beta\hbar\omega/2}/(1-e^{-\beta\hbar\omega})</span>、<span class="math inline">\langle\epsilon\rangle=\tfrac12\hbar\omega+\hbar\omega/(e^{\beta\hbar\omega}-1)</span>。零点項は定数ゆえ占有因子・比熱に効かず、<span class="math inline">nh\nu</span> と <span class="math inline">(n+\tfrac12)\hbar\omega</span> は同じスペクトル。</p>
+</section>
+<section id="ex-7-3" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-7-3">問題 7-3　エネルギー揺らぎ (ΔE)²=kBT²Cv</h3>
+<p>[★ 難易度：☆☆ ] <span class="tag">[導出補完]</span></p>
+<p>§7.4 は揺らぎの式を結果として与えた。分配関数から導く。<span class="math inline">\beta=1/k_BT</span>。</p>
+<ol type="1">
+<li><span class="math inline">\langle E\rangle=-\dfrac{\partial\ln Z}{\partial\beta}</span>、<span class="math inline">\langle E^2\rangle=\dfrac{1}{Z}\dfrac{\partial^2 Z}{\partial\beta^2}</span> を使い、<span class="math inline">\langle(\Delta E)^2\rangle=\dfrac{\partial^2\ln Z}{\partial\beta^2}=-\dfrac{\partial\langle E\rangle}{\partial\beta}</span> を示せ。</li>
+<li><span class="math inline">\dfrac{\partial}{\partial\beta}=-k_BT^2\dfrac{\partial}{\partial T}</span> を使い、<span class="math inline">\langle(\Delta E)^2\rangle=k_BT^2 C_V</span> を導け（<span class="math inline">C_V=\partial\langle E\rangle/\partial T</span>）。</li>
+<li><span class="math inline">\langle E\rangle\propto N</span>、<span class="math inline">C_V\propto N</span> から相対揺らぎ <span class="math inline">\sqrt{\langle(\Delta E)^2\rangle}/\langle E\rangle\propto1/\sqrt N</span> を示せ。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-statistical-mechanics-fluctuations">§7.4 平均値と揺らぎ</a>／多重度の揺らぎ幅は<a href="../part3/06-thermal-equilibrium.html#ex-6-1">演習 6-1</a>、CMB スペクトル歪みは<a href="../part6/16-cmb.html">第16章</a>。</p>
+</section>
+<section id="模範解答問題-7-3" class="level2 callout-derive" data-collapse="true">
+<h2 class="anchored" data-anchor-id="模範解答問題-7-3">模範解答（問題 7-3）</h2>
+<p><strong>(1)</strong> <span class="math inline">\langle E^2\rangle-\langle E\rangle^2</span> を計算する。<span class="math inline">\langle E\rangle=-\partial_\beta\ln Z=-\dfrac{1}{Z}\partial_\beta Z</span>。もう一度微分：</p>
+<p><span class="math display">
+\frac{\partial^2\ln Z}{\partial\beta^2}=\frac{1}{Z}\frac{\partial^2 Z}{\partial\beta^2}-\left(\frac{1}{Z}\frac{\partial Z}{\partial\beta}\right)^2=\langle E^2\rangle-\langle E\rangle^2=\langle(\Delta E)^2\rangle.
+</span></p>
+<p>また <span class="math inline">\partial^2\ln Z/\partial\beta^2=-\partial\langle E\rangle/\partial\beta</span>。</p>
+<p><strong>(2)</strong> <span class="math inline">\partial_\beta=-k_BT^2\partial_T</span>（<span class="math inline">\beta=1/k_BT</span> より <span class="math inline">d\beta=-dT/k_BT^2</span>）。よって</p>
+<p><span class="math display">
+\langle(\Delta E)^2\rangle=-\frac{\partial\langle E\rangle}{\partial\beta}=k_BT^2\frac{\partial\langle E\rangle}{\partial T}=k_BT^2 C_V.
+</span></p>
+<p><strong>(3)</strong> <span class="math inline">\langle E\rangle\propto N</span>、<span class="math inline">C_V\propto N</span> なので <span class="math inline">\langle(\Delta E)^2\rangle\propto N</span>、<span class="math inline">\sqrt{\langle(\Delta E)^2\rangle}\propto\sqrt N</span>。相対揺らぎは <span class="math inline">\sqrt N/N=1/\sqrt N</span>。マクロ系で揺らぎが消える理由。</p>
+<p><strong>答え</strong>：<span class="math inline">\langle(\Delta E)^2\rangle=\partial^2\ln Z/\partial\beta^2=k_BT^2C_V</span>。相対揺らぎ <span class="math inline">\propto1/\sqrt N</span>。</p>
+</section>
+<section id="ex-7-4" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-7-4">問題 7-4　水素準位の Boltzmann 占有と Balmer 線の温度依存</h3>
+<p>[★ 難易度：☆☆☆ ] <span class="tag">[理解を深める]</span></p>
+<p>§7.3 の Boltzmann 分布 <span class="math inline">n_2/n_1=(g_2/g_1)e^{-(E_2-E_1)/k_BT}</span> を水素に応用する。<span class="math inline">E_n=-13.6/n^2</span> eV、<span class="math inline">g_n=2n^2</span>、<span class="math inline">k_B=8.617\times10^{-5}</span> eV/K。</p>
+<ol type="1">
+<li><span class="math inline">n=1\to2</span> の励起エネルギー <span class="math inline">E_2-E_1</span> と縮退度比 <span class="math inline">g_2/g_1</span> を求めよ。</li>
+<li><span class="math inline">T=5800</span> K（太陽光球）と <span class="math inline">T=10000</span> K（A 型星）で占有数比 <span class="math inline">n_2/n_1</span> を計算し、何桁違うか述べよ。</li>
+<li>Balmer 線（<span class="math inline">n=2</span> から始まる可視吸収線）が低温の太陽で弱く、A 型星（<span class="math inline">\sim10000</span> K）で強くなる理由を述べよ。さらに高温では弱まる（電離が効く）ことに一言触れよ。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-statistical-mechanics-boltzmann">§7.3 Boltzmann 分布</a>／恒星の色と温度は<a href="../part1/01-where-blackbody.html#sec-where-blackbody-stars">§1.3</a>、線強度からの温度推定は<a href="../part7/23-line-applications.html">第23章</a>、原子準位は<a href="../part7/21-atomic-physics.html">第21章</a>。</p>
+</section>
+<section id="模範解答問題-7-4" class="level2 callout-derive" data-collapse="true">
+<h2 class="anchored" data-anchor-id="模範解答問題-7-4">模範解答（問題 7-4）</h2>
+<p><strong>(1)</strong> <span class="math inline">E_2-E_1=-13.6/4-(-13.6/1)=-3.4+13.6=10.2</span> eV。<span class="math inline">g_2/g_1=2\cdot2^2/(2\cdot1^2)=8/2=4</span>。</p>
+<p><strong>(2)</strong> <span class="math inline">T=5800</span> K：<span class="math inline">k_BT=8.617\times10^{-5}\times5800=0.500</span> eV。指数 <span class="math inline">-10.2/0.500=-20.4</span>、<span class="math inline">e^{-20.4}=1.37\times10^{-9}</span>。<span class="math inline">n_2/n_1=4\times1.37\times10^{-9}\approx5.5\times10^{-9}</span>。 <span class="math inline">T=10000</span> K：<span class="math inline">k_BT=0.862</span> eV。指数 <span class="math inline">-10.2/0.862=-11.8</span>、<span class="math inline">e^{-11.8}=7.2\times10^{-6}</span>。<span class="math inline">n_2/n_1=4\times7.2\times10^{-6}\approx2.9\times10^{-5}</span>。 比は <span class="math inline">2.9\times10^{-5}/5.5\times10^{-9}\approx5300</span> 倍。約3〜4桁違う。</p>
+<p><strong>(3)</strong> Balmer 線は <span class="math inline">n=2</span> にいる原子が吸収して生じる。太陽（5800 K）では <span class="math inline">n=2</span> の占有が <span class="math inline">\sim10^{-9}</span> と極めて少なく、Balmer 線は弱い。A 型星（<span class="math inline">\sim10000</span> K）では <span class="math inline">n=2</span> 占有が数千倍に増え、Balmer 線が最強になる。さらに高温（O・B 型）では水素が電離して中性水素自体が減り、Balmer 線は再び弱まる（電離は Saha 式、本問の Boltzmann だけでは表せない別効果）。</p>
+<p><strong>答え</strong>：<span class="math inline">E_2-E_1=10.2</span> eV、<span class="math inline">g_2/g_1=4</span>。<span class="math inline">n_2/n_1\approx5.5\times10^{-9}</span>（5800 K）→<span class="math inline">2.9\times10^{-5}</span>（10000 K）で約5300倍。Balmer 線は A 型で最強、さらに高温では電離で弱まる。</p>
 </section>
 <section id="sec-statistical-mechanics-further" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-statistical-mechanics-further">さらに学ぶための参考文献</h2>
@@ -1623,15 +1713,135 @@ u_\nu^\text{RJ} = g(\nu) \cdot k_B T = \frac{8\pi \nu^2}{c^3} k_B T
 <span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-statistical-mechanics-exercises .unnumbered}</span></span>
 <span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple"}</span>
-<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a>演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。</span>
-<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 7-1　熱浴との接触から Boltzmann 確率を導く {#ex-7-1 .unnumbered}</span></span>
 <span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-statistical-mechanics-further .unnumbered}</span></span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
 <span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Reif, *Fundamentals of Statistical and Thermal Physics* (McGraw-Hill, 1965) — Boltzmann 分布と分配関数の標準教科書</span>
-<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pathria &amp; Beale, *Statistical Mechanics* (Academic Press, 3rd ed., 2011) — より現代的な体系化</span>
-<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>久保亮五『大学演習　熱学・統計力学』（裳華房, 1961）— 古典的な日本の教科書、演習豊富</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a>§7.1 は $P_i=e^{-E_i/k_BT}/Z$ を結果として与えた。系を温度 $T$ の大きな熱浴と接触させた設定から導く。</span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>系がエネルギー $E_i$ の状態にある確率は、熱浴が残りのエネルギー $E_{\rm tot}-E_i$ を取る多重度に比例する：$P_i\propto\Omega_{\rm bath}(E_{\rm tot}-E_i)$。これを $S_{\rm bath}=k_B\ln\Omega_{\rm bath}$ で書き換えよ。</span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$E_i\ll E_{\rm tot}$ として $S_{\rm bath}(E_{\rm tot}-E_i)$ を $E_i$ について1次まで展開し、$1/T=\partial S_{\rm bath}/\partial E$ を使って $P_i\propto e^{-E_i/k_BT}$ を導け。</span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>規格化して $Z=\sum_i e^{-E_i/k_BT}$ が現れることを示せ。</span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§7.1 状態数と確率</span><span class="co">](#sec-statistical-mechanics-states)</span>／温度の定義は<span class="co">[</span><span class="ot">§6.3</span><span class="co">](../part3/06-thermal-equilibrium.qmd#sec-thermal-equilibrium-entropy)</span>（<span class="co">[</span><span class="ot">演習 6-2</span><span class="co">](../part3/06-thermal-equilibrium.qmd#ex-6-2)</span>）。</span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 7-1）</span></span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a>**(1)** 系が状態 $i$（エネルギー $E_i$）にあるとき、全体のミクロ状態数は熱浴の多重度 $\Omega_{\rm bath}(E_{\rm tot}-E_i)$ に等しい。等確率の原理から $P_i\propto\Omega_{\rm bath}(E_{\rm tot}-E_i)=e^{S_{\rm bath}(E_{\rm tot}-E_i)/k_B}$。</span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a>**(2)** $E_i\ll E_{\rm tot}$ で Taylor 展開：</span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a>S_{\rm bath}(E_{\rm tot}-E_i)\simeq S_{\rm bath}(E_{\rm tot})-E_i\frac{\partial S_{\rm bath}}{\partial E}=S_{\rm bath}(E_{\rm tot})-\frac{E_i}{T}.</span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>よって $P_i\propto e^{S_{\rm bath}(E_{\rm tot})/k_B}e^{-E_i/k_BT}\propto e^{-E_i/k_BT}$。</span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>**(3)** $\sum_i P_i=1$ より $P_i=\dfrac{e^{-E_i/k_BT}}{\sum_j e^{-E_j/k_BT}}=\dfrac{e^{-E_i/k_BT}}{Z}$、$Z=\sum_j e^{-E_j/k_BT}$。</span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a>**答え**：$P_i\propto\Omega_{\rm bath}(E_{\rm tot}-E_i)$ を1次展開し $1/T=\partial S/\partial E$ を使うと $P_i=e^{-E_i/k_BT}/Z$。</span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 7-2　振動子の分配関数と、零点項が占有因子に効かないこと {#ex-7-2 .unnumbered}</span></span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a>§7.2 は調和振動子の $Z_1$ と $\langle E\rangle$ を与え、零点項が観測量に影響しないと注記した。これを確かめる。準位 $\epsilon_n=(n+\tfrac12)\hbar\omega$。</span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$Z_1=\displaystyle\sum_{n=0}^\infty e^{-\beta(n+1/2)\hbar\omega}=\dfrac{e^{-\beta\hbar\omega/2}}{1-e^{-\beta\hbar\omega}}$ を示せ。</span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$\langle\epsilon\rangle=-\partial\ln Z_1/\partial\beta=\dfrac{\hbar\omega}{2}+\dfrac{\hbar\omega}{e^{\beta\hbar\omega}-1}$ を導け。</span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>零点項 $\hbar\omega/2$ は (i) 占有因子 $1/(e^{\beta\hbar\omega}-1)$ と (ii) 比熱 $C=\partial\langle\epsilon\rangle/\partial T$ のどちらにも影響しないことを示せ。なぜ Planck の $\epsilon_n=nh\nu$ と Schrödinger の $\epsilon_n=(n+\tfrac12)\hbar\omega$ が同じスペクトルを与えるのか。</span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§7.2 分配関数</span><span class="co">](#sec-statistical-mechanics-partition)</span>／Planck の量子仮説からの導出は<span class="co">[</span><span class="ot">§10.2</span><span class="co">](../part4/10-planck-quantum.qmd#sec-planck-quantum-oscillator)</span>（<span class="co">[</span><span class="ot">演習 10-1</span><span class="co">](../part4/10-planck-quantum.qmd#ex-10-1)</span>）、零点エネルギーは<span class="co">[</span><span class="ot">§12.2</span><span class="co">](../part4/12-quantum-foundations.qmd#sec-quantum-foundations-oscillator)</span>。</span>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 7-2）</span></span>
+<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a>**(1)** 共通因子 $e^{-\beta\hbar\omega/2}$ を括り出すと等比級数：</span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a>Z_1=e^{-\beta\hbar\omega/2}\sum_{n=0}^\infty e^{-\beta n\hbar\omega}=e^{-\beta\hbar\omega/2}\cdot\frac{1}{1-e^{-\beta\hbar\omega}}.</span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a>**(2)** $\ln Z_1=-\dfrac{\beta\hbar\omega}{2}-\ln(1-e^{-\beta\hbar\omega})$。$\beta$ で微分：</span>
+<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a>\langle\epsilon\rangle=-\frac{\partial\ln Z_1}{\partial\beta}=\frac{\hbar\omega}{2}+\frac{\hbar\omega e^{-\beta\hbar\omega}}{1-e^{-\beta\hbar\omega}}=\frac{\hbar\omega}{2}+\frac{\hbar\omega}{e^{\beta\hbar\omega}-1}.</span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>**(3)** (i) 第二項 $1/(e^{\beta\hbar\omega}-1)$ が占有因子で、零点項 $\hbar\omega/2$ とは独立に現れる。(ii) $\hbar\omega/2$ は温度に依らない定数なので $C=\partial\langle\epsilon\rangle/\partial T$ で微分すると消える。よって観測量（占有因子・比熱・放射スペクトル）は零点項に依らない。Planck（$nh\nu$）と Schrödinger（$(n+\tfrac12)\hbar\omega$）は零点という定数オフセットだけが違い、温度微分・対数微分で消えるので、同じ占有因子＝同じスペクトルを与える。</span>
+<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a>**答え**：$Z_1=e^{-\beta\hbar\omega/2}/(1-e^{-\beta\hbar\omega})$、$\langle\epsilon\rangle=\tfrac12\hbar\omega+\hbar\omega/(e^{\beta\hbar\omega}-1)$。零点項は定数ゆえ占有因子・比熱に効かず、$nh\nu$ と $(n+\tfrac12)\hbar\omega$ は同じスペクトル。</span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 7-3　エネルギー揺らぎ (ΔE)²=kBT²Cv {#ex-7-3 .unnumbered}</span></span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a>§7.4 は揺らぎの式を結果として与えた。分配関数から導く。$\beta=1/k_BT$。</span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$\langle E\rangle=-\dfrac{\partial\ln Z}{\partial\beta}$、$\langle E^2\rangle=\dfrac{1}{Z}\dfrac{\partial^2 Z}{\partial\beta^2}$ を使い、$\langle(\Delta E)^2\rangle=\dfrac{\partial^2\ln Z}{\partial\beta^2}=-\dfrac{\partial\langle E\rangle}{\partial\beta}$ を示せ。</span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$\dfrac{\partial}{\partial\beta}=-k_BT^2\dfrac{\partial}{\partial T}$ を使い、$\langle(\Delta E)^2\rangle=k_BT^2 C_V$ を導け（$C_V=\partial\langle E\rangle/\partial T$）。</span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>$\langle E\rangle\propto N$、$C_V\propto N$ から相対揺らぎ $\sqrt{\langle(\Delta E)^2\rangle}/\langle E\rangle\propto1/\sqrt N$ を示せ。</span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§7.4 平均値と揺らぎ</span><span class="co">](#sec-statistical-mechanics-fluctuations)</span>／多重度の揺らぎ幅は<span class="co">[</span><span class="ot">演習 6-1</span><span class="co">](../part3/06-thermal-equilibrium.qmd#ex-6-1)</span>、CMB スペクトル歪みは<span class="co">[</span><span class="ot">第16章</span><span class="co">](../part6/16-cmb.qmd)</span>。</span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 7-3）</span></span>
+<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>**(1)** $\langle E^2\rangle-\langle E\rangle^2$ を計算する。$\langle E\rangle=-\partial_\beta\ln Z=-\dfrac{1}{Z}\partial_\beta Z$。もう一度微分：</span>
+<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a>\frac{\partial^2\ln Z}{\partial\beta^2}=\frac{1}{Z}\frac{\partial^2 Z}{\partial\beta^2}-\left(\frac{1}{Z}\frac{\partial Z}{\partial\beta}\right)^2=\langle E^2\rangle-\langle E\rangle^2=\langle(\Delta E)^2\rangle.</span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a>また $\partial^2\ln Z/\partial\beta^2=-\partial\langle E\rangle/\partial\beta$。</span>
+<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>**(2)** $\partial_\beta=-k_BT^2\partial_T$（$\beta=1/k_BT$ より $d\beta=-dT/k_BT^2$）。よって</span>
+<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a>\langle(\Delta E)^2\rangle=-\frac{\partial\langle E\rangle}{\partial\beta}=k_BT^2\frac{\partial\langle E\rangle}{\partial T}=k_BT^2 C_V.</span>
+<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a>**(3)** $\langle E\rangle\propto N$、$C_V\propto N$ なので $\langle(\Delta E)^2\rangle\propto N$、$\sqrt{\langle(\Delta E)^2\rangle}\propto\sqrt N$。相対揺らぎは $\sqrt N/N=1/\sqrt N$。マクロ系で揺らぎが消える理由。</span>
+<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a>**答え**：$\langle(\Delta E)^2\rangle=\partial^2\ln Z/\partial\beta^2=k_BT^2C_V$。相対揺らぎ $\propto1/\sqrt N$。</span>
+<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 7-4　水素準位の Boltzmann 占有と Balmer 線の温度依存 {#ex-7-4 .unnumbered}</span></span>
+<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a>§7.3 の Boltzmann 分布 $n_2/n_1=(g_2/g_1)e^{-(E_2-E_1)/k_BT}$ を水素に応用する。$E_n=-13.6/n^2$ eV、$g_n=2n^2$、$k_B=8.617\times10^{-5}$ eV/K。</span>
+<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$n=1\to2$ の励起エネルギー $E_2-E_1$ と縮退度比 $g_2/g_1$ を求めよ。</span>
+<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$T=5800$ K（太陽光球）と $T=10000$ K（A 型星）で占有数比 $n_2/n_1$ を計算し、何桁違うか述べよ。</span>
+<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Balmer 線（$n=2$ から始まる可視吸収線）が低温の太陽で弱く、A 型星（$\sim10000$ K）で強くなる理由を述べよ。さらに高温では弱まる（電離が効く）ことに一言触れよ。</span>
+<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§7.3 Boltzmann 分布</span><span class="co">](#sec-statistical-mechanics-boltzmann)</span>／恒星の色と温度は<span class="co">[</span><span class="ot">§1.3</span><span class="co">](../part1/01-where-blackbody.qmd#sec-where-blackbody-stars)</span>、線強度からの温度推定は<span class="co">[</span><span class="ot">第23章</span><span class="co">](../part7/23-line-applications.qmd)</span>、原子準位は<span class="co">[</span><span class="ot">第21章</span><span class="co">](../part7/21-atomic-physics.qmd)</span>。</span>
+<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 7-4）</span></span>
+<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a>**(1)** $E_2-E_1=-13.6/4-(-13.6/1)=-3.4+13.6=10.2$ eV。$g_2/g_1=2\cdot2^2/(2\cdot1^2)=8/2=4$。</span>
+<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a>**(2)** $T=5800$ K：$k_BT=8.617\times10^{-5}\times5800=0.500$ eV。指数 $-10.2/0.500=-20.4$、$e^{-20.4}=1.37\times10^{-9}$。$n_2/n_1=4\times1.37\times10^{-9}\approx5.5\times10^{-9}$。</span>
+<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a>$T=10000$ K：$k_BT=0.862$ eV。指数 $-10.2/0.862=-11.8$、$e^{-11.8}=7.2\times10^{-6}$。$n_2/n_1=4\times7.2\times10^{-6}\approx2.9\times10^{-5}$。</span>
+<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a>比は $2.9\times10^{-5}/5.5\times10^{-9}\approx5300$ 倍。約3〜4桁違う。</span>
+<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a>**(3)** Balmer 線は $n=2$ にいる原子が吸収して生じる。太陽（5800 K）では $n=2$ の占有が $\sim10^{-9}$ と極めて少なく、Balmer 線は弱い。A 型星（$\sim10000$ K）では $n=2$ 占有が数千倍に増え、Balmer 線が最強になる。さらに高温（O・B 型）では水素が電離して中性水素自体が減り、Balmer 線は再び弱まる（電離は Saha 式、本問の Boltzmann だけでは表せない別効果）。</span>
+<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a>**答え**：$E_2-E_1=10.2$ eV、$g_2/g_1=4$。$n_2/n_1\approx5.5\times10^{-9}$（5800 K）→$2.9\times10^{-5}$（10000 K）で約5300倍。Balmer 線は A 型で最強、さらに高温では電離で弱まる。</span>
+<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-statistical-mechanics-further .unnumbered}</span></span>
+<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Reif, *Fundamentals of Statistical and Thermal Physics* (McGraw-Hill, 1965) — Boltzmann 分布と分配関数の標準教科書</span>
+<span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pathria &amp; Beale, *Statistical Mechanics* (Academic Press, 3rd ed., 2011) — より現代的な体系化</span>
+<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>久保亮五『大学演習　熱学・統計力学』（裳華房, 1961）— 古典的な日本の教科書、演習豊富</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

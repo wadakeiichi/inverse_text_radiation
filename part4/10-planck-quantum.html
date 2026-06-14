@@ -485,7 +485,17 @@ window.Quarto = {
   <li><a href="#sec-planck-quantum-limits" id="toc-sec-planck-quantum-limits" class="nav-link" data-scroll-target="#sec-planck-quantum-limits">10.4 Wien・Rayleigh–Jeans 両極限の再導出</a></li>
   <li><a href="#sec-planck-quantum-history" id="toc-sec-planck-quantum-history" class="nav-link" data-scroll-target="#sec-planck-quantum-history">10.5 歴史的背景と現代的解釈</a></li>
   <li><a href="#sec-planck-quantum-summary" id="toc-sec-planck-quantum-summary" class="nav-link" data-scroll-target="#sec-planck-quantum-summary">この章で何がわかったか</a></li>
-  <li><a href="#sec-planck-quantum-exercises" id="toc-sec-planck-quantum-exercises" class="nav-link" data-scroll-target="#sec-planck-quantum-exercises">演習問題</a></li>
+  <li><a href="#sec-planck-quantum-exercises" id="toc-sec-planck-quantum-exercises" class="nav-link" data-scroll-target="#sec-planck-quantum-exercises">演習問題</a>
+  <ul class="collapse">
+  <li><a href="#ex-10-1" id="toc-ex-10-1" class="nav-link" data-scroll-target="#ex-10-1">問題 10-1　量子化振動子の分配関数と平均エネルギー</a></li>
+  </ul></li>
+  <li><a href="#模範解答問題-10-1" id="toc-模範解答問題-10-1" class="nav-link" data-scroll-target="#模範解答問題-10-1">模範解答（問題 10-1）</a></li>
+  <li><a href="#ex-10-2" id="toc-ex-10-2" class="nav-link" data-scroll-target="#ex-10-2">問題 10-2　両極限と「最初の量子補正」</a></li>
+  <li><a href="#模範解答問題-10-2" id="toc-模範解答問題-10-2" class="nav-link" data-scroll-target="#模範解答問題-10-2">模範解答（問題 10-2）</a></li>
+  <li><a href="#ex-10-3" id="toc-ex-10-3" class="nav-link" data-scroll-target="#ex-10-3">問題 10-3　プランク分布から Stefan–Boltzmann 則</a></li>
+  <li><a href="#模範解答問題-10-3" id="toc-模範解答問題-10-3" class="nav-link" data-scroll-target="#模範解答問題-10-3">模範解答（問題 10-3）</a></li>
+  <li><a href="#ex-10-4" id="toc-ex-10-4" class="nav-link" data-scroll-target="#ex-10-4">問題 10-4　Wien 変位則：ピーク振動数は T に比例</a></li>
+  <li><a href="#模範解答問題-10-4" id="toc-模範解答問題-10-4" class="nav-link" data-scroll-target="#模範解答問題-10-4">模範解答（問題 10-4）</a></li>
   <li><a href="#sec-planck-quantum-further" id="toc-sec-planck-quantum-further" class="nav-link" data-scroll-target="#sec-planck-quantum-further">さらに学ぶための参考文献</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/edit/main/part4/10-planck-quantum.qmd" class="toc-action"><i class="bi bi-github"></i>編集</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/blob/main/part4/10-planck-quantum.qmd" class="toc-action"><i class="bi empty"></i>ソースコード</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/issues/new" class="toc-action"><i class="bi empty"></i>問題を報告</a></li></ul></div></nav>
@@ -749,16 +759,98 @@ B_\nu \to \frac{2h\nu^3}{c^2} e^{-h\nu/k_B T}
 </section>
 <section id="sec-planck-quantum-exercises" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-planck-quantum-exercises">演習問題</h2>
-<div class="callout callout-style-simple callout-note">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。</p>
-</div>
-</div>
-</div>
+<p><span class="tag">[導出補完]</span> <strong>模範解答</strong> は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</p>
+<section id="ex-10-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-10-1">問題 10-1　量子化振動子の分配関数と平均エネルギー</h3>
+<p>[★ 難易度：☆ ] <span class="tag">[導出補完]</span></p>
+<p>§10.2 は分配関数 <span class="math inline">Z_1=1/(1-e^{-\beta h\nu})</span> と平均エネルギー <span class="math inline">\langle E\rangle=h\nu/(e^{h\nu/k_BT}-1)</span> を「第7章 §7.2 の手法で」与えた。両式を自力で導け。準位は <span class="math inline">E_n=nh\nu\ (n=0,1,2,\ldots)</span>。</p>
+<ol type="1">
+<li>等比級数の和として <span class="math inline">Z_1=\sum_{n=0}^\infty e^{-\beta nh\nu}=\dfrac{1}{1-e^{-\beta h\nu}}</span> を示せ（収束条件も述べよ）。</li>
+<li><span class="math inline">\langle E\rangle=-\partial\ln Z_1/\partial\beta</span> を実行して <span class="math inline">\langle E\rangle=\dfrac{h\nu}{e^{\beta h\nu}-1}</span> を導け。</li>
+<li>古典結果 <span class="math inline">\langle E\rangle=k_BT</span> と比べ、低振動数極限で一致することを確認せよ。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-planck-quantum-oscillator">§10.2 振動子の量子化</a>／手法は<a href="../part3/07-statistical-mechanics.html">第7章 統計力学</a>、古典との対比は<a href="../part4/09-classical-failure.html#ex-9-2">演習 9-2</a>。</p>
+</section>
+</section>
+<section id="模範解答問題-10-1" class="level2 callout-derive" data-collapse="true">
+<h2 class="anchored" data-anchor-id="模範解答問題-10-1">模範解答（問題 10-1）</h2>
+<p><strong>(1)</strong> 公比 <span class="math inline">r=e^{-\beta h\nu}</span> の等比級数。<span class="math inline">\beta,h,\nu&gt;0</span> より <span class="math inline">0&lt;r&lt;1</span> で収束し、</p>
+<p><span class="math display">
+Z_1=\sum_{n=0}^\infty r^n=\frac{1}{1-r}=\frac{1}{1-e^{-\beta h\nu}}.
+</span></p>
+<p><strong>(2)</strong> <span class="math inline">\ln Z_1=-\ln(1-e^{-\beta h\nu})</span>。<span class="math inline">\beta</span> で微分：</p>
+<p><span class="math display">
+\langle E\rangle=-\frac{\partial\ln Z_1}{\partial\beta}=\frac{h\nu\,e^{-\beta h\nu}}{1-e^{-\beta h\nu}}=\frac{h\nu}{e^{\beta h\nu}-1}=\frac{h\nu}{e^{h\nu/k_BT}-1}.
+</span></p>
+<p><strong>(3)</strong> 低振動数 <span class="math inline">x\equiv h\nu/k_BT\ll1</span> で <span class="math inline">e^x-1\simeq x</span> ゆえ <span class="math inline">\langle E\rangle\to h\nu/x=k_BT</span>。古典の等分配と一致する。</p>
+<p><strong>答え</strong>：<span class="math inline">Z_1=1/(1-e^{-\beta h\nu})</span>、<span class="math inline">\langle E\rangle=h\nu/(e^{h\nu/k_BT}-1)\xrightarrow{h\nu\ll k_BT}k_BT</span>。</p>
+</section>
+<section id="ex-10-2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-10-2">問題 10-2　両極限と「最初の量子補正」</h3>
+<p>[★ 難易度：☆☆ ] <span class="tag">[導出補完]</span></p>
+<p>§10.4 はプランク分布の低・高振動数極限を示した。導出を埋め、さらに一歩進める。<span class="math inline">x\equiv h\nu/k_BT</span> とおく。</p>
+<ol type="1">
+<li>低振動数（<span class="math inline">x\ll1</span>）で <span class="math inline">B_\nu\to\dfrac{2\nu^2}{c^2}k_BT</span>（Rayleigh–Jeans）を導け。</li>
+<li>平均エネルギー <span class="math inline">\langle E\rangle=\dfrac{h\nu}{e^x-1}</span> を <span class="math inline">x</span> の小ささで展開し、古典値 <span class="math inline">k_BT</span> からの <strong>最初の補正項</strong> を求めよ。補正の符号は何を意味するか。</li>
+<li>高振動数（<span class="math inline">x\gg1</span>）で Wien の式 <span class="math inline">B_\nu\to\dfrac{2h\nu^3}{c^2}e^{-h\nu/k_BT}</span> を導け。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-planck-quantum-limits">§10.4 Wien・Rayleigh–Jeans 両極限</a>／RJ の古典導出は<a href="../part4/09-classical-failure.html#sec-classical-failure-rayleigh-jeans">§9.2</a>、観測比較は<a href="../part1/02-reading-spectra.html#sec-reading-spectra-limits">§2.5</a>。</p>
+</section>
+<section id="模範解答問題-10-2" class="level2 callout-derive" data-collapse="true">
+<h2 class="anchored" data-anchor-id="模範解答問題-10-2">模範解答（問題 10-2）</h2>
+<p><strong>(1)</strong> <span class="math inline">B_\nu=\dfrac{2h\nu^3}{c^2}\dfrac{1}{e^x-1}</span>。<span class="math inline">x\ll1</span> で <span class="math inline">e^x-1\simeq x=h\nu/k_BT</span> ゆえ <span class="math inline">B_\nu\to\dfrac{2h\nu^3}{c^2}\cdot\dfrac{k_BT}{h\nu}=\dfrac{2\nu^2}{c^2}k_BT</span>。<span class="math inline">h</span> が消える＝古典極限。</p>
+<p><strong>(2)</strong> <span class="math inline">e^x-1=x\left(1+\dfrac{x}{2}+\dfrac{x^2}{6}+\cdots\right)</span> ゆえ</p>
+<p><span class="math display">
+\langle E\rangle=\frac{h\nu}{e^x-1}=\frac{k_BT}{1+\frac{x}{2}+\cdots}=k_BT\left(1-\frac{x}{2}+\cdots\right)=k_BT-\frac{h\nu}{2}+\cdots.
+</span></p>
+<p>最初の補正は <span class="math inline">-h\nu/2</span>。<strong>負号</strong>は、量子化により各モードが古典の等分配値より小さいエネルギーしか受け取れない（高振動数ほど効く凍結の始まり）ことを意味する。</p>
+<p><strong>(3)</strong> <span class="math inline">x\gg1</span> で <span class="math inline">e^x-1\simeq e^x</span> ゆえ <span class="math inline">B_\nu\to\dfrac{2h\nu^3}{c^2}e^{-x}=\dfrac{2h\nu^3}{c^2}e^{-h\nu/k_BT}</span>。これが Wien の式。</p>
+<p><strong>答え</strong>：低：<span class="math inline">2\nu^2k_BT/c^2</span>；補正 <span class="math inline">\langle E\rangle\simeq k_BT-\tfrac12 h\nu</span>（負＝凍結の兆し）；高：<span class="math inline">2h\nu^3e^{-h\nu/k_BT}/c^2</span>。</p>
+</section>
+<section id="ex-10-3" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-10-3">問題 10-3　プランク分布から Stefan–Boltzmann 則</h3>
+<p>[★ 難易度：☆☆☆ ] <span class="tag">[導出補完]</span></p>
+<p>第9章の表で「全エネルギー密度＝<span class="math inline">aT^4</span>（有限）」とあったが、本文は積分を実行していない。プランクのエネルギー密度 <span class="math inline">u_\nu=\dfrac{8\pi h\nu^3}{c^3}\dfrac{1}{e^{h\nu/k_BT}-1}</span> を全振動数で積分し、<span class="math inline">u=aT^4</span> を導いて放射定数 <span class="math inline">a</span> を基本定数で表せ。</p>
+<ol type="1">
+<li><span class="math inline">x=h\nu/k_BT</span> で変数変換し、<span class="math inline">u=\dfrac{8\pi h}{c^3}\left(\dfrac{k_BT}{h}\right)^4\displaystyle\int_0^\infty\frac{x^3}{e^x-1}dx</span> を導け。</li>
+<li><span class="math inline">\displaystyle\int_0^\infty\frac{x^3}{e^x-1}dx=\frac{\pi^4}{15}</span> を用いて <span class="math inline">a=\dfrac{8\pi^5 k_B^4}{15c^3h^3}</span> を示し、数値（SI）を概算せよ。</li>
+<li><span class="math inline">u=aT^4</span> と射出強度 <span class="math inline">j=\sigma T^4</span> の関係 <span class="math inline">a=4\sigma/c</span> から、<span class="math inline">\sigma</span> の値を確認せよ。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-planck-quantum-derivation">§10.3 プランク分布の導出</a>／発散する古典版との対比は<a href="../part4/09-classical-failure.html#ex-9-3">演習 9-3</a>、積分公式は<a href="../appendix/A-math-notes.html">付録A 数学ノート</a>。</p>
+</section>
+<section id="模範解答問題-10-3" class="level2 callout-derive" data-collapse="true">
+<h2 class="anchored" data-anchor-id="模範解答問題-10-3">模範解答（問題 10-3）</h2>
+<p><strong>(1)</strong> <span class="math inline">x=h\nu/k_BT</span> より <span class="math inline">\nu=k_BTx/h,\ d\nu=(k_BT/h)dx</span>。代入して</p>
+<p><span class="math display">
+u=\frac{8\pi h}{c^3}\left(\frac{k_BT}{h}\right)^4\int_0^\infty\frac{x^3}{e^x-1}dx.
+</span></p>
+<p><strong>(2)</strong> 積分 <span class="math inline">=\pi^4/15</span> を入れて</p>
+<p><span class="math display">
+u=\frac{8\pi^5 k_B^4}{15c^3h^3}T^4\equiv aT^4,\qquad a=\frac{8\pi^5k_B^4}{15c^3h^3}\approx7.57\times10^{-16}\ \mathrm{J\,m^{-3}\,K^{-4}}.
+</span></p>
+<p><strong>(3)</strong> <span class="math inline">a=4\sigma/c</span> より <span class="math inline">\sigma=ac/4=7.57\times10^{-16}\times3.00\times10^8/4\approx5.67\times10^{-8}\ \mathrm{W\,m^{-2}\,K^{-4}}</span>。既知の Stefan–Boltzmann 定数と一致する。</p>
+<p><strong>答え</strong>：<span class="math inline">a=\dfrac{8\pi^5k_B^4}{15c^3h^3}\approx7.57\times10^{-16}\,\mathrm{J\,m^{-3}K^{-4}}</span>、<span class="math inline">\sigma=ac/4\approx5.67\times10^{-8}\,\mathrm{W\,m^{-2}K^{-4}}</span>。</p>
+</section>
+<section id="ex-10-4" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-10-4">問題 10-4　Wien 変位則：ピーク振動数は T に比例</h3>
+<p>[★ 難易度：☆☆ ] <span class="tag">[理解を深める]</span></p>
+<p>§10.4 は両極限の境目を <span class="math inline">\nu\sim k_BT/h</span> と見積もった。プランク分布のピークを正確に求めて「変位則」を導く。</p>
+<ol type="1">
+<li><span class="math inline">B_\nu\propto\dfrac{\nu^3}{e^{x}-1}\ (x=h\nu/k_BT)</span> を <span class="math inline">\nu</span> で微分してゼロにおき、<span class="math inline">3(1-e^{-x})=x</span> という超越方程式を導け。</li>
+<li>数値解 <span class="math inline">x_{\rm peak}\approx2.821</span> を用いて <span class="math inline">\nu_{\rm peak}=2.821\,k_BT/h</span> を示し、<span class="math inline">\nu_{\rm peak}\propto T</span> を確認せよ。</li>
+<li>太陽 <span class="math inline">T\simeq5800</span> K について <span class="math inline">\nu_{\rm peak}</span> と対応波長を概算せよ（<span class="math inline">B_\lambda</span> のピーク波長とは係数が異なることに触れよ）。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-planck-quantum-limits">§10.4 両極限と境界</a>／波長表示の Wien 変位則の導出は<a href="../part1/02-reading-spectra.html#ex-2-2">演習 2-2</a>、観測スペクトルのピークは<a href="../part1/01-where-blackbody.html">第1章</a>。</p>
+</section>
+<section id="模範解答問題-10-4" class="level2 callout-derive" data-collapse="true">
+<h2 class="anchored" data-anchor-id="模範解答問題-10-4">模範解答（問題 10-4）</h2>
+<p><strong>(1)</strong> <span class="math inline">f(\nu)=\nu^3(e^x-1)^{-1}</span>、<span class="math inline">x=h\nu/k_BT</span> なので <span class="math inline">dx/d\nu=h/k_BT</span>。積の微分をゼロとおき、<span class="math inline">\nu^2/(e^x-1)</span> で割って <span class="math inline">h\nu/k_BT=x</span> を使うと</p>
+<p><span class="math display">
+3-\frac{x e^x}{e^x-1}=0\ \Longrightarrow\ 3(1-e^{-x})=x.
+</span></p>
+<p><strong>(2)</strong> この超越方程式の非自明解は <span class="math inline">x_{\rm peak}\approx2.821</span>。よって <span class="math inline">\nu_{\rm peak}=x_{\rm peak}k_BT/h=2.821\,k_BT/h\propto T</span>（Wien 変位則）。</p>
+<p><strong>(3)</strong> <span class="math inline">T=5800</span> K で <span class="math inline">\nu_{\rm peak}\approx3.4\times10^{14}</span> Hz、<span class="math inline">\lambda=c/\nu_{\rm peak}\approx8.8\times10^{2}</span> nm（近赤外）。これは <span class="math inline">B_\lambda</span> を最大化して得る <span class="math inline">\lambda_{\rm peak}\approx500</span> nm とは別物。<span class="math inline">B_\nu</span> と <span class="math inline">B_\lambda</span> ではヤコビアン <span class="math inline">d\nu=-(c/\lambda^2)d\lambda</span> のため最大化条件が異なり（<span class="math inline">\lambda</span> 側は <span class="math inline">x\approx4.965</span>）、<span class="math inline">\nu_{\rm peak}\lambda_{\rm peak}\ne c</span> となる。</p>
+<p><strong>答え</strong>：<span class="math inline">3(1-e^{-x})=x\Rightarrow x\approx2.821</span>、<span class="math inline">\nu_{\rm peak}=2.821k_BT/h\propto T</span>。太陽で <span class="math inline">\nu_{\rm peak}\approx3.4\times10^{14}</span> Hz（<span class="math inline">\sim880</span> nm）。<span class="math inline">B_\nu</span> と <span class="math inline">B_\lambda</span> のピークは一致しない。</p>
 </section>
 <section id="sec-planck-quantum-further" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-planck-quantum-further">さらに学ぶための参考文献</h2>
@@ -1444,15 +1536,135 @@ B_\nu \to \frac{2h\nu^3}{c^2} e^{-h\nu/k_B T}
 <span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-planck-quantum-exercises .unnumbered}</span></span>
 <span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple"}</span>
-<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。</span>
-<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 10-1　量子化振動子の分配関数と平均エネルギー {#ex-10-1 .unnumbered}</span></span>
 <span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-planck-quantum-further .unnumbered}</span></span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆ </span><span class="co">] [tag:導出補完]</span></span>
 <span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Planck, "Ueber das Gesetz der Energieverteilung im Normalspectrum", *Annalen der Physik* 309 (1901) — 量子仮説の原論文（独語）</span>
-<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pais, *Subtle is the Lord* (Oxford, 1982) — Planck・Einstein の物理学的位置づけ</span>
-<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Reif, *Fundamentals of Statistical and Thermal Physics* (McGraw-Hill, 1965) — 量子化振動子の標準的扱い</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a>§10.2 は分配関数 $Z_1=1/(1-e^{-\beta h\nu})$ と平均エネルギー $\langle E\rangle=h\nu/(e^{h\nu/k_BT}-1)$ を「第7章 §7.2 の手法で」与えた。両式を自力で導け。準位は $E_n=nh\nu\ (n=0,1,2,\ldots)$。</span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>等比級数の和として $Z_1=\sum_{n=0}^\infty e^{-\beta nh\nu}=\dfrac{1}{1-e^{-\beta h\nu}}$ を示せ（収束条件も述べよ）。</span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$\langle E\rangle=-\partial\ln Z_1/\partial\beta$ を実行して $\langle E\rangle=\dfrac{h\nu}{e^{\beta h\nu}-1}$ を導け。</span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>古典結果 $\langle E\rangle=k_BT$ と比べ、低振動数極限で一致することを確認せよ。</span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§10.2 振動子の量子化</span><span class="co">](#sec-planck-quantum-oscillator)</span>／手法は<span class="co">[</span><span class="ot">第7章 統計力学</span><span class="co">](../part3/07-statistical-mechanics.qmd)</span>、古典との対比は<span class="co">[</span><span class="ot">演習 9-2</span><span class="co">](../part4/09-classical-failure.qmd#ex-9-2)</span>。</span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 10-1）</span></span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>**(1)** 公比 $r=e^{-\beta h\nu}$ の等比級数。$\beta,h,\nu&gt;0$ より $0&lt;r&lt;1$ で収束し、</span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>Z_1=\sum_{n=0}^\infty r^n=\frac{1}{1-r}=\frac{1}{1-e^{-\beta h\nu}}.</span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a>**(2)** $\ln Z_1=-\ln(1-e^{-\beta h\nu})$。$\beta$ で微分：</span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>\langle E\rangle=-\frac{\partial\ln Z_1}{\partial\beta}=\frac{h\nu\,e^{-\beta h\nu}}{1-e^{-\beta h\nu}}=\frac{h\nu}{e^{\beta h\nu}-1}=\frac{h\nu}{e^{h\nu/k_BT}-1}.</span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a>**(3)** 低振動数 $x\equiv h\nu/k_BT\ll1$ で $e^x-1\simeq x$ ゆえ $\langle E\rangle\to h\nu/x=k_BT$。古典の等分配と一致する。</span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a>**答え**：$Z_1=1/(1-e^{-\beta h\nu})$、$\langle E\rangle=h\nu/(e^{h\nu/k_BT}-1)\xrightarrow{h\nu\ll k_BT}k_BT$。</span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 10-2　両極限と「最初の量子補正」 {#ex-10-2 .unnumbered}</span></span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>§10.4 はプランク分布の低・高振動数極限を示した。導出を埋め、さらに一歩進める。$x\equiv h\nu/k_BT$ とおく。</span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>低振動数（$x\ll1$）で $B_\nu\to\dfrac{2\nu^2}{c^2}k_BT$（Rayleigh–Jeans）を導け。</span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>平均エネルギー $\langle E\rangle=\dfrac{h\nu}{e^x-1}$ を $x$ の小ささで展開し、古典値 $k_BT$ からの **最初の補正項** を求めよ。補正の符号は何を意味するか。</span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>高振動数（$x\gg1$）で Wien の式 $B_\nu\to\dfrac{2h\nu^3}{c^2}e^{-h\nu/k_BT}$ を導け。</span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§10.4 Wien・Rayleigh–Jeans 両極限</span><span class="co">](#sec-planck-quantum-limits)</span>／RJ の古典導出は<span class="co">[</span><span class="ot">§9.2</span><span class="co">](../part4/09-classical-failure.qmd#sec-classical-failure-rayleigh-jeans)</span>、観測比較は<span class="co">[</span><span class="ot">§2.5</span><span class="co">](../part1/02-reading-spectra.qmd#sec-reading-spectra-limits)</span>。</span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 10-2）</span></span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>**(1)** $B_\nu=\dfrac{2h\nu^3}{c^2}\dfrac{1}{e^x-1}$。$x\ll1$ で $e^x-1\simeq x=h\nu/k_BT$ ゆえ $B_\nu\to\dfrac{2h\nu^3}{c^2}\cdot\dfrac{k_BT}{h\nu}=\dfrac{2\nu^2}{c^2}k_BT$。$h$ が消える＝古典極限。</span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>**(2)** $e^x-1=x\left(1+\dfrac{x}{2}+\dfrac{x^2}{6}+\cdots\right)$ ゆえ</span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a>\langle E\rangle=\frac{h\nu}{e^x-1}=\frac{k_BT}{1+\frac{x}{2}+\cdots}=k_BT\left(1-\frac{x}{2}+\cdots\right)=k_BT-\frac{h\nu}{2}+\cdots.</span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a>最初の補正は $-h\nu/2$。**負号**は、量子化により各モードが古典の等分配値より小さいエネルギーしか受け取れない（高振動数ほど効く凍結の始まり）ことを意味する。</span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a>**(3)** $x\gg1$ で $e^x-1\simeq e^x$ ゆえ $B_\nu\to\dfrac{2h\nu^3}{c^2}e^{-x}=\dfrac{2h\nu^3}{c^2}e^{-h\nu/k_BT}$。これが Wien の式。</span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a>**答え**：低：$2\nu^2k_BT/c^2$；補正 $\langle E\rangle\simeq k_BT-\tfrac12 h\nu$（負＝凍結の兆し）；高：$2h\nu^3e^{-h\nu/k_BT}/c^2$。</span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 10-3　プランク分布から Stefan–Boltzmann 則 {#ex-10-3 .unnumbered}</span></span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>第9章の表で「全エネルギー密度＝$aT^4$（有限）」とあったが、本文は積分を実行していない。プランクのエネルギー密度 $u_\nu=\dfrac{8\pi h\nu^3}{c^3}\dfrac{1}{e^{h\nu/k_BT}-1}$ を全振動数で積分し、$u=aT^4$ を導いて放射定数 $a$ を基本定数で表せ。</span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$x=h\nu/k_BT$ で変数変換し、$u=\dfrac{8\pi h}{c^3}\left(\dfrac{k_BT}{h}\right)^4\displaystyle\int_0^\infty\frac{x^3}{e^x-1}dx$ を導け。</span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$\displaystyle\int_0^\infty\frac{x^3}{e^x-1}dx=\frac{\pi^4}{15}$ を用いて $a=\dfrac{8\pi^5 k_B^4}{15c^3h^3}$ を示し、数値（SI）を概算せよ。</span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>$u=aT^4$ と射出強度 $j=\sigma T^4$ の関係 $a=4\sigma/c$ から、$\sigma$ の値を確認せよ。</span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§10.3 プランク分布の導出</span><span class="co">](#sec-planck-quantum-derivation)</span>／発散する古典版との対比は<span class="co">[</span><span class="ot">演習 9-3</span><span class="co">](../part4/09-classical-failure.qmd#ex-9-3)</span>、積分公式は<span class="co">[</span><span class="ot">付録A 数学ノート</span><span class="co">](../appendix/A-math-notes.qmd)</span>。</span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 10-3）</span></span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a>**(1)** $x=h\nu/k_BT$ より $\nu=k_BTx/h,\ d\nu=(k_BT/h)dx$。代入して</span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a>u=\frac{8\pi h}{c^3}\left(\frac{k_BT}{h}\right)^4\int_0^\infty\frac{x^3}{e^x-1}dx.</span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a>**(2)** 積分 $=\pi^4/15$ を入れて</span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a>u=\frac{8\pi^5 k_B^4}{15c^3h^3}T^4\equiv aT^4,\qquad a=\frac{8\pi^5k_B^4}{15c^3h^3}\approx7.57\times10^{-16}\ \mathrm{J\,m^{-3}\,K^{-4}}.</span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a>**(3)** $a=4\sigma/c$ より $\sigma=ac/4=7.57\times10^{-16}\times3.00\times10^8/4\approx5.67\times10^{-8}\ \mathrm{W\,m^{-2}\,K^{-4}}$。既知の Stefan–Boltzmann 定数と一致する。</span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a>**答え**：$a=\dfrac{8\pi^5k_B^4}{15c^3h^3}\approx7.57\times10^{-16}\,\mathrm{J\,m^{-3}K^{-4}}$、$\sigma=ac/4\approx5.67\times10^{-8}\,\mathrm{W\,m^{-2}K^{-4}}$。</span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 10-4　Wien 変位則：ピーク振動数は T に比例 {#ex-10-4 .unnumbered}</span></span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a>§10.4 は両極限の境目を $\nu\sim k_BT/h$ と見積もった。プランク分布のピークを正確に求めて「変位則」を導く。</span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$B_\nu\propto\dfrac{\nu^3}{e^{x}-1}\ (x=h\nu/k_BT)$ を $\nu$ で微分してゼロにおき、$3(1-e^{-x})=x$ という超越方程式を導け。</span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>数値解 $x_{\rm peak}\approx2.821$ を用いて $\nu_{\rm peak}=2.821\,k_BT/h$ を示し、$\nu_{\rm peak}\propto T$ を確認せよ。</span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>太陽 $T\simeq5800$ K について $\nu_{\rm peak}$ と対応波長を概算せよ（$B_\lambda$ のピーク波長とは係数が異なることに触れよ）。</span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§10.4 両極限と境界</span><span class="co">](#sec-planck-quantum-limits)</span>／波長表示の Wien 変位則の導出は<span class="co">[</span><span class="ot">演習 2-2</span><span class="co">](../part1/02-reading-spectra.qmd#ex-2-2)</span>、観測スペクトルのピークは<span class="co">[</span><span class="ot">第1章</span><span class="co">](../part1/01-where-blackbody.qmd)</span>。</span>
+<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 10-4）</span></span>
+<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a>**(1)** $f(\nu)=\nu^3(e^x-1)^{-1}$、$x=h\nu/k_BT$ なので $dx/d\nu=h/k_BT$。積の微分をゼロとおき、$\nu^2/(e^x-1)$ で割って $h\nu/k_BT=x$ を使うと</span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a>3-\frac{x e^x}{e^x-1}=0\ \Longrightarrow\ 3(1-e^{-x})=x.</span>
+<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a>**(2)** この超越方程式の非自明解は $x_{\rm peak}\approx2.821$。よって $\nu_{\rm peak}=x_{\rm peak}k_BT/h=2.821\,k_BT/h\propto T$（Wien 変位則）。</span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a>**(3)** $T=5800$ K で $\nu_{\rm peak}\approx3.4\times10^{14}$ Hz、$\lambda=c/\nu_{\rm peak}\approx8.8\times10^{2}$ nm（近赤外）。これは $B_\lambda$ を最大化して得る $\lambda_{\rm peak}\approx500$ nm とは別物。$B_\nu$ と $B_\lambda$ ではヤコビアン $d\nu=-(c/\lambda^2)d\lambda$ のため最大化条件が異なり（$\lambda$ 側は $x\approx4.965$）、$\nu_{\rm peak}\lambda_{\rm peak}\ne c$ となる。</span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a>**答え**：$3(1-e^{-x})=x\Rightarrow x\approx2.821$、$\nu_{\rm peak}=2.821k_BT/h\propto T$。太陽で $\nu_{\rm peak}\approx3.4\times10^{14}$ Hz（$\sim880$ nm）。$B_\nu$ と $B_\lambda$ のピークは一致しない。</span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-planck-quantum-further .unnumbered}</span></span>
+<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Planck, "Ueber das Gesetz der Energieverteilung im Normalspectrum", *Annalen der Physik* 309 (1901) — 量子仮説の原論文（独語）</span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pais, *Subtle is the Lord* (Oxford, 1982) — Planck・Einstein の物理学的位置づけ</span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Reif, *Fundamentals of Statistical and Thermal Physics* (McGraw-Hill, 1965) — 量子化振動子の標準的扱い</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

@@ -486,7 +486,17 @@ window.Quarto = {
   <li><a href="#sec-cmb-distortions" id="toc-sec-cmb-distortions" class="nav-link" data-scroll-target="#sec-cmb-distortions">16.5 スペクトル歪み ― <span class="math inline">\mu</span> 歪みと <span class="math inline">y</span> 歪み</a></li>
   <li><a href="#sec-cmb-what-we-measure" id="toc-sec-cmb-what-we-measure" class="nav-link" data-scroll-target="#sec-cmb-what-we-measure">16.6 CMB の何を測っているか ― 4つの側面</a></li>
   <li><a href="#sec-cmb-summary" id="toc-sec-cmb-summary" class="nav-link" data-scroll-target="#sec-cmb-summary">この章で何がわかったか</a></li>
-  <li><a href="#sec-cmb-exercises" id="toc-sec-cmb-exercises" class="nav-link" data-scroll-target="#sec-cmb-exercises">演習問題</a></li>
+  <li><a href="#sec-cmb-exercises" id="toc-sec-cmb-exercises" class="nav-link" data-scroll-target="#sec-cmb-exercises">演習問題</a>
+  <ul class="collapse">
+  <li><a href="#ex-16-1" id="toc-ex-16-1" class="nav-link" data-scroll-target="#ex-16-1">問題 16-1　なぜ宇宙膨張で黒体形が崩れないか ― T は 1/a に比例</a></li>
+  </ul></li>
+  <li><a href="#模範解答問題-16-1" id="toc-模範解答問題-16-1" class="nav-link" data-scroll-target="#模範解答問題-16-1">模範解答（問題 16-1）</a></li>
+  <li><a href="#ex-16-2" id="toc-ex-16-2" class="nav-link" data-scroll-target="#ex-16-2">問題 16-2　高赤方偏移の CMB 温度</a></li>
+  <li><a href="#模範解答問題-16-2" id="toc-模範解答問題-16-2" class="nav-link" data-scroll-target="#模範解答問題-16-2">模範解答（問題 16-2）</a></li>
+  <li><a href="#ex-16-3" id="toc-ex-16-3" class="nav-link" data-scroll-target="#ex-16-3">問題 16-3　熱化と再結合の区別 ― 「撮影時刻」と「黒体化」</a></li>
+  <li><a href="#模範解答問題-16-3" id="toc-模範解答問題-16-3" class="nav-link" data-scroll-target="#模範解答問題-16-3">模範解答（問題 16-3）</a></li>
+  <li><a href="#ex-16-4" id="toc-ex-16-4" class="nav-link" data-scroll-target="#ex-16-4">問題 16-4　μ 歪みと y 歪み ― いつの何を見るか</a></li>
+  <li><a href="#模範解答問題-16-4" id="toc-模範解答問題-16-4" class="nav-link" data-scroll-target="#模範解答問題-16-4">模範解答（問題 16-4）</a></li>
   <li><a href="#sec-cmb-further" id="toc-sec-cmb-further" class="nav-link" data-scroll-target="#sec-cmb-further">さらに学ぶための参考文献</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/edit/main/part6/16-cmb.qmd" class="toc-action"><i class="bi bi-github"></i>編集</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/blob/main/part6/16-cmb.qmd" class="toc-action"><i class="bi empty"></i>ソースコード</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/issues/new" class="toc-action"><i class="bi empty"></i>問題を報告</a></li></ul></div></nav>
@@ -732,16 +742,79 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1} \quad \xrightar
 </section>
 <section id="sec-cmb-exercises" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-cmb-exercises">演習問題</h2>
-<div class="callout callout-style-simple callout-note">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。</p>
-</div>
-</div>
-</div>
+<p><span class="tag">[導出補完]</span> <strong>模範解答</strong> は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</p>
+<section id="ex-16-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-16-1">問題 16-1　なぜ宇宙膨張で黒体形が崩れないか ― T は 1/a に比例</h3>
+<p>[★ 難易度：☆☆ ] <span class="tag">[導出補完]</span></p>
+<p>§16.4 は膨張下で黒体形が保たれる条件を述べた。確かめる。スケール因子 <span class="math inline">a(t)</span>、膨張で波長 <span class="math inline">\lambda\to a\lambda</span>、振動数 <span class="math inline">\nu\to\nu/a</span>。</p>
+<ol type="1">
+<li>プランク分布の指数 <span class="math inline">h\nu/k_BT</span> が膨張下で不変であるためには <span class="math inline">T\propto1/a</span> が必要であることを示せ。</li>
+<li><span class="math inline">T\propto a^{-1}</span> と Stefan-Boltzmann <span class="math inline">u\propto T^4</span> から、エネルギー密度が <span class="math inline">u\propto a^{-4}</span> で減ることを示せ。</li>
+<li><span class="math inline">u\propto a^{-4}</span> を「光子数密度 <span class="math inline">\propto a^{-3}</span>」と「1光子あたりのエネルギー <span class="math inline">\propto a^{-1}</span>」の積として説明せよ。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-cmb-expansion">§16.4 宇宙膨張と温度</a>／Stefan-Boltzmann は<a href="../part4/10-planck-quantum.html#ex-10-3">演習 10-3</a>、光子数密度 <span class="math inline">\propto T^3</span> は<a href="../part3/08-photon-statistics.html#ex-8-3">演習 8-3</a>。</p>
+</section>
+</section>
+<section id="模範解答問題-16-1" class="level2 callout-derive" data-collapse="true">
+<h2 class="anchored" data-anchor-id="模範解答問題-16-1">模範解答（問題 16-1）</h2>
+<p><strong>(1)</strong> 膨張で各モードの振動数は <span class="math inline">\nu\to\nu/a</span>。指数 <span class="math inline">h\nu/k_BT</span> が不変であるには、<span class="math inline">\nu</span> が <span class="math inline">1/a</span> で減るのと同じ割合で <span class="math inline">T</span> も減らねばならない：<span class="math inline">T\propto1/a</span>。このとき各振動数で占有因子 <span class="math inline">1/(e^{h\nu/k_BT}-1)</span> が保たれ、スペクトル形（プランク分布）は温度だけが下がる形で保存される。</p>
+<p><strong>(2)</strong> <span class="math inline">u\propto T^4\propto(a^{-1})^4=a^{-4}</span>。</p>
+<p><strong>(3)</strong> 光子数密度 <span class="math inline">n_\gamma\propto T^3\propto a^{-3}</span>（体積膨張で薄まる）。1光子あたりのエネルギー <span class="math inline">h\nu\propto a^{-1}</span>（赤方偏移）。積 <span class="math inline">u=n_\gamma\cdot\langle h\nu\rangle\propto a^{-3}\cdot a^{-1}=a^{-4}</span>。物質（<span class="math inline">\rho\propto a^{-3}</span>）より1段速く薄まるのが放射の特徴。</p>
+<p><strong>答え</strong>：指数不変には <span class="math inline">T\propto1/a</span>。すると <span class="math inline">u\propto T^4\propto a^{-4}=a^{-3}</span>(数密度)×<span class="math inline">a^{-1}</span>(光子エネルギー)。形は保たれ温度だけ下がる。</p>
+</section>
+<section id="ex-16-2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-16-2">問題 16-2　高赤方偏移の CMB 温度</h3>
+<p>[★ 難易度：☆☆ ] <span class="tag">[理解を深める]</span></p>
+<p>§16.4 は過去ほど宇宙が熱いことを述べた。<span class="math inline">T_{\rm CMB}(z)=(1+z)T_0</span>、<span class="math inline">T_0=2.725</span> K。</p>
+<ol type="1">
+<li>赤方偏移 <span class="math inline">z=3</span> での CMB 温度を求めよ。</li>
+<li>その温度の黒体の Wien ピーク波長 <span class="math inline">\lambda_{\rm peak}=b/T</span>（<span class="math inline">b=2.898\times10^{-3}</span> m·K）を、<span class="math inline">z=3</span> と現在（<span class="math inline">z=0</span>）で計算して比べよ。</li>
+<li>高赤方偏移銀河の吸収線温度計でこの <span class="math inline">T_{\rm CMB}(z)</span> が確認されていることが、何の直接観測的証拠になるか述べよ。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-cmb-expansion">§16.4 宇宙膨張と温度</a>／Wien 則は<a href="../part1/02-reading-spectra.html#ex-2-2">演習 2-2</a>。</p>
+</section>
+<section id="模範解答問題-16-2" class="level2 callout-derive" data-collapse="true">
+<h2 class="anchored" data-anchor-id="模範解答問題-16-2">模範解答（問題 16-2）</h2>
+<p><strong>(1)</strong> <span class="math inline">T_{\rm CMB}(3)=(1+3)\times2.725=4\times2.725=10.9</span> K。</p>
+<p><strong>(2)</strong> 現在 <span class="math inline">z=0</span>：<span class="math inline">\lambda_{\rm peak}=2.898\times10^{-3}/2.725=1.06\times10^{-3}</span> m <span class="math inline">=1.06</span> mm（マイクロ波）。<span class="math inline">z=3</span>：<span class="math inline">\lambda_{\rm peak}=2.898\times10^{-3}/10.9=2.66\times10^{-4}</span> m <span class="math inline">=266\ \mu</span>m（遠赤外）。過去はピークが短波長側。比はちょうど <span class="math inline">(1+z)=4</span> 倍。</p>
+<p><strong>(3)</strong> 高赤方偏移銀河中の原子・分子の励起温度（CMB 光子で励起される準位比から測る温度計）が <span class="math inline">(1+z)T_0</span> と一致することは、「過去ほど宇宙が熱かった」こと、すなわち <span class="math inline">T\propto1/a</span>（膨張で冷える黒体）という標準宇宙論の予言の直接観測的確認になる。</p>
+<p><strong>答え</strong>：<span class="math inline">T(z=3)=10.9</span> K。<span class="math inline">\lambda_{\rm peak}</span> は 1.06 mm→266 μm（<span class="math inline">1+z=4</span> 倍短く）。<span class="math inline">T\propto1/a</span> の直接確認。</p>
+</section>
+<section id="ex-16-3" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-16-3">問題 16-3　熱化と再結合の区別 ― 「撮影時刻」と「黒体化」</h3>
+<p>[★ 難易度：☆☆ ] <span class="tag">[理解を深める]</span></p>
+<p>§16.2・16.3 は「CMB が再結合で黒体になった」という言い方が不正確だと述べた。整理する。</p>
+<ol type="1">
+<li>「熱化（<span class="math inline">\mu\to0</span>）」と「再結合（最終散乱）」は、それぞれ宇宙史のいつ起き、何を担う過程か区別して述べよ（赤方偏移の目安も）。</li>
+<li>熱化を担う主過程（二重コンプトン散乱・制動放射・コンプトン散乱）のうち、光子数を変えられるのはどれか。なぜ <span class="math inline">\mu=0</span> にこれが必要か。</li>
+<li>もし元素組成が違って再結合温度が変わっても、現在の <span class="math inline">T_0=2.725</span> K は変わらない。なぜか（<span class="math inline">T_0=T_{\rm rec}/(1+z_{\rm rec})</span> が恒等式である理由）。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-cmb-thermalization">§16.2 熱化の三段階</a>、<a href="#sec-cmb-recombination">§16.3 再結合</a>／<span class="math inline">\mu=0</span> の物理は<a href="../part3/08-photon-statistics.html#ex-8-3">演習 8-3</a>、第1章の動機は<a href="../part1/01-where-blackbody.html#sec-where-blackbody-cmb">§1.5</a>（<a href="../part1/01-where-blackbody.html#ex-1-4">演習 1-4</a>）。</p>
+</section>
+<section id="模範解答問題-16-3" class="level2 callout-derive" data-collapse="true">
+<h2 class="anchored" data-anchor-id="模範解答問題-16-3">模範解答（問題 16-3）</h2>
+<p><strong>(1)</strong> 熱化：<span class="math inline">z\gtrsim2\times10^6</span> までに完了。放射のスペクトルを Planck 形（<span class="math inline">\mu\to0</span>）に整える過程。再結合：<span class="math inline">z\simeq1100</span>。電子と陽子が中性水素になり光が自由伝搬を始める（最終散乱＝CMB の「撮影時刻」）。前者が黒体スペクトルを作り、後者がそれを解放する。</p>
+<p><strong>(2)</strong> 二重コンプトン散乱（<span class="math inline">e^-+\gamma\to e^-+2\gamma</span>）と制動放射が光子数を変えられる。コンプトン散乱はエネルギー再分配のみで数を変えない。<span class="math inline">\mu=0</span>（化学ポテンシャルゼロ＝光子数が自由に調整される）には光子数を増減できる過程が必要なので、二重コンプトン散乱が本質的。</p>
+<p><strong>(3)</strong> <span class="math inline">T_0=T_{\rm rec}/(1+z_{\rm rec})</span> は <span class="math inline">T\propto1/a</span>（<span class="math inline">1+z=1/a</span>）という恒等式。元素組成が変わって再結合温度 <span class="math inline">T_{\rm rec}</span> が変われば、それに応じて <span class="math inline">z_{\rm rec}</span> も変わり、比 <span class="math inline">T_{\rm rec}/(1+z_{\rm rec})=T_0</span> は恒等的に保たれる。<span class="math inline">T_0</span> を実際に決めるのは光子数密度の歴史（バリオン-光子比など）で、再結合の詳細は最終散乱面の位置だけを左右する。</p>
+<p><strong>答え</strong>：熱化（<span class="math inline">z\gtrsim2\times10^6</span>、黒体化）と再結合（<span class="math inline">z\simeq1100</span>、撮影）は別過程。二重コンプトンが光子数を変え <span class="math inline">\mu=0</span> を作る。<span class="math inline">T_0</span> は <span class="math inline">T\propto1/a</span> の恒等式ゆえ再結合温度に依らない。</p>
+</section>
+<section id="ex-16-4" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-16-4">問題 16-4　μ 歪みと y 歪み ― いつの何を見るか</h3>
+<p>[★ 難易度：☆☆ ] <span class="tag">[理解を深める]</span></p>
+<p>§16.5 はスペクトル歪みを2種に分けた。整理する。</p>
+<ol type="1">
+<li><span class="math inline">\mu</span> 歪みと <span class="math inline">y</span> 歪みが、それぞれ宇宙史のどの時期のエネルギー注入を記録するか述べよ（熱化過程の効率喪失の順序と結びつけて）。</li>
+<li><span class="math inline">\mu</span> 歪みが「Bose-Einstein 分布（<span class="math inline">\mu\neq0</span>）」の形になる理由を、コンプトン散乱は働くが光子数を変えられない状況から説明せよ。</li>
+<li><span class="math inline">y</span> 歪みが銀河団で観測される Sunyaev-Zel’dovich 効果と同じ物理であること、約 217 GHz が「ヌル点」になることに触れよ。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-cmb-distortions">§16.5 スペクトル歪み</a>／コンプトン化の同じ物理は<a href="../part6/18-accretion-high-energy.html#sec-comptonization">§18.3</a>（<a href="../part6/18-accretion-high-energy.html#ex-18-2">演習 18-2</a>）。</p>
+</section>
+<section id="模範解答問題-16-4" class="level2 callout-derive" data-collapse="true">
+<h2 class="anchored" data-anchor-id="模範解答問題-16-4">模範解答（問題 16-4）</h2>
+<p><strong>(1)</strong> <span class="math inline">\mu</span> 歪み：<span class="math inline">z\sim5\times10^4</span>〜<span class="math inline">2\times10^6</span> のエネルギー注入を記録。この時期は二重コンプトンが無効化（光子数を変えられない）だがコンプトン散乱は有効（エネルギー再分配可能）。<span class="math inline">y</span> 歪み：<span class="math inline">z\lesssim10^4</span>（コンプトン散乱も非効率化して以降、現在まで含む）の高温電子との散乱を記録。熱化過程が効率を失う順序（光子数生成→エネルギー再分配）に対応する。</p>
+<p><strong>(2)</strong> <span class="math inline">\mu</span> 歪みの時期は、コンプトン散乱がエネルギーを完全に再分配して平衡分布に達するが、光子数を変えられない。粒子数が保存される Bose 気体の平衡は <span class="math inline">\mu\neq0</span> の Bose-Einstein 分布（第8章）。だからプランク（<span class="math inline">\mu=0</span>）からずれた <span class="math inline">\mu\neq0</span> の形になる。</p>
+<p><strong>(3)</strong> <span class="math inline">y</span> 歪みは高温電子と CMB 光子の逆コンプトン散乱で、スペクトル全体が高振動数側へ引きずられる。これは銀河団中の高温ガスで起こる Sunyaev-Zel’dovich 効果と同じ物理（スケールが宇宙論的か銀河団かの違いのみ）。低振動数側が暗く（ディップ）、高振動数側が明るく（バンプ）、その境界の約 217 GHz がヌル点。</p>
+<p><strong>答え</strong>：<span class="math inline">\mu</span> 歪み＝<span class="math inline">z\sim5\times10^4</span>–<span class="math inline">2\times10^6</span>（光子数凍結、BE 分布）、<span class="math inline">y</span> 歪み＝<span class="math inline">z\lesssim10^4</span>（高温電子散乱）。<span class="math inline">y</span> は SZ 効果と同物理、217 GHz がヌル点。</p>
 </section>
 <section id="sec-cmb-further" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-cmb-further">さらに学ぶための参考文献</h2>
@@ -1396,16 +1469,110 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1} \quad \xrightar
 <span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-cmb-exercises .unnumbered}</span></span>
 <span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple"}</span>
-<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。</span>
-<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 16-1　なぜ宇宙膨張で黒体形が崩れないか ― T は 1/a に比例 {#ex-16-1 .unnumbered}</span></span>
 <span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-cmb-further .unnumbered}</span></span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
 <span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Dodelson &amp; Schmidt, *Modern Cosmology* (Academic Press, 2nd ed., 2020) — CMB と宇宙論の標準教科書</span>
-<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Peebles, *Principles of Physical Cosmology* (Princeton, 1993) — 古典、再結合と熱化の物理を丁寧に</span>
-<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Chluba &amp; Sunyaev, "The evolution of CMB spectral distortions in the early Universe," MNRAS 419 (2012) 1294 — スペクトル歪みの体系的計算</span>
-<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mather et al., "Measurement of the CMB Spectrum by the COBE FIRAS Instrument," ApJ 420 (1994) 439 — FIRAS の原論文</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>§16.4 は膨張下で黒体形が保たれる条件を述べた。確かめる。スケール因子 $a(t)$、膨張で波長 $\lambda\to a\lambda$、振動数 $\nu\to\nu/a$。</span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>プランク分布の指数 $h\nu/k_BT$ が膨張下で不変であるためには $T\propto1/a$ が必要であることを示せ。</span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$T\propto a^{-1}$ と Stefan-Boltzmann $u\propto T^4$ から、エネルギー密度が $u\propto a^{-4}$ で減ることを示せ。</span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>$u\propto a^{-4}$ を「光子数密度 $\propto a^{-3}$」と「1光子あたりのエネルギー $\propto a^{-1}$」の積として説明せよ。</span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§16.4 宇宙膨張と温度</span><span class="co">](#sec-cmb-expansion)</span>／Stefan-Boltzmann は<span class="co">[</span><span class="ot">演習 10-3</span><span class="co">](../part4/10-planck-quantum.qmd#ex-10-3)</span>、光子数密度 $\propto T^3$ は<span class="co">[</span><span class="ot">演習 8-3</span><span class="co">](../part3/08-photon-statistics.qmd#ex-8-3)</span>。</span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 16-1）</span></span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a>**(1)** 膨張で各モードの振動数は $\nu\to\nu/a$。指数 $h\nu/k_BT$ が不変であるには、$\nu$ が $1/a$ で減るのと同じ割合で $T$ も減らねばならない：$T\propto1/a$。このとき各振動数で占有因子 $1/(e^{h\nu/k_BT}-1)$ が保たれ、スペクトル形（プランク分布）は温度だけが下がる形で保存される。</span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>**(2)** $u\propto T^4\propto(a^{-1})^4=a^{-4}$。</span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>**(3)** 光子数密度 $n_\gamma\propto T^3\propto a^{-3}$（体積膨張で薄まる）。1光子あたりのエネルギー $h\nu\propto a^{-1}$（赤方偏移）。積 $u=n_\gamma\cdot\langle h\nu\rangle\propto a^{-3}\cdot a^{-1}=a^{-4}$。物質（$\rho\propto a^{-3}$）より1段速く薄まるのが放射の特徴。</span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>**答え**：指数不変には $T\propto1/a$。すると $u\propto T^4\propto a^{-4}=a^{-3}$(数密度)×$a^{-1}$(光子エネルギー)。形は保たれ温度だけ下がる。</span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 16-2　高赤方偏移の CMB 温度 {#ex-16-2 .unnumbered}</span></span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a>§16.4 は過去ほど宇宙が熱いことを述べた。$T_{\rm CMB}(z)=(1+z)T_0$、$T_0=2.725$ K。</span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>赤方偏移 $z=3$ での CMB 温度を求めよ。</span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>その温度の黒体の Wien ピーク波長 $\lambda_{\rm peak}=b/T$（$b=2.898\times10^{-3}$ m·K）を、$z=3$ と現在（$z=0$）で計算して比べよ。</span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>高赤方偏移銀河の吸収線温度計でこの $T_{\rm CMB}(z)$ が確認されていることが、何の直接観測的証拠になるか述べよ。</span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§16.4 宇宙膨張と温度</span><span class="co">](#sec-cmb-expansion)</span>／Wien 則は<span class="co">[</span><span class="ot">演習 2-2</span><span class="co">](../part1/02-reading-spectra.qmd#ex-2-2)</span>。</span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 16-2）</span></span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>**(1)** $T_{\rm CMB}(3)=(1+3)\times2.725=4\times2.725=10.9$ K。</span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>**(2)** 現在 $z=0$：$\lambda_{\rm peak}=2.898\times10^{-3}/2.725=1.06\times10^{-3}$ m $=1.06$ mm（マイクロ波）。$z=3$：$\lambda_{\rm peak}=2.898\times10^{-3}/10.9=2.66\times10^{-4}$ m $=266\ \mu$m（遠赤外）。過去はピークが短波長側。比はちょうど $(1+z)=4$ 倍。</span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>**(3)** 高赤方偏移銀河中の原子・分子の励起温度（CMB 光子で励起される準位比から測る温度計）が $(1+z)T_0$ と一致することは、「過去ほど宇宙が熱かった」こと、すなわち $T\propto1/a$（膨張で冷える黒体）という標準宇宙論の予言の直接観測的確認になる。</span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>**答え**：$T(z=3)=10.9$ K。$\lambda_{\rm peak}$ は 1.06 mm→266 μm（$1+z=4$ 倍短く）。$T\propto1/a$ の直接確認。</span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 16-3　熱化と再結合の区別 ― 「撮影時刻」と「黒体化」 {#ex-16-3 .unnumbered}</span></span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>§16.2・16.3 は「CMB が再結合で黒体になった」という言い方が不正確だと述べた。整理する。</span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>「熱化（$\mu\to0$）」と「再結合（最終散乱）」は、それぞれ宇宙史のいつ起き、何を担う過程か区別して述べよ（赤方偏移の目安も）。</span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>熱化を担う主過程（二重コンプトン散乱・制動放射・コンプトン散乱）のうち、光子数を変えられるのはどれか。なぜ $\mu=0$ にこれが必要か。</span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>もし元素組成が違って再結合温度が変わっても、現在の $T_0=2.725$ K は変わらない。なぜか（$T_0=T_{\rm rec}/(1+z_{\rm rec})$ が恒等式である理由）。</span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§16.2 熱化の三段階</span><span class="co">](#sec-cmb-thermalization)</span>、<span class="co">[</span><span class="ot">§16.3 再結合</span><span class="co">](#sec-cmb-recombination)</span>／$\mu=0$ の物理は<span class="co">[</span><span class="ot">演習 8-3</span><span class="co">](../part3/08-photon-statistics.qmd#ex-8-3)</span>、第1章の動機は<span class="co">[</span><span class="ot">§1.5</span><span class="co">](../part1/01-where-blackbody.qmd#sec-where-blackbody-cmb)</span>（<span class="co">[</span><span class="ot">演習 1-4</span><span class="co">](../part1/01-where-blackbody.qmd#ex-1-4)</span>）。</span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 16-3）</span></span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a>**(1)** 熱化：$z\gtrsim2\times10^6$ までに完了。放射のスペクトルを Planck 形（$\mu\to0$）に整える過程。再結合：$z\simeq1100$。電子と陽子が中性水素になり光が自由伝搬を始める（最終散乱＝CMB の「撮影時刻」）。前者が黒体スペクトルを作り、後者がそれを解放する。</span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>**(2)** 二重コンプトン散乱（$e^-+\gamma\to e^-+2\gamma$）と制動放射が光子数を変えられる。コンプトン散乱はエネルギー再分配のみで数を変えない。$\mu=0$（化学ポテンシャルゼロ＝光子数が自由に調整される）には光子数を増減できる過程が必要なので、二重コンプトン散乱が本質的。</span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a>**(3)** $T_0=T_{\rm rec}/(1+z_{\rm rec})$ は $T\propto1/a$（$1+z=1/a$）という恒等式。元素組成が変わって再結合温度 $T_{\rm rec}$ が変われば、それに応じて $z_{\rm rec}$ も変わり、比 $T_{\rm rec}/(1+z_{\rm rec})=T_0$ は恒等的に保たれる。$T_0$ を実際に決めるのは光子数密度の歴史（バリオン-光子比など）で、再結合の詳細は最終散乱面の位置だけを左右する。</span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a>**答え**：熱化（$z\gtrsim2\times10^6$、黒体化）と再結合（$z\simeq1100$、撮影）は別過程。二重コンプトンが光子数を変え $\mu=0$ を作る。$T_0$ は $T\propto1/a$ の恒等式ゆえ再結合温度に依らない。</span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 16-4　μ 歪みと y 歪み ― いつの何を見るか {#ex-16-4 .unnumbered}</span></span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a>§16.5 はスペクトル歪みを2種に分けた。整理する。</span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$\mu$ 歪みと $y$ 歪みが、それぞれ宇宙史のどの時期のエネルギー注入を記録するか述べよ（熱化過程の効率喪失の順序と結びつけて）。</span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$\mu$ 歪みが「Bose-Einstein 分布（$\mu\neq0$）」の形になる理由を、コンプトン散乱は働くが光子数を変えられない状況から説明せよ。</span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>$y$ 歪みが銀河団で観測される Sunyaev-Zel'dovich 効果と同じ物理であること、約 217 GHz が「ヌル点」になることに触れよ。</span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§16.5 スペクトル歪み</span><span class="co">](#sec-cmb-distortions)</span>／コンプトン化の同じ物理は<span class="co">[</span><span class="ot">§18.3</span><span class="co">](../part6/18-accretion-high-energy.qmd#sec-comptonization)</span>（<span class="co">[</span><span class="ot">演習 18-2</span><span class="co">](../part6/18-accretion-high-energy.qmd#ex-18-2)</span>）。</span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 16-4）</span></span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a>**(1)** $\mu$ 歪み：$z\sim5\times10^4$〜$2\times10^6$ のエネルギー注入を記録。この時期は二重コンプトンが無効化（光子数を変えられない）だがコンプトン散乱は有効（エネルギー再分配可能）。$y$ 歪み：$z\lesssim10^4$（コンプトン散乱も非効率化して以降、現在まで含む）の高温電子との散乱を記録。熱化過程が効率を失う順序（光子数生成→エネルギー再分配）に対応する。</span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a>**(2)** $\mu$ 歪みの時期は、コンプトン散乱がエネルギーを完全に再分配して平衡分布に達するが、光子数を変えられない。粒子数が保存される Bose 気体の平衡は $\mu\neq0$ の Bose-Einstein 分布（第8章）。だからプランク（$\mu=0$）からずれた $\mu\neq0$ の形になる。</span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a>**(3)** $y$ 歪みは高温電子と CMB 光子の逆コンプトン散乱で、スペクトル全体が高振動数側へ引きずられる。これは銀河団中の高温ガスで起こる Sunyaev-Zel'dovich 効果と同じ物理（スケールが宇宙論的か銀河団かの違いのみ）。低振動数側が暗く（ディップ）、高振動数側が明るく（バンプ）、その境界の約 217 GHz がヌル点。</span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>**答え**：$\mu$ 歪み＝$z\sim5\times10^4$–$2\times10^6$（光子数凍結、BE 分布）、$y$ 歪み＝$z\lesssim10^4$（高温電子散乱）。$y$ は SZ 効果と同物理、217 GHz がヌル点。</span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-cmb-further .unnumbered}</span></span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Dodelson &amp; Schmidt, *Modern Cosmology* (Academic Press, 2nd ed., 2020) — CMB と宇宙論の標準教科書</span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Peebles, *Principles of Physical Cosmology* (Princeton, 1993) — 古典、再結合と熱化の物理を丁寧に</span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Chluba &amp; Sunyaev, "The evolution of CMB spectral distortions in the early Universe," MNRAS 419 (2012) 1294 — スペクトル歪みの体系的計算</span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mather et al., "Measurement of the CMB Spectrum by the COBE FIRAS Instrument," ApJ 420 (1994) 439 — FIRAS の原論文</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

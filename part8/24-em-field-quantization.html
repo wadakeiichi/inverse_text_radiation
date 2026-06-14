@@ -488,7 +488,17 @@ window.Quarto = {
   </ul></li>
   <li><a href="#sec-em-field-quantization-bridge" id="toc-sec-em-field-quantization-bridge" class="nav-link" data-scroll-target="#sec-em-field-quantization-bridge">24.5 線スペクトルへの橋</a></li>
   <li><a href="#sec-em-field-quantization-summary" id="toc-sec-em-field-quantization-summary" class="nav-link" data-scroll-target="#sec-em-field-quantization-summary">この章で何がわかったか</a></li>
-  <li><a href="#sec-em-field-quantization-exercises" id="toc-sec-em-field-quantization-exercises" class="nav-link" data-scroll-target="#sec-em-field-quantization-exercises">演習問題</a></li>
+  <li><a href="#sec-em-field-quantization-exercises" id="toc-sec-em-field-quantization-exercises" class="nav-link" data-scroll-target="#sec-em-field-quantization-exercises">演習問題</a>
+  <ul class="collapse">
+  <li><a href="#ex-24-1" id="toc-ex-24-1" class="nav-link" data-scroll-target="#ex-24-1">問題 24-1　各モード＝量子調和振動子という置き換え</a></li>
+  </ul></li>
+  <li><a href="#模範解答問題-24-1" id="toc-模範解答問題-24-1" class="nav-link" data-scroll-target="#模範解答問題-24-1">模範解答（問題 24-1）</a></li>
+  <li><a href="#ex-24-2" id="toc-ex-24-2" class="nav-link" data-scroll-target="#ex-24-2">問題 24-2　黒体放射を電磁場の熱状態として書き直す</a></li>
+  <li><a href="#模範解答問題-24-2" id="toc-模範解答問題-24-2" class="nav-link" data-scroll-target="#模範解答問題-24-2">模範解答（問題 24-2）</a></li>
+  <li><a href="#ex-24-3" id="toc-ex-24-3" class="nav-link" data-scroll-target="#ex-24-3">問題 24-3　真空の零点エネルギーと観測可能な帰結</a></li>
+  <li><a href="#模範解答問題-24-3" id="toc-模範解答問題-24-3" class="nav-link" data-scroll-target="#模範解答問題-24-3">模範解答（問題 24-3）</a></li>
+  <li><a href="#ex-24-4" id="toc-ex-24-4" class="nav-link" data-scroll-target="#ex-24-4">問題 24-4　なぜ電磁場の量子化が必要だったか</a></li>
+  <li><a href="#模範解答問題-24-4" id="toc-模範解答問題-24-4" class="nav-link" data-scroll-target="#模範解答問題-24-4">模範解答（問題 24-4）</a></li>
   <li><a href="#sec-em-field-quantization-further" id="toc-sec-em-field-quantization-further" class="nav-link" data-scroll-target="#sec-em-field-quantization-further">さらに学ぶための参考文献</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/edit/main/part8/24-em-field-quantization.qmd" class="toc-action"><i class="bi bi-github"></i>編集</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/blob/main/part8/24-em-field-quantization.qmd" class="toc-action"><i class="bi empty"></i>ソースコード</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/issues/new" class="toc-action"><i class="bi empty"></i>問題を報告</a></li></ul></div></nav>
@@ -1006,16 +1016,79 @@ B_\nu(T) = \frac{2h\nu^3}{c^2} \cdot \frac{1}{e^{h\nu/k_B T} - 1}
 </section>
 <section id="sec-em-field-quantization-exercises" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-em-field-quantization-exercises">演習問題</h2>
-<div class="callout callout-style-simple callout-note">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。</p>
-</div>
-</div>
-</div>
+<p><span class="tag">[導出補完]</span> <strong>模範解答</strong> は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</p>
+<section id="ex-24-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-24-1">問題 24-1　各モード＝量子調和振動子という置き換え</h3>
+<p>[★ 難易度：☆☆ ] <span class="tag">[理解を深める]</span></p>
+<p>§24.2 は「各モードを量子調和振動子に置き換える」一行で第I〜VII部が接続されると述べた。モード Hamiltonian <span class="math inline">\hat H_{\rm mode}=\hbar\omega_{\mathbf k}(\hat a^\dagger_{\mathbf k\sigma}\hat a_{\mathbf k\sigma}+\tfrac12)</span>。</p>
+<ol type="1">
+<li><span class="math inline">\hat a^\dagger</span>、<span class="math inline">\hat a</span>、<span class="math inline">\hat n=\hat a^\dagger\hat a</span> がそれぞれ電磁場の文脈で何を表すか（放出・吸収・光子数）述べよ。</li>
+<li>調和振動子の励起準位 <span class="math inline">|n\rangle</span> が「そのモードに <span class="math inline">n</span> 個の光子がある状態」と読み替えられることを、第10章のエネルギー量子 <span class="math inline">h\nu</span>、第8章の Bose 統計、第14章のモード密度と対応づけよ。</li>
+<li>「第I〜VII部で別々の道具と思っていたものが一行で接続される」とはどういう意味か、自分の言葉でまとめよ。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-em-field-quantization-mode-oscillator">§24.2 各モードは調和振動子</a>／生成消滅演算子は<a href="../part4/12-quantum-foundations.html#ex-12-1">演習 12-1</a>・<a href="../part4/12-quantum-foundations.html#ex-12-4">演習 12-4</a>、モード密度は<a href="../part5/14-cavity-modes.html#ex-14-1">演習 14-1</a>、Bose 統計は<a href="../part3/08-photon-statistics.html#ex-8-2">演習 8-2</a>。</p>
+</section>
+</section>
+<section id="模範解答問題-24-1" class="level2 callout-derive" data-collapse="true">
+<h2 class="anchored" data-anchor-id="模範解答問題-24-1">模範解答（問題 24-1）</h2>
+<p><strong>(1)</strong> <span class="math inline">\hat a^\dagger_{\mathbf k\sigma}</span>：モード <span class="math inline">(\mathbf k,\sigma)</span> に光子を1個生成＝放出。<span class="math inline">\hat a_{\mathbf k\sigma}</span>：光子を1個消滅＝吸収。<span class="math inline">\hat n=\hat a^\dagger\hat a</span>：そのモードの光子数（固有値 <span class="math inline">n=0,1,2,\dots</span>）＝観測量。</p>
+<p><strong>(2)</strong> 励起準位 <span class="math inline">|n\rangle</span> のエネルギーは <span class="math inline">E_n=(n+\tfrac12)\hbar\omega</span> で、隣接準位差 <span class="math inline">\hbar\omega=h\nu</span>＝第10章のエネルギー量子。各モードを熱平衡の調和振動子とみた平均励起数 <span class="math inline">\langle n\rangle=1/(e^{h\nu/kT}-1)</span>＝第8章の Bose 占有数。振動数 <span class="math inline">\nu</span> 近傍のモードの個数＝第14章のモード密度 <span class="math inline">g(\nu)</span>。</p>
+<p><strong>(3)</strong> エネルギー量子化（第10章）、光子の Bose 統計（第8章）、モード密度（第14章）、自発放出（第11章）― これらは別々の物理に見えたが、すべて「各モード＝量子化された調和振動子」という一つの構造の異なる側面である。一行の置き換えで、観測される連続スペクトルの全因子が単一の枠組みに収まる。</p>
+<p><strong>答え</strong>：<span class="math inline">\hat a^\dagger</span>＝放出、<span class="math inline">\hat a</span>＝吸収、<span class="math inline">\hat n</span>＝光子数。<span class="math inline">|n\rangle</span>＝光子 <span class="math inline">n</span> 個。量子化・Bose 統計・モード密度・自発放出がすべて「モード＝量子振動子」の一構造の側面。</p>
+</section>
+<section id="ex-24-2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-24-2">問題 24-2　黒体放射を電磁場の熱状態として書き直す</h3>
+<p>[★ 難易度：☆☆ ] <span class="tag">[導出補完]</span></p>
+<p>§24.4 はプランク分布を「電磁場の熱状態の表現」として再構成した。熱密度行列 <span class="math inline">\hat\rho_{\rm th}=\dfrac1Z e^{-\hat H/k_BT}</span> から組み立てる。</p>
+<ol type="1">
+<li>各モードの平均光子数 <span class="math inline">\bar n(\nu,T)={\rm tr}(\hat\rho_{\rm th}\hat n)=\dfrac{1}{e^{h\nu/k_BT}-1}</span> が、第III部で導いた Bose 占有数と一致することを確認せよ（化学ポテンシャル <span class="math inline">\mu=0</span> の理由も）。</li>
+<li>モード密度 <span class="math inline">g(\nu)=8\pi\nu^2/c^3</span> と光子エネルギー <span class="math inline">h\nu</span> を掛けて <span class="math inline">u_\nu=\dfrac{8\pi h\nu^3}{c^3}\dfrac{1}{e^{h\nu/kT}-1}</span>、<span class="math inline">B_\nu=\dfrac{c}{4\pi}u_\nu=\dfrac{2h\nu^3}{c^2}\dfrac{1}{e^{h\nu/kT}-1}</span> を導け。</li>
+<li>第8章（Bose 統計）・第10章（振動子の熱平均）・第14章（モード密度×熱励起）の三つの導出が「同じ一つの構造」であるとはどういう意味か述べよ。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-em-field-quantization-blackbody">§24.4 電磁場の熱状態</a>／Bose 占有数は<a href="../part3/08-photon-statistics.html#ex-8-2">演習 8-2</a>・<a href="../part3/08-photon-statistics.html#ex-8-3">演習 8-3</a>、全因子の合流は<a href="../part5/14-cavity-modes.html#ex-14-4">演習 14-4</a>。</p>
+</section>
+<section id="模範解答問題-24-2" class="level2 callout-derive" data-collapse="true">
+<h2 class="anchored" data-anchor-id="模範解答問題-24-2">模範解答（問題 24-2）</h2>
+<p><strong>(1)</strong> 単一モードの熱平均 <span class="math inline">\bar n=\sum_n n\,e^{-n\hbar\omega/kT}/\sum_n e^{-n\hbar\omega/kT}=1/(e^{\hbar\omega/kT}-1)=1/(e^{h\nu/kT}-1)</span>。これは第III部の Bose 占有数（<span class="math inline">\mu=0</span>）と同一。光子は数が保存しない（吸収・放出で生成消滅）ので <span class="math inline">\mu=0</span>。</p>
+<p><strong>(2)</strong> <span class="math inline">u_\nu=g(\nu)\cdot h\nu\cdot\bar n=\dfrac{8\pi\nu^2}{c^3}\cdot h\nu\cdot\dfrac{1}{e^{h\nu/kT}-1}=\dfrac{8\pi h\nu^3}{c^3}\dfrac{1}{e^{h\nu/kT}-1}</span>。等方場で <span class="math inline">B_\nu=\dfrac{c}{4\pi}u_\nu=\dfrac{2h\nu^3}{c^2}\dfrac{1}{e^{h\nu/kT}-1}</span>。</p>
+<p><strong>(3)</strong> 「光子気体の Bose 統計」（第8章）、「量子化振動子の熱平均」（第10章）、「モード密度×熱励起」（第14章）は出発点も言葉も違うが、すべて「温度 <span class="math inline">T</span> の熱浴と平衡にある電磁場（各モード＝調和振動子）の熱状態」を別の角度から記述したもの。同じ密度行列 <span class="math inline">\hat\rho_{\rm th}</span> から同じプランク分布が出る。</p>
+<p><strong>答え</strong>：<span class="math inline">\bar n=1/(e^{h\nu/kT}-1)</span>（<span class="math inline">\mu=0</span>）。<span class="math inline">B_\nu=\frac{2h\nu^3}{c^2}\frac{1}{e^{h\nu/kT}-1}</span>。三つの導出は電磁場の熱状態の同一構造の異なる側面。</p>
+</section>
+<section id="ex-24-3" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-24-3">問題 24-3　真空の零点エネルギーと観測可能な帰結</h3>
+<p>[★ 難易度：☆☆ ] <span class="tag">[理解を深める]</span></p>
+<p>§24.3 は真空 <span class="math inline">|0\rangle</span> が「空ではない」ことの観測的帰結を挙げた。零点エネルギー <span class="math inline">E_0=\sum_{\mathbf k,\sigma}\tfrac12\hbar\omega_{\mathbf k}</span>。</p>
+<ol type="1">
+<li>零点エネルギーは形式的に発散するのに、なぜ観測される物理量（の差）は有限なのか述べよ。プランク分布に零点項が現れない理由（演習 12-3）と結びつけよ。</li>
+<li>真空が「空ではない」ことの観測可能な帰結を3つ挙げよ（自発放出・自然幅・Casimir 効果）。Casimir 力が <span class="math inline">F\propto1/L^4</span> になることに触れよ。</li>
+<li>「真空に揺らぎがある」と「真空は粒子で満ちている」は同じか違うか。交換関係 <span class="math inline">[\hat a,\hat a^\dagger]=1</span> と場の分散 <span class="math inline">\langle(\Delta E)^2\rangle\neq0</span> に触れて述べよ。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-em-field-quantization-vacuum">§24.3 真空状態と零点エネルギー</a>／零点が観測量に効かないことは<a href="../part3/07-statistical-mechanics.html#ex-7-2">演習 7-2</a>・<a href="../part4/12-quantum-foundations.html#ex-12-3">演習 12-3</a>、自然幅は<a href="../part8/25-qed-minimum.html#sec-qed-minimum-natural-width">§25.4</a>。</p>
+</section>
+<section id="模範解答問題-24-3" class="level2 callout-derive" data-collapse="true">
+<h2 class="anchored" data-anchor-id="模範解答問題-24-3">模範解答（問題 24-3）</h2>
+<p><strong>(1)</strong> 零点エネルギーはエネルギーの絶対基準（定数オフセット）で、その絶対値は観測できない。観測できるのは零点エネルギーの<strong>差や変化</strong>（境界条件の変化など）で、これは有限。プランク分布に零点項 <span class="math inline">\tfrac12\hbar\omega</span> が現れないのも、それが温度非依存の定数で放射の励起分（物質とやりとりする部分）に効かないから（演習 12-3）。</p>
+<p><strong>(2)</strong> ① 自発放出（真空揺らぎが励起原子を揺さぶる、§25.2）。② 線の自然幅（励起準位の有限寿命、<span class="math inline">\Gamma=A_{ul}</span>）。③ Casimir 効果（二枚の金属板間で許されるモードが減り、板間の零点エネルギーが板外より小さくなり引力 <span class="math inline">F\propto1/L^4</span> が生じる）。</p>
+<p><strong>(3)</strong> 違う。真空 <span class="math inline">|0\rangle</span> は厳密に光子0個の状態（<span class="math inline">\hat n|0\rangle=0</span>）。観測される「揺らぎ」は粒子がいることではなく、<span class="math inline">[\hat a,\hat a^\dagger]=1</span> の非可換性から来る電場・磁場の期待値の分散 <span class="math inline">\langle(\Delta E)^2\rangle\neq0</span>。粒子数を定めると場の値が揺らぎ、場の値を定めると粒子数が揺らぐ（不確定性関係の双対）。</p>
+<p><strong>答え</strong>：零点の絶対値は観測不能、差は有限。帰結＝自発放出・自然幅・Casimir(<span class="math inline">F\propto1/L^4</span>)。揺らぎ＝場の分散(<span class="math inline">[\hat a,\hat a^\dagger]=1</span>)で、粒子で満ちているのとは別。</p>
+</section>
+<section id="ex-24-4" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-24-4">問題 24-4　なぜ電磁場の量子化が必要だったか</h3>
+<p>[★ 難易度：☆ ] <span class="tag">[理解を深める]</span></p>
+<p>§24.1 は、古典電磁気＋（別々の）量子論では説明しきれず、電磁場そのものの量子化が要る現象を列挙した。</p>
+<ol type="1">
+<li>次の各現象が古典電磁気では説明できない理由を一言ずつ述べよ：エネルギー量子化 <span class="math inline">h\nu</span>、自発放出 <span class="math inline">A_{ul}</span>、線の自然幅、光子の Bose 統計。</li>
+<li>これらが「同じ枠組み（電磁場の量子化）」から出ることが、なぜ本書の逆引きの到達点なのか述べよ。</li>
+<li>本書では電磁場と量子論を第V部と第IV部で別々に扱ってきた。第VIII部でそれらを「同時に量子化する」ことの意味を述べよ。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-em-field-quantization-why">§24.1 なぜ量子化が必要か</a>／自発放出は<a href="../part4/11-einstein-method.html#ex-11-1">演習 11-1</a>、Bose 統計は<a href="../part3/08-photon-statistics.html#ex-8-1">演習 8-1</a>。</p>
+</section>
+<section id="模範解答問題-24-4" class="level2 callout-derive" data-collapse="true">
+<h2 class="anchored" data-anchor-id="模範解答問題-24-4">模範解答（問題 24-4）</h2>
+<p><strong>(1)</strong> エネルギー量子化：古典波には離散性がない。自発放出：古典では「ゼロ放射場→放出ゼロ」で減衰の起源がない。自然幅：励起準位の有限寿命を古典電子モデルでは「決め打ち」するしかない。Bose 統計：古典場は数えられる粒子ではなく、識別不能粒子の統計が出てこない。</p>
+<p><strong>(2)</strong> 第I〜VII部で別々に逆引きしてきた断片（量子化・統計・自発放出・自然幅）が、「電磁場を量子化する」という一つの枠組みからすべて出る。観測スペクトルから出発した逆引きが、最終的に単一の物理基盤（QED）に収束する ― これが到達点。</p>
+<p><strong>(3)</strong> 第IV部は物質（原子）を量子化したが電磁場は古典場、第V部は電磁場を古典的に扱った。第VIII部で電磁場と物質を<strong>同時に</strong>量子化することで、両者の相互作用（自発放出・Einstein 関係・選択則）が一貫した枠組みで現れ、連続スペクトルと線スペクトルが統一される。</p>
+<p><strong>答え</strong>：量子化・自発放出・自然幅・Bose 統計は古典場では出ない。電磁場量子化で全断片が一基盤に収束。第VIII部は電磁場と物質を同時量子化して両スペクトルを統一。</p>
 </section>
 <section id="sec-em-field-quantization-further" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-em-field-quantization-further">さらに学ぶための参考文献</h2>
@@ -1754,17 +1827,111 @@ B_\nu(T) = \frac{2h\nu^3}{c^2} \cdot \frac{1}{e^{h\nu/k_B T} - 1}
 <span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-em-field-quantization-exercises .unnumbered}</span></span>
 <span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple"}</span>
-<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a>演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。</span>
-<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 24-1　各モード＝量子調和振動子という置き換え {#ex-24-1 .unnumbered}</span></span>
 <span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-em-field-quantization-further .unnumbered}</span></span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
 <span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Loudon, *The Quantum Theory of Light* (Oxford, 3rd ed., 2000) — 直観重視の電磁場量子化、本章のレベルの標準書</span>
-<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mandel &amp; Wolf, *Optical Coherence and Quantum Optics* (Cambridge, 1995) — より体系的に進めたい読者向け</span>
-<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Milonni, *The Quantum Vacuum* (Academic Press, 1994) — 真空揺らぎ・Casimir 効果の専門書</span>
-<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Peskin &amp; Schroeder, *An Introduction to Quantum Field Theory* (Westview, 1995) — 場の量子論の本格教科書、最初の数章</span>
-<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Weinberg, "The Cosmological Constant Problem," Rev. Mod. Phys. 61 (1989) 1 — 宇宙定数問題の古典レビュー</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a>§24.2 は「各モードを量子調和振動子に置き換える」一行で第I〜VII部が接続されると述べた。モード Hamiltonian $\hat H_{\rm mode}=\hbar\omega_{\mathbf k}(\hat a^\dagger_{\mathbf k\sigma}\hat a_{\mathbf k\sigma}+\tfrac12)$。</span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$\hat a^\dagger$、$\hat a$、$\hat n=\hat a^\dagger\hat a$ がそれぞれ電磁場の文脈で何を表すか（放出・吸収・光子数）述べよ。</span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>調和振動子の励起準位 $|n\rangle$ が「そのモードに $n$ 個の光子がある状態」と読み替えられることを、第10章のエネルギー量子 $h\nu$、第8章の Bose 統計、第14章のモード密度と対応づけよ。</span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>「第I〜VII部で別々の道具と思っていたものが一行で接続される」とはどういう意味か、自分の言葉でまとめよ。</span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§24.2 各モードは調和振動子</span><span class="co">](#sec-em-field-quantization-mode-oscillator)</span>／生成消滅演算子は<span class="co">[</span><span class="ot">演習 12-1</span><span class="co">](../part4/12-quantum-foundations.qmd#ex-12-1)</span>・<span class="co">[</span><span class="ot">演習 12-4</span><span class="co">](../part4/12-quantum-foundations.qmd#ex-12-4)</span>、モード密度は<span class="co">[</span><span class="ot">演習 14-1</span><span class="co">](../part5/14-cavity-modes.qmd#ex-14-1)</span>、Bose 統計は<span class="co">[</span><span class="ot">演習 8-2</span><span class="co">](../part3/08-photon-statistics.qmd#ex-8-2)</span>。</span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 24-1）</span></span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>**(1)** $\hat a^\dagger_{\mathbf k\sigma}$：モード $(\mathbf k,\sigma)$ に光子を1個生成＝放出。$\hat a_{\mathbf k\sigma}$：光子を1個消滅＝吸収。$\hat n=\hat a^\dagger\hat a$：そのモードの光子数（固有値 $n=0,1,2,\dots$）＝観測量。</span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a>**(2)** 励起準位 $|n\rangle$ のエネルギーは $E_n=(n+\tfrac12)\hbar\omega$ で、隣接準位差 $\hbar\omega=h\nu$＝第10章のエネルギー量子。各モードを熱平衡の調和振動子とみた平均励起数 $\langle n\rangle=1/(e^{h\nu/kT}-1)$＝第8章の Bose 占有数。振動数 $\nu$ 近傍のモードの個数＝第14章のモード密度 $g(\nu)$。</span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a>**(3)** エネルギー量子化（第10章）、光子の Bose 統計（第8章）、モード密度（第14章）、自発放出（第11章）― これらは別々の物理に見えたが、すべて「各モード＝量子化された調和振動子」という一つの構造の異なる側面である。一行の置き換えで、観測される連続スペクトルの全因子が単一の枠組みに収まる。</span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a>**答え**：$\hat a^\dagger$＝放出、$\hat a$＝吸収、$\hat n$＝光子数。$|n\rangle$＝光子 $n$ 個。量子化・Bose 統計・モード密度・自発放出がすべて「モード＝量子振動子」の一構造の側面。</span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 24-2　黒体放射を電磁場の熱状態として書き直す {#ex-24-2 .unnumbered}</span></span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a>§24.4 はプランク分布を「電磁場の熱状態の表現」として再構成した。熱密度行列 $\hat\rho_{\rm th}=\dfrac1Z e^{-\hat H/k_BT}$ から組み立てる。</span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>各モードの平均光子数 $\bar n(\nu,T)={\rm tr}(\hat\rho_{\rm th}\hat n)=\dfrac{1}{e^{h\nu/k_BT}-1}$ が、第III部で導いた Bose 占有数と一致することを確認せよ（化学ポテンシャル $\mu=0$ の理由も）。</span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>モード密度 $g(\nu)=8\pi\nu^2/c^3$ と光子エネルギー $h\nu$ を掛けて $u_\nu=\dfrac{8\pi h\nu^3}{c^3}\dfrac{1}{e^{h\nu/kT}-1}$、$B_\nu=\dfrac{c}{4\pi}u_\nu=\dfrac{2h\nu^3}{c^2}\dfrac{1}{e^{h\nu/kT}-1}$ を導け。</span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>第8章（Bose 統計）・第10章（振動子の熱平均）・第14章（モード密度×熱励起）の三つの導出が「同じ一つの構造」であるとはどういう意味か述べよ。</span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§24.4 電磁場の熱状態</span><span class="co">](#sec-em-field-quantization-blackbody)</span>／Bose 占有数は<span class="co">[</span><span class="ot">演習 8-2</span><span class="co">](../part3/08-photon-statistics.qmd#ex-8-2)</span>・<span class="co">[</span><span class="ot">演習 8-3</span><span class="co">](../part3/08-photon-statistics.qmd#ex-8-3)</span>、全因子の合流は<span class="co">[</span><span class="ot">演習 14-4</span><span class="co">](../part5/14-cavity-modes.qmd#ex-14-4)</span>。</span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 24-2）</span></span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>**(1)** 単一モードの熱平均 $\bar n=\sum_n n\,e^{-n\hbar\omega/kT}/\sum_n e^{-n\hbar\omega/kT}=1/(e^{\hbar\omega/kT}-1)=1/(e^{h\nu/kT}-1)$。これは第III部の Bose 占有数（$\mu=0$）と同一。光子は数が保存しない（吸収・放出で生成消滅）ので $\mu=0$。</span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a>**(2)** $u_\nu=g(\nu)\cdot h\nu\cdot\bar n=\dfrac{8\pi\nu^2}{c^3}\cdot h\nu\cdot\dfrac{1}{e^{h\nu/kT}-1}=\dfrac{8\pi h\nu^3}{c^3}\dfrac{1}{e^{h\nu/kT}-1}$。等方場で $B_\nu=\dfrac{c}{4\pi}u_\nu=\dfrac{2h\nu^3}{c^2}\dfrac{1}{e^{h\nu/kT}-1}$。</span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a>**(3)** 「光子気体の Bose 統計」（第8章）、「量子化振動子の熱平均」（第10章）、「モード密度×熱励起」（第14章）は出発点も言葉も違うが、すべて「温度 $T$ の熱浴と平衡にある電磁場（各モード＝調和振動子）の熱状態」を別の角度から記述したもの。同じ密度行列 $\hat\rho_{\rm th}$ から同じプランク分布が出る。</span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>**答え**：$\bar n=1/(e^{h\nu/kT}-1)$（$\mu=0$）。$B_\nu=\frac{2h\nu^3}{c^2}\frac{1}{e^{h\nu/kT}-1}$。三つの導出は電磁場の熱状態の同一構造の異なる側面。</span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 24-3　真空の零点エネルギーと観測可能な帰結 {#ex-24-3 .unnumbered}</span></span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a>§24.3 は真空 $|0\rangle$ が「空ではない」ことの観測的帰結を挙げた。零点エネルギー $E_0=\sum_{\mathbf k,\sigma}\tfrac12\hbar\omega_{\mathbf k}$。</span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>零点エネルギーは形式的に発散するのに、なぜ観測される物理量（の差）は有限なのか述べよ。プランク分布に零点項が現れない理由（演習 12-3）と結びつけよ。</span>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>真空が「空ではない」ことの観測可能な帰結を3つ挙げよ（自発放出・自然幅・Casimir 効果）。Casimir 力が $F\propto1/L^4$ になることに触れよ。</span>
+<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>「真空に揺らぎがある」と「真空は粒子で満ちている」は同じか違うか。交換関係 $<span class="co">[</span><span class="ot">\hat a,\hat a^\dagger</span><span class="co">]</span>=1$ と場の分散 $\langle(\Delta E)^2\rangle\neq0$ に触れて述べよ。</span>
+<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§24.3 真空状態と零点エネルギー</span><span class="co">](#sec-em-field-quantization-vacuum)</span>／零点が観測量に効かないことは<span class="co">[</span><span class="ot">演習 7-2</span><span class="co">](../part3/07-statistical-mechanics.qmd#ex-7-2)</span>・<span class="co">[</span><span class="ot">演習 12-3</span><span class="co">](../part4/12-quantum-foundations.qmd#ex-12-3)</span>、自然幅は<span class="co">[</span><span class="ot">§25.4</span><span class="co">](../part8/25-qed-minimum.qmd#sec-qed-minimum-natural-width)</span>。</span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 24-3）</span></span>
+<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a>**(1)** 零点エネルギーはエネルギーの絶対基準（定数オフセット）で、その絶対値は観測できない。観測できるのは零点エネルギーの**差や変化**（境界条件の変化など）で、これは有限。プランク分布に零点項 $\tfrac12\hbar\omega$ が現れないのも、それが温度非依存の定数で放射の励起分（物質とやりとりする部分）に効かないから（演習 12-3）。</span>
+<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a>**(2)** ① 自発放出（真空揺らぎが励起原子を揺さぶる、§25.2）。② 線の自然幅（励起準位の有限寿命、$\Gamma=A_{ul}$）。③ Casimir 効果（二枚の金属板間で許されるモードが減り、板間の零点エネルギーが板外より小さくなり引力 $F\propto1/L^4$ が生じる）。</span>
+<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a>**(3)** 違う。真空 $|0\rangle$ は厳密に光子0個の状態（$\hat n|0\rangle=0$）。観測される「揺らぎ」は粒子がいることではなく、$<span class="co">[</span><span class="ot">\hat a,\hat a^\dagger</span><span class="co">]</span>=1$ の非可換性から来る電場・磁場の期待値の分散 $\langle(\Delta E)^2\rangle\neq0$。粒子数を定めると場の値が揺らぎ、場の値を定めると粒子数が揺らぐ（不確定性関係の双対）。</span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>**答え**：零点の絶対値は観測不能、差は有限。帰結＝自発放出・自然幅・Casimir($F\propto1/L^4$)。揺らぎ＝場の分散($<span class="co">[</span><span class="ot">\hat a,\hat a^\dagger</span><span class="co">]</span>=1$)で、粒子で満ちているのとは別。</span>
+<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 24-4　なぜ電磁場の量子化が必要だったか {#ex-24-4 .unnumbered}</span></span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a>§24.1 は、古典電磁気＋（別々の）量子論では説明しきれず、電磁場そのものの量子化が要る現象を列挙した。</span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>次の各現象が古典電磁気では説明できない理由を一言ずつ述べよ：エネルギー量子化 $h\nu$、自発放出 $A_{ul}$、線の自然幅、光子の Bose 統計。</span>
+<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>これらが「同じ枠組み（電磁場の量子化）」から出ることが、なぜ本書の逆引きの到達点なのか述べよ。</span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>本書では電磁場と量子論を第V部と第IV部で別々に扱ってきた。第VIII部でそれらを「同時に量子化する」ことの意味を述べよ。</span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§24.1 なぜ量子化が必要か</span><span class="co">](#sec-em-field-quantization-why)</span>／自発放出は<span class="co">[</span><span class="ot">演習 11-1</span><span class="co">](../part4/11-einstein-method.qmd#ex-11-1)</span>、Bose 統計は<span class="co">[</span><span class="ot">演習 8-1</span><span class="co">](../part3/08-photon-statistics.qmd#ex-8-1)</span>。</span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 24-4）</span></span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a>**(1)** エネルギー量子化：古典波には離散性がない。自発放出：古典では「ゼロ放射場→放出ゼロ」で減衰の起源がない。自然幅：励起準位の有限寿命を古典電子モデルでは「決め打ち」するしかない。Bose 統計：古典場は数えられる粒子ではなく、識別不能粒子の統計が出てこない。</span>
+<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a>**(2)** 第I〜VII部で別々に逆引きしてきた断片（量子化・統計・自発放出・自然幅）が、「電磁場を量子化する」という一つの枠組みからすべて出る。観測スペクトルから出発した逆引きが、最終的に単一の物理基盤（QED）に収束する ― これが到達点。</span>
+<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>**(3)** 第IV部は物質（原子）を量子化したが電磁場は古典場、第V部は電磁場を古典的に扱った。第VIII部で電磁場と物質を**同時に**量子化することで、両者の相互作用（自発放出・Einstein 関係・選択則）が一貫した枠組みで現れ、連続スペクトルと線スペクトルが統一される。</span>
+<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a>**答え**：量子化・自発放出・自然幅・Bose 統計は古典場では出ない。電磁場量子化で全断片が一基盤に収束。第VIII部は電磁場と物質を同時量子化して両スペクトルを統一。</span>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-em-field-quantization-further .unnumbered}</span></span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Loudon, *The Quantum Theory of Light* (Oxford, 3rd ed., 2000) — 直観重視の電磁場量子化、本章のレベルの標準書</span>
+<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mandel &amp; Wolf, *Optical Coherence and Quantum Optics* (Cambridge, 1995) — より体系的に進めたい読者向け</span>
+<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Milonni, *The Quantum Vacuum* (Academic Press, 1994) — 真空揺らぎ・Casimir 効果の専門書</span>
+<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Peskin &amp; Schroeder, *An Introduction to Quantum Field Theory* (Westview, 1995) — 場の量子論の本格教科書、最初の数章</span>
+<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Weinberg, "The Cosmological Constant Problem," Rev. Mod. Phys. 61 (1989) 1 — 宇宙定数問題の古典レビュー</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

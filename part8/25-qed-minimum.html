@@ -490,7 +490,17 @@ window.Quarto = {
   </ul></li>
   <li><a href="#sec-qed-minimum-summary" id="toc-sec-qed-minimum-summary" class="nav-link" data-scroll-target="#sec-qed-minimum-summary">この章で何がわかったか</a></li>
   <li><a href="#sec-qed-minimum-afterword" id="toc-sec-qed-minimum-afterword" class="nav-link" data-scroll-target="#sec-qed-minimum-afterword">あとがき ― 逆引きの終わりに</a></li>
-  <li><a href="#sec-qed-minimum-exercises" id="toc-sec-qed-minimum-exercises" class="nav-link" data-scroll-target="#sec-qed-minimum-exercises">演習問題</a></li>
+  <li><a href="#sec-qed-minimum-exercises" id="toc-sec-qed-minimum-exercises" class="nav-link" data-scroll-target="#sec-qed-minimum-exercises">演習問題</a>
+  <ul class="collapse">
+  <li><a href="#ex-25-1" id="toc-ex-25-1" class="nav-link" data-scroll-target="#ex-25-1">問題 25-1　Fermi の黄金律から自発放出率 Aul</a></li>
+  </ul></li>
+  <li><a href="#模範解答問題-25-1" id="toc-模範解答問題-25-1" class="nav-link" data-scroll-target="#模範解答問題-25-1">模範解答（問題 25-1）</a></li>
+  <li><a href="#ex-25-2" id="toc-ex-25-2" class="nav-link" data-scroll-target="#ex-25-2">問題 25-2　Aul/Bul=2hν³/c² ― 二つの地図の交点</a></li>
+  <li><a href="#模範解答問題-25-2" id="toc-模範解答問題-25-2" class="nav-link" data-scroll-target="#模範解答問題-25-2">模範解答（問題 25-2）</a></li>
+  <li><a href="#ex-25-3" id="toc-ex-25-3" class="nav-link" data-scroll-target="#ex-25-3">問題 25-3　自発放出 ↔︎ 真空揺らぎ ↔︎ 自然幅の三位一体</a></li>
+  <li><a href="#模範解答問題-25-3" id="toc-模範解答問題-25-3" class="nav-link" data-scroll-target="#模範解答問題-25-3">模範解答（問題 25-3）</a></li>
+  <li><a href="#ex-25-4" id="toc-ex-25-4" class="nav-link" data-scroll-target="#ex-25-4">問題 25-4　選択則を行列要素で、そして連続と線の統一</a></li>
+  <li><a href="#模範解答問題-25-4" id="toc-模範解答問題-25-4" class="nav-link" data-scroll-target="#模範解答問題-25-4">模範解答（問題 25-4）</a></li>
   <li><a href="#sec-qed-minimum-further" id="toc-sec-qed-minimum-further" class="nav-link" data-scroll-target="#sec-qed-minimum-further">さらに学ぶための参考文献</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/edit/main/part8/25-qed-minimum.qmd" class="toc-action"><i class="bi bi-github"></i>編集</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/blob/main/part8/25-qed-minimum.qmd" class="toc-action"><i class="bi empty"></i>ソースコード</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/issues/new" class="toc-action"><i class="bi empty"></i>問題を報告</a></li></ul></div></nav>
@@ -1080,16 +1090,116 @@ A_{ul} = \frac{\omega^3}{3\pi\epsilon_0 \hbar c^3} |\langle l | \hat{\mathbf{d}}
 </section>
 <section id="sec-qed-minimum-exercises" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-qed-minimum-exercises">演習問題</h2>
-<div class="callout callout-style-simple callout-note">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。</p>
-</div>
-</div>
-</div>
+<p><span class="tag">[導出補完]</span> <strong>模範解答</strong> は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</p>
+<section id="ex-25-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-25-1">問題 25-1　Fermi の黄金律から自発放出率 Aul</h3>
+<p>[★ 難易度：☆☆ ] <span class="tag">[導出補完]</span></p>
+<p>§25.2 は Fermi の黄金律 <span class="math inline">\Gamma_{u\to l}=\dfrac{2\pi}{\hbar}|\langle l;1_{\mathbf k\sigma}|\hat H_{\rm int}|u;0\rangle|^2\rho(\omega)</span> から <span class="math inline">A_{ul}=\dfrac{\omega^3}{3\pi\epsilon_0\hbar c^3}|\langle l|\hat{\mathbf d}|u\rangle|^2</span> が出るとした。構造を読む。</p>
+<ol type="1">
+<li>自発放出の始状態 <span class="math inline">|u;0\rangle</span>（原子上準位＋電磁場真空）と終状態 <span class="math inline">|l;1_{\mathbf k\sigma}\rangle</span>（原子下準位＋光子1個）を述べ、なぜ「真空から光子を生成する」過程なのか説明せよ。</li>
+<li><span class="math inline">A_{ul}</span> の前因子 <span class="math inline">\omega^3</span> が「モード密度 <span class="math inline">\propto\nu^2</span> × エネルギー量子 <span class="math inline">h\nu</span>」の構造から来ることを述べ、これが第24章でプランク前因子に出た <span class="math inline">2h\nu^3/c^2</span> と同じ構造であることを指摘せよ。</li>
+<li>古典電磁気では自発放出が起こらないのに QED では <span class="math inline">A_{ul}\neq0</span> になる物理的理由（真空揺らぎ）を述べよ。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-qed-minimum-spontaneous">§25.2 Fermi の黄金律</a>／振動子強度との関係は<a href="../part7/21-atomic-physics.html#ex-21-2">演習 21-2</a>、Einstein 係数は<a href="../part4/11-einstein-method.html#ex-11-1">演習 11-1</a>。</p>
+</section>
+</section>
+<section id="模範解答問題-25-1" class="level2 callout-derive" data-collapse="true">
+<h2 class="anchored" data-anchor-id="模範解答問題-25-1">模範解答（問題 25-1）</h2>
+<p><strong>(1)</strong> 始状態 <span class="math inline">|u;0\rangle</span>：原子は上準位 <span class="math inline">u</span>、電磁場は真空（光子0個）。終状態 <span class="math inline">|l;1_{\mathbf k\sigma}\rangle</span>：原子は下準位 <span class="math inline">l</span>、電磁場にモード <span class="math inline">(\mathbf k,\sigma)</span> の光子が1個。相互作用 <span class="math inline">\hat H_{\rm int}</span> の生成演算子 <span class="math inline">\hat a^\dagger</span> が真空から光子を1個作る。外部光がない真空からの遷移なので「自発」放出。</p>
+<p><strong>(2)</strong> Fermi の黄金律の終状態モード密度 <span class="math inline">\rho(\omega)\propto\omega^2</span>（モード密度 <span class="math inline">\propto\nu^2</span>、第14章）と、放出光子のエネルギー <span class="math inline">\hbar\omega=h\nu</span> が掛かって <span class="math inline">\omega^3</span> が出る。これはプランク前因子 <span class="math inline">2h\nu^3/c^2</span> の <span class="math inline">\nu^3</span>（＝モード密度 <span class="math inline">\nu^2</span>×エネルギー量子 <span class="math inline">h\nu</span>）と同じ構造。</p>
+<p><strong>(3)</strong> 古典電磁気では「ゼロ放射場→放出ゼロ」で励起原子が落ちる理由がない。QED では真空に零点揺らぎ（<span class="math inline">\hat a^\dagger</span> が真空から光子を生成しうること）があり、これが励起原子に常にちょっかいをかけて放出を誘起する。だから真空でも <span class="math inline">A_{ul}\neq0</span>。</p>
+<p><strong>答え</strong>：<span class="math inline">|u;0\rangle\to|l;1\rangle</span>＝真空から光子生成。<span class="math inline">\omega^3</span>＝モード密度 <span class="math inline">\nu^2</span>×<span class="math inline">h\nu</span>＝プランク前因子と同構造。真空揺らぎが自発放出を駆動。</p>
+</section>
+<section id="ex-25-2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-25-2">問題 25-2　Aul/Bul=2hν³/c² ― 二つの地図の交点</h3>
+<p>[★ 難易度：☆☆☆ ] <span class="tag">[理解を深める]</span></p>
+<p>§25.3 は前因子 <span class="math inline">2h\nu^3/c^2</span> がプランク関数地図と水素線地図の共通起源だと総括した。</p>
+<ol type="1">
+<li><span class="math inline">2h\nu^3/c^2</span> の各因子（<span class="math inline">\nu^3</span>、<span class="math inline">1/c^2</span>、<span class="math inline">2</span>、<span class="math inline">h</span>）が、プランク関数と自発放出率の両方で同じ物理（モード密度・分散関係・偏光・エネルギー量子）から来ることを表で整理せよ。</li>
+<li>自発放出 <span class="math inline">A_{ul}</span> と誘導放出 <span class="math inline">B_{ul}</span> が「同じ Fermi の黄金律の二側面」である（終状態モードが真空か既に光子を持つか、Bose 増強因子 <span class="math inline">\sqrt{n+1}</span>）ことを述べよ。</li>
+<li>「プランク関数と水素線吸収係数は、同じ電磁場の同じモード構造を電磁場側・物質側から眺めたもの」という総括を、自分の言葉でまとめよ。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-qed-minimum-einstein">§25.3 Einstein 関係式の QED 起源</a>／プランク前因子の分解は<a href="../part5/14-cavity-modes.html#ex-14-4">演習 14-4</a>、Einstein 関係は<a href="../part4/11-einstein-method.html#ex-11-1">演習 11-1</a>・<a href="../part4/11-einstein-method.html#ex-11-2">演習 11-2</a>。</p>
+</section>
+<section id="模範解答問題-25-2" class="level2 callout-derive" data-collapse="true">
+<h2 class="anchored" data-anchor-id="模範解答問題-25-2">模範解答（問題 25-2）</h2>
+<p><strong>(1)</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>因子</th>
+<th>プランク関数</th>
+<th>自発放出率</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\nu^3</span></td>
+<td>モード密度 <span class="math inline">\nu^2</span> × <span class="math inline">h\nu</span></td>
+<td>終状態モード密度 <span class="math inline">\nu^2</span> × <span class="math inline">h\nu</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">1/c^2</span></td>
+<td>分散関係 <span class="math inline">k=2\pi\nu/c</span> ＋ <span class="math inline">u_\nu\to B_\nu</span></td>
+<td>同じ</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">2</span></td>
+<td>偏光自由度（横波）</td>
+<td>同じ</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">h</span></td>
+<td>エネルギー量子</td>
+<td>同じ</td>
+</tr>
+</tbody>
+</table>
+<p>どちらも「電磁場の同じモード構造」を見ている。</p>
+<p><strong>(2)</strong> Fermi の黄金律で、終状態のモードが既に <span class="math inline">n</span> 個の光子を持つ場合は <span class="math inline">|n\rangle\to|n+1\rangle</span> の遷移で Bose 増強因子 <span class="math inline">\sqrt{n+1}</span>（→ 誘導放出 <span class="math inline">B_{ul}</span>、<span class="math inline">\propto n</span> 部分）と自発項（<span class="math inline">+1</span> 部分）が同時に出る。終状態が真空なら <span class="math inline">n=0</span> で増強因子1＝自発放出 <span class="math inline">A_{ul}</span>。両者の比 <span class="math inline">A_{ul}/B_{ul}=2h\nu^3/c^2</span>。</p>
+<p><strong>(3)</strong> プランク関数は「電磁場の各モードの熱励起」を電磁場側から見たスペクトル、水素線吸収係数は「原子が電磁場のモードと遷移する」のを物質側から見た量。両者に共通する <span class="math inline">2h\nu^3/c^2</span> は、同じ電磁場のモード構造（モード密度×偏光×エネルギー量子）の現れ。連続も線も、同じ電磁場–物質相互作用 Hamiltonian の二側面。</p>
+<p><strong>答え</strong>：<span class="math inline">2h\nu^3/c^2</span> の各因子は両地図で同一物理（モード密度・分散・偏光・量子）。<span class="math inline">A_{ul}</span>/<span class="math inline">B_{ul}</span> は Fermi 黄金律の真空/光子有りの二側面（<span class="math inline">\sqrt{n+1}</span>）。連続と線は同じモード構造の二つの眺め。</p>
+</section>
+<section id="ex-25-3" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-25-3">問題 25-3　自発放出 ↔︎ 真空揺らぎ ↔︎ 自然幅の三位一体</h3>
+<p>[★ 難易度：☆☆ ] <span class="tag">[理解を深める]</span></p>
+<p>§25.4 は自然幅を QED 的に意味づけた。Ly<span class="math inline">\alpha</span>（<span class="math inline">A_{ul}=6.27\times10^8</span> s<span class="math inline">^{-1}</span>）を例に三者の関係を整理する。</p>
+<ol type="1">
+<li>真空揺らぎ → 自発放出 → 励起寿命 <span class="math inline">\tau=1/A_{ul}</span> → 自然幅 <span class="math inline">\gamma_{\rm nat}=A_{ul}/(2\pi)</span> という連鎖を述べよ。</li>
+<li>「線の自然幅は真空揺らぎの存在を観測している」という主張の意味を述べよ。観測例（QSO の damped Ly<span class="math inline">\alpha</span> 系の減衰翼）に触れよ。</li>
+<li>21 cm 線（<span class="math inline">A_{ul}\simeq2.9\times10^{-15}</span> s<span class="math inline">^{-1}</span>）の自然幅は極端に小さいのに観測される。その理由（膨大な中性水素）を演習 19-1 と結びつけて述べよ。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-qed-minimum-natural-width">§25.4 自然幅と真空揺らぎ</a>／自然幅の計算は<a href="../part7/22-line-shape.html#ex-22-2">演習 22-2</a>、21 cm は<a href="../part7/19-where-lines.html#ex-19-1">演習 19-1</a>。</p>
+</section>
+<section id="模範解答問題-25-3" class="level2 callout-derive" data-collapse="true">
+<h2 class="anchored" data-anchor-id="模範解答問題-25-3">模範解答（問題 25-3）</h2>
+<p><strong>(1)</strong> 量子化された電磁場の真空には各モードに零点揺らぎがある → それが励起原子に常にちょっかいをかけ自発放出を誘起（<span class="math inline">A_{ul}</span>）→ 励起準位の寿命が有限 <span class="math inline">\tau=1/A_{ul}</span> → 不確定性関係でエネルギー幅 <span class="math inline">\Delta E\sim\hbar A_{ul}</span>、振動数幅 <span class="math inline">\gamma_{\rm nat}=A_{ul}/(2\pi)</span> が線に現れる。</p>
+<p><strong>(2)</strong> 自然幅の物理的起源は真空揺らぎが励起原子を揺さぶること。よって観測される自然幅（Lorentzian の翼）は、真空が「空ではない」ことの直接の観測的痕跡。QSO の damped Ly<span class="math inline">\alpha</span> 系の減衰翼は、まさにこの自然幅起源の Lorentzian 翼を地上の分光計で測ったもの。</p>
+<p><strong>(3)</strong> 21 cm 線の <span class="math inline">A_{ul}</span> は極小（自然幅も極小）だが、中心地図 <span class="math inline">\alpha_\nu=(\pi e^2/m_ec)f_{lu}n_l\phi</span> の <span class="math inline">n_l</span>（中性水素の柱密度）が宇宙的スケールで膨大なので、積として観測可能な信号になる（演習 19-1）。真空揺らぎの効果がいかに弱くても、宇宙的物質量では無視できない。</p>
+<p><strong>答え</strong>：真空揺らぎ→自発放出 <span class="math inline">A_{ul}</span>→寿命 <span class="math inline">\tau=1/A_{ul}</span>→自然幅 <span class="math inline">A_{ul}/2\pi</span>。自然幅＝真空揺らぎの観測（damped Ly<span class="math inline">\alpha</span> 翼）。21 cm は膨大な <span class="math inline">n_l</span> で観測可能。</p>
+</section>
+<section id="ex-25-4" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-25-4">問題 25-4　選択則を行列要素で、そして連続と線の統一</h3>
+<p>[★ 難易度：☆☆ ] <span class="tag">[理解を深める]</span></p>
+<p>§25.5・25.6 の総括。電気双極子行列要素 <span class="math inline">\mathbf d_{ul}=\langle u|\hat{\mathbf d}|l\rangle=-e\langle u|\hat{\mathbf r}|l\rangle</span> と本書全体の統一。</p>
+<ol type="1">
+<li>電気双極子（E1）選択則 <span class="math inline">\Delta l=\pm1</span>、<span class="math inline">\Delta m=0,\pm1</span> が、相互作用の最低次（双極子）とパリティ・角運動量保存から自然に出ること、禁制遷移が高次（M1/E2）として残ることを述べよ。</li>
+<li>第21章で「経験則」として述べた選択則が、本章で QED 構造から導かれることが、本書の原則③「天下り的に式を与えない」とどう関係するか述べよ。</li>
+<li>本書の総括として、連続スペクトル（プランク関数）と線スペクトル（水素線吸収係数）が「同じ電磁場–物質相互作用 Hamiltonian の二側面」であることを、これまでの全演習を踏まえて自分の言葉でまとめよ。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-qed-minimum-selection">§25.5 選択則</a>、<a href="#sec-qed-minimum-unification">§25.6 連続と線の統一</a>／選択則の原子物理側は<a href="../part7/21-atomic-physics.html#ex-21-3">演習 21-3</a>、全因子の合流は<a href="../part5/14-cavity-modes.html#ex-14-4">演習 14-4</a>。</p>
+</section>
+<section id="模範解答問題-25-4" class="level2 callout-derive" data-collapse="true">
+<h2 class="anchored" data-anchor-id="模範解答問題-25-4">模範解答（問題 25-4）</h2>
+<p><strong>(1)</strong> 相互作用 <span class="math inline">\hat H_{\rm int}</span> の長波長極限が電気双極子 <span class="math inline">\hat{\mathbf d}</span> を介する（最低次）。<span class="math inline">\langle u|\hat{\mathbf d}|l\rangle</span> はパリティと角運動量の保存から <span class="math inline">\Delta l=\pm1</span>、<span class="math inline">\Delta m=0,\pm1</span> で非ゼロ。これを満たさない遷移は E1 で行列要素ゼロ＝禁制だが、磁気双極子(M1)・電気四重極(E2)など高次過程として弱く残る（強度 <span class="math inline">\sim\alpha^2</span> 倍）。</p>
+<p><strong>(2)</strong> 第21章では選択則を観測規則（経験則）として受け入れたが、本章で「電気双極子相互作用の最低次」という QED 構造から必然として導いた。これは本書の原則③「天下り的に式を与えず、必然性として理解させる」を線スペクトル側で最終的に実行したもの。観測規則の背後にある物理が明示された。</p>
+<p><strong>(3)</strong> プランク関数（連続）は電磁場の各モードの熱励起を電磁場側から、水素線吸収係数（線）は原子と電磁場モードの遷移を物質側から見た量。両者は同じ相互作用 Hamiltonian <span class="math inline">\hat H_{\rm int}=-(e/m_e)\hat{\mathbf A}\cdot\hat{\mathbf p}</span> から出て、共通の前因子 <span class="math inline">2h\nu^3/c^2</span>（モード密度×偏光×エネルギー量子）を持つ。観測されるスペクトル ― CMB の黒体、恒星の Fraunhofer 線、AGN の鉄線、21 cm ― はすべて、量子化された電磁場のモード構造の現れであり、観測者は毎日 QED を見ている。これが本書の逆引きの到達点。</p>
+<p><strong>答え</strong>：E1 選択則は双極子の最低次＋保存則から、禁制は高次として残る。経験則を QED から導く＝原則③の完成。連続も線も同じ <span class="math inline">\hat H_{\rm int}</span> の二側面、共通前因子 <span class="math inline">2h\nu^3/c^2</span> が統一の印。</p>
 </section>
 <section id="sec-qed-minimum-further" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-qed-minimum-further">さらに学ぶための参考文献</h2>
@@ -1867,18 +1977,121 @@ A_{ul} = \frac{\omega^3}{3\pi\epsilon_0 \hbar c^3} |\langle l | \hat{\mathbf{d}}
 <span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-qed-minimum-exercises .unnumbered}</span></span>
 <span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple"}</span>
-<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>演習問題は、本書全体の章構成が固まったあとに、各部を通じて統一的に作成する予定。</span>
-<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 25-1　Fermi の黄金律から自発放出率 Aul {#ex-25-1 .unnumbered}</span></span>
 <span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-qed-minimum-further .unnumbered}</span></span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
 <span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sakurai &amp; Napolitano, *Modern Quantum Mechanics* (Cambridge, 3rd ed., 2020) — 放射場と物質の相互作用の章、本章のレベルから一段深く</span>
-<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Loudon, *The Quantum Theory of Light* (Oxford, 3rd ed., 2000) — 自発放出・自然幅の QED 的扱い、本書と相性が良い</span>
-<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Cohen-Tannoudji, Dupont-Roc &amp; Grynberg, *Photons and Atoms* / *Atom-Photon Interactions* (Wiley, 1989/1992) — 光と原子の相互作用の体系的扱い</span>
-<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rybicki &amp; Lightman, *Radiative Processes in Astrophysics* (Wiley, 1979) — 天体物理応用での放射理論の標準教科書</span>
-<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Peskin &amp; Schroeder, *An Introduction to Quantum Field Theory* (Westview, 1995) — 本格的な場の量子論</span>
-<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Weinberg, *The Quantum Theory of Fields* vol. I-III (Cambridge, 1995-2000) — さらに深く進みたい読者へ</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a>§25.2 は Fermi の黄金律 $\Gamma_{u\to l}=\dfrac{2\pi}{\hbar}|\langle l;1_{\mathbf k\sigma}|\hat H_{\rm int}|u;0\rangle|^2\rho(\omega)$ から $A_{ul}=\dfrac{\omega^3}{3\pi\epsilon_0\hbar c^3}|\langle l|\hat{\mathbf d}|u\rangle|^2$ が出るとした。構造を読む。</span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>自発放出の始状態 $|u;0\rangle$（原子上準位＋電磁場真空）と終状態 $|l;1_{\mathbf k\sigma}\rangle$（原子下準位＋光子1個）を述べ、なぜ「真空から光子を生成する」過程なのか説明せよ。</span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$A_{ul}$ の前因子 $\omega^3$ が「モード密度 $\propto\nu^2$ × エネルギー量子 $h\nu$」の構造から来ることを述べ、これが第24章でプランク前因子に出た $2h\nu^3/c^2$ と同じ構造であることを指摘せよ。</span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>古典電磁気では自発放出が起こらないのに QED では $A_{ul}\neq0$ になる物理的理由（真空揺らぎ）を述べよ。</span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§25.2 Fermi の黄金律</span><span class="co">](#sec-qed-minimum-spontaneous)</span>／振動子強度との関係は<span class="co">[</span><span class="ot">演習 21-2</span><span class="co">](../part7/21-atomic-physics.qmd#ex-21-2)</span>、Einstein 係数は<span class="co">[</span><span class="ot">演習 11-1</span><span class="co">](../part4/11-einstein-method.qmd#ex-11-1)</span>。</span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 25-1）</span></span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a>**(1)** 始状態 $|u;0\rangle$：原子は上準位 $u$、電磁場は真空（光子0個）。終状態 $|l;1_{\mathbf k\sigma}\rangle$：原子は下準位 $l$、電磁場にモード $(\mathbf k,\sigma)$ の光子が1個。相互作用 $\hat H_{\rm int}$ の生成演算子 $\hat a^\dagger$ が真空から光子を1個作る。外部光がない真空からの遷移なので「自発」放出。</span>
+<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a>**(2)** Fermi の黄金律の終状態モード密度 $\rho(\omega)\propto\omega^2$（モード密度 $\propto\nu^2$、第14章）と、放出光子のエネルギー $\hbar\omega=h\nu$ が掛かって $\omega^3$ が出る。これはプランク前因子 $2h\nu^3/c^2$ の $\nu^3$（＝モード密度 $\nu^2$×エネルギー量子 $h\nu$）と同じ構造。</span>
+<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a>**(3)** 古典電磁気では「ゼロ放射場→放出ゼロ」で励起原子が落ちる理由がない。QED では真空に零点揺らぎ（$\hat a^\dagger$ が真空から光子を生成しうること）があり、これが励起原子に常にちょっかいをかけて放出を誘起する。だから真空でも $A_{ul}\neq0$。</span>
+<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a>**答え**：$|u;0\rangle\to|l;1\rangle$＝真空から光子生成。$\omega^3$＝モード密度 $\nu^2$×$h\nu$＝プランク前因子と同構造。真空揺らぎが自発放出を駆動。</span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 25-2　Aul/Bul=2hν³/c² ― 二つの地図の交点 {#ex-25-2 .unnumbered}</span></span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a>§25.3 は前因子 $2h\nu^3/c^2$ がプランク関数地図と水素線地図の共通起源だと総括した。</span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$2h\nu^3/c^2$ の各因子（$\nu^3$、$1/c^2$、$2$、$h$）が、プランク関数と自発放出率の両方で同じ物理（モード密度・分散関係・偏光・エネルギー量子）から来ることを表で整理せよ。</span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>自発放出 $A_{ul}$ と誘導放出 $B_{ul}$ が「同じ Fermi の黄金律の二側面」である（終状態モードが真空か既に光子を持つか、Bose 増強因子 $\sqrt{n+1}$）ことを述べよ。</span>
+<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>「プランク関数と水素線吸収係数は、同じ電磁場の同じモード構造を電磁場側・物質側から眺めたもの」という総括を、自分の言葉でまとめよ。</span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§25.3 Einstein 関係式の QED 起源</span><span class="co">](#sec-qed-minimum-einstein)</span>／プランク前因子の分解は<span class="co">[</span><span class="ot">演習 14-4</span><span class="co">](../part5/14-cavity-modes.qmd#ex-14-4)</span>、Einstein 関係は<span class="co">[</span><span class="ot">演習 11-1</span><span class="co">](../part4/11-einstein-method.qmd#ex-11-1)</span>・<span class="co">[</span><span class="ot">演習 11-2</span><span class="co">](../part4/11-einstein-method.qmd#ex-11-2)</span>。</span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 25-2）</span></span>
+<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>**(1)**</span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 因子 <span class="pp">|</span> プランク関数 <span class="pp">|</span> 自発放出率 <span class="pp">|</span></span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $\nu^3$ <span class="pp">|</span> モード密度 $\nu^2$ × $h\nu$ <span class="pp">|</span> 終状態モード密度 $\nu^2$ × $h\nu$ <span class="pp">|</span></span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $1/c^2$ <span class="pp">|</span> 分散関係 $k=2\pi\nu/c$ ＋ $u_\nu\to B_\nu$ <span class="pp">|</span> 同じ <span class="pp">|</span></span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $2$ <span class="pp">|</span> 偏光自由度（横波） <span class="pp">|</span> 同じ <span class="pp">|</span></span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $h$ <span class="pp">|</span> エネルギー量子 <span class="pp">|</span> 同じ <span class="pp">|</span></span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a>どちらも「電磁場の同じモード構造」を見ている。</span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a>**(2)** Fermi の黄金律で、終状態のモードが既に $n$ 個の光子を持つ場合は $|n\rangle\to|n+1\rangle$ の遷移で Bose 増強因子 $\sqrt{n+1}$（→ 誘導放出 $B_{ul}$、$\propto n$ 部分）と自発項（$+1$ 部分）が同時に出る。終状態が真空なら $n=0$ で増強因子1＝自発放出 $A_{ul}$。両者の比 $A_{ul}/B_{ul}=2h\nu^3/c^2$。</span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a>**(3)** プランク関数は「電磁場の各モードの熱励起」を電磁場側から見たスペクトル、水素線吸収係数は「原子が電磁場のモードと遷移する」のを物質側から見た量。両者に共通する $2h\nu^3/c^2$ は、同じ電磁場のモード構造（モード密度×偏光×エネルギー量子）の現れ。連続も線も、同じ電磁場–物質相互作用 Hamiltonian の二側面。</span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a>**答え**：$2h\nu^3/c^2$ の各因子は両地図で同一物理（モード密度・分散・偏光・量子）。$A_{ul}$/$B_{ul}$ は Fermi 黄金律の真空/光子有りの二側面（$\sqrt{n+1}$）。連続と線は同じモード構造の二つの眺め。</span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 25-3　自発放出 ↔ 真空揺らぎ ↔ 自然幅の三位一体 {#ex-25-3 .unnumbered}</span></span>
+<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>§25.4 は自然幅を QED 的に意味づけた。Ly$\alpha$（$A_{ul}=6.27\times10^8$ s$^{-1}$）を例に三者の関係を整理する。</span>
+<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>真空揺らぎ → 自発放出 → 励起寿命 $\tau=1/A_{ul}$ → 自然幅 $\gamma_{\rm nat}=A_{ul}/(2\pi)$ という連鎖を述べよ。</span>
+<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>「線の自然幅は真空揺らぎの存在を観測している」という主張の意味を述べよ。観測例（QSO の damped Ly$\alpha$ 系の減衰翼）に触れよ。</span>
+<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>21 cm 線（$A_{ul}\simeq2.9\times10^{-15}$ s$^{-1}$）の自然幅は極端に小さいのに観測される。その理由（膨大な中性水素）を演習 19-1 と結びつけて述べよ。</span>
+<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§25.4 自然幅と真空揺らぎ</span><span class="co">](#sec-qed-minimum-natural-width)</span>／自然幅の計算は<span class="co">[</span><span class="ot">演習 22-2</span><span class="co">](../part7/22-line-shape.qmd#ex-22-2)</span>、21 cm は<span class="co">[</span><span class="ot">演習 19-1</span><span class="co">](../part7/19-where-lines.qmd#ex-19-1)</span>。</span>
+<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 25-3）</span></span>
+<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a>**(1)** 量子化された電磁場の真空には各モードに零点揺らぎがある → それが励起原子に常にちょっかいをかけ自発放出を誘起（$A_{ul}$）→ 励起準位の寿命が有限 $\tau=1/A_{ul}$ → 不確定性関係でエネルギー幅 $\Delta E\sim\hbar A_{ul}$、振動数幅 $\gamma_{\rm nat}=A_{ul}/(2\pi)$ が線に現れる。</span>
+<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a>**(2)** 自然幅の物理的起源は真空揺らぎが励起原子を揺さぶること。よって観測される自然幅（Lorentzian の翼）は、真空が「空ではない」ことの直接の観測的痕跡。QSO の damped Ly$\alpha$ 系の減衰翼は、まさにこの自然幅起源の Lorentzian 翼を地上の分光計で測ったもの。</span>
+<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a>**(3)** 21 cm 線の $A_{ul}$ は極小（自然幅も極小）だが、中心地図 $\alpha_\nu=(\pi e^2/m_ec)f_{lu}n_l\phi$ の $n_l$（中性水素の柱密度）が宇宙的スケールで膨大なので、積として観測可能な信号になる（演習 19-1）。真空揺らぎの効果がいかに弱くても、宇宙的物質量では無視できない。</span>
+<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a>**答え**：真空揺らぎ→自発放出 $A_{ul}$→寿命 $\tau=1/A_{ul}$→自然幅 $A_{ul}/2\pi$。自然幅＝真空揺らぎの観測（damped Ly$\alpha$ 翼）。21 cm は膨大な $n_l$ で観測可能。</span>
+<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 25-4　選択則を行列要素で、そして連続と線の統一 {#ex-25-4 .unnumbered}</span></span>
+<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a>§25.5・25.6 の総括。電気双極子行列要素 $\mathbf d_{ul}=\langle u|\hat{\mathbf d}|l\rangle=-e\langle u|\hat{\mathbf r}|l\rangle$ と本書全体の統一。</span>
+<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>電気双極子（E1）選択則 $\Delta l=\pm1$、$\Delta m=0,\pm1$ が、相互作用の最低次（双極子）とパリティ・角運動量保存から自然に出ること、禁制遷移が高次（M1/E2）として残ることを述べよ。</span>
+<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>第21章で「経験則」として述べた選択則が、本章で QED 構造から導かれることが、本書の原則③「天下り的に式を与えない」とどう関係するか述べよ。</span>
+<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>本書の総括として、連続スペクトル（プランク関数）と線スペクトル（水素線吸収係数）が「同じ電磁場–物質相互作用 Hamiltonian の二側面」であることを、これまでの全演習を踏まえて自分の言葉でまとめよ。</span>
+<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§25.5 選択則</span><span class="co">](#sec-qed-minimum-selection)</span>、<span class="co">[</span><span class="ot">§25.6 連続と線の統一</span><span class="co">](#sec-qed-minimum-unification)</span>／選択則の原子物理側は<span class="co">[</span><span class="ot">演習 21-3</span><span class="co">](../part7/21-atomic-physics.qmd#ex-21-3)</span>、全因子の合流は<span class="co">[</span><span class="ot">演習 14-4</span><span class="co">](../part5/14-cavity-modes.qmd#ex-14-4)</span>。</span>
+<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 25-4）</span></span>
+<span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a>**(1)** 相互作用 $\hat H_{\rm int}$ の長波長極限が電気双極子 $\hat{\mathbf d}$ を介する（最低次）。$\langle u|\hat{\mathbf d}|l\rangle$ はパリティと角運動量の保存から $\Delta l=\pm1$、$\Delta m=0,\pm1$ で非ゼロ。これを満たさない遷移は E1 で行列要素ゼロ＝禁制だが、磁気双極子(M1)・電気四重極(E2)など高次過程として弱く残る（強度 $\sim\alpha^2$ 倍）。</span>
+<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a>**(2)** 第21章では選択則を観測規則（経験則）として受け入れたが、本章で「電気双極子相互作用の最低次」という QED 構造から必然として導いた。これは本書の原則③「天下り的に式を与えず、必然性として理解させる」を線スペクトル側で最終的に実行したもの。観測規則の背後にある物理が明示された。</span>
+<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a>**(3)** プランク関数（連続）は電磁場の各モードの熱励起を電磁場側から、水素線吸収係数（線）は原子と電磁場モードの遷移を物質側から見た量。両者は同じ相互作用 Hamiltonian $\hat H_{\rm int}=-(e/m_e)\hat{\mathbf A}\cdot\hat{\mathbf p}$ から出て、共通の前因子 $2h\nu^3/c^2$（モード密度×偏光×エネルギー量子）を持つ。観測されるスペクトル ― CMB の黒体、恒星の Fraunhofer 線、AGN の鉄線、21 cm ― はすべて、量子化された電磁場のモード構造の現れであり、観測者は毎日 QED を見ている。これが本書の逆引きの到達点。</span>
+<span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a>**答え**：E1 選択則は双極子の最低次＋保存則から、禁制は高次として残る。経験則を QED から導く＝原則③の完成。連続も線も同じ $\hat H_{\rm int}$ の二側面、共通前因子 $2h\nu^3/c^2$ が統一の印。</span>
+<span id="cb1-397"><a href="#cb1-397" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-qed-minimum-further .unnumbered}</span></span>
+<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sakurai &amp; Napolitano, *Modern Quantum Mechanics* (Cambridge, 3rd ed., 2020) — 放射場と物質の相互作用の章、本章のレベルから一段深く</span>
+<span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Loudon, *The Quantum Theory of Light* (Oxford, 3rd ed., 2000) — 自発放出・自然幅の QED 的扱い、本書と相性が良い</span>
+<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Cohen-Tannoudji, Dupont-Roc &amp; Grynberg, *Photons and Atoms* / *Atom-Photon Interactions* (Wiley, 1989/1992) — 光と原子の相互作用の体系的扱い</span>
+<span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rybicki &amp; Lightman, *Radiative Processes in Astrophysics* (Wiley, 1979) — 天体物理応用での放射理論の標準教科書</span>
+<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Peskin &amp; Schroeder, *An Introduction to Quantum Field Theory* (Westview, 1995) — 本格的な場の量子論</span>
+<span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Weinberg, *The Quantum Theory of Fields* vol. I-III (Cambridge, 1995-2000) — さらに深く進みたい読者へ</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
