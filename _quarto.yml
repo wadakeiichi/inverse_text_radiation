@@ -40,6 +40,7 @@ book:
 
   chapters:
     - index.qmd
+    - contents.qmd
     - 00-prologue.qmd
     - part: "第I部　宇宙に満ちる黒体放射"
       chapters:
