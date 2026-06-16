@@ -219,6 +219,11 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../contents.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">目次</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../00-prologue.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">序章　この本の目的と歩き方</span></a>
   </div>
 </li>
@@ -588,7 +593,7 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1} \quad \xrightar
 <p>恒星のスペクトルは、第15章 §15.2-§15.3 で扱った <strong>「振動数依存不透明度を持つ恒星大気」</strong> の典型例。完全な黒体ではないが、十分な近似で次のように書ける：</p>
 <p><span id="eq-stefan-boltzmann-star"><span class="math display">
 L_\star = 4\pi R_\star^2 \sigma T_\text{eff}^4
-\tag{19.1}</span></span></p>
+\tag{20.1}</span></span></p>
 <p>ここで <span class="math inline">L_\star</span> は全光度、<span class="math inline">R_\star</span> は恒星半径、<span class="math inline">T_\text{eff}</span> は <strong>有効温度</strong>。これは Stefan-Boltzmann 則（第2章 §2.4）の観測的応用：「もし恒星表面が温度 <span class="math inline">T_\text{eff}</span> の理想黒体だったとしたら、観測される全光度が同じになるような温度」と定義する。</p>
 <div class="callout callout-style-simple callout-warning">
 <div class="callout-body d-flex">
@@ -626,11 +631,11 @@ L_\star = 4\pi R_\star^2 \sigma T_\text{eff}^4
 <p>エネルギー収支：</p>
 <p><span id="eq-planet-balance"><span class="math display">
 \underbrace{(1-A) \cdot \frac{L_\star}{4\pi d^2} \cdot \pi R_p^2}_\text{吸収光} = \underbrace{4\pi R_p^2 \cdot \sigma T_\text{eq}^4}_\text{再放射}
-\tag{19.2}</span></span></p>
+\tag{20.2}</span></span></p>
 <p>ここで <span class="math inline">A</span> はアルベド（反射率）、<span class="math inline">d</span> は恒星-惑星距離、<span class="math inline">R_p</span> は惑星半径。解いて</p>
 <p><span id="eq-planet-temperature"><span class="math display">
 T_\text{eq} = T_\star \left(\frac{R_\star}{2d}\right)^{1/2} (1-A)^{1/4}
-\tag{19.3}</span></span></p>
+\tag{20.3}</span></span></p>
 <p>地球の場合（<span class="math inline">T_\star = 5778</span> K, <span class="math inline">R_\star/d = 1/214</span>, <span class="math inline">A = 0.3</span>）：<span class="math inline">T_\text{eq} \simeq 255</span> K <span class="math inline">\simeq -18</span> °C。</p>
 <div class="callout callout-style-simple callout-warning">
 <div class="callout-body d-flex">
@@ -638,7 +643,7 @@ T_\text{eq} = T_\star \left(\frac{R_\star}{2d}\right)^{1/2} (1-A)^{1/4}
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>注意（観測）</strong>：実際の地球表面温度は約 +15 °C で、平衡温度より 33 K 高い。これは <strong>温室効果</strong>（大気の赤外不透明度）による。<a href="#eq-planet-temperature" class="quarto-xref">式&nbsp;<span>19.3</span></a> は <strong>「大気がない」近似</strong> で、地球のように大気のある惑星では大きく外れる。</p>
+<p><strong>注意（観測）</strong>：実際の地球表面温度は約 +15 °C で、平衡温度より 33 K 高い。これは <strong>温室効果</strong>（大気の赤外不透明度）による。<a href="#eq-planet-temperature" class="quarto-xref">式&nbsp;<span>20.3</span></a> は <strong>「大気がない」近似</strong> で、地球のように大気のある惑星では大きく外れる。</p>
 <p>しかし「平衡温度」は次のような実用的価値を持つ：</p>
 <ul>
 <li>多くの太陽系外惑星では大気がよくわからない → 平衡温度が <strong>最初の温度推定値</strong> として使われる</li>
@@ -654,7 +659,7 @@ T_\text{eq} = T_\star \left(\frac{R_\star}{2d}\right)^{1/2} (1-A)^{1/4}
 <p>星間ダスト、原始惑星系円盤の塵、星形成領域の冷たい塵 ― これらの熱放射は、第15章 §15.4 の <strong>修正黒体スペクトル</strong></p>
 <p><span id="eq-modified-blackbody-applied"><span class="math display">
 I_\nu^\text{dust} = Q_\nu \cdot B_\nu(T_d), \quad Q_\nu \propto \nu^\beta \text{ (long wavelength)}
-\tag{19.4}</span></span></p>
+\tag{20.4}</span></span></p>
 <p>で記述される。観測される <span class="math inline">I_\nu</span> から、三つの物理量が読み取れる：</p>
 <ol type="1">
 <li><strong>ダスト温度 <span class="math inline">T_d</span></strong> ― Wien 側の指数的減衰の鋭さ、または SED のピーク位置から</li>
@@ -734,7 +739,7 @@ I_\nu^\text{dust} = Q_\nu \cdot B_\nu(T_d), \quad Q_\nu \propto \nu^\beta \text{
 <p>全 SED は</p>
 <p><span id="eq-multi-temperature-sed"><span class="math display">
 I_\nu^\text{total} = \sum_i I_{\nu, \text{star}, i} + \sum_j Q_\nu(\beta_j)\, B_\nu(T_j)\, M_j + I_\nu^\text{lines} + I_\nu^\text{ff} + \ldots
-\tag{19.5}</span></span></p>
+\tag{20.5}</span></span></p>
 <p>の形で組み立てる。フィッティングは温度・質量・<span class="math inline">\beta</span> の組合せを観測波長点と適合させ、<span class="math inline">\chi^2</span> 最小化や Bayesian inference で求める。</p>
 <div class="callout callout-style-simple callout-warning">
 <div class="callout-body d-flex">
@@ -765,21 +770,21 @@ I_\nu^\text{total} = \sum_i I_{\nu, \text{star}, i} + \sum_j Q_\nu(\beta_j)\, B_
 <p>鍵は、<strong>自由–自由吸収係数が低振動数ほど大きい</strong>ことである：</p>
 <p><span id="eq-ff-absorption"><span class="math display">
 \alpha_\nu^{\mathrm{ff}} \propto n_e\, n_i\, T_e^{-3/2}\, \nu^{-2}\, \bar g_{\mathrm{ff}}(\nu,T_e)
-\tag{19.6}</span></span></p>
+\tag{20.6}</span></span></p>
 <p>ここで <span class="math inline">n_e, n_i</span> は電子・イオン数密度、<span class="math inline">\bar g_{\mathrm{ff}}</span> は Gaunt 因子（<span class="math inline">\nu,T_e</span> にゆるやかに依存）。</p>
 <p>これを視線方向に積分したものが光学的厚さ <span class="math inline">\tau_\nu=\int\alpha_\nu^{\mathrm{ff}}\,ds</span> である。密度の寄与は <strong>発光量度</strong>（<strong>emission measure</strong>）</p>
 <p><span id="eq-emission-measure"><span class="math display">
 \mathrm{EM}\equiv\int n_e^2\,ds \qquad(\text{水素プラズマでは } n_i\simeq n_e)
-\tag{19.7}</span></span></p>
-<p>にまとまる。残る振動数・温度依存は、<a href="#eq-ff-absorption" class="quarto-xref">式&nbsp;<span>19.6</span></a> の <span class="math inline">\nu^{-2}\,T_e^{-3/2}</span> に Gaunt 因子のゆるやかな依存（<span class="math inline">\bar g_{\mathrm{ff}}\propto\nu^{-0.1}\,T_e^{0.15}</span> 程度）が重なったもので、実用的な近似形は</p>
+\tag{20.7}</span></span></p>
+<p>にまとまる。残る振動数・温度依存は、<a href="#eq-ff-absorption" class="quarto-xref">式&nbsp;<span>20.6</span></a> の <span class="math inline">\nu^{-2}\,T_e^{-3/2}</span> に Gaunt 因子のゆるやかな依存（<span class="math inline">\bar g_{\mathrm{ff}}\propto\nu^{-0.1}\,T_e^{0.15}</span> 程度）が重なったもので、実用的な近似形は</p>
 <p><span id="eq-ff-optical-depth"><span class="math display">
 \tau_\nu \;\propto\; \mathrm{EM}\,\nu^{-2.1}\,T_e^{-1.35}
-\tag{19.8}</span></span></p>
+\tag{20.8}</span></span></p>
 <p>となる。<span class="math inline">\mathrm{EM}</span> は吸収の強さ（密度の寄与）を、指数 <span class="math inline">\nu^{-2.1}</span> はその振動数依存を与える。後者が支配的で、<span class="math inline">\tau_\nu\propto\nu^{-2.1}</span> のため <strong>低振動数で光学的に厚く、高振動数で薄い</strong>。</p>
 <p>等温スラブ（温度 <span class="math inline">T_e</span>、LTE）の射出強度は第5章の解 <span class="math inline">I_\nu=B_\nu(T_e)(1-e^{-\tau_\nu})</span>。電波帯では <span class="math inline">h\nu\ll k_BT_e</span> なので Rayleigh–Jeans が使え、輝度温度 <span class="math inline">T_b\equiv c^2 I_\nu/(2\nu^2 k_B)</span> で書くと</p>
 <p><span id="eq-ff-brightness-temp"><span class="math display">
 T_b(\nu)=T_e\left(1-e^{-\tau_\nu}\right)
-\tag{19.9}</span></span></p>
+\tag{20.9}</span></span></p>
 <p><strong>低振動数側（光学的に厚い、<span class="math inline">\tau_\nu\gg1</span>）</strong>：<span class="math inline">T_b\to T_e</span> に飽和し、<span class="math inline">I_\nu\to B_\nu(T_e)</span>。これは第5章 §5.6 の「光学的に厚い極限で <span class="math inline">I_\nu\to B_\nu(T)</span>」そのもので、観測されるのは <strong>電子温度 <span class="math inline">T_e</span> の黒体（の Rayleigh–Jeans 裾）</strong> である。フラックスは <span class="math inline">F_\nu\propto\nu^2</span>。</p>
 <p><strong>高振動数側（光学的に薄い、<span class="math inline">\tau_\nu\ll1</span>）</strong>：<span class="math inline">T_b\to T_e\,\tau_\nu\propto\nu^{-2.1}</span> なので <span class="math inline">F_\nu\propto\nu^2\cdot\nu^{-2.1}=\nu^{-0.1}</span> ― ほぼ平坦。</p>
 <p>両者の境目（<span class="math inline">\tau_\nu\simeq1</span> となる <strong>ターンオーバー振動数</strong> <span class="math inline">\nu_t</span>）は <span class="math inline">\mathrm{EM}</span> と <span class="math inline">T_e</span> で決まる。したがって電波 HII 領域の連続スペクトルは、<strong>低 <span class="math inline">\nu</span> 側 <span class="math inline">F_\nu\propto\nu^2</span>（黒体的）→ 高 <span class="math inline">\nu</span> 側 <span class="math inline">F_\nu\propto\nu^{-0.1}</span>（薄い）</strong> という特徴的な折れ曲がりを示す。</p>

@@ -219,6 +219,11 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../contents.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">目次</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../00-prologue.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">序章　この本の目的と歩き方</span></a>
   </div>
 </li>
@@ -635,7 +640,7 @@ B_\nu(T) = \frac{2\, \boxed{h}\, \nu^3}{c^2} \cdot \frac{1}{e^{\boxed{h}\nu/kT} 
 <img src="../images/einstein-processes.svg" class="img-fluid figure-img" style="width:92.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-einstein-three-processes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;13.1: 二準位系における三つの素過程と Einstein 係数の対応。自発放出は外部放射場に依存せず確率 <span class="math inline">A_{ul}</span>、誘導吸収・誘導放出は放射場 <span class="math inline">J_\nu</span> に比例する確率 <span class="math inline">B_{lu}J_\nu</span>, <span class="math inline">B_{ul}J_\nu</span> で起こる。第VII部（線スペクトル）の §20.2 で本図がそのまま再登場する。
+図&nbsp;14.1: 二準位系における三つの素過程と Einstein 係数の対応。自発放出は外部放射場に依存せず確率 <span class="math inline">A_{ul}</span>、誘導吸収・誘導放出は放射場 <span class="math inline">J_\nu</span> に比例する確率 <span class="math inline">B_{lu}J_\nu</span>, <span class="math inline">B_{ul}J_\nu</span> で起こる。第VII部（線スペクトル）の §20.2 で本図がそのまま再登場する。
 </figcaption>
 </figure>
 </div>
@@ -739,26 +744,26 @@ n_l B_{lu}^{(u)} u_\nu, \qquad A_{ul}/B_{ul}^{(u)} = \frac{8\pi h\nu^3}{c^3}
 <p><strong>詳細釣り合い</strong>：上下準位間の遷移率が両向きで等しい：</p>
 <p><span id="eq-einstein-detailed-balance"><span class="math display">
 n_l B_{lu} J_\nu \;=\; n_u (A_{ul} + B_{ul} J_\nu)
-\tag{13.1}</span></span></p>
+\tag{14.1}</span></span></p>
 <p>左辺は <span class="math inline">l \to u</span>（吸収）、右辺は <span class="math inline">u \to l</span>（自発放出＋誘導放出）の総和。これを <span class="math inline">J_\nu</span> について解くと</p>
 <p><span id="eq-einstein-jnu-form"><span class="math display">
 J_\nu = \frac{A_{ul}/B_{ul}}{(n_l/n_u)(B_{lu}/B_{ul}) - 1}
-\tag{13.2}</span></span></p>
+\tag{14.2}</span></span></p>
 <p>ここで <span class="math inline">n_u/n_l</span> は熱平衡なら Boltzmann 分布で</p>
 <p><span id="eq-einstein-boltzmann"><span class="math display">
 \frac{n_u}{n_l} = \frac{g_u}{g_l} e^{-h\nu/k_B T}
-\tag{13.3}</span></span></p>
-<p>これを <a href="#eq-einstein-jnu-form" class="quarto-xref">式&nbsp;<span>13.2</span></a> に代入して整理すると</p>
+\tag{14.3}</span></span></p>
+<p>これを <a href="#eq-einstein-jnu-form" class="quarto-xref">式&nbsp;<span>14.2</span></a> に代入して整理すると</p>
 <p><span id="eq-einstein-jnu-final"><span class="math display">
 J_\nu = \frac{A_{ul}/B_{ul}}{(g_l B_{lu}/g_u B_{ul}) e^{h\nu/k_B T} - 1}
-\tag{13.4}</span></span></p>
+\tag{14.4}</span></span></p>
 <p><strong>観測されるプランク分布 <span class="math inline">J_\nu = B_\nu(T)</span> と一致させる</strong>ためには、Einstein 係数の間に次の関係が必要となる：</p>
 <p><span id="eq-einstein-B-ratio"><span class="math display">
 g_l B_{lu} = g_u B_{ul}
-\tag{13.5}</span></span></p>
+\tag{14.5}</span></span></p>
 <p><span id="eq-einstein-A-B-ratio"><span class="math display">
 \frac{A_{ul}}{B_{ul}} = \frac{2h\nu^3}{c^2}
-\tag{13.6}</span></span></p>
+\tag{14.6}</span></span></p>
 <p>これらが <strong>Einstein の関係式</strong>（<strong>Einstein relations</strong>）である。詳細釣り合いという原理だけから、これら係数の比が自然界に必然として出る。</p>
 <div class="callout callout-style-simple callout-tip">
 <div class="callout-body d-flex">
@@ -777,12 +782,12 @@ g_l B_{lu} = g_u B_{ul}
 <h2 class="anchored" data-anchor-id="sec-einstein-method-bridge">11.4 観測とのつながり ― 連続と線の橋</h2>
 <p>[本文目安：B3-B4]</p>
 <p>Einstein 係数は、本書の二つの中心地図 ― <strong>プランク関数地図</strong>と<strong>水素線地図</strong>（第VII部）― を結ぶ要となる量である。</p>
-<p><strong>連続スペクトル側との関係</strong>：<a href="#eq-einstein-A-B-ratio" class="quarto-xref">式&nbsp;<span>13.6</span></a> で出てくる <span class="math inline">2h\nu^3/c^2</span> は、<strong>プランク関数の前因子と同じ</strong>である。これは偶然ではなく、両者ともが「電磁場の同じモード構造」を見ている結果（第VIII部・第25章で詳しく扱う）。</p>
+<p><strong>連続スペクトル側との関係</strong>：<a href="#eq-einstein-A-B-ratio" class="quarto-xref">式&nbsp;<span>14.6</span></a> で出てくる <span class="math inline">2h\nu^3/c^2</span> は、<strong>プランク関数の前因子と同じ</strong>である。これは偶然ではなく、両者ともが「電磁場の同じモード構造」を見ている結果（第VIII部・第25章で詳しく扱う）。</p>
 <p><strong>線スペクトル側との関係</strong>：</p>
 <ul>
 <li><strong>自発放出率 <span class="math inline">A_{ul}</span></strong> は、観測される<strong>線の自然幅</strong>（<strong>natural width</strong>）と直結する。励起寿命 <span class="math inline">\tau = 1/A_{ul}</span>、自然幅 <span class="math inline">\Delta\nu_{\mathrm{nat}} = A_{ul}/(2\pi)</span>（第22章で本格的に扱う）。</li>
 <li><strong>B 係数</strong>は、観測される<strong>線吸収係数 <span class="math inline">\alpha_\nu^{\mathrm{line}}</span> の振動子強度</strong>と直接つながる（第21章）。</li>
-<li>線のソース関数（第5章）：LTE では <a href="../part7/20-line-formation.html#eq-line-S-explicit" class="quarto-xref">式&nbsp;<span>22.7</span></a> に従い <span class="math inline">S_\nu = (2h\nu^3/c^2)/[(g_u n_l)/(g_l n_u) - 1]</span> となり、Boltzmann 比 <span class="math inline">n_u/n_l = (g_u/g_l) e^{-h\nu/k_B T}</span> を代入すると分母が <span class="math inline">e^{h\nu/k_B T} - 1</span> に整理され、<span class="math inline">S_\nu = B_\nu(T)</span>（第20章 §20.4 で再導出）。</li>
+<li>線のソース関数（第5章）：LTE では <a href="../part7/20-line-formation.html#eq-line-S-explicit" class="quarto-xref">式&nbsp;<span>23.7</span></a> に従い <span class="math inline">S_\nu = (2h\nu^3/c^2)/[(g_u n_l)/(g_l n_u) - 1]</span> となり、Boltzmann 比 <span class="math inline">n_u/n_l = (g_u/g_l) e^{-h\nu/k_B T}</span> を代入すると分母が <span class="math inline">e^{h\nu/k_B T} - 1</span> に整理され、<span class="math inline">S_\nu = B_\nu(T)</span>（第20章 §20.4 で再導出）。</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -822,7 +827,7 @@ g_l B_{lu} = g_u B_{ul}
 <p><strong>使えるようになった道具</strong>（§11.1〜11.5）：</p>
 <ul>
 <li>自発放出・誘導放出・誘導吸収という素過程に分解する見方</li>
-<li>詳細釣り合い <a href="#eq-einstein-detailed-balance" class="quarto-xref">式&nbsp;<span>13.1</span></a> から Einstein 関係 <a href="#eq-einstein-B-ratio" class="quarto-xref">式&nbsp;<span>13.5</span></a>, <a href="#eq-einstein-A-B-ratio" class="quarto-xref">式&nbsp;<span>13.6</span></a> を導く方法</li>
+<li>詳細釣り合い <a href="#eq-einstein-detailed-balance" class="quarto-xref">式&nbsp;<span>14.1</span></a> から Einstein 関係 <a href="#eq-einstein-B-ratio" class="quarto-xref">式&nbsp;<span>14.5</span></a>, <a href="#eq-einstein-A-B-ratio" class="quarto-xref">式&nbsp;<span>14.6</span></a> を導く方法</li>
 <li><span class="math inline">A_{ul}</span> から線の自然幅、<span class="math inline">B_{lu}</span> から振動子強度 ― 線スペクトルの計算手段全般</li>
 </ul>
 </div>
@@ -833,7 +838,7 @@ g_l B_{lu} = g_u B_{ul}
 <h2 class="unnumbered anchored" data-anchor-id="sec-einstein-method-summary">この章で何がわかったか</h2>
 <div class="callout-summary">
 <p><strong>中心地図に戻る</strong></p>
-<p>本章で、中心地図プランク関数の構造が <strong>詳細釣り合い</strong>と <strong>三つの遷移過程</strong>（自発・誘導吸収・誘導放出）から再構成された。Einstein 関係式 <a href="#eq-einstein-A-B-ratio" class="quarto-xref">式&nbsp;<span>13.6</span></a> の右辺に現れる <strong><span class="math inline">2h\nu^3/c^2</span></strong> は、プランク関数の前因子そのものである。</p>
+<p>本章で、中心地図プランク関数の構造が <strong>詳細釣り合い</strong>と <strong>三つの遷移過程</strong>（自発・誘導吸収・誘導放出）から再構成された。Einstein 関係式 <a href="#eq-einstein-A-B-ratio" class="quarto-xref">式&nbsp;<span>14.6</span></a> の右辺に現れる <strong><span class="math inline">2h\nu^3/c^2</span></strong> は、プランク関数の前因子そのものである。</p>
 <p>本章で導入された <strong>Einstein 係数</strong>は、本書の二つの中心地図 ― プランク関数地図と水素線地図 ― を結ぶ要となる量である。第VII部で本格的に活用するが、その下地はここで整っている。</p>
 <p><strong>次章へ</strong>：第12章では、本書の三度目のプランク分布導出ルート ― <strong>量子力学の基礎概念</strong>（状態と観測量、調和振動子、生成消滅演算子、零点エネルギー）― へ進む。これは第V部の電磁モード密度の議論と第VIII部の電磁場量子化への準備でもある。Planck の振動子と Einstein の光量子が、量子力学の枠組みで一つに統合される。</p>
 </div>

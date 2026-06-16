@@ -219,6 +219,11 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../contents.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">目次</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../00-prologue.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">序章　この本の目的と歩き方</span></a>
   </div>
 </li>
@@ -578,7 +583,7 @@ B_\nu(T) = \frac{2\, \boxed{h}\, \nu^3}{c^2} \cdot \frac{1}{e^{\boxed{h}\nu/kT} 
 <p><strong>固有値問題</strong>：観測量を測定すると、対応する演算子の<strong>固有値</strong>（<strong>eigenvalue</strong>）のどれかが結果として得られる。</p>
 <p><span id="eq-eigenvalue-problem"><span class="math display">
 \hat{O} |o\rangle = o\, |o\rangle
-\tag{14.1}</span></span></p>
+\tag{15.1}</span></span></p>
 <p>ここで <span class="math inline">|o\rangle</span> は固有ベクトル（<strong>eigenstate</strong>）、<span class="math inline">o</span> は固有値。たとえばエネルギー演算子 <span class="math inline">\hat{H}</span> の固有値 <span class="math inline">E_n</span> がエネルギー準位を与える。</p>
 <p><strong>確率振幅</strong>：系が状態 <span class="math inline">|\psi\rangle</span> にあるとき、観測値 <span class="math inline">o</span> が出る確率は <span class="math inline">|\langle o | \psi \rangle|^2</span>。これが量子論の確率解釈である。</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -602,12 +607,12 @@ B_\nu(T) = \frac{2\, \boxed{h}\, \nu^3}{c^2} \cdot \frac{1}{e^{\boxed{h}\nu/kT} 
 <p>質量 <span class="math inline">m</span>、固有振動数 <span class="math inline">\omega = 2\pi\nu</span> の調和振動子の Hamiltonian は</p>
 <p><span id="eq-harmonic-hamiltonian"><span class="math display">
 \hat{H} = \frac{\hat{p}^2}{2m} + \frac{1}{2} m\omega^2 \hat{x}^2
-\tag{14.2}</span></span></p>
+\tag{15.2}</span></span></p>
 <p>ここで <span class="math inline">\hat{x}</span> と <span class="math inline">\hat{p}</span> は位置と運動量の演算子で、交換関係 <span class="math inline">[\hat{x}, \hat{p}] = i\hbar</span>（<span class="math inline">\hbar = h/2\pi</span>）を満たす。</p>
-<p><a href="#eq-harmonic-hamiltonian" class="quarto-xref">式&nbsp;<span>14.2</span></a> の固有値問題を解くと、エネルギー準位は</p>
+<p><a href="#eq-harmonic-hamiltonian" class="quarto-xref">式&nbsp;<span>15.2</span></a> の固有値問題を解くと、エネルギー準位は</p>
 <p><span id="eq-harmonic-eigenvalues"><span class="math display">
 E_n = \hbar\omega \left( n + \frac{1}{2} \right), \qquad n = 0, 1, 2, \ldots
-\tag{14.3}</span></span></p>
+\tag{15.3}</span></span></p>
 <p>となる。これが Planck の量子化に対応する離散エネルギーである。</p>
 <p><strong>等間隔の準位</strong>：隣接準位の差は <span class="math inline">E_{n+1} - E_n = \hbar\omega = h\nu</span>。これが Planck の「エネルギー量子 <span class="math inline">h\nu</span>」の正体である。</p>
 <p><strong>零点エネルギー</strong>（<strong>zero-point energy</strong>）：最低エネルギー（<span class="math inline">n = 0</span>）でも <span class="math inline">E_0 = \hbar\omega/2 \neq 0</span>。古典では振動子が完全に止まる状態がエネルギーゼロだったが、量子では<strong>不確定性原理</strong>（<span class="math inline">\Delta x \cdot \Delta p \geq \hbar/2</span>）から完全な静止が許されない。これが「真空でもエネルギーを持つ」という量子の特徴で、第VIII部・第24章で本格的に扱う。</p>
@@ -627,19 +632,19 @@ E_n = \hbar\omega \left( n + \frac{1}{2} \right), \qquad n = 0, 1, 2, \ldots
 <section id="sec-quantum-foundations-operators" class="level2">
 <h2 class="anchored" data-anchor-id="sec-quantum-foundations-operators">12.3 生成消滅演算子 ― 量子の最小公倍数</h2>
 <p>[本文目安：B4｜導出：M1]</p>
-<p><a href="#eq-harmonic-hamiltonian" class="quarto-xref">式&nbsp;<span>14.2</span></a> は次のエレガントな形に書き直せる。<strong>生成消滅演算子</strong>（<strong>creation and annihilation operators</strong>）を</p>
+<p><a href="#eq-harmonic-hamiltonian" class="quarto-xref">式&nbsp;<span>15.2</span></a> は次のエレガントな形に書き直せる。<strong>生成消滅演算子</strong>（<strong>creation and annihilation operators</strong>）を</p>
 <p><span id="eq-creation-annihilation-def"><span class="math display">
 \hat{a} = \sqrt{\frac{m\omega}{2\hbar}} \left( \hat{x} + \frac{i}{m\omega} \hat{p} \right), \qquad \hat{a}^\dagger = \sqrt{\frac{m\omega}{2\hbar}} \left( \hat{x} - \frac{i}{m\omega} \hat{p} \right)
-\tag{14.4}</span></span></p>
+\tag{15.4}</span></span></p>
 <p>と定義すると、Hamiltonian は</p>
 <p><span id="eq-hamiltonian-number"><span class="math display">
 \hat{H} = \hbar\omega \left( \hat{a}^\dagger \hat{a} + \frac{1}{2} \right) = \hbar\omega \left( \hat{n} + \frac{1}{2} \right)
-\tag{14.5}</span></span></p>
+\tag{15.5}</span></span></p>
 <p>ここで <span class="math inline">\hat{n} = \hat{a}^\dagger \hat{a}</span> は <strong>数演算子</strong>（<strong>number operator</strong>）で、固有値が <span class="math inline">n = 0, 1, 2, \ldots</span>。</p>
 <p><span class="math inline">\hat{a}^\dagger</span> は数を一つ増やし（<strong>creation</strong>, 生成）、<span class="math inline">\hat{a}</span> は一つ減らす（<strong>annihilation</strong>, 消滅）：</p>
 <p><span id="eq-creation-annihilation-action"><span class="math display">
 \hat{a}^\dagger |n\rangle = \sqrt{n+1}\, |n+1\rangle, \qquad \hat{a} |n\rangle = \sqrt{n}\, |n-1\rangle
-\tag{14.6}</span></span></p>
+\tag{15.6}</span></span></p>
 <p>これらの交換関係 <span class="math inline">[\hat{a}, \hat{a}^\dagger] = 1</span> から、すべてが綺麗に整う。</p>
 <p><strong>物理的解釈</strong>：生成消滅演算子は、振動子のエネルギー準位を一段階上げ下げする。電磁場の文脈では、<span class="math inline">\hat{a}^\dagger</span> が<strong>光子を一つ生成</strong>し、<span class="math inline">\hat{a}</span> が<strong>光子を一つ消滅</strong>させる。これが第VIII部の電磁場量子化の核心である。</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -691,8 +696,8 @@ E_n = \hbar\omega \left( n + \frac{1}{2} \right), \qquad n = 0, 1, 2, \ldots
 <p>[本文目安：B3]</p>
 <p>本章で導入した道具は、第V部以降の議論の前提になる：</p>
 <p><strong>第V部（電磁モード）</strong>：第V部で電磁場のモード密度 <span class="math inline">g(\nu) = 8\pi\nu^2/c^3</span> を本格的に導出する。各モードは本章の調和振動子に対応し、量子化されると光子の集まりとして扱える。</p>
-<p><strong>第VII部（線スペクトル）</strong>：第21章で水素原子のエネルギー準位を Schrödinger 方程式から導く。これは本章 §12.1 で導入した固有値問題 <a href="#eq-eigenvalue-problem" class="quarto-xref">式&nbsp;<span>14.1</span></a> の具体例である。第22章で線の自然幅を扱うが、その起源は本章で導入した零点エネルギー（→ 自発放出）にある。</p>
-<p><strong>第VIII部（QED）</strong>：第24章で電磁場の量子化を扱う。これは本章 §12.3 の生成消滅演算子を、空間の各点での電磁モードに対して並べたものに等しい。第25章で Einstein 係数の関係式 <a href="11-einstein-method.html#eq-einstein-A-B-ratio" class="quarto-xref">式&nbsp;<span>13.6</span></a> を QED の言葉で再構成する。</p>
+<p><strong>第VII部（線スペクトル）</strong>：第21章で水素原子のエネルギー準位を Schrödinger 方程式から導く。これは本章 §12.1 で導入した固有値問題 <a href="#eq-eigenvalue-problem" class="quarto-xref">式&nbsp;<span>15.1</span></a> の具体例である。第22章で線の自然幅を扱うが、その起源は本章で導入した零点エネルギー（→ 自発放出）にある。</p>
+<p><strong>第VIII部（QED）</strong>：第24章で電磁場の量子化を扱う。これは本章 §12.3 の生成消滅演算子を、空間の各点での電磁モードに対して並べたものに等しい。第25章で Einstein 係数の関係式 <a href="11-einstein-method.html#eq-einstein-A-B-ratio" class="quarto-xref">式&nbsp;<span>14.6</span></a> を QED の言葉で再構成する。</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">

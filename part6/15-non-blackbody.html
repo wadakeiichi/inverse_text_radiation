@@ -219,6 +219,11 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../contents.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">目次</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../00-prologue.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">序章　この本の目的と歩き方</span></a>
   </div>
 </li>
@@ -611,7 +616,7 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1} \quad \xrightar
 <p>これら四段階に対応して、観測スペクトルは</p>
 <p><span id="eq-deviation-factor"><span class="math display">
 I_\nu^\text{obs} = B_\nu(T) \cdot f_\text{dev}(\nu, T, \text{物理量})
-\tag{17.1}</span></span></p>
+\tag{18.1}</span></span></p>
 <p>と書けることが多い。<span class="math inline">f_\text{dev}</span> が <strong>何でずれるか・どれくらいずれるか</strong> を読み解くのが本章以降の主題である。</p>
 <div class="callout callout-style-simple callout-tip">
 <div class="callout-body d-flex">
@@ -632,7 +637,7 @@ I_\nu^\text{obs} = B_\nu(T) \cdot f_\text{dev}(\nu, T, \text{物理量})
 <p>放射輸送方程式（第5章）から、灰色大気で得られる <strong>Eddington 近似</strong> の解は（導出は Mihalas 1978 §3 や Hubeny &amp; Mihalas 2014 第 17 章参照、本書では結果のみ引く）</p>
 <p><span id="eq-eddington-grey"><span class="math display">
 T^4(\tau) = \frac{3}{4} T_\text{eff}^4 \left(\tau + \frac{2}{3}\right)
-\tag{17.2}</span></span></p>
+\tag{18.2}</span></span></p>
 <p>ここで <span class="math inline">\tau</span> は光学的深さ、<span class="math inline">T_\text{eff}</span> は <strong>有効温度</strong>（<strong>effective temperature</strong>）。表面 <span class="math inline">\tau = 0</span> では <span class="math inline">T(0) = (1/2)^{1/4} T_\text{eff} \simeq 0.84\, T_\text{eff}</span>。</p>
 <p><strong>灰色大気でのスペクトル</strong>：振動数によらず吸収率が同じため、振動数依存性によるスペクトル形の歪み（次節）を導入しない。LTE の仮定の下では各層のスペクトルはプランク関数で、観測されるフラックスは振動数ごとに <span class="math inline">\tau \approx 2/3</span> 付近の層の温度のプランク関数で近似される。<strong>形の歪みは作らないが、現実の恒星にある吸収線・吸収端は当然再現できない</strong>。</p>
 <div class="callout callout-style-simple callout-warning">
@@ -673,12 +678,12 @@ T^4(\tau) = \frac{3}{4} T_\text{eff}^4 \left(\tau + \frac{2}{3}\right)
 <p>形式的に書くと、振動数依存不透明度の下で、観測者方向（鉛直から <span class="math inline">\theta = \arccos\mu</span> の方向）への射出強度は（平面平行・LTE で）</p>
 <p><span id="eq-eddington-barbier-intensity"><span class="math display">
 I_\nu(0, \mu) = \int_0^\infty S_\nu(\tau_\nu) e^{-\tau_\nu/\mu} \frac{d\tau_\nu}{\mu} \approx S_\nu(\tau_\nu = \mu)
-\tag{17.3}</span></span></p>
+\tag{18.3}</span></span></p>
 <p>これが <strong>Eddington-Barbier 近似（射出強度版）</strong>：観測される振動数 <span class="math inline">\nu</span> の方向 <span class="math inline">\mu</span> への強度は、その振動数で光学的深さが <span class="math inline">\tau_\nu = \mu</span> になる層の源泉関数値に近い。</p>
 <p>半球積分した <strong>emergent flux</strong>（鉛直外向きフラックス）では別の流儀の Eddington-Barbier 近似が成り立つ：</p>
 <p><span id="eq-eddington-barbier-flux"><span class="math display">
 F_\nu(0) = \int_0^\infty 2\pi S_\nu(\tau_\nu) E_2(\tau_\nu) d\tau_\nu \approx \pi S_\nu(\tau_\nu = 2/3)
-\tag{17.4}</span></span></p>
+\tag{18.4}</span></span></p>
 <p>LTE では <span class="math inline">S_\nu = B_\nu(T)</span> なので、両式の右辺の <span class="math inline">S_\nu</span> は <span class="math inline">B_\nu(T)</span> に置き換わる。</p>
 <div class="callout callout-style-simple callout-warning">
 <div class="callout-body d-flex">
@@ -704,7 +709,7 @@ F_\nu(0) = \int_0^\infty 2\pi S_\nu(\tau_\nu) E_2(\tau_\nu) d\tau_\nu \approx \p
 <p>その原因は、粒子サイズが波長より小さくなる帯域での <strong>放射効率の低下</strong>。放射効率 <span class="math inline">Q_\nu</span> をプランク関数に掛けた形</p>
 <p><span id="eq-modified-blackbody"><span class="math display">
 I_\nu^\text{dust} = Q_\nu(a) \cdot B_\nu(T)
-\tag{17.5}</span></span></p>
+\tag{18.5}</span></span></p>
 <p>が <strong>修正黒体</strong>（<strong>modified blackbody</strong>, <strong>greybody</strong>）と呼ばれる。</p>
 <p>長波長極限では多くの物質で <span class="math inline">Q_\nu \propto \nu^\beta</span>（<span class="math inline">\beta \approx 1</span>〜<span class="math inline">2</span>）の振る舞いを示し、これを <strong>ダスト emissivity index</strong> と呼ぶ。観測スペクトルからの <span class="math inline">\beta</span> の決定は、ダスト粒子の組成・大きさ分布の手がかりとなる（第17章 §17.3）。</p>
 <div class="callout callout-style-simple callout-tip">
@@ -731,7 +736,7 @@ I_\nu^\text{dust} = Q_\nu(a) \cdot B_\nu(T)
 <p>散乱が支配的な系では、観測される光は <strong>「ソース関数（第5章 §5.4）が局所のプランク関数とは大きく違う」</strong> 状態になる。具体的には、ソース関数 <span class="math inline">S_\nu</span> は</p>
 <p><span id="eq-source-with-scattering"><span class="math display">
 S_\nu = \frac{\kappa_\nu^\text{abs} B_\nu(T) + \sigma_\nu \langle J_\nu \rangle}{\kappa_\nu^\text{abs} + \sigma_\nu}
-\tag{17.6}</span></span></p>
+\tag{18.6}</span></span></p>
 <p>の形になり、散乱割合 <span class="math inline">\sigma_\nu/(\kappa_\nu^\text{abs} + \sigma_\nu)</span> が大きいと局所のプランク関数からの大きな乖離が生じる。</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -753,7 +758,7 @@ S_\nu = \frac{\kappa_\nu^\text{abs} B_\nu(T) + \sigma_\nu \langle J_\nu \rangle}
 <p>ここまでは粒子のエネルギー分布が Maxwell-Boltzmann（熱的分布）であることを前提していた。しかし宇宙では、粒子のエネルギー分布が <strong>べき則</strong>（<strong>power-law</strong>）になっている場合がある（<strong>非熱的</strong>）：</p>
 <p><span id="eq-nonthermal-distribution"><span class="math display">
 \frac{dn}{dE} \propto E^{-p}
-\tag{17.7}</span></span></p>
+\tag{18.7}</span></span></p>
 <p>このような非熱的電子からの <strong>シンクロトロン放射</strong> や <strong>逆コンプトン放射</strong> は、観測スペクトルもべき則となる：<span class="math inline">I_\nu \propto \nu^{-\alpha}</span>。これらの本格的な扱いは本書の主軸（熱的放射）の射程外であり、Rybicki &amp; Lightman、Longair 等の専門書を参照してほしい（第18章 §18.3 でも降着円盤と共存する非熱的成分との関連で軽く触れる）。</p>
 <p><strong>熱的 vs 非熱的の見分け方</strong>：</p>
 <table class="caption-top table">

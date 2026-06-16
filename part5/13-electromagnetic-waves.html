@@ -219,6 +219,11 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../contents.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">目次</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../00-prologue.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">序章　この本の目的と歩き方</span></a>
   </div>
 </li>
@@ -578,11 +583,11 @@ B_\nu(T) = \frac{2 h\, \boxed{\nu^3}}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 <p><span id="eq-maxwell-divergence"><span class="math display">
 \nabla \cdot \mathbf{E} = 0, \quad
 \nabla \cdot \mathbf{B} = 0
-\tag{15.1}</span></span></p>
+\tag{16.1}</span></span></p>
 <p><span id="eq-maxwell-curl"><span class="math display">
 \nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}, \quad
 \nabla \times \mathbf{B} = \mu_0\epsilon_0\frac{\partial \mathbf{E}}{\partial t} = \frac{1}{c^2}\frac{\partial \mathbf{E}}{\partial t}
-\tag{15.2}</span></span></p>
+\tag{16.2}</span></span></p>
 <p><span class="math inline">\mathbf{E}</span> は電場（<strong>electric field</strong>）、<span class="math inline">\mathbf{B}</span> は磁場（<strong>magnetic field</strong>）、<span class="math inline">c = 1/\sqrt{\mu_0\epsilon_0}</span> は真空中の光速度。</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -626,10 +631,10 @@ B_\nu(T) = \frac{2 h\, \boxed{\nu^3}}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 <section id="sec-electromagnetic-waves-wave-equation" class="level2">
 <h2 class="anchored" data-anchor-id="sec-electromagnetic-waves-wave-equation">13.2 波動方程式 ― 光速度 <span class="math inline">c</span> の起源</h2>
 <p>[本文目安：B2-B3]</p>
-<p><a href="#eq-maxwell-curl" class="quarto-xref">式&nbsp;<span>15.2</span></a> の二つの式から <span class="math inline">\mathbf{B}</span> を消去できる。一方の式に時間微分をとり、もう一方を空間 rot で展開してベクトル恒等式 <span class="math inline">\nabla \times (\nabla \times \mathbf{E}) = \nabla(\nabla \cdot \mathbf{E}) - \nabla^2 \mathbf{E}</span> と <a href="#eq-maxwell-divergence" class="quarto-xref">式&nbsp;<span>15.1</span></a> を使うと、</p>
+<p><a href="#eq-maxwell-curl" class="quarto-xref">式&nbsp;<span>16.2</span></a> の二つの式から <span class="math inline">\mathbf{B}</span> を消去できる。一方の式に時間微分をとり、もう一方を空間 rot で展開してベクトル恒等式 <span class="math inline">\nabla \times (\nabla \times \mathbf{E}) = \nabla(\nabla \cdot \mathbf{E}) - \nabla^2 \mathbf{E}</span> と <a href="#eq-maxwell-divergence" class="quarto-xref">式&nbsp;<span>16.1</span></a> を使うと、</p>
 <p><span id="eq-wave-equation"><span class="math display">
 \nabla^2 \mathbf{E} - \frac{1}{c^2}\frac{\partial^2 \mathbf{E}}{\partial t^2} = 0
-\tag{15.3}</span></span></p>
+\tag{16.3}</span></span></p>
 <p><span class="math inline">\mathbf{B}</span> についても同じ形の方程式が出る。これが <strong>波動方程式</strong>（<strong>wave equation</strong>）。</p>
 <p><strong>重要な帰結</strong>：Maxwell 方程式は、その中の定数 <span class="math inline">c</span> を<strong>光の伝播速度</strong>として持つ波動方程式を生む。電磁波の速度が真空中で <span class="math inline">c</span> であることは、Maxwell 方程式そのものに組み込まれている。これは観測される光の速さがどの基準系でも <span class="math inline">c</span> であることの古典的な根拠でもある（→ 特殊相対性理論の出発点、本書の射程外）。</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -649,14 +654,14 @@ B_\nu(T) = \frac{2 h\, \boxed{\nu^3}}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 <section id="sec-electromagnetic-waves-plane-wave" class="level2">
 <h2 class="anchored" data-anchor-id="sec-electromagnetic-waves-plane-wave">13.3 平面波解 ― 振動数と波数</h2>
 <p>[本文目安：B2-B3]</p>
-<p><a href="#eq-wave-equation" class="quarto-xref">式&nbsp;<span>15.3</span></a> の解の代表が <strong>平面波</strong>（<strong>plane wave</strong>）である：</p>
+<p><a href="#eq-wave-equation" class="quarto-xref">式&nbsp;<span>16.3</span></a> の解の代表が <strong>平面波</strong>（<strong>plane wave</strong>）である：</p>
 <p><span id="eq-plane-wave"><span class="math display">
 \mathbf{E}(\mathbf{r}, t) = \mathbf{E}_0 \exp\left[i(\mathbf{k}\cdot\mathbf{r} - \omega t)\right]
-\tag{15.4}</span></span></p>
-<p>ここで <span class="math inline">\mathbf{k}</span> は <strong>波数ベクトル</strong>（<strong>wave vector</strong>）、<span class="math inline">\omega = 2\pi\nu</span> は <strong>角振動数</strong>（<strong>angular frequency</strong>）。<a href="#eq-plane-wave" class="quarto-xref">式&nbsp;<span>15.4</span></a> を <a href="#eq-wave-equation" class="quarto-xref">式&nbsp;<span>15.3</span></a> に代入すると、<strong>分散関係</strong>（<strong>dispersion relation</strong>）</p>
+\tag{16.4}</span></span></p>
+<p>ここで <span class="math inline">\mathbf{k}</span> は <strong>波数ベクトル</strong>（<strong>wave vector</strong>）、<span class="math inline">\omega = 2\pi\nu</span> は <strong>角振動数</strong>（<strong>angular frequency</strong>）。<a href="#eq-plane-wave" class="quarto-xref">式&nbsp;<span>16.4</span></a> を <a href="#eq-wave-equation" class="quarto-xref">式&nbsp;<span>16.3</span></a> に代入すると、<strong>分散関係</strong>（<strong>dispersion relation</strong>）</p>
 <p><span id="eq-dispersion-relation"><span class="math display">
 \omega = c |\mathbf{k}|, \quad \text{すなわち} \quad \nu = c/\lambda
-\tag{15.5}</span></span></p>
+\tag{16.5}</span></span></p>
 <p>が出る。ここで <span class="math inline">\lambda = 2\pi/|\mathbf{k}|</span> は <strong>波長</strong>。これは本書を通じて使ってきた <span class="math inline">\nu = c/\lambda</span> の関係そのもの。</p>
 <p>平面波には三つの「自由度」がある：</p>
 <ol type="1">
@@ -669,10 +674,10 @@ B_\nu(T) = \frac{2 h\, \boxed{\nu^3}}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 <section id="sec-electromagnetic-waves-polarization" class="level2">
 <h2 class="anchored" data-anchor-id="sec-electromagnetic-waves-polarization">13.4 偏光 ― 横波の二つの自由度</h2>
 <p>[本文目安：B2-B3]</p>
-<p><a href="#eq-plane-wave" class="quarto-xref">式&nbsp;<span>15.4</span></a> を <a href="#eq-maxwell-divergence" class="quarto-xref">式&nbsp;<span>15.1</span></a> に代入すると、</p>
+<p><a href="#eq-plane-wave" class="quarto-xref">式&nbsp;<span>16.4</span></a> を <a href="#eq-maxwell-divergence" class="quarto-xref">式&nbsp;<span>16.1</span></a> に代入すると、</p>
 <p><span id="eq-transverse-condition"><span class="math display">
 \mathbf{k} \cdot \mathbf{E}_0 = 0
-\tag{15.6}</span></span></p>
+\tag{16.6}</span></span></p>
 <p>つまり<strong>電場は波数ベクトルに垂直</strong>である ― <strong>横波</strong>（<strong>transverse wave</strong>）の性質。</p>
 <p>波数ベクトル <span class="math inline">\mathbf{k}</span> が決まると、<span class="math inline">\mathbf{E}_0</span> は <span class="math inline">\mathbf{k}</span> に垂直な平面内で任意に選べる。この平面は二次元なので、<strong>独立な偏光自由度は二つ</strong>である：</p>
 <ul>
@@ -720,13 +725,13 @@ B_\nu(T) = \frac{2 h\, \boxed{\nu^3}}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 <p>電磁場のエネルギーの流れを表すのが <strong>Poynting ベクトル</strong>（<strong>Poynting vector</strong>）：</p>
 <p><span id="eq-poynting-vector"><span class="math display">
 \mathbf{S} = \frac{c}{4\pi} \mathbf{E} \times \mathbf{B}
-\tag{15.7}</span></span></p>
+\tag{16.7}</span></span></p>
 <p>Gauss 単位系での表式。SI 単位では <span class="math inline">\mathbf{S} = (1/\mu_0) \mathbf{E} \times \mathbf{B}</span>。</p>
 <p>物理的意味：単位面積・単位時間あたりに通過する電磁エネルギー。すなわち<strong>エネルギー流密度</strong>である。第4章で扱った観測量としてのフラックス <span class="math inline">F_\nu</span> は、この Poynting ベクトルの時間平均を振動数で分解したものに対応する。</p>
-<p>平面波 <a href="#eq-plane-wave" class="quarto-xref">式&nbsp;<span>15.4</span></a> の場合、時間平均された Poynting ベクトルは</p>
+<p>平面波 <a href="#eq-plane-wave" class="quarto-xref">式&nbsp;<span>16.4</span></a> の場合、時間平均された Poynting ベクトルは</p>
 <p><span id="eq-poynting-time-averaged"><span class="math display">
 \langle \mathbf{S} \rangle = \frac{c}{8\pi} |\mathbf{E}_0|^2 \hat{\mathbf{k}}
-\tag{15.8}</span></span></p>
+\tag{16.8}</span></span></p>
 <p>これは波の方向 <span class="math inline">\hat{\mathbf{k}}</span> に向かう。電磁波がエネルギーを運ぶ方向は、波数ベクトルの方向と一致する。</p>
 <div class="callout callout-style-simple callout-tip">
 <div class="callout-body d-flex">
@@ -764,7 +769,7 @@ B_\nu(T) = \frac{2 h\, \boxed{\nu^3}}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 <p><strong>方針</strong>：実際の空洞は完全導体ではないが、空洞放射の<strong>スペクトル形は壁の材質によらない</strong>ことを第3章で示した。したがって、計算の便宜上「完全導体壁」を仮定して構わない。これは黒体放射の普遍性を逆手に取った計算戦略である。</p>
 </div>
 </div>
-<p><a href="#eq-plane-wave" class="quarto-xref">式&nbsp;<span>15.4</span></a> のような自由な平面波は空洞の有限境界では存在できず、境界条件 <span class="math inline">E_\parallel = 0</span> を満たす<strong>離散的な定在波</strong>だけが許される。この離散化が第14章のモードの数え上げ ― そしてプランク分布の前因子 <span class="math inline">\nu^3/c^2</span> の起源 ― である。</p>
+<p><a href="#eq-plane-wave" class="quarto-xref">式&nbsp;<span>16.4</span></a> のような自由な平面波は空洞の有限境界では存在できず、境界条件 <span class="math inline">E_\parallel = 0</span> を満たす<strong>離散的な定在波</strong>だけが許される。この離散化が第14章のモードの数え上げ ― そしてプランク分布の前因子 <span class="math inline">\nu^3/c^2</span> の起源 ― である。</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -777,10 +782,10 @@ B_\nu(T) = \frac{2 h\, \boxed{\nu^3}}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 <div class="callout-body-container callout-body">
 <p><strong>使えるようになった道具</strong>（§13.1〜13.6）：</p>
 <ul>
-<li>Maxwell 方程式から波動方程式 <a href="#eq-wave-equation" class="quarto-xref">式&nbsp;<span>15.3</span></a> を導き、光速 <span class="math inline">c</span> がそこに組み込まれていることを確認</li>
-<li>平面波解 <a href="#eq-plane-wave" class="quarto-xref">式&nbsp;<span>15.4</span></a> と分散関係 <span class="math inline">\omega = c|\mathbf{k}|</span></li>
-<li>横波条件 <a href="#eq-transverse-condition" class="quarto-xref">式&nbsp;<span>15.6</span></a> から、偏光自由度が <strong>2</strong> であることを確認 ― これがプランク分布の前因子の係数 2 の正体</li>
-<li>Poynting ベクトル <a href="#eq-poynting-vector" class="quarto-xref">式&nbsp;<span>15.7</span></a> が観測量フラックスに対応すること</li>
+<li>Maxwell 方程式から波動方程式 <a href="#eq-wave-equation" class="quarto-xref">式&nbsp;<span>16.3</span></a> を導き、光速 <span class="math inline">c</span> がそこに組み込まれていることを確認</li>
+<li>平面波解 <a href="#eq-plane-wave" class="quarto-xref">式&nbsp;<span>16.4</span></a> と分散関係 <span class="math inline">\omega = c|\mathbf{k}|</span></li>
+<li>横波条件 <a href="#eq-transverse-condition" class="quarto-xref">式&nbsp;<span>16.6</span></a> から、偏光自由度が <strong>2</strong> であることを確認 ― これがプランク分布の前因子の係数 2 の正体</li>
+<li>Poynting ベクトル <a href="#eq-poynting-vector" class="quarto-xref">式&nbsp;<span>16.7</span></a> が観測量フラックスに対応すること</li>
 <li>完全導体壁での境界条件 (<span class="math inline">E_\parallel = 0</span>) ― 第14章で離散モードを数えるための準備</li>
 </ul>
 </div>

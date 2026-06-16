@@ -219,6 +219,11 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../contents.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">目次</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../00-prologue.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">序章　この本の目的と歩き方</span></a>
   </div>
 </li>
@@ -577,16 +582,16 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \boxed{\frac{1}{e^{h\nu/kT} - 1}}
 <blockquote class="blockquote">
 <p>孤立系のミクロ状態のうち、与えられたエネルギー <span class="math inline">E</span> を満たすものは、すべて等しい確率で実現する。</p>
 </blockquote>
-<p>これだけで多くの結果が出る。粒子数 <span class="math inline">N</span>、体積 <span class="math inline">V</span>、エネルギー <span class="math inline">E</span> が指定されたマクロ状態に対応するミクロ状態の数 <span class="math inline">\Omega(E, V, N)</span> を計算すれば、エントロピー <span class="math inline">S = k_B \ln \Omega</span>（<a href="06-thermal-equilibrium.html#eq-entropy-boltzmann" class="quarto-xref">式&nbsp;<span>8.2</span></a>）からすべての熱力学量が導かれる。</p>
+<p>これだけで多くの結果が出る。粒子数 <span class="math inline">N</span>、体積 <span class="math inline">V</span>、エネルギー <span class="math inline">E</span> が指定されたマクロ状態に対応するミクロ状態の数 <span class="math inline">\Omega(E, V, N)</span> を計算すれば、エントロピー <span class="math inline">S = k_B \ln \Omega</span>（<a href="06-thermal-equilibrium.html#eq-entropy-boltzmann" class="quarto-xref">式&nbsp;<span>9.2</span></a>）からすべての熱力学量が導かれる。</p>
 <p>これを <strong>ミクロカノニカル分布</strong> と呼ぶ。</p>
 <p>しかし実用上はもう一段使いやすい設定が便利である。系を<strong>熱浴</strong>（温度 <span class="math inline">T</span> で固定）と接触させた状況を考える。エネルギー <span class="math inline">E_i</span> のミクロ状態が実現する確率は</p>
 <p><span id="eq-boltzmann-prob"><span class="math display">
 P_i = \frac{1}{Z}\, e^{-E_i / k_B T}
-\tag{9.1}</span></span></p>
+\tag{10.1}</span></span></p>
 <p>となる。これが <strong>Boltzmann 分布</strong>（<strong>Boltzmann distribution</strong>, あるいは canonical distribution）で、<span class="math inline">Z</span> は規格化定数：</p>
 <p><span id="eq-partition-function"><span class="math display">
 Z = \sum_i e^{-E_i / k_B T}
-\tag{9.2}</span></span></p>
+\tag{10.2}</span></span></p>
 <p>これが <strong>分配関数</strong>（<strong>partition function</strong>, あるいは独語 <em>Zustandssumme</em>「状態和」）。<span class="math inline">Z</span> は系のすべての情報を含む量で、ここから物理量がすべて引き出せる。</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -608,7 +613,7 @@ Z = \sum_i e^{-E_i / k_B T}
 <p>分配関数 <span class="math inline">Z(T, V, N)</span> から、平均エネルギーは</p>
 <p><span id="eq-mean-energy"><span class="math display">
 \langle E \rangle = -\frac{\partial \ln Z}{\partial \beta}
-\tag{9.3}</span></span></p>
+\tag{10.3}</span></span></p>
 <p>ただし <span class="math inline">\beta = 1/k_B T</span>。同様に他の熱力学量も：</p>
 <table class="caption-top table">
 <colgroup>
@@ -644,23 +649,23 @@ Z = \sum_i e^{-E_i / k_B T}
 </tr>
 </tbody>
 </table>
-<p>つまり、<strong>分配関数を計算できれば熱力学はほぼ完結する</strong>。逆に言えば、計算の本丸はミクロ状態の和 <a href="#eq-partition-function" class="quarto-xref">式&nbsp;<span>9.2</span></a> を実行する点にある。</p>
+<p>つまり、<strong>分配関数を計算できれば熱力学はほぼ完結する</strong>。逆に言えば、計算の本丸はミクロ状態の和 <a href="#eq-partition-function" class="quarto-xref">式&nbsp;<span>10.2</span></a> を実行する点にある。</p>
 <p><strong>例：N 個の独立な調和振動子</strong></p>
 <p>エネルギー <span class="math inline">\epsilon_n = (n + 1/2)\hbar\omega</span> を持つ独立な振動子 <span class="math inline">N</span> 個の系では、</p>
 <p><span id="eq-partition-oscillator"><span class="math display">
 Z = \prod_{i=1}^N Z_1, \quad Z_1 = \sum_{n=0}^\infty e^{-\beta(n + 1/2)\hbar\omega} = \frac{e^{-\beta\hbar\omega/2}}{1 - e^{-\beta\hbar\omega}}
-\tag{9.4}</span></span></p>
+\tag{10.4}</span></span></p>
 <p>ここから平均エネルギー：</p>
 <p><span id="eq-mean-energy-oscillator"><span class="math display">
 \langle E \rangle = N \left( \frac{\hbar\omega}{2} + \frac{\hbar\omega}{e^{\beta\hbar\omega} - 1} \right)
-\tag{9.5}</span></span></p>
+\tag{10.5}</span></span></p>
 <div id="fig-quantum-freezeout" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-quantum-freezeout-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="../images/quantum-freeze-out.svg" class="img-fluid figure-img" style="width:88.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-quantum-freezeout-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;9.1: 量子化振動子 1 個の平均エネルギー <span class="math inline">\langle\epsilon\rangle</span> と古典の等分配 <span class="math inline">k_B T</span> の比較。低振動数（<span class="math inline">h\nu \ll k_BT</span>）では古典と一致するが、<strong><span class="math inline">h\nu \approx k_BT</span> 付近から急速に等分配を下回り</strong>、<span class="math inline">h\nu \gg k_BT</span> では指数的に「凍結」する。これが Rayleigh–Jeans 紫外破綻からプランク分布への移行を量子論側から見たもので、第10章 §10.2 で本格的に扱う。
+図&nbsp;10.1: 量子化振動子 1 個の平均エネルギー <span class="math inline">\langle\epsilon\rangle</span> と古典の等分配 <span class="math inline">k_B T</span> の比較。低振動数（<span class="math inline">h\nu \ll k_BT</span>）では古典と一致するが、<strong><span class="math inline">h\nu \approx k_BT</span> 付近から急速に等分配を下回り</strong>、<span class="math inline">h\nu \gg k_BT</span> では指数的に「凍結」する。これが Rayleigh–Jeans 紫外破綻からプランク分布への移行を量子論側から見たもので、第10章 §10.2 で本格的に扱う。
 </figcaption>
 </figure>
 </div>
@@ -697,8 +702,8 @@ Z = \prod_{i=1}^N Z_1, \quad Z_1 = \sum_{n=0}^\infty e^{-\beta(n + 1/2)\hbar\ome
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>問い</strong>：いま導いた振動子の式 <a href="#eq-mean-energy-oscillator" class="quarto-xref">式&nbsp;<span>9.5</span></a> は、プランク分布そのものではないのか？</p>
-<p><strong>短答</strong>：構造はほぼ同じだが、まだプランク分布ではない。<a href="#eq-mean-energy-oscillator" class="quarto-xref">式&nbsp;<span>9.5</span></a> は「ある <strong>一つの</strong> モードの平均エネルギー」を与える式である。プランク分布 <span class="math inline">B_\nu(T)</span> は、これに「振動数 <span class="math inline">\nu</span> 近傍にどれだけのモードがあるか」（モード密度）を掛けたもの。</p>
+<p><strong>問い</strong>：いま導いた振動子の式 <a href="#eq-mean-energy-oscillator" class="quarto-xref">式&nbsp;<span>10.5</span></a> は、プランク分布そのものではないのか？</p>
+<p><strong>短答</strong>：構造はほぼ同じだが、まだプランク分布ではない。<a href="#eq-mean-energy-oscillator" class="quarto-xref">式&nbsp;<span>10.5</span></a> は「ある <strong>一つの</strong> モードの平均エネルギー」を与える式である。プランク分布 <span class="math inline">B_\nu(T)</span> は、これに「振動数 <span class="math inline">\nu</span> 近傍にどれだけのモードがあるか」（モード密度）を掛けたもの。</p>
 <p><strong>もう一歩</strong>：モード密度の話は第V部・第14章で扱う。中心地図のプランク関数の <strong>指数関数因子</strong>（占有因子）が本章で説明され、<strong>前因子</strong> <span class="math inline">2h\nu^3/c^2</span> は第V部で説明される、という構造になっている。</p>
 </div>
 </div>
@@ -716,7 +721,7 @@ Z = \prod_{i=1}^N Z_1, \quad Z_1 = \sum_{n=0}^\infty e^{-\beta(n + 1/2)\hbar\ome
 <p><strong>使えるようになった道具</strong>（§7.1〜7.2）：</p>
 <ul>
 <li>分配関数 <span class="math inline">Z</span> から、平均エネルギー・自由エネルギー・エントロピー・圧力・比熱までを微分一発で取り出せる</li>
-<li>量子化された調和振動子の平均エネルギー <a href="#eq-mean-energy-oscillator" class="quarto-xref">式&nbsp;<span>9.5</span></a> に、観測されるプランク分布の指数関数因子 <span class="math inline">1/(e^{\hbar\omega/k_BT}-1)</span> がすでに現れる ― 観測される高振動数の指数減衰の起源がここに芽生えている</li>
+<li>量子化された調和振動子の平均エネルギー <a href="#eq-mean-energy-oscillator" class="quarto-xref">式&nbsp;<span>10.5</span></a> に、観測されるプランク分布の指数関数因子 <span class="math inline">1/(e^{\hbar\omega/k_BT}-1)</span> がすでに現れる ― 観測される高振動数の指数減衰の起源がここに芽生えている</li>
 </ul>
 </div>
 </div>
@@ -724,16 +729,16 @@ Z = \prod_{i=1}^N Z_1, \quad Z_1 = \sum_{n=0}^\infty e^{-\beta(n + 1/2)\hbar\ome
 <section id="sec-statistical-mechanics-boltzmann" class="level2">
 <h2 class="anchored" data-anchor-id="sec-statistical-mechanics-boltzmann">7.3 Boltzmann 分布 ― 古典統計の中心定理</h2>
 <p>[本文目安：B3]</p>
-<p><a href="#eq-boltzmann-prob" class="quarto-xref">式&nbsp;<span>9.1</span></a> を観測量で表すと、<span class="math inline">N</span> 個の同種粒子のうち、エネルギー <span class="math inline">E_i</span> の状態 <span class="math inline">i</span> にある粒子数の平均は</p>
+<p><a href="#eq-boltzmann-prob" class="quarto-xref">式&nbsp;<span>10.1</span></a> を観測量で表すと、<span class="math inline">N</span> 個の同種粒子のうち、エネルギー <span class="math inline">E_i</span> の状態 <span class="math inline">i</span> にある粒子数の平均は</p>
 <p><span id="eq-boltzmann-distribution"><span class="math display">
 \langle n_i \rangle = N \cdot \frac{g_i e^{-E_i/k_B T}}{\sum_j g_j e^{-E_j/k_B T}}
-\tag{9.6}</span></span></p>
+\tag{10.6}</span></span></p>
 <p>ここで <span class="math inline">g_i</span> は状態 <span class="math inline">i</span> の<strong>縮退度</strong>（<strong>degeneracy</strong>）。これが（古典）<strong>Boltzmann 分布</strong> である。</p>
 <p><strong>例：水素原子の準位占有数</strong></p>
 <p>水素原子の主量子数 <span class="math inline">n</span> の準位は、エネルギー <span class="math inline">E_n = -13.6 \text{ eV} / n^2</span> をもち、縮退度は <span class="math inline">g_n = 2 n^2</span>（電子スピン込み）。温度 <span class="math inline">T</span> の熱浴と平衡にあるとき、</p>
 <p><span id="eq-boltzmann-hydrogen"><span class="math display">
 \frac{n_2}{n_1} = \frac{g_2}{g_1} e^{-(E_2 - E_1)/k_B T}
-\tag{9.7}</span></span></p>
+\tag{10.7}</span></span></p>
 <p>この比は、第VII部で線スペクトルの強度比から温度を求める基本式になる。</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -745,7 +750,7 @@ Z = \prod_{i=1}^N Z_1, \quad Z_1 = \sum_{n=0}^\infty e^{-\beta(n + 1/2)\hbar\ome
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>対応（観測）</strong>：観測される線スペクトル強度比から温度を読むのは、まさにこの Boltzmann 分布が成り立っているという仮定（LTE）に基づいている。LTE が破れる場面（non-LTE、第5章 §5.5）では <a href="#eq-boltzmann-hydrogen" class="quarto-xref">式&nbsp;<span>9.7</span></a> は使えない。</p>
+<p><strong>対応（観測）</strong>：観測される線スペクトル強度比から温度を読むのは、まさにこの Boltzmann 分布が成り立っているという仮定（LTE）に基づいている。LTE が破れる場面（non-LTE、第5章 §5.5）では <a href="#eq-boltzmann-hydrogen" class="quarto-xref">式&nbsp;<span>10.7</span></a> は使えない。</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -758,7 +763,7 @@ Z = \prod_{i=1}^N Z_1, \quad Z_1 = \sum_{n=0}^\infty e^{-\beta(n + 1/2)\hbar\ome
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>使えるようになった道具</strong>（§7.3）：Boltzmann 分布 <a href="#eq-boltzmann-distribution" class="quarto-xref">式&nbsp;<span>9.6</span></a> は、観測される複数の線の強度比から温度を読み出す「<strong>励起温度</strong>」推定の基礎式である。第VII部・第23章で本格的に応用する。</p>
+<p><strong>使えるようになった道具</strong>（§7.3）：Boltzmann 分布 <a href="#eq-boltzmann-distribution" class="quarto-xref">式&nbsp;<span>10.6</span></a> は、観測される複数の線の強度比から温度を読み出す「<strong>励起温度</strong>」推定の基礎式である。第VII部・第23章で本格的に応用する。</p>
 </div>
 </div>
 </section>
@@ -769,7 +774,7 @@ Z = \prod_{i=1}^N Z_1, \quad Z_1 = \sum_{n=0}^\infty e^{-\beta(n + 1/2)\hbar\ome
 <p>エネルギー揺らぎは分配関数からこう求まる：</p>
 <p><span id="eq-energy-fluctuation"><span class="math display">
 \langle (\Delta E)^2 \rangle = \langle E^2 \rangle - \langle E \rangle^2 = k_B T^2 \frac{\partial \langle E \rangle}{\partial T} = k_B T^2 C_V
-\tag{9.8}</span></span></p>
+\tag{10.8}</span></span></p>
 <p><span class="math inline">C_V</span> は定積熱容量。<span class="math inline">N \sim 10^{23}</span> では、相対的な揺らぎは <span class="math inline">\Delta E / \langle E \rangle \sim 1/\sqrt{N} \sim 10^{-11}</span> で、観測に出てこない（マクロ熱力学が成り立つ理由）。</p>
 <p>しかし<strong>少数粒子系</strong>や<strong>特定の振動数帯</strong>では揺らぎが重要になる。</p>
 <p><strong>CMB のスペクトル歪み</strong>：CMB の黒体スペクトルは完璧だが、初期宇宙の様々な過程（粒子崩壊、再結合、Compton 散乱の不完全さ）がスペクトルに微小な歪みを残しうる。これらの歪みは「光子数の揺らぎ」「エネルギーの揺らぎ」を反映する量であり、第16章で扱う。</p>
@@ -792,12 +797,12 @@ Z = \prod_{i=1}^N Z_1, \quad Z_1 = \sum_{n=0}^\infty e^{-\beta(n + 1/2)\hbar\ome
 <p>ここまで導入した分配関数 <span class="math inline">Z</span> は、熱力学の標準的関数とすべて対応している。鍵となる関係：</p>
 <p><span id="eq-free-energy"><span class="math display">
 F = -k_B T \ln Z
-\tag{9.9}</span></span></p>
+\tag{10.9}</span></span></p>
 <p>ここから</p>
 <p><span class="math display">
 S = -\frac{\partial F}{\partial T}, \quad P = -\frac{\partial F}{\partial V}, \quad \mu = \frac{\partial F}{\partial N}
 </span></p>
-<p><strong>化学ポテンシャル</strong>（<strong>chemical potential</strong>）<span class="math inline">\mu</span> は粒子数に対する Lagrange 乗数で、<a href="06-thermal-equilibrium.html#eq-lagrange" class="quarto-xref">式&nbsp;<span>8.4</span></a> の <span class="math inline">\alpha = -\mu/k_B T</span> に対応する。</p>
+<p><strong>化学ポテンシャル</strong>（<strong>chemical potential</strong>）<span class="math inline">\mu</span> は粒子数に対する Lagrange 乗数で、<a href="06-thermal-equilibrium.html#eq-lagrange" class="quarto-xref">式&nbsp;<span>9.4</span></a> の <span class="math inline">\alpha = -\mu/k_B T</span> に対応する。</p>
 <p><strong>化学ポテンシャルの物理的意味</strong>：粒子を一つ加えたときの自由エネルギーの変化。「粒子数を保存しないといけない系」では化学ポテンシャルが現れ、保存しない系（光子のように）では <span class="math inline">\mu = 0</span> になる。</p>
 <p>なぜ光子は粒子数を保存しないか。電磁場のモードと物質の相互作用（吸収・放出）で光子は生成・消滅し、その数は決まっていない。エネルギーは保存するが個数は保存しない。これが<strong>光子の化学ポテンシャルがゼロ</strong>になる物理的理由で、第8章で詳しく扱う。</p>
 </section>
@@ -808,7 +813,7 @@ S = -\frac{\partial F}{\partial T}, \quad P = -\frac{\partial F}{\partial V}, \q
 <p><strong>古典の結論（Rayleigh–Jeans）</strong>：振動数 <span class="math inline">\nu</span> あたりのモード数を <span class="math inline">g(\nu)</span> とすると、エネルギー等分配定理から各モードには平均エネルギー <span class="math inline">k_B T</span> が配分される。よって振動数 <span class="math inline">\nu</span> あたりの放射エネルギー密度は</p>
 <p><span id="eq-rj-classical"><span class="math display">
 u_\nu^\text{RJ} = g(\nu) \cdot k_B T = \frac{8\pi \nu^2}{c^3} k_B T
-\tag{9.10}</span></span></p>
+\tag{10.10}</span></span></p>
 <p>これは振動数の二乗に比例して増加し、全エネルギー <span class="math inline">\int u_\nu d\nu</span> は発散する。</p>
 <p><strong>観測との矛盾</strong>：実際の黒体スペクトルは、高振動数で指数関数的に減衰し、全エネルギー <span class="math inline">u = aT^4</span> は有限である。古典統計は決定的に間違っている。</p>
 <p><strong>何が問題か</strong>：</p>

@@ -219,6 +219,11 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../contents.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">目次</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../00-prologue.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">序章　この本の目的と歩き方</span></a>
   </div>
 </li>
@@ -590,7 +595,7 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1} \quad \xrightar
 <p>この仮定 3 が <strong>局所黒体近似</strong>。各半径から <strong>温度 <span class="math inline">T(R)</span> の黒体スペクトル</strong> が放たれる：</p>
 <p><span id="eq-disk-local-blackbody"><span class="math display">
 I_\nu(R) = B_\nu(T(R))
-\tag{20.1}</span></span></p>
+\tag{21.1}</span></span></p>
 <p>ただし、<strong><span class="math inline">T(R)</span> は半径によって変わる</strong>。これが多温度合成スペクトル（次節）を生む。</p>
 <div class="callout callout-style-simple callout-warning">
 <div class="callout-body d-flex">
@@ -615,17 +620,17 @@ I_\nu(R) = B_\nu(T(R))
 <p>標準降着円盤では、エネルギー収支から温度の半径依存が</p>
 <p><span id="eq-disk-temperature-profile"><span class="math display">
 T(R) \propto R^{-3/4}
-\tag{20.2}</span></span></p>
+\tag{21.2}</span></span></p>
 <p>となる（薄い円盤の Stefan-Boltzmann バランス）。内側ほど高温、外側ほど低温。</p>
 <p>全円盤からの合成スペクトル：</p>
 <p><span id="eq-disk-total-flux"><span class="math display">
 F_\nu = \int_{R_\text{in}}^{R_\text{out}} 2\pi R \cdot B_\nu(T(R)) dR
-\tag{20.3}</span></span></p>
+\tag{21.3}</span></span></p>
 <p>ここで重要なのは <strong>中間振動数帯</strong> の振る舞い。<span class="math inline">k_B T(R_\text{in}) \gg h\nu \gg k_B T(R_\text{out})</span>（あるいは同値に <span class="math inline">T(R_\text{in}) \gg h\nu/k_B \gg T(R_\text{out})</span>）となる振動数では、温度分布が積分を支配する。</p>
-<p><a href="#eq-disk-temperature-profile" class="quarto-xref">式&nbsp;<span>20.2</span></a> を使って変数変換すると（導出概略は下記の問い、丁寧な計算は Frank, King &amp; Raine 第 5 章参照）</p>
+<p><a href="#eq-disk-temperature-profile" class="quarto-xref">式&nbsp;<span>21.2</span></a> を使って変数変換すると（導出概略は下記の問い、丁寧な計算は Frank, King &amp; Raine 第 5 章参照）</p>
 <p><span id="eq-disk-13-powerlaw"><span class="math display">
 F_\nu \propto \nu^{1/3} \quad \text{(中間帯)}
-\tag{20.4}</span></span></p>
+\tag{21.4}</span></span></p>
 <p>この <strong><span class="math inline">\nu^{1/3}</span> べき則</strong> は、多温度円盤の <strong>特徴的シグネチャ</strong>。観測される X 線連星や活動銀河中心核 (AGN) の連続光に、この勾配が広い範囲で見られる。</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -660,11 +665,11 @@ F_\nu \propto \nu^{1/3} \quad \text{(中間帯)}
 <p>低温の黒体光子（種光子、<span class="math inline">h\nu_\text{seed}</span>）が熱い電子（<span class="math inline">k_B T_e \gg h\nu_\text{seed}</span>）と散乱した一回あたりのエネルギー利得：</p>
 <p><span id="eq-compton-gain-per-scattering"><span class="math display">
 \frac{\Delta \nu}{\nu} \simeq \frac{4 k_B T_e}{m_e c^2}
-\tag{20.5}</span></span></p>
+\tag{21.5}</span></span></p>
 <p>光子が脱出までに <span class="math inline">N</span> 回散乱すると、累積利得 <span class="math inline">{(1 + \Delta\nu/\nu)}^N</span>。コロナの光学的深さ <span class="math inline">\tau_e</span> と温度から見積もる <strong>Compton <span class="math inline">y</span> パラメータ</strong>：</p>
 <p><span id="eq-compton-y"><span class="math display">
 y \equiv \frac{4 k_B T_e}{m_e c^2} \max(\tau_e, \tau_e^2)
-\tag{20.6}</span></span></p>
+\tag{21.6}</span></span></p>
 <ul>
 <li><span class="math inline">y \ll 1</span>：光子はわずかにエネルギー利得 ― 元の黒体形のわずかな歪み（<strong>Wien 側へのテイル</strong>）</li>
 <li><span class="math inline">y \gtrsim 1</span>：光子はコロナで完全に再分配される ― <strong>Wien 分布</strong> に近い高温化スペクトル</li>
@@ -726,7 +731,7 @@ y \equiv \frac{4 k_B T_e}{m_e c^2} \max(\tau_e, \tau_e^2)
 <p>これらの効果は、第13章 §13.4 の偏光自由度や §18.1 の局所黒体仮定の <strong>上に重ねて</strong> 効く。観測される SED は</p>
 <p><span id="eq-grdisk-flux"><span class="math display">
 F_\nu^\text{obs} = \int B_\nu(T(R, \phi)) \cdot g^3(R, \phi) \cdot dA_\text{proper}
-\tag{20.7}</span></span></p>
+\tag{21.7}</span></span></p>
 <p>の形（<span class="math inline">g</span> は赤方偏移因子、<span class="math inline">dA_\text{proper}</span> は固有面積）。一般相対論的計算が必要。</p>
 <p>特に重要な観測量は <strong>広線輪郭</strong> ― 鉄輝線 (6.4 keV) が、円盤の高速回転と重力赤方偏移により、特徴的な非対称形状（青翼が高く、赤翼が長く伸びる）に変形される。これがブラックホールスピンの測定に使われる。</p>
 <div class="callout callout-style-default callout-note callout-titled">

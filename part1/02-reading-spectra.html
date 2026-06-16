@@ -219,6 +219,11 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../contents.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">目次</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../00-prologue.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">序章　この本の目的と歩き方</span></a>
   </div>
 </li>
@@ -550,7 +555,7 @@ window.Quarto = {
 -->
 <p><span id="eq-planck-function"><span class="math display">
 B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
-\tag{4.1}</span></span></p>
+\tag{5.1}</span></span></p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -640,7 +645,7 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 <p>第1章では、宇宙のさまざまな天体が「同じ関数族」に属する連続スペクトルを示すことを観察した。この関数族は、振動数 <span class="math inline">\nu</span> の関数として書くと次の形をもつ：</p>
 <p><span id="eq-planck-nu"><span class="math display">
 B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu / kT} - 1}
-\tag{4.2}</span></span></p>
+\tag{5.2}</span></span></p>
 <p>ここで <span class="math inline">B_\nu</span> は<strong>比強度</strong>（<strong>specific intensity</strong>）、つまり「単位面積・単位時間・単位立体角・単位振動数あたりのエネルギー」である。単位は erg s<span class="math inline">^{-1}</span> cm<span class="math inline">^{-2}</span> Hz<span class="math inline">^{-1}</span> sr<span class="math inline">^{-1}</span>（SI なら W m<span class="math inline">^{-2}</span> Hz<span class="math inline">^{-1}</span> sr<span class="math inline">^{-1}</span>）。本章では「面を通過するエネルギーの目安」として簡略に用いるが、<strong>正式な定義</strong> ― 面要素を法線から <span class="math inline">\theta</span> 傾けて通過する成分に対する <span class="math inline">\cos\theta</span> を含む形 ― は第4章 §4.1 で扱う。</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -652,7 +657,7 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu / kT} - 1}
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>本章での扱い方</strong>：率直に言えば、本章では <span class="math inline">B_\nu</span>（<a href="#eq-planck-nu" class="quarto-xref">式&nbsp;<span>4.2</span></a>）を<strong>一度ひとつの経験式・観測曲線として受け入れる</strong>。第1章で「観測される現象」として温度ごとに同じ形をとることを確認したので、いまはその観測される曲線を表す式が上のように書ける、という事実だけ使う。式の各因子（<span class="math inline">2h\nu^3/c^2</span>、<span class="math inline">1/(e^{h\nu/kT}-1)</span>）がなぜこの形になるかは、第8章（光子統計）、第10章（プランクの量子仮説）、第14章（モード密度）で順に逆引きする。</p>
+<p><strong>本章での扱い方</strong>：率直に言えば、本章では <span class="math inline">B_\nu</span>（<a href="#eq-planck-nu" class="quarto-xref">式&nbsp;<span>5.2</span></a>）を<strong>一度ひとつの経験式・観測曲線として受け入れる</strong>。第1章で「観測される現象」として温度ごとに同じ形をとることを確認したので、いまはその観測される曲線を表す式が上のように書ける、という事実だけ使う。式の各因子（<span class="math inline">2h\nu^3/c^2</span>、<span class="math inline">1/(e^{h\nu/kT}-1)</span>）がなぜこの形になるかは、第8章（光子統計）、第10章（プランクの量子仮説）、第14章（モード密度）で順に逆引きする。</p>
 </div>
 </div>
 <p>この曲線の特徴を、まず観測の言葉で整理しよう：</p>
@@ -678,7 +683,7 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu / kT} - 1}
 <img src="02-reading-spectra_files/figure-html/fig-planck-three-temps-output-1.png" width="757" height="469" class="figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-planck-three-temps-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;4.1: 三つの温度のプランク曲線。温度上昇でピークは高振動数側に移り、面積（全エネルギー）は <span class="math inline">T^4</span> に比例して大きくなる。
+図&nbsp;5.1: 三つの温度のプランク曲線。温度上昇でピークは高振動数側に移り、面積（全エネルギー）は <span class="math inline">T^4</span> に比例して大きくなる。
 </figcaption>
 </figure>
 </div>
@@ -692,11 +697,11 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu / kT} - 1}
 <p>両者は<strong>同じエネルギー</strong>を<strong>異なる変数の刻み</strong>で表現している：</p>
 <p><span id="eq-nu-lambda-conversion"><span class="math display">
 B_\nu \, d\nu = -B_\lambda \, d\lambda
-\tag{4.3}</span></span></p>
+\tag{5.3}</span></span></p>
 <p>ここで <span class="math inline">\nu = c/\lambda</span> から <span class="math inline">d\nu = -c/\lambda^2 \, d\lambda</span> なので、</p>
 <p><span id="eq-planck-lambda"><span class="math display">
 B_\lambda(T) = B_\nu(T) \cdot \frac{c}{\lambda^2} = \frac{2 h c^2}{\lambda^5} \cdot \frac{1}{e^{hc/\lambda kT} - 1}
-\tag{4.4}</span></span></p>
+\tag{5.4}</span></span></p>
 <p>ジャコビアン <span class="math inline">c/\lambda^2</span> がかかることで、<span class="math inline">B_\lambda</span> の関数形は <span class="math inline">B_\nu</span> と異なる。</p>
 <p><strong>ピーク位置のずれ</strong>：</p>
 <table class="caption-top table">
@@ -743,10 +748,10 @@ B_\lambda(T) = B_\nu(T) \cdot \frac{c}{\lambda^2} = \frac{2 h c^2}{\lambda^5} \c
 <section id="sec-reading-spectra-wien" class="level2">
 <h2 class="anchored" data-anchor-id="sec-reading-spectra-wien">2.3 ピークと温度 ― Wien の変位則</h2>
 <p>[本文目安：B2]</p>
-<p><a href="#eq-planck-lambda" class="quarto-xref">式&nbsp;<span>4.4</span></a> のピーク条件から、波長表示のピーク <span class="math inline">\lambda_{\max}</span> と温度 <span class="math inline">T</span> の間に簡単な関係が成り立つ：</p>
+<p><a href="#eq-planck-lambda" class="quarto-xref">式&nbsp;<span>5.4</span></a> のピーク条件から、波長表示のピーク <span class="math inline">\lambda_{\max}</span> と温度 <span class="math inline">T</span> の間に簡単な関係が成り立つ：</p>
 <p><span id="eq-wien-displacement"><span class="math display">
 \lambda_{\max} \cdot T = b \simeq 2.898 \times 10^{-3}\ \mathrm{m \cdot K}
-\tag{4.5}</span></span></p>
+\tag{5.5}</span></span></p>
 <p>これが <strong>Wien の変位則</strong>（<strong>Wien’s displacement law</strong>）である。<span class="math inline">b</span> は Wien の変位定数。</p>
 <p>実例：</p>
 <table class="caption-top table">
@@ -809,15 +814,15 @@ B_\lambda(T) = B_\nu(T) \cdot \frac{c}{\lambda^2} = \frac{2 h c^2}{\lambda^5} \c
 <h2 class="anchored" data-anchor-id="sec-reading-spectra-stefan-boltzmann">2.4 面積と全放射 ― Stefan–Boltzmann 則</h2>
 <p>[本文目安：B2]</p>
 <p>プランク曲線 <span class="math inline">B_\nu(T)</span> から、黒体表面の単位面積・単位時間あたりに放出される全エネルギー（全放射フラックス）が得られる。手順は二段階：</p>
-<p><strong>(i) 振動数別フラックス <span class="math inline">F_\nu</span></strong>：黒体表面は等方放出をするが、観測者がいるのは<strong>外向きの半球</strong>である。表面から半球の全方向に立体角積分すると、射影因子 <span class="math inline">\cos\theta</span> がかかって（<a href="../part2/04-radiation-field.html#eq-flux-def" class="quarto-xref">式&nbsp;<span>6.6</span></a> 参照）</p>
+<p><strong>(i) 振動数別フラックス <span class="math inline">F_\nu</span></strong>：黒体表面は等方放出をするが、観測者がいるのは<strong>外向きの半球</strong>である。表面から半球の全方向に立体角積分すると、射影因子 <span class="math inline">\cos\theta</span> がかかって（<a href="../part2/04-radiation-field.html#eq-flux-def" class="quarto-xref">式&nbsp;<span>7.6</span></a> 参照）</p>
 <p><span id="eq-fnu-pi-bnu"><span class="math display">
 F_\nu = \int_{\text{半球}} B_\nu \cos\theta\, d\Omega = \pi B_\nu(T)
-\tag{4.6}</span></span></p>
+\tag{5.6}</span></span></p>
 <p>ここで「全立体角 <span class="math inline">4\pi</span> ではなく <span class="math inline">\pi</span>」になるのは、<strong>半球積分</strong>かつ<strong><span class="math inline">\cos\theta</span> 射影</strong>の二つの効果（<span class="math inline">\int_0^{2\pi} d\varphi \int_0^{\pi/2} \cos\theta \sin\theta\, d\theta = \pi</span>）から。第II部・第4章で改めて整理する。</p>
 <p><strong>(ii) 全振動数積分</strong>：<span class="math inline">F = \int_0^\infty F_\nu d\nu = \pi \int_0^\infty B_\nu d\nu</span> を実行すると</p>
 <p><span id="eq-stefan-boltzmann"><span class="math display">
 F = \sigma T^4
-\tag{4.7}</span></span></p>
+\tag{5.7}</span></span></p>
 <p>ここで <span class="math inline">\sigma = 5.670 \times 10^{-5}</span> erg s<span class="math inline">^{-1}</span> cm<span class="math inline">^{-2}</span> K<span class="math inline">^{-4}</span> は <strong>Stefan–Boltzmann 定数</strong>（<strong>Stefan–Boltzmann constant</strong>）である。</p>
 <p>「<span class="math inline">T^4</span>」という強い温度依存性は天文学のスケール感を支配する：</p>
 <ul>
@@ -828,7 +833,7 @@ F = \sigma T^4
 <p>光度（luminosity, 単位時間に天体全体から放出されるエネルギー）は、半径 <span class="math inline">R</span> の球を仮定すれば</p>
 <p><span id="eq-luminosity-sb"><span class="math display">
 L = 4\pi R^2 \cdot \sigma T^4
-\tag{4.8}</span></span></p>
+\tag{5.8}</span></span></p>
 <p>これと観測される光度から、半径と温度の組み合わせ <span class="math inline">R^2 T^4</span> を読み出せる。距離が分かっていれば、観測されるフラックス <span class="math inline">f</span> と光度の関係 <span class="math inline">L = 4\pi d^2 f</span> から、独立に <span class="math inline">L</span> を決められる。</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -853,7 +858,7 @@ L = 4\pi R^2 \cdot \sigma T^4
 <p><span class="math inline">h\nu \ll kT</span> では、<span class="math inline">e^{h\nu/kT} - 1 \simeq h\nu/kT</span> なので</p>
 <p><span id="eq-rayleigh-jeans"><span class="math display">
 B_\nu(T) \xrightarrow[h\nu \ll kT]{} \frac{2 \nu^2}{c^2} kT
-\tag{4.9}</span></span></p>
+\tag{5.9}</span></span></p>
 <p>ここに <strong><span class="math inline">h</span> が現れていない</strong>ことに注意。これは古典物理から（量子論なしで）導ける式である。電波天文学ではほぼ常にこの極限で観測している。</p>
 </section>
 <section id="高振動数極限wien-の式" class="level3">
@@ -861,7 +866,7 @@ B_\nu(T) \xrightarrow[h\nu \ll kT]{} \frac{2 \nu^2}{c^2} kT
 <p><span class="math inline">h\nu \gg kT</span> では、<span class="math inline">e^{h\nu/kT} - 1 \simeq e^{h\nu/kT}</span> なので</p>
 <p><span id="eq-wien-limit"><span class="math display">
 B_\nu(T) \xrightarrow[h\nu \gg kT]{} \frac{2 h \nu^3}{c^2} e^{-h\nu/kT}
-\tag{4.10}</span></span></p>
+\tag{5.10}</span></span></p>
 <p>こちらは指数関数で急激に落ちる側。<strong><span class="math inline">h</span> が現れる</strong>ことが本質的で、古典物理だけでは出てこない。</p>
 </section>
 <section id="この二つの極限から見える物理の対立" class="level3">
@@ -966,12 +971,12 @@ B_\nu(T) \xrightarrow[h\nu \gg kT]{} \frac{2 h \nu^3}{c^2} e^{-h\nu/kT}
 <li><strong>観測</strong>：複数の波長帯でフラックス <span class="math inline">f_\nu</span> または <span class="math inline">f_\lambda</span> を測る（SED の構築）</li>
 <li><strong>温度の推定</strong>：
 <ul>
-<li>Wien の式（<a href="#eq-wien-displacement" class="quarto-xref">式&nbsp;<span>4.5</span></a>）でピーク波長から <span class="math inline">T</span> を概算、または</li>
+<li>Wien の式（<a href="#eq-wien-displacement" class="quarto-xref">式&nbsp;<span>5.5</span></a>）でピーク波長から <span class="math inline">T</span> を概算、または</li>
 <li>色（バンド間のフラックス比）を黒体と比較して色温度 <span class="math inline">T_c</span> を決定</li>
 </ul></li>
 <li><strong>距離の特定</strong>：年周視差、その他の距離指標を使う</li>
 <li><strong>光度の計算</strong>：観測フラックスと距離から <span class="math inline">L = 4\pi d^2 f</span></li>
-<li><strong>半径の推定</strong>：Stefan–Boltzmann (<a href="#eq-luminosity-sb" class="quarto-xref">式&nbsp;<span>4.8</span></a>) を逆算して <span class="math inline">R = \sqrt{L / (4\pi \sigma T^4)}</span></li>
+<li><strong>半径の推定</strong>：Stefan–Boltzmann (<a href="#eq-luminosity-sb" class="quarto-xref">式&nbsp;<span>5.8</span></a>) を逆算して <span class="math inline">R = \sqrt{L / (4\pi \sigma T^4)}</span></li>
 </ol>
 <p>この一連の手順は、<strong>プランク分布が中心地図として</strong>機能しているからこそ意味を持つ。観測量と物理量を結ぶ橋渡しが、すべて <span class="math inline">B_\nu(T)</span> の形（とそのモーメント）に集約される。</p>
 <div class="callout callout-style-default callout-tip callout-titled">

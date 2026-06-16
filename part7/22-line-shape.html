@@ -219,6 +219,11 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../contents.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">目次</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../00-prologue.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">序章　この本の目的と歩き方</span></a>
   </div>
 </li>
@@ -534,12 +539,12 @@ window.Quarto = {
 <p><strong>第一層：イコニック・アンカー（リュードベリ公式）</strong></p>
 <p><span id="eq-rydberg"><span class="math display">
 \frac{1}{\lambda} = R_\mathrm{H} \left( \frac{1}{n_1^2} - \frac{1}{n_2^2} \right)
-\tag{24.1}</span></span></p>
+\tag{25.1}</span></span></p>
 <p>線スペクトルの「骨格」を一目で示す。<span class="math inline">R_\mathrm{H}</span> は基本定数の組合せ、<span class="math inline">1/n^2</span> は束縛状態のエネルギー、離散性が「線が存在する理由」を語る。</p>
 <p><strong>第二層：構造的マップ（Hα を標準例とした線吸収係数）</strong></p>
 <p><span id="eq-line-absorption"><span class="math display">
 \alpha_\nu = \frac{\pi e^2}{m_e c} \, f_{lu} \, n_l \, \phi(\nu - \nu_0)
-\tag{24.2}</span></span></p>
+\tag{25.2}</span></span></p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -588,7 +593,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>地図の使い方</strong>：第VII部の各章はこの式の異なる因子を解き明かす。プランク関数地図と並べて読めば、本書を貫く二つの逆引きが同時に把握できる。第VIII部の QED で、両者は前因子 <span class="math inline">2h\nu^3/c^2</span> を介して統一される（<a href="../part8/25-qed-minimum.html#eq-einstein-A" class="quarto-xref">式&nbsp;<span>27.4</span></a> 参照）。</p>
+<p><strong>地図の使い方</strong>：第VII部の各章はこの式の異なる因子を解き明かす。プランク関数地図と並べて読めば、本書を貫く二つの逆引きが同時に把握できる。第VIII部の QED で、両者は前因子 <span class="math inline">2h\nu^3/c^2</span> を介して統一される（<a href="../part8/25-qed-minimum.html#eq-einstein-A" class="quarto-xref">式&nbsp;<span>28.4</span></a> 参照）。</p>
 </div>
 </div>
 </div>
@@ -654,7 +659,7 @@ window.Quarto = {
 <p>これに対応する規格化された線形関数（<strong>Lorentzian</strong>）は</p>
 <p><span id="eq-lorentzian"><span class="math display">
 \phi_L(\nu - \nu_0) = \frac{1}{\pi} \frac{\gamma_\text{nat}/2}{(\nu - \nu_0)^2 + (\gamma_\text{nat}/2)^2}
-\tag{24.3}</span></span></p>
+\tag{25.3}</span></span></p>
 <p>特徴：</p>
 <ul>
 <li>中心 <span class="math inline">\nu = \nu_0</span> で最大、<span class="math inline">|\nu - \nu_0| = \gamma_\text{nat}/2</span>（HWHM）で半値</li>
@@ -682,15 +687,15 @@ window.Quarto = {
 <p>ガスの粒子は熱運動で <strong>視線方向に速度</strong> を持つ。各粒子は自分の速度に応じて、観測者の系で線中心振動数が <strong>Doppler シフト</strong> する：</p>
 <p><span id="eq-doppler-shift"><span class="math display">
 \nu = \nu_0 \left(1 + \frac{v_\parallel}{c}\right)
-\tag{24.4}</span></span></p>
+\tag{25.4}</span></span></p>
 <p>熱的 Maxwell-Boltzmann 速度分布のもとでは、視線速度成分 <span class="math inline">v_\parallel</span> も Gaussian 分布。これを線形に積分すると、</p>
 <p><span id="eq-gaussian-doppler"><span class="math display">
 \phi_D(\nu - \nu_0) = \frac{1}{\Delta\nu_D \sqrt{\pi}} \exp\left[-\frac{(\nu - \nu_0)^2}{\Delta\nu_D^2}\right]
-\tag{24.5}</span></span></p>
+\tag{25.5}</span></span></p>
 <p>ここで <strong>Doppler 幅</strong></p>
 <p><span id="eq-doppler-width"><span class="math display">
 \Delta\nu_D = \frac{\nu_0}{c} \sqrt{\frac{2k_B T}{m}}
-\tag{24.6}</span></span></p>
+\tag{25.6}</span></span></p>
 <p><span class="math inline">m</span> は原子・分子質量。</p>
 <p>特徴：</p>
 <ul>
@@ -717,7 +722,7 @@ window.Quarto = {
 <p>ガスが密になると、原子は <strong>他の粒子との衝突</strong> で励起準位の位相が乱される。これは励起準位の有効寿命を短くし、自然幅と同形の <strong>Lorentzian 拡がり</strong> を加える：</p>
 <p><span id="eq-collision-width"><span class="math display">
 \Gamma_\text{coll} = 2\sum_i n_i \langle \sigma_i v_i \rangle
-\tag{24.7}</span></span></p>
+\tag{25.7}</span></span></p>
 <p>ここで <span class="math inline">n_i</span> は衝突相手の数密度、<span class="math inline">\sigma_i v_i</span> は衝突断面積×相対速度の平均。</p>
 <p><strong>特徴</strong>：</p>
 <ul>
@@ -748,14 +753,14 @@ window.Quarto = {
 <img src="../images/voigt-profile.svg" class="img-fluid figure-img" style="width:92.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-voigt-profile-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;24.1: Voigt プロファイル（黒）と、その元となる Gaussian（赤・点線）／Lorentzian（青・破線）の比較。<strong>線形スケール</strong>ではコアの形が、<strong>対数スケール</strong>では翼の形が比較しやすい。<strong>コアは Gaussian で急速に落ち、翼に行くと Lorentzian がべき則 <span class="math inline">1/\Delta\nu^2</span> で長く伸びる</strong> ― これが Voigt 線の二面性で、観測者がコア（温度）と翼（密度・圧力）を別々のプローブとして使える理由。
+図&nbsp;25.1: Voigt プロファイル（黒）と、その元となる Gaussian（赤・点線）／Lorentzian（青・破線）の比較。<strong>線形スケール</strong>ではコアの形が、<strong>対数スケール</strong>では翼の形が比較しやすい。<strong>コアは Gaussian で急速に落ち、翼に行くと Lorentzian がべき則 <span class="math inline">1/\Delta\nu^2</span> で長く伸びる</strong> ― これが Voigt 線の二面性で、観測者がコア（温度）と翼（密度・圧力）を別々のプローブとして使える理由。
 </figcaption>
 </figure>
 </div>
 <p>自然幅 + 衝突幅（合算した Lorentzian、幅 <span class="math inline">\gamma</span>）と Doppler 拡がり（Gaussian、幅 <span class="math inline">\Delta\nu_D</span>）の <strong>両方</strong> が効くのが現実。線形は両者の <strong>畳み込み</strong>：</p>
 <p><span id="eq-voigt-convolution"><span class="math display">
 \phi_V(\nu - \nu_0) = \phi_L \otimes \phi_D = \int \phi_L(\nu - \nu' - \nu_0) \phi_D(\nu' - \nu_0) d\nu'
-\tag{24.8}</span></span></p>
+\tag{25.8}</span></span></p>
 <p>これが <strong>Voigt プロファイル</strong>。閉形式では書けないが、無次元パラメータ</p>
 <p><span class="math display">
 a = \frac{\gamma}{2\Delta\nu_D}, \quad x = \frac{\nu - \nu_0}{\Delta\nu_D}
@@ -814,7 +819,7 @@ a = \frac{\gamma}{2\Delta\nu_D}, \quad x = \frac{\nu - \nu_0}{\Delta\nu_D}
 <p>これらマクロ速度場は <strong>熱的線幅と等価な Gaussian</strong> として加算的に効く：</p>
 <p><span id="eq-velocity-quadrature-sum"><span class="math display">
 \Delta\nu_\text{D,total}^2 = \Delta\nu_\text{D,thermal}^2 + \Delta\nu_\text{D,turb}^2 + \ldots
-\tag{24.9}</span></span></p>
+\tag{25.9}</span></span></p>
 <p>熱的成分と乱流成分の分離は、<strong>元素質量に対する依存性</strong> から行える：熱は <span class="math inline">1/\sqrt{m}</span> 依存、乱流は元素質量によらない。</p>
 <div class="callout callout-style-simple callout-warning">
 <div class="callout-body d-flex">
@@ -847,7 +852,7 @@ a = \frac{\gamma}{2\Delta\nu_D}, \quad x = \frac{\nu - \nu_0}{\Delta\nu_D}
 <p>磁場 <span class="math inline">\mathbf{B}</span> の下では、原子のエネルギー準位が磁気量子数 <span class="math inline">m_J</span> に応じて分裂する：<strong>Zeeman 効果</strong>。</p>
 <p><span id="eq-zeeman-energy"><span class="math display">
 \Delta E_\text{Zeeman} = g_J \mu_B B m_J
-\tag{24.10}</span></span></p>
+\tag{25.10}</span></span></p>
 <p>ここで <span class="math inline">g_J</span> は Landé <span class="math inline">g</span> 因子、<span class="math inline">\mu_B = e\hbar/2m_e</span> は Bohr 磁子。</p>
 <p>観測される線形への影響：</p>
 <ul>

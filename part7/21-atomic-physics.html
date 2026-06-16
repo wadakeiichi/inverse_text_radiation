@@ -219,6 +219,11 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../contents.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">目次</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../00-prologue.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">序章　この本の目的と歩き方</span></a>
   </div>
 </li>
@@ -540,12 +545,12 @@ window.Quarto = {
 <p><strong>第一層：イコニック・アンカー（リュードベリ公式）</strong></p>
 <p><span id="eq-rydberg"><span class="math display">
 \frac{1}{\lambda} = R_\mathrm{H} \left( \frac{1}{n_1^2} - \frac{1}{n_2^2} \right)
-\tag{23.1}</span></span></p>
+\tag{24.1}</span></span></p>
 <p>線スペクトルの「骨格」を一目で示す。<span class="math inline">R_\mathrm{H}</span> は基本定数の組合せ、<span class="math inline">1/n^2</span> は束縛状態のエネルギー、離散性が「線が存在する理由」を語る。</p>
 <p><strong>第二層：構造的マップ（Hα を標準例とした線吸収係数）</strong></p>
 <p><span id="eq-line-absorption"><span class="math display">
 \alpha_\nu = \frac{\pi e^2}{m_e c} \, f_{lu} \, n_l \, \phi(\nu - \nu_0)
-\tag{23.2}</span></span></p>
+\tag{24.2}</span></span></p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -594,7 +599,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>地図の使い方</strong>：第VII部の各章はこの式の異なる因子を解き明かす。プランク関数地図と並べて読めば、本書を貫く二つの逆引きが同時に把握できる。第VIII部の QED で、両者は前因子 <span class="math inline">2h\nu^3/c^2</span> を介して統一される（<a href="../part8/25-qed-minimum.html#eq-einstein-A" class="quarto-xref">式&nbsp;<span>27.4</span></a> 参照）。</p>
+<p><strong>地図の使い方</strong>：第VII部の各章はこの式の異なる因子を解き明かす。プランク関数地図と並べて読めば、本書を貫く二つの逆引きが同時に把握できる。第VIII部の QED で、両者は前因子 <span class="math inline">2h\nu^3/c^2</span> を介して統一される（<a href="../part8/25-qed-minimum.html#eq-einstein-A" class="quarto-xref">式&nbsp;<span>28.4</span></a> 参照）。</p>
 </div>
 </div>
 </div>
@@ -639,7 +644,7 @@ window.Quarto = {
 <p>第19章 §19.1 で見た太陽の Fraunhofer C 線（<span class="math inline">\lambda = 656</span> nm, H<span class="math inline">\alpha</span>）と、それに続く水素線系列の振動数は、すべて <strong>Rydberg 公式</strong> で書ける：</p>
 <p><span id="eq-rydberg-formula"><span class="math display">
 \frac{1}{\lambda} = R_H \left(\frac{1}{n_l^2} - \frac{1}{n_u^2}\right)
-\tag{23.3}</span></span></p>
+\tag{24.3}</span></span></p>
 <p>ここで <span class="math inline">R_H \simeq 1.097 \times 10^7</span> m<span class="math inline">^{-1}</span> は Rydberg 定数、<span class="math inline">n_l, n_u</span> は主量子数。</p>
 <ul>
 <li><strong>Lyman 系列</strong>（<span class="math inline">n_l = 1</span>）：紫外、<span class="math inline">\lambda &lt; 122</span> nm</li>
@@ -668,15 +673,15 @@ window.Quarto = {
 <p>Bohr（1913）は、Rutherford の原子模型に <strong>角運動量量子化</strong> を導入した：</p>
 <p><span id="eq-bohr-quantization"><span class="math display">
 L = n\hbar, \quad n = 1, 2, 3, \ldots
-\tag{23.4}</span></span></p>
+\tag{24.4}</span></span></p>
 <p>これと古典電磁気の Coulomb 力 + Newton 運動方程式を組み合わせると、エネルギー準位</p>
 <p><span id="eq-bohr-energy"><span class="math display">
 E_n = -\frac{1}{2} \frac{m_e e^4}{(4\pi\epsilon_0)^2 \hbar^2} \frac{1}{n^2} = -\frac{13.6\,\text{eV}}{n^2}
-\tag{23.5}</span></span></p>
+\tag{24.5}</span></span></p>
 <p>が出る。線振動数は <span class="math inline">h\nu = E_u - E_l</span> から</p>
 <p><span id="eq-bohr-rydberg"><span class="math display">
 \frac{1}{\lambda} = \frac{m_e e^4}{(4\pi\epsilon_0)^2 \cdot 4\pi \hbar^3 c} \left(\frac{1}{n_l^2} - \frac{1}{n_u^2}\right) = R_H \left(\frac{1}{n_l^2} - \frac{1}{n_u^2}\right)
-\tag{23.6}</span></span></p>
+\tag{24.6}</span></span></p>
 <p>これで Rydberg 公式が量子物理から <strong>逆引き</strong> された。</p>
 <div class="callout callout-style-simple callout-warning">
 <div class="callout-body d-flex">
@@ -695,11 +700,11 @@ E_n = -\frac{1}{2} \frac{m_e e^4}{(4\pi\epsilon_0)^2 \hbar^2} \frac{1}{n^2} = -\
 <p>電子の波動的性質を取り入れた Schrödinger 方程式（1926）を Coulomb ポテンシャル <span class="math inline">V(r) = -e^2/(4\pi\epsilon_0 r)</span> の下で解くと、波動関数</p>
 <p><span id="eq-hydrogen-wavefunction"><span class="math display">
 \psi_{nlm}(r, \theta, \phi) = R_{nl}(r) Y_{lm}(\theta, \phi)
-\tag{23.7}</span></span></p>
+\tag{24.7}</span></span></p>
 <p>が得られる。ここで <span class="math inline">n, l, m</span> は主量子数・軌道角運動量量子数・磁気量子数。エネルギーは（非相対論的・スピン無視）</p>
 <p><span id="eq-schrodinger-energy"><span class="math display">
 E_n = -\frac{13.6\,\text{eV}}{n^2}
-\tag{23.8}</span></span></p>
+\tag{24.8}</span></span></p>
 <p>Bohr 模型と <strong>同じエネルギー</strong> だが、構造が深い：</p>
 <ol type="1">
 <li><strong>縮退</strong>：<span class="math inline">n</span> が同じで <span class="math inline">l, m</span> が違う状態はエネルギーが等しい（Coulomb ポテンシャル固有の縮退）</li>
@@ -725,7 +730,7 @@ E_n = -\frac{13.6\,\text{eV}}{n^2}
 <p>中心地図 <span class="math inline">\alpha_\nu = (\pi e^2/m_e c) f_{lu} n_l \phi(\nu-\nu_0)</span> の <strong>振動子強度</strong> <span class="math inline">f_{lu}</span> は、量子力学では <strong>遷移行列要素</strong> から計算される：</p>
 <p><span id="eq-oscillator-strength"><span class="math display">
 f_{lu} = \frac{2 m_e \omega_{ul}}{3 \hbar} |\langle u | \mathbf{r} | l \rangle|^2 \cdot \frac{1}{g_l}
-\tag{23.9}</span></span></p>
+\tag{24.9}</span></span></p>
 <p>ここで <span class="math inline">\langle u | \mathbf{r} | l \rangle</span> は <strong>電気双極子遷移行列要素</strong>、<span class="math inline">\omega_{ul} = (E_u - E_l)/\hbar</span>。物理的解釈：</p>
 <ul>
 <li><span class="math inline">f_{lu}</span> は古典的振動子の <strong>強度を表す無次元量</strong> で、<span class="math inline">\sum_u f_{lu} = N_\text{electrons}</span>（<strong>Thomas-Reiche-Kuhn 和則</strong>）</li>
@@ -756,11 +761,11 @@ f_{lu} = \frac{2 m_e \omega_{ul}}{3 \hbar} |\langle u | \mathbf{r} | l \rangle|^
 <p>電場 <span class="math inline">\mathbf{E}(t) = \mathbf{E}_0 e^{-i\omega t}</span> に弱く減衰する束縛電子（質量 <span class="math inline">m_e</span>、電荷 <span class="math inline">-e</span>、固有角振動数 <span class="math inline">\omega_0</span>、減衰率 <span class="math inline">\gamma</span>）の運動方程式：</p>
 <p><span id="eq-lorentz-oscillator"><span class="math display">
 \ddot{\mathbf{r}} + \gamma \dot{\mathbf{r}} + \omega_0^2 \mathbf{r} = -\frac{e}{m_e}\mathbf{E}(t)
-\tag{23.10}</span></span></p>
+\tag{24.10}</span></span></p>
 <p>定常解の振幅から、放電子による双極子モーメント <span class="math inline">\mathbf{p}(t)</span> を求め、これに対する <strong>吸収断面積</strong>（時間平均パワー吸収率を入射エネルギーフラックスで割ったもの）を計算すると、振動数積分された値は</p>
 <p><span id="eq-classical-integrated-cross-section"><span class="math display">
 \int_0^\infty \sigma_\text{cl}(\nu)\, d\nu = \frac{\pi e^2}{m_e c}
-\tag{23.11}</span></span></p>
+\tag{24.11}</span></span></p>
 <p>ここで前因子 <span class="math inline">\pi e^2/m_e c</span> は <strong>減衰率 <span class="math inline">\gamma</span> にも線形ぴーくの位置にもよらない普遍量</strong>。古典電磁気の力学パラメータのみで決まる。</p>
 </section>
 <section id="量子論への橋-振動子強度-f_lu-の登場" class="level3">
@@ -768,30 +773,30 @@ f_{lu} = \frac{2 m_e \omega_{ul}}{3 \hbar} |\langle u | \mathbf{r} | l \rangle|^
 <p>実際の原子は古典振動子ではなく、量子的な多準位系である。各遷移 <span class="math inline">l \to u</span> の <strong>実効的な吸収強度</strong> は、古典的振動子の振動数積分断面積に <strong>無次元の補正係数</strong> <span class="math inline">f_{lu}</span>（振動子強度、第21.4節）を掛けたものとして書ける：</p>
 <p><span id="eq-quantum-integrated-cross-section"><span class="math display">
 \int_0^\infty \sigma_{lu}(\nu)\, d\nu = \frac{\pi e^2}{m_e c} \cdot f_{lu}
-\tag{23.12}</span></span></p>
-<p><span class="math inline">f_{lu}</span> は量子力学の遷移行列要素 <a href="#eq-oscillator-strength" class="quarto-xref">式&nbsp;<span>23.9</span></a> から計算される。Thomas-Reiche-Kuhn 和則 <span class="math inline">\sum_u f_{lu} = N_\text{electrons}</span> は、「すべての遷移を足し合わせると、古典的に予想される総吸収量に戻る」という意味で、古典-量子対応を定量的に保証する。</p>
+\tag{24.12}</span></span></p>
+<p><span class="math inline">f_{lu}</span> は量子力学の遷移行列要素 <a href="#eq-oscillator-strength" class="quarto-xref">式&nbsp;<span>24.9</span></a> から計算される。Thomas-Reiche-Kuhn 和則 <span class="math inline">\sum_u f_{lu} = N_\text{electrons}</span> は、「すべての遷移を足し合わせると、古典的に予想される総吸収量に戻る」という意味で、古典-量子対応を定量的に保証する。</p>
 <p>線形 <span class="math inline">\phi(\nu-\nu_0)</span>（規格化 <span class="math inline">\int \phi\, d\nu = 1</span>）を使って、吸収断面積を振動数依存の形に展開：</p>
 <p><span id="eq-cross-section-line"><span class="math display">
 \sigma_{lu}(\nu) = \frac{\pi e^2}{m_e c} f_{lu}\, \phi(\nu - \nu_0)
-\tag{23.13}</span></span></p>
+\tag{24.13}</span></span></p>
 <p>これを <strong>柱密度 × 断面積 = 吸収係数</strong> の関係に代入して、中心地図</p>
 <p><span id="eq-line-absorption-coefficient-complete"><span class="math display">
 \boxed{
 \alpha_\nu = \frac{\pi e^2}{m_e c}\, f_{lu}\, n_l\, \phi(\nu - \nu_0)
 }
-\tag{23.14}</span></span></p>
+\tag{24.14}</span></span></p>
 <p>を再現する（第VII部冒頭で経験式として受け入れていたこの式が、いま完全に逆引きされた）。</p>
 </section>
 <section id="einstein-b-係数との換算" class="level3">
 <h3 class="anchored" data-anchor-id="einstein-b-係数との換算">Einstein <span class="math inline">B</span> 係数との換算</h3>
-<p>第20章 §20.2 で導入した Einstein 関係 <span class="math inline">\alpha_\nu = (h\nu_0/4\pi) n_l B_{lu} \phi(\nu-\nu_0)</span> と本節の <a href="#eq-line-absorption-coefficient-complete" class="quarto-xref">式&nbsp;<span>23.14</span></a> を比べると、両者は <strong>同一の物理量を別の言葉で書いたもの</strong> であり、</p>
+<p>第20章 §20.2 で導入した Einstein 関係 <span class="math inline">\alpha_\nu = (h\nu_0/4\pi) n_l B_{lu} \phi(\nu-\nu_0)</span> と本節の <a href="#eq-line-absorption-coefficient-complete" class="quarto-xref">式&nbsp;<span>24.14</span></a> を比べると、両者は <strong>同一の物理量を別の言葉で書いたもの</strong> であり、</p>
 <p><span id="eq-B-f-conversion"><span class="math display">
 B_{lu} = \frac{4\pi^2 e^2}{m_e c h\nu_0}\, f_{lu}
-\tag{23.15}</span></span></p>
+\tag{24.15}</span></span></p>
 <p>の換算で結ばれる（<span class="math inline">J_\nu</span> 規約、§11.3）。さらに Einstein 関係 <span class="math inline">A_{ul} = (2h\nu^3/c^2) B_{ul} = (2h\nu^3/c^2)(g_l/g_u) B_{lu}</span> と組合せて、自発放出率 <span class="math inline">A_{ul}</span> も振動子強度から：</p>
 <p><span id="eq-A-f-conversion"><span class="math display">
 A_{ul} = \frac{8\pi^2 e^2 \nu_0^2}{m_e c^3}\, \frac{g_l}{g_u}\, f_{lu}
-\tag{23.16}</span></span></p>
+\tag{24.16}</span></span></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -855,7 +860,7 @@ A_{ul} = \frac{8\pi^2 e^2 \nu_0^2}{m_e c^3}\, \frac{g_l}{g_u}\, f_{lu}
 <p>電気双極子遷移は、波動関数のパリティと角運動量の選択則を持つ：</p>
 <p><span id="eq-selection-rules-E1"><span class="math display">
 \Delta l = \pm 1, \quad \Delta m = 0, \pm 1
-\tag{23.17}</span></span></p>
+\tag{24.17}</span></span></p>
 <p>これらを満たさない遷移は、電気双極子では起こらない ― 「<strong>禁制</strong>」（<strong>forbidden</strong>）。</p>
 <p>しかし、より高次の遷移は弱いながら可能：</p>
 <ul>

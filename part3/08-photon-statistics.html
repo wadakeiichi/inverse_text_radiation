@@ -219,6 +219,11 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../contents.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">目次</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../00-prologue.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">序章　この本の目的と歩き方</span></a>
   </div>
 </li>
@@ -641,17 +646,17 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \boxed{\frac{1}{e^{h\nu/kT} - 1}}
 <p>各「単一粒子状態」<span class="math inline">i</span> に何個の粒子が入るかを <span class="math inline">n_i</span> とする。<span class="math inline">n_i</span> は 0, 1, 2, … と自由。状態 <span class="math inline">i</span> の縮退度（同じエネルギー <span class="math inline">E_i</span> の状態数）を <span class="math inline">g_i</span>、その状態を占有する粒子の総数を <span class="math inline">N_i</span> とすると、これらの占有を実現する場合の数（ミクロ状態数）は、</p>
 <p><span id="eq-bose-multiplicity"><span class="math display">
 W_\text{BE} = \prod_i \frac{(N_i + g_i - 1)!}{N_i!\,(g_i - 1)!}
-\tag{10.1}</span></span></p>
+\tag{11.1}</span></span></p>
 <p>これは「<span class="math inline">g_i</span> 個の箱に <span class="math inline">N_i</span> 個の区別できない玉を入れる組合せ」である。</p>
 <p>エントロピー <span class="math inline">S = k_B \ln W</span> を、制約 <span class="math inline">\sum N_i = N</span>, <span class="math inline">\sum N_i E_i = E</span> のもとで最大化する。Lagrange 未定乗数法（第6章 §6.4 の手順）と Stirling 近似で、結果は</p>
 <p><span id="eq-bose-einstein"><span class="math display">
 \bar{n}_i = \frac{1}{e^{(E_i - \mu)/k_B T} - 1}
-\tag{10.2}</span></span></p>
+\tag{11.2}</span></span></p>
 <p>これが <strong>Bose–Einstein 分布</strong>（<strong>Bose–Einstein distribution</strong>）である。<span class="math inline">\bar{n}_i</span> は状態 <span class="math inline">i</span> あたりの平均<strong>占有数</strong>（<strong>occupation number</strong>）。</p>
 </section>
 <section id="導出ノートオンライン版限定" class="level2 callout-derive" data-collapse="true">
 <h2 class="anchored" data-anchor-id="導出ノートオンライン版限定">導出ノート（オンライン版限定）</h2>
-<p><a href="#eq-bose-multiplicity" class="quarto-xref">式&nbsp;<span>10.1</span></a> の対数をとり、Stirling 近似 <span class="math inline">\ln N! \simeq N \ln N - N</span> を使うと</p>
+<p><a href="#eq-bose-multiplicity" class="quarto-xref">式&nbsp;<span>11.1</span></a> の対数をとり、Stirling 近似 <span class="math inline">\ln N! \simeq N \ln N - N</span> を使うと</p>
 <p><span class="math display">
 \ln W = \sum_i \left[ (N_i + g_i) \ln(N_i + g_i) - N_i \ln N_i - g_i \ln g_i \right]
 </span></p>
@@ -659,9 +664,9 @@ W_\text{BE} = \prod_i \frac{(N_i + g_i - 1)!}{N_i!\,(g_i - 1)!}
 <p><span class="math display">
 \frac{\partial}{\partial N_i}\left[ \ln W - \alpha (\sum_j N_j - N) - \beta (\sum_j N_j E_j - E) \right] = 0
 </span></p>
-<p>から <span class="math inline">\ln(N_i + g_i) - \ln N_i = \alpha + \beta E_i</span>、すなわち <span class="math inline">\bar{n}_i = N_i/g_i = 1/(e^{\alpha + \beta E_i} - 1)</span> を得る。<span class="math inline">\beta = 1/k_B T</span>、<span class="math inline">\alpha = -\mu/k_B T</span> で <a href="#eq-bose-einstein" class="quarto-xref">式&nbsp;<span>10.2</span></a> に至る。</p>
+<p>から <span class="math inline">\ln(N_i + g_i) - \ln N_i = \alpha + \beta E_i</span>、すなわち <span class="math inline">\bar{n}_i = N_i/g_i = 1/(e^{\alpha + \beta E_i} - 1)</span> を得る。<span class="math inline">\beta = 1/k_B T</span>、<span class="math inline">\alpha = -\mu/k_B T</span> で <a href="#eq-bose-einstein" class="quarto-xref">式&nbsp;<span>11.2</span></a> に至る。</p>
 </section>
-<p><a href="#eq-bose-einstein" class="quarto-xref">式&nbsp;<span>10.2</span></a> はプランク分布の占有因子の形と一致する ― ただし化学ポテンシャル <span class="math inline">\mu</span> がついている。光子の場合は次節で <span class="math inline">\mu = 0</span> となる。</p>
+<p><a href="#eq-bose-einstein" class="quarto-xref">式&nbsp;<span>11.2</span></a> はプランク分布の占有因子の形と一致する ― ただし化学ポテンシャル <span class="math inline">\mu</span> がついている。光子の場合は次節で <span class="math inline">\mu = 0</span> となる。</p>
 <div class="callout callout-style-simple callout-tip">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -684,16 +689,16 @@ W_\text{BE} = \prod_i \frac{(N_i + g_i - 1)!}{N_i!\,(g_i - 1)!}
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>使えるようになった道具</strong>（§8.3）：Bose–Einstein 占有数 <a href="#eq-bose-einstein" class="quarto-xref">式&nbsp;<span>10.2</span></a> を、温度と化学ポテンシャルから具体的に書き下せる。これが観測されるプランク分布の指数関数因子の正体を与える。</p>
+<p><strong>使えるようになった道具</strong>（§8.3）：Bose–Einstein 占有数 <a href="#eq-bose-einstein" class="quarto-xref">式&nbsp;<span>11.2</span></a> を、温度と化学ポテンシャルから具体的に書き下せる。これが観測されるプランク分布の指数関数因子の正体を与える。</p>
 </div>
 </div>
 <section id="sec-photon-statistics-mu-zero" class="level2">
 <h2 class="anchored" data-anchor-id="sec-photon-statistics-mu-zero">8.4 光子の化学ポテンシャル ― なぜゼロか</h2>
 <p>[本文目安：B4｜導出：M1]</p>
-<p>光子は <a href="#eq-bose-einstein" class="quarto-xref">式&nbsp;<span>10.2</span></a> で <strong><span class="math inline">\mu = 0</span></strong> が成り立つ。これがプランク分布のあの単純な形</p>
+<p>光子は <a href="#eq-bose-einstein" class="quarto-xref">式&nbsp;<span>11.2</span></a> で <strong><span class="math inline">\mu = 0</span></strong> が成り立つ。これがプランク分布のあの単純な形</p>
 <p><span id="eq-photon-occupation"><span class="math display">
 \bar{n}_\text{photon}(\nu, T) = \frac{1}{e^{h\nu/k_B T} - 1}
-\tag{10.3}</span></span></p>
+\tag{11.3}</span></span></p>
 <p>を生む。なぜ <span class="math inline">\mu = 0</span> になるのか。</p>
 <p>化学ポテンシャル <span class="math inline">\mu</span> は、粒子を一個加えたときの自由エネルギーの変化 <span class="math inline">\partial F / \partial N</span> である（第7章 §7.5）。これは<strong>粒子数 <span class="math inline">N</span> が保存量である場合</strong>にのみ意味を持つ。粒子数が保存しない系では、<span class="math inline">N</span> は熱平衡で「他の量と整合するように決まる」量となり、<span class="math inline">\mu</span> は粒子追加の代償なし ― すなわち <span class="math inline">\mu = 0</span> ― になる。</p>
 <p>光子の場合：</p>
@@ -738,18 +743,18 @@ W_\text{BE} = \prod_i \frac{(N_i + g_i - 1)!}{N_i!\,(g_i - 1)!}
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>使えるようになった道具</strong>（§8.4）：化学ポテンシャルがゼロな系（光子）の占有数 <a href="#eq-photon-occupation" class="quarto-xref">式&nbsp;<span>10.3</span></a> は、温度と振動数だけで書き下せる。これが観測される CMB の黒体スペクトルの指数関数因子の正体である。CMB が完全な黒体に近い (<span class="math inline">\mu \lesssim 10^{-5}</span>) ことは、<span class="math inline">\mu = 0</span> の前提（光子数の非保存）が宇宙史で確かに実現したことの観測的証拠になる（第16章 <span class="math inline">\mu</span> 歪み）。</p>
+<p><strong>使えるようになった道具</strong>（§8.4）：化学ポテンシャルがゼロな系（光子）の占有数 <a href="#eq-photon-occupation" class="quarto-xref">式&nbsp;<span>11.3</span></a> は、温度と振動数だけで書き下せる。これが観測される CMB の黒体スペクトルの指数関数因子の正体である。CMB が完全な黒体に近い (<span class="math inline">\mu \lesssim 10^{-5}</span>) ことは、<span class="math inline">\mu = 0</span> の前提（光子数の非保存）が宇宙史で確かに実現したことの観測的証拠になる（第16章 <span class="math inline">\mu</span> 歪み）。</p>
 </div>
 </div>
 </section>
 <section id="sec-photon-statistics-photon-gas" class="level2">
 <h2 class="anchored" data-anchor-id="sec-photon-statistics-photon-gas">8.5 光子気体の統計 ― エネルギー密度から圧力まで</h2>
 <p>[本文目安：B4｜導出：M1]</p>
-<p><a href="#eq-photon-occupation" class="quarto-xref">式&nbsp;<span>10.3</span></a> を使って、放射場の各種熱力学量を計算できる。</p>
+<p><a href="#eq-photon-occupation" class="quarto-xref">式&nbsp;<span>11.3</span></a> を使って、放射場の各種熱力学量を計算できる。</p>
 <p><strong>エネルギー密度</strong>（振動数あたり）：振動数 <span class="math inline">\nu</span> 近傍のモード密度を <span class="math inline">g(\nu) d\nu</span>、各モードのエネルギーを <span class="math inline">h\nu</span>、平均光子数を <span class="math inline">\bar{n}</span> とすると</p>
 <p><span id="eq-photon-energy-density"><span class="math display">
 u_\nu d\nu = g(\nu)\, h\nu\, \bar{n}(\nu, T)\, d\nu = g(\nu) \cdot \frac{h\nu}{e^{h\nu/k_B T} - 1}\, d\nu
-\tag{10.4}</span></span></p>
+\tag{11.4}</span></span></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -761,27 +766,27 @@ u_\nu d\nu = g(\nu)\, h\nu\, \bar{n}(\nu, T)\, d\nu = g(\nu) \cdot \frac{h\nu}{e
 </div>
 <div class="callout-body-container callout-body">
 <p><strong>方針（先取りの注意）</strong>：以下の計算でモード密度 <span class="math inline">g(\nu) = 8\pi\nu^2/c^3</span> を<strong>先取りして借用する</strong>。これは電磁場が三次元空間で離散的な定在波モードを持つことから出る量で、その本格的な導出は<strong>第V部・第14章で行う</strong>。</p>
-<p>本章の本丸は <strong>占有因子 <span class="math inline">1/(e^{h\nu/kT}-1)</span> の導出</strong>（前節 <a href="#eq-photon-occupation" class="quarto-xref">式&nbsp;<span>10.3</span></a>）であって、モード密度を含めた全体形 <span class="math inline">B_\nu(T)</span> ではない。モード密度を借りる理由は、占有因子だけだと放射場のエネルギー密度として観測できる量にはならず、「占有因子＋モード密度」の組合せで初めて Planck 分布全体が見えるからである。<strong>全体形が見えてから、第V部でモード密度の起源に逆引きする</strong>、というのが本書の戦略である。</p>
+<p>本章の本丸は <strong>占有因子 <span class="math inline">1/(e^{h\nu/kT}-1)</span> の導出</strong>（前節 <a href="#eq-photon-occupation" class="quarto-xref">式&nbsp;<span>11.3</span></a>）であって、モード密度を含めた全体形 <span class="math inline">B_\nu(T)</span> ではない。モード密度を借りる理由は、占有因子だけだと放射場のエネルギー密度として観測できる量にはならず、「占有因子＋モード密度」の組合せで初めて Planck 分布全体が見えるからである。<strong>全体形が見えてから、第V部でモード密度の起源に逆引きする</strong>、というのが本書の戦略である。</p>
 </div>
 </div>
 <p>第V部から <span class="math inline">g(\nu) = 8\pi\nu^2/c^3</span> を借りて代入すれば</p>
 <p><span id="eq-planck-energy-density"><span class="math display">
 u_\nu(T) = \frac{8\pi \nu^2}{c^3} \cdot \frac{h\nu}{e^{h\nu/k_B T} - 1} = \frac{8\pi h \nu^3}{c^3} \cdot \frac{1}{e^{h\nu/k_B T} - 1}
-\tag{10.5}</span></span></p>
+\tag{11.5}</span></span></p>
 <p>そして比強度 <span class="math inline">B_\nu = c u_\nu / (4\pi)</span> から</p>
 <p><span id="eq-planck-rederived"><span class="math display">
 B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/k_B T} - 1}
-\tag{10.6}</span></span></p>
+\tag{11.6}</span></span></p>
 <p><strong>プランク分布の全体形が、光子気体の Bose–Einstein 統計と（第V部から借りた）モード密度から再構成された</strong>。本章で逆引きしたのは右側の <strong>占有因子</strong>であり、前因子 <span class="math inline">2h\nu^3/c^2</span> の起源は第V部で引き続き扱う。</p>
-<p><strong>全エネルギー密度</strong>：<a href="#eq-planck-energy-density" class="quarto-xref">式&nbsp;<span>10.5</span></a> を全振動数で積分（<span class="math inline">x = h\nu/k_B T</span> の置換と <span class="math inline">\int_0^\infty x^3/(e^x - 1) dx = \pi^4/15</span>）すると</p>
+<p><strong>全エネルギー密度</strong>：<a href="#eq-planck-energy-density" class="quarto-xref">式&nbsp;<span>11.5</span></a> を全振動数で積分（<span class="math inline">x = h\nu/k_B T</span> の置換と <span class="math inline">\int_0^\infty x^3/(e^x - 1) dx = \pi^4/15</span>）すると</p>
 <p><span id="eq-energy-density-T4"><span class="math display">
 u(T) = \int_0^\infty u_\nu d\nu = \frac{4\sigma}{c} T^4 \equiv a T^4
-\tag{10.7}</span></span></p>
+\tag{11.7}</span></span></p>
 <p>ここで <span class="math inline">\sigma</span> は Stefan–Boltzmann 定数。<strong><span class="math inline">T^4</span> の起源は、占有因子の積分結果として現れる</strong>。</p>
 <p><strong>圧力</strong>：光子気体の圧力は、第7章 §7.5 の熱力学関数の方法で</p>
 <p><span id="eq-photon-pressure"><span class="math display">
 P = \frac{1}{3} u = \frac{a T^4}{3}
-\tag{10.8}</span></span></p>
+\tag{11.8}</span></span></p>
 <p>「<span class="math inline">P = u/3</span>」の係数は、光子が質量ゼロ・等方分布の Bose 気体である帰結。気体の状態方程式（理想気体 <span class="math inline">PV = N k_B T</span>）とは異なる。</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">

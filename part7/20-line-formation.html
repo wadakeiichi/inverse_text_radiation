@@ -219,6 +219,11 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../contents.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">目次</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../00-prologue.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">序章　この本の目的と歩き方</span></a>
   </div>
 </li>
@@ -534,12 +539,12 @@ window.Quarto = {
 <p><strong>第一層：イコニック・アンカー（リュードベリ公式）</strong></p>
 <p><span id="eq-rydberg"><span class="math display">
 \frac{1}{\lambda} = R_\mathrm{H} \left( \frac{1}{n_1^2} - \frac{1}{n_2^2} \right)
-\tag{22.1}</span></span></p>
+\tag{23.1}</span></span></p>
 <p>線スペクトルの「骨格」を一目で示す。<span class="math inline">R_\mathrm{H}</span> は基本定数の組合せ、<span class="math inline">1/n^2</span> は束縛状態のエネルギー、離散性が「線が存在する理由」を語る。</p>
 <p><strong>第二層：構造的マップ（Hα を標準例とした線吸収係数）</strong></p>
 <p><span id="eq-line-absorption"><span class="math display">
 \alpha_\nu = \frac{\pi e^2}{m_e c} \, f_{lu} \, n_l \, \phi(\nu - \nu_0)
-\tag{22.2}</span></span></p>
+\tag{23.2}</span></span></p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -588,7 +593,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>地図の使い方</strong>：第VII部の各章はこの式の異なる因子を解き明かす。プランク関数地図と並べて読めば、本書を貫く二つの逆引きが同時に把握できる。第VIII部の QED で、両者は前因子 <span class="math inline">2h\nu^3/c^2</span> を介して統一される（<a href="../part8/25-qed-minimum.html#eq-einstein-A" class="quarto-xref">式&nbsp;<span>27.4</span></a> 参照）。</p>
+<p><strong>地図の使い方</strong>：第VII部の各章はこの式の異なる因子を解き明かす。プランク関数地図と並べて読めば、本書を貫く二つの逆引きが同時に把握できる。第VIII部の QED で、両者は前因子 <span class="math inline">2h\nu^3/c^2</span> を介して統一される（<a href="../part8/25-qed-minimum.html#eq-einstein-A" class="quarto-xref">式&nbsp;<span>28.4</span></a> 参照）。</p>
 </div>
 </div>
 </div>
@@ -633,14 +638,14 @@ window.Quarto = {
 <p>吸収線の <strong>観測量</strong> として最も標準的なのが <strong>等価幅</strong>（<strong>equivalent width</strong>, <strong>EW</strong>）。</p>
 <p><span id="eq-equivalent-width"><span class="math display">
 W_\lambda \equiv \int_\text{line} \frac{I_c - I_\lambda}{I_c} d\lambda
-\tag{22.3}</span></span></p>
+\tag{23.3}</span></span></p>
 <div id="fig-equivalent-width" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-equivalent-width-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="../images/equivalent-width.svg" class="img-fluid figure-img" style="width:85.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-equivalent-width-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;22.1: 等価幅 <span class="math inline">W_\lambda</span> の幾何的な定義 ― <strong>吸収線が連続光から引き抜いた光の総量（青の面積）</strong> を、深さが連続光と同じ高さの <strong>赤の矩形</strong> に置き換えたときの幅。輪郭の細かい形状によらない積分量なので、観測しやすく理論との比較も容易。
+図&nbsp;23.1: 等価幅 <span class="math inline">W_\lambda</span> の幾何的な定義 ― <strong>吸収線が連続光から引き抜いた光の総量（青の面積）</strong> を、深さが連続光と同じ高さの <strong>赤の矩形</strong> に置き換えたときの幅。輪郭の細かい形状によらない積分量なので、観測しやすく理論との比較も容易。
 </figcaption>
 </figure>
 </div>
@@ -665,14 +670,14 @@ W_\lambda \equiv \int_\text{line} \frac{I_c - I_\lambda}{I_c} d\lambda
 <section id="sec-line-three-processes" class="level2">
 <h2 class="anchored" data-anchor-id="sec-line-three-processes">20.2 線の三つの素過程 ― Einstein 係数の再登場</h2>
 <p>[本文目安：B3]</p>
-<p>第11章 §11.2 で導入した <strong>Einstein 係数</strong>（同じ図を再掲、<a href="#fig-einstein-three-processes-line" class="quarto-xref">図&nbsp;<span>22.2</span></a>）：</p>
+<p>第11章 §11.2 で導入した <strong>Einstein 係数</strong>（同じ図を再掲、<a href="#fig-einstein-three-processes-line" class="quarto-xref">図&nbsp;<span>23.2</span></a>）：</p>
 <div id="fig-einstein-three-processes-line" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-einstein-three-processes-line-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="../images/einstein-processes.svg" class="img-fluid figure-img" style="width:88.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-einstein-three-processes-line-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;22.2: 三つの素過程の準位図（再掲）。連続スペクトル側（第IV部）で導入した同じ図が、線スペクトル側でも線形成の出発点となる。両中心地図が共通の Hamiltonian の二側面であることを示す最初の表れ。
+図&nbsp;23.2: 三つの素過程の準位図（再掲）。連続スペクトル側（第IV部）で導入した同じ図が、線スペクトル側でも線形成の出発点となる。両中心地図が共通の Hamiltonian の二側面であることを示す最初の表れ。
 </figcaption>
 </figure>
 </div>
@@ -684,12 +689,12 @@ W_\lambda \equiv \int_\text{line} \frac{I_c - I_\lambda}{I_c} d\lambda
 <p>これらは原子物理（第21章で再導出）と熱平衡条件（第11章 §11.3 の Einstein 関係式）</p>
 <p><span id="eq-einstein-relations"><span class="math display">
 \frac{A_{ul}}{B_{ul}} = \frac{2h\nu^3}{c^2}, \quad \frac{g_l B_{lu}}{g_u B_{ul}} = 1
-\tag{22.4}</span></span></p>
+\tag{23.4}</span></span></p>
 <p>で結ばれる。ここで <span class="math inline">g_l, g_u</span> は下/上準位の縮重度。これらは <strong>線形成の主役</strong> である。</p>
 <p>線吸収係数を Einstein 係数で書き直すと</p>
 <p><span id="eq-line-absorption-einstein"><span class="math display">
 \alpha_\nu = \frac{h\nu_0}{4\pi} n_l B_{lu} \phi(\nu - \nu_0) \left[1 - \frac{g_l n_u}{g_u n_l}\right]
-\tag{22.5}</span></span></p>
+\tag{23.5}</span></span></p>
 <p>右辺の括弧内が <strong>誘導放出補正</strong>。<span class="math inline">n_u &gt; 0</span> なら吸収を弱める効果を表す。</p>
 <div class="callout callout-style-simple callout-tip">
 <div class="callout-body d-flex">
@@ -714,15 +719,15 @@ W_\lambda \equiv \int_\text{line} \frac{I_c - I_\lambda}{I_c} d\lambda
 <p>第5章 §5.4 で定義した <strong>ソース関数</strong> <span class="math inline">S_\nu</span> は、線スペクトルでは</p>
 <p><span id="eq-line-source-function"><span class="math display">
 S_\nu^\text{line} = \frac{j_\nu^\text{line}}{\alpha_\nu^\text{line}}
-\tag{22.6}</span></span></p>
+\tag{23.6}</span></span></p>
 <p>の形で構成される。<span class="math inline">j_\nu^\text{line}</span> は線放射係数（自発放出 + 誘導放出からの寄与）、<span class="math inline">\alpha_\nu^\text{line}</span> は線吸収係数。Einstein 係数を使うと、<span class="math inline">\phi(\nu-\nu_0)</span> が両者で共通になる前提のもとで</p>
 <p><span id="eq-line-S-explicit"><span class="math display">
 S_\nu^\text{line} = \frac{A_{ul} n_u}{B_{lu} n_l - B_{ul} n_u} = \frac{2h\nu_0^3/c^2}{(g_u n_l)/(g_l n_u) - 1}
-\tag{22.7}</span></span></p>
+\tag{23.7}</span></span></p>
 <p>これは形式的に <strong>プランク関数と同じ構造</strong> だが、<span class="math inline">h\nu/k_BT</span> の代わりに <span class="math inline">\ln[(g_u n_l)/(g_l n_u)]</span> が指数因子に入っている。これを <strong>「励起温度</strong>」（<strong>excitation temperature</strong>）<span class="math inline">T_\text{ex}</span> を使って</p>
 <p><span id="eq-excitation-temperature"><span class="math display">
 \frac{g_u n_l}{g_l n_u} = e^{h\nu_0/k_B T_\text{ex}}
-\tag{22.8}</span></span></p>
+\tag{23.8}</span></span></p>
 <p>と書き直すと、<span class="math inline">S_\nu^\text{line} = B_{\nu_0}(T_\text{ex})</span>。すなわち <strong>線源泉関数は、励起温度に対応する黒体スペクトル</strong>。</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -745,11 +750,11 @@ S_\nu^\text{line} = \frac{A_{ul} n_u}{B_{lu} n_l - B_{ul} n_u} = \frac{2h\nu_0^3
 <p><strong>LTE</strong>（局所熱平衡、第6章 §6.5）が成り立つ環境では、占有数 <span class="math inline">n_l, n_u</span> は局所の <strong>キネティック温度</strong> <span class="math inline">T_\text{kin}</span>（粒子の運動エネルギー由来の温度）に対する Boltzmann 分布で書ける：</p>
 <p><span id="eq-boltzmann"><span class="math display">
 \frac{n_u}{g_u} = \frac{n_l}{g_l} e^{-h\nu_0/k_B T_\text{kin}}
-\tag{22.9}</span></span></p>
+\tag{23.9}</span></span></p>
 <p>すると <span class="math inline">T_\text{ex} = T_\text{kin}</span> となり、線源泉関数は <strong>キネティック温度のプランク関数</strong>：</p>
 <p><span id="eq-LTE-source-function"><span class="math display">
 S_\nu^\text{line, LTE} = B_\nu(T_\text{kin})
-\tag{22.10}</span></span></p>
+\tag{23.10}</span></span></p>
 <p>これが「LTE の良い」点 ― <strong>線スペクトルが連続スペクトルと同じ温度</strong> で記述できる。例えば、恒星大気の Eddington-Barbier 近似（第15章 §15.3）が線スペクトルにも適用できる：観測される線輝度 = 線で光学的深さ 2/3 になる層の温度 <span class="math inline">T_\text{kin}</span> のプランク関数値。</p>
 <div class="callout callout-style-simple callout-tip">
 <div class="callout-body d-flex">
@@ -769,7 +774,7 @@ S_\nu^\text{line, LTE} = B_\nu(T_\text{kin})
 <img src="../images/line-formation-geometry.svg" class="img-fluid figure-img" style="width:88.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-line-geometry-lte-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;22.3: 同じ原子遷移が観測の幾何条件で吸収線にも輝線にもなる三つのケース（第19章 §19.3 で導入した図を、§20.4 で源泉関数の文脈で再掲）。温度勾配と背景光の組合せがどう線形態を決めるかが視覚的に分かる。
+図&nbsp;23.3: 同じ原子遷移が観測の幾何条件で吸収線にも輝線にもなる三つのケース（第19章 §19.3 で導入した図を、§20.4 で源泉関数の文脈で再掲）。温度勾配と背景光の組合せがどう線形態を決めるかが視覚的に分かる。
 </figcaption>
 </figure>
 </div>
@@ -830,7 +835,7 @@ W(N) = \begin{cases}
 \propto \sqrt{\ln N} &amp; \text{(飽和領域)} \\
 \propto \sqrt{N} &amp; \text{(減衰翼領域)}
 \end{cases}
-\tag{22.11}</span></span></p>
+\tag{23.11}</span></span></p>
 <p>物理的解釈：</p>
 <ul>
 <li><strong>線形領域</strong>：吸収線の光学的深さ <span class="math inline">\tau &lt; 1</span>。等価幅は柱密度に比例</li>

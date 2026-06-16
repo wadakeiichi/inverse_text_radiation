@@ -219,6 +219,11 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../contents.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">目次</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../00-prologue.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">序章　この本の目的と歩き方</span></a>
   </div>
 </li>
@@ -611,7 +616,7 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \boxed{\frac{1}{e^{h\nu/kT} - 1}}
 <p>理想気体 <span class="math inline">N</span> 個の分子を二つの体積に分けるとき、分子が左 <span class="math inline">N_L</span>、右 <span class="math inline">N_R = N - N_L</span> で分かれるマクロ状態の多重度は</p>
 <p><span id="eq-multiplicity-gas"><span class="math display">
 \Omega(N_L) = \binom{N}{N_L} = \frac{N!}{N_L!\, N_R!}
-\tag{8.1}</span></span></p>
+\tag{9.1}</span></span></p>
 <p>これは <span class="math inline">N_L = N/2</span> で最大になる。<strong>等しく分かれる状態が圧倒的に多いミクロ状態を持つ</strong>ことが、気体が均一に広がる理由である。</p>
 <p><strong>例：放射場のモード</strong></p>
 <p>第V部で本格的に扱うが、空洞中の電磁場は離散的なモードの集まりとみなせる。各モードに何個の光子が入っているかで、放射場のミクロ状態が決まる。同じ全エネルギー <span class="math inline">E</span> を、これらのモードに<strong>どう分配するか</strong>でミクロ状態が変わる。マクロ状態（全エネルギー、温度）が決まっても、ミクロ状態には多くの選択肢がある。</p>
@@ -634,7 +639,7 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \boxed{\frac{1}{e^{h\nu/kT} - 1}}
 <p>多重度 <span class="math inline">\Omega</span> を直接扱うと、桁が極端に大きくなって扱いにくい（<span class="math inline">10^{10^{23}}</span> など）。対数をとった量</p>
 <p><span id="eq-entropy-boltzmann"><span class="math display">
 S = k_B \ln \Omega
-\tag{8.2}</span></span></p>
+\tag{9.2}</span></span></p>
 <p>を <strong>エントロピー</strong>（<strong>entropy</strong>）と呼ぶ。これが Boltzmann の関係である（彼の墓碑にこの式が刻まれている）。</p>
 <p>エントロピーには重要な性質がある：</p>
 <ol type="1">
@@ -659,7 +664,7 @@ S = k_B \ln \Omega
 <p><strong>温度との関係</strong>：エントロピー <span class="math inline">S</span> をエネルギー <span class="math inline">E</span> の関数として書くと、温度はその偏微分で定まる：</p>
 <p><span id="eq-temperature-entropy"><span class="math display">
 \frac{1}{T} = \left(\frac{\partial S}{\partial E}\right)_{V, N}
-\tag{8.3}</span></span></p>
+\tag{9.3}</span></span></p>
 <p>つまり「温度」とは、エネルギーを少し加えたときにエントロピーがどれだけ増えるかの<strong>逆数</strong>である。これが熱力学的な温度の最も本質的な定義になる。</p>
 </section>
 <section id="sec-thermal-equilibrium-max-entropy" class="level2">
@@ -676,7 +681,7 @@ S = k_B \ln \Omega
 <p>これらの制約のもとで多重度 <span class="math inline">\Omega(\{n_i\})</span> を最大化するのが最大エントロピー原理。具体的にはラグランジュの未定乗数法（乗数 <span class="math inline">\alpha, \beta</span>）を使い、</p>
 <p><span id="eq-lagrange"><span class="math display">
 \frac{\partial}{\partial n_i}\left[ \ln \Omega - \alpha \sum_j n_j - \beta \sum_j n_j E_j \right] = 0
-\tag{8.4}</span></span></p>
+\tag{9.4}</span></span></p>
 <p>を解く。<span class="math inline">\Omega</span> の具体形は粒子の統計（古典・Bose・Fermi）で変わるが、いずれも</p>
 <p><span class="math display">
 n_i \propto f(\beta E_i, \alpha)
@@ -687,7 +692,7 @@ n_i \propto f(\beta E_i, \alpha)
 <li><strong>Bose 統計</strong>：<span class="math inline">n_i = 1/(e^{\alpha + \beta E_i} - 1)</span>（第8章）</li>
 <li><strong>Fermi 統計</strong>：<span class="math inline">n_i = 1/(e^{\alpha + \beta E_i} + 1)</span></li>
 </ul>
-<p>ここで <span class="math inline">\beta = 1/k_B T</span> が温度の逆数になることが、<a href="#eq-temperature-entropy" class="quarto-xref">式&nbsp;<span>8.3</span></a> と整合する。<span class="math inline">\alpha</span> は化学ポテンシャル <span class="math inline">\mu</span> と <span class="math inline">\alpha = -\mu/k_B T</span> で対応する。</p>
+<p>ここで <span class="math inline">\beta = 1/k_B T</span> が温度の逆数になることが、<a href="#eq-temperature-entropy" class="quarto-xref">式&nbsp;<span>9.3</span></a> と整合する。<span class="math inline">\alpha</span> は化学ポテンシャル <span class="math inline">\mu</span> と <span class="math inline">\alpha = -\mu/k_B T</span> で対応する。</p>
 <div class="callout callout-style-simple callout-tip">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -758,7 +763,7 @@ n_i \propto f(\beta E_i, \alpha)
 <p>すなわち</p>
 <p><span id="eq-detailed-balance"><span class="math display">
 n_i\, W_{i \to j} = n_j\, W_{j \to i}
-\tag{8.5}</span></span></p>
+\tag{9.5}</span></span></p>
 <p>ここで <span class="math inline">W_{i \to j}</span> は単位時間あたりの遷移確率、<span class="math inline">n_i</span> は状態 <span class="math inline">i</span> の占有数。この関係は、各準位ペア <span class="math inline">(i, j)</span> について個別に成立する。</p>
 <p><strong>なぜ詳細釣り合いが効くのか</strong>：</p>
 <p>熱平衡を「全粒子の正味の流れがゼロ」と定義しても矛盾はないが、それだけでは「ある複雑な閉じた経路を回る流れ」を排除できない。詳細釣り合いはこれより強い条件で、<strong>任意のペアで個別に釣り合う</strong>ことを要請する。</p>

@@ -219,6 +219,11 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../contents.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">目次</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../00-prologue.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">序章　この本の目的と歩き方</span></a>
   </div>
 </li>
@@ -533,7 +538,7 @@ window.Quarto = {
 <img src="../images/hydrogen-map.svg" class="img-fluid figure-img" style="width:90.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hydrogen-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;21.1: 水素線吸収係数 <span class="math inline">\alpha_\nu</span> の各因子と、それを逆引きする章群の対応。<strong>因子の色＝担当する章/部の色</strong>で結ばれており、矢印に頼らず読み取れる設計。第VII部の§19-23と、線スペクトルが連続側と統合される第VIII部までの流れを一望できる。
+図&nbsp;22.1: 水素線吸収係数 <span class="math inline">\alpha_\nu</span> の各因子と、それを逆引きする章群の対応。<strong>因子の色＝担当する章/部の色</strong>で結ばれており、矢印に頼らず読み取れる設計。第VII部の§19-23と、線スペクトルが連続側と統合される第VIII部までの流れを一望できる。
 </figcaption>
 </figure>
 </div>
@@ -542,12 +547,12 @@ window.Quarto = {
 <p><strong>第一層：イコニック・アンカー（リュードベリ公式）</strong></p>
 <p><span id="eq-rydberg"><span class="math display">
 \frac{1}{\lambda} = R_\mathrm{H} \left( \frac{1}{n_1^2} - \frac{1}{n_2^2} \right)
-\tag{21.1}</span></span></p>
+\tag{22.1}</span></span></p>
 <p>線スペクトルの「骨格」を一目で示す。<span class="math inline">R_\mathrm{H}</span> は基本定数の組合せ、<span class="math inline">1/n^2</span> は束縛状態のエネルギー、離散性が「線が存在する理由」を語る。</p>
 <p><strong>第二層：構造的マップ（Hα を標準例とした線吸収係数）</strong></p>
 <p><span id="eq-line-absorption"><span class="math display">
 \alpha_\nu = \frac{\pi e^2}{m_e c} \, f_{lu} \, n_l \, \phi(\nu - \nu_0)
-\tag{21.2}</span></span></p>
+\tag{22.2}</span></span></p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -596,7 +601,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>地図の使い方</strong>：第VII部の各章はこの式の異なる因子を解き明かす。プランク関数地図と並べて読めば、本書を貫く二つの逆引きが同時に把握できる。第VIII部の QED で、両者は前因子 <span class="math inline">2h\nu^3/c^2</span> を介して統一される（<a href="../part8/25-qed-minimum.html#eq-einstein-A" class="quarto-xref">式&nbsp;<span>27.4</span></a> 参照）。</p>
+<p><strong>地図の使い方</strong>：第VII部の各章はこの式の異なる因子を解き明かす。プランク関数地図と並べて読めば、本書を貫く二つの逆引きが同時に把握できる。第VIII部の QED で、両者は前因子 <span class="math inline">2h\nu^3/c^2</span> を介して統一される（<a href="../part8/25-qed-minimum.html#eq-einstein-A" class="quarto-xref">式&nbsp;<span>28.4</span></a> 参照）。</p>
 </div>
 </div>
 </div>
@@ -747,7 +752,7 @@ window.Quarto = {
 <img src="../images/line-formation-geometry.svg" class="img-fluid figure-img" style="width:92.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-line-geometry-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;21.2: 同じ原子遷移が、観測の幾何条件によって <strong>吸収線</strong> にも <strong>輝線</strong> にも見える仕組み。(a) 背後に明るい連続光源があってその前を冷たいガスが覆う → 吸収線（恒星大気）、(b) 背景に連続光がなく、励起されたガス自体を観測 → 輝線（星雲）、(c) 温度勾配のある大気 → 表面付近では冷たく見えるため吸収線。Kirchhoff の三法則の現代的視覚化、§20.4 でも再登場する。
+図&nbsp;22.2: 同じ原子遷移が、観測の幾何条件によって <strong>吸収線</strong> にも <strong>輝線</strong> にも見える仕組み。(a) 背後に明るい連続光源があってその前を冷たいガスが覆う → 吸収線（恒星大気）、(b) 背景に連続光がなく、励起されたガス自体を観測 → 輝線（星雲）、(c) 温度勾配のある大気 → 表面付近では冷たく見えるため吸収線。Kirchhoff の三法則の現代的視覚化、§20.4 でも再登場する。
 </figcaption>
 </figure>
 </div>
@@ -785,7 +790,7 @@ window.Quarto = {
 <p>水素原子の基底状態 (<span class="math inline">n=1</span>) には、電子スピン ↑ と陽子スピン ↑ が <strong>平行か反平行か</strong> で微小なエネルギー差がある（<strong>超微細構造</strong>, <strong>hyperfine structure</strong>）。エネルギー差はわずか <span class="math inline">\Delta E \simeq 5.9 \times 10^{-6}</span> eV、対応する振動数は</p>
 <p><span id="eq-21cm-frequency"><span class="math display">
 \nu_{21\text{cm}} = 1420.405\,\text{MHz} \quad (\lambda = 21.106\,\text{cm})
-\tag{21.3}</span></span></p>
+\tag{22.3}</span></span></p>
 <p>これが <strong>21 cm 線</strong>（<strong>21 cm line</strong>, <strong>HI line</strong>）。</p>
 <p>宇宙物理での 21 cm 線の特別な役割：</p>
 <ul>

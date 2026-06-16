@@ -219,6 +219,11 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../contents.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">目次</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../00-prologue.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">序章　この本の目的と歩き方</span></a>
   </div>
 </li>
@@ -576,14 +581,14 @@ B_\nu(T) = \frac{2 h\, \boxed{\nu^3}}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 <h2 class="anchored" data-anchor-id="sec-cavity-modes-standing-waves">14.1 空洞中の定在波 ― 境界条件と量子化</h2>
 <p>[本文目安：B2-B3]</p>
 <p>辺長 <span class="math inline">L</span> の立方体空洞を考える。壁は完全導体（第13章 §13.6）。三軸方向を <span class="math inline">x, y, z</span> とし、原点を空洞の隅にとる。</p>
-<p>第13章の平面波解 <a href="13-electromagnetic-waves.html#eq-plane-wave" class="quarto-xref">式&nbsp;<span>15.4</span></a> をそのまま入れると壁の境界条件を満たさない。代わりに、<strong>定在波</strong>（<strong>standing wave</strong>）の重ね合わせとして電場を書く。電場の <span class="math inline">x</span> 成分は、壁 <span class="math inline">y = 0, L</span> と <span class="math inline">z = 0, L</span> で接線方向（<span class="math inline">E_\parallel = 0</span>）の条件から</p>
+<p>第13章の平面波解 <a href="13-electromagnetic-waves.html#eq-plane-wave" class="quarto-xref">式&nbsp;<span>16.4</span></a> をそのまま入れると壁の境界条件を満たさない。代わりに、<strong>定在波</strong>（<strong>standing wave</strong>）の重ね合わせとして電場を書く。電場の <span class="math inline">x</span> 成分は、壁 <span class="math inline">y = 0, L</span> と <span class="math inline">z = 0, L</span> で接線方向（<span class="math inline">E_\parallel = 0</span>）の条件から</p>
 <p><span id="eq-Ex-standing-wave"><span class="math display">
 E_x(\mathbf{r}, t) \propto \cos(k_x x) \sin(k_y y) \sin(k_z z) \, e^{-i\omega t}
-\tag{16.1}</span></span></p>
+\tag{17.1}</span></span></p>
 <p>の形になる（<span class="math inline">E_y, E_z</span> も同様に対称な形）。境界条件 <span class="math inline">\sin(k_i L) = 0</span> から、許される波数成分は</p>
 <p><span id="eq-allowed-k"><span class="math display">
 k_x = \frac{n_x \pi}{L}, \quad k_y = \frac{n_y \pi}{L}, \quad k_z = \frac{n_z \pi}{L}
-\tag{16.2}</span></span></p>
+\tag{17.2}</span></span></p>
 <p>ここで <span class="math inline">n_x, n_y, n_z</span> は<strong>正の整数</strong>（<span class="math inline">n_i = 1, 2, 3, \ldots</span>）。<span class="math inline">n_x = n_y = n_z = 0</span> では全成分が消えて自明だが、軸成分の一部だけが 0 になる場合（例：<span class="math inline">n_x = 0</span>, <span class="math inline">n_y, n_z \ge 1</span>）は厳密には残る偏光自由度が一つで生き残る。ただし全モード数の中でこれらは「境界の格子点」上の有限個に過ぎず、熱力学極限（<span class="math inline">V \to \infty</span>）でモード密度には寄与しない（次節以降の積分で測度ゼロ）。本書では §14.2 以降の数え上げで <span class="math inline">n_i \ge 1</span> のみを扱う。</p>
 <p><strong>重要なポイント</strong>：境界条件が、本来連続だった波数 <span class="math inline">\mathbf{k}</span> を<strong>離散的な格子点</strong>に量子化した。これは Planck の量子化（第10章）とは別の意味の「量子化」 ― 古典電磁気と境界条件だけから出る幾何学的離散化である。</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -608,26 +613,26 @@ k_x = \frac{n_x \pi}{L}, \quad k_y = \frac{n_y \pi}{L}, \quad k_z = \frac{n_z \p
 <section id="sec-cavity-modes-k-counting" class="level2">
 <h2 class="anchored" data-anchor-id="sec-cavity-modes-k-counting">14.2 許される波数の数え上げ ― <span class="math inline">k</span> 空間の格子</h2>
 <p>[本文目安：B3]</p>
-<p><a href="#eq-allowed-k" class="quarto-xref">式&nbsp;<span>16.2</span></a> で許される <span class="math inline">(n_x, n_y, n_z)</span> の組は、<strong>正の整数の三つ組</strong>である。これらを <strong>波数空間</strong>（<strong>k-space</strong>）にプロットすると、原点付近に格子点が並ぶ。</p>
+<p><a href="#eq-allowed-k" class="quarto-xref">式&nbsp;<span>17.2</span></a> で許される <span class="math inline">(n_x, n_y, n_z)</span> の組は、<strong>正の整数の三つ組</strong>である。これらを <strong>波数空間</strong>（<strong>k-space</strong>）にプロットすると、原点付近に格子点が並ぶ。</p>
 <div id="fig-k-space" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-k-space-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="../images/k-space-counting.svg" class="img-fluid figure-img" style="width:88.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-k-space-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;16.1: <span class="math inline">k</span> 空間における格子点の並び（格子間隔 <span class="math inline">\pi/L</span>）と、波数 <span class="math inline">k</span> 未満の数え上げに使う <strong>第一象限（1/8 球）の球殻</strong>。プランク分布の前因子 <span class="math inline">8\pi\nu^2/c^3</span> を生む計算の幾何を、本書最大の数え上げの核として示す。
+図&nbsp;17.1: <span class="math inline">k</span> 空間における格子点の並び（格子間隔 <span class="math inline">\pi/L</span>）と、波数 <span class="math inline">k</span> 未満の数え上げに使う <strong>第一象限（1/8 球）の球殻</strong>。プランク分布の前因子 <span class="math inline">8\pi\nu^2/c^3</span> を生む計算の幾何を、本書最大の数え上げの核として示す。
 </figcaption>
 </figure>
 </div>
 <p>格子間隔は各軸方向に <span class="math inline">\pi/L</span>。したがって、波数空間における<strong>単位体積あたりの格子点密度</strong>は</p>
 <p><span id="eq-k-space-density"><span class="math display">
 \rho_{k\text{-space}} = \frac{1}{(\pi/L)^3} = \frac{L^3}{\pi^3} = \frac{V}{\pi^3}
-\tag{16.3}</span></span></p>
+\tag{17.3}</span></span></p>
 <p>ここで <span class="math inline">V = L^3</span> は空洞の体積。</p>
 <p><strong>波数の大きさ</strong> <span class="math inline">k = |\mathbf{k}| = \sqrt{k_x^2 + k_y^2 + k_z^2}</span> が <span class="math inline">k</span> 未満であるモードの個数は、波数空間で<strong>半径 <span class="math inline">k</span> の球の体積</strong>を考えればよい。ただし格子点は正の整数のみなので、<strong>第一象限（octant, 1/8 のみ）</strong>を取る：</p>
 <p><span id="eq-mode-count-k-onepol"><span class="math display">
 N_\text{mode}^{(1)}(&lt;k) = \rho_{k\text{-space}} \cdot \frac{1}{8} \cdot \frac{4\pi k^3}{3} = \frac{V k^3}{6\pi^2}
-\tag{16.4}</span></span></p>
+\tag{17.4}</span></span></p>
 <p>ここで指数 (1) は「偏光自由度を考慮していない」ことを表す（次節で考慮）。</p>
 <div class="callout callout-style-simple callout-tip">
 <div class="callout-body d-flex">
@@ -646,10 +651,10 @@ N_\text{mode}^{(1)}(&lt;k) = \rho_{k\text{-space}} \cdot \frac{1}{8} \cdot \frac
 <h2 class="anchored" data-anchor-id="sec-cavity-modes-polarization">14.3 偏光自由度 ― 横波の2倍</h2>
 <p>[本文目安：B2-B3]</p>
 <p>第13章 §13.4 で見たように、与えられた <span class="math inline">\mathbf{k}</span> ベクトルに対し、独立な偏光方向は<strong>二つ</strong>ある（横波条件）。</p>
-<p><a href="#eq-mode-count-k-onepol" class="quarto-xref">式&nbsp;<span>16.4</span></a> に偏光自由度を掛けて：</p>
+<p><a href="#eq-mode-count-k-onepol" class="quarto-xref">式&nbsp;<span>17.4</span></a> に偏光自由度を掛けて：</p>
 <p><span id="eq-mode-count-k"><span class="math display">
 N_\text{mode}(&lt;k) = 2 \cdot \frac{V k^3}{6\pi^2} = \frac{V k^3}{3\pi^2}
-\tag{16.5}</span></span></p>
+\tag{17.5}</span></span></p>
 <p>これが波数 <span class="math inline">k</span> 未満のモードの総数。<span class="math inline">V</span> に比例するのは、大きな空洞ほどモード数が多いという当然の結果。</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -668,15 +673,15 @@ N_\text{mode}(&lt;k) = 2 \cdot \frac{V k^3}{6\pi^2} = \frac{V k^3}{3\pi^2}
 <section id="sec-cavity-modes-frequency" class="level2">
 <h2 class="anchored" data-anchor-id="sec-cavity-modes-frequency">14.4 振動数空間に変換 ― モード密度の正体</h2>
 <p>[本文目安：B3]</p>
-<p>波数 <span class="math inline">k</span> と振動数 <span class="math inline">\nu</span> は第13章の分散関係 <a href="13-electromagnetic-waves.html#eq-dispersion-relation" class="quarto-xref">式&nbsp;<span>15.5</span></a> で結ばれる：<span class="math inline">k = 2\pi\nu/c</span>。<a href="#eq-mode-count-k" class="quarto-xref">式&nbsp;<span>16.5</span></a> に代入して</p>
+<p>波数 <span class="math inline">k</span> と振動数 <span class="math inline">\nu</span> は第13章の分散関係 <a href="13-electromagnetic-waves.html#eq-dispersion-relation" class="quarto-xref">式&nbsp;<span>16.5</span></a> で結ばれる：<span class="math inline">k = 2\pi\nu/c</span>。<a href="#eq-mode-count-k" class="quarto-xref">式&nbsp;<span>17.5</span></a> に代入して</p>
 <p><span id="eq-mode-count-nu"><span class="math display">
 N_\text{mode}(&lt;\nu) = \frac{V}{3\pi^2} \left(\frac{2\pi\nu}{c}\right)^3 = \frac{8\pi V \nu^3}{3 c^3}
-\tag{16.6}</span></span></p>
+\tag{17.6}</span></span></p>
 <p>これが振動数 <span class="math inline">\nu</span> 未満のモードの総数。微分して <strong>振動数あたり・単位体積あたりのモード密度</strong> を得る：</p>
 <p><span id="eq-mode-density"><span class="math display">
 g(\nu) = \frac{1}{V} \frac{dN_\text{mode}}{d\nu} = \frac{8\pi \nu^2}{c^3}
-\tag{16.7}</span></span></p>
-<p>これが第8章 <a href="../part3/08-photon-statistics.html#eq-photon-energy-density" class="quarto-xref">式&nbsp;<span>10.4</span></a> と第9章 <a href="../part4/09-classical-failure.html#eq-mode-density-borrowed" class="quarto-xref">式&nbsp;<span>11.2</span></a> で<strong>借用</strong>していた式である。本章で本格的に逆引きが完了した。</p>
+\tag{17.7}</span></span></p>
+<p>これが第8章 <a href="../part3/08-photon-statistics.html#eq-photon-energy-density" class="quarto-xref">式&nbsp;<span>11.4</span></a> と第9章 <a href="../part4/09-classical-failure.html#eq-mode-density-borrowed" class="quarto-xref">式&nbsp;<span>12.2</span></a> で<strong>借用</strong>していた式である。本章で本格的に逆引きが完了した。</p>
 <p><strong><span class="math inline">\nu^2</span> の起源を辿る</strong>：</p>
 <table class="caption-top table">
 <colgroup>
@@ -720,20 +725,20 @@ g(\nu) = \frac{1}{V} \frac{dN_\text{mode}}{d\nu} = \frac{8\pi \nu^2}{c^3}
 <section id="sec-cavity-modes-bnu-derivation" class="level2">
 <h2 class="anchored" data-anchor-id="sec-cavity-modes-bnu-derivation">14.5 プランク分布の前因子への合流 ― 第I〜V部の総まとめ</h2>
 <p>[本文目安：B3｜導出：M1]</p>
-<p>モード密度 <a href="#eq-mode-density" class="quarto-xref">式&nbsp;<span>16.7</span></a> を、第8章で立ち上げた<strong>振動数あたりエネルギー密度</strong>の表式に代入する。第8章 <a href="../part3/08-photon-statistics.html#eq-photon-energy-density" class="quarto-xref">式&nbsp;<span>10.4</span></a> から：</p>
+<p>モード密度 <a href="#eq-mode-density" class="quarto-xref">式&nbsp;<span>17.7</span></a> を、第8章で立ち上げた<strong>振動数あたりエネルギー密度</strong>の表式に代入する。第8章 <a href="../part3/08-photon-statistics.html#eq-photon-energy-density" class="quarto-xref">式&nbsp;<span>11.4</span></a> から：</p>
 <p><span id="eq-uvalues"><span class="math display">
 u_\nu(T) = g(\nu) \cdot h\nu \cdot \bar{n}(\nu, T) = \frac{8\pi\nu^2}{c^3} \cdot h\nu \cdot \frac{1}{e^{h\nu/k_BT}-1}
-\tag{16.8}</span></span></p>
+\tag{17.8}</span></span></p>
 <p>整理すると</p>
 <p><span id="eq-planck-energy-final"><span class="math display">
 u_\nu(T) = \frac{8\pi h\nu^3}{c^3} \cdot \frac{1}{e^{h\nu/k_BT}-1}
-\tag{16.9}</span></span></p>
+\tag{17.9}</span></span></p>
 <p>比強度に変換する（等方放射場では <span class="math inline">B_\nu = c\, u_\nu / 4\pi</span>、第4章 §4.3）：</p>
 <p><span id="eq-planck-fully-derived"><span class="math display">
 \boxed{
 B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/k_BT}-1}
 }
-\tag{16.10}</span></span></p>
+\tag{17.10}</span></span></p>
 <p><strong>プランク分布が、観測から逆向きに完全に説明された。</strong> 各因子の起源を一覧にまとめる：</p>
 <table class="caption-top table">
 <colgroup>
