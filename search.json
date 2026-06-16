@@ -3236,188 +3236,210 @@
   {
     "objectID": "part6/17-stars-planets-dust.html",
     "href": "part6/17-stars-planets-dust.html",
-    "title": "第17章　恒星・惑星・ダストの熱放射",
+    "title": "第17章　恒星・惑星・ダスト・電離ガスの熱放射",
     "section": "",
     "text": "この章の中心地図",
     "crumbs": [
       "第VI部　現実の宇宙へ戻る",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダストの熱放射</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダスト・電離ガスの熱放射</span>"
     ]
   },
   {
     "objectID": "part6/17-stars-planets-dust.html#sec-stars-planets-dust-map",
     "href": "part6/17-stars-planets-dust.html#sec-stars-planets-dust-map",
-    "title": "第17章　恒星・惑星・ダストの熱放射",
+    "title": "第17章　恒星・惑星・ダスト・電離ガスの熱放射",
     "section": "",
     "text": "中心地図：プランク関数 ― 本部の主題は「ずれ」\n\nB_\\nu(T) = \\frac{2 h \\nu^3}{c^2} \\cdot \\frac{1}{e^{h\\nu/kT} - 1} \\quad \\xrightarrow{\\text{現実}} \\quad \\text{?}\n\n第VI部（現実の宇宙へ戻る）は、観測される現実の天体スペクトルが、この理想的プランク関数からどのように、そしてなぜ ずれるかを扱う。ずれの主な起源：\n\n振動数依存不透明度 → 修正黒体（第15章）\n多温度成分の重ね合わせ → 多温度黒体スペクトル（第17・18章）\n散乱効果（コンプトン化など）→ 高エネルギー側の変形（第18章）\n非熱的放射の混入 → シンクロトロン・ベキ則の重なり\n\n本部は、観測スペクトルを「理想的黒体＋ずれ」として読み解き、ずれの定量化から物理状態を引き出す視点を養う。\n\n\n\n\n\n\n\nノート\n\n\n\n方針：本章は最も「実務」に近い章。各節で「観測される SED → 仮定する物理モデル → 読み取れる物理量」の流れを意識して進める。",
     "crumbs": [
       "第VI部　現実の宇宙へ戻る",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダストの熱放射</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダスト・電離ガスの熱放射</span>"
     ]
   },
   {
     "objectID": "part6/17-stars-planets-dust.html#sec-stars-planets-dust-questions",
     "href": "part6/17-stars-planets-dust.html#sec-stars-planets-dust-questions",
-    "title": "第17章　恒星・惑星・ダストの熱放射",
+    "title": "第17章　恒星・惑星・ダスト・電離ガスの熱放射",
     "section": "この章で答える問い",
-    "text": "この章で答える問い\n\n\n恒星のスペクトル分類（OBAFGKM）は何を反映しているのか\n惑星の平衡温度を求めるとき、何を仮定し、何を無視しているのか\nダストの放射スペクトルが赤外で「黒体に似ているがずれている」のはなぜか\n多温度成分（恒星表層と内部、HII 領域と中性領域）は観測スペクトルにどう現れるのか",
+    "text": "この章で答える問い\n\n\n恒星のスペクトル分類（OBAFGKM）は何を反映しているのか\n惑星の平衡温度を求めるとき、何を仮定し、何を無視しているのか\nダストの放射スペクトルが赤外で「黒体に似ているがずれている」のはなぜか\n多温度成分（恒星表層と内部、HII 領域と中性領域）は観測スペクトルにどう現れるのか\n希薄な電離ガス（HII 領域）の連続光が、低振動数側で「黒体的」に見えるのはなぜか",
     "crumbs": [
       "第VI部　現実の宇宙へ戻る",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダストの熱放射</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダスト・電離ガスの熱放射</span>"
     ]
   },
   {
     "objectID": "part6/17-stars-planets-dust.html#sec-stars-planets-dust-goals",
     "href": "part6/17-stars-planets-dust.html#sec-stars-planets-dust-goals",
-    "title": "第17章　恒星・惑星・ダストの熱放射",
+    "title": "第17章　恒星・惑星・ダスト・電離ガスの熱放射",
     "section": "到達目標",
-    "text": "到達目標\nこの章を読み終えると、読者は次のことができるようになる：\n\n恒星の有効温度・惑星の平衡温度・ダストの色温度を、適切な近似のもとで計算できる\n修正黒体スペクトルからダストの性質（放射効率・温度・量）を読み取れる\n多温度合成スペクトルから、主要な温度成分を見分けられる",
+    "text": "到達目標\nこの章を読み終えると、読者は次のことができるようになる：\n\n恒星の有効温度・惑星の平衡温度・ダストの色温度を、適切な近似のもとで計算できる\n修正黒体スペクトルからダストの性質（放射効率・温度・量）を読み取れる\n多温度合成スペクトルから、主要な温度成分を見分けられる\n電離ガスの自由–自由放射が低振動数で黒体（B_\\nu(T_e)）に漸近する仕組みを説明できる",
     "crumbs": [
       "第VI部　現実の宇宙へ戻る",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダストの熱放射</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダスト・電離ガスの熱放射</span>"
     ]
   },
   {
     "objectID": "part6/17-stars-planets-dust.html#sec-stars-effective-temperature",
     "href": "part6/17-stars-planets-dust.html#sec-stars-effective-temperature",
-    "title": "第17章　恒星・惑星・ダストの熱放射",
+    "title": "第17章　恒星・惑星・ダスト・電離ガスの熱放射",
     "section": "17.1 恒星の有効温度 ― L = 4\\pi R^2 \\sigma T_\\text{eff}^4",
     "text": "17.1 恒星の有効温度 ― L = 4\\pi R^2 \\sigma T_\\text{eff}^4\n[本文目安：B3]\n恒星のスペクトルは、第15章 §15.2-§15.3 で扱った 「振動数依存不透明度を持つ恒星大気」 の典型例。完全な黒体ではないが、十分な近似で次のように書ける：\n\nL_\\star = 4\\pi R_\\star^2 \\sigma T_\\text{eff}^4\n\\tag{19.1}\nここで L_\\star は全光度、R_\\star は恒星半径、T_\\text{eff} は 有効温度。これは Stefan-Boltzmann 則（第2章 §2.4）の観測的応用：「もし恒星表面が温度 T_\\text{eff} の理想黒体だったとしたら、観測される全光度が同じになるような温度」と定義する。\n\n\n\n\n\n\n注意（観測）：「有効温度」は 観測上の便利な定義量 であって、恒星の物理的温度ではない。表層は温度勾配を持っており、紫外側で「より深く」、赤外側で「より浅く」見えている（Eddington-Barbier、第15章 §15.3）。有効温度は 積分量（全光度）からの逆算値で、振動数ごとに違う「色温度」とは別概念\n\n\n\nスペクトル分類 OBAFGKM は本質的に有効温度の分類：O型で約 40{,}000 K、M 型で約 3{,}000 K。これに付随する違い ― 吸収線パターン、紫外/可視/赤外の連続光比、彩層活動 ― はすべて温度から派生する物理である。\n\n\n\n\n\n\n問い：太陽（T_\\text{eff} = 5778 K）と Vega（T_\\text{eff} = 9602 K）の SED を比べたとき、両者の 同一波長 での明るさ比（半径と距離を同じと仮定）はどれくらいか？ 紫外、可視、赤外それぞれで違うか？\n短答：Wien 則 \\lambda_\\text{peak} \\propto 1/T から、Vega のピークは太陽より短波長側。同一波長での比 B_\\nu(T_1)/B_\\nu(T_2) は\n\n可視（500 nm）：Vega が 約 7.6 倍明るい\n紫外（250 nm）：Vega が 約 53 倍明るい（Wien 側の指数差が支配）\n赤外（5 µm）：Vega が 約 1.85 倍明るい（Rayleigh-Jeans 側、温度比のみ効く）\n\n紫外側ほど温度差が劇的に効くのが「Wien 側の急峻性」の現れ",
     "crumbs": [
       "第VI部　現実の宇宙へ戻る",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダストの熱放射</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダスト・電離ガスの熱放射</span>"
     ]
   },
   {
     "objectID": "part6/17-stars-planets-dust.html#sec-planet-equilibrium",
     "href": "part6/17-stars-planets-dust.html#sec-planet-equilibrium",
-    "title": "第17章　恒星・惑星・ダストの熱放射",
+    "title": "第17章　恒星・惑星・ダスト・電離ガスの熱放射",
     "section": "17.2 惑星の平衡温度 ― 入出力バランス",
     "text": "17.2 惑星の平衡温度 ― 入出力バランス\n[本文目安：B3]\n惑星は内部の核融合エネルギーを持たない（地球型岩石惑星では地殻活動の貢献は弱い）。観測される熱放射は、ほぼすべて 恒星からの入射光を吸収・再放射 したもの。\nエネルギー収支：\n\n\\underbrace{(1-A) \\cdot \\frac{L_\\star}{4\\pi d^2} \\cdot \\pi R_p^2}_\\text{吸収光} = \\underbrace{4\\pi R_p^2 \\cdot \\sigma T_\\text{eq}^4}_\\text{再放射}\n\\tag{19.2}\nここで A はアルベド（反射率）、d は恒星-惑星距離、R_p は惑星半径。解いて\n\nT_\\text{eq} = T_\\star \\left(\\frac{R_\\star}{2d}\\right)^{1/2} (1-A)^{1/4}\n\\tag{19.3}\n地球の場合（T_\\star = 5778 K, R_\\star/d = 1/214, A = 0.3）：T_\\text{eq} \\simeq 255 K \\simeq -18 °C。\n\n\n\n\n\n\n注意（観測）：実際の地球表面温度は約 +15 °C で、平衡温度より 33 K 高い。これは 温室効果（大気の赤外不透明度）による。式 19.3 は 「大気がない」近似 で、地球のように大気のある惑星では大きく外れる。\nしかし「平衡温度」は次のような実用的価値を持つ：\n\n多くの太陽系外惑星では大気がよくわからない → 平衡温度が 最初の温度推定値 として使われる\n「ハビタブルゾーン」（液体水が安定な軌道）は平衡温度から定義される",
     "crumbs": [
       "第VI部　現実の宇宙へ戻る",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダストの熱放射</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダスト・電離ガスの熱放射</span>"
     ]
   },
   {
     "objectID": "part6/17-stars-planets-dust.html#sec-dust-modified-blackbody",
     "href": "part6/17-stars-planets-dust.html#sec-dust-modified-blackbody",
-    "title": "第17章　恒星・惑星・ダストの熱放射",
+    "title": "第17章　恒星・惑星・ダスト・電離ガスの熱放射",
     "section": "17.3 ダストの修正黒体 ― 放射効率と粒子サイズ",
     "text": "17.3 ダストの修正黒体 ― 放射効率と粒子サイズ\n[本文目安：B3]\n星間ダスト、原始惑星系円盤の塵、星形成領域の冷たい塵 ― これらの熱放射は、第15章 §15.4 の 修正黒体スペクトル\n\nI_\\nu^\\text{dust} = Q_\\nu \\cdot B_\\nu(T_d), \\quad Q_\\nu \\propto \\nu^\\beta \\text{ (long wavelength)}\n\\tag{19.4}\nで記述される。観測される I_\\nu から、三つの物理量が読み取れる：\n\nダスト温度 T_d ― Wien 側の指数的減衰の鋭さ、または SED のピーク位置から\nemissivity index \\beta ― Rayleigh-Jeans 側の勾配の急さから\nダスト質量 ― 全光度を B_\\nu(T_d) で割ったときの規格化定数から（不透明度を仮定する必要あり）\n\n\\beta の値はダストの物理を反映する：\n\n大きな粒子（\\gtrsim 100 µm）：\\beta \\to 0（粒子サイズ ≈ 波長の極限）\n小さな結晶粒子（シリケート、\\lesssim 1 µm）：\\beta \\to 2\n非晶質シリケート、グラファイト：\\beta \\simeq 1.5〜2\n\n\n\n\n\n\n\nノート\n\n\n\n対応（観測）：ALMA で観測される原始惑星系円盤のミリ波 SED を \\beta で分析すると、円盤の中心部ほど粒子が大きい（\\beta が小さい）ことが発見されている。これは円盤内でダストが成長して惑星形成へ向かう過程の直接観測的証拠",
     "crumbs": [
       "第VI部　現実の宇宙へ戻る",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダストの熱放射</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダスト・電離ガスの熱放射</span>"
     ]
   },
   {
     "objectID": "part6/17-stars-planets-dust.html#sec-infrared-astronomy",
     "href": "part6/17-stars-planets-dust.html#sec-infrared-astronomy",
-    "title": "第17章　恒星・惑星・ダストの熱放射",
+    "title": "第17章　恒星・惑星・ダスト・電離ガスの熱放射",
     "section": "17.4 赤外線天文学 ― 多温度天体の現代観測",
     "text": "17.4 赤外線天文学 ― 多温度天体の現代観測\n[本文目安：B3]\n近代の宇宙論的観測では、赤外線・サブミリ波の天文学が決定的に重要。なぜなら：\n\n銀河の重元素の半分が星間ダストに閉じ込められており、その熱放射は 遠赤外（FIR）に大きなピーク を持つ\n高赤方偏移銀河は、紫外/可視光が宇宙膨張で赤方偏移し、観測波長帯が赤外/サブミリへ移動する\n\n主要観測施設の波長帯：\n\n\n\n観測施設\n波長帯\n主な対象\n\n\n\n\nSpitzer\n3.6〜160 µm\n中間赤外〜遠赤外、銀河系・近傍銀河\n\n\nHerschel\n60〜600 µm\n遠赤外〜サブミリ、星形成\n\n\nALMA\n0.3〜3.6 mm\n(サブ)ミリ波、原始惑星系円盤・高赤方偏移銀河\n\n\nJWST\n0.6〜28 µm\n近赤外〜中間赤外、高分解能分光・恒星形成\n\n\n\nこれら異なる波長帯の同一天体観測を組み合わせた 多波長 SED を、複数温度のダスト成分でフィットすることで、温度・質量・組成・空間構造を逆引きする。",
     "crumbs": [
       "第VI部　現実の宇宙へ戻る",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダストの熱放射</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダスト・電離ガスの熱放射</span>"
     ]
   },
   {
     "objectID": "part6/17-stars-planets-dust.html#sec-multi-temperature",
     "href": "part6/17-stars-planets-dust.html#sec-multi-temperature",
-    "title": "第17章　恒星・惑星・ダストの熱放射",
+    "title": "第17章　恒星・惑星・ダスト・電離ガスの熱放射",
     "section": "17.5 多温度合成 ― SED フィッティング",
     "text": "17.5 多温度合成 ― SED フィッティング\n[本文目安：B3]\n実際の銀河や星間雲は 複数の温度成分の混合 であることが普通：\n\n銀河の SED：恒星の光（\\sim 10^4 K の準黒体）＋ 暖かいダスト（\\sim 100 K）＋ 冷たいダスト（\\sim 20 K）＋ AGN や活発な星形成があれば中間赤外の高温成分\n星形成領域：HII 領域（\\sim 10^4 K のプラズマ自由-自由放射）＋ 高温ダスト（\\sim 100 K）＋ 冷たい分子雲のダスト（\\sim 15 K）＋ 線スペクトル\n\n全 SED は\n\nI_\\nu^\\text{total} = \\sum_i I_{\\nu, \\text{star}, i} + \\sum_j Q_\\nu(\\beta_j)\\, B_\\nu(T_j)\\, M_j + I_\\nu^\\text{lines} + I_\\nu^\\text{ff} + \\ldots\n\\tag{19.5}\nの形で組み立てる。フィッティングは温度・質量・\\beta の組合せを観測波長点と適合させ、\\chi^2 最小化や Bayesian inference で求める。\n\n\n\n\n\n\n注意（観測）：「冷たい成分の質量」を多温度フィットから推定するとき、温度との 強い縮退 に注意。同じピーク位置でも、(高温・少量) と (低温・大量) で同程度の SED を作れる場合がある。長波長側（Rayleigh-Jeans 側）の観測点が、この縮退を解く鍵となる\n\n\n\n\n\n\n\n\n\n問い：温度 T_d = 20 K のダスト成分のピーク波長を Wien 則で求めよ。これは何の観測施設の波長帯か？\n短答：\\lambda_\\text{peak} \\approx 2898\\,\\text{µm·K} / 20\\,\\text{K} \\simeq 145 µm。これは Herschel SPIRE / PACS の主帯域。冷たい星間ダストの観測が Herschel で飛躍的に進んだのはこのため",
     "crumbs": [
       "第VI部　現実の宇宙へ戻る",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダストの熱放射</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダスト・電離ガスの熱放射</span>"
+    ]
+  },
+  {
+    "objectID": "part6/17-stars-planets-dust.html#sec-free-free-ionized",
+    "href": "part6/17-stars-planets-dust.html#sec-free-free-ionized",
+    "title": "第17章　恒星・惑星・ダスト・電離ガスの熱放射",
+    "section": "17.6 電離ガスの自由–自由放射 ― 電波で見る黒体への漸近",
+    "text": "17.6 電離ガスの自由–自由放射 ― 電波で見る黒体への漸近\n[本文目安：B3]\n恒星・惑星・ダストはいずれも「面をもつ高密度の熱放射体」だった。しかし 希薄な電離ガス（HII 領域・惑星状星雲・銀河中心の電離ガスなど）も、熱的な連続光 ― 自由–自由放射（free-free emission、熱的制動放射, thermal bremsstrahlung）― を放つ。自由電子がイオンの Coulomb 場で曲げられるときに光子を出す過程で、電子が Maxwell 分布（温度 T_e）にあれば 熱的放射（第1章 §1.9）であり、LTE のもとでソース関数は S_\\nu=B_\\nu(T_e) になる（第3章・第5章）。\n鍵は、自由–自由吸収係数が低振動数ほど大きいことである：\n\n\\alpha_\\nu^{\\mathrm{ff}} \\propto n_e\\, n_i\\, T_e^{-3/2}\\, \\nu^{-2}\\, \\bar g_{\\mathrm{ff}}(\\nu,T_e)\n\\tag{19.6}\nここで n_e, n_i は電子・イオン数密度、\\bar g_{\\mathrm{ff}} は Gaunt 因子（\\nu にゆるやかに依存）。光学的厚さ \\tau_\\nu=\\int\\alpha_\\nu^{\\mathrm{ff}}\\,ds \\propto \\mathrm{EM}\\,\\nu^{-2.1}\\,T_e^{-1.35} は 発光量度（emission measure）\\mathrm{EM}=\\int n_e^2\\,ds で決まり、\\nu^{-2} で効くため 低振動数で光学的に厚く、高振動数で薄い。\n等温スラブ（温度 T_e、LTE）の射出強度は第5章の解 I_\\nu=B_\\nu(T_e)(1-e^{-\\tau_\\nu})。電波帯では h\\nu\\ll k_BT_e なので Rayleigh–Jeans が使え、輝度温度 T_b\\equiv c^2 I_\\nu/(2\\nu^2 k_B) で書くと\n\nT_b(\\nu)=T_e\\left(1-e^{-\\tau_\\nu}\\right)\n\\tag{19.7}\n低振動数側（光学的に厚い、\\tau_\\nu\\gg1）：T_b\\to T_e に飽和し、I_\\nu\\to B_\\nu(T_e)。これは第5章 §5.6 の「光学的に厚い極限で I_\\nu\\to B_\\nu(T)」そのもので、観測されるのは 電子温度 T_e の黒体（の Rayleigh–Jeans 裾） である。フラックスは F_\\nu\\propto\\nu^2。\n高振動数側（光学的に薄い、\\tau_\\nu\\ll1）：T_b\\to T_e\\,\\tau_\\nu\\propto\\nu^{-2.1} なので F_\\nu\\propto\\nu^2\\cdot\\nu^{-2.1}=\\nu^{-0.1} ― ほぼ平坦。\n両者の境目（\\tau_\\nu\\simeq1 となる ターンオーバー振動数 \\nu_t）は \\mathrm{EM} と T_e で決まる。したがって電波 HII 領域の連続スペクトルは、低 \\nu 側 F_\\nu\\propto\\nu^2（黒体的）→ 高 \\nu 側 F_\\nu\\propto\\nu^{-0.1}（薄い） という特徴的な折れ曲がりを示す。\n\n\n\n\n\n\nノート\n\n\n\n対応（観測）：電波で観測する HII 領域（オリオン大星雲など）・超コンパクト HII 領域・惑星状星雲の連続スペクトルは、まさにこの折れ曲がりを示す。低振動数側で輝度温度 T_b が一定値に飽和すること自体が「ガスが光学的に厚くなり電子温度 T_e の黒体に達した」直接の証拠であり、そこから T_e を、ターンオーバーから \\mathrm{EM}（密度 × 経路長）を読み取れる。第1章 §1.2–1.6 の黒体例（恒星光球・CMB・降着円盤）は 面をもつ天体 だったが、ここでは 希薄な気体 が低振動数で黒体に漸近する ― 第5章 §5.6「光学的に厚い → 黒体」の最も直接的な気体の実例である。\n\n\n\n\n\n\n\n\n問い：自由–自由放射は「熱的放射」なのに、なぜ全帯域で単一の黒体（プランク分布）には ならない のか？\n短答：黒体になるのは 光学的に厚い 振動数帯（低 \\nu 側）だけ。高 \\nu 側では光学的に薄く、I_\\nu\\approx\\tau_\\nu B_\\nu(T_e)\\ll B_\\nu(T_e) となって黒体から下にずれる。「熱的（粒子が Maxwell 分布）」と「黒体（光学的に厚く熱平衡放射場）」は別条件であり、自由–自由放射は前者を常に満たすが、後者は低振動数でのみ満たす。\nもう一歩：同じ熱的自由–自由放射でも、銀河団の高温プラズマ（T_e\\sim10^7–10^8 K）からの X 線制動放射 は全帯域で光学的に薄く、F_\\nu\\propto e^{-h\\nu/k_BT_e} の指数カットオフをもつ「薄い側」の典型例である（第18章）。低振動数で黒体に漸近するのは、\\nu^{-2} で吸収が伸びる電波帯ならではの現象である。",
+    "crumbs": [
+      "第VI部　現実の宇宙へ戻る",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダスト・電離ガスの熱放射</span>"
     ]
   },
   {
     "objectID": "part6/17-stars-planets-dust.html#sec-stars-planets-dust-tools",
     "href": "part6/17-stars-planets-dust.html#sec-stars-planets-dust-tools",
-    "title": "第17章　恒星・惑星・ダストの熱放射",
-    "section": "17.6 使えるようになった道具",
-    "text": "17.6 使えるようになった道具\n\n\n\n\n\n\nノート\n\n\n\n\n恒星の有効温度の定義と限界（積分量としての T_\\text{eff}）\n惑星の平衡温度と温室効果のずれ\n修正黒体スペクトル Q_\\nu B_\\nu(T) からのダスト 3 物理量読み取り\n多温度 SED フィッティングの構造と縮退性\n観測波長帯（赤外・サブミリ・ミリ）と各観測施設の対応関係",
+    "title": "第17章　恒星・惑星・ダスト・電離ガスの熱放射",
+    "section": "17.7 使えるようになった道具",
+    "text": "17.7 使えるようになった道具\n\n\n\n\n\n\nノート\n\n\n\n\n恒星の有効温度の定義と限界（積分量としての T_\\text{eff}）\n惑星の平衡温度と温室効果のずれ\n修正黒体スペクトル Q_\\nu B_\\nu(T) からのダスト 3 物理量読み取り\n多温度 SED フィッティングの構造と縮退性\n観測波長帯（赤外・サブミリ・ミリ）と各観測施設の対応関係\n電離ガスの自由–自由放射：低 \\nu 側は T_e の黒体（Rayleigh–Jeans）、高 \\nu 側は F_\\nu\\propto\\nu^{-0.1}、ターンオーバーから \\mathrm{EM} と T_e",
     "crumbs": [
       "第VI部　現実の宇宙へ戻る",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダストの熱放射</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダスト・電離ガスの熱放射</span>"
     ]
   },
   {
     "objectID": "part6/17-stars-planets-dust.html#sec-stars-planets-dust-summary",
     "href": "part6/17-stars-planets-dust.html#sec-stars-planets-dust-summary",
-    "title": "第17章　恒星・惑星・ダストの熱放射",
+    "title": "第17章　恒星・惑星・ダスト・電離ガスの熱放射",
     "section": "この章で何がわかったか",
-    "text": "この章で何がわかったか\n\n中心地図に戻る\n中心地図プランク分布 B_\\nu(T) に、ずれ因子として「振動数依存不透明度」「修正黒体係数 Q_\\nu」「複数温度成分の和」を加えるだけで、宇宙にある熱放射体の大半を統一的に記述できることを見た。\n\n恒星：T_\\text{eff} で代表される（厳密には大気の温度構造の積分量）\n惑星：恒星光の再放射、T_\\text{eq} ＋ 温室効果のずれ\nダスト：修正黒体 Q_\\nu B_\\nu(T_d)、\\beta が粒子物理を反映\n銀河・星形成領域：多温度合成、波長帯ごとに異なる成分が主役\n\n次章では、もっと極端な物理条件 ― 強い重力場・強磁場・相対論的速度 ― のもとでも、同じ枠組み（プランク関数 ＋ ずれ因子）がどこまで通用するかを見る",
+    "text": "この章で何がわかったか\n\n中心地図に戻る\n中心地図プランク分布 B_\\nu(T) に、ずれ因子として「振動数依存不透明度」「修正黒体係数 Q_\\nu」「複数温度成分の和」を加えるだけで、宇宙にある熱放射体の大半を統一的に記述できることを見た。\n\n恒星：T_\\text{eff} で代表される（厳密には大気の温度構造の積分量）\n惑星：恒星光の再放射、T_\\text{eq} ＋ 温室効果のずれ\nダスト：修正黒体 Q_\\nu B_\\nu(T_d)、\\beta が粒子物理を反映\n銀河・星形成領域：多温度合成、波長帯ごとに異なる成分が主役\n電離ガス（HII 領域）：自由–自由放射が低振動数で光学的に厚くなり B_\\nu(T_e) に漸近 ― 面をもたない希薄な気体が黒体に達する観測例（§17.6）\n\n次章では、もっと極端な物理条件 ― 強い重力場・強磁場・相対論的速度 ― のもとでも、同じ枠組み（プランク関数 ＋ ずれ因子）がどこまで通用するかを見る",
     "crumbs": [
       "第VI部　現実の宇宙へ戻る",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダストの熱放射</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダスト・電離ガスの熱放射</span>"
     ]
   },
   {
     "objectID": "part6/17-stars-planets-dust.html#sec-stars-planets-dust-exercises",
     "href": "part6/17-stars-planets-dust.html#sec-stars-planets-dust-exercises",
-    "title": "第17章　恒星・惑星・ダストの熱放射",
+    "title": "第17章　恒星・惑星・ダスト・電離ガスの熱放射",
     "section": "演習問題",
     "text": "演習問題\n[導出補完] 模範解答 は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。\n\n問題 17-1　惑星の平衡温度を入出力バランスから\n[★ 難易度：☆☆ ] [導出補完]\n§17.2 のエネルギー収支から惑星平衡温度を導く。アルベド A、恒星-惑星距離 d、恒星半径 R_\\star、温度 T_\\star、惑星半径 R_p。\n\n吸収光 (1-A)\\dfrac{L_\\star}{4\\pi d^2}\\pi R_p^2 と再放射 4\\pi R_p^2\\sigma T_{\\rm eq}^4 を等置し、L_\\star=4\\pi R_\\star^2\\sigma T_\\star^4 を使って T_{\\rm eq}=T_\\star\\left(\\dfrac{R_\\star}{2d}\\right)^{1/2}(1-A)^{1/4} を導け。\n断面積 \\pi R_p^2（吸収）と表面積 4\\pi R_p^2（放射）の比 4 が、式のどこに効くか説明せよ。\n地球（T_\\star=5778 K、R_\\star/d=1/214、A=0.3）で T_{\\rm eq} を計算し、実際の地表温度（+15 °C）とのずれの原因を述べよ。\n\n関連：§17.2 惑星の平衡温度／Stefan-Boltzmann と光度は§2.4（演習 2-5）。",
     "crumbs": [
       "第VI部　現実の宇宙へ戻る",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダストの熱放射</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダスト・電離ガスの熱放射</span>"
     ]
   },
   {
     "objectID": "part6/17-stars-planets-dust.html#模範解答問題-17-1",
     "href": "part6/17-stars-planets-dust.html#模範解答問題-17-1",
-    "title": "第17章　恒星・惑星・ダストの熱放射",
+    "title": "第17章　恒星・惑星・ダスト・電離ガスの熱放射",
     "section": "模範解答（問題 17-1）",
     "text": "模範解答（問題 17-1）\n(1) 等置：(1-A)\\dfrac{L_\\star}{4\\pi d^2}\\pi R_p^2=4\\pi R_p^2\\sigma T_{\\rm eq}^4。\\pi R_p^2 を消し、L_\\star=4\\pi R_\\star^2\\sigma T_\\star^4 を代入：\n(1-A)\\frac{4\\pi R_\\star^2\\sigma T_\\star^4}{4\\pi d^2}\\cdot\\frac14=\\sigma T_{\\rm eq}^4\\ \\Rightarrow\\ T_{\\rm eq}^4=(1-A)\\frac{R_\\star^2}{4d^2}T_\\star^4.\nT_{\\rm eq}=T_\\star\\left(\\frac{R_\\star}{2d}\\right)^{1/2}(1-A)^{1/4}.\n(2) 惑星は断面 \\pi R_p^2 で恒星光を受け、全表面 4\\pi R_p^2 から再放射する。比 4\\pi R_p^2/\\pi R_p^2=4 が右辺の 1/4（すなわち \\sqrt{1/4}=1/2 が R_\\star/2d の 2）として効く。自転が速く全球で均一再放射する近似。\n(3) T_{\\rm eq}=5778\\times(1/(2\\times214))^{1/2}\\times(0.7)^{1/4}=5778\\times(2.34\\times10^{-3})^{1/2}\\times0.915=5778\\times0.0483\\times0.915\\simeq255 K（-18°C）。実際の +15°C との 33 K の差は温室効果（大気の赤外不透明度）。この式は大気なし近似。\n答え：T_{\\rm eq}=T_\\star\\sqrt{R_\\star/2d}\\,(1-A)^{1/4}。地球で 255 K。実測との 33 K 差は温室効果。",
     "crumbs": [
       "第VI部　現実の宇宙へ戻る",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダストの熱放射</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダスト・電離ガスの熱放射</span>"
     ]
   },
   {
     "objectID": "part6/17-stars-planets-dust.html#模範解答問題-17-2",
     "href": "part6/17-stars-planets-dust.html#模範解答問題-17-2",
-    "title": "第17章　恒星・惑星・ダストの熱放射",
+    "title": "第17章　恒星・惑星・ダスト・電離ガスの熱放射",
     "section": "模範解答（問題 17-2）",
     "text": "模範解答（問題 17-2）\nx=hc/\\lambda kT、hc/k=1.439\\times10^{-2} m·K。比 =\\dfrac{e^{x_1}-1}{e^{x_2}-1}（x_1＝太陽、x_2＝Vega、x_1&gt;x_2）。\n(1) \\lambda=500 nm：hc/\\lambda k=1.439\\times10^{-2}/5.0\\times10^{-7}=2.88\\times10^4 K。x_1=28800/5778=4.98、x_2=28800/9602=3.00。比 =\\dfrac{e^{4.98}-1}{e^{3.00}-1}=\\dfrac{144.4}{19.1}\\simeq7.6。Vega が約7.6倍明るい。\n(2) \\lambda=250 nm：hc/\\lambda k=5.76\\times10^4 K。x_1=9.96、x_2=5.99。比 =\\dfrac{e^{9.96}-1}{e^{5.99}-1}=\\dfrac{21100}{399}\\simeq53。紫外は両者とも Wien 側で指数 e^{x} が支配し、温度差が指数的に増幅されるため比が大きい。\n(3) \\lambda=5\\ \\mum：hc/\\lambda k=2.88\\times10^3 K。x_1=0.498、x_2=0.300。比 =\\dfrac{e^{0.498}-1}{e^{0.300}-1}=\\dfrac{0.645}{0.350}\\simeq1.85。x\\ll1 で e^x-1\\simeq x ゆえ比 \\simeq x_1/x_2=T_2/T_1=9602/5778=1.66 に近く、Rayleigh-Jeans 側では温度比のみが効く（指数増幅なし）。\n答え：比は可視 7.6、紫外 53、赤外 1.85。Wien 側（紫外）ほど温度差が指数的に効き、RJ 側（赤外）は温度比のみ。",
     "crumbs": [
       "第VI部　現実の宇宙へ戻る",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダストの熱放射</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダスト・電離ガスの熱放射</span>"
     ]
   },
   {
     "objectID": "part6/17-stars-planets-dust.html#模範解答問題-17-3",
     "href": "part6/17-stars-planets-dust.html#模範解答問題-17-3",
-    "title": "第17章　恒星・惑星・ダストの熱放射",
+    "title": "第17章　恒星・惑星・ダスト・電離ガスの熱放射",
     "section": "模範解答（問題 17-3）",
     "text": "模範解答（問題 17-3）\n(1) T_d：Wien 側の指数減衰の鋭さ、または SED のピーク位置（Wien 則）から。\\beta：Rayleigh-Jeans 側（長波長）の勾配の急さ（I_\\nu\\propto\\nu^{2+\\beta}）から。ダスト質量：全光度を B_\\nu(T_d) で割ったときの規格化定数から（不透明度の仮定が必要）。\n(2) \\beta が小さいほど粒子が大きい（粒子サイズ≈波長の極限で \\beta\\to0）。円盤中心部ほど \\beta が小さい＝粒子が大きく成長している。これは円盤内でダストが集積・成長して惑星形成へ向かう過程の直接観測的証拠。\n(3) 同じピーク位置でも（高温・少量）と（低温・大量）で似た SED を作れる縮退がある。RJ 側の勾配 \\nu^{2+\\beta} と絶対強度は温度・質量・\\beta に異なる依存をするので、ピークより長波長（サブミリ・ミリ）の観測点を加えると、RJ 側の形が温度と質量を分離して縮退を解く。だから長波長観測が鍵。\n答え：T_d＝Wien側/ピーク、\\beta＝RJ側勾配、質量＝規格化。中心部の小 \\beta＝粒子成長＝惑星形成の証拠。長波長点が温度-質量縮退を解く。",
     "crumbs": [
       "第VI部　現実の宇宙へ戻る",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダストの熱放射</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダスト・電離ガスの熱放射</span>"
     ]
   },
   {
     "objectID": "part6/17-stars-planets-dust.html#模範解答問題-17-4",
     "href": "part6/17-stars-planets-dust.html#模範解答問題-17-4",
-    "title": "第17章　恒星・惑星・ダストの熱放射",
+    "title": "第17章　恒星・惑星・ダスト・電離ガスの熱放射",
     "section": "模範解答（問題 17-4）",
     "text": "模範解答（問題 17-4）\n(1) \\lambda_{\\rm peak}=2898/20=145\\ \\mum。これは Herschel（SPIRE/PACS、60–600 μm）の主帯域。冷たい星間ダストの観測が Herschel で飛躍したのはこのため。\n(2) T_d=100 K：\\lambda_{\\rm peak}=2898/100=29\\ \\mum（中間赤外、Spitzer/JWST）。T_d=15 K：\\lambda_{\\rm peak}=2898/15=193\\ \\mum（サブミリ、Herschel/ALMA）。\n(3) ダスト（T\\sim15–30 K）の熱放射ピークは遠赤外〜サブミリ。銀河の重元素の半分がダストに閉じ込められているので、可視・紫外だけ見ると物質の半分を見落とす。遠赤外・サブミリ（Herschel/ALMA）でこの放射を捉えて初めて、銀河の星間物質・ダスト質量・星形成の全体像（物質収支）が分かる。\n答え：20 K→145 μm（Herschel）、100 K→29 μm、15 K→193 μm。重元素の半分がダスト＝遠赤外/サブミリ観測が物質収支に必須。",
     "crumbs": [
       "第VI部　現実の宇宙へ戻る",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダストの熱放射</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダスト・電離ガスの熱放射</span>"
+    ]
+  },
+  {
+    "objectID": "part6/17-stars-planets-dust.html#模範解答問題-17-5",
+    "href": "part6/17-stars-planets-dust.html#模範解答問題-17-5",
+    "title": "第17章　恒星・惑星・ダスト・電離ガスの熱放射",
+    "section": "模範解答（問題 17-5）",
+    "text": "模範解答（問題 17-5）\n(1) \\tau_\\nu\\gg1 で 1-e^{-\\tau_\\nu}\\to1 ゆえ T_b\\to T_e、すなわち I_\\nu=B_\\nu(T_e)(1-e^{-\\tau_\\nu})\\to B_\\nu(T_e)。これは第5章 §5.6 の「光学的に厚い極限で I_\\nu\\to S_\\nu=B_\\nu(T)」そのもの（LTE で S_\\nu=B_\\nu(T_e)）。電波帯は h\\nu\\ll k_BT_e なので B_\\nu(T_e)\\simeq2\\nu^2k_BT_e/c^2（Rayleigh–Jeans）、よって F_\\nu\\propto\\nu^2。観測されるのは電子温度 T_e の黒体の RJ 裾。\n(2) \\tau_\\nu\\ll1 で 1-e^{-\\tau_\\nu}\\simeq\\tau_\\nu ゆえ T_b\\to T_e\\tau_\\nu\\propto\\nu^{-2.1}。フラックスは RJ で F_\\nu\\propto\\nu^2 T_b\\propto\\nu^2\\cdot\\nu^{-2.1}=\\nu^{-0.1}（ほぼ平坦）。\n(3) 黒体になるのは光学的に厚い低 \\nu 側だけ。高 \\nu 側は光学的に薄く I_\\nu\\approx\\tau_\\nu B_\\nu(T_e)\\ll B_\\nu(T_e) で黒体から下にずれる。「熱的（粒子が Maxwell 分布）」と「黒体（光学的に厚い）」は別条件で、自由–自由放射は前者を常に、後者を低 \\nu 側でのみ満たす。\n答え：低 \\nu（厚い）→ T_b\\to T_e、I_\\nu\\to B_\\nu(T_e)、F_\\nu\\propto\\nu^2（T_e の黒体）。高 \\nu（薄い）→ F_\\nu\\propto\\nu^{-0.1}。黒体化は光学的に厚い低 \\nu 側のみ。",
+    "crumbs": [
+      "第VI部　現実の宇宙へ戻る",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダスト・電離ガスの熱放射</span>"
     ]
   },
   {
     "objectID": "part6/17-stars-planets-dust.html#sec-stars-planets-dust-further",
     "href": "part6/17-stars-planets-dust.html#sec-stars-planets-dust-further",
-    "title": "第17章　恒星・惑星・ダストの熱放射",
+    "title": "第17章　恒星・惑星・ダスト・電離ガスの熱放射",
     "section": "さらに学ぶための参考文献",
-    "text": "さらに学ぶための参考文献\n\nCarroll & Ostlie, An Introduction to Modern Astrophysics (Cambridge, 2nd ed., 2017) — 恒星・惑星・銀河の標準的扱い\nPierrehumbert, Principles of Planetary Climate (Cambridge, 2010) — 惑星平衡温度と温室効果の物理\nDraine, Physics of the Interstellar and Intergalactic Medium (Princeton, 2011) — ダストの放射、\\beta、修正黒体\nGalametz et al. の SED フィッティングのレビュー（A&A, 2012）— 多温度 SED の実用解析",
+    "text": "さらに学ぶための参考文献\n\nCarroll & Ostlie, An Introduction to Modern Astrophysics (Cambridge, 2nd ed., 2017) — 恒星・惑星・銀河の標準的扱い\nPierrehumbert, Principles of Planetary Climate (Cambridge, 2010) — 惑星平衡温度と温室効果の物理\nDraine, Physics of the Interstellar and Intergalactic Medium (Princeton, 2011) — ダストの放射、\\beta、修正黒体\nGalametz et al. の SED フィッティングのレビュー（A&A, 2012）— 多温度 SED の実用解析\nWilson, Rohlfs & Hüttemeister, Tools of Radio Astronomy (Springer, 6th ed., 2013) — 電波連続光・自由–自由放射と HII 領域のスペクトル\nRybicki & Lightman, Radiative Processes in Astrophysics (Wiley, 1979) — 第5章「Bremsstrahlung」（自由–自由放射の断面積と吸収）",
     "crumbs": [
       "第VI部　現実の宇宙へ戻る",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダストの熱放射</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>第17章　恒星・惑星・ダスト・電離ガスの熱放射</span>"
     ]
   },
   {
