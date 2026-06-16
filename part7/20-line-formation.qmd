@@ -245,11 +245,11 @@ $$ {#eq-curve-of-growth}
 
 [★ 難易度：☆☆ ] [tag:導出補完]
 
-§20.3 は線源泉関数を励起温度 $T_{\rm ex}$ のプランク関数に書き換えた。導出を埋める。$S_\nu^{\rm line}=\dfrac{A_{ul}n_u}{B_{lu}n_l-B_{ul}n_u}$、Einstein 関係 $A_{ul}/B_{ul}=2h\nu_0^3/c^2$、$g_lB_{lu}=g_uB_{ul}$。
+§20.3 は線源泉関数を励起温度 $T_\mathrm{ex}$ のプランク関数に書き換えた。導出を埋める。$S_\nu^\mathrm{line}=\dfrac{A_{ul}n_u}{B_{lu}n_l-B_{ul}n_u}$、Einstein 関係 $A_{ul}/B_{ul}=2h\nu_0^3/c^2$、$g_lB_{lu}=g_uB_{ul}$。
 
-1. Einstein 関係を使って $S_\nu^{\rm line}=\dfrac{2h\nu_0^3/c^2}{(g_un_l)/(g_ln_u)-1}$ を導け。
-2. 励起温度を $\dfrac{g_un_l}{g_ln_u}=e^{h\nu_0/k_BT_{\rm ex}}$ で定義し、$S_\nu^{\rm line}=B_{\nu_0}(T_{\rm ex})$ を示せ。
-3. $T_{\rm ex}$ が物理的なキネティック温度と一致するのはどんな条件か（LTE）。一致しない場合（non-LTE）に $S_\nu$ がプランク関数でなくなるわけではない理由を述べよ。
+1. Einstein 関係を使って $S_\nu^\mathrm{line}=\dfrac{2h\nu_0^3/c^2}{(g_un_l)/(g_ln_u)-1}$ を導け。
+2. 励起温度を $\dfrac{g_un_l}{g_ln_u}=e^{h\nu_0/k_BT_\mathrm{ex}}$ で定義し、$S_\nu^\mathrm{line}=B_{\nu_0}(T_\mathrm{ex})$ を示せ。
+3. $T_\mathrm{ex}$ が物理的なキネティック温度と一致するのはどんな条件か（LTE）。一致しない場合（non-LTE）に $S_\nu$ がプランク関数でなくなるわけではない理由を述べよ。
 
 **関連**：[§20.3 線源泉関数](#sec-line-source-function)／Einstein 関係の導出は[演習 11-1](../part4/11-einstein-method.qmd#ex-11-1)、ソース関数の基礎は[演習 5-5](../part2/05-radiative-transfer.qmd#ex-5-5)、LTE は[§20.4](#sec-LTE-line-formation)。
 
@@ -258,15 +258,15 @@ $$ {#eq-curve-of-growth}
 
 **(1)** 分子分母を $B_{ul}n_u$ で割る。$g_lB_{lu}=g_uB_{ul}$ より $B_{lu}=（g_u/g_l)B_{ul}$：
 
-$$S_\nu^{\rm line}=\frac{A_{ul}n_u}{B_{lu}n_l-B_{ul}n_u}=\frac{A_{ul}/B_{ul}}{\dfrac{B_{lu}n_l}{B_{ul}n_u}-1}=\frac{2h\nu_0^3/c^2}{\dfrac{g_un_l}{g_ln_u}-1}.$$
+$$S_\nu^\mathrm{line}=\frac{A_{ul}n_u}{B_{lu}n_l-B_{ul}n_u}=\frac{A_{ul}/B_{ul}}{\dfrac{B_{lu}n_l}{B_{ul}n_u}-1}=\frac{2h\nu_0^3/c^2}{\dfrac{g_un_l}{g_ln_u}-1}.$$
 
-**(2)** $\dfrac{g_un_l}{g_ln_u}=e^{h\nu_0/k_BT_{\rm ex}}$ を代入すると分母が $e^{h\nu_0/k_BT_{\rm ex}}-1$ となり
+**(2)** $\dfrac{g_un_l}{g_ln_u}=e^{h\nu_0/k_BT_\mathrm{ex}}$ を代入すると分母が $e^{h\nu_0/k_BT_\mathrm{ex}}-1$ となり
 
-$$S_\nu^{\rm line}=\frac{2h\nu_0^3/c^2}{e^{h\nu_0/k_BT_{\rm ex}}-1}=B_{\nu_0}(T_{\rm ex}).$$
+$$S_\nu^\mathrm{line}=\frac{2h\nu_0^3/c^2}{e^{h\nu_0/k_BT_\mathrm{ex}}-1}=B_{\nu_0}(T_\mathrm{ex}).$$
 
-**(3)** 占有数が局所キネティック温度 $T_{\rm kin}$ の Boltzmann 分布で書ける（LTE）とき $T_{\rm ex}=T_{\rm kin}$。non-LTE では占有数が Boltzmann から外れて $T_{\rm ex}\ne T_{\rm kin}$ になるが、$T_{\rm ex}$ を「占有比を Boltzmann 形で書いたときの温度」と**定義**する限り、$S_\nu=B_\nu(T_{\rm ex})$ は形式的に常に成り立つ。ただし $T_{\rm ex}$ は物理温度を反映しない。
+**(3)** 占有数が局所キネティック温度 $T_\mathrm{kin}$ の Boltzmann 分布で書ける（LTE）とき $T_\mathrm{ex}=T_\mathrm{kin}$。non-LTE では占有数が Boltzmann から外れて $T_\mathrm{ex}\ne T_\mathrm{kin}$ になるが、$T_\mathrm{ex}$ を「占有比を Boltzmann 形で書いたときの温度」と**定義**する限り、$S_\nu=B_\nu(T_\mathrm{ex})$ は形式的に常に成り立つ。ただし $T_\mathrm{ex}$ は物理温度を反映しない。
 
-**答え**：$S_\nu^{\rm line}=\dfrac{2h\nu_0^3/c^2}{(g_un_l)/(g_ln_u)-1}=B_{\nu_0}(T_{\rm ex})$。LTE で $T_{\rm ex}=T_{\rm kin}$、non-LTE でも定義上 $B_\nu(T_{\rm ex})$ の形は保たれる。
+**答え**：$S_\nu^\mathrm{line}=\dfrac{2h\nu_0^3/c^2}{(g_un_l)/(g_ln_u)-1}=B_{\nu_0}(T_\mathrm{ex})$。LTE で $T_\mathrm{ex}=T_\mathrm{kin}$、non-LTE でも定義上 $B_\nu(T_\mathrm{ex})$ の形は保たれる。
 :::
 
 ### 問題 20-2　誘導放出補正と準位反転（メーザー） {#ex-20-2 .unnumbered}

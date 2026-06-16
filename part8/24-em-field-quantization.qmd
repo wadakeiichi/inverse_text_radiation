@@ -257,7 +257,7 @@ $$ {#eq-planck-quantum-field}
 
 [★ 難易度：☆☆ ] [tag:理解を深める]
 
-§24.2 は「各モードを量子調和振動子に置き換える」一行で第I〜VII部が接続されると述べた。モード Hamiltonian $\hat H_{\rm mode}=\hbar\omega_{\mathbf k}(\hat a^\dagger_{\mathbf k\sigma}\hat a_{\mathbf k\sigma}+\tfrac12)$。
+§24.2 は「各モードを量子調和振動子に置き換える」一行で第I〜VII部が接続されると述べた。モード Hamiltonian $\hat H_\mathrm{mode}=\hbar\omega_{\mathbf k}(\hat a^\dagger_{\mathbf k\sigma}\hat a_{\mathbf k\sigma}+\tfrac12)$。
 
 1. $\hat a^\dagger$、$\hat a$、$\hat n=\hat a^\dagger\hat a$ がそれぞれ電磁場の文脈で何を表すか（放出・吸収・光子数）述べよ。
 2. 調和振動子の励起準位 $|n\rangle$ が「そのモードに $n$ 個の光子がある状態」と読み替えられることを、第10章のエネルギー量子 $h\nu$、第8章の Bose 統計、第14章のモード密度と対応づけよ。
@@ -281,9 +281,9 @@ $$ {#eq-planck-quantum-field}
 
 [★ 難易度：☆☆ ] [tag:導出補完]
 
-§24.4 はプランク分布を「電磁場の熱状態の表現」として再構成した。熱密度行列 $\hat\rho_{\rm th}=\dfrac1Z e^{-\hat H/k_BT}$ から組み立てる。
+§24.4 はプランク分布を「電磁場の熱状態の表現」として再構成した。熱密度行列 $\hat\rho_\mathrm{th}=\dfrac1Z e^{-\hat H/k_BT}$ から組み立てる。
 
-1. 各モードの平均光子数 $\bar n(\nu,T)={\rm tr}(\hat\rho_{\rm th}\hat n)=\dfrac{1}{e^{h\nu/k_BT}-1}$ が、第III部で導いた Bose 占有数と一致することを確認せよ（化学ポテンシャル $\mu=0$ の理由も）。
+1. 各モードの平均光子数 $\bar n(\nu,T)=\mathrm{tr}(\hat\rho_\mathrm{th}\hat n)=\dfrac{1}{e^{h\nu/k_BT}-1}$ が、第III部で導いた Bose 占有数と一致することを確認せよ（化学ポテンシャル $\mu=0$ の理由も）。
 2. モード密度 $g(\nu)=8\pi\nu^2/c^3$ と光子エネルギー $h\nu$ を掛けて $u_\nu=\dfrac{8\pi h\nu^3}{c^3}\dfrac{1}{e^{h\nu/kT}-1}$、$B_\nu=\dfrac{c}{4\pi}u_\nu=\dfrac{2h\nu^3}{c^2}\dfrac{1}{e^{h\nu/kT}-1}$ を導け。
 3. 第8章（Bose 統計）・第10章（振動子の熱平均）・第14章（モード密度×熱励起）の三つの導出が「同じ一つの構造」であるとはどういう意味か述べよ。
 
@@ -296,7 +296,7 @@ $$ {#eq-planck-quantum-field}
 
 **(2)** $u_\nu=g(\nu)\cdot h\nu\cdot\bar n=\dfrac{8\pi\nu^2}{c^3}\cdot h\nu\cdot\dfrac{1}{e^{h\nu/kT}-1}=\dfrac{8\pi h\nu^3}{c^3}\dfrac{1}{e^{h\nu/kT}-1}$。等方場で $B_\nu=\dfrac{c}{4\pi}u_\nu=\dfrac{2h\nu^3}{c^2}\dfrac{1}{e^{h\nu/kT}-1}$。
 
-**(3)** 「光子気体の Bose 統計」（第8章）、「量子化振動子の熱平均」（第10章）、「モード密度×熱励起」（第14章）は出発点も言葉も違うが、すべて「温度 $T$ の熱浴と平衡にある電磁場（各モード＝調和振動子）の熱状態」を別の角度から記述したもの。同じ密度行列 $\hat\rho_{\rm th}$ から同じプランク分布が出る。
+**(3)** 「光子気体の Bose 統計」（第8章）、「量子化振動子の熱平均」（第10章）、「モード密度×熱励起」（第14章）は出発点も言葉も違うが、すべて「温度 $T$ の熱浴と平衡にある電磁場（各モード＝調和振動子）の熱状態」を別の角度から記述したもの。同じ密度行列 $\hat\rho_\mathrm{th}$ から同じプランク分布が出る。
 
 **答え**：$\bar n=1/(e^{h\nu/kT}-1)$（$\mu=0$）。$B_\nu=\frac{2h\nu^3}{c^2}\frac{1}{e^{h\nu/kT}-1}$。三つの導出は電磁場の熱状態の同一構造の異なる側面。
 :::

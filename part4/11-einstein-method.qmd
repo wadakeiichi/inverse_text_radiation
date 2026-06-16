@@ -344,11 +344,11 @@ $$
 
 [★ 難易度：☆☆☆ ] [tag:理解を深める]
 
-§11.4 は「$A_{ul}$ は線の自然幅と直結、$\tau=1/A_{ul}$、$\Delta\nu_{\rm nat}=A_{ul}/2\pi$」とだけ述べた。典型的な許容遷移 $A_{ul}=1\times10^8\ \mathrm{s^{-1}}$、波長 $\lambda=500$ nm の線について数値評価せよ。
+§11.4 は「$A_{ul}$ は線の自然幅と直結、$\tau=1/A_{ul}$、$\Delta\nu_\mathrm{nat}=A_{ul}/2\pi$」とだけ述べた。典型的な許容遷移 $A_{ul}=1\times10^8\ \mathrm{s^{-1}}$、波長 $\lambda=500$ nm の線について数値評価せよ。
 
 1. 励起寿命 $\tau$ を求めよ。
-2. 自然幅 $\Delta\nu_{\rm nat}=A_{ul}/2\pi$ を Hz で求めよ。
-3. 対応する波長幅 $\Delta\lambda_{\rm nat}=(\lambda^2/c)\Delta\nu_{\rm nat}$ を求め、線中心波長との相対幅 $\Delta\lambda/\lambda$ を評価せよ。なぜ自然幅は実際の観測線幅より普通ずっと狭いのか（ドップラー幅との対比）を一言で述べよ。
+2. 自然幅 $\Delta\nu_\mathrm{nat}=A_{ul}/2\pi$ を Hz で求めよ。
+3. 対応する波長幅 $\Delta\lambda_\mathrm{nat}=(\lambda^2/c)\Delta\nu_\mathrm{nat}$ を求め、線中心波長との相対幅 $\Delta\lambda/\lambda$ を評価せよ。なぜ自然幅は実際の観測線幅より普通ずっと狭いのか（ドップラー幅との対比）を一言で述べよ。
 
 **関連**：[§11.4 連続と線の橋](#sec-einstein-method-bridge)／自然幅の本格的扱いは[第22章 線の形](../part7/22-line-shape.qmd)、その量子的起源（零点振動）は[§12.4](../part4/12-quantum-foundations.qmd#sec-quantum-foundations-vacuum)と[演習 12-3](../part4/12-quantum-foundations.qmd#ex-12-3)。
 
@@ -357,17 +357,17 @@ $$
 
 **(1)** $\tau=1/A_{ul}=1/10^8=1\times10^{-8}$ s $=10$ ns。
 
-**(2)** $\Delta\nu_{\rm nat}=A_{ul}/2\pi=10^8/(2\pi)\approx1.6\times10^7$ Hz $\approx16$ MHz。
+**(2)** $\Delta\nu_\mathrm{nat}=A_{ul}/2\pi=10^8/(2\pi)\approx1.6\times10^7$ Hz $\approx16$ MHz。
 
 **(3)** $\lambda=500$ nm、$\lambda^2/c=(5.0\times10^{-7})^2/(3.0\times10^8)=2.5\times10^{-13}/3.0\times10^8\approx8.3\times10^{-22}$ s·m。よって
 
 $$
-\Delta\lambda_{\rm nat}=\frac{\lambda^2}{c}\Delta\nu_{\rm nat}\approx8.3\times10^{-22}\times1.6\times10^7\approx1.3\times10^{-14}\ \mathrm{m}=1.3\times10^{-5}\ \mathrm{nm}.
+\Delta\lambda_\mathrm{nat}=\frac{\lambda^2}{c}\Delta\nu_\mathrm{nat}\approx8.3\times10^{-22}\times1.6\times10^7\approx1.3\times10^{-14}\ \mathrm{m}=1.3\times10^{-5}\ \mathrm{nm}.
 $$
 
-相対幅 $\Delta\lambda/\lambda\approx1.3\times10^{-14}/5.0\times10^{-7}\approx2.7\times10^{-8}$。きわめて狭い。**理由**：実際の星間・恒星大気の線は熱運動による**ドップラー幅**が支配的で、$\Delta\nu_D/\nu\sim v_{\rm th}/c\sim10^{-5}$ 程度と自然幅より3桁ほど広い。自然幅が見えるのは線の遠い翼（ローレンツ翼）や低温・低速度分散の特殊な状況に限られる。
+相対幅 $\Delta\lambda/\lambda\approx1.3\times10^{-14}/5.0\times10^{-7}\approx2.7\times10^{-8}$。きわめて狭い。**理由**：実際の星間・恒星大気の線は熱運動による**ドップラー幅**が支配的で、$\Delta\nu_D/\nu\sim v_\mathrm{th}/c\sim10^{-5}$ 程度と自然幅より3桁ほど広い。自然幅が見えるのは線の遠い翼（ローレンツ翼）や低温・低速度分散の特殊な状況に限られる。
 
-**答え**：$\tau=10$ ns、$\Delta\nu_{\rm nat}\approx16$ MHz、$\Delta\lambda_{\rm nat}\approx1.3\times10^{-5}$ nm（$\Delta\lambda/\lambda\sim3\times10^{-8}$）。通常はドップラー幅が支配的で自然幅は埋もれる。
+**答え**：$\tau=10$ ns、$\Delta\nu_\mathrm{nat}\approx16$ MHz、$\Delta\lambda_\mathrm{nat}\approx1.3\times10^{-5}$ nm（$\Delta\lambda/\lambda\sim3\times10^{-8}$）。通常はドップラー幅が支配的で自然幅は埋もれる。
 :::
 
 ## さらに学ぶための参考文献 {#sec-einstein-method-further .unnumbered}

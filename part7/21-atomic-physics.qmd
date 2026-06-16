@@ -327,7 +327,7 @@ $$ {#eq-selection-rules-E1}
 
 1. 両式を等置して $B_{lu}=\dfrac{4\pi^2e^2}{m_ec\,h\nu_0}f_{lu}$（$J_\nu$ 規約）を導け。
 2. Einstein 関係 $A_{ul}=\dfrac{2h\nu_0^3}{c^2}B_{ul}=\dfrac{2h\nu_0^3}{c^2}\dfrac{g_l}{g_u}B_{lu}$ と組合せ、$A_{ul}=\dfrac{8\pi^2e^2\nu_0^2}{m_ec^3}\dfrac{g_l}{g_u}f_{lu}$ を導け。
-3. $\pi e^2/m_ec$ が「古典 Lorentz 振動子の積分吸収断面積」であり、$f_{lu}$ がその量子論的補正（Thomas-Reiche-Kuhn 和則 $\sum_u f_{lu}=N_{\rm electrons}$）であることの意味を一言で述べよ。
+3. $\pi e^2/m_ec$ が「古典 Lorentz 振動子の積分吸収断面積」であり、$f_{lu}$ がその量子論的補正（Thomas-Reiche-Kuhn 和則 $\sum_u f_{lu}=N_\mathrm{electrons}$）であることの意味を一言で述べよ。
 
 **関連**：[§21.4b 前因子の逆引き](#sec-atomic-lorentz-prefactor)、[§21.4 振動子強度](#sec-atomic-oscillator-strength)／Einstein 関係は[演習 11-1](../part4/11-einstein-method.qmd#ex-11-1)、QED からの $A_{ul}$ は[§25.2](../part8/25-qed-minimum.qmd#sec-qed-minimum-spontaneous)。
 
@@ -344,7 +344,7 @@ $$A_{ul}=\frac{2h\nu_0^3}{c^2}\frac{g_l}{g_u}\frac{4\pi^2e^2}{m_ec\,h\nu_0}f_{lu
 
 （$h$ が消え、$\nu_0^3/\nu_0=\nu_0^2$。）
 
-**(3)** $\pi e^2/m_ec$ は古典の減衰調和振動子（Lorentz 振動子）が与える振動数積分吸収断面積で、減衰率にもピーク位置にもよらない普遍量。実際の原子はこれに無次元の量子補正 $f_{lu}$ を掛けたもので、全遷移の和 $\sum_u f_{lu}=N_{\rm electrons}$（TRK 和則）が「すべて足すと古典総吸収量に戻る」ことを保証する。古典-量子の橋。
+**(3)** $\pi e^2/m_ec$ は古典の減衰調和振動子（Lorentz 振動子）が与える振動数積分吸収断面積で、減衰率にもピーク位置にもよらない普遍量。実際の原子はこれに無次元の量子補正 $f_{lu}$ を掛けたもので、全遷移の和 $\sum_u f_{lu}=N_\mathrm{electrons}$（TRK 和則）が「すべて足すと古典総吸収量に戻る」ことを保証する。古典-量子の橋。
 
 **答え**：$B_{lu}=\dfrac{4\pi^2e^2}{m_ech\nu_0}f_{lu}$、$A_{ul}=\dfrac{8\pi^2e^2\nu_0^2}{m_ec^3}\dfrac{g_l}{g_u}f_{lu}$。$\pi e^2/m_ec$＝古典積分断面積、$f_{lu}$＝量子補正（TRK 和則）。
 :::

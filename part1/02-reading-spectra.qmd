@@ -186,7 +186,7 @@ $$ {#eq-luminosity-sb}
 $h\nu \ll kT$ では、$e^{h\nu/kT} - 1 \simeq h\nu/kT$ なので
 
 $$
-B_\nu(T) \xrightarrow[h\nu \ll kT]{} \frac{2 \nu^2}{c^2} kT
+B_\nu(T) \underset{h\nu \ll kT}{\longrightarrow} \frac{2 \nu^2}{c^2} kT
 $$ {#eq-rayleigh-jeans}
 
 ここに **$h$ が現れていない**ことに注意。これは古典物理から（量子論なしで）導ける式である。電波天文学ではほぼ常にこの極限で観測している。
@@ -196,7 +196,7 @@ $$ {#eq-rayleigh-jeans}
 $h\nu \gg kT$ では、$e^{h\nu/kT} - 1 \simeq e^{h\nu/kT}$ なので
 
 $$
-B_\nu(T) \xrightarrow[h\nu \gg kT]{} \frac{2 h \nu^3}{c^2} e^{-h\nu/kT}
+B_\nu(T) \underset{h\nu \gg kT}{\longrightarrow} \frac{2 h \nu^3}{c^2} e^{-h\nu/kT}
 $$ {#eq-wien-limit}
 
 こちらは指数関数で急激に落ちる側。**$h$ が現れる**ことが本質的で、古典物理だけでは出てこない。

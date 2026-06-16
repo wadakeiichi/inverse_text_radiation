@@ -259,26 +259,26 @@ $$ {#eq-ff-brightness-temp}
 
 §17.2 のエネルギー収支から惑星平衡温度を導く。アルベド $A$、恒星-惑星距離 $d$、恒星半径 $R_\star$、温度 $T_\star$、惑星半径 $R_p$。
 
-1. 吸収光 $(1-A)\dfrac{L_\star}{4\pi d^2}\pi R_p^2$ と再放射 $4\pi R_p^2\sigma T_{\rm eq}^4$ を等置し、$L_\star=4\pi R_\star^2\sigma T_\star^4$ を使って $T_{\rm eq}=T_\star\left(\dfrac{R_\star}{2d}\right)^{1/2}(1-A)^{1/4}$ を導け。
+1. 吸収光 $(1-A)\dfrac{L_\star}{4\pi d^2}\pi R_p^2$ と再放射 $4\pi R_p^2\sigma T_\mathrm{eq}^4$ を等置し、$L_\star=4\pi R_\star^2\sigma T_\star^4$ を使って $T_\mathrm{eq}=T_\star\left(\dfrac{R_\star}{2d}\right)^{1/2}(1-A)^{1/4}$ を導け。
 2. 断面積 $\pi R_p^2$（吸収）と表面積 $4\pi R_p^2$（放射）の比 4 が、式のどこに効くか説明せよ。
-3. 地球（$T_\star=5778$ K、$R_\star/d=1/214$、$A=0.3$）で $T_{\rm eq}$ を計算し、実際の地表温度（+15 °C）とのずれの原因を述べよ。
+3. 地球（$T_\star=5778$ K、$R_\star/d=1/214$、$A=0.3$）で $T_\mathrm{eq}$ を計算し、実際の地表温度（+15 °C）とのずれの原因を述べよ。
 
 **関連**：[§17.2 惑星の平衡温度](#sec-planet-equilibrium)／Stefan-Boltzmann と光度は[§2.4](../part1/02-reading-spectra.qmd#sec-reading-spectra-stefan-boltzmann)（[演習 2-5](../part1/02-reading-spectra.qmd#ex-2-5)）。
 
 ::: {.callout-derive collapse="true"}
 ## 模範解答（問題 17-1）
 
-**(1)** 等置：$(1-A)\dfrac{L_\star}{4\pi d^2}\pi R_p^2=4\pi R_p^2\sigma T_{\rm eq}^4$。$\pi R_p^2$ を消し、$L_\star=4\pi R_\star^2\sigma T_\star^4$ を代入：
+**(1)** 等置：$(1-A)\dfrac{L_\star}{4\pi d^2}\pi R_p^2=4\pi R_p^2\sigma T_\mathrm{eq}^4$。$\pi R_p^2$ を消し、$L_\star=4\pi R_\star^2\sigma T_\star^4$ を代入：
 
-$$(1-A)\frac{4\pi R_\star^2\sigma T_\star^4}{4\pi d^2}\cdot\frac14=\sigma T_{\rm eq}^4\ \Rightarrow\ T_{\rm eq}^4=(1-A)\frac{R_\star^2}{4d^2}T_\star^4.$$
+$$(1-A)\frac{4\pi R_\star^2\sigma T_\star^4}{4\pi d^2}\cdot\frac14=\sigma T_\mathrm{eq}^4\ \Rightarrow\ T_\mathrm{eq}^4=(1-A)\frac{R_\star^2}{4d^2}T_\star^4.$$
 
-$$T_{\rm eq}=T_\star\left(\frac{R_\star}{2d}\right)^{1/2}(1-A)^{1/4}.$$
+$$T_\mathrm{eq}=T_\star\left(\frac{R_\star}{2d}\right)^{1/2}(1-A)^{1/4}.$$
 
 **(2)** 惑星は断面 $\pi R_p^2$ で恒星光を受け、全表面 $4\pi R_p^2$ から再放射する。比 $4\pi R_p^2/\pi R_p^2=4$ が右辺の $1/4$（すなわち $\sqrt{1/4}=1/2$ が $R_\star/2d$ の 2）として効く。自転が速く全球で均一再放射する近似。
 
-**(3)** $T_{\rm eq}=5778\times(1/(2\times214))^{1/2}\times(0.7)^{1/4}=5778\times(2.34\times10^{-3})^{1/2}\times0.915=5778\times0.0483\times0.915\simeq255$ K（$-18$°C）。実際の +15°C との 33 K の差は温室効果（大気の赤外不透明度）。この式は大気なし近似。
+**(3)** $T_\mathrm{eq}=5778\times(1/(2\times214))^{1/2}\times(0.7)^{1/4}=5778\times(2.34\times10^{-3})^{1/2}\times0.915=5778\times0.0483\times0.915\simeq255$ K（$-18$°C）。実際の +15°C との 33 K の差は温室効果（大気の赤外不透明度）。この式は大気なし近似。
 
-**答え**：$T_{\rm eq}=T_\star\sqrt{R_\star/2d}\,(1-A)^{1/4}$。地球で 255 K。実測との 33 K 差は温室効果。
+**答え**：$T_\mathrm{eq}=T_\star\sqrt{R_\star/2d}\,(1-A)^{1/4}$。地球で 255 K。実測との 33 K 差は温室効果。
 :::
 
 ### 問題 17-2　二温度天体の同一波長明るさ比 {#ex-17-2 .unnumbered}
@@ -335,7 +335,7 @@ $x=hc/\lambda kT$、$hc/k=1.439\times10^{-2}$ m·K。比 $=\dfrac{e^{x_1}-1}{e^{
 
 [★ 難易度：☆ ] [tag:理解を深める]
 
-§17.5 の問いを一般化する。Wien 則 $\lambda_{\rm peak}=b/T$（$b=2898\ \mu$m·K）。
+§17.5 の問いを一般化する。Wien 則 $\lambda_\mathrm{peak}=b/T$（$b=2898\ \mu$m·K）。
 
 1. $T_d=20$ K の冷たいダストのピーク波長を求め、どの観測施設の帯域か述べよ。
 2. 暖かいダスト $T_d=100$ K、ごく冷たいダスト $T_d=15$ K のピーク波長も求めよ。
@@ -346,9 +346,9 @@ $x=hc/\lambda kT$、$hc/k=1.439\times10^{-2}$ m·K。比 $=\dfrac{e^{x_1}-1}{e^{
 ::: {.callout-derive collapse="true"}
 ## 模範解答（問題 17-4）
 
-**(1)** $\lambda_{\rm peak}=2898/20=145\ \mu$m。これは Herschel（SPIRE/PACS、60–600 μm）の主帯域。冷たい星間ダストの観測が Herschel で飛躍したのはこのため。
+**(1)** $\lambda_\mathrm{peak}=2898/20=145\ \mu$m。これは Herschel（SPIRE/PACS、60–600 μm）の主帯域。冷たい星間ダストの観測が Herschel で飛躍したのはこのため。
 
-**(2)** $T_d=100$ K：$\lambda_{\rm peak}=2898/100=29\ \mu$m（中間赤外、Spitzer/JWST）。$T_d=15$ K：$\lambda_{\rm peak}=2898/15=193\ \mu$m（サブミリ、Herschel/ALMA）。
+**(2)** $T_d=100$ K：$\lambda_\mathrm{peak}=2898/100=29\ \mu$m（中間赤外、Spitzer/JWST）。$T_d=15$ K：$\lambda_\mathrm{peak}=2898/15=193\ \mu$m（サブミリ、Herschel/ALMA）。
 
 **(3)** ダスト（$T\sim15$–$30$ K）の熱放射ピークは遠赤外〜サブミリ。銀河の重元素の半分がダストに閉じ込められているので、可視・紫外だけ見ると物質の半分を見落とす。遠赤外・サブミリ（Herschel/ALMA）でこの放射を捉えて初めて、銀河の星間物質・ダスト質量・星形成の全体像（物質収支）が分かる。
 

@@ -3,7 +3,7 @@
 **中心地図：プランク関数 ― 本部の主題は「ずれ」**
 
 $$
-B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1} \quad \xrightarrow{\text{現実}} \quad \text{?}
+B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1} \quad \overset{\text{現実}}{\longrightarrow} \quad \text{?}
 $$
 
 第VI部（現実の宇宙へ戻る）は、観測される現実の天体スペクトルが、この理想的プランク関数からどのように、そしてなぜ **ずれる**かを扱う。ずれの主な起源：

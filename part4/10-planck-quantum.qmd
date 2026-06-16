@@ -231,7 +231,7 @@ $$
 
 **(3)** 低振動数 $x\equiv h\nu/k_BT\ll1$ で $e^x-1\simeq x$ ゆえ $\langle E\rangle\to h\nu/x=k_BT$。古典の等分配と一致する。
 
-**答え**：$Z_1=1/(1-e^{-\beta h\nu})$、$\langle E\rangle=h\nu/(e^{h\nu/k_BT}-1)\xrightarrow{h\nu\ll k_BT}k_BT$。
+**答え**：$Z_1=1/(1-e^{-\beta h\nu})$、$\langle E\rangle=h\nu/(e^{h\nu/k_BT}-1)\overset{h\nu\ll k_BT}{\longrightarrow}k_BT$。
 :::
 
 ### 問題 10-2　両極限と「最初の量子補正」 {#ex-10-2 .unnumbered}
@@ -303,8 +303,8 @@ $$
 §10.4 は両極限の境目を $\nu\sim k_BT/h$ と見積もった。プランク分布のピークを正確に求めて「変位則」を導く。
 
 1. $B_\nu\propto\dfrac{\nu^3}{e^{x}-1}\ (x=h\nu/k_BT)$ を $\nu$ で微分してゼロにおき、$3(1-e^{-x})=x$ という超越方程式を導け。
-2. 数値解 $x_{\rm peak}\approx2.821$ を用いて $\nu_{\rm peak}=2.821\,k_BT/h$ を示し、$\nu_{\rm peak}\propto T$ を確認せよ。
-3. 太陽 $T\simeq5800$ K について $\nu_{\rm peak}$ と対応波長を概算せよ（$B_\lambda$ のピーク波長とは係数が異なることに触れよ）。
+2. 数値解 $x_\mathrm{peak}\approx2.821$ を用いて $\nu_\mathrm{peak}=2.821\,k_BT/h$ を示し、$\nu_\mathrm{peak}\propto T$ を確認せよ。
+3. 太陽 $T\simeq5800$ K について $\nu_\mathrm{peak}$ と対応波長を概算せよ（$B_\lambda$ のピーク波長とは係数が異なることに触れよ）。
 
 **関連**：[§10.4 両極限と境界](#sec-planck-quantum-limits)／波長表示の Wien 変位則の導出は[演習 2-2](../part1/02-reading-spectra.qmd#ex-2-2)、観測スペクトルのピークは[第1章](../part1/01-where-blackbody.qmd)。
 
@@ -317,11 +317,11 @@ $$
 3-\frac{x e^x}{e^x-1}=0\ \Longrightarrow\ 3(1-e^{-x})=x.
 $$
 
-**(2)** この超越方程式の非自明解は $x_{\rm peak}\approx2.821$。よって $\nu_{\rm peak}=x_{\rm peak}k_BT/h=2.821\,k_BT/h\propto T$（Wien 変位則）。
+**(2)** この超越方程式の非自明解は $x_\mathrm{peak}\approx2.821$。よって $\nu_\mathrm{peak}=x_\mathrm{peak}k_BT/h=2.821\,k_BT/h\propto T$（Wien 変位則）。
 
-**(3)** $T=5800$ K で $\nu_{\rm peak}\approx3.4\times10^{14}$ Hz、$\lambda=c/\nu_{\rm peak}\approx8.8\times10^{2}$ nm（近赤外）。これは $B_\lambda$ を最大化して得る $\lambda_{\rm peak}\approx500$ nm とは別物。$B_\nu$ と $B_\lambda$ ではヤコビアン $d\nu=-(c/\lambda^2)d\lambda$ のため最大化条件が異なり（$\lambda$ 側は $x\approx4.965$）、$\nu_{\rm peak}\lambda_{\rm peak}\ne c$ となる。
+**(3)** $T=5800$ K で $\nu_\mathrm{peak}\approx3.4\times10^{14}$ Hz、$\lambda=c/\nu_\mathrm{peak}\approx8.8\times10^{2}$ nm（近赤外）。これは $B_\lambda$ を最大化して得る $\lambda_\mathrm{peak}\approx500$ nm とは別物。$B_\nu$ と $B_\lambda$ ではヤコビアン $d\nu=-(c/\lambda^2)d\lambda$ のため最大化条件が異なり（$\lambda$ 側は $x\approx4.965$）、$\nu_\mathrm{peak}\lambda_\mathrm{peak}\ne c$ となる。
 
-**答え**：$3(1-e^{-x})=x\Rightarrow x\approx2.821$、$\nu_{\rm peak}=2.821k_BT/h\propto T$。太陽で $\nu_{\rm peak}\approx3.4\times10^{14}$ Hz（$\sim880$ nm）。$B_\nu$ と $B_\lambda$ のピークは一致しない。
+**答え**：$3(1-e^{-x})=x\Rightarrow x\approx2.821$、$\nu_\mathrm{peak}=2.821k_BT/h\propto T$。太陽で $\nu_\mathrm{peak}\approx3.4\times10^{14}$ Hz（$\sim880$ nm）。$B_\nu$ と $B_\lambda$ のピークは一致しない。
 :::
 
 ## さらに学ぶための参考文献 {#sec-planck-quantum-further .unnumbered}

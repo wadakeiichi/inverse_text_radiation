@@ -250,10 +250,10 @@ $$ {#eq-nonthermal-distribution}
 
 [★ 難易度：☆☆ ] [tag:導出補完]
 
-§15.2 は灰色大気の Eddington 近似解 $T^4(\tau)=\dfrac{3}{4}T_{\rm eff}^4(\tau+\dfrac23)$ を結果として引いた。これを読み解く。
+§15.2 は灰色大気の Eddington 近似解 $T^4(\tau)=\dfrac{3}{4}T_\mathrm{eff}^4(\tau+\dfrac23)$ を結果として引いた。これを読み解く。
 
-1. 表面 $\tau=0$ での温度 $T(0)$ を $T_{\rm eff}$ で表し、$T(0)\simeq0.84\,T_{\rm eff}$ を確かめよ。
-2. $T(\tau)=T_{\rm eff}$ となる光学的深さ $\tau$ を求めよ。
+1. 表面 $\tau=0$ での温度 $T(0)$ を $T_\mathrm{eff}$ で表し、$T(0)\simeq0.84\,T_\mathrm{eff}$ を確かめよ。
+2. $T(\tau)=T_\mathrm{eff}$ となる光学的深さ $\tau$ を求めよ。
 3. (2) の結果が Eddington-Barbier 近似（emergent flux は $\tau_\nu=2/3$ 層の $S_\nu$ で近似）と整合することを述べ、観測される連続光が「$\tau\simeq2/3$ の層の温度」を映す理由を説明せよ。
 
 **関連**：[§15.2 灰色大気](#sec-non-blackbody-grey)、[§15.3 Eddington-Barbier](#sec-non-blackbody-frequency-opacity) ／ $\tau\sim1$ と光球は[第II部 演習 5-4](../part2/05-radiative-transfer.qmd#ex-5-4)、有効温度は[§17.1](../part6/17-stars-planets-dust.qmd#sec-stars-effective-temperature)。
@@ -261,13 +261,13 @@ $$ {#eq-nonthermal-distribution}
 ::: {.callout-derive collapse="true"}
 ## 模範解答（問題 15-1）
 
-**(1)** $\tau=0$：$T^4(0)=\dfrac34 T_{\rm eff}^4\cdot\dfrac23=\dfrac12 T_{\rm eff}^4$。よって $T(0)=(1/2)^{1/4}T_{\rm eff}=0.841\,T_{\rm eff}$。表面は有効温度より約16%低い。
+**(1)** $\tau=0$：$T^4(0)=\dfrac34 T_\mathrm{eff}^4\cdot\dfrac23=\dfrac12 T_\mathrm{eff}^4$。よって $T(0)=(1/2)^{1/4}T_\mathrm{eff}=0.841\,T_\mathrm{eff}$。表面は有効温度より約16%低い。
 
-**(2)** $T^4(\tau)=T_{\rm eff}^4$ とおく：$\dfrac34(\tau+\dfrac23)=1\Rightarrow\tau+\dfrac23=\dfrac43\Rightarrow\tau=\dfrac23$。
+**(2)** $T^4(\tau)=T_\mathrm{eff}^4$ とおく：$\dfrac34(\tau+\dfrac23)=1\Rightarrow\tau+\dfrac23=\dfrac43\Rightarrow\tau=\dfrac23$。
 
-**(3)** emergent flux の Eddington-Barbier 近似 $F_\nu\approx\pi S_\nu(\tau_\nu=2/3)$ は「$\tau=2/3$ 層のソース関数が観測フラックスを代表する」。灰色大気ではちょうどこの層で $T=T_{\rm eff}$ なので、LTE（$S_\nu=B_\nu$）の下で観測される連続光は $B_\nu(T_{\rm eff})$ に近い。観測スペクトルは「$\tau\simeq2/3$ の層」を映している。
+**(3)** emergent flux の Eddington-Barbier 近似 $F_\nu\approx\pi S_\nu(\tau_\nu=2/3)$ は「$\tau=2/3$ 層のソース関数が観測フラックスを代表する」。灰色大気ではちょうどこの層で $T=T_\mathrm{eff}$ なので、LTE（$S_\nu=B_\nu$）の下で観測される連続光は $B_\nu(T_\mathrm{eff})$ に近い。観測スペクトルは「$\tau\simeq2/3$ の層」を映している。
 
-**答え**：$T(0)=(1/2)^{1/4}T_{\rm eff}\simeq0.84T_{\rm eff}$、$T=T_{\rm eff}$ は $\tau=2/3$。これが Eddington-Barbier の見える深さ。
+**答え**：$T(0)=(1/2)^{1/4}T_\mathrm{eff}\simeq0.84T_\mathrm{eff}$、$T=T_\mathrm{eff}$ は $\tau=2/3$。これが Eddington-Barbier の見える深さ。
 :::
 
 ### 問題 15-2　修正黒体のべき ― なぜ β は Rayleigh-Jeans 側でしか見えないか {#ex-15-2 .unnumbered}
@@ -298,7 +298,7 @@ $$ {#eq-nonthermal-distribution}
 
 [★ 難易度：☆☆ ] [tag:導出補完]
 
-§15.5 のソース関数 $S_\nu=\dfrac{\kappa_\nu^{\rm abs}B_\nu(T)+\sigma_\nu\langle J_\nu\rangle}{\kappa_\nu^{\rm abs}+\sigma_\nu}$ を読み解く。単一散乱アルベド $\tilde\omega_\nu\equiv\dfrac{\sigma_\nu}{\kappa_\nu^{\rm abs}+\sigma_\nu}$。
+§15.5 のソース関数 $S_\nu=\dfrac{\kappa_\nu^\mathrm{abs}B_\nu(T)+\sigma_\nu\langle J_\nu\rangle}{\kappa_\nu^\mathrm{abs}+\sigma_\nu}$ を読み解く。単一散乱アルベド $\tilde\omega_\nu\equiv\dfrac{\sigma_\nu}{\kappa_\nu^\mathrm{abs}+\sigma_\nu}$。
 
 1. $S_\nu$ を $\tilde\omega_\nu$ で書き直し、$S_\nu=(1-\tilde\omega_\nu)B_\nu+\tilde\omega_\nu\langle J_\nu\rangle$ を示せ。
 2. 純吸収（$\tilde\omega_\nu=0$）と純散乱（$\tilde\omega_\nu=1$）の極限で $S_\nu$ がそれぞれ何になるか述べ、後者で局所プランク関数から外れる理由を述べよ。
@@ -309,9 +309,9 @@ $$ {#eq-nonthermal-distribution}
 ::: {.callout-derive collapse="true"}
 ## 模範解答（問題 15-3）
 
-**(1)** 分子分母を $\kappa^{\rm abs}+\sigma$ で割る：$S_\nu=\dfrac{\kappa^{\rm abs}}{\kappa^{\rm abs}+\sigma}B_\nu+\dfrac{\sigma}{\kappa^{\rm abs}+\sigma}\langle J_\nu\rangle=(1-\tilde\omega_\nu)B_\nu+\tilde\omega_\nu\langle J_\nu\rangle$。
+**(1)** 分子分母を $\kappa^\mathrm{abs}+\sigma$ で割る：$S_\nu=\dfrac{\kappa^\mathrm{abs}}{\kappa^\mathrm{abs}+\sigma}B_\nu+\dfrac{\sigma}{\kappa^\mathrm{abs}+\sigma}\langle J_\nu\rangle=(1-\tilde\omega_\nu)B_\nu+\tilde\omega_\nu\langle J_\nu\rangle$。
 
-**(2)** 純吸収 $\tilde\omega=0$：$S_\nu=B_\nu(T)$（LTE、局所プランク）。純散乱 $\tilde\omega=1$：$S_\nu=\langle J_\nu\rangle$（平均強度そのもの）。後者は局所の温度 $T$ ではなく、媒質全体から散乱されてきた放射場 $\langle J_\nu\rangle$ で決まるので、局所プランク関数 $B_\nu(T_{\rm local})$ から外れる（非局所）。
+**(2)** 純吸収 $\tilde\omega=0$：$S_\nu=B_\nu(T)$（LTE、局所プランク）。純散乱 $\tilde\omega=1$：$S_\nu=\langle J_\nu\rangle$（平均強度そのもの）。後者は局所の温度 $T$ ではなく、媒質全体から散乱されてきた放射場 $\langle J_\nu\rangle$ で決まるので、局所プランク関数 $B_\nu(T_\mathrm{local})$ から外れる（非局所）。
 
 **(3)** 熱平衡放射は両偏光が等確率で混ざり無偏光。散乱（特に Thomson・Rayleigh 散乱）は散乱角に依存して特定偏光を優先的に散乱し、偏光を生む。よって観測される偏光は、その光が散乱を経たこと＝散乱が無視できないことの直接証拠。例：CMB の偏光（再結合期の Thomson 散乱）、太陽コロナの偏光、惑星間ダストの散乱光。
 

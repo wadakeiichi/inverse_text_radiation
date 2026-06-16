@@ -273,8 +273,8 @@ $$ {#eq-rj-classical}
 
 §7.1 は $P_i=e^{-E_i/k_BT}/Z$ を結果として与えた。系を温度 $T$ の大きな熱浴と接触させた設定から導く。
 
-1. 系がエネルギー $E_i$ の状態にある確率は、熱浴が残りのエネルギー $E_{\rm tot}-E_i$ を取る多重度に比例する：$P_i\propto\Omega_{\rm bath}(E_{\rm tot}-E_i)$。これを $S_{\rm bath}=k_B\ln\Omega_{\rm bath}$ で書き換えよ。
-2. $E_i\ll E_{\rm tot}$ として $S_{\rm bath}(E_{\rm tot}-E_i)$ を $E_i$ について1次まで展開し、$1/T=\partial S_{\rm bath}/\partial E$ を使って $P_i\propto e^{-E_i/k_BT}$ を導け。
+1. 系がエネルギー $E_i$ の状態にある確率は、熱浴が残りのエネルギー $E_\mathrm{tot}-E_i$ を取る多重度に比例する：$P_i\propto\Omega_\mathrm{bath}(E_\mathrm{tot}-E_i)$。これを $S_\mathrm{bath}=k_B\ln\Omega_\mathrm{bath}$ で書き換えよ。
+2. $E_i\ll E_\mathrm{tot}$ として $S_\mathrm{bath}(E_\mathrm{tot}-E_i)$ を $E_i$ について1次まで展開し、$1/T=\partial S_\mathrm{bath}/\partial E$ を使って $P_i\propto e^{-E_i/k_BT}$ を導け。
 3. 規格化して $Z=\sum_i e^{-E_i/k_BT}$ が現れることを示せ。
 
 **関連**：[§7.1 状態数と確率](#sec-statistical-mechanics-states)／温度の定義は[§6.3](../part3/06-thermal-equilibrium.qmd#sec-thermal-equilibrium-entropy)（[演習 6-2](../part3/06-thermal-equilibrium.qmd#ex-6-2)）。
@@ -282,19 +282,19 @@ $$ {#eq-rj-classical}
 ::: {.callout-derive collapse="true"}
 ## 模範解答（問題 7-1）
 
-**(1)** 系が状態 $i$（エネルギー $E_i$）にあるとき、全体のミクロ状態数は熱浴の多重度 $\Omega_{\rm bath}(E_{\rm tot}-E_i)$ に等しい。等確率の原理から $P_i\propto\Omega_{\rm bath}(E_{\rm tot}-E_i)=e^{S_{\rm bath}(E_{\rm tot}-E_i)/k_B}$。
+**(1)** 系が状態 $i$（エネルギー $E_i$）にあるとき、全体のミクロ状態数は熱浴の多重度 $\Omega_\mathrm{bath}(E_\mathrm{tot}-E_i)$ に等しい。等確率の原理から $P_i\propto\Omega_\mathrm{bath}(E_\mathrm{tot}-E_i)=e^{S_\mathrm{bath}(E_\mathrm{tot}-E_i)/k_B}$。
 
-**(2)** $E_i\ll E_{\rm tot}$ で Taylor 展開：
+**(2)** $E_i\ll E_\mathrm{tot}$ で Taylor 展開：
 
 $$
-S_{\rm bath}(E_{\rm tot}-E_i)\simeq S_{\rm bath}(E_{\rm tot})-E_i\frac{\partial S_{\rm bath}}{\partial E}=S_{\rm bath}(E_{\rm tot})-\frac{E_i}{T}.
+S_\mathrm{bath}(E_\mathrm{tot}-E_i)\simeq S_\mathrm{bath}(E_\mathrm{tot})-E_i\frac{\partial S_\mathrm{bath}}{\partial E}=S_\mathrm{bath}(E_\mathrm{tot})-\frac{E_i}{T}.
 $$
 
-よって $P_i\propto e^{S_{\rm bath}(E_{\rm tot})/k_B}e^{-E_i/k_BT}\propto e^{-E_i/k_BT}$。
+よって $P_i\propto e^{S_\mathrm{bath}(E_\mathrm{tot})/k_B}e^{-E_i/k_BT}\propto e^{-E_i/k_BT}$。
 
 **(3)** $\sum_i P_i=1$ より $P_i=\dfrac{e^{-E_i/k_BT}}{\sum_j e^{-E_j/k_BT}}=\dfrac{e^{-E_i/k_BT}}{Z}$、$Z=\sum_j e^{-E_j/k_BT}$。
 
-**答え**：$P_i\propto\Omega_{\rm bath}(E_{\rm tot}-E_i)$ を1次展開し $1/T=\partial S/\partial E$ を使うと $P_i=e^{-E_i/k_BT}/Z$。
+**答え**：$P_i\propto\Omega_\mathrm{bath}(E_\mathrm{tot}-E_i)$ を1次展開し $1/T=\partial S/\partial E$ を使うと $P_i=e^{-E_i/k_BT}/Z$。
 :::
 
 ### 問題 7-2　振動子の分配関数と、零点項が占有因子に効かないこと {#ex-7-2 .unnumbered}
