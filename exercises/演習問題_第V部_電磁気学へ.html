@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>演習問題 ― 第V部　逆引き3：電磁気学へ（第13〜14章）</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@300;400;500;600;700&family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{--primary:#1f4e79;--secondary:#a23b3b;--gold:#c9a227;--ink:#1f2933;--muted:#5a6573;--paper:#fff;--bg:#fbfaf6;--soft:#eef1f6;--line:#d8dde6;--blue-bg:#f0f6ff;--gold-bg:#fff8e6;}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans JP",system-ui,sans-serif;font-weight:400;line-height:1.85;font-size:16.5px;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:860px;margin:0 auto;padding:0 22px 120px}
+header.book{background:linear-gradient(135deg,#1f4e79 0%,#163a5c 100%);color:#fff;padding:46px 22px 40px;margin-bottom:38px;border-bottom:4px solid var(--gold);}
+header.book .inner{max-width:860px;margin:0 auto}
+header.book .kicker{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:0 0 10px;}
+header.book h1{font-family:"IBM Plex Serif",serif;font-weight:600;font-size:30px;line-height:1.35;margin:0 0 14px;}
+header.book p.sub{margin:0;color:#cdd9e8;font-size:15px;max-width:640px}
+header.book a.bookhome{display:inline-block;margin-top:18px;color:#fff;font-size:13.5px;text-decoration:none;border:1px solid rgba(255,255,255,.4);padding:6px 14px;border-radius:999px;transition:.15s;}
+header.book a.bookhome:hover{background:rgba(255,255,255,.12)}
+.intro{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin-bottom:34px;box-shadow:0 1px 3px rgba(31,41,51,.05);}
+.intro h2{margin:0 0 10px;font-size:17px;color:var(--primary);font-family:"IBM Plex Serif",serif}
+.intro p{margin:.5em 0;font-size:14.5px;color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.legend span{font-size:13px;padding:4px 11px;border-radius:999px;border:1px solid var(--line);background:var(--soft);color:var(--ink)}
+.legend .star{color:var(--gold);font-weight:600}
+.chapter{margin:46px 0 0}
+.chapter-head{border-left:5px solid var(--primary);padding:4px 0 4px 16px;margin-bottom:8px;}
+.chapter-head .cnum{font-size:13px;letter-spacing:.1em;color:var(--secondary);font-weight:600}
+.chapter-head h2{font-family:"IBM Plex Serif",serif;font-weight:600;font-size:24px;margin:3px 0 6px;color:var(--ink)}
+.chapter-head a.src{font-size:13px;color:var(--primary);text-decoration:none}
+.chapter-head a.src:hover{text-decoration:underline}
+.chapter-overview{font-size:14px;color:var(--muted);margin:0 0 18px 21px}
+.problem{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin:18px 0;box-shadow:0 1px 3px rgba(31,41,51,.05);}
+.problem .top{display:flex;align-items:baseline;flex-wrap:wrap;gap:10px;margin-bottom:6px}
+.problem .pid{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:14px;color:#fff;background:var(--primary);padding:2px 9px;border-radius:6px}
+.problem .ptitle{font-weight:600;font-size:17px;color:var(--ink)}
+.problem .diff{color:var(--gold);font-size:15px;letter-spacing:1px}
+.problem .tag{font-size:11.5px;padding:2px 9px;border-radius:999px;font-weight:500;}
+.tag.deriv{background:var(--blue-bg);color:#1f4e79;border:1px solid #cfe0f5}
+.tag.deepen{background:var(--gold-bg);color:#8a6d12;border:1px solid #ecdca0}
+.problem .body{margin-top:10px}.problem .body p{margin:.55em 0}
+.problem ol.parts{margin:.4em 0;padding-left:1.4em}.problem ol.parts li{margin:.3em 0}
+table.mini{border-collapse:collapse;margin:.6em 0;font-size:14px}
+table.mini th,table.mini td{border:1px solid var(--line);padding:4px 10px;text-align:left}
+table.mini th{background:var(--soft)}
+.related{margin-top:14px;padding:10px 14px;background:var(--soft);border-radius:8px;font-size:13px;color:var(--muted)}
+.related b{color:var(--ink);font-weight:600}
+.related a{color:var(--primary);text-decoration:none;border-bottom:1px dotted var(--primary)}
+.related a:hover{border-bottom-style:solid}
+details.sol{margin-top:14px;border:1px solid var(--line);border-radius:8px;background:#fdfcf3;overflow:hidden}
+details.sol>summary{cursor:pointer;list-style:none;padding:11px 16px;font-weight:600;font-size:14.5px;color:var(--secondary);background:#fbf7ec;user-select:none;display:flex;align-items:center;gap:8px}
+details.sol>summary::-webkit-details-marker{display:none}
+details.sol>summary::before{content:"▶";font-size:11px;transition:.15s;color:var(--gold)}
+details.sol[open]>summary::before{transform:rotate(90deg)}
+details.sol .solbody{padding:6px 20px 18px;font-size:15px}
+details.sol .solbody p{margin:.6em 0}
+details.sol .solbody .ans{margin-top:12px;padding:10px 14px;border-left:3px solid var(--gold);background:#fff8e6;border-radius:0 6px 6px 0;font-size:14.5px}
+.katex{font-size:1.04em}.katex-display{overflow-x:auto;overflow-y:hidden;padding:4px 0}
+hr.soft{border:none;border-top:1px solid var(--line);margin:40px 0}
+footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+footer a{color:var(--primary)}
+.toc{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:34px}
+.toc h2{margin:0 0 10px;font-size:15px;color:var(--primary)}
+.toc ul{margin:0;padding-left:1.1em;font-size:14px}.toc li{margin:3px 0}
+.toc a{color:var(--ink);text-decoration:none}.toc a:hover{color:var(--primary);text-decoration:underline}
+.partnav{margin-top:10px;font-size:13px}.partnav a{color:#cfe0f5;text-decoration:none;border-bottom:1px dotted #6f94bd}
+@media(max-width:620px){header.book h1{font-size:24px}}
+</style>
+</head>
+<body>
+
+<header class="book">
+  <div class="inner">
+    <p class="kicker">宇宙の熱的放射 ― 演習問題集</p>
+    <h1>第V部　逆引き3：電磁気学へ<br>演習問題と模範解答（第13〜14章）</h1>
+    <p class="sub">Maxwell 方程式から波動方程式・平面波・偏光を確認し、空洞中の定在波を数え上げてモード密度 $g(\nu)=8\pi\nu^2/c^3$ を導く。プランク分布の前因子 $2h\nu^3/c^2$ の最後のピースを逆引きする問題集です。</p>
+    <a class="bookhome" href="https://wadakeiichi.github.io/inverse_text_radiation/" target="_blank" rel="noopener">教科書本体（GitHub Pages）を開く ↗</a>
+    <div class="partnav">関連：<a href="演習問題_第I部_黒体放射の現象論.html">▶ 第I部</a> ・ <a href="演習問題_第III部_熱力学統計力学へ.html">第III部</a> ・ <a href="演習問題_第IV部_量子論へ.html">第IV部</a></div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="intro">
+    <h2>この問題集の使い方</h2>
+    <p>本文が「標準的な電磁気学教科書を参照」「結果のみ」とした計算を自力で展開する<span style="color:#1f4e79">導出補完</span>問題と、偏光自由度や次元依存性など物理的意味を掘る<span style="color:#8a6d12">理解を深める</span>問題の二系統です。第V部はプランク分布の前因子の起源（偏光の2、モード密度の $\nu^2$、光速の $c$）を確定させる部なので、幾何的な数え上げが中心になります。各問に本文該当節へのリンクを付けています。解答は「▶ 模範解答」で展開 ― まず自力で。</p>
+    <div class="legend">
+      <span class="star">☆</span> 基礎
+      <span class="star">☆☆</span> 標準（導出・意味づけ）
+      <span class="star">☆☆☆</span> 発展（多段の数え上げ・総合）
+      <span class="tag deriv" style="font-size:13px">導出補完</span>
+      <span class="tag deepen" style="font-size:13px">理解を深める</span>
+    </div>
+  </div>
+
+  <div class="toc">
+    <h2>収録問題（全8問）</h2>
+    <ul>
+      <li><a href="#ch13">第13章　電磁波としての光</a>（4問）</li>
+      <li><a href="#ch14">第14章　空洞中の電磁モード</a>（4問）</li>
+    </ul>
+  </div>
+
+  <!-- ================= CHAPTER 13 ================= -->
+  <section class="chapter" id="ch13">
+    <div class="chapter-head">
+      <span class="cnum">第13章</span>
+      <h2>電磁波としての光</h2>
+      <a class="src" href="https://wadakeiichi.github.io/inverse_text_radiation/part5/13-electromagnetic-waves.html" target="_blank" rel="noopener">本文を開く ↗</a>
+    </div>
+    <p class="chapter-overview">Maxwell 方程式→波動方程式（光速 $c$ の起源）、平面波と分散関係、横波条件から偏光自由度2、Poynting ベクトル。前因子の「$c$」と「2」をここで確定する。</p>
+
+    <!-- 13-1 -->
+    <div class="problem">
+      <div class="top"><span class="pid">13-1</span><span class="ptitle">Maxwell 方程式から波動方程式を導く</span><span class="diff">☆☆</span><span class="tag deriv">導出補完</span></div>
+      <div class="body">
+        <p>§13.2 はベクトル恒等式を使うとだけ述べた。真空 Maxwell 方程式から $\mathbf E$ の波動方程式を導く。$\nabla\cdot\mathbf E=0$、$\nabla\times\mathbf E=-\partial_t\mathbf B$、$\nabla\times\mathbf B=\dfrac{1}{c^2}\partial_t\mathbf E$。</p>
+        <ol class="parts">
+          <li>$\nabla\times\mathbf E=-\partial_t\mathbf B$ の両辺に $\nabla\times$ を作用させ、恒等式 $\nabla\times(\nabla\times\mathbf E)=\nabla(\nabla\cdot\mathbf E)-\nabla^2\mathbf E$ を使って $-\nabla^2\mathbf E=-\partial_t(\nabla\times\mathbf B)$ を示せ。</li>
+          <li>右辺に $\nabla\times\mathbf B=\dfrac{1}{c^2}\partial_t\mathbf E$ を代入し、$\nabla^2\mathbf E-\dfrac{1}{c^2}\partial_t^2\mathbf E=0$ を導け。</li>
+          <li>$c=1/\sqrt{\mu_0\epsilon_0}$ が波の伝播速度としてこの式に現れることの意味（光速が電磁気の基本定数から決まる）を一言で述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part5/13-electromagnetic-waves.html#sec-electromagnetic-waves-wave-equation" target="_blank" rel="noopener">§13.2 波動方程式</a> ／
+        前因子の $1/c^2$ の起源は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part5/14-cavity-modes.html#sec-cavity-modes-frequency" target="_blank" rel="noopener">§14.4</a>（演習 14-1）。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $\nabla\times(\nabla\times\mathbf E)=-\partial_t(\nabla\times\mathbf B)$。左辺に恒等式を使い、$\nabla\cdot\mathbf E=0$（真空）より $\nabla(\nabla\cdot\mathbf E)=0$ ゆえ</p>
+          $$\nabla(\nabla\cdot\mathbf E)-\nabla^2\mathbf E=-\nabla^2\mathbf E=-\partial_t(\nabla\times\mathbf B).$$
+          <p><b>(2)</b> $\nabla\times\mathbf B=\dfrac{1}{c^2}\partial_t\mathbf E$ を代入：</p>
+          $$-\nabla^2\mathbf E=-\partial_t\left(\frac{1}{c^2}\partial_t\mathbf E\right)=-\frac{1}{c^2}\partial_t^2\mathbf E\ \Rightarrow\ \nabla^2\mathbf E-\frac{1}{c^2}\partial_t^2\mathbf E=0.$$
+          <p><b>(3)</b> この波動方程式の波の速さは方程式中の定数 $c=1/\sqrt{\mu_0\epsilon_0}$。電気・磁気の基本定数だけから光速が決まり、光が電磁波であること、その速度が真空中で $c$ であることが Maxwell 方程式に組み込まれている。これがプランク前因子の $c$ の出どころ。</p>
+          <div class="ans"><b>答え：</b> $\nabla^2\mathbf E-\frac{1}{c^2}\partial_t^2\mathbf E=0$。波速 $c=1/\sqrt{\mu_0\epsilon_0}$ が電磁気定数から決まる。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 13-2 -->
+    <div class="problem">
+      <div class="top"><span class="pid">13-2</span><span class="ptitle">分散関係と横波条件 ― 偏光自由度2</span><span class="diff">☆☆</span><span class="tag deriv">導出補完</span></div>
+      <div class="body">
+        <p>平面波 $\mathbf E=\mathbf E_0\,e^{i(\mathbf k\cdot\mathbf r-\omega t)}$ を使う。</p>
+        <ol class="parts">
+          <li>波動方程式に代入して分散関係 $\omega=c|\mathbf k|$（$\nu=c/\lambda$）を導け。</li>
+          <li>$\nabla\cdot\mathbf E=0$ に代入して $\mathbf k\cdot\mathbf E_0=0$（横波）を示せ。</li>
+          <li>横波条件から、与えられた $\mathbf k$ に対し独立な偏光が2つであることを示し、これがプランク前因子 $2h\nu^3/c^2$ の先頭の「2」の起源であることを述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part5/13-electromagnetic-waves.html#sec-electromagnetic-waves-plane-wave" target="_blank" rel="noopener">§13.3 平面波</a>、
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part5/13-electromagnetic-waves.html#sec-electromagnetic-waves-polarization" target="_blank" rel="noopener">§13.4 偏光</a> ／
+        モード数え上げでの2倍は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part5/14-cavity-modes.html#sec-cavity-modes-polarization" target="_blank" rel="noopener">§14.3</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $\partial_t\to-i\omega$、$\nabla\to i\mathbf k$ ゆえ $\nabla^2\to-|\mathbf k|^2$、$\partial_t^2\to-\omega^2$。波動方程式は</p>
+          $$\left(-|\mathbf k|^2+\frac{\omega^2}{c^2}\right)\mathbf E_0=0\ \Rightarrow\ \omega^2=c^2|\mathbf k|^2\ \Rightarrow\ \omega=c|\mathbf k|.$$
+          <p>$\omega=2\pi\nu$、$|\mathbf k|=2\pi/\lambda$ より $\nu=c/\lambda$。</p>
+          <p><b>(2)</b> $\nabla\cdot\mathbf E=i\mathbf k\cdot\mathbf E_0\,e^{i(\cdots)}=0\Rightarrow\mathbf k\cdot\mathbf E_0=0$。電場は伝播方向に垂直＝横波。</p>
+          <p><b>(3)</b> $\mathbf E_0$ は $\mathbf k$ に垂直な平面（2次元）内で自由。よって独立な基底偏光は2つ（例：直線偏光2方向、または右・左円偏光）。任意の偏光はこの2つの線形結合。この「2」がモード数え上げで各 $\mathbf k$ に2を掛ける根拠となり、プランク前因子の先頭の2になる。</p>
+          <div class="ans"><b>答え：</b> $\omega=c|\mathbf k|$、$\mathbf k\cdot\mathbf E_0=0$。横波ゆえ偏光は2自由度＝前因子の「2」。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 13-3 -->
+    <div class="problem">
+      <div class="top"><span class="pid">13-3</span><span class="ptitle">Poynting ベクトルの時間平均</span><span class="diff">☆☆</span><span class="tag deriv">導出補完</span></div>
+      <div class="body">
+        <p>§13.5 は時間平均 Poynting ベクトル $\langle\mathbf S\rangle=\dfrac{c}{8\pi}|\mathbf E_0|^2\hat{\mathbf k}$（Gauss 単位）を結果として与えた。導く。実数の平面波 $\mathbf E=\mathbf E_0\cos(\mathbf k\cdot\mathbf r-\omega t)$、電磁波では $|\mathbf B|=|\mathbf E|$ かつ $\mathbf B=\hat{\mathbf k}\times\mathbf E$（Gauss）。</p>
+        <p><b>単位系の注意：</b>本問は <b>Gauss/CGS 規約</b>（$\mathbf S=\dfrac{c}{4\pi}\mathbf E\times\mathbf B$）で進める。SI では $\mathbf S=\dfrac{1}{\mu_0}\mathbf E\times\mathbf B$、$|\mathbf B|=|\mathbf E|/c$ となり前因子が変わる（時間平均は $\langle\mathbf S\rangle=\tfrac12 c\epsilon_0|\mathbf E_0|^2\hat{\mathbf k}$）。付録 B.4 の SI 統一方針に対し、ここでは現行本文に合わせ CGS で扱う。</p>
+        <ol class="parts">
+          <li>$\mathbf S=\dfrac{c}{4\pi}\mathbf E\times\mathbf B$ に代入し、$\mathbf S=\dfrac{c}{4\pi}|\mathbf E_0|^2\cos^2(\mathbf k\cdot\mathbf r-\omega t)\,\hat{\mathbf k}$ を示せ。</li>
+          <li>$\cos^2$ の時間平均が $1/2$ であることを使い、$\langle\mathbf S\rangle=\dfrac{c}{8\pi}|\mathbf E_0|^2\hat{\mathbf k}$ を導け。</li>
+          <li>エネルギーが波数ベクトル方向 $\hat{\mathbf k}$ に運ばれること、これが観測量フラックス $F_\nu$ に対応することを一言で述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part5/13-electromagnetic-waves.html#sec-electromagnetic-waves-poynting" target="_blank" rel="noopener">§13.5 Poynting ベクトル</a> ／
+        フラックスの定義は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part2/04-radiation-field.html#sec-radiation-field-flux" target="_blank" rel="noopener">第4章 §4.4</a>（<a href="演習問題_第II部_放射の記述と輸送.html">第II部 演習</a>）。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $\mathbf B=\hat{\mathbf k}\times\mathbf E$、$\mathbf E\perp\hat{\mathbf k}$ ゆえ $\mathbf E\times\mathbf B=\mathbf E\times(\hat{\mathbf k}\times\mathbf E)=\hat{\mathbf k}|\mathbf E|^2-\mathbf E(\mathbf E\cdot\hat{\mathbf k})=|\mathbf E|^2\hat{\mathbf k}$（$\mathbf E\cdot\hat{\mathbf k}=0$）。$|\mathbf E|^2=|\mathbf E_0|^2\cos^2(\cdots)$。よって</p>
+          $$\mathbf S=\frac{c}{4\pi}|\mathbf E_0|^2\cos^2(\mathbf k\cdot\mathbf r-\omega t)\,\hat{\mathbf k}.$$
+          <p><b>(2)</b> $\langle\cos^2\rangle=1/2$（1周期平均）ゆえ</p>
+          $$\langle\mathbf S\rangle=\frac{c}{4\pi}|\mathbf E_0|^2\cdot\frac12\,\hat{\mathbf k}=\frac{c}{8\pi}|\mathbf E_0|^2\hat{\mathbf k}.$$
+          <p><b>(3)</b> エネルギー流は波数方向 $\hat{\mathbf k}$。これは単位面積・単位時間あたりのエネルギー流密度で、振動数分解すれば観測量フラックス $F_\nu$（第4章）に対応する。望遠鏡が検出するのは本質的にこの量。</p>
+          <div class="ans"><b>答え：</b> $\mathbf S=\frac{c}{4\pi}|\mathbf E_0|^2\cos^2(\cdots)\hat{\mathbf k}$、時間平均で $\langle\mathbf S\rangle=\frac{c}{8\pi}|\mathbf E_0|^2\hat{\mathbf k}$。$\hat{\mathbf k}$ 方向のエネルギー流＝フラックス。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 13-4 -->
+    <div class="problem">
+      <div class="top"><span class="pid">13-4</span><span class="ptitle">偏光が運ぶ天文情報 ― なぜ黒体は無偏光か</span><span class="diff">☆☆</span><span class="tag deepen">理解を深める</span></div>
+      <div class="body">
+        <p>§13.4 は偏光の天文的意義を列挙した。整理する。</p>
+        <ol class="parts">
+          <li>偏光自由度が「ちょうど2」になるのは、電磁波が3次元空間で横波だからである。もし縦波成分が許されたら自由度は何個になるか。なぜ実際は2なのか。</li>
+          <li>シンクロトロン放射・散乱光・Zeeman 効果が、それぞれ偏光からどんな物理量（磁場方向・散乱幾何・磁場強度）を引き出すか述べよ。</li>
+          <li>中心地図のプランク分布そのものは等方・無偏光である。なぜ熱平衡放射は無偏光なのか（多数の方向と偏光の平均）を述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part5/13-electromagnetic-waves.html#sec-electromagnetic-waves-polarization" target="_blank" rel="noopener">§13.4 偏光</a> ／
+        散乱と偏光は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/15-non-blackbody.html#sec-non-blackbody-scattering" target="_blank" rel="noopener">§15.5</a>、Zeeman 効果は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/22-line-shape.html" target="_blank" rel="noopener">第22章</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 3次元のベクトル場 $\mathbf E_0$ は本来3成分。横波条件 $\mathbf k\cdot\mathbf E_0=0$ が1成分（$\mathbf k$ 方向＝縦波成分）を禁じるので、残り2成分（$\mathbf k$ 垂直面内）が独立。もし縦波が許されれば3自由度だが、Maxwell 方程式（$\nabla\cdot\mathbf E=0$）が縦波を禁じるため実際は2。</p>
+          <p><b>(2)</b> シンクロトロン：放射の偏光面から磁場の方向（偏光は磁場に垂直）。散乱光：偏光の向き・度合いから散乱体の幾何（散乱角90°で最大偏光）。Zeeman 効果：線が偏光成分に分裂し、その分裂幅から磁場強度。</p>
+          <p><b>(3)</b> 熱平衡放射は多数の独立な放射体（原子・モード）から、あらゆる方向・あらゆる偏光で等確率に放出される。2つの偏光状態が同じ強度で混ざり、方向平均すると正味の偏光は打ち消されてゼロになる。だから黒体放射は等方・無偏光。観測される偏光は、散乱や磁場など等方性を破る機構の存在を示す。</p>
+          <div class="ans"><b>答え：</b> Maxwell が縦波を禁じ自由度2。偏光→磁場方向(シンクロトロン)/散乱幾何/磁場強度(Zeeman)。熱平衡は両偏光が等確率で混ざり無偏光。</div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <hr class="soft">
+
+  <!-- ================= CHAPTER 14 ================= -->
+  <section class="chapter" id="ch14">
+    <div class="chapter-head">
+      <span class="cnum">第14章</span>
+      <h2>空洞中の電磁モード</h2>
+      <a class="src" href="https://wadakeiichi.github.io/inverse_text_radiation/part5/14-cavity-modes.html" target="_blank" rel="noopener">本文を開く ↗</a>
+    </div>
+    <p class="chapter-overview">定在波と境界条件から許される波数、$k$ 空間の数え上げ（1/8 球＋偏光2）、モード密度 $g(\nu)=8\pi\nu^2/c^3$、そしてプランク分布の全因子の合流。第I〜V部の逆引きの総まとめ。</p>
+
+    <!-- 14-1 -->
+    <div class="problem">
+      <div class="top"><span class="pid">14-1</span><span class="ptitle">定在波と境界条件からモード密度 $8\pi\nu^2/c^3$</span><span class="diff">☆☆☆</span><span class="tag deriv">導出補完</span></div>
+      <div class="body">
+        <p>§14.1〜14.4 の数え上げを通しで再現する。辺長 $L$ の完全導体立方体。定在波 $E_x\propto\cos(k_xx)\sin(k_yy)\sin(k_zz)$ など。</p>
+        <ol class="parts">
+          <li>境界条件 $E_\parallel=0$ から許される波数が $k_i=n_i\pi/L$（$n_i=1,2,\dots$）になることを示せ。</li>
+          <li>$k$ 空間の格子点密度 $V/\pi^3$、第一象限（1/8 球）、偏光2を使い、$|\mathbf k|\lt k$ のモード数 $N(\lt k)=\dfrac{Vk^3}{3\pi^2}$ を導け。</li>
+          <li>分散関係 $k=2\pi\nu/c$ を代入し $N(\lt \nu)=\dfrac{8\pi V\nu^3}{3c^3}$、微分して $g(\nu)=\dfrac{1}{V}\dfrac{dN}{d\nu}=\dfrac{8\pi\nu^2}{c^3}$ を導け。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part5/14-cavity-modes.html#sec-cavity-modes-standing-waves" target="_blank" rel="noopener">§14.1 定在波</a>、
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part5/14-cavity-modes.html#sec-cavity-modes-frequency" target="_blank" rel="noopener">§14.4 モード密度</a> ／
+        同じ式を第9章側から導いたのが <a href="演習問題_第IV部_量子論へ.html">第IV部 演習 9-1</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 壁 $y=0,L$ と $z=0,L$ で $E_x$ の接線成分がゼロ。$E_x\propto\sin(k_yy)\sin(k_zz)$ が $y,z=0$ で自動的にゼロ、$y,z=L$ でゼロには $\sin(k_iL)=0\Rightarrow k_iL=n_i\pi$。よって $k_i=n_i\pi/L$（$n_i=1,2,\dots$、各軸独立）。</p>
+          <p><b>(2)</b> 格子間隔 $\pi/L$ ゆえ $k$ 空間の格子点密度 $1/(\pi/L)^3=V/\pi^3$（$V=L^3$）。$n_i\gt 0$ なので半径 $k$ の球の第一象限（1/8）のみ：$\frac18\cdot\frac{4\pi k^3}{3}$。偏光2を掛けて</p>
+          $$N(<k)=2\cdot\frac{V}{\pi^3}\cdot\frac18\cdot\frac{4\pi k^3}{3}=\frac{Vk^3}{3\pi^2}.$$
+          <p><b>(3)</b> $k=2\pi\nu/c$：</p>
+          $$N(<\nu)=\frac{V}{3\pi^2}\left(\frac{2\pi\nu}{c}\right)^3=\frac{8\pi V\nu^3}{3c^3},\qquad g(\nu)=\frac1V\frac{dN}{d\nu}=\frac{8\pi\nu^2}{c^3}.$$
+          <div class="ans"><b>答え：</b> $k_i=n_i\pi/L$、$N(\lt k)=Vk^3/3\pi^2$、$g(\nu)=8\pi\nu^2/c^3$。第9章の数え上げ（演習 9-1）と一致。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 14-2 -->
+    <div class="problem">
+      <div class="top"><span class="pid">14-2</span><span class="ptitle">なぜ「1/8 倍」か ― $\pm\mathbf k$ の同一視</span><span class="diff">☆☆</span><span class="tag deepen">理解を深める</span></div>
+      <div class="body">
+        <p>§14.2 の問いを掘る。全球 $4\pi k^3/3$ をそのまま使うと過大評価になる。</p>
+        <ol class="parts">
+          <li>なぜ許される $\mathbf k$ は第一象限（$n_x,n_y,n_z\gt 0$）だけなのか。$\mathbf k$ と $-\mathbf k$ が同じ定在波を表すこと（$\cos(k_xx)=\cos(-k_xx)$）を使って説明せよ。</li>
+          <li>周期境界条件（壁でなく端をつなぐ）にすると格子間隔が $2\pi/L$、$\mathbf k$ は正負両方をとる。この場合も同じ $g(\nu)$ になることを、両効果（間隔 $2$ 倍＝密度 $1/8$、全球を使う＝$\times8$）が打ち消すことから示せ。</li>
+          <li>「壁にどう接続するか」が最終結果に効かないことが、第3章の黒体放射の普遍性とどう整合するか述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part5/14-cavity-modes.html#sec-cavity-modes-k-counting" target="_blank" rel="noopener">§14.2 波数の数え上げ</a> ／
+        普遍性は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/03-universality.html#sec-universality-cavity" target="_blank" rel="noopener">§3.3</a>（<a href="演習問題_第I部_黒体放射の現象論.html">第I部 演習 3-1</a>）。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 定在波は $\cos(k_xx)$ や $\sin(k_xx)$ の形で、$k_x$ と $-k_x$ は同じ関数（偶／奇の符号差は振幅に吸収）を与え、物理的に同一のモード。$n_i$ を正負両方数えると同じモードを重複して数えることになる。独立なモードは $n_i\gt 0$ の第一象限のみ。よって全球の 1/8。</p>
+          <p><b>(2)</b> 周期境界条件では許される $k_i=2\pi n_i/L$（$n_i=0,\pm1,\pm2,\dots$）で格子間隔 $2\pi/L$（壁の場合の2倍）。格子点密度は $(L/2\pi)^3=V/8\pi^3$（壁の $V/\pi^3$ の 1/8）。一方 $\mathbf k$ は正負両方とるので全球 $4\pi k^3/3$（1/8 球の8倍）を使う。密度の $1/8$ と全球の $\times8$ が打ち消し、$N(\lt k)=2\cdot\frac{V}{8\pi^3}\cdot\frac{4\pi k^3}{3}=\frac{Vk^3}{3\pi^2}$ と同じ。</p>
+          <p><b>(3)</b> 第3章では「空洞放射のスペクトルは壁の材質によらず一意」（熱力学第二法則）と示した。境界条件の選び方（完全導体壁 vs 周期境界）が $g(\nu)$ を変えないのは、まさにこの普遍性の現れ。計算の便宜でどちらを選んでもよく、これは普遍性を逆手にとった計算戦略。</p>
+          <div class="ans"><b>答え：</b> $\pm\mathbf k$ が同一モードゆえ 1/8 球。周期境界では密度 1/8・全球 ×8 が打ち消し同じ $g(\nu)$。境界の選び方に依らないのは黒体の普遍性の現れ。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 14-3 -->
+    <div class="problem">
+      <div class="top"><span class="pid">14-3</span><span class="ptitle">モード密度の次元依存性 $g(\nu)\propto\nu^{d-1}$</span><span class="diff">☆☆</span><span class="tag deepen">理解を深める</span></div>
+      <div class="body">
+        <p>§14.4 は3次元で $g(\nu)\propto\nu^2$ になる理由が幾何にあると述べた。次元を一般化する。</p>
+        <ol class="parts">
+          <li>$d$ 次元で $k$ 空間の球の体積 $\propto k^d$ から、$|\mathbf k|\lt k$ のモード数 $N(\lt k)\propto k^d$、よって $g(k)\propto k^{d-1}$、$g(\nu)\propto\nu^{d-1}/c^d$ を示せ。</li>
+          <li>3次元・2次元・1次元でモード密度の振動数依存を書き、それぞれ $\nu^2$・$\nu$・定数になることを確かめよ。</li>
+          <li>もし宇宙が2次元なら、プランク分布のエネルギー密度 $u_\nu=g(\nu)h\nu\bar n$ は $\nu$ の何乗の前因子を持つか。「観測される黒体スペクトルの形に3次元という情報が組み込まれている」という主張を説明せよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part5/14-cavity-modes.html#sec-cavity-modes-frequency" target="_blank" rel="noopener">§14.4 モード密度の正体</a> ／
+        モード密度の幾何は <a href="演習問題_第IV部_量子論へ.html">第IV部 演習 9-1</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $d$ 次元の球の体積は $\propto k^d$。格子密度 $\propto V/\pi^d$、象限因子・偏光因子は定数なので $N(\lt k)\propto Vk^d$。微分して $dN/dk\propto k^{d-1}$。$k=2\pi\nu/c$ より $g(\nu)\propto\nu^{d-1}/c^d$。</p>
+          <p><b>(2)</b> 3次元：$g\propto\nu^2/c^3$。2次元：$g\propto\nu/c^2$。1次元：$g\propto\nu^0=$ 定数（$\propto1/c$）。これは「$k$ 空間の球殻 $k^{d-1}$」の幾何そのもの。</p>
+          <p><b>(3)</b> 2次元では $u_\nu=g(\nu)h\nu\bar n\propto\nu\cdot h\nu/(e^{h\nu/kT}-1)=h\nu^2/(e^{h\nu/kT}-1)$、前因子は $\nu^2$（3次元の $\nu^3$ ではない）。スペクトル全体の形（低振動数べき・ピーク位置・全エネルギーの温度依存）が次元で変わる。逆に言えば、観測される黒体スペクトルが $\nu^3$ 前因子を持つこと自体が、我々が3次元空間に住む証拠を含んでいる。</p>
+          <div class="ans"><b>答え：</b> $g(\nu)\propto\nu^{d-1}/c^d$。3D→$\nu^2$、2D→$\nu$、1D→定数。2次元なら $u_\nu$ 前因子は $\nu^2$。スペクトル形が空間次元を反映。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 14-4 -->
+    <div class="problem">
+      <div class="top"><span class="pid">14-4</span><span class="ptitle">プランク分布の全因子の合流 ― 第I〜V部の総まとめ</span><span class="diff">☆☆☆</span><span class="tag deriv">導出補完</span></div>
+      <div class="body">
+        <p>§14.5 の総まとめを自分で組み立てる。モード密度 $g(\nu)=8\pi\nu^2/c^3$、各モードの光子エネルギー $h\nu$、平均光子数 $\bar n=1/(e^{h\nu/kT}-1)$。</p>
+        <ol class="parts">
+          <li>エネルギー密度 $u_\nu=g(\nu)\cdot h\nu\cdot\bar n$ を組み立て、$u_\nu=\dfrac{8\pi h\nu^3}{c^3}\dfrac{1}{e^{h\nu/kT}-1}$ を示せ。</li>
+          <li>等方場の関係 $B_\nu=\dfrac{c}{4\pi}u_\nu$（第4章）を使い、$B_\nu=\dfrac{2h\nu^3}{c^2}\dfrac{1}{e^{h\nu/kT}-1}$ を導け。</li>
+          <li>前因子 $2h\nu^3/c^2$ と指数因子 $1/(e^{h\nu/kT}-1)$ の各部品（2、$\nu^2$、$1/c^3$、$h\nu$、Bose＋$\mu=0$）が、それぞれどの章・どの物理に由来するかを一覧にせよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part5/14-cavity-modes.html#sec-cavity-modes-bnu-derivation" target="_blank" rel="noopener">§14.5 前因子への合流</a> ／
+        占有因子は <a href="演習問題_第III部_熱力学統計力学へ.html">第III部 演習 8-2・8-3</a>、$h\nu$ 量子化は <a href="演習問題_第IV部_量子論へ.html">第IV部 演習 10-1</a>、$B_\nu=\frac{c}{4\pi}u_\nu$ は <a href="演習問題_第II部_放射の記述と輸送.html">第II部 演習 4-1</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $u_\nu=g(\nu)\cdot h\nu\cdot\bar n=\dfrac{8\pi\nu^2}{c^3}\cdot h\nu\cdot\dfrac{1}{e^{h\nu/kT}-1}=\dfrac{8\pi h\nu^3}{c^3}\dfrac{1}{e^{h\nu/kT}-1}$。</p>
+          <p><b>(2)</b> $B_\nu=\dfrac{c}{4\pi}u_\nu=\dfrac{c}{4\pi}\cdot\dfrac{8\pi h\nu^3}{c^3}\dfrac{1}{e^{h\nu/kT}-1}=\dfrac{2h\nu^3}{c^2}\dfrac{1}{e^{h\nu/kT}-1}$。（$\frac{c}{4\pi}\cdot8\pi=2c$、$/c^3=1/c^2$。）</p>
+          <p><b>(3)</b> 各因子の起源：</p>
+          <table class="mini">
+            <tr><th>因子</th><th>起源</th><th>章/演習</th></tr>
+            <tr><td>$1/(e^{h\nu/kT}-1)$</td><td>光子の Bose 統計＋$\mu=0$</td><td>第8章（8-2,8-3）</td></tr>
+            <tr><td>$h\nu$（指数中・前因子中）</td><td>エネルギー量子化</td><td>第10章（10-1）</td></tr>
+            <tr><td>$\nu^2$</td><td>3次元空洞のモード密度</td><td>第14章（14-1）</td></tr>
+            <tr><td>$1/c^3$</td><td>分散関係 $k=2\pi\nu/c$</td><td>第13章（13-2）</td></tr>
+            <tr><td>$2$</td><td>偏光自由度（横波）</td><td>第13章（13-2,13-4）</td></tr>
+            <tr><td>全体 $1/c^2$</td><td>$1/c^3\times c$（$u_\nu\to B_\nu$ 変換）</td><td>第14章/第4章（4-1）</td></tr>
+          </table>
+          <p>観測される一本の黒体曲線から、統計力学・量子論・電磁気学が逆向きに再構成された。</p>
+          <div class="ans"><b>答え：</b> $u_\nu=\frac{8\pi h\nu^3}{c^3}\frac{1}{e^{h\nu/kT}-1}$、$B_\nu=\frac{2h\nu^3}{c^2}\frac{1}{e^{h\nu/kT}-1}$。全因子が第8・10・13・14章の物理に分解される。</div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <footer>
+    <p><b>宇宙の熱的放射</b> ― 連続放射と線スペクトルの背景物理（和田 桂一）<br>
+    演習問題集・第V部（試作版）。本文の各節は
+    <a href="https://wadakeiichi.github.io/inverse_text_radiation/" target="_blank" rel="noopener">GitHub Pages 公開版</a>
+    にリンクしています。第V部は電磁気学への逆引きが主題のため、Maxwell→波動方程式→偏光の導出と、空洞モードの数え上げ（前因子の完全分解）を組み合わせました。プランク分布の全因子がここで出揃います。<br>
+    関連演習：<a href="演習問題_第I部_黒体放射の現象論.html">第I部</a> ・ <a href="演習問題_第II部_放射の記述と輸送.html">第II部</a> ・ <a href="演習問題_第III部_熱力学統計力学へ.html">第III部</a> ・ <a href="演習問題_第IV部_量子論へ.html">第IV部</a></p>
+  </footer>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false},
+      {left: "\\[", right: "\\]", display: true}
+    ],
+    throwOnError: false
+  });
+});
+</script>
+</body>
+</html>

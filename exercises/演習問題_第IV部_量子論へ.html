@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>演習問題 ― 第IV部　逆引き2：量子論へ（第9〜12章）</title>
+
+<!-- KaTeX -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@300;400;500;600;700&family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --primary:#1f4e79; --secondary:#a23b3b; --gold:#c9a227;
+  --ink:#1f2933; --muted:#5a6573; --paper:#ffffff; --bg:#fbfaf6;
+  --soft:#eef1f6; --line:#d8dde6; --blue-bg:#f0f6ff; --gold-bg:#fff8e6; --red-bg:#fff4f0;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:"IBM Plex Sans JP",system-ui,sans-serif;
+  font-weight:400; line-height:1.85; font-size:16.5px;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:860px; margin:0 auto; padding:0 22px 120px}
+
+/* Header */
+header.book{
+  background:linear-gradient(135deg,#1f4e79 0%,#163a5c 100%);
+  color:#fff; padding:46px 22px 40px; margin-bottom:38px;
+  border-bottom:4px solid var(--gold);
+}
+header.book .inner{max-width:860px;margin:0 auto}
+header.book .kicker{
+  font-size:13px; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--gold); font-weight:600; margin:0 0 10px;
+}
+header.book h1{
+  font-family:"IBM Plex Serif",serif; font-weight:600;
+  font-size:30px; line-height:1.35; margin:0 0 14px;
+}
+header.book p.sub{margin:0;color:#cdd9e8;font-size:15px;max-width:620px}
+header.book a.bookhome{
+  display:inline-block;margin-top:18px;color:#fff;font-size:13.5px;
+  text-decoration:none;border:1px solid rgba(255,255,255,.4);
+  padding:6px 14px;border-radius:999px;transition:.15s;
+}
+header.book a.bookhome:hover{background:rgba(255,255,255,.12)}
+
+/* Intro / legend */
+.intro{
+  background:var(--paper); border:1px solid var(--line);
+  border-radius:12px; padding:22px 24px; margin-bottom:34px;
+  box-shadow:0 1px 3px rgba(31,41,51,.05);
+}
+.intro h2{margin:0 0 10px;font-size:17px;color:var(--primary);font-family:"IBM Plex Serif",serif}
+.intro p{margin:.5em 0;font-size:14.5px;color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.legend span{
+  font-size:13px;padding:4px 11px;border-radius:999px;border:1px solid var(--line);
+  background:var(--soft);color:var(--ink)
+}
+.legend .star{color:var(--gold);font-weight:600}
+
+/* Chapter section */
+.chapter{margin:46px 0 0}
+.chapter-head{
+  border-left:5px solid var(--primary); padding:4px 0 4px 16px; margin-bottom:8px;
+}
+.chapter-head .cnum{font-size:13px;letter-spacing:.1em;color:var(--secondary);font-weight:600}
+.chapter-head h2{
+  font-family:"IBM Plex Serif",serif;font-weight:600;font-size:24px;
+  margin:3px 0 6px;color:var(--ink)
+}
+.chapter-head a.src{font-size:13px;color:var(--primary);text-decoration:none}
+.chapter-head a.src:hover{text-decoration:underline}
+.chapter-overview{font-size:14px;color:var(--muted);margin:0 0 18px 21px}
+
+/* Problem card */
+.problem{
+  background:var(--paper); border:1px solid var(--line); border-radius:12px;
+  padding:22px 24px; margin:18px 0; box-shadow:0 1px 3px rgba(31,41,51,.05);
+}
+.problem .top{display:flex;align-items:baseline;flex-wrap:wrap;gap:10px;margin-bottom:6px}
+.problem .pid{
+  font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:14px;
+  color:#fff;background:var(--primary);padding:2px 9px;border-radius:6px
+}
+.problem .ptitle{font-weight:600;font-size:17px;color:var(--ink)}
+.problem .diff{color:var(--gold);font-size:15px;letter-spacing:1px}
+.problem .tag{
+  font-size:11.5px;padding:2px 9px;border-radius:999px;font-weight:500;
+}
+.tag.deriv{background:var(--blue-bg);color:#1f4e79;border:1px solid #cfe0f5}
+.tag.deepen{background:var(--gold-bg);color:#8a6d12;border:1px solid #ecdca0}
+.problem .body{margin-top:10px}
+.problem .body p{margin:.55em 0}
+.problem ol.parts{margin:.4em 0 .4em 0;padding-left:1.4em}
+.problem ol.parts li{margin:.3em 0}
+
+/* related links */
+.related{
+  margin-top:14px;padding:10px 14px;background:var(--soft);
+  border-radius:8px;font-size:13px;color:var(--muted)
+}
+.related b{color:var(--ink);font-weight:600}
+.related a{color:var(--primary);text-decoration:none;border-bottom:1px dotted var(--primary)}
+.related a:hover{border-bottom-style:solid}
+
+/* solution */
+details.sol{
+  margin-top:14px;border:1px solid var(--line);border-radius:8px;
+  background:#fdfcf3;overflow:hidden
+}
+details.sol>summary{
+  cursor:pointer;list-style:none;padding:11px 16px;font-weight:600;font-size:14.5px;
+  color:var(--secondary);background:#fbf7ec;user-select:none;display:flex;align-items:center;gap:8px
+}
+details.sol>summary::-webkit-details-marker{display:none}
+details.sol>summary::before{content:"▶";font-size:11px;transition:.15s;color:var(--gold)}
+details.sol[open]>summary::before{transform:rotate(90deg)}
+details.sol .solbody{padding:6px 20px 18px;font-size:15px}
+details.sol .solbody p{margin:.6em 0}
+details.sol .solbody .ans{
+  margin-top:12px;padding:10px 14px;border-left:3px solid var(--gold);
+  background:#fff8e6;border-radius:0 6px 6px 0;font-size:14.5px
+}
+.katex{font-size:1.04em}
+.katex-display{overflow-x:auto;overflow-y:hidden;padding:4px 0}
+hr.soft{border:none;border-top:1px solid var(--line);margin:40px 0}
+footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+footer a{color:var(--primary)}
+.toc{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:34px}
+.toc h2{margin:0 0 10px;font-size:15px;color:var(--primary)}
+.toc ul{margin:0;padding-left:1.1em;columns:2;column-gap:28px;font-size:14px}
+.toc li{margin:3px 0}
+.toc a{color:var(--ink);text-decoration:none}
+.toc a:hover{color:var(--primary);text-decoration:underline}
+@media(max-width:620px){.toc ul{columns:1}header.book h1{font-size:24px}}
+</style>
+</head>
+<body>
+
+<header class="book">
+  <div class="inner">
+    <p class="kicker">宇宙の熱的放射 ― 演習問題集</p>
+    <h1>第IV部　逆引き2：量子論へ<br>演習問題と模範解答（第9〜12章）</h1>
+    <p class="sub">古典論の破綻からプランクの量子仮説、アインシュタインの係数法、そして量子力学の基礎まで。本文で導出を省いた箇所を自力で埋め、与えられた道具で理解を深めるための問題集です。</p>
+    <a class="bookhome" href="https://wadakeiichi.github.io/inverse_text_radiation/" target="_blank" rel="noopener">教科書本体（GitHub Pages）を開く ↗</a>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="intro">
+    <h2>この問題集の使い方</h2>
+    <p>各問題は、第IV部の各節で <b>本文が「整理すると」「§◯で示した手法で」と省略した導出</b> を自分の手で再現するもの（<span style="color:#1f4e79">導出補完</span>）と、<b>本文で得た道具を別の角度から使って理解を深める</b>もの（<span style="color:#8a6d12">理解を深める</span>）の二種類です。各問題には関連する本文の節へのリンクを付けています。解答は「▶ 模範解答」をクリックすると展開します。まず自力で解いてから開いてください。</p>
+    <div class="legend">
+      <span class="star">☆</span> 基礎（本文の確認）
+      <span class="star">☆☆</span> 標準（導出の再現・応用）
+      <span class="star">☆☆☆</span> 発展（数値評価・章をまたぐ総合）
+      <span class="tag deriv" style="font-size:13px">導出補完</span>
+      <span class="tag deepen" style="font-size:13px">理解を深める</span>
+    </div>
+  </div>
+
+  <div class="toc">
+    <h2>収録問題（全16問）</h2>
+    <ul>
+      <li><a href="#ch9">第9章　古典論の破綻</a>（4問）</li>
+      <li><a href="#ch10">第10章　プランクの量子仮説</a>（4問）</li>
+      <li><a href="#ch11">第11章　アインシュタインの方法</a>（4問）</li>
+      <li><a href="#ch12">第12章　量子力学の基礎へ</a>（4問）</li>
+    </ul>
+  </div>
+
+  <!-- ================= CHAPTER 9 ================= -->
+  <section class="chapter" id="ch9">
+    <div class="chapter-head">
+      <span class="cnum">第09章</span>
+      <h2>古典論ではなぜ失敗するのか</h2>
+      <a class="src" href="https://wadakeiichi.github.io/inverse_text_radiation/part4/09-classical-failure.html" target="_blank" rel="noopener">本文を開く ↗</a>
+    </div>
+    <p class="chapter-overview">モード密度 $g(\nu)\propto\nu^2$ と等分配 $\langle E\rangle=k_BT$ から Rayleigh–Jeans 則が出るが、全振動数で積分すると発散する（紫外線破綻）。本文が「結果だけ借用」「第V部で導出」とした箇所を埋め、破綻の構造を定量的につかむ。</p>
+
+    <!-- 9-1 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">9-1</span>
+        <span class="ptitle">空洞モード密度 $g(\nu)=8\pi\nu^2/c^3$ の数え上げ</span>
+        <span class="diff">☆☆</span>
+        <span class="tag deriv">導出補完</span>
+      </div>
+      <div class="body">
+        <p>本文 §9.1 はモード密度 $g(\nu)=8\pi\nu^2/c^3$ を「第14章で本格導出する結果」として借用している。この幾何的な数え上げを自分で再現せよ。辺長 $L$ の立方体（完全導体壁）で許される波数は</p>
+        $$\mathbf{k}=\frac{\pi}{L}(n_x,n_y,n_z),\qquad n_x,n_y,n_z=1,2,3,\dots$$
+        <ol class="parts">
+          <li>波数の大きさが $k$ 未満のモード総数 $N(k)$ を、$\mathbf{k}$ 空間の「格子セル体積」と「正の八分球の体積」から求めよ。偏光自由度 $\times 2$ を忘れぬこと。</li>
+          <li>$k=2\pi\nu/c$ を使って単位体積あたりのモード数を $\nu$ の関数で表し、$g(\nu)=dN/(L^3\,d\nu)=8\pi\nu^2/c^3$ を示せ。</li>
+          <li>係数 $8\pi$ のうち、どの因子が「3次元」に、どの因子が「偏光」に由来するか説明せよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/09-classical-failure.html#sec-classical-failure-modes" target="_blank" rel="noopener">§9.1 空洞モードの数え上げ</a> ／
+        本格導出は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part5/14-cavity-modes.html" target="_blank" rel="noopener">第14章 空洞モード</a>
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 各 $(n_x,n_y,n_z)$ は正の整数なので、許される波数ベクトルは $\mathbf{k}$ 空間で間隔 $\pi/L$ の格子点を、第1八分象限（すべて正）に限って占める。1モードあたりの格子セル体積は $(\pi/L)^3$。大きさ $k$ 未満の領域は半径 $k$ の球の正の八分の一、体積 $\frac{1}{8}\cdot\frac{4}{3}\pi k^3$。偏光2状態を掛けて</p>
+          $$N(k)=2\times\frac{\frac{1}{8}\cdot\frac{4}{3}\pi k^3}{(\pi/L)^3}=2\times\frac{\pi k^3 L^3}{6\pi^3}=\frac{L^3 k^3}{3\pi^2}.$$
+          <p><b>(2)</b> 単位体積あたり $n(k)=N/L^3=k^3/(3\pi^2)$。$k=2\pi\nu/c$ を代入すると</p>
+          $$n(\nu)=\frac{1}{3\pi^2}\left(\frac{2\pi\nu}{c}\right)^3=\frac{8\pi^3\nu^3}{3\pi^2 c^3}=\frac{8\pi\nu^3}{3c^3}.$$
+          $$g(\nu)=\frac{dn}{d\nu}=\frac{8\pi\nu^2}{c^3}.$$
+          <p><b>(3)</b> $\nu^2$ は3次元波数空間の球殻 $4\pi k^2\,dk$（次元 $d$ なら $k^{d-1}$）に由来する幾何因子。係数の $2$（$8\pi=2\times4\pi$ の $2$）は電磁波の横波2偏光に由来する。</p>
+          <div class="ans"><b>答え：</b> $N(k)=L^3k^3/3\pi^2$、よって $g(\nu)=8\pi\nu^2/c^3$。$\nu^2$＝3次元の幾何、係数の $2$＝偏光自由度。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 9-2 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">9-2</span>
+        <span class="ptitle">古典分配関数から $\langle E_{\rm mode}\rangle=k_BT$</span>
+        <span class="diff">☆</span>
+        <span class="tag deriv">導出補完</span>
+      </div>
+      <div class="body">
+        <p>§9.2 は等分配定理で各モードに $k_BT$ が分配されると述べた。これを古典分配関数から直接導け。モードは調和振動子 $E=\dfrac{p^2}{2m}+\dfrac{1}{2}m\omega^2 q^2$ と等価である。</p>
+        <ol class="parts">
+          <li>古典分配関数 $Z=\dfrac{1}{h_0}\displaystyle\int e^{-\beta E}\,dq\,dp$（$\beta=1/k_BT$）を計算し、$Z\propto\beta^{-1}$ を示せ。</li>
+          <li>$\langle E\rangle=-\partial\ln Z/\partial\beta$ から $\langle E\rangle=k_BT$ を導け。</li>
+          <li>この「2つの二次形式に各 $\frac12 k_BT$」という結果を、3次元の自由粒子（並進運動エネルギーのみ）の $\frac32 k_BT$ と対比して、なぜ振動子は $k_BT$ なのかを一言で説明せよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/09-classical-failure.html#sec-classical-failure-rayleigh-jeans" target="_blank" rel="noopener">§9.2 等分配と Rayleigh–Jeans</a> ／
+        等分配定理は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part3/07-statistical-mechanics.html" target="_blank" rel="noopener">第7章 §7.6</a>。
+        この古典結果を量子化したものが <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/10-planck-quantum.html#sec-planck-quantum-oscillator" target="_blank" rel="noopener">§10.2</a> の問題 10-1。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 位置と運動量の積分が分離する：</p>
+          $$Z=\frac{1}{h_0}\int_{-\infty}^{\infty}e^{-\beta p^2/2m}dp\int_{-\infty}^{\infty}e^{-\beta m\omega^2 q^2/2}dq.$$
+          <p>ガウス積分 $\int e^{-a x^2}dx=\sqrt{\pi/a}$ を用いると、各因子は $\sqrt{2\pi m/\beta}$ と $\sqrt{2\pi/(\beta m\omega^2)}$。積は</p>
+          $$Z=\frac{1}{h_0}\sqrt{\frac{2\pi m}{\beta}}\sqrt{\frac{2\pi}{\beta m\omega^2}}=\frac{2\pi}{h_0\omega}\cdot\frac{1}{\beta}\;\propto\;\beta^{-1}.$$
+          <p><b>(2)</b> $\ln Z=-\ln\beta+\text{const}$ なので</p>
+          $$\langle E\rangle=-\frac{\partial\ln Z}{\partial\beta}=\frac{1}{\beta}=k_BT.$$
+          <p>2つの二次形式（$p^2$ と $q^2$）が各 $\beta^{-1/2}$ を生み、合わせて $\beta^{-1}$ ＝ $k_BT$。</p>
+          <p><b>(3)</b> 等分配は「ハミルトニアン中の二次形式1つあたり $\frac12 k_BT$」を与える。自由粒子は運動量の二次形式が3つ（$p_x^2,p_y^2,p_z^2$）で $\frac32 k_BT$。振動子は運動量＋位置で二次形式が2つなので $k_BT$。位置に対する復元力（ポテンシャル項）があることが差を生む。</p>
+          <div class="ans"><b>答え：</b> $Z\propto\beta^{-1}\Rightarrow\langle E\rangle=k_BT$。二次形式2個（運動＋ポテンシャル）ゆえ自由粒子の $\frac32k_BT$ と異なる。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 9-3 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">9-3</span>
+        <span class="ptitle">紫外発散の「次数」とカットオフ依存性</span>
+        <span class="diff">☆☆</span>
+        <span class="tag deepen">理解を深める</span>
+      </div>
+      <div class="body">
+        <p>§9.3 は $u_{\rm classical}=\int_0^\infty u_\nu^{\rm RJ}d\nu=\infty$ を示した。なぜ「紫外線」破綻と呼ぶのかを定量的に確かめる。</p>
+        <ol class="parts">
+          <li>人工的な上限 $\nu_{\max}$ を導入し、全エネルギー密度が $u(\nu_{\max})=\dfrac{8\pi k_BT}{3c^3}\nu_{\max}^3$ となることを示せ。発散は $\nu_{\max}\to\infty$ でどんな冪で増えるか。</li>
+          <li>エネルギーがどの振動数帯に集中するかを「$d u/d\nu\propto\nu^2$ が単調増加」という事実から論じ、なぜ高振動数（紫外）側が破綻の原因かを述べよ。</li>
+          <li>プランク分布 $u_\nu\propto\nu^3/(e^{h\nu/k_BT}-1)$ ではこの積分が収束する理由を、被積分関数の $\nu\to\infty$ での振る舞いから説明せよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/09-classical-failure.html#sec-classical-failure-uv-catastrophe" target="_blank" rel="noopener">§9.3 紫外線破綻</a> ／
+        収束する全積分（Stefan–Boltzmann）は問題 10-3、本文 <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/10-planck-quantum.html#sec-planck-quantum-derivation" target="_blank" rel="noopener">§10.3</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $u_\nu^{\rm RJ}=\dfrac{8\pi\nu^2}{c^3}k_BT$ を $0$ から $\nu_{\max}$ まで積分：</p>
+          $$u(\nu_{\max})=\frac{8\pi k_BT}{c^3}\int_0^{\nu_{\max}}\nu^2 d\nu=\frac{8\pi k_BT}{3c^3}\nu_{\max}^3.$$
+          <p>発散は $\nu_{\max}^3$ の3次冪。カットオフを2倍にすると寄与が8倍になる。</p>
+          <p><b>(2)</b> エネルギー密度の振動数あたり寄与 $du/d\nu\propto\nu^2$ は $\nu$ とともに単調増加し、上限近傍が積分を支配する。すなわちエネルギーは常に「いちばん高い振動数帯」に集中する。古典論には上限がないので、紫外〜X線〜ガンマ線側がいくらでも寄与を積み増し、発散する。これが「紫外線」破綻の名の由来。</p>
+          <p><b>(3)</b> プランクでは被積分関数が $\nu\to\infty$ で</p>
+          $$\frac{\nu^3}{e^{h\nu/k_BT}-1}\;\sim\;\nu^3 e^{-h\nu/k_BT}\to 0$$
+          と指数的に抑えられる。指数減衰は任意の冪 $\nu^3$ に勝つので積分は収束し、有限の $u=aT^4$ を与える（問題 10-3）。量子化によるエネルギー単位 $h\nu$ が高振動数モードを「凍結」させることが、収束の物理的理由である。</p>
+          <div class="ans"><b>答え：</b> $u\propto\nu_{\max}^3$ で発散、寄与は高振動数に集中（＝紫外破綻）。プランクは $\nu^3e^{-h\nu/k_BT}\to0$ で収束。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 9-4 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">9-4</span>
+        <span class="ptitle">破綻の「責任の所在」― モード密度か等分配か</span>
+        <span class="diff">☆☆</span>
+        <span class="tag deepen">理解を深める</span>
+      </div>
+      <div class="body">
+        <p>§9.4–9.5 の論理を整理する問いである。</p>
+        <ol class="parts">
+          <li>Rayleigh–Jeans 則 $u_\nu^{\rm RJ}=g(\nu)\langle E\rangle$ を構成する2因子のうち、量子論で「変えなくてよい」のはどちらで、「変えなければならない」のはどちらか。理由とともに述べよ。</li>
+          <li>観測される黒体スペクトル（第1章）が古典論を致命的に否定する2つの特徴を挙げよ。</li>
+          <li>もしエネルギー単位が $\epsilon=h\nu$（$\propto\nu$）でなく $\nu$ に依らない定数 $\epsilon_0$ だったら、高振動数モードの凍結は起きるか。簡潔に論ぜよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/09-classical-failure.html#sec-classical-failure-missing" target="_blank" rel="noopener">§9.4 等分配の前提</a>、
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/09-classical-failure.html#sec-classical-failure-necessity" target="_blank" rel="noopener">§9.5 量子仮説の必然性</a> ／
+        観測の特徴は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/01-where-blackbody.html" target="_blank" rel="noopener">第1章</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> <b>モード密度 $g(\nu)=8\pi\nu^2/c^3$ は変えなくてよい</b>。これは古典電磁気＋境界条件の幾何的結果で、量子論を要しない（実際プランク分布の前因子 $\nu^2$/$\nu^3$ はこれが起源）。<b>変えるべきは各モードの平均エネルギー $\langle E\rangle$</b>。等分配の $k_BT$（エネルギー連続の仮定に依存）を、量子化された $h\nu/(e^{h\nu/k_BT}-1)$ に置き換える必要がある。</p>
+          <p><b>(2)</b> ① スペクトルに有限のピークが存在する（古典は単調増加でピークなし）。② 高振動数側が指数的に減衰する（古典は $\nu^2$ で増大）。CMB の完全な黒体形や恒星スペクトルがこれを示す。</p>
+          <p><b>(3)</b> 起きない。凍結は「エネルギー単位 $\epsilon(\nu)$ が高振動数で $k_BT$ を超える」ことで生じる。$\epsilon_0$ が定数なら、$\epsilon_0\ll k_BT$ を満たす限りすべての振動数で等分配 $k_BT$ が回復し、$\nu\to\infty$ でもモードが凍結せず発散は残る。$\epsilon\propto\nu$ という<b>振動数に比例して増える単位</b>であることが、高振動数を選択的に止める鍵である。</p>
+          <div class="ans"><b>答え：</b> $g(\nu)$ は不変、$\langle E\rangle$ を量子化。否定する観測＝ピークの存在と指数減衰。$\epsilon\propto\nu$ でないと凍結は起きない。</div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <hr class="soft">
+
+  <!-- ================= CHAPTER 10 ================= -->
+  <section class="chapter" id="ch10">
+    <div class="chapter-head">
+      <span class="cnum">第10章</span>
+      <h2>プランクの量子仮説</h2>
+      <a class="src" href="https://wadakeiichi.github.io/inverse_text_radiation/part4/10-planck-quantum.html" target="_blank" rel="noopener">本文を開く ↗</a>
+    </div>
+    <p class="chapter-overview">$\epsilon=h\nu$ の量子化から振動子の平均エネルギー、プランク分布、両極限、Stefan–Boltzmann、Wien 変位則を導く。本文が「第7章の手法で」「整理すると」とした計算を埋める。</p>
+
+    <!-- 10-1 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">10-1</span>
+        <span class="ptitle">量子化振動子の分配関数と平均エネルギー</span>
+        <span class="diff">☆</span>
+        <span class="tag deriv">導出補完</span>
+      </div>
+      <div class="body">
+        <p>§10.2 は分配関数 $Z_1=1/(1-e^{-\beta h\nu})$ と平均エネルギー $\langle E\rangle=h\nu/(e^{h\nu/k_BT}-1)$ を「第7章 §7.2 の手法で」与えた。両式を自力で導け。準位は $E_n=nh\nu\ (n=0,1,2,\dots)$。</p>
+        <ol class="parts">
+          <li>等比級数の和として $Z_1=\sum_{n=0}^\infty e^{-\beta nh\nu}=\dfrac{1}{1-e^{-\beta h\nu}}$ を示せ（収束条件も述べよ）。</li>
+          <li>$\langle E\rangle=-\partial\ln Z_1/\partial\beta$ を実行して $\langle E\rangle=\dfrac{h\nu}{e^{\beta h\nu}-1}$ を導け。</li>
+          <li>問題 9-2 の古典結果 $\langle E\rangle=k_BT$ と比べ、低振動数極限で一致することを確認せよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/10-planck-quantum.html#sec-planck-quantum-oscillator" target="_blank" rel="noopener">§10.2 振動子の量子化</a> ／
+        手法は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part3/07-statistical-mechanics.html" target="_blank" rel="noopener">第7章 統計力学</a>、対比は問題 9-2。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 公比 $r=e^{-\beta h\nu}$ の等比級数。$\beta,h,\nu\gt 0$ より $0\lt r\lt 1$ で収束し、</p>
+          $$Z_1=\sum_{n=0}^\infty r^n=\frac{1}{1-r}=\frac{1}{1-e^{-\beta h\nu}}.$$
+          <p><b>(2)</b> $\ln Z_1=-\ln(1-e^{-\beta h\nu})$。$\beta$ で微分：</p>
+          $$\langle E\rangle=-\frac{\partial\ln Z_1}{\partial\beta}=-\frac{h\nu\,e^{-\beta h\nu}}{1-e^{-\beta h\nu}}\cdot(-1)=\frac{h\nu\,e^{-\beta h\nu}}{1-e^{-\beta h\nu}}.$$
+          <p>分子・分母に $e^{\beta h\nu}$ を掛けて</p>
+          $$\langle E\rangle=\frac{h\nu}{e^{\beta h\nu}-1}=\frac{h\nu}{e^{h\nu/k_BT}-1}.$$
+          <p><b>(3)</b> 低振動数 $x\equiv h\nu/k_BT\ll1$ で $e^x-1\simeq x$ ゆえ $\langle E\rangle\to h\nu/x=k_BT$。古典の等分配と一致する。</p>
+          <div class="ans"><b>答え：</b> $Z_1=1/(1-e^{-\beta h\nu})$、$\langle E\rangle=h\nu/(e^{h\nu/k_BT}-1)\xrightarrow{h\nu\ll k_BT}k_BT$。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 10-2 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">10-2</span>
+        <span class="ptitle">両極限と「最初の量子補正」</span>
+        <span class="diff">☆☆</span>
+        <span class="tag deriv">導出補完</span>
+      </div>
+      <div class="body">
+        <p>§10.4 はプランク分布の低・高振動数極限を示した。導出を埋め、さらに一歩進める。$x\equiv h\nu/k_BT$ とおく。</p>
+        <ol class="parts">
+          <li>低振動数（$x\ll1$）で $B_\nu\to\dfrac{2\nu^2}{c^2}k_BT$（Rayleigh–Jeans）を導け。</li>
+          <li>平均エネルギーを $\langle E\rangle=\dfrac{h\nu}{e^x-1}$ から $x$ の小ささで展開し、古典値 $k_BT$ からの<b>最初の補正項</b>を求めよ。補正の符号は何を意味するか。</li>
+          <li>高振動数（$x\gg1$）で Wien の式 $B_\nu\to\dfrac{2h\nu^3}{c^2}e^{-h\nu/k_BT}$ を導け。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/10-planck-quantum.html#sec-planck-quantum-limits" target="_blank" rel="noopener">§10.4 Wien・Rayleigh–Jeans 両極限</a> ／
+        RJ の古典導出は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/09-classical-failure.html#sec-classical-failure-rayleigh-jeans" target="_blank" rel="noopener">§9.2</a>、観測比較は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/02-reading-spectra.html" target="_blank" rel="noopener">§2.5</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $B_\nu=\dfrac{2h\nu^3}{c^2}\dfrac{1}{e^x-1}$。$x\ll1$ で $e^x-1\simeq x=h\nu/k_BT$ ゆえ</p>
+          $$B_\nu\to\frac{2h\nu^3}{c^2}\cdot\frac{k_BT}{h\nu}=\frac{2\nu^2}{c^2}k_BT.$$
+          <p>$h$ が消える＝古典極限。</p>
+          <p><b>(2)</b> $e^x-1=x\left(1+\dfrac{x}{2}+\dfrac{x^2}{6}+\cdots\right)$ ゆえ</p>
+          $$\langle E\rangle=\frac{h\nu}{e^x-1}=\frac{k_BT}{1+\frac{x}{2}+\frac{x^2}{6}+\cdots}=k_BT\left(1-\frac{x}{2}+\cdots\right)=k_BT-\frac{h\nu}{2}+\cdots.$$
+          <p>最初の補正は $-h\nu/2$。<b>負号</b>は、量子化により各モードが古典の等分配値より小さいエネルギーしか受け取れない（高振動数ほど効く凍結の始まり）ことを意味する。</p>
+          <p><b>(3)</b> $x\gg1$ で $e^x-1\simeq e^x$ ゆえ</p>
+          $$B_\nu\to\frac{2h\nu^3}{c^2}e^{-x}=\frac{2h\nu^3}{c^2}e^{-h\nu/k_BT}.$$
+          <p>これが Wien の式。$h$ は指数の中と前因子の両方に現れる。</p>
+          <div class="ans"><b>答え：</b> 低：$2\nu^2k_BT/c^2$；補正 $\langle E\rangle\simeq k_BT-\tfrac12 h\nu$（負＝凍結の兆し）；高：$2h\nu^3e^{-h\nu/k_BT}/c^2$。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 10-3 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">10-3</span>
+        <span class="ptitle">プランク分布から Stefan–Boltzmann 則</span>
+        <span class="diff">☆☆☆</span>
+        <span class="tag deriv">導出補完</span>
+      </div>
+      <div class="body">
+        <p><b>レベル：</b>導出 B3–M1（変数変換と定積分 $\int_0^\infty x^3/(e^x-1)dx$ の評価を含む）。</p>
+        <p>第9章の表で「全エネルギー密度＝$aT^4$（有限）」とあったが、本文は積分を実行していない。プランクのエネルギー密度 $u_\nu=\dfrac{8\pi h\nu^3}{c^3}\dfrac{1}{e^{h\nu/k_BT}-1}$ を全振動数で積分し、$u=aT^4$ を導いて放射定数 $a$ を基本定数で表せ。</p>
+        <ol class="parts">
+          <li>$x=h\nu/k_BT$ で変数変換し、$u=\dfrac{8\pi h}{c^3}\left(\dfrac{k_BT}{h}\right)^4\displaystyle\int_0^\infty\frac{x^3}{e^x-1}dx$ を導け。</li>
+          <li>$\displaystyle\int_0^\infty\frac{x^3}{e^x-1}dx=\frac{\pi^4}{15}$ を用いて $a=\dfrac{8\pi^5 k_B^4}{15c^3h^3}$ を示し、数値（SI）を概算せよ。</li>
+          <li>$u=aT^4$ と射出強度 $j=\sigma T^4$ の関係 $a=4\sigma/c$ から、$\sigma$ の値を確認せよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/10-planck-quantum.html#sec-planck-quantum-derivation" target="_blank" rel="noopener">§10.3 プランク分布の導出</a> ／
+        発散する古典版との対比は問題 9-3、<a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/09-classical-failure.html#sec-classical-failure-uv-catastrophe" target="_blank" rel="noopener">§9.3</a>。積分公式は <a href="https://wadakeiichi.github.io/inverse_text_radiation/appendix/A-math-notes.html" target="_blank" rel="noopener">付録A 数学ノート</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $x=h\nu/k_BT$ より $\nu=k_BTx/h,\ d\nu=(k_BT/h)dx$。代入：</p>
+          $$u=\int_0^\infty\frac{8\pi h\nu^3}{c^3}\frac{d\nu}{e^{h\nu/k_BT}-1}=\frac{8\pi h}{c^3}\left(\frac{k_BT}{h}\right)^3\frac{k_BT}{h}\int_0^\infty\frac{x^3}{e^x-1}dx.$$
+          $$=\frac{8\pi h}{c^3}\left(\frac{k_BT}{h}\right)^4\int_0^\infty\frac{x^3}{e^x-1}dx.$$
+          <p><b>(2)</b> 積分 $=\pi^4/15$ を入れて</p>
+          $$u=\frac{8\pi h}{c^3}\frac{k_B^4 T^4}{h^4}\frac{\pi^4}{15}=\underbrace{\frac{8\pi^5 k_B^4}{15c^3h^3}}_{a}T^4.$$
+          <p>数値：$k_B=1.381\times10^{-23},\ h=6.626\times10^{-34},\ c=3.00\times10^8$（SI）を入れると</p>
+          $$a\approx7.57\times10^{-16}\ \mathrm{J\,m^{-3}\,K^{-4}}.$$
+          <p><b>(3)</b> $a=4\sigma/c$ より $\sigma=ac/4=7.57\times10^{-16}\times3.00\times10^8/4\approx5.67\times10^{-8}\ \mathrm{W\,m^{-2}\,K^{-4}}$。Stefan–Boltzmann 定数の既知値と一致する。</p>
+          <div class="ans"><b>答え：</b> $a=\dfrac{8\pi^5k_B^4}{15c^3h^3}\approx7.57\times10^{-16}\,\mathrm{J\,m^{-3}K^{-4}}$、$\sigma=ac/4\approx5.67\times10^{-8}\,\mathrm{W\,m^{-2}K^{-4}}$。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 10-4 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">10-4</span>
+        <span class="ptitle">Wien 変位則：ピーク振動数 $\propto T$</span>
+        <span class="diff">☆☆</span>
+        <span class="tag deepen">理解を深める</span>
+      </div>
+      <div class="body">
+        <p>§10.4 は両極限の境目を $\nu\sim k_BT/h$ と見積もった。プランク分布のピークを正確に求めて「変位則」を導く。</p>
+        <ol class="parts">
+          <li>$B_\nu\propto\dfrac{\nu^3}{e^{x}-1}\ (x=h\nu/k_BT)$ を $\nu$ で微分してゼロにおき、$3(1-e^{-x})=x$ という超越方程式を導け。</li>
+          <li>数値解 $x_{\rm peak}\approx2.821$ を用いて $\nu_{\rm peak}=2.821\,k_BT/h$ を示し、$\nu_{\rm peak}\propto T$（Wien 変位則）を確認せよ。</li>
+          <li>太陽 $T\simeq5800$ K について $\nu_{\rm peak}$ と対応波長 $\lambda=c/\nu_{\rm peak}$ を概算せよ。（注：$B_\lambda$ のピーク波長とは係数が異なることに触れよ。）</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/10-planck-quantum.html#sec-planck-quantum-limits" target="_blank" rel="noopener">§10.4 両極限と境界</a> ／
+        観測スペクトルのピークは <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/01-where-blackbody.html" target="_blank" rel="noopener">第1章</a>、<a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/02-reading-spectra.html" target="_blank" rel="noopener">第2章</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $f(\nu)=\nu^3(e^x-1)^{-1}$、$x=h\nu/k_BT$ なので $dx/d\nu=h/k_BT$。積の微分：</p>
+          $$f'=\frac{3\nu^2}{e^x-1}-\frac{\nu^3 e^x}{(e^x-1)^2}\frac{h}{k_BT}=0.$$
+          <p>$\nu^2/(e^x-1)$ で割り、$h\nu/k_BT=x$ を使うと</p>
+          $$3-\frac{x e^x}{e^x-1}=0\ \Longrightarrow\ 3(e^x-1)=x e^x\ \Longrightarrow\ 3(1-e^{-x})=x.$$
+          <p><b>(2)</b> この超越方程式の非自明解は $x_{\rm peak}\approx2.821$。よって</p>
+          $$\nu_{\rm peak}=\frac{x_{\rm peak}k_BT}{h}=2.821\frac{k_BT}{h}\propto T.$$
+          <p>温度に比例してピークが動く＝Wien 変位則。</p>
+          <p><b>(3)</b> $T=5800$ K：$\nu_{\rm peak}=2.821\times(1.381\times10^{-23}\times5800)/(6.626\times10^{-34})\approx3.4\times10^{14}$ Hz。$\lambda=c/\nu_{\rm peak}\approx8.8\times10^{-7}$ m $\approx 880$ nm（近赤外）。<b>注意：</b>これは $B_\lambda$ を最大化して得る $\lambda_{\rm peak}\approx500$ nm とは別物。$B_\nu$ と $B_\lambda$ ではヤコビアン $d\nu=-(c/\lambda^2)d\lambda$ のため最大化条件が異なり（$\lambda$ 側は $x\approx4.965$）、$\nu_{\rm peak}\lambda_{\rm peak}\ne c$ となる。</p>
+          <div class="ans"><b>答え：</b> $3(1-e^{-x})=x\Rightarrow x\approx2.821$、$\nu_{\rm peak}=2.821k_BT/h\propto T$。太陽で $\nu_{\rm peak}\approx3.4\times10^{14}$ Hz（$\sim880$ nm）。$B_\nu$ と $B_\lambda$ のピークは一致しない。</div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <hr class="soft">
+
+  <!-- ================= CHAPTER 11 ================= -->
+  <section class="chapter" id="ch11">
+    <div class="chapter-head">
+      <span class="cnum">第11章</span>
+      <h2>アインシュタインの方法</h2>
+      <a class="src" href="https://wadakeiichi.github.io/inverse_text_radiation/part4/11-einstein-method.html" target="_blank" rel="noopener">本文を開く ↗</a>
+    </div>
+    <p class="chapter-overview">自発放出・誘導放出・誘導吸収の詳細釣り合いからプランク分布と Einstein 関係式を再導出する。本文が「整理すると」とした代数を埋め、係数規約・自然幅へとつなぐ。</p>
+
+    <!-- 11-1 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">11-1</span>
+        <span class="ptitle">詳細釣り合いから Einstein 関係式</span>
+        <span class="diff">☆☆</span>
+        <span class="tag deriv">導出補完</span>
+      </div>
+      <div class="body">
+        <p>§11.3 は詳細釣り合いの式から Einstein 関係式を「整理すると」得た。途中代数を完全に埋めよ。出発点：</p>
+        $$n_l B_{lu}J_\nu=n_u(A_{ul}+B_{ul}J_\nu),\qquad \frac{n_u}{n_l}=\frac{g_u}{g_l}e^{-h\nu/k_BT}.$$
+        <ol class="parts">
+          <li>$J_\nu$ について解き、$J_\nu=\dfrac{A_{ul}/B_{ul}}{(g_l B_{lu}/g_u B_{ul})e^{h\nu/k_BT}-1}$ を導け。</li>
+          <li>これが任意の $T$ で観測されるプランク分布 $B_\nu=\dfrac{2h\nu^3/c^2}{e^{h\nu/k_BT}-1}$ に一致する条件として、2つの Einstein 関係式 $g_lB_{lu}=g_uB_{ul}$ と $A_{ul}/B_{ul}=2h\nu^3/c^2$ を導け。</li>
+          <li>なぜ「任意の $T$ で」一致させることが2式を同時に要求するのか説明せよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/11-einstein-method.html#sec-einstein-method-detailed-balance" target="_blank" rel="noopener">§11.3 詳細釣り合い</a> ／
+        詳細釣り合いの原理は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part3/06-thermal-equilibrium.html" target="_blank" rel="noopener">第6章 §6.6</a>、同じ占有因子の別ルートは <a href="https://wadakeiichi.github.io/inverse_text_radiation/part3/08-photon-statistics.html" target="_blank" rel="noopener">第8章</a> と問題 10-1。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $J_\nu$ の項を集める：</p>
+          $$n_l B_{lu}J_\nu-n_u B_{ul}J_\nu=n_u A_{ul}\ \Rightarrow\ J_\nu=\frac{n_u A_{ul}}{n_l B_{lu}-n_u B_{ul}}=\frac{A_{ul}/B_{ul}}{\dfrac{n_l}{n_u}\dfrac{B_{lu}}{B_{ul}}-1}.$$
+          <p>$n_l/n_u=(g_l/g_u)e^{+h\nu/k_BT}$ を代入：</p>
+          $$J_\nu=\frac{A_{ul}/B_{ul}}{\dfrac{g_lB_{lu}}{g_uB_{ul}}e^{h\nu/k_BT}-1}.$$
+          <p><b>(2)</b> プランク分布 $B_\nu=\dfrac{2h\nu^3/c^2}{e^{h\nu/k_BT}-1}$ と項ごとに比較する。分母の指数の係数が $1$ であるためには</p>
+          $$\frac{g_lB_{lu}}{g_uB_{ul}}=1\ \Longrightarrow\ g_lB_{lu}=g_uB_{ul}.$$
+          <p>これを使うと分子は $A_{ul}/B_{ul}$、これがプランクの前因子に等しい：</p>
+          $$\frac{A_{ul}}{B_{ul}}=\frac{2h\nu^3}{c^2}.$$
+          <p><b>(3)</b> Einstein 係数は $T$ に依らない原子の固有量。一方 $J_\nu=B_\nu(T)$ はすべての $T$ で成り立たねばならない。指数 $e^{h\nu/k_BT}$ は $T$ で連続的に変わるので、「指数の係数＝1」（$T$ 依存項の一致）と「全体の前因子の一致」（$T$ 非依存項の一致）は独立な条件となり、2式を同時に要求する。</p>
+          <div class="ans"><b>答え：</b> $g_lB_{lu}=g_uB_{ul}$ かつ $A_{ul}/B_{ul}=2h\nu^3/c^2$。$T$ 依存・非依存の両部分を一致させるため2式が必要。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 11-2 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">11-2</span>
+        <span class="ptitle">自発放出と誘導放出の比 $= e^{h\nu/k_BT}-1$</span>
+        <span class="diff">☆</span>
+        <span class="tag deepen">理解を深める</span>
+      </div>
+      <div class="body">
+        <p>熱放射場の中で、1個の上準位原子が起こす自発放出率と誘導放出率の比を求め、どの波長帯でどちらが優勢かを論じる。</p>
+        <ol class="parts">
+          <li>比 $R=A_{ul}/(B_{ul}J_\nu)$ を、熱平衡 $J_\nu=B_\nu(T)$ と Einstein 関係 $A_{ul}/B_{ul}=2h\nu^3/c^2$ を使って簡単化し、$R=e^{h\nu/k_BT}-1$ を示せ。</li>
+          <li>電波領域（$h\nu\ll k_BT$）と可視・紫外（$h\nu\gg k_BT$）で $R$ の大小を評価し、それぞれどちらの放出が優勢かを述べよ。</li>
+          <li>(2) の結果が、宇宙メーザー（誘導放出の卓越）が電波領域に多い理由とどう関係するか簡潔に述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/11-einstein-method.html#sec-einstein-method-three-processes" target="_blank" rel="noopener">§11.2 三つの素過程</a>、
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/11-einstein-method.html#sec-einstein-method-astrophysics" target="_blank" rel="noopener">§11.5 メーザー</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 熱場で $J_\nu=B_\nu=\dfrac{2h\nu^3/c^2}{e^{h\nu/k_BT}-1}$。よって</p>
+          $$R=\frac{A_{ul}}{B_{ul}J_\nu}=\frac{A_{ul}/B_{ul}}{B_\nu}=\frac{2h\nu^3/c^2}{\dfrac{2h\nu^3/c^2}{e^{h\nu/k_BT}-1}}=e^{h\nu/k_BT}-1.$$
+          <p><b>(2)</b> 電波（$h\nu\ll k_BT$）：$R\approx h\nu/k_BT\ll1$、誘導放出が自発放出を圧倒。可視・紫外（$h\nu\gg k_BT$）：$R\approx e^{h\nu/k_BT}\gg1$、自発放出が圧倒的に優勢。</p>
+          <p><b>(3)</b> $R$ が小さい電波領域では、自発放出という「ロス」に対して誘導放出が相対的に効きやすい。一方、可視・紫外では $R\gg1$（自発放出優勢）のため、増幅（レーザー）には強い反転分布と共振器が必要になる。よって自然界の「メーザー」は電波領域に多い。</p>
+          <p><b>ただし重要な注意：</b>誘導放出が自発放出より大きいだけでは増幅にはならない。熱平衡では誘導放出が大きくても<b>誘導吸収も同時に大きく</b>、両者が打ち消すので正味の増幅は起きない。正味増幅（負の吸収係数）には<b>準位反転</b> $n_u/g_u\gt n_l/g_l$ が必須で、これがあって初めて誘導放出が吸収を上回り、線に沿って光が雪崩的に増える。電波領域は「反転が少し作られれば増幅に転じやすい」場であって、反転なしに自動で増幅するわけではない。</p>
+          <div class="ans"><b>答え：</b> $R=e^{h\nu/k_BT}-1$。電波で $R\ll1$（誘導優勢）、可視・紫外で $R\gg1$（自発優勢）。宇宙メーザーが電波に多いことと整合。ただし正味増幅には準位反転 $n_u/g_u\gt n_l/g_l$（負の吸収）が必須。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 11-3 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">11-3</span>
+        <span class="ptitle">$B$ 係数の規約変換（$J_\nu$ 規約 ↔ $u_\nu$ 規約）</span>
+        <span class="diff">☆☆</span>
+        <span class="tag deriv">導出補完</span>
+      </div>
+      <div class="body">
+        <p>§11.3 のコラムは2つの規約を併記し $B_{lu}^{(u)}=(c/4\pi)B_{lu}$ とだけ述べた。これを導く。等方場では $u_\nu=(4\pi/c)J_\nu$。</p>
+        <ol class="parts">
+          <li>遷移率は規約に依らず物理的に同一であること、すなわち $B_{lu}J_\nu=B_{lu}^{(u)}u_\nu$ を出発点に、$B_{lu}^{(u)}=(c/4\pi)B_{lu}$ を導け。</li>
+          <li>$J_\nu$ 規約での $A_{ul}/B_{ul}=2h\nu^3/c^2$ から、$u_\nu$ 規約での比 $A_{ul}/B_{ul}^{(u)}=8\pi h\nu^3/c^3$ を導け。</li>
+          <li>論文を読むとき規約の取り違えがどんな誤りを生むか（係数の数値が $4\pi/c$ 倍ずれる等）を一言で述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/11-einstein-method.html#sec-einstein-method-detailed-balance" target="_blank" rel="noopener">§11.3 係数の規約コラム</a> ／
+        平均強度 $J_\nu$ とエネルギー密度 $u_\nu$ の定義は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part2/04-radiation-field.html" target="_blank" rel="noopener">第4章 放射場</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 同じ物理過程（吸収率 [s$^{-1}$]）を2つの規約で書いた量は等しい：</p>
+          $$B_{lu}J_\nu=B_{lu}^{(u)}u_\nu.$$
+          <p>$u_\nu=(4\pi/c)J_\nu$ を代入して $J_\nu$ を消すと</p>
+          $$B_{lu}J_\nu=B_{lu}^{(u)}\frac{4\pi}{c}J_\nu\ \Rightarrow\ B_{lu}^{(u)}=\frac{c}{4\pi}B_{lu}.$$
+          <p><b>(2)</b> $B_{ul}$ も同様に $B_{ul}^{(u)}=(c/4\pi)B_{ul}$。よって</p>
+          $$\frac{A_{ul}}{B_{ul}^{(u)}}=\frac{A_{ul}}{(c/4\pi)B_{ul}}=\frac{4\pi}{c}\cdot\frac{A_{ul}}{B_{ul}}=\frac{4\pi}{c}\cdot\frac{2h\nu^3}{c^2}=\frac{8\pi h\nu^3}{c^3}.$$
+          <p>これは $u_\nu$ 規約での標準形（量子光学でよく見る $8\pi h\nu^3/c^3$）と一致する。</p>
+          <p><b>(3)</b> どちらの規約で書かれた $B$ かを取り違えると、係数の数値が $c/4\pi$（または逆数）倍ずれ、線吸収係数・振動子強度・遷移率の換算がすべて狂う。論文・教科書を読むときは「$B$ が $J_\nu$ に掛かるか $u_\nu$ に掛かるか」を必ず確認する。</p>
+          <div class="ans"><b>答え：</b> $B_{lu}^{(u)}=\tfrac{c}{4\pi}B_{lu}$、$A_{ul}/B_{ul}^{(u)}=8\pi h\nu^3/c^3$。規約取り違えは係数を $4\pi/c$ 倍ずらす。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 11-4 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">11-4</span>
+        <span class="ptitle">$A_{ul}$ から励起寿命・自然幅・波長幅</span>
+        <span class="diff">☆☆☆</span>
+        <span class="tag deepen">理解を深める</span>
+      </div>
+      <div class="body">
+        <p>§11.4 は「$A_{ul}$ は線の自然幅と直結、$\tau=1/A_{ul}$、$\Delta\nu_{\rm nat}=A_{ul}/2\pi$」とだけ述べた。典型的な許容遷移 $A_{ul}=1\times10^8\ \mathrm{s^{-1}}$、波長 $\lambda=500$ nm の線について数値評価せよ。</p>
+        <ol class="parts">
+          <li>励起寿命 $\tau$ を求めよ。</li>
+          <li>自然幅 $\Delta\nu_{\rm nat}=A_{ul}/2\pi$ を Hz で求めよ。</li>
+          <li>対応する波長幅 $\Delta\lambda_{\rm nat}=(\lambda^2/c)\Delta\nu_{\rm nat}$ を求め、線中心波長との相対幅 $\Delta\lambda/\lambda$ を評価せよ。なぜ自然幅は実際の観測線幅より普通ずっと狭いのか（ドップラー幅との対比）を一言で述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/11-einstein-method.html#sec-einstein-method-bridge" target="_blank" rel="noopener">§11.4 連続と線の橋</a> ／
+        自然幅の本格的扱いは <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/22-line-shape.html" target="_blank" rel="noopener">第22章 線の形</a>、その量子的起源（零点振動）は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/12-quantum-foundations.html#sec-quantum-foundations-vacuum" target="_blank" rel="noopener">§12.4</a> と問題 12-3。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $\tau=1/A_{ul}=1/10^8=1\times10^{-8}$ s $=10$ ns。</p>
+          <p><b>(2)</b> $\Delta\nu_{\rm nat}=A_{ul}/2\pi=10^8/(2\pi)\approx1.6\times10^7$ Hz $\approx16$ MHz。</p>
+          <p><b>(3)</b> $\lambda=500$ nm、$\lambda^2/c=(5.0\times10^{-7})^2/(3.0\times10^8)=2.5\times10^{-13}/3.0\times10^8\approx8.3\times10^{-22}$ s·m。よって</p>
+          $$\Delta\lambda_{\rm nat}=\frac{\lambda^2}{c}\Delta\nu_{\rm nat}\approx8.3\times10^{-22}\times1.6\times10^7\approx1.3\times10^{-14}\ \mathrm{m}=1.3\times10^{-5}\ \mathrm{nm}.$$
+          <p>相対幅 $\Delta\lambda/\lambda\approx1.3\times10^{-14}/5.0\times10^{-7}\approx2.7\times10^{-8}$。きわめて狭い。<b>理由：</b>実際の星間・恒星大気の線は熱運動による<b>ドップラー幅</b>が支配的で、$\Delta\nu_D/\nu\sim v_{\rm th}/c\sim10^{-5}$ 程度と自然幅より3桁ほど広い。自然幅が見えるのは線の遠い翼（ローレンツ翼）や低温・低速度分散の特殊な状況に限られる。</p>
+          <div class="ans"><b>答え：</b> $\tau=10$ ns、$\Delta\nu_{\rm nat}\approx16$ MHz、$\Delta\lambda_{\rm nat}\approx1.3\times10^{-5}$ nm（$\Delta\lambda/\lambda\sim3\times10^{-8}$）。通常はドップラー幅が支配的で自然幅は埋もれる。</div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <hr class="soft">
+
+  <!-- ================= CHAPTER 12 ================= -->
+  <section class="chapter" id="ch12">
+    <div class="chapter-head">
+      <span class="cnum">第12章</span>
+      <h2>量子力学の基礎へ戻る</h2>
+      <a class="src" href="https://wadakeiichi.github.io/inverse_text_radiation/part4/12-quantum-foundations.html" target="_blank" rel="noopener">本文を開く ↗</a>
+    </div>
+    <p class="chapter-overview">調和振動子の量子化、生成消滅演算子、零点エネルギーを整理する。本文が結果だけ示した演算子計算を埋め、プランク導出（第10章）との接続（零点項の扱い）を深める。</p>
+
+    <!-- 12-1 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">12-1</span>
+        <span class="ptitle">生成消滅演算子でハミルトニアンを対角化</span>
+        <span class="diff">☆☆</span>
+        <span class="tag deriv">導出補完</span>
+      </div>
+      <div class="body">
+        <p><b>レベル：</b>導出 B4–M1（生成・消滅演算子の代数と交換関係を使う）。</p>
+        <p>§12.3 は $\hat H=\hbar\omega(\hat a^\dagger\hat a+\tfrac12)$ を結果として与えた。定義</p>
+        $$\hat a=\sqrt{\tfrac{m\omega}{2\hbar}}\left(\hat x+\tfrac{i}{m\omega}\hat p\right),\quad \hat a^\dagger=\sqrt{\tfrac{m\omega}{2\hbar}}\left(\hat x-\tfrac{i}{m\omega}\hat p\right)$$
+        と $[\hat x,\hat p]=i\hbar$ から、$\hat H=\dfrac{\hat p^2}{2m}+\dfrac12 m\omega^2\hat x^2$ がこの形になることを示せ。さらに $[\hat a,\hat a^\dagger]=1$ を確かめよ。</p>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/12-quantum-foundations.html#sec-quantum-foundations-operators" target="_blank" rel="noopener">§12.3 生成消滅演算子</a>、
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/12-quantum-foundations.html#sec-quantum-foundations-oscillator" target="_blank" rel="noopener">§12.2 調和振動子</a> ／
+        準位 $E_n=(n+\tfrac12)\hbar\omega$ は第10章のエネルギー量子 $h\nu$ の量子力学的根拠（問題 10-1）。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p>$\hat a^\dagger\hat a$ を展開する：</p>
+          $$\hat a^\dagger\hat a=\frac{m\omega}{2\hbar}\left(\hat x-\frac{i}{m\omega}\hat p\right)\left(\hat x+\frac{i}{m\omega}\hat p\right)=\frac{m\omega}{2\hbar}\left[\hat x^2+\frac{1}{m^2\omega^2}\hat p^2+\frac{i}{m\omega}(\hat x\hat p-\hat p\hat x)\right].$$
+          <p>$\hat x\hat p-\hat p\hat x=[\hat x,\hat p]=i\hbar$ なので $\dfrac{i}{m\omega}(i\hbar)=-\dfrac{\hbar}{m\omega}$。代入：</p>
+          $$\hat a^\dagger\hat a=\frac{m\omega}{2\hbar}\hat x^2+\frac{1}{2\hbar m\omega}\hat p^2-\frac12.$$
+          <p>両辺に $\hbar\omega$ を掛ける：</p>
+          $$\hbar\omega\,\hat a^\dagger\hat a=\frac12 m\omega^2\hat x^2+\frac{\hat p^2}{2m}-\frac12\hbar\omega=\hat H-\frac12\hbar\omega.$$
+          $$\therefore\ \hat H=\hbar\omega\left(\hat a^\dagger\hat a+\frac12\right).$$
+          <p><b>交換関係：</b> 同様に $\hat a\hat a^\dagger=\dfrac{m\omega}{2\hbar}\hat x^2+\dfrac{1}{2\hbar m\omega}\hat p^2+\dfrac12$。差をとると</p>
+          $$[\hat a,\hat a^\dagger]=\hat a\hat a^\dagger-\hat a^\dagger\hat a=\frac12-\left(-\frac12\right)=1.$$
+          <div class="ans"><b>答え：</b> $\hat H=\hbar\omega(\hat a^\dagger\hat a+\tfrac12)$。零点 $\tfrac12\hbar\omega$ は交換子 $[\hat x,\hat p]=i\hbar$ から出る。$[\hat a,\hat a^\dagger]=1$。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 12-2 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">12-2</span>
+        <span class="ptitle">零点エネルギー $\tfrac12\hbar\omega$ を不確定性原理から</span>
+        <span class="diff">☆</span>
+        <span class="tag deriv">導出補完</span>
+      </div>
+      <div class="body">
+        <p>§12.2 は「不確定性原理から完全静止が許されず $E_0=\tfrac12\hbar\omega$」と述べた。これを最小化問題として導け。基底状態では $\langle\hat x\rangle=\langle\hat p\rangle=0$ なので $\langle\hat x^2\rangle=(\Delta x)^2,\ \langle\hat p^2\rangle=(\Delta p)^2$。</p>
+        <ol class="parts">
+          <li>エネルギー期待値 $E=\dfrac{(\Delta p)^2}{2m}+\dfrac12 m\omega^2(\Delta x)^2$ に、最小不確定 $\Delta p=\dfrac{\hbar}{2\Delta x}$ を代入せよ。</li>
+          <li>$\Delta x$ について最小化し、$E_{\min}=\tfrac12\hbar\omega$ と最適な $\Delta x$ を求めよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/12-quantum-foundations.html#sec-quantum-foundations-oscillator" target="_blank" rel="noopener">§12.2 零点エネルギー</a> ／
+        零点振動の観測的帰結（自発放出・Casimir）は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/12-quantum-foundations.html#sec-quantum-foundations-vacuum" target="_blank" rel="noopener">§12.4</a>、<a href="https://wadakeiichi.github.io/inverse_text_radiation/part8/24-em-field-quantization.html" target="_blank" rel="noopener">第24章</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $\Delta p=\hbar/(2\Delta x)$ を代入：</p>
+          $$E(\Delta x)=\frac{\hbar^2}{8m(\Delta x)^2}+\frac12 m\omega^2(\Delta x)^2.$$
+          <p><b>(2)</b> $u=(\Delta x)^2$ とおいて $dE/du=0$：</p>
+          $$-\frac{\hbar^2}{8m u^2}+\frac12 m\omega^2=0\ \Rightarrow\ u^2=\frac{\hbar^2}{4m^2\omega^2}\ \Rightarrow\ u=(\Delta x)^2=\frac{\hbar}{2m\omega}.$$
+          <p>代入：</p>
+          $$E_{\min}=\frac{\hbar^2}{8m}\cdot\frac{2m\omega}{\hbar}+\frac12 m\omega^2\cdot\frac{\hbar}{2m\omega}=\frac{\hbar\omega}{4}+\frac{\hbar\omega}{4}=\frac12\hbar\omega.$$
+          <p>運動エネルギーとポテンシャルが各 $\tfrac14\hbar\omega$ ずつ等分される点が最小。</p>
+          <div class="ans"><b>答え：</b> $(\Delta x)^2=\hbar/2m\omega$ で $E_{\min}=\tfrac12\hbar\omega$。完全静止（$\Delta x=0$）は不確定性が禁じる。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 12-3 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">12-3</span>
+        <span class="ptitle">零点エネルギーはなぜプランク分布に現れないのか</span>
+        <span class="diff">☆☆</span>
+        <span class="tag deepen">理解を深める</span>
+      </div>
+      <div class="body">
+        <p>第10章の量子化振動子では $\langle E\rangle=h\nu/(e^x-1)$ を使ったが、完全な量子力学では $E_n=(n+\tfrac12)\hbar\omega$ で零点 $\tfrac12\hbar\omega$ がある。両者の整合を考える。</p>
+        <ol class="parts">
+          <li>準位 $E_n=(n+\tfrac12)\hbar\omega$ の熱平均が $\langle E\rangle=\tfrac12\hbar\omega+\dfrac{\hbar\omega}{e^{\hbar\omega/k_BT}-1}$ となることを、占有数 $\langle n\rangle=1/(e^{\hbar\omega/k_BT}-1)$ を使って示せ。</li>
+          <li>なぜ観測される放射エネルギー密度 $u_\nu$（プランク分布）に零点項 $\tfrac12\hbar\omega$ が現れないのか。物理的理由を述べよ（ヒント：定数オフセット、エネルギーの基準）。</li>
+          <li>では零点エネルギーは「観測できない」のか。観測可能な帰結の例を §12.4 から2つ挙げよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/12-quantum-foundations.html#sec-quantum-foundations-vacuum" target="_blank" rel="noopener">§12.4 真空状態</a> ／
+        プランク導出は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/10-planck-quantum.html#sec-planck-quantum-derivation" target="_blank" rel="noopener">§10.3</a>（問題 10-1）、零点の本格的扱いは <a href="https://wadakeiichi.github.io/inverse_text_radiation/part8/24-em-field-quantization.html" target="_blank" rel="noopener">第24章</a>、<a href="https://wadakeiichi.github.io/inverse_text_radiation/part8/25-qed-minimum.html" target="_blank" rel="noopener">第25章</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> Boltzmann 重み $P_n=e^{-\beta E_n}/Z$。$E_n=(n+\tfrac12)\hbar\omega$ なので</p>
+          $$\langle E\rangle=\sum_n\left(n+\tfrac12\right)\hbar\omega\,P_n=\tfrac12\hbar\omega+\hbar\omega\langle n\rangle=\frac12\hbar\omega+\frac{\hbar\omega}{e^{\hbar\omega/k_BT}-1}.$$
+          <p>（$\langle n\rangle=\sum n P_n=1/(e^{\beta\hbar\omega}-1)$ は問題 10-1 の計算と同じ。）</p>
+          <p><b>(2)</b> 零点項 $\tfrac12\hbar\omega$ は<b>温度に依らない定数オフセット</b>。放射場のエネルギー密度や物質との熱的なやりとり（吸収・放出）に効くのは、真空（$n=0$）より上の<b>励起分</b> $\hbar\omega\langle n\rangle$ だけである。エネルギーの絶対基準（ハミルトニアンの零点）は物理に効かないので、観測される $u_\nu$ は励起分すなわちプランク分布になる。零点をすべてのモードで足すと発散するが、これは絶対値として観測不能。</p>
+          <p><b>(3)</b> 零点の<b>差</b>や<b>変化</b>は観測可能。例：①境界条件でモード構造を変えると真空エネルギーが変化する <b>Casimir 効果</b>。②真空電磁場の揺らぎが励起原子を揺さぶって起こす <b>自発放出</b>（$A_{ul}$ の起源、第11章）。これらは線の自然幅（第22章）として観測スペクトルにも痕跡を残す。</p>
+          <div class="ans"><b>答え：</b> $\langle E\rangle=\tfrac12\hbar\omega+\hbar\omega/(e^{\hbar\omega/k_BT}-1)$。零点は $T$ 非依存の定数オフセットで放射の励起分に効かないため $u_\nu$ に出ない。だが差は Casimir 効果・自発放出として観測可能。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 12-4 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">12-4</span>
+        <span class="ptitle">演算子の作用 $\hat a^\dagger|n\rangle=\sqrt{n+1}\,|n+1\rangle$ の係数</span>
+        <span class="diff">☆☆</span>
+        <span class="tag deriv">導出補完</span>
+      </div>
+      <div class="body">
+        <p><b>レベル：</b>導出 B4–M1（生成・消滅演算子の代数を使う）。</p>
+        <p>§12.3 は係数を結果として与えた。$[\hat a,\hat a^\dagger]=1$ と数演算子 $\hat n=\hat a^\dagger\hat a$（$\hat n|n\rangle=n|n\rangle$、$|n\rangle$ は規格化）から、上昇・下降の係数を導け。</p>
+        <ol class="parts">
+          <li>$\hat a^\dagger|n\rangle$ のノルムの2乗 $\langle n|\hat a\hat a^\dagger|n\rangle$ を計算し、$\hat a^\dagger|n\rangle=\sqrt{n+1}\,|n+1\rangle$ を示せ。</li>
+          <li>同様に $\hat a|n\rangle=\sqrt{n}\,|n-1\rangle$ を示し、$\hat a|0\rangle=0$（真空は消滅で潰れる）を確認せよ。</li>
+          <li>これらが電磁場の文脈で「光子の生成・消滅」に対応することを一言で述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/12-quantum-foundations.html#sec-quantum-foundations-operators" target="_blank" rel="noopener">§12.3 生成消滅演算子</a>、
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/12-quantum-foundations.html#sec-quantum-foundations-vacuum" target="_blank" rel="noopener">§12.4 数状態・真空</a> ／
+        電磁場各モードへの拡張は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part8/24-em-field-quantization.html" target="_blank" rel="noopener">第24章 電磁場の量子化</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $\hat a\hat a^\dagger=\hat a^\dagger\hat a+[\hat a,\hat a^\dagger]=\hat n+1$ ゆえ</p>
+          $$\big\|\hat a^\dagger|n\rangle\big\|^2=\langle n|\hat a\hat a^\dagger|n\rangle=\langle n|(\hat n+1)|n\rangle=n+1.$$
+          <p>また $\hat n(\hat a^\dagger|n\rangle)=(\hat a^\dagger\hat n+\hat a^\dagger)|n\rangle=(n+1)\hat a^\dagger|n\rangle$ より $\hat a^\dagger|n\rangle$ は固有値 $n+1$ の状態。規格化して位相を実にとれば</p>
+          $$\hat a^\dagger|n\rangle=\sqrt{n+1}\,|n+1\rangle.$$
+          <p><b>(2)</b> 同様に $\|\hat a|n\rangle\|^2=\langle n|\hat a^\dagger\hat a|n\rangle=\langle n|\hat n|n\rangle=n$ ゆえ $\hat a|n\rangle=\sqrt{n}\,|n-1\rangle$。$n=0$ では係数 $\sqrt0=0$ となり $\hat a|0\rangle=0$。真空はこれ以上下げられない。</p>
+          <p><b>(3)</b> 電磁場の各モードをこの調和振動子と同一視すると、$\hat a^\dagger$ はそのモードに光子を1個<b>生成</b>し、$\hat a$ は1個<b>消滅</b>させる。$|n\rangle$ は「光子 $n$ 個の状態」、$|0\rangle$ は光子のない電磁真空に対応する。</p>
+          <div class="ans"><b>答え：</b> $\|\hat a^\dagger|n\rangle\|^2=n+1\Rightarrow\hat a^\dagger|n\rangle=\sqrt{n+1}|n+1\rangle$、$\hat a|n\rangle=\sqrt n|n-1\rangle$、$\hat a|0\rangle=0$。電磁場では光子の生成・消滅。</div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <footer>
+    <p><b>宇宙の熱的放射</b> ― 連続放射と線スペクトルの背景物理（和田 桂一）<br>
+    演習問題集・第IV部（試作版）。本文の各節は
+    <a href="https://wadakeiichi.github.io/inverse_text_radiation/" target="_blank" rel="noopener">GitHub Pages 公開版</a>
+    にリンクしています。問題はすべて本文の三原則（逆引き／背景物理を曖昧にしない／天下り的に式を与えない）に沿って、本文が省いた導出の補完と理解の深化を目的に作成しました。</p>
+  </footer>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false},
+      {left: "\\[", right: "\\]", display: true}
+    ],
+    throwOnError: false
+  });
+});
+</script>
+</body>
+</html>

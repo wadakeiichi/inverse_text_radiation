@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>演習問題 ― 第VI部　現実の宇宙へ戻る（第15〜18章）</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@300;400;500;600;700&family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{--primary:#1f4e79;--secondary:#a23b3b;--gold:#c9a227;--ink:#1f2933;--muted:#5a6573;--paper:#fff;--bg:#fbfaf6;--soft:#eef1f6;--line:#d8dde6;--blue-bg:#f0f6ff;--gold-bg:#fff8e6;}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans JP",system-ui,sans-serif;font-weight:400;line-height:1.85;font-size:16.5px;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:860px;margin:0 auto;padding:0 22px 120px}
+header.book{background:linear-gradient(135deg,#1f4e79 0%,#163a5c 100%);color:#fff;padding:46px 22px 40px;margin-bottom:38px;border-bottom:4px solid var(--gold);}
+header.book .inner{max-width:860px;margin:0 auto}
+header.book .kicker{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:0 0 10px;}
+header.book h1{font-family:"IBM Plex Serif",serif;font-weight:600;font-size:30px;line-height:1.35;margin:0 0 14px;}
+header.book p.sub{margin:0;color:#cdd9e8;font-size:15px;max-width:660px}
+header.book a.bookhome{display:inline-block;margin-top:18px;color:#fff;font-size:13.5px;text-decoration:none;border:1px solid rgba(255,255,255,.4);padding:6px 14px;border-radius:999px;transition:.15s;}
+header.book a.bookhome:hover{background:rgba(255,255,255,.12)}
+.intro{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin-bottom:34px;box-shadow:0 1px 3px rgba(31,41,51,.05);}
+.intro h2{margin:0 0 10px;font-size:17px;color:var(--primary);font-family:"IBM Plex Serif",serif}
+.intro p{margin:.5em 0;font-size:14.5px;color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.legend span{font-size:13px;padding:4px 11px;border-radius:999px;border:1px solid var(--line);background:var(--soft);color:var(--ink)}
+.legend .star{color:var(--gold);font-weight:600}
+.chapter{margin:46px 0 0}
+.chapter-head{border-left:5px solid var(--primary);padding:4px 0 4px 16px;margin-bottom:8px;}
+.chapter-head .cnum{font-size:13px;letter-spacing:.1em;color:var(--secondary);font-weight:600}
+.chapter-head h2{font-family:"IBM Plex Serif",serif;font-weight:600;font-size:24px;margin:3px 0 6px;color:var(--ink)}
+.chapter-head a.src{font-size:13px;color:var(--primary);text-decoration:none}
+.chapter-head a.src:hover{text-decoration:underline}
+.chapter-overview{font-size:14px;color:var(--muted);margin:0 0 18px 21px}
+.problem{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin:18px 0;box-shadow:0 1px 3px rgba(31,41,51,.05);}
+.problem .top{display:flex;align-items:baseline;flex-wrap:wrap;gap:10px;margin-bottom:6px}
+.problem .pid{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:14px;color:#fff;background:var(--primary);padding:2px 9px;border-radius:6px}
+.problem .ptitle{font-weight:600;font-size:17px;color:var(--ink)}
+.problem .diff{color:var(--gold);font-size:15px;letter-spacing:1px}
+.problem .tag{font-size:11.5px;padding:2px 9px;border-radius:999px;font-weight:500;}
+.tag.deriv{background:var(--blue-bg);color:#1f4e79;border:1px solid #cfe0f5}
+.tag.deepen{background:var(--gold-bg);color:#8a6d12;border:1px solid #ecdca0}
+.problem .body{margin-top:10px}.problem .body p{margin:.55em 0}
+.problem ol.parts{margin:.4em 0;padding-left:1.4em}.problem ol.parts li{margin:.3em 0}
+table.mini{border-collapse:collapse;margin:.6em 0;font-size:14px}
+table.mini th,table.mini td{border:1px solid var(--line);padding:4px 10px;text-align:left}
+table.mini th{background:var(--soft)}
+.related{margin-top:14px;padding:10px 14px;background:var(--soft);border-radius:8px;font-size:13px;color:var(--muted)}
+.related b{color:var(--ink);font-weight:600}
+.related a{color:var(--primary);text-decoration:none;border-bottom:1px dotted var(--primary)}
+.related a:hover{border-bottom-style:solid}
+details.sol{margin-top:14px;border:1px solid var(--line);border-radius:8px;background:#fdfcf3;overflow:hidden}
+details.sol>summary{cursor:pointer;list-style:none;padding:11px 16px;font-weight:600;font-size:14.5px;color:var(--secondary);background:#fbf7ec;user-select:none;display:flex;align-items:center;gap:8px}
+details.sol>summary::-webkit-details-marker{display:none}
+details.sol>summary::before{content:"▶";font-size:11px;transition:.15s;color:var(--gold)}
+details.sol[open]>summary::before{transform:rotate(90deg)}
+details.sol .solbody{padding:6px 20px 18px;font-size:15px}
+details.sol .solbody p{margin:.6em 0}
+details.sol .solbody .ans{margin-top:12px;padding:10px 14px;border-left:3px solid var(--gold);background:#fff8e6;border-radius:0 6px 6px 0;font-size:14.5px}
+.katex{font-size:1.04em}.katex-display{overflow-x:auto;overflow-y:hidden;padding:4px 0}
+hr.soft{border:none;border-top:1px solid var(--line);margin:40px 0}
+footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+footer a{color:var(--primary)}
+.toc{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:34px}
+.toc h2{margin:0 0 10px;font-size:15px;color:var(--primary)}
+.toc ul{margin:0;padding-left:1.1em;columns:2;column-gap:28px;font-size:14px}.toc li{margin:3px 0}
+.toc a{color:var(--ink);text-decoration:none}.toc a:hover{color:var(--primary);text-decoration:underline}
+.partnav{margin-top:10px;font-size:13px}.partnav a{color:#cfe0f5;text-decoration:none;border-bottom:1px dotted #6f94bd}
+@media(max-width:620px){.toc ul{columns:1}header.book h1{font-size:24px}}
+</style>
+</head>
+<body>
+
+<header class="book">
+  <div class="inner">
+    <p class="kicker">宇宙の熱的放射 ― 演習問題集</p>
+    <h1>第VI部　現実の宇宙へ戻る<br>演習問題と模範解答（第15〜18章）</h1>
+    <p class="sub">理想のプランク分布に「ずれ因子」を掛けて現実の天体を読む。灰色大気・修正黒体・CMB 熱化と宇宙膨張・惑星平衡温度・多温度降着円盤・コンプトン化。観測スペクトルから物理量を逆引きする応用問題集です。</p>
+    <a class="bookhome" href="https://wadakeiichi.github.io/inverse_text_radiation/" target="_blank" rel="noopener">教科書本体（GitHub Pages）を開く ↗</a>
+    <div class="partnav">関連：<a href="演習問題_第I部_黒体放射の現象論.html">▶ 第I部</a> ・ <a href="演習問題_第II部_放射の記述と輸送.html">第II部</a> ・ <a href="演習問題_第III部_熱力学統計力学へ.html">第III部</a> ・ <a href="演習問題_第V部_電磁気学へ.html">第V部</a></div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="intro">
+    <h2>この問題集の使い方</h2>
+    <p>本文が「結果のみ引く」とした近似式（灰色大気、惑星平衡温度、$\nu^{1/3}$ べき則）を自力で導く<span style="color:#1f4e79">導出補完</span>問題と、観測データから温度・質量・磁場を引き出す<span style="color:#8a6d12">理解を深める</span>問題の二系統です。第VI部は応用の部なので、数値評価と「どこが局所黒体でどこから外れるか」の判断が中心になります。各問に本文該当節へのリンクを付けています。解答は「▶ 模範解答」で展開 ― まず自力で。</p>
+    <div class="legend">
+      <span class="star">☆</span> 基礎
+      <span class="star">☆☆</span> 標準（導出・観測応用）
+      <span class="star">☆☆☆</span> 発展（多段の導出・数値）
+      <span class="tag deriv" style="font-size:13px">導出補完</span>
+      <span class="tag deepen" style="font-size:13px">理解を深める</span>
+    </div>
+  </div>
+
+  <div class="toc">
+    <h2>収録問題（全15問）</h2>
+    <ul>
+      <li><a href="#ch15">第15章　完全な黒体ではない</a>（3問）</li>
+      <li><a href="#ch16">第16章　宇宙マイクロ波背景放射</a>（4問）</li>
+      <li><a href="#ch17">第17章　恒星・惑星・ダスト</a>（4問）</li>
+      <li><a href="#ch18">第18章　降着円盤と高エネルギー天体</a>（4問）</li>
+    </ul>
+  </div>
+
+  <!-- ================= CHAPTER 15 ================= -->
+  <section class="chapter" id="ch15">
+    <div class="chapter-head">
+      <span class="cnum">第15章</span>
+      <h2>現実の天体は完全な黒体ではない</h2>
+      <a class="src" href="https://wadakeiichi.github.io/inverse_text_radiation/part6/15-non-blackbody.html" target="_blank" rel="noopener">本文を開く ↗</a>
+    </div>
+    <p class="chapter-overview">灰色大気の温度構造と Eddington-Barbier、修正黒体 $Q_\nu B_\nu$ のべき、散乱を含むソース関数と偏光。理想からの「ずれ」を分類して読む。</p>
+
+    <!-- 15-1 -->
+    <div class="problem">
+      <div class="top"><span class="pid">15-1</span><span class="ptitle">灰色大気の温度構造と「見える深さ」</span><span class="diff">☆☆</span><span class="tag deriv">導出補完</span></div>
+      <div class="body">
+        <p>§15.2 は灰色大気の Eddington 近似解 $T^4(\tau)=\dfrac{3}{4}T_{\rm eff}^4(\tau+\dfrac23)$ を結果として引いた。これを読み解く。</p>
+        <ol class="parts">
+          <li>表面 $\tau=0$ での温度 $T(0)$ を $T_{\rm eff}$ で表し、$T(0)\simeq0.84\,T_{\rm eff}$ を確かめよ。</li>
+          <li>$T(\tau)=T_{\rm eff}$ となる光学的深さ $\tau$ を求めよ。</li>
+          <li>(2) の結果が Eddington-Barbier 近似（emergent flux は $\tau_\nu=2/3$ 層の $S_\nu$ で近似）と整合することを述べ、観測される連続光が「$\tau\simeq2/3$ の層の温度」を映す理由を説明せよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/15-non-blackbody.html#sec-non-blackbody-grey" target="_blank" rel="noopener">§15.2 灰色大気</a>、
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/15-non-blackbody.html#sec-non-blackbody-frequency-opacity" target="_blank" rel="noopener">§15.3 Eddington-Barbier</a> ／
+        $\tau\sim1$ と光球は <a href="演習問題_第II部_放射の記述と輸送.html">第II部 演習 5-4</a>、有効温度は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/17-stars-planets-dust.html#sec-stars-effective-temperature" target="_blank" rel="noopener">§17.1</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $\tau=0$：$T^4(0)=\dfrac34 T_{\rm eff}^4\cdot\dfrac23=\dfrac12 T_{\rm eff}^4$。よって $T(0)=(1/2)^{1/4}T_{\rm eff}=0.841\,T_{\rm eff}$。表面は有効温度より約16%低い。</p>
+          <p><b>(2)</b> $T^4(\tau)=T_{\rm eff}^4$ とおく：$\dfrac34(\tau+\dfrac23)=1\Rightarrow\tau+\dfrac23=\dfrac43\Rightarrow\tau=\dfrac23$。</p>
+          <p><b>(3)</b> emergent flux の Eddington-Barbier 近似 $F_\nu\approx\pi S_\nu(\tau_\nu=2/3)$ は「$\tau=2/3$ 層のソース関数が観測フラックスを代表する」。灰色大気ではちょうどこの層で $T=T_{\rm eff}$ なので、LTE（$S_\nu=B_\nu$）の下で観測される連続光は $B_\nu(T_{\rm eff})$ に近い。観測スペクトルは「$\tau\simeq2/3$ の層」を映している。</p>
+          <div class="ans"><b>答え：</b> $T(0)=(1/2)^{1/4}T_{\rm eff}\simeq0.84T_{\rm eff}$、$T=T_{\rm eff}$ は $\tau=2/3$。これが Eddington-Barbier の見える深さ。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 15-2 -->
+    <div class="problem">
+      <div class="top"><span class="pid">15-2</span><span class="ptitle">修正黒体のべき ― なぜ $\beta$ は Rayleigh-Jeans 側でしか見えないか</span><span class="diff">☆☆</span><span class="tag deepen">理解を深める</span></div>
+      <div class="body">
+        <p>§15.4 の修正黒体 $I_\nu=Q_\nu B_\nu(T)$、$Q_\nu\propto\nu^\beta$（長波長極限）。</p>
+        <ol class="parts">
+          <li>Rayleigh-Jeans 側（$h\nu\ll kT$、$B_\nu\propto\nu^2$）で、$\beta=2$ のとき観測される $I_\nu$ は $\nu$ の何乗に比例するか。$\beta=1$ なら？</li>
+          <li>Wien 側（$h\nu\gg kT$）では $Q_\nu\propto\nu^\beta$ の冪は指数減衰に対してほぼ効かないことを説明せよ。</li>
+          <li>「$\beta$ は Rayleigh-Jeans 側でのみ見える」という非対称性が、観測でダストの $\beta$ を決めるとき長波長（サブミリ・ミリ）観測を必要とする理由を述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/15-non-blackbody.html#sec-non-blackbody-modified" target="_blank" rel="noopener">§15.4 修正黒体</a> ／
+        両極限は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/02-reading-spectra.html#sec-reading-spectra-limits" target="_blank" rel="noopener">§2.5</a>（<a href="演習問題_第IV部_量子論へ.html">第IV部 演習 10-2</a>）、ダスト解析は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/17-stars-planets-dust.html#sec-dust-modified-blackbody" target="_blank" rel="noopener">§17.3</a>（演習 17-3）。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> RJ 側 $B_\nu\propto\nu^2$。$I_\nu=Q_\nu B_\nu\propto\nu^\beta\cdot\nu^2=\nu^{2+\beta}$。$\beta=2$ なら $I_\nu\propto\nu^4$、$\beta=1$ なら $\nu^3$。低振動数側の勾配が黒体（$\nu^2$）より急になる。</p>
+          <p><b>(2)</b> Wien 側 $B_\nu\propto\nu^3e^{-h\nu/kT}$ で指数減衰が支配的。$Q_\nu\propto\nu^\beta$ の冪は指数関数に比べて緩やかで、スペクトルの落ち方をほとんど変えない。したがって Wien 側の形からは $\beta$ をほぼ読めない。</p>
+          <p><b>(3)</b> $\beta$ は RJ 側の勾配 $\nu^{2+\beta}$ にしか現れない。ダスト（$T\sim10$–$30$ K）の RJ 側は遠赤外〜サブミリ・ミリ波に来る。よって $\beta$ を測るには、ピークより長波長側のサブミリ・ミリ（Herschel/ALMA）観測点が必要。Wien 側（近赤外）だけでは $\beta$ が決まらない。</p>
+          <div class="ans"><b>答え：</b> RJ 側 $I_\nu\propto\nu^{2+\beta}$（$\beta=2$ で $\nu^4$）。Wien 側は指数減衰が支配で $\beta$ が見えない。ゆえに $\beta$ 決定には長波長観測が必須。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 15-3 -->
+    <div class="problem">
+      <div class="top"><span class="pid">15-3</span><span class="ptitle">散乱を含むソース関数と偏光</span><span class="diff">☆☆</span><span class="tag deriv">導出補完</span></div>
+      <div class="body">
+        <p>§15.5 のソース関数 $S_\nu=\dfrac{\kappa_\nu^{\rm abs}B_\nu(T)+\sigma_\nu\langle J_\nu\rangle}{\kappa_\nu^{\rm abs}+\sigma_\nu}$ を読み解く。単一散乱アルベド $\tilde\omega_\nu\equiv\dfrac{\sigma_\nu}{\kappa_\nu^{\rm abs}+\sigma_\nu}$。</p>
+        <ol class="parts">
+          <li>$S_\nu$ を $\tilde\omega_\nu$ で書き直し、$S_\nu=(1-\tilde\omega_\nu)B_\nu+\tilde\omega_\nu\langle J_\nu\rangle$ を示せ。</li>
+          <li>純吸収（$\tilde\omega_\nu=0$）と純散乱（$\tilde\omega_\nu=1$）の極限で $S_\nu$ がそれぞれ何になるか述べ、後者で局所プランク関数から外れる理由を述べよ。</li>
+          <li>熱平衡放射は無偏光なのに、散乱が偏光を生む。観測される偏光が「散乱が無視できない」ことの直接の証拠になる理由を述べ、例を1つ挙げよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/15-non-blackbody.html#sec-non-blackbody-scattering" target="_blank" rel="noopener">§15.5 散乱の効果</a> ／
+        ソース関数の基礎は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part2/05-radiative-transfer.html#sec-radiative-transfer-source" target="_blank" rel="noopener">§5.4</a>（<a href="演習問題_第II部_放射の記述と輸送.html">第II部 演習</a>）、偏光は <a href="演習問題_第V部_電磁気学へ.html">第V部 演習 13-4</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 分子分母を $\kappa^{\rm abs}+\sigma$ で割る：$S_\nu=\dfrac{\kappa^{\rm abs}}{\kappa^{\rm abs}+\sigma}B_\nu+\dfrac{\sigma}{\kappa^{\rm abs}+\sigma}\langle J_\nu\rangle=(1-\tilde\omega_\nu)B_\nu+\tilde\omega_\nu\langle J_\nu\rangle$。</p>
+          <p><b>(2)</b> 純吸収 $\tilde\omega=0$：$S_\nu=B_\nu(T)$（LTE、局所プランク）。純散乱 $\tilde\omega=1$：$S_\nu=\langle J_\nu\rangle$（平均強度そのもの）。後者は局所の温度 $T$ ではなく、媒質全体から散乱されてきた放射場 $\langle J_\nu\rangle$ で決まるので、局所プランク関数 $B_\nu(T_{\rm local})$ から外れる（非局所）。</p>
+          <p><b>(3)</b> 熱平衡放射は両偏光が等確率で混ざり無偏光。散乱（特に Thomson・Rayleigh 散乱）は散乱角に依存して特定偏光を優先的に散乱し、偏光を生む。よって観測される偏光は、その光が散乱を経たこと＝散乱が無視できないことの直接証拠。例：CMB の偏光（再結合期の Thomson 散乱）、太陽コロナの偏光、惑星間ダストの散乱光。</p>
+          <div class="ans"><b>答え：</b> $S_\nu=(1-\tilde\omega)B_\nu+\tilde\omega\langle J_\nu\rangle$。純散乱で $S_\nu=\langle J_\nu\rangle$（非局所）。偏光の存在＝散乱卓越の証拠（CMB 偏光など）。</div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <hr class="soft">
+
+  <!-- ================= CHAPTER 16 ================= -->
+  <section class="chapter" id="ch16">
+    <div class="chapter-head">
+      <span class="cnum">第16章</span>
+      <h2>宇宙マイクロ波背景放射</h2>
+      <a class="src" href="https://wadakeiichi.github.io/inverse_text_radiation/part6/16-cmb.html" target="_blank" rel="noopener">本文を開く ↗</a>
+    </div>
+    <p class="chapter-overview">$T\propto1/a$ で黒体形が保たれる仕組み、高赤方偏移の CMB 温度、熱化と再結合の区別、$\mu$ 歪みと $y$ 歪み。完璧な黒体という極限を逆向きに読む。</p>
+
+    <!-- 16-1 -->
+    <div class="problem">
+      <div class="top"><span class="pid">16-1</span><span class="ptitle">なぜ宇宙膨張で黒体形が崩れないか ― $T\propto1/a$</span><span class="diff">☆☆</span><span class="tag deriv">導出補完</span></div>
+      <div class="body">
+        <p>§16.4 は膨張下で黒体形が保たれる条件を述べた。確かめる。スケール因子 $a(t)$、膨張で波長 $\lambda\to a\lambda$、振動数 $\nu\to\nu/a$。</p>
+        <ol class="parts">
+          <li>プランク分布の指数 $h\nu/k_BT$ が膨張下で不変であるためには $T\propto1/a$ が必要であることを示せ。</li>
+          <li>$T\propto a^{-1}$ と Stefan-Boltzmann $u\propto T^4$ から、エネルギー密度が $u\propto a^{-4}$ で減ることを示せ。</li>
+          <li>$u\propto a^{-4}$ を「光子数密度 $\propto a^{-3}$」と「1光子あたりのエネルギー $\propto a^{-1}$」の積として説明せよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/16-cmb.html#sec-cmb-expansion" target="_blank" rel="noopener">§16.4 宇宙膨張と温度</a> ／
+        Stefan-Boltzmann は <a href="演習問題_第IV部_量子論へ.html">第IV部 演習 10-3</a>、光子数密度 $\propto T^3$ は <a href="演習問題_第III部_熱力学統計力学へ.html">第III部 演習 8-3</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 膨張で各モードの振動数は $\nu\to\nu/a$。指数 $h\nu/k_BT$ が不変であるには、$\nu$ が $1/a$ で減るのと同じ割合で $T$ も減らねばならない：$T\propto1/a$。このとき各振動数で占有因子 $1/(e^{h\nu/k_BT}-1)$ が保たれ、スペクトル形（プランク分布）は温度だけが下がる形で保存される。</p>
+          <p><b>(2)</b> $u\propto T^4\propto(a^{-1})^4=a^{-4}$。</p>
+          <p><b>(3)</b> 光子数密度 $n_\gamma\propto T^3\propto a^{-3}$（体積膨張で薄まる）。1光子あたりのエネルギー $h\nu\propto a^{-1}$（赤方偏移）。積 $u=n_\gamma\cdot\langle h\nu\rangle\propto a^{-3}\cdot a^{-1}=a^{-4}$。物質（$\rho\propto a^{-3}$）より1段速く薄まるのが放射の特徴。</p>
+          <div class="ans"><b>答え：</b> 指数不変には $T\propto1/a$。すると $u\propto T^4\propto a^{-4}=a^{-3}$(数密度)×$a^{-1}$(光子エネルギー)。形は保たれ温度だけ下がる。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 16-2 -->
+    <div class="problem">
+      <div class="top"><span class="pid">16-2</span><span class="ptitle">高赤方偏移の CMB 温度</span><span class="diff">☆☆</span><span class="tag deepen">理解を深める</span></div>
+      <div class="body">
+        <p>§16.4 は過去ほど宇宙が熱いことを述べた。$T_{\rm CMB}(z)=(1+z)T_0$、$T_0=2.725$ K。</p>
+        <ol class="parts">
+          <li>赤方偏移 $z=3$ での CMB 温度を求めよ。</li>
+          <li>その温度の黒体の Wien ピーク波長 $\lambda_{\rm peak}=b/T$（$b=2.898\times10^{-3}$ m·K）を、$z=3$ と現在（$z=0$）で計算して比べよ。</li>
+          <li>高赤方偏移銀河の吸収線温度計でこの $T_{\rm CMB}(z)$ が確認されていることが、何の直接観測的証拠になるか述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/16-cmb.html#sec-cmb-expansion" target="_blank" rel="noopener">§16.4 宇宙膨張と温度</a> ／
+        Wien 則は <a href="演習問題_第I部_黒体放射の現象論.html">第I部 演習 2-2</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $T_{\rm CMB}(3)=(1+3)\times2.725=4\times2.725=10.9$ K。</p>
+          <p><b>(2)</b> 現在 $z=0$：$\lambda_{\rm peak}=2.898\times10^{-3}/2.725=1.06\times10^{-3}$ m $=1.06$ mm（マイクロ波）。$z=3$：$\lambda_{\rm peak}=2.898\times10^{-3}/10.9=2.66\times10^{-4}$ m $=266\ \mu$m（遠赤外）。過去はピークが短波長側。比はちょうど $(1+z)=4$ 倍。</p>
+          <p><b>(3)</b> 高赤方偏移銀河中の原子・分子の励起温度（CMB 光子で励起される準位比から測る温度計）が $(1+z)T_0$ と一致することは、「過去ほど宇宙が熱かった」こと、すなわち $T\propto1/a$（膨張で冷える黒体）という標準宇宙論の予言の直接観測的確認になる。</p>
+          <div class="ans"><b>答え：</b> $T(z=3)=10.9$ K。$\lambda_{\rm peak}$ は 1.06 mm→266 μm（$1+z=4$ 倍短く）。$T\propto1/a$ の直接確認。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 16-3 -->
+    <div class="problem">
+      <div class="top"><span class="pid">16-3</span><span class="ptitle">熱化と再結合の区別 ― 「撮影時刻」と「黒体化」</span><span class="diff">☆☆</span><span class="tag deepen">理解を深める</span></div>
+      <div class="body">
+        <p>§16.2・16.3 は「CMB が再結合で黒体になった」という言い方が不正確だと述べた。整理する。</p>
+        <ol class="parts">
+          <li>「熱化（$\mu\to0$）」と「再結合（最終散乱）」は、それぞれ宇宙史のいつ起き、何を担う過程か区別して述べよ（赤方偏移の目安も）。</li>
+          <li>熱化を担う主過程（二重コンプトン散乱・制動放射・コンプトン散乱）のうち、光子数を変えられるのはどれか。なぜ $\mu=0$ にこれが必要か。</li>
+          <li>もし元素組成が違って再結合温度が変わっても、現在の $T_0=2.725$ K は変わらない。なぜか（$T_0=T_{\rm rec}/(1+z_{\rm rec})$ が恒等式である理由）。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/16-cmb.html#sec-cmb-thermalization" target="_blank" rel="noopener">§16.2 熱化の三段階</a>、
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/16-cmb.html#sec-cmb-recombination" target="_blank" rel="noopener">§16.3 再結合</a> ／
+        $\mu=0$ の物理は <a href="演習問題_第III部_熱力学統計力学へ.html">第III部 演習 8-3</a>、第1章の動機は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/01-where-blackbody.html#sec-where-blackbody-cmb" target="_blank" rel="noopener">§1.5</a>（<a href="演習問題_第I部_黒体放射の現象論.html">第I部 演習 1-4</a>）。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 熱化：$z\gtrsim2\times10^6$ までに完了。放射のスペクトルを Planck 形（$\mu\to0$）に整える過程。再結合：$z\simeq1100$。電子と陽子が中性水素になり光が自由伝搬を始める（最終散乱＝CMB の「撮影時刻」）。前者が黒体スペクトルを作り、後者がそれを解放する。</p>
+          <p><b>(2)</b> 二重コンプトン散乱（$e^-+\gamma\to e^-+2\gamma$）と制動放射が光子数を変えられる。コンプトン散乱はエネルギー再分配のみで数を変えない。$\mu=0$（化学ポテンシャルゼロ＝光子数が自由に調整される）には光子数を増減できる過程が必要なので、二重コンプトン散乱が本質的。</p>
+          <p><b>(3)</b> $T_0=T_{\rm rec}/(1+z_{\rm rec})$ は $T\propto1/a$（$1+z=1/a$）という恒等式。元素組成が変わって再結合温度 $T_{\rm rec}$ が変われば、それに応じて $z_{\rm rec}$ も変わり、比 $T_{\rm rec}/(1+z_{\rm rec})=T_0$ は恒等的に保たれる。$T_0$ を実際に決めるのは光子数密度の歴史（バリオン-光子比など）で、再結合の詳細は最終散乱面の位置だけを左右する。</p>
+          <div class="ans"><b>答え：</b> 熱化（$z\gtrsim2\times10^6$、黒体化）と再結合（$z\simeq1100$、撮影）は別過程。二重コンプトンが光子数を変え $\mu=0$ を作る。$T_0$ は $T\propto1/a$ の恒等式ゆえ再結合温度に依らない。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 16-4 -->
+    <div class="problem">
+      <div class="top"><span class="pid">16-4</span><span class="ptitle">$\mu$ 歪みと $y$ 歪み ― いつの何を見るか</span><span class="diff">☆☆</span><span class="tag deepen">理解を深める</span></div>
+      <div class="body">
+        <p>§16.5 はスペクトル歪みを2種に分けた。整理する。</p>
+        <ol class="parts">
+          <li>$\mu$ 歪みと $y$ 歪みが、それぞれ宇宙史のどの時期のエネルギー注入を記録するか述べよ（熱化過程の効率喪失の順序と結びつけて）。</li>
+          <li>$\mu$ 歪みが「Bose-Einstein 分布（$\mu\neq0$）」の形になる理由を、コンプトン散乱は働くが光子数を変えられない状況から説明せよ。</li>
+          <li>$y$ 歪みが銀河団で観測される Sunyaev-Zel'dovich 効果と同じ物理であること、約 217 GHz が「ヌル点」になることに触れよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/16-cmb.html#sec-cmb-distortions" target="_blank" rel="noopener">§16.5 スペクトル歪み</a> ／
+        コンプトン化の同じ物理は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/18-accretion-high-energy.html#sec-comptonization" target="_blank" rel="noopener">§18.3</a>（演習 18-2）。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $\mu$ 歪み：$z\sim5\times10^4$〜$2\times10^6$ のエネルギー注入を記録。この時期は二重コンプトンが無効化（光子数を変えられない）だがコンプトン散乱は有効（エネルギー再分配可能）。$y$ 歪み：$z\lesssim10^4$（コンプトン散乱も非効率化して以降、現在まで含む）の高温電子との散乱を記録。熱化過程が効率を失う順序（光子数生成→エネルギー再分配）に対応する。</p>
+          <p><b>(2)</b> $\mu$ 歪みの時期は、コンプトン散乱がエネルギーを完全に再分配して平衡分布に達するが、光子数を変えられない。粒子数が保存される Bose 気体の平衡は $\mu\neq0$ の Bose-Einstein 分布（第8章）。だからプランク（$\mu=0$）からずれた $\mu\neq0$ の形になる。</p>
+          <p><b>(3)</b> $y$ 歪みは高温電子と CMB 光子の逆コンプトン散乱で、スペクトル全体が高振動数側へ引きずられる。これは銀河団中の高温ガスで起こる Sunyaev-Zel'dovich 効果と同じ物理（スケールが宇宙論的か銀河団かの違いのみ）。低振動数側が暗く（ディップ）、高振動数側が明るく（バンプ）、その境界の約 217 GHz がヌル点。</p>
+          <div class="ans"><b>答え：</b> $\mu$ 歪み＝$z\sim5\times10^4$–$2\times10^6$（光子数凍結、BE 分布）、$y$ 歪み＝$z\lesssim10^4$（高温電子散乱）。$y$ は SZ 効果と同物理、217 GHz がヌル点。</div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <hr class="soft">
+
+  <!-- ================= CHAPTER 17 ================= -->
+  <section class="chapter" id="ch17">
+    <div class="chapter-head">
+      <span class="cnum">第17章</span>
+      <h2>恒星・惑星・ダストの熱放射</h2>
+      <a class="src" href="https://wadakeiichi.github.io/inverse_text_radiation/part6/17-stars-planets-dust.html" target="_blank" rel="noopener">本文を開く ↗</a>
+    </div>
+    <p class="chapter-overview">惑星平衡温度の導出、二温度天体の同一波長明るさ比、ダスト修正黒体からの物理量読み取り、ピーク波長と観測施設の対応。観測 SED から物理量を逆引きする。</p>
+
+    <!-- 17-1 -->
+    <div class="problem">
+      <div class="top"><span class="pid">17-1</span><span class="ptitle">惑星の平衡温度を入出力バランスから</span><span class="diff">☆☆</span><span class="tag deriv">導出補完</span></div>
+      <div class="body">
+        <p>§17.2 のエネルギー収支から惑星平衡温度を導く。アルベド $A$、恒星-惑星距離 $d$、恒星半径 $R_\star$、温度 $T_\star$、惑星半径 $R_p$。</p>
+        <ol class="parts">
+          <li>吸収光 $(1-A)\dfrac{L_\star}{4\pi d^2}\pi R_p^2$ と再放射 $4\pi R_p^2\sigma T_{\rm eq}^4$ を等置し、$L_\star=4\pi R_\star^2\sigma T_\star^4$ を使って $T_{\rm eq}=T_\star\left(\dfrac{R_\star}{2d}\right)^{1/2}(1-A)^{1/4}$ を導け。</li>
+          <li>断面積 $\pi R_p^2$（吸収）と表面積 $4\pi R_p^2$（放射）の比 4 が、式のどこに効くか説明せよ。</li>
+          <li>地球（$T_\star=5778$ K、$R_\star/d=1/214$、$A=0.3$）で $T_{\rm eq}$ を計算し、実際の地表温度（+15 °C）とのずれの原因を述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/17-stars-planets-dust.html#sec-planet-equilibrium" target="_blank" rel="noopener">§17.2 惑星の平衡温度</a> ／
+        Stefan-Boltzmann と光度は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/02-reading-spectra.html#sec-reading-spectra-stefan-boltzmann" target="_blank" rel="noopener">§2.4</a>（<a href="演習問題_第I部_黒体放射の現象論.html">第I部 演習 2-5</a>）。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 等置：$(1-A)\dfrac{L_\star}{4\pi d^2}\pi R_p^2=4\pi R_p^2\sigma T_{\rm eq}^4$。$\pi R_p^2$ を消し、$L_\star=4\pi R_\star^2\sigma T_\star^4$ を代入：</p>
+          $$(1-A)\frac{4\pi R_\star^2\sigma T_\star^4}{4\pi d^2}\cdot\frac14=\sigma T_{\rm eq}^4\ \Rightarrow\ T_{\rm eq}^4=(1-A)\frac{R_\star^2}{4d^2}T_\star^4.$$
+          $$T_{\rm eq}=T_\star\left(\frac{R_\star}{2d}\right)^{1/2}(1-A)^{1/4}.$$
+          <p><b>(2)</b> 惑星は断面 $\pi R_p^2$ で恒星光を受け、全表面 $4\pi R_p^2$ から再放射する。比 $4\pi R_p^2/\pi R_p^2=4$ が右辺の $1/4$（すなわち $\sqrt{1/4}=1/2$ が $R_\star/2d$ の 2）として効く。自転が速く全球で均一再放射する近似。</p>
+          <p><b>(3)</b> $T_{\rm eq}=5778\times(1/(2\times214))^{1/2}\times(0.7)^{1/4}=5778\times(2.34\times10^{-3})^{1/2}\times0.915=5778\times0.0483\times0.915\simeq255$ K（$-18$°C）。実際の +15°C との 33 K の差は温室効果（大気の赤外不透明度）。この式は大気なし近似。</p>
+          <div class="ans"><b>答え：</b> $T_{\rm eq}=T_\star\sqrt{R_\star/2d}\,(1-A)^{1/4}$。地球で 255 K。実測との 33 K 差は温室効果。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 17-2 -->
+    <div class="problem">
+      <div class="top"><span class="pid">17-2</span><span class="ptitle">二温度天体の同一波長明るさ比</span><span class="diff">☆☆☆</span><span class="tag deepen">理解を深める</span></div>
+      <div class="body">
+        <p>§17.1 の問いを数値で解く。太陽（$T_1=5778$ K）と Vega（$T_2=9602$ K）を半径・距離同じと仮定。同一振動数での比強度比 $\dfrac{B_\nu(T_2)}{B_\nu(T_1)}=\dfrac{e^{h\nu/kT_1}-1}{e^{h\nu/kT_2}-1}$ を使う。便利な関係 $h\nu/k=hc/\lambda k$、$hc/k=1.439\times10^{-2}$ m·K。</p>
+        <ol class="parts">
+          <li>可視 $\lambda=500$ nm で $x_i=hc/\lambda kT_i$ を求め、明るさ比を計算せよ（約7.6倍）。</li>
+          <li>紫外 $\lambda=250$ nm で同様に計算せよ（約53倍）。なぜ紫外ほど比が大きいか。</li>
+          <li>赤外 $\lambda=5\ \mu$m での比を計算し（約1.85倍）、長波長側ほど比が温度比へ近づくことを確認せよ（ただし $x\simeq0.5$ でまだ RJ 極限とは言い切れない）。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/17-stars-planets-dust.html#sec-stars-effective-temperature" target="_blank" rel="noopener">§17.1 恒星の有効温度</a> ／
+        両極限は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/02-reading-spectra.html#sec-reading-spectra-limits" target="_blank" rel="noopener">§2.5</a>、恒星の色は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/01-where-blackbody.html#sec-where-blackbody-stars" target="_blank" rel="noopener">§1.3</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p>$x=hc/\lambda kT$、$hc/k=1.439\times10^{-2}$ m·K。比 $=\dfrac{e^{x_1}-1}{e^{x_2}-1}$（$x_1$＝太陽、$x_2$＝Vega、$x_1\gt x_2$）。</p>
+          <p><b>(1)</b> $\lambda=500$ nm：$hc/\lambda k=1.439\times10^{-2}/5.0\times10^{-7}=2.88\times10^4$ K。$x_1=28800/5778=4.98$、$x_2=28800/9602=3.00$。比 $=\dfrac{e^{4.98}-1}{e^{3.00}-1}=\dfrac{144.4}{19.1}\simeq7.6$。Vega が約7.6倍明るい。</p>
+          <p><b>(2)</b> $\lambda=250$ nm：$hc/\lambda k=5.76\times10^4$ K。$x_1=9.96$、$x_2=5.99$。比 $=\dfrac{e^{9.96}-1}{e^{5.99}-1}=\dfrac{21100}{399}\simeq53$。紫外は両者とも Wien 側で指数 $e^{x}$ が支配し、温度差が指数的に増幅されるため比が大きい。</p>
+          <p><b>(3)</b> $\lambda=5\ \mu$m：$hc/\lambda k=2.88\times10^3$ K。$x_1=0.498$、$x_2=0.300$。比 $=\dfrac{e^{0.498}-1}{e^{0.300}-1}=\dfrac{0.645}{0.350}\simeq1.85$。RJ 極限 $x\ll1$ なら $e^x-1\simeq x$ で比 $\to x_1/x_2=T_2/T_1=9602/5778=1.66$。ただし $x_1\simeq0.50$ はまだ $x\ll1$ とは言えず、比 1.85 は温度比 1.66 より 10% 以上大きい。つまり<b>RJ 側に近づきつつある</b>段階であり、温度比のみで近似するには 10–20 µm（$x\lesssim0.25$）まで長波長へ寄せるとよい。</p>
+          <div class="ans"><b>答え：</b> 比は可視 7.6、紫外 53、赤外 1.85。Wien 側（紫外）ほど温度差が指数的に効き、長波長側（赤外）ほど温度比に近づく（5 µm ではまだ 10% 程度の補正が残る）。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 17-3 -->
+    <div class="problem">
+      <div class="top"><span class="pid">17-3</span><span class="ptitle">ダスト修正黒体から3物理量を読む</span><span class="diff">☆☆</span><span class="tag deepen">理解を深める</span></div>
+      <div class="body">
+        <p>§17.3 の修正黒体 $I_\nu=Q_\nu B_\nu(T_d)$、$Q_\nu\propto\nu^\beta$。観測 SED から3つの物理量を読む手順を整理する。</p>
+        <ol class="parts">
+          <li>ダスト温度 $T_d$、emissivity index $\beta$、ダスト質量 がそれぞれ SED のどの特徴から読めるか述べよ。</li>
+          <li>$\beta$ の値が粒子サイズを反映する（大粒子 $\beta\to0$、小結晶 $\beta\to2$）。ALMA で原始惑星系円盤の中心部ほど $\beta$ が小さい観測が、何を示すか述べよ。</li>
+          <li>多温度フィットで「冷たい成分の質量」を推定するとき、温度との縮退に注意が要る。長波長観測点がこの縮退を解く理由を、修正黒体の RJ 側（演習 15-2）と結びつけて述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/17-stars-planets-dust.html#sec-dust-modified-blackbody" target="_blank" rel="noopener">§17.3 ダストの修正黒体</a>、
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/17-stars-planets-dust.html#sec-multi-temperature" target="_blank" rel="noopener">§17.5 多温度合成</a> ／
+        修正黒体のべきは演習 15-2、修正黒体の定義は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/15-non-blackbody.html#sec-non-blackbody-modified" target="_blank" rel="noopener">§15.4</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $T_d$：Wien 側の指数減衰の鋭さ、または SED のピーク位置（Wien 則）から。$\beta$：Rayleigh-Jeans 側（長波長）の勾配の急さ（$I_\nu\propto\nu^{2+\beta}$）から。ダスト質量：全光度を $B_\nu(T_d)$ で割ったときの規格化定数から（不透明度の仮定が必要）。</p>
+          <p><b>(2)</b> $\beta$ が小さいほど粒子が大きい（粒子サイズ≈波長の極限で $\beta\to0$）。円盤中心部ほど $\beta$ が小さい＝粒子が大きく成長している。これは円盤内でダストが集積・成長して惑星形成へ向かう過程の直接観測的証拠。</p>
+          <p><b>(3)</b> 同じピーク位置でも（高温・少量）と（低温・大量）で似た SED を作れる縮退がある。RJ 側の勾配 $\nu^{2+\beta}$ と絶対強度は温度・質量・$\beta$ に異なる依存をするので、ピークより長波長（サブミリ・ミリ）の観測点を加えると、RJ 側の形が温度と質量を分離して縮退を解く。だから長波長観測が鍵。</p>
+          <div class="ans"><b>答え：</b> $T_d$＝Wien側/ピーク、$\beta$＝RJ側勾配、質量＝規格化。中心部の小 $\beta$＝粒子成長＝惑星形成の証拠。長波長点が温度-質量縮退を解く。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 17-4 -->
+    <div class="problem">
+      <div class="top"><span class="pid">17-4</span><span class="ptitle">ダストのピーク波長と観測施設</span><span class="diff">☆</span><span class="tag deepen">理解を深める</span></div>
+      <div class="body">
+        <p>§17.5 の問いを一般化する。Wien 則 $\lambda_{\rm peak}=b/T$（$b=2898\ \mu$m·K）。</p>
+        <ol class="parts">
+          <li>$T_d=20$ K の冷たいダストのピーク波長を求め、どの観測施設の帯域か述べよ。</li>
+          <li>暖かいダスト $T_d=100$ K、ごく冷たいダスト $T_d=15$ K のピーク波長も求めよ。</li>
+          <li>銀河の重元素の半分がダストに閉じ込められ、その熱放射が遠赤外〜サブミリにピークを持つ。なぜ赤外・サブミリ天文学（Herschel/ALMA）が宇宙の物質収支に決定的なのか述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/17-stars-planets-dust.html#sec-multi-temperature" target="_blank" rel="noopener">§17.5 多温度合成</a>、
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/17-stars-planets-dust.html#sec-infrared-astronomy" target="_blank" rel="noopener">§17.4 赤外線天文学</a> ／
+        Wien 変位則は <a href="演習問題_第I部_黒体放射の現象論.html">第I部 演習 2-2</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $\lambda_{\rm peak}=2898/20=145\ \mu$m。これは Herschel（SPIRE/PACS、60–600 μm）の主帯域。冷たい星間ダストの観測が Herschel で飛躍したのはこのため。</p>
+          <p><b>(2)</b> $T_d=100$ K：$\lambda_{\rm peak}=2898/100=29\ \mu$m（中間赤外、Spitzer/JWST）。$T_d=15$ K：$\lambda_{\rm peak}=2898/15=193\ \mu$m（サブミリ、Herschel/ALMA）。</p>
+          <p><b>(3)</b> ダスト（$T\sim15$–$30$ K）の熱放射ピークは遠赤外〜サブミリ。銀河の重元素の半分がダストに閉じ込められているので、可視・紫外だけ見ると物質の半分を見落とす。遠赤外・サブミリ（Herschel/ALMA）でこの放射を捉えて初めて、銀河の星間物質・ダスト質量・星形成の全体像（物質収支）が分かる。</p>
+          <div class="ans"><b>答え：</b> 20 K→145 μm（Herschel）、100 K→29 μm、15 K→193 μm。重元素の半分がダスト＝遠赤外/サブミリ観測が物質収支に必須。</div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <hr class="soft">
+
+  <!-- ================= CHAPTER 18 ================= -->
+  <section class="chapter" id="ch18">
+    <div class="chapter-head">
+      <span class="cnum">第18章</span>
+      <h2>降着円盤と高エネルギー天体</h2>
+      <a class="src" href="https://wadakeiichi.github.io/inverse_text_radiation/part6/18-accretion-high-energy.html" target="_blank" rel="noopener">本文を開く ↗</a>
+    </div>
+    <p class="chapter-overview">局所黒体仮定とその限界、多温度円盤の $\nu^{1/3}$ べき則、コンプトン $y$ パラメータ、中性子星の重力赤方偏移。プランクの枠組みを極端な条件へ拡張する。</p>
+
+    <!-- 18-1 -->
+    <div class="problem">
+      <div class="top"><span class="pid">18-1</span><span class="ptitle">多温度円盤の $\nu^{1/3}$ べき則</span><span class="diff">☆☆☆</span><span class="tag deriv">導出補完</span></div>
+      <div class="body">
+        <p>§18.2 は標準降着円盤の中間振動数帯で $F_\nu\propto\nu^{1/3}$ になると述べた。導出の骨子を埋める。温度プロファイル $T(R)\propto R^{-3/4}$、合成フラックス $F_\nu=\displaystyle\int_{R_{\rm in}}^{R_{\rm out}}2\pi R\,B_\nu(T(R))\,dR$。</p>
+        <ol class="parts">
+          <li>$T\propto R^{-3/4}$ から $R\propto T^{-4/3}$、$2\pi R\,dR\propto T^{-11/3}\,dT$ を示せ。</li>
+          <li>中間帯（$kT(R_{\rm in})\gg h\nu\gg kT(R_{\rm out})$）では、$h\nu\simeq kT(R)$ となる半径が振動数とともに動き、その内側は Rayleigh-Jeans 側、外側は Wien 側で抑えられる。全 Planck 関数を保ったまま $F_\nu\propto\nu^3\displaystyle\int\frac{R\,dR}{e^{h\nu/kT(R)}-1}$ と書き、$x=h\nu/kT(R)$ に変換して $F_\nu\propto\nu^{1/3}$ を導け。</li>
+          <li>温度プロファイルが一般に $T\propto R^{-\alpha}$ なら $F_\nu\propto\nu^{(3\alpha-2)/\alpha}$ となることを確かめ、$\alpha=3/4$ で $1/3$ になることを示せ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/18-accretion-high-energy.html#sec-disk-multi-temperature" target="_blank" rel="noopener">§18.2 多温度円盤</a> ／
+        局所黒体は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/18-accretion-high-energy.html#sec-disk-local-blackbody" target="_blank" rel="noopener">§18.1</a>（演習 18-3）、RJ 極限は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/02-reading-spectra.html#sec-reading-spectra-limits" target="_blank" rel="noopener">§2.5</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $T\propto R^{-3/4}\Rightarrow R\propto T^{-4/3}$。$dR\propto T^{-7/3}dT$。$2\pi R\,dR\propto T^{-4/3}\cdot T^{-7/3}dT=T^{-11/3}dT$。</p>
+          <p><b>(2)</b> 全半径を RJ 近似で済ませると積分端が固定され $F_\nu\propto\nu^2$ になってしまう。正しくは、$h\nu\simeq kT(R)$ を満たす<b>有効半径が振動数とともに移動</b>し、その内側は RJ・外側は Wien 側で切れる。全 Planck 関数を保つと</p>
+          $$F_\nu\propto\nu^3\int_{R_{\rm in}}^{R_{\rm out}}\frac{R\,dR}{e^{h\nu/kT(R)}-1}.$$
+          <p>$T\propto R^{-3/4}$ より $R\propto T^{-4/3}$。$x=h\nu/kT(R)$ とおくと $T=h\nu/kx$、$R\propto\nu^{-4/3}x^{4/3}$、$dR\propto\nu^{-4/3}x^{1/3}dx$、ゆえに $R\,dR\propto\nu^{-8/3}x^{5/3}dx$。代入して</p>
+          $$F_\nu\propto\nu^3\cdot\nu^{-8/3}\int\frac{x^{5/3}}{e^x-1}dx=\nu^{1/3}\int_0^\infty\frac{x^{5/3}}{e^x-1}dx.$$
+          <p>中間帯が十分広ければ積分は $0\to\infty$ とみなせて収束し、$\nu$ に依らない定数になる。したがって $F_\nu\propto\nu^{1/3}$。内側（小 $x$＝RJ 側）と外側（大 $x$＝Wien 側）が振動数とともに自動的に切り替わるのが要点。</p>
+          <p><b>(3)</b> 一般に $T\propto R^{-\alpha}\Rightarrow R\propto T^{-1/\alpha}$。同じ $x=h\nu/kT$ 変換で $R\,dR\propto\nu^{-2/\alpha}x^{2/\alpha-1}dx$。よって $F_\nu\propto\nu^3\cdot\nu^{-2/\alpha}\displaystyle\int\frac{x^{2/\alpha-1}}{e^x-1}dx\propto\nu^{3-2/\alpha}=\nu^{(3\alpha-2)/\alpha}$。$\alpha=3/4$ で $3-8/3=1/3$。</p>
+          <div class="ans"><b>答え：</b> $2\pi R\,dR\propto T^{-11/3}dT$、中間帯で $F_\nu\propto\nu^{1/3}$。一般に $T\propto R^{-\alpha}$ で $F_\nu\propto\nu^{(3\alpha-2)/\alpha}$、$\alpha=3/4$ で $1/3$。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 18-2 -->
+    <div class="problem">
+      <div class="top"><span class="pid">18-2</span><span class="ptitle">コンプトン $y$ パラメータ</span><span class="diff">☆☆</span><span class="tag deriv">導出補完</span></div>
+      <div class="body">
+        <p>§18.3 のコンプトン化を読み解く。種光子（低温黒体）が高温電子コロナ（$T_e$）を通過する。1回散乱あたりのエネルギー利得 $\dfrac{\Delta\nu}{\nu}\simeq\dfrac{4k_BT_e}{m_ec^2}$、$y\equiv\dfrac{4k_BT_e}{m_ec^2}\max(\tau_e,\tau_e^2)$。$m_ec^2=511$ keV。</p>
+        <ol class="parts">
+          <li>$T_e=10^9$ K（$k_BT_e\simeq86$ keV）で1回あたりのエネルギー利得 $\Delta\nu/\nu$ を求めよ。</li>
+          <li>$y\ll1$、$y\gtrsim1$、中間域で観測スペクトルがどう変わるか（弱い Wien テイル／Wien 分布化／べき則）述べよ。</li>
+          <li>この $y$ パラメータが第16章 CMB の $y$ 歪み（Sunyaev-Zel'dovich 効果）と同じ物理であること、スケールの違いだけであることを述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/18-accretion-high-energy.html#sec-comptonization" target="_blank" rel="noopener">§18.3 コンプトン化</a> ／
+        CMB の $y$ 歪みは <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/16-cmb.html#sec-cmb-distortions" target="_blank" rel="noopener">§16.5</a>（演習 16-4）。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $\dfrac{\Delta\nu}{\nu}=\dfrac{4k_BT_e}{m_ec^2}=\dfrac{4\times86\ \text{keV}}{511\ \text{keV}}=\dfrac{344}{511}\simeq0.67$。1回の散乱で振動数が約 67% 増える。（$k_BT_e=8.617\times10^{-5}\times10^9=8.6\times10^4$ eV $=86$ keV。）</p>
+          <p><b>(2)</b> $y\ll1$：光子はわずかにエネルギーを得るだけ＝元の黒体形に弱い Wien 側テイルが付く。$y\gtrsim1$：光子がコロナで完全に再分配され、Wien 分布に近い高温化スペクトル。中間域：べき則 $F_\nu\propto\nu^{-\alpha}$ が現れ、高エネルギー側は Wien カットオフで切れる。</p>
+          <p><b>(3)</b> どちらも高温電子と光子の逆コンプトン散乱で、$y=\dfrac{4k_BT_e}{m_ec^2}\max(\tau,\tau^2)$ という同じパラメータでスペクトル変形を測る。X 線連星のコロナ（銀河近傍スケール）も、銀河団ガス（宇宙論スケール）も、同じ物理。違うのはスケール（$T_e$、$\tau$ の値と対象の大きさ）だけ。</p>
+          <div class="ans"><b>答え：</b> $\Delta\nu/\nu\simeq0.67$（$T_e=10^9$ K）。$y\ll1$ 弱テイル、$y\gtrsim1$ Wien 化、中間でべき則。CMB の $y$ 歪み（SZ 効果）と同物理。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 18-3 -->
+    <div class="problem">
+      <div class="top"><span class="pid">18-3</span><span class="ptitle">局所黒体仮定とその限界</span><span class="diff">☆☆</span><span class="tag deepen">理解を深める</span></div>
+      <div class="body">
+        <p>§18.1 は標準降着円盤が「各半径で局所的に黒体」と仮定する。この仮定が成り立つ条件と破れ方を整理する。</p>
+        <ol class="parts">
+          <li>各半径が温度 $T(R)$ の黒体として放射するには、第3章・第5章のどんな条件（熱化時間、光学的厚さ、単一温度）が局所的に満たされる必要があるか述べよ。</li>
+          <li>実際の円盤で局所黒体から外れる要因を2つ挙げよ（高温コロナ、振動数依存不透明度、電子散乱卓越など）。</li>
+          <li>電子散乱が吸収より卓越する高温体では、観測される色温度 $T_{\rm col}$ が実効温度 $T(R)$ より高くなり、補正係数 $f_{\rm col}\simeq1.5$–$2$ が経験的に要る。なぜ散乱卓越が色温度を上げるのか、演習 15-3 のソース関数と結びつけて一言で述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/18-accretion-high-energy.html#sec-disk-local-blackbody" target="_blank" rel="noopener">§18.1 局所黒体近似</a> ／
+        黒体化条件は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/03-universality.html#sec-universality-real-objects" target="_blank" rel="noopener">§3.6</a>（<a href="演習問題_第I部_黒体放射の現象論.html">第I部 演習 3-4</a>）、LTE は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part2/05-radiative-transfer.html#sec-radiative-transfer-lte" target="_blank" rel="noopener">§5.5</a>、散乱ソース関数は演習 15-3。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> ① 熱化時間が円盤の力学的時間より短い（局所的に熱平衡に達する）、② 各半径で鉛直方向に光学的に厚い（$\tau\gg1$、吸収・再放出が十分）、③ その半径内では単一温度 $T(R)$ で記述できる。これらが満たされれば各半径が $B_\nu(T(R))$ で放射する（第3章 §3.6、第5章 §5.6）。</p>
+          <p><b>(2)</b> 例：高温・希薄なコロナ層（局所熱平衡を破る）、不透明度の振動数依存（修正黒体的なずれ）、電子散乱が吸収より卓越（純黒体から外れる）。</p>
+          <p><b>(3)</b> 電子散乱卓越ではソース関数 $S_\nu=(1-\tilde\omega)B_\nu+\tilde\omega\langle J_\nu\rangle$（演習 15-3）が局所プランクから外れ、光子は吸収で熱化されにくく深部の高温を反映したまま散乱で抜ける。結果、見かけの色温度が実効温度より高くなり、$f_{\rm col}\simeq1.5$–$2$ の補正が要る。</p>
+          <div class="ans"><b>答え：</b> 局所熱平衡・光学的厚・単一温度が必要。破れ＝コロナ／振動数依存不透明度／電子散乱卓越。散乱卓越は熱化を妨げ色温度を上げる（$f_{\rm col}\sim1.5$–$2$）。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 18-4 -->
+    <div class="problem">
+      <div class="top"><span class="pid">18-4</span><span class="ptitle">中性子星表面の重力赤方偏移</span><span class="diff">☆☆</span><span class="tag deriv">導出補完</span></div>
+      <div class="body">
+        <p>§18.4 は中性子星の観測温度が重力赤方偏移を受けると述べた。$z_g=(1-2GM/Rc^2)^{-1/2}-1$、観測温度 $T_\infty=T/(1+z_g)$。$M=1.4M_\odot=2.78\times10^{30}$ kg、$R=10$ km、$G=6.674\times10^{-11}$、$c=3\times10^8$ m/s。</p>
+        <ol class="parts">
+          <li>コンパクトネス $2GM/Rc^2$ を計算せよ。</li>
+          <li>重力赤方偏移 $z_g$ を求め、$z_g\simeq0.3$ を確かめよ。</li>
+          <li>表面温度 $T=10^7$ K の中性子星の観測温度 $T_\infty$ を求めよ。重力赤方偏移と Stefan-Boltzmann を連立すると質量と半径の組合せが制約できる（NICER の戦略）ことに一言触れよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/18-accretion-high-energy.html#sec-neutron-star-surface" target="_blank" rel="noopener">§18.4 中性子星表面</a> ／
+        Fermi 縮退は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part3/08-photon-statistics.html#sec-photon-statistics-bose-fermi" target="_blank" rel="noopener">§8.2</a>、相対論的修正は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/18-accretion-high-energy.html#sec-black-hole-effects" target="_blank" rel="noopener">§18.5</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $\dfrac{2GM}{Rc^2}=\dfrac{2\times6.674\times10^{-11}\times2.78\times10^{30}}{1.0\times10^4\times(3\times10^8)^2}=\dfrac{3.71\times10^{20}}{9.0\times10^{20}}=0.412$。</p>
+          <p><b>(2)</b> $z_g=(1-0.412)^{-1/2}-1=(0.588)^{-1/2}-1=1.304-1=0.304\simeq0.30$。</p>
+          <p><b>(3)</b> $T_\infty=T/(1+z_g)=10^7/1.30=7.7\times10^6$ K。観測される温度は表面温度より約23%低い。重力赤方偏移 $z_g$ は $M/R$ に依存し、Stefan-Boltzmann で得る放射半径は $M,R$ の別の組合せに依存するので、両者を連立すると $M$ と $R$ を独立に制約できる。NICER はこれにパルス時間プロファイルを加えて核物質の状態方程式を制約している。</p>
+          <div class="ans"><b>答え：</b> $2GM/Rc^2=0.41$、$z_g\simeq0.30$、$T_\infty=7.7\times10^6$ K。$z_g$ と Stefan-Boltzmann の連立で $M,R$ を制約（NICER）。</div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <footer>
+    <p><b>宇宙の熱的放射</b> ― 連続放射と線スペクトルの背景物理（和田 桂一）<br>
+    演習問題集・第VI部（試作版）。本文の各節は
+    <a href="https://wadakeiichi.github.io/inverse_text_radiation/" target="_blank" rel="noopener">GitHub Pages 公開版</a>
+    にリンクしています。第VI部は現実の天体への応用が主題のため、近似式の導出（灰色大気・惑星平衡温度・$\nu^{1/3}$ べき則・重力赤方偏移）と、観測スペクトルからの物理量逆引き（CMB 温度・ダスト・コンプトン化）を組み合わせました。<br>
+    関連演習：<a href="演習問題_第I部_黒体放射の現象論.html">第I部</a> ・ <a href="演習問題_第II部_放射の記述と輸送.html">第II部</a> ・ <a href="演習問題_第III部_熱力学統計力学へ.html">第III部</a> ・ <a href="演習問題_第IV部_量子論へ.html">第IV部</a> ・ <a href="演習問題_第V部_電磁気学へ.html">第V部</a></p>
+  </footer>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false},
+      {left: "\\[", right: "\\]", display: true}
+    ],
+    throwOnError: false
+  });
+});
+</script>
+</body>
+</html>

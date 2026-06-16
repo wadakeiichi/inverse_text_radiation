@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>演習問題 ― 第III部　逆引き1：熱力学・統計力学へ（第6〜8章）</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@300;400;500;600;700&family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --primary:#1f4e79; --secondary:#a23b3b; --gold:#c9a227;
+  --ink:#1f2933; --muted:#5a6573; --paper:#ffffff; --bg:#fbfaf6;
+  --soft:#eef1f6; --line:#d8dde6; --blue-bg:#f0f6ff; --gold-bg:#fff8e6; --red-bg:#fff4f0;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0; background:var(--bg); color:var(--ink);
+  font-family:"IBM Plex Sans JP",system-ui,sans-serif;
+  font-weight:400; line-height:1.85; font-size:16.5px; -webkit-font-smoothing:antialiased;}
+.wrap{max-width:860px; margin:0 auto; padding:0 22px 120px}
+header.book{background:linear-gradient(135deg,#1f4e79 0%,#163a5c 100%);
+  color:#fff; padding:46px 22px 40px; margin-bottom:38px; border-bottom:4px solid var(--gold);}
+header.book .inner{max-width:860px;margin:0 auto}
+header.book .kicker{font-size:13px; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--gold); font-weight:600; margin:0 0 10px;}
+header.book h1{font-family:"IBM Plex Serif",serif; font-weight:600; font-size:30px; line-height:1.35; margin:0 0 14px;}
+header.book p.sub{margin:0;color:#cdd9e8;font-size:15px;max-width:640px}
+header.book a.bookhome{display:inline-block;margin-top:18px;color:#fff;font-size:13.5px;
+  text-decoration:none;border:1px solid rgba(255,255,255,.4); padding:6px 14px;border-radius:999px;transition:.15s;}
+header.book a.bookhome:hover{background:rgba(255,255,255,.12)}
+.intro{background:var(--paper); border:1px solid var(--line); border-radius:12px;
+  padding:22px 24px; margin-bottom:34px; box-shadow:0 1px 3px rgba(31,41,51,.05);}
+.intro h2{margin:0 0 10px;font-size:17px;color:var(--primary);font-family:"IBM Plex Serif",serif}
+.intro p{margin:.5em 0;font-size:14.5px;color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.legend span{font-size:13px;padding:4px 11px;border-radius:999px;border:1px solid var(--line);background:var(--soft);color:var(--ink)}
+.legend .star{color:var(--gold);font-weight:600}
+.chapter{margin:46px 0 0}
+.chapter-head{border-left:5px solid var(--primary); padding:4px 0 4px 16px; margin-bottom:8px;}
+.chapter-head .cnum{font-size:13px;letter-spacing:.1em;color:var(--secondary);font-weight:600}
+.chapter-head h2{font-family:"IBM Plex Serif",serif;font-weight:600;font-size:24px; margin:3px 0 6px;color:var(--ink)}
+.chapter-head a.src{font-size:13px;color:var(--primary);text-decoration:none}
+.chapter-head a.src:hover{text-decoration:underline}
+.chapter-overview{font-size:14px;color:var(--muted);margin:0 0 18px 21px}
+.problem{background:var(--paper); border:1px solid var(--line); border-radius:12px;
+  padding:22px 24px; margin:18px 0; box-shadow:0 1px 3px rgba(31,41,51,.05);}
+.problem .top{display:flex;align-items:baseline;flex-wrap:wrap;gap:10px;margin-bottom:6px}
+.problem .pid{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:14px;
+  color:#fff;background:var(--primary);padding:2px 9px;border-radius:6px}
+.problem .ptitle{font-weight:600;font-size:17px;color:var(--ink)}
+.problem .diff{color:var(--gold);font-size:15px;letter-spacing:1px}
+.problem .tag{font-size:11.5px;padding:2px 9px;border-radius:999px;font-weight:500;}
+.tag.deriv{background:var(--blue-bg);color:#1f4e79;border:1px solid #cfe0f5}
+.tag.deepen{background:var(--gold-bg);color:#8a6d12;border:1px solid #ecdca0}
+.problem .body{margin-top:10px}
+.problem .body p{margin:.55em 0}
+.problem ol.parts{margin:.4em 0 .4em 0;padding-left:1.4em}
+.problem ol.parts li{margin:.3em 0}
+table.mini{border-collapse:collapse;margin:.6em 0;font-size:14px}
+table.mini th,table.mini td{border:1px solid var(--line);padding:4px 10px;text-align:left}
+table.mini th{background:var(--soft)}
+.related{margin-top:14px;padding:10px 14px;background:var(--soft);border-radius:8px;font-size:13px;color:var(--muted)}
+.related b{color:var(--ink);font-weight:600}
+.related a{color:var(--primary);text-decoration:none;border-bottom:1px dotted var(--primary)}
+.related a:hover{border-bottom-style:solid}
+details.sol{margin-top:14px;border:1px solid var(--line);border-radius:8px;background:#fdfcf3;overflow:hidden}
+details.sol>summary{cursor:pointer;list-style:none;padding:11px 16px;font-weight:600;font-size:14.5px;
+  color:var(--secondary);background:#fbf7ec;user-select:none;display:flex;align-items:center;gap:8px}
+details.sol>summary::-webkit-details-marker{display:none}
+details.sol>summary::before{content:"▶";font-size:11px;transition:.15s;color:var(--gold)}
+details.sol[open]>summary::before{transform:rotate(90deg)}
+details.sol .solbody{padding:6px 20px 18px;font-size:15px}
+details.sol .solbody p{margin:.6em 0}
+details.sol .solbody .ans{margin-top:12px;padding:10px 14px;border-left:3px solid var(--gold);
+  background:#fff8e6;border-radius:0 6px 6px 0;font-size:14.5px}
+.katex{font-size:1.04em}
+.katex-display{overflow-x:auto;overflow-y:hidden;padding:4px 0}
+hr.soft{border:none;border-top:1px solid var(--line);margin:40px 0}
+footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+footer a{color:var(--primary)}
+.toc{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:34px}
+.toc h2{margin:0 0 10px;font-size:15px;color:var(--primary)}
+.toc ul{margin:0;padding-left:1.1em;font-size:14px}
+.toc li{margin:3px 0}
+.toc a{color:var(--ink);text-decoration:none}
+.toc a:hover{color:var(--primary);text-decoration:underline}
+.partnav{margin-top:10px;font-size:13px}
+.partnav a{color:#cfe0f5;text-decoration:none;border-bottom:1px dotted #6f94bd}
+@media(max-width:620px){header.book h1{font-size:24px}}
+</style>
+</head>
+<body>
+
+<header class="book">
+  <div class="inner">
+    <p class="kicker">宇宙の熱的放射 ― 演習問題集</p>
+    <h1>第III部　逆引き1：熱力学・統計力学へ<br>演習問題と模範解答（第6〜8章）</h1>
+    <p class="sub">熱平衡・エントロピー・最大エントロピー原理から、分配関数と Boltzmann 分布、そして光子の Bose–Einstein 統計へ。プランク分布の占有因子 $1/(e^{h\nu/kT}-1)$ がなぜ出るのか、本文が導出ノートに畳んだ計算を自力で展開する問題集です。</p>
+    <a class="bookhome" href="https://wadakeiichi.github.io/inverse_text_radiation/" target="_blank" rel="noopener">教科書本体（GitHub Pages）を開く ↗</a>
+    <div class="partnav">関連：<a href="演習問題_第I部_黒体放射の現象論.html">▶ 第I部</a> ・ <a href="演習問題_第II部_放射の記述と輸送.html">第II部</a> ・ <a href="演習問題_第IV部_量子論へ.html">第IV部</a></div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="intro">
+    <h2>この問題集の使い方</h2>
+    <p>本文が「導出ノート」「Lagrange 未定乗数法で」と省略・要約した統計力学の計算を自力で展開する<span style="color:#1f4e79">導出補完</span>問題と、得た分布を観測（励起温度・放射圧・CMB 光子数）に応用する<span style="color:#8a6d12">理解を深める</span>問題の二系統です。第III部は本書のクライマックス（占有因子の導出）を含むので、計算の密度が上がります。各問に本文該当節へのリンクを付けています。解答は「▶ 模範解答」で展開 ― まず自力で。</p>
+    <div class="legend">
+      <span class="star">☆</span> 基礎
+      <span class="star">☆☆</span> 標準（導出・応用）
+      <span class="star">☆☆☆</span> 発展（多段の導出・数値）
+      <span class="tag deriv" style="font-size:13px">導出補完</span>
+      <span class="tag deepen" style="font-size:13px">理解を深める</span>
+    </div>
+  </div>
+
+  <div class="toc">
+    <h2>収録問題（全12問）</h2>
+    <ul>
+      <li><a href="#ch6">第6章　熱平衡とは何か</a>（4問）</li>
+      <li><a href="#ch7">第7章　統計力学の基本</a>（4問）</li>
+      <li><a href="#ch8">第8章　光子の統計</a>（4問）</li>
+    </ul>
+  </div>
+
+  <!-- ================= CHAPTER 6 ================= -->
+  <section class="chapter" id="ch6">
+    <div class="chapter-head">
+      <span class="cnum">第06章</span>
+      <h2>熱平衡とは何か</h2>
+      <a class="src" href="https://wadakeiichi.github.io/inverse_text_radiation/part3/06-thermal-equilibrium.html" target="_blank" rel="noopener">本文を開く ↗</a>
+    </div>
+    <p class="chapter-overview">多重度・エントロピー $S=k_B\ln\Omega$・温度 $1/T=\partial S/\partial E$・最大エントロピー原理・詳細釣り合い。本文が原理として述べた内容を、具体的な数え上げと変分で裏づける。</p>
+
+    <!-- 6-1 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">6-1</span>
+        <span class="ptitle">多重度の最大と「マクロ状態で十分」な理由</span>
+        <span class="diff">☆☆</span>
+        <span class="tag deriv">導出補完</span>
+      </div>
+      <div class="body">
+        <p>§6.2 は気体分子を左右に分ける多重度 $\Omega(N_L)=\binom{N}{N_L}$ が $N_L=N/2$ で最大になると述べた。これを示し、揺らぎの幅を見積もる。</p>
+        <ol class="parts">
+          <li>Stirling 近似 $\ln N!\simeq N\ln N-N$ を使い、$\ln\Omega(N_L)$ を最大化して $N_L=N/2$ を導け。</li>
+          <li>$N_L=N/2+x$ のまわりで $\ln\Omega$ を $x$ の2次まで展開し、$\ln\Omega\simeq\ln\Omega_{\max}-\dfrac{2x^2}{N}$ を示せ（分布が幅 $\sim\sqrt{N}$ のガウス型）。</li>
+          <li>相対的な揺らぎ $\sqrt{\langle x^2\rangle}/N\sim1/\sqrt{N}$ が、$N\sim10^{23}$ で $10^{-11}$ 程度になることを確かめ、「マクロ状態だけで温度が語れる」理由を述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part3/06-thermal-equilibrium.html#sec-thermal-equilibrium-macro-micro" target="_blank" rel="noopener">§6.2 マクロ状態とミクロ状態</a> ／
+        揺らぎの一般論は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part3/07-statistical-mechanics.html#sec-statistical-mechanics-fluctuations" target="_blank" rel="noopener">§7.4</a>（演習 7-3）。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $\ln\Omega=\ln N!-\ln N_L!-\ln(N-N_L)!$。Stirling で微分（$N$ 固定）：</p>
+          $$\frac{d\ln\Omega}{dN_L}=-\ln N_L+\ln(N-N_L)=\ln\frac{N-N_L}{N_L}=0\ \Rightarrow\ N_L=N-N_L\ \Rightarrow\ N_L=\frac N2.$$
+          <p><b>(2)</b> $N_L=N/2+x$、$N_R=N/2-x$。$\ln\Omega=N\ln N-N_L\ln N_L-N_R\ln N_R$（定数項略）。2次まで展開すると、各 $\ln(N/2\pm x)\simeq\ln(N/2)\pm\frac{2x}{N}-\frac{2x^2}{N^2}$ を使って整理し</p>
+          $$\ln\Omega\simeq\ln\Omega_{\max}-\frac{2x^2}{N}.$$
+          <p>すなわち $\Omega\propto e^{-2x^2/N}$。これはガウス型で標準偏差 $\sigma_x=\sqrt{N}/2$。</p>
+          <p><b>(3)</b> $\sqrt{\langle x^2\rangle}=\sigma_x=\sqrt N/2$ ゆえ相対揺らぎ $\sigma_x/N=1/(2\sqrt N)\sim1/\sqrt N$。$N=10^{23}$ で $\sim10^{-11.5}$。観測誤差よりはるかに小さく、ほぼすべてのミクロ状態が $N_L\simeq N/2$ のマクロ状態に集中する。だからマクロ状態（最大多重度の状態）だけで物理を語れる。</p>
+          <div class="ans"><b>答え：</b> $N_L=N/2$ で最大、$\Omega\propto e^{-2x^2/N}$（幅 $\sqrt N/2$）。相対揺らぎ $\sim1/\sqrt N\sim10^{-11}$ ゆえマクロ状態で十分。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 6-2 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">6-2</span>
+        <span class="ptitle">エントロピーの加法性と $1/T=\partial S/\partial E$</span>
+        <span class="diff">☆☆</span>
+        <span class="tag deriv">導出補完</span>
+      </div>
+      <div class="body">
+        <p>§6.3 はエントロピー $S=k_B\ln\Omega$ の加法性と温度の定義 $1/T=(\partial S/\partial E)_{V,N}$ を与えた。両方を導く。</p>
+        <ol class="parts">
+          <li>独立な二系 $\Omega=\Omega_1\Omega_2$ から $S=S_1+S_2$（加法性）を示せ。</li>
+          <li>エネルギー $E=E_1+E_2$ を分け合う二系を熱接触させ、全多重度 $\Omega_1(E_1)\Omega_2(E_2)$ を最大化する。$\partial S_1/\partial E_1=\partial S_2/\partial E_2$ が平衡条件であることを示せ。</li>
+          <li>この共通の値を $1/T$ と定義する根拠（「温度が等しいとき平衡」という熱力学的描像との整合）を述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part3/06-thermal-equilibrium.html#sec-thermal-equilibrium-entropy" target="_blank" rel="noopener">§6.3 エントロピー</a>、
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part3/06-thermal-equilibrium.html#sec-thermal-equilibrium-temperature" target="_blank" rel="noopener">§6.1 温度と熱平衡</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 独立な二系の全多重度は積 $\Omega=\Omega_1\Omega_2$。対数をとると $S=k_B\ln(\Omega_1\Omega_2)=k_B\ln\Omega_1+k_B\ln\Omega_2=S_1+S_2$。エントロピーは加法的（示量的）。</p>
+          <p><b>(2)</b> $E_1$ を変数に全エントロピー $S=S_1(E_1)+S_2(E-E_1)$ を最大化：</p>
+          $$\frac{dS}{dE_1}=\frac{\partial S_1}{\partial E_1}-\frac{\partial S_2}{\partial E_2}=0\ \Rightarrow\ \frac{\partial S_1}{\partial E_1}=\frac{\partial S_2}{\partial E_2}.$$
+          <p>（$dE_2/dE_1=-1$ を使った。）平衡では両系で $\partial S/\partial E$ が一致する。</p>
+          <p><b>(3)</b> 熱力学では「二系を接触させて正味のエネルギー流が止まる＝温度が等しい」が平衡。(2) の共通量 $\partial S/\partial E$ がまさに平衡で一致する量なので、これを温度と結びつけるのが自然。次元と符号（エネルギーを加えるとエントロピーが増える）から $1/T\equiv\partial S/\partial E$ と定義すると、熱力学の温度と一致する。</p>
+          <div class="ans"><b>答え：</b> $\Omega=\Omega_1\Omega_2\Rightarrow S=S_1+S_2$。平衡で $\partial S_1/\partial E_1=\partial S_2/\partial E_2$、これを $1/T$ と定義。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 6-3 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">6-3</span>
+        <span class="ptitle">最大エントロピーから Boltzmann 分布を導く</span>
+        <span class="diff">☆☆☆</span>
+        <span class="tag deriv">導出補完</span>
+      </div>
+      <div class="body">
+        <p><b>レベル：</b>導出 B4–M1（Lagrange 未定乗数法・Stirling 近似を使う。本書の逆引き構成では本筋だが、章末演習としては重め）。</p>
+        <p>§6.4 は Lagrange 未定乗数法で $n_i\propto f(\beta E_i,\alpha)$ になると述べた。識別可能粒子（古典）について具体的に実行する。準位 $\{E_i\}$ に $\{n_i\}$ 個を配る多重度 $\Omega=\dfrac{N!}{\prod_i n_i!}$。</p>
+        <ol class="parts">
+          <li>$\ln\Omega$ に Stirling を使い、制約 $\sum n_i=N$、$\sum n_i E_i=E$ のもとで $\dfrac{\partial}{\partial n_i}[\ln\Omega-\alpha\sum n_j-\beta\sum n_j E_j]=0$ を解いて $n_i\propto e^{-\beta E_i}$ を導け。</li>
+          <li>規格化して $n_i=\dfrac{N e^{-\beta E_i}}{\sum_j e^{-\beta E_j}}$ を示し、分配関数 $Z=\sum_j e^{-\beta E_j}$ が分母に現れることを確認せよ。</li>
+          <li>$\beta=1/k_BT$ が問題 6-2 の温度定義と整合する理由を一言で。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part3/06-thermal-equilibrium.html#sec-thermal-equilibrium-max-entropy" target="_blank" rel="noopener">§6.4 最大エントロピー原理</a> ／
+        分配関数の活用は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part3/07-statistical-mechanics.html#sec-statistical-mechanics-partition" target="_blank" rel="noopener">§7.2</a>、Bose 版は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part3/08-photon-statistics.html#sec-photon-statistics-bose-einstein" target="_blank" rel="noopener">§8.3</a>（演習 8-2）。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $\ln\Omega=\ln N!-\sum_i\ln n_i!\simeq N\ln N-N-\sum_i(n_i\ln n_i-n_i)$。$n_i$ で微分すると $\partial\ln\Omega/\partial n_i=-\ln n_i$。変分条件：</p>
+          $$-\ln n_i-\alpha-\beta E_i=0\ \Rightarrow\ \ln n_i=-\alpha-\beta E_i\ \Rightarrow\ n_i=e^{-\alpha}e^{-\beta E_i}\propto e^{-\beta E_i}.$$
+          <p><b>(2)</b> $\sum_i n_i=N$ より $e^{-\alpha}\sum_j e^{-\beta E_j}=N$、よって $e^{-\alpha}=N/Z$、$Z=\sum_j e^{-\beta E_j}$。したがって</p>
+          $$n_i=\frac{N e^{-\beta E_i}}{\sum_j e^{-\beta E_j}}=\frac{N}{Z}e^{-\beta E_i}.$$
+          <p>分母にちょうど分配関数 $Z$ が現れる。</p>
+          <p><b>(3)</b> エネルギー制約の Lagrange 乗数 $\beta$ は、エントロピー最大化で「エネルギーを1単位動かしたときのエントロピー変化」に対応する。これは問題 6-2 の $1/T=\partial S/\partial E$ そのもので、$\beta=1/k_BT$ と同定される。</p>
+          <div class="ans"><b>答え：</b> 変分で $n_i\propto e^{-\beta E_i}$、規格化で $n_i=(N/Z)e^{-\beta E_i}$、$Z=\sum e^{-\beta E_j}$。$\beta=1/k_BT$ は温度定義と整合。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 6-4 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">6-4</span>
+        <span class="ptitle">詳細釣り合いと遷移率の比</span>
+        <span class="diff">☆☆</span>
+        <span class="tag deepen">理解を深める</span>
+      </div>
+      <div class="body">
+        <p>§6.6 は詳細釣り合い $n_i W_{i\to j}=n_j W_{j\to i}$ を導入した。これと Boltzmann 分布を組み合わせる。</p>
+        <ol class="parts">
+          <li>熱平衡で $n_i/n_j=(g_i/g_j)e^{-(E_i-E_j)/k_BT}$ を使い、遷移率の比 $W_{i\to j}/W_{j\to i}$ を求めよ。</li>
+          <li>「全粒子の正味流れがゼロ」という弱い条件と、「各ペアで個別に釣り合う」詳細釣り合いの違いを、3状態を巡回する流れ（$1\to2\to3\to1$）を例に説明せよ。</li>
+          <li>この原理が第11章で Einstein 係数の関係式を導くのにどう使われるか、一言で予告せよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part3/06-thermal-equilibrium.html#sec-thermal-equilibrium-detailed-balance" target="_blank" rel="noopener">§6.6 詳細釣り合い</a> ／
+        Einstein への応用は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/11-einstein-method.html#sec-einstein-method-detailed-balance" target="_blank" rel="noopener">§11.3</a>（<a href="演習問題_第IV部_量子論へ.html">第IV部 演習 11-1</a>）、Boltzmann 比は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part3/07-statistical-mechanics.html#sec-statistical-mechanics-boltzmann" target="_blank" rel="noopener">§7.3</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 詳細釣り合いから $W_{i\to j}/W_{j\to i}=n_j/n_i$。Boltzmann 比を代入：</p>
+          $$\frac{W_{i\to j}}{W_{j\to i}}=\frac{n_j}{n_i}=\frac{g_j}{g_i}e^{-(E_j-E_i)/k_BT}.$$
+          <p>（上準位ほど占有が少ないので、上向き遷移率と下向き遷移率の比がこの形になる。）</p>
+          <p><b>(2)</b> 「正味流れゼロ」は、たとえば $1\to2\to3\to1$ と一方向に循環する定常流があっても各状態の占有数が一定なら満たされてしまう。詳細釣り合いはより強く、各ペア（$1\!\leftrightarrow\!2$, $2\!\leftrightarrow\!3$, $3\!\leftrightarrow\!1$）で個別に往復が釣り合うことを要求し、そうした循環流を禁じる。これは微視的時間反転対称性の帰結で、真の熱平衡を特徴づける。</p>
+          <p><b>(3)</b> 第11章で Einstein は、放射と二準位原子の吸収・自発放出・誘導放出に詳細釣り合いを課し、$J_\nu=B_\nu$ を要求することで Einstein 関係式 $A_{ul}/B_{ul}=2h\nu^3/c^2$ と $g_lB_{lu}=g_uB_{ul}$ を導く。本問の「遷移率の比」が原子と放射の係数の比に具体化される。</p>
+          <div class="ans"><b>答え：</b> $W_{i\to j}/W_{j\to i}=(g_j/g_i)e^{-(E_j-E_i)/k_BT}$。詳細釣り合いは循環流を禁じる強い条件。第11章の Einstein 関係式の基礎。</div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <hr class="soft">
+
+  <!-- ================= CHAPTER 7 ================= -->
+  <section class="chapter" id="ch7">
+    <div class="chapter-head">
+      <span class="cnum">第07章</span>
+      <h2>統計力学の基本</h2>
+      <a class="src" href="https://wadakeiichi.github.io/inverse_text_radiation/part3/07-statistical-mechanics.html" target="_blank" rel="noopener">本文を開く ↗</a>
+    </div>
+    <p class="chapter-overview">分配関数 $Z$ から熱力学量を生成し、振動子の平均エネルギー・エネルギー揺らぎを導く。Boltzmann 分布を水素準位に応用し、古典統計の破綻（紫外発散）への伏線をつかむ。</p>
+
+    <!-- 7-1 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">7-1</span>
+        <span class="ptitle">熱浴との接触から Boltzmann 確率を導く</span>
+        <span class="diff">☆☆</span>
+        <span class="tag deriv">導出補完</span>
+      </div>
+      <div class="body">
+        <p>§7.1 は $P_i=e^{-E_i/k_BT}/Z$ を結果として与えた。系を温度 $T$ の大きな熱浴と接触させた設定から導く。</p>
+        <ol class="parts">
+          <li>系がエネルギー $E_i$ の状態にある確率は、熱浴が残りのエネルギー $E_{\rm tot}-E_i$ を取る多重度に比例する：$P_i\propto\Omega_{\rm bath}(E_{\rm tot}-E_i)$。これを $S_{\rm bath}=k_B\ln\Omega_{\rm bath}$ で書き換えよ。</li>
+          <li>$E_i\ll E_{\rm tot}$ として $S_{\rm bath}(E_{\rm tot}-E_i)$ を $E_i$ について1次まで展開し、$1/T=\partial S_{\rm bath}/\partial E$ を使って $P_i\propto e^{-E_i/k_BT}$ を導け。</li>
+          <li>規格化して $Z=\sum_i e^{-E_i/k_BT}$ が現れることを示せ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part3/07-statistical-mechanics.html#sec-statistical-mechanics-states" target="_blank" rel="noopener">§7.1 状態数と確率</a> ／
+        温度の定義は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part3/06-thermal-equilibrium.html#sec-thermal-equilibrium-entropy" target="_blank" rel="noopener">§6.3</a>（演習 6-2）。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 系が状態 $i$（エネルギー $E_i$）にあるとき、全体のミクロ状態数は熱浴の多重度 $\Omega_{\rm bath}(E_{\rm tot}-E_i)$ に等しい。等確率の原理から $P_i\propto\Omega_{\rm bath}(E_{\rm tot}-E_i)=e^{S_{\rm bath}(E_{\rm tot}-E_i)/k_B}$。</p>
+          <p><b>(2)</b> $E_i\ll E_{\rm tot}$ で Taylor 展開：</p>
+          $$S_{\rm bath}(E_{\rm tot}-E_i)\simeq S_{\rm bath}(E_{\rm tot})-E_i\frac{\partial S_{\rm bath}}{\partial E}=S_{\rm bath}(E_{\rm tot})-\frac{E_i}{T}.$$
+          <p>よって $P_i\propto e^{S_{\rm bath}(E_{\rm tot})/k_B}e^{-E_i/k_BT}\propto e^{-E_i/k_BT}$。</p>
+          <p><b>(3)</b> $\sum_i P_i=1$ より $P_i=\dfrac{e^{-E_i/k_BT}}{\sum_j e^{-E_j/k_BT}}=\dfrac{e^{-E_i/k_BT}}{Z}$、$Z=\sum_j e^{-E_j/k_BT}$。</p>
+          <div class="ans"><b>答え：</b> $P_i\propto\Omega_{\rm bath}(E_{\rm tot}-E_i)$ を1次展開し $1/T=\partial S/\partial E$ を使うと $P_i=e^{-E_i/k_BT}/Z$。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 7-2 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">7-2</span>
+        <span class="ptitle">振動子の分配関数と、零点項が占有因子に効かないこと</span>
+        <span class="diff">☆☆</span>
+        <span class="tag deriv">導出補完</span>
+      </div>
+      <div class="body">
+        <p>§7.2 は調和振動子の $Z_1$ と $\langle E\rangle$ を与え、零点項が観測量に影響しないと注記した。これを確かめる。準位 $\epsilon_n=(n+\tfrac12)\hbar\omega$。</p>
+        <ol class="parts">
+          <li>$Z_1=\displaystyle\sum_{n=0}^\infty e^{-\beta(n+1/2)\hbar\omega}=\dfrac{e^{-\beta\hbar\omega/2}}{1-e^{-\beta\hbar\omega}}$ を示せ。</li>
+          <li>$\langle\epsilon\rangle=-\partial\ln Z_1/\partial\beta=\dfrac{\hbar\omega}{2}+\dfrac{\hbar\omega}{e^{\beta\hbar\omega}-1}$ を導け。</li>
+          <li>零点項 $\hbar\omega/2$ は (i) 占有因子 $1/(e^{\beta\hbar\omega}-1)$ と (ii) 比熱 $C=\partial\langle\epsilon\rangle/\partial T$ のどちらにも影響しないことを示せ。なぜ Planck の $\epsilon_n=nh\nu$ と Schrödinger の $\epsilon_n=(n+\tfrac12)\hbar\omega$ が同じスペクトルを与えるのか。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part3/07-statistical-mechanics.html#sec-statistical-mechanics-partition" target="_blank" rel="noopener">§7.2 分配関数</a> ／
+        Planck の量子仮説からの導出は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/10-planck-quantum.html#sec-planck-quantum-oscillator" target="_blank" rel="noopener">§10.2</a>（<a href="演習問題_第IV部_量子論へ.html">第IV部 演習 10-1</a>）、零点エネルギーは <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/12-quantum-foundations.html#sec-quantum-foundations-oscillator" target="_blank" rel="noopener">§12.2</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 共通因子 $e^{-\beta\hbar\omega/2}$ を括り出すと等比級数：</p>
+          $$Z_1=e^{-\beta\hbar\omega/2}\sum_{n=0}^\infty e^{-\beta n\hbar\omega}=e^{-\beta\hbar\omega/2}\cdot\frac{1}{1-e^{-\beta\hbar\omega}}.$$
+          <p><b>(2)</b> $\ln Z_1=-\dfrac{\beta\hbar\omega}{2}-\ln(1-e^{-\beta\hbar\omega})$。$\beta$ で微分：</p>
+          $$\langle\epsilon\rangle=-\frac{\partial\ln Z_1}{\partial\beta}=\frac{\hbar\omega}{2}+\frac{\hbar\omega e^{-\beta\hbar\omega}}{1-e^{-\beta\hbar\omega}}=\frac{\hbar\omega}{2}+\frac{\hbar\omega}{e^{\beta\hbar\omega}-1}.$$
+          <p><b>(3)</b> (i) 第二項 $1/(e^{\beta\hbar\omega}-1)$ が占有因子で、零点項 $\hbar\omega/2$ とは独立に現れる。(ii) $\hbar\omega/2$ は温度に依らない定数なので $C=\partial\langle\epsilon\rangle/\partial T$ で微分すると消える。よって観測量（占有因子・比熱・放射スペクトル）は零点項に依らない。Planck（$nh\nu$）と Schrödinger（$(n+\tfrac12)\hbar\omega$）は零点という定数オフセットだけが違い、温度微分・対数微分で消えるので、同じ占有因子＝同じスペクトルを与える。</p>
+          <div class="ans"><b>答え：</b> $Z_1=e^{-\beta\hbar\omega/2}/(1-e^{-\beta\hbar\omega})$、$\langle\epsilon\rangle=\tfrac12\hbar\omega+\hbar\omega/(e^{\beta\hbar\omega}-1)$。零点項は定数ゆえ占有因子・比熱に効かず、$nh\nu$ と $(n+\tfrac12)\hbar\omega$ は同じスペクトル。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 7-3 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">7-3</span>
+        <span class="ptitle">エネルギー揺らぎ $\langle(\Delta E)^2\rangle=k_BT^2C_V$</span>
+        <span class="diff">☆☆</span>
+        <span class="tag deriv">導出補完</span>
+      </div>
+      <div class="body">
+        <p>§7.4 は揺らぎの式を結果として与えた。分配関数から導く。$\beta=1/k_BT$。</p>
+        <ol class="parts">
+          <li>$\langle E\rangle=-\dfrac{\partial\ln Z}{\partial\beta}$、$\langle E^2\rangle=\dfrac{1}{Z}\dfrac{\partial^2 Z}{\partial\beta^2}$ を使い、$\langle(\Delta E)^2\rangle=\dfrac{\partial^2\ln Z}{\partial\beta^2}=-\dfrac{\partial\langle E\rangle}{\partial\beta}$ を示せ。</li>
+          <li>$\dfrac{\partial}{\partial\beta}=-k_BT^2\dfrac{\partial}{\partial T}$ を使い、$\langle(\Delta E)^2\rangle=k_BT^2 C_V$ を導け（$C_V=\partial\langle E\rangle/\partial T$）。</li>
+          <li>$\langle E\rangle\propto N$、$C_V\propto N$ から相対揺らぎ $\sqrt{\langle(\Delta E)^2\rangle}/\langle E\rangle\propto1/\sqrt N$ を示せ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part3/07-statistical-mechanics.html#sec-statistical-mechanics-fluctuations" target="_blank" rel="noopener">§7.4 平均値と揺らぎ</a> ／
+        多重度の揺らぎ幅は演習 6-1、CMB スペクトル歪みは <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/16-cmb.html" target="_blank" rel="noopener">第16章</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $\langle E^2\rangle-\langle E\rangle^2$ を計算する。$\langle E\rangle=-\partial_\beta\ln Z=-\dfrac{1}{Z}\partial_\beta Z$。もう一度微分：</p>
+          $$\frac{\partial^2\ln Z}{\partial\beta^2}=\frac{1}{Z}\frac{\partial^2 Z}{\partial\beta^2}-\left(\frac{1}{Z}\frac{\partial Z}{\partial\beta}\right)^2=\langle E^2\rangle-\langle E\rangle^2=\langle(\Delta E)^2\rangle.$$
+          <p>また $\partial^2\ln Z/\partial\beta^2=-\partial\langle E\rangle/\partial\beta$。</p>
+          <p><b>(2)</b> $\partial_\beta=-k_BT^2\partial_T$（$\beta=1/k_BT$ より $d\beta=-dT/k_BT^2$）。よって</p>
+          $$\langle(\Delta E)^2\rangle=-\frac{\partial\langle E\rangle}{\partial\beta}=k_BT^2\frac{\partial\langle E\rangle}{\partial T}=k_BT^2 C_V.$$
+          <p><b>(3)</b> $\langle E\rangle\propto N$、$C_V\propto N$ なので $\langle(\Delta E)^2\rangle\propto N$、$\sqrt{\langle(\Delta E)^2\rangle}\propto\sqrt N$。相対揺らぎは $\sqrt N/N=1/\sqrt N$。マクロ系で揺らぎが消える理由。</p>
+          <div class="ans"><b>答え：</b> $\langle(\Delta E)^2\rangle=\partial^2\ln Z/\partial\beta^2=k_BT^2C_V$。相対揺らぎ $\propto1/\sqrt N$。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 7-4 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">7-4</span>
+        <span class="ptitle">水素準位の Boltzmann 占有と Balmer 線の温度依存</span>
+        <span class="diff">☆☆☆</span>
+        <span class="tag deepen">理解を深める</span>
+      </div>
+      <div class="body">
+        <p>§7.3 の Boltzmann 分布 $n_2/n_1=(g_2/g_1)e^{-(E_2-E_1)/k_BT}$ を水素に応用する。$E_n=-13.6/n^2$ eV、$g_n=2n^2$、$k_B=8.617\times10^{-5}$ eV/K。</p>
+        <ol class="parts">
+          <li>$n=1\to2$ の励起エネルギー $E_2-E_1$ と縮退度比 $g_2/g_1$ を求めよ。</li>
+          <li>$T=5800$ K（太陽光球）と $T=10000$ K（A 型星）で占有数比 $n_2/n_1$ を計算し、何桁違うか述べよ。</li>
+          <li>Balmer 線（$n=2$ から始まる可視吸収線）が低温の太陽で弱く、A 型星（$\sim10000$ K）で強くなる理由を述べよ。さらに高温では弱まる（電離が効く）ことに一言触れよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part3/07-statistical-mechanics.html#sec-statistical-mechanics-boltzmann" target="_blank" rel="noopener">§7.3 Boltzmann 分布</a> ／
+        恒星の色と温度は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/01-where-blackbody.html#sec-where-blackbody-stars" target="_blank" rel="noopener">§1.3</a>、線強度からの温度推定は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/23-line-applications.html" target="_blank" rel="noopener">第23章</a>、原子準位は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/21-atomic-physics.html" target="_blank" rel="noopener">第21章</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $E_2-E_1=-13.6/4-(-13.6/1)=-3.4+13.6=10.2$ eV。$g_2/g_1=2\cdot2^2/(2\cdot1^2)=8/2=4$。</p>
+          <p><b>(2)</b> $T=5800$ K：$k_BT=8.617\times10^{-5}\times5800=0.500$ eV。指数 $-10.2/0.500=-20.4$、$e^{-20.4}=1.37\times10^{-9}$。$n_2/n_1=4\times1.37\times10^{-9}\approx5.5\times10^{-9}$。<br>
+          $T=10000$ K：$k_BT=0.862$ eV。指数 $-10.2/0.862=-11.8$、$e^{-11.8}=7.2\times10^{-6}$。$n_2/n_1=4\times7.2\times10^{-6}\approx2.9\times10^{-5}$。<br>
+          比は $2.9\times10^{-5}/5.5\times10^{-9}\approx5300$ 倍。約3〜4桁違う。</p>
+          <p><b>(3)</b> Balmer 線は $n=2$ にいる原子が吸収して生じる。太陽（5800 K）では $n=2$ の占有が $\sim10^{-9}$ と極めて少なく、Balmer 線は弱い。A 型星（$\sim10000$ K）では $n=2$ 占有が数千倍に増え、Balmer 線が最強になる。さらに高温（O・B 型）では水素が電離して中性水素自体が減り、Balmer 線は再び弱まる（電離は Saha 式、本問の Boltzmann だけでは表せない別効果）。</p>
+          <div class="ans"><b>答え：</b> $E_2-E_1=10.2$ eV、$g_2/g_1=4$。$n_2/n_1\approx5.5\times10^{-9}$（5800 K）→$2.9\times10^{-5}$（10000 K）で約5300倍。Balmer 線は A 型で最強、さらに高温では電離で弱まる。</div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <hr class="soft">
+
+  <!-- ================= CHAPTER 8 ================= -->
+  <section class="chapter" id="ch8">
+    <div class="chapter-head">
+      <span class="cnum">第08章</span>
+      <h2>光子の統計</h2>
+      <a class="src" href="https://wadakeiichi.github.io/inverse_text_radiation/part3/08-photon-statistics.html" target="_blank" rel="noopener">本文を開く ↗</a>
+    </div>
+    <p class="chapter-overview">識別不能性 → Bose–Einstein 分布 → 光子の $\mu=0$ → 占有因子 $1/(e^{h\nu/kT}-1)$。第III部のクライマックス。数え上げと変分、CMB 光子数・放射圧の数値評価を扱う。</p>
+
+    <!-- 8-1 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">8-1</span>
+        <span class="ptitle">識別可能 vs 不能 ― 数え上げの違い</span>
+        <span class="diff">☆☆</span>
+        <span class="tag deriv">導出補完</span>
+      </div>
+      <div class="body">
+        <p>§8.1 は2状態2粒子で古典4通り・Bose 3通りになることを示した。一般化する。</p>
+        <ol class="parts">
+          <li>$g$ 個の状態に $N$ 個の区別できない Bose 粒子を入れる場合の数が $\dbinom{N+g-1}{N}$ になることを「仕切り棒（玉と仕切り）」の論法で示せ。</li>
+          <li>$g=2,N=2$ で値が 3 になることを確かめ、古典の $g^N=4$ と比べよ。</li>
+          <li>「1 が A・2 が B」と「1 が B・2 が A」が同一状態に潰れることが、なぜ Boltzmann 統計から Bose 統計へのずれを生むのか述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part3/08-photon-statistics.html#sec-photon-statistics-indistinguishable" target="_blank" rel="noopener">§8.1 区別できない粒子</a>、
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part3/08-photon-statistics.html#sec-photon-statistics-bose-fermi" target="_blank" rel="noopener">§8.2 Bose と Fermi</a> ／
+        識別不能性の量子論的根拠は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/12-quantum-foundations.html" target="_blank" rel="noopener">第12章</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $N$ 個の区別できない玉を $g$ 個の状態に分けるのは、$N$ 個の玉と $g-1$ 本の仕切り棒を一列に並べる場合の数に等しい。全 $N+g-1$ 個の位置から玉の位置 $N$ 個を選ぶので $\dbinom{N+g-1}{N}$。</p>
+          <p><b>(2)</b> $g=2,N=2$：$\dbinom{2+2-1}{2}=\dbinom{3}{2}=3$。Bose は3通り（(2,0),(1,1),(0,2)）。古典は各粒子が独立に2状態を選べて $2^2=4$。識別不能だと1つ少ない。</p>
+          <p><b>(3)</b> 古典では「1 が A・2 が B」と「1 が B・2 が A」を別状態と数えるが、識別不能だと粒子のラベルに意味がなく同一状態に潰れる。この「数え過ぎの打ち消し」が状態数を変え、最大エントロピー分布が Boltzmann（$\propto e^{-\beta E}$）から Bose（$1/(e^{\beta E}-1)$ 型）へずれる起源になる。特に同じ状態に複数入れることが許される効果が分母の $-1$ を生む。</p>
+          <div class="ans"><b>答え：</b> 場合の数 $\binom{N+g-1}{N}$（仕切り棒法）、$g=N=2$ で 3（古典は4）。ラベルの消失が Bose 統計へのずれを生む。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 8-2 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">8-2</span>
+        <span class="ptitle">Bose–Einstein 分布の導出</span>
+        <span class="diff">☆☆☆</span>
+        <span class="tag deriv">導出補完</span>
+      </div>
+      <div class="body">
+        <p><b>レベル：</b>導出 B4–M1（Bose 統計の組合せ論と Stirling 近似を使う。章末演習としては重め）。</p>
+        <p>§8.3 は導出をオンライン版の畳んだノートに収めた。これを自力で展開する。状態群 $i$（縮退度 $g_i$、占有 $N_i$）のミクロ状態数 $W=\displaystyle\prod_i\frac{(N_i+g_i-1)!}{N_i!\,(g_i-1)!}$。</p>
+        <ol class="parts">
+          <li>$\ln W$ に Stirling 近似を適用し（$g_i\gg1$ とみて $g_i-1\approx g_i$）、$\ln W\simeq\sum_i[(N_i+g_i)\ln(N_i+g_i)-N_i\ln N_i-g_i\ln g_i]$ を示せ。</li>
+          <li>制約 $\sum N_i=N$、$\sum N_iE_i=E$ のもとで Lagrange 乗数 $\alpha,\beta$ を用い、$\partial/\partial N_i=0$ から $\ln\dfrac{N_i+g_i}{N_i}=\alpha+\beta E_i$ を導け。</li>
+          <li>占有数 $\bar n_i=N_i/g_i$ について解き、$\bar n_i=\dfrac{1}{e^{\alpha+\beta E_i}-1}=\dfrac{1}{e^{(E_i-\mu)/k_BT}-1}$ を示せ（$\beta=1/k_BT$、$\alpha=-\mu/k_BT$）。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part3/08-photon-statistics.html#sec-photon-statistics-bose-einstein" target="_blank" rel="noopener">§8.3 Bose–Einstein 分布</a> ／
+        Lagrange 法の枠組みは <a href="https://wadakeiichi.github.io/inverse_text_radiation/part3/06-thermal-equilibrium.html#sec-thermal-equilibrium-max-entropy" target="_blank" rel="noopener">§6.4</a>（演習 6-3）、$\mu=0$ は演習 8-3。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $\ln W=\sum_i[\ln(N_i+g_i-1)!-\ln N_i!-\ln(g_i-1)!]$。Stirling $\ln x!\simeq x\ln x-x$ と $g_i-1\approx g_i$ を使うと、$-x$ の項は制約で打ち消し合い</p>
+          $$\ln W\simeq\sum_i\left[(N_i+g_i)\ln(N_i+g_i)-N_i\ln N_i-g_i\ln g_i\right].$$
+          <p><b>(2)</b> 変分関数 $\Phi=\ln W-\alpha\sum_j N_j-\beta\sum_j N_jE_j$。$N_i$ で微分：</p>
+          $$\frac{\partial\ln W}{\partial N_i}=\ln(N_i+g_i)+1-\ln N_i-1=\ln\frac{N_i+g_i}{N_i}.$$
+          $$\frac{\partial\Phi}{\partial N_i}=\ln\frac{N_i+g_i}{N_i}-\alpha-\beta E_i=0\ \Rightarrow\ \ln\frac{N_i+g_i}{N_i}=\alpha+\beta E_i.$$
+          <p><b>(3)</b> $\dfrac{N_i+g_i}{N_i}=1+\dfrac{g_i}{N_i}=1+\dfrac{1}{\bar n_i}=e^{\alpha+\beta E_i}$ ゆえ $\dfrac{1}{\bar n_i}=e^{\alpha+\beta E_i}-1$、すなわち</p>
+          $$\bar n_i=\frac{1}{e^{\alpha+\beta E_i}-1}=\frac{1}{e^{(E_i-\mu)/k_BT}-1}.$$
+          <div class="ans"><b>答え：</b> Stirling＋Lagrange で $\ln\frac{N_i+g_i}{N_i}=\alpha+\beta E_i$、解いて $\bar n_i=1/(e^{(E_i-\mu)/k_BT}-1)$。分母の $-1$ が Bose の特徴。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 8-3 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">8-3</span>
+        <span class="ptitle">光子の $\mu=0$ と CMB 光子数密度 $n_\gamma\propto T^3$</span>
+        <span class="diff">☆☆☆</span>
+        <span class="tag deepen">理解を深める</span>
+      </div>
+      <div class="body">
+        <p>§8.4 は光子の化学ポテンシャルが $\mu=0$ で $\bar n=1/(e^{h\nu/kT}-1)$ になり、$n_\gamma\propto T^3$ と述べた。確かめる。</p>
+        <ol class="parts">
+          <li>なぜ光子は $\mu=0$ なのか、粒子数の保存／非保存の観点から述べよ。</li>
+          <li>光子数密度 $n_\gamma=\displaystyle\int_0^\infty g(\nu)\bar n(\nu)\,d\nu$（$g(\nu)=8\pi\nu^2/c^3$）で $x=h\nu/k_BT$ と置換し、$n_\gamma=\dfrac{8\pi}{c^3}\left(\dfrac{k_BT}{h}\right)^3\displaystyle\int_0^\infty\frac{x^2}{e^x-1}dx$ を導け。</li>
+          <li>$\displaystyle\int_0^\infty\frac{x^2}{e^x-1}dx=2\zeta(3)\approx2.404$ を用い、$T_{\rm CMB}=2.725$ K で $n_\gamma$ を計算して $\approx411$ cm$^{-3}$ を確認せよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part3/08-photon-statistics.html#sec-photon-statistics-mu-zero" target="_blank" rel="noopener">§8.4 光子の化学ポテンシャル</a> ／
+        $\mu$ 歪みと CMB は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/16-cmb.html" target="_blank" rel="noopener">第16章</a>、モード密度 $g(\nu)$ の導出は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part5/14-cavity-modes.html" target="_blank" rel="noopener">第14章</a>、$\int x^3$ 版（エネルギー密度）は <a href="演習問題_第IV部_量子論へ.html">第IV部 演習 10-3</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 化学ポテンシャルは粒子数 $N$ が保存量のときに意味を持つ「粒子1個追加の自由エネルギー代償」。光子は物質との吸収・放出で生成・消滅し、総数が保存しない。熱平衡では $N_\gamma$ が温度・体積から自動的に決まる従属量となり、追加の代償がない＝$\mu=0$。</p>
+          <p><b>(2)</b> $x=h\nu/k_BT$、$\nu=k_BTx/h$、$d\nu=(k_BT/h)dx$：</p>
+          $$n_\gamma=\int_0^\infty\frac{8\pi\nu^2}{c^3}\frac{d\nu}{e^{h\nu/k_BT}-1}=\frac{8\pi}{c^3}\left(\frac{k_BT}{h}\right)^3\int_0^\infty\frac{x^2}{e^x-1}dx.$$
+          <p><b>(3)</b> 積分 $=2.404$。$k_BT/h$ を計算：$k_BT=1.381\times10^{-23}\times2.725=3.76\times10^{-23}$ J、$/h=3.76\times10^{-23}/6.626\times10^{-34}=5.68\times10^{10}$ s$^{-1}$。3乗 $=1.83\times10^{32}$。$8\pi/c^3=25.13/(3.00\times10^8)^3=9.31\times10^{-25}$。掛け合わせ：</p>
+          $$n_\gamma=9.31\times10^{-25}\times1.83\times10^{32}\times2.404\approx4.1\times10^8\ \mathrm{m^{-3}}=411\ \mathrm{cm^{-3}}.$$
+          <p>観測値とよく一致。$n_\gamma\propto T^3$ は前因子 $(k_BT/h)^3$ から明らか。</p>
+          <div class="ans"><b>答え：</b> 光子数非保存ゆえ $\mu=0$。$n_\gamma=\frac{8\pi}{c^3}(k_BT/h)^3\cdot2.404\approx411$ cm$^{-3}$（$T=2.725$ K）、$\propto T^3$。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 8-4 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">8-4</span>
+        <span class="ptitle">光子気体の $P=u/3$ と放射圧 vs ガス圧</span>
+        <span class="diff">☆☆</span>
+        <span class="tag deepen">理解を深める</span>
+      </div>
+      <div class="body">
+        <p>§8.5 は光子気体の圧力 $P=u/3=aT^4/3$ を与えた。理想気体と比べ、放射圧が効く条件を探る。</p>
+        <ol class="parts">
+          <li>等方放射場では $P_\nu=u_\nu/3$（演習 4-1）。これが理想気体 $P_{\rm gas}=nk_BT$ と「温度・密度への依存」でどう違うか述べよ。</li>
+          <li>放射圧 $P_{\rm rad}=aT^4/3$ とガス圧 $P_{\rm gas}=nk_BT$ が等しくなる条件 $T^3/n=3k_B/a$ を導け。これは高温・低密度で放射圧が優勢になることを示す。</li>
+          <li>太陽中心（$T\simeq1.5\times10^7$ K、$n\simeq10^{32}$ m$^{-3}$）で $P_{\rm rad}/P_{\rm gas}$ を概算し、放射圧が支配的でない（がより重い星では効く）ことを確認せよ。$a=7.566\times10^{-16}$ J m$^{-3}$K$^{-4}$。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part3/08-photon-statistics.html#sec-photon-statistics-photon-gas" target="_blank" rel="noopener">§8.5 光子気体の統計</a> ／
+        $P_\nu=u_\nu/3$ の導出は <a href="演習問題_第II部_放射の記述と輸送.html">第II部 演習 4-1</a>、Eddington 限界・降着は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/18-accretion-high-energy.html" target="_blank" rel="noopener">第18章</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 放射圧 $P_{\rm rad}=u/3=aT^4/3$ は<b>温度の4乗</b>に効き密度には依らない（光子数自体が $T^3$ で決まる）。理想気体 $P_{\rm gas}=nk_BT$ は密度 $n$ に比例し温度には1乗。よって温度を上げ密度を下げるほど放射圧が相対的に強くなる。</p>
+          <p><b>(2)</b> $P_{\rm rad}=P_{\rm gas}$ とおく：$\dfrac{aT^4}{3}=nk_BT\Rightarrow\dfrac{T^3}{n}=\dfrac{3k_B}{a}$。左辺が大きい（高温・低密度）ほど放射圧優勢。</p>
+          <p><b>(3)</b> $P_{\rm rad}=aT^4/3=7.566\times10^{-16}\times(1.5\times10^7)^4/3$。$(1.5\times10^7)^4=5.06\times10^{28}$。$\times7.566\times10^{-16}=3.83\times10^{13}$、$/3=1.28\times10^{13}$ Pa。<br>
+          $P_{\rm gas}=nk_BT=10^{32}\times1.381\times10^{-23}\times1.5\times10^7=2.07\times10^{16}$ Pa。<br>
+          比 $P_{\rm rad}/P_{\rm gas}\approx1.28\times10^{13}/2.07\times10^{16}\approx6\times10^{-4}$。太陽中心では放射圧は約0.06%で支配的でない。質量の大きい星ほど中心温度が高く密度が相対的に低いため放射圧が増し、超大質量星では放射圧が支配的になって Eddington 限界（星の質量上限）を与える。</p>
+          <div class="ans"><b>答え：</b> $P_{\rm rad}=aT^4/3$（密度非依存）、$P_{\rm gas}=nk_BT$。等しい条件 $T^3/n=3k_B/a$。太陽中心で $P_{\rm rad}/P_{\rm gas}\approx6\times10^{-4}$（重い星では支配的）。</div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <footer>
+    <p><b>宇宙の熱的放射</b> ― 連続放射と線スペクトルの背景物理（和田 桂一）<br>
+    演習問題集・第III部（試作版）。本文の各節は
+    <a href="https://wadakeiichi.github.io/inverse_text_radiation/" target="_blank" rel="noopener">GitHub Pages 公開版</a>
+    にリンクしています。第III部は統計力学への逆引きが主題のため、本文が導出ノートに畳んだ計算（最大エントロピー→Boltzmann、Bose–Einstein 分布）の展開と、得た分布の観測応用（励起温度・CMB 光子数・放射圧）を組み合わせました。<br>
+    関連演習：<a href="演習問題_第I部_黒体放射の現象論.html">第I部</a> ・ <a href="演習問題_第II部_放射の記述と輸送.html">第II部</a> ・ <a href="演習問題_第IV部_量子論へ.html">第IV部</a></p>
+  </footer>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false},
+      {left: "\\[", right: "\\]", display: true}
+    ],
+    throwOnError: false
+  });
+});
+</script>
+</body>
+</html>

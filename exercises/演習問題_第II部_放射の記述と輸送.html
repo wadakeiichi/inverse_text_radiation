@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>演習問題 ― 第II部　放射をどう記述するか（第4〜5章）</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@300;400;500;600;700&family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --primary:#1f4e79; --secondary:#a23b3b; --gold:#c9a227;
+  --ink:#1f2933; --muted:#5a6573; --paper:#ffffff; --bg:#fbfaf6;
+  --soft:#eef1f6; --line:#d8dde6; --blue-bg:#f0f6ff; --gold-bg:#fff8e6; --red-bg:#fff4f0;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0; background:var(--bg); color:var(--ink);
+  font-family:"IBM Plex Sans JP",system-ui,sans-serif;
+  font-weight:400; line-height:1.85; font-size:16.5px; -webkit-font-smoothing:antialiased;}
+.wrap{max-width:860px; margin:0 auto; padding:0 22px 120px}
+header.book{background:linear-gradient(135deg,#1f4e79 0%,#163a5c 100%);
+  color:#fff; padding:46px 22px 40px; margin-bottom:38px; border-bottom:4px solid var(--gold);}
+header.book .inner{max-width:860px;margin:0 auto}
+header.book .kicker{font-size:13px; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--gold); font-weight:600; margin:0 0 10px;}
+header.book h1{font-family:"IBM Plex Serif",serif; font-weight:600; font-size:30px; line-height:1.35; margin:0 0 14px;}
+header.book p.sub{margin:0;color:#cdd9e8;font-size:15px;max-width:640px}
+header.book a.bookhome{display:inline-block;margin-top:18px;color:#fff;font-size:13.5px;
+  text-decoration:none;border:1px solid rgba(255,255,255,.4); padding:6px 14px;border-radius:999px;transition:.15s;}
+header.book a.bookhome:hover{background:rgba(255,255,255,.12)}
+.intro{background:var(--paper); border:1px solid var(--line); border-radius:12px;
+  padding:22px 24px; margin-bottom:34px; box-shadow:0 1px 3px rgba(31,41,51,.05);}
+.intro h2{margin:0 0 10px;font-size:17px;color:var(--primary);font-family:"IBM Plex Serif",serif}
+.intro p{margin:.5em 0;font-size:14.5px;color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.legend span{font-size:13px;padding:4px 11px;border-radius:999px;border:1px solid var(--line);background:var(--soft);color:var(--ink)}
+.legend .star{color:var(--gold);font-weight:600}
+.chapter{margin:46px 0 0}
+.chapter-head{border-left:5px solid var(--primary); padding:4px 0 4px 16px; margin-bottom:8px;}
+.chapter-head .cnum{font-size:13px;letter-spacing:.1em;color:var(--secondary);font-weight:600}
+.chapter-head h2{font-family:"IBM Plex Serif",serif;font-weight:600;font-size:24px; margin:3px 0 6px;color:var(--ink)}
+.chapter-head a.src{font-size:13px;color:var(--primary);text-decoration:none}
+.chapter-head a.src:hover{text-decoration:underline}
+.chapter-overview{font-size:14px;color:var(--muted);margin:0 0 18px 21px}
+.problem{background:var(--paper); border:1px solid var(--line); border-radius:12px;
+  padding:22px 24px; margin:18px 0; box-shadow:0 1px 3px rgba(31,41,51,.05);}
+.problem .top{display:flex;align-items:baseline;flex-wrap:wrap;gap:10px;margin-bottom:6px}
+.problem .pid{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:14px;
+  color:#fff;background:var(--primary);padding:2px 9px;border-radius:6px}
+.problem .ptitle{font-weight:600;font-size:17px;color:var(--ink)}
+.problem .diff{color:var(--gold);font-size:15px;letter-spacing:1px}
+.problem .tag{font-size:11.5px;padding:2px 9px;border-radius:999px;font-weight:500;}
+.tag.deriv{background:var(--blue-bg);color:#1f4e79;border:1px solid #cfe0f5}
+.tag.deepen{background:var(--gold-bg);color:#8a6d12;border:1px solid #ecdca0}
+.problem .body{margin-top:10px}
+.problem .body p{margin:.55em 0}
+.problem ol.parts{margin:.4em 0 .4em 0;padding-left:1.4em}
+.problem ol.parts li{margin:.3em 0}
+table.mini{border-collapse:collapse;margin:.6em 0;font-size:14px}
+table.mini th,table.mini td{border:1px solid var(--line);padding:4px 10px;text-align:left}
+table.mini th{background:var(--soft)}
+.related{margin-top:14px;padding:10px 14px;background:var(--soft);border-radius:8px;font-size:13px;color:var(--muted)}
+.related b{color:var(--ink);font-weight:600}
+.related a{color:var(--primary);text-decoration:none;border-bottom:1px dotted var(--primary)}
+.related a:hover{border-bottom-style:solid}
+details.sol{margin-top:14px;border:1px solid var(--line);border-radius:8px;background:#fdfcf3;overflow:hidden}
+details.sol>summary{cursor:pointer;list-style:none;padding:11px 16px;font-weight:600;font-size:14.5px;
+  color:var(--secondary);background:#fbf7ec;user-select:none;display:flex;align-items:center;gap:8px}
+details.sol>summary::-webkit-details-marker{display:none}
+details.sol>summary::before{content:"▶";font-size:11px;transition:.15s;color:var(--gold)}
+details.sol[open]>summary::before{transform:rotate(90deg)}
+details.sol .solbody{padding:6px 20px 18px;font-size:15px}
+details.sol .solbody p{margin:.6em 0}
+details.sol .solbody .ans{margin-top:12px;padding:10px 14px;border-left:3px solid var(--gold);
+  background:#fff8e6;border-radius:0 6px 6px 0;font-size:14.5px}
+.katex{font-size:1.04em}
+.katex-display{overflow-x:auto;overflow-y:hidden;padding:4px 0}
+hr.soft{border:none;border-top:1px solid var(--line);margin:40px 0}
+footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+footer a{color:var(--primary)}
+.toc{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:34px}
+.toc h2{margin:0 0 10px;font-size:15px;color:var(--primary)}
+.toc ul{margin:0;padding-left:1.1em;font-size:14px}
+.toc li{margin:3px 0}
+.toc a{color:var(--ink);text-decoration:none}
+.toc a:hover{color:var(--primary);text-decoration:underline}
+.partnav{margin-top:10px;font-size:13px}
+.partnav a{color:#cfe0f5;text-decoration:none;border-bottom:1px dotted #6f94bd}
+@media(max-width:620px){header.book h1{font-size:24px}}
+</style>
+</head>
+<body>
+
+<header class="book">
+  <div class="inner">
+    <p class="kicker">宇宙の熱的放射 ― 演習問題集</p>
+    <h1>第II部　放射をどう記述するか<br>演習問題と模範解答（第4〜5章）</h1>
+    <p class="sub">放射場を記述する共通言語 ― 比強度・モーメント・エネルギー密度 ― と、観測スペクトルを「光が経た歴史」として読む放射輸送方程式。等方場の関係式や形式解の導出を埋め、光学的厚薄・LTE の意味を深める問題集です。</p>
+    <a class="bookhome" href="https://wadakeiichi.github.io/inverse_text_radiation/" target="_blank" rel="noopener">教科書本体（GitHub Pages）を開く ↗</a>
+    <div class="partnav">関連：<a href="演習問題_第I部_黒体放射の現象論.html">▶ 第I部</a> ・ <a href="演習問題_第IV部_量子論へ.html">第IV部</a> の演習</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="intro">
+    <h2>この問題集の使い方</h2>
+    <p>本文が定義として与えた基本量どうしの関係を自分で導く<span style="color:#1f4e79">導出補完</span>問題と、観測量との対応や LTE の意味を別角度で掘る<span style="color:#8a6d12">理解を深める</span>問題の二系統です。第II部は「記述の枠組み」を整える部なので、定義から関係式を導く計算と、観測の現場での意味づけが中心になります。各問に本文該当節へのリンクを付けています。解答は「▶ 模範解答」で展開 ― まず自力で。</p>
+    <div class="legend">
+      <span class="star">☆</span> 基礎（定義・確認）
+      <span class="star">☆☆</span> 標準（関係式の導出・意味づけ）
+      <span class="star">☆☆☆</span> 発展（微妙な概念の総合）
+      <span class="tag deriv" style="font-size:13px">導出補完</span>
+      <span class="tag deepen" style="font-size:13px">理解を深める</span>
+    </div>
+  </div>
+
+  <div class="toc">
+    <h2>収録問題（全9問）</h2>
+    <ul>
+      <li><a href="#ch4">第4章　放射場の基本量</a>（4問）</li>
+      <li><a href="#ch5">第5章　放射輸送の基礎</a>（5問）</li>
+    </ul>
+  </div>
+
+  <!-- ================= CHAPTER 4 ================= -->
+  <section class="chapter" id="ch4">
+    <div class="chapter-head">
+      <span class="cnum">第04章</span>
+      <h2>放射場の基本量</h2>
+      <a class="src" href="https://wadakeiichi.github.io/inverse_text_radiation/part2/04-radiation-field.html" target="_blank" rel="noopener">本文を開く ↗</a>
+    </div>
+    <p class="chapter-overview">比強度 $I_\nu$ を出発点に、エネルギー密度・フラックス・モーメント（$J,F,P$）を立体角積分で結ぶ。等方場での関係式の導出と、観測量（点光源＝フラックス、広がった光源＝比強度）の判別を扱う。</p>
+
+    <!-- 4-1 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">4-1</span>
+        <span class="ptitle">等方場で $u_\nu=\frac{4\pi}{c}I_\nu$、$F_\nu=0$、$P_\nu=\frac{1}{3}u_\nu$</span>
+        <span class="diff">☆☆</span>
+        <span class="tag deriv">導出補完</span>
+      </div>
+      <div class="body">
+        <p>§4.3〜4.5 は等方放射場での値を表で与えた。定義から自分で導く。立体角要素 $d\Omega=\sin\theta\,d\theta\,d\varphi$。等方なら $I_\nu$ は方向に依らず積分の外へ出せる。</p>
+        <ol class="parts">
+          <li>$u_\nu=\dfrac{1}{c}\displaystyle\oint I_\nu\,d\Omega$ から、等方場で $u_\nu=\dfrac{4\pi}{c}I_\nu$ を示せ。</li>
+          <li>$F_\nu=\displaystyle\oint I_\nu\cos\theta\,d\Omega$ が等方場でゼロになることを示せ。</li>
+          <li>$P_\nu=\dfrac{1}{c}\displaystyle\oint I_\nu\cos^2\theta\,d\Omega$ を計算し、$\displaystyle\oint\cos^2\theta\,d\Omega=\dfrac{4\pi}{3}$ を使って $P_\nu=\dfrac{1}{3}u_\nu$ を導け。これは光子気体の状態方程式 $P=u/3$ に対応する。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part2/04-radiation-field.html#sec-radiation-field-energy-density" target="_blank" rel="noopener">§4.3 エネルギー密度</a>、
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part2/04-radiation-field.html#sec-radiation-field-moments" target="_blank" rel="noopener">§4.5 モーメント</a> ／
+        $P=u/3$ の光子気体としての扱いは <a href="https://wadakeiichi.github.io/inverse_text_radiation/part3/08-photon-statistics.html" target="_blank" rel="noopener">第8章</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $I_\nu$ を外に出すと $u_\nu=\dfrac{I_\nu}{c}\displaystyle\oint d\Omega=\dfrac{I_\nu}{c}\cdot4\pi=\dfrac{4\pi}{c}I_\nu$。</p>
+          <p><b>(2)</b> $\displaystyle\oint\cos\theta\,d\Omega=\int_0^{2\pi}d\varphi\int_0^{\pi}\cos\theta\sin\theta\,d\theta=2\pi\left[\dfrac{\sin^2\theta}{2}\right]_0^{\pi}=2\pi\cdot0=0$。（上半球の正と下半球の負が打ち消す。）よって $F_\nu=I_\nu\cdot0=0$。</p>
+          <p><b>(3)</b> $\displaystyle\oint\cos^2\theta\,d\Omega=\int_0^{2\pi}d\varphi\int_0^{\pi}\cos^2\theta\sin\theta\,d\theta=2\pi\left[-\dfrac{\cos^3\theta}{3}\right]_0^{\pi}=2\pi\cdot\dfrac{2}{3}=\dfrac{4\pi}{3}$。よって</p>
+          $$P_\nu=\frac{I_\nu}{c}\cdot\frac{4\pi}{3}=\frac{1}{3}\cdot\frac{4\pi}{c}I_\nu=\frac{1}{3}u_\nu.$$
+          <div class="ans"><b>答え：</b> 等方場で $u_\nu=\frac{4\pi}{c}I_\nu$、$F_\nu=0$、$P_\nu=\frac13 u_\nu$。最後は光子気体の状態方程式 $P=u/3$。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 4-2 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">4-2</span>
+        <span class="ptitle">表面輝度は距離によらない ― $I_\nu$ 不変と $F_\nu\propto1/d^2$</span>
+        <span class="diff">☆☆</span>
+        <span class="tag deepen">理解を深める</span>
+      </div>
+      <div class="body">
+        <p>§4.1 は「遠くの星が暗く見えるのは比強度ではなくフラックスが減るから」と述べた。これを定量的に確かめる。</p>
+        <ol class="parts">
+          <li>真空中で比強度 $I_\nu$ が経路に沿って保存することを前提に、距離 $d$ にある半径 $R$ の一様な円盤天体について、観測される比強度 $I_\nu$ が $d$ に依らないことを述べよ。</li>
+          <li>その天体が張る立体角が $\Omega\simeq\pi R^2/d^2\propto1/d^2$ であることを示し、観測フラックス $F_\nu\simeq I_\nu\,\Omega\propto1/d^2$ を導け。</li>
+          <li>点光源の式 $F_\nu^{\rm obs}=L_\nu/4\pi d^2$ と (2) が整合することを、$L_\nu$ を $I_\nu$ と $R$ で表して確かめよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part2/04-radiation-field.html#sec-radiation-field-intensity" target="_blank" rel="noopener">§4.1 比強度（保存則）</a>、
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part2/04-radiation-field.html#sec-radiation-field-flux" target="_blank" rel="noopener">§4.4 フラックス</a> ／
+        立体角は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part2/04-radiation-field.html#sec-radiation-field-solid-angle" target="_blank" rel="noopener">§4.2</a>、光度の定義は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/02-reading-spectra.html#sec-reading-spectra-stefan-boltzmann" target="_blank" rel="noopener">§2.4</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 比強度は真空伝播で保存する（光線一本あたりのエネルギーが不変、位相空間体積保存の帰結）。よって天体表面の比強度と、遠方で観測する比強度は等しく、距離 $d$ に依らない（表面輝度の距離不変）。</p>
+          <p><b>(2)</b> 半径 $R$ の円盤を距離 $d$ から見ると、見込む角の半径は $\theta\simeq R/d$（$R\ll d$）。立体角は $\Omega\simeq\pi\theta^2=\pi R^2/d^2\propto1/d^2$。観測フラックスは「比強度×天体の立体角」なので $F_\nu\simeq I_\nu\Omega=\pi I_\nu R^2/d^2\propto1/d^2$。</p>
+          <p><b>(3)</b> 表面フラックス $F_\nu^{\rm surf}=\pi I_\nu$（半球射出、§2.4）、光度 $L_\nu=4\pi R^2\cdot F_\nu^{\rm surf}=4\pi R^2\cdot\pi I_\nu=4\pi^2 R^2 I_\nu$。点光源式に入れると</p>
+          $$F_\nu^{\rm obs}=\frac{L_\nu}{4\pi d^2}=\frac{4\pi^2R^2 I_\nu}{4\pi d^2}=\frac{\pi I_\nu R^2}{d^2},$$
+          <p>これは (2) と完全に一致する。$I_\nu$ は不変、$F_\nu$ だけが $1/d^2$ で落ちる。</p>
+          <div class="ans"><b>答え：</b> $I_\nu$ は距離不変、$\Omega\propto1/d^2$ ゆえ $F_\nu=\pi I_\nu R^2/d^2\propto1/d^2$。点光源式とも一致。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 4-3 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">4-3</span>
+        <span class="ptitle">CMB のエネルギー密度を見積もる</span>
+        <span class="diff">☆</span>
+        <span class="tag deepen">理解を深める</span>
+      </div>
+      <div class="body">
+        <p>§4.3 は熱平衡で $u=\displaystyle\int u_\nu\,d\nu=aT^4$（$a=4\sigma/c$）になると述べ、CMB で $u\simeq4.2\times10^{-13}$ erg cm$^{-3}$ と見積もった。これを確かめる。</p>
+        <ol class="parts">
+          <li>放射定数を CGS で $a=7.566\times10^{-15}$ erg cm$^{-3}$ K$^{-4}$ とし、$T_{\rm CMB}=2.725$ K で $u=aT^4$ を計算せよ。</li>
+          <li>等方黒体場では $u_\nu=\dfrac{4\pi}{c}B_\nu(T)$、$J_\nu=B_\nu(T)$ となる。なぜ $J_\nu=B_\nu$ なのに $u_\nu$ には $4\pi/c$ が付くのか、定義の違いから一言で述べよ。</li>
+          <li>得られた $u$ が、銀河系内の宇宙線・星間磁場のエネルギー密度（$\sim10^{-12}$ erg cm$^{-3}$）と同程度であることを確認し、その含意を一言。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part2/04-radiation-field.html#sec-radiation-field-energy-density" target="_blank" rel="noopener">§4.3 エネルギー密度</a>、
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part2/04-radiation-field.html#sec-radiation-field-moments" target="_blank" rel="noopener">§4.5 平均強度</a> ／
+        $u=aT^4$ の導出は <a href="演習問題_第IV部_量子論へ.html">第IV部 演習 10-3</a>、<a href="https://wadakeiichi.github.io/inverse_text_radiation/part3/06-thermal-equilibrium.html" target="_blank" rel="noopener">第6章</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $T^4=(2.725)^4=55.1$ K$^4$。よって</p>
+          $$u=aT^4=7.566\times10^{-15}\times55.1\simeq4.2\times10^{-13}\ \mathrm{erg\,cm^{-3}}.$$
+          <p>本文の値と一致。</p>
+          <p><b>(2)</b> $J_\nu$ は比強度の<b>方向平均</b>（$\frac{1}{4\pi}\oint I_\nu d\Omega$）なので等方場で $J_\nu=I_\nu=B_\nu$。一方 $u_\nu$ は単位体積あたりの<b>エネルギー</b>（$\frac1c\oint I_\nu d\Omega$）で、全立体角の積分 $4\pi$ と $1/c$ が付く。平均か総和か、という定義の違い。実際 $u_\nu=\frac{4\pi}{c}J_\nu$。</p>
+          <p><b>(3)</b> $4.2\times10^{-13}$ と $10^{-12}$ erg cm$^{-3}$ はオーダーで同程度。CMB・宇宙線・星間磁場のエネルギー密度が拮抗していることは、銀河系の星間媒質がこれらの間でエネルギーをやりとりする「準平衡」的な系であることを示唆する（重要なベースライン）。</p>
+          <div class="ans"><b>答え：</b> $u\simeq4.2\times10^{-13}$ erg cm$^{-3}$。$J_\nu$＝方向平均、$u_\nu$＝体積エネルギー（$4\pi/c$ 倍）。宇宙線・磁場と同オーダー。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 4-4 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">4-4</span>
+        <span class="ptitle">点光源か広がった光源か ― 装置との関係で決まる</span>
+        <span class="diff">☆☆</span>
+        <span class="tag deepen">理解を深める</span>
+      </div>
+      <div class="body">
+        <p>§4.4・4.8 は「点光源か広がった光源か」は天体固有でなく観測装置との関係で決まると述べた。$\alpha$ Cen A（視直径 $\sim9$ mas）を例に確かめる。</p>
+        <ol class="parts">
+          <li>$\alpha$ Cen A を円盤とみて立体角 $\Omega_{\rm src}\simeq\pi(\theta/2)^2$ を sr で概算せよ（$\theta=9$ mas）。</li>
+          <li>通常の地上望遠鏡（シーイング $\sim1$ arcsec）のビーム立体角 $\Omega_{\rm beam}\simeq\pi(0.5'')^2$ と比べ、点光源として扱える理由を述べよ。</li>
+          <li>VLTI 干渉計（分解能 $\sim1$ mas）ではどうなるか。同じ天体で扱いが変わることが何を意味するか、観測される量（$F_\nu$ か $I_\nu$ か）の観点から述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part2/04-radiation-field.html#sec-radiation-field-flux" target="_blank" rel="noopener">§4.4 フラックス（点光源/広がった光源）</a>、
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part2/04-radiation-field.html#sec-radiation-field-observation" target="_blank" rel="noopener">§4.8 装置と放射場</a> ／
+        立体角の見積りは <a href="https://wadakeiichi.github.io/inverse_text_radiation/part2/04-radiation-field.html#sec-radiation-field-solid-angle" target="_blank" rel="noopener">§4.2</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $\theta=9$ mas $=9\times10^{-3}$ arcsec。1 arcsec $=4.85\times10^{-6}$ rad なので $\theta=9\times10^{-3}\times4.85\times10^{-6}=4.4\times10^{-8}$ rad。半径 $\theta/2=2.2\times10^{-8}$ rad。立体角</p>
+          $$\Omega_{\rm src}\simeq\pi(2.2\times10^{-8})^2\simeq1.5\times10^{-15}\ \mathrm{sr}.$$
+          <p>（本文の表の値と一致。）</p>
+          <p><b>(2)</b> シーイング 1 arcsec のビーム半径 $0.5''=2.4\times10^{-6}$ rad、$\Omega_{\rm beam}\simeq\pi(2.4\times10^{-6})^2\simeq1.8\times10^{-11}$ sr。$\Omega_{\rm src}/\Omega_{\rm beam}\sim10^{-4}\ll1$。天体はビームよりはるかに小さく、空間的に分解できない＝点光源。測れるのはフラックス $F_\nu$ のみ。</p>
+          <p><b>(3)</b> VLTI の分解能 $\sim1$ mas は天体視直径 9 mas より小さいので、円盤を空間的に分解できる＝広がった光源として扱え、面上の比強度 $I_\nu$（表面輝度分布）が測れる。同じ天体が装置の分解能次第で点光源にも広がった光源にもなる。すなわち「点か広がりか」は天体の性質でなく装置との関係で決まる。</p>
+          <div class="ans"><b>答え：</b> $\Omega_{\rm src}\simeq1.5\times10^{-15}$ sr。シーイング1″では $\ll\Omega_{\rm beam}$ ゆえ点光源（$F_\nu$ を測る）。VLTI 1 masでは分解でき広がった光源（$I_\nu$）。装置依存。</div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <hr class="soft">
+
+  <!-- ================= CHAPTER 5 ================= -->
+  <section class="chapter" id="ch5">
+    <div class="chapter-head">
+      <span class="cnum">第05章</span>
+      <h2>放射輸送の基礎</h2>
+      <a class="src" href="https://wadakeiichi.github.io/inverse_text_radiation/part2/05-radiative-transfer.html" target="_blank" rel="noopener">本文を開く ↗</a>
+    </div>
+    <p class="chapter-overview">放射輸送方程式 $dI_\nu/d\tau=-I_\nu+S_\nu$ の形式解、光学的に厚い／薄い極限、吸収線か輝線かの判定、LTE でソース関数が $B_\nu$ になる仕組み。本文が結果だけ示した形式解と極限を導出で埋める。</p>
+
+    <!-- 5-1 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">5-1</span>
+        <span class="ptitle">放射輸送方程式の形式解を導く</span>
+        <span class="diff">☆☆</span>
+        <span class="tag deriv">導出補完</span>
+      </div>
+      <div class="body">
+        <p>§5.3 は形式解 $I_\nu(\tau_\nu)=I_\nu(0)e^{-\tau_\nu}+\displaystyle\int_0^{\tau_\nu}S_\nu(\tau')e^{-(\tau_\nu-\tau')}d\tau'$ を結果として与えた。これを導く。出発点は $\dfrac{dI_\nu}{d\tau_\nu}=-I_\nu+S_\nu$。</p>
+        <ol class="parts">
+          <li>積分因子 $e^{\tau_\nu}$ を掛けて左辺を $\dfrac{d}{d\tau_\nu}(I_\nu e^{\tau_\nu})$ にまとめよ。</li>
+          <li>$0$ から $\tau_\nu$ まで積分して形式解を導け。</li>
+          <li>第一項と第二項をそれぞれ物理的に解釈せよ（「初期光の減衰」「経路上の放出の積算」）。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part2/05-radiative-transfer.html#sec-radiative-transfer-equation" target="_blank" rel="noopener">§5.3 放射輸送方程式</a>、
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part2/05-radiative-transfer.html#sec-radiative-transfer-optical-depth" target="_blank" rel="noopener">§5.2 光学的厚さ</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 両辺に $e^{\tau_\nu}$ を掛ける：$e^{\tau_\nu}\dfrac{dI_\nu}{d\tau_\nu}+e^{\tau_\nu}I_\nu=e^{\tau_\nu}S_\nu$。左辺は積の微分でまとまる：</p>
+          $$\frac{d}{d\tau_\nu}\left(I_\nu e^{\tau_\nu}\right)=S_\nu e^{\tau_\nu}.$$
+          <p><b>(2)</b> $0$ から $\tau_\nu$ まで積分：</p>
+          $$I_\nu(\tau_\nu)e^{\tau_\nu}-I_\nu(0)=\int_0^{\tau_\nu}S_\nu(\tau')e^{\tau'}d\tau'.$$
+          <p>両辺を $e^{\tau_\nu}$ で割る：</p>
+          $$I_\nu(\tau_\nu)=I_\nu(0)e^{-\tau_\nu}+\int_0^{\tau_\nu}S_\nu(\tau')e^{-(\tau_\nu-\tau')}d\tau'.$$
+          <p><b>(3)</b> 第一項：入射光 $I_\nu(0)$ が経路全体の吸収で $e^{-\tau_\nu}$ 倍に減衰したもの。第二項：各深さ $\tau'$ で放出された光 $S_\nu d\tau'$ が、そこから観測点までの吸収 $e^{-(\tau_\nu-\tau')}$ で減衰しながら積算されたもの。観測スペクトルが「光が経た歴史」を映すとは、この第二項のこと。</p>
+          <div class="ans"><b>答え：</b> 積分因子 $e^{\tau}$ で $\frac{d}{d\tau}(Ie^\tau)=Se^\tau$、積分して形式解。第一項＝初期光の減衰、第二項＝放出の減衰付き積算。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 5-2 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">5-2</span>
+        <span class="ptitle">厚い極限と薄い極限を形式解から</span>
+        <span class="diff">☆☆</span>
+        <span class="tag deriv">導出補完</span>
+      </div>
+      <div class="body">
+        <p>§5.6・5.7 は両極限を結果として示した。ソース関数 $S_\nu$ が経路上ほぼ一定の場合について、形式解（問題 5-1）から導け。</p>
+        <ol class="parts">
+          <li>一定 $S_\nu$ で形式解の積分を実行し、$I_\nu(\tau)=I_\nu(0)e^{-\tau}+S_\nu(1-e^{-\tau})$ を示せ。</li>
+          <li>光学的に厚い極限 $\tau\gg1$ で $I_\nu\to S_\nu$ を導け。</li>
+          <li>光学的に薄い極限 $\tau\ll1$ で $I_\nu\approx I_\nu(0)+\tau(S_\nu-I_\nu(0))$ を導け（$e^{-\tau}\approx1-\tau$）。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part2/05-radiative-transfer.html#sec-radiative-transfer-thick" target="_blank" rel="noopener">§5.6 光学的に厚い極限</a>、
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part2/05-radiative-transfer.html#sec-radiative-transfer-thin" target="_blank" rel="noopener">§5.7 光学的に薄い極限</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $S_\nu$ 一定なら積分は</p>
+          $$\int_0^{\tau}S_\nu e^{-(\tau-\tau')}d\tau'=S_\nu e^{-\tau}\int_0^{\tau}e^{\tau'}d\tau'=S_\nu e^{-\tau}(e^{\tau}-1)=S_\nu(1-e^{-\tau}).$$
+          <p>よって $I_\nu(\tau)=I_\nu(0)e^{-\tau}+S_\nu(1-e^{-\tau})$。</p>
+          <p><b>(2)</b> $\tau\gg1$ で $e^{-\tau}\to0$ ゆえ $I_\nu\to S_\nu$。初期光は完全に消え、比強度はソース関数の値そのものになる。</p>
+          <p><b>(3)</b> $\tau\ll1$ で $e^{-\tau}\approx1-\tau$：</p>
+          $$I_\nu\approx I_\nu(0)(1-\tau)+S_\nu\tau=I_\nu(0)+\tau(S_\nu-I_\nu(0)).$$
+          <div class="ans"><b>答え：</b> $I_\nu=I_\nu(0)e^{-\tau}+S_\nu(1-e^{-\tau})$。厚い→$S_\nu$、薄い→$I_\nu(0)+\tau(S_\nu-I_\nu(0))$。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 5-3 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">5-3</span>
+        <span class="ptitle">吸収線か輝線か ― ソース関数と背景光の大小</span>
+        <span class="diff">☆☆</span>
+        <span class="tag deepen">理解を深める</span>
+      </div>
+      <div class="body">
+        <p>問題 5-2(3) の薄い極限 $I_\nu\approx I_\nu(0)+\tau_\nu(S_\nu-I_\nu(0))$ を使って、線が吸収で見えるか輝線で見えるかを論じる。線の中心 $\nu_0$ では $\alpha_\nu$ が大きく $\tau_\nu$ が局所的に増す。</p>
+        <ol class="parts">
+          <li>$S_\nu\lt I_\nu(0)$ のとき、線中心で $I_\nu$ は連続光より大きいか小さいか。これは吸収線・輝線のどちらか。</li>
+          <li>$S_\nu\gt I_\nu(0)$（特に背景光 $I_\nu(0)\approx0$）のときはどうか。</li>
+          <li>太陽の Fraunhofer 吸収線（光球の外側ほど温度が下がる）と、HII 領域の輝線スペクトル（背景光なし）が、それぞれどちらの条件に対応するか述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part2/05-radiative-transfer.html#sec-radiative-transfer-source" target="_blank" rel="noopener">§5.4 ソース関数</a>、
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part2/05-radiative-transfer.html#sec-radiative-transfer-thin" target="_blank" rel="noopener">§5.7 薄い極限（輝線天体）</a> ／
+        太陽の連続+線の二重構造は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/01-where-blackbody.html#sec-where-blackbody-sun" target="_blank" rel="noopener">§1.2</a>、線スペクトルは <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/20-line-formation.html" target="_blank" rel="noopener">第20章</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $S_\nu\lt I_\nu(0)$ なら $S_\nu-I_\nu(0)\lt 0$。線中心で $\tau_\nu$ が大きいほど $I_\nu=I_\nu(0)+\tau_\nu(S_\nu-I_\nu(0))$ は連続光 $I_\nu(0)$ より<b>小さく</b>なる。すなわち連続光を背景にした<b>吸収線</b>として見える。</p>
+          <p><b>(2)</b> $S_\nu\gt I_\nu(0)$ なら $S_\nu-I_\nu(0)\gt 0$。線中心で $I_\nu$ は背景より<b>大きく</b>、<b>輝線</b>になる。特に背景光がない（$I_\nu(0)\approx0$）と $I_\nu\approx\tau_\nu S_\nu$ で、線中心だけ明るい純粋な輝線スペクトルになる。</p>
+          <p><b>(3)</b> 太陽の Fraunhofer 線：明るい光球（連続光 $I_\nu(0)$ 大）を背景に、外側の低温層（$S_\nu=B_\nu(T_{\rm out})\lt I_\nu(0)$）が吸収する → $S_\nu\lt I_\nu(0)$、吸収線。HII 領域：背景となる連続光がほぼなく、ガス自身の放出だけが見える → $S_\nu\gt I_\nu(0)\approx0$、輝線。線の出方は線中心のソース関数と背景光の大小で決まる。</p>
+          <div class="ans"><b>答え：</b> $S_\nu\lt I_\nu(0)$→吸収線、$S_\nu\gt I_\nu(0)$→輝線。太陽 Fraunhofer＝前者、HII 領域＝後者。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 5-4 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">5-4</span>
+        <span class="ptitle">$\tau\sim1$ がなぜ「光球（見える表面）」なのか</span>
+        <span class="diff">☆☆</span>
+        <span class="tag deepen">理解を深める</span>
+      </div>
+      <div class="body">
+        <p>§5.2・5.6 は「太陽の表面とは可視光で $\tau\sim1$ の深さ」と述べた。形式解の重み付けから理由を考える。</p>
+        <ol class="parts">
+          <li>外向きに観測する場合、形式解の第二項の重み $e^{-(\tau_\nu-\tau')}$ は $\tau'$ がどの辺りで最大か。なぜ「観測点から光学的厚さ約1の深さ」が実効的な放出層になるか述べよ。</li>
+          <li>平均自由行程 $\ell_{\rm mfp}=1/\alpha_\nu$ を使い、「$\tau\sim1$ は光が散乱・吸収されずに脱出できる最後の深さ」という描像で (1) を言い換えよ。</li>
+          <li>温度が深さとともに上がる恒星大気で、$\tau\sim1$ の層が LTE なら観測スペクトルが $B_\nu(T(\tau\!\sim\!1))$ に近づく理由を、問題 5-2(2) と結びつけて述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part2/05-radiative-transfer.html#sec-radiative-transfer-optical-depth" target="_blank" rel="noopener">§5.2 光学的厚さ</a>、
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part2/05-radiative-transfer.html#sec-radiative-transfer-thick" target="_blank" rel="noopener">§5.6 厚い極限</a> ／
+        太陽光球が黒体に近い理由は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/03-universality.html#sec-universality-real-objects" target="_blank" rel="noopener">§3.6</a>（演習 3-4）。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 観測点（$\tau_\nu=0$ を外側にとる座標で考えると）に届く放出の重みは $e^{-(\tau_\nu-\tau')}$ で、観測点から光学的厚さが約1以内の層（$\tau\lesssim1$）からの寄与が支配的。それより深い層の光は手前の吸収 $e^{-\tau}$ で強く減衰して届かない。だから「観測点から $\tau\sim1$ の深さ」が実効的な放出層＝「見える表面」になる。</p>
+          <p><b>(2)</b> $\ell_{\rm mfp}=1/\alpha_\nu$ は光が一回吸収・散乱されずに進める距離。$\tau\sim1$ は観測点から測って平均自由行程ほぼ1回分の深さで、そこから出た光子はもう吸収されずに脱出できる。それより深い光子は途中で吸収・再放出され「直接は見えない」。よって $\tau\sim1$ が脱出できる最後の深さ＝光球。</p>
+          <p><b>(3)</b> $\tau\sim1$ 層が LTE なら $S_\nu=B_\nu(T(\tau\!\sim\!1))$。その層は内側に向かって光学的に厚い（$\tau\gg1$）ので、問題 5-2(2) の厚い極限により出てくる比強度は $I_\nu\to S_\nu=B_\nu(T(\tau\!\sim\!1))$。すなわち観測スペクトルは $\tau\sim1$ 層の温度のプランク関数に近づく。太陽が $B_\nu(5800\text{K})$ に近いのはこのため。</p>
+          <div class="ans"><b>答え：</b> 重み $e^{-(\tau-\tau')}$ ゆえ $\tau\sim1$ 層が実効放出層＝脱出できる最後の深さ＝光球。そこが LTE＋厚いので $I_\nu\to B_\nu(T(\tau\!\sim\!1))$。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 5-5 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">5-5</span>
+        <span class="ptitle">LTE で $S_\nu=B_\nu$ ― 放射場は黒体でなくてよい</span>
+        <span class="diff">☆☆☆</span>
+        <span class="tag deepen">理解を深める</span>
+      </div>
+      <div class="body">
+        <p>§5.5 の微妙な点を整理する。LTE は「物質の状態が局所温度 $T$ だけで決まる」近似であって、放射場 $J_\nu$ が黒体である必要は含まない。</p>
+        <ol class="parts">
+          <li>Kirchhoff の法則が「比 $j_\nu/\alpha_\nu$ を物質の局所温度 $T$ だけの関数（$=B_\nu(T)$）にする」ことを使って、$J_\nu\ne B_\nu$ でも LTE なら $S_\nu=B_\nu(T)$ となる理由を述べよ。</li>
+          <li>「LTE」と「完全熱平衡」の違いを、（物質の状態）と（放射場の状態）の二つの観点で述べよ。</li>
+          <li>統計平衡方程式に放射場 $J_\nu$ が入る（誘導吸収・放出 $B_{lu}J_\nu, B_{ul}J_\nu$）と、なぜ占有数に「非局所性」が入るのか。逆に「熱化深さ」より深いとなぜ実質 LTE に戻るのか述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part2/05-radiative-transfer.html#sec-radiative-transfer-lte" target="_blank" rel="noopener">§5.5 LTE と non-LTE</a> ／
+        Kirchhoff とソース関数は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/03-universality.html#sec-universality-kirchhoff" target="_blank" rel="noopener">§3.5</a>（<a href="演習問題_第I部_黒体放射の現象論.html">第I部 演習 3-3</a>）、完全熱平衡は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part3/06-thermal-equilibrium.html" target="_blank" rel="noopener">第6章</a>、統計平衡と Einstein 係数は <a href="演習問題_第IV部_量子論へ.html">第IV部 演習 11-1</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> ソース関数は $S_\nu=j_\nu/\alpha_\nu$。Kirchhoff の法則により、物質が局所温度 $T$ で熱化していれば、放出と吸収の比 $j_\nu/\alpha_\nu$ は<b>その物質の温度 $T$ だけの関数</b> $B_\nu(T)$ になる。$j_\nu$ も $\alpha_\nu$ も局所占有数（Boltzmann 分布、局所 $T$）で決まり、その比は周囲の放射場 $J_\nu$ に依らない。だから $J_\nu$ が異方的でも $J_\nu\ne B_\nu$ でも、物質さえ LTE なら $S_\nu=B_\nu(T)$。</p>
+          <p><b>(2)</b> LTE：<b>物質</b>の速度分布・電離・励起が局所 $T$ で決まる（Maxwell・Saha・Boltzmann）。放射場 $J_\nu$ は黒体でも等方でもなくてよい。完全熱平衡：<b>物質も放射場も両方</b>が同一温度で平衡（$J_\nu=B_\nu$ かつ等方、$F_\nu=0$）。LTE は物質だけの条件、完全熱平衡は放射場まで含む強い条件。</p>
+          <p><b>(3)</b> 誘導吸収・放出の率は $J_\nu$ に比例する。形式解が示すように $J_\nu(\mathbf r)$ は媒質全体の構造（経路上の温度・密度）を積分した非局所量。だから占有数を決める統計平衡方程式に $J_\nu$ が入ると、占有数＝媒質全体の関数となり非局所性が入る。一方「熱化深さ」より深い領域では放射場がその場で熱化し $J_\nu\to B_\nu(T_{\rm local})$ となるため、統計平衡の解も Boltzmann（局所値）に漸近し $S_\nu\to B_\nu(T_{\rm local})$、実質 LTE に戻る。non-LTE が観測に効くのは薄い領域や中程度 $\tau$ の上層大気。</p>
+          <div class="ans"><b>答え：</b> Kirchhoff が $j/\alpha$ を局所 $T$ だけの関数にするので、放射場が黒体でなくても物質 LTE なら $S_\nu=B_\nu$。完全熱平衡は放射場まで黒体な強い条件。$J_\nu$ 経由で非局所性が入るが、熱化深さより深いと $J_\nu\to B_\nu$ で実質 LTE。</div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <footer>
+    <p><b>宇宙の熱的放射</b> ― 連続放射と線スペクトルの背景物理（和田 桂一）<br>
+    演習問題集・第II部（試作版）。本文の各節は
+    <a href="https://wadakeiichi.github.io/inverse_text_radiation/" target="_blank" rel="noopener">GitHub Pages 公開版</a>
+    にリンクしています。第II部は放射場の記述と輸送が主題のため、定義からの関係式導出（等方場のモーメント、形式解、厚薄の極限）と、観測量・LTE の意味づけを組み合わせました。<br>
+    関連演習：<a href="演習問題_第I部_黒体放射の現象論.html">第I部</a> ・ <a href="演習問題_第IV部_量子論へ.html">第IV部</a></p>
+  </footer>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false},
+      {left: "\\[", right: "\\]", display: true}
+    ],
+    throwOnError: false
+  });
+});
+</script>
+</body>
+</html>

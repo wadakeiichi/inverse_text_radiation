@@ -1,7 +1,13 @@
 # レビュー依頼メール テンプレート
 
 専門家にレビューを依頼する際の文面テンプレート。3 パターン用意。
-公開ページ URL と Zenodo DOI を取得したら、`[URL]` `[DOI]` の箇所を埋めて使用する。
+
+**実 URL（v0.1, 2026-06-11 時点）**：
+
+- 公開ページ（HTML）：<https://wadakeiichi.github.io/inverse_text_radiation/>
+- PDF preprint：<https://doi.org/10.5281/zenodo.20635563>
+- 詳細（趣旨・観点・返信形式）：<https://github.com/wadakeiichi/inverse_text_radiation/blob/main/REVIEW.md>
+- DOI: `10.5281/zenodo.20635563`
 
 ---
 
@@ -21,9 +27,9 @@ XX 先生
 
 本書は「観測されるスペクトルから出発し、その背後の物理を逆向きにたどる」という構成で全 8 部 25 章をまとめており、特に先生のご専門である **[該当分野]** の章（第 X 章〜第 Y 章）について、物理的正しさ・教育的妥当性の両面でご意見をいただきたく思います。
 
-- **ブラウザで読む**：[URL]
-- **PDF**：[Zenodo DOI URL]
-- **詳細**（趣旨・観点・返信形式の希望など）：[URL]/REVIEW.html
+- **ブラウザで読む**：<https://wadakeiichi.github.io/inverse_text_radiation/>
+- **PDF**：<https://doi.org/10.5281/zenodo.20635563>（DOI: 10.5281/zenodo.20635563、CC BY 4.0）
+- **詳細**（趣旨・観点・返信形式の希望など）：<https://github.com/wadakeiichi/inverse_text_radiation/blob/main/REVIEW.md>
 
 ご都合に応じて、自由形式のメール返信から PDF への注釈書き込み、GitHub Issues まで、どの粒度でも歓迎です。
 
@@ -52,9 +58,9 @@ XX さん
 
 『**宇宙の熱的放射 ― 連続放射と線スペクトルの背景物理**』
 
-- ブラウザ版：[URL]
-- PDF：[Zenodo DOI URL]
-- 観点と返信方法：[URL]/REVIEW.html
+- ブラウザ版：<https://wadakeiichi.github.io/inverse_text_radiation/>
+- PDF：<https://doi.org/10.5281/zenodo.20635563>
+- 観点と返信方法：<https://github.com/wadakeiichi/inverse_text_radiation/blob/main/REVIEW.md>
 
 特に **[該当分野]** のところ、XX さんに見ていただけると助かります。
 
@@ -79,8 +85,8 @@ XX さん
 
 『**宇宙の熱的放射 ― 連続放射と線スペクトルの背景物理**』
 
-- 読む：[URL]
-- 詳しい趣旨：[URL]/REVIEW.html
+- 読む：<https://wadakeiichi.github.io/inverse_text_radiation/>
+- 詳しい趣旨：<https://github.com/wadakeiichi/inverse_text_radiation/blob/main/REVIEW.md>
 
 ご専門外の章でも大歓迎です。むしろ自分の専門の前提知識がない章のほうが、率直な「ここ難しかった」「ここわからなかった」を教えていただきやすいと思います。
 

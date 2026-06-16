@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>演習問題 ― 第VII部　線スペクトル ― もう一つの逆引き（第19〜23章）</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@300;400;500;600;700&family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{--primary:#1f4e79;--secondary:#a23b3b;--gold:#c9a227;--ink:#1f2933;--muted:#5a6573;--paper:#fff;--bg:#fbfaf6;--soft:#eef1f6;--line:#d8dde6;--blue-bg:#f0f6ff;--gold-bg:#fff8e6;}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans JP",system-ui,sans-serif;font-weight:400;line-height:1.85;font-size:16.5px;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:860px;margin:0 auto;padding:0 22px 120px}
+header.book{background:linear-gradient(135deg,#1f4e79 0%,#163a5c 100%);color:#fff;padding:46px 22px 40px;margin-bottom:38px;border-bottom:4px solid var(--gold);}
+header.book .inner{max-width:860px;margin:0 auto}
+header.book .kicker{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:0 0 10px;}
+header.book h1{font-family:"IBM Plex Serif",serif;font-weight:600;font-size:30px;line-height:1.35;margin:0 0 14px;}
+header.book p.sub{margin:0;color:#cdd9e8;font-size:15px;max-width:660px}
+header.book a.bookhome{display:inline-block;margin-top:18px;color:#fff;font-size:13.5px;text-decoration:none;border:1px solid rgba(255,255,255,.4);padding:6px 14px;border-radius:999px;transition:.15s;}
+header.book a.bookhome:hover{background:rgba(255,255,255,.12)}
+.intro{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin-bottom:34px;box-shadow:0 1px 3px rgba(31,41,51,.05);}
+.intro h2{margin:0 0 10px;font-size:17px;color:var(--primary);font-family:"IBM Plex Serif",serif}
+.intro p{margin:.5em 0;font-size:14.5px;color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.legend span{font-size:13px;padding:4px 11px;border-radius:999px;border:1px solid var(--line);background:var(--soft);color:var(--ink)}
+.legend .star{color:var(--gold);font-weight:600}
+.chapter{margin:46px 0 0}
+.chapter-head{border-left:5px solid var(--primary);padding:4px 0 4px 16px;margin-bottom:8px;}
+.chapter-head .cnum{font-size:13px;letter-spacing:.1em;color:var(--secondary);font-weight:600}
+.chapter-head h2{font-family:"IBM Plex Serif",serif;font-weight:600;font-size:24px;margin:3px 0 6px;color:var(--ink)}
+.chapter-head a.src{font-size:13px;color:var(--primary);text-decoration:none}
+.chapter-head a.src:hover{text-decoration:underline}
+.chapter-overview{font-size:14px;color:var(--muted);margin:0 0 18px 21px}
+.problem{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin:18px 0;box-shadow:0 1px 3px rgba(31,41,51,.05);}
+.problem .top{display:flex;align-items:baseline;flex-wrap:wrap;gap:10px;margin-bottom:6px}
+.problem .pid{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:14px;color:#fff;background:var(--primary);padding:2px 9px;border-radius:6px}
+.problem .ptitle{font-weight:600;font-size:17px;color:var(--ink)}
+.problem .diff{color:var(--gold);font-size:15px;letter-spacing:1px}
+.problem .tag{font-size:11.5px;padding:2px 9px;border-radius:999px;font-weight:500;}
+.tag.deriv{background:var(--blue-bg);color:#1f4e79;border:1px solid #cfe0f5}
+.tag.deepen{background:var(--gold-bg);color:#8a6d12;border:1px solid #ecdca0}
+.problem .body{margin-top:10px}.problem .body p{margin:.55em 0}
+.problem ol.parts{margin:.4em 0;padding-left:1.4em}.problem ol.parts li{margin:.3em 0}
+table.mini{border-collapse:collapse;margin:.6em 0;font-size:14px}
+table.mini th,table.mini td{border:1px solid var(--line);padding:4px 10px;text-align:left}
+table.mini th{background:var(--soft)}
+.related{margin-top:14px;padding:10px 14px;background:var(--soft);border-radius:8px;font-size:13px;color:var(--muted)}
+.related b{color:var(--ink);font-weight:600}
+.related a{color:var(--primary);text-decoration:none;border-bottom:1px dotted var(--primary)}
+.related a:hover{border-bottom-style:solid}
+details.sol{margin-top:14px;border:1px solid var(--line);border-radius:8px;background:#fdfcf3;overflow:hidden}
+details.sol>summary{cursor:pointer;list-style:none;padding:11px 16px;font-weight:600;font-size:14.5px;color:var(--secondary);background:#fbf7ec;user-select:none;display:flex;align-items:center;gap:8px}
+details.sol>summary::-webkit-details-marker{display:none}
+details.sol>summary::before{content:"▶";font-size:11px;transition:.15s;color:var(--gold)}
+details.sol[open]>summary::before{transform:rotate(90deg)}
+details.sol .solbody{padding:6px 20px 18px;font-size:15px}
+details.sol .solbody p{margin:.6em 0}
+details.sol .solbody .ans{margin-top:12px;padding:10px 14px;border-left:3px solid var(--gold);background:#fff8e6;border-radius:0 6px 6px 0;font-size:14.5px}
+.katex{font-size:1.04em}.katex-display{overflow-x:auto;overflow-y:hidden;padding:4px 0}
+hr.soft{border:none;border-top:1px solid var(--line);margin:40px 0}
+footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+footer a{color:var(--primary)}
+.toc{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:34px}
+.toc h2{margin:0 0 10px;font-size:15px;color:var(--primary)}
+.toc ul{margin:0;padding-left:1.1em;columns:2;column-gap:28px;font-size:14px}.toc li{margin:3px 0}
+.toc a{color:var(--ink);text-decoration:none}.toc a:hover{color:var(--primary);text-decoration:underline}
+.partnav{margin-top:10px;font-size:13px}.partnav a{color:#cfe0f5;text-decoration:none;border-bottom:1px dotted #6f94bd}
+@media(max-width:620px){.toc ul{columns:1}header.book h1{font-size:24px}}
+</style>
+</head>
+<body>
+
+<header class="book">
+  <div class="inner">
+    <p class="kicker">宇宙の熱的放射 ― 演習問題集</p>
+    <h1>第VII部　線スペクトル ― もう一つの逆引き<br>演習問題と模範解答（第19〜23章）</h1>
+    <p class="sub">水素線吸収係数 $\alpha_\nu=(\pi e^2/m_ec)f_{lu}n_l\phi(\nu-\nu_0)$ の各因子を逆引きする。線形成と Einstein 係数、Rydberg と振動子強度、Voigt 線形、そして視線速度・組成・温度密度診断まで。観測の線一本から物理を読む問題集です。</p>
+    <a class="bookhome" href="https://wadakeiichi.github.io/inverse_text_radiation/" target="_blank" rel="noopener">教科書本体（GitHub Pages）を開く ↗</a>
+    <div class="partnav">関連：<a href="演習問題_第IV部_量子論へ.html">▶ 第IV部</a>（Einstein 係数）・ <a href="演習問題_第II部_放射の記述と輸送.html">第II部</a>（放射輸送）</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="intro">
+    <h2>この問題集の使い方</h2>
+    <p>本文が「結果のみ」「専門書を参照」とした計算を自力で展開する<span style="color:#1f4e79">導出補完</span>問題と、観測の線スペクトルから速度・組成・温度・密度・磁場を読む<span style="color:#8a6d12">理解を深める</span>問題の二系統です。第VII部は連続スペクトル（第I〜VI部）と対をなす線スペクトルの逆引きなので、Einstein 係数や量子力学の道具が再登場します。各問に本文該当節へのリンクを付けています。解答は「▶ 模範解答」で展開 ― まず自力で。</p>
+    <div class="legend">
+      <span class="star">☆</span> 基礎
+      <span class="star">☆☆</span> 標準（導出・観測応用）
+      <span class="star">☆☆☆</span> 発展（多段の導出・数値）
+      <span class="tag deriv" style="font-size:13px">導出補完</span>
+      <span class="tag deepen" style="font-size:13px">理解を深める</span>
+    </div>
+  </div>
+
+  <div class="toc">
+    <h2>収録問題（全18問）</h2>
+    <ul>
+      <li><a href="#ch19">第19章　線スペクトルはどこに</a>（3問）</li>
+      <li><a href="#ch20">第20章　線形成</a>（4問）</li>
+      <li><a href="#ch21">第21章　原子物理へ</a>（4問）</li>
+      <li><a href="#ch22">第22章　線形の物理</a>（4問）</li>
+      <li><a href="#ch23">第23章　天体物理を読む</a>（3問）</li>
+    </ul>
+  </div>
+
+  <!-- ================= CHAPTER 19 ================= -->
+  <section class="chapter" id="ch19">
+    <div class="chapter-head">
+      <span class="cnum">第19章</span>
+      <h2>線スペクトルはどこに現れるか</h2>
+      <a class="src" href="https://wadakeiichi.github.io/inverse_text_radiation/part7/19-where-lines.html" target="_blank" rel="noopener">本文を開く ↗</a>
+    </div>
+    <p class="chapter-overview">Fraunhofer 線・輝線・禁制線・21 cm・分子線・AGN 線という観測カテゴリ。中心地図 $\alpha_\nu$ の各因子の役割を観測の側から把握する。</p>
+
+    <!-- 19-1 -->
+    <div class="problem">
+      <div class="top"><span class="pid">19-1</span><span class="ptitle">21 cm 線 ― 極端に弱い遷移がなぜ観測できるか</span><span class="diff">☆☆</span><span class="tag deepen">理解を深める</span></div>
+      <div class="body">
+        <p>§19.4 は 21 cm 線の自発放出率 $A_{ul}\simeq2.9\times10^{-15}$ s$^{-1}$ が Ly$\alpha$（$A\simeq6.3\times10^8$ s$^{-1}$）より約 $10^{23}$ 倍小さいと述べた。中心地図 $\alpha_\nu=(\pi e^2/m_ec)f_{lu}n_l\phi$ で考える。</p>
+        <p><b>注意：</b>21 cm 線は電気双極子（E1）ではなく、水素基底状態の<b>磁気双極子（M1）超微細遷移</b>である。前因子 $\pi e^2/m_ec$ は本来 E1 振動子強度の文脈で導入された量なので、ここではその数値を 21 cm に直接当てるのではなく、中心地図の「<b>遷移強度 × 占有数 $n_l$ × 線形 $\phi$</b>」という<b>構造だけ</b>を借りる。$f_{lu}$ は「有効遷移強度（または $A_{ul}$）」と読み替えること。</p>
+        <ol class="parts">
+          <li>個々の原子では一千万年に一度しか脱励起しない遷移が、観測可能な信号になる理由を、$\alpha_\nu$ のどの因子で説明するか述べよ。</li>
+          <li>励起寿命 $\tau=1/A_{ul}$ を年単位で求めよ。</li>
+          <li>21 cm 線が宇宙物理で特別な役割を持つ理由を3つ挙げよ（観測波長帯・ダスト・対象天体の観点から）。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/19-where-lines.html#sec-where-lines-21cm" target="_blank" rel="noopener">§19.4 21 cm 線</a> ／
+        中心地図の $n_l$ は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/20-line-formation.html#sec-line-source-function" target="_blank" rel="noopener">§20.3</a>、超微細構造の M1 遷移は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part8/25-qed-minimum.html#sec-qed-minimum-selection" target="_blank" rel="noopener">§25.5</a>、宇宙論応用は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/23-line-applications.html#sec-line-applications-cosmology" target="_blank" rel="noopener">§23.5</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 中心地図 $\alpha_\nu=(\pi e^2/m_ec)f_{lu}\,n_l\,\phi$ の <b>$n_l$（下準位占有数＝柱密度）</b>。21 cm の有効遷移強度（$\propto A_{ul}$）は極端に小さいが、宇宙には中性水素が膨大に存在し $n_l$ が桁外れに大きい。両者の積として観測可能な吸収・輝線になる。「弱い遷移＋膨大な物質量」の組合せ。なお 21 cm は M1 遷移なので、ここで $f_{lu}$ と書いたのは通常の E1 振動子強度ではなく有効遷移強度を指す（借りているのは式の構造のみ）。</p>
+          <p><b>(2)</b> $\tau=1/A_{ul}=1/(2.9\times10^{-15})=3.4\times10^{14}$ s。年に直すと $3.4\times10^{14}/(3.16\times10^7)\simeq1.1\times10^7$ 年（約一千万年）。</p>
+          <p><b>(3)</b> ① 電波（21 cm）なのでダストに吸収されず銀河系の遠くまで見通せる。② 中性水素は宇宙のどこにでもある（星間ガス・ハロー・銀河間媒質）。③ 銀河回転曲線（ダークマターの証拠）や高赤方偏移の宇宙再電離期（SKA の標的）を探れる。</p>
+          <div class="ans"><b>答え：</b> $n_l$（膨大な中性水素）が小さな $f_{lu}$ を補う。$\tau\simeq1.1\times10^7$ 年。ダスト透過・遍在・回転曲線/再電離で特別。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 19-2 -->
+    <div class="problem">
+      <div class="top"><span class="pid">19-2</span><span class="ptitle">禁制線は「低密度の証拠」</span><span class="diff">☆☆</span><span class="tag deepen">理解を深める</span></div>
+      <div class="body">
+        <p>§19.3 は [O III] $\lambda$5007 等の禁制線が星雲で強く見える一方、地上実験室では見えにくいと述べた。</p>
+        <ol class="parts">
+          <li>禁制線が地上の高密度環境で見えにくい理由を、衝突脱励起と自発放出の競合から述べよ。</li>
+          <li>極低密度の星雲（$n_e\sim10^2$–$10^4$ cm$^{-3}$）でなぜ自発放出が間に合うのか。臨界密度の概念に触れて述べよ。</li>
+          <li>「禁制線が出ている」という観測事実が、その天体について何を語るか一言で述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/19-where-lines.html#sec-where-lines-emission" target="_blank" rel="noopener">§19.3 星雲の輝線</a> ／
+        選択則と禁制線の次数は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/21-atomic-physics.html#sec-atomic-selection-rules" target="_blank" rel="noopener">§21.5</a>（演習 21-3）、密度診断は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/23-line-applications.html#sec-line-applications-diagnostics" target="_blank" rel="noopener">§23.3</a>（演習 23-2）。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 禁制線の上準位は自発放出率 $A_{ul}$ が極端に小さい（長寿命）。高密度では、上準位の原子が自発放出で光子を出す前に、他粒子との衝突で脱励起されてしまう（衝突脱励起）。その結果、線として放出されず見えない。</p>
+          <p><b>(2)</b> 衝突脱励起率は密度 $n_e$ に比例。自発放出率 $A_{ul}$ と衝突脱励起率が拮抗する密度が<b>臨界密度</b> $n_{\rm crit}\sim A_{ul}/\langle\sigma v\rangle$。星雲は $n_e$ が臨界密度より低いので、衝突より先に自発放出が起こり、禁制線が放出される。</p>
+          <p><b>(3)</b> 禁制線が観測される＝その天体の密度が臨界密度より低い、すなわち<b>極低密度環境である</b>ことの直接の証拠。地上では実現できない希薄さの指標になる。</p>
+          <div class="ans"><b>答え：</b> 高密度では衝突脱励起が自発放出に勝ち禁制線が潰れる。星雲は臨界密度以下で自発放出が間に合う。禁制線の存在＝低密度の証拠。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 19-3 -->
+    <div class="problem">
+      <div class="top"><span class="pid">19-3</span><span class="ptitle">AGN 広線からブラックホール質量</span><span class="diff">☆☆</span><span class="tag deepen">理解を深める</span></div>
+      <div class="body">
+        <p>§19.6 は AGN の広線幅から中心ブラックホール質量が測れると述べた（reverberation mapping）。広線領域（BLR）の運動をケプラー回転（ビリアル）とみなす：$M_{\rm BH}\simeq\dfrac{v^2 R}{G}$。</p>
+        <ol class="parts">
+          <li>広線の FWHM から速度 $v$ を、reverberation mapping から BLR 半径 $R$ を得る手順を一言で述べよ。</li>
+          <li>$v=5000$ km/s、$R=20$ 光日として $M_{\rm BH}$ を太陽質量単位で概算せよ（1 光日 $=2.59\times10^{13}$ m、$G=6.67\times10^{-11}$、$M_\odot=1.99\times10^{30}$ kg）。</li>
+          <li>狭線（FWHM $\sim$ 数百 km/s）は同じ手法で中心質量を測れない。なぜか述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/19-where-lines.html#sec-where-lines-agn" target="_blank" rel="noopener">§19.6 AGN・クェーサーの線</a> ／
+        ブラックホール近傍の相対論的効果は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/18-accretion-high-energy.html#sec-black-hole-effects" target="_blank" rel="noopener">§18.5</a>（<a href="演習問題_第VI部_現実の宇宙へ.html">第VI部 演習</a>）、線幅は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/22-line-shape.html#sec-line-shape-macro" target="_blank" rel="noopener">§22.5</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 広線の FWHM（ドップラー幅）から BLR ガスの速度分散 $v$ を得る。reverberation mapping は連続光の変動と広線の変動の時間遅れ $\Delta t$ から $R=c\,\Delta t$（光路差）で BLR 半径を測る。両者を $M=v^2R/G$ に入れる。</p>
+          <p><b>(2)</b> $v=5\times10^6$ m/s、$R=20\times2.59\times10^{13}=5.18\times10^{14}$ m。$M=\dfrac{(5\times10^6)^2\times5.18\times10^{14}}{6.67\times10^{-11}}=\dfrac{2.5\times10^{13}\times5.18\times10^{14}}{6.67\times10^{-11}}=\dfrac{1.30\times10^{28}}{6.67\times10^{-11}}=1.94\times10^{38}$ kg。太陽質量で $1.94\times10^{38}/1.99\times10^{30}\simeq9.7\times10^7\ M_\odot$（約 $10^8\ M_\odot$）。</p>
+          <p><b>(3)</b> 狭線領域（NLR）は中心から $\sim100$–$1000$ pc も外側にあり、その速度はホスト銀河スケールの運動（中心ブラックホールの重力が支配しない）を反映する。よって NLR 速度に $M=v^2R/G$ を当てても中心ブラックホール質量にはならない。中心質量を測るには中心近傍の BLR が必要。</p>
+          <div class="ans"><b>答え：</b> FWHM→$v$、時間遅れ→$R=c\Delta t$。$M_{\rm BH}\simeq10^8\,M_\odot$。狭線は中心重力圏外なので使えない。</div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <hr class="soft">
+
+  <!-- ================= CHAPTER 20 ================= -->
+  <section class="chapter" id="ch20">
+    <div class="chapter-head">
+      <span class="cnum">第20章</span>
+      <h2>線形成 ― 吸収線と輝線の物理</h2>
+      <a class="src" href="https://wadakeiichi.github.io/inverse_text_radiation/part7/20-line-formation.html" target="_blank" rel="noopener">本文を開く ↗</a>
+    </div>
+    <p class="chapter-overview">Einstein 係数による線吸収、線源泉関数 $S_\nu=B_\nu(T_{\rm ex})$、誘導放出補正と準位反転、等価幅と curve of growth。連続側の第5章の線スペクトル版。</p>
+
+    <!-- 20-1 -->
+    <div class="problem">
+      <div class="top"><span class="pid">20-1</span><span class="ptitle">線源泉関数が $B_\nu(T_{\rm ex})$ になる</span><span class="diff">☆☆</span><span class="tag deriv">導出補完</span></div>
+      <div class="body">
+        <p>§20.3 は線源泉関数を励起温度 $T_{\rm ex}$ のプランク関数に書き換えた。導出を埋める。$S_\nu^{\rm line}=\dfrac{A_{ul}n_u}{B_{lu}n_l-B_{ul}n_u}$、Einstein 関係 $A_{ul}/B_{ul}=2h\nu_0^3/c^2$、$g_lB_{lu}=g_uB_{ul}$。</p>
+        <ol class="parts">
+          <li>Einstein 関係を使って $S_\nu^{\rm line}=\dfrac{2h\nu_0^3/c^2}{(g_un_l)/(g_ln_u)-1}$ を導け。</li>
+          <li>励起温度を $\dfrac{g_un_l}{g_ln_u}=e^{h\nu_0/k_BT_{\rm ex}}$ で定義し、$S_\nu^{\rm line}=B_{\nu_0}(T_{\rm ex})$ を示せ。</li>
+          <li>$T_{\rm ex}$ が物理的なキネティック温度と一致するのはどんな条件か（LTE）。一致しない場合（non-LTE）に $S_\nu$ がプランク関数でなくなるわけではない理由を述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/20-line-formation.html#sec-line-source-function" target="_blank" rel="noopener">§20.3 線源泉関数</a> ／
+        Einstein 関係の導出は <a href="演習問題_第IV部_量子論へ.html">第IV部 演習 11-1</a>、ソース関数の基礎は <a href="演習問題_第II部_放射の記述と輸送.html">第II部 演習 5-5</a>、LTE は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/20-line-formation.html#sec-LTE-line-formation" target="_blank" rel="noopener">§20.4</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 分子分母を $B_{ul}n_u$ で割る。$g_lB_{lu}=g_uB_{ul}$ より $B_{lu}=(g_u/g_l)B_{ul}$：</p>
+          $$S_\nu^{\rm line}=\frac{A_{ul}n_u}{B_{lu}n_l-B_{ul}n_u}=\frac{A_{ul}/B_{ul}}{\dfrac{B_{lu}n_l}{B_{ul}n_u}-1}=\frac{2h\nu_0^3/c^2}{\dfrac{g_un_l}{g_ln_u}-1}.$$
+          <p><b>(2)</b> $\dfrac{g_un_l}{g_ln_u}=e^{h\nu_0/k_BT_{\rm ex}}$ を代入すると分母が $e^{h\nu_0/k_BT_{\rm ex}}-1$ となり</p>
+          $$S_\nu^{\rm line}=\frac{2h\nu_0^3/c^2}{e^{h\nu_0/k_BT_{\rm ex}}-1}=B_{\nu_0}(T_{\rm ex}).$$
+          <p><b>(3)</b> 占有数が局所キネティック温度 $T_{\rm kin}$ の Boltzmann 分布で書ける（LTE）とき $T_{\rm ex}=T_{\rm kin}$。non-LTE では占有数が Boltzmann から外れて $T_{\rm ex}\ne T_{\rm kin}$ になるが、$T_{\rm ex}$ を「占有比を Boltzmann 形で書いたときの温度」と<b>定義</b>する限り、$S_\nu=B_\nu(T_{\rm ex})$ は形式的に常に成り立つ。ただし $T_{\rm ex}$ は物理温度を反映しない。</p>
+          <div class="ans"><b>答え：</b> $S_\nu^{\rm line}=\dfrac{2h\nu_0^3/c^2}{(g_un_l)/(g_ln_u)-1}=B_{\nu_0}(T_{\rm ex})$。LTE で $T_{\rm ex}=T_{\rm kin}$、non-LTE でも定義上 $B_\nu(T_{\rm ex})$ の形は保たれる。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 20-2 -->
+    <div class="problem">
+      <div class="top"><span class="pid">20-2</span><span class="ptitle">誘導放出補正と準位反転（メーザー）</span><span class="diff">☆☆</span><span class="tag deriv">導出補完</span></div>
+      <div class="body">
+        <p>§20.2 の線吸収係数 $\alpha_\nu=\dfrac{h\nu_0}{4\pi}n_lB_{lu}\phi\left[1-\dfrac{g_ln_u}{g_un_l}\right]$ の誘導放出補正 $[1-g_ln_u/(g_un_l)]$ を読み解く。</p>
+        <ol class="parts">
+          <li>補正項がゼロになる条件（$n_u/g_u=n_l/g_l$）の物理的意味を述べよ。</li>
+          <li>補正項が負になる条件（$n_u/g_u\gt n_l/g_l$）を求め、そのとき $\alpha_\nu\lt 0$（負の吸収＝増幅）になることを示せ。これが何の現象か。</li>
+          <li>宇宙メーザー（H$_2$O 22 GHz、OH 1.6 GHz）が観測されることから、何が逆引きできるか述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/20-line-formation.html#sec-line-three-processes" target="_blank" rel="noopener">§20.2 線の三つの素過程</a> ／
+        誘導放出は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/11-einstein-method.html#sec-einstein-method-three-processes" target="_blank" rel="noopener">§11.2</a>、自発/誘導放出の比は <a href="演習問題_第IV部_量子論へ.html">第IV部 演習 11-2</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $\dfrac{g_ln_u}{g_un_l}=1$ すなわち $\dfrac{n_u}{g_u}=\dfrac{n_l}{g_l}$ で補正がゼロ。上下準位の縮重度あたりの占有が等しく、誘導放出が誘導吸収を完全に打ち消す。「これ以上正味で吸収できない」状態。</p>
+          <p><b>(2)</b> $\dfrac{g_ln_u}{g_un_l}\gt 1$ すなわち $\dfrac{n_u}{g_u}\gt \dfrac{n_l}{g_l}$（<b>準位反転</b>）のとき補正項が負になり $\alpha_\nu\lt 0$。負の吸収係数は、光が媒質を通るほど強められる＝<b>増幅</b>。これがメーザー／レーザーの原理。</p>
+          <p><b>(3)</b> 宇宙メーザーが見える＝準位反転 $n_u/g_u\gt n_l/g_l$ が実現している＝熱平衡では起こらない<b>非平衡なポンプ機構</b>（衝突ポンプ・放射ポンプ）が働いていることが逆引きできる。星形成領域・恒星質量放出・銀河中心の特殊な物理環境を示す。</p>
+          <div class="ans"><b>答え：</b> 補正ゼロ＝占有が等しい。負＝準位反転（$n_u/g_u\gt n_l/g_l$）→$\alpha_\nu\lt 0$＝増幅＝メーザー。観測は非平衡ポンプ機構の証拠。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 20-3 -->
+    <div class="problem">
+      <div class="top"><span class="pid">20-3</span><span class="ptitle">等価幅と curve of growth の三領域</span><span class="diff">☆☆</span><span class="tag deepen">理解を深める</span></div>
+      <div class="body">
+        <p>§20.1・20.6 の等価幅 $W_\lambda=\int\frac{I_c-I_\lambda}{I_c}d\lambda$ と curve of growth を読む。</p>
+        <ol class="parts">
+          <li>等価幅が「線の輪郭の詳細によらない積分量」である利点を述べよ。浅く広い線と深く狭い線が同じ $W$ になりうる理由は。</li>
+          <li>curve of growth の三領域（線形 $W\propto N$、飽和 $W\propto\sqrt{\ln N}$、減衰翼 $W\propto\sqrt{N}$）が、それぞれ光学的深さ $\tau$ のどんな状態に対応するか述べよ。</li>
+          <li>飽和領域の線から柱密度 $N$ を精度よく決めるのが難しい理由を述べよ。組成解析で複数の強さの線を使う理由と結びつけよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/20-line-formation.html#sec-line-equivalent-width" target="_blank" rel="noopener">§20.1 等価幅</a>、
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/20-line-formation.html#sec-curve-of-growth" target="_blank" rel="noopener">§20.6 curve of growth</a> ／
+        組成解析は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/23-line-applications.html#sec-line-applications-abundance" target="_blank" rel="noopener">§23.2</a>、減衰翼は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/22-line-shape.html#sec-line-shape-natural" target="_blank" rel="noopener">§22.1</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 等価幅は「線が連続光から引き抜いた光の総量」を波長幅で表した積分量で、装置の分解能で輪郭がぼやけても保存される。同じ総吸収量なら、浅く広い線も深く狭い線も面積が等しく同じ $W$ になる。観測しやすく理論と比べやすい。</p>
+          <p><b>(2)</b> 線形領域：$\tau\lt 1$（光学的に薄い）、吸収量が柱密度に比例 $W\propto N$。飽和領域：線芯 $\tau\gg1$（完全に黒）で中心はこれ以上吸収できず、$W$ は $\sqrt{\ln N}$ でしか増えない。減衰翼領域：Lorentz 翼（自然幅・衝突幅）が支配し $W\propto\sqrt{N}$。</p>
+          <p><b>(3)</b> 飽和領域では $W$ が $N$ にほとんど鈍感（$\sqrt{\ln N}$）なので、$W$ の小さな測定誤差が $N$ の大きな誤差になる。だから組成解析では弱い線（線形領域）・中間・強い線（減衰翼）を組み合わせ、curve of growth 全体を観測点で押さえて $N$ を精度よく決める。</p>
+          <div class="ans"><b>答え：</b> $W$ は輪郭によらぬ積分量。線形($\tau\lt 1$)→飽和($\tau\gg1$)→減衰翼。飽和域は $N$ に鈍感ゆえ複数の強さの線が必要。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 20-4 -->
+    <div class="problem">
+      <div class="top"><span class="pid">20-4</span><span class="ptitle">LTE で吸収線になる条件 ― 温度勾配と背景光</span><span class="diff">☆☆</span><span class="tag deepen">理解を深める</span></div>
+      <div class="body">
+        <p>§20.4 は線が吸収か輝線かが温度構造と背景光で決まると述べた。LTE（$S_\nu=B_\nu(T)$）で考える。</p>
+        <ol class="parts">
+          <li>恒星大気のように温度が深さとともに上がる場合、線中心と連続光がそれぞれどの深さ（温度）を見ているか述べ、なぜ吸収線になるか説明せよ。</li>
+          <li>彩層・コロナのように温度が外側で上がる、あるいは背景連続光がないガス雲では、なぜ輝線になるか述べよ。</li>
+          <li>線の Eddington-Barbier（線で $\tau_\nu=2/3$ になる層の $B_\nu$）が、線中心と連続でなぜ違う温度を与えるか、線中心の方が $\alpha_\nu$ が大きいことと結びつけて述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/20-line-formation.html#sec-LTE-line-formation" target="_blank" rel="noopener">§20.4 LTE 線形成</a> ／
+        吸収線か輝線かは <a href="演習問題_第II部_放射の記述と輸送.html">第II部 演習 5-3</a>、Eddington-Barbier は <a href="演習問題_第VI部_現実の宇宙へ.html">第VI部 演習 15-1</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 線中心は $\alpha_\nu$ が大きく光学的厚さがすぐ1に達するので<b>浅い（外側＝低温）層</b>を見る。連続光は $\alpha_\nu$ が小さく<b>深い（高温）層</b>まで見通せる。LTE で $S_\nu=B_\nu(T)$ ゆえ、線中心は低温のプランク関数値（暗い）、連続は高温（明るい）。差し引き線中心が連続より暗く＝吸収線。</p>
+          <p><b>(2)</b> 温度が外側で上がる（彩層・コロナ）と、線中心が見る浅い層の方が高温になり、線中心が連続より明るく＝輝線。あるいは背景連続光がないガス雲では、ガス自身の放出 $\tau S_\nu$ だけが見え、線中心で強い輝線になる。</p>
+          <p><b>(3)</b> Eddington-Barbier 近似では、各振動数で $\tau_\nu=2/3$ になる層の $B_\nu(T)$ が出てくる。線中心は $\alpha_\nu$ が大きいので $\tau_\nu=2/3$ に達する幾何的深さが浅い（連続より外側＝別の温度の層）。よって線中心と連続が異なる温度を映し、温度勾配の向きで吸収/輝線が決まる。</p>
+          <div class="ans"><b>答え：</b> 線中心＝浅い層（$\alpha_\nu$ 大）、連続＝深い層。温度が深さで上がれば吸収線、外側で上がる/背景光なしなら輝線。Eddington-Barbier で別温度を映す。</div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <hr class="soft">
+
+  <!-- ================= CHAPTER 21 ================= -->
+  <section class="chapter" id="ch21">
+    <div class="chapter-head">
+      <span class="cnum">第21章</span>
+      <h2>線スペクトルから原子物理へ</h2>
+      <a class="src" href="https://wadakeiichi.github.io/inverse_text_radiation/part7/21-atomic-physics.html" target="_blank" rel="noopener">本文を開く ↗</a>
+    </div>
+    <p class="chapter-overview">Rydberg 公式と Bohr/Schrödinger、振動子強度 $f_{lu}$ と遷移行列要素、$\pi e^2/m_ec$ の古典 Lorentz 振動子起源、選択則と禁制線。線振動数 $\nu_0$ と $f_{lu}$ の逆引き。</p>
+
+    <!-- 21-1 -->
+    <div class="problem">
+      <div class="top"><span class="pid">21-1</span><span class="ptitle">Rydberg 公式と H$\alpha$ の波長</span><span class="diff">☆☆</span><span class="tag deriv">導出補完</span></div>
+      <div class="body">
+        <p>§21.1・21.2 の Rydberg 公式 $\dfrac{1}{\lambda}=R_H\left(\dfrac{1}{n_l^2}-\dfrac{1}{n_u^2}\right)$、$R_H=1.097\times10^7$ m$^{-1}$、Bohr エネルギー $E_n=-13.6/n^2$ eV。</p>
+        <ol class="parts">
+          <li>$h\nu=E_u-E_l$ から Rydberg 公式の形が出ることを示せ。</li>
+          <li>Balmer 系列の H$\alpha$（$n_l=2\to n_u=3$）の波長を計算し、656 nm を確かめよ。</li>
+          <li>Lyman 系列の系列極限（$n_u\to\infty$、$n_l=1$）の波長を求め、これが水素の電離エネルギー 13.6 eV に対応することを確かめよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/21-atomic-physics.html#sec-atomic-rydberg" target="_blank" rel="noopener">§21.1 Rydberg 公式</a>、
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/21-atomic-physics.html#sec-atomic-bohr" target="_blank" rel="noopener">§21.2 Bohr 模型</a> ／
+        準位の量子力学的起源は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/12-quantum-foundations.html#sec-quantum-foundations-states" target="_blank" rel="noopener">§12.1</a>、Boltzmann 占有は <a href="演習問題_第III部_熱力学統計力学へ.html">第III部 演習 7-4</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $h\nu=E_u-E_l=-\dfrac{13.6}{n_u^2}-\left(-\dfrac{13.6}{n_l^2}\right)=13.6\,\text{eV}\left(\dfrac{1}{n_l^2}-\dfrac{1}{n_u^2}\right)$。$\nu=c/\lambda$ より $\dfrac{1}{\lambda}=\dfrac{13.6\,\text{eV}}{hc}\left(\dfrac{1}{n_l^2}-\dfrac{1}{n_u^2}\right)=R_H\left(\dfrac{1}{n_l^2}-\dfrac{1}{n_u^2}\right)$。</p>
+          <p><b>(2)</b> $\dfrac{1}{\lambda}=1.097\times10^7\left(\dfrac14-\dfrac19\right)=1.097\times10^7\times0.1389=1.524\times10^6$ m$^{-1}$。$\lambda=6.56\times10^{-7}$ m $=656$ nm。✓（太陽 Fraunhofer C 線）</p>
+          <p><b>(3)</b> $n_u\to\infty$、$n_l=1$：$\dfrac{1}{\lambda}=R_H\times1=1.097\times10^7$ m$^{-1}$、$\lambda=91.2$ nm。対応エネルギー $E=hc/\lambda=1.986\times10^{-25}/9.12\times10^{-8}=2.18\times10^{-18}$ J $=13.6$ eV。これは基底状態（$n=1$）からの電離エネルギーに一致。</p>
+          <div class="ans"><b>答え：</b> $h\nu=E_u-E_l$ から Rydberg 公式。H$\alpha$＝656 nm。Lyman 極限 91.2 nm＝13.6 eV（電離エネルギー）。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 21-2 -->
+    <div class="problem">
+      <div class="top"><span class="pid">21-2</span><span class="ptitle">Einstein 係数と振動子強度の換算</span><span class="diff">☆☆</span><span class="tag deriv">導出補完</span></div>
+      <div class="body">
+        <p>§21.4b は中心地図の前因子 $\pi e^2/m_ec$ と Einstein 係数を結ぶ換算を与えた。導出を埋める。中心地図 $\alpha_\nu=\dfrac{\pi e^2}{m_ec}f_{lu}n_l\phi$ と Einstein 形 $\alpha_\nu=\dfrac{h\nu_0}{4\pi}n_lB_{lu}\phi$（誘導放出補正を当面無視）。</p>
+        <p><b>単位系の注意：</b>本問は前因子を $\pi e^2/m_ec$ と書く<b>Gauss/CGS 規約</b>で進める。SI では $\dfrac{\pi e^2}{m_ec}\to\dfrac{\pi e^2}{4\pi\epsilon_0\,m_ec}=\dfrac{e^2}{4\epsilon_0 m_ec}$ と $4\pi\epsilon_0$ が露わに入り、以下の $B_{lu}$・$A_{ul}$ の係数も対応して変わる（付録 B.4 の SI 統一方針）。ここでは現行本文に合わせ CGS で扱う。</p>
+        <ol class="parts">
+          <li>両式を等置して $B_{lu}=\dfrac{4\pi^2e^2}{m_ec\,h\nu_0}f_{lu}$（$J_\nu$ 規約）を導け。</li>
+          <li>Einstein 関係 $A_{ul}=\dfrac{2h\nu_0^3}{c^2}B_{ul}=\dfrac{2h\nu_0^3}{c^2}\dfrac{g_l}{g_u}B_{lu}$ と組合せ、$A_{ul}=\dfrac{8\pi^2e^2\nu_0^2}{m_ec^3}\dfrac{g_l}{g_u}f_{lu}$ を導け。</li>
+          <li>$\pi e^2/m_ec$ が「古典 Lorentz 振動子の積分吸収断面積」であり、$f_{lu}$ がその量子論的補正（Thomas-Reiche-Kuhn 和則 $\sum_u f_{lu}=N_{\rm electrons}$）であることの意味を一言で述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/21-atomic-physics.html#sec-atomic-lorentz-prefactor" target="_blank" rel="noopener">§21.4b 前因子の逆引き</a>、
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/21-atomic-physics.html#sec-atomic-oscillator-strength" target="_blank" rel="noopener">§21.4 振動子強度</a> ／
+        Einstein 関係は <a href="演習問題_第IV部_量子論へ.html">第IV部 演習 11-1</a>、QED からの $A_{ul}$ は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part8/25-qed-minimum.html#sec-qed-minimum-spontaneous" target="_blank" rel="noopener">§25.2</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 両式の $n_l\phi$ を消して係数を等置：$\dfrac{\pi e^2}{m_ec}f_{lu}=\dfrac{h\nu_0}{4\pi}B_{lu}$。$B_{lu}$ について解く：</p>
+          $$B_{lu}=\frac{4\pi}{h\nu_0}\cdot\frac{\pi e^2}{m_ec}f_{lu}=\frac{4\pi^2e^2}{m_ec\,h\nu_0}f_{lu}.$$
+          <p><b>(2)</b> $B_{ul}=(g_l/g_u)B_{lu}$ を $A_{ul}=\dfrac{2h\nu_0^3}{c^2}B_{ul}$ に代入：</p>
+          $$A_{ul}=\frac{2h\nu_0^3}{c^2}\frac{g_l}{g_u}\frac{4\pi^2e^2}{m_ec\,h\nu_0}f_{lu}=\frac{8\pi^2e^2\nu_0^2}{m_ec^3}\frac{g_l}{g_u}f_{lu}.$$
+          <p>（$h$ が消え、$\nu_0^3/\nu_0=\nu_0^2$。）</p>
+          <p><b>(3)</b> $\pi e^2/m_ec$ は古典の減衰調和振動子（Lorentz 振動子）が与える振動数積分吸収断面積で、減衰率にもピーク位置にもよらない普遍量。実際の原子はこれに無次元の量子補正 $f_{lu}$ を掛けたもので、全遷移の和 $\sum_u f_{lu}=N_{\rm electrons}$（TRK 和則）が「すべて足すと古典総吸収量に戻る」ことを保証する。古典-量子の橋。</p>
+          <div class="ans"><b>答え：</b> $B_{lu}=\dfrac{4\pi^2e^2}{m_ech\nu_0}f_{lu}$、$A_{ul}=\dfrac{8\pi^2e^2\nu_0^2}{m_ec^3}\dfrac{g_l}{g_u}f_{lu}$。$\pi e^2/m_ec$＝古典積分断面積、$f_{lu}$＝量子補正（TRK 和則）。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 21-3 -->
+    <div class="problem">
+      <div class="top"><span class="pid">21-3</span><span class="ptitle">選択則と禁制線の次数</span><span class="diff">☆☆</span><span class="tag deepen">理解を深める</span></div>
+      <div class="body">
+        <p>§21.5 の電気双極子選択則 $\Delta l=\pm1$、$\Delta m=0,\pm1$ と禁制遷移を読む。</p>
+        <ol class="parts">
+          <li>電気双極子（E1）選択則を満たさない遷移が「禁制」と呼ばれる理由を、遷移行列要素 $\langle u|\mathbf r|l\rangle$ の観点から述べよ。</li>
+          <li>磁気双極子（M1）・電気四重極（E2）遷移の強度が E1 の約 $\alpha^2\sim10^{-4}$ 倍であること（$\alpha\simeq1/137$）を確かめ、$\alpha^2$ がどこから来るか一言で述べよ。</li>
+          <li>禁制線が地上では見えにくいのに星間で見える理由を、演習 19-2 と結びつけて述べよ。21 cm 線が M1 禁制遷移であることにも触れよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/21-atomic-physics.html#sec-atomic-selection-rules" target="_blank" rel="noopener">§21.5 選択則と禁制線</a> ／
+        QED からの選択則は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part8/25-qed-minimum.html#sec-qed-minimum-selection" target="_blank" rel="noopener">§25.5</a>、禁制線と低密度は演習 19-2、密度診断は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/23-line-applications.html#sec-line-applications-diagnostics" target="_blank" rel="noopener">§23.3</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> E1 遷移強度は電気双極子行列要素 $\langle u|\mathbf r|l\rangle$ で決まる。パリティと角運動量の保存から、$\Delta l=\pm1$ 等を満たさない遷移ではこの行列要素がゼロになり、最低次（E1）では遷移が起こらない。これが「禁制」。</p>
+          <p><b>(2)</b> M1・E2 は次数が一つ高い過程で、典型的に振幅が微細構造定数 $\alpha$ 程度小さく、強度（振幅の2乗）が $\alpha^2\simeq(1/137)^2\simeq5.3\times10^{-5}\sim10^{-4}$ 倍。$\alpha$ は電磁相互作用の結合定数で、より高次の多重極展開の各段で $\alpha$ のべきが効く。<b>ただしこれは典型的な原子スケールでの目安にすぎない。</b>実際の禁制線の $A_{ul}$ は遷移エネルギー・選択則・行列要素・衝突環境で桁単位に変わるので、「禁制線はだいたい $10^{-4}$ 倍」と一律に覚えてはいけない。星雲線では臨界密度（演習 19-2, 23-2）とセットで強度を評価する。</p>
+          <p><b>(3)</b> 禁制線は $A_{ul}$ が極端に小さく長寿命。地上の高密度では自発放出より衝突脱励起が先に起こり消える（演習 19-2）。星間の極低密度では衝突が稀で自発放出が間に合い観測できる。21 cm 線は水素基底状態の超微細構造の M1 禁制遷移で、$A_{ul}\sim10^{-15}$ s$^{-1}$ と極小だが膨大な中性水素のおかげで観測される。</p>
+          <div class="ans"><b>答え：</b> E1 選択則違反＝行列要素ゼロ＝禁制。M1/E2 は $\alpha^2\sim10^{-4}$ 倍（あくまで典型的目安で、実際の $A_{ul}$ は遷移ごとに大きく異なる）。低密度の星間でのみ観測（21 cm も M1 禁制）。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 21-4 -->
+    <div class="problem">
+      <div class="top"><span class="pid">21-4</span><span class="ptitle">なぜ Bohr 模型では線強度が出ないか</span><span class="diff">☆</span><span class="tag deepen">理解を深める</span></div>
+      <div class="body">
+        <p>§21.2・21.3 は Bohr 模型と Schrödinger 方程式が同じエネルギーを与えるのに、後者が「正しい」量子力学だと述べた。</p>
+        <ol class="parts">
+          <li>Bohr 模型と Schrödinger 方程式が一致する点（エネルギー準位）と、異なる点（波動関数・縮退・角運動量）を述べよ。</li>
+          <li>振動子強度 $f_{lu}\propto|\langle u|\mathbf r|l\rangle|^2$ がなぜ Bohr 模型では計算できないか述べよ。</li>
+          <li>観測される線の<b>振動数</b>は Bohr 模型で説明できるが、線の<b>強度</b>には Schrödinger 方程式（波動関数）が必要、という構図を、中心地図 $\alpha_\nu$ の $\nu_0$ と $f_{lu}$ に対応づけて述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/21-atomic-physics.html#sec-atomic-schrodinger" target="_blank" rel="noopener">§21.3 Schrödinger 方程式</a> ／
+        固有値問題は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/12-quantum-foundations.html#sec-quantum-foundations-states" target="_blank" rel="noopener">§12.1</a>、振動子強度の換算は演習 21-2。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 一致：エネルギー準位 $E_n=-13.6/n^2$ eV（線振動数を正しく与える）。異なる：Bohr は電子を許される軌道上に「正確に」置く描像で波動関数を持たず、角運動量を $L=n\hbar$ とする（Schrödinger は $L^2=l(l+1)\hbar^2$）。Schrödinger は同じ $n$ で $l,m$ の異なる縮退状態と、空間に広がる存在確率分布（波動関数）を持つ。</p>
+          <p><b>(2)</b> $f_{lu}$ は上下準位の波動関数の重なり $\langle u|\mathbf r|l\rangle=\int\psi_u^*\,\mathbf r\,\psi_l\,d^3r$ から計算される。Bohr 模型は波動関数を持たないので、この積分を実行できず $f_{lu}$ を予言できない。</p>
+          <p><b>(3)</b> 中心地図 $\alpha_\nu=(\pi e^2/m_ec)f_{lu}n_l\phi(\nu-\nu_0)$ で、$\nu_0$（線振動数＝準位差）は Bohr 模型でも出るが、$f_{lu}$（線強度を決める振動子強度）は波動関数の行列要素ゆえ Schrödinger 方程式が要る。線の「位置」と「強さ」で必要な理論の深さが違う。</p>
+          <div class="ans"><b>答え：</b> エネルギー（$\nu_0$）は一致するが、Bohr は波動関数を持たず $f_{lu}=|\langle u|\mathbf r|l\rangle|^2$ を計算できない。線強度には Schrödinger が必要。</div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <hr class="soft">
+
+  <!-- ================= CHAPTER 22 ================= -->
+  <section class="chapter" id="ch22">
+    <div class="chapter-head">
+      <span class="cnum">第22章</span>
+      <h2>線形（line shape）の物理</h2>
+      <a class="src" href="https://wadakeiichi.github.io/inverse_text_radiation/part7/22-line-shape.html" target="_blank" rel="noopener">本文を開く ↗</a>
+    </div>
+    <p class="chapter-overview">自然幅（Lorentzian）、Doppler 幅（Gaussian）、衝突幅、Voigt プロファイル、マクロ速度場と Zeeman。中心地図の線形関数 $\phi(\nu-\nu_0)$ から温度・密度・速度・磁場を逆引きする。</p>
+
+    <!-- 22-1 -->
+    <div class="problem">
+      <div class="top"><span class="pid">22-1</span><span class="ptitle">Doppler 幅 ― 熱運動の Gaussian</span><span class="diff">☆☆</span><span class="tag deriv">導出補完</span></div>
+      <div class="body">
+        <p>§22.2 の Doppler 幅 $\Delta\nu_D=\dfrac{\nu_0}{c}\sqrt{\dfrac{2k_BT}{m}}$。HII 領域（$T=10^4$ K）の水素 H$\alpha$ について。</p>
+        <ol class="parts">
+          <li>速度の標準偏差に相当する $\Delta v_D=\sqrt{2k_BT/m_p}$ を km/s で求めよ（$m_p=1.67\times10^{-27}$ kg）。</li>
+          <li>FWHM $=2\sqrt{\ln2}\,\Delta v_D$ を求めよ。</li>
+          <li>同じ温度の鉄（$m=56\,m_p$）の Doppler 幅は水素の何倍か。観測線幅の元素質量依存性から熱的拡がりと他の拡がりをどう区別できるか述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/22-line-shape.html#sec-line-shape-doppler" target="_blank" rel="noopener">§22.2 Doppler 拡がり</a> ／
+        Maxwell 分布は <a href="演習問題_第III部_熱力学統計力学へ.html">第III部 演習</a>、マクロ速度場は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/22-line-shape.html#sec-line-shape-macro" target="_blank" rel="noopener">§22.5</a>（演習 22-4）。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $\Delta v_D=\sqrt{2k_BT/m_p}=\sqrt{2\times1.381\times10^{-23}\times10^4/1.67\times10^{-27}}=\sqrt{1.654\times10^8}=1.29\times10^4$ m/s $=12.9$ km/s。</p>
+          <p><b>(2)</b> FWHM $=2\sqrt{\ln2}\times12.9=2\times0.833\times12.9=21.4$ km/s。</p>
+          <p><b>(3)</b> $\Delta\nu_D\propto1/\sqrt{m}$ ゆえ鉄は $\sqrt{56}\simeq7.5$ 倍狭い。観測で「重い元素の線ほど狭い」なら熱的拡がりが支配（質量依存）。一方、乱流・自転などマクロ速度場は元素質量に依らないので、異なる質量の元素の線幅を比べると、熱的成分と非熱的（質量無依存）成分を分離できる。</p>
+          <div class="ans"><b>答え：</b> $\Delta v_D=12.9$ km/s、FWHM $=21.4$ km/s。鉄は $\sqrt{56}\simeq7.5$ 倍狭い。質量依存性で熱的と乱流を分離。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 22-2 -->
+    <div class="problem">
+      <div class="top"><span class="pid">22-2</span><span class="ptitle">自然幅 ― 寿命から Lorentzian</span><span class="diff">☆☆</span><span class="tag deriv">導出補完</span></div>
+      <div class="body">
+        <p>§22.1 の自然幅。励起寿命 $\tau_u=1/A_{ul}$、振動数単位の自然幅 $\gamma_{\rm nat}=A_{ul}/(2\pi)$。Ly$\alpha$（$\lambda=121.6$ nm、$A_{ul}=6.27\times10^8$ s$^{-1}$）について。</p>
+        <ol class="parts">
+          <li>励起寿命 $\tau_u$ と自然幅 $\gamma_{\rm nat}$（Hz）を求めよ。</li>
+          <li>波長単位の自然幅 $\Delta\lambda_{\rm nat}=\dfrac{\lambda^2 A_{ul}}{2\pi c}$ を Å 単位で求め、$4.9\times10^{-5}$ Å を確かめよ。</li>
+          <li>自然幅 Lorentzian の「翼」が $1/(\Delta\nu)^2$ でべき的に伸びることが、QSO の damped Ly$\alpha$ 系の減衰翼として観測される。なぜ自然幅は線中心より翼で重要なのか述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/22-line-shape.html#sec-line-shape-natural" target="_blank" rel="noopener">§22.1 自然幅</a> ／
+        $A_{ul}$ と自然幅は <a href="演習問題_第IV部_量子論へ.html">第IV部 演習 11-4</a>、真空揺らぎとの関係は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part8/25-qed-minimum.html#sec-qed-minimum-natural-width" target="_blank" rel="noopener">§25.4</a>（<a href="演習問題_第VIII部_QEDからの俯瞰.html">第VIII部 演習</a>）。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $\tau_u=1/A_{ul}=1/(6.27\times10^8)=1.6\times10^{-9}$ s（1.6 ns）。$\gamma_{\rm nat}=A_{ul}/(2\pi)=6.27\times10^8/6.283=9.98\times10^7\simeq10^8$ Hz。</p>
+          <p><b>(2)</b> $\Delta\lambda_{\rm nat}=\dfrac{\lambda^2 A_{ul}}{2\pi c}=\dfrac{(1.216\times10^{-7})^2\times6.27\times10^8}{2\pi\times3\times10^8}=\dfrac{1.479\times10^{-14}\times6.27\times10^8}{1.885\times10^9}=\dfrac{9.27\times10^{-6}}{1.885\times10^9}=4.9\times10^{-15}$ m $=4.9\times10^{-5}$ Å。✓</p>
+          <p><b>(3)</b> 線中心は Doppler の Gaussian コアが支配し（指数減衰で狭い）、自然幅 Lorentzian は埋もれる。しかし Lorentzian の翼は $1/(\Delta\nu)^2$ でべき的に緩く伸びるため、中心から十分離れた翼では Gaussian（$e^{-(\Delta\nu)^2}$）が先に消えて Lorentzian が浮かび上がる。よって自然幅は線翼（damping wing）で重要。</p>
+          <div class="ans"><b>答え：</b> $\tau_u=1.6$ ns、$\gamma_{\rm nat}\simeq10^8$ Hz、$\Delta\lambda_{\rm nat}=4.9\times10^{-5}$ Å。Lorentzian 翼が $1/\Delta\nu^2$ で伸びるため翼で支配的。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 22-3 -->
+    <div class="problem">
+      <div class="top"><span class="pid">22-3</span><span class="ptitle">Voigt プロファイル ― コアと翼を別プローブに</span><span class="diff">☆☆</span><span class="tag deepen">理解を深める</span></div>
+      <div class="body">
+        <p>§22.4 の Voigt プロファイルは Gaussian（Doppler）と Lorentzian（自然幅＋衝突幅）の畳み込み。無次元パラメータ $a=\gamma/(2\Delta\nu_D)$、$x=(\nu-\nu_0)/\Delta\nu_D$。</p>
+        <ol class="parts">
+          <li>コア（$|x|\lt $ 数）と翼（$|x|\gg1$）で、それぞれ Gaussian と Lorentzian のどちらが支配するか述べよ。$|x|\gt 5$ で Doppler 成分が $e^{-25}\sim10^{-11}$ に消えることを確かめよ。</li>
+          <li>コアと翼が、観測者にとってそれぞれどんな物理量（温度・速度／密度・圧力）のプローブになるか述べよ。</li>
+          <li>コアと翼を同時にフィットすることで、温度と密度を独立に決められる理由を述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/22-line-shape.html#sec-line-shape-voigt" target="_blank" rel="noopener">§22.4 Voigt プロファイル</a>、
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/22-line-shape.html#sec-line-shape-pressure" target="_blank" rel="noopener">§22.3 衝突拡がり</a> ／
+        恒星の $\log g$ 決定は §22.3、curve of growth の減衰翼は演習 20-3。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> コア（$|x|\lt 3$ 程度）は Gaussian（Doppler）が支配。翼（$|x|\gg1$）は Lorentzian が支配。$|x|=5$ で Gaussian は $e^{-x^2}=e^{-25}\simeq1.4\times10^{-11}$ とほぼ消え、$1/x^2$ で緩く減衰する Lorentz 翼だけが残る。</p>
+          <p><b>(2)</b> コア：Doppler 幅 $\Delta\nu_D\propto\sqrt{T/m}$ から<b>温度</b>、中心シフトから<b>視線速度</b>。翼：Lorentzian 幅 $\gamma=$ 自然幅＋衝突幅で、衝突幅が<b>密度・圧力</b>に比例するので翼の形から<b>密度・圧力</b>。</p>
+          <p><b>(3)</b> コアは温度に、翼は密度・圧力に主に依存し、両者は線形の異なる部分に別々に効く。観測されたコアと翼を同時にフィットすると、温度（コア幅）と密度（翼の広がり）を分離して独立に決められる。恒星の表面重力 $\log g$ は翼の解析から得られる。</p>
+          <div class="ans"><b>答え：</b> コア＝Gaussian（温度・速度）、翼＝Lorentzian（密度・圧力）。$|x|\gt 5$ で Gaussian は $10^{-11}$ に消え翼が浮かぶ。同時フィットで温度と密度を分離。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 22-4 -->
+    <div class="problem">
+      <div class="top"><span class="pid">22-4</span><span class="ptitle">熱的幅と乱流の分離、Zeeman で磁場</span><span class="diff">☆☆</span><span class="tag deepen">理解を深める</span></div>
+      <div class="body">
+        <p>§22.5・22.6 のマクロ速度場と磁場。Gaussian 成分の二乗和 $\Delta\nu_{D,{\rm total}}^2=\Delta\nu_{D,{\rm thermal}}^2+\Delta\nu_{D,{\rm turb}}^2$、Zeeman 分裂 $\Delta E=g_J\mu_B B m_J$。</p>
+        <ol class="parts">
+          <li>熱的成分（$\propto1/\sqrt m$）と乱流成分（元素質量に依らない）が、異なる質量の元素の線幅比較でどう分離できるか述べよ。</li>
+          <li>マイクロ乱流とマクロ乱流で数学的扱いが異なる理由（速度場のスケールと光子平均自由行程の大小）を一言で述べよ。</li>
+          <li>Zeeman 分裂が線スペクトルから磁場を測る数少ない直接手段である理由を述べ、観測例（太陽黒点・星形成領域）を1つ挙げよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/22-line-shape.html#sec-line-shape-macro" target="_blank" rel="noopener">§22.5 マクロな速度場</a>、
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/22-line-shape.html#sec-line-shape-zeeman" target="_blank" rel="noopener">§22.6 Zeeman 効果</a> ／
+        偏光は <a href="演習問題_第V部_電磁気学へ.html">第V部 演習 13-4</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 熱的 Doppler 幅は $\Delta v_{\rm th}\propto1/\sqrt m$ で重い元素ほど狭い。乱流は等方ランダム速度で元素質量に依らず一定。複数の元素（軽い H と重い Fe など）の線幅を測り、$\Delta v^2=\Delta v_{\rm th}^2(m)+\xi_{\rm turb}^2$ を質量に対してプロットすると、質量依存部分（熱的）と一定部分（乱流 $\xi_{\rm turb}$）に分離できる。</p>
+          <p><b>(2)</b> 速度場のスケールが光子の平均自由行程より<b>小さい</b>＝マイクロ乱流：線吸収係数 $\alpha_\nu$ 自体に織り込まれ、$\Delta\nu_D$ の単純拡張で扱える。<b>大きい</b>＝マクロ乱流：線形成は局所的に進み、最後に射出スペクトルへの畳み込みとして効く。扱う段階が違う。</p>
+          <p><b>(3)</b> 磁場は放射スペクトルに直接の連続的痕跡を残しにくいが、Zeeman 効果は準位を $m_J$ に応じて分裂させ（分裂幅 $\propto B$）、円偏光・直線偏光を伴うので、線の分裂・偏光から磁場の強度と方向を直接測れる。例：太陽黒点（Fe I $\lambda$6173）、星形成領域（OH メーザー・CN 線）。</p>
+          <div class="ans"><b>答え：</b> 熱的（$\propto1/\sqrt m$）と乱流（質量無依存）は元素質量比較で分離。マイクロ/マクロは平均自由行程との大小で扱いが違う。Zeeman 分裂・偏光が磁場の直接手段（太陽黒点など）。</div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <hr class="soft">
+
+  <!-- ================= CHAPTER 23 ================= -->
+  <section class="chapter" id="ch23">
+    <div class="chapter-head">
+      <span class="cnum">第23章</span>
+      <h2>線スペクトルから天体物理を読む</h2>
+      <a class="src" href="https://wadakeiichi.github.io/inverse_text_radiation/part7/23-line-applications.html" target="_blank" rel="noopener">本文を開く ↗</a>
+    </div>
+    <p class="chapter-overview">視線速度と系外惑星、線比による温度・密度診断、QSO 吸収系と 21 cm 宇宙論。逆引き道具を観測解析に動員する第VII部の実務章。</p>
+
+    <!-- 23-1 -->
+    <div class="problem">
+      <div class="top"><span class="pid">23-1</span><span class="ptitle">視線速度と系外惑星の検出</span><span class="diff">☆☆</span><span class="tag deriv">導出補完</span></div>
+      <div class="body">
+        <p>§23.1 の視線速度 $\dfrac{v_\parallel}{c}=\dfrac{\nu_0-\nu_{\rm obs}}{\nu_0}$ を系外惑星検出に使う。中心星と惑星は共通重心を回り、$M_\star v_\star=M_p v_p$。</p>
+        <ol class="parts">
+          <li>地球と同じ軌道半径（1 AU、公転速度 $v_p\simeq30$ km/s）を回る木星質量惑星（$M_p/M_\star\simeq10^{-3}$）が中心星に起こす視線速度ゆらぎ $v_\star$ を求めよ。</li>
+          <li>その $v_\star$ が現在の Doppler 法（HARPS/ESPRESSO、感度サブ m/s〜数 m/s）で検出可能か述べよ。地球質量の検出には何 cm/s 感度が要るか概算せよ。</li>
+          <li>宇宙論的赤方偏移 $z$ を単純な $v/c$ と書けるのは低赤方偏移近似に限ることを、$1+z=a(t_{\rm obs})/a(t_{\rm emit})$ に触れて述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/23-line-applications.html#sec-line-applications-velocity" target="_blank" rel="noopener">§23.1 視線速度</a> ／
+        Doppler シフトは <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/22-line-shape.html#sec-line-shape-doppler" target="_blank" rel="noopener">§22.2</a>、宇宙膨張と赤方偏移は <a href="演習問題_第VI部_現実の宇宙へ.html">第VI部 演習 16-2</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $v_\star=(M_p/M_\star)v_p=10^{-3}\times30$ km/s $=0.03$ km/s $=30$ m/s。</p>
+          <p><b>(2)</b> 30 m/s は HARPS/ESPRESSO（サブ m/s〜数 m/s）で十分検出可能。地球質量惑星なら $M_p/M_\star\simeq3\times10^{-6}$ ゆえ $v_\star\simeq3\times10^{-6}\times30$ km/s $\simeq0.09$ m/s $\simeq10$ cm/s 感度が必要で、これは現在の最先端。</p>
+          <p><b>(3)</b> $z\simeq v/c$ は $z\ll1$ でのみ成立。一般には宇宙論的赤方偏移は時空のスケール因子比 $1+z=a(t_{\rm obs})/a(t_{\rm emit})$ で定義され、単純な後退速度ではない。$z\gtrsim0.1$ では特殊相対論的 Doppler 公式や宇宙論モデル依存の距離-赤方偏移関係が要る。</p>
+          <div class="ans"><b>答え：</b> $v_\star=30$ m/s（検出可能）。地球質量には $\sim10$ cm/s 感度。$z=v/c$ は低赤方偏移近似のみ、本来は $1+z=a_{\rm obs}/a_{\rm emit}$。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 23-2 -->
+    <div class="problem">
+      <div class="top"><span class="pid">23-2</span><span class="ptitle">線比による温度・密度診断</span><span class="diff">☆☆</span><span class="tag deepen">理解を深める</span></div>
+      <div class="body">
+        <p>§23.3 の禁制線比による診断。[O III] $\lambda$4363/$\lambda$5007（温度）と [S II] $\lambda$6716/$\lambda$6731（密度）。</p>
+        <ol class="parts">
+          <li>[O III] $\lambda$4363/$\lambda$5007 比が電子温度に強く依存する理由を、両線の上準位エネルギー差から述べよ。</li>
+          <li>[S II] $\lambda$6716/$\lambda$6731 比が電子密度に依存する理由を、両上準位の臨界密度の違いから述べよ。</li>
+          <li>一つの線比が「温度のみ」または「密度のみ」に依存し、もう一方に鈍感だと、なぜ温度と密度を分離して測れるのか述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/23-line-applications.html#sec-line-applications-diagnostics" target="_blank" rel="noopener">§23.3 温度・密度診断</a> ／
+        禁制線と臨界密度は演習 19-2、Boltzmann 占有は <a href="演習問題_第III部_熱力学統計力学へ.html">第III部 演習 7-4</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> [O III] $\lambda$4363 と $\lambda$5007 は上準位のエネルギーが大きく異なる。上準位の占有比は Boltzmann 因子 $e^{-\Delta E/k_BT_e}$ で決まり、エネルギー差 $\Delta E$ が大きいほど温度に敏感。両線の強度比はこの占有比を反映し、電子温度 $T_e$ に強く依存する。</p>
+          <p><b>(2)</b> [S II] $\lambda$6716 と $\lambda$6731 は上準位エネルギーが近い（温度に鈍感）が、各上準位の臨界密度が異なる。電子密度が両者の臨界密度の中間（$n_e\sim10^2$–$10^4$ cm$^{-3}$）にあると、密度に応じて衝突脱励起の効き方が変わり、強度比が密度の関数になる。</p>
+          <p><b>(3)</b> [O III] 比は温度のみ、[S II] 比は密度のみに主に依存し互いに鈍感なので、二つの線比を独立な方程式として連立すれば、温度と密度を別々に解ける。これが星雲の電子温度・密度を分離して測る標準法。</p>
+          <div class="ans"><b>答え：</b> [O III] は上準位エネルギー差大→温度敏感、[S II] は臨界密度差→密度敏感。互いに鈍感ゆえ温度と密度を分離して測れる。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 23-3 -->
+    <div class="problem">
+      <div class="top"><span class="pid">23-3</span><span class="ptitle">高赤方偏移宇宙 ― Ly$\alpha$ 森と 21 cm</span><span class="diff">☆☆</span><span class="tag deepen">理解を深める</span></div>
+      <div class="body">
+        <p>§23.5 の宇宙論的応用。QSO 吸収系（Ly$\alpha$ 森・DLA・金属吸収系）と再電離期の 21 cm 線。</p>
+        <ol class="parts">
+          <li>Ly$\alpha$ 森・DLA・金属吸収系が、それぞれ宇宙の何（バリオン分布・銀河前駆体・化学進化）を語るか述べよ。</li>
+          <li>再電離期 $z=7$ の中性水素 21 cm 線（静止波長 0.211 m）の観測波長を求めよ。$z=6$ と $z=20$ では何 m か。</li>
+          <li>第16章の CMB（連続スペクトル側の宇宙論プローブ）と本問の Ly$\alpha$/21 cm（線スペクトル側）が、宇宙物理の二つの主柱として何の歴史を相補的に語るか述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/23-line-applications.html#sec-line-applications-cosmology" target="_blank" rel="noopener">§23.5 宇宙論的応用</a> ／
+        CMB は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/16-cmb.html" target="_blank" rel="noopener">第16章</a>（<a href="演習問題_第VI部_現実の宇宙へ.html">第VI部 演習</a>）、21 cm の起源は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/19-where-lines.html#sec-where-lines-21cm" target="_blank" rel="noopener">§19.4</a>（演習 19-1）。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> Ly$\alpha$ 森：低柱密度の中性水素による多数の吸収線＝宇宙のバリオン分布マップ。DLA（damped Ly$\alpha$）：高柱密度系＝高赤方偏移銀河の前駆体。金属吸収系（C IV, Mg II 等）：宇宙初期の化学進化・銀河流出の記録。</p>
+          <p><b>(2)</b> $\lambda_{\rm obs}=(1+z)\times0.211$ m。$z=7$：$8\times0.211=1.69$ m。$z=6$：$7\times0.211=1.48$ m。$z=20$：$21\times0.211=4.43$ m。再電離期は約 1.5〜4.4 m（SKA の標的帯）。</p>
+          <p><b>(3)</b> CMB は連続スペクトル（黒体）で宇宙の<b>温度の歴史</b>（熱化・膨張）を語る。Ly$\alpha$/21 cm は線スペクトルで<b>構造形成・電離・化学進化の歴史</b>を語る。両者は宇宙物理学の二つの主柱として相補的に、初期宇宙から現在までの異なる側面を逆引きさせる。</p>
+          <div class="ans"><b>答え：</b> Ly$\alpha$ 森＝バリオン分布、DLA＝銀河前駆体、金属系＝化学進化。21 cm($z=7$)＝1.69 m（$z=6$:1.48、$z=20$:4.43 m）。CMB＝温度史、線＝構造・電離・化学史で相補的。</div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <footer>
+    <p><b>宇宙の熱的放射</b> ― 連続放射と線スペクトルの背景物理（和田 桂一）<br>
+    演習問題集・第VII部（試作版）。本文の各節は
+    <a href="https://wadakeiichi.github.io/inverse_text_radiation/" target="_blank" rel="noopener">GitHub Pages 公開版</a>
+    にリンクしています。第VII部は線スペクトルの逆引きが主題のため、線源泉関数・Einstein 換算・Rydberg・線形の導出と、観測応用（視線速度・組成・診断・宇宙論）を組み合わせました。連続スペクトル（第I〜VI部）と対をなす構造です。<br>
+    関連演習：<a href="演習問題_第II部_放射の記述と輸送.html">第II部</a> ・ <a href="演習問題_第III部_熱力学統計力学へ.html">第III部</a> ・ <a href="演習問題_第IV部_量子論へ.html">第IV部</a> ・ <a href="演習問題_第VI部_現実の宇宙へ.html">第VI部</a></p>
+  </footer>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false},
+      {left: "\\[", right: "\\]", display: true}
+    ],
+    throwOnError: false
+  });
+});
+</script>
+</body>
+</html>

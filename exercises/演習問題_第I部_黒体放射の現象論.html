@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>演習問題 ― 第I部　宇宙に満ちる黒体放射（第1〜3章）</title>
+
+<!-- KaTeX -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@300;400;500;600;700&family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --primary:#1f4e79; --secondary:#a23b3b; --gold:#c9a227;
+  --ink:#1f2933; --muted:#5a6573; --paper:#ffffff; --bg:#fbfaf6;
+  --soft:#eef1f6; --line:#d8dde6; --blue-bg:#f0f6ff; --gold-bg:#fff8e6; --red-bg:#fff4f0;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:"IBM Plex Sans JP",system-ui,sans-serif;
+  font-weight:400; line-height:1.85; font-size:16.5px;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:860px; margin:0 auto; padding:0 22px 120px}
+header.book{
+  background:linear-gradient(135deg,#1f4e79 0%,#163a5c 100%);
+  color:#fff; padding:46px 22px 40px; margin-bottom:38px;
+  border-bottom:4px solid var(--gold);
+}
+header.book .inner{max-width:860px;margin:0 auto}
+header.book .kicker{
+  font-size:13px; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--gold); font-weight:600; margin:0 0 10px;
+}
+header.book h1{
+  font-family:"IBM Plex Serif",serif; font-weight:600;
+  font-size:30px; line-height:1.35; margin:0 0 14px;
+}
+header.book p.sub{margin:0;color:#cdd9e8;font-size:15px;max-width:640px}
+header.book a.bookhome{
+  display:inline-block;margin-top:18px;color:#fff;font-size:13.5px;
+  text-decoration:none;border:1px solid rgba(255,255,255,.4);
+  padding:6px 14px;border-radius:999px;transition:.15s;
+}
+header.book a.bookhome:hover{background:rgba(255,255,255,.12)}
+.intro{
+  background:var(--paper); border:1px solid var(--line);
+  border-radius:12px; padding:22px 24px; margin-bottom:34px;
+  box-shadow:0 1px 3px rgba(31,41,51,.05);
+}
+.intro h2{margin:0 0 10px;font-size:17px;color:var(--primary);font-family:"IBM Plex Serif",serif}
+.intro p{margin:.5em 0;font-size:14.5px;color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.legend span{
+  font-size:13px;padding:4px 11px;border-radius:999px;border:1px solid var(--line);
+  background:var(--soft);color:var(--ink)
+}
+.legend .star{color:var(--gold);font-weight:600}
+.chapter{margin:46px 0 0}
+.chapter-head{border-left:5px solid var(--primary); padding:4px 0 4px 16px; margin-bottom:8px;}
+.chapter-head .cnum{font-size:13px;letter-spacing:.1em;color:var(--secondary);font-weight:600}
+.chapter-head h2{
+  font-family:"IBM Plex Serif",serif;font-weight:600;font-size:24px;
+  margin:3px 0 6px;color:var(--ink)
+}
+.chapter-head a.src{font-size:13px;color:var(--primary);text-decoration:none}
+.chapter-head a.src:hover{text-decoration:underline}
+.chapter-overview{font-size:14px;color:var(--muted);margin:0 0 18px 21px}
+.problem{
+  background:var(--paper); border:1px solid var(--line); border-radius:12px;
+  padding:22px 24px; margin:18px 0; box-shadow:0 1px 3px rgba(31,41,51,.05);
+}
+.problem .top{display:flex;align-items:baseline;flex-wrap:wrap;gap:10px;margin-bottom:6px}
+.problem .pid{
+  font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:14px;
+  color:#fff;background:var(--primary);padding:2px 9px;border-radius:6px
+}
+.problem .ptitle{font-weight:600;font-size:17px;color:var(--ink)}
+.problem .diff{color:var(--gold);font-size:15px;letter-spacing:1px}
+.problem .tag{font-size:11.5px;padding:2px 9px;border-radius:999px;font-weight:500;}
+.tag.deriv{background:var(--blue-bg);color:#1f4e79;border:1px solid #cfe0f5}
+.tag.deepen{background:var(--gold-bg);color:#8a6d12;border:1px solid #ecdca0}
+.problem .body{margin-top:10px}
+.problem .body p{margin:.55em 0}
+.problem ol.parts{margin:.4em 0 .4em 0;padding-left:1.4em}
+.problem ol.parts li{margin:.3em 0}
+table.mini{border-collapse:collapse;margin:.6em 0;font-size:14px}
+table.mini th,table.mini td{border:1px solid var(--line);padding:4px 10px;text-align:left}
+table.mini th{background:var(--soft)}
+.related{margin-top:14px;padding:10px 14px;background:var(--soft);border-radius:8px;font-size:13px;color:var(--muted)}
+.related b{color:var(--ink);font-weight:600}
+.related a{color:var(--primary);text-decoration:none;border-bottom:1px dotted var(--primary)}
+.related a:hover{border-bottom-style:solid}
+details.sol{margin-top:14px;border:1px solid var(--line);border-radius:8px;background:#fdfcf3;overflow:hidden}
+details.sol>summary{
+  cursor:pointer;list-style:none;padding:11px 16px;font-weight:600;font-size:14.5px;
+  color:var(--secondary);background:#fbf7ec;user-select:none;display:flex;align-items:center;gap:8px
+}
+details.sol>summary::-webkit-details-marker{display:none}
+details.sol>summary::before{content:"▶";font-size:11px;transition:.15s;color:var(--gold)}
+details.sol[open]>summary::before{transform:rotate(90deg)}
+details.sol .solbody{padding:6px 20px 18px;font-size:15px}
+details.sol .solbody p{margin:.6em 0}
+details.sol .solbody .ans{
+  margin-top:12px;padding:10px 14px;border-left:3px solid var(--gold);
+  background:#fff8e6;border-radius:0 6px 6px 0;font-size:14.5px
+}
+.katex{font-size:1.04em}
+.katex-display{overflow-x:auto;overflow-y:hidden;padding:4px 0}
+hr.soft{border:none;border-top:1px solid var(--line);margin:40px 0}
+footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+footer a{color:var(--primary)}
+.toc{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:34px}
+.toc h2{margin:0 0 10px;font-size:15px;color:var(--primary)}
+.toc ul{margin:0;padding-left:1.1em;font-size:14px}
+.toc li{margin:3px 0}
+.toc a{color:var(--ink);text-decoration:none}
+.toc a:hover{color:var(--primary);text-decoration:underline}
+.partnav{margin-top:10px;font-size:13px}
+.partnav a{color:#cfe0f5;text-decoration:none;border-bottom:1px dotted #6f94bd}
+@media(max-width:620px){header.book h1{font-size:24px}}
+</style>
+</head>
+<body>
+
+<header class="book">
+  <div class="inner">
+    <p class="kicker">宇宙の熱的放射 ― 演習問題集</p>
+    <h1>第I部　宇宙に満ちる黒体放射<br>演習問題と模範解答（第1〜3章）</h1>
+    <p class="sub">観測される黒体スペクトルの現象論。スペクトルの「読み方」（Wien 則・Stefan–Boltzmann 則）の導出を埋め、観測データから温度・光度・半径を引き出し、普遍性の起源（熱平衡・空洞放射・Kirchhoff の法則）を論証で深める問題集です。</p>
+    <a class="bookhome" href="https://wadakeiichi.github.io/inverse_text_radiation/" target="_blank" rel="noopener">教科書本体（GitHub Pages）を開く ↗</a>
+    <div class="partnav">関連：<a href="演習問題_第IV部_量子論へ.html">▶ 第IV部 量子論へ の演習</a></div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="intro">
+    <h2>この問題集の使い方</h2>
+    <p>各問題は、本文が「第◯章で扱う」「導出は省く」とした計算を自分で埋める<span style="color:#1f4e79">導出補完</span>問題と、本文で得た道具・観測データを別の角度で使う<span style="color:#8a6d12">理解を深める</span>問題の二系統です。第I部は「観測の現象論」が主題なので、概念の整理・観測データからの推定・普遍性の論証が中心になります。各問に本文該当節へのリンクを付けています。解答は「▶ 模範解答」で展開します ― まず自力で。</p>
+    <div class="legend">
+      <span class="star">☆</span> 基礎（本文・データの確認）
+      <span class="star">☆☆</span> 標準（導出・推定・論証）
+      <span class="star">☆☆☆</span> 発展（数値ワークフロー・超越方程式）
+      <span class="tag deriv" style="font-size:13px">導出補完</span>
+      <span class="tag deepen" style="font-size:13px">理解を深める</span>
+    </div>
+  </div>
+
+  <div class="toc">
+    <h2>収録問題（全13問）</h2>
+    <ul>
+      <li><a href="#ch1">第1章　黒体放射はどこに現れるか</a>（4問）</li>
+      <li><a href="#ch2">第2章　黒体スペクトルをどう読むか</a>（5問）</li>
+      <li><a href="#ch3">第3章　黒体放射はなぜ普遍的なのか</a>（4問）</li>
+    </ul>
+  </div>
+
+  <!-- ================= CHAPTER 1 ================= -->
+  <section class="chapter" id="ch1">
+    <div class="chapter-head">
+      <span class="cnum">第01章</span>
+      <h2>宇宙で黒体放射はどこに現れるか</h2>
+      <a class="src" href="https://wadakeiichi.github.io/inverse_text_radiation/part1/01-where-blackbody.html" target="_blank" rel="noopener">本文を開く ↗</a>
+    </div>
+    <p class="chapter-overview">本章は式を天下り的に与えず、観測の現象論に徹する。提示された温度・ピーク波長のデータと、理想化の3条件、熱的/非熱的・LTE/非LTE という分類軸を使って理解を深める。</p>
+
+    <!-- 1-1 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">1-1</span>
+        <span class="ptitle">散らばったデータから Wien 変位定数を逆算する</span>
+        <span class="diff">☆</span>
+        <span class="tag deepen">理解を深める</span>
+      </div>
+      <div class="body">
+        <p>本章は §1.2〜§1.5 で温度とピーク波長の組を別々に与えている（太陽 $T_\odot\simeq5778$ K で $\lambda_{\max}\simeq500$ nm、CMB $T=2.725$ K で $\lambda_{\max}\simeq1.06$ mm、地球 $T\simeq290$ K で中間赤外 $\sim10\ \mu$m）。式を使わずに、これらが一つの法則に従うことを確かめる。</p>
+        <ol class="parts">
+          <li>3つの組について積 $\lambda_{\max}\cdot T$ を計算し、ほぼ一定値になることを確かめよ。</li>
+          <li>その共通値（経験的な Wien 変位定数）$b$ を概算せよ。</li>
+          <li>「温度が4桁違う天体が同じ $b$ を共有する」という事実は、第1章の主張「すべて同じ関数族 $B_\nu(T)$」をどう支持するか述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/01-where-blackbody.html#sec-where-blackbody-cmb" target="_blank" rel="noopener">§1.5 CMB</a> ／
+        変位則の正式な扱いは <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/02-reading-spectra.html#sec-reading-spectra-wien" target="_blank" rel="noopener">§2.3 Wien の変位則</a>（導出は問題 2-2）。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 単位を m·K に揃える：</p>
+          <table class="mini">
+            <tr><th>天体</th><th>$\lambda_{\max}$</th><th>$T$ [K]</th><th>$\lambda_{\max}T$ [m·K]</th></tr>
+            <tr><td>太陽</td><td>$5.0\times10^{-7}$ m</td><td>5778</td><td>$2.89\times10^{-3}$</td></tr>
+            <tr><td>CMB</td><td>$1.06\times10^{-3}$ m</td><td>2.725</td><td>$2.89\times10^{-3}$</td></tr>
+            <tr><td>地球</td><td>$1.0\times10^{-5}$ m</td><td>290</td><td>$2.9\times10^{-3}$</td></tr>
+          </table>
+          <p>3桁の精度で同じ値。</p>
+          <p><b>(2)</b> $b\approx2.9\times10^{-3}$ m·K。これは §2.3 の Wien 変位定数 $b=2.898\times10^{-3}$ m·K と一致する。</p>
+          <p><b>(3)</b> もし天体ごとにスペクトルの関数形が違えば、「ピーク波長×温度」が天体ごとにバラバラになるはず。4桁の温度差を超えて単一の $b$ を共有することは、ピーク位置の温度依存が全天体で共通＝同一の関数族 $B_\nu(T)$ が温度だけを変えて現れている、という第1章の主張を定量的に裏づける。</p>
+          <div class="ans"><b>答え：</b> $\lambda_{\max}T\approx2.9\times10^{-3}$ m·K で一定。単一の関数族が温度パラメータだけで全天体を記述することの証拠。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 1-2 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">1-2</span>
+        <span class="ptitle">理想黒体の3条件で現実天体を採点する</span>
+        <span class="diff">☆☆</span>
+        <span class="tag deepen">理解を深める</span>
+      </div>
+      <div class="body">
+        <p>§1.7 は理想黒体に課す3条件（① 完全吸収、② 完全熱化、③ 単一温度）を挙げ、天体ごとの達成度を表にした。各天体について「どの条件が破れ、その結果スペクトルにどんな『ずれ』が現れるか」を結びつける。</p>
+        <ol class="parts">
+          <li><b>CMB</b>がほぼ完璧な黒体である理由を、3条件すべての観点から述べよ。</li>
+          <li><b>降着円盤</b>が破る条件を1つ挙げ、その帰結である「多温度黒体」とは観測上どういうスペクトルになるか述べよ。</li>
+          <li><b>星間ダスト</b>が破る条件を1つ挙げ、その帰結（修正黒体／放射効率の振動数依存）を述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/01-where-blackbody.html#sec-where-blackbody-idealization" target="_blank" rel="noopener">§1.7 理想化の3条件</a> ／
+        「ずれ」の整理は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/02-reading-spectra.html#sec-reading-spectra-deviation" target="_blank" rel="noopener">§2.7</a>、修正黒体は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/15-non-blackbody.html" target="_blank" rel="noopener">第15章</a>、多温度円盤は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/18-accretion-high-energy.html" target="_blank" rel="noopener">第18章</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> CMB は ① 再結合期以前に光と物質が密に相互作用して完全吸収・完全熱化に相当する状況を達成、② 長時間・高密度で完璧な熱平衡に到達、③ 平均温度 $T_\mathrm{CMB}=2.7255$ K の黒体スペクトルで全天が非常によく記述できる（厳密には単一温度ではなく、この平均＝monopole に方向ゆらぎ $\Delta T/T\sim10^{-5}$ と微小なスペクトル歪みが重なる。第16章で扱う）― 3条件すべてを最もよく満たす。だから $\Delta I/I\lt 10^{-4}$ という観測精度の限界まで黒体形からずれない。</p>
+          <p><b>(2)</b> 降着円盤は条件③（単一温度）を破る。半径ごとに温度が異なり、各半径の $B_\nu(T(r))$ が重なる。観測スペクトルは単一の $T$ では再現できず、ピークが鈍り高振動数側に裾を引く「多温度黒体（多温度円盤スペクトル）」になる。各半径では局所的に黒体近似が成り立つことが前提。</p>
+          <p><b>(3)</b> ダストは条件①（完全吸収）を破る。波長によって放射効率 $\epsilon_\nu\lt 1$ が変化するため、黒体に振動数依存のスペクトル指数を掛けた「修正黒体」として観測される。</p>
+          <div class="ans"><b>答え：</b> CMB＝3条件すべて満たす。円盤＝③単一温度を破る→多温度合成。ダスト＝①完全吸収を破る→修正黒体。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 1-3 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">1-3</span>
+        <span class="ptitle">熱的/非熱的 と LTE/非LTE は直交する</span>
+        <span class="diff">☆☆</span>
+        <span class="tag deepen">理解を深める</span>
+      </div>
+      <div class="body">
+        <p>§1.9 は「熱的/非熱的」（粒子のエネルギー分布が Maxwell 分布か）と「LTE/非LTE」（準位占有が局所温度だけで決まるか）が別概念で直交すると強調した。</p>
+        <ol class="parts">
+          <li>「熱的 vs 非熱的」を分ける物理量と、「LTE vs 非LTE」を分ける物理量をそれぞれ一言で述べよ。</li>
+          <li>次の各放射を「熱的/非熱的」で分類せよ：熱的制動放射、シンクロトロン放射、CMB、LTE 線放射。</li>
+          <li>CMB の温度ゆらぎ $\Delta T/T\sim10^{-5}$ は「非熱的」放射ではない。なぜか。スペクトル（強度 vs 振動数）と空間ゆらぎ（方向ごとの温度差）の違いに触れて説明せよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/01-where-blackbody.html#sec-where-blackbody-thermal" target="_blank" rel="noopener">§1.9 熱的放射と非熱的放射</a> ／
+        非熱的放射の応用は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/18-accretion-high-energy.html" target="_blank" rel="noopener">第18章</a>、LTE/非LTE は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/03-universality.html#sec-universality-thermal-equilibrium" target="_blank" rel="noopener">§3.2</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 熱的/非熱的を分けるのは<b>粒子のエネルギー分布</b>（Maxwell 分布なら熱的、べき則など非Maxwellなら非熱的）。LTE/非LTE を分けるのは<b>原子の準位占有数</b>（局所温度 $T$ だけで決まれば LTE、放射場 $J_\nu$ にも依存すれば非LTE）。</p>
+          <p><b>(2)</b> 熱的制動放射＝熱的（Maxwell 分布プラズマ）。シンクロトロン＝非熱的（べき則の相対論的電子）。CMB＝熱的（完全な熱平衡）。LTE 線放射＝熱的。</p>
+          <p><b>(3)</b> CMB は各方向で見ると依然として完全なプランク分布（熱的スペクトル）。温度ゆらぎとは「方向ごとに黒体温度がわずかに違う」という<b>空間的</b>な差であって、各点の<b>スペクトル形</b>が非熱的（べき則）になっているわけではない。「非熱的」は強度 vs 振動数のスペクトル形の話、ゆらぎは方向ごとの温度の話で、軸が異なる。ゆらぎの起源（初期宇宙の量子ゆらぎ）も熱平衡の統計ゆらぎとは別物。</p>
+          <div class="ans"><b>答え：</b> 分布関数 vs 準位占有という別軸。制動・CMB・LTE線＝熱的、シンクロトロン＝非熱的。CMB ゆらぎはスペクトルでなく空間温度差なので非熱的とは無関係。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 1-4 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">1-4</span>
+        <span class="ptitle">CMB の黒体性：「熱化」と「自由伝搬の開始」を分ける</span>
+        <span class="diff">☆☆</span>
+        <span class="tag deepen">理解を深める</span>
+      </div>
+      <div class="body">
+        <p>§1.5 は「再結合期に黒体になった」という言い方は不正確で、「再結合期<b>までに</b>完成した黒体スペクトルが再結合期に解放された」と理解せよ、と注意している。</p>
+        <ol class="parts">
+          <li>「熱化（thermalization）」と「自由伝搬の開始（再結合・脱結合）」は、それぞれ宇宙史のいつ起き、何を担う過程か区別して述べよ。</li>
+          <li>熱化を担った物理過程を§1.5から挙げよ。</li>
+          <li>再結合以降、宇宙膨張で温度が下がってもスペクトルが黒体形を保つのはなぜか（断熱不変としての性質に触れて）述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/01-where-blackbody.html#sec-where-blackbody-cmb" target="_blank" rel="noopener">§1.5 CMB</a> ／
+        本格的扱いは <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/16-cmb.html" target="_blank" rel="noopener">第16章 CMB</a>、熱平衡の条件は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/03-universality.html#sec-universality-real-objects" target="_blank" rel="noopener">§3.6</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> <b>熱化</b>：宇宙ごく初期（典型的に宇宙年齢 $\lesssim10^7$ 秒）に、放射場のスペクトルを Planck 形へ整える過程。<b>自由伝搬の開始（再結合期、約38万年）</b>：電子と陽子が結合して中性水素になり、光が散乱されずに直進できるようになる過程。前者がスペクトルの形を作り、後者がそれを「解放」する。両者は時代も役割も別。</p>
+          <p><b>(2)</b> 二重 Compton 散乱、制動放射、Compton 散乱など、光子と物質の強い相互作用。これらが早期の高密度環境でスペクトルを Planck 形に整えた。</p>
+          <p><b>(3)</b> 宇宙膨張は黒体スペクトルの「形」を保存する（断熱不変量としての性質）。膨張で各光子の振動数が一様に赤方偏移し、温度パラメータ $T$ が下がるだけで、プランク分布の関数形 $B_\nu(T)$ はそのまま保たれる。だから現在 2.725 K でも完璧な黒体形を示す。</p>
+          <div class="ans"><b>答え：</b> 熱化＝初期にスペクトルを作る、再結合＝それを解放する、で別過程。膨張は形を保存（断熱不変）するので低温でも黒体のまま。</div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <hr class="soft">
+
+  <!-- ================= CHAPTER 2 ================= -->
+  <section class="chapter" id="ch2">
+    <div class="chapter-head">
+      <span class="cnum">第02章</span>
+      <h2>黒体スペクトルをどう読むか</h2>
+      <a class="src" href="https://wadakeiichi.github.io/inverse_text_radiation/part1/02-reading-spectra.html" target="_blank" rel="noopener">本文を開く ↗</a>
+    </div>
+    <p class="chapter-overview">$B_\nu\to B_\lambda$ 変換、Wien 変位則、$F_\nu=\pi B_\nu$ の半球積分、Stefan–Boltzmann 定数、観測データからの温度・光度・半径推定。本章が「導出は第◯章で」とした計算を埋め、ワークフローを数値で実行する。</p>
+
+    <!-- 2-1 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">2-1</span>
+        <span class="ptitle">$B_\nu$ から $B_\lambda$ への変換とヤコビアン</span>
+        <span class="diff">☆☆</span>
+        <span class="tag deriv">導出補完</span>
+      </div>
+      <div class="body">
+        <p>§2.2 は $B_\lambda=B_\nu\cdot c/\lambda^2$ を与えた。これを導く。出発点は「同じエネルギーを異なる変数の刻みで表す」という関係 $B_\nu\,d\nu=-B_\lambda\,d\lambda$。</p>
+        <ol class="parts">
+          <li>$\nu=c/\lambda$ から $d\nu=-(c/\lambda^2)d\lambda$ を示し、$B_\lambda=B_\nu\,c/\lambda^2$ を導け。負号がなぜ現れ、なぜ最終式で消えるか説明せよ。</li>
+          <li>$B_\nu=\dfrac{2h\nu^3}{c^2}\dfrac{1}{e^{h\nu/kT}-1}$ に代入して $B_\lambda=\dfrac{2hc^2}{\lambda^5}\dfrac{1}{e^{hc/\lambda kT}-1}$ を導け。</li>
+          <li>なぜ $B_\nu$ は $\nu^3$、$B_\lambda$ は $\lambda^{-5}$ なのか（冪が3と5でずれる理由）をヤコビアンの観点から一言で述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/02-reading-spectra.html#sec-reading-spectra-nu-lambda" target="_blank" rel="noopener">§2.2 振動数表示と波長表示</a> ／
+        ピーク位置のずれは問題 2-2、比強度の定義は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part2/04-radiation-field.html" target="_blank" rel="noopener">第4章</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $\nu=c/\lambda$ を微分して $d\nu=-(c/\lambda^2)d\lambda$。$\nu$ が増えると $\lambda$ が減るので負号がつく。物理量（エネルギー）は正なので、刻みの向きを合わせるために $B_\nu\,d\nu=-B_\lambda\,d\lambda$ と書く。これに $d\nu=-(c/\lambda^2)d\lambda$ を入れると</p>
+          $$B_\nu\left(-\frac{c}{\lambda^2}\right)d\lambda=-B_\lambda\,d\lambda\ \Rightarrow\ B_\lambda=B_\nu\frac{c}{\lambda^2}.$$
+          <p>両辺の負号が打ち消し、最終式は正になる。</p>
+          <p><b>(2)</b> $\nu=c/\lambda$ を代入。前因子：$\dfrac{2h\nu^3}{c^2}\cdot\dfrac{c}{\lambda^2}=\dfrac{2h}{c^2}\dfrac{c^3}{\lambda^3}\dfrac{c}{\lambda^2}=\dfrac{2hc^2}{\lambda^5}$。指数：$h\nu/kT=hc/\lambda kT$。よって</p>
+          $$B_\lambda=\frac{2hc^2}{\lambda^5}\frac{1}{e^{hc/\lambda kT}-1}.$$
+          <p><b>(3)</b> $B_\nu\propto\nu^3$ にヤコビアン $c/\lambda^2\propto\lambda^{-2}$ が掛かる。$\nu^3\propto\lambda^{-3}$ なので $\lambda^{-3}\cdot\lambda^{-2}=\lambda^{-5}$。冪の差2はヤコビアン由来。</p>
+          <div class="ans"><b>答え：</b> $B_\lambda=B_\nu c/\lambda^2=\dfrac{2hc^2}{\lambda^5}\dfrac{1}{e^{hc/\lambda kT}-1}$。$\lambda^{-5}$ の「5」はヤコビアン $\lambda^{-2}$ が $\nu^3=\lambda^{-3}$ に掛かるため。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 2-2 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">2-2</span>
+        <span class="ptitle">Wien 変位則の導出 ― 超越方程式と $b$ の値</span>
+        <span class="diff">☆☆☆</span>
+        <span class="tag deriv">導出補完</span>
+      </div>
+      <div class="body">
+        <p>§2.3 は $\lambda_{\max}T=b\simeq2.898\times10^{-3}$ m·K を結果として与えた。$B_\lambda$ を最大化して導く。$x\equiv hc/\lambda kT$ とおく。</p>
+        <ol class="parts">
+          <li>$B_\lambda\propto\lambda^{-5}(e^{x}-1)^{-1}$ を $\lambda$ で微分してゼロとおき、$(5-x)e^{x}=5$、すなわち $x=5(1-e^{-x})$ を導け。</li>
+          <li>数値解 $x_{\max}\approx4.965$ を用いて $b=\dfrac{hc}{4.965\,k}$ を示し、数値を計算して $2.90\times10^{-3}$ m·K を確認せよ。</li>
+          <li>振動数表示のピークは $h\nu/kT\approx2.821$（§2.2、第10章の問題で導出）。なぜ $\lambda_{\max}\nu_{\max}\ne c$ となるのか、ヤコビアンの観点から説明せよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/02-reading-spectra.html#sec-reading-spectra-wien" target="_blank" rel="noopener">§2.3 Wien の変位則</a> ／
+        振動数表示ピーク 2.821 の導出は <a href="演習問題_第IV部_量子論へ.html">第IV部 演習 10-4</a>、データ照合は問題 1-1。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $f(\lambda)=\lambda^{-5}(e^{x}-1)^{-1}$、$x=hc/\lambda kT$ なので $dx/d\lambda=-x/\lambda$。積の微分：</p>
+          $$f'=-5\lambda^{-6}(e^x-1)^{-1}-\lambda^{-5}\frac{e^x}{(e^x-1)^2}\frac{dx}{d\lambda}=0.$$
+          <p>$dx/d\lambda=-x/\lambda$ を代入し、$\lambda^{-6}(e^x-1)^{-1}$ で割ると</p>
+          $$-5+\frac{x e^x}{e^x-1}=0\ \Rightarrow\ x e^x=5(e^x-1)\ \Rightarrow\ (5-x)e^x=5,\ \text{即ち}\ x=5(1-e^{-x}).$$
+          <p><b>(2)</b> 非自明解は $x_{\max}\approx4.965$。$x=hc/\lambda_{\max}kT$ より</p>
+          $$\lambda_{\max}T=\frac{hc}{x_{\max}k}=\frac{hc}{4.965\,k}.$$
+          <p>数値：$hc=6.626\times10^{-34}\times3.00\times10^8=1.988\times10^{-25}$ J·m。$4.965k=4.965\times1.381\times10^{-23}=6.857\times10^{-23}$。よって $b=1.988\times10^{-25}/6.857\times10^{-23}=2.90\times10^{-3}$ m·K。✓</p>
+          <p><b>(3)</b> ピークを与える条件は最大化する関数（$B_\lambda$ か $B_\nu$）で異なる。両者はヤコビアン $c/\lambda^2$ だけずれた別関数なので、最大点も別位置になる（$x=4.965$ と $2.821$）。$\lambda_{\max}=hc/4.965kT$、$\nu_{\max}=2.821kT/h$ ゆえ $\lambda_{\max}\nu_{\max}=(2.821/4.965)c\approx0.568\,c\ne c$。同じスペクトルでも「どの変数でピークを測るか」で答えが変わる。</p>
+          <div class="ans"><b>答え：</b> $(5-x)e^x=5\Rightarrow x\approx4.965$、$b=hc/4.965k\approx2.90\times10^{-3}$ m·K。$\lambda_{\max}\nu_{\max}=0.568c\ne c$（ヤコビアンでピークがずれるため）。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 2-3 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">2-3</span>
+        <span class="ptitle">$F_\nu=\pi B_\nu$ ― 半球積分はなぜ $4\pi$ でなく $\pi$ か</span>
+        <span class="diff">☆☆</span>
+        <span class="tag deriv">導出補完</span>
+      </div>
+      <div class="body">
+        <p>§2.4 は黒体表面の射出フラックスが $F_\nu=\displaystyle\int_{\text{半球}}B_\nu\cos\theta\,d\Omega=\pi B_\nu$ になると述べ、立体角積分の値だけ示した。これを自分で実行する。</p>
+        <ol class="parts">
+          <li>立体角要素 $d\Omega=\sin\theta\,d\theta\,d\varphi$ を使い、外向き半球（$0\le\theta\le\pi/2$）で $\displaystyle\int\cos\theta\,d\Omega$ を計算して $\pi$ を得よ。</li>
+          <li>「全立体角 $4\pi$」でも「半球 $2\pi$」でもなく $\pi$ になる理由を、（i）半球に限ること と（ii）$\cos\theta$ 射影、の二つに分けて説明せよ。</li>
+          <li>もし $\cos\theta$ を落として $\int_{\text{半球}}B_\nu d\Omega$ としたら値はいくつか。なぜそれは物理的に正しくないか。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/02-reading-spectra.html#sec-reading-spectra-stefan-boltzmann" target="_blank" rel="noopener">§2.4 Stefan–Boltzmann 則</a> ／
+        フラックスと比強度の正式な定義（$\cos\theta$ の由来）は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part2/04-radiation-field.html" target="_blank" rel="noopener">第4章 放射場</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 黒体は等方なので $B_\nu$ は方向に依らず積分の外へ：</p>
+          $$\int_{\text{半球}}\cos\theta\,d\Omega=\int_0^{2\pi}d\varphi\int_0^{\pi/2}\cos\theta\sin\theta\,d\theta=2\pi\left[\frac{\sin^2\theta}{2}\right]_0^{\pi/2}=2\pi\cdot\frac12=\pi.$$
+          <p>よって $F_\nu=\pi B_\nu$。</p>
+          <p><b>(2)</b> （i）表面から外へ出る放射だけを数えるので積分は上半球 $2\pi$ sr に限る（下向きは表面内部へ向かい射出に寄与しない）。（ii）フラックスは面を<b>垂直に</b>通る成分なので、法線から $\theta$ 傾いた方向の寄与には射影因子 $\cos\theta$ が掛かる。$\cos\theta$ の角度平均が $1/2$ なので、$2\pi\times\tfrac12=\pi$ となる。</p>
+          <p><b>(3)</b> $\int_{\text{半球}}d\Omega=2\pi$ なので値は $2\pi B_\nu$。だがこれは「すべての方向の放射が面を垂直に通る」と誤って数えたことになり、斜め方向の放射が面を通る実効断面が $\cos\theta$ で減る効果を無視している。フラックス（面を通過する正味エネルギー流）の定義に反するので物理的に正しくない。</p>
+          <div class="ans"><b>答え：</b> $\int_{\text{半球}}\cos\theta\,d\Omega=\pi$。半球に限る効果（$2\pi$）×$\cos\theta$ 射影の平均（$1/2$）＝$\pi$。$\cos\theta$ を落とすと $2\pi B_\nu$ となり射影を無視した誤り。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 2-4 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">2-4</span>
+        <span class="ptitle">Stefan–Boltzmann 定数 $\sigma$ を基本定数で表す</span>
+        <span class="diff">☆☆☆</span>
+        <span class="tag deriv">導出補完</span>
+      </div>
+      <div class="body">
+        <p>§2.4 は $\sigma$ の数値だけ与え、導出を第6・8章に委ねた。$F=\pi\displaystyle\int_0^\infty B_\nu\,d\nu$ から直接 $\sigma$ を基本定数で表す。</p>
+        <ol class="parts">
+          <li>$F=\pi\displaystyle\int_0^\infty\frac{2h\nu^3}{c^2}\frac{d\nu}{e^{h\nu/kT}-1}$ で $x=h\nu/kT$ と変数変換し、$F=\dfrac{2\pi k^4}{c^2h^3}T^4\displaystyle\int_0^\infty\frac{x^3}{e^x-1}dx$ を導け。</li>
+          <li>$\displaystyle\int_0^\infty\frac{x^3}{e^x-1}dx=\frac{\pi^4}{15}$ を用いて $\sigma=\dfrac{2\pi^5 k^4}{15c^2h^3}$ を示し、SI で数値（$\approx5.67\times10^{-8}$ W m$^{-2}$K$^{-4}$）を確認せよ。</li>
+          <li>第IV部の問題で導いた放射定数 $a=\dfrac{8\pi^5k^4}{15c^3h^3}$ と、$\sigma=ac/4$ の関係を確かめよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/02-reading-spectra.html#sec-reading-spectra-stefan-boltzmann" target="_blank" rel="noopener">§2.4 Stefan–Boltzmann 則</a> ／
+        $a=4\sigma/c$ と $a$ の導出は <a href="演習問題_第IV部_量子論へ.html">第IV部 演習 10-3</a>、本文 <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/10-planck-quantum.html#sec-planck-quantum-derivation" target="_blank" rel="noopener">§10.3</a>。積分公式は <a href="https://wadakeiichi.github.io/inverse_text_radiation/appendix/A-math-notes.html" target="_blank" rel="noopener">付録A</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $x=h\nu/kT$、$\nu=kTx/h$、$d\nu=(kT/h)dx$。前因子 $\dfrac{2h}{c^2}\nu^3=\dfrac{2h}{c^2}\left(\dfrac{kT}{h}\right)^3x^3$。$d\nu$ の $(kT/h)$ と合わせて</p>
+          $$F=\pi\cdot\frac{2h}{c^2}\left(\frac{kT}{h}\right)^4\int_0^\infty\frac{x^3}{e^x-1}dx=\frac{2\pi k^4}{c^2h^3}T^4\int_0^\infty\frac{x^3}{e^x-1}dx.$$
+          <p><b>(2)</b> 積分 $=\pi^4/15$ を代入：</p>
+          $$F=\frac{2\pi k^4}{c^2h^3}\frac{\pi^4}{15}T^4=\underbrace{\frac{2\pi^5k^4}{15c^2h^3}}_{\sigma}T^4.$$
+          <p>数値（SI）：分子 $2\pi^5k^4=2\times306.0\times(1.381\times10^{-23})^4=612.0\times3.64\times10^{-92}=2.23\times10^{-89}$。分母 $15c^2h^3=15\times(3.00\times10^8)^2\times(6.626\times10^{-34})^3=15\times9.00\times10^{16}\times2.91\times10^{-100}=3.93\times10^{-82}$。よって $\sigma\approx5.67\times10^{-8}$ W m$^{-2}$K$^{-4}$。✓</p>
+          <p><b>(3)</b> $\dfrac{ac}{4}=\dfrac{1}{4}\cdot\dfrac{8\pi^5k^4}{15c^3h^3}\cdot c=\dfrac{2\pi^5k^4}{15c^2h^3}=\sigma$。確かに $\sigma=ac/4$。エネルギー密度 $u=aT^4$ と射出フラックス $F=\sigma T^4$ が $\sigma=ac/4$ で結ばれる（等方場 $u=4\pi B/c$、$F=\pi B$ から $F=(c/4)u$）。</p>
+          <div class="ans"><b>答え：</b> $\sigma=\dfrac{2\pi^5k^4}{15c^2h^3}\approx5.67\times10^{-8}$ W m$^{-2}$K$^{-4}$。放射定数とは $\sigma=ac/4$。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 2-5 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">2-5</span>
+        <span class="ptitle">観測データから太陽の温度・光度・半径を引き出す</span>
+        <span class="diff">☆☆☆</span>
+        <span class="tag deepen">理解を深める</span>
+      </div>
+      <div class="body">
+        <p>§2.8 のワークフローを数値で実行する。観測量：ピーク波長 $\lambda_{\max}\simeq500$ nm、地球での太陽定数 $f\simeq1.36\times10^3$ W m$^{-2}$、距離 $d=1$ AU $=1.496\times10^{11}$ m。</p>
+        <ol class="parts">
+          <li>Wien の式（$b=2.898\times10^{-3}$ m·K）から有効温度 $T$ を求めよ。</li>
+          <li>$L=4\pi d^2 f$ から太陽光度 $L_\odot$ を求めよ。</li>
+          <li>Stefan–Boltzmann $L=4\pi R^2\sigma T^4$ を逆算して半径 $R_\odot=\sqrt{L/(4\pi\sigma T^4)}$ を求め、既知値（$R_\odot\simeq6.96\times10^8$ m）と比べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/02-reading-spectra.html#sec-reading-spectra-estimation" target="_blank" rel="noopener">§2.8 観測データから推定</a> ／
+        各道具は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/02-reading-spectra.html#sec-reading-spectra-wien" target="_blank" rel="noopener">§2.3</a>・<a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/02-reading-spectra.html#sec-reading-spectra-stefan-boltzmann" target="_blank" rel="noopener">§2.4</a>、$\sigma$ の導出は問題 2-4。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $T=b/\lambda_{\max}=2.898\times10^{-3}/5.00\times10^{-7}=5.80\times10^3$ K。（有効温度 $\simeq5800$ K）</p>
+          <p><b>(2)</b> $L=4\pi d^2 f=4\pi(1.496\times10^{11})^2\times1.36\times10^3$。$d^2=2.238\times10^{22}$、$4\pi d^2=2.812\times10^{23}$、$\times f=3.82\times10^{26}$ W。すなわち $L_\odot\simeq3.8\times10^{26}$ W（既知 $3.83\times10^{26}$ W と一致）。</p>
+          <p><b>(3)</b> $\sigma T^4=5.67\times10^{-8}\times(5800)^4=5.67\times10^{-8}\times1.13\times10^{15}=6.41\times10^7$ W m$^{-2}$。</p>
+          $$R=\sqrt{\frac{L}{4\pi\sigma T^4}}=\sqrt{\frac{3.82\times10^{26}}{4\pi\times6.41\times10^7}}=\sqrt{\frac{3.82\times10^{26}}{8.05\times10^8}}=\sqrt{4.74\times10^{17}}\approx6.9\times10^8\ \text{m}.$$
+          <p>既知値 $6.96\times10^8$ m とよく一致。観測量（ピーク波長・フラックス・距離）だけから太陽の物理量がプランク分布を介して再現できる。</p>
+          <div class="ans"><b>答え：</b> $T\simeq5800$ K、$L_\odot\simeq3.8\times10^{26}$ W、$R_\odot\simeq6.9\times10^8$ m。いずれも実測とよく一致。</div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <hr class="soft">
+
+  <!-- ================= CHAPTER 3 ================= -->
+  <section class="chapter" id="ch3">
+    <div class="chapter-head">
+      <span class="cnum">第03章</span>
+      <h2>黒体放射はなぜ普遍的なのか</h2>
+      <a class="src" href="https://wadakeiichi.github.io/inverse_text_radiation/part1/03-universality.html" target="_blank" rel="noopener">本文を開く ↗</a>
+    </div>
+    <p class="chapter-overview">空洞放射の思考実験と熱力学第二法則による普遍性の論証、Kirchhoff の法則 $a_\nu=\epsilon_\nu$、LTE でのソース関数 $S_\nu=B_\nu$。本章が「証明（背理法）」とだけ述べた論証を厳密に埋める。</p>
+
+    <!-- 3-1 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">3-1</span>
+        <span class="ptitle">空洞放射の普遍性を第二法則で証明する</span>
+        <span class="diff">☆☆</span>
+        <span class="tag deriv">導出補完</span>
+      </div>
+      <div class="body">
+        <p>§3.3 は背理法の骨子だけ示した。これを各振動数について厳密化する。</p>
+        <ol class="parts">
+          <li>異なる材質の空洞 A・B を同じ温度 $T$ に保ち、振動数 $[\nu,\nu+d\nu]$ だけ通すフィルターを挟んで導管でつなぐ。もし $u_\nu^A\ne u_\nu^B$ なら何が起こるか述べよ。</li>
+          <li>それが熱力学第二法則のどの主張に反するか説明せよ（同一温度の二系の間に正味のエネルギー流＝仕事を取り出せる永久機関）。</li>
+          <li>フィルターを使う議論が「全エネルギーだけでなく各振動数で $u_\nu$ が普遍」という強い結論を与える理由を述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/03-universality.html#sec-universality-cavity" target="_blank" rel="noopener">§3.3 空洞放射</a> ／
+        熱平衡そのものの起源（最大エントロピー）は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part3/06-thermal-equilibrium.html" target="_blank" rel="noopener">第6章</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> フィルターは $[\nu,\nu+d\nu]$ の放射だけを通す。もし $u_\nu^A\gt u_\nu^B$ なら、この帯域で A から B へ正味のエネルギーが流れる（逆なら逆向き）。両空洞は同じ温度 $T$ なのに、放射エネルギーが一方向に流れ続ける。</p>
+          <p><b>(2)</b> 同一温度の二つの系の間に外部からの仕事なしに正味のエネルギー（熱）が流れることになる。この流れを使えば永久に仕事を取り出せ、「外部に変化を残さず、低温部へ熱を移す以外に熱を仕事に変換し続ける機関は作れない」という熱力学第二法則（Clausius/Kelvin の主張）に反する。よって仮定 $u_\nu^A\ne u_\nu^B$ は誤り。</p>
+          <p><b>(3)</b> フィルターで振動数を1つずつ切り出せるので、「もし<b>ある</b>振動数で $u_\nu$ が違えば」その帯域だけで第二法則違反が起こる。したがって違反を避けるには<b>すべての</b>振動数で $u_\nu^A=u_\nu^B$ でなければならない。全エネルギー（積分値）の一致よりも強い、スペクトルの各点での普遍性が示せる。</p>
+          <div class="ans"><b>答え：</b> $u_\nu^A\ne u_\nu^B$ だと同一温度の二系間に正味エネルギー流＝第二法則違反。フィルター議論で各振動数ごとに $u_\nu(T)$ が材質によらず一意と結論。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 3-2 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">3-2</span>
+        <span class="ptitle">Kirchhoff の法則 $a_\nu=\epsilon_\nu$ を平衡から導く</span>
+        <span class="diff">☆☆</span>
+        <span class="tag deriv">導出補完</span>
+      </div>
+      <div class="body">
+        <p>§3.4–3.5 は $a_\nu=\epsilon_\nu$（吸収率＝放出率）を結果として与えた。空洞内の平衡から導く。温度 $T$ の空洞（内部は黒体放射 $B_\nu(T)$）に、吸収率 $a_\nu$・放出率 $\epsilon_\nu$ の小物体を置く。</p>
+        <ol class="parts">
+          <li>単位時間・単位面積・単位振動数あたり、この物体が吸収するエネルギーと放出するエネルギーをそれぞれ $a_\nu, \epsilon_\nu, B_\nu$ で書け。</li>
+          <li>物体が空洞と同じ温度 $T$ を保つ（熱平衡）には吸収＝放出が必要。これから $a_\nu=\epsilon_\nu$ を導け。</li>
+          <li>なぜこの等式が「各振動数ごと」に成り立たねばならないのか（詳細釣り合い）を述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/03-universality.html#sec-universality-perfect-emitter" target="_blank" rel="noopener">§3.4 完全吸収体と完全放射体</a>、
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/03-universality.html#sec-universality-kirchhoff" target="_blank" rel="noopener">§3.5 Kirchhoff の法則</a> ／
+        詳細釣り合いの一般論は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part3/06-thermal-equilibrium.html" target="_blank" rel="noopener">第6章 §6.6</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 空洞内の入射放射は黒体 $B_\nu(T)$。吸収エネルギー（率）は入射のうち吸収される割合：$\propto a_\nu B_\nu(T)$。放出エネルギーは、完全黒体の放出 $B_\nu(T)$ に放出率を掛けた $\propto \epsilon_\nu B_\nu(T)$。（比例係数＝立体角・面積因子は両者共通。）</p>
+          <p><b>(2)</b> 物体が温度 $T$ を保つには、各振動数で吸収＝放出：</p>
+          $$a_\nu B_\nu(T)=\epsilon_\nu B_\nu(T)\ \Rightarrow\ a_\nu=\epsilon_\nu.$$
+          <p>$B_\nu(T)\ne0$ なので約せる。吸収が強い振動数では放出も強い。</p>
+          <p><b>(3)</b> もしある振動数で吸収＞放出、別の振動数で吸収＜放出だと、全体では釣り合っていても、物体は前者の振動数で正味エネルギーを受け取り後者で失う。これは空洞放射のスペクトルを各振動数で変えてしまい（あるいは物体内に振動数間のエネルギー輸送を生み）、平衡と矛盾する。第二法則と整合する平衡（詳細釣り合い）は各振動数ごとの釣り合いを要求するので、$a_\nu=\epsilon_\nu$ は振動数ごとに成り立つ。</p>
+          <div class="ans"><b>答え：</b> 平衡で $a_\nu B_\nu=\epsilon_\nu B_\nu\Rightarrow a_\nu=\epsilon_\nu$。詳細釣り合いゆえ各振動数で成立。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 3-3 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">3-3</span>
+        <span class="ptitle">LTE でソース関数が $S_\nu=B_\nu$ になる</span>
+        <span class="diff">☆☆</span>
+        <span class="tag deriv">導出補完</span>
+      </div>
+      <div class="body">
+        <p>§3.5 は放射輸送方程式 $\dfrac{dI_\nu}{ds}=-\alpha_\nu I_\nu+j_\nu$ とソース関数 $S_\nu\equiv j_\nu/\alpha_\nu$ を導入し、LTE で $S_\nu=B_\nu(T)$ になると述べた。これを空洞平衡から導く。</p>
+        <ol class="parts">
+          <li>熱平衡の空洞内では放射場が等方かつ一様で $I_\nu=B_\nu(T)$、したがって $dI_\nu/ds=0$。これを輸送方程式に入れて $j_\nu/\alpha_\nu=B_\nu(T)$、すなわち $S_\nu=B_\nu(T)$ を示せ。</li>
+          <li>$S_\nu=B_\nu$ が成り立つのは「物質が局所温度 $T$ で熱化している（LTE）」ときである。なぜ放射場 $J_\nu$ が黒体でなくても $S_\nu=B_\nu$ が言えるのか、Kirchhoff の法則（問題 3-2）が $j_\nu/\alpha_\nu$ を物質の温度だけの関数にすることに触れて述べよ。</li>
+          <li>逆に希薄ガスや AGN 輝線領域で $S_\nu\ne B_\nu$ になるのはなぜか、一言で。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/03-universality.html#sec-universality-kirchhoff" target="_blank" rel="noopener">§3.5 Kirchhoff とソース関数</a> ／
+        放射輸送の本格的扱いは <a href="https://wadakeiichi.github.io/inverse_text_radiation/part2/05-radiative-transfer.html" target="_blank" rel="noopener">第5章</a>、線形成での再導出は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/20-line-formation.html" target="_blank" rel="noopener">第20章 §20.4</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 平衡の空洞では $I_\nu=B_\nu(T)$ が一様等方なので位置によらず $dI_\nu/ds=0$。輸送方程式に代入：</p>
+          $$0=-\alpha_\nu B_\nu(T)+j_\nu\ \Rightarrow\ j_\nu=\alpha_\nu B_\nu(T)\ \Rightarrow\ S_\nu\equiv\frac{j_\nu}{\alpha_\nu}=B_\nu(T).$$
+          <p><b>(2)</b> Kirchhoff の法則は放出と吸収の比 $j_\nu/\alpha_\nu$ を<b>物質の温度 $T$ だけ</b>の関数（$=B_\nu(T)$）にする。$j_\nu$ も $\alpha_\nu$ も物質の局所状態（温度 $T$ で熱化した占有数）で決まり、その比は放射場 $I_\nu$ や $J_\nu$ に依らない。だから周囲の放射場が黒体でなく異方的でも、物質さえ局所温度 $T$ で熱化（LTE）していれば $S_\nu=j_\nu/\alpha_\nu=B_\nu(T)$ が成り立つ。</p>
+          <p><b>(3)</b> 希薄ガスや AGN 輝線領域では準位占有数が局所温度だけでは決まらず放射場 $J_\nu$ に依存する（非LTE）。すると $j_\nu/\alpha_\nu$ が物質温度だけの関数でなくなり $S_\nu\ne B_\nu$ となる。</p>
+          <div class="ans"><b>答え：</b> 平衡 $dI_\nu/ds=0$ から $S_\nu=j_\nu/\alpha_\nu=B_\nu(T)$。Kirchhoff により比は物質温度だけの関数なので、LTE なら放射場が黒体でなくても成立。非LTEだと崩れる。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 3-4 -->
+    <div class="problem">
+      <div class="top">
+        <span class="pid">3-4</span>
+        <span class="ptitle">完全鏡の空洞と「平衡に必要な相互作用」</span>
+        <span class="diff">☆☆</span>
+        <span class="tag deepen">理解を深める</span>
+      </div>
+      <div class="body">
+        <p>§3.3 の問いは「壁が完全鏡（$a_\nu=0$）なら空洞放射はどうなるか」を扱った。これを現実天体の黒体化条件（§3.6）とつなぐ。</p>
+        <ol class="parts">
+          <li>完全鏡の空洞が黒体スペクトルを出さない理由を、平衡に達するメカニズムの有無から説明せよ。</li>
+          <li>レーザー共振器（高反射率ミラー）がこれに近いこと、逆に小穴を開けた空洞が実効的な完全吸収体になることを述べよ。</li>
+          <li>§3.6 の条件1「光学的に厚い（$\tau\gg1$）」が、なぜ黒体への接近を保証するのか。完全鏡の例（吸収ゼロ）と対比して述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/03-universality.html#sec-universality-cavity" target="_blank" rel="noopener">§3.3 空洞放射（完全鏡の問い）</a>、
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/03-universality.html#sec-universality-real-objects" target="_blank" rel="noopener">§3.6 現実の天体が黒体に近づく条件</a> ／
+        光学的厚さと放射輸送は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part2/05-radiative-transfer.html" target="_blank" rel="noopener">第5章</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 黒体スペクトルは「放射場と物質が相互作用して熱平衡に達した」結果である。完全鏡は光を吸収も放出もしないので、放射場と壁（物質）がエネルギーをやりとりできない。よって放射場は熱平衡に向かわず、内部のスペクトルは「最初に入っていた光」のまま決まらない。平衡に達するには少なくとも一部の吸収（相互作用）が不可欠。</p>
+          <p><b>(2)</b> レーザー共振器は高反射率ミラーで吸収が極小なので、定常的な黒体放射を出さず、特定モードの非平衡な光を蓄える。一方、空洞に小穴を開けると、入射光は穴から入って内部で何度も反射・吸収されほぼ確実に吸収される＝実効的に完全吸収体（$a_\nu\to1$）。同時に穴からは内部の熱平衡放射＝黒体スペクトルが出る。</p>
+          <p><b>(3)</b> 光学的に厚い（$\tau\gg1$）とは、光が抜ける間に多数回の吸収・再放出を受けること。これにより放射場と物質が十分相互作用して局所的に熱化し、ソース関数が $B_\nu(T)$ に近づく（問題 3-3）。完全鏡（吸収ゼロ、$\tau=0$）は相互作用が皆無で熱化しないのと正反対で、$\tau\gg1$ こそが黒体への接近を保証する。</p>
+          <div class="ans"><b>答え：</b> 吸収ゼロ＝相互作用なし＝熱化せず黒体にならない。小穴空洞は実効完全吸収体で黒体を出す。$\tau\gg1$ は多数回の吸収再放出で熱化を保証し $B_\nu$ に近づける。</div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <footer>
+    <p><b>宇宙の熱的放射</b> ― 連続放射と線スペクトルの背景物理（和田 桂一）<br>
+    演習問題集・第I部（試作版）。本文の各節は
+    <a href="https://wadakeiichi.github.io/inverse_text_radiation/" target="_blank" rel="noopener">GitHub Pages 公開版</a>
+    にリンクしています。第I部は観測の現象論が主題のため、概念整理・データからの推定・普遍性の論証を中心に、本文が省いた式の導出（Wien 変位則、$F_\nu=\pi B_\nu$、Stefan–Boltzmann 定数）の補完を組み合わせました。<br>
+    関連演習：<a href="演習問題_第IV部_量子論へ.html">第IV部 量子論へ</a></p>
+  </footer>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false},
+      {left: "\\[", right: "\\]", display: true}
+    ],
+    throwOnError: false
+  });
+});
+</script>
+</body>
+</html>

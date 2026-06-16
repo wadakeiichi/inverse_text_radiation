@@ -138,12 +138,18 @@ The accompanying source code (Quarto book) is also publicly available under the 
 1. CITATION.cff の `doi` フィールドを追加：
 
    ```yaml
-   doi: 10.5281/zenodo.XXXXXXX
+   doi: 10.5281/zenodo.XXXXXXX   # ← 次バージョンの登録時にここを更新
    ```
 
 2. README の「Zenodo に登録された preprint」リンクを実 URL に差し替え
 3. REVIEW.md の DOI 欄を更新
 4. 再 commit & push（実 DOI を反映した v0.1.1 として）
+
+**v0.1 実値（2026-06-11 登録済み）**：
+
+- DOI: `10.5281/zenodo.20635563`
+- Record URL: <https://zenodo.org/records/20635563>
+- DOI URL: <https://doi.org/10.5281/zenodo.20635563>
 
 ---
 

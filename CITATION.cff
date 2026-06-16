@@ -7,9 +7,16 @@ authors:
     given-names: "桂一"
     email: "wada@astrophysics.jp"
 type: book
-date-released: 2026-05-14
+version: "v0.1"
+date-released: 2026-06-11
 license: CC-BY-4.0
+doi: 10.5281/zenodo.20635563
 url: "https://github.com/wadakeiichi/inverse_text_radiation"
+repository-code: "https://github.com/wadakeiichi/inverse_text_radiation"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.20635563
+    description: "v0.1 preprint on Zenodo"
 preferred-citation:
   type: book
   title: "宇宙の熱的放射 ― 連続放射と線スペクトルの背景物理"
@@ -18,3 +25,4 @@ preferred-citation:
     - family-names: "和田"
       given-names: "桂一"
   year: 2026
+  doi: 10.5281/zenodo.20635563

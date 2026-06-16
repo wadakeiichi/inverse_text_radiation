@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>演習問題 ― 第VIII部　QEDからの俯瞰（第24〜25章）</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@300;400;500;600;700&family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{--primary:#1f4e79;--secondary:#a23b3b;--gold:#c9a227;--ink:#1f2933;--muted:#5a6573;--paper:#fff;--bg:#fbfaf6;--soft:#eef1f6;--line:#d8dde6;--blue-bg:#f0f6ff;--gold-bg:#fff8e6;}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans JP",system-ui,sans-serif;font-weight:400;line-height:1.85;font-size:16.5px;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:860px;margin:0 auto;padding:0 22px 120px}
+header.book{background:linear-gradient(135deg,#1f4e79 0%,#163a5c 100%);color:#fff;padding:46px 22px 40px;margin-bottom:38px;border-bottom:4px solid var(--gold);}
+header.book .inner{max-width:860px;margin:0 auto}
+header.book .kicker{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:0 0 10px;}
+header.book h1{font-family:"IBM Plex Serif",serif;font-weight:600;font-size:30px;line-height:1.35;margin:0 0 14px;}
+header.book p.sub{margin:0;color:#cdd9e8;font-size:15px;max-width:660px}
+header.book a.bookhome{display:inline-block;margin-top:18px;color:#fff;font-size:13.5px;text-decoration:none;border:1px solid rgba(255,255,255,.4);padding:6px 14px;border-radius:999px;transition:.15s;}
+header.book a.bookhome:hover{background:rgba(255,255,255,.12)}
+.intro{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin-bottom:34px;box-shadow:0 1px 3px rgba(31,41,51,.05);}
+.intro h2{margin:0 0 10px;font-size:17px;color:var(--primary);font-family:"IBM Plex Serif",serif}
+.intro p{margin:.5em 0;font-size:14.5px;color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.legend span{font-size:13px;padding:4px 11px;border-radius:999px;border:1px solid var(--line);background:var(--soft);color:var(--ink)}
+.legend .star{color:var(--gold);font-weight:600}
+.chapter{margin:46px 0 0}
+.chapter-head{border-left:5px solid var(--primary);padding:4px 0 4px 16px;margin-bottom:8px;}
+.chapter-head .cnum{font-size:13px;letter-spacing:.1em;color:var(--secondary);font-weight:600}
+.chapter-head h2{font-family:"IBM Plex Serif",serif;font-weight:600;font-size:24px;margin:3px 0 6px;color:var(--ink)}
+.chapter-head a.src{font-size:13px;color:var(--primary);text-decoration:none}
+.chapter-head a.src:hover{text-decoration:underline}
+.chapter-overview{font-size:14px;color:var(--muted);margin:0 0 18px 21px}
+.problem{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin:18px 0;box-shadow:0 1px 3px rgba(31,41,51,.05);}
+.problem .top{display:flex;align-items:baseline;flex-wrap:wrap;gap:10px;margin-bottom:6px}
+.problem .pid{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:14px;color:#fff;background:var(--primary);padding:2px 9px;border-radius:6px}
+.problem .ptitle{font-weight:600;font-size:17px;color:var(--ink)}
+.problem .diff{color:var(--gold);font-size:15px;letter-spacing:1px}
+.problem .tag{font-size:11.5px;padding:2px 9px;border-radius:999px;font-weight:500;}
+.tag.deriv{background:var(--blue-bg);color:#1f4e79;border:1px solid #cfe0f5}
+.tag.deepen{background:var(--gold-bg);color:#8a6d12;border:1px solid #ecdca0}
+.problem .body{margin-top:10px}.problem .body p{margin:.55em 0}
+.problem ol.parts{margin:.4em 0;padding-left:1.4em}.problem ol.parts li{margin:.3em 0}
+table.mini{border-collapse:collapse;margin:.6em 0;font-size:14px}
+table.mini th,table.mini td{border:1px solid var(--line);padding:4px 10px;text-align:left}
+table.mini th{background:var(--soft)}
+.related{margin-top:14px;padding:10px 14px;background:var(--soft);border-radius:8px;font-size:13px;color:var(--muted)}
+.related b{color:var(--ink);font-weight:600}
+.related a{color:var(--primary);text-decoration:none;border-bottom:1px dotted var(--primary)}
+.related a:hover{border-bottom-style:solid}
+details.sol{margin-top:14px;border:1px solid var(--line);border-radius:8px;background:#fdfcf3;overflow:hidden}
+details.sol>summary{cursor:pointer;list-style:none;padding:11px 16px;font-weight:600;font-size:14.5px;color:var(--secondary);background:#fbf7ec;user-select:none;display:flex;align-items:center;gap:8px}
+details.sol>summary::-webkit-details-marker{display:none}
+details.sol>summary::before{content:"▶";font-size:11px;transition:.15s;color:var(--gold)}
+details.sol[open]>summary::before{transform:rotate(90deg)}
+details.sol .solbody{padding:6px 20px 18px;font-size:15px}
+details.sol .solbody p{margin:.6em 0}
+details.sol .solbody .ans{margin-top:12px;padding:10px 14px;border-left:3px solid var(--gold);background:#fff8e6;border-radius:0 6px 6px 0;font-size:14.5px}
+.katex{font-size:1.04em}.katex-display{overflow-x:auto;overflow-y:hidden;padding:4px 0}
+hr.soft{border:none;border-top:1px solid var(--line);margin:40px 0}
+.capstone{background:linear-gradient(135deg,#fbf7ec,#fff8e6);border:1px solid #ecdca0;border-radius:12px;padding:20px 24px;margin:30px 0}
+.capstone h3{margin:0 0 8px;color:#8a6d12;font-family:"IBM Plex Serif",serif;font-size:17px}
+.capstone p{margin:.5em 0;font-size:14.5px;color:var(--ink)}
+.capstone a{color:var(--primary)}
+footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+footer a{color:var(--primary)}
+.toc{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:34px}
+.toc h2{margin:0 0 10px;font-size:15px;color:var(--primary)}
+.toc ul{margin:0;padding-left:1.1em;font-size:14px}.toc li{margin:3px 0}
+.toc a{color:var(--ink);text-decoration:none}.toc a:hover{color:var(--primary);text-decoration:underline}
+.partnav{margin-top:10px;font-size:13px}.partnav a{color:#cfe0f5;text-decoration:none;border-bottom:1px dotted #6f94bd}
+@media(max-width:620px){header.book h1{font-size:24px}}
+</style>
+</head>
+<body>
+
+<header class="book">
+  <div class="inner">
+    <p class="kicker">宇宙の熱的放射 ― 演習問題集</p>
+    <h1>第VIII部　QEDからの俯瞰<br>演習問題と模範解答（第24〜25章）</h1>
+    <p class="sub">電磁場の各モードを量子調和振動子とみなし、黒体放射を「電磁場の熱状態」として書き直す。Fermi の黄金律から自発放出率 $A_{ul}$ を導き、$A_{ul}/B_{ul}=2h\nu^3/c^2$ がプランク関数と水素線の二つの中心地図の交点であることを総括する問題集です。</p>
+    <a class="bookhome" href="https://wadakeiichi.github.io/inverse_text_radiation/" target="_blank" rel="noopener">教科書本体（GitHub Pages）を開く ↗</a>
+    <div class="partnav">関連：<a href="演習問題_第IV部_量子論へ.html">▶ 第IV部</a>（Einstein係数・量子振動子）・ <a href="演習問題_第V部_電磁気学へ.html">第V部</a>（モード密度）・ <a href="演習問題_第VII部_線スペクトル.html">第VII部</a></div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="intro">
+    <h2>この問題集の使い方</h2>
+    <p>本文が「見通し」として整理した QED の枠組みを自分の言葉で再構成する<span style="color:#1f4e79">導出補完</span>問題と、二つの中心地図の統一・真空揺らぎの観測的帰結を掘る<span style="color:#8a6d12">理解を深める</span>問題の二系統です。第VIII部は本書全体の総括なので、これまでの全部の演習を束ねる問題が中心になります。各問に本文該当節へのリンクを付けています。解答は「▶ 模範解答」で展開 ― まず自力で。</p>
+    <div class="legend">
+      <span class="star">☆</span> 基礎
+      <span class="star">☆☆</span> 標準（見通しの再構成）
+      <span class="star">☆☆☆</span> 発展（全体の総合）
+      <span class="tag deriv" style="font-size:13px">導出補完</span>
+      <span class="tag deepen" style="font-size:13px">理解を深める</span>
+    </div>
+  </div>
+
+  <div class="toc">
+    <h2>収録問題（全8問）</h2>
+    <ul>
+      <li><a href="#ch24">第24章　電磁場を量子化するとは</a>（4問）</li>
+      <li><a href="#ch25">第25章　Einstein係数・自然幅・選択則を QED で見通す</a>（4問）</li>
+    </ul>
+  </div>
+
+  <!-- ================= CHAPTER 24 ================= -->
+  <section class="chapter" id="ch24">
+    <div class="chapter-head">
+      <span class="cnum">第24章</span>
+      <h2>電磁場を量子化するとは何か</h2>
+      <a class="src" href="https://wadakeiichi.github.io/inverse_text_radiation/part8/24-em-field-quantization.html" target="_blank" rel="noopener">本文を開く ↗</a>
+    </div>
+    <p class="chapter-overview">各モード＝量子調和振動子、光子の生成消滅、真空と零点エネルギー、黒体放射を電磁場の熱状態として書き直す。連続スペクトル中心地図の最終解釈。</p>
+
+    <!-- 24-1 -->
+    <div class="problem">
+      <div class="top"><span class="pid">24-1</span><span class="ptitle">各モード＝量子調和振動子という置き換え</span><span class="diff">☆☆</span><span class="tag deepen">理解を深める</span></div>
+      <div class="body">
+        <p>§24.2 は「各モードを量子調和振動子に置き換える」一行で第I〜VII部が接続されると述べた。モード Hamiltonian $\hat H_{\rm mode}=\hbar\omega_{\mathbf k}(\hat a^\dagger_{\mathbf k\sigma}\hat a_{\mathbf k\sigma}+\tfrac12)$。</p>
+        <ol class="parts">
+          <li>$\hat a^\dagger$、$\hat a$、$\hat n=\hat a^\dagger\hat a$ がそれぞれ電磁場の文脈で何を表すか（放出・吸収・光子数）述べよ。</li>
+          <li>調和振動子の励起準位 $|n\rangle$ が「そのモードに $n$ 個の光子がある状態」と読み替えられることを、第10章のエネルギー量子 $h\nu$、第8章の Bose 統計、第14章のモード密度と対応づけよ。</li>
+          <li>「第I〜VII部で別々の道具と思っていたものが一行で接続される」とはどういう意味か、自分の言葉でまとめよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part8/24-em-field-quantization.html#sec-em-field-quantization-mode-oscillator" target="_blank" rel="noopener">§24.2 各モードは調和振動子</a> ／
+        生成消滅演算子は <a href="演習問題_第IV部_量子論へ.html">第IV部 演習 12-1・12-4</a>、モード密度は <a href="演習問題_第V部_電磁気学へ.html">第V部 演習 14-1</a>、Bose 統計は <a href="演習問題_第III部_熱力学統計力学へ.html">第III部 演習 8-2</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> $\hat a^\dagger_{\mathbf k\sigma}$：モード $(\mathbf k,\sigma)$ に光子を1個生成＝放出。$\hat a_{\mathbf k\sigma}$：光子を1個消滅＝吸収。$\hat n=\hat a^\dagger\hat a$：そのモードの光子数（固有値 $n=0,1,2,\dots$）＝観測量。</p>
+          <p><b>(2)</b> 励起準位 $|n\rangle$ のエネルギーは $E_n=(n+\tfrac12)\hbar\omega$ で、隣接準位差 $\hbar\omega=h\nu$＝第10章のエネルギー量子。各モードを熱平衡の調和振動子とみた平均励起数 $\langle n\rangle=1/(e^{h\nu/kT}-1)$＝第8章の Bose 占有数。振動数 $\nu$ 近傍のモードの個数＝第14章のモード密度 $g(\nu)$。</p>
+          <p><b>(3)</b> エネルギー量子化（第10章）、光子の Bose 統計（第8章）、モード密度（第14章）、自発放出（第11章）― これらは別々の物理に見えたが、すべて「各モード＝量子化された調和振動子」という一つの構造の異なる側面である。一行の置き換えで、観測される連続スペクトルの全因子が単一の枠組みに収まる。</p>
+          <div class="ans"><b>答え：</b> $\hat a^\dagger$＝放出、$\hat a$＝吸収、$\hat n$＝光子数。$|n\rangle$＝光子 $n$ 個。量子化・Bose 統計・モード密度・自発放出がすべて「モード＝量子振動子」の一構造の側面。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 24-2 -->
+    <div class="problem">
+      <div class="top"><span class="pid">24-2</span><span class="ptitle">黒体放射を電磁場の熱状態として書き直す</span><span class="diff">☆☆</span><span class="tag deriv">導出補完</span></div>
+      <div class="body">
+        <p>§24.4 はプランク分布を「電磁場の熱状態の表現」として再構成した。熱密度行列 $\hat\rho_{\rm th}=\dfrac1Z e^{-\hat H/k_BT}$ から組み立てる。</p>
+        <ol class="parts">
+          <li>各モードの平均光子数 $\bar n(\nu,T)={\rm tr}(\hat\rho_{\rm th}\hat n)=\dfrac{1}{e^{h\nu/k_BT}-1}$ が、第III部で導いた Bose 占有数と一致することを確認せよ（化学ポテンシャル $\mu=0$ の理由も）。</li>
+          <li>モード密度 $g(\nu)=8\pi\nu^2/c^3$ と光子エネルギー $h\nu$ を掛けて $u_\nu=\dfrac{8\pi h\nu^3}{c^3}\dfrac{1}{e^{h\nu/kT}-1}$、$B_\nu=\dfrac{c}{4\pi}u_\nu=\dfrac{2h\nu^3}{c^2}\dfrac{1}{e^{h\nu/kT}-1}$ を導け。</li>
+          <li>第8章（Bose 統計）・第10章（振動子の熱平均）・第14章（モード密度×熱励起）の三つの導出が「同じ一つの構造」であるとはどういう意味か述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part8/24-em-field-quantization.html#sec-em-field-quantization-blackbody" target="_blank" rel="noopener">§24.4 電磁場の熱状態</a> ／
+        Bose 占有数は <a href="演習問題_第III部_熱力学統計力学へ.html">第III部 演習 8-2・8-3</a>、全因子の合流は <a href="演習問題_第V部_電磁気学へ.html">第V部 演習 14-4</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 単一モードの熱平均 $\bar n=\sum_n n\,e^{-n\hbar\omega/kT}/\sum_n e^{-n\hbar\omega/kT}=1/(e^{\hbar\omega/kT}-1)=1/(e^{h\nu/kT}-1)$。これは第III部の Bose 占有数（$\mu=0$）と同一。光子は数が保存しない（吸収・放出で生成消滅）ので $\mu=0$。</p>
+          <p><b>(2)</b> $u_\nu=g(\nu)\cdot h\nu\cdot\bar n=\dfrac{8\pi\nu^2}{c^3}\cdot h\nu\cdot\dfrac{1}{e^{h\nu/kT}-1}=\dfrac{8\pi h\nu^3}{c^3}\dfrac{1}{e^{h\nu/kT}-1}$。等方場で $B_\nu=\dfrac{c}{4\pi}u_\nu=\dfrac{2h\nu^3}{c^2}\dfrac{1}{e^{h\nu/kT}-1}$。</p>
+          <p><b>(3)</b> 「光子気体の Bose 統計」（第8章）、「量子化振動子の熱平均」（第10章）、「モード密度×熱励起」（第14章）は出発点も言葉も違うが、すべて「温度 $T$ の熱浴と平衡にある電磁場（各モード＝調和振動子）の熱状態」を別の角度から記述したもの。同じ密度行列 $\hat\rho_{\rm th}$ から同じプランク分布が出る。</p>
+          <div class="ans"><b>答え：</b> $\bar n=1/(e^{h\nu/kT}-1)$（$\mu=0$）。$B_\nu=\frac{2h\nu^3}{c^2}\frac{1}{e^{h\nu/kT}-1}$。三つの導出は電磁場の熱状態の同一構造の異なる側面。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 24-3 -->
+    <div class="problem">
+      <div class="top"><span class="pid">24-3</span><span class="ptitle">真空の零点エネルギーと観測可能な帰結</span><span class="diff">☆☆</span><span class="tag deepen">理解を深める</span></div>
+      <div class="body">
+        <p>§24.3 は真空 $|0\rangle$ が「空ではない」ことの観測的帰結を挙げた。零点エネルギー $E_0=\sum_{\mathbf k,\sigma}\tfrac12\hbar\omega_{\mathbf k}$。</p>
+        <ol class="parts">
+          <li>零点エネルギーは形式的に発散するのに、なぜ観測される物理量（の差）は有限なのか述べよ。プランク分布に零点項が現れない理由（演習 12-3）と結びつけよ。</li>
+          <li>真空が「空ではない」ことの観測可能な帰結を3つ挙げよ（自発放出・自然幅・Casimir 効果）。Casimir 力が $F\propto1/L^4$ になることに触れよ。</li>
+          <li>「真空に揺らぎがある」と「真空は粒子で満ちている」は同じか違うか。交換関係 $[\hat a,\hat a^\dagger]=1$ と場の分散 $\langle(\Delta E)^2\rangle\neq0$ に触れて述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part8/24-em-field-quantization.html#sec-em-field-quantization-vacuum" target="_blank" rel="noopener">§24.3 真空状態と零点エネルギー</a> ／
+        零点が観測量に効かないことは <a href="演習問題_第III部_熱力学統計力学へ.html">第III部 演習 7-2</a>・<a href="演習問題_第IV部_量子論へ.html">第IV部 演習 12-3</a>、自然幅は §25.4。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 零点エネルギーはエネルギーの絶対基準（定数オフセット）で、その絶対値は観測できない。観測できるのは零点エネルギーの<b>差や変化</b>（境界条件の変化など）で、これは有限。プランク分布に零点項 $\tfrac12\hbar\omega$ が現れないのも、それが温度非依存の定数で放射の励起分（物質とやりとりする部分）に効かないから（演習 12-3）。</p>
+          <p><b>(2)</b> ① 自発放出（真空揺らぎが励起原子を揺さぶる、§25.2）。② 線の自然幅（励起準位の有限寿命、$\Gamma=A_{ul}$）。③ Casimir 効果（二枚の金属板間で許されるモードが減り、板間の零点エネルギーが板外より小さくなり引力 $F\propto1/L^4$ が生じる）。</p>
+          <p><b>(3)</b> 違う。真空 $|0\rangle$ は厳密に光子0個の状態（$\hat n|0\rangle=0$）。観測される「揺らぎ」は粒子がいることではなく、$[\hat a,\hat a^\dagger]=1$ の非可換性から来る電場・磁場の期待値の分散 $\langle(\Delta E)^2\rangle\neq0$。粒子数を定めると場の値が揺らぎ、場の値を定めると粒子数が揺らぐ（不確定性関係の双対）。</p>
+          <div class="ans"><b>答え：</b> 零点の絶対値は観測不能、差は有限。帰結＝自発放出・自然幅・Casimir($F\propto1/L^4$)。揺らぎ＝場の分散($[\hat a,\hat a^\dagger]=1$)で、粒子で満ちているのとは別。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 24-4 -->
+    <div class="problem">
+      <div class="top"><span class="pid">24-4</span><span class="ptitle">なぜ電磁場の量子化が必要だったか</span><span class="diff">☆</span><span class="tag deepen">理解を深める</span></div>
+      <div class="body">
+        <p>§24.1 は、古典電磁気＋（別々の）量子論では説明しきれず、電磁場そのものの量子化が要る現象を列挙した。</p>
+        <ol class="parts">
+          <li>次の各現象が古典電磁気では説明できない理由を一言ずつ述べよ：エネルギー量子化 $h\nu$、自発放出 $A_{ul}$、線の自然幅、光子の Bose 統計。</li>
+          <li>これらが「同じ枠組み（電磁場の量子化）」から出ることが、なぜ本書の逆引きの到達点なのか述べよ。</li>
+          <li>本書では電磁場と量子論を第V部と第IV部で別々に扱ってきた。第VIII部でそれらを「同時に量子化する」ことの意味を述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part8/24-em-field-quantization.html#sec-em-field-quantization-why" target="_blank" rel="noopener">§24.1 なぜ量子化が必要か</a> ／
+        自発放出は <a href="演習問題_第IV部_量子論へ.html">第IV部 演習 11-1</a>、Bose 統計は <a href="演習問題_第III部_熱力学統計力学へ.html">第III部 演習 8-1</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> エネルギー量子化：古典波には離散性がない。自発放出：古典では「ゼロ放射場→放出ゼロ」で減衰の起源がない。自然幅：励起準位の有限寿命を古典電子モデルでは「決め打ち」するしかない。Bose 統計：古典場は数えられる粒子ではなく、識別不能粒子の統計が出てこない。</p>
+          <p><b>(2)</b> 第I〜VII部で別々に逆引きしてきた断片（量子化・統計・自発放出・自然幅）が、「電磁場を量子化する」という一つの枠組みからすべて出る。観測スペクトルから出発した逆引きが、最終的に単一の物理基盤（QED）に収束する ― これが到達点。</p>
+          <p><b>(3)</b> 第IV部は物質（原子）を量子化したが電磁場は古典場、第V部は電磁場を古典的に扱った。第VIII部で電磁場と物質を<b>同時に</b>量子化することで、両者の相互作用（自発放出・Einstein 関係・選択則）が一貫した枠組みで現れ、連続スペクトルと線スペクトルが統一される。</p>
+          <div class="ans"><b>答え：</b> 量子化・自発放出・自然幅・Bose 統計は古典場では出ない。電磁場量子化で全断片が一基盤に収束。第VIII部は電磁場と物質を同時量子化して両スペクトルを統一。</div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <hr class="soft">
+
+  <!-- ================= CHAPTER 25 ================= -->
+  <section class="chapter" id="ch25">
+    <div class="chapter-head">
+      <span class="cnum">第25章</span>
+      <h2>Einstein係数・自然幅・選択則を QED で見通す</h2>
+      <a class="src" href="https://wadakeiichi.github.io/inverse_text_radiation/part8/25-qed-minimum.html" target="_blank" rel="noopener">本文を開く ↗</a>
+    </div>
+    <p class="chapter-overview">Fermi の黄金律から $A_{ul}$、$A_{ul}/B_{ul}=2h\nu^3/c^2$ の QED 起源、自発放出↔真空揺らぎ↔自然幅、選択則を行列要素で。連続と線の統一 ― 本書全体の総括。</p>
+
+    <!-- 25-1 -->
+    <div class="problem">
+      <div class="top"><span class="pid">25-1</span><span class="ptitle">Fermi の黄金律から自発放出率 $A_{ul}$</span><span class="diff">☆☆</span><span class="tag deriv">導出補完</span></div>
+      <div class="body">
+        <p>§25.2 は Fermi の黄金律 $\Gamma_{u\to l}=\dfrac{2\pi}{\hbar}|\langle l;1_{\mathbf k\sigma}|\hat H_{\rm int}|u;0\rangle|^2\rho(\omega)$ から $A_{ul}=\dfrac{\omega^3}{3\pi\epsilon_0\hbar c^3}|\langle l|\hat{\mathbf d}|u\rangle|^2$ が出るとした。構造を読む。</p>
+        <p><b>レベル：</b>[本文目安：M1｜発展：M2+]。本問は Fermi の黄金律・QED 行列要素の<b>完全導出ではなく、$\omega^3$ 前因子がどんな物理から組み上がるかの構造を読む</b>問題。行列要素の評価そのものは M2+ 相当。</p>
+        <ol class="parts">
+          <li>自発放出の始状態 $|u;0\rangle$（原子上準位＋電磁場真空）と終状態 $|l;1_{\mathbf k\sigma}\rangle$（原子下準位＋光子1個）を述べ、なぜ「真空から光子を生成する」過程なのか説明せよ。</li>
+          <li>$A_{ul}$ の前因子 $\omega^3$ が「モード密度 $\propto\nu^2$ × エネルギー量子 $h\nu$」の構造から来ることを述べ、これが第24章でプランク前因子に出た $2h\nu^3/c^2$ と同じ構造であることを指摘せよ。</li>
+          <li>古典電磁気では自発放出が起こらないのに QED では $A_{ul}\neq0$ になる物理的理由（真空揺らぎ）を述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part8/25-qed-minimum.html#sec-qed-minimum-spontaneous" target="_blank" rel="noopener">§25.2 Fermi の黄金律</a> ／
+        振動子強度との関係は <a href="演習問題_第VII部_線スペクトル.html">第VII部 演習 21-2</a>、Einstein 係数は <a href="演習問題_第IV部_量子論へ.html">第IV部 演習 11-1</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 始状態 $|u;0\rangle$：原子は上準位 $u$、電磁場は真空（光子0個）。終状態 $|l;1_{\mathbf k\sigma}\rangle$：原子は下準位 $l$、電磁場にモード $(\mathbf k,\sigma)$ の光子が1個。相互作用 $\hat H_{\rm int}$ の生成演算子 $\hat a^\dagger$ が真空から光子を1個作る。外部光がない真空からの遷移なので「自発」放出。</p>
+          <p><b>(2)</b> $\omega^3$ は二つの $\omega$ 依存因子の積として出る。① 終状態モード密度 $\rho(\omega)\propto\omega^2$（モード密度 $\propto\nu^2$、第14章）。② 行列要素 $|\langle l;1|\hat H_{\rm int}|u;0\rangle|^2$ に含まれる<b>真空場（1光子）振幅の二乗</b>。$\hat H_{\rm int}\propto\hat{\mathbf A}$ で、1モードの零点電場振幅は $E_{\rm vac}\propto\sqrt{\hbar\omega/2\epsilon_0 V}$ ゆえ $|E_{\rm vac}|^2\propto\hbar\omega$。両者の積 $\omega^2\cdot\omega=\omega^3$。見通しとしては「モード密度 $\nu^2$ × エネルギー量子 $h\nu$」と書けるが、厳密には後者の $h\nu$ は<b>真空場1光子振幅の二乗 $\propto\hbar\omega$</b> として現れる点に注意。いずれにせよプランク前因子 $2h\nu^3/c^2$ の $\nu^3$ と同じ構造。</p>
+          <p><b>(3)</b> 古典電磁気では「ゼロ放射場→放出ゼロ」で励起原子が落ちる理由がない。QED では真空に零点揺らぎ（$\hat a^\dagger$ が真空から光子を生成しうること）があり、これが励起原子に常にちょっかいをかけて放出を誘起する。だから真空でも $A_{ul}\neq0$。</p>
+          <div class="ans"><b>答え：</b> $|u;0\rangle\to|l;1\rangle$＝真空から光子生成。$\omega^3$＝モード密度 $\nu^2$×$h\nu$＝プランク前因子と同構造。真空揺らぎが自発放出を駆動。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 25-2 -->
+    <div class="problem">
+      <div class="top"><span class="pid">25-2</span><span class="ptitle">$A_{ul}/B_{ul}=2h\nu^3/c^2$ ― 二つの地図の交点</span><span class="diff">☆☆☆</span><span class="tag deepen">理解を深める</span></div>
+      <div class="body">
+        <p>§25.3 は前因子 $2h\nu^3/c^2$ がプランク関数地図と水素線地図の共通起源だと総括した。</p>
+        <ol class="parts">
+          <li>$2h\nu^3/c^2$ の各因子（$\nu^3$、$1/c^2$、$2$、$h$）が、プランク関数と自発放出率の両方で同じ物理（モード密度・分散関係・偏光・エネルギー量子）から来ることを表で整理せよ。</li>
+          <li>自発放出 $A_{ul}$ と誘導放出 $B_{ul}$ が「同じ Fermi の黄金律の二側面」である（終状態モードが真空か既に光子を持つか、Bose 増強因子 $\sqrt{n+1}$）ことを述べよ。</li>
+          <li>「プランク関数と水素線吸収係数は、同じ電磁場の同じモード構造を電磁場側・物質側から眺めたもの」という総括を、自分の言葉でまとめよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part8/25-qed-minimum.html#sec-qed-minimum-einstein" target="_blank" rel="noopener">§25.3 Einstein 関係式の QED 起源</a> ／
+        プランク前因子の分解は <a href="演習問題_第V部_電磁気学へ.html">第V部 演習 14-4</a>、Einstein 関係は <a href="演習問題_第IV部_量子論へ.html">第IV部 演習 11-1・11-2</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b></p>
+          <table class="mini">
+            <tr><th>因子</th><th>プランク関数</th><th>自発放出率</th></tr>
+            <tr><td>$\nu^3$</td><td>モード密度 $\nu^2$ × $h\nu$</td><td>終状態モード密度 $\nu^2$ × $h\nu$</td></tr>
+            <tr><td>$1/c^2$</td><td>分散関係 $k=2\pi\nu/c$ ＋ $u_\nu\to B_\nu$</td><td>同じ</td></tr>
+            <tr><td>$2$</td><td>偏光自由度（横波）</td><td>同じ</td></tr>
+            <tr><td>$h$</td><td>エネルギー量子</td><td>同じ</td></tr>
+          </table>
+          <p>どちらも「電磁場の同じモード構造」を見ている。（表の「$\nu^2\times h\nu$」のうち $h\nu$ は、自発放出側では厳密には真空場1光子振幅の二乗 $\propto\hbar\omega$ として入る。演習 25-1(2) 参照。）</p>
+          <p><b>(2)</b> Fermi の黄金律で、終状態のモードが既に $n$ 個の光子を持つ場合は $|n\rangle\to|n+1\rangle$ の遷移で Bose 増強因子 $\sqrt{n+1}$（→ 誘導放出 $B_{ul}$、$\propto n$ 部分）と自発項（$+1$ 部分）が同時に出る。終状態が真空なら $n=0$ で増強因子1＝自発放出 $A_{ul}$。両者の比 $A_{ul}/B_{ul}=2h\nu^3/c^2$。</p>
+          <p><b>(3)</b> プランク関数は「電磁場の各モードの熱励起」を電磁場側から見たスペクトル、水素線吸収係数は「原子が電磁場のモードと遷移する」のを物質側から見た量。両者に共通する $2h\nu^3/c^2$ は、同じ電磁場のモード構造（モード密度×偏光×エネルギー量子）の現れ。連続も線も、同じ電磁場–物質相互作用 Hamiltonian の二側面。</p>
+          <div class="ans"><b>答え：</b> $2h\nu^3/c^2$ の各因子は両地図で同一物理（モード密度・分散・偏光・量子）。$A_{ul}$/$B_{ul}$ は Fermi 黄金律の真空/光子有りの二側面（$\sqrt{n+1}$）。連続と線は同じモード構造の二つの眺め。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 25-3 -->
+    <div class="problem">
+      <div class="top"><span class="pid">25-3</span><span class="ptitle">自発放出 ↔ 真空揺らぎ ↔ 自然幅の三位一体</span><span class="diff">☆☆</span><span class="tag deepen">理解を深める</span></div>
+      <div class="body">
+        <p>§25.4 は自然幅を QED 的に意味づけた。Ly$\alpha$（$A_{ul}=6.27\times10^8$ s$^{-1}$）を例に三者の関係を整理する。</p>
+        <ol class="parts">
+          <li>真空揺らぎ → 自発放出 → 励起寿命 $\tau=1/A_{ul}$ → 自然幅 $\gamma_{\rm nat}=A_{ul}/(2\pi)$ という連鎖を述べよ。</li>
+          <li>「線の自然幅は真空揺らぎの存在を観測している」という主張の意味を述べよ。観測例（QSO の damped Ly$\alpha$ 系の減衰翼）に触れよ。</li>
+          <li>21 cm 線（$A_{ul}\simeq2.9\times10^{-15}$ s$^{-1}$）の自然幅は極端に小さいのに観測される。その理由（膨大な中性水素）を演習 19-1 と結びつけて述べよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part8/25-qed-minimum.html#sec-qed-minimum-natural-width" target="_blank" rel="noopener">§25.4 自然幅と真空揺らぎ</a> ／
+        自然幅の計算は <a href="演習問題_第VII部_線スペクトル.html">第VII部 演習 22-2</a>、21 cm は <a href="演習問題_第VII部_線スペクトル.html">第VII部 演習 19-1</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 量子化された電磁場の真空には各モードに零点揺らぎがある → それが励起原子に常にちょっかいをかけ自発放出を誘起（$A_{ul}$）→ 励起準位の寿命が有限 $\tau=1/A_{ul}$ → 不確定性関係でエネルギー幅 $\Delta E\sim\hbar A_{ul}$、振動数幅 $\gamma_{\rm nat}=A_{ul}/(2\pi)$ が線に現れる。</p>
+          <p><b>(2)</b> 自然幅の物理的起源は真空揺らぎが励起原子を揺さぶること。よって観測される自然幅（Lorentzian の翼）は、真空が「空ではない」ことの直接の観測的痕跡。QSO の damped Ly$\alpha$ 系の減衰翼は、まさにこの自然幅起源の Lorentzian 翼を地上の分光計で測ったもの。</p>
+          <p><b>(3)</b> 21 cm 線の $A_{ul}$ は極小（自然幅も極小）だが、中心地図 $\alpha_\nu=(\pi e^2/m_ec)f_{lu}n_l\phi$ の $n_l$（中性水素の柱密度）が宇宙的スケールで膨大なので、積として観測可能な信号になる（演習 19-1）。真空揺らぎの効果がいかに弱くても、宇宙的物質量では無視できない。</p>
+          <div class="ans"><b>答え：</b> 真空揺らぎ→自発放出 $A_{ul}$→寿命 $\tau=1/A_{ul}$→自然幅 $A_{ul}/2\pi$。自然幅＝真空揺らぎの観測（damped Ly$\alpha$ 翼）。21 cm は膨大な $n_l$ で観測可能。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 25-4 -->
+    <div class="problem">
+      <div class="top"><span class="pid">25-4</span><span class="ptitle">選択則を行列要素で、そして連続と線の統一</span><span class="diff">☆☆</span><span class="tag deepen">理解を深める</span></div>
+      <div class="body">
+        <p>§25.5・25.6 の総括。電気双極子行列要素 $\mathbf d_{ul}=\langle u|\hat{\mathbf d}|l\rangle=-e\langle u|\hat{\mathbf r}|l\rangle$ と本書全体の統一。</p>
+        <ol class="parts">
+          <li>電気双極子（E1）選択則 $\Delta l=\pm1$、$\Delta m=0,\pm1$ が、相互作用の最低次（双極子）とパリティ・角運動量保存から自然に出ること、禁制遷移が高次（M1/E2）として残ることを述べよ。</li>
+          <li>第21章で「経験則」として述べた選択則が、本章で QED 構造から導かれることが、本書の原則③「天下り的に式を与えない」とどう関係するか述べよ。</li>
+          <li>本書の総括として、連続スペクトル（プランク関数）と線スペクトル（水素線吸収係数）が「同じ電磁場–物質相互作用 Hamiltonian の二側面」であることを、これまでの全演習を踏まえて自分の言葉でまとめよ。</li>
+        </ol>
+      </div>
+      <div class="related"><b>関連：</b>
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part8/25-qed-minimum.html#sec-qed-minimum-selection" target="_blank" rel="noopener">§25.5 選択則</a>、
+        <a href="https://wadakeiichi.github.io/inverse_text_radiation/part8/25-qed-minimum.html#sec-qed-minimum-unification" target="_blank" rel="noopener">§25.6 連続と線の統一</a> ／
+        選択則の原子物理側は <a href="演習問題_第VII部_線スペクトル.html">第VII部 演習 21-3</a>、全因子の合流は <a href="演習問題_第V部_電磁気学へ.html">第V部 演習 14-4</a>。
+      </div>
+      <details class="sol"><summary>模範解答</summary>
+        <div class="solbody">
+          <p><b>(1)</b> 相互作用 $\hat H_{\rm int}$ の長波長極限が電気双極子 $\hat{\mathbf d}$ を介する（最低次）。$\langle u|\hat{\mathbf d}|l\rangle$ はパリティと角運動量の保存から $\Delta l=\pm1$、$\Delta m=0,\pm1$ で非ゼロ。これを満たさない遷移は E1 で行列要素ゼロ＝禁制だが、磁気双極子(M1)・電気四重極(E2)など高次過程として弱く残る（強度 $\sim\alpha^2$ 倍）。</p>
+          <p><b>(2)</b> 第21章では選択則を観測規則（経験則）として受け入れたが、本章で「電気双極子相互作用の最低次」という QED 構造から必然として導いた。これは本書の原則③「天下り的に式を与えず、必然性として理解させる」を線スペクトル側で最終的に実行したもの。観測規則の背後にある物理が明示された。</p>
+          <p><b>(3)</b> プランク関数（連続）は電磁場の各モードの熱励起を電磁場側から、水素線吸収係数（線）は原子と電磁場モードの遷移を物質側から見た量。両者は同じ相互作用 Hamiltonian $\hat H_{\rm int}=-(e/m_e)\hat{\mathbf A}\cdot\hat{\mathbf p}$ から出て、共通の前因子 $2h\nu^3/c^2$（モード密度×偏光×エネルギー量子）を持つ。観測されるスペクトル ― CMB の黒体、恒星の Fraunhofer 線、AGN の鉄線、21 cm ― はすべて、量子化された電磁場のモード構造の現れであり、観測者は毎日 QED を見ている。これが本書の逆引きの到達点。</p>
+          <div class="ans"><b>答え：</b> E1 選択則は双極子の最低次＋保存則から、禁制は高次として残る。経験則を QED から導く＝原則③の完成。連続も線も同じ $\hat H_{\rm int}$ の二側面、共通前因子 $2h\nu^3/c^2$ が統一の印。</div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <div class="capstone">
+    <h3>全8部の演習を終えて ― 逆引きの地図</h3>
+    <p>本問題集は、観測される一本のスペクトル（連続も線も）から出発し、その背後の物理を逆向きにたどる本書の構成に沿っています。第VIII部の総括問題（25-2・25-4）は、これまでの全部の演習を束ねる位置にあります：</p>
+    <p>占有因子 $1/(e^{h\nu/kT}-1)$ は <a href="演習問題_第III部_熱力学統計力学へ.html">第III部（Bose 統計）</a>、エネルギー量子 $h\nu$ は <a href="演習問題_第IV部_量子論へ.html">第IV部</a>、前因子 $2h\nu^3/c^2$ のモード密度と偏光は <a href="演習問題_第V部_電磁気学へ.html">第V部</a>。これらが <a href="演習問題_第VII部_線スペクトル.html">第VII部</a> の Einstein 係数を介して線スペクトルとつながり、本部で $A_{ul}/B_{ul}=2h\nu^3/c^2$ として一点に収束します。</p>
+    <p>全8部（第I〜VIII部）・計99問。各問は本書の三原則 ―（① 逆引き、② 背景物理を曖昧にしない、③ 天下り的に式を与えない）― に沿って、本文が省いた導出の補完と理解の深化を目的に作成しました。</p>
+  </div>
+
+  <footer>
+    <p><b>宇宙の熱的放射</b> ― 連続放射と線スペクトルの背景物理（和田 桂一）<br>
+    演習問題集・第VIII部（試作版）。本文の各節は
+    <a href="https://wadakeiichi.github.io/inverse_text_radiation/" target="_blank" rel="noopener">GitHub Pages 公開版</a>
+    にリンクしています。第VIII部は QED からの俯瞰が主題のため、Fermi の黄金律から $A_{ul}$ を導く見通しと、二つの中心地図の統一（共通前因子 $2h\nu^3/c^2$）の総括を組み合わせました。<br>
+    全演習：<a href="演習問題_第I部_黒体放射の現象論.html">I</a> ・ <a href="演習問題_第II部_放射の記述と輸送.html">II</a> ・ <a href="演習問題_第III部_熱力学統計力学へ.html">III</a> ・ <a href="演習問題_第IV部_量子論へ.html">IV</a> ・ <a href="演習問題_第V部_電磁気学へ.html">V</a> ・ <a href="演習問題_第VI部_現実の宇宙へ.html">VI</a> ・ <a href="演習問題_第VII部_線スペクトル.html">VII</a> ・ VIII</p>
+  </footer>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false},
+      {left: "\\[", right: "\\]", display: true}
+    ],
+    throwOnError: false
+  });
+});
+</script>
+</body>
+</html>

@@ -81,7 +81,8 @@ GitHub Pages で公開しています：
 
 Zenodo に preprint として登録しています：
 
-→ DOI: 10.5281/zenodo.XXXXXXX （v0.1 登録後にURL記載）
+→ <https://doi.org/10.5281/zenodo.20635563>
+（DOI: 10.5281/zenodo.20635563、v0.1 / 2026-06-11）
 
 Acrobat 等で注釈を入れて返送いただくと、章・式・段落単位の細かい指摘がいただきやすいです。
 
