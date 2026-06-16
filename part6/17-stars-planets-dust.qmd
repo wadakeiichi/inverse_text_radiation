@@ -1,10 +1,10 @@
 ---
-title: "第17章　恒星・惑星・ダストの熱放射"
+title: "第17章　恒星・惑星・ダスト・電離ガスの熱放射"
 lang: ja
 ---
 
 ::: {.chapter-overview}
-**この章の主題**：第15章でずれの体系を整理し、第16章で完全黒体の極限（CMB）を見た。本章では、もっとも身近な熱放射体 ― 恒星・惑星・ダスト ― の **観測スペクトルが、プランク分布を出発点としてどう書けるか** を扱う。各天体のスペクトルから読み取れる物理量（温度・サイズ・距離・組成）と、それを引き出す典型的手順を、逆引きの立場で整理する。
+**この章の主題**：第15章でずれの体系を整理し、第16章で完全黒体の極限（CMB）を見た。本章では、もっとも身近な熱放射体 ― 恒星・惑星・ダスト ― の **観測スペクトルが、プランク分布を出発点としてどう書けるか** を扱う。各天体のスペクトルから読み取れる物理量（温度・サイズ・距離・組成）と、それを引き出す典型的手順を、逆引きの立場で整理する。最後に、**面をもたない希薄な電離ガス**（HII 領域など）の自由–自由放射が、低振動数側で光学的に厚くなって黒体に漸近するという重要な観測例（§17.6）を加える。
 :::
 
 ## この章の中心地図 {#sec-stars-planets-dust-map .unnumbered}
@@ -22,6 +22,7 @@ lang: ja
 - 惑星の平衡温度を求めるとき、何を仮定し、何を無視しているのか
 - ダストの放射スペクトルが赤外で「黒体に似ているがずれている」のはなぜか
 - 多温度成分（恒星表層と内部、HII 領域と中性領域）は観測スペクトルにどう現れるのか
+- 希薄な電離ガス（HII 領域）の連続光が、低振動数側で「黒体的」に見えるのはなぜか
 :::
 
 ## 到達目標 {#sec-stars-planets-dust-goals .unnumbered}
@@ -31,6 +32,7 @@ lang: ja
 - 恒星の有効温度・惑星の平衡温度・ダストの色温度を、適切な近似のもとで計算できる
 - 修正黒体スペクトルからダストの性質（放射効率・温度・量）を読み取れる
 - 多温度合成スペクトルから、主要な温度成分を見分けられる
+- 電離ガスの自由–自由放射が低振動数で黒体（$B_\nu(T_e)$）に漸近する仕組みを説明できる
 
 ---
 
@@ -166,7 +168,45 @@ $$ {#eq-multi-temperature-sed}
 **短答**：$\lambda_\text{peak} \approx 2898\,\text{µm·K} / 20\,\text{K} \simeq 145$ µm。これは Herschel SPIRE / PACS の主帯域。冷たい星間ダストの観測が Herschel で飛躍的に進んだのはこのため
 :::
 
-## 17.6 使えるようになった道具 {#sec-stars-planets-dust-tools .unnumbered}
+## 17.6 電離ガスの自由–自由放射 ― 電波で見る黒体への漸近 {#sec-free-free-ionized}
+
+[本文目安：B3]
+
+恒星・惑星・ダストはいずれも「面をもつ高密度の熱放射体」だった。しかし **希薄な電離ガス**（HII 領域・惑星状星雲・銀河中心の電離ガスなど）も、熱的な連続光 ― **自由–自由放射**（**free-free emission**、**熱的制動放射**, thermal bremsstrahlung）― を放つ。自由電子がイオンの Coulomb 場で曲げられるときに光子を出す過程で、電子が Maxwell 分布（温度 $T_e$）にあれば **熱的放射**（第1章 §1.9）であり、LTE のもとでソース関数は $S_\nu=B_\nu(T_e)$ になる（第3章・第5章）。
+
+鍵は、**自由–自由吸収係数が低振動数ほど大きい**ことである：
+
+$$
+\alpha_\nu^{\mathrm{ff}} \propto n_e\, n_i\, T_e^{-3/2}\, \nu^{-2}\, \bar g_{\mathrm{ff}}(\nu,T_e)
+$$ {#eq-ff-absorption}
+
+ここで $n_e, n_i$ は電子・イオン数密度、$\bar g_{\mathrm{ff}}$ は Gaunt 因子（$\nu$ にゆるやかに依存）。光学的厚さ $\tau_\nu=\int\alpha_\nu^{\mathrm{ff}}\,ds \propto \mathrm{EM}\,\nu^{-2.1}\,T_e^{-1.35}$ は **発光量度**（**emission measure**）$\mathrm{EM}=\int n_e^2\,ds$ で決まり、$\nu^{-2}$ で効くため **低振動数で光学的に厚く、高振動数で薄い**。
+
+等温スラブ（温度 $T_e$、LTE）の射出強度は第5章の解 $I_\nu=B_\nu(T_e)(1-e^{-\tau_\nu})$。電波帯では $h\nu\ll k_BT_e$ なので Rayleigh–Jeans が使え、輝度温度 $T_b\equiv c^2 I_\nu/(2\nu^2 k_B)$ で書くと
+
+$$
+T_b(\nu)=T_e\left(1-e^{-\tau_\nu}\right)
+$$ {#eq-ff-brightness-temp}
+
+**低振動数側（光学的に厚い、$\tau_\nu\gg1$）**：$T_b\to T_e$ に飽和し、$I_\nu\to B_\nu(T_e)$。これは第5章 §5.6 の「光学的に厚い極限で $I_\nu\to B_\nu(T)$」そのもので、観測されるのは **電子温度 $T_e$ の黒体（の Rayleigh–Jeans 裾）** である。フラックスは $F_\nu\propto\nu^2$。
+
+**高振動数側（光学的に薄い、$\tau_\nu\ll1$）**：$T_b\to T_e\,\tau_\nu\propto\nu^{-2.1}$ なので $F_\nu\propto\nu^2\cdot\nu^{-2.1}=\nu^{-0.1}$ ― ほぼ平坦。
+
+両者の境目（$\tau_\nu\simeq1$ となる **ターンオーバー振動数** $\nu_t$）は $\mathrm{EM}$ と $T_e$ で決まる。したがって電波 HII 領域の連続スペクトルは、**低 $\nu$ 側 $F_\nu\propto\nu^2$（黒体的）→ 高 $\nu$ 側 $F_\nu\propto\nu^{-0.1}$（薄い）** という特徴的な折れ曲がりを示す。
+
+::: {.callout-note}
+**対応（観測）**：電波で観測する HII 領域（オリオン大星雲など）・超コンパクト HII 領域・惑星状星雲の連続スペクトルは、まさにこの折れ曲がりを示す。低振動数側で輝度温度 $T_b$ が一定値に飽和すること自体が「**ガスが光学的に厚くなり電子温度 $T_e$ の黒体に達した**」直接の証拠であり、そこから $T_e$ を、ターンオーバーから $\mathrm{EM}$（密度 × 経路長）を読み取れる。第1章 §1.2–1.6 の黒体例（恒星光球・CMB・降着円盤）は **面をもつ天体** だったが、ここでは **希薄な気体** が低振動数で黒体に漸近する ― 第5章 §5.6「光学的に厚い → 黒体」の最も直接的な気体の実例である。
+:::
+
+::: {.callout-tip appearance="simple"}
+**問い**：自由–自由放射は「熱的放射」なのに、なぜ全帯域で単一の黒体（プランク分布）には **ならない** のか？
+
+**短答**：黒体になるのは **光学的に厚い** 振動数帯（低 $\nu$ 側）だけ。高 $\nu$ 側では光学的に薄く、$I_\nu\approx\tau_\nu B_\nu(T_e)\ll B_\nu(T_e)$ となって黒体から下にずれる。「熱的（粒子が Maxwell 分布）」と「黒体（光学的に厚く熱平衡放射場）」は別条件であり、自由–自由放射は前者を常に満たすが、後者は低振動数でのみ満たす。
+
+**もう一歩**：同じ熱的自由–自由放射でも、銀河団の高温プラズマ（$T_e\sim10^7$–$10^8$ K）からの **X 線制動放射** は全帯域で光学的に薄く、$F_\nu\propto e^{-h\nu/k_BT_e}$ の指数カットオフをもつ「薄い側」の典型例である（第18章）。低振動数で黒体に漸近するのは、$\nu^{-2}$ で吸収が伸びる電波帯ならではの現象である。
+:::
+
+## 17.7 使えるようになった道具 {#sec-stars-planets-dust-tools .unnumbered}
 
 ::: {.callout-note}
 - 恒星の有効温度の定義と限界（積分量としての $T_\text{eff}$）
@@ -174,6 +214,7 @@ $$ {#eq-multi-temperature-sed}
 - 修正黒体スペクトル $Q_\nu B_\nu(T)$ からのダスト 3 物理量読み取り
 - 多温度 SED フィッティングの構造と縮退性
 - 観測波長帯（赤外・サブミリ・ミリ）と各観測施設の対応関係
+- 電離ガスの自由–自由放射：低 $\nu$ 側は $T_e$ の黒体（Rayleigh–Jeans）、高 $\nu$ 側は $F_\nu\propto\nu^{-0.1}$、ターンオーバーから $\mathrm{EM}$ と $T_e$
 :::
 
 ---
@@ -189,6 +230,7 @@ $$ {#eq-multi-temperature-sed}
 - 惑星：恒星光の再放射、$T_\text{eq}$ ＋ 温室効果のずれ
 - ダスト：修正黒体 $Q_\nu B_\nu(T_d)$、$\beta$ が粒子物理を反映
 - 銀河・星形成領域：多温度合成、波長帯ごとに異なる成分が主役
+- 電離ガス（HII 領域）：自由–自由放射が低振動数で光学的に厚くなり $B_\nu(T_e)$ に漸近 ― 面をもたない希薄な気体が黒体に達する観測例（§17.6）
 
 次章では、もっと極端な物理条件 ― 強い重力場・強磁場・相対論的速度 ― のもとでも、同じ枠組み（プランク関数 ＋ ずれ因子）がどこまで通用するかを見る
 :::
@@ -299,9 +341,35 @@ $x=hc/\lambda kT$、$hc/k=1.439\times10^{-2}$ m·K。比 $=\dfrac{e^{x_1}-1}{e^{
 **答え**：20 K→145 μm（Herschel）、100 K→29 μm、15 K→193 μm。重元素の半分がダスト＝遠赤外/サブミリ観測が物質収支に必須。
 :::
 
+### 問題 17-5　電波HII領域の自由–自由スペクトルのターンオーバー {#ex-17-5 .unnumbered}
+
+[★ 難易度：☆☆ ] [tag:導出補完]
+
+§17.6 の電離ガスの自由–自由放射を扱う。等温スラブ（電子温度 $T_e$、LTE）の輝度温度 $T_b(\nu)=T_e(1-e^{-\tau_\nu})$、自由–自由の光学的厚さ $\tau_\nu\propto\nu^{-2.1}$（電波帯）とする。
+
+1. 低振動数（光学的に厚い、$\tau_\nu\gg1$）で $T_b\to T_e$、$I_\nu\to B_\nu(T_e)$、フラックスが $F_\nu\propto\nu^2$ になることを示せ。これが「電子温度 $T_e$ の黒体（Rayleigh–Jeans 裾）」である理由を、第5章 §5.6 と結びつけて述べよ。
+2. 高振動数（光学的に薄い、$\tau_\nu\ll1$）で $T_b\to T_e\tau_\nu$、$F_\nu\propto\nu^{-0.1}$ になることを示せ（Rayleigh–Jeans で $F_\nu\propto\nu^2 T_b$ を使う）。
+3. 「自由–自由放射は熱的なのに、全帯域で単一の黒体にはならない」のはなぜか。低 $\nu$ 側と高 $\nu$ 側で何が違うかを一言で述べよ。
+
+**関連**：[§17.6 電離ガスの自由–自由放射](#sec-free-free-ionized)／光学的に厚い極限は[§5.6](../part2/05-radiative-transfer.qmd#sec-radiative-transfer-thick)（[演習 5-2](../part2/05-radiative-transfer.qmd#ex-5-2)）、輝度温度は[§2.6](../part1/02-reading-spectra.qmd#sec-reading-spectra-temperatures)、熱的/非熱的は[§1.9](../part1/01-where-blackbody.qmd#sec-where-blackbody-thermal)、X 線制動放射は[第18章](../part6/18-accretion-high-energy.qmd)。
+
+::: {.callout-derive collapse="true"}
+## 模範解答（問題 17-5）
+
+**(1)** $\tau_\nu\gg1$ で $1-e^{-\tau_\nu}\to1$ ゆえ $T_b\to T_e$、すなわち $I_\nu=B_\nu(T_e)(1-e^{-\tau_\nu})\to B_\nu(T_e)$。これは第5章 §5.6 の「光学的に厚い極限で $I_\nu\to S_\nu=B_\nu(T)$」そのもの（LTE で $S_\nu=B_\nu(T_e)$）。電波帯は $h\nu\ll k_BT_e$ なので $B_\nu(T_e)\simeq2\nu^2k_BT_e/c^2$（Rayleigh–Jeans）、よって $F_\nu\propto\nu^2$。観測されるのは電子温度 $T_e$ の黒体の RJ 裾。
+
+**(2)** $\tau_\nu\ll1$ で $1-e^{-\tau_\nu}\simeq\tau_\nu$ ゆえ $T_b\to T_e\tau_\nu\propto\nu^{-2.1}$。フラックスは RJ で $F_\nu\propto\nu^2 T_b\propto\nu^2\cdot\nu^{-2.1}=\nu^{-0.1}$（ほぼ平坦）。
+
+**(3)** 黒体になるのは光学的に厚い低 $\nu$ 側だけ。高 $\nu$ 側は光学的に薄く $I_\nu\approx\tau_\nu B_\nu(T_e)\ll B_\nu(T_e)$ で黒体から下にずれる。「熱的（粒子が Maxwell 分布）」と「黒体（光学的に厚い）」は別条件で、自由–自由放射は前者を常に、後者を低 $\nu$ 側でのみ満たす。
+
+**答え**：低 $\nu$（厚い）→ $T_b\to T_e$、$I_\nu\to B_\nu(T_e)$、$F_\nu\propto\nu^2$（$T_e$ の黒体）。高 $\nu$（薄い）→ $F_\nu\propto\nu^{-0.1}$。黒体化は光学的に厚い低 $\nu$ 側のみ。
+:::
+
 ## さらに学ぶための参考文献 {#sec-stars-planets-dust-further .unnumbered}
 
 - Carroll & Ostlie, *An Introduction to Modern Astrophysics* (Cambridge, 2nd ed., 2017) — 恒星・惑星・銀河の標準的扱い
 - Pierrehumbert, *Principles of Planetary Climate* (Cambridge, 2010) — 惑星平衡温度と温室効果の物理
 - Draine, *Physics of the Interstellar and Intergalactic Medium* (Princeton, 2011) — ダストの放射、$\beta$、修正黒体
 - Galametz et al. の SED フィッティングのレビュー（A&A, 2012）— 多温度 SED の実用解析
+- Wilson, Rohlfs & Hüttemeister, *Tools of Radio Astronomy* (Springer, 6th ed., 2013) — 電波連続光・自由–自由放射と HII 領域のスペクトル
+- Rybicki & Lightman, *Radiative Processes in Astrophysics* (Wiley, 1979) — 第5章「Bremsstrahlung」（自由–自由放射の断面積と吸収）
