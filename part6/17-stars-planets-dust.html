@@ -539,7 +539,7 @@ window.Quarto = {
 <div class="central-map planck-map">
 <p><strong>中心地図：プランク関数 ― 本部の主題は「ずれ」</strong></p>
 <p><span class="math display">
-B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1} \quad \xrightarrow{\text{現実}} \quad \text{?}
+B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1} \quad \overset{\text{現実}}{\longrightarrow} \quad \text{?}
 </span></p>
 <p>第VI部（現実の宇宙へ戻る）は、観測される現実の天体スペクトルが、この理想的プランク関数からどのように、そしてなぜ <strong>ずれる</strong>かを扱う。ずれの主な起源：</p>
 <ul>
@@ -861,21 +861,21 @@ T_b(\nu)=T_e\left(1-e^{-\tau_\nu}\right)
 <p>[★ 難易度：☆☆ ] <span class="tag">[導出補完]</span></p>
 <p>§17.2 のエネルギー収支から惑星平衡温度を導く。アルベド <span class="math inline">A</span>、恒星-惑星距離 <span class="math inline">d</span>、恒星半径 <span class="math inline">R_\star</span>、温度 <span class="math inline">T_\star</span>、惑星半径 <span class="math inline">R_p</span>。</p>
 <ol type="1">
-<li>吸収光 <span class="math inline">(1-A)\dfrac{L_\star}{4\pi d^2}\pi R_p^2</span> と再放射 <span class="math inline">4\pi R_p^2\sigma T_{\rm eq}^4</span> を等置し、<span class="math inline">L_\star=4\pi R_\star^2\sigma T_\star^4</span> を使って <span class="math inline">T_{\rm eq}=T_\star\left(\dfrac{R_\star}{2d}\right)^{1/2}(1-A)^{1/4}</span> を導け。</li>
+<li>吸収光 <span class="math inline">(1-A)\dfrac{L_\star}{4\pi d^2}\pi R_p^2</span> と再放射 <span class="math inline">4\pi R_p^2\sigma T_\mathrm{eq}^4</span> を等置し、<span class="math inline">L_\star=4\pi R_\star^2\sigma T_\star^4</span> を使って <span class="math inline">T_\mathrm{eq}=T_\star\left(\dfrac{R_\star}{2d}\right)^{1/2}(1-A)^{1/4}</span> を導け。</li>
 <li>断面積 <span class="math inline">\pi R_p^2</span>（吸収）と表面積 <span class="math inline">4\pi R_p^2</span>（放射）の比 4 が、式のどこに効くか説明せよ。</li>
-<li>地球（<span class="math inline">T_\star=5778</span> K、<span class="math inline">R_\star/d=1/214</span>、<span class="math inline">A=0.3</span>）で <span class="math inline">T_{\rm eq}</span> を計算し、実際の地表温度（+15 °C）とのずれの原因を述べよ。</li>
+<li>地球（<span class="math inline">T_\star=5778</span> K、<span class="math inline">R_\star/d=1/214</span>、<span class="math inline">A=0.3</span>）で <span class="math inline">T_\mathrm{eq}</span> を計算し、実際の地表温度（+15 °C）とのずれの原因を述べよ。</li>
 </ol>
 <p><strong>関連</strong>：<a href="#sec-planet-equilibrium">§17.2 惑星の平衡温度</a>／Stefan-Boltzmann と光度は<a href="../part1/02-reading-spectra.html#sec-reading-spectra-stefan-boltzmann">§2.4</a>（<a href="../part1/02-reading-spectra.html#ex-2-5">演習 2-5</a>）。</p>
 </section>
 </section>
 <section id="模範解答問題-17-1" class="level2 callout-derive" data-collapse="true">
 <h2 class="anchored" data-anchor-id="模範解答問題-17-1">模範解答（問題 17-1）</h2>
-<p><strong>(1)</strong> 等置：<span class="math inline">(1-A)\dfrac{L_\star}{4\pi d^2}\pi R_p^2=4\pi R_p^2\sigma T_{\rm eq}^4</span>。<span class="math inline">\pi R_p^2</span> を消し、<span class="math inline">L_\star=4\pi R_\star^2\sigma T_\star^4</span> を代入：</p>
-<p><span class="math display">(1-A)\frac{4\pi R_\star^2\sigma T_\star^4}{4\pi d^2}\cdot\frac14=\sigma T_{\rm eq}^4\ \Rightarrow\ T_{\rm eq}^4=(1-A)\frac{R_\star^2}{4d^2}T_\star^4.</span></p>
-<p><span class="math display">T_{\rm eq}=T_\star\left(\frac{R_\star}{2d}\right)^{1/2}(1-A)^{1/4}.</span></p>
+<p><strong>(1)</strong> 等置：<span class="math inline">(1-A)\dfrac{L_\star}{4\pi d^2}\pi R_p^2=4\pi R_p^2\sigma T_\mathrm{eq}^4</span>。<span class="math inline">\pi R_p^2</span> を消し、<span class="math inline">L_\star=4\pi R_\star^2\sigma T_\star^4</span> を代入：</p>
+<p><span class="math display">(1-A)\frac{4\pi R_\star^2\sigma T_\star^4}{4\pi d^2}\cdot\frac14=\sigma T_\mathrm{eq}^4\ \Rightarrow\ T_\mathrm{eq}^4=(1-A)\frac{R_\star^2}{4d^2}T_\star^4.</span></p>
+<p><span class="math display">T_\mathrm{eq}=T_\star\left(\frac{R_\star}{2d}\right)^{1/2}(1-A)^{1/4}.</span></p>
 <p><strong>(2)</strong> 惑星は断面 <span class="math inline">\pi R_p^2</span> で恒星光を受け、全表面 <span class="math inline">4\pi R_p^2</span> から再放射する。比 <span class="math inline">4\pi R_p^2/\pi R_p^2=4</span> が右辺の <span class="math inline">1/4</span>（すなわち <span class="math inline">\sqrt{1/4}=1/2</span> が <span class="math inline">R_\star/2d</span> の 2）として効く。自転が速く全球で均一再放射する近似。</p>
-<p><strong>(3)</strong> <span class="math inline">T_{\rm eq}=5778\times(1/(2\times214))^{1/2}\times(0.7)^{1/4}=5778\times(2.34\times10^{-3})^{1/2}\times0.915=5778\times0.0483\times0.915\simeq255</span> K（<span class="math inline">-18</span>°C）。実際の +15°C との 33 K の差は温室効果（大気の赤外不透明度）。この式は大気なし近似。</p>
-<p><strong>答え</strong>：<span class="math inline">T_{\rm eq}=T_\star\sqrt{R_\star/2d}\,(1-A)^{1/4}</span>。地球で 255 K。実測との 33 K 差は温室効果。</p>
+<p><strong>(3)</strong> <span class="math inline">T_\mathrm{eq}=5778\times(1/(2\times214))^{1/2}\times(0.7)^{1/4}=5778\times(2.34\times10^{-3})^{1/2}\times0.915=5778\times0.0483\times0.915\simeq255</span> K（<span class="math inline">-18</span>°C）。実際の +15°C との 33 K の差は温室効果（大気の赤外不透明度）。この式は大気なし近似。</p>
+<p><strong>答え</strong>：<span class="math inline">T_\mathrm{eq}=T_\star\sqrt{R_\star/2d}\,(1-A)^{1/4}</span>。地球で 255 K。実測との 33 K 差は温室効果。</p>
 </section>
 <section id="ex-17-2" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ex-17-2">問題 17-2　二温度天体の同一波長明るさ比</h3>
@@ -917,7 +917,7 @@ T_b(\nu)=T_e\left(1-e^{-\tau_\nu}\right)
 <section id="ex-17-4" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ex-17-4">問題 17-4　ダストのピーク波長と観測施設</h3>
 <p>[★ 難易度：☆ ] <span class="tag">[理解を深める]</span></p>
-<p>§17.5 の問いを一般化する。Wien 則 <span class="math inline">\lambda_{\rm peak}=b/T</span>（<span class="math inline">b=2898\ \mu</span>m·K）。</p>
+<p>§17.5 の問いを一般化する。Wien 則 <span class="math inline">\lambda_\mathrm{peak}=b/T</span>（<span class="math inline">b=2898\ \mu</span>m·K）。</p>
 <ol type="1">
 <li><span class="math inline">T_d=20</span> K の冷たいダストのピーク波長を求め、どの観測施設の帯域か述べよ。</li>
 <li>暖かいダスト <span class="math inline">T_d=100</span> K、ごく冷たいダスト <span class="math inline">T_d=15</span> K のピーク波長も求めよ。</li>
@@ -927,8 +927,8 @@ T_b(\nu)=T_e\left(1-e^{-\tau_\nu}\right)
 </section>
 <section id="模範解答問題-17-4" class="level2 callout-derive" data-collapse="true">
 <h2 class="anchored" data-anchor-id="模範解答問題-17-4">模範解答（問題 17-4）</h2>
-<p><strong>(1)</strong> <span class="math inline">\lambda_{\rm peak}=2898/20=145\ \mu</span>m。これは Herschel（SPIRE/PACS、60–600 μm）の主帯域。冷たい星間ダストの観測が Herschel で飛躍したのはこのため。</p>
-<p><strong>(2)</strong> <span class="math inline">T_d=100</span> K：<span class="math inline">\lambda_{\rm peak}=2898/100=29\ \mu</span>m（中間赤外、Spitzer/JWST）。<span class="math inline">T_d=15</span> K：<span class="math inline">\lambda_{\rm peak}=2898/15=193\ \mu</span>m（サブミリ、Herschel/ALMA）。</p>
+<p><strong>(1)</strong> <span class="math inline">\lambda_\mathrm{peak}=2898/20=145\ \mu</span>m。これは Herschel（SPIRE/PACS、60–600 μm）の主帯域。冷たい星間ダストの観測が Herschel で飛躍したのはこのため。</p>
+<p><strong>(2)</strong> <span class="math inline">T_d=100</span> K：<span class="math inline">\lambda_\mathrm{peak}=2898/100=29\ \mu</span>m（中間赤外、Spitzer/JWST）。<span class="math inline">T_d=15</span> K：<span class="math inline">\lambda_\mathrm{peak}=2898/15=193\ \mu</span>m（サブミリ、Herschel/ALMA）。</p>
 <p><strong>(3)</strong> ダスト（<span class="math inline">T\sim15</span>–<span class="math inline">30</span> K）の熱放射ピークは遠赤外〜サブミリ。銀河の重元素の半分がダストに閉じ込められているので、可視・紫外だけ見ると物質の半分を見落とす。遠赤外・サブミリ（Herschel/ALMA）でこの放射を捉えて初めて、銀河の星間物質・ダスト質量・星形成の全体像（物質収支）が分かる。</p>
 <p><strong>答え</strong>：20 K→145 μm（Herschel）、100 K→29 μm、15 K→193 μm。重元素の半分がダスト＝遠赤外/サブミリ観測が物質収支に必須。</p>
 </section>
@@ -1696,26 +1696,26 @@ T_b(\nu)=T_e\left(1-e^{-\tau_\nu}\right)
 <span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a>§17.2 のエネルギー収支から惑星平衡温度を導く。アルベド $A$、恒星-惑星距離 $d$、恒星半径 $R_\star$、温度 $T_\star$、惑星半径 $R_p$。</span>
 <span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>吸収光 $(1-A)\dfrac{L_\star}{4\pi d^2}\pi R_p^2$ と再放射 $4\pi R_p^2\sigma T_{\rm eq}^4$ を等置し、$L_\star=4\pi R_\star^2\sigma T_\star^4$ を使って $T_{\rm eq}=T_\star\left(\dfrac{R_\star}{2d}\right)^{1/2}(1-A)^{1/4}$ を導け。</span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>吸収光 $(1-A)\dfrac{L_\star}{4\pi d^2}\pi R_p^2$ と再放射 $4\pi R_p^2\sigma T_\mathrm{eq}^4$ を等置し、$L_\star=4\pi R_\star^2\sigma T_\star^4$ を使って $T_\mathrm{eq}=T_\star\left(\dfrac{R_\star}{2d}\right)^{1/2}(1-A)^{1/4}$ を導け。</span>
 <span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>断面積 $\pi R_p^2$（吸収）と表面積 $4\pi R_p^2$（放射）の比 4 が、式のどこに効くか説明せよ。</span>
-<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>地球（$T_\star=5778$ K、$R_\star/d=1/214$、$A=0.3$）で $T_{\rm eq}$ を計算し、実際の地表温度（+15 °C）とのずれの原因を述べよ。</span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>地球（$T_\star=5778$ K、$R_\star/d=1/214$、$A=0.3$）で $T_\mathrm{eq}$ を計算し、実際の地表温度（+15 °C）とのずれの原因を述べよ。</span>
 <span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§17.2 惑星の平衡温度</span><span class="co">](#sec-planet-equilibrium)</span>／Stefan-Boltzmann と光度は<span class="co">[</span><span class="ot">§2.4</span><span class="co">](../part1/02-reading-spectra.qmd#sec-reading-spectra-stefan-boltzmann)</span>（<span class="co">[</span><span class="ot">演習 2-5</span><span class="co">](../part1/02-reading-spectra.qmd#ex-2-5)</span>）。</span>
 <span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
 <span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 17-1）</span></span>
 <span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>**(1)** 等置：$(1-A)\dfrac{L_\star}{4\pi d^2}\pi R_p^2=4\pi R_p^2\sigma T_{\rm eq}^4$。$\pi R_p^2$ を消し、$L_\star=4\pi R_\star^2\sigma T_\star^4$ を代入：</span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>**(1)** 等置：$(1-A)\dfrac{L_\star}{4\pi d^2}\pi R_p^2=4\pi R_p^2\sigma T_\mathrm{eq}^4$。$\pi R_p^2$ を消し、$L_\star=4\pi R_\star^2\sigma T_\star^4$ を代入：</span>
 <span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a>$$(1-A)\frac{4\pi R_\star^2\sigma T_\star^4}{4\pi d^2}\cdot\frac14=\sigma T_{\rm eq}^4\ \Rightarrow\ T_{\rm eq}^4=(1-A)\frac{R_\star^2}{4d^2}T_\star^4.$$</span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a>$$(1-A)\frac{4\pi R_\star^2\sigma T_\star^4}{4\pi d^2}\cdot\frac14=\sigma T_\mathrm{eq}^4\ \Rightarrow\ T_\mathrm{eq}^4=(1-A)\frac{R_\star^2}{4d^2}T_\star^4.$$</span>
 <span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a>$$T_{\rm eq}=T_\star\left(\frac{R_\star}{2d}\right)^{1/2}(1-A)^{1/4}.$$</span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a>$$T_\mathrm{eq}=T_\star\left(\frac{R_\star}{2d}\right)^{1/2}(1-A)^{1/4}.$$</span>
 <span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a>**(2)** 惑星は断面 $\pi R_p^2$ で恒星光を受け、全表面 $4\pi R_p^2$ から再放射する。比 $4\pi R_p^2/\pi R_p^2=4$ が右辺の $1/4$（すなわち $\sqrt{1/4}=1/2$ が $R_\star/2d$ の 2）として効く。自転が速く全球で均一再放射する近似。</span>
 <span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a>**(3)** $T_{\rm eq}=5778\times(1/(2\times214))^{1/2}\times(0.7)^{1/4}=5778\times(2.34\times10^{-3})^{1/2}\times0.915=5778\times0.0483\times0.915\simeq255$ K（$-18$°C）。実際の +15°C との 33 K の差は温室効果（大気の赤外不透明度）。この式は大気なし近似。</span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a>**(3)** $T_\mathrm{eq}=5778\times(1/(2\times214))^{1/2}\times(0.7)^{1/4}=5778\times(2.34\times10^{-3})^{1/2}\times0.915=5778\times0.0483\times0.915\simeq255$ K（$-18$°C）。実際の +15°C との 33 K の差は温室効果（大気の赤外不透明度）。この式は大気なし近似。</span>
 <span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a>**答え**：$T_{\rm eq}=T_\star\sqrt{R_\star/2d}\,(1-A)^{1/4}$。地球で 255 K。実測との 33 K 差は温室効果。</span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a>**答え**：$T_\mathrm{eq}=T_\star\sqrt{R_\star/2d}\,(1-A)^{1/4}$。地球で 255 K。実測との 33 K 差は温室効果。</span>
 <span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 17-2　二温度天体の同一波長明るさ比 {#ex-17-2 .unnumbered}</span></span>
@@ -1772,7 +1772,7 @@ T_b(\nu)=T_e\left(1-e^{-\tau_\nu}\right)
 <span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆ </span><span class="co">] [tag:理解を深める]</span></span>
 <span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>§17.5 の問いを一般化する。Wien 則 $\lambda_{\rm peak}=b/T$（$b=2898\ \mu$m·K）。</span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>§17.5 の問いを一般化する。Wien 則 $\lambda_\mathrm{peak}=b/T$（$b=2898\ \mu$m·K）。</span>
 <span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$T_d=20$ K の冷たいダストのピーク波長を求め、どの観測施設の帯域か述べよ。</span>
 <span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>暖かいダスト $T_d=100$ K、ごく冷たいダスト $T_d=15$ K のピーク波長も求めよ。</span>
@@ -1783,9 +1783,9 @@ T_b(\nu)=T_e\left(1-e^{-\tau_\nu}\right)
 <span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
 <span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 17-4）</span></span>
 <span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a>**(1)** $\lambda_{\rm peak}=2898/20=145\ \mu$m。これは Herschel（SPIRE/PACS、60–600 μm）の主帯域。冷たい星間ダストの観測が Herschel で飛躍したのはこのため。</span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a>**(1)** $\lambda_\mathrm{peak}=2898/20=145\ \mu$m。これは Herschel（SPIRE/PACS、60–600 μm）の主帯域。冷たい星間ダストの観測が Herschel で飛躍したのはこのため。</span>
 <span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a>**(2)** $T_d=100$ K：$\lambda_{\rm peak}=2898/100=29\ \mu$m（中間赤外、Spitzer/JWST）。$T_d=15$ K：$\lambda_{\rm peak}=2898/15=193\ \mu$m（サブミリ、Herschel/ALMA）。</span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a>**(2)** $T_d=100$ K：$\lambda_\mathrm{peak}=2898/100=29\ \mu$m（中間赤外、Spitzer/JWST）。$T_d=15$ K：$\lambda_\mathrm{peak}=2898/15=193\ \mu$m（サブミリ、Herschel/ALMA）。</span>
 <span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a>**(3)** ダスト（$T\sim15$–$30$ K）の熱放射ピークは遠赤外〜サブミリ。銀河の重元素の半分がダストに閉じ込められているので、可視・紫外だけ見ると物質の半分を見落とす。遠赤外・サブミリ（Herschel/ALMA）でこの放射を捉えて初めて、銀河の星間物質・ダスト質量・星形成の全体像（物質収支）が分かる。</span>
 <span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a></span>

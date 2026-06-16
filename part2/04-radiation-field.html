@@ -997,7 +997,7 @@ P_\nu=\frac{I_\nu}{c}\cdot\frac{4\pi}{3}=\frac{1}{3}\cdot\frac{4\pi}{c}I_\nu=\fr
 <ol type="1">
 <li>真空中で比強度 <span class="math inline">I_\nu</span> が経路に沿って保存することを前提に、距離 <span class="math inline">d</span> にある半径 <span class="math inline">R</span> の一様な円盤天体について、観測される比強度 <span class="math inline">I_\nu</span> が <span class="math inline">d</span> に依らないことを述べよ。</li>
 <li>その天体が張る立体角が <span class="math inline">\Omega\simeq\pi R^2/d^2\propto1/d^2</span> であることを示し、観測フラックス <span class="math inline">F_\nu\simeq I_\nu\,\Omega\propto1/d^2</span> を導け。</li>
-<li>点光源の式 <span class="math inline">F_\nu^{\rm obs}=L_\nu/4\pi d^2</span> と (2) が整合することを、<span class="math inline">L_\nu</span> を <span class="math inline">I_\nu</span> と <span class="math inline">R</span> で表して確かめよ。</li>
+<li>点光源の式 <span class="math inline">F_\nu^\mathrm{obs}=L_\nu/4\pi d^2</span> と (2) が整合することを、<span class="math inline">L_\nu</span> を <span class="math inline">I_\nu</span> と <span class="math inline">R</span> で表して確かめよ。</li>
 </ol>
 <p><strong>関連</strong>：<a href="#sec-radiation-field-intensity">§4.1 比強度（保存則）</a>、<a href="#sec-radiation-field-flux">§4.4 フラックス</a>／立体角は<a href="#sec-radiation-field-solid-angle">§4.2</a>、光度の定義は<a href="../part1/02-reading-spectra.html#sec-reading-spectra-stefan-boltzmann">§2.4</a>。</p>
 </section>
@@ -1005,9 +1005,9 @@ P_\nu=\frac{I_\nu}{c}\cdot\frac{4\pi}{3}=\frac{1}{3}\cdot\frac{4\pi}{c}I_\nu=\fr
 <h2 class="anchored" data-anchor-id="模範解答問題-4-2">模範解答（問題 4-2）</h2>
 <p><strong>(1)</strong> 比強度は真空伝播で保存する（光線一本あたりのエネルギーが不変、位相空間体積保存の帰結）。よって天体表面の比強度と、遠方で観測する比強度は等しく、距離 <span class="math inline">d</span> に依らない（表面輝度の距離不変）。</p>
 <p><strong>(2)</strong> 半径 <span class="math inline">R</span> の円盤を距離 <span class="math inline">d</span> から見ると、見込む角の半径は <span class="math inline">\theta\simeq R/d</span>（<span class="math inline">R\ll d</span>）。立体角は <span class="math inline">\Omega\simeq\pi\theta^2=\pi R^2/d^2\propto1/d^2</span>。観測フラックスは「比強度×天体の立体角」なので <span class="math inline">F_\nu\simeq I_\nu\Omega=\pi I_\nu R^2/d^2\propto1/d^2</span>。</p>
-<p><strong>(3)</strong> 表面フラックス <span class="math inline">F_\nu^{\rm surf}=\pi I_\nu</span>（半球射出、§2.4）、光度 <span class="math inline">L_\nu=4\pi R^2\cdot F_\nu^{\rm surf}=4\pi R^2\cdot\pi I_\nu=4\pi^2 R^2 I_\nu</span>。点光源式に入れると</p>
+<p><strong>(3)</strong> 表面フラックス <span class="math inline">F_\nu^\mathrm{surf}=\pi I_\nu</span>（半球射出、§2.4）、光度 <span class="math inline">L_\nu=4\pi R^2\cdot F_\nu^\mathrm{surf}=4\pi R^2\cdot\pi I_\nu=4\pi^2 R^2 I_\nu</span>。点光源式に入れると</p>
 <p><span class="math display">
-F_\nu^{\rm obs}=\frac{L_\nu}{4\pi d^2}=\frac{4\pi^2R^2 I_\nu}{4\pi d^2}=\frac{\pi I_\nu R^2}{d^2},
+F_\nu^\mathrm{obs}=\frac{L_\nu}{4\pi d^2}=\frac{4\pi^2R^2 I_\nu}{4\pi d^2}=\frac{\pi I_\nu R^2}{d^2},
 </span></p>
 <p>これは (2) と完全に一致する。<span class="math inline">I_\nu</span> は不変、<span class="math inline">F_\nu</span> だけが <span class="math inline">1/d^2</span> で落ちる。</p>
 <p><strong>答え</strong>：<span class="math inline">I_\nu</span> は距離不変、<span class="math inline">\Omega\propto1/d^2</span> ゆえ <span class="math inline">F_\nu=\pi I_\nu R^2/d^2\propto1/d^2</span>。点光源式とも一致。</p>
@@ -1017,7 +1017,7 @@ F_\nu^{\rm obs}=\frac{L_\nu}{4\pi d^2}=\frac{4\pi^2R^2 I_\nu}{4\pi d^2}=\frac{\p
 <p>[★ 難易度：☆ ] <span class="tag">[理解を深める]</span></p>
 <p>§4.3 は熱平衡で <span class="math inline">u=\displaystyle\int u_\nu\,d\nu=aT^4</span>（<span class="math inline">a=4\sigma/c</span>）になると述べ、CMB で <span class="math inline">u\simeq4.2\times10^{-13}</span> erg cm<span class="math inline">^{-3}</span> と見積もった。これを確かめる。</p>
 <ol type="1">
-<li>放射定数を CGS で <span class="math inline">a=7.566\times10^{-15}</span> erg cm<span class="math inline">^{-3}</span> K<span class="math inline">^{-4}</span> とし、<span class="math inline">T_{\rm CMB}=2.725</span> K で <span class="math inline">u=aT^4</span> を計算せよ。</li>
+<li>放射定数を CGS で <span class="math inline">a=7.566\times10^{-15}</span> erg cm<span class="math inline">^{-3}</span> K<span class="math inline">^{-4}</span> とし、<span class="math inline">T_\mathrm{CMB}=2.725</span> K で <span class="math inline">u=aT^4</span> を計算せよ。</li>
 <li>等方黒体場では <span class="math inline">u_\nu=\dfrac{4\pi}{c}B_\nu(T)</span>、<span class="math inline">J_\nu=B_\nu(T)</span> となる。なぜ <span class="math inline">J_\nu=B_\nu</span> なのに <span class="math inline">u_\nu</span> には <span class="math inline">4\pi/c</span> が付くのか、定義の違いから一言で述べよ。</li>
 <li>得られた <span class="math inline">u</span> が、銀河系内の宇宙線・星間磁場のエネルギー密度（<span class="math inline">\sim10^{-12}</span> erg cm<span class="math inline">^{-3}</span>）と同程度であることを確認し、その含意を一言。</li>
 </ol>
@@ -1039,8 +1039,8 @@ u=aT^4=7.566\times10^{-15}\times55.1\simeq4.2\times10^{-13}\ \mathrm{erg\,cm^{-3
 <p>[★ 難易度：☆☆ ] <span class="tag">[理解を深める]</span></p>
 <p>§4.4・4.8 は「点光源か広がった光源か」は天体固有でなく観測装置との関係で決まると述べた。<span class="math inline">\alpha</span> Cen A（視直径 <span class="math inline">\sim9</span> mas）を例に確かめる。</p>
 <ol type="1">
-<li><span class="math inline">\alpha</span> Cen A を円盤とみて立体角 <span class="math inline">\Omega_{\rm src}\simeq\pi(\theta/2)^2</span> を sr で概算せよ（<span class="math inline">\theta=9</span> mas）。</li>
-<li>通常の地上望遠鏡（シーイング <span class="math inline">\sim1</span> arcsec）のビーム立体角 <span class="math inline">\Omega_{\rm beam}\simeq\pi(0.5'')^2</span> と比べ、点光源として扱える理由を述べよ。</li>
+<li><span class="math inline">\alpha</span> Cen A を円盤とみて立体角 <span class="math inline">\Omega_\mathrm{src}\simeq\pi(\theta/2)^2</span> を sr で概算せよ（<span class="math inline">\theta=9</span> mas）。</li>
+<li>通常の地上望遠鏡（シーイング <span class="math inline">\sim1</span> arcsec）のビーム立体角 <span class="math inline">\Omega_\mathrm{beam}\simeq\pi(0.5'')^2</span> と比べ、点光源として扱える理由を述べよ。</li>
 <li>VLTI 干渉計（分解能 <span class="math inline">\sim1</span> mas）ではどうなるか。同じ天体で扱いが変わることが何を意味するか、観測される量（<span class="math inline">F_\nu</span> か <span class="math inline">I_\nu</span> か）の観点から述べよ。</li>
 </ol>
 <p><strong>関連</strong>：<a href="#sec-radiation-field-flux">§4.4 フラックス（点光源/広がった光源）</a>、<a href="#sec-radiation-field-observation">§4.8 装置と放射場</a>／立体角の見積りは<a href="#sec-radiation-field-solid-angle">§4.2</a>。</p>
@@ -1049,12 +1049,12 @@ u=aT^4=7.566\times10^{-15}\times55.1\simeq4.2\times10^{-13}\ \mathrm{erg\,cm^{-3
 <h2 class="anchored" data-anchor-id="模範解答問題-4-4">模範解答（問題 4-4）</h2>
 <p><strong>(1)</strong> <span class="math inline">\theta=9</span> mas <span class="math inline">=9\times10^{-3}</span> arcsec。1 arcsec <span class="math inline">=4.85\times10^{-6}</span> rad なので <span class="math inline">\theta=9\times10^{-3}\times4.85\times10^{-6}=4.4\times10^{-8}</span> rad。半径 <span class="math inline">\theta/2=2.2\times10^{-8}</span> rad。立体角</p>
 <p><span class="math display">
-\Omega_{\rm src}\simeq\pi(2.2\times10^{-8})^2\simeq1.5\times10^{-15}\ \mathrm{sr}.
+\Omega_\mathrm{src}\simeq\pi(2.2\times10^{-8})^2\simeq1.5\times10^{-15}\ \mathrm{sr}.
 </span></p>
 <p>（本文の表の値と一致。）</p>
-<p><strong>(2)</strong> シーイング 1 arcsec のビーム半径 <span class="math inline">0.5''=2.4\times10^{-6}</span> rad、<span class="math inline">\Omega_{\rm beam}\simeq\pi(2.4\times10^{-6})^2\simeq1.8\times10^{-11}</span> sr。<span class="math inline">\Omega_{\rm src}/\Omega_{\rm beam}\sim10^{-4}\ll1</span>。天体はビームよりはるかに小さく、空間的に分解できない＝点光源。測れるのはフラックス <span class="math inline">F_\nu</span> のみ。</p>
+<p><strong>(2)</strong> シーイング 1 arcsec のビーム半径 <span class="math inline">0.5''=2.4\times10^{-6}</span> rad、<span class="math inline">\Omega_\mathrm{beam}\simeq\pi(2.4\times10^{-6})^2\simeq1.8\times10^{-11}</span> sr。<span class="math inline">\Omega_\mathrm{src}/\Omega_\mathrm{beam}\sim10^{-4}\ll1</span>。天体はビームよりはるかに小さく、空間的に分解できない＝点光源。測れるのはフラックス <span class="math inline">F_\nu</span> のみ。</p>
 <p><strong>(3)</strong> VLTI の分解能 <span class="math inline">\sim1</span> mas は天体視直径 9 mas より小さいので、円盤を空間的に分解できる＝広がった光源として扱え、面上の比強度 <span class="math inline">I_\nu</span>（表面輝度分布）が測れる。同じ天体が装置の分解能次第で点光源にも広がった光源にもなる。すなわち「点か広がりか」は天体の性質でなく装置との関係で決まる。</p>
-<p><strong>答え</strong>：<span class="math inline">\Omega_{\rm src}\simeq1.5\times10^{-15}</span> sr。シーイング1″では <span class="math inline">\ll\Omega_{\rm beam}</span> ゆえ点光源（<span class="math inline">F_\nu</span> を測る）。VLTI 1 masでは分解でき広がった光源（<span class="math inline">I_\nu</span>）。装置依存。</p>
+<p><strong>答え</strong>：<span class="math inline">\Omega_\mathrm{src}\simeq1.5\times10^{-15}</span> sr。シーイング1″では <span class="math inline">\ll\Omega_\mathrm{beam}</span> ゆえ点光源（<span class="math inline">F_\nu</span> を測る）。VLTI 1 masでは分解でき広がった光源（<span class="math inline">I_\nu</span>）。装置依存。</p>
 </section>
 <section id="sec-radiation-field-further" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-radiation-field-further">さらに学ぶための参考文献</h2>
@@ -1890,7 +1890,7 @@ u=aT^4=7.566\times10^{-15}\times55.1\simeq4.2\times10^{-13}\ \mathrm{erg\,cm^{-3
 <span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>真空中で比強度 $I_\nu$ が経路に沿って保存することを前提に、距離 $d$ にある半径 $R$ の一様な円盤天体について、観測される比強度 $I_\nu$ が $d$ に依らないことを述べよ。</span>
 <span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>その天体が張る立体角が $\Omega\simeq\pi R^2/d^2\propto1/d^2$ であることを示し、観測フラックス $F_\nu\simeq I_\nu\,\Omega\propto1/d^2$ を導け。</span>
-<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>点光源の式 $F_\nu^{\rm obs}=L_\nu/4\pi d^2$ と (2) が整合することを、$L_\nu$ を $I_\nu$ と $R$ で表して確かめよ。</span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>点光源の式 $F_\nu^\mathrm{obs}=L_\nu/4\pi d^2$ と (2) が整合することを、$L_\nu$ を $I_\nu$ と $R$ で表して確かめよ。</span>
 <span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§4.1 比強度（保存則）</span><span class="co">](#sec-radiation-field-intensity)</span>、<span class="co">[</span><span class="ot">§4.4 フラックス</span><span class="co">](#sec-radiation-field-flux)</span>／立体角は<span class="co">[</span><span class="ot">§4.2</span><span class="co">](#sec-radiation-field-solid-angle)</span>、光度の定義は<span class="co">[</span><span class="ot">§2.4</span><span class="co">](../part1/02-reading-spectra.qmd#sec-reading-spectra-stefan-boltzmann)</span>。</span>
 <span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a></span>
@@ -1901,10 +1901,10 @@ u=aT^4=7.566\times10^{-15}\times55.1\simeq4.2\times10^{-13}\ \mathrm{erg\,cm^{-3
 <span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a>**(2)** 半径 $R$ の円盤を距離 $d$ から見ると、見込む角の半径は $\theta\simeq R/d$（$R\ll d$）。立体角は $\Omega\simeq\pi\theta^2=\pi R^2/d^2\propto1/d^2$。観測フラックスは「比強度×天体の立体角」なので $F_\nu\simeq I_\nu\Omega=\pi I_\nu R^2/d^2\propto1/d^2$。</span>
 <span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a>**(3)** 表面フラックス $F_\nu^{\rm surf}=\pi I_\nu$（半球射出、§2.4）、光度 $L_\nu=4\pi R^2\cdot F_\nu^{\rm surf}=4\pi R^2\cdot\pi I_\nu=4\pi^2 R^2 I_\nu$。点光源式に入れると</span>
+<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a>**(3)** 表面フラックス $F_\nu^\mathrm{surf}=\pi I_\nu$（半球射出、§2.4）、光度 $L_\nu=4\pi R^2\cdot F_\nu^\mathrm{surf}=4\pi R^2\cdot\pi I_\nu=4\pi^2 R^2 I_\nu$。点光源式に入れると</span>
 <span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a>F_\nu^{\rm obs}=\frac{L_\nu}{4\pi d^2}=\frac{4\pi^2R^2 I_\nu}{4\pi d^2}=\frac{\pi I_\nu R^2}{d^2},</span>
+<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a>F_\nu^\mathrm{obs}=\frac{L_\nu}{4\pi d^2}=\frac{4\pi^2R^2 I_\nu}{4\pi d^2}=\frac{\pi I_\nu R^2}{d^2},</span>
 <span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a>これは (2) と完全に一致する。$I_\nu$ は不変、$F_\nu$ だけが $1/d^2$ で落ちる。</span>
@@ -1918,7 +1918,7 @@ u=aT^4=7.566\times10^{-15}\times55.1\simeq4.2\times10^{-13}\ \mathrm{erg\,cm^{-3
 <span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a>§4.3 は熱平衡で $u=\displaystyle\int u_\nu\,d\nu=aT^4$（$a=4\sigma/c$）になると述べ、CMB で $u\simeq4.2\times10^{-13}$ erg cm$^{-3}$ と見積もった。これを確かめる。</span>
 <span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>放射定数を CGS で $a=7.566\times10^{-15}$ erg cm$^{-3}$ K$^{-4}$ とし、$T_{\rm CMB}=2.725$ K で $u=aT^4$ を計算せよ。</span>
+<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>放射定数を CGS で $a=7.566\times10^{-15}$ erg cm$^{-3}$ K$^{-4}$ とし、$T_\mathrm{CMB}=2.725$ K で $u=aT^4$ を計算せよ。</span>
 <span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>等方黒体場では $u_\nu=\dfrac{4\pi}{c}B_\nu(T)$、$J_\nu=B_\nu(T)$ となる。なぜ $J_\nu=B_\nu$ なのに $u_\nu$ には $4\pi/c$ が付くのか、定義の違いから一言で述べよ。</span>
 <span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>得られた $u$ が、銀河系内の宇宙線・星間磁場のエネルギー密度（$\sim10^{-12}$ erg cm$^{-3}$）と同程度であることを確認し、その含意を一言。</span>
 <span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a></span>
@@ -1948,8 +1948,8 @@ u=aT^4=7.566\times10^{-15}\times55.1\simeq4.2\times10^{-13}\ \mathrm{erg\,cm^{-3
 <span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a>§4.4・4.8 は「点光源か広がった光源か」は天体固有でなく観測装置との関係で決まると述べた。$\alpha$ Cen A（視直径 $\sim9$ mas）を例に確かめる。</span>
 <span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$\alpha$ Cen A を円盤とみて立体角 $\Omega_{\rm src}\simeq\pi(\theta/2)^2$ を sr で概算せよ（$\theta=9$ mas）。</span>
-<span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>通常の地上望遠鏡（シーイング $\sim1$ arcsec）のビーム立体角 $\Omega_{\rm beam}\simeq\pi(0.5'')^2$ と比べ、点光源として扱える理由を述べよ。</span>
+<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$\alpha$ Cen A を円盤とみて立体角 $\Omega_\mathrm{src}\simeq\pi(\theta/2)^2$ を sr で概算せよ（$\theta=9$ mas）。</span>
+<span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>通常の地上望遠鏡（シーイング $\sim1$ arcsec）のビーム立体角 $\Omega_\mathrm{beam}\simeq\pi(0.5'')^2$ と比べ、点光源として扱える理由を述べよ。</span>
 <span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>VLTI 干渉計（分解能 $\sim1$ mas）ではどうなるか。同じ天体で扱いが変わることが何を意味するか、観測される量（$F_\nu$ か $I_\nu$ か）の観点から述べよ。</span>
 <span id="cb1-414"><a href="#cb1-414" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-415"><a href="#cb1-415" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§4.4 フラックス（点光源/広がった光源）</span><span class="co">](#sec-radiation-field-flux)</span>、<span class="co">[</span><span class="ot">§4.8 装置と放射場</span><span class="co">](#sec-radiation-field-observation)</span>／立体角の見積りは<span class="co">[</span><span class="ot">§4.2</span><span class="co">](#sec-radiation-field-solid-angle)</span>。</span>
@@ -1960,16 +1960,16 @@ u=aT^4=7.566\times10^{-15}\times55.1\simeq4.2\times10^{-13}\ \mathrm{erg\,cm^{-3
 <span id="cb1-420"><a href="#cb1-420" aria-hidden="true" tabindex="-1"></a>**(1)** $\theta=9$ mas $=9\times10^{-3}$ arcsec。1 arcsec $=4.85\times10^{-6}$ rad なので $\theta=9\times10^{-3}\times4.85\times10^{-6}=4.4\times10^{-8}$ rad。半径 $\theta/2=2.2\times10^{-8}$ rad。立体角</span>
 <span id="cb1-421"><a href="#cb1-421" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-422"><a href="#cb1-422" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-423"><a href="#cb1-423" aria-hidden="true" tabindex="-1"></a>\Omega_{\rm src}\simeq\pi(2.2\times10^{-8})^2\simeq1.5\times10^{-15}\ \mathrm{sr}.</span>
+<span id="cb1-423"><a href="#cb1-423" aria-hidden="true" tabindex="-1"></a>\Omega_\mathrm{src}\simeq\pi(2.2\times10^{-8})^2\simeq1.5\times10^{-15}\ \mathrm{sr}.</span>
 <span id="cb1-424"><a href="#cb1-424" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-425"><a href="#cb1-425" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-426"><a href="#cb1-426" aria-hidden="true" tabindex="-1"></a>（本文の表の値と一致。）</span>
 <span id="cb1-427"><a href="#cb1-427" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-428"><a href="#cb1-428" aria-hidden="true" tabindex="-1"></a>**(2)** シーイング 1 arcsec のビーム半径 $0.5''=2.4\times10^{-6}$ rad、$\Omega_{\rm beam}\simeq\pi(2.4\times10^{-6})^2\simeq1.8\times10^{-11}$ sr。$\Omega_{\rm src}/\Omega_{\rm beam}\sim10^{-4}\ll1$。天体はビームよりはるかに小さく、空間的に分解できない＝点光源。測れるのはフラックス $F_\nu$ のみ。</span>
+<span id="cb1-428"><a href="#cb1-428" aria-hidden="true" tabindex="-1"></a>**(2)** シーイング 1 arcsec のビーム半径 $0.5''=2.4\times10^{-6}$ rad、$\Omega_\mathrm{beam}\simeq\pi(2.4\times10^{-6})^2\simeq1.8\times10^{-11}$ sr。$\Omega_\mathrm{src}/\Omega_\mathrm{beam}\sim10^{-4}\ll1$。天体はビームよりはるかに小さく、空間的に分解できない＝点光源。測れるのはフラックス $F_\nu$ のみ。</span>
 <span id="cb1-429"><a href="#cb1-429" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-430"><a href="#cb1-430" aria-hidden="true" tabindex="-1"></a>**(3)** VLTI の分解能 $\sim1$ mas は天体視直径 9 mas より小さいので、円盤を空間的に分解できる＝広がった光源として扱え、面上の比強度 $I_\nu$（表面輝度分布）が測れる。同じ天体が装置の分解能次第で点光源にも広がった光源にもなる。すなわち「点か広がりか」は天体の性質でなく装置との関係で決まる。</span>
 <span id="cb1-431"><a href="#cb1-431" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-432"><a href="#cb1-432" aria-hidden="true" tabindex="-1"></a>**答え**：$\Omega_{\rm src}\simeq1.5\times10^{-15}$ sr。シーイング1″では $\ll\Omega_{\rm beam}$ ゆえ点光源（$F_\nu$ を測る）。VLTI 1 masでは分解でき広がった光源（$I_\nu$）。装置依存。</span>
+<span id="cb1-432"><a href="#cb1-432" aria-hidden="true" tabindex="-1"></a>**答え**：$\Omega_\mathrm{src}\simeq1.5\times10^{-15}$ sr。シーイング1″では $\ll\Omega_\mathrm{beam}$ ゆえ点光源（$F_\nu$ を測る）。VLTI 1 masでは分解でき広がった光源（$I_\nu$）。装置依存。</span>
 <span id="cb1-433"><a href="#cb1-433" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-434"><a href="#cb1-434" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-435"><a href="#cb1-435" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-radiation-field-further .unnumbered}</span></span>

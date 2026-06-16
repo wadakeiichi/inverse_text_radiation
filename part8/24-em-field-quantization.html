@@ -1025,7 +1025,7 @@ B_\nu(T) = \frac{2h\nu^3}{c^2} \cdot \frac{1}{e^{h\nu/k_B T} - 1}
 <section id="ex-24-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ex-24-1">問題 24-1　各モード＝量子調和振動子という置き換え</h3>
 <p>[★ 難易度：☆☆ ] <span class="tag">[理解を深める]</span></p>
-<p>§24.2 は「各モードを量子調和振動子に置き換える」一行で第I〜VII部が接続されると述べた。モード Hamiltonian <span class="math inline">\hat H_{\rm mode}=\hbar\omega_{\mathbf k}(\hat a^\dagger_{\mathbf k\sigma}\hat a_{\mathbf k\sigma}+\tfrac12)</span>。</p>
+<p>§24.2 は「各モードを量子調和振動子に置き換える」一行で第I〜VII部が接続されると述べた。モード Hamiltonian <span class="math inline">\hat H_\mathrm{mode}=\hbar\omega_{\mathbf k}(\hat a^\dagger_{\mathbf k\sigma}\hat a_{\mathbf k\sigma}+\tfrac12)</span>。</p>
 <ol type="1">
 <li><span class="math inline">\hat a^\dagger</span>、<span class="math inline">\hat a</span>、<span class="math inline">\hat n=\hat a^\dagger\hat a</span> がそれぞれ電磁場の文脈で何を表すか（放出・吸収・光子数）述べよ。</li>
 <li>調和振動子の励起準位 <span class="math inline">|n\rangle</span> が「そのモードに <span class="math inline">n</span> 個の光子がある状態」と読み替えられることを、第10章のエネルギー量子 <span class="math inline">h\nu</span>、第8章の Bose 統計、第14章のモード密度と対応づけよ。</li>
@@ -1044,9 +1044,9 @@ B_\nu(T) = \frac{2h\nu^3}{c^2} \cdot \frac{1}{e^{h\nu/k_B T} - 1}
 <section id="ex-24-2" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ex-24-2">問題 24-2　黒体放射を電磁場の熱状態として書き直す</h3>
 <p>[★ 難易度：☆☆ ] <span class="tag">[導出補完]</span></p>
-<p>§24.4 はプランク分布を「電磁場の熱状態の表現」として再構成した。熱密度行列 <span class="math inline">\hat\rho_{\rm th}=\dfrac1Z e^{-\hat H/k_BT}</span> から組み立てる。</p>
+<p>§24.4 はプランク分布を「電磁場の熱状態の表現」として再構成した。熱密度行列 <span class="math inline">\hat\rho_\mathrm{th}=\dfrac1Z e^{-\hat H/k_BT}</span> から組み立てる。</p>
 <ol type="1">
-<li>各モードの平均光子数 <span class="math inline">\bar n(\nu,T)={\rm tr}(\hat\rho_{\rm th}\hat n)=\dfrac{1}{e^{h\nu/k_BT}-1}</span> が、第III部で導いた Bose 占有数と一致することを確認せよ（化学ポテンシャル <span class="math inline">\mu=0</span> の理由も）。</li>
+<li>各モードの平均光子数 <span class="math inline">\bar n(\nu,T)=\mathrm{tr}(\hat\rho_\mathrm{th}\hat n)=\dfrac{1}{e^{h\nu/k_BT}-1}</span> が、第III部で導いた Bose 占有数と一致することを確認せよ（化学ポテンシャル <span class="math inline">\mu=0</span> の理由も）。</li>
 <li>モード密度 <span class="math inline">g(\nu)=8\pi\nu^2/c^3</span> と光子エネルギー <span class="math inline">h\nu</span> を掛けて <span class="math inline">u_\nu=\dfrac{8\pi h\nu^3}{c^3}\dfrac{1}{e^{h\nu/kT}-1}</span>、<span class="math inline">B_\nu=\dfrac{c}{4\pi}u_\nu=\dfrac{2h\nu^3}{c^2}\dfrac{1}{e^{h\nu/kT}-1}</span> を導け。</li>
 <li>第8章（Bose 統計）・第10章（振動子の熱平均）・第14章（モード密度×熱励起）の三つの導出が「同じ一つの構造」であるとはどういう意味か述べよ。</li>
 </ol>
@@ -1056,7 +1056,7 @@ B_\nu(T) = \frac{2h\nu^3}{c^2} \cdot \frac{1}{e^{h\nu/k_B T} - 1}
 <h2 class="anchored" data-anchor-id="模範解答問題-24-2">模範解答（問題 24-2）</h2>
 <p><strong>(1)</strong> 単一モードの熱平均 <span class="math inline">\bar n=\sum_n n\,e^{-n\hbar\omega/kT}/\sum_n e^{-n\hbar\omega/kT}=1/(e^{\hbar\omega/kT}-1)=1/(e^{h\nu/kT}-1)</span>。これは第III部の Bose 占有数（<span class="math inline">\mu=0</span>）と同一。光子は数が保存しない（吸収・放出で生成消滅）ので <span class="math inline">\mu=0</span>。</p>
 <p><strong>(2)</strong> <span class="math inline">u_\nu=g(\nu)\cdot h\nu\cdot\bar n=\dfrac{8\pi\nu^2}{c^3}\cdot h\nu\cdot\dfrac{1}{e^{h\nu/kT}-1}=\dfrac{8\pi h\nu^3}{c^3}\dfrac{1}{e^{h\nu/kT}-1}</span>。等方場で <span class="math inline">B_\nu=\dfrac{c}{4\pi}u_\nu=\dfrac{2h\nu^3}{c^2}\dfrac{1}{e^{h\nu/kT}-1}</span>。</p>
-<p><strong>(3)</strong> 「光子気体の Bose 統計」（第8章）、「量子化振動子の熱平均」（第10章）、「モード密度×熱励起」（第14章）は出発点も言葉も違うが、すべて「温度 <span class="math inline">T</span> の熱浴と平衡にある電磁場（各モード＝調和振動子）の熱状態」を別の角度から記述したもの。同じ密度行列 <span class="math inline">\hat\rho_{\rm th}</span> から同じプランク分布が出る。</p>
+<p><strong>(3)</strong> 「光子気体の Bose 統計」（第8章）、「量子化振動子の熱平均」（第10章）、「モード密度×熱励起」（第14章）は出発点も言葉も違うが、すべて「温度 <span class="math inline">T</span> の熱浴と平衡にある電磁場（各モード＝調和振動子）の熱状態」を別の角度から記述したもの。同じ密度行列 <span class="math inline">\hat\rho_\mathrm{th}</span> から同じプランク分布が出る。</p>
 <p><strong>答え</strong>：<span class="math inline">\bar n=1/(e^{h\nu/kT}-1)</span>（<span class="math inline">\mu=0</span>）。<span class="math inline">B_\nu=\frac{2h\nu^3}{c^2}\frac{1}{e^{h\nu/kT}-1}</span>。三つの導出は電磁場の熱状態の同一構造の異なる側面。</p>
 </section>
 <section id="ex-24-3" class="level3 unnumbered">
@@ -1838,7 +1838,7 @@ B_\nu(T) = \frac{2h\nu^3}{c^2} \cdot \frac{1}{e^{h\nu/k_B T} - 1}
 <span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
 <span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a>§24.2 は「各モードを量子調和振動子に置き換える」一行で第I〜VII部が接続されると述べた。モード Hamiltonian $\hat H_{\rm mode}=\hbar\omega_{\mathbf k}(\hat a^\dagger_{\mathbf k\sigma}\hat a_{\mathbf k\sigma}+\tfrac12)$。</span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a>§24.2 は「各モードを量子調和振動子に置き換える」一行で第I〜VII部が接続されると述べた。モード Hamiltonian $\hat H_\mathrm{mode}=\hbar\omega_{\mathbf k}(\hat a^\dagger_{\mathbf k\sigma}\hat a_{\mathbf k\sigma}+\tfrac12)$。</span>
 <span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$\hat a^\dagger$、$\hat a$、$\hat n=\hat a^\dagger\hat a$ がそれぞれ電磁場の文脈で何を表すか（放出・吸収・光子数）述べよ。</span>
 <span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>調和振動子の励起準位 $|n\rangle$ が「そのモードに $n$ 個の光子がある状態」と読み替えられることを、第10章のエネルギー量子 $h\nu$、第8章の Bose 統計、第14章のモード密度と対応づけよ。</span>
@@ -1862,9 +1862,9 @@ B_\nu(T) = \frac{2h\nu^3}{c^2} \cdot \frac{1}{e^{h\nu/k_B T} - 1}
 <span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
 <span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a>§24.4 はプランク分布を「電磁場の熱状態の表現」として再構成した。熱密度行列 $\hat\rho_{\rm th}=\dfrac1Z e^{-\hat H/k_BT}$ から組み立てる。</span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a>§24.4 はプランク分布を「電磁場の熱状態の表現」として再構成した。熱密度行列 $\hat\rho_\mathrm{th}=\dfrac1Z e^{-\hat H/k_BT}$ から組み立てる。</span>
 <span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>各モードの平均光子数 $\bar n(\nu,T)={\rm tr}(\hat\rho_{\rm th}\hat n)=\dfrac{1}{e^{h\nu/k_BT}-1}$ が、第III部で導いた Bose 占有数と一致することを確認せよ（化学ポテンシャル $\mu=0$ の理由も）。</span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>各モードの平均光子数 $\bar n(\nu,T)=\mathrm{tr}(\hat\rho_\mathrm{th}\hat n)=\dfrac{1}{e^{h\nu/k_BT}-1}$ が、第III部で導いた Bose 占有数と一致することを確認せよ（化学ポテンシャル $\mu=0$ の理由も）。</span>
 <span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>モード密度 $g(\nu)=8\pi\nu^2/c^3$ と光子エネルギー $h\nu$ を掛けて $u_\nu=\dfrac{8\pi h\nu^3}{c^3}\dfrac{1}{e^{h\nu/kT}-1}$、$B_\nu=\dfrac{c}{4\pi}u_\nu=\dfrac{2h\nu^3}{c^2}\dfrac{1}{e^{h\nu/kT}-1}$ を導け。</span>
 <span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>第8章（Bose 統計）・第10章（振動子の熱平均）・第14章（モード密度×熱励起）の三つの導出が「同じ一つの構造」であるとはどういう意味か述べよ。</span>
 <span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a></span>
@@ -1877,7 +1877,7 @@ B_\nu(T) = \frac{2h\nu^3}{c^2} \cdot \frac{1}{e^{h\nu/k_B T} - 1}
 <span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a>**(2)** $u_\nu=g(\nu)\cdot h\nu\cdot\bar n=\dfrac{8\pi\nu^2}{c^3}\cdot h\nu\cdot\dfrac{1}{e^{h\nu/kT}-1}=\dfrac{8\pi h\nu^3}{c^3}\dfrac{1}{e^{h\nu/kT}-1}$。等方場で $B_\nu=\dfrac{c}{4\pi}u_\nu=\dfrac{2h\nu^3}{c^2}\dfrac{1}{e^{h\nu/kT}-1}$。</span>
 <span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a>**(3)** 「光子気体の Bose 統計」（第8章）、「量子化振動子の熱平均」（第10章）、「モード密度×熱励起」（第14章）は出発点も言葉も違うが、すべて「温度 $T$ の熱浴と平衡にある電磁場（各モード＝調和振動子）の熱状態」を別の角度から記述したもの。同じ密度行列 $\hat\rho_{\rm th}$ から同じプランク分布が出る。</span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a>**(3)** 「光子気体の Bose 統計」（第8章）、「量子化振動子の熱平均」（第10章）、「モード密度×熱励起」（第14章）は出発点も言葉も違うが、すべて「温度 $T$ の熱浴と平衡にある電磁場（各モード＝調和振動子）の熱状態」を別の角度から記述したもの。同じ密度行列 $\hat\rho_\mathrm{th}$ から同じプランク分布が出る。</span>
 <span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>**答え**：$\bar n=1/(e^{h\nu/kT}-1)$（$\mu=0$）。$B_\nu=\frac{2h\nu^3}{c^2}\frac{1}{e^{h\nu/kT}-1}$。三つの導出は電磁場の熱状態の同一構造の異なる側面。</span>
 <span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a>:::</span>

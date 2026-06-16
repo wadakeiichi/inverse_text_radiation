@@ -535,7 +535,7 @@ window.Quarto = {
 <div class="central-map planck-map">
 <p><strong>中心地図：プランク関数 ― 本部の主題は「ずれ」</strong></p>
 <p><span class="math display">
-B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1} \quad \xrightarrow{\text{現実}} \quad \text{?}
+B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1} \quad \overset{\text{現実}}{\longrightarrow} \quad \text{?}
 </span></p>
 <p>第VI部（現実の宇宙へ戻る）は、観測される現実の天体スペクトルが、この理想的プランク関数からどのように、そしてなぜ <strong>ずれる</strong>かを扱う。ずれの主な起源：</p>
 <ul>
@@ -860,10 +860,10 @@ S_\nu = \frac{\kappa_\nu^\text{abs} B_\nu(T) + \sigma_\nu \langle J_\nu \rangle}
 <section id="ex-15-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ex-15-1">問題 15-1　灰色大気の温度構造と「見える深さ」</h3>
 <p>[★ 難易度：☆☆ ] <span class="tag">[導出補完]</span></p>
-<p>§15.2 は灰色大気の Eddington 近似解 <span class="math inline">T^4(\tau)=\dfrac{3}{4}T_{\rm eff}^4(\tau+\dfrac23)</span> を結果として引いた。これを読み解く。</p>
+<p>§15.2 は灰色大気の Eddington 近似解 <span class="math inline">T^4(\tau)=\dfrac{3}{4}T_\mathrm{eff}^4(\tau+\dfrac23)</span> を結果として引いた。これを読み解く。</p>
 <ol type="1">
-<li>表面 <span class="math inline">\tau=0</span> での温度 <span class="math inline">T(0)</span> を <span class="math inline">T_{\rm eff}</span> で表し、<span class="math inline">T(0)\simeq0.84\,T_{\rm eff}</span> を確かめよ。</li>
-<li><span class="math inline">T(\tau)=T_{\rm eff}</span> となる光学的深さ <span class="math inline">\tau</span> を求めよ。</li>
+<li>表面 <span class="math inline">\tau=0</span> での温度 <span class="math inline">T(0)</span> を <span class="math inline">T_\mathrm{eff}</span> で表し、<span class="math inline">T(0)\simeq0.84\,T_\mathrm{eff}</span> を確かめよ。</li>
+<li><span class="math inline">T(\tau)=T_\mathrm{eff}</span> となる光学的深さ <span class="math inline">\tau</span> を求めよ。</li>
 <li><ol start="2" type="1">
 <li>の結果が Eddington-Barbier 近似（emergent flux は <span class="math inline">\tau_\nu=2/3</span> 層の <span class="math inline">S_\nu</span> で近似）と整合することを述べ、観測される連続光が「<span class="math inline">\tau\simeq2/3</span> の層の温度」を映す理由を説明せよ。</li>
 </ol></li>
@@ -873,10 +873,10 @@ S_\nu = \frac{\kappa_\nu^\text{abs} B_\nu(T) + \sigma_\nu \langle J_\nu \rangle}
 </section>
 <section id="模範解答問題-15-1" class="level2 callout-derive" data-collapse="true">
 <h2 class="anchored" data-anchor-id="模範解答問題-15-1">模範解答（問題 15-1）</h2>
-<p><strong>(1)</strong> <span class="math inline">\tau=0</span>：<span class="math inline">T^4(0)=\dfrac34 T_{\rm eff}^4\cdot\dfrac23=\dfrac12 T_{\rm eff}^4</span>。よって <span class="math inline">T(0)=(1/2)^{1/4}T_{\rm eff}=0.841\,T_{\rm eff}</span>。表面は有効温度より約16%低い。</p>
-<p><strong>(2)</strong> <span class="math inline">T^4(\tau)=T_{\rm eff}^4</span> とおく：<span class="math inline">\dfrac34(\tau+\dfrac23)=1\Rightarrow\tau+\dfrac23=\dfrac43\Rightarrow\tau=\dfrac23</span>。</p>
-<p><strong>(3)</strong> emergent flux の Eddington-Barbier 近似 <span class="math inline">F_\nu\approx\pi S_\nu(\tau_\nu=2/3)</span> は「<span class="math inline">\tau=2/3</span> 層のソース関数が観測フラックスを代表する」。灰色大気ではちょうどこの層で <span class="math inline">T=T_{\rm eff}</span> なので、LTE（<span class="math inline">S_\nu=B_\nu</span>）の下で観測される連続光は <span class="math inline">B_\nu(T_{\rm eff})</span> に近い。観測スペクトルは「<span class="math inline">\tau\simeq2/3</span> の層」を映している。</p>
-<p><strong>答え</strong>：<span class="math inline">T(0)=(1/2)^{1/4}T_{\rm eff}\simeq0.84T_{\rm eff}</span>、<span class="math inline">T=T_{\rm eff}</span> は <span class="math inline">\tau=2/3</span>。これが Eddington-Barbier の見える深さ。</p>
+<p><strong>(1)</strong> <span class="math inline">\tau=0</span>：<span class="math inline">T^4(0)=\dfrac34 T_\mathrm{eff}^4\cdot\dfrac23=\dfrac12 T_\mathrm{eff}^4</span>。よって <span class="math inline">T(0)=(1/2)^{1/4}T_\mathrm{eff}=0.841\,T_\mathrm{eff}</span>。表面は有効温度より約16%低い。</p>
+<p><strong>(2)</strong> <span class="math inline">T^4(\tau)=T_\mathrm{eff}^4</span> とおく：<span class="math inline">\dfrac34(\tau+\dfrac23)=1\Rightarrow\tau+\dfrac23=\dfrac43\Rightarrow\tau=\dfrac23</span>。</p>
+<p><strong>(3)</strong> emergent flux の Eddington-Barbier 近似 <span class="math inline">F_\nu\approx\pi S_\nu(\tau_\nu=2/3)</span> は「<span class="math inline">\tau=2/3</span> 層のソース関数が観測フラックスを代表する」。灰色大気ではちょうどこの層で <span class="math inline">T=T_\mathrm{eff}</span> なので、LTE（<span class="math inline">S_\nu=B_\nu</span>）の下で観測される連続光は <span class="math inline">B_\nu(T_\mathrm{eff})</span> に近い。観測スペクトルは「<span class="math inline">\tau\simeq2/3</span> の層」を映している。</p>
+<p><strong>答え</strong>：<span class="math inline">T(0)=(1/2)^{1/4}T_\mathrm{eff}\simeq0.84T_\mathrm{eff}</span>、<span class="math inline">T=T_\mathrm{eff}</span> は <span class="math inline">\tau=2/3</span>。これが Eddington-Barbier の見える深さ。</p>
 </section>
 <section id="ex-15-2" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ex-15-2">問題 15-2　修正黒体のべき ― なぜ β は Rayleigh-Jeans 側でしか見えないか</h3>
@@ -899,7 +899,7 @@ S_\nu = \frac{\kappa_\nu^\text{abs} B_\nu(T) + \sigma_\nu \langle J_\nu \rangle}
 <section id="ex-15-3" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ex-15-3">問題 15-3　散乱を含むソース関数と偏光</h3>
 <p>[★ 難易度：☆☆ ] <span class="tag">[導出補完]</span></p>
-<p>§15.5 のソース関数 <span class="math inline">S_\nu=\dfrac{\kappa_\nu^{\rm abs}B_\nu(T)+\sigma_\nu\langle J_\nu\rangle}{\kappa_\nu^{\rm abs}+\sigma_\nu}</span> を読み解く。単一散乱アルベド <span class="math inline">\tilde\omega_\nu\equiv\dfrac{\sigma_\nu}{\kappa_\nu^{\rm abs}+\sigma_\nu}</span>。</p>
+<p>§15.5 のソース関数 <span class="math inline">S_\nu=\dfrac{\kappa_\nu^\mathrm{abs}B_\nu(T)+\sigma_\nu\langle J_\nu\rangle}{\kappa_\nu^\mathrm{abs}+\sigma_\nu}</span> を読み解く。単一散乱アルベド <span class="math inline">\tilde\omega_\nu\equiv\dfrac{\sigma_\nu}{\kappa_\nu^\mathrm{abs}+\sigma_\nu}</span>。</p>
 <ol type="1">
 <li><span class="math inline">S_\nu</span> を <span class="math inline">\tilde\omega_\nu</span> で書き直し、<span class="math inline">S_\nu=(1-\tilde\omega_\nu)B_\nu+\tilde\omega_\nu\langle J_\nu\rangle</span> を示せ。</li>
 <li>純吸収（<span class="math inline">\tilde\omega_\nu=0</span>）と純散乱（<span class="math inline">\tilde\omega_\nu=1</span>）の極限で <span class="math inline">S_\nu</span> がそれぞれ何になるか述べ、後者で局所プランク関数から外れる理由を述べよ。</li>
@@ -909,8 +909,8 @@ S_\nu = \frac{\kappa_\nu^\text{abs} B_\nu(T) + \sigma_\nu \langle J_\nu \rangle}
 </section>
 <section id="模範解答問題-15-3" class="level2 callout-derive" data-collapse="true">
 <h2 class="anchored" data-anchor-id="模範解答問題-15-3">模範解答（問題 15-3）</h2>
-<p><strong>(1)</strong> 分子分母を <span class="math inline">\kappa^{\rm abs}+\sigma</span> で割る：<span class="math inline">S_\nu=\dfrac{\kappa^{\rm abs}}{\kappa^{\rm abs}+\sigma}B_\nu+\dfrac{\sigma}{\kappa^{\rm abs}+\sigma}\langle J_\nu\rangle=(1-\tilde\omega_\nu)B_\nu+\tilde\omega_\nu\langle J_\nu\rangle</span>。</p>
-<p><strong>(2)</strong> 純吸収 <span class="math inline">\tilde\omega=0</span>：<span class="math inline">S_\nu=B_\nu(T)</span>（LTE、局所プランク）。純散乱 <span class="math inline">\tilde\omega=1</span>：<span class="math inline">S_\nu=\langle J_\nu\rangle</span>（平均強度そのもの）。後者は局所の温度 <span class="math inline">T</span> ではなく、媒質全体から散乱されてきた放射場 <span class="math inline">\langle J_\nu\rangle</span> で決まるので、局所プランク関数 <span class="math inline">B_\nu(T_{\rm local})</span> から外れる（非局所）。</p>
+<p><strong>(1)</strong> 分子分母を <span class="math inline">\kappa^\mathrm{abs}+\sigma</span> で割る：<span class="math inline">S_\nu=\dfrac{\kappa^\mathrm{abs}}{\kappa^\mathrm{abs}+\sigma}B_\nu+\dfrac{\sigma}{\kappa^\mathrm{abs}+\sigma}\langle J_\nu\rangle=(1-\tilde\omega_\nu)B_\nu+\tilde\omega_\nu\langle J_\nu\rangle</span>。</p>
+<p><strong>(2)</strong> 純吸収 <span class="math inline">\tilde\omega=0</span>：<span class="math inline">S_\nu=B_\nu(T)</span>（LTE、局所プランク）。純散乱 <span class="math inline">\tilde\omega=1</span>：<span class="math inline">S_\nu=\langle J_\nu\rangle</span>（平均強度そのもの）。後者は局所の温度 <span class="math inline">T</span> ではなく、媒質全体から散乱されてきた放射場 <span class="math inline">\langle J_\nu\rangle</span> で決まるので、局所プランク関数 <span class="math inline">B_\nu(T_\mathrm{local})</span> から外れる（非局所）。</p>
 <p><strong>(3)</strong> 熱平衡放射は両偏光が等確率で混ざり無偏光。散乱（特に Thomson・Rayleigh 散乱）は散乱角に依存して特定偏光を優先的に散乱し、偏光を生む。よって観測される偏光は、その光が散乱を経たこと＝散乱が無視できないことの直接証拠。例：CMB の偏光（再結合期の Thomson 散乱）、太陽コロナの偏光、惑星間ダストの散乱光。</p>
 <p><strong>答え</strong>：<span class="math inline">S_\nu=(1-\tilde\omega)B_\nu+\tilde\omega\langle J_\nu\rangle</span>。純散乱で <span class="math inline">S_\nu=\langle J_\nu\rangle</span>（非局所）。偏光の存在＝散乱卓越の証拠（CMB 偏光など）。</p>
 </section>
@@ -1649,10 +1649,10 @@ S_\nu = \frac{\kappa_\nu^\text{abs} B_\nu(T) + \sigma_\nu \langle J_\nu \rangle}
 <span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
 <span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a>§15.2 は灰色大気の Eddington 近似解 $T^4(\tau)=\dfrac{3}{4}T_{\rm eff}^4(\tau+\dfrac23)$ を結果として引いた。これを読み解く。</span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a>§15.2 は灰色大気の Eddington 近似解 $T^4(\tau)=\dfrac{3}{4}T_\mathrm{eff}^4(\tau+\dfrac23)$ を結果として引いた。これを読み解く。</span>
 <span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>表面 $\tau=0$ での温度 $T(0)$ を $T_{\rm eff}$ で表し、$T(0)\simeq0.84\,T_{\rm eff}$ を確かめよ。</span>
-<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$T(\tau)=T_{\rm eff}$ となる光学的深さ $\tau$ を求めよ。</span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>表面 $\tau=0$ での温度 $T(0)$ を $T_\mathrm{eff}$ で表し、$T(0)\simeq0.84\,T_\mathrm{eff}$ を確かめよ。</span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$T(\tau)=T_\mathrm{eff}$ となる光学的深さ $\tau$ を求めよ。</span>
 <span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>(2) の結果が Eddington-Barbier 近似（emergent flux は $\tau_\nu=2/3$ 層の $S_\nu$ で近似）と整合することを述べ、観測される連続光が「$\tau\simeq2/3$ の層の温度」を映す理由を説明せよ。</span>
 <span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§15.2 灰色大気</span><span class="co">](#sec-non-blackbody-grey)</span>、<span class="co">[</span><span class="ot">§15.3 Eddington-Barbier</span><span class="co">](#sec-non-blackbody-frequency-opacity)</span> ／ $\tau\sim1$ と光球は<span class="co">[</span><span class="ot">第II部 演習 5-4</span><span class="co">](../part2/05-radiative-transfer.qmd#ex-5-4)</span>、有効温度は<span class="co">[</span><span class="ot">§17.1</span><span class="co">](../part6/17-stars-planets-dust.qmd#sec-stars-effective-temperature)</span>。</span>
@@ -1660,13 +1660,13 @@ S_\nu = \frac{\kappa_\nu^\text{abs} B_\nu(T) + \sigma_\nu \langle J_\nu \rangle}
 <span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
 <span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 15-1）</span></span>
 <span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a>**(1)** $\tau=0$：$T^4(0)=\dfrac34 T_{\rm eff}^4\cdot\dfrac23=\dfrac12 T_{\rm eff}^4$。よって $T(0)=(1/2)^{1/4}T_{\rm eff}=0.841\,T_{\rm eff}$。表面は有効温度より約16%低い。</span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a>**(1)** $\tau=0$：$T^4(0)=\dfrac34 T_\mathrm{eff}^4\cdot\dfrac23=\dfrac12 T_\mathrm{eff}^4$。よって $T(0)=(1/2)^{1/4}T_\mathrm{eff}=0.841\,T_\mathrm{eff}$。表面は有効温度より約16%低い。</span>
 <span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>**(2)** $T^4(\tau)=T_{\rm eff}^4$ とおく：$\dfrac34(\tau+\dfrac23)=1\Rightarrow\tau+\dfrac23=\dfrac43\Rightarrow\tau=\dfrac23$。</span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>**(2)** $T^4(\tau)=T_\mathrm{eff}^4$ とおく：$\dfrac34(\tau+\dfrac23)=1\Rightarrow\tau+\dfrac23=\dfrac43\Rightarrow\tau=\dfrac23$。</span>
 <span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>**(3)** emergent flux の Eddington-Barbier 近似 $F_\nu\approx\pi S_\nu(\tau_\nu=2/3)$ は「$\tau=2/3$ 層のソース関数が観測フラックスを代表する」。灰色大気ではちょうどこの層で $T=T_{\rm eff}$ なので、LTE（$S_\nu=B_\nu$）の下で観測される連続光は $B_\nu(T_{\rm eff})$ に近い。観測スペクトルは「$\tau\simeq2/3$ の層」を映している。</span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>**(3)** emergent flux の Eddington-Barbier 近似 $F_\nu\approx\pi S_\nu(\tau_\nu=2/3)$ は「$\tau=2/3$ 層のソース関数が観測フラックスを代表する」。灰色大気ではちょうどこの層で $T=T_\mathrm{eff}$ なので、LTE（$S_\nu=B_\nu$）の下で観測される連続光は $B_\nu(T_\mathrm{eff})$ に近い。観測スペクトルは「$\tau\simeq2/3$ の層」を映している。</span>
 <span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>**答え**：$T(0)=(1/2)^{1/4}T_{\rm eff}\simeq0.84T_{\rm eff}$、$T=T_{\rm eff}$ は $\tau=2/3$。これが Eddington-Barbier の見える深さ。</span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>**答え**：$T(0)=(1/2)^{1/4}T_\mathrm{eff}\simeq0.84T_\mathrm{eff}$、$T=T_\mathrm{eff}$ は $\tau=2/3$。これが Eddington-Barbier の見える深さ。</span>
 <span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 15-2　修正黒体のべき ― なぜ β は Rayleigh-Jeans 側でしか見えないか {#ex-15-2 .unnumbered}</span></span>
@@ -1697,7 +1697,7 @@ S_\nu = \frac{\kappa_\nu^\text{abs} B_\nu(T) + \sigma_\nu \langle J_\nu \rangle}
 <span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
 <span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>§15.5 のソース関数 $S_\nu=\dfrac{\kappa_\nu^{\rm abs}B_\nu(T)+\sigma_\nu\langle J_\nu\rangle}{\kappa_\nu^{\rm abs}+\sigma_\nu}$ を読み解く。単一散乱アルベド $\tilde\omega_\nu\equiv\dfrac{\sigma_\nu}{\kappa_\nu^{\rm abs}+\sigma_\nu}$。</span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>§15.5 のソース関数 $S_\nu=\dfrac{\kappa_\nu^\mathrm{abs}B_\nu(T)+\sigma_\nu\langle J_\nu\rangle}{\kappa_\nu^\mathrm{abs}+\sigma_\nu}$ を読み解く。単一散乱アルベド $\tilde\omega_\nu\equiv\dfrac{\sigma_\nu}{\kappa_\nu^\mathrm{abs}+\sigma_\nu}$。</span>
 <span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$S_\nu$ を $\tilde\omega_\nu$ で書き直し、$S_\nu=(1-\tilde\omega_\nu)B_\nu+\tilde\omega_\nu\langle J_\nu\rangle$ を示せ。</span>
 <span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>純吸収（$\tilde\omega_\nu=0$）と純散乱（$\tilde\omega_\nu=1$）の極限で $S_\nu$ がそれぞれ何になるか述べ、後者で局所プランク関数から外れる理由を述べよ。</span>
@@ -1708,9 +1708,9 @@ S_\nu = \frac{\kappa_\nu^\text{abs} B_\nu(T) + \sigma_\nu \langle J_\nu \rangle}
 <span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
 <span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 15-3）</span></span>
 <span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a>**(1)** 分子分母を $\kappa^{\rm abs}+\sigma$ で割る：$S_\nu=\dfrac{\kappa^{\rm abs}}{\kappa^{\rm abs}+\sigma}B_\nu+\dfrac{\sigma}{\kappa^{\rm abs}+\sigma}\langle J_\nu\rangle=(1-\tilde\omega_\nu)B_\nu+\tilde\omega_\nu\langle J_\nu\rangle$。</span>
+<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a>**(1)** 分子分母を $\kappa^\mathrm{abs}+\sigma$ で割る：$S_\nu=\dfrac{\kappa^\mathrm{abs}}{\kappa^\mathrm{abs}+\sigma}B_\nu+\dfrac{\sigma}{\kappa^\mathrm{abs}+\sigma}\langle J_\nu\rangle=(1-\tilde\omega_\nu)B_\nu+\tilde\omega_\nu\langle J_\nu\rangle$。</span>
 <span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a>**(2)** 純吸収 $\tilde\omega=0$：$S_\nu=B_\nu(T)$（LTE、局所プランク）。純散乱 $\tilde\omega=1$：$S_\nu=\langle J_\nu\rangle$（平均強度そのもの）。後者は局所の温度 $T$ ではなく、媒質全体から散乱されてきた放射場 $\langle J_\nu\rangle$ で決まるので、局所プランク関数 $B_\nu(T_{\rm local})$ から外れる（非局所）。</span>
+<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a>**(2)** 純吸収 $\tilde\omega=0$：$S_\nu=B_\nu(T)$（LTE、局所プランク）。純散乱 $\tilde\omega=1$：$S_\nu=\langle J_\nu\rangle$（平均強度そのもの）。後者は局所の温度 $T$ ではなく、媒質全体から散乱されてきた放射場 $\langle J_\nu\rangle$ で決まるので、局所プランク関数 $B_\nu(T_\mathrm{local})$ から外れる（非局所）。</span>
 <span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a>**(3)** 熱平衡放射は両偏光が等確率で混ざり無偏光。散乱（特に Thomson・Rayleigh 散乱）は散乱角に依存して特定偏光を優先的に散乱し、偏光を生む。よって観測される偏光は、その光が散乱を経たこと＝散乱が無視できないことの直接証拠。例：CMB の偏光（再結合期の Thomson 散乱）、太陽コロナの偏光、惑星間ダストの散乱光。</span>
 <span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a></span>

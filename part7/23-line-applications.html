@@ -919,11 +919,11 @@ window.Quarto = {
 <section id="ex-23-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ex-23-1">問題 23-1　視線速度と系外惑星の検出</h3>
 <p>[★ 難易度：☆☆ ] <span class="tag">[導出補完]</span></p>
-<p>§23.1 の視線速度 <span class="math inline">\dfrac{v_\parallel}{c}=\dfrac{\nu_0-\nu_{\rm obs}}{\nu_0}</span> を系外惑星検出に使う。中心星と惑星は共通重心を回り、<span class="math inline">M_\star v_\star=M_p v_p</span>。</p>
+<p>§23.1 の視線速度 <span class="math inline">\dfrac{v_\parallel}{c}=\dfrac{\nu_0-\nu_\mathrm{obs}}{\nu_0}</span> を系外惑星検出に使う。中心星と惑星は共通重心を回り、<span class="math inline">M_\star v_\star=M_p v_p</span>。</p>
 <ol type="1">
 <li>地球と同じ軌道半径（1 AU、公転速度 <span class="math inline">v_p\simeq30</span> km/s）を回る木星質量惑星（<span class="math inline">M_p/M_\star\simeq10^{-3}</span>）が中心星に起こす視線速度ゆらぎ <span class="math inline">v_\star</span> を求めよ。</li>
 <li>その <span class="math inline">v_\star</span> が現在の Doppler 法（HARPS/ESPRESSO、感度サブ m/s〜数 m/s）で検出可能か述べよ。地球質量の検出には何 cm/s 感度が要るか概算せよ。</li>
-<li>宇宙論的赤方偏移 <span class="math inline">z</span> を単純な <span class="math inline">v/c</span> と書けるのは低赤方偏移近似に限ることを、<span class="math inline">1+z=a(t_{\rm obs})/a(t_{\rm emit})</span> に触れて述べよ。</li>
+<li>宇宙論的赤方偏移 <span class="math inline">z</span> を単純な <span class="math inline">v/c</span> と書けるのは低赤方偏移近似に限ることを、<span class="math inline">1+z=a(t_\mathrm{obs})/a(t_\mathrm{emit})</span> に触れて述べよ。</li>
 </ol>
 <p><strong>関連</strong>：<a href="#sec-line-applications-velocity">§23.1 視線速度</a>／Doppler シフトは<a href="../part7/22-line-shape.html#sec-line-shape-doppler">§22.2</a>、宇宙膨張と赤方偏移は<a href="../part6/16-cmb.html#ex-16-2">演習 16-2</a>。</p>
 </section>
@@ -932,8 +932,8 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="模範解答問題-23-1">模範解答（問題 23-1）</h2>
 <p><strong>(1)</strong> <span class="math inline">v_\star=（M_p/M_\star)v_p=10^{-3}\times30</span> km/s <span class="math inline">=0.03</span> km/s <span class="math inline">=30</span> m/s。</p>
 <p><strong>(2)</strong> 30 m/s は HARPS/ESPRESSO（サブ m/s〜数 m/s）で十分検出可能。地球質量惑星なら <span class="math inline">M_p/M_\star\simeq3\times10^{-6}</span> ゆえ <span class="math inline">v_\star\simeq3\times10^{-6}\times30</span> km/s <span class="math inline">\simeq0.09</span> m/s <span class="math inline">\simeq10</span> cm/s 感度が必要で、これは現在の最先端。</p>
-<p><strong>(3)</strong> <span class="math inline">z\simeq v/c</span> は <span class="math inline">z\ll1</span> でのみ成立。一般には宇宙論的赤方偏移は時空のスケール因子比 <span class="math inline">1+z=a(t_{\rm obs})/a(t_{\rm emit})</span> で定義され、単純な後退速度ではない。<span class="math inline">z\gtrsim0.1</span> では特殊相対論的 Doppler 公式や宇宙論モデル依存の距離-赤方偏移関係が要る。</p>
-<p><strong>答え</strong>：<span class="math inline">v_\star=30</span> m/s（検出可能）。地球質量には <span class="math inline">\sim10</span> cm/s 感度。<span class="math inline">z=v/c</span> は低赤方偏移近似のみ、本来は <span class="math inline">1+z=a_{\rm obs}/a_{\rm emit}</span>。</p>
+<p><strong>(3)</strong> <span class="math inline">z\simeq v/c</span> は <span class="math inline">z\ll1</span> でのみ成立。一般には宇宙論的赤方偏移は時空のスケール因子比 <span class="math inline">1+z=a(t_\mathrm{obs})/a(t_\mathrm{emit})</span> で定義され、単純な後退速度ではない。<span class="math inline">z\gtrsim0.1</span> では特殊相対論的 Doppler 公式や宇宙論モデル依存の距離-赤方偏移関係が要る。</p>
+<p><strong>答え</strong>：<span class="math inline">v_\star=30</span> m/s（検出可能）。地球質量には <span class="math inline">\sim10</span> cm/s 感度。<span class="math inline">z=v/c</span> は低赤方偏移近似のみ、本来は <span class="math inline">1+z=a_\mathrm{obs}/a_\mathrm{emit}</span>。</p>
 </section>
 <section id="ex-23-2" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ex-23-2">問題 23-2　線比による温度・密度診断</h3>
@@ -967,7 +967,7 @@ window.Quarto = {
 <section id="模範解答問題-23-3" class="level2 callout-derive" data-collapse="true">
 <h2 class="anchored" data-anchor-id="模範解答問題-23-3">模範解答（問題 23-3）</h2>
 <p><strong>(1)</strong> Ly<span class="math inline">\alpha</span> 森：低柱密度の中性水素による多数の吸収線＝宇宙のバリオン分布マップ。DLA（damped Ly<span class="math inline">\alpha</span>）：高柱密度系＝高赤方偏移銀河の前駆体。金属吸収系（C IV, Mg II 等）：宇宙初期の化学進化・銀河流出の記録。</p>
-<p><strong>(2)</strong> <span class="math inline">\lambda_{\rm obs}=(1+z)\times0.211</span> m。<span class="math inline">z=7</span>：<span class="math inline">8\times0.211=1.69</span> m。<span class="math inline">z=6</span>：<span class="math inline">7\times0.211=1.48</span> m。<span class="math inline">z=20</span>：<span class="math inline">21\times0.211=4.43</span> m。再電離期は約 1.5〜4.4 m（SKA の標的帯）。</p>
+<p><strong>(2)</strong> <span class="math inline">\lambda_\mathrm{obs}=(1+z)\times0.211</span> m。<span class="math inline">z=7</span>：<span class="math inline">8\times0.211=1.69</span> m。<span class="math inline">z=6</span>：<span class="math inline">7\times0.211=1.48</span> m。<span class="math inline">z=20</span>：<span class="math inline">21\times0.211=4.43</span> m。再電離期は約 1.5〜4.4 m（SKA の標的帯）。</p>
 <p><strong>(3)</strong> CMB は連続スペクトル（黒体）で宇宙の<strong>温度の歴史</strong>（熱化・膨張）を語る。Ly<span class="math inline">\alpha</span>/21 cm は線スペクトルで<strong>構造形成・電離・化学進化の歴史</strong>を語る。両者は宇宙物理学の二つの主柱として相補的に、初期宇宙から現在までの異なる側面を逆引きさせる。</p>
 <p><strong>答え</strong>：Ly<span class="math inline">\alpha</span> 森＝バリオン分布、DLA＝銀河前駆体、金属系＝化学進化。21 cm(<span class="math inline">z=7</span>)＝1.69 m（<span class="math inline">z=6</span>:1.48、<span class="math inline">z=20</span>:4.43 m）。CMB＝温度史、線＝構造・電離・化学史で相補的。</p>
 </section>
@@ -1689,11 +1689,11 @@ window.Quarto = {
 <span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
 <span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>§23.1 の視線速度 $\dfrac{v_\parallel}{c}=\dfrac{\nu_0-\nu_{\rm obs}}{\nu_0}$ を系外惑星検出に使う。中心星と惑星は共通重心を回り、$M_\star v_\star=M_p v_p$。</span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>§23.1 の視線速度 $\dfrac{v_\parallel}{c}=\dfrac{\nu_0-\nu_\mathrm{obs}}{\nu_0}$ を系外惑星検出に使う。中心星と惑星は共通重心を回り、$M_\star v_\star=M_p v_p$。</span>
 <span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>地球と同じ軌道半径（1 AU、公転速度 $v_p\simeq30$ km/s）を回る木星質量惑星（$M_p/M_\star\simeq10^{-3}$）が中心星に起こす視線速度ゆらぎ $v_\star$ を求めよ。</span>
 <span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>その $v_\star$ が現在の Doppler 法（HARPS/ESPRESSO、感度サブ m/s〜数 m/s）で検出可能か述べよ。地球質量の検出には何 cm/s 感度が要るか概算せよ。</span>
-<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>宇宙論的赤方偏移 $z$ を単純な $v/c$ と書けるのは低赤方偏移近似に限ることを、$1+z=a(t_{\rm obs})/a(t_{\rm emit})$ に触れて述べよ。</span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>宇宙論的赤方偏移 $z$ を単純な $v/c$ と書けるのは低赤方偏移近似に限ることを、$1+z=a(t_\mathrm{obs})/a(t_\mathrm{emit})$ に触れて述べよ。</span>
 <span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§23.1 視線速度</span><span class="co">](#sec-line-applications-velocity)</span>／Doppler シフトは<span class="co">[</span><span class="ot">§22.2</span><span class="co">](../part7/22-line-shape.qmd#sec-line-shape-doppler)</span>、宇宙膨張と赤方偏移は<span class="co">[</span><span class="ot">演習 16-2</span><span class="co">](../part6/16-cmb.qmd#ex-16-2)</span>。</span>
 <span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a></span>
@@ -1704,9 +1704,9 @@ window.Quarto = {
 <span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a>**(2)** 30 m/s は HARPS/ESPRESSO（サブ m/s〜数 m/s）で十分検出可能。地球質量惑星なら $M_p/M_\star\simeq3\times10^{-6}$ ゆえ $v_\star\simeq3\times10^{-6}\times30$ km/s $\simeq0.09$ m/s $\simeq10$ cm/s 感度が必要で、これは現在の最先端。</span>
 <span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a>**(3)** $z\simeq v/c$ は $z\ll1$ でのみ成立。一般には宇宙論的赤方偏移は時空のスケール因子比 $1+z=a(t_{\rm obs})/a(t_{\rm emit})$ で定義され、単純な後退速度ではない。$z\gtrsim0.1$ では特殊相対論的 Doppler 公式や宇宙論モデル依存の距離-赤方偏移関係が要る。</span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a>**(3)** $z\simeq v/c$ は $z\ll1$ でのみ成立。一般には宇宙論的赤方偏移は時空のスケール因子比 $1+z=a(t_\mathrm{obs})/a(t_\mathrm{emit})$ で定義され、単純な後退速度ではない。$z\gtrsim0.1$ では特殊相対論的 Doppler 公式や宇宙論モデル依存の距離-赤方偏移関係が要る。</span>
 <span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>**答え**：$v_\star=30$ m/s（検出可能）。地球質量には $\sim10$ cm/s 感度。$z=v/c$ は低赤方偏移近似のみ、本来は $1+z=a_{\rm obs}/a_{\rm emit}$。</span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>**答え**：$v_\star=30$ m/s（検出可能）。地球質量には $\sim10$ cm/s 感度。$z=v/c$ は低赤方偏移近似のみ、本来は $1+z=a_\mathrm{obs}/a_\mathrm{emit}$。</span>
 <span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 23-2　線比による温度・密度診断 {#ex-23-2 .unnumbered}</span></span>
@@ -1750,7 +1750,7 @@ window.Quarto = {
 <span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a>**(1)** Ly$\alpha$ 森：低柱密度の中性水素による多数の吸収線＝宇宙のバリオン分布マップ。DLA（damped Ly$\alpha$）：高柱密度系＝高赤方偏移銀河の前駆体。金属吸収系（C IV, Mg II 等）：宇宙初期の化学進化・銀河流出の記録。</span>
 <span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a>**(2)** $\lambda_{\rm obs}=(1+z)\times0.211$ m。$z=7$：$8\times0.211=1.69$ m。$z=6$：$7\times0.211=1.48$ m。$z=20$：$21\times0.211=4.43$ m。再電離期は約 1.5〜4.4 m（SKA の標的帯）。</span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a>**(2)** $\lambda_\mathrm{obs}=(1+z)\times0.211$ m。$z=7$：$8\times0.211=1.69$ m。$z=6$：$7\times0.211=1.48$ m。$z=20$：$21\times0.211=4.43$ m。再電離期は約 1.5〜4.4 m（SKA の標的帯）。</span>
 <span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a>**(3)** CMB は連続スペクトル（黒体）で宇宙の**温度の歴史**（熱化・膨張）を語る。Ly$\alpha$/21 cm は線スペクトルで**構造形成・電離・化学進化の歴史**を語る。両者は宇宙物理学の二つの主柱として相補的に、初期宇宙から現在までの異なる側面を逆引きさせる。</span>
 <span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a></span>

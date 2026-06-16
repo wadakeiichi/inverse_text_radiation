@@ -536,7 +536,7 @@ window.Quarto = {
 <div class="central-map planck-map">
 <p><strong>中心地図：プランク関数 ― 本部の主題は「ずれ」</strong></p>
 <p><span class="math display">
-B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1} \quad \xrightarrow{\text{現実}} \quad \text{?}
+B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1} \quad \overset{\text{現実}}{\longrightarrow} \quad \text{?}
 </span></p>
 <p>第VI部（現実の宇宙へ戻る）は、観測される現実の天体スペクトルが、この理想的プランク関数からどのように、そしてなぜ <strong>ずれる</strong>かを扱う。ずれの主な起源：</p>
 <ul>
@@ -799,10 +799,10 @@ F_\nu^\text{obs} = \int B_\nu(T(R, \phi)) \cdot g^3(R, \phi) \cdot dA_\text{prop
 <section id="ex-18-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ex-18-1">問題 18-1　多温度円盤の 1/3 乗べき則</h3>
 <p>[★ 難易度：☆☆☆ ] <span class="tag">[導出補完]</span></p>
-<p>§18.2 は標準降着円盤の中間振動数帯で <span class="math inline">F_\nu\propto\nu^{1/3}</span> になると述べた。導出の骨子を埋める。温度プロファイル <span class="math inline">T(R)\propto R^{-3/4}</span>、合成フラックス <span class="math inline">F_\nu=\displaystyle\int_{R_{\rm in}}^{R_{\rm out}}2\pi R\,B_\nu(T(R))\,dR</span>。</p>
+<p>§18.2 は標準降着円盤の中間振動数帯で <span class="math inline">F_\nu\propto\nu^{1/3}</span> になると述べた。導出の骨子を埋める。温度プロファイル <span class="math inline">T(R)\propto R^{-3/4}</span>、合成フラックス <span class="math inline">F_\nu=\displaystyle\int_{R_\mathrm{in}}^{R_\mathrm{out}}2\pi R\,B_\nu(T(R))\,dR</span>。</p>
 <ol type="1">
 <li><span class="math inline">T\propto R^{-3/4}</span> から <span class="math inline">R\propto T^{-4/3}</span>、<span class="math inline">2\pi R\,dR\propto T^{-11/3}\,dT</span> を示せ。</li>
-<li>中間帯（<span class="math inline">kT(R_{\rm in})\gg h\nu\gg kT(R_{\rm out})</span>）では各半径の Rayleigh-Jeans 側 <span class="math inline">B_\nu\propto\nu^2 T</span> が効く。<span class="math inline">F_\nu\propto\nu^2\displaystyle\int T\cdot T^{-11/3}\,dT=\nu^2\int T^{-8/3}dT</span> を変数 <span class="math inline">x=h\nu/kT</span> に変換し、<span class="math inline">F_\nu\propto\nu^{1/3}</span> を導け。</li>
+<li>中間帯（<span class="math inline">kT(R_\mathrm{in})\gg h\nu\gg kT(R_\mathrm{out})</span>）では各半径の Rayleigh-Jeans 側 <span class="math inline">B_\nu\propto\nu^2 T</span> が効く。<span class="math inline">F_\nu\propto\nu^2\displaystyle\int T\cdot T^{-11/3}\,dT=\nu^2\int T^{-8/3}dT</span> を変数 <span class="math inline">x=h\nu/kT</span> に変換し、<span class="math inline">F_\nu\propto\nu^{1/3}</span> を導け。</li>
 <li>温度プロファイルが一般に <span class="math inline">T\propto R^{-\alpha}</span> なら <span class="math inline">F_\nu\propto\nu^{(3\alpha-2)/\alpha}</span> となることを確かめ、<span class="math inline">\alpha=3/4</span> で <span class="math inline">1/3</span> になることを示せ。</li>
 </ol>
 <p><strong>関連</strong>：<a href="#sec-disk-multi-temperature">§18.2 多温度円盤</a>／局所黒体は<a href="#sec-disk-local-blackbody">§18.1</a>（<a href="#ex-18-3">演習 18-3</a>）、RJ 極限は<a href="../part1/02-reading-spectra.html#sec-reading-spectra-limits">§2.5</a>。</p>
@@ -842,7 +842,7 @@ F_\nu^\text{obs} = \int B_\nu(T(R, \phi)) \cdot g^3(R, \phi) \cdot dA_\text{prop
 <ol type="1">
 <li>各半径が温度 <span class="math inline">T(R)</span> の黒体として放射するには、第3章・第5章のどんな条件（熱化時間、光学的厚さ、単一温度）が局所的に満たされる必要があるか述べよ。</li>
 <li>実際の円盤で局所黒体から外れる要因を2つ挙げよ（高温コロナ、振動数依存不透明度、電子散乱卓越など）。</li>
-<li>電子散乱が吸収より卓越する高温体では、観測される色温度 <span class="math inline">T_{\rm col}</span> が実効温度 <span class="math inline">T(R)</span> より高くなり、補正係数 <span class="math inline">f_{\rm col}\simeq1.5</span>–<span class="math inline">2</span> が経験的に要る。なぜ散乱卓越が色温度を上げるのか、<a href="../part6/15-non-blackbody.html#ex-15-3">演習 15-3</a> のソース関数と結びつけて一言で述べよ。</li>
+<li>電子散乱が吸収より卓越する高温体では、観測される色温度 <span class="math inline">T_\mathrm{col}</span> が実効温度 <span class="math inline">T(R)</span> より高くなり、補正係数 <span class="math inline">f_\mathrm{col}\simeq1.5</span>–<span class="math inline">2</span> が経験的に要る。なぜ散乱卓越が色温度を上げるのか、<a href="../part6/15-non-blackbody.html#ex-15-3">演習 15-3</a> のソース関数と結びつけて一言で述べよ。</li>
 </ol>
 <p><strong>関連</strong>：<a href="#sec-disk-local-blackbody">§18.1 局所黒体近似</a>／黒体化条件は<a href="../part1/03-universality.html#sec-universality-real-objects">§3.6</a>（<a href="../part1/03-universality.html#ex-3-4">演習 3-4</a>）、LTE は<a href="../part2/05-radiative-transfer.html#sec-radiative-transfer-lte">§5.5</a>、散乱ソース関数は<a href="../part6/15-non-blackbody.html#ex-15-3">演習 15-3</a>。</p>
 </section>
@@ -850,8 +850,8 @@ F_\nu^\text{obs} = \int B_\nu(T(R, \phi)) \cdot g^3(R, \phi) \cdot dA_\text{prop
 <h2 class="anchored" data-anchor-id="模範解答問題-18-3">模範解答（問題 18-3）</h2>
 <p><strong>(1)</strong> ① 熱化時間が円盤の力学的時間より短い（局所的に熱平衡に達する）、② 各半径で鉛直方向に光学的に厚い（<span class="math inline">\tau\gg1</span>、吸収・再放出が十分）、③ その半径内では単一温度 <span class="math inline">T(R)</span> で記述できる。これらが満たされれば各半径が <span class="math inline">B_\nu(T(R))</span> で放射する（第3章 §3.6、第5章 §5.6）。</p>
 <p><strong>(2)</strong> 例：高温・希薄なコロナ層（局所熱平衡を破る）、不透明度の振動数依存（修正黒体的なずれ）、電子散乱が吸収より卓越（純黒体から外れる）。</p>
-<p><strong>(3)</strong> 電子散乱卓越ではソース関数 <span class="math inline">S_\nu=(1-\tilde\omega)B_\nu+\tilde\omega\langle J_\nu\rangle</span>（<a href="../part6/15-non-blackbody.html#ex-15-3">演習 15-3</a>）が局所プランクから外れ、光子は吸収で熱化されにくく深部の高温を反映したまま散乱で抜ける。結果、見かけの色温度が実効温度より高くなり、<span class="math inline">f_{\rm col}\simeq1.5</span>–<span class="math inline">2</span> の補正が要る。</p>
-<p><strong>答え</strong>：局所熱平衡・光学的厚・単一温度が必要。破れ＝コロナ／振動数依存不透明度／電子散乱卓越。散乱卓越は熱化を妨げ色温度を上げる（<span class="math inline">f_{\rm col}\sim1.5</span>–<span class="math inline">2</span>）。</p>
+<p><strong>(3)</strong> 電子散乱卓越ではソース関数 <span class="math inline">S_\nu=(1-\tilde\omega)B_\nu+\tilde\omega\langle J_\nu\rangle</span>（<a href="../part6/15-non-blackbody.html#ex-15-3">演習 15-3</a>）が局所プランクから外れ、光子は吸収で熱化されにくく深部の高温を反映したまま散乱で抜ける。結果、見かけの色温度が実効温度より高くなり、<span class="math inline">f_\mathrm{col}\simeq1.5</span>–<span class="math inline">2</span> の補正が要る。</p>
+<p><strong>答え</strong>：局所熱平衡・光学的厚・単一温度が必要。破れ＝コロナ／振動数依存不透明度／電子散乱卓越。散乱卓越は熱化を妨げ色温度を上げる（<span class="math inline">f_\mathrm{col}\sim1.5</span>–<span class="math inline">2</span>）。</p>
 </section>
 <section id="ex-18-4" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ex-18-4">問題 18-4　中性子星表面の重力赤方偏移</h3>
@@ -1582,10 +1582,10 @@ F_\nu^\text{obs} = \int B_\nu(T(R, \phi)) \cdot g^3(R, \phi) \cdot dA_\text{prop
 <span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆☆ </span><span class="co">] [tag:導出補完]</span></span>
 <span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a>§18.2 は標準降着円盤の中間振動数帯で $F_\nu\propto\nu^{1/3}$ になると述べた。導出の骨子を埋める。温度プロファイル $T(R)\propto R^{-3/4}$、合成フラックス $F_\nu=\displaystyle\int_{R_{\rm in}}^{R_{\rm out}}2\pi R\,B_\nu(T(R))\,dR$。</span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a>§18.2 は標準降着円盤の中間振動数帯で $F_\nu\propto\nu^{1/3}$ になると述べた。導出の骨子を埋める。温度プロファイル $T(R)\propto R^{-3/4}$、合成フラックス $F_\nu=\displaystyle\int_{R_\mathrm{in}}^{R_\mathrm{out}}2\pi R\,B_\nu(T(R))\,dR$。</span>
 <span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$T\propto R^{-3/4}$ から $R\propto T^{-4/3}$、$2\pi R\,dR\propto T^{-11/3}\,dT$ を示せ。</span>
-<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>中間帯（$kT(R_{\rm in})\gg h\nu\gg kT(R_{\rm out})$）では各半径の Rayleigh-Jeans 側 $B_\nu\propto\nu^2 T$ が効く。$F_\nu\propto\nu^2\displaystyle\int T\cdot T^{-11/3}\,dT=\nu^2\int T^{-8/3}dT$ を変数 $x=h\nu/kT$ に変換し、$F_\nu\propto\nu^{1/3}$ を導け。</span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>中間帯（$kT(R_\mathrm{in})\gg h\nu\gg kT(R_\mathrm{out})$）では各半径の Rayleigh-Jeans 側 $B_\nu\propto\nu^2 T$ が効く。$F_\nu\propto\nu^2\displaystyle\int T\cdot T^{-11/3}\,dT=\nu^2\int T^{-8/3}dT$ を変数 $x=h\nu/kT$ に変換し、$F_\nu\propto\nu^{1/3}$ を導け。</span>
 <span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>温度プロファイルが一般に $T\propto R^{-\alpha}$ なら $F_\nu\propto\nu^{(3\alpha-2)/\alpha}$ となることを確かめ、$\alpha=3/4$ で $1/3$ になることを示せ。</span>
 <span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§18.2 多温度円盤</span><span class="co">](#sec-disk-multi-temperature)</span>／局所黒体は<span class="co">[</span><span class="ot">§18.1</span><span class="co">](#sec-disk-local-blackbody)</span>（<span class="co">[</span><span class="ot">演習 18-3</span><span class="co">](#ex-18-3)</span>）、RJ 極限は<span class="co">[</span><span class="ot">§2.5</span><span class="co">](../part1/02-reading-spectra.qmd#sec-reading-spectra-limits)</span>。</span>
@@ -1638,7 +1638,7 @@ F_\nu^\text{obs} = \int B_\nu(T(R, \phi)) \cdot g^3(R, \phi) \cdot dA_\text{prop
 <span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>各半径が温度 $T(R)$ の黒体として放射するには、第3章・第5章のどんな条件（熱化時間、光学的厚さ、単一温度）が局所的に満たされる必要があるか述べよ。</span>
 <span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>実際の円盤で局所黒体から外れる要因を2つ挙げよ（高温コロナ、振動数依存不透明度、電子散乱卓越など）。</span>
-<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>電子散乱が吸収より卓越する高温体では、観測される色温度 $T_{\rm col}$ が実効温度 $T(R)$ より高くなり、補正係数 $f_{\rm col}\simeq1.5$–$2$ が経験的に要る。なぜ散乱卓越が色温度を上げるのか、<span class="co">[</span><span class="ot">演習 15-3</span><span class="co">](../part6/15-non-blackbody.qmd#ex-15-3)</span> のソース関数と結びつけて一言で述べよ。</span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>電子散乱が吸収より卓越する高温体では、観測される色温度 $T_\mathrm{col}$ が実効温度 $T(R)$ より高くなり、補正係数 $f_\mathrm{col}\simeq1.5$–$2$ が経験的に要る。なぜ散乱卓越が色温度を上げるのか、<span class="co">[</span><span class="ot">演習 15-3</span><span class="co">](../part6/15-non-blackbody.qmd#ex-15-3)</span> のソース関数と結びつけて一言で述べよ。</span>
 <span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§18.1 局所黒体近似</span><span class="co">](#sec-disk-local-blackbody)</span>／黒体化条件は<span class="co">[</span><span class="ot">§3.6</span><span class="co">](../part1/03-universality.qmd#sec-universality-real-objects)</span>（<span class="co">[</span><span class="ot">演習 3-4</span><span class="co">](../part1/03-universality.qmd#ex-3-4)</span>）、LTE は<span class="co">[</span><span class="ot">§5.5</span><span class="co">](../part2/05-radiative-transfer.qmd#sec-radiative-transfer-lte)</span>、散乱ソース関数は<span class="co">[</span><span class="ot">演習 15-3</span><span class="co">](../part6/15-non-blackbody.qmd#ex-15-3)</span>。</span>
 <span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a></span>
@@ -1649,9 +1649,9 @@ F_\nu^\text{obs} = \int B_\nu(T(R, \phi)) \cdot g^3(R, \phi) \cdot dA_\text{prop
 <span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>**(2)** 例：高温・希薄なコロナ層（局所熱平衡を破る）、不透明度の振動数依存（修正黒体的なずれ）、電子散乱が吸収より卓越（純黒体から外れる）。</span>
 <span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>**(3)** 電子散乱卓越ではソース関数 $S_\nu=(1-\tilde\omega)B_\nu+\tilde\omega\langle J_\nu\rangle$（<span class="co">[</span><span class="ot">演習 15-3</span><span class="co">](../part6/15-non-blackbody.qmd#ex-15-3)</span>）が局所プランクから外れ、光子は吸収で熱化されにくく深部の高温を反映したまま散乱で抜ける。結果、見かけの色温度が実効温度より高くなり、$f_{\rm col}\simeq1.5$–$2$ の補正が要る。</span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>**(3)** 電子散乱卓越ではソース関数 $S_\nu=(1-\tilde\omega)B_\nu+\tilde\omega\langle J_\nu\rangle$（<span class="co">[</span><span class="ot">演習 15-3</span><span class="co">](../part6/15-non-blackbody.qmd#ex-15-3)</span>）が局所プランクから外れ、光子は吸収で熱化されにくく深部の高温を反映したまま散乱で抜ける。結果、見かけの色温度が実効温度より高くなり、$f_\mathrm{col}\simeq1.5$–$2$ の補正が要る。</span>
 <span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a>**答え**：局所熱平衡・光学的厚・単一温度が必要。破れ＝コロナ／振動数依存不透明度／電子散乱卓越。散乱卓越は熱化を妨げ色温度を上げる（$f_{\rm col}\sim1.5$–$2$）。</span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a>**答え**：局所熱平衡・光学的厚・単一温度が必要。破れ＝コロナ／振動数依存不透明度／電子散乱卓越。散乱卓越は熱化を妨げ色温度を上げる（$f_\mathrm{col}\sim1.5$–$2$）。</span>
 <span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 18-4　中性子星表面の重力赤方偏移 {#ex-18-4 .unnumbered}</span></span>

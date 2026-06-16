@@ -788,7 +788,7 @@ Z_1=\sum_{n=0}^\infty r^n=\frac{1}{1-r}=\frac{1}{1-e^{-\beta h\nu}}.
 \langle E\rangle=-\frac{\partial\ln Z_1}{\partial\beta}=\frac{h\nu\,e^{-\beta h\nu}}{1-e^{-\beta h\nu}}=\frac{h\nu}{e^{\beta h\nu}-1}=\frac{h\nu}{e^{h\nu/k_BT}-1}.
 </span></p>
 <p><strong>(3)</strong> 低振動数 <span class="math inline">x\equiv h\nu/k_BT\ll1</span> で <span class="math inline">e^x-1\simeq x</span> ゆえ <span class="math inline">\langle E\rangle\to h\nu/x=k_BT</span>。古典の等分配と一致する。</p>
-<p><strong>答え</strong>：<span class="math inline">Z_1=1/(1-e^{-\beta h\nu})</span>、<span class="math inline">\langle E\rangle=h\nu/(e^{h\nu/k_BT}-1)\xrightarrow{h\nu\ll k_BT}k_BT</span>。</p>
+<p><strong>答え</strong>：<span class="math inline">Z_1=1/(1-e^{-\beta h\nu})</span>、<span class="math inline">\langle E\rangle=h\nu/(e^{h\nu/k_BT}-1)\overset{h\nu\ll k_BT}{\longrightarrow}k_BT</span>。</p>
 </section>
 <section id="ex-10-2" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ex-10-2">問題 10-2　両極限と「最初の量子補正」</h3>
@@ -842,8 +842,8 @@ u=\frac{8\pi^5 k_B^4}{15c^3h^3}T^4\equiv aT^4,\qquad a=\frac{8\pi^5k_B^4}{15c^3h
 <p>§10.4 は両極限の境目を <span class="math inline">\nu\sim k_BT/h</span> と見積もった。プランク分布のピークを正確に求めて「変位則」を導く。</p>
 <ol type="1">
 <li><span class="math inline">B_\nu\propto\dfrac{\nu^3}{e^{x}-1}\ (x=h\nu/k_BT)</span> を <span class="math inline">\nu</span> で微分してゼロにおき、<span class="math inline">3(1-e^{-x})=x</span> という超越方程式を導け。</li>
-<li>数値解 <span class="math inline">x_{\rm peak}\approx2.821</span> を用いて <span class="math inline">\nu_{\rm peak}=2.821\,k_BT/h</span> を示し、<span class="math inline">\nu_{\rm peak}\propto T</span> を確認せよ。</li>
-<li>太陽 <span class="math inline">T\simeq5800</span> K について <span class="math inline">\nu_{\rm peak}</span> と対応波長を概算せよ（<span class="math inline">B_\lambda</span> のピーク波長とは係数が異なることに触れよ）。</li>
+<li>数値解 <span class="math inline">x_\mathrm{peak}\approx2.821</span> を用いて <span class="math inline">\nu_\mathrm{peak}=2.821\,k_BT/h</span> を示し、<span class="math inline">\nu_\mathrm{peak}\propto T</span> を確認せよ。</li>
+<li>太陽 <span class="math inline">T\simeq5800</span> K について <span class="math inline">\nu_\mathrm{peak}</span> と対応波長を概算せよ（<span class="math inline">B_\lambda</span> のピーク波長とは係数が異なることに触れよ）。</li>
 </ol>
 <p><strong>関連</strong>：<a href="#sec-planck-quantum-limits">§10.4 両極限と境界</a>／波長表示の Wien 変位則の導出は<a href="../part1/02-reading-spectra.html#ex-2-2">演習 2-2</a>、観測スペクトルのピークは<a href="../part1/01-where-blackbody.html">第1章</a>。</p>
 </section>
@@ -853,9 +853,9 @@ u=\frac{8\pi^5 k_B^4}{15c^3h^3}T^4\equiv aT^4,\qquad a=\frac{8\pi^5k_B^4}{15c^3h
 <p><span class="math display">
 3-\frac{x e^x}{e^x-1}=0\ \Longrightarrow\ 3(1-e^{-x})=x.
 </span></p>
-<p><strong>(2)</strong> この超越方程式の非自明解は <span class="math inline">x_{\rm peak}\approx2.821</span>。よって <span class="math inline">\nu_{\rm peak}=x_{\rm peak}k_BT/h=2.821\,k_BT/h\propto T</span>（Wien 変位則）。</p>
-<p><strong>(3)</strong> <span class="math inline">T=5800</span> K で <span class="math inline">\nu_{\rm peak}\approx3.4\times10^{14}</span> Hz、<span class="math inline">\lambda=c/\nu_{\rm peak}\approx8.8\times10^{2}</span> nm（近赤外）。これは <span class="math inline">B_\lambda</span> を最大化して得る <span class="math inline">\lambda_{\rm peak}\approx500</span> nm とは別物。<span class="math inline">B_\nu</span> と <span class="math inline">B_\lambda</span> ではヤコビアン <span class="math inline">d\nu=-(c/\lambda^2)d\lambda</span> のため最大化条件が異なり（<span class="math inline">\lambda</span> 側は <span class="math inline">x\approx4.965</span>）、<span class="math inline">\nu_{\rm peak}\lambda_{\rm peak}\ne c</span> となる。</p>
-<p><strong>答え</strong>：<span class="math inline">3(1-e^{-x})=x\Rightarrow x\approx2.821</span>、<span class="math inline">\nu_{\rm peak}=2.821k_BT/h\propto T</span>。太陽で <span class="math inline">\nu_{\rm peak}\approx3.4\times10^{14}</span> Hz（<span class="math inline">\sim880</span> nm）。<span class="math inline">B_\nu</span> と <span class="math inline">B_\lambda</span> のピークは一致しない。</p>
+<p><strong>(2)</strong> この超越方程式の非自明解は <span class="math inline">x_\mathrm{peak}\approx2.821</span>。よって <span class="math inline">\nu_\mathrm{peak}=x_\mathrm{peak}k_BT/h=2.821\,k_BT/h\propto T</span>（Wien 変位則）。</p>
+<p><strong>(3)</strong> <span class="math inline">T=5800</span> K で <span class="math inline">\nu_\mathrm{peak}\approx3.4\times10^{14}</span> Hz、<span class="math inline">\lambda=c/\nu_\mathrm{peak}\approx8.8\times10^{2}</span> nm（近赤外）。これは <span class="math inline">B_\lambda</span> を最大化して得る <span class="math inline">\lambda_\mathrm{peak}\approx500</span> nm とは別物。<span class="math inline">B_\nu</span> と <span class="math inline">B_\lambda</span> ではヤコビアン <span class="math inline">d\nu=-(c/\lambda^2)d\lambda</span> のため最大化条件が異なり（<span class="math inline">\lambda</span> 側は <span class="math inline">x\approx4.965</span>）、<span class="math inline">\nu_\mathrm{peak}\lambda_\mathrm{peak}\ne c</span> となる。</p>
+<p><strong>答え</strong>：<span class="math inline">3(1-e^{-x})=x\Rightarrow x\approx2.821</span>、<span class="math inline">\nu_\mathrm{peak}=2.821k_BT/h\propto T</span>。太陽で <span class="math inline">\nu_\mathrm{peak}\approx3.4\times10^{14}</span> Hz（<span class="math inline">\sim880</span> nm）。<span class="math inline">B_\nu</span> と <span class="math inline">B_\lambda</span> のピークは一致しない。</p>
 </section>
 <section id="sec-planck-quantum-further" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-planck-quantum-further">さらに学ぶための参考文献</h2>
@@ -1572,7 +1572,7 @@ u=\frac{8\pi^5 k_B^4}{15c^3h^3}T^4\equiv aT^4,\qquad a=\frac{8\pi^5k_B^4}{15c^3h
 <span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a>**(3)** 低振動数 $x\equiv h\nu/k_BT\ll1$ で $e^x-1\simeq x$ ゆえ $\langle E\rangle\to h\nu/x=k_BT$。古典の等分配と一致する。</span>
 <span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a>**答え**：$Z_1=1/(1-e^{-\beta h\nu})$、$\langle E\rangle=h\nu/(e^{h\nu/k_BT}-1)\xrightarrow{h\nu\ll k_BT}k_BT$。</span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a>**答え**：$Z_1=1/(1-e^{-\beta h\nu})$、$\langle E\rangle=h\nu/(e^{h\nu/k_BT}-1)\overset{h\nu\ll k_BT}{\longrightarrow}k_BT$。</span>
 <span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 10-2　両極限と「最初の量子補正」 {#ex-10-2 .unnumbered}</span></span>
@@ -1644,8 +1644,8 @@ u=\frac{8\pi^5 k_B^4}{15c^3h^3}T^4\equiv aT^4,\qquad a=\frac{8\pi^5k_B^4}{15c^3h
 <span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a>§10.4 は両極限の境目を $\nu\sim k_BT/h$ と見積もった。プランク分布のピークを正確に求めて「変位則」を導く。</span>
 <span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$B_\nu\propto\dfrac{\nu^3}{e^{x}-1}\ (x=h\nu/k_BT)$ を $\nu$ で微分してゼロにおき、$3(1-e^{-x})=x$ という超越方程式を導け。</span>
-<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>数値解 $x_{\rm peak}\approx2.821$ を用いて $\nu_{\rm peak}=2.821\,k_BT/h$ を示し、$\nu_{\rm peak}\propto T$ を確認せよ。</span>
-<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>太陽 $T\simeq5800$ K について $\nu_{\rm peak}$ と対応波長を概算せよ（$B_\lambda$ のピーク波長とは係数が異なることに触れよ）。</span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>数値解 $x_\mathrm{peak}\approx2.821$ を用いて $\nu_\mathrm{peak}=2.821\,k_BT/h$ を示し、$\nu_\mathrm{peak}\propto T$ を確認せよ。</span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>太陽 $T\simeq5800$ K について $\nu_\mathrm{peak}$ と対応波長を概算せよ（$B_\lambda$ のピーク波長とは係数が異なることに触れよ）。</span>
 <span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§10.4 両極限と境界</span><span class="co">](#sec-planck-quantum-limits)</span>／波長表示の Wien 変位則の導出は<span class="co">[</span><span class="ot">演習 2-2</span><span class="co">](../part1/02-reading-spectra.qmd#ex-2-2)</span>、観測スペクトルのピークは<span class="co">[</span><span class="ot">第1章</span><span class="co">](../part1/01-where-blackbody.qmd)</span>。</span>
 <span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a></span>
@@ -1658,11 +1658,11 @@ u=\frac{8\pi^5 k_B^4}{15c^3h^3}T^4\equiv aT^4,\qquad a=\frac{8\pi^5k_B^4}{15c^3h
 <span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a>3-\frac{x e^x}{e^x-1}=0\ \Longrightarrow\ 3(1-e^{-x})=x.</span>
 <span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a>**(2)** この超越方程式の非自明解は $x_{\rm peak}\approx2.821$。よって $\nu_{\rm peak}=x_{\rm peak}k_BT/h=2.821\,k_BT/h\propto T$（Wien 変位則）。</span>
+<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a>**(2)** この超越方程式の非自明解は $x_\mathrm{peak}\approx2.821$。よって $\nu_\mathrm{peak}=x_\mathrm{peak}k_BT/h=2.821\,k_BT/h\propto T$（Wien 変位則）。</span>
 <span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a>**(3)** $T=5800$ K で $\nu_{\rm peak}\approx3.4\times10^{14}$ Hz、$\lambda=c/\nu_{\rm peak}\approx8.8\times10^{2}$ nm（近赤外）。これは $B_\lambda$ を最大化して得る $\lambda_{\rm peak}\approx500$ nm とは別物。$B_\nu$ と $B_\lambda$ ではヤコビアン $d\nu=-(c/\lambda^2)d\lambda$ のため最大化条件が異なり（$\lambda$ 側は $x\approx4.965$）、$\nu_{\rm peak}\lambda_{\rm peak}\ne c$ となる。</span>
+<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a>**(3)** $T=5800$ K で $\nu_\mathrm{peak}\approx3.4\times10^{14}$ Hz、$\lambda=c/\nu_\mathrm{peak}\approx8.8\times10^{2}$ nm（近赤外）。これは $B_\lambda$ を最大化して得る $\lambda_\mathrm{peak}\approx500$ nm とは別物。$B_\nu$ と $B_\lambda$ ではヤコビアン $d\nu=-(c/\lambda^2)d\lambda$ のため最大化条件が異なり（$\lambda$ 側は $x\approx4.965$）、$\nu_\mathrm{peak}\lambda_\mathrm{peak}\ne c$ となる。</span>
 <span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a>**答え**：$3(1-e^{-x})=x\Rightarrow x\approx2.821$、$\nu_{\rm peak}=2.821k_BT/h\propto T$。太陽で $\nu_{\rm peak}\approx3.4\times10^{14}$ Hz（$\sim880$ nm）。$B_\nu$ と $B_\lambda$ のピークは一致しない。</span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a>**答え**：$3(1-e^{-x})=x\Rightarrow x\approx2.821$、$\nu_\mathrm{peak}=2.821k_BT/h\propto T$。太陽で $\nu_\mathrm{peak}\approx3.4\times10^{14}$ Hz（$\sim880$ nm）。$B_\nu$ と $B_\lambda$ のピークは一致しない。</span>
 <span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-planck-quantum-further .unnumbered}</span></span>
