@@ -180,7 +180,21 @@ $$
 \alpha_\nu^{\mathrm{ff}} \propto n_e\, n_i\, T_e^{-3/2}\, \nu^{-2}\, \bar g_{\mathrm{ff}}(\nu,T_e)
 $$ {#eq-ff-absorption}
 
-ここで $n_e, n_i$ は電子・イオン数密度、$\bar g_{\mathrm{ff}}$ は Gaunt 因子（$\nu$ にゆるやかに依存）。光学的厚さ $\tau_\nu=\int\alpha_\nu^{\mathrm{ff}}\,ds \propto \mathrm{EM}\,\nu^{-2.1}\,T_e^{-1.35}$ は **発光量度**（**emission measure**）$\mathrm{EM}=\int n_e^2\,ds$ で決まり、$\nu^{-2}$ で効くため **低振動数で光学的に厚く、高振動数で薄い**。
+ここで $n_e, n_i$ は電子・イオン数密度、$\bar g_{\mathrm{ff}}$ は Gaunt 因子（$\nu,T_e$ にゆるやかに依存）。
+
+これを視線方向に積分したものが光学的厚さ $\tau_\nu=\int\alpha_\nu^{\mathrm{ff}}\,ds$ である。密度の寄与は **発光量度**（**emission measure**）
+
+$$
+\mathrm{EM}\equiv\int n_e^2\,ds \qquad(\text{水素プラズマでは } n_i\simeq n_e)
+$$ {#eq-emission-measure}
+
+にまとまる。残る振動数・温度依存は、@eq-ff-absorption の $\nu^{-2}\,T_e^{-3/2}$ に Gaunt 因子のゆるやかな依存（$\bar g_{\mathrm{ff}}\propto\nu^{-0.1}\,T_e^{0.15}$ 程度）が重なったもので、実用的な近似形は
+
+$$
+\tau_\nu \;\propto\; \mathrm{EM}\,\nu^{-2.1}\,T_e^{-1.35}
+$$ {#eq-ff-optical-depth}
+
+となる。$\mathrm{EM}$ は吸収の強さ（密度の寄与）を、指数 $\nu^{-2.1}$ はその振動数依存を与える。後者が支配的で、$\tau_\nu\propto\nu^{-2.1}$ のため **低振動数で光学的に厚く、高振動数で薄い**。
 
 等温スラブ（温度 $T_e$、LTE）の射出強度は第5章の解 $I_\nu=B_\nu(T_e)(1-e^{-\tau_\nu})$。電波帯では $h\nu\ll k_BT_e$ なので Rayleigh–Jeans が使え、輝度温度 $T_b\equiv c^2 I_\nu/(2\nu^2 k_B)$ で書くと
 
