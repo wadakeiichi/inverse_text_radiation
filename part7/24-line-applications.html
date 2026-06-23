@@ -1,0 +1,1779 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>第24章　線スペクトルから天体物理を読む – 宇宙の熱的放射</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../part8/25-em-field-quantization.html" rel="next">
+<link href="../part7/23-line-shape.html" rel="prev">
+<link href="../images/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-6acc544bc6b266166f93717a0814bb05.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-ff0bbcb3b1d9a5abcb18e9945927b451.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "一致なし",
+    "search-matching-documents-text": "一致した文書",
+    "search-copy-link-title": "検索へのリンクをコピー",
+    "search-hide-matches-text": "追加の検索結果を非表示",
+    "search-more-match-text": "追加の検索結果",
+    "search-more-matches-text": "追加の検索結果",
+    "search-clear-button-title": "消去",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "取消",
+    "search-submit-button-title": "検索",
+    "search-label": "サーチ"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@300;400;500;600;700&amp;family=IBM+Plex+Serif:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="サイドバーを切り替える" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part7/20-where-lines.html">第VII部　線スペクトル ― もう一つの逆引き</a></li><li class="breadcrumb-item"><a href="../part7/24-line-applications.html"><span class="chapter-title">第24章　線スペクトルから天体物理を読む</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="サイドバーを切り替える" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="サーチ" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">宇宙の熱的放射</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/wadakeiichi/inverse_text_radiation" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <div class="dropdown">
+      <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../宇宙の熱的放射.pdf">
+              <i class="bi bi-file-pdf pe-1"></i>
+            Download PDF
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../宇宙の熱的放射.epub">
+              <i class="bi bi-journal pe-1"></i>
+            Download ePub
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="サーチ"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">宇宙の熱的放射</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contents.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">目次</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../00-prologue.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">序章　この本の目的と歩き方</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">第I部　宇宙に満ちる黒体放射</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part1/01-where-blackbody.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第1章　宇宙で黒体放射はどこに現れるか</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part1/02-reading-spectra.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第2章　黒体スペクトルをどう読むか</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part1/03-universality.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第3章　黒体放射はなぜ普遍的なのか</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">第II部　放射をどう記述するか</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2/04-radiation-field.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第4章　放射場の基本量</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2/05-radiative-transfer.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第5章　放射輸送の基礎</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">第III部　逆引き1：熱力学・統計力学へ</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3/06-thermal-equilibrium.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第6章　熱平衡とは何か</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3/07-statistical-mechanics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第7章　統計力学の基本</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3/08-photon-statistics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第8章　光子の統計</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">第IV部　逆引き2：量子論へ</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4/09-classical-failure.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第9章　古典論ではなぜ失敗するのか</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4/10-planck-quantum.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第10章　プランクの量子仮説</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4/11-einstein-method.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第11章　アインシュタインの方法</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4/12-quantum-foundations.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第12章　量子力学の基礎へ戻る</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">第V部　逆引き3：電磁気学へ</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5/13-electromagnetic-waves.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第13章　電磁波としての光</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5/14-cavity-modes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第14章　空洞中の電磁モード</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">第VI部　現実の宇宙へ戻る</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6/15-non-blackbody.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第15章　現実の天体は完全な黒体ではない</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6/16-cmb.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第16章　宇宙マイクロ波背景放射</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6/17-stars-planets-dust.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第17章　恒星・惑星・ダスト・電離ガスの熱放射</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6/18-accretion-high-energy.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第18章　降着円盤と高エネルギー天体</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6/19-continuum-microprocesses.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第19章　自由電子が作る連続光 ― 自由-自由・束縛-自由・再結合</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">第VII部　線スペクトル ― もう一つの逆引き</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part7/20-where-lines.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第20章　線スペクトルはどこに現れるか</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part7/21-line-formation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第21章　線形成 ― 吸収線と輝線の物理</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part7/22-atomic-physics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第22章　線スペクトルから原子物理へ</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part7/23-line-shape.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第23章　線形（line shape）の物理</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part7/24-line-applications.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">第24章　線スペクトルから天体物理を読む</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">第VIII部　QEDからの俯瞰 ― 連続と線を結ぶ見通し</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part8/25-em-field-quantization.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第25章　電磁場を量子化するとは何か ― 直観的描像</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part8/26-qed-minimum.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第26章　Einstein係数・自然幅・選択則を QED で見通す</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">参考文献</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendix/A-math-notes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">付録 A　数学補章</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendix/B-units-constants.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">付録 B　単位と基本定数</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendix/C-glossary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">用語索引（和英・英和）</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">目次</h2>
+   
+  <ul>
+  <li><a href="#sec-line-applications-map" id="toc-sec-line-applications-map" class="nav-link active" data-scroll-target="#sec-line-applications-map">この章の中心地図</a></li>
+  <li><a href="#sec-line-applications-questions" id="toc-sec-line-applications-questions" class="nav-link" data-scroll-target="#sec-line-applications-questions">この章で答える問い</a></li>
+  <li><a href="#sec-line-applications-goals" id="toc-sec-line-applications-goals" class="nav-link" data-scroll-target="#sec-line-applications-goals">到達目標</a></li>
+  <li><a href="#sec-line-applications-velocity" id="toc-sec-line-applications-velocity" class="nav-link" data-scroll-target="#sec-line-applications-velocity">24.1 視線速度 ― 線中心のシフト</a></li>
+  <li><a href="#sec-line-applications-abundance" id="toc-sec-line-applications-abundance" class="nav-link" data-scroll-target="#sec-line-applications-abundance">24.2 化学組成 ― 等価幅と curve of growth</a></li>
+  <li><a href="#sec-line-applications-diagnostics" id="toc-sec-line-applications-diagnostics" class="nav-link" data-scroll-target="#sec-line-applications-diagnostics">24.3 温度・密度診断 ― 線比の原理</a></li>
+  <li><a href="#sec-line-applications-ionization" id="toc-sec-line-applications-ionization" class="nav-link" data-scroll-target="#sec-line-applications-ionization">24.4 電離度と化学種の分布 ― イオン化バランス</a></li>
+  <li><a href="#sec-line-applications-cosmology" id="toc-sec-line-applications-cosmology" class="nav-link" data-scroll-target="#sec-line-applications-cosmology">24.5 宇宙論的応用 ― QSO 吸収系と 21 cm 線</a></li>
+  <li><a href="#sec-line-applications-exoplanet" id="toc-sec-line-applications-exoplanet" class="nav-link" data-scroll-target="#sec-line-applications-exoplanet">24.6 系外惑星大気 ― 透過分光と高分散分光</a></li>
+  <li><a href="#sec-line-applications-summary" id="toc-sec-line-applications-summary" class="nav-link" data-scroll-target="#sec-line-applications-summary">24.7 まとめ ― 線スペクトル逆引き地図の完成</a></li>
+  <li><a href="#sec-line-applications-summary-final" id="toc-sec-line-applications-summary-final" class="nav-link" data-scroll-target="#sec-line-applications-summary-final">この章で何がわかったか</a></li>
+  <li><a href="#sec-line-applications-exercises" id="toc-sec-line-applications-exercises" class="nav-link" data-scroll-target="#sec-line-applications-exercises">演習問題</a>
+  <ul class="collapse">
+  <li><a href="#ex-24-1" id="toc-ex-24-1" class="nav-link" data-scroll-target="#ex-24-1">問題 24-1　視線速度と系外惑星の検出</a></li>
+  </ul></li>
+  <li><a href="#模範解答問題-24-1" id="toc-模範解答問題-24-1" class="nav-link" data-scroll-target="#模範解答問題-24-1">模範解答（問題 24-1）</a></li>
+  <li><a href="#ex-24-2" id="toc-ex-24-2" class="nav-link" data-scroll-target="#ex-24-2">問題 24-2　線比による温度・密度診断</a></li>
+  <li><a href="#模範解答問題-24-2" id="toc-模範解答問題-24-2" class="nav-link" data-scroll-target="#模範解答問題-24-2">模範解答（問題 24-2）</a></li>
+  <li><a href="#ex-24-3" id="toc-ex-24-3" class="nav-link" data-scroll-target="#ex-24-3">問題 24-3　高赤方偏移宇宙 ― Lyα 森と 21 cm</a></li>
+  <li><a href="#模範解答問題-24-3" id="toc-模範解答問題-24-3" class="nav-link" data-scroll-target="#模範解答問題-24-3">模範解答（問題 24-3）</a></li>
+  <li><a href="#sec-line-applications-further" id="toc-sec-line-applications-further" class="nav-link" data-scroll-target="#sec-line-applications-further">さらに学ぶための参考文献</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/edit/main/part7/24-line-applications.qmd" class="toc-action"><i class="bi bi-github"></i>編集</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/blob/main/part7/24-line-applications.qmd" class="toc-action"><i class="bi empty"></i>ソースコード</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/issues/new" class="toc-action"><i class="bi empty"></i>問題を報告</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part7/20-where-lines.html">第VII部　線スペクトル ― もう一つの逆引き</a></li><li class="breadcrumb-item"><a href="../part7/24-line-applications.html"><span class="chapter-title">第24章　線スペクトルから天体物理を読む</span></a></li></ol></nav>
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-title">第24章　線スペクトルから天体物理を読む</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Source</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="chapter-overview">
+<p><strong>この章の主題</strong>：第20-23章で整備した線スペクトルの逆引き道具（Einstein 係数・占有数・振動子強度・線形）を、<strong>現実の観測解析</strong> に動員する。視線速度・化学組成・温度・密度・電離度・磁場・宇宙論的赤方偏移という、<strong>線スペクトルが直接読ませてくれる物理量</strong> を体系的に整理し、第VII部を閉じる。これは第VI部（連続スペクトルの応用）と対をなす、線スペクトル側の実務章である。</p>
+</div>
+<section id="sec-line-applications-map" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sec-line-applications-map">この章の中心地図</h2>
+<div class="central-map hydrogen-map">
+<p><strong>水素線スペクトルの地図 ― 二層構造</strong></p>
+<p><strong>第一層：イコニック・アンカー（リュードベリ公式）</strong></p>
+<p><span id="eq-rydberg"><span class="math display">
+\frac{1}{\lambda} = R_\mathrm{H} \left( \frac{1}{n_1^2} - \frac{1}{n_2^2} \right)
+\tag{27.1}</span></span></p>
+<p>線スペクトルの「骨格」を一目で示す。<span class="math inline">R_\mathrm{H}</span> は基本定数の組合せ、<span class="math inline">1/n^2</span> は束縛状態のエネルギー、離散性が「線が存在する理由」を語る。</p>
+<p><strong>第二層：構造的マップ（Hα を標準例とした線吸収係数）</strong></p>
+<p><span id="eq-line-absorption"><span class="math display">
+\alpha_\nu = \frac{\pi e^2}{m_e c} \, f_{lu} \, n_l \, \phi(\nu - \nu_0)
+\tag{27.2}</span></span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>因子</th>
+<th>物理的意味</th>
+<th>対応する章</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\alpha_\nu</span></td>
+<td>観測量（線吸収係数）</td>
+<td>第21章</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\pi e^2 / m_e c</span></td>
+<td>古典極限の線強度</td>
+<td>第22章＋第VIII部</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">f_{lu}</span></td>
+<td>振動子強度</td>
+<td>第22章</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">n_l</span></td>
+<td>下準位の占有数</td>
+<td>第21章＋Part III</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\phi(\nu - \nu_0)</span></td>
+<td>線形（自然・Doppler・Voigt）</td>
+<td>第23章</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\nu_0</span></td>
+<td>線位置（リュードベリ）</td>
+<td>第22章</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="callout callout-style-simple callout-tip no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>地図の使い方</strong>：第VII部の各章はこの式の異なる因子を解き明かす。プランク関数地図と並べて読めば、本書を貫く二つの逆引きが同時に把握できる。第VIII部の QED で、両者は前因子 <span class="math inline">2h\nu^3/c^2</span> を介して統一される（<a href="../part8/26-qed-minimum.html#eq-einstein-A" class="quarto-xref">式&nbsp;<span>29.4</span></a> 参照）。</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+ノート
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>方針</strong>：本章は「<strong>逆引きの結果としての観測道具</strong>」の章。中心地図 <span class="math inline">\alpha_\nu = (\pi e^2/m_e c) f_{lu} n_l \phi(\nu-\nu_0)</span> の各因子から、どんな物理量が読めるかを再整理し、観測の具体例で確認する。</p>
+</div>
+</div>
+</section>
+<section id="sec-line-applications-questions" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sec-line-applications-questions">この章で答える問い</h2>
+<div class="callout-question">
+<ul>
+<li>線の中心振動数のシフトから、どんな速度情報が読めるか</li>
+<li>等価幅と curve of growth から元素組成を測る手順は</li>
+<li>線比（line ratio）から温度・密度を診断する原理は</li>
+<li>高赤方偏移 QSO のスペクトルからは、宇宙の何が読めるか</li>
+<li>系外惑星大気の線スペクトルからは、何がわかるか</li>
+</ul>
+</div>
+</section>
+<section id="sec-line-applications-goals" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sec-line-applications-goals">到達目標</h2>
+<p>この章を読み終えると、読者は次のことができるようになる：</p>
+<ul>
+<li>線の中心シフトから視線速度と宇宙論的赤方偏移を測れる</li>
+<li>等価幅と curve of growth から元素組成を求める手順を組み立てられる</li>
+<li>線比診断（[O III]、[S II] 等）から電子温度と密度を分けて測れる</li>
+<li>第VII部の中心地図が、観測 → 物理量の <strong>網羅的逆引き地図</strong> であることを実感できる</li>
+</ul>
+<hr>
+</section>
+<section id="sec-line-applications-velocity" class="level2">
+<h2 class="anchored" data-anchor-id="sec-line-applications-velocity">24.1 視線速度 ― 線中心のシフト</h2>
+<p>[本文目安：B1-B2]</p>
+<p>線スペクトルの最も基本的応用は <strong>視線速度測定</strong>：観測される線中心 <span class="math inline">\nu_\text{obs}</span> と実験室での既知の値 <span class="math inline">\nu_0</span> の比較から、Doppler シフト</p>
+<p><span id="eq-doppler-velocity"><span class="math display">
+\frac{v_\parallel}{c} = \frac{\nu_0 - \nu_\text{obs}}{\nu_0} \quad (\text{非相対論的})
+\tag{27.3}</span></span></p>
+<p>これだけで多くの応用が可能：</p>
+<ul>
+<li><strong>連星系の軌道</strong>：成分星の視線速度変化 → 質量比、傾き → 質量</li>
+<li><strong>銀河の回転曲線</strong>：21 cm 線や H<span class="math inline">\alpha</span> 線の視線速度マップ → ダークマター存在の証拠</li>
+<li><strong>宇宙論的赤方偏移</strong>：<span class="math inline">z \equiv (\nu_0 - \nu_\text{obs})/\nu_\text{obs}</span> で定義され、銀河の距離尺度（Hubble 法則）</li>
+<li><strong>系外惑星検出</strong>：恒星の視線速度の周期的揺らぎ → 惑星の存在</li>
+</ul>
+<div class="callout callout-style-simple callout-warning">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>注意（観測）</strong>：宇宙論的赤方偏移 <span class="math inline">z</span> を <span class="math inline">v_\text{recession}/c</span> と書くのは <strong><span class="math inline">z \ll 1</span> の低赤方偏移近似のみ</strong> で正当化される。一般相対論的には、宇宙論的赤方偏移は時空計量のスケール因子比</p>
+<p><span class="math display">
+1 + z = \frac{a(t_\text{obs})}{a(t_\text{emit})}
+</span></p>
+<p>で定義され、単純な Doppler 速度ではない。<span class="math inline">z \gtrsim 0.1</span> では特殊相対論的 Doppler 公式や宇宙論モデル（<span class="math inline">\Lambda</span>CDM）に依存した距離–赤方偏移関係を使う必要がある。本書は線スペクトル応用を主眼とし、宇宙論の詳細は専門書（Dodelson &amp; Schmidt 等）を参照</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>問い</strong>：太陽の周りを地球と同じ軌道半径で公転する木星質量惑星は、太陽にどのくらいの視線速度ゆらぎを起こすか？</p>
+<p><strong>短答</strong>：<span class="math inline">v_\star = (M_p/M_\star) v_p \simeq (10^{-3}) \cdot 30</span> km/s = 30 m/s。Doppler 法での系外惑星検出の典型感度（HARPS, ESPRESSO 等）はサブ m/s 〜数 m/s で、これは十分検出可能。地球質量同等の惑星検出には <span class="math inline">\sim 10</span> cm/s 感度が必要で、これは現在の最先端</p>
+<p><strong>もう一歩</strong>：視線速度測定の精度は、線中心の決定精度に依存する。Voigt プロファイルの中心を <span class="math inline">\sim 10^{-3} \cdot \Delta\nu_D</span> レベルで決定できれば、~10 m/s レベルの速度精度が得られる</p>
+</div>
+</div>
+</div>
+</section>
+<section id="sec-line-applications-abundance" class="level2">
+<h2 class="anchored" data-anchor-id="sec-line-applications-abundance">24.2 化学組成 ― 等価幅と curve of growth</h2>
+<p>[本文目安：B3]</p>
+<p>恒星・星間ガス・QSO 視線方向の <strong>化学組成</strong> を測る古典的方法。手順：</p>
+<ol type="1">
+<li><strong>観測</strong>：吸収線スペクトルから等価幅 <span class="math inline">W</span> を測る（複数の線、複数の元素）</li>
+<li><strong>curve of growth</strong>：第21章 §21.6 から <span class="math inline">W \to N</span>（柱密度）の換算</li>
+<li><strong>正規化</strong>：水素柱密度を基準とし、<strong>相対組成 <span class="math inline">N_X/N_H</span></strong> を求める</li>
+<li><strong>太陽組成との比</strong>：[X/H] <span class="math inline">= \log_{10}(N_X/N_H) - \log_{10}(N_X/N_H)_\odot</span></li>
+</ol>
+<p>応用例：</p>
+<ul>
+<li><strong>銀河化学進化</strong>：金属量 [Fe/H] と <span class="math inline">\alpha</span> 元素過剰 [<span class="math inline">\alpha</span>/Fe] から、銀河中で星形成と超新星爆発が起きた <strong>タイムスケール</strong> が読める</li>
+<li><strong>QSO 吸収系</strong>：高赤方偏移の <strong>金属吸収系</strong>（C IV, Mg II, Fe II 等）→ 宇宙初期銀河の化学組成</li>
+<li><strong>系外惑星宿主星</strong>：金属量と惑星形成の相関 → 「金属に富む恒星は巨大惑星を持ちやすい」という観測法則</li>
+</ul>
+<div class="callout callout-style-simple callout-warning">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>注意（観測）</strong>：等価幅から組成を求めるとき、curve of growth のどの領域に線があるかで誤差源が変わる：</p>
+<ul>
+<li><strong>線形領域</strong>：誤差は等価幅の測定精度（連続光のフィット精度に依存）</li>
+<li><strong>飽和領域</strong>：<span class="math inline">N</span> への感度が落ちる、ほぼ無用</li>
+<li><strong>減衰翼領域</strong>：感度回復、しかし衝突幅の理論計算誤差が新たな誤差源</li>
+</ul>
+<p>優れた組成解析は <strong>複数の線（弱・中・強）</strong> を組み合わせて、curve of growth 全体を観測点で押さえる</p>
+</div>
+</div>
+</div>
+</section>
+<section id="sec-line-applications-diagnostics" class="level2">
+<h2 class="anchored" data-anchor-id="sec-line-applications-diagnostics">24.3 温度・密度診断 ― 線比の原理</h2>
+<p>[本文目安：B3]</p>
+<p>二つの異なる線の <strong>強度比</strong> <span class="math inline">I_1/I_2</span> は、しばしば <strong>温度のみ</strong> または <strong>密度のみ</strong> に強く依存し、もう一方には鈍感。これを利用した <strong>diagnostic line ratio</strong>：</p>
+<p><strong>温度診断の例（電子温度）</strong>：</p>
+<ul>
+<li><strong>[O III] $$4363 / $$5007</strong>：両者の上準位エネルギーが大きく違うので、温度に強く依存</li>
+<li>観測 $<span class="math inline">4363/</span>$5007 比 → <span class="math inline">T_e \simeq 10^4</span> K</li>
+</ul>
+<p><strong>密度診断の例（電子密度）</strong>：</p>
+<ul>
+<li>**[S II] $$6716 / $<span class="math inline">6731**：両者の上準位エネルギーは近いが、各上準位の **臨界密度**（**critical density** ― 衝突脱励起率と自発放出率が拮抗する電子密度）が異なるため、両線の強度比は密度に応じて変わる。低密度極限と高密度極限の中間 (</span>n_e 10<sup>2$〜$10</sup>4$ cm<span class="math inline">^{-3}</span>) で診断感度が高い</li>
+<li>観測 $<span class="math inline">6716/</span>$6731 比 → <span class="math inline">n_e \sim 10^2</span>〜<span class="math inline">10^4</span> cm<span class="math inline">^{-3}</span></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+ノート
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>用語</strong>：これらは <strong>禁制線</strong>（第20章 §20.3、第22章 §22.5）。禁制線が <strong>密度に敏感</strong> なのは、衝突脱励起が許容線に比べて短時間で起こるため。極低密度では禁制線が強く、高密度では衝突脱励起で弱まる。<strong>「禁制線の存在自体が低密度の証拠」</strong> とも言える</p>
+<p><strong>対応（観測）</strong>：HII 領域・惑星状星雲・AGN の電子温度・密度を測る現代的標準ツール。観測の波長分解能と感度の進歩により、<span class="math inline">\delta T_e \sim 100</span> K、<span class="math inline">\delta \log n_e \sim 0.1</span> レベルの精度が達成されている</p>
+</div>
+</div>
+</section>
+<section id="sec-line-applications-ionization" class="level2">
+<h2 class="anchored" data-anchor-id="sec-line-applications-ionization">24.4 電離度と化学種の分布 ― イオン化バランス</h2>
+<p>[本文目安：B3]</p>
+<p>同じ元素の異なる電離段階（例：H I vs H II、C IV vs C II）の <strong>存在比</strong> から、電離度が読める（電離平衡を定める Saha 式と、それが連続放射に効く仕組みは<a href="../part6/19-continuum-microprocesses.html#sec-continuum-saha">第19章 §19.5</a>）：</p>
+<ul>
+<li><strong>太陽光球</strong>：水素は中性が圧倒的（<span class="math inline">T \simeq 6000</span> K）</li>
+<li><strong>HII 領域</strong>：水素は完全電離（<span class="math inline">T \simeq 10^4</span> K、紫外光子で電離）</li>
+<li><strong>コロナ</strong>：鉄が Fe IX〜Fe XX まで電離（<span class="math inline">T \sim 10^6</span> K、衝突電離）</li>
+</ul>
+<p>複数の電離段階の線を観測すれば、<strong>電子温度</strong> と <strong>電離パラメータ</strong>（<span class="math inline">U \equiv n_\text{ionizing photon}/n_e</span>）の組合せが決まる。これが活動銀河中心核（AGN）の <strong>電離度解析</strong>（<strong>BPT diagram</strong>：[O III]/Hβ vs [N II]/Hα の二次元プロット）の基礎。</p>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>問い</strong>：同じ温度の HII 領域でも、励起源（中心星）が暖かい O 型星か、冷たい B 型星かで、観測される線スペクトルはどう違うか？</p>
+<p><strong>短答</strong>：O 型星は <strong>より高エネルギーの紫外光子</strong> を出すので、より深い電離 → [O III] が強く、低電離度の [O II] が弱い。B 型星では逆。この <strong>励起構造（excitation sequence）</strong> が銀河の高解像分光で銀河系内の様々な星雲を分類するのに使われる</p>
+</div>
+</div>
+</div>
+</section>
+<section id="sec-line-applications-cosmology" class="level2">
+<h2 class="anchored" data-anchor-id="sec-line-applications-cosmology">24.5 宇宙論的応用 ― QSO 吸収系と 21 cm 線</h2>
+<p>[本文目安：B3-B4]</p>
+<p><strong>QSO 吸収系</strong>：高赤方偏移 QSO のスペクトルには、視線方向の <strong>多数の吸収系</strong> が並ぶ：</p>
+<ul>
+<li><strong>Lyα 森（Lyman-alpha forest）</strong>：低柱密度の中性水素 → 宇宙の <strong>バリオン分布マップ</strong></li>
+<li><strong>Damped Lyα system（DLA）</strong>：高柱密度系 → 高赤方偏移銀河の前駆体</li>
+<li><strong>金属吸収系</strong>：C IV, Mg II 等 → 宇宙初期の化学進化、銀河流出（galactic outflow）</li>
+</ul>
+<p>これらの観測から、宇宙再電離の時期、銀河風の歴史、宇宙の重元素生成史が逆引きされる。</p>
+<p><strong>21 cm 線の宇宙論</strong>：再電離期 <span class="math inline">z \sim 6</span>〜<span class="math inline">20</span> の中性水素分布を 21 cm 線（観測波長は <span class="math inline">0.21 \times (1+z)</span> なので約 <span class="math inline">1.5</span>〜<span class="math inline">4.4</span> m）で見る。SKA（Square Kilometre Array）の主要観測ターゲット。</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+ノート
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>対応（観測）</strong>：第16章で見た CMB（連続スペクトル側の宇宙論プローブ）と本節の QSO 吸収・21 cm（線スペクトル側）が、<strong>宇宙物理学の二つの主柱</strong> として並列に効くことが、第VI部 ＋ 第VII部の最大の成果。一方は宇宙の温度の歴史、他方は構造形成・電離・化学進化の歴史</p>
+</div>
+</div>
+</section>
+<section id="sec-line-applications-exoplanet" class="level2">
+<h2 class="anchored" data-anchor-id="sec-line-applications-exoplanet">24.6 系外惑星大気 ― 透過分光と高分散分光</h2>
+<p>[本文目安：B3-B4]</p>
+<p>系外惑星が中心星の前を通過するとき（transit）、惑星大気を <strong>透過した光</strong> に大気成分の吸収線が刻まれる：</p>
+<ul>
+<li><strong>HST、JWST</strong>：可視〜赤外分光で水蒸気・メタン・CO<span class="math inline">_2</span>・酸素等の検出</li>
+<li><strong>高分散分光</strong>（ESPRESSO, IGRINS 等、<span class="math inline">R \sim 10^5</span>）：個別線の Doppler シフトから惑星の速度成分まで読める</li>
+</ul>
+<p>応用：</p>
+<ul>
+<li>大気組成 → 惑星形成過程の手がかり</li>
+<li>バイオシグナチャー（O<span class="math inline">_2</span>、CH<span class="math inline">_4</span> の共存）の探査</li>
+<li>地球型惑星の habitability 評価</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+ノート
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>対応（観測）</strong>：系外惑星の大気観測は <strong>線スペクトル道具の現代応用の白眉</strong>。本書の第20-23章で整備した枠組み（Einstein 係数 → 振動子強度 → 線形フィッティング）が、すべて動員される</p>
+</div>
+</div>
+</section>
+<section id="sec-line-applications-summary" class="level2">
+<h2 class="anchored" data-anchor-id="sec-line-applications-summary">24.7 まとめ ― 線スペクトル逆引き地図の完成</h2>
+<p>[本文目安：B2]</p>
+<p>第VII部全体を振り返ると、<strong>線スペクトル → 物理量</strong> の逆引きは以下のようにマップ化される：</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>中心地図の因子</th>
+<th>観測量</th>
+<th>逆引き先の物理量</th>
+<th>章</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\nu_0</span></td>
+<td>線振動数</td>
+<td>原子・分子のエネルギー準位</td>
+<td>21</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\nu_0</span> シフト</td>
+<td>中心シフト</td>
+<td>視線速度、宇宙論赤方偏移</td>
+<td>23</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">f_{lu}</span></td>
+<td>線強度（と <span class="math inline">n_l</span> から）</td>
+<td>遷移行列要素（量子力学）</td>
+<td>21</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">n_l</span></td>
+<td>等価幅</td>
+<td>柱密度、化学組成</td>
+<td>20, 23</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">n_l</span> ratio</td>
+<td>線比</td>
+<td>励起温度、電子温度・密度、電離度</td>
+<td>20, 23</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\phi(\nu-\nu_0)</span> 幅</td>
+<td>Doppler 幅</td>
+<td>キネティック温度、乱流速度</td>
+<td>22</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\phi(\nu-\nu_0)</span> 翼</td>
+<td>翼の形</td>
+<td>密度、圧力</td>
+<td>22</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\phi(\nu-\nu_0)</span> 分裂</td>
+<td>Zeeman 分裂</td>
+<td>磁場</td>
+<td>22</td>
+</tr>
+</tbody>
+</table>
+<p>これが第VII部の到達点 ― <strong>線スペクトル一本から、原子物理から銀河化学・宇宙論まで、多層の物理が逆引きできる地図</strong> が完成した。</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+ノート
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>使えるようになった道具</strong>（§24.1〜§24.6）：</p>
+<ul>
+<li>視線速度測定 ― 連星・回転曲線・宇宙論・系外惑星検出</li>
+<li>化学組成決定 ― curve of growth + 太陽組成基準</li>
+<li>温度・密度診断 ― 線比（特に禁制線）</li>
+<li>電離度解析 ― 多重電離段階の線比較</li>
+<li>高赤方偏移宇宙の探査 ― QSO 吸収系、21 cm</li>
+<li>系外惑星大気観測 ― 透過分光、高分散分光</li>
+</ul>
+</div>
+</div>
+<hr>
+</section>
+<section id="sec-line-applications-summary-final" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sec-line-applications-summary-final">この章で何がわかったか</h2>
+<div class="callout-summary">
+<p><strong>中心地図に戻る・第VII部の総まとめ</strong></p>
+<p>第VII部で、中心地図 <span class="math inline">\alpha_\nu = (\pi e^2/m_e c) f_{lu} n_l \phi(\nu-\nu_0)</span> の各因子が完全に逆引きされた：</p>
+<ul>
+<li><span class="math inline">\nu_0</span>（第22章）：原子・分子のエネルギー準位 ← 量子力学</li>
+<li><span class="math inline">f_{lu}</span>（第22章）：振動子強度 ← 遷移行列要素</li>
+<li><span class="math inline">n_l</span>（第21章）：占有数 ← LTE/non-LTE 統計力学</li>
+<li><span class="math inline">\phi(\nu-\nu_0)</span>（第23章）：線形 ← 不確定性原理＋熱運動＋衝突＋磁場</li>
+<li>観測応用（本章）：全部組み合わせて、物理量の網羅的読み取り</li>
+</ul>
+<p>第I-VI部の連続スペクトルと並ぶ、<strong>線スペクトル側の逆引き</strong> が完成した。第VIII部では、この二つの主柱（プランク分布と水素線吸収係数）を、より深い物理 ― <strong>電磁場の量子化と QED</strong> ― から統一的に俯瞰する。</p>
+</div>
+</section>
+<section id="sec-line-applications-exercises" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sec-line-applications-exercises">演習問題</h2>
+<p><span class="tag">[導出補完]</span> <strong>模範解答</strong> は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</p>
+<section id="ex-24-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-24-1">問題 24-1　視線速度と系外惑星の検出</h3>
+<p>[★ 難易度：☆☆ ] <span class="tag">[導出補完]</span></p>
+<p>§24.1 の視線速度 <span class="math inline">\dfrac{v_\parallel}{c}=\dfrac{\nu_0-\nu_\mathrm{obs}}{\nu_0}</span> を系外惑星検出に使う。中心星と惑星は共通重心を回り、<span class="math inline">M_\star v_\star=M_p v_p</span>。</p>
+<ol type="1">
+<li>地球と同じ軌道半径（1 AU、公転速度 <span class="math inline">v_p\simeq30</span> km/s）を回る木星質量惑星（<span class="math inline">M_p/M_\star\simeq10^{-3}</span>）が中心星に起こす視線速度ゆらぎ <span class="math inline">v_\star</span> を求めよ。</li>
+<li>その <span class="math inline">v_\star</span> が現在の Doppler 法（HARPS/ESPRESSO、感度サブ m/s〜数 m/s）で検出可能か述べよ。地球質量の検出には何 cm/s 感度が要るか概算せよ。</li>
+<li>宇宙論的赤方偏移 <span class="math inline">z</span> を単純な <span class="math inline">v/c</span> と書けるのは低赤方偏移近似に限ることを、<span class="math inline">1+z=a(t_\mathrm{obs})/a(t_\mathrm{emit})</span> に触れて述べよ。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-line-applications-velocity">§24.1 視線速度</a>／Doppler シフトは<a href="../part7/23-line-shape.html#sec-line-shape-doppler">§23.2</a>、宇宙膨張と赤方偏移は<a href="../part6/16-cmb.html#ex-16-2">演習 16-2</a>。</p>
+</section>
+</section>
+<section id="模範解答問題-24-1" class="level2 callout-derive" data-collapse="true">
+<h2 class="anchored" data-anchor-id="模範解答問題-24-1">模範解答（問題 24-1）</h2>
+<p><strong>(1)</strong> <span class="math inline">v_\star=（M_p/M_\star)v_p=10^{-3}\times30</span> km/s <span class="math inline">=0.03</span> km/s <span class="math inline">=30</span> m/s。</p>
+<p><strong>(2)</strong> 30 m/s は HARPS/ESPRESSO（サブ m/s〜数 m/s）で十分検出可能。地球質量惑星なら <span class="math inline">M_p/M_\star\simeq3\times10^{-6}</span> ゆえ <span class="math inline">v_\star\simeq3\times10^{-6}\times30</span> km/s <span class="math inline">\simeq0.09</span> m/s <span class="math inline">\simeq10</span> cm/s 感度が必要で、これは現在の最先端。</p>
+<p><strong>(3)</strong> <span class="math inline">z\simeq v/c</span> は <span class="math inline">z\ll1</span> でのみ成立。一般には宇宙論的赤方偏移は時空のスケール因子比 <span class="math inline">1+z=a(t_\mathrm{obs})/a(t_\mathrm{emit})</span> で定義され、単純な後退速度ではない。<span class="math inline">z\gtrsim0.1</span> では特殊相対論的 Doppler 公式や宇宙論モデル依存の距離-赤方偏移関係が要る。</p>
+<p><strong>答え</strong>：<span class="math inline">v_\star=30</span> m/s（検出可能）。地球質量には <span class="math inline">\sim10</span> cm/s 感度。<span class="math inline">z=v/c</span> は低赤方偏移近似のみ、本来は <span class="math inline">1+z=a_\mathrm{obs}/a_\mathrm{emit}</span>。</p>
+</section>
+<section id="ex-24-2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-24-2">問題 24-2　線比による温度・密度診断</h3>
+<p>[★ 難易度：☆☆ ] <span class="tag">[理解を深める]</span></p>
+<p>§24.3 の禁制線比による診断。[O III] $<span class="math inline">4363/</span>$5007（温度）と [S II] $<span class="math inline">6716/</span>$6731（密度）。</p>
+<ol type="1">
+<li>[O III] $<span class="math inline">4363/</span>$5007 比が電子温度に強く依存する理由を、両線の上準位エネルギー差から述べよ。</li>
+<li>[S II] $<span class="math inline">6716/</span>$6731 比が電子密度に依存する理由を、両上準位の臨界密度の違いから述べよ。</li>
+<li>一つの線比が「温度のみ」または「密度のみ」に依存し、もう一方に鈍感だと、なぜ温度と密度を分離して測れるのか述べよ。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-line-applications-diagnostics">§24.3 温度・密度診断</a>／禁制線と臨界密度は<a href="../part7/20-where-lines.html#ex-20-2">演習 20-2</a>、Boltzmann 占有は<a href="../part3/07-statistical-mechanics.html#ex-7-4">演習 7-4</a>。</p>
+</section>
+<section id="模範解答問題-24-2" class="level2 callout-derive" data-collapse="true">
+<h2 class="anchored" data-anchor-id="模範解答問題-24-2">模範解答（問題 24-2）</h2>
+<p><strong>(1)</strong> [O III] $$4363 と $$5007 は上準位のエネルギーが大きく異なる。上準位の占有比は Boltzmann 因子 <span class="math inline">e^{-\Delta E/k_BT_e}</span> で決まり、エネルギー差 <span class="math inline">\Delta E</span> が大きいほど温度に敏感。両線の強度比はこの占有比を反映し、電子温度 <span class="math inline">T_e</span> に強く依存する。</p>
+<p><strong>(2)</strong> [S II] $$6716 と $<span class="math inline">6731 は上準位エネルギーが近い（温度に鈍感）が、各上準位の臨界密度が異なる。電子密度が両者の臨界密度の中間（</span>n_e10<sup>2$–$10</sup>4$ cm<span class="math inline">^{-3}</span>）にあると、密度に応じて衝突脱励起の効き方が変わり、強度比が密度の関数になる。</p>
+<p><strong>(3)</strong> [O III] 比は温度のみ、[S II] 比は密度のみに主に依存し互いに鈍感なので、二つの線比を独立な方程式として連立すれば、温度と密度を別々に解ける。これが星雲の電子温度・密度を分離して測る標準法。</p>
+<p><strong>答え</strong>：[O III] は上準位エネルギー差大→温度敏感、[S II] は臨界密度差→密度敏感。互いに鈍感ゆえ温度と密度を分離して測れる。</p>
+</section>
+<section id="ex-24-3" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-24-3">問題 24-3　高赤方偏移宇宙 ― Lyα 森と 21 cm</h3>
+<p>[★ 難易度：☆☆ ] <span class="tag">[理解を深める]</span></p>
+<p>§24.5 の宇宙論的応用。QSO 吸収系（Ly<span class="math inline">\alpha</span> 森・DLA・金属吸収系）と再電離期の 21 cm 線。</p>
+<ol type="1">
+<li>Ly<span class="math inline">\alpha</span> 森・DLA・金属吸収系が、それぞれ宇宙の何（バリオン分布・銀河前駆体・化学進化）を語るか述べよ。</li>
+<li>再電離期 <span class="math inline">z=7</span> の中性水素 21 cm 線（静止波長 0.211 m）の観測波長を求めよ。<span class="math inline">z=6</span> と <span class="math inline">z=20</span> では何 m か。</li>
+<li>第16章の CMB（連続スペクトル側の宇宙論プローブ）と本問の Ly<span class="math inline">\alpha</span>/21 cm（線スペクトル側）が、宇宙物理の二つの主柱として何の歴史を相補的に語るか述べよ。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-line-applications-cosmology">§24.5 宇宙論的応用</a>／CMB は<a href="../part6/16-cmb.html">第16章</a>（<a href="../part6/16-cmb.html">第VI部 演習</a>）、21 cm の起源は<a href="../part7/20-where-lines.html#sec-where-lines-21cm">§20.4</a>（<a href="../part7/20-where-lines.html#ex-20-1">演習 20-1</a>）。</p>
+</section>
+<section id="模範解答問題-24-3" class="level2 callout-derive" data-collapse="true">
+<h2 class="anchored" data-anchor-id="模範解答問題-24-3">模範解答（問題 24-3）</h2>
+<p><strong>(1)</strong> Ly<span class="math inline">\alpha</span> 森：低柱密度の中性水素による多数の吸収線＝宇宙のバリオン分布マップ。DLA（damped Ly<span class="math inline">\alpha</span>）：高柱密度系＝高赤方偏移銀河の前駆体。金属吸収系（C IV, Mg II 等）：宇宙初期の化学進化・銀河流出の記録。</p>
+<p><strong>(2)</strong> <span class="math inline">\lambda_\mathrm{obs}=(1+z)\times0.211</span> m。<span class="math inline">z=7</span>：<span class="math inline">8\times0.211=1.69</span> m。<span class="math inline">z=6</span>：<span class="math inline">7\times0.211=1.48</span> m。<span class="math inline">z=20</span>：<span class="math inline">21\times0.211=4.43</span> m。再電離期は約 1.5〜4.4 m（SKA の標的帯）。</p>
+<p><strong>(3)</strong> CMB は連続スペクトル（黒体）で宇宙の<strong>温度の歴史</strong>（熱化・膨張）を語る。Ly<span class="math inline">\alpha</span>/21 cm は線スペクトルで<strong>構造形成・電離・化学進化の歴史</strong>を語る。両者は宇宙物理学の二つの主柱として相補的に、初期宇宙から現在までの異なる側面を逆引きさせる。</p>
+<p><strong>答え</strong>：Ly<span class="math inline">\alpha</span> 森＝バリオン分布、DLA＝銀河前駆体、金属系＝化学進化。21 cm(<span class="math inline">z=7</span>)＝1.69 m（<span class="math inline">z=6</span>:1.48、<span class="math inline">z=20</span>:4.43 m）。CMB＝温度史、線＝構造・電離・化学史で相補的。</p>
+</section>
+<section id="sec-line-applications-further" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sec-line-applications-further">さらに学ぶための参考文献</h2>
+<ul>
+<li>Asplund, “New Light on Stellar Abundance Analyses,” ARA&amp;A 43 (2005) 481 — 恒星化学組成の現代手法</li>
+<li>Osterbrock &amp; Ferland, <em>Astrophysics of Gaseous Nebulae and Active Galactic Nuclei</em> (Univ. Science Books, 2nd ed., 2006) — 線比診断の標準書</li>
+<li>Prochaska, “Quasar Absorption Line Spectroscopy” レビュー — QSO 吸収系の網羅的解説</li>
+<li>Madhusudhan, “Exoplanetary Atmospheres,” ARA&amp;A 57 (2019) 617 — 系外惑星大気観測のレビュー</li>
+<li>Dalgarno &amp; Layzer (eds.), <em>Spectroscopy of Astrophysical Plasmas</em> (Cambridge, 1987) — 線比診断の体系的記述</li>
+</ul>
+
+
+<!-- -->
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "コピーしました");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "コピーしました");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../part7/23-line-shape.html" class="pagination-link" aria-label="第23章　線形（line shape）の物理">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">第23章　線形（line shape）の物理</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../part8/25-em-field-quantization.html" class="pagination-link" aria-label="第25章　電磁場を量子化するとは何か ― 直観的描像">
+        <span class="nav-page-text"><span class="chapter-title">第25章　電磁場を量子化するとは何か ― 直観的描像</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">ソースコード</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "第24章　線スペクトルから天体物理を読む"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">lang:</span><span class="co"> ja</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>::: {.chapter-overview}</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>**この章の主題**：第20-23章で整備した線スペクトルの逆引き道具（Einstein 係数・占有数・振動子強度・線形）を、**現実の観測解析** に動員する。視線速度・化学組成・温度・密度・電離度・磁場・宇宙論的赤方偏移という、**線スペクトルが直接読ませてくれる物理量** を体系的に整理し、第VII部を閉じる。これは第VI部（連続スペクトルの応用）と対をなす、線スペクトル側の実務章である。</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章の中心地図 {#sec-line-applications-map .unnumbered}</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../_includes/_hydrogen-map.qmd &gt;}}</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>**方針**：本章は「**逆引きの結果としての観測道具**」の章。中心地図 $\alpha_\nu = (\pi e^2/m_e c) f_{lu} n_l \phi(\nu-\nu_0)$ の各因子から、どんな物理量が読めるかを再整理し、観測の具体例で確認する。</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で答える問い {#sec-line-applications-questions .unnumbered}</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>::: {.callout-question}</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>線の中心振動数のシフトから、どんな速度情報が読めるか</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>等価幅と curve of growth から元素組成を測る手順は</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>線比（line ratio）から温度・密度を診断する原理は</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>高赤方偏移 QSO のスペクトルからは、宇宙の何が読めるか</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>系外惑星大気の線スペクトルからは、何がわかるか</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="fu">## 到達目標 {#sec-line-applications-goals .unnumbered}</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>この章を読み終えると、読者は次のことができるようになる：</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>線の中心シフトから視線速度と宇宙論的赤方偏移を測れる</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>等価幅と curve of growth から元素組成を求める手順を組み立てられる</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>線比診断（<span class="co">[</span><span class="ot">O III</span><span class="co">]</span>、<span class="co">[</span><span class="ot">S II</span><span class="co">]</span> 等）から電子温度と密度を分けて測れる</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>第VII部の中心地図が、観測 → 物理量の **網羅的逆引き地図** であることを実感できる</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="fu">## 24.1 視線速度 ― 線中心のシフト {#sec-line-applications-velocity}</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B1-B2</span><span class="co">]</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>線スペクトルの最も基本的応用は **視線速度測定**：観測される線中心 $\nu_\text{obs}$ と実験室での既知の値 $\nu_0$ の比較から、Doppler シフト</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>\frac{v_\parallel}{c} = \frac{\nu_0 - \nu_\text{obs}}{\nu_0} \quad (\text{非相対論的})</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>$$ {#eq-doppler-velocity}</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>これだけで多くの応用が可能：</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**連星系の軌道**：成分星の視線速度変化 → 質量比、傾き → 質量</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**銀河の回転曲線**：21 cm 線や H$\alpha$ 線の視線速度マップ → ダークマター存在の証拠</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**宇宙論的赤方偏移**：$z \equiv (\nu_0 - \nu_\text{obs})/\nu_\text{obs}$ で定義され、銀河の距離尺度（Hubble 法則）</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**系外惑星検出**：恒星の視線速度の周期的揺らぎ → 惑星の存在</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning appearance="simple"}</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>**注意（観測）**：宇宙論的赤方偏移 $z$ を $v_\text{recession}/c$ と書くのは **$z \ll 1$ の低赤方偏移近似のみ** で正当化される。一般相対論的には、宇宙論的赤方偏移は時空計量のスケール因子比</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>1 + z = \frac{a(t_\text{obs})}{a(t_\text{emit})}</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>で定義され、単純な Doppler 速度ではない。$z \gtrsim 0.1$ では特殊相対論的 Doppler 公式や宇宙論モデル（$\Lambda$CDM）に依存した距離–赤方偏移関係を使う必要がある。本書は線スペクトル応用を主眼とし、宇宙論の詳細は専門書（Dodelson &amp; Schmidt 等）を参照</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>**問い**：太陽の周りを地球と同じ軌道半径で公転する木星質量惑星は、太陽にどのくらいの視線速度ゆらぎを起こすか？</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>**短答**：$v_\star = (M_p/M_\star) v_p \simeq (10^{-3}) \cdot 30$ km/s = 30 m/s。Doppler 法での系外惑星検出の典型感度（HARPS, ESPRESSO 等）はサブ m/s 〜数 m/s で、これは十分検出可能。地球質量同等の惑星検出には $\sim 10$ cm/s 感度が必要で、これは現在の最先端</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>**もう一歩**：視線速度測定の精度は、線中心の決定精度に依存する。Voigt プロファイルの中心を $\sim 10^{-3} \cdot \Delta\nu_D$ レベルで決定できれば、~10 m/s レベルの速度精度が得られる</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="fu">## 24.2 化学組成 ― 等価幅と curve of growth {#sec-line-applications-abundance}</span></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>恒星・星間ガス・QSO 視線方向の **化学組成** を測る古典的方法。手順：</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**観測**：吸収線スペクトルから等価幅 $W$ を測る（複数の線、複数の元素）</span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**curve of growth**：第21章 §21.6 から $W \to N$（柱密度）の換算</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**正規化**：水素柱密度を基準とし、**相対組成 $N_X/N_H$** を求める</span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**太陽組成との比**：<span class="co">[</span><span class="ot">X/H</span><span class="co">]</span> $= \log_{10}(N_X/N_H) - \log_{10}(N_X/N_H)_\odot$</span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>応用例：</span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**銀河化学進化**：金属量 [Fe/H] と $\alpha$ 元素過剰 [$\alpha$/Fe] から、銀河中で星形成と超新星爆発が起きた **タイムスケール** が読める</span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**QSO 吸収系**：高赤方偏移の **金属吸収系**（C IV, Mg II, Fe II 等）→ 宇宙初期銀河の化学組成</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**系外惑星宿主星**：金属量と惑星形成の相関 → 「金属に富む恒星は巨大惑星を持ちやすい」という観測法則</span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning appearance="simple"}</span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>**注意（観測）**：等価幅から組成を求めるとき、curve of growth のどの領域に線があるかで誤差源が変わる：</span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**線形領域**：誤差は等価幅の測定精度（連続光のフィット精度に依存）</span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**飽和領域**：$N$ への感度が落ちる、ほぼ無用</span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**減衰翼領域**：感度回復、しかし衝突幅の理論計算誤差が新たな誤差源</span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>優れた組成解析は **複数の線（弱・中・強）** を組み合わせて、curve of growth 全体を観測点で押さえる</span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a><span class="fu">## 24.3 温度・密度診断 ― 線比の原理 {#sec-line-applications-diagnostics}</span></span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>二つの異なる線の **強度比** $I_1/I_2$ は、しばしば **温度のみ** または **密度のみ** に強く依存し、もう一方には鈍感。これを利用した **diagnostic line ratio**：</span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>**温度診断の例（電子温度）**：</span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**[O III] $\lambda$4363 / $\lambda$5007**：両者の上準位エネルギーが大きく違うので、温度に強く依存</span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>観測 $\lambda$4363/$\lambda$5007 比 → $T_e \simeq 10^4$ K</span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>**密度診断の例（電子密度）**：</span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**[S II] $\lambda$6716 / $\lambda$6731**：両者の上準位エネルギーは近いが、各上準位の **臨界密度**（**critical density** ― 衝突脱励起率と自発放出率が拮抗する電子密度）が異なるため、両線の強度比は密度に応じて変わる。低密度極限と高密度極限の中間 ($n_e \sim 10^2$〜$10^4$ cm$^{-3}$) で診断感度が高い</span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>観測 $\lambda$6716/$\lambda$6731 比 → $n_e \sim 10^2$〜$10^4$ cm$^{-3}$</span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>**用語**：これらは **禁制線**（第20章 §20.3、第22章 §22.5）。禁制線が **密度に敏感** なのは、衝突脱励起が許容線に比べて短時間で起こるため。極低密度では禁制線が強く、高密度では衝突脱励起で弱まる。**「禁制線の存在自体が低密度の証拠」** とも言える</span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>**対応（観測）**：HII 領域・惑星状星雲・AGN の電子温度・密度を測る現代的標準ツール。観測の波長分解能と感度の進歩により、$\delta T_e \sim 100$ K、$\delta \log n_e \sim 0.1$ レベルの精度が達成されている</span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a><span class="fu">## 24.4 電離度と化学種の分布 ― イオン化バランス {#sec-line-applications-ionization}</span></span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>同じ元素の異なる電離段階（例：H I vs H II、C IV vs C II）の **存在比** から、電離度が読める（電離平衡を定める Saha 式と、それが連続放射に効く仕組みは<span class="co">[</span><span class="ot">第19章 §19.5</span><span class="co">](../part6/19-continuum-microprocesses.qmd#sec-continuum-saha)</span>）：</span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**太陽光球**：水素は中性が圧倒的（$T \simeq 6000$ K）</span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**HII 領域**：水素は完全電離（$T \simeq 10^4$ K、紫外光子で電離）</span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**コロナ**：鉄が Fe IX〜Fe XX まで電離（$T \sim 10^6$ K、衝突電離）</span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>複数の電離段階の線を観測すれば、**電子温度** と **電離パラメータ**（$U \equiv n_\text{ionizing photon}/n_e$）の組合せが決まる。これが活動銀河中心核（AGN）の **電離度解析**（**BPT diagram**：<span class="co">[</span><span class="ot">O III</span><span class="co">]</span>/Hβ vs <span class="co">[</span><span class="ot">N II</span><span class="co">]</span>/Hα の二次元プロット）の基礎。</span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>**問い**：同じ温度の HII 領域でも、励起源（中心星）が暖かい O 型星か、冷たい B 型星かで、観測される線スペクトルはどう違うか？</span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>**短答**：O 型星は **より高エネルギーの紫外光子** を出すので、より深い電離 → [O III] が強く、低電離度の [O II] が弱い。B 型星では逆。この **励起構造（excitation sequence）** が銀河の高解像分光で銀河系内の様々な星雲を分類するのに使われる</span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a><span class="fu">## 24.5 宇宙論的応用 ― QSO 吸収系と 21 cm 線 {#sec-line-applications-cosmology}</span></span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3-B4</span><span class="co">]</span></span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>**QSO 吸収系**：高赤方偏移 QSO のスペクトルには、視線方向の **多数の吸収系** が並ぶ：</span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Lyα 森（Lyman-alpha forest）**：低柱密度の中性水素 → 宇宙の **バリオン分布マップ**</span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Damped Lyα system（DLA）**：高柱密度系 → 高赤方偏移銀河の前駆体</span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**金属吸収系**：C IV, Mg II 等 → 宇宙初期の化学進化、銀河流出（galactic outflow）</span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>これらの観測から、宇宙再電離の時期、銀河風の歴史、宇宙の重元素生成史が逆引きされる。</span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>**21 cm 線の宇宙論**：再電離期 $z \sim 6$〜$20$ の中性水素分布を 21 cm 線（観測波長は $0.21 \times (1+z)$ なので約 $1.5$〜$4.4$ m）で見る。SKA（Square Kilometre Array）の主要観測ターゲット。</span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>**対応（観測）**：第16章で見た CMB（連続スペクトル側の宇宙論プローブ）と本節の QSO 吸収・21 cm（線スペクトル側）が、**宇宙物理学の二つの主柱** として並列に効くことが、第VI部 ＋ 第VII部の最大の成果。一方は宇宙の温度の歴史、他方は構造形成・電離・化学進化の歴史</span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a><span class="fu">## 24.6 系外惑星大気 ― 透過分光と高分散分光 {#sec-line-applications-exoplanet}</span></span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3-B4</span><span class="co">]</span></span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>系外惑星が中心星の前を通過するとき（transit）、惑星大気を **透過した光** に大気成分の吸収線が刻まれる：</span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**HST、JWST**：可視〜赤外分光で水蒸気・メタン・CO$_2$・酸素等の検出</span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**高分散分光**（ESPRESSO, IGRINS 等、$R \sim 10^5$）：個別線の Doppler シフトから惑星の速度成分まで読める</span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>応用：</span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>大気組成 → 惑星形成過程の手がかり</span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>バイオシグナチャー（O$_2$、CH$_4$ の共存）の探査</span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>地球型惑星の habitability 評価</span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>**対応（観測）**：系外惑星の大気観測は **線スペクトル道具の現代応用の白眉**。本書の第20-23章で整備した枠組み（Einstein 係数 → 振動子強度 → 線形フィッティング）が、すべて動員される</span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a><span class="fu">## 24.7 まとめ ― 線スペクトル逆引き地図の完成 {#sec-line-applications-summary}</span></span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B2</span><span class="co">]</span></span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>第VII部全体を振り返ると、**線スペクトル → 物理量** の逆引きは以下のようにマップ化される：</span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 中心地図の因子 <span class="pp">|</span> 観測量 <span class="pp">|</span> 逆引き先の物理量 <span class="pp">|</span> 章 <span class="pp">|</span></span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|---|</span></span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $\nu_0$ <span class="pp">|</span> 線振動数 <span class="pp">|</span> 原子・分子のエネルギー準位 <span class="pp">|</span> 21 <span class="pp">|</span></span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $\nu_0$ シフト <span class="pp">|</span> 中心シフト <span class="pp">|</span> 視線速度、宇宙論赤方偏移 <span class="pp">|</span> 23 <span class="pp">|</span></span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $f_{lu}$ <span class="pp">|</span> 線強度（と $n_l$ から） <span class="pp">|</span> 遷移行列要素（量子力学） <span class="pp">|</span> 21 <span class="pp">|</span></span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $n_l$ <span class="pp">|</span> 等価幅 <span class="pp">|</span> 柱密度、化学組成 <span class="pp">|</span> 20, 23 <span class="pp">|</span></span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $n_l$ ratio <span class="pp">|</span> 線比 <span class="pp">|</span> 励起温度、電子温度・密度、電離度 <span class="pp">|</span> 20, 23 <span class="pp">|</span></span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $\phi(\nu-\nu_0)$ 幅 <span class="pp">|</span> Doppler 幅 <span class="pp">|</span> キネティック温度、乱流速度 <span class="pp">|</span> 22 <span class="pp">|</span></span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $\phi(\nu-\nu_0)$ 翼 <span class="pp">|</span> 翼の形 <span class="pp">|</span> 密度、圧力 <span class="pp">|</span> 22 <span class="pp">|</span></span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $\phi(\nu-\nu_0)$ 分裂 <span class="pp">|</span> Zeeman 分裂 <span class="pp">|</span> 磁場 <span class="pp">|</span> 22 <span class="pp">|</span></span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>これが第VII部の到達点 ― **線スペクトル一本から、原子物理から銀河化学・宇宙論まで、多層の物理が逆引きできる地図** が完成した。</span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>**使えるようになった道具**（§24.1〜§24.6）：</span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>視線速度測定 ― 連星・回転曲線・宇宙論・系外惑星検出</span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>化学組成決定 ― curve of growth + 太陽組成基準</span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>温度・密度診断 ― 線比（特に禁制線）</span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>電離度解析 ― 多重電離段階の線比較</span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>高赤方偏移宇宙の探査 ― QSO 吸収系、21 cm</span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>系外惑星大気観測 ― 透過分光、高分散分光</span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-line-applications-summary-final .unnumbered}</span></span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る・第VII部の総まとめ**</span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>第VII部で、中心地図 $\alpha_\nu = (\pi e^2/m_e c) f_{lu} n_l \phi(\nu-\nu_0)$ の各因子が完全に逆引きされた：</span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$\nu_0$（第22章）：原子・分子のエネルギー準位 ← 量子力学</span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$f_{lu}$（第22章）：振動子強度 ← 遷移行列要素</span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$n_l$（第21章）：占有数 ← LTE/non-LTE 統計力学</span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$\phi(\nu-\nu_0)$（第23章）：線形 ← 不確定性原理＋熱運動＋衝突＋磁場</span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>観測応用（本章）：全部組み合わせて、物理量の網羅的読み取り</span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>第I-VI部の連続スペクトルと並ぶ、**線スペクトル側の逆引き** が完成した。第VIII部では、この二つの主柱（プランク分布と水素線吸収係数）を、より深い物理 ― **電磁場の量子化と QED** ― から統一的に俯瞰する。</span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-line-applications-exercises .unnumbered}</span></span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 24-1　視線速度と系外惑星の検出 {#ex-24-1 .unnumbered}</span></span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>§24.1 の視線速度 $\dfrac{v_\parallel}{c}=\dfrac{\nu_0-\nu_\mathrm{obs}}{\nu_0}$ を系外惑星検出に使う。中心星と惑星は共通重心を回り、$M_\star v_\star=M_p v_p$。</span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>地球と同じ軌道半径（1 AU、公転速度 $v_p\simeq30$ km/s）を回る木星質量惑星（$M_p/M_\star\simeq10^{-3}$）が中心星に起こす視線速度ゆらぎ $v_\star$ を求めよ。</span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>その $v_\star$ が現在の Doppler 法（HARPS/ESPRESSO、感度サブ m/s〜数 m/s）で検出可能か述べよ。地球質量の検出には何 cm/s 感度が要るか概算せよ。</span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>宇宙論的赤方偏移 $z$ を単純な $v/c$ と書けるのは低赤方偏移近似に限ることを、$1+z=a(t_\mathrm{obs})/a(t_\mathrm{emit})$ に触れて述べよ。</span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§24.1 視線速度</span><span class="co">](#sec-line-applications-velocity)</span>／Doppler シフトは<span class="co">[</span><span class="ot">§23.2</span><span class="co">](../part7/23-line-shape.qmd#sec-line-shape-doppler)</span>、宇宙膨張と赤方偏移は<span class="co">[</span><span class="ot">演習 16-2</span><span class="co">](../part6/16-cmb.qmd#ex-16-2)</span>。</span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 24-1）</span></span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a>**(1)** $v_\star=（M_p/M_\star)v_p=10^{-3}\times30$ km/s $=0.03$ km/s $=30$ m/s。</span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a>**(2)** 30 m/s は HARPS/ESPRESSO（サブ m/s〜数 m/s）で十分検出可能。地球質量惑星なら $M_p/M_\star\simeq3\times10^{-6}$ ゆえ $v_\star\simeq3\times10^{-6}\times30$ km/s $\simeq0.09$ m/s $\simeq10$ cm/s 感度が必要で、これは現在の最先端。</span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a>**(3)** $z\simeq v/c$ は $z\ll1$ でのみ成立。一般には宇宙論的赤方偏移は時空のスケール因子比 $1+z=a(t_\mathrm{obs})/a(t_\mathrm{emit})$ で定義され、単純な後退速度ではない。$z\gtrsim0.1$ では特殊相対論的 Doppler 公式や宇宙論モデル依存の距離-赤方偏移関係が要る。</span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>**答え**：$v_\star=30$ m/s（検出可能）。地球質量には $\sim10$ cm/s 感度。$z=v/c$ は低赤方偏移近似のみ、本来は $1+z=a_\mathrm{obs}/a_\mathrm{emit}$。</span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 24-2　線比による温度・密度診断 {#ex-24-2 .unnumbered}</span></span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>§24.3 の禁制線比による診断。<span class="co">[</span><span class="ot">O III</span><span class="co">]</span> $\lambda$4363/$\lambda$5007（温度）と <span class="co">[</span><span class="ot">S II</span><span class="co">]</span> $\lambda$6716/$\lambda$6731（密度）。</span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span><span class="co">[</span><span class="ot">O III</span><span class="co">]</span> $\lambda$4363/$\lambda$5007 比が電子温度に強く依存する理由を、両線の上準位エネルギー差から述べよ。</span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span><span class="co">[</span><span class="ot">S II</span><span class="co">]</span> $\lambda$6716/$\lambda$6731 比が電子密度に依存する理由を、両上準位の臨界密度の違いから述べよ。</span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>一つの線比が「温度のみ」または「密度のみ」に依存し、もう一方に鈍感だと、なぜ温度と密度を分離して測れるのか述べよ。</span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§24.3 温度・密度診断</span><span class="co">](#sec-line-applications-diagnostics)</span>／禁制線と臨界密度は<span class="co">[</span><span class="ot">演習 20-2</span><span class="co">](../part7/20-where-lines.qmd#ex-20-2)</span>、Boltzmann 占有は<span class="co">[</span><span class="ot">演習 7-4</span><span class="co">](../part3/07-statistical-mechanics.qmd#ex-7-4)</span>。</span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 24-2）</span></span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>**(1)** <span class="co">[</span><span class="ot">O III</span><span class="co">]</span> $\lambda$4363 と $\lambda$5007 は上準位のエネルギーが大きく異なる。上準位の占有比は Boltzmann 因子 $e^{-\Delta E/k_BT_e}$ で決まり、エネルギー差 $\Delta E$ が大きいほど温度に敏感。両線の強度比はこの占有比を反映し、電子温度 $T_e$ に強く依存する。</span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a>**(2)** <span class="co">[</span><span class="ot">S II</span><span class="co">]</span> $\lambda$6716 と $\lambda$6731 は上準位エネルギーが近い（温度に鈍感）が、各上準位の臨界密度が異なる。電子密度が両者の臨界密度の中間（$n_e\sim10^2$–$10^4$ cm$^{-3}$）にあると、密度に応じて衝突脱励起の効き方が変わり、強度比が密度の関数になる。</span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a>**(3)** <span class="co">[</span><span class="ot">O III</span><span class="co">]</span> 比は温度のみ、<span class="co">[</span><span class="ot">S II</span><span class="co">]</span> 比は密度のみに主に依存し互いに鈍感なので、二つの線比を独立な方程式として連立すれば、温度と密度を別々に解ける。これが星雲の電子温度・密度を分離して測る標準法。</span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a>**答え**：<span class="co">[</span><span class="ot">O III</span><span class="co">]</span> は上準位エネルギー差大→温度敏感、<span class="co">[</span><span class="ot">S II</span><span class="co">]</span> は臨界密度差→密度敏感。互いに鈍感ゆえ温度と密度を分離して測れる。</span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 24-3　高赤方偏移宇宙 ― Lyα 森と 21 cm {#ex-24-3 .unnumbered}</span></span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a>§24.5 の宇宙論的応用。QSO 吸収系（Ly$\alpha$ 森・DLA・金属吸収系）と再電離期の 21 cm 線。</span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Ly$\alpha$ 森・DLA・金属吸収系が、それぞれ宇宙の何（バリオン分布・銀河前駆体・化学進化）を語るか述べよ。</span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>再電離期 $z=7$ の中性水素 21 cm 線（静止波長 0.211 m）の観測波長を求めよ。$z=6$ と $z=20$ では何 m か。</span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>第16章の CMB（連続スペクトル側の宇宙論プローブ）と本問の Ly$\alpha$/21 cm（線スペクトル側）が、宇宙物理の二つの主柱として何の歴史を相補的に語るか述べよ。</span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§24.5 宇宙論的応用</span><span class="co">](#sec-line-applications-cosmology)</span>／CMB は<span class="co">[</span><span class="ot">第16章</span><span class="co">](../part6/16-cmb.qmd)</span>（<span class="co">[</span><span class="ot">第VI部 演習</span><span class="co">](../part6/16-cmb.qmd)</span>）、21 cm の起源は<span class="co">[</span><span class="ot">§20.4</span><span class="co">](../part7/20-where-lines.qmd#sec-where-lines-21cm)</span>（<span class="co">[</span><span class="ot">演習 20-1</span><span class="co">](../part7/20-where-lines.qmd#ex-20-1)</span>）。</span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 24-3）</span></span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a>**(1)** Ly$\alpha$ 森：低柱密度の中性水素による多数の吸収線＝宇宙のバリオン分布マップ。DLA（damped Ly$\alpha$）：高柱密度系＝高赤方偏移銀河の前駆体。金属吸収系（C IV, Mg II 等）：宇宙初期の化学進化・銀河流出の記録。</span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a>**(2)** $\lambda_\mathrm{obs}=(1+z)\times0.211$ m。$z=7$：$8\times0.211=1.69$ m。$z=6$：$7\times0.211=1.48$ m。$z=20$：$21\times0.211=4.43$ m。再電離期は約 1.5〜4.4 m（SKA の標的帯）。</span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a>**(3)** CMB は連続スペクトル（黒体）で宇宙の**温度の歴史**（熱化・膨張）を語る。Ly$\alpha$/21 cm は線スペクトルで**構造形成・電離・化学進化の歴史**を語る。両者は宇宙物理学の二つの主柱として相補的に、初期宇宙から現在までの異なる側面を逆引きさせる。</span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a>**答え**：Ly$\alpha$ 森＝バリオン分布、DLA＝銀河前駆体、金属系＝化学進化。21 cm($z=7$)＝1.69 m（$z=6$:1.48、$z=20$:4.43 m）。CMB＝温度史、線＝構造・電離・化学史で相補的。</span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-line-applications-further .unnumbered}</span></span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Asplund, "New Light on Stellar Abundance Analyses," ARA&amp;A 43 (2005) 481 — 恒星化学組成の現代手法</span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Osterbrock &amp; Ferland, *Astrophysics of Gaseous Nebulae and Active Galactic Nuclei* (Univ. Science Books, 2nd ed., 2006) — 線比診断の標準書</span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Prochaska, "Quasar Absorption Line Spectroscopy" レビュー — QSO 吸収系の網羅的解説</span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Madhusudhan, "Exoplanetary Atmospheres," ARA&amp;A 57 (2019) 617 — 系外惑星大気観測のレビュー</span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Dalgarno &amp; Layzer (eds.), *Spectroscopy of Astrophysical Plasmas* (Cambridge, 1987) — 線比診断の体系的記述</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/edit/main/part7/24-line-applications.qmd" class="toc-action"><i class="bi bi-github"></i>編集</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/blob/main/part7/24-line-applications.qmd" class="toc-action"><i class="bi empty"></i>ソースコード</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/issues/new" class="toc-action"><i class="bi empty"></i>問題を報告</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
