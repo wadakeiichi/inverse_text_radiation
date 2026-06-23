@@ -145,10 +145,10 @@ $$ {#eq-transverse-condition}
 
 - **シンクロトロン放射**（非熱的）の偏光 → 磁場の方向診断
 - **散乱光**の偏光 → 散乱体の幾何
-- **Zeeman 効果**（第22章）→ 線が偏光して分裂、磁場強度を測定
+- **Zeeman 効果**（第23章）→ 線が偏光して分裂、磁場強度を測定
 - **CMB の B モード偏光** → 初期宇宙の重力波の指紋
 
-ただし、本書の中心地図プランク分布そのものは**等方・無偏光**である（多数の方向と偏光の平均）。観測される偏光現象は、本書では第15章以降や第22章で扱う。
+ただし、本書の中心地図プランク分布そのものは**等方・無偏光**である（多数の方向と偏光の平均）。観測される偏光現象は、本書では第15章以降や第23章で扱う。
 :::
 
 ## 13.5 Poynting ベクトル ― 観測量への接続 {#sec-electromagnetic-waves-poynting}
@@ -337,7 +337,7 @@ $$
 2. シンクロトロン放射・散乱光・Zeeman 効果が、それぞれ偏光からどんな物理量（磁場方向・散乱幾何・磁場強度）を引き出すか述べよ。
 3. 中心地図のプランク分布そのものは等方・無偏光である。なぜ熱平衡放射は無偏光なのか（多数の方向と偏光の平均）を述べよ。
 
-**関連**：[§13.4 偏光](#sec-electromagnetic-waves-polarization)／散乱と偏光は[§15.5](../part6/15-non-blackbody.qmd#sec-non-blackbody-scattering)、Zeeman 効果は[第22章](../part7/22-line-shape.qmd)。
+**関連**：[§13.4 偏光](#sec-electromagnetic-waves-polarization)／散乱と偏光は[§15.5](../part6/15-non-blackbody.qmd#sec-non-blackbody-scattering)、Zeeman 効果は[第23章](../part7/23-line-shape.qmd)。
 
 ::: {.callout-derive collapse="true"}
 ## 模範解答（問題 13-4）

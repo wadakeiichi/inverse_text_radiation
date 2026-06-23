@@ -232,11 +232,11 @@ $$
 
 [★ 難易度：☆☆ ] [tag:導出補完]
 
-§23.1 の視線速度 $\dfrac{v_\parallel}{c}=\dfrac{\nu_0-\nu_\mathrm{obs}}{\nu_0}$ を系外惑星検出に使う。中心星と惑星は共通重心を回り、$M_\star v_\star=M_p v_p$。
+§23.1 の視線速度 $\dfrac{v_\parallel}{c}=\dfrac{\nu_0-\nu_{\rm obs}}{\nu_0}$ を系外惑星検出に使う。中心星と惑星は共通重心を回り、$M_\star v_\star=M_p v_p$。
 
 1. 地球と同じ軌道半径（1 AU、公転速度 $v_p\simeq30$ km/s）を回る木星質量惑星（$M_p/M_\star\simeq10^{-3}$）が中心星に起こす視線速度ゆらぎ $v_\star$ を求めよ。
 2. その $v_\star$ が現在の Doppler 法（HARPS/ESPRESSO、感度サブ m/s〜数 m/s）で検出可能か述べよ。地球質量の検出には何 cm/s 感度が要るか概算せよ。
-3. 宇宙論的赤方偏移 $z$ を単純な $v/c$ と書けるのは低赤方偏移近似に限ることを、$1+z=a(t_\mathrm{obs})/a(t_\mathrm{emit})$ に触れて述べよ。
+3. 宇宙論的赤方偏移 $z$ を単純な $v/c$ と書けるのは低赤方偏移近似に限ることを、$1+z=a(t_{\rm obs})/a(t_{\rm emit})$ に触れて述べよ。
 
 **関連**：[§23.1 視線速度](#sec-line-applications-velocity)／Doppler シフトは[§22.2](../part7/22-line-shape.qmd#sec-line-shape-doppler)、宇宙膨張と赤方偏移は[演習 16-2](../part6/16-cmb.qmd#ex-16-2)。
 
@@ -247,9 +247,9 @@ $$
 
 **(2)** 30 m/s は HARPS/ESPRESSO（サブ m/s〜数 m/s）で十分検出可能。地球質量惑星なら $M_p/M_\star\simeq3\times10^{-6}$ ゆえ $v_\star\simeq3\times10^{-6}\times30$ km/s $\simeq0.09$ m/s $\simeq10$ cm/s 感度が必要で、これは現在の最先端。
 
-**(3)** $z\simeq v/c$ は $z\ll1$ でのみ成立。一般には宇宙論的赤方偏移は時空のスケール因子比 $1+z=a(t_\mathrm{obs})/a(t_\mathrm{emit})$ で定義され、単純な後退速度ではない。$z\gtrsim0.1$ では特殊相対論的 Doppler 公式や宇宙論モデル依存の距離-赤方偏移関係が要る。
+**(3)** $z\simeq v/c$ は $z\ll1$ でのみ成立。一般には宇宙論的赤方偏移は時空のスケール因子比 $1+z=a(t_{\rm obs})/a(t_{\rm emit})$ で定義され、単純な後退速度ではない。$z\gtrsim0.1$ では特殊相対論的 Doppler 公式や宇宙論モデル依存の距離-赤方偏移関係が要る。
 
-**答え**：$v_\star=30$ m/s（検出可能）。地球質量には $\sim10$ cm/s 感度。$z=v/c$ は低赤方偏移近似のみ、本来は $1+z=a_\mathrm{obs}/a_\mathrm{emit}$。
+**答え**：$v_\star=30$ m/s（検出可能）。地球質量には $\sim10$ cm/s 感度。$z=v/c$ は低赤方偏移近似のみ、本来は $1+z=a_{\rm obs}/a_{\rm emit}$。
 :::
 
 ### 問題 23-2　線比による温度・密度診断 {#ex-23-2 .unnumbered}
@@ -293,7 +293,7 @@ $$
 
 **(1)** Ly$\alpha$ 森：低柱密度の中性水素による多数の吸収線＝宇宙のバリオン分布マップ。DLA（damped Ly$\alpha$）：高柱密度系＝高赤方偏移銀河の前駆体。金属吸収系（C IV, Mg II 等）：宇宙初期の化学進化・銀河流出の記録。
 
-**(2)** $\lambda_\mathrm{obs}=(1+z)\times0.211$ m。$z=7$：$8\times0.211=1.69$ m。$z=6$：$7\times0.211=1.48$ m。$z=20$：$21\times0.211=4.43$ m。再電離期は約 1.5〜4.4 m（SKA の標的帯）。
+**(2)** $\lambda_{\rm obs}=(1+z)\times0.211$ m。$z=7$：$8\times0.211=1.69$ m。$z=6$：$7\times0.211=1.48$ m。$z=20$：$21\times0.211=4.43$ m。再電離期は約 1.5〜4.4 m（SKA の標的帯）。
 
 **(3)** CMB は連続スペクトル（黒体）で宇宙の**温度の歴史**（熱化・膨張）を語る。Ly$\alpha$/21 cm は線スペクトルで**構造形成・電離・化学進化の歴史**を語る。両者は宇宙物理学の二つの主柱として相補的に、初期宇宙から現在までの異なる側面を逆引きさせる。
 

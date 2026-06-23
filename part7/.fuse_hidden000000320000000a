@@ -281,10 +281,10 @@ $$ {#eq-zeeman-energy}
 
 [★ 難易度：☆☆ ] [tag:導出補完]
 
-§22.1 の自然幅。励起寿命 $\tau_u=1/A_{ul}$、振動数単位の自然幅 $\gamma_\mathrm{nat}=A_{ul}/(2\pi)$。Ly$\alpha$（$\lambda=121.6$ nm、$A_{ul}=6.27\times10^8$ s$^{-1}$）について。
+§22.1 の自然幅。励起寿命 $\tau_u=1/A_{ul}$、振動数単位の自然幅 $\gamma_{\rm nat}=A_{ul}/(2\pi)$。Ly$\alpha$（$\lambda=121.6$ nm、$A_{ul}=6.27\times10^8$ s$^{-1}$）について。
 
-1. 励起寿命 $\tau_u$ と自然幅 $\gamma_\mathrm{nat}$（Hz）を求めよ。
-2. 波長単位の自然幅 $\Delta\lambda_\mathrm{nat}=\dfrac{\lambda^2 A_{ul}}{2\pi c}$ を Å 単位で求め、$4.9\times10^{-5}$ Å を確かめよ。
+1. 励起寿命 $\tau_u$ と自然幅 $\gamma_{\rm nat}$（Hz）を求めよ。
+2. 波長単位の自然幅 $\Delta\lambda_{\rm nat}=\dfrac{\lambda^2 A_{ul}}{2\pi c}$ を Å 単位で求め、$4.9\times10^{-5}$ Å を確かめよ。
 3. 自然幅 Lorentzian の「翼」が $1/(\Delta\nu)^2$ でべき的に伸びることが、QSO の damped Ly$\alpha$ 系の減衰翼として観測される。なぜ自然幅は線中心より翼で重要なのか述べよ。
 
 **関連**：[§22.1 自然幅](#sec-line-shape-natural)／$A_{ul}$ と自然幅は[演習 11-4](../part4/11-einstein-method.qmd#ex-11-4)、真空揺らぎとの関係は[§25.4](../part8/25-qed-minimum.qmd#sec-qed-minimum-natural-width)（[第VIII部 演習](../part8/25-qed-minimum.qmd)）。
@@ -292,13 +292,13 @@ $$ {#eq-zeeman-energy}
 ::: {.callout-derive collapse="true"}
 ## 模範解答（問題 22-2）
 
-**(1)** $\tau_u=1/A_{ul}=1/(6.27\times10^8)=1.6\times10^{-9}$ s（1.6 ns）。$\gamma_\mathrm{nat}=A_{ul}/(2\pi)=6.27\times10^8/6.283=9.98\times10^7\simeq10^8$ Hz。
+**(1)** $\tau_u=1/A_{ul}=1/(6.27\times10^8)=1.6\times10^{-9}$ s（1.6 ns）。$\gamma_{\rm nat}=A_{ul}/(2\pi)=6.27\times10^8/6.283=9.98\times10^7\simeq10^8$ Hz。
 
-**(2)** $\Delta\lambda_\mathrm{nat}=\dfrac{\lambda^2 A_{ul}}{2\pi c}=\dfrac{(1.216\times10^{-7})^2\times6.27\times10^8}{2\pi\times3\times10^8}=\dfrac{1.479\times10^{-14}\times6.27\times10^8}{1.885\times10^9}=\dfrac{9.27\times10^{-6}}{1.885\times10^9}=4.9\times10^{-15}$ m $=4.9\times10^{-5}$ Å。✓
+**(2)** $\Delta\lambda_{\rm nat}=\dfrac{\lambda^2 A_{ul}}{2\pi c}=\dfrac{(1.216\times10^{-7})^2\times6.27\times10^8}{2\pi\times3\times10^8}=\dfrac{1.479\times10^{-14}\times6.27\times10^8}{1.885\times10^9}=\dfrac{9.27\times10^{-6}}{1.885\times10^9}=4.9\times10^{-15}$ m $=4.9\times10^{-5}$ Å。✓
 
 **(3)** 線中心は Doppler の Gaussian コアが支配し（指数減衰で狭い）、自然幅 Lorentzian は埋もれる。しかし Lorentzian の翼は $1/(\Delta\nu)^2$ でべき的に緩く伸びるため、中心から十分離れた翼では Gaussian（$e^{-(\Delta\nu)^2}$）が先に消えて Lorentzian が浮かび上がる。よって自然幅は線翼（damping wing）で重要。
 
-**答え**：$\tau_u=1.6$ ns、$\gamma_\mathrm{nat}\simeq10^8$ Hz、$\Delta\lambda_\mathrm{nat}=4.9\times10^{-5}$ Å。Lorentzian 翼が $1/\Delta\nu^2$ で伸びるため翼で支配的。
+**答え**：$\tau_u=1.6$ ns、$\gamma_{\rm nat}\simeq10^8$ Hz、$\Delta\lambda_{\rm nat}=4.9\times10^{-5}$ Å。Lorentzian 翼が $1/\Delta\nu^2$ で伸びるため翼で支配的。
 :::
 
 ### 問題 22-3　Voigt プロファイル ― コアと翼を別プローブに {#ex-22-3 .unnumbered}
@@ -329,7 +329,7 @@ $$ {#eq-zeeman-energy}
 
 [★ 難易度：☆☆ ] [tag:理解を深める]
 
-§22.5・22.6 のマクロ速度場と磁場。Gaussian 成分の二乗和 $\Delta\nu_{D,\mathrm{total}}^2=\Delta\nu_{D,\mathrm{thermal}}^2+\Delta\nu_{D,\mathrm{turb}}^2$、Zeeman 分裂 $\Delta E=g_J\mu_B B m_J$。
+§22.5・22.6 のマクロ速度場と磁場。Gaussian 成分の二乗和 $\Delta\nu_{D,{\rm total}}^2=\Delta\nu_{D,{\rm thermal}}^2+\Delta\nu_{D,{\rm turb}}^2$、Zeeman 分裂 $\Delta E=g_J\mu_B B m_J$。
 
 1. 熱的成分（$\propto1/\sqrt m$）と乱流成分（元素質量に依らない）が、異なる質量の元素の線幅比較でどう分離できるか述べよ。
 2. マイクロ乱流とマクロ乱流で数学的扱いが異なる理由（速度場のスケールと光子平均自由行程の大小）を一言で述べよ。
@@ -340,7 +340,7 @@ $$ {#eq-zeeman-energy}
 ::: {.callout-derive collapse="true"}
 ## 模範解答（問題 22-4）
 
-**(1)** 熱的 Doppler 幅は $\Delta v_\mathrm{th}\propto1/\sqrt m$ で重い元素ほど狭い。乱流は等方ランダム速度で元素質量に依らず一定。複数の元素（軽い H と重い Fe など）の線幅を測り、$\Delta v^2=\Delta v_\mathrm{th}^2(m)+\xi_\mathrm{turb}^2$ を質量に対してプロットすると、質量依存部分（熱的）と一定部分（乱流 $\xi_\mathrm{turb}$）に分離できる。
+**(1)** 熱的 Doppler 幅は $\Delta v_{\rm th}\propto1/\sqrt m$ で重い元素ほど狭い。乱流は等方ランダム速度で元素質量に依らず一定。複数の元素（軽い H と重い Fe など）の線幅を測り、$\Delta v^2=\Delta v_{\rm th}^2(m)+\xi_{\rm turb}^2$ を質量に対してプロットすると、質量依存部分（熱的）と一定部分（乱流 $\xi_{\rm turb}$）に分離できる。
 
 **(2)** 速度場のスケールが光子の平均自由行程より**小さい**＝マイクロ乱流：線吸収係数 $\alpha_\nu$ 自体に織り込まれ、$\Delta\nu_D$ の単純拡張で扱える。**大きい**＝マクロ乱流：線形成は局所的に進み、最後に射出スペクトルへの畳み込みとして効く。扱う段階が違う。
 

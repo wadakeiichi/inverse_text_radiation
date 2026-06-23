@@ -1,10 +1,10 @@
 ---
-title: "第20章　線形成 ― 吸収線と輝線の物理"
+title: "第21章　線形成 ― 吸収線と輝線の物理"
 lang: ja
 ---
 
 ::: {.chapter-overview}
-**この章の主題**：第19章で見たさまざまな線スペクトルは、すべて「**原子・分子の離散的遷移と、その場の放射場との相互作用**」の結果として理解できる。本章では、第11章で導入した **Einstein 係数** $A_{ul}, B_{lu}, B_{ul}$ を線スペクトルの主役として再登場させ、**線吸収・線輝線・線源泉関数** を逆引きで体系化する。これは連続スペクトルの第4-5章（放射輸送と源泉関数）の **線スペクトル版** にあたる。
+**この章の主題**：第20章で見たさまざまな線スペクトルは、すべて「**原子・分子の離散的遷移と、その場の放射場との相互作用**」の結果として理解できる。本章では、第11章で導入した **Einstein 係数** $A_{ul}, B_{lu}, B_{ul}$ を線スペクトルの主役として再登場させ、**線吸収・線輝線・線源泉関数** を逆引きで体系化する。これは連続スペクトルの第4-5章（放射輸送と源泉関数）の **線スペクトル版** にあたる。
 :::
 
 ## この章の中心地図 {#sec-line-formation-map .unnumbered}
@@ -12,7 +12,7 @@ lang: ja
 {{< include ../_includes/_hydrogen-map.qmd >}}
 
 ::: {.callout-note}
-**方針**：本章では中心地図 $\alpha_\nu = (\pi e^2/m_e c) f_{lu} n_l \phi(\nu-\nu_0)$ の **$n_l$ 因子** と **線形成（吸収 or 輝線）の選択** に焦点を当てる。$f_{lu}$ は第21章、$\phi(\nu-\nu_0)$ は第22章で別途扱う。
+**方針**：本章では中心地図 $\alpha_\nu = (\pi e^2/m_e c) f_{lu} n_l \phi(\nu-\nu_0)$ の **$n_l$ 因子** と **線形成（吸収 or 輝線）の選択** に焦点を当てる。$f_{lu}$ は第22章、$\phi(\nu-\nu_0)$ は第23章で別途扱う。
 :::
 
 ## この章で答える問い {#sec-line-formation-questions .unnumbered}
@@ -34,7 +34,7 @@ lang: ja
 
 ---
 
-## 20.1 線の観測量 ― 等価幅 {#sec-line-equivalent-width}
+## 21.1 線の観測量 ― 等価幅 {#sec-line-equivalent-width}
 
 [本文目安：B2-B3]
 
@@ -55,10 +55,10 @@ $$ {#eq-equivalent-width}
 輝線についても同様に、連続光からの **余剰光** の積分として等価幅を定義する。
 
 ::: {.callout-warning appearance="simple"}
-**注意（観測）**：等価幅は **観測スペクトル分解能の限界以上の線** には鋭敏。一方、強く飽和した線（線芯が完全に黒）では、追加の物質を加えても等価幅はゆっくりとしか増えない（§20.6 の curve of growth の「飽和域」）。等価幅から物理量を読むには、線がどの「成長領域」にあるかを意識する必要がある
+**注意（観測）**：等価幅は **観測スペクトル分解能の限界以上の線** には鋭敏。一方、強く飽和した線（線芯が完全に黒）では、追加の物質を加えても等価幅はゆっくりとしか増えない（§21.6 の curve of growth の「飽和域」）。等価幅から物理量を読むには、線がどの「成長領域」にあるかを意識する必要がある
 :::
 
-## 20.2 線の三つの素過程 ― Einstein 係数の再登場 {#sec-line-three-processes}
+## 21.2 線の三つの素過程 ― Einstein 係数の再登場 {#sec-line-three-processes}
 
 [本文目安：B3]
 
@@ -70,7 +70,7 @@ $$ {#eq-equivalent-width}
 - $B_{lu}$：**誘導吸収**（**induced absorption**）― $l \to u$ で光子吸収
 - $B_{ul}$：**誘導放出**（**stimulated emission**）― $u \to l$、入射光と同じモードへ放出
 
-これらは原子物理（第21章で再導出）と熱平衡条件（第11章 §11.3 の Einstein 関係式）
+これらは原子物理（第22章で再導出）と熱平衡条件（第11章 §11.3 の Einstein 関係式）
 
 $$
 \frac{A_{ul}}{B_{ul}} = \frac{2h\nu^3}{c^2}, \quad \frac{g_l B_{lu}}{g_u B_{ul}} = 1
@@ -97,7 +97,7 @@ $$ {#eq-line-absorption-einstein}
 **もう一歩**：銀河中心の H$_2$O メーザー（22 GHz）、星形成領域の OH メーザー（1.6 GHz）はこの **天然のレーザー** 現象。観測すれば、$n_u/g_u > n_l/g_l$ を実現する非平衡ポンプ機構（衝突、放射ポンプ）の存在が逆引きされる
 :::
 
-## 20.3 線源泉関数 ― 連続スペクトルから線スペクトルへ {#sec-line-source-function}
+## 21.3 線源泉関数 ― 連続スペクトルから線スペクトルへ {#sec-line-source-function}
 
 [本文目安：B3]
 
@@ -122,12 +122,12 @@ $$ {#eq-excitation-temperature}
 と書き直すと、$S_\nu^\text{line} = B_{\nu_0}(T_\text{ex})$。すなわち **線源泉関数は、励起温度に対応する黒体スペクトル**。
 
 ::: {.callout-note}
-**用語**：**励起温度** $T_\text{ex}$ は、観測者が観測される線の強度から **逆引き** で求める「上下準位の占有比を Boltzmann 分布で書いたときの温度」。物理的に物質と熱平衡している温度とは限らない（LTE / non-LTE の区別、§20.4-§20.5）
+**用語**：**励起温度** $T_\text{ex}$ は、観測者が観測される線の強度から **逆引き** で求める「上下準位の占有比を Boltzmann 分布で書いたときの温度」。物理的に物質と熱平衡している温度とは限らない（LTE / non-LTE の区別、§21.4-§21.5）
 
 **対応（観測）**：観測される線の輝度温度から $T_\text{ex}$ を測れる ― これが線スペクトルから物理状態を逆引きする最初のステップ
 :::
 
-## 20.4 LTE 線形成 ― 線源泉関数 ≈ $B_\nu(T_\text{kin})$ {#sec-LTE-line-formation}
+## 21.4 LTE 線形成 ― 線源泉関数 ≈ $B_\nu(T_\text{kin})$ {#sec-LTE-line-formation}
 
 [本文目安：B3]
 
@@ -153,9 +153,9 @@ $$ {#eq-LTE-source-function}
 逆に、温度が深さとともに **下がる** 場合（彩層・コロナ）や、観測対象がガス雲そのもの（背景の連続光がない）では、輝線として現れる。**吸収線 ↔ 輝線は、温度構造と背景光の組合せ** で決まる
 :::
 
-![同じ原子遷移が観測の幾何条件で吸収線にも輝線にもなる三つのケース（第19章 §19.3 で導入した図を、§20.4 で源泉関数の文脈で再掲）。温度勾配と背景光の組合せがどう線形態を決めるかが視覚的に分かる。](../images/line-formation-geometry.svg){#fig-line-geometry-lte width=88%}
+![同じ原子遷移が観測の幾何条件で吸収線にも輝線にもなる三つのケース（第20章 §20.3 で導入した図を、§21.4 で源泉関数の文脈で再掲）。温度勾配と背景光の組合せがどう線形態を決めるかが視覚的に分かる。](../images/line-formation-geometry.svg){#fig-line-geometry-lte width=88%}
 
-## 20.5 non-LTE 線形成 ― いつ・なぜ LTE が破綻するか {#sec-non-LTE-line-formation}
+## 21.5 non-LTE 線形成 ― いつ・なぜ LTE が破綻するか {#sec-non-LTE-line-formation}
 
 [本文目安：B3-B4]
 
@@ -187,7 +187,7 @@ non-LTE 線形成を扱う数値的枠組み：
 - **熱的 vs 非熱的**：粒子のエネルギー分布が Maxwell-Boltzmann か否か。LTE / non-LTE とは別の軸（第15章 §15.1）
 :::
 
-## 20.6 curve of growth ― 等価幅から柱密度を測る {#sec-curve-of-growth}
+## 21.6 curve of growth ― 等価幅から柱密度を測る {#sec-curve-of-growth}
 
 [本文目安：B3]
 
@@ -205,13 +205,13 @@ $$ {#eq-curve-of-growth}
 
 - **線形領域**：吸収線の光学的深さ $\tau < 1$。等価幅は柱密度に比例
 - **飽和領域**：線芯が完全に黒（$\tau \gg 1$）。中心が「これ以上吸収できない」、ただ広がるだけ
-- **減衰翼領域**：自然幅・衝突幅が支配（第22章）。Lorentz 翼の $\propto \sqrt{N}$ 依存
+- **減衰翼領域**：自然幅・衝突幅が支配（第23章）。Lorentz 翼の $\propto \sqrt{N}$ 依存
 
 ::: {.callout-note}
-**対応（観測）**：恒星・QSO 吸収線スペクトルの解析で、curve of growth は **観測等価幅 → 柱密度** を求める基本道具。化学組成、QSO 視線方向の星間吸収系の柱密度測定などに使われる。第23章 §23.2 で本格的に応用する
+**対応（観測）**：恒星・QSO 吸収線スペクトルの解析で、curve of growth は **観測等価幅 → 柱密度** を求める基本道具。化学組成、QSO 視線方向の星間吸収系の柱密度測定などに使われる。第24章 §24.2 で本格的に応用する
 :::
 
-## 20.7 使えるようになった道具 {#sec-line-formation-tools .unnumbered}
+## 21.7 使えるようになった道具 {#sec-line-formation-tools .unnumbered}
 
 ::: {.callout-note}
 - 等価幅 $W_\lambda$ ― 線の最も基本的観測量
@@ -241,20 +241,20 @@ $$ {#eq-curve-of-growth}
 
 以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。
 
-### 問題 20-1　線源泉関数が Bν(Tex) になる {#ex-20-1 .unnumbered}
+### 問題 21-1　線源泉関数が Bν(Tex) になる {#ex-21-1 .unnumbered}
 
 [★ 難易度：☆☆ ] [tag:導出補完]
 
-§20.3 は線源泉関数を励起温度 $T_\mathrm{ex}$ のプランク関数に書き換えた。導出を埋める。$S_\nu^\mathrm{line}=\dfrac{A_{ul}n_u}{B_{lu}n_l-B_{ul}n_u}$、Einstein 関係 $A_{ul}/B_{ul}=2h\nu_0^3/c^2$、$g_lB_{lu}=g_uB_{ul}$。
+§21.3 は線源泉関数を励起温度 $T_\mathrm{ex}$ のプランク関数に書き換えた。導出を埋める。$S_\nu^\mathrm{line}=\dfrac{A_{ul}n_u}{B_{lu}n_l-B_{ul}n_u}$、Einstein 関係 $A_{ul}/B_{ul}=2h\nu_0^3/c^2$、$g_lB_{lu}=g_uB_{ul}$。
 
 1. Einstein 関係を使って $S_\nu^\mathrm{line}=\dfrac{2h\nu_0^3/c^2}{(g_un_l)/(g_ln_u)-1}$ を導け。
 2. 励起温度を $\dfrac{g_un_l}{g_ln_u}=e^{h\nu_0/k_BT_\mathrm{ex}}$ で定義し、$S_\nu^\mathrm{line}=B_{\nu_0}(T_\mathrm{ex})$ を示せ。
 3. $T_\mathrm{ex}$ が物理的なキネティック温度と一致するのはどんな条件か（LTE）。一致しない場合（non-LTE）に $S_\nu$ がプランク関数でなくなるわけではない理由を述べよ。
 
-**関連**：[§20.3 線源泉関数](#sec-line-source-function)／Einstein 関係の導出は[演習 11-1](../part4/11-einstein-method.qmd#ex-11-1)、ソース関数の基礎は[演習 5-5](../part2/05-radiative-transfer.qmd#ex-5-5)、LTE は[§20.4](#sec-LTE-line-formation)。
+**関連**：[§21.3 線源泉関数](#sec-line-source-function)／Einstein 関係の導出は[演習 11-1](../part4/11-einstein-method.qmd#ex-11-1)、ソース関数の基礎は[演習 5-5](../part2/05-radiative-transfer.qmd#ex-5-5)、LTE は[§21.4](#sec-LTE-line-formation)。
 
 ::: {.callout-derive collapse="true"}
-## 模範解答（問題 20-1）
+## 模範解答（問題 21-1）
 
 **(1)** 分子分母を $B_{ul}n_u$ で割る。$g_lB_{lu}=g_uB_{ul}$ より $B_{lu}=（g_u/g_l)B_{ul}$：
 
@@ -269,20 +269,20 @@ $$S_\nu^\mathrm{line}=\frac{2h\nu_0^3/c^2}{e^{h\nu_0/k_BT_\mathrm{ex}}-1}=B_{\nu
 **答え**：$S_\nu^\mathrm{line}=\dfrac{2h\nu_0^3/c^2}{(g_un_l)/(g_ln_u)-1}=B_{\nu_0}(T_\mathrm{ex})$。LTE で $T_\mathrm{ex}=T_\mathrm{kin}$、non-LTE でも定義上 $B_\nu(T_\mathrm{ex})$ の形は保たれる。
 :::
 
-### 問題 20-2　誘導放出補正と準位反転（メーザー） {#ex-20-2 .unnumbered}
+### 問題 21-2　誘導放出補正と準位反転（メーザー） {#ex-21-2 .unnumbered}
 
 [★ 難易度：☆☆ ] [tag:導出補完]
 
-§20.2 の線吸収係数 $\alpha_\nu=\dfrac{h\nu_0}{4\pi}n_lB_{lu}\phi\left[1-\dfrac{g_ln_u}{g_un_l}\right]$ の誘導放出補正 $[1-g_ln_u/(g_un_l)]$ を読み解く。
+§21.2 の線吸収係数 $\alpha_\nu=\dfrac{h\nu_0}{4\pi}n_lB_{lu}\phi\left[1-\dfrac{g_ln_u}{g_un_l}\right]$ の誘導放出補正 $[1-g_ln_u/(g_un_l)]$ を読み解く。
 
 1. 補正項がゼロになる条件（$n_u/g_u=n_l/g_l$）の物理的意味を述べよ。
 2. 補正項が負になる条件（$n_u/g_u>n_l/g_l$）を求め、そのとき $\alpha_\nu<0$（負の吸収＝増幅）になることを示せ。これが何の現象か。
 3. 宇宙メーザー（H$_2$O 22 GHz、OH 1.6 GHz）が観測されることから、何が逆引きできるか述べよ。
 
-**関連**：[§20.2 線の三つの素過程](#sec-line-three-processes)／誘導放出は[§11.2](../part4/11-einstein-method.qmd#sec-einstein-method-three-processes)、自発/誘導放出の比は[演習 11-2](../part4/11-einstein-method.qmd#ex-11-2)。
+**関連**：[§21.2 線の三つの素過程](#sec-line-three-processes)／誘導放出は[§11.2](../part4/11-einstein-method.qmd#sec-einstein-method-three-processes)、自発/誘導放出の比は[演習 11-2](../part4/11-einstein-method.qmd#ex-11-2)。
 
 ::: {.callout-derive collapse="true"}
-## 模範解答（問題 20-2）
+## 模範解答（問題 21-2）
 
 **(1)** $\dfrac{g_ln_u}{g_un_l}=1$ すなわち $\dfrac{n_u}{g_u}=\dfrac{n_l}{g_l}$ で補正がゼロ。上下準位の縮重度あたりの占有が等しく、誘導放出が誘導吸収を完全に打ち消す。「これ以上正味で吸収できない」状態。
 
@@ -293,20 +293,20 @@ $$S_\nu^\mathrm{line}=\frac{2h\nu_0^3/c^2}{e^{h\nu_0/k_BT_\mathrm{ex}}-1}=B_{\nu
 **答え**：補正ゼロ＝占有が等しい。負＝準位反転（$n_u/g_u>n_l/g_l$）→$\alpha_\nu<0$＝増幅＝メーザー。観測は非平衡ポンプ機構の証拠。
 :::
 
-### 問題 20-3　等価幅と curve of growth の三領域 {#ex-20-3 .unnumbered}
+### 問題 21-3　等価幅と curve of growth の三領域 {#ex-21-3 .unnumbered}
 
 [★ 難易度：☆☆ ] [tag:理解を深める]
 
-§20.1・20.6 の等価幅 $W_\lambda=\int\frac{I_c-I_\lambda}{I_c}d\lambda$ と curve of growth を読む。
+§21.1・20.6 の等価幅 $W_\lambda=\int\frac{I_c-I_\lambda}{I_c}d\lambda$ と curve of growth を読む。
 
 1. 等価幅が「線の輪郭の詳細によらない積分量」である利点を述べよ。浅く広い線と深く狭い線が同じ $W$ になりうる理由は。
 2. curve of growth の三領域（線形 $W\propto N$、飽和 $W\propto\sqrt{\ln N}$、減衰翼 $W\propto\sqrt{N}$）が、それぞれ光学的深さ $\tau$ のどんな状態に対応するか述べよ。
 3. 飽和領域の線から柱密度 $N$ を精度よく決めるのが難しい理由を述べよ。組成解析で複数の強さの線を使う理由と結びつけよ。
 
-**関連**：[§20.1 等価幅](#sec-line-equivalent-width)、[§20.6 curve of growth](#sec-curve-of-growth)／組成解析は[§23.2](../part7/23-line-applications.qmd#sec-line-applications-abundance)、減衰翼は[§22.1](../part7/22-line-shape.qmd#sec-line-shape-natural)。
+**関連**：[§21.1 等価幅](#sec-line-equivalent-width)、[§21.6 curve of growth](#sec-curve-of-growth)／組成解析は[§24.2](../part7/24-line-applications.qmd#sec-line-applications-abundance)、減衰翼は[§23.1](../part7/23-line-shape.qmd#sec-line-shape-natural)。
 
 ::: {.callout-derive collapse="true"}
-## 模範解答（問題 20-3）
+## 模範解答（問題 21-3）
 
 **(1)** 等価幅は「線が連続光から引き抜いた光の総量」を波長幅で表した積分量で、装置の分解能で輪郭がぼやけても保存される。同じ総吸収量なら、浅く広い線も深く狭い線も面積が等しく同じ $W$ になる。観測しやすく理論と比べやすい。
 
@@ -317,20 +317,20 @@ $$S_\nu^\mathrm{line}=\frac{2h\nu_0^3/c^2}{e^{h\nu_0/k_BT_\mathrm{ex}}-1}=B_{\nu
 **答え**：$W$ は輪郭によらぬ積分量。線形($\tau<1$)→飽和($\tau\gg1$)→減衰翼。飽和域は $N$ に鈍感ゆえ複数の強さの線が必要。
 :::
 
-### 問題 20-4　LTE で吸収線になる条件 ― 温度勾配と背景光 {#ex-20-4 .unnumbered}
+### 問題 21-4　LTE で吸収線になる条件 ― 温度勾配と背景光 {#ex-21-4 .unnumbered}
 
 [★ 難易度：☆☆ ] [tag:理解を深める]
 
-§20.4 は線が吸収か輝線かが温度構造と背景光で決まると述べた。LTE（$S_\nu=B_\nu(T)$）で考える。
+§21.4 は線が吸収か輝線かが温度構造と背景光で決まると述べた。LTE（$S_\nu=B_\nu(T)$）で考える。
 
 1. 恒星大気のように温度が深さとともに上がる場合、線中心と連続光がそれぞれどの深さ（温度）を見ているか述べ、なぜ吸収線になるか説明せよ。
 2. 彩層・コロナのように温度が外側で上がる、あるいは背景連続光がないガス雲では、なぜ輝線になるか述べよ。
 3. 線の Eddington-Barbier（線で $\tau_\nu=2/3$ になる層の $B_\nu$）が、線中心と連続でなぜ違う温度を与えるか、線中心の方が $\alpha_\nu$ が大きいことと結びつけて述べよ。
 
-**関連**：[§20.4 LTE 線形成](#sec-LTE-line-formation)／吸収線か輝線かは[演習 5-3](../part2/05-radiative-transfer.qmd#ex-5-3)、Eddington-Barbier は[演習 15-1](../part6/15-non-blackbody.qmd#ex-15-1)。
+**関連**：[§21.4 LTE 線形成](#sec-LTE-line-formation)／吸収線か輝線かは[演習 5-3](../part2/05-radiative-transfer.qmd#ex-5-3)、Eddington-Barbier は[演習 15-1](../part6/15-non-blackbody.qmd#ex-15-1)。
 
 ::: {.callout-derive collapse="true"}
-## 模範解答（問題 20-4）
+## 模範解答（問題 21-4）
 
 **(1)** 線中心は $\alpha_\nu$ が大きく光学的厚さがすぐ1に達するので**浅い（外側＝低温）層**を見る。連続光は $\alpha_\nu$ が小さく**深い（高温）層**まで見通せる。LTE で $S_\nu=B_\nu(T)$ ゆえ、線中心は低温のプランク関数値（暗い）、連続は高温（明るい）。差し引き線中心が連続より暗く＝吸収線。
 

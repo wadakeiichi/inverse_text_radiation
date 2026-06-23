@@ -12,12 +12,14 @@
 v0.1 のレビュー受付・反映フェーズ。
 
 ### Added（追加）
-- 中心地図（線）SVG `images/hydrogen-map.svg` ― 第19章で表示
+- **第19章「自由電子が作る連続光 ― 自由-自由・束縛-自由・再結合」を新設**（第VI部末尾）。連続放射の素過程（制動放射・光電離・再結合）を放出/吸収の両面で扱い、Kirchhoff・Milne 関係・Saha 平衡で結ぶ。H⁻ 連続不透明度、観測逆引き、再結合線への橋渡し節を含む。設計メモ `docs/continuum-microprocesses-chapter-plan.md`
+- 第19章 §19.1 連続を作る三素過程の準位図 SVG `images/continuum-processes.svg`（`einstein-processes.svg` の姉妹図）
+- 中心地図（線）SVG `images/hydrogen-map.svg` ― 第20章で表示
 - 第4章 §4.1 比強度の幾何 SVG `specific-intensity.svg`
 - 第14章 §14.2 k 空間の格子 SVG `k-space-counting.svg`
-- 第19章 §19.3 ／ 第20章 §20.4 吸収線/輝線の幾何 SVG `line-formation-geometry.svg`
-- 第20章 §20.1 等価幅の幾何 SVG `equivalent-width.svg`
-- 第22章 §22.4 Voigt プロファイル SVG `voigt-profile.svg`
+- 第20章 §20.3 ／ 第21章 §21.4 吸収線/輝線の幾何 SVG `line-formation-geometry.svg`
+- 第21章 §21.1 等価幅の幾何 SVG `equivalent-width.svg`
+- 第23章 §23.4 Voigt プロファイル SVG `voigt-profile.svg`
 - 第9章 §9.3 紫外破綻 SVG `uv-catastrophe.svg`
 - 第7章 §7.2 ／ 第10章 §10.2 量子振動子の凍結 SVG `quantum-freeze-out.svg`
 - 中心地図（連続）SVG `planck-map.svg`、Einstein 三過程 SVG `einstein-processes.svg`
@@ -25,6 +27,7 @@ v0.1 のレビュー受付・反映フェーズ。
 - `requirements.txt`、`docs/figure-roadmap.md`、`docs/release-notes-v0.1.md` 等の運用ドキュメント
 
 ### Changed（変更）
+- **第19章の新設に伴い第VII・VIII部を1章ずつ繰り下げ**（旧19–25章 → 20–26章、全 8 部 26 章）。`#sec-`/`#eq-` ID は維持、旧ファイル名 `part7/19–23`・`part8/24–25` は `20–24`・`25–26` にリネーム（要：旧URLのリダイレクト設定）
 - HTML 本文フォントを **IBM Plex Sans JP** に切替（PDF は Noto Sans CJK JP）
 - 用語統一：「中赤外 → 中間赤外」（astro-dic 準拠）
 - CI を `librsvg2-bin` 追加対応、Python 依存を `requirements.txt` 化

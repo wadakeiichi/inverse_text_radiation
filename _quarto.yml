@@ -72,17 +72,18 @@ book:
         - part6/16-cmb.qmd
         - part6/17-stars-planets-dust.qmd
         - part6/18-accretion-high-energy.qmd
+        - part6/19-continuum-microprocesses.qmd
     - part: "第VII部　線スペクトル ― もう一つの逆引き"
       chapters:
-        - part7/19-where-lines.qmd
-        - part7/20-line-formation.qmd
-        - part7/21-atomic-physics.qmd
-        - part7/22-line-shape.qmd
-        - part7/23-line-applications.qmd
+        - part7/20-where-lines.qmd
+        - part7/21-line-formation.qmd
+        - part7/22-atomic-physics.qmd
+        - part7/23-line-shape.qmd
+        - part7/24-line-applications.qmd
     - part: "第VIII部　QEDからの俯瞰 ― 連続と線を結ぶ見通し"
       chapters:
-        - part8/24-em-field-quantization.qmd
-        - part8/25-qed-minimum.qmd
+        - part8/25-em-field-quantization.qmd
+        - part8/26-qed-minimum.qmd
     - references.qmd
 
   appendices:

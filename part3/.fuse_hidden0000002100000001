@@ -1,5 +1,5 @@
 ---
-title: "第8章　光子の統計"
+title: "第08章　光子の統計"
 lang: ja
 ---
 
@@ -267,7 +267,7 @@ $$
 
 §8.1 は2状態2粒子で古典4通り・Bose 3通りになることを示した。一般化する。
 
-1. $g$ 個の状態に $N$ 個の区別できない Bose 粒子を入れる場合の数が $\binom{N+g-1}{N}$ になることを「仕切り棒（玉と仕切り）」の論法で示せ。
+1. $g$ 個の状態に $N$ 個の区別できない Bose 粒子を入れる場合の数が $\dbinom{N+g-1}{N}$ になることを「仕切り棒（玉と仕切り）」の論法で示せ。
 2. $g=2,N=2$ で値が 3 になることを確かめ、古典の $g^N=4$ と比べよ。
 3. 「1 が A・2 が B」と「1 が B・2 が A」が同一状態に潰れることが、なぜ Boltzmann 統計から Bose 統計へのずれを生むのか述べよ。
 
@@ -276,9 +276,9 @@ $$
 ::: {.callout-derive collapse="true"}
 ## 模範解答（問題 8-1）
 
-**(1)** $N$ 個の区別できない玉を $g$ 個の状態に分けるのは、$N$ 個の玉と $g-1$ 本の仕切り棒を一列に並べる場合の数に等しい。全 $N+g-1$ 個の位置から玉の位置 $N$ 個を選ぶので $\binom{N+g-1}{N}$。
+**(1)** $N$ 個の区別できない玉を $g$ 個の状態に分けるのは、$N$ 個の玉と $g-1$ 本の仕切り棒を一列に並べる場合の数に等しい。全 $N+g-1$ 個の位置から玉の位置 $N$ 個を選ぶので $\dbinom{N+g-1}{N}$。
 
-**(2)** $g=2,N=2$：$\binom{2+2-1}{2}=\binom{3}{2}=3$。Bose は3通り（(2,0),(1,1),(0,2)）。古典は各粒子が独立に2状態を選べて $2^2=4$。識別不能だと1つ少ない。
+**(2)** $g=2,N=2$：$\dbinom{2+2-1}{2}=\dbinom{3}{2}=3$。Bose は3通り（(2,0),(1,1),(0,2)）。古典は各粒子が独立に2状態を選べて $2^2=4$。識別不能だと1つ少ない。
 
 **(3)** 古典では「1 が A・2 が B」と「1 が B・2 が A」を別状態と数えるが、識別不能だと粒子のラベルに意味がなく同一状態に潰れる。この「数え過ぎの打ち消し」が状態数を変え、最大エントロピー分布が Boltzmann（$\propto e^{-\beta E}$）から Bose（$1/(e^{\beta E}-1)$ 型）へずれる起源になる。特に同じ状態に複数入れることが許される効果が分母の $-1$ を生む。
 
@@ -333,7 +333,7 @@ $$
 
 1. なぜ光子は $\mu=0$ なのか、粒子数の保存／非保存の観点から述べよ。
 2. 光子数密度 $n_\gamma=\displaystyle\int_0^\infty g(\nu)\bar n(\nu)\,d\nu$（$g(\nu)=8\pi\nu^2/c^3$）で $x=h\nu/k_BT$ と置換し、$n_\gamma=\dfrac{8\pi}{c^3}\left(\dfrac{k_BT}{h}\right)^3\displaystyle\int_0^\infty\frac{x^2}{e^x-1}dx$ を導け。
-3. $\displaystyle\int_0^\infty\frac{x^2}{e^x-1}dx=2\zeta(3)\approx2.404$ を用い、$T_\mathrm{CMB}=2.725$ K で $n_\gamma$ を計算して $\approx411$ cm$^{-3}$ を確認せよ。
+3. $\displaystyle\int_0^\infty\frac{x^2}{e^x-1}dx=2\zeta(3)\approx2.404$ を用い、$T_{\rm CMB}=2.725$ K で $n_\gamma$ を計算して $\approx411$ cm$^{-3}$ を確認せよ。
 
 **関連**：[§8.4 光子の化学ポテンシャル](#sec-photon-statistics-mu-zero)／$\mu$ 歪みと CMB は[第16章](../part6/16-cmb.qmd)、モード密度 $g(\nu)$ の導出は[第14章](../part5/14-cavity-modes.qmd)、$\int x^3$ 版（エネルギー密度）は[演習 10-3](../part4/10-planck-quantum.qmd#ex-10-3)。
 
@@ -365,24 +365,24 @@ $$
 
 §8.5 は光子気体の圧力 $P=u/3=aT^4/3$ を与えた。理想気体と比べ、放射圧が効く条件を探る。
 
-1. 等方放射場では $P_\nu=u_\nu/3$（演習 4-1）。これが理想気体 $P_\mathrm{gas}=nk_BT$ と「温度・密度への依存」でどう違うか述べよ。
-2. 放射圧 $P_\mathrm{rad}=aT^4/3$ とガス圧 $P_\mathrm{gas}=nk_BT$ が等しくなる条件 $T^3/n=3k_B/a$ を導け。これは高温・低密度で放射圧が優勢になることを示す。
-3. 太陽中心（$T\simeq1.5\times10^7$ K、$n\simeq10^{32}$ m$^{-3}$）で $P_\mathrm{rad}/P_\mathrm{gas}$ を概算し、放射圧が支配的でない（がより重い星では効く）ことを確認せよ。$a=7.566\times10^{-16}$ J m$^{-3}$K$^{-4}$。
+1. 等方放射場では $P_\nu=u_\nu/3$（演習 4-1）。これが理想気体 $P_{\rm gas}=nk_BT$ と「温度・密度への依存」でどう違うか述べよ。
+2. 放射圧 $P_{\rm rad}=aT^4/3$ とガス圧 $P_{\rm gas}=nk_BT$ が等しくなる条件 $T^3/n=3k_B/a$ を導け。これは高温・低密度で放射圧が優勢になることを示す。
+3. 太陽中心（$T\simeq1.5\times10^7$ K、$n\simeq10^{32}$ m$^{-3}$）で $P_{\rm rad}/P_{\rm gas}$ を概算し、放射圧が支配的でない（がより重い星では効く）ことを確認せよ。$a=7.566\times10^{-16}$ J m$^{-3}$K$^{-4}$。
 
 **関連**：[§8.5 光子気体の統計](#sec-photon-statistics-photon-gas)／$P_\nu=u_\nu/3$ の導出は[演習 4-1](../part2/04-radiation-field.qmd#ex-4-1)、Eddington 限界・降着は[第18章](../part6/18-accretion-high-energy.qmd)。
 
 ::: {.callout-derive collapse="true"}
 ## 模範解答（問題 8-4）
 
-**(1)** 放射圧 $P_\mathrm{rad}=u/3=aT^4/3$ は**温度の4乗**に効き密度には依らない（光子数自体が $T^3$ で決まる）。理想気体 $P_\mathrm{gas}=nk_BT$ は密度 $n$ に比例し温度には1乗。よって温度を上げ密度を下げるほど放射圧が相対的に強くなる。
+**(1)** 放射圧 $P_{\rm rad}=u/3=aT^4/3$ は**温度の4乗**に効き密度には依らない（光子数自体が $T^3$ で決まる）。理想気体 $P_{\rm gas}=nk_BT$ は密度 $n$ に比例し温度には1乗。よって温度を上げ密度を下げるほど放射圧が相対的に強くなる。
 
-**(2)** $P_\mathrm{rad}=P_\mathrm{gas}$ とおく：$\dfrac{aT^4}{3}=nk_BT\Rightarrow\dfrac{T^3}{n}=\dfrac{3k_B}{a}$。左辺が大きい（高温・低密度）ほど放射圧優勢。
+**(2)** $P_{\rm rad}=P_{\rm gas}$ とおく：$\dfrac{aT^4}{3}=nk_BT\Rightarrow\dfrac{T^3}{n}=\dfrac{3k_B}{a}$。左辺が大きい（高温・低密度）ほど放射圧優勢。
 
-**(3)** $P_\mathrm{rad}=aT^4/3=7.566\times10^{-16}\times(1.5\times10^7)^4/3$。$(1.5\times10^7)^4=5.06\times10^{28}$。$\times7.566\times10^{-16}=3.83\times10^{13}$、$/3=1.28\times10^{13}$ Pa。
-$P_\mathrm{gas}=nk_BT=10^{32}\times1.381\times10^{-23}\times1.5\times10^7=2.07\times10^{16}$ Pa。
-比 $P_\mathrm{rad}/P_\mathrm{gas}\approx1.28\times10^{13}/2.07\times10^{16}\approx6\times10^{-4}$。太陽中心では放射圧は約0.06%で支配的でない。質量の大きい星ほど中心温度が高く密度が相対的に低いため放射圧が増し、超大質量星では放射圧が支配的になって Eddington 限界（星の質量上限）を与える。
+**(3)** $P_{\rm rad}=aT^4/3=7.566\times10^{-16}\times(1.5\times10^7)^4/3$。$(1.5\times10^7)^4=5.06\times10^{28}$。$\times7.566\times10^{-16}=3.83\times10^{13}$、$/3=1.28\times10^{13}$ Pa。
+$P_{\rm gas}=nk_BT=10^{32}\times1.381\times10^{-23}\times1.5\times10^7=2.07\times10^{16}$ Pa。
+比 $P_{\rm rad}/P_{\rm gas}\approx1.28\times10^{13}/2.07\times10^{16}\approx6\times10^{-4}$。太陽中心では放射圧は約0.06%で支配的でない。質量の大きい星ほど中心温度が高く密度が相対的に低いため放射圧が増し、超大質量星では放射圧が支配的になって Eddington 限界（星の質量上限）を与える。
 
-**答え**：$P_\mathrm{rad}=aT^4/3$（密度非依存）、$P_\mathrm{gas}=nk_BT$。等しい条件 $T^3/n=3k_B/a$。太陽中心で $P_\mathrm{rad}/P_\mathrm{gas}\approx6\times10^{-4}$（重い星では支配的）。
+**答え**：$P_{\rm rad}=aT^4/3$（密度非依存）、$P_{\rm gas}=nk_BT$。等しい条件 $T^3/n=3k_B/a$。太陽中心で $P_{\rm rad}/P_{\rm gas}\approx6\times10^{-4}$（重い星では支配的）。
 :::
 
 ## さらに学ぶための参考文献 {#sec-photon-statistics-further .unnumbered}

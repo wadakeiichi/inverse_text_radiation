@@ -124,7 +124,7 @@ $$ {#eq-planck-quantum-rederived}
 | 第8章：光子の Bose 統計（$\mu = 0$） | $\bar{n} = 1/(e^{h\nu/k_B T} - 1)$ |
 | 第10章：振動子のエネルギー量子化 | $\langle E \rangle / h\nu = 1/(e^{h\nu/k_B T} - 1)$ |
 
-これは偶然ではない。両者は同じ物理（電磁場の各モードを量子化された調和振動子と見る）の二つの言い方である。第25章で「電磁場の量子化」として整理し直す。
+これは偶然ではない。両者は同じ物理（電磁場の各モードを量子化された調和振動子と見る）の二つの言い方である。第24章で「電磁場の量子化」として整理し直す。
 
 ::: {.callout-note}
 **対応（観測）**：高振動数で $1/(e^{h\nu/k_B T}-1) \sim e^{-h\nu/k_B T}$ が出ることが、観測される黒体スペクトルの**指数減衰**（第1章で見た）の起源である。これが Planck の量子仮説が「観測の必然」として要請された理由である。
@@ -172,7 +172,7 @@ Planck の量子仮説の歴史的・物理的位置づけを整理する。
 
 **Einstein (1905)** ― 光電効果の解析から、電磁場そのものが量子化された光（**光量子**, light quanta）から成ることを主張。Planck の振動子の量子化と物理的に等価だが、解釈の強度がより強い。第11章で扱う。
 
-**現代的解釈（場の量子論）**：電磁場の各モードを**量子化された調和振動子**として扱う（第VIII部・第25章）。各モードのエネルギー準位が $E_n = (n + 1/2) h\nu$（零点エネルギー込み）となり、$n$ が「そのモードに含まれる光子の数」を表す。Planck の振動子と Einstein の光量子は、この描像の中で統一される。
+**現代的解釈（場の量子論）**：電磁場の各モードを**量子化された調和振動子**として扱う（第VIII部・第24章）。各モードのエネルギー準位が $E_n = (n + 1/2) h\nu$（零点エネルギー込み）となり、$n$ が「そのモードに含まれる光子の数」を表す。Planck の振動子と Einstein の光量子は、この描像の中で統一される。
 
 **観測の意義**：Planck (1900) の論文は、20世紀物理学の出発点と広く認められている。一つの**観測**（黒体スペクトル）から、自然界に普遍的な定数 $h$ が導入され、量子力学・場の量子論が立ち上がる流れの起点となった。本書の三原則「① 逆引き」の象徴的な瞬間とも言える ― 観測が理論を駆動した、その典型例である。
 
@@ -231,7 +231,7 @@ $$
 
 **(3)** 低振動数 $x\equiv h\nu/k_BT\ll1$ で $e^x-1\simeq x$ ゆえ $\langle E\rangle\to h\nu/x=k_BT$。古典の等分配と一致する。
 
-**答え**：$Z_1=1/(1-e^{-\beta h\nu})$、$\langle E\rangle=h\nu/(e^{h\nu/k_BT}-1)\overset{h\nu\ll k_BT}{\longrightarrow}k_BT$。
+**答え**：$Z_1=1/(1-e^{-\beta h\nu})$、$\langle E\rangle=h\nu/(e^{h\nu/k_BT}-1)\xrightarrow{h\nu\ll k_BT}k_BT$。
 :::
 
 ### 問題 10-2　両極限と「最初の量子補正」 {#ex-10-2 .unnumbered}
@@ -303,8 +303,8 @@ $$
 §10.4 は両極限の境目を $\nu\sim k_BT/h$ と見積もった。プランク分布のピークを正確に求めて「変位則」を導く。
 
 1. $B_\nu\propto\dfrac{\nu^3}{e^{x}-1}\ (x=h\nu/k_BT)$ を $\nu$ で微分してゼロにおき、$3(1-e^{-x})=x$ という超越方程式を導け。
-2. 数値解 $x_\mathrm{peak}\approx2.821$ を用いて $\nu_\mathrm{peak}=2.821\,k_BT/h$ を示し、$\nu_\mathrm{peak}\propto T$ を確認せよ。
-3. 太陽 $T\simeq5800$ K について $\nu_\mathrm{peak}$ と対応波長を概算せよ（$B_\lambda$ のピーク波長とは係数が異なることに触れよ）。
+2. 数値解 $x_{\rm peak}\approx2.821$ を用いて $\nu_{\rm peak}=2.821\,k_BT/h$ を示し、$\nu_{\rm peak}\propto T$ を確認せよ。
+3. 太陽 $T\simeq5800$ K について $\nu_{\rm peak}$ と対応波長を概算せよ（$B_\lambda$ のピーク波長とは係数が異なることに触れよ）。
 
 **関連**：[§10.4 両極限と境界](#sec-planck-quantum-limits)／波長表示の Wien 変位則の導出は[演習 2-2](../part1/02-reading-spectra.qmd#ex-2-2)、観測スペクトルのピークは[第1章](../part1/01-where-blackbody.qmd)。
 
@@ -317,11 +317,11 @@ $$
 3-\frac{x e^x}{e^x-1}=0\ \Longrightarrow\ 3(1-e^{-x})=x.
 $$
 
-**(2)** この超越方程式の非自明解は $x_\mathrm{peak}\approx2.821$。よって $\nu_\mathrm{peak}=x_\mathrm{peak}k_BT/h=2.821\,k_BT/h\propto T$（Wien 変位則）。
+**(2)** この超越方程式の非自明解は $x_{\rm peak}\approx2.821$。よって $\nu_{\rm peak}=x_{\rm peak}k_BT/h=2.821\,k_BT/h\propto T$（Wien 変位則）。
 
-**(3)** $T=5800$ K で $\nu_\mathrm{peak}\approx3.4\times10^{14}$ Hz、$\lambda=c/\nu_\mathrm{peak}\approx8.8\times10^{2}$ nm（近赤外）。これは $B_\lambda$ を最大化して得る $\lambda_\mathrm{peak}\approx500$ nm とは別物。$B_\nu$ と $B_\lambda$ ではヤコビアン $d\nu=-(c/\lambda^2)d\lambda$ のため最大化条件が異なり（$\lambda$ 側は $x\approx4.965$）、$\nu_\mathrm{peak}\lambda_\mathrm{peak}\ne c$ となる。
+**(3)** $T=5800$ K で $\nu_{\rm peak}\approx3.4\times10^{14}$ Hz、$\lambda=c/\nu_{\rm peak}\approx8.8\times10^{2}$ nm（近赤外）。これは $B_\lambda$ を最大化して得る $\lambda_{\rm peak}\approx500$ nm とは別物。$B_\nu$ と $B_\lambda$ ではヤコビアン $d\nu=-(c/\lambda^2)d\lambda$ のため最大化条件が異なり（$\lambda$ 側は $x\approx4.965$）、$\nu_{\rm peak}\lambda_{\rm peak}\ne c$ となる。
 
-**答え**：$3(1-e^{-x})=x\Rightarrow x\approx2.821$、$\nu_\mathrm{peak}=2.821k_BT/h\propto T$。太陽で $\nu_\mathrm{peak}\approx3.4\times10^{14}$ Hz（$\sim880$ nm）。$B_\nu$ と $B_\lambda$ のピークは一致しない。
+**答え**：$3(1-e^{-x})=x\Rightarrow x\approx2.821$、$\nu_{\rm peak}=2.821k_BT/h\propto T$。太陽で $\nu_{\rm peak}\approx3.4\times10^{14}$ Hz（$\sim880$ nm）。$B_\nu$ と $B_\lambda$ のピークは一致しない。
 :::
 
 ## さらに学ぶための参考文献 {#sec-planck-quantum-further .unnumbered}

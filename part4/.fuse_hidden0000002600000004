@@ -1,5 +1,5 @@
 ---
-title: "第9章　古典論ではなぜ失敗するのか"
+title: "第09章　古典論ではなぜ失敗するのか"
 lang: ja
 ---
 
@@ -278,7 +278,7 @@ $$
 
 [★ 難易度：☆☆ ] [tag:理解を深める]
 
-§9.3 は $u_\mathrm{classical}=\int_0^\infty u_\nu^\mathrm{RJ}d\nu=\infty$ を示した。なぜ「紫外線」破綻と呼ぶのかを定量的に確かめる。
+§9.3 は $u_{\rm classical}=\int_0^\infty u_\nu^{\rm RJ}d\nu=\infty$ を示した。なぜ「紫外線」破綻と呼ぶのかを定量的に確かめる。
 
 1. 人工的な上限 $\nu_{\max}$ を導入し、全エネルギー密度が $u(\nu_{\max})=\dfrac{8\pi k_BT}{3c^3}\nu_{\max}^3$ となることを示せ。発散は $\nu_{\max}\to\infty$ でどんな冪で増えるか。
 2. エネルギーがどの振動数帯に集中するかを「$d u/d\nu\propto\nu^2$ が単調増加」という事実から論じ、なぜ高振動数（紫外）側が破綻の原因かを述べよ。
@@ -289,7 +289,7 @@ $$
 ::: {.callout-derive collapse="true"}
 ## 模範解答（問題 9-3）
 
-**(1)** $u_\nu^\mathrm{RJ}=\dfrac{8\pi\nu^2}{c^3}k_BT$ を $0$ から $\nu_{\max}$ まで積分：
+**(1)** $u_\nu^{\rm RJ}=\dfrac{8\pi\nu^2}{c^3}k_BT$ を $0$ から $\nu_{\max}$ まで積分：
 
 $$
 u(\nu_{\max})=\frac{8\pi k_BT}{c^3}\int_0^{\nu_{\max}}\nu^2 d\nu=\frac{8\pi k_BT}{3c^3}\nu_{\max}^3.
@@ -316,7 +316,7 @@ $$
 
 §9.4–9.5 の論理を整理する問いである。
 
-1. Rayleigh–Jeans 則 $u_\nu^\mathrm{RJ}=g(\nu)\langle E\rangle$ を構成する2因子のうち、量子論で「変えなくてよい」のはどちらで、「変えなければならない」のはどちらか。理由とともに述べよ。
+1. Rayleigh–Jeans 則 $u_\nu^{\rm RJ}=g(\nu)\langle E\rangle$ を構成する2因子のうち、量子論で「変えなくてよい」のはどちらで、「変えなければならない」のはどちらか。理由とともに述べよ。
 2. 観測される黒体スペクトル（第1章）が古典論を致命的に否定する2つの特徴を挙げよ。
 3. もしエネルギー単位が $\epsilon=h\nu$（$\propto\nu$）でなく $\nu$ に依らない定数 $\epsilon_0$ だったら、高振動数モードの凍結は起きるか。簡潔に論ぜよ。
 

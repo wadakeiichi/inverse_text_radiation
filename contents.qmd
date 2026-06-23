@@ -14,24 +14,24 @@ crossref:
 
 ## 第I部　宇宙に満ちる黒体放射 {.unnumbered}
 
-- [第01章　宇宙で黒体放射はどこに現れるか](part1/01-where-blackbody.qmd)
-- [第02章　黒体スペクトルをどう読むか](part1/02-reading-spectra.qmd)
-- [第03章　黒体放射はなぜ普遍的なのか](part1/03-universality.qmd)
+- [第1章　宇宙で黒体放射はどこに現れるか](part1/01-where-blackbody.qmd)
+- [第2章　黒体スペクトルをどう読むか](part1/02-reading-spectra.qmd)
+- [第3章　黒体放射はなぜ普遍的なのか](part1/03-universality.qmd)
 
 ## 第II部　放射をどう記述するか {.unnumbered}
 
-- [第04章　放射場の基本量](part2/04-radiation-field.qmd)
-- [第05章　放射輸送の基礎](part2/05-radiative-transfer.qmd)
+- [第4章　放射場の基本量](part2/04-radiation-field.qmd)
+- [第5章　放射輸送の基礎](part2/05-radiative-transfer.qmd)
 
 ## 第III部　逆引き1：熱力学・統計力学へ {.unnumbered}
 
-- [第06章　熱平衡とは何か](part3/06-thermal-equilibrium.qmd)
-- [第07章　統計力学の基本](part3/07-statistical-mechanics.qmd)
-- [第08章　光子の統計](part3/08-photon-statistics.qmd)
+- [第6章　熱平衡とは何か](part3/06-thermal-equilibrium.qmd)
+- [第7章　統計力学の基本](part3/07-statistical-mechanics.qmd)
+- [第8章　光子の統計](part3/08-photon-statistics.qmd)
 
 ## 第IV部　逆引き2：量子論へ {.unnumbered}
 
-- [第09章　古典論ではなぜ失敗するのか](part4/09-classical-failure.qmd)
+- [第9章　古典論ではなぜ失敗するのか](part4/09-classical-failure.qmd)
 - [第10章　プランクの量子仮説](part4/10-planck-quantum.qmd)
 - [第11章　アインシュタインの方法](part4/11-einstein-method.qmd)
 - [第12章　量子力学の基礎へ戻る](part4/12-quantum-foundations.qmd)
@@ -47,19 +47,20 @@ crossref:
 - [第16章　宇宙マイクロ波背景放射](part6/16-cmb.qmd)
 - [第17章　恒星・惑星・ダスト・電離ガスの熱放射](part6/17-stars-planets-dust.qmd)
 - [第18章　降着円盤と高エネルギー天体](part6/18-accretion-high-energy.qmd)
+- [第19章　自由電子が作る連続光 ― 自由-自由・束縛-自由・再結合](part6/19-continuum-microprocesses.qmd)
 
 ## 第VII部　線スペクトル ― もう一つの逆引き {.unnumbered}
 
-- [第19章　線スペクトルはどこに現れるか](part7/19-where-lines.qmd)
-- [第20章　線形成 ― 吸収線と輝線の物理](part7/20-line-formation.qmd)
-- [第21章　線スペクトルから原子物理へ](part7/21-atomic-physics.qmd)
-- [第22章　線形（line shape）の物理](part7/22-line-shape.qmd)
-- [第23章　線スペクトルから天体物理を読む](part7/23-line-applications.qmd)
+- [第20章　線スペクトルはどこに現れるか](part7/20-where-lines.qmd)
+- [第21章　線形成 ― 吸収線と輝線の物理](part7/21-line-formation.qmd)
+- [第22章　線スペクトルから原子物理へ](part7/22-atomic-physics.qmd)
+- [第23章　線形（line shape）の物理](part7/23-line-shape.qmd)
+- [第24章　線スペクトルから天体物理を読む](part7/24-line-applications.qmd)
 
 ## 第VIII部　QEDからの俯瞰 ― 連続と線を結ぶ見通し {.unnumbered}
 
-- [第24章　電磁場を量子化するとは何か ― 直観的描像](part8/24-em-field-quantization.qmd)
-- [第25章　Einstein係数・自然幅・選択則を QED で見通す](part8/25-qed-minimum.qmd)
+- [第25章　電磁場を量子化するとは何か ― 直観的描像](part8/25-em-field-quantization.qmd)
+- [第26章　Einstein係数・自然幅・選択則を QED で見通す](part8/26-qed-minimum.qmd)
 
 ## 参考文献・付録 {.unnumbered}
 
