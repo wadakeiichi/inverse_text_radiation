@@ -55,7 +55,7 @@ $$
 - **自由-自由**（free-free, ff）：自由電子がイオンの Coulomb 場で曲げられる際に光子を吸収・放出する＝**制動放射**（bremsstrahlung）。束縛準位を経由しないので、任意の振動数で起こる。
 - （**束縛-束縛**：線。第VII部。）
 
-![連続を作る三素過程の準位図。横線が束縛準位、上部の網掛け帯が連続状態（$E>0$）。束縛-束縛（線、第VII部）と対比して、束縛-自由（光電離↔再結合）と自由-自由（制動放射）が連続帯を使うことを示す。第11章 §11.2／第20章 §20.2 の二準位＋三過程図の姉妹図。](../images/continuum-processes.svg){#fig-continuum-processes width=88%}
+![連続を作る三素過程の準位図。横線が束縛準位、上部の網掛け帯が連続状態（$E>0$）。束縛-束縛（線、第VII部）と対比して、束縛-自由（光電離↔再結合）と自由-自由（制動放射）が連続帯を使うことを示す。第11章 §11.2／第21章 §21.2 の二準位＋三過程図の姉妹図。](../images/continuum-processes.svg){#fig-continuum-processes width=88%}
 
 ::: {.callout-note}
 **用語**：本章の三過程は、電子が **Maxwell 分布**（温度 $T_e$）にある限りすべて **熱的放射**（第1章 §1.9）である。「熱的」は粒子のエネルギー分布の性質であって、スペクトルが黒体になるかどうか（光学的厚さの問題、§19.6）とは別の条件である ― この区別は第17章 §17.6 で自由-自由放射について見た通りで、本章の三過程すべてに共通する。
@@ -79,7 +79,7 @@ $$
 \alpha_\nu^{\mathrm{ff}} \;\propto\; n_e\,n_i\,Z^2\,T_e^{-3/2}\,\nu^{-2}\,\bar g_{\mathrm{ff}}\,\bigl(1-e^{-h\nu/k_BT_e}\bigr)
 $$ {#eq-ff-absorption-micro}
 
-括弧の $(1-e^{-h\nu/k_BT_e})$ は **誘導放出補正**（第11章・第20章 §20.2 と同じ因子）である。@eq-ff-emissivity と @eq-ff-absorption-micro の比をとると、$n_e,n_i$ も $\bar g_{\mathrm{ff}}$ も消えて
+括弧の $(1-e^{-h\nu/k_BT_e})$ は **誘導放出補正**（第11章・第21章 §21.2 と同じ因子）である。@eq-ff-emissivity と @eq-ff-absorption-micro の比をとると、$n_e,n_i$ も $\bar g_{\mathrm{ff}}$ も消えて
 
 $$
 \frac{\varepsilon_\nu^{\mathrm{ff}}}{\alpha_\nu^{\mathrm{ff}}} = \frac{2h\nu^3}{c^2}\frac{1}{e^{h\nu/k_BT_e}-1} = B_\nu(T_e)
@@ -91,6 +91,8 @@ $$ {#eq-ff-kirchhoff}
 
 - **低振動数（電波）**：$\alpha_\nu^{\mathrm{ff}}$ が大きく光学的に厚い → $I_\nu\to B_\nu(T_e)$。HII 領域の電波連続光が黒体に漸近する（第17章 §17.6 のターンオーバー）。
 - **高振動数・高温・希薄（X 線）**：光学的に薄く、観測される $F_\nu\propto e^{-h\nu/k_BT_e}$ の **指数カットオフ**。銀河団の高温ガス（$T_e\sim10^7$–$10^8$ K）が典型（第18章）。
+
+![自由-自由放射のスペクトル。低振動数では光学的に厚く $F_\nu\propto\nu^2$（電子温度 $T_e$ の黒体の Rayleigh–Jeans 裾）、ターンオーバー $\nu_t$ を越えると光学的に薄くほぼ平坦（$\propto\nu^{-0.1}$）、$h\nu\sim k_BT_e$ で指数カットオフ。電波 HII 領域と銀河団 X 線は同じ熱的制動放射の両端である。](../images/continuum-ff-spectrum.svg){#fig-continuum-ff-spectrum width=92%}
 
 ::: {.callout-tip appearance="simple"}
 **問い**：自由-自由放射は全帯域で「熱的」なのに、なぜ全帯域で単一の黒体スペクトルには **ならない** のか？
@@ -162,6 +164,8 @@ h\nu = \tfrac12 m_e v^2 + \chi_n
 $$ {#eq-fb-photon-energy}
 
 である。電子は連続的な速度分布（Maxwell）を持つので、放出される光子も **連続スペクトル** になる ― これが **自由-束縛放射**（free-bound emission）＝**再結合連続光**（recombination continuum）である。ただし $h\nu$ は最小でも $\chi_n$（$v\to0$）なので、再結合連続光は各準位のしきい $\chi_n$ で **下端（放出端）** を持ち、そこから高振動数へ裾を引く。吸収側の連続吸収端（§19.3）と同じ位置に、今度は **放出の端** が立つ。
+
+![同じしきい値（Lyman 912 Å・Balmer 3646 Å・Paschen 8204 Å）が、恒星大気では **束縛-自由の吸収端**（上：短波長へ向け急に立ち上がり $\propto\nu^{-3}$ で減衰、可視は H⁻ が担う）として、星雲では **自由-束縛の放出端＝再結合連続光**（下：各しきいで放出が跳ね上がり短波長へ Wien 減衰、Balmer ジャンプが顕著）として現れる。背景光の有無で吸収にも放出にも見える（§19.6）。](../images/continuum-edges-recomb.svg){#fig-continuum-edges-recomb width=94%}
 
 ### Milne 関係 ― 詳細つり合いが結ぶ吸収と放出
 

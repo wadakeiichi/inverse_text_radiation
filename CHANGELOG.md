@@ -14,6 +14,8 @@ v0.1 のレビュー受付・反映フェーズ。
 ### Added（追加）
 - **第19章「自由電子が作る連続光 ― 自由-自由・束縛-自由・再結合」を新設**（第VI部末尾）。連続放射の素過程（制動放射・光電離・再結合）を放出/吸収の両面で扱い、Kirchhoff・Milne 関係・Saha 平衡で結ぶ。H⁻ 連続不透明度、観測逆引き、再結合線への橋渡し節を含む。設計メモ `docs/continuum-microprocesses-chapter-plan.md`
 - 第19章 §19.1 連続を作る三素過程の準位図 SVG `images/continuum-processes.svg`（`einstein-processes.svg` の姉妹図）
+- 第19章 §19.2 自由-自由放射のスペクトル（電波の黒体漸近〜X線の指数カットオフ）SVG `images/continuum-ff-spectrum.svg`
+- 第19章 §19.3–19.4 連続吸収端と再結合連続光（Lyman/Balmer/Paschen のしきい値、吸収端 vs 放出端）SVG `images/continuum-edges-recomb.svg`
 - 中心地図（線）SVG `images/hydrogen-map.svg` ― 第20章で表示
 - 第4章 §4.1 比強度の幾何 SVG `specific-intensity.svg`
 - 第14章 §14.2 k 空間の格子 SVG `k-space-counting.svg`
