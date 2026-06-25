@@ -21,6 +21,27 @@ venv/
 *.fls
 *.fdb_latexmk
 *.synctex.gz
+# Quarto/LaTeX で生成される中間 .tex（keep-tex: false のため追跡しない）
+index.tex
+*.tex
+
+# Quarto がトップレベルに出す単発レンダー成果物（書籍本体は _book/ に出る）
+# 注: exercises/*.html とルートのレビュー HTML は意図的に追跡しているため除外しない
+/index.html
+/contents.html
+/00-prologue.html
+/references.html
+part1/*.html
+part2/*.html
+part3/*.html
+part4/*.html
+part5/*.html
+part6/*.html
+part7/*.html
+part8/*.html
+appendix/*.html
+site_libs/
+*.quarto_ipynb_*
 
 # OS
 .DS_Store

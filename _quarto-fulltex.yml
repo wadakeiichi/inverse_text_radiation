@@ -1,0 +1,19 @@
+# ローカル専用プロファイル：フル版 TeX Live で PDF を出すとき用。
+#
+# 使い方:
+#   quarto render --profile fulltex
+#   （または）QUARTO_PROFILE=fulltex quarto render
+#
+# 目的:
+#   フル版 TeX Live には必要パッケージが既に揃っているため、Quarto の
+#   LaTeX パッケージ自動取得（tlmgr 経由）を止める。これにより、ローカルの
+#   TeX Live 2024 が 2026 リモートとクロスリリース更新できずに失敗する問題を
+#   回避する。
+#
+# 注意:
+#   このプロファイルを「指定しない」通常ビルド（CI / GitHub Actions の
+#   TinyTeX 環境など）では latex-auto-install は既定の true のまま動くので、
+#   このファイルを push しても CI のPDFビルドには影響しない。
+format:
+  pdf:
+    latex-auto-install: false
