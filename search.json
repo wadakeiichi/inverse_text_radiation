@@ -154,7 +154,7 @@
     "href": "00-prologue.html#sec-prologue-audience",
     "title": "序章　この本の目的と歩き方",
     "section": "0.2 対象読者と前提知識",
-    "text": "0.2 対象読者と前提知識\n本書は、物理学科、天文学科、宇宙物理学科などの学部学生、および大学院修士課程の学生を主な対象とする。観測スペクトル（連続・線の両方）と基礎物理を結びつけて理解したい読者、既存教科書で個々の式を学んだあと「結局この式はなぜこうなのか」を観測現象から再確認したい読者にも向いている。\n前提知識としては、微積分、指数関数と対数、基本的な力学、初歩的な電磁気学。熱力学・量子力学・原子物理の素養があると望ましいが、第I・II部から第III部以降への遡り方は読者の進度に合わせて調整できる。",
+    "text": "0.2 対象読者と前提知識\n本書は、物理学科、天文学科、宇宙物理学科などの学部学生、および大学院修士課程の学生を主な対象とする。観測スペクトル（連続・線の両方）と基礎物理を結びつけて理解したい読者、既存教科書で個々の式を学んだあと「結局この式はなぜこうなのか」を観測現象から再確認したい読者にも向いている。\n前提知識としては、微積分、指数関数と対数、基本的な力学、初歩的な電磁気学。熱力学・量子力学・原子物理の素養があると望ましいが、第I・II部から第III部以降への遡り方は読者の進度に合わせて調整できる。\n\n\n\n\n\n\n前提知識チェックリスト\n各項目に不安があれば、対応する付録 A の節で短く補える。読み始める前に一度確認し、本文で詰まったらここに戻ってほしい。\n\n□ 微積分（偏微分・指数/対数・簡単な定積分）→ 付録 §A.2\n□ 立体角と球面積分（d\\Omega=\\sin\\theta\\,d\\theta\\,d\\varphi、半球積分）→ 付録 §A.1\n□ ガウス積分・ガンマ/ゼータ関数（プランク積分に必要）→ 付録 §A.2\n□ 統計力学の基礎（分配関数・Boltzmann 分布）→ 付録 §A.3／第7章\n□ Maxwell 方程式とベクトル解析 → 付録 §A.6\n□ 量子力学の道具（交換関係・生成消滅演算子）※第IV・VIII部で使用 → 付録 §A.5\n\n第5章で放射輸送方程式（微分方程式）に入る前に、上の微積分・立体角の項目を済ませておくと無理がない。",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>序章　この本の目的と歩き方</span>"
     ]
@@ -2117,7 +2117,7 @@
     "href": "part4/10-planck-quantum.html#sec-planck-quantum-oscillator",
     "title": "第10章　プランクの量子仮説",
     "section": "10.2 振動子の量子化 ― 統計力学の組み直し",
-    "text": "10.2 振動子の量子化 ― 統計力学の組み直し\n[本文目安：B3]\nエネルギー量子 式 13.1 を仮定すると、第7章 §7.2 の手順で振動子の分配関数を組み直せる。エネルギー準位が E_n = n h\\nu（n = 0, 1, 2, \\ldots）で離散化された場合、分配関数は\n\nZ_1(\\beta) = \\sum_{n=0}^{\\infty} e^{-\\beta n h\\nu} = \\frac{1}{1 - e^{-\\beta h\\nu}}\n\\tag{13.2}\nここで \\beta = 1/k_B T。これは無限等比級数の和である（古典の連続積分なら \\int_0^\\infty e^{-\\beta E} dE = 1/\\beta = k_B T が出る）。\n分配関数の対数から平均エネルギーが求まる（第7章 §7.2 の手法）：\n\n\\langle E \\rangle = -\\frac{\\partial \\ln Z_1}{\\partial \\beta} = \\frac{h\\nu}{e^{h\\nu/k_B T} - 1}\n\\tag{13.3}\nこれが量子化された振動子のひとつあたりの平均エネルギーである。第7章 §7.2 の 式 10.5 で既に見た形だが、ここでは Planck の量子仮説から直接出ている。\n式 13.3 を古典の等分配 \\langle E \\rangle_\\text{classical} = k_B T と比較すると：\n\n低振動数極限（h\\nu \\ll k_B T）：\\langle E \\rangle \\to k_B T ― 古典と一致\n高振動数極限（h\\nu \\gg k_B T）：\\langle E \\rangle \\to h\\nu \\, e^{-h\\nu/k_B T} \\to 0 ― 古典より遥かに小さい\n\n\n\n\n\n\n\n図 13.1: 量子化振動子 1 個の平均エネルギーと古典の等分配の比較（第7章 §7.2 で初出した図を、Planck 量子仮説の文脈で再掲）。高振動数モードが「凍結」する仕組み こそ、紫外破綻（第9章 §9.3）を回避してプランク分布を生む鍵である。\n\n\n\nこれが高振動数モードの「凍結」である。エネルギー単位 h\\nu が熱エネルギー k_B T より遥かに大きい場合、そのモードを励起するための熱が手に入らず、平均エネルギーが指数関数的に小さくなる。\n\n\n\n\n\n\n問い：なぜ「凍結」と呼ぶのか？\n短答：高振動数モードに熱的にアクセスできない ― つまり熱エネルギーがそのモードに「行けない」 ― 状態を、低温物理の言葉で「凍結」（freeze-out）と呼ぶ。\nもう一歩：同じ概念は、二原子分子の回転・振動自由度の低温での凍結、固体の比熱が低温で T^3 に従う Debye 則、宇宙論的にニュートリノが脱結合する状況など、さまざまな場面で再登場する。Planck の議論は、その最初の例である。",
+    "text": "10.2 振動子の量子化 ― 統計力学の組み直し\n[本文目安：B3]\nエネルギー量子 式 13.1 を仮定すると、第7章 §7.2 の手順で振動子の分配関数を組み直せる。エネルギー準位が E_n = n h\\nu（n = 0, 1, 2, \\ldots）で離散化された場合、分配関数は\n\nZ_1(\\beta) = \\sum_{n=0}^{\\infty} e^{-\\beta n h\\nu} = \\frac{1}{1 - e^{-\\beta h\\nu}}\n\\tag{13.2}\nここで \\beta = 1/k_B T。これは無限等比級数の和である（古典の連続積分なら \\int_0^\\infty e^{-\\beta E} dE = 1/\\beta = k_B T が出る）。\n分配関数の対数から平均エネルギーが求まる（第7章 §7.2 の手法）：\n\n\\langle E \\rangle = -\\frac{\\partial \\ln Z_1}{\\partial \\beta} = \\frac{h\\nu}{e^{h\\nu/k_B T} - 1}\n\\tag{13.3}\nこれが量子化された振動子のひとつあたりの平均エネルギーである。第7章 §7.2 の 式 10.5 で既に見た形だが、ここでは Planck の量子仮説から直接出ている。\n式 13.3 を古典の等分配 \\langle E \\rangle_\\text{classical} = k_B T と比較すると：\n\n低振動数極限（h\\nu \\ll k_B T）：\\langle E \\rangle \\to k_B T ― 古典と一致\n高振動数極限（h\\nu \\gg k_B T）：\\langle E \\rangle \\to h\\nu \\, e^{-h\\nu/k_B T} \\to 0 ― 古典より遥かに小さい\n\n\n\n\n\n\n\n図 13.1: 量子化振動子 1 個の平均エネルギーと古典の等分配の比較（第7章 §7.2 で初出した図を、Planck 量子仮説の文脈で再掲）。高振動数モードが「凍結」する仕組み こそ、紫外破綻（第9章 §9.3）を回避してプランク分布を生む鍵である。\n\n\n\nこれが高振動数モードの「凍結」である。エネルギー単位 h\\nu が熱エネルギー k_B T より遥かに大きい場合、そのモードを励起するための熱が手に入らず、平均エネルギーが指数関数的に小さくなる。\n\n\n\n\n\n\n数値で見る凍結：温度 T を固定し、三つのモードの平均エネルギー 式 13.3 を k_B T を単位にして並べる（x \\equiv h\\nu/k_B T）。\n\n\n\n\n\n\n\n\nx = h\\nu/k_B T\n\\langle E\\rangle / k_B T = x/(e^{x}-1)\n古典 \\langle E\\rangle/k_BT=1 との比\n\n\n\n\n0.1（低振動数）\n0.95\nほぼ等分配どおり\n\n\n1（h\\nu \\simeq k_BT）\n0.58\nすでに半分強まで低下\n\n\n10（高振動数）\n4.5\\times10^{-4}\n桁違いに凍結\n\n\n\nx=10 のモードは、古典の等分配が約束する k_B T の 約 2000 分の 1 しか受け取れない。振動数が上がるほど受け取れるエネルギーが指数関数的に枯れる ― この「枯れ方」が、すべての高振動数モードに k_B T を配ってしまう古典の紫外破綻（第9章 §9.3）を断ち切る。\n\n\n\n\n\n\n\n\n\n問い：なぜ「凍結」と呼ぶのか？\n短答：高振動数モードに熱的にアクセスできない ― つまり熱エネルギーがそのモードに「行けない」 ― 状態を、低温物理の言葉で「凍結」（freeze-out）と呼ぶ。\nもう一歩：同じ概念は、二原子分子の回転・振動自由度の低温での凍結、固体の比熱が低温で T^3 に従う Debye 則、宇宙論的にニュートリノが脱結合する状況など、さまざまな場面で再登場する。Planck の議論は、その最初の例である。",
     "crumbs": [
       "第IV部　逆引き2：量子論へ",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>第10章　プランクの量子仮説</span>"
@@ -2685,11 +2685,22 @@
     ]
   },
   {
+    "objectID": "part5/13-electromagnetic-waves.html#sec-electromagnetic-waves-larmor",
+    "href": "part5/13-electromagnetic-waves.html#sec-electromagnetic-waves-larmor",
+    "title": "第13章　電磁波としての光",
+    "section": "13.5b 加速電荷の放射 ― Larmor 公式",
+    "text": "13.5b 加速電荷の放射 ― Larmor 公式\n[本文目安：B3｜この節は黒体放射の本線には不要。第VI部の連続放射を読む前に通ればよい]\nこれまでは電磁波の 伝播 を見てきた。では電磁波は どこから出る のか。Maxwell 方程式の帰結として、加速度を受けた電荷は電磁波を放射する。非相対論的な電荷 e が加速度 a を受けるとき、全方向へ放射される仕事率（放射パワー）は Larmor 公式（Larmor formula）で与えられる：\n\nP = \\frac{2}{3}\\frac{e^2 a^2}{c^3} \\quad (\\text{Gauss 単位系})\n\\tag{16.9}\nSI では P = e^2 a^2 / (6\\pi\\epsilon_0 c^3)。放射の角度分布は加速度方向に対して \\sin^2\\theta（双極子パターン）で、加速度の向きには放射されない。要点は 「加速度の二乗に比例する」 ことである。\n\n\n\n\n\n\nなぜここで触れるか：黒体放射そのものはモード密度（第14章）と占有因子（第8章）だけで決まり、Larmor 公式は要らない。しかし 現実の連続放射 の多くは、この一本の式に根を持つ：\n\n自由-自由放射（制動放射）：自由電子がイオンの Coulomb 場で曲げられ加速される → 放射（第19章 §19.2）。\nシンクロトロン放射：相対論的電子が磁場中で旋回加速される → Larmor の相対論的一般化（第18章）。偏光する（§13.4）。\nトムソン/コンプトン散乱：入射波が電子を揺さぶり（加速し）、その電子が再放射する（第18章）。\n\nすなわち本書が第VI部で「与えられたもの」として使う放出係数 j_\\nu の 古典的な出どころ がこの式である。詳しい応用は各章に譲る。",
+    "crumbs": [
+      "第V部　逆引き3：電磁気学へ",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>第13章　電磁波としての光</span>"
+    ]
+  },
+  {
     "objectID": "part5/13-electromagnetic-waves.html#sec-electromagnetic-waves-boundary",
     "href": "part5/13-electromagnetic-waves.html#sec-electromagnetic-waves-boundary",
     "title": "第13章　電磁波としての光",
     "section": "13.6 境界条件 ― 第14章への入口",
-    "text": "13.6 境界条件 ― 第14章への入口\n[本文目安：B3]\n第14章で扱う空洞放射の準備として、電磁場の 境界条件（boundary conditions）を確認する。\n完全導体の表面（perfect conductor）：\n\n電場の接線成分は連続でゼロ：E_\\parallel = 0 （物理的には、導体内部の自由電子が瞬時に外部電場を打ち消す）\n磁場の法線成分はゼロ：B_\\perp = 0 （表面電流の対応から）\n\nこれらが空洞壁での反射を導き、内部の電磁場が定在波（standing wave）の重ね合わせとして表される根拠になる。\n\n\n\n\n\n\nノート\n\n\n\n方針：実際の空洞は完全導体ではないが、空洞放射のスペクトル形は壁の材質によらないことを第3章で示した。したがって、計算の便宜上「完全導体壁」を仮定して構わない。これは黒体放射の普遍性を逆手に取った計算戦略である。\n\n\n式 16.4 のような自由な平面波は空洞の有限境界では存在できず、境界条件 E_\\parallel = 0 を満たす離散的な定在波だけが許される。この離散化が第14章のモードの数え上げ ― そしてプランク分布の前因子 \\nu^3/c^2 の起源 ― である。\n\n\n\n\n\n\nノート\n\n\n\n使えるようになった道具（§13.1〜13.6）：\n\nMaxwell 方程式から波動方程式 式 16.3 を導き、光速 c がそこに組み込まれていることを確認\n平面波解 式 16.4 と分散関係 \\omega = c|\\mathbf{k}|\n横波条件 式 16.6 から、偏光自由度が 2 であることを確認 ― これがプランク分布の前因子の係数 2 の正体\nPoynting ベクトル 式 16.7 が観測量フラックスに対応すること\n完全導体壁での境界条件 (E_\\parallel = 0) ― 第14章で離散モードを数えるための準備",
+    "text": "13.6 境界条件 ― 第14章への入口\n[本文目安：B3]\n第14章で扱う空洞放射の準備として、電磁場の 境界条件（boundary conditions）を確認する。\n完全導体の表面（perfect conductor）：\n\n電場の接線成分は連続でゼロ：E_\\parallel = 0 （物理的には、導体内部の自由電子が瞬時に外部電場を打ち消す）\n磁場の法線成分はゼロ：B_\\perp = 0 （表面電流の対応から）\n\nこれらが空洞壁での反射を導き、内部の電磁場が定在波（standing wave）の重ね合わせとして表される根拠になる。\n\n\n\n\n\n\nノート\n\n\n\n方針：実際の空洞は完全導体ではないが、空洞放射のスペクトル形は壁の材質によらないことを第3章で示した。したがって、計算の便宜上「完全導体壁」を仮定して構わない。これは黒体放射の普遍性を逆手に取った計算戦略である。\n\n\n式 16.4 のような自由な平面波は空洞の有限境界では存在できず、境界条件 E_\\parallel = 0 を満たす離散的な定在波だけが許される。この離散化が第14章のモードの数え上げ ― そしてプランク分布の前因子 \\nu^3/c^2 の起源 ― である。\n\n\n\n\n\n\nノート\n\n\n\n使えるようになった道具（§13.1〜13.6）：\n\nMaxwell 方程式から波動方程式 式 16.3 を導き、光速 c がそこに組み込まれていることを確認\n平面波解 式 16.4 と分散関係 \\omega = c|\\mathbf{k}|\n横波条件 式 16.6 から、偏光自由度が 2 であることを確認 ― これがプランク分布の前因子の係数 2 の正体\nPoynting ベクトル 式 16.7 が観測量フラックスに対応すること\nLarmor 公式 式 16.9 ― 加速電荷が放射する事実（制動放射・シンクロトロン・散乱の古典的土台、第VI部）\n完全導体壁での境界条件 (E_\\parallel = 0) ― 第14章で離散モードを数えるための準備",
     "crumbs": [
       "第V部　逆引き3：電磁気学へ",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>第13章　電磁波としての光</span>"
@@ -3789,7 +3800,7 @@
     "href": "part6/19-continuum-microprocesses.html#sec-continuum-free-free",
     "title": "第19章　自由電子が作る連続光 ― 自由-自由・束縛-自由・再結合",
     "section": "19.2 自由-自由放射と吸収 ― 熱的制動放射",
-    "text": "19.2 自由-自由放射と吸収 ― 熱的制動放射\n[本文目安：B3]\n自由電子がイオンの Coulomb 場で加速度を受けると、古典電磁気（第V部）の通り電磁波を放つ。これが 自由-自由放射（制動放射）である。\nここで放出の量を表す係数を二つ区別しておく。放出係数（emission coefficient）j_\\nu は単位体積・単位振動数・単位立体角あたりに放出されるエネルギー（次元は erg s⁻¹ cm⁻³ Hz⁻¹ sr⁻¹）であり、放射輸送方程式にソース項として現れる。これに対し、体積放射率 \\varepsilon_\\nu は全立体角に放出されるエネルギー（次元は erg s⁻¹ cm⁻³ Hz⁻¹）で、等方放射では両者は立体角積分 \\varepsilon_\\nu = 4\\pi\\, j_\\nu で結ばれる。\n電子が Maxwell 分布にあるとき、自由-自由の体積放射率は\n\n\\varepsilon_\\nu^{\\mathrm{ff}} \\;\\propto\\; n_e\\,n_i\\,Z^2\\,T_e^{-1/2}\\,e^{-h\\nu/k_BT_e}\\,\\bar g_{\\mathrm{ff}}(\\nu,T_e)\n\\tag{22.1}\nの形をとる（自由-自由放射は等方なので、放出係数は j_\\nu^{\\mathrm{ff}} = \\varepsilon_\\nu^{\\mathrm{ff}}/4\\pi）。Z はイオンの電荷、\\bar g_{\\mathrm{ff}} は Gaunt 因子（量子補正、\\nu,T_e にゆるやかに依存し O(1)）。指数因子 e^{-h\\nu/k_BT_e} は、振動数 \\nu の光子を出すには電子が少なくとも h\\nu の運動エネルギーを持たねばならず、その割合が Maxwell 分布で抑えられることを表す。\n対応する 吸収係数 は、第17章 §17.6 で見たように\n\n\\alpha_\\nu^{\\mathrm{ff}} \\;\\propto\\; n_e\\,n_i\\,Z^2\\,T_e^{-3/2}\\,\\nu^{-2}\\,\\bar g_{\\mathrm{ff}}\\,\\bigl(1-e^{-h\\nu/k_BT_e}\\bigr)\n\\tag{22.2}\n括弧の (1-e^{-h\\nu/k_BT_e}) は 誘導放出補正（第11章・第21章 §21.2 と同じ因子）である。ソース関数は放出係数（単位立体角あたり）と吸収係数の比 S_\\nu = j_\\nu/\\alpha_\\nu で定義されるので、等方放射で j_\\nu^{\\mathrm{ff}} = \\varepsilon_\\nu^{\\mathrm{ff}}/4\\pi を用いる。式 22.1 と 式 22.2 の比をとると、n_e,n_i も \\bar g_{\\mathrm{ff}} も消えて\n\nS_\\nu^{\\mathrm{ff}} = \\frac{j_\\nu^{\\mathrm{ff}}}{\\alpha_\\nu^{\\mathrm{ff}}} = \\frac{1}{4\\pi}\\frac{\\varepsilon_\\nu^{\\mathrm{ff}}}{\\alpha_\\nu^{\\mathrm{ff}}} = \\frac{2h\\nu^3}{c^2}\\frac{1}{e^{h\\nu/k_BT_e}-1} = B_\\nu(T_e)\n\\tag{22.3}\nとなり、Kirchhoff の法則 S_\\nu=B_\\nu(T_e) が素過程のレベルで確かめられる（第3章・第5章）。立体角因子 4\\pi は j_\\nu と \\varepsilon_\\nu の換算に現れるが、係数の振動数・温度依存はそのまま B_\\nu(T_e) を再現する。すなわち自由-自由放射のソース関数は、つねに電子温度の黒体である。\n観測スペクトルの形を決めるのは、ここから先の 光学的厚さ \\tau_\\nu=\\int\\alpha_\\nu^{\\mathrm{ff}}\\,ds である。式 22.2 の \\nu^{-2} により、\n\n低振動数（電波）：\\alpha_\\nu^{\\mathrm{ff}} が大きく光学的に厚い → I_\\nu\\to B_\\nu(T_e)。HII 領域の電波連続光が黒体に漸近する（第17章 §17.6 のターンオーバー）。\n高振動数・高温・希薄（X 線）：光学的に薄く、観測される F_\\nu\\propto e^{-h\\nu/k_BT_e} の 指数カットオフ。銀河団の高温ガス（T_e\\sim10^7〜10^8 K）が典型（第18章）。\n\n\n\n\n\n\n\n図 22.2: 自由-自由放射のスペクトル。低振動数では光学的に厚く F_\\nu\\propto\\nu^2（電子温度 T_e の黒体の Rayleigh–Jeans 裾）、ターンオーバー \\nu_t を越えると光学的に薄くほぼ平坦（\\propto\\nu^{-0.1}）、h\\nu\\sim k_BT_e で指数カットオフ。電波 HII 領域と銀河団 X 線は同じ熱的制動放射の両端である。\n\n\n\n\n\n\n\n\n\n問い：自由-自由放射は全帯域で「熱的」なのに、なぜ全帯域で単一の黒体スペクトルには ならない のか？\n短答：黒体になるのは光学的に厚い帯（低 \\nu）だけ。高 \\nu では光学的に薄く I_\\nu\\approx\\tau_\\nu B_\\nu \\ll B_\\nu となって黒体から下にずれ、e^{-h\\nu/k_BT_e} で切れる。「熱的（Maxwell 分布）」と「黒体（光学的に厚い熱平衡放射場）」は別条件である（第17章 §17.6）。",
+    "text": "19.2 自由-自由放射と吸収 ― 熱的制動放射\n[本文目安：B3]\n自由電子がイオンの Coulomb 場で加速度を受けると、加速電荷は電磁波を放射する（Larmor 公式、第13章 §13.5b）。これが 自由-自由放射（制動放射）である。\nここで放出の量を表す係数を二つ区別しておく。放出係数（emission coefficient）j_\\nu は単位体積・単位振動数・単位立体角あたりに放出されるエネルギー（次元は erg s⁻¹ cm⁻³ Hz⁻¹ sr⁻¹）であり、放射輸送方程式にソース項として現れる。これに対し、体積放射率 \\varepsilon_\\nu は全立体角に放出されるエネルギー（次元は erg s⁻¹ cm⁻³ Hz⁻¹）で、等方放射では両者は立体角積分 \\varepsilon_\\nu = 4\\pi\\, j_\\nu で結ばれる。\n電子が Maxwell 分布にあるとき、自由-自由の体積放射率は\n\n\\varepsilon_\\nu^{\\mathrm{ff}} \\;\\propto\\; n_e\\,n_i\\,Z^2\\,T_e^{-1/2}\\,e^{-h\\nu/k_BT_e}\\,\\bar g_{\\mathrm{ff}}(\\nu,T_e)\n\\tag{22.1}\nの形をとる（自由-自由放射は等方なので、放出係数は j_\\nu^{\\mathrm{ff}} = \\varepsilon_\\nu^{\\mathrm{ff}}/4\\pi）。Z はイオンの電荷、\\bar g_{\\mathrm{ff}} は Gaunt 因子（量子補正、\\nu,T_e にゆるやかに依存し O(1)）。指数因子 e^{-h\\nu/k_BT_e} は、振動数 \\nu の光子を出すには電子が少なくとも h\\nu の運動エネルギーを持たねばならず、その割合が Maxwell 分布で抑えられることを表す。\n対応する 吸収係数 は、第17章 §17.6 で見たように\n\n\\alpha_\\nu^{\\mathrm{ff}} \\;\\propto\\; n_e\\,n_i\\,Z^2\\,T_e^{-3/2}\\,\\nu^{-2}\\,\\bar g_{\\mathrm{ff}}\\,\\bigl(1-e^{-h\\nu/k_BT_e}\\bigr)\n\\tag{22.2}\n括弧の (1-e^{-h\\nu/k_BT_e}) は 誘導放出補正（第11章・第21章 §21.2 と同じ因子）である。ソース関数は放出係数（単位立体角あたり）と吸収係数の比 S_\\nu = j_\\nu/\\alpha_\\nu で定義されるので、等方放射で j_\\nu^{\\mathrm{ff}} = \\varepsilon_\\nu^{\\mathrm{ff}}/4\\pi を用いる。式 22.1 と 式 22.2 の比をとると、n_e,n_i も \\bar g_{\\mathrm{ff}} も消えて\n\nS_\\nu^{\\mathrm{ff}} = \\frac{j_\\nu^{\\mathrm{ff}}}{\\alpha_\\nu^{\\mathrm{ff}}} = \\frac{1}{4\\pi}\\frac{\\varepsilon_\\nu^{\\mathrm{ff}}}{\\alpha_\\nu^{\\mathrm{ff}}} = \\frac{2h\\nu^3}{c^2}\\frac{1}{e^{h\\nu/k_BT_e}-1} = B_\\nu(T_e)\n\\tag{22.3}\nとなり、Kirchhoff の法則 S_\\nu=B_\\nu(T_e) が素過程のレベルで確かめられる（第3章・第5章）。立体角因子 4\\pi は j_\\nu と \\varepsilon_\\nu の換算に現れるが、係数の振動数・温度依存はそのまま B_\\nu(T_e) を再現する。すなわち自由-自由放射のソース関数は、つねに電子温度の黒体である。\n観測スペクトルの形を決めるのは、ここから先の 光学的厚さ \\tau_\\nu=\\int\\alpha_\\nu^{\\mathrm{ff}}\\,ds である。式 22.2 の \\nu^{-2} により、\n\n低振動数（電波）：\\alpha_\\nu^{\\mathrm{ff}} が大きく光学的に厚い → I_\\nu\\to B_\\nu(T_e)。HII 領域の電波連続光が黒体に漸近する（第17章 §17.6 のターンオーバー）。\n高振動数・高温・希薄（X 線）：光学的に薄く、観測される F_\\nu\\propto e^{-h\\nu/k_BT_e} の 指数カットオフ。銀河団の高温ガス（T_e\\sim10^7〜10^8 K）が典型（第18章）。\n\n\n\n\n\n\n\n図 22.2: 自由-自由放射のスペクトル。低振動数では光学的に厚く F_\\nu\\propto\\nu^2（電子温度 T_e の黒体の Rayleigh–Jeans 裾）、ターンオーバー \\nu_t を越えると光学的に薄くほぼ平坦（\\propto\\nu^{-0.1}）、h\\nu\\sim k_BT_e で指数カットオフ。電波 HII 領域と銀河団 X 線は同じ熱的制動放射の両端である。\n\n\n\n\n\n\n\n\n\n問い：自由-自由放射は全帯域で「熱的」なのに、なぜ全帯域で単一の黒体スペクトルには ならない のか？\n短答：黒体になるのは光学的に厚い帯（低 \\nu）だけ。高 \\nu では光学的に薄く I_\\nu\\approx\\tau_\\nu B_\\nu \\ll B_\\nu となって黒体から下にずれ、e^{-h\\nu/k_BT_e} で切れる。「熱的（Maxwell 分布）」と「黒体（光学的に厚い熱平衡放射場）」は別条件である（第17章 §17.6）。",
     "crumbs": [
       "第VI部　現実の宇宙へ戻る",
       "<span class='chapter-number'>22</span>  <span class='chapter-title'>第19章　自由電子が作る連続光 ― 自由-自由・束縛-自由・再結合</span>"
@@ -4229,7 +4240,7 @@
     "href": "part7/21-line-formation.html#sec-non-LTE-line-formation",
     "title": "第21章　線形成 ― 吸収線と輝線の物理",
     "section": "21.5 non-LTE 線形成 ― いつ・なぜ LTE が破綻するか",
-    "text": "21.5 non-LTE 線形成 ― いつ・なぜ LTE が破綻するか\n[本文目安：B3-B4]\n実際には LTE が破綻する状況が多い：\n\n希薄ガス（衝突率が低い）\n強い放射場（放射過程が衝突過程より速い）\n急激な温度勾配（局所平衡が追いつかない）\n\nこのとき、占有数 n_l, n_u は Boltzmann 分布から外れ、励起温度 T_\\text{ex} がキネティック温度 T_\\text{kin} と乖離する。線ソース関数は B_\\nu(T_\\text{ex}) のままだが、T_\\text{ex} が物理温度を反映しない。\nnon-LTE 線形成を扱う数値的枠組み：\n\n占有数の方程式：各準位への入力（励起・吸収）＝各準位からの出力（脱励起・放出）の収支\n放射輸送方程式：占有数で決まる S_\\nu と \\alpha_\\nu から、放射場を解く\n両者の反復：放射場と占有数が 自己無撞着 になるまで反復\n\nこれが non-LTE radiative transfer の標準枠組み。\n\n\n\n\n\n\n注意（観測）：「LTE 解析からの偏差」は、観測者が誤った結論に至る源。一例として、恒星大気の Fe I 線 を LTE で解析すると、紫外側で Fe の over-ionization（過電離） により占有数が Saha 予測を下回り、組成決定で 0.1〜0.4 dex のずれが生じることが知られている（Asplund 2005 のレビュー）。non-LTE 補正は現代の線スペクトル解析の必須道具となっている\n\n\n\n\n\n\n\n\n\nノート\n\n\n\n用語の整理（第6章 §6.5 と整合）：\n\nLTE：物質側の占有数が局所キネティック温度の Boltzmann/Saha 分布 → 線ソース関数 = B_\\nu(T_\\text{kin})\nnon-LTE：物質側の占有数が局所温度の Boltzmann から外れる → 線ソース関数 ≠ B_\\nu(T_\\text{kin})、しかし依然として = B_\\nu(T_\\text{ex})\n熱的 vs 非熱的：粒子のエネルギー分布が Maxwell-Boltzmann か否か。LTE / non-LTE とは別の軸（第15章 §15.1）",
+    "text": "21.5 non-LTE 線形成 ― いつ・なぜ LTE が破綻するか\n[本文目安：B3-B4]\n実際には LTE が破綻する状況が多い：\n\n希薄ガス（衝突率が低い）\n強い放射場（放射過程が衝突過程より速い）\n急激な温度勾配（局所平衡が追いつかない）\n\nこのとき、占有数 n_l, n_u は Boltzmann 分布から外れ、励起温度 T_\\text{ex} がキネティック温度 T_\\text{kin} と乖離する。線ソース関数は B_\\nu(T_\\text{ex}) のままだが、T_\\text{ex} が物理温度を反映しない。\nnon-LTE 線形成を扱う数値的枠組み：\n\n占有数の方程式：各準位への入力（励起・吸収）＝各準位からの出力（脱励起・放出）の収支\n放射輸送方程式：占有数で決まる S_\\nu と \\alpha_\\nu から、放射場を解く\n両者の反復：放射場と占有数が 自己無撞着 になるまで反復\n\nこれが non-LTE radiative transfer の標準枠組み。\n\n\n\n\n\n\nいつ LTE か ― 二準位原子と臨界密度：抽象論を、最も簡単な 二準位原子 で数にしてみる。上準位 u から下準位 l への脱励起には二つの経路がある ― 衝突脱励起（電子との衝突、率 n_e q_{ul}。q_{ul} は脱励起の速度係数）と 自発放出（率 A_{ul}）。両者が拮抗する電子密度を 臨界密度（critical density）と呼ぶ：\n\nn_\\text{crit} \\equiv \\frac{A_{ul}}{q_{ul}}\n\\tag{24.11}\n\nn_e \\gg n_\\text{crit}：衝突が放射より速く、占有数は衝突で熱平衡化する → LTE（T_\\text{ex}\\to T_\\text{kin}）。\nn_e \\ll n_\\text{crit}：自発放出が先に脱励起してしまい、上準位が熱平衡値より枯れる → non-LTE（T_\\text{ex} &lt; T_\\text{kin}、サブサーマル）。\n\nつまり「衝突率 vs 放射率」の大小が LTE/non-LTE を分ける ― review2 が抽象的と感じた統計平衡の中身は、この一本の不等式に凝縮できる。許容線（大きい A_{ul}）は n_\\text{crit} が高く non-LTE になりやすい一方、禁制線（小さい A_{ul}、第22章 §22.5）は n_\\text{crit} が低く、希薄な星雲でも LTE 的に振る舞いやすい。この臨界密度の差を逆手に取って電子密度を測るのが、第24章 §24.3 の [S II] $6716/$6731 線比診断（多準位の具体例）である。\n\n\n\n\n\n\n\n\n\n注意（観測）：「LTE 解析からの偏差」は、観測者が誤った結論に至る源。一例として、恒星大気の Fe I 線 を LTE で解析すると、紫外側で Fe の over-ionization（過電離） により占有数が Saha 予測を下回り、組成決定で 0.1〜0.4 dex のずれが生じることが知られている（Asplund 2005 のレビュー）。non-LTE 補正は現代の線スペクトル解析の必須道具となっている\n\n\n\n\n\n\n\n\n\nノート\n\n\n\n用語の整理（第6章 §6.5 と整合）：\n\nLTE：物質側の占有数が局所キネティック温度の Boltzmann/Saha 分布 → 線ソース関数 = B_\\nu(T_\\text{kin})\nnon-LTE：物質側の占有数が局所温度の Boltzmann から外れる → 線ソース関数 ≠ B_\\nu(T_\\text{kin})、しかし依然として = B_\\nu(T_\\text{ex})\n熱的 vs 非熱的：粒子のエネルギー分布が Maxwell-Boltzmann か否か。LTE / non-LTE とは別の軸（第15章 §15.1）",
     "crumbs": [
       "第VII部　線スペクトル ― もう一つの逆引き",
       "<span class='chapter-number'>24</span>  <span class='chapter-title'>第21章　線形成 ― 吸収線と輝線の物理</span>"
@@ -4240,7 +4251,7 @@
     "href": "part7/21-line-formation.html#sec-curve-of-growth",
     "title": "第21章　線形成 ― 吸収線と輝線の物理",
     "section": "21.6 成長曲線（curve of growth） ― 等価幅から柱密度を測る",
-    "text": "21.6 成長曲線（curve of growth） ― 等価幅から柱密度を測る\n[本文目安：B3]\n弱い吸収線から強い吸収線まで、観測される 等価幅 W と 柱密度 N \\equiv \\int n_l\\, ds の関係は、成長曲線（curve of growth、等価幅曲線とも）として知られる：\n\nW(N) = \\begin{cases}\n\\propto N & \\text{(線形領域)} \\\\\n\\propto \\sqrt{\\ln N} & \\text{(飽和領域)} \\\\\n\\propto \\sqrt{N} & \\text{(減衰翼領域)}\n\\end{cases}\n\\tag{24.11}\n物理的解釈：\n\n線形領域：吸収線の光学的深さ \\tau &lt; 1。等価幅は柱密度に比例\n飽和領域：線芯が完全に黒（\\tau \\gg 1）。中心が「これ以上吸収できない」、ただ広がるだけ\n減衰翼領域：自然幅・衝突幅が支配（第23章）。Lorentz 翼の \\propto \\sqrt{N} 依存\n\n\n\n\n\n\n\nノート\n\n\n\n観測との対応：恒星・QSO 吸収線スペクトルの解析で、成長曲線は 観測等価幅 → 柱密度 を求める基本道具である。化学組成、QSO 視線方向の星間吸収系の柱密度測定などに使われる。第24章 §24.2 で本格的に応用する。",
+    "text": "21.6 成長曲線（curve of growth） ― 等価幅から柱密度を測る\n[本文目安：B3]\n弱い吸収線から強い吸収線まで、観測される 等価幅 W と 柱密度 N \\equiv \\int n_l\\, ds の関係は、成長曲線（curve of growth、等価幅曲線とも）として知られる：\n\nW(N) = \\begin{cases}\n\\propto N & \\text{(線形領域)} \\\\\n\\propto \\sqrt{\\ln N} & \\text{(飽和領域)} \\\\\n\\propto \\sqrt{N} & \\text{(減衰翼領域)}\n\\end{cases}\n\\tag{24.12}\n物理的解釈：\n\n線形領域：吸収線の光学的深さ \\tau &lt; 1。等価幅は柱密度に比例\n飽和領域：線芯が完全に黒（\\tau \\gg 1）。中心が「これ以上吸収できない」、ただ広がるだけ\n減衰翼領域：自然幅・衝突幅が支配（第23章）。Lorentz 翼の \\propto \\sqrt{N} 依存\n\n\n\n\n\n\n\nノート\n\n\n\n観測との対応：恒星・QSO 吸収線スペクトルの解析で、成長曲線は 観測等価幅 → 柱密度 を求める基本道具である。化学組成、QSO 視線方向の星間吸収系の柱密度測定などに使われる。第24章 §24.2 で本格的に応用する。",
     "crumbs": [
       "第VII部　線スペクトル ― もう一つの逆引き",
       "<span class='chapter-number'>24</span>  <span class='chapter-title'>第21章　線形成 ― 吸収線と輝線の物理</span>"
@@ -4438,7 +4449,7 @@
     "href": "part7/22-atomic-physics.html#sec-atomic-selection-rules",
     "title": "第22章　線スペクトルから原子物理へ",
     "section": "22.5 選択則と禁制線 ― なぜ「許されない」遷移が見えるか",
-    "text": "22.5 選択則と禁制線 ― なぜ「許されない」遷移が見えるか\n[本文目安：B3]\n電気双極子遷移は、波動関数のパリティと角運動量の選択則を持つ：\n\n\\Delta l = \\pm 1, \\quad \\Delta m = 0, \\pm 1\n\\tag{25.18}\nこれらを満たさない遷移は、電気双極子では起こらない ― 「禁制」（forbidden）。\nしかし、より高次の遷移は弱いながら可能：\n\n電気四重極遷移（E2）：f \\sim \\alpha^2 f_{E1} \\sim 10^{-4} 倍\n磁気双極子遷移（M1）：f \\sim \\alpha^2 f_{E1} \\sim 10^{-4} 倍\n\nこれらの弱い遷移は、地上の実験室では 衝突脱励起 で先に消されて観測できないが、極低密度の宇宙環境 では時間が許されて自発放出が起こる。\n第20章 §20.3 で触れた 禁制線（[O III] $$5007 等）の正体はこれ。\n\n\n\n\n\n\n問い：[O III] $5007 は「禁制」と呼ばれるが、HII 領域や惑星状星雲では H$ よりも強く観測されることがある。なぜか？\n短答：HII 領域の電子密度（n_e \\sim 10^2〜10^4 cm^{-3}）では衝突脱励起時間が長く、A_{ul} \\sim 10^{-2} s^{-1} の禁制線でも自発放出が間に合う。一方、[O III] のエネルギー準位構造は 衝突励起断面積が大きく、励起される割合も高い。両者の組合せで、許容線と同程度の強度が出る。\nもう一歩：[O III] $$5007 の強度は、星雲の 電子温度 に強く依存し、§24.3 の温度診断に使われる。「禁制」という言葉は、地上実験室での測りにくさを反映するが、宇宙物理では主役級の道具",
+    "text": "22.5 選択則と禁制線 ― なぜ「許されない」遷移が見えるか\n[本文目安：B3]\n電気双極子遷移は、波動関数のパリティと角運動量の選択則を持つ：\n\n\\Delta l = \\pm 1, \\quad \\Delta m = 0, \\pm 1\n\\tag{25.18}\nこれらを満たさない遷移は、電気双極子では起こらない ― 「禁制」（forbidden）。\nしかし、より高次の遷移は弱いながら可能：\n\n電気四重極遷移（E2）：f \\sim \\alpha^2 f_{E1} \\sim 10^{-4} 倍\n磁気双極子遷移（M1）：f \\sim \\alpha^2 f_{E1} \\sim 10^{-4} 倍\n\nこれらの弱い遷移は、地上の実験室では 衝突脱励起 で先に消されて観測できないが、極低密度の宇宙環境 では時間が許されて自発放出が起こる。\n第20章 §20.3 で触れた 禁制線（[O III] $$5007 等）の正体はこれ。\n\n\n\n\n\n\n前因子の読み替え ― 禁制線・21 cm をどう中心地図に乗せるか：中心地図の前因子 \\pi e^2/m_e c は古典 Lorentz 振動子＝電気双極子（E1）遷移 に対応する（§22.4b）。M1・E2 の禁制線や 21 cm 線（基底状態超微細構造の M1）は E1 ではないので、この前因子と通常の振動子強度 f_{lu} をそのまま当てはめられない。実務では順序を逆にする ― 測定（または計算）された自発放出率 A_{ul} を出発点に、Einstein 関係 式 25.17 を E1 に限らず一般化して逆に解き、実効的な B_{lu}（あるいは実効振動子強度 f_{lu}\\sim\\alpha^2 f_{E1}）を得る。こうして禁制線も 21 cm 線も同じ中心地図 \\alpha_\\nu=(\\pi e^2/m_e c)f_{lu}n_l\\phi の枠に乗る。21 cm 線への具体的な適用は第20章 §20.4 を参照。\n\n\n\n\n\n\n\n\n\n問い：[O III] $5007 は「禁制」と呼ばれるが、HII 領域や惑星状星雲では H$ よりも強く観測されることがある。なぜか？\n短答：HII 領域の電子密度（n_e \\sim 10^2〜10^4 cm^{-3}）では衝突脱励起時間が長く、A_{ul} \\sim 10^{-2} s^{-1} の禁制線でも自発放出が間に合う。一方、[O III] のエネルギー準位構造は 衝突励起断面積が大きく、励起される割合も高い。両者の組合せで、許容線と同程度の強度が出る。\nもう一歩：[O III] $$5007 の強度は、星雲の 電子温度 に強く依存し、§24.3 の温度診断に使われる。「禁制」という言葉は、地上実験室での測りにくさを反映するが、宇宙物理では主役級の道具",
     "crumbs": [
       "第VII部　線スペクトル ― もう一つの逆引き",
       "<span class='chapter-number'>25</span>  <span class='chapter-title'>第22章　線スペクトルから原子物理へ</span>"
@@ -5503,7 +5514,7 @@
     "href": "appendix/B-units-constants.html#sec-order-of-magnitude",
     "title": "付録 B — 付録 B　単位と基本定数",
     "section": "B.5 数値の桁感覚 ― オーダー推定のための定数",
-    "text": "B.5 数値の桁感覚 ― オーダー推定のための定数\n「ざっくり計算」のための桁感覚。\n\nB.5.1 エネルギー目盛り\n\n\n\n\n\n\n\n\n\n現象\nエネルギー\n特性温度\n対応波長\n\n\n\n\n室温の熱運動\n0.025 eV\n300 K\n50 µm\n\n\n水素 21 cm 超微細構造\n5.9 \\times 10^{-6} eV\n0.07 K\n21 cm\n\n\nCMB 光子（典型）\n6.6 \\times 10^{-4} eV\n2.725 K\n1 mm\n\n\n可視光（H\\alpha）\n1.89 eV\n2.2 \\times 10^4 K\n656 nm\n\n\n水素 Lyα\n10.2 eV\n1.2 \\times 10^5 K\n121.6 nm\n\n\n水素電離\n13.6 eV\n1.6 \\times 10^5 K\n91.2 nm\n\n\n鉄 K\\alpha（中性鉄）\n6.4 keV\n7.4 \\times 10^7 K\n0.19 nm\n\n\n電子静止質量\n0.511 MeV\n5.9 \\times 10^9 K\n\\lambda_C = 2.4 pm\n\n\n陽子静止質量\n938 MeV\n1.1 \\times 10^{13} K\n\\sim 1.3 fm\n\n\n\n\n\nB.5.2 重力スケール\n\n\n\n\n\n\n\n\n量\n計算\n例\n\n\n\n\nSchwarzschild 半径\nr_s = 2GM/c^2\nr_{s,\\odot} \\simeq 3 km, r_{s,M87} \\simeq 2 \\times 10^{13} m\n\n\n表面重力（恒星）\ng = GM/R^2\n太陽 g_\\odot = 274 m s^{-2}, 白色矮星 \\sim 10^6 m s^{-2}\n\n\n自由落下時間\nt_\\text{ff} = \\sqrt{1/G\\rho}\n太陽密度 1.4 g/cc → t_\\text{ff} \\sim 30 min\n\n\n\n\n\nB.5.3 観測的密度\n\n\n\n環境\n数密度 [cm^{-3}]\n温度 [K]\n\n\n\n\n銀河間媒質\n10^{-6}\n10^5–10^7\n\n\n暖かい星間ガス（WIM）\n10^{-1}\n10^4\n\n\nHII 領域\n10^2–10^4\n10^4\n\n\n暗黒分子雲\n10^3–10^5\n10–20\n\n\n原始惑星系円盤\n10^{10}–10^{12}\n20–1000\n\n\n恒星光球\n\\sim 10^{17}\n\\sim 6000\n\n\n太陽コロナ\n10^8–10^{10}\n10^6–10^7\n\n\n\n\n本文での使用：第15章以降の応用章で「桁感覚」が必要なとき、本表を参照してほしい。",
+    "text": "B.5 数値の桁感覚 ― オーダー推定のための定数\n「ざっくり計算」のための桁感覚。\n\nB.5.1 エネルギー目盛り\n\n\n\n\n\n\n\n\n\n現象\nエネルギー\n特性温度\n対応波長\n\n\n\n\n室温の熱運動\n0.025 eV\n300 K\n50 µm\n\n\n水素 21 cm 超微細構造\n5.9 \\times 10^{-6} eV\n0.07 K\n21 cm\n\n\nCMB 光子（熱エネルギー k_B T）\n2.3 \\times 10^{-4} eV\n2.725 K\n5.3 mm\n\n\n可視光（H\\alpha）\n1.89 eV\n2.2 \\times 10^4 K\n656 nm\n\n\n水素 Lyα\n10.2 eV\n1.2 \\times 10^5 K\n121.6 nm\n\n\n水素電離\n13.6 eV\n1.6 \\times 10^5 K\n91.2 nm\n\n\n鉄 K\\alpha（中性鉄）\n6.4 keV\n7.4 \\times 10^7 K\n0.19 nm\n\n\n電子静止質量\n0.511 MeV\n5.9 \\times 10^9 K\n\\lambda_C = 2.4 pm\n\n\n陽子静止質量\n938 MeV\n1.1 \\times 10^{13} K\n\\sim 1.3 fm\n\n\n\n\n\nB.5.2 重力スケール\n\n\n\n\n\n\n\n\n量\n計算\n例\n\n\n\n\nSchwarzschild 半径\nr_s = 2GM/c^2\nr_{s,\\odot} \\simeq 3 km, r_{s,M87} \\simeq 2 \\times 10^{13} m\n\n\n表面重力（恒星）\ng = GM/R^2\n太陽 g_\\odot = 274 m s^{-2}, 白色矮星 \\sim 10^6 m s^{-2}\n\n\n自由落下時間\nt_\\text{ff} = \\sqrt{1/G\\rho}\n太陽密度 1.4 g/cc → t_\\text{ff} \\sim 30 min\n\n\n\n\n\nB.5.3 観測的密度\n\n\n\n環境\n数密度 [cm^{-3}]\n温度 [K]\n\n\n\n\n銀河間媒質\n10^{-6}\n10^5–10^7\n\n\n暖かい星間ガス（WIM）\n10^{-1}\n10^4\n\n\nHII 領域\n10^2–10^4\n10^4\n\n\n暗黒分子雲\n10^3–10^5\n10–20\n\n\n原始惑星系円盤\n10^{10}–10^{12}\n20–1000\n\n\n恒星光球\n\\sim 10^{17}\n\\sim 6000\n\n\n太陽コロナ\n10^8–10^{10}\n10^6–10^7\n\n\n\n\n本文での使用：第15章以降の応用章で「桁感覚」が必要なとき、本表を参照してほしい。",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>B</span>  <span class='chapter-title'>付録 B　単位と基本定数</span>"
@@ -5551,6 +5562,72 @@
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>C</span>  <span class='chapter-title'>用語索引（和英・英和）</span>"
+    ]
+  },
+  {
+    "objectID": "appendix/D-correspondence.html",
+    "href": "appendix/D-correspondence.html",
+    "title": "付録 D　標準教科書との対応表",
+    "section": "",
+    "text": "D.1 放射の記述と輸送\n本書は観測スペクトルから基礎物理へ「逆引き」する独自の構成をとるため、章立てが標準的な放射過程の教科書とは順序が異なる。並行して標準書を参照したい読者のために、主要トピックごとに本書の章節と、代表的な標準教科書の対応箇所を示す。\n略号：",
+    "crumbs": [
+      "Appendices",
+      "付録 D　標準教科書との対応表"
+    ]
+  },
+  {
+    "objectID": "appendix/D-correspondence.html#d.1-放射の記述と輸送",
+    "href": "appendix/D-correspondence.html#d.1-放射の記述と輸送",
+    "title": "付録 D　標準教科書との対応表",
+    "section": "",
+    "text": "トピック\n本書\nR&L\nその他\n\n\n\n\n比強度・フラックス・放射モーメント\n第4章\nCh. 1\nH&M（放射場の定義）\n\n\n放射輸送方程式・形式解・光学的厚さ\n第5章\nCh. 1\nH&M（輸送方程式の章）\n\n\nソース関数・Kirchhoff の法則\n第3章, 第5章\nCh. 1\nH&M\n\n\nEddington–Barbier 近似\n第15章\nCh. 1\nH&M",
+    "crumbs": [
+      "Appendices",
+      "付録 D　標準教科書との対応表"
+    ]
+  },
+  {
+    "objectID": "appendix/D-correspondence.html#d.2-黒体放射と統計",
+    "href": "appendix/D-correspondence.html#d.2-黒体放射と統計",
+    "title": "付録 D　標準教科書との対応表",
+    "section": "D.2 黒体放射と統計",
+    "text": "D.2 黒体放射と統計\n\n\n\n\n\n\n\n\n\nトピック\n本書\nR&L\nその他\n\n\n\n\nプランク関数・Wien 則・Stefan–Boltzmann\n第1・2・10章\n§1.5（Ch. 1）\nKittel & Kroemer, Thermal Physics\n\n\n統計力学・分配関数・Boltzmann 分布\n第6・7章\n―\n久保『統計力学』, Kittel & Kroemer\n\n\n光子統計・Bose–Einstein・\\mu=0\n第8章\n―\nKittel & Kroemer\n\n\n古典論の破綻・Rayleigh–Jeans・紫外破綻\n第9章\n§1.5\nKittel & Kroemer\n\n\nEinstein 係数（A, B）・詳細釣り合い\n第11章\n§1.6\nH&M, Loudon\n\n\n電磁波・偏光・Poynting・モード密度・空洞\n第13・14章\nCh. 1（放射場）, Ch. 2\nJackson, Classical Electrodynamics",
+    "crumbs": [
+      "Appendices",
+      "付録 D　標準教科書との対応表"
+    ]
+  },
+  {
+    "objectID": "appendix/D-correspondence.html#d.3-連続放射の素過程",
+    "href": "appendix/D-correspondence.html#d.3-連続放射の素過程",
+    "title": "付録 D　標準教科書との対応表",
+    "section": "D.3 連続放射の素過程",
+    "text": "D.3 連続放射の素過程\n\n\n\n\n\n\n\n\n\nトピック\n本書\nR&L\nその他\n\n\n\n\n加速電荷の放射・Larmor 公式・双極子放射\n第13章 §13.5b\nCh. 3\nJackson Ch. 14\n\n\n自由-自由放射（熱的制動放射）\n第17・19章\nCh. 5\nLongair\n\n\nシンクロトロン放射（非熱的）\n第18章\nCh. 6\nLongair\n\n\nコンプトン／逆コンプトン散乱\n第18章\nCh. 7\nLongair\n\n\n束縛-自由・再結合・Saha 電離平衡\n第19章, 付録 A §A.3\nCh. 5, Ch. 10\nDraine, Osterbrock & Ferland",
+    "crumbs": [
+      "Appendices",
+      "付録 D　標準教科書との対応表"
+    ]
+  },
+  {
+    "objectID": "appendix/D-correspondence.html#d.4-線スペクトルと原子物理",
+    "href": "appendix/D-correspondence.html#d.4-線スペクトルと原子物理",
+    "title": "付録 D　標準教科書との対応表",
+    "section": "D.4 線スペクトルと原子物理",
+    "text": "D.4 線スペクトルと原子物理\n\n\n\n\n\n\n\n\n\nトピック\n本書\nR&L\nその他\n\n\n\n\n原子構造・Rydberg 公式・エネルギー準位\n第22章\nCh. 9\nDraine, Bransden & Joachain\n\n\n振動子強度・遷移確率・選択則・禁制線\n第22章\nCh. 10\nDraine, Rutten 講義録\n\n\n線輪郭（自然幅・Doppler・衝突幅・Voigt）\n第23章\nCh. 10\nDraine, H&M\n\n\nLTE/non-LTE・統計平衡・励起温度・臨界密度\n第21章\n―\nH&M, Draine\n\n\n成長曲線・等価幅・柱密度\n第21・24章\n―\nDraine, Spitzer\n\n\n線比診断（[O III], [S II] 等）\n第24章\n―\nOsterbrock & Ferland",
+    "crumbs": [
+      "Appendices",
+      "付録 D　標準教科書との対応表"
+    ]
+  },
+  {
+    "objectID": "appendix/D-correspondence.html#d.5-応用と発展",
+    "href": "appendix/D-correspondence.html#d.5-応用と発展",
+    "title": "付録 D　標準教科書との対応表",
+    "section": "D.5 応用と発展",
+    "text": "D.5 応用と発展\n\n\n\n\n\n\n\n\n\nトピック\n本書\nR&L\nその他\n\n\n\n\nCMB・スペクトル歪み・温度異方性\n第16章\n―\nDodelson, Modern Cosmology\n\n\n恒星・惑星・ダストの熱放射\n第15・17章\n―\nH&M, Draine\n\n\n降着円盤・高エネルギー天体\n第18章\nCh. 5–7\nLongair, Frank/King/Raine\n\n\n電磁場の量子化・光子描像\n第25章\n―\nLoudon, The Quantum Theory of Light\n\n\nQED 最小限（最小結合・A/自然幅/選択則の統一）\n第26章\n―\nSakurai, Advanced Quantum Mechanics; Loudon",
+    "crumbs": [
+      "Appendices",
+      "付録 D　標準教科書との対応表"
     ]
   }
 ]

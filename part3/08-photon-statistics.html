@@ -479,6 +479,12 @@ window.Quarto = {
   <a href="../appendix/C-glossary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">用語索引（和英・英和）</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendix/D-correspondence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">付録 D　標準教科書との対応表</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -686,6 +692,21 @@ W_\text{BE} = \prod_i \frac{(N_i + g_i - 1)!}{N_i!\,(g_i - 1)!}
 <p><strong>問い</strong>：Bose 分布の分母にある「<span class="math inline">-1</span>」は、Fermi 分布の「<span class="math inline">+1</span>」と何が違うのか？</p>
 <p><strong>短答</strong>：粒子の数え方の違いから来る。Bose では「同じ状態に複数入れる」ため Σ_n = 1/(1−x)（無限等比和）の因子から <span class="math inline">-1</span>、Fermi では「0 か 1 だけ」だから 1+x から <span class="math inline">+1</span> になる。</p>
 <p><strong>もう一歩</strong>：分母の符号は、低温（<span class="math inline">E - \mu \ll k_B T</span>）で巨大な違いを生む。Bose では <span class="math inline">\bar{n} \to \infty</span>（Bose–Einstein 凝縮の可能性）、Fermi では <span class="math inline">\bar{n} \to 1</span>（縮退、白色矮星・中性子星）。本書では光子のみ扱うが、第18章の中性子星表面で Fermi 縮退に再会する。</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>逆の極限 ― 量子統計はいつ古典統計に戻るか</strong>：上は占有数が大きい極限だった。逆に <strong>占有数が小さい</strong>（<span class="math inline">\bar{n} \ll 1</span>）極限を見ると、量子統計と古典統計の関係が見える。<span class="math inline">\bar{n} \ll 1</span> は <span class="math inline">e^{(E-\mu)/k_B T} \gg 1</span> と同じで、このとき分母の <span class="math inline">\mp 1</span> は無視でき、</p>
+<p><span class="math display">
+\bar{n}_i = \frac{1}{e^{(E_i-\mu)/k_B T} \mp 1} \;\longrightarrow\; e^{-(E_i-\mu)/k_B T}
+</span></p>
+<p>と Bose も Fermi も等しく <strong>Maxwell–Boltzmann 分布</strong>（第7章 <a href="07-statistical-mechanics.html#eq-boltzmann-distribution" class="quarto-xref">式&nbsp;<span>10.6</span></a>）に帰着する。物理的には、各状態の占有がまれ（<span class="math inline">\bar n\ll1</span>）なら「同じ状態に複数入るか」「入れないか」という量子的な違いが効かず、粒子はあたかも区別できる古典粒子のように振る舞う。この条件は、数密度 <span class="math inline">n</span> と熱的ド・ブロイ波長 <span class="math inline">\lambda_\text{th}=h/\sqrt{2\pi m k_B T}</span> で <span class="math inline">n\lambda_\text{th}^3 \ll 1</span>（<strong>非縮退</strong>）と書ける ― 密度が低く温度が高いほど古典近似がよい。</p>
+<p>本書が物質の準位を Boltzmann 分布（第7章）で、放射場を Bose 分布（本章）で扱うのは矛盾ではなく、<strong>同じ統計の二つの極限</strong>である。ただし光子は <span class="math inline">\bar n</span> が小さいとは限らず（低振動数側で <span class="math inline">\bar n\gg1</span>）、<span class="math inline">\mu=0</span> も効くため、プランク分布は古典分布には縮退しない ― そこが熱放射の量子性の核心である。</p>
 </div>
 </div>
 </div>
@@ -1546,274 +1567,286 @@ n_\gamma=9.31\times10^{-25}\times1.83\times10^{32}\times2.404\approx4.1\times10^
 <span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>**もう一歩**：分母の符号は、低温（$E - \mu \ll k_B T$）で巨大な違いを生む。Bose では $\bar{n} \to \infty$（Bose–Einstein 凝縮の可能性）、Fermi では $\bar{n} \to 1$（縮退、白色矮星・中性子星）。本書では光子のみ扱うが、第18章の中性子星表面で Fermi 縮退に再会する。</span>
 <span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>**使えるようになった道具**（§8.3）：Bose–Einstein 占有数 @eq-bose-einstein を、温度と化学ポテンシャルから具体的に書き下せる。これが観測されるプランク分布の指数関数因子の正体を与える。</span>
-<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a><span class="fu">## 8.4 光子の化学ポテンシャル ― なぜゼロか {#sec-photon-statistics-mu-zero}</span></span>
-<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B4｜導出：M1</span><span class="co">]</span></span>
-<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>光子は @eq-bose-einstein で **$\mu = 0$** が成り立つ。これがプランク分布のあの単純な形</span>
-<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>\bar{n}_\text{photon}(\nu, T) = \frac{1}{e^{h\nu/k_B T} - 1}</span>
-<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>$$ {#eq-photon-occupation}</span>
-<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>を生む。なぜ $\mu = 0$ になるのか。</span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple"}</span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>**逆の極限 ― 量子統計はいつ古典統計に戻るか**：上は占有数が大きい極限だった。逆に **占有数が小さい**（$\bar{n} \ll 1$）極限を見ると、量子統計と古典統計の関係が見える。$\bar{n} \ll 1$ は $e^{(E-\mu)/k_B T} \gg 1$ と同じで、このとき分母の $\mp 1$ は無視でき、</span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>\bar{n}_i = \frac{1}{e^{(E_i-\mu)/k_B T} \mp 1} \;\longrightarrow\; e^{-(E_i-\mu)/k_B T}</span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>と Bose も Fermi も等しく **Maxwell–Boltzmann 分布**（第7章 @eq-boltzmann-distribution）に帰着する。物理的には、各状態の占有がまれ（$\bar n\ll1$）なら「同じ状態に複数入るか」「入れないか」という量子的な違いが効かず、粒子はあたかも区別できる古典粒子のように振る舞う。この条件は、数密度 $n$ と熱的ド・ブロイ波長 $\lambda_\text{th}=h/\sqrt{2\pi m k_B T}$ で $n\lambda_\text{th}^3 \ll 1$（**非縮退**）と書ける ― 密度が低く温度が高いほど古典近似がよい。</span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>本書が物質の準位を Boltzmann 分布（第7章）で、放射場を Bose 分布（本章）で扱うのは矛盾ではなく、**同じ統計の二つの極限**である。ただし光子は $\bar n$ が小さいとは限らず（低振動数側で $\bar n\gg1$）、$\mu=0$ も効くため、プランク分布は古典分布には縮退しない ― そこが熱放射の量子性の核心である。</span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>**使えるようになった道具**（§8.3）：Bose–Einstein 占有数 @eq-bose-einstein を、温度と化学ポテンシャルから具体的に書き下せる。これが観測されるプランク分布の指数関数因子の正体を与える。</span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>化学ポテンシャル $\mu$ は、粒子を一個加えたときの自由エネルギーの変化 $\partial F / \partial N$ である（第7章 §7.5）。これは**粒子数 $N$ が保存量である場合**にのみ意味を持つ。粒子数が保存しない系では、$N$ は熱平衡で「他の量と整合するように決まる」量となり、$\mu$ は粒子追加の代償なし ― すなわち $\mu = 0$ ― になる。</span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a><span class="fu">## 8.4 光子の化学ポテンシャル ― なぜゼロか {#sec-photon-statistics-mu-zero}</span></span>
 <span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>光子の場合：</span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B4｜導出：M1</span><span class="co">]</span></span>
 <span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>電磁場と物質の相互作用（吸収・放出）で光子は**生成・消滅する**</span>
-<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>光子の総数 $N_\gamma$ は熱平衡で自動的に決まる量</span>
-<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>よって $\mu_\gamma = 0$</span>
-<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>これに対して、原子・分子・電子のような物質粒子は通常の温度・密度では数が保存し（化学反応がないかぎり）、$\mu \ne 0$ となる。</span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>光子は @eq-bose-einstein で **$\mu = 0$** が成り立つ。これがプランク分布のあの単純な形</span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a>\bar{n}_\text{photon}(\nu, T) = \frac{1}{e^{h\nu/k_B T} - 1}</span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>$$ {#eq-photon-occupation}</span>
 <span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>**観測との対応**：CMB のスペクトルが完璧な黒体（$\mu = 0$）であることは、再結合以前に光子と物質が十分に長く相互作用して光子数を「自由に」調整できたことの証拠。もし $\mu \ne 0$ なら、CMB スペクトルは Bose–Einstein 分布の形（プランクから外れる）を残すはずで、これを **「$\mu$ 歪み」** と呼ぶ。第16章で扱う。</span>
-<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>を生む。なぜ $\mu = 0$ になるのか。</span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>化学ポテンシャル $\mu$ は、粒子を一個加えたときの自由エネルギーの変化 $\partial F / \partial N$ である（第7章 §7.5）。これは**粒子数 $N$ が保存量である場合**にのみ意味を持つ。粒子数が保存しない系では、$N$ は熱平衡で「他の量と整合するように決まる」量となり、$\mu$ は粒子追加の代償なし ― すなわち $\mu = 0$ ― になる。</span>
 <span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
-<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>**問い**：光子の数が保存しないなら、宇宙の光子数はどこから決まっているのか？</span>
-<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a>**短答**：「光子数 $N_\gamma$ は熱平衡で自動的に決まる」とは、温度 $T$ と空洞の体積 $V$ が決まれば、$N_\gamma(T, V)$ が一意になることを意味する。具体的には $N_\gamma \propto V T^3$。</span>
-<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a>**もう一歩**：観測される CMB の光子数密度 $n_\gamma \simeq 411$ cm$^{-3}$ は、CMB 温度 $T = 2.725$ K と $n_\gamma \propto T^3$ から一意に決まる。早期宇宙の物質との結合は、この光子数を「自由に」作り出してくれた。</span>
-<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>光子の場合：</span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>電磁場と物質の相互作用（吸収・放出）で光子は**生成・消滅する**</span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>光子の総数 $N_\gamma$ は熱平衡で自動的に決まる量</span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>よって $\mu_\gamma = 0$</span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>これに対して、原子・分子・電子のような物質粒子は通常の温度・密度では数が保存し（化学反応がないかぎり）、$\mu \ne 0$ となる。</span>
 <span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a>**使えるようになった道具**（§8.4）：化学ポテンシャルがゼロな系（光子）の占有数 @eq-photon-occupation は、温度と振動数だけで書き下せる。これが観測される CMB の黒体スペクトルの指数関数因子の正体である。CMB が完全な黒体に近い ($\mu \lesssim 10^{-5}$) ことは、$\mu = 0$ の前提（光子数の非保存）が宇宙史で確かに実現したことの観測的証拠になる（第16章 $\mu$ 歪み）。</span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a>**観測との対応**：CMB のスペクトルが完璧な黒体（$\mu = 0$）であることは、再結合以前に光子と物質が十分に長く相互作用して光子数を「自由に」調整できたことの証拠。もし $\mu \ne 0$ なら、CMB スペクトルは Bose–Einstein 分布の形（プランクから外れる）を残すはずで、これを **「$\mu$ 歪み」** と呼ぶ。第16章で扱う。</span>
 <span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a><span class="fu">## 8.5 光子気体の統計 ― エネルギー密度から圧力まで {#sec-photon-statistics-photon-gas}</span></span>
-<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B4｜導出：M1</span><span class="co">]</span></span>
-<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>@eq-photon-occupation を使って、放射場の各種熱力学量を計算できる。</span>
-<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a>**エネルギー密度**（振動数あたり）：振動数 $\nu$ 近傍のモード密度を $g(\nu) d\nu$、各モードのエネルギーを $h\nu$、平均光子数を $\bar{n}$ とすると</span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>**問い**：光子の数が保存しないなら、宇宙の光子数はどこから決まっているのか？</span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>**短答**：「光子数 $N_\gamma$ は熱平衡で自動的に決まる」とは、温度 $T$ と空洞の体積 $V$ が決まれば、$N_\gamma(T, V)$ が一意になることを意味する。具体的には $N_\gamma \propto V T^3$。</span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>**もう一歩**：観測される CMB の光子数密度 $n_\gamma \simeq 411$ cm$^{-3}$ は、CMB 温度 $T = 2.725$ K と $n_\gamma \propto T^3$ から一意に決まる。早期宇宙の物質との結合は、この光子数を「自由に」作り出してくれた。</span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>u_\nu d\nu = g(\nu)\, h\nu\, \bar{n}(\nu, T)\, d\nu = g(\nu) \cdot \frac{h\nu}{e^{h\nu/k_B T} - 1}\, d\nu</span>
-<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>$$ {#eq-photon-energy-density}</span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>**使えるようになった道具**（§8.4）：化学ポテンシャルがゼロな系（光子）の占有数 @eq-photon-occupation は、温度と振動数だけで書き下せる。これが観測される CMB の黒体スペクトルの指数関数因子の正体である。CMB が完全な黒体に近い ($\mu \lesssim 10^{-5}$) ことは、$\mu = 0$ の前提（光子数の非保存）が宇宙史で確かに実現したことの観測的証拠になる（第16章 $\mu$ 歪み）。</span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>**方針（先取りの注意）**：以下の計算でモード密度 $g(\nu) = 8\pi\nu^2/c^3$ を**先取りして借用する**。これは電磁場が三次元空間で離散的な定在波モードを持つことから出る量で、その本格的な導出は**第V部・第14章で行う**。ここでは結果だけを**仮に借りる**位置づけであり、第14章でこの借用を返す（@sec-photon-statistics-photon-gas ↔ <span class="co">[</span><span class="ot">第14章</span><span class="co">](../part5/14-cavity-modes.qmd)</span>の往復で確認できる）。</span>
-<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>本章の中心課題は **占有因子 $1/(e^{h\nu/kT}-1)$ の導出**（前節 @eq-photon-occupation）である。ただしこれを放射場のエネルギー密度として観測できる量にするには、モード密度が必要である。その導出は第V部・第14章で行う。占有因子だけでは観測量にならず、「占有因子＋モード密度」の組合せで初めて Planck 分布全体が見える。**全体形が見えてから、第V部でモード密度の起源に逆引きする**、というのが本書の戦略である。</span>
-<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a><span class="fu">## 8.5 光子気体の統計 ― エネルギー密度から圧力まで {#sec-photon-statistics-photon-gas}</span></span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B4｜導出：M1</span><span class="co">]</span></span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>@eq-photon-occupation を使って、放射場の各種熱力学量を計算できる。</span>
 <span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>第V部から $g(\nu) = 8\pi\nu^2/c^3$ を借りて代入すれば</span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>**エネルギー密度**（振動数あたり）：振動数 $\nu$ 近傍のモード密度を $g(\nu) d\nu$、各モードのエネルギーを $h\nu$、平均光子数を $\bar{n}$ とすると</span>
 <span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>u_\nu(T) = \frac{8\pi \nu^2}{c^3} \cdot \frac{h\nu}{e^{h\nu/k_B T} - 1} = \frac{8\pi h \nu^3}{c^3} \cdot \frac{1}{e^{h\nu/k_B T} - 1}</span>
-<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>$$ {#eq-planck-energy-density}</span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>u_\nu d\nu = g(\nu)\, h\nu\, \bar{n}(\nu, T)\, d\nu = g(\nu) \cdot \frac{h\nu}{e^{h\nu/k_B T} - 1}\, d\nu</span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>$$ {#eq-photon-energy-density}</span>
 <span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>そして比強度 $B_\nu = c u_\nu / (4\pi)$ から</span>
-<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/k_B T} - 1}</span>
-<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>$$ {#eq-planck-rederived}</span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>**方針（先取りの注意）**：以下の計算でモード密度 $g(\nu) = 8\pi\nu^2/c^3$ を**先取りして借用する**。これは電磁場が三次元空間で離散的な定在波モードを持つことから出る量で、その本格的な導出は**第V部・第14章で行う**。ここでは結果だけを**仮に借りる**位置づけであり、第14章でこの借用を返す（@sec-photon-statistics-photon-gas ↔ <span class="co">[</span><span class="ot">第14章</span><span class="co">](../part5/14-cavity-modes.qmd)</span>の往復で確認できる）。</span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>本章の中心課題は **占有因子 $1/(e^{h\nu/kT}-1)$ の導出**（前節 @eq-photon-occupation）である。ただしこれを放射場のエネルギー密度として観測できる量にするには、モード密度が必要である。その導出は第V部・第14章で行う。占有因子だけでは観測量にならず、「占有因子＋モード密度」の組合せで初めて Planck 分布全体が見える。**全体形が見えてから、第V部でモード密度の起源に逆引きする**、というのが本書の戦略である。</span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a>**プランク分布の全体形が、光子気体の Bose–Einstein 統計と（第V部から借りた）モード密度から再構成された**。本章で逆引きしたのは右側の **占有因子**であり、前因子 $2h\nu^3/c^2$ の起源は第V部で引き続き扱う。</span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a>第V部から $g(\nu) = 8\pi\nu^2/c^3$ を借りて代入すれば</span>
 <span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a>**全エネルギー密度**：@eq-planck-energy-density を全振動数で積分（$x = h\nu/k_B T$ の置換と $\int_0^\infty x^3/(e^x - 1) dx = \pi^4/15$）すると</span>
-<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a>u(T) = \int_0^\infty u_\nu d\nu = \frac{4\sigma}{c} T^4 \equiv a T^4</span>
-<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>$$ {#eq-energy-density-T4}</span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a>u_\nu(T) = \frac{8\pi \nu^2}{c^3} \cdot \frac{h\nu}{e^{h\nu/k_B T} - 1} = \frac{8\pi h \nu^3}{c^3} \cdot \frac{1}{e^{h\nu/k_B T} - 1}</span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a>$$ {#eq-planck-energy-density}</span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>そして比強度 $B_\nu = c u_\nu / (4\pi)$ から</span>
 <span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>ここで $\sigma$ は Stefan–Boltzmann 定数。**$T^4$ の起源は、占有因子の積分結果として現れる**。</span>
-<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a>**圧力**：光子気体の圧力は、第7章 §7.5 の熱力学関数の方法で</span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/k_B T} - 1}</span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a>$$ {#eq-planck-rederived}</span>
 <span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a>P = \frac{1}{3} u = \frac{a T^4}{3}</span>
-<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>$$ {#eq-photon-pressure}</span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a>**プランク分布の全体形が、光子気体の Bose–Einstein 統計と（第V部から借りた）モード密度から再構成された**。本章で逆引きしたのは右側の **占有因子**であり、前因子 $2h\nu^3/c^2$ の起源は第V部で引き続き扱う。</span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>**全エネルギー密度**：@eq-planck-energy-density を全振動数で積分（$x = h\nu/k_B T$ の置換と $\int_0^\infty x^3/(e^x - 1) dx = \pi^4/15$）すると</span>
 <span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>「$P = u/3$」の係数は、光子が質量ゼロ・等方分布の Bose 気体である帰結。気体の状態方程式（理想気体 $PV = N k_B T$）とは異なる。</span>
-<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>**観測との対応**：恒星内部や降着円盤の中心部では、**放射圧** $P_\text{rad} = aT^4/3$ がガス圧 $P_\text{gas} = n k_B T$ より大きくなることがある。Eddington 限界はこの放射圧と重力のバランスから決まる量で、星の質量上限を与える。第18章で扱う。</span>
-<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>u(T) = \int_0^\infty u_\nu d\nu = \frac{4\sigma}{c} T^4 \equiv a T^4</span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>$$ {#eq-energy-density-T4}</span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>ここで $\sigma$ は Stefan–Boltzmann 定数。**$T^4$ の起源は、占有因子の積分結果として現れる**。</span>
 <span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a><span class="fu">## 8.6 統計力学から見たプランク分布 ― 第III部の到達点 {#sec-photon-statistics-summary-section}</span></span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>**圧力**：光子気体の圧力は、第7章 §7.5 の熱力学関数の方法で</span>
 <span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B4｜導出：M1</span><span class="co">]</span></span>
-<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>第I部で「観測される連続スペクトルは黒体に近い」と確認し、第II部で「LTE ではソース関数がプランク関数」と整理し、第III部の本章で **「Bose–Einstein 統計から プランク分布の占有因子 $1/(e^{h\nu/kT}-1)$ が必然として出る」** ことを示した。</span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>P = \frac{1}{3} u = \frac{a T^4}{3}</span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>$$ {#eq-photon-pressure}</span>
 <span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a>これは中心地図プランク関数</span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a>「$P = u/3$」の係数は、光子が質量ゼロ・等方分布の Bose 気体である帰結。気体の状態方程式（理想気体 $PV = N k_B T$）とは異なる。</span>
 <span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>B_\nu(T) = \boxed{\frac{2 h \nu^3}{c^2}} \cdot \boxed{\frac{1}{e^{h\nu/k_B T} - 1}}</span>
-<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>**観測との対応**：恒星内部や降着円盤の中心部では、**放射圧** $P_\text{rad} = aT^4/3$ がガス圧 $P_\text{gas} = n k_B T$ より大きくなることがある。Eddington 限界はこの放射圧と重力のバランスから決まる量で、星の質量上限を与える。第18章で扱う。</span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a>の **指数関数因子**（右側、本章で解き明かした）が、統計力学（光子の Bose 統計＋熱平衡）の帰結であることを意味する。</span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a><span class="fu">## 8.6 統計力学から見たプランク分布 ― 第III部の到達点 {#sec-photon-statistics-summary-section}</span></span>
 <span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a>残りは：</span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B4｜導出：M1</span><span class="co">]</span></span>
 <span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**前因子 $2h\nu^3/c^2$** ：モード密度 $\propto \nu^2$、エネルギー量子 $h\nu$、偏光自由度 2 の積。**第V部（電磁気学）と第IV部（量子論）の合作**で解き明かす</span>
-<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**$h\nu$ 自体の意味**：エネルギーが連続でなく $h\nu$ の単位で離散化されること。**第IV部（量子論）の中心テーマ**</span>
-<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>第IV部・第V部でこれらの「なぜ」が解明されれば、中心地図プランク関数のすべての因子が逆引きで説明されたことになる。これが本書の第I〜V部全体の流れである。</span>
-<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-photon-statistics-summary .unnumbered}</span></span>
-<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
-<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る**</span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a>第I部で「観測される連続スペクトルは黒体に近い」と確認し、第II部で「LTE ではソース関数がプランク関数」と整理し、第III部の本章で **「Bose–Einstein 統計から プランク分布の占有因子 $1/(e^{h\nu/kT}-1)$ が必然として出る」** ことを示した。</span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>これは中心地図プランク関数</span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>B_\nu(T) = \boxed{\frac{2 h \nu^3}{c^2}} \cdot \boxed{\frac{1}{e^{h\nu/k_B T} - 1}}</span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a>の **指数関数因子**（右側、本章で解き明かした）が、統計力学（光子の Bose 統計＋熱平衡）の帰結であることを意味する。</span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a>残りは：</span>
 <span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a>本章で、中心地図 $B_\nu(T)$ の **指数関数因子 $1/(e^{h\nu/kT}-1)$** が解き明かされた：</span>
-<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Bose 統計**（光子が区別できないボソンであること）から $1/(e^{(E-\mu)/k_B T} - 1)$ という形が出る</span>
-<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**光子の化学ポテンシャル $\mu = 0$**（光子数が保存しないこと）が分母を簡単にする</span>
-<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>結果として **占有因子 $1/(e^{h\nu/k_B T} - 1)$** が現れ、これが指数関数的減衰（高振動数）と $\nu^2$ 立ち上がり（低振動数）の両方を統一的に与える</span>
-<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>第I〜III部のロードマップが完結した：</span>
-<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a>**観測される連続スペクトル → 熱平衡という条件 → 光子の Bose 統計 → 占有因子**</span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**前因子 $2h\nu^3/c^2$** ：モード密度 $\propto \nu^2$、エネルギー量子 $h\nu$、偏光自由度 2 の積。**第V部（電磁気学）と第IV部（量子論）の合作**で解き明かす</span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**$h\nu$ 自体の意味**：エネルギーが連続でなく $h\nu$ の単位で離散化されること。**第IV部（量子論）の中心テーマ**</span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a>第IV部・第V部でこれらの「なぜ」が解明されれば、中心地図プランク関数のすべての因子が逆引きで説明されたことになる。これが本書の第I〜V部全体の流れである。</span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-photon-statistics-summary .unnumbered}</span></span>
 <span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a>**次章へ**：第9〜12章では「指数の中の $h\nu$」を逆引きする。なぜエネルギーが連続でなく $h\nu$ の量子化された単位で扱われるのか。これが量子論の起源と直結する。</span>
-<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る**</span>
 <span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-photon-statistics-exercises .unnumbered}</span></span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a>本章で、中心地図 $B_\nu(T)$ の **指数関数因子 $1/(e^{h\nu/kT}-1)$** が解き明かされた：</span>
 <span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</span>
-<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 8-1　識別可能 vs 不能 ― 数え上げの違い {#ex-8-1 .unnumbered}</span></span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Bose 統計**（光子が区別できないボソンであること）から $1/(e^{(E-\mu)/k_B T} - 1)$ という形が出る</span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**光子の化学ポテンシャル $\mu = 0$**（光子数が保存しないこと）が分母を簡単にする</span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>結果として **占有因子 $1/(e^{h\nu/k_B T} - 1)$** が現れ、これが指数関数的減衰（高振動数）と $\nu^2$ 立ち上がり（低振動数）の両方を統一的に与える</span>
 <span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
-<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>§8.1 は2状態2粒子で古典4通り・Bose 3通りになることを示した。一般化する。</span>
-<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$g$ 個の状態に $N$ 個の区別できない Bose 粒子を入れる場合の数が $\binom{N+g-1}{N}$ になることを「仕切り棒（玉と仕切り）」の論法で示せ。</span>
-<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$g=2,N=2$ で値が 3 になることを確かめ、古典の $g^N=4$ と比べよ。</span>
-<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>「1 が A・2 が B」と「1 が B・2 が A」が同一状態に潰れることが、なぜ Boltzmann 統計から Bose 統計へのずれを生むのか述べよ。</span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>第I〜III部のロードマップが完結した：</span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a>**観測される連続スペクトル → 熱平衡という条件 → 光子の Bose 統計 → 占有因子**</span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a>**次章へ**：第9〜12章では「指数の中の $h\nu$」を逆引きする。なぜエネルギーが連続でなく $h\nu$ の量子化された単位で扱われるのか。これが量子論の起源と直結する。</span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-photon-statistics-exercises .unnumbered}</span></span>
 <span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§8.1 区別できない粒子</span><span class="co">](#sec-photon-statistics-indistinguishable)</span>、<span class="co">[</span><span class="ot">§8.2 Bose と Fermi</span><span class="co">](#sec-photon-statistics-bose-fermi)</span>／識別不能性の量子論的根拠は<span class="co">[</span><span class="ot">第12章</span><span class="co">](../part4/12-quantum-foundations.qmd)</span>。</span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</span>
 <span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 8-1）</span></span>
-<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a>**(1)** $N$ 個の区別できない玉を $g$ 個の状態に分けるのは、$N$ 個の玉と $g-1$ 本の仕切り棒を一列に並べる場合の数に等しい。全 $N+g-1$ 個の位置から玉の位置 $N$ 個を選ぶので $\binom{N+g-1}{N}$。</span>
-<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a>**(2)** $g=2,N=2$：$\binom{2+2-1}{2}=\binom{3}{2}=3$。Bose は3通り（(2,0),(1,1),(0,2)）。古典は各粒子が独立に2状態を選べて $2^2=4$。識別不能だと1つ少ない。</span>
-<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a>**(3)** 古典では「1 が A・2 が B」と「1 が B・2 が A」を別状態と数えるが、識別不能だと粒子のラベルに意味がなく同一状態に潰れる。この「数え過ぎの打ち消し」が状態数を変え、最大エントロピー分布が Boltzmann（$\propto e^{-\beta E}$）から Bose（$1/(e^{\beta E}-1)$ 型）へずれる起源になる。特に同じ状態に複数入れることが許される効果が分母の $-1$ を生む。</span>
-<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a>**答え**：場合の数 $\binom{N+g-1}{N}$（仕切り棒法）、$g=N=2$ で 3（古典は4）。ラベルの消失が Bose 統計へのずれを生む。</span>
-<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 8-1　識別可能 vs 不能 ― 数え上げの違い {#ex-8-1 .unnumbered}</span></span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a>§8.1 は2状態2粒子で古典4通り・Bose 3通りになることを示した。一般化する。</span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$g$ 個の状態に $N$ 個の区別できない Bose 粒子を入れる場合の数が $\binom{N+g-1}{N}$ になることを「仕切り棒（玉と仕切り）」の論法で示せ。</span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$g=2,N=2$ で値が 3 になることを確かめ、古典の $g^N=4$ と比べよ。</span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>「1 が A・2 が B」と「1 が B・2 が A」が同一状態に潰れることが、なぜ Boltzmann 統計から Bose 統計へのずれを生むのか述べよ。</span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§8.1 区別できない粒子</span><span class="co">](#sec-photon-statistics-indistinguishable)</span>、<span class="co">[</span><span class="ot">§8.2 Bose と Fermi</span><span class="co">](#sec-photon-statistics-bose-fermi)</span>／識別不能性の量子論的根拠は<span class="co">[</span><span class="ot">第12章</span><span class="co">](../part4/12-quantum-foundations.qmd)</span>。</span>
 <span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 8-2　Bose–Einstein 分布の導出 {#ex-8-2 .unnumbered}</span></span>
-<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆☆ </span><span class="co">] [tag:導出補完]</span></span>
-<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a>§8.3 は導出をオンライン版の畳んだノートに収めた。これを自力で展開する。状態群 $i$（縮退度 $g_i$、占有 $N_i$）のミクロ状態数 $W=\displaystyle\prod_i\frac{(N_i+g_i-1)!}{N_i!\,(g_i-1)!}$。</span>
-<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$\ln W$ に Stirling 近似を適用し（$g_i\gg1$ とみて $g_i-1\approx g_i$）、$\ln W\simeq\sum_i<span class="co">[</span><span class="ot">(N_i+g_i)\ln(N_i+g_i)-N_i\ln N_i-g_i\ln g_i</span><span class="co">]</span>$ を示せ。</span>
-<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>制約 $\sum N_i=N$、$\sum N_iE_i=E$ のもとで Lagrange 乗数 $\alpha,\beta$ を用い、$\partial/\partial N_i=0$ から $\ln\dfrac{N_i+g_i}{N_i}=\alpha+\beta E_i$ を導け。</span>
-<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>占有数 $\bar n_i=N_i/g_i$ について解き、$\bar n_i=\dfrac{1}{e^{\alpha+\beta E_i}-1}=\dfrac{1}{e^{(E_i-\mu)/k_BT}-1}$ を示せ（$\beta=1/k_BT$、$\alpha=-\mu/k_BT$）。</span>
-<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§8.3 Bose–Einstein 分布</span><span class="co">](#sec-photon-statistics-bose-einstein)</span>／Lagrange 法の枠組みは<span class="co">[</span><span class="ot">§6.4</span><span class="co">](../part3/06-thermal-equilibrium.qmd#sec-thermal-equilibrium-max-entropy)</span>（<span class="co">[</span><span class="ot">演習 6-3</span><span class="co">](../part3/06-thermal-equilibrium.qmd#ex-6-3)</span>）、$\mu=0$ は<span class="co">[</span><span class="ot">演習 8-3</span><span class="co">](#ex-8-3)</span>。</span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 8-1）</span></span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a>**(1)** $N$ 個の区別できない玉を $g$ 個の状態に分けるのは、$N$ 個の玉と $g-1$ 本の仕切り棒を一列に並べる場合の数に等しい。全 $N+g-1$ 個の位置から玉の位置 $N$ 個を選ぶので $\binom{N+g-1}{N}$。</span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>**(2)** $g=2,N=2$：$\binom{2+2-1}{2}=\binom{3}{2}=3$。Bose は3通り（(2,0),(1,1),(0,2)）。古典は各粒子が独立に2状態を選べて $2^2=4$。識別不能だと1つ少ない。</span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>**(3)** 古典では「1 が A・2 が B」と「1 が B・2 が A」を別状態と数えるが、識別不能だと粒子のラベルに意味がなく同一状態に潰れる。この「数え過ぎの打ち消し」が状態数を変え、最大エントロピー分布が Boltzmann（$\propto e^{-\beta E}$）から Bose（$1/(e^{\beta E}-1)$ 型）へずれる起源になる。特に同じ状態に複数入れることが許される効果が分母の $-1$ を生む。</span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a>**答え**：場合の数 $\binom{N+g-1}{N}$（仕切り棒法）、$g=N=2$ で 3（古典は4）。ラベルの消失が Bose 統計へのずれを生む。</span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 8-2）</span></span>
-<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a>**(1)** $\ln W=\sum_i<span class="co">[</span><span class="ot">\ln(N_i+g_i-1)!-\ln N_i!-\ln(g_i-1)!</span><span class="co">]</span>$。Stirling $\ln x!\simeq x\ln x-x$ と $g_i-1\approx g_i$ を使うと、$-x$ の項は制約で打ち消し合い</span>
-<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a>\ln W\simeq\sum_i\left<span class="co">[</span><span class="ot">(N_i+g_i)\ln(N_i+g_i)-N_i\ln N_i-g_i\ln g_i\right</span><span class="co">]</span>.</span>
-<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a>**(2)** 変分関数 $\Phi=\ln W-\alpha\sum_j N_j-\beta\sum_j N_jE_j$。$N_i$ で微分：</span>
-<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a>\frac{\partial\ln W}{\partial N_i}=\ln(N_i+g_i)+1-\ln N_i-1=\ln\frac{N_i+g_i}{N_i}.</span>
-<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 8-2　Bose–Einstein 分布の導出 {#ex-8-2 .unnumbered}</span></span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a>§8.3 は導出をオンライン版の畳んだノートに収めた。これを自力で展開する。状態群 $i$（縮退度 $g_i$、占有 $N_i$）のミクロ状態数 $W=\displaystyle\prod_i\frac{(N_i+g_i-1)!}{N_i!\,(g_i-1)!}$。</span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$\ln W$ に Stirling 近似を適用し（$g_i\gg1$ とみて $g_i-1\approx g_i$）、$\ln W\simeq\sum_i<span class="co">[</span><span class="ot">(N_i+g_i)\ln(N_i+g_i)-N_i\ln N_i-g_i\ln g_i</span><span class="co">]</span>$ を示せ。</span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>制約 $\sum N_i=N$、$\sum N_iE_i=E$ のもとで Lagrange 乗数 $\alpha,\beta$ を用い、$\partial/\partial N_i=0$ から $\ln\dfrac{N_i+g_i}{N_i}=\alpha+\beta E_i$ を導け。</span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>占有数 $\bar n_i=N_i/g_i$ について解き、$\bar n_i=\dfrac{1}{e^{\alpha+\beta E_i}-1}=\dfrac{1}{e^{(E_i-\mu)/k_BT}-1}$ を示せ（$\beta=1/k_BT$、$\alpha=-\mu/k_BT$）。</span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§8.3 Bose–Einstein 分布</span><span class="co">](#sec-photon-statistics-bose-einstein)</span>／Lagrange 法の枠組みは<span class="co">[</span><span class="ot">§6.4</span><span class="co">](../part3/06-thermal-equilibrium.qmd#sec-thermal-equilibrium-max-entropy)</span>（<span class="co">[</span><span class="ot">演習 6-3</span><span class="co">](../part3/06-thermal-equilibrium.qmd#ex-6-3)</span>）、$\mu=0$ は<span class="co">[</span><span class="ot">演習 8-3</span><span class="co">](#ex-8-3)</span>。</span>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 8-2）</span></span>
 <span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a>\frac{\partial\Phi}{\partial N_i}=\ln\frac{N_i+g_i}{N_i}-\alpha-\beta E_i=0\ \Rightarrow\ \ln\frac{N_i+g_i}{N_i}=\alpha+\beta E_i.</span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a>**(1)** $\ln W=\sum_i<span class="co">[</span><span class="ot">\ln(N_i+g_i-1)!-\ln N_i!-\ln(g_i-1)!</span><span class="co">]</span>$。Stirling $\ln x!\simeq x\ln x-x$ と $g_i-1\approx g_i$ を使うと、$-x$ の項は制約で打ち消し合い</span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a>**(3)** $\dfrac{N_i+g_i}{N_i}=1+\dfrac{g_i}{N_i}=1+\dfrac{1}{\bar n_i}=e^{\alpha+\beta E_i}$ ゆえ $\dfrac{1}{\bar n_i}=e^{\alpha+\beta E_i}-1$、すなわち</span>
+<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a>\ln W\simeq\sum_i\left<span class="co">[</span><span class="ot">(N_i+g_i)\ln(N_i+g_i)-N_i\ln N_i-g_i\ln g_i\right</span><span class="co">]</span>.</span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a>\bar n_i=\frac{1}{e^{\alpha+\beta E_i}-1}=\frac{1}{e^{(E_i-\mu)/k_BT}-1}.</span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a>**(2)** 変分関数 $\Phi=\ln W-\alpha\sum_j N_j-\beta\sum_j N_jE_j$。$N_i$ で微分：</span>
+<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>**答え**：Stirling＋Lagrange で $\ln\frac{N_i+g_i}{N_i}=\alpha+\beta E_i$、解いて $\bar n_i=1/(e^{(E_i-\mu)/k_BT}-1)$。分母の $-1$ が Bose の特徴。</span>
-<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 8-3　光子の μ=0 と CMB 光子数密度（T³ 則） {#ex-8-3 .unnumbered}</span></span>
-<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
-<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a>§8.4 は光子の化学ポテンシャルが $\mu=0$ で $\bar n=1/(e^{h\nu/kT}-1)$ になり、$n_\gamma\propto T^3$ と述べた。確かめる。</span>
-<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>なぜ光子は $\mu=0$ なのか、粒子数の保存／非保存の観点から述べよ。</span>
-<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>光子数密度 $n_\gamma=\displaystyle\int_0^\infty g(\nu)\bar n(\nu)\,d\nu$（$g(\nu)=8\pi\nu^2/c^3$）で $x=h\nu/k_BT$ と置換し、$n_\gamma=\dfrac{8\pi}{c^3}\left(\dfrac{k_BT}{h}\right)^3\displaystyle\int_0^\infty\frac{x^2}{e^x-1}dx$ を導け。</span>
-<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>$\displaystyle\int_0^\infty\frac{x^2}{e^x-1}dx=2\zeta(3)\approx2.404$ を用い、$T_\mathrm{CMB}=2.725$ K で $n_\gamma$ を計算して $\approx411$ cm$^{-3}$ を確認せよ。</span>
-<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§8.4 光子の化学ポテンシャル</span><span class="co">](#sec-photon-statistics-mu-zero)</span>／$\mu$ 歪みと CMB は<span class="co">[</span><span class="ot">第16章</span><span class="co">](../part6/16-cmb.qmd)</span>、モード密度 $g(\nu)$ の導出は<span class="co">[</span><span class="ot">第14章</span><span class="co">](../part5/14-cavity-modes.qmd)</span>、$\int x^3$ 版（エネルギー密度）は<span class="co">[</span><span class="ot">演習 10-3</span><span class="co">](../part4/10-planck-quantum.qmd#ex-10-3)</span>。</span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a>\frac{\partial\ln W}{\partial N_i}=\ln(N_i+g_i)+1-\ln N_i-1=\ln\frac{N_i+g_i}{N_i}.</span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a>\frac{\partial\Phi}{\partial N_i}=\ln\frac{N_i+g_i}{N_i}-\alpha-\beta E_i=0\ \Rightarrow\ \ln\frac{N_i+g_i}{N_i}=\alpha+\beta E_i.</span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a>**(3)** $\dfrac{N_i+g_i}{N_i}=1+\dfrac{g_i}{N_i}=1+\dfrac{1}{\bar n_i}=e^{\alpha+\beta E_i}$ ゆえ $\dfrac{1}{\bar n_i}=e^{\alpha+\beta E_i}-1$、すなわち</span>
+<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>\bar n_i=\frac{1}{e^{\alpha+\beta E_i}-1}=\frac{1}{e^{(E_i-\mu)/k_BT}-1}.</span>
+<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a>**答え**：Stirling＋Lagrange で $\ln\frac{N_i+g_i}{N_i}=\alpha+\beta E_i$、解いて $\bar n_i=1/(e^{(E_i-\mu)/k_BT}-1)$。分母の $-1$ が Bose の特徴。</span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 8-3）</span></span>
-<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a>**(1)** 化学ポテンシャルは粒子数 $N$ が保存量のときに意味を持つ「粒子1個追加の自由エネルギー代償」。光子は物質との吸収・放出で生成・消滅し、総数が保存しない。熱平衡では $N_\gamma$ が温度・体積から自動的に決まる従属量となり、追加の代償がない＝$\mu=0$。</span>
-<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a>**(2)** $x=h\nu/k_BT$、$\nu=k_BTx/h$、$d\nu=(k_BT/h)dx$：</span>
-<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a>n_\gamma=\int_0^\infty\frac{8\pi\nu^2}{c^3}\frac{d\nu}{e^{h\nu/k_BT}-1}=\frac{8\pi}{c^3}\left(\frac{k_BT}{h}\right)^3\int_0^\infty\frac{x^2}{e^x-1}dx.</span>
-<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a>**(3)** 積分 $=2.404$。$k_BT/h$ を計算：$k_BT=1.381\times10^{-23}\times2.725=3.76\times10^{-23}$ J、$/h=3.76\times10^{-23}/6.626\times10^{-34}=5.68\times10^{10}$ s$^{-1}$。3乗 $=1.83\times10^{32}$。$8\pi/c^3=25.13/(3.00\times10^8)^3=9.31\times10^{-25}$。掛け合わせ：</span>
-<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a>n_\gamma=9.31\times10^{-25}\times1.83\times10^{32}\times2.404\approx4.1\times10^8\ \mathrm{m^{-3}}=411\ \mathrm{cm^{-3}}.</span>
-<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 8-3　光子の μ=0 と CMB 光子数密度（T³ 則） {#ex-8-3 .unnumbered}</span></span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a>§8.4 は光子の化学ポテンシャルが $\mu=0$ で $\bar n=1/(e^{h\nu/kT}-1)$ になり、$n_\gamma\propto T^3$ と述べた。確かめる。</span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>なぜ光子は $\mu=0$ なのか、粒子数の保存／非保存の観点から述べよ。</span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>光子数密度 $n_\gamma=\displaystyle\int_0^\infty g(\nu)\bar n(\nu)\,d\nu$（$g(\nu)=8\pi\nu^2/c^3$）で $x=h\nu/k_BT$ と置換し、$n_\gamma=\dfrac{8\pi}{c^3}\left(\dfrac{k_BT}{h}\right)^3\displaystyle\int_0^\infty\frac{x^2}{e^x-1}dx$ を導け。</span>
+<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>$\displaystyle\int_0^\infty\frac{x^2}{e^x-1}dx=2\zeta(3)\approx2.404$ を用い、$T_\mathrm{CMB}=2.725$ K で $n_\gamma$ を計算して $\approx411$ cm$^{-3}$ を確認せよ。</span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§8.4 光子の化学ポテンシャル</span><span class="co">](#sec-photon-statistics-mu-zero)</span>／$\mu$ 歪みと CMB は<span class="co">[</span><span class="ot">第16章</span><span class="co">](../part6/16-cmb.qmd)</span>、モード密度 $g(\nu)$ の導出は<span class="co">[</span><span class="ot">第14章</span><span class="co">](../part5/14-cavity-modes.qmd)</span>、$\int x^3$ 版（エネルギー密度）は<span class="co">[</span><span class="ot">演習 10-3</span><span class="co">](../part4/10-planck-quantum.qmd#ex-10-3)</span>。</span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 8-3）</span></span>
+<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>**(1)** 化学ポテンシャルは粒子数 $N$ が保存量のときに意味を持つ「粒子1個追加の自由エネルギー代償」。光子は物質との吸収・放出で生成・消滅し、総数が保存しない。熱平衡では $N_\gamma$ が温度・体積から自動的に決まる従属量となり、追加の代償がない＝$\mu=0$。</span>
 <span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a>観測値とよく一致。$n_\gamma\propto T^3$ は前因子 $(k_BT/h)^3$ から明らか。</span>
+<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a>**(2)** $x=h\nu/k_BT$、$\nu=k_BTx/h$、$d\nu=(k_BT/h)dx$：</span>
 <span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a>**答え**：光子数非保存ゆえ $\mu=0$。$n_\gamma=\frac{8\pi}{c^3}(k_BT/h)^3\cdot2.404\approx411$ cm$^{-3}$（$T=2.725$ K）、$\propto T^3$。</span>
-<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 8-4　光子気体の P=u/3 と放射圧 vs ガス圧 {#ex-8-4 .unnumbered}</span></span>
-<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
-<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a>§8.5 は光子気体の圧力 $P=u/3=aT^4/3$ を与えた。理想気体と比べ、放射圧が効く条件を探る。</span>
-<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>等方放射場では $P_\nu=u_\nu/3$（演習 4-1）。これが理想気体 $P_\mathrm{gas}=nk_BT$ と「温度・密度への依存」でどう違うか述べよ。</span>
-<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>放射圧 $P_\mathrm{rad}=aT^4/3$ とガス圧 $P_\mathrm{gas}=nk_BT$ が等しくなる条件 $T^3/n=3k_B/a$ を導け。これは高温・低密度で放射圧が優勢になることを示す。</span>
-<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>太陽中心（$T\simeq1.5\times10^7$ K、$n\simeq10^{32}$ m$^{-3}$）で $P_\mathrm{rad}/P_\mathrm{gas}$ を概算し、放射圧が支配的でない（がより重い星では効く）ことを確認せよ。$a=7.566\times10^{-16}$ J m$^{-3}$K$^{-4}$。</span>
-<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§8.5 光子気体の統計</span><span class="co">](#sec-photon-statistics-photon-gas)</span>／$P_\nu=u_\nu/3$ の導出は<span class="co">[</span><span class="ot">演習 4-1</span><span class="co">](../part2/04-radiation-field.qmd#ex-4-1)</span>、Eddington 限界・降着は<span class="co">[</span><span class="ot">第18章</span><span class="co">](../part6/18-accretion-high-energy.qmd)</span>。</span>
+<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a>n_\gamma=\int_0^\infty\frac{8\pi\nu^2}{c^3}\frac{d\nu}{e^{h\nu/k_BT}-1}=\frac{8\pi}{c^3}\left(\frac{k_BT}{h}\right)^3\int_0^\infty\frac{x^2}{e^x-1}dx.</span>
+<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a>**(3)** 積分 $=2.404$。$k_BT/h$ を計算：$k_BT=1.381\times10^{-23}\times2.725=3.76\times10^{-23}$ J、$/h=3.76\times10^{-23}/6.626\times10^{-34}=5.68\times10^{10}$ s$^{-1}$。3乗 $=1.83\times10^{32}$。$8\pi/c^3=25.13/(3.00\times10^8)^3=9.31\times10^{-25}$。掛け合わせ：</span>
+<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a>n_\gamma=9.31\times10^{-25}\times1.83\times10^{32}\times2.404\approx4.1\times10^8\ \mathrm{m^{-3}}=411\ \mathrm{cm^{-3}}.</span>
+<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a>観測値とよく一致。$n_\gamma\propto T^3$ は前因子 $(k_BT/h)^3$ から明らか。</span>
+<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a>**答え**：光子数非保存ゆえ $\mu=0$。$n_\gamma=\frac{8\pi}{c^3}(k_BT/h)^3\cdot2.404\approx411$ cm$^{-3}$（$T=2.725$ K）、$\propto T^3$。</span>
+<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 8-4）</span></span>
-<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a>**(1)** 放射圧 $P_\mathrm{rad}=u/3=aT^4/3$ は**温度の4乗**に効き密度には依らない（光子数自体が $T^3$ で決まる）。理想気体 $P_\mathrm{gas}=nk_BT$ は密度 $n$ に比例し温度には1乗。よって温度を上げ密度を下げるほど放射圧が相対的に強くなる。</span>
-<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a>**(2)** $P_\mathrm{rad}=P_\mathrm{gas}$ とおく：$\dfrac{aT^4}{3}=nk_BT\Rightarrow\dfrac{T^3}{n}=\dfrac{3k_B}{a}$。左辺が大きい（高温・低密度）ほど放射圧優勢。</span>
-<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a>**(3)** $P_\mathrm{rad}=aT^4/3=7.566\times10^{-16}\times(1.5\times10^7)^4/3$。$(1.5\times10^7)^4=5.06\times10^{28}$。$\times7.566\times10^{-16}=3.83\times10^{13}$、$/3=1.28\times10^{13}$ Pa。</span>
-<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a>$P_\mathrm{gas}=nk_BT=10^{32}\times1.381\times10^{-23}\times1.5\times10^7=2.07\times10^{16}$ Pa。</span>
-<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a>比 $P_\mathrm{rad}/P_\mathrm{gas}\approx1.28\times10^{13}/2.07\times10^{16}\approx6\times10^{-4}$。太陽中心では放射圧は約0.06%で支配的でない。質量の大きい星ほど中心温度が高く密度が相対的に低いため放射圧が増し、超大質量星では放射圧が支配的になって Eddington 限界（星の質量上限）を与える。</span>
-<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a>**答え**：$P_\mathrm{rad}=aT^4/3$（密度非依存）、$P_\mathrm{gas}=nk_BT$。等しい条件 $T^3/n=3k_B/a$。太陽中心で $P_\mathrm{rad}/P_\mathrm{gas}\approx6\times10^{-4}$（重い星では支配的）。</span>
-<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-photon-statistics-further .unnumbered}</span></span>
-<span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pathria &amp; Beale, *Statistical Mechanics* (Academic Press, 3rd ed., 2011) — 第6章「Boson Statistics」が標準的</span>
-<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Huang, *Statistical Mechanics* (Wiley, 2nd ed., 1987) — Bose–Einstein 凝縮の体系的扱い</span>
-<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mandl, *Statistical Physics* (Wiley, 2nd ed., 1988) — 学部向けに丁寧な扱い</span>
-<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>田崎晴明『統計力学 II』（培風館, 2008）— Bose 統計と Planck 分布の和文教科書</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 8-4　光子気体の P=u/3 と放射圧 vs ガス圧 {#ex-8-4 .unnumbered}</span></span>
+<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a>§8.5 は光子気体の圧力 $P=u/3=aT^4/3$ を与えた。理想気体と比べ、放射圧が効く条件を探る。</span>
+<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>等方放射場では $P_\nu=u_\nu/3$（演習 4-1）。これが理想気体 $P_\mathrm{gas}=nk_BT$ と「温度・密度への依存」でどう違うか述べよ。</span>
+<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>放射圧 $P_\mathrm{rad}=aT^4/3$ とガス圧 $P_\mathrm{gas}=nk_BT$ が等しくなる条件 $T^3/n=3k_B/a$ を導け。これは高温・低密度で放射圧が優勢になることを示す。</span>
+<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>太陽中心（$T\simeq1.5\times10^7$ K、$n\simeq10^{32}$ m$^{-3}$）で $P_\mathrm{rad}/P_\mathrm{gas}$ を概算し、放射圧が支配的でない（がより重い星では効く）ことを確認せよ。$a=7.566\times10^{-16}$ J m$^{-3}$K$^{-4}$。</span>
+<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§8.5 光子気体の統計</span><span class="co">](#sec-photon-statistics-photon-gas)</span>／$P_\nu=u_\nu/3$ の導出は<span class="co">[</span><span class="ot">演習 4-1</span><span class="co">](../part2/04-radiation-field.qmd#ex-4-1)</span>、Eddington 限界・降着は<span class="co">[</span><span class="ot">第18章</span><span class="co">](../part6/18-accretion-high-energy.qmd)</span>。</span>
+<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 8-4）</span></span>
+<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a>**(1)** 放射圧 $P_\mathrm{rad}=u/3=aT^4/3$ は**温度の4乗**に効き密度には依らない（光子数自体が $T^3$ で決まる）。理想気体 $P_\mathrm{gas}=nk_BT$ は密度 $n$ に比例し温度には1乗。よって温度を上げ密度を下げるほど放射圧が相対的に強くなる。</span>
+<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a>**(2)** $P_\mathrm{rad}=P_\mathrm{gas}$ とおく：$\dfrac{aT^4}{3}=nk_BT\Rightarrow\dfrac{T^3}{n}=\dfrac{3k_B}{a}$。左辺が大きい（高温・低密度）ほど放射圧優勢。</span>
+<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a>**(3)** $P_\mathrm{rad}=aT^4/3=7.566\times10^{-16}\times(1.5\times10^7)^4/3$。$(1.5\times10^7)^4=5.06\times10^{28}$。$\times7.566\times10^{-16}=3.83\times10^{13}$、$/3=1.28\times10^{13}$ Pa。</span>
+<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a>$P_\mathrm{gas}=nk_BT=10^{32}\times1.381\times10^{-23}\times1.5\times10^7=2.07\times10^{16}$ Pa。</span>
+<span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a>比 $P_\mathrm{rad}/P_\mathrm{gas}\approx1.28\times10^{13}/2.07\times10^{16}\approx6\times10^{-4}$。太陽中心では放射圧は約0.06%で支配的でない。質量の大きい星ほど中心温度が高く密度が相対的に低いため放射圧が増し、超大質量星では放射圧が支配的になって Eddington 限界（星の質量上限）を与える。</span>
+<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-397"><a href="#cb1-397" aria-hidden="true" tabindex="-1"></a>**答え**：$P_\mathrm{rad}=aT^4/3$（密度非依存）、$P_\mathrm{gas}=nk_BT$。等しい条件 $T^3/n=3k_B/a$。太陽中心で $P_\mathrm{rad}/P_\mathrm{gas}\approx6\times10^{-4}$（重い星では支配的）。</span>
+<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-photon-statistics-further .unnumbered}</span></span>
+<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pathria &amp; Beale, *Statistical Mechanics* (Academic Press, 3rd ed., 2011) — 第6章「Boson Statistics」が標準的</span>
+<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Huang, *Statistical Mechanics* (Wiley, 2nd ed., 1987) — Bose–Einstein 凝縮の体系的扱い</span>
+<span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mandl, *Statistical Physics* (Wiley, 2nd ed., 1988) — 学部向けに丁寧な扱い</span>
+<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>田崎晴明『統計力学 II』（培風館, 2008）— Bose 統計と Planck 分布の和文教科書</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

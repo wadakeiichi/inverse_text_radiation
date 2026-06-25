@@ -479,6 +479,12 @@ window.Quarto = {
   <a href="../appendix/C-glossary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">用語索引（和英・英和）</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendix/D-correspondence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">付録 D　標準教科書との対応表</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -886,6 +892,16 @@ A_{ul} = \frac{8\pi^2 e^2 \nu_0^2}{m_e c^3}\, \frac{g_l}{g_u}\, f_{lu} \quad (\t
 </ul>
 <p>これらの弱い遷移は、地上の実験室では <strong>衝突脱励起</strong> で先に消されて観測できないが、<strong>極低密度の宇宙環境</strong> では時間が許されて自発放出が起こる。</p>
 <p>第20章 §20.3 で触れた <strong>禁制線</strong>（[O III] $$5007 等）の正体はこれ。</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>前因子の読み替え ― 禁制線・21 cm をどう中心地図に乗せるか</strong>：中心地図の前因子 <span class="math inline">\pi e^2/m_e c</span> は古典 Lorentz 振動子＝<strong>電気双極子（E1）遷移</strong> に対応する（§22.4b）。M1・E2 の禁制線や 21 cm 線（基底状態超微細構造の M1）は E1 ではないので、この前因子と通常の振動子強度 <span class="math inline">f_{lu}</span> をそのまま当てはめられない。実務では順序を逆にする ― <strong>測定（または計算）された自発放出率 <span class="math inline">A_{ul}</span> を出発点に</strong>、Einstein 関係 <a href="#eq-A-f-conversion" class="quarto-xref">式&nbsp;<span>25.17</span></a> を E1 に限らず一般化して逆に解き、実効的な <span class="math inline">B_{lu}</span>（あるいは実効振動子強度 <span class="math inline">f_{lu}\sim\alpha^2 f_{E1}</span>）を得る。こうして禁制線も 21 cm 線も同じ中心地図 <span class="math inline">\alpha_\nu=(\pi e^2/m_e c)f_{lu}n_l\phi</span> の枠に乗る。21 cm 線への具体的な適用は第20章 §20.4 を参照。</p>
+</div>
+</div>
+</div>
 <div class="callout callout-style-simple callout-tip">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1771,175 +1787,179 @@ A_{ul} = \frac{8\pi^2 e^2 \nu_0^2}{m_e c^3}\, \frac{g_l}{g_u}\, f_{lu} \quad (\t
 <span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a>第20章 §20.3 で触れた **禁制線**（<span class="co">[</span><span class="ot">O III</span><span class="co">]</span> $\lambda$5007 等）の正体はこれ。</span>
 <span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
-<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a>**問い**：<span class="co">[</span><span class="ot">O III</span><span class="co">]</span> $\lambda$5007 は「禁制」と呼ばれるが、HII 領域や惑星状星雲では H$\beta$ よりも強く観測されることがある。なぜか？</span>
-<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a>**短答**：HII 領域の電子密度（$n_e \sim 10^2$〜$10^4$ cm$^{-3}$）では衝突脱励起時間が長く、$A_{ul} \sim 10^{-2}$ s$^{-1}$ の禁制線でも自発放出が間に合う。一方、[O III] のエネルギー準位構造は **衝突励起断面積が大きく**、励起される割合も高い。両者の組合せで、許容線と同程度の強度が出る。</span>
-<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>**もう一歩**：[O III] $\lambda$5007 の強度は、星雲の **電子温度** に強く依存し、§24.3 の温度診断に使われる。「禁制」という言葉は、地上実験室での測りにくさを反映するが、宇宙物理では主役級の道具</span>
-<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a><span class="fu">## 22.6 多電子原子と分子 ― 水素原子の枠組みの拡張 {#sec-atomic-multi-electron}</span></span>
-<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3-B4</span><span class="co">]</span></span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple"}</span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a>**前因子の読み替え ― 禁制線・21 cm をどう中心地図に乗せるか**：中心地図の前因子 $\pi e^2/m_e c$ は古典 Lorentz 振動子＝**電気双極子（E1）遷移** に対応する（§22.4b）。M1・E2 の禁制線や 21 cm 線（基底状態超微細構造の M1）は E1 ではないので、この前因子と通常の振動子強度 $f_{lu}$ をそのまま当てはめられない。実務では順序を逆にする ― **測定（または計算）された自発放出率 $A_{ul}$ を出発点に**、Einstein 関係 @eq-A-f-conversion を E1 に限らず一般化して逆に解き、実効的な $B_{lu}$（あるいは実効振動子強度 $f_{lu}\sim\alpha^2 f_{E1}$）を得る。こうして禁制線も 21 cm 線も同じ中心地図 $\alpha_\nu=(\pi e^2/m_e c)f_{lu}n_l\phi$ の枠に乗る。21 cm 線への具体的な適用は第20章 §20.4 を参照。</span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>**問い**：<span class="co">[</span><span class="ot">O III</span><span class="co">]</span> $\lambda$5007 は「禁制」と呼ばれるが、HII 領域や惑星状星雲では H$\beta$ よりも強く観測されることがある。なぜか？</span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>**短答**：HII 領域の電子密度（$n_e \sim 10^2$〜$10^4$ cm$^{-3}$）では衝突脱励起時間が長く、$A_{ul} \sim 10^{-2}$ s$^{-1}$ の禁制線でも自発放出が間に合う。一方、[O III] のエネルギー準位構造は **衝突励起断面積が大きく**、励起される割合も高い。両者の組合せで、許容線と同程度の強度が出る。</span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a>**もう一歩**：[O III] $\lambda$5007 の強度は、星雲の **電子温度** に強く依存し、§24.3 の温度診断に使われる。「禁制」という言葉は、地上実験室での測りにくさを反映するが、宇宙物理では主役級の道具</span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>水素以外の原子では、複数の電子が同時に存在するため、$\psi$ は単一粒子波動関数の積では書けない（Pauli の排他律と電子間相互作用）。代わりに：</span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a><span class="fu">## 22.6 多電子原子と分子 ― 水素原子の枠組みの拡張 {#sec-atomic-multi-electron}</span></span>
 <span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Hartree-Fock 近似**：各電子の波動関数を、他電子の平均場の中で解く</span>
-<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**項記号**（**term symbol**）：原子の状態を $^{2S+1}L_J$ で表す（例：太陽 D 線の上準位は $^2P_{3/2}$ と $^2P_{1/2}$）</span>
-<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**微細構造**：スピン-軌道結合による準位分裂、線分裂の起源</span>
-<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**超微細構造**：核スピンとの結合、21 cm 線の起源（§20.4）</span>
-<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>分子では、**回転・振動準位** が加わる：</span>
-<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**回転準位**：$E_J = \hbar^2 J(J+1) / 2I$、$I$ は慣性モーメント。電波・サブミリ波</span>
-<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**振動準位**：$E_v = \hbar \omega (v + 1/2)$、$\omega$ は分子振動振動数。中間赤外</span>
-<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**電子準位**：原子と同類。紫外〜可視</span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3-B4</span><span class="co">]</span></span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a>水素以外の原子では、複数の電子が同時に存在するため、$\psi$ は単一粒子波動関数の積では書けない（Pauli の排他律と電子間相互作用）。代わりに：</span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Hartree-Fock 近似**：各電子の波動関数を、他電子の平均場の中で解く</span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**項記号**（**term symbol**）：原子の状態を $^{2S+1}L_J$ で表す（例：太陽 D 線の上準位は $^2P_{3/2}$ と $^2P_{1/2}$）</span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**微細構造**：スピン-軌道結合による準位分裂、線分裂の起源</span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**超微細構造**：核スピンとの結合、21 cm 線の起源（§20.4）</span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>分子では、**回転・振動準位** が加わる：</span>
 <span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a>これらの組合せで、分子線スペクトルの **巨大なライン群（rotational band 等）** が生まれる。</span>
-<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning appearance="simple"}</span>
-<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a>**注意（観測）**：分子線スペクトルは原子線より遥かに複雑だが、回転定数 $B$ と振動定数 $\omega_e$ の **二つの定数** で大半が記述できる。NIST Molecular Spectroscopy Database 等で公開されており、観測者は分子線同定とパラメータ決定にこれを利用する</span>
-<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**回転準位**：$E_J = \hbar^2 J(J+1) / 2I$、$I$ は慣性モーメント。電波・サブミリ波</span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**振動準位**：$E_v = \hbar \omega (v + 1/2)$、$\omega$ は分子振動振動数。中間赤外</span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**電子準位**：原子と同類。紫外〜可視</span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a>これらの組合せで、分子線スペクトルの **巨大なライン群（rotational band 等）** が生まれる。</span>
 <span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a><span class="fu">## 22.7 使えるようになった道具 {#sec-atomic-tools .unnumbered}</span></span>
-<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rydberg 公式とその Bohr 模型・Schrödinger 方程式からの逆引き導出</span>
-<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>振動子強度 $f_{lu}$ の量子力学的意味（遷移行列要素）</span>
-<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>選択則と禁制線の起源、極低密度宇宙環境での観測可能性</span>
-<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>多電子原子（項記号、微細構造）・分子（回転・振動準位）への拡張</span>
-<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>中心地図 $\alpha_\nu$ の $f_{lu}$ と $\nu_0$ 因子の完全な逆引き</span>
-<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-atomic-physics-summary .unnumbered}</span></span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning appearance="simple"}</span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a>**注意（観測）**：分子線スペクトルは原子線より遥かに複雑だが、回転定数 $B$ と振動定数 $\omega_e$ の **二つの定数** で大半が記述できる。NIST Molecular Spectroscopy Database 等で公開されており、観測者は分子線同定とパラメータ決定にこれを利用する</span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a><span class="fu">## 22.7 使えるようになった道具 {#sec-atomic-tools .unnumbered}</span></span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rydberg 公式とその Bohr 模型・Schrödinger 方程式からの逆引き導出</span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>振動子強度 $f_{lu}$ の量子力学的意味（遷移行列要素）</span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>選択則と禁制線の起源、極低密度宇宙環境での観測可能性</span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>多電子原子（項記号、微細構造）・分子（回転・振動準位）への拡張</span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>中心地図 $\alpha_\nu$ の $f_{lu}$ と $\nu_0$ 因子の完全な逆引き</span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
-<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る**</span>
-<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>本章で、中心地図 $\alpha_\nu = (\pi e^2/m_e c) f_{lu} n_l \phi(\nu-\nu_0)$ の **線振動数 $\nu_0$** と **振動子強度 $f_{lu}$** が量子力学から逆引きされた：</span>
-<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$\nu_0$ は原子・分子のエネルギー準位差（Rydberg 公式、項記号、回転・振動準位）</span>
-<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$f_{lu}$ は遷移行列要素 $|\langle u|\mathbf{r}|l\rangle|^2$ から計算される無次元量</span>
-<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>選択則と禁制線が、観測される線スペクトルの構造（強い線・弱い線・宇宙環境固有の線）を決める</span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-atomic-physics-summary .unnumbered}</span></span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る**</span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a>本章で、中心地図 $\alpha_\nu = (\pi e^2/m_e c) f_{lu} n_l \phi(\nu-\nu_0)$ の **線振動数 $\nu_0$** と **振動子強度 $f_{lu}$** が量子力学から逆引きされた：</span>
 <span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>次章では中心地図の最後の因子 ― **線輪郭 $\phi(\nu-\nu_0)$** ― の物理を探る。</span>
-<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-atomic-physics-exercises .unnumbered}</span></span>
-<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$\nu_0$ は原子・分子のエネルギー準位差（Rydberg 公式、項記号、回転・振動準位）</span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$f_{lu}$ は遷移行列要素 $|\langle u|\mathbf{r}|l\rangle|^2$ から計算される無次元量</span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>選択則と禁制線が、観測される線スペクトルの構造（強い線・弱い線・宇宙環境固有の線）を決める</span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a>次章では中心地図の最後の因子 ― **線輪郭 $\phi(\nu-\nu_0)$** ― の物理を探る。</span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 22-1　Rydberg 公式と Hα の波長 {#ex-22-1 .unnumbered}</span></span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-atomic-physics-exercises .unnumbered}</span></span>
 <span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</span>
 <span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a>§22.1・21.2 の Rydberg 公式 $\dfrac{1}{\lambda}=R_H\left(\dfrac{1}{n_l^2}-\dfrac{1}{n_u^2}\right)$、$R_H=1.097\times10^7$ m$^{-1}$、Bohr エネルギー $E_n=-13.6/n^2$ eV。</span>
+<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 22-1　Rydberg 公式と Hα の波長 {#ex-22-1 .unnumbered}</span></span>
 <span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$h\nu=E_u-E_l$ から Rydberg 公式の形が出ることを示せ。</span>
-<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Balmer 系列の H$\alpha$（$n_l=2\to n_u=3$）の波長を計算し、656 nm を確かめよ。</span>
-<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Lyman 系列の系列極限（$n_u\to\infty$、$n_l=1$）の波長を求め、これが水素の電離エネルギー 13.6 eV に対応することを確かめよ。</span>
+<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a>§22.1・21.2 の Rydberg 公式 $\dfrac{1}{\lambda}=R_H\left(\dfrac{1}{n_l^2}-\dfrac{1}{n_u^2}\right)$、$R_H=1.097\times10^7$ m$^{-1}$、Bohr エネルギー $E_n=-13.6/n^2$ eV。</span>
 <span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§22.1 Rydberg 公式</span><span class="co">](#sec-atomic-rydberg)</span>、<span class="co">[</span><span class="ot">§22.2 Bohr 模型</span><span class="co">](#sec-atomic-bohr)</span>／準位の量子力学的起源は<span class="co">[</span><span class="ot">§12.1</span><span class="co">](../part4/12-quantum-foundations.qmd#sec-quantum-foundations-states)</span>、Boltzmann 占有は<span class="co">[</span><span class="ot">演習 7-4</span><span class="co">](../part3/07-statistical-mechanics.qmd#ex-7-4)</span>。</span>
-<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 22-1）</span></span>
-<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a>**(1)** $h\nu=E_u-E_l=-\dfrac{13.6}{n_u^2}-\left(-\dfrac{13.6}{n_l^2}\right)=13.6\,\text{eV}\left(\dfrac{1}{n_l^2}-\dfrac{1}{n_u^2}\right)$。$\nu=c/\lambda$ より $\dfrac{1}{\lambda}=\dfrac{13.6\,\text{eV}}{hc}\left(\dfrac{1}{n_l^2}-\dfrac{1}{n_u^2}\right)=R_H\left(\dfrac{1}{n_l^2}-\dfrac{1}{n_u^2}\right)$。</span>
-<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>**(2)** $\dfrac{1}{\lambda}=1.097\times10^7\left(\dfrac14-\dfrac19\right)=1.097\times10^7\times0.1389=1.524\times10^6$ m$^{-1}$。$\lambda=6.56\times10^{-7}$ m $=656$ nm。✓（太陽 Fraunhofer C 線）</span>
+<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$h\nu=E_u-E_l$ から Rydberg 公式の形が出ることを示せ。</span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Balmer 系列の H$\alpha$（$n_l=2\to n_u=3$）の波長を計算し、656 nm を確かめよ。</span>
+<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Lyman 系列の系列極限（$n_u\to\infty$、$n_l=1$）の波長を求め、これが水素の電離エネルギー 13.6 eV に対応することを確かめよ。</span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§22.1 Rydberg 公式</span><span class="co">](#sec-atomic-rydberg)</span>、<span class="co">[</span><span class="ot">§22.2 Bohr 模型</span><span class="co">](#sec-atomic-bohr)</span>／準位の量子力学的起源は<span class="co">[</span><span class="ot">§12.1</span><span class="co">](../part4/12-quantum-foundations.qmd#sec-quantum-foundations-states)</span>、Boltzmann 占有は<span class="co">[</span><span class="ot">演習 7-4</span><span class="co">](../part3/07-statistical-mechanics.qmd#ex-7-4)</span>。</span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 22-1）</span></span>
 <span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>**(3)** $n_u\to\infty$、$n_l=1$：$\dfrac{1}{\lambda}=R_H\times1=1.097\times10^7$ m$^{-1}$、$\lambda=91.2$ nm。対応エネルギー $E=hc/\lambda=1.986\times10^{-25}/9.12\times10^{-8}=2.18\times10^{-18}$ J $=13.6$ eV。これは基底状態（$n=1$）からの電離エネルギーに一致。</span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>**(1)** $h\nu=E_u-E_l=-\dfrac{13.6}{n_u^2}-\left(-\dfrac{13.6}{n_l^2}\right)=13.6\,\text{eV}\left(\dfrac{1}{n_l^2}-\dfrac{1}{n_u^2}\right)$。$\nu=c/\lambda$ より $\dfrac{1}{\lambda}=\dfrac{13.6\,\text{eV}}{hc}\left(\dfrac{1}{n_l^2}-\dfrac{1}{n_u^2}\right)=R_H\left(\dfrac{1}{n_l^2}-\dfrac{1}{n_u^2}\right)$。</span>
 <span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a>**答え**：$h\nu=E_u-E_l$ から Rydberg 公式。H$\alpha$＝656 nm。Lyman 極限 91.2 nm＝13.6 eV（電離エネルギー）。</span>
-<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 22-2　Einstein 係数と振動子強度の換算 {#ex-22-2 .unnumbered}</span></span>
-<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a>**(2)** $\dfrac{1}{\lambda}=1.097\times10^7\left(\dfrac14-\dfrac19\right)=1.097\times10^7\times0.1389=1.524\times10^6$ m$^{-1}$。$\lambda=6.56\times10^{-7}$ m $=656$ nm。✓（太陽 Fraunhofer C 線）</span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a>**(3)** $n_u\to\infty$、$n_l=1$：$\dfrac{1}{\lambda}=R_H\times1=1.097\times10^7$ m$^{-1}$、$\lambda=91.2$ nm。対応エネルギー $E=hc/\lambda=1.986\times10^{-25}/9.12\times10^{-8}=2.18\times10^{-18}$ J $=13.6$ eV。これは基底状態（$n=1$）からの電離エネルギーに一致。</span>
+<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>**答え**：$h\nu=E_u-E_l$ から Rydberg 公式。H$\alpha$＝656 nm。Lyman 極限 91.2 nm＝13.6 eV（電離エネルギー）。</span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a>§22.4b は中心地図の前因子 $\pi e^2/m_ec$ と Einstein 係数を結ぶ換算を与えた。導出を埋める。中心地図 $\alpha_\nu=\dfrac{\pi e^2}{m_ec}f_{lu}n_l\phi$ と Einstein 形 $\alpha_\nu=\dfrac{h\nu_0}{4\pi}n_lB_{lu}\phi$（誘導放出補正を当面無視）。</span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 22-2　Einstein 係数と振動子強度の換算 {#ex-22-2 .unnumbered}</span></span>
 <span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>両式を等置して $B_{lu}=\dfrac{4\pi^2e^2}{m_ec\,h\nu_0}f_{lu}$（$J_\nu$ 規約）を導け。</span>
-<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Einstein 関係 $A_{ul}=\dfrac{2h\nu_0^3}{c^2}B_{ul}=\dfrac{2h\nu_0^3}{c^2}\dfrac{g_l}{g_u}B_{lu}$ と組合せ、$A_{ul}=\dfrac{8\pi^2e^2\nu_0^2}{m_ec^3}\dfrac{g_l}{g_u}f_{lu}$ を導け。</span>
-<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>$\pi e^2/m_ec$ が「古典 Lorentz 振動子の積分吸収断面積」であり、$f_{lu}$ がその量子論的補正（Thomas-Reiche-Kuhn 和則 $\sum_u f_{lu}=N_\mathrm{electrons}$）であることの意味を一言で述べよ。</span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a>§22.4b は中心地図の前因子 $\pi e^2/m_ec$ と Einstein 係数を結ぶ換算を与えた。導出を埋める。中心地図 $\alpha_\nu=\dfrac{\pi e^2}{m_ec}f_{lu}n_l\phi$ と Einstein 形 $\alpha_\nu=\dfrac{h\nu_0}{4\pi}n_lB_{lu}\phi$（誘導放出補正を当面無視）。</span>
 <span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§22.4b 前因子の逆引き</span><span class="co">](#sec-atomic-lorentz-prefactor)</span>、<span class="co">[</span><span class="ot">§22.4 振動子強度</span><span class="co">](#sec-atomic-oscillator-strength)</span>／Einstein 関係は<span class="co">[</span><span class="ot">演習 11-1</span><span class="co">](../part4/11-einstein-method.qmd#ex-11-1)</span>、QED からの $A_{ul}$ は<span class="co">[</span><span class="ot">§26.2</span><span class="co">](../part8/26-qed-minimum.qmd#sec-qed-minimum-spontaneous)</span>。</span>
-<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 22-2）</span></span>
-<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>**(1)** 両式の $n_l\phi$ を消して係数を等置：$\dfrac{\pi e^2}{m_ec}f_{lu}=\dfrac{h\nu_0}{4\pi}B_{lu}$。$B_{lu}$ について解く：</span>
-<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a>$$B_{lu}=\frac{4\pi}{h\nu_0}\cdot\frac{\pi e^2}{m_ec}f_{lu}=\frac{4\pi^2e^2}{m_ec\,h\nu_0}f_{lu}.$$</span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>両式を等置して $B_{lu}=\dfrac{4\pi^2e^2}{m_ec\,h\nu_0}f_{lu}$（$J_\nu$ 規約）を導け。</span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Einstein 関係 $A_{ul}=\dfrac{2h\nu_0^3}{c^2}B_{ul}=\dfrac{2h\nu_0^3}{c^2}\dfrac{g_l}{g_u}B_{lu}$ と組合せ、$A_{ul}=\dfrac{8\pi^2e^2\nu_0^2}{m_ec^3}\dfrac{g_l}{g_u}f_{lu}$ を導け。</span>
+<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>$\pi e^2/m_ec$ が「古典 Lorentz 振動子の積分吸収断面積」であり、$f_{lu}$ がその量子論的補正（Thomas-Reiche-Kuhn 和則 $\sum_u f_{lu}=N_\mathrm{electrons}$）であることの意味を一言で述べよ。</span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§22.4b 前因子の逆引き</span><span class="co">](#sec-atomic-lorentz-prefactor)</span>、<span class="co">[</span><span class="ot">§22.4 振動子強度</span><span class="co">](#sec-atomic-oscillator-strength)</span>／Einstein 関係は<span class="co">[</span><span class="ot">演習 11-1</span><span class="co">](../part4/11-einstein-method.qmd#ex-11-1)</span>、QED からの $A_{ul}$ は<span class="co">[</span><span class="ot">§26.2</span><span class="co">](../part8/26-qed-minimum.qmd#sec-qed-minimum-spontaneous)</span>。</span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 22-2）</span></span>
 <span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a>**(2)** $B_{ul}=（g_l/g_u)B_{lu}$ を $A_{ul}=\dfrac{2h\nu_0^3}{c^2}B_{ul}$ に代入：</span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a>**(1)** 両式の $n_l\phi$ を消して係数を等置：$\dfrac{\pi e^2}{m_ec}f_{lu}=\dfrac{h\nu_0}{4\pi}B_{lu}$。$B_{lu}$ について解く：</span>
 <span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a>$$A_{ul}=\frac{2h\nu_0^3}{c^2}\frac{g_l}{g_u}\frac{4\pi^2e^2}{m_ec\,h\nu_0}f_{lu}=\frac{8\pi^2e^2\nu_0^2}{m_ec^3}\frac{g_l}{g_u}f_{lu}.$$</span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a>$$B_{lu}=\frac{4\pi}{h\nu_0}\cdot\frac{\pi e^2}{m_ec}f_{lu}=\frac{4\pi^2e^2}{m_ec\,h\nu_0}f_{lu}.$$</span>
 <span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>（$h$ が消え、$\nu_0^3/\nu_0=\nu_0^2$。）</span>
+<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>**(2)** $B_{ul}=（g_l/g_u)B_{lu}$ を $A_{ul}=\dfrac{2h\nu_0^3}{c^2}B_{ul}$ に代入：</span>
 <span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a>**(3)** $\pi e^2/m_ec$ は古典の減衰調和振動子（Lorentz 振動子）が与える振動数積分吸収断面積で、減衰率にもピーク位置にもよらない普遍量。実際の原子はこれに無次元の量子補正 $f_{lu}$ を掛けたもので、全遷移の和 $\sum_u f_{lu}=N_\mathrm{electrons}$（TRK 和則）が「すべて足すと古典総吸収量に戻る」ことを保証する。古典-量子の橋。</span>
+<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a>$$A_{ul}=\frac{2h\nu_0^3}{c^2}\frac{g_l}{g_u}\frac{4\pi^2e^2}{m_ec\,h\nu_0}f_{lu}=\frac{8\pi^2e^2\nu_0^2}{m_ec^3}\frac{g_l}{g_u}f_{lu}.$$</span>
 <span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a>**答え**：$B_{lu}=\dfrac{4\pi^2e^2}{m_ech\nu_0}f_{lu}$、$A_{ul}=\dfrac{8\pi^2e^2\nu_0^2}{m_ec^3}\dfrac{g_l}{g_u}f_{lu}$。$\pi e^2/m_ec$＝古典積分断面積、$f_{lu}$＝量子補正（TRK 和則）。</span>
-<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 22-3　選択則と禁制線の次数 {#ex-22-3 .unnumbered}</span></span>
-<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a>（$h$ が消え、$\nu_0^3/\nu_0=\nu_0^2$。）</span>
+<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a>**(3)** $\pi e^2/m_ec$ は古典の減衰調和振動子（Lorentz 振動子）が与える振動数積分吸収断面積で、減衰率にもピーク位置にもよらない普遍量。実際の原子はこれに無次元の量子補正 $f_{lu}$ を掛けたもので、全遷移の和 $\sum_u f_{lu}=N_\mathrm{electrons}$（TRK 和則）が「すべて足すと古典総吸収量に戻る」ことを保証する。古典-量子の橋。</span>
+<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a>**答え**：$B_{lu}=\dfrac{4\pi^2e^2}{m_ech\nu_0}f_{lu}$、$A_{ul}=\dfrac{8\pi^2e^2\nu_0^2}{m_ec^3}\dfrac{g_l}{g_u}f_{lu}$。$\pi e^2/m_ec$＝古典積分断面積、$f_{lu}$＝量子補正（TRK 和則）。</span>
+<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a>§22.5 の電気双極子選択則 $\Delta l=\pm1$、$\Delta m=0,\pm1$ と禁制遷移を読む。</span>
+<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 22-3　選択則と禁制線の次数 {#ex-22-3 .unnumbered}</span></span>
 <span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>電気双極子（E1）選択則を満たさない遷移が「禁制」と呼ばれる理由を、遷移行列要素 $\langle u|\mathbf r|l\rangle$ の観点から述べよ。</span>
-<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>磁気双極子（M1）・電気四重極（E2）遷移の強度が E1 の約 $\alpha^2\sim10^{-4}$ 倍であること（$\alpha\simeq1/137$）を確かめ、$\alpha^2$ がどこから来るか一言で述べよ。</span>
-<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>禁制線が地上では見えにくいのに星間で見える理由を、演習 20-2 と結びつけて述べよ。21 cm 線が M1 禁制遷移であることにも触れよ。</span>
+<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a>§22.5 の電気双極子選択則 $\Delta l=\pm1$、$\Delta m=0,\pm1$ と禁制遷移を読む。</span>
 <span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§22.5 選択則と禁制線</span><span class="co">](#sec-atomic-selection-rules)</span>／QED からの選択則は<span class="co">[</span><span class="ot">§26.5</span><span class="co">](../part8/26-qed-minimum.qmd#sec-qed-minimum-selection)</span>、禁制線と低密度は<span class="co">[</span><span class="ot">演習 20-2</span><span class="co">](../part7/20-where-lines.qmd#ex-20-2)</span>、密度診断は<span class="co">[</span><span class="ot">§24.3</span><span class="co">](../part7/24-line-applications.qmd#sec-line-applications-diagnostics)</span>。</span>
-<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 22-3）</span></span>
-<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a>**(1)** E1 遷移強度は電気双極子行列要素 $\langle u|\mathbf r|l\rangle$ で決まる。パリティと角運動量の保存から、$\Delta l=\pm1$ 等を満たさない遷移ではこの行列要素がゼロになり、最低次（E1）では遷移が起こらない。これが「禁制」。</span>
-<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a>**(2)** M1・E2 は次数が一つ高い過程で、典型的に振幅が微細構造定数 $\alpha$ 程度小さく、強度（振幅の2乗）が $\alpha^2\simeq(1/137)^2\simeq5.3\times10^{-5}\sim10^{-4}$ 倍。$\alpha$ は電磁相互作用の結合定数で、より高次の多重極展開の各段で $\alpha$ のべきが効く。</span>
+<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>電気双極子（E1）選択則を満たさない遷移が「禁制」と呼ばれる理由を、遷移行列要素 $\langle u|\mathbf r|l\rangle$ の観点から述べよ。</span>
+<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>磁気双極子（M1）・電気四重極（E2）遷移の強度が E1 の約 $\alpha^2\sim10^{-4}$ 倍であること（$\alpha\simeq1/137$）を確かめ、$\alpha^2$ がどこから来るか一言で述べよ。</span>
+<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>禁制線が地上では見えにくいのに星間で見える理由を、演習 20-2 と結びつけて述べよ。21 cm 線が M1 禁制遷移であることにも触れよ。</span>
+<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§22.5 選択則と禁制線</span><span class="co">](#sec-atomic-selection-rules)</span>／QED からの選択則は<span class="co">[</span><span class="ot">§26.5</span><span class="co">](../part8/26-qed-minimum.qmd#sec-qed-minimum-selection)</span>、禁制線と低密度は<span class="co">[</span><span class="ot">演習 20-2</span><span class="co">](../part7/20-where-lines.qmd#ex-20-2)</span>、密度診断は<span class="co">[</span><span class="ot">§24.3</span><span class="co">](../part7/24-line-applications.qmd#sec-line-applications-diagnostics)</span>。</span>
+<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 22-3）</span></span>
 <span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a>**(3)** 禁制線は $A_{ul}$ が極端に小さく長寿命。地上の高密度では自発放出より衝突脱励起が先に起こり消える（<span class="co">[</span><span class="ot">演習 20-2</span><span class="co">](../part7/20-where-lines.qmd#ex-20-2)</span>）。星間の極低密度では衝突が稀で自発放出が間に合い観測できる。21 cm 線は水素基底状態の超微細構造の M1 禁制遷移で、$A_{ul}\sim10^{-15}$ s$^{-1}$ と極小だが膨大な中性水素のおかげで観測される。</span>
+<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a>**(1)** E1 遷移強度は電気双極子行列要素 $\langle u|\mathbf r|l\rangle$ で決まる。パリティと角運動量の保存から、$\Delta l=\pm1$ 等を満たさない遷移ではこの行列要素がゼロになり、最低次（E1）では遷移が起こらない。これが「禁制」。</span>
 <span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a>**答え**：E1 選択則違反＝行列要素ゼロ＝禁制。M1/E2 は $\alpha^2\sim10^{-4}$ 倍。低密度の星間でのみ観測（21 cm も M1 禁制）。</span>
-<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 22-4　なぜ Bohr 模型では線強度が出ないか {#ex-22-4 .unnumbered}</span></span>
-<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a>**(2)** M1・E2 は次数が一つ高い過程で、典型的に振幅が微細構造定数 $\alpha$ 程度小さく、強度（振幅の2乗）が $\alpha^2\simeq(1/137)^2\simeq5.3\times10^{-5}\sim10^{-4}$ 倍。$\alpha$ は電磁相互作用の結合定数で、より高次の多重極展開の各段で $\alpha$ のべきが効く。</span>
+<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a>**(3)** 禁制線は $A_{ul}$ が極端に小さく長寿命。地上の高密度では自発放出より衝突脱励起が先に起こり消える（<span class="co">[</span><span class="ot">演習 20-2</span><span class="co">](../part7/20-where-lines.qmd#ex-20-2)</span>）。星間の極低密度では衝突が稀で自発放出が間に合い観測できる。21 cm 線は水素基底状態の超微細構造の M1 禁制遷移で、$A_{ul}\sim10^{-15}$ s$^{-1}$ と極小だが膨大な中性水素のおかげで観測される。</span>
+<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a>**答え**：E1 選択則違反＝行列要素ゼロ＝禁制。M1/E2 は $\alpha^2\sim10^{-4}$ 倍。低密度の星間でのみ観測（21 cm も M1 禁制）。</span>
+<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a>§22.2・21.3 は Bohr 模型と Schrödinger 方程式が同じエネルギーを与えるのに、後者が「正しい」量子力学だと述べた。</span>
+<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 22-4　なぜ Bohr 模型では線強度が出ないか {#ex-22-4 .unnumbered}</span></span>
 <span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Bohr 模型と Schrödinger 方程式が一致する点（エネルギー準位）と、異なる点（波動関数・縮退・角運動量）を述べよ。</span>
-<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>振動子強度 $f_{lu}\propto|\langle u|\mathbf r|l\rangle|^2$ がなぜ Bohr 模型では計算できないか述べよ。</span>
-<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>観測される線の**振動数**は Bohr 模型で説明できるが、線の**強度**には Schrödinger 方程式（波動関数）が必要、という構図を、中心地図 $\alpha_\nu$ の $\nu_0$ と $f_{lu}$ に対応づけて述べよ。</span>
+<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a>§22.2・21.3 は Bohr 模型と Schrödinger 方程式が同じエネルギーを与えるのに、後者が「正しい」量子力学だと述べた。</span>
 <span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§22.3 Schrödinger 方程式</span><span class="co">](#sec-atomic-schrodinger)</span>／固有値問題は<span class="co">[</span><span class="ot">§12.1</span><span class="co">](../part4/12-quantum-foundations.qmd#sec-quantum-foundations-states)</span>、振動子強度の換算は<span class="co">[</span><span class="ot">演習 22-2</span><span class="co">](#ex-22-2)</span>。</span>
-<span id="cb1-397"><a href="#cb1-397" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 22-4）</span></span>
-<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a>**(1)** 一致：エネルギー準位 $E_n=-13.6/n^2$ eV（線振動数を正しく与える）。異なる：Bohr は電子を許される軌道上に「正確に」置く描像で波動関数を持たず、角運動量を $L=n\hbar$ とする（Schrödinger は $L^2=l(l+1)\hbar^2$）。Schrödinger は同じ $n$ で $l,m$ の異なる縮退状態と、空間に広がる存在確率分布（波動関数）を持つ。</span>
-<span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a>**(2)** $f_{lu}$ は上下準位の波動関数の重なり $\langle u|\mathbf r|l\rangle=\int\psi_u^*\,\mathbf r\,\psi_l\,d^3r$ から計算される。Bohr 模型は波動関数を持たないので、この積分を実行できず $f_{lu}$ を予言できない。</span>
+<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Bohr 模型と Schrödinger 方程式が一致する点（エネルギー準位）と、異なる点（波動関数・縮退・角運動量）を述べよ。</span>
+<span id="cb1-397"><a href="#cb1-397" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>振動子強度 $f_{lu}\propto|\langle u|\mathbf r|l\rangle|^2$ がなぜ Bohr 模型では計算できないか述べよ。</span>
+<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>観測される線の**振動数**は Bohr 模型で説明できるが、線の**強度**には Schrödinger 方程式（波動関数）が必要、という構図を、中心地図 $\alpha_\nu$ の $\nu_0$ と $f_{lu}$ に対応づけて述べよ。</span>
+<span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§22.3 Schrödinger 方程式</span><span class="co">](#sec-atomic-schrodinger)</span>／固有値問題は<span class="co">[</span><span class="ot">§12.1</span><span class="co">](../part4/12-quantum-foundations.qmd#sec-quantum-foundations-states)</span>、振動子強度の換算は<span class="co">[</span><span class="ot">演習 22-2</span><span class="co">](#ex-22-2)</span>。</span>
+<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 22-4）</span></span>
 <span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a>**(3)** 中心地図 $\alpha_\nu=(\pi e^2/m_ec)f_{lu}n_l\phi(\nu-\nu_0)$ で、$\nu_0$（線振動数＝準位差）は Bohr 模型でも出るが、$f_{lu}$（線強度を決める振動子強度）は波動関数の行列要素ゆえ Schrödinger 方程式が要る。線の「位置」と「強さ」で必要な理論の深さが違う。</span>
+<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a>**(1)** 一致：エネルギー準位 $E_n=-13.6/n^2$ eV（線振動数を正しく与える）。異なる：Bohr は電子を許される軌道上に「正確に」置く描像で波動関数を持たず、角運動量を $L=n\hbar$ とする（Schrödinger は $L^2=l(l+1)\hbar^2$）。Schrödinger は同じ $n$ で $l,m$ の異なる縮退状態と、空間に広がる存在確率分布（波動関数）を持つ。</span>
 <span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a>**答え**：エネルギー（$\nu_0$）は一致するが、Bohr は波動関数を持たず $f_{lu}=|\langle u|\mathbf r|l\rangle|^2$ を計算できない。線強度には Schrödinger が必要。</span>
-<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-atomic-physics-further .unnumbered}</span></span>
-<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Bransden &amp; Joachain, *Physics of Atoms and Molecules* (Pearson, 2nd ed., 2003) — 原子物理の標準教科書</span>
-<span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sobelman, *Atomic Spectra and Radiative Transitions* (Springer, 2nd ed., 1992) — 原子線と振動子強度</span>
-<span id="cb1-414"><a href="#cb1-414" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Herzberg, *Molecular Spectra and Molecular Structure* (Krieger, vol. I-III, 1989-1991) — 分子分光の標準書</span>
-<span id="cb1-415"><a href="#cb1-415" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>NIST Atomic Spectra Database (<span class="ot">&lt;https://physics.nist.gov/asd&gt;</span>) — 原子線データの定本</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a>**(2)** $f_{lu}$ は上下準位の波動関数の重なり $\langle u|\mathbf r|l\rangle=\int\psi_u^*\,\mathbf r\,\psi_l\,d^3r$ から計算される。Bohr 模型は波動関数を持たないので、この積分を実行できず $f_{lu}$ を予言できない。</span>
+<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a>**(3)** 中心地図 $\alpha_\nu=(\pi e^2/m_ec)f_{lu}n_l\phi(\nu-\nu_0)$ で、$\nu_0$（線振動数＝準位差）は Bohr 模型でも出るが、$f_{lu}$（線強度を決める振動子強度）は波動関数の行列要素ゆえ Schrödinger 方程式が要る。線の「位置」と「強さ」で必要な理論の深さが違う。</span>
+<span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a>**答え**：エネルギー（$\nu_0$）は一致するが、Bohr は波動関数を持たず $f_{lu}=|\langle u|\mathbf r|l\rangle|^2$ を計算できない。線強度には Schrödinger が必要。</span>
+<span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-414"><a href="#cb1-414" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-atomic-physics-further .unnumbered}</span></span>
+<span id="cb1-415"><a href="#cb1-415" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-416"><a href="#cb1-416" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Bransden &amp; Joachain, *Physics of Atoms and Molecules* (Pearson, 2nd ed., 2003) — 原子物理の標準教科書</span>
+<span id="cb1-417"><a href="#cb1-417" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sobelman, *Atomic Spectra and Radiative Transitions* (Springer, 2nd ed., 1992) — 原子線と振動子強度</span>
+<span id="cb1-418"><a href="#cb1-418" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Herzberg, *Molecular Spectra and Molecular Structure* (Krieger, vol. I-III, 1989-1991) — 分子分光の標準書</span>
+<span id="cb1-419"><a href="#cb1-419" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>NIST Atomic Spectra Database (<span class="ot">&lt;https://physics.nist.gov/asd&gt;</span>) — 原子線データの定本</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

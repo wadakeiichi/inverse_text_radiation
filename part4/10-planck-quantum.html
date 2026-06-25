@@ -479,6 +479,12 @@ window.Quarto = {
   <a href="../appendix/C-glossary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">用語索引（和英・英和）</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendix/D-correspondence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">付録 D　標準教科書との対応表</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -644,6 +650,48 @@ Z_1(\beta) = \sum_{n=0}^{\infty} e^{-\beta n h\nu} = \frac{1}{1 - e^{-\beta h\nu
 </figure>
 </div>
 <p>これが<strong>高振動数モードの「凍結」</strong>である。エネルギー単位 <span class="math inline">h\nu</span> が熱エネルギー <span class="math inline">k_B T</span> より遥かに大きい場合、そのモードを励起するための熱が手に入らず、平均エネルギーが指数関数的に小さくなる。</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>数値で見る凍結</strong>：温度 <span class="math inline">T</span> を固定し、三つのモードの平均エネルギー <a href="#eq-mean-energy-quantized" class="quarto-xref">式&nbsp;<span>13.3</span></a> を <span class="math inline">k_B T</span> を単位にして並べる（<span class="math inline">x \equiv h\nu/k_B T</span>）。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="math inline">x = h\nu/k_B T</span></th>
+<th><span class="math inline">\langle E\rangle / k_B T = x/(e^{x}-1)</span></th>
+<th>古典 <span class="math inline">\langle E\rangle/k_BT=1</span> との比</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">0.1</span>（低振動数）</td>
+<td><span class="math inline">0.95</span></td>
+<td>ほぼ等分配どおり</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">1</span>（<span class="math inline">h\nu \simeq k_BT</span>）</td>
+<td><span class="math inline">0.58</span></td>
+<td>すでに半分強まで低下</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">10</span>（高振動数）</td>
+<td><span class="math inline">4.5\times10^{-4}</span></td>
+<td><strong>桁違いに凍結</strong></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">x=10</span> のモードは、古典の等分配が約束する <span class="math inline">k_B T</span> の <strong>約 2000 分の 1</strong> しか受け取れない。振動数が上がるほど受け取れるエネルギーが指数関数的に枯れる ― この「枯れ方」が、すべての高振動数モードに <span class="math inline">k_B T</span> を配ってしまう古典の紫外破綻（第9章 §9.3）を断ち切る。</p>
+</div>
+</div>
+</div>
 <div class="callout callout-style-simple callout-tip">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1442,244 +1490,256 @@ u=\frac{8\pi^5 k_B^4}{15c^3h^3}T^4\equiv aT^4,\qquad a=\frac{8\pi^5k_B^4}{15c^3h
 <span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>これが**高振動数モードの「凍結」**である。エネルギー単位 $h\nu$ が熱エネルギー $k_B T$ より遥かに大きい場合、そのモードを励起するための熱が手に入らず、平均エネルギーが指数関数的に小さくなる。</span>
 <span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
-<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>**問い**：なぜ「凍結」と呼ぶのか？</span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple"}</span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>**数値で見る凍結**：温度 $T$ を固定し、三つのモードの平均エネルギー @eq-mean-energy-quantized を $k_B T$ を単位にして並べる（$x \equiv h\nu/k_B T$）。</span>
 <span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>**短答**：高振動数モードに熱的にアクセスできない ― つまり熱エネルギーがそのモードに「行けない」 ― 状態を、低温物理の言葉で「凍結」（freeze-out）と呼ぶ。</span>
-<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>**もう一歩**：同じ概念は、二原子分子の回転・振動自由度の低温での凍結、固体の比熱が低温で $T^3$ に従う Debye 則、宇宙論的にニュートリノが脱結合する状況など、さまざまな場面で再登場する。Planck の議論は、その最初の例である。</span>
-<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a><span class="fu">## 10.3 プランク分布の導出 ― 量子振動子 × モード密度 {#sec-planck-quantum-derivation}</span></span>
-<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3-B4｜導出：M1</span><span class="co">]</span></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $x = h\nu/k_B T$ <span class="pp">|</span> $\langle E\rangle / k_B T = x/(e^{x}-1)$ <span class="pp">|</span> 古典 $\langle E\rangle/k_BT=1$ との比 <span class="pp">|</span></span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $0.1$（低振動数）<span class="pp">|</span> $0.95$ <span class="pp">|</span> ほぼ等分配どおり <span class="pp">|</span></span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $1$（$h\nu \simeq k_BT$）<span class="pp">|</span> $0.58$ <span class="pp">|</span> すでに半分強まで低下 <span class="pp">|</span></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $10$（高振動数）<span class="pp">|</span> $4.5\times10^{-4}$ <span class="pp">|</span> **桁違いに凍結** <span class="pp">|</span></span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>$x=10$ のモードは、古典の等分配が約束する $k_B T$ の **約 2000 分の 1** しか受け取れない。振動数が上がるほど受け取れるエネルギーが指数関数的に枯れる ― この「枯れ方」が、すべての高振動数モードに $k_B T$ を配ってしまう古典の紫外破綻（第9章 §9.3）を断ち切る。</span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>@eq-mean-energy-quantized と、第9章 @eq-mode-density-borrowed のモード密度 $g(\nu) = 8\pi\nu^2/c^3$ を組み合わせると、放射場の振動数あたりエネルギー密度は</span>
-<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>u_\nu(T) = g(\nu) \cdot \langle E \rangle = \frac{8\pi h \nu^3}{c^3} \cdot \frac{1}{e^{h\nu/k_B T} - 1}</span>
-<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>$$ {#eq-planck-energy-density-quantum}</span>
-<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>比強度に直すと</span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>**問い**：なぜ「凍結」と呼ぶのか？</span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>**短答**：高振動数モードに熱的にアクセスできない ― つまり熱エネルギーがそのモードに「行けない」 ― 状態を、低温物理の言葉で「凍結」（freeze-out）と呼ぶ。</span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>**もう一歩**：同じ概念は、二原子分子の回転・振動自由度の低温での凍結、固体の比熱が低温で $T^3$ に従う Debye 則、宇宙論的にニュートリノが脱結合する状況など、さまざまな場面で再登場する。Planck の議論は、その最初の例である。</span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>B_\nu(T) = \frac{c}{4\pi} u_\nu = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/k_B T} - 1}</span>
-<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>$$ {#eq-planck-quantum-rederived}</span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a><span class="fu">## 10.3 プランク分布の導出 ― 量子振動子 × モード密度 {#sec-planck-quantum-derivation}</span></span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3-B4｜導出：M1</span><span class="co">]</span></span>
 <span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>**プランク分布が、振動子の量子化から導かれた**。これが Planck (1900) の歴史的論文の核心である。</span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>@eq-mean-energy-quantized と、第9章 @eq-mode-density-borrowed のモード密度 $g(\nu) = 8\pi\nu^2/c^3$ を組み合わせると、放射場の振動数あたりエネルギー密度は</span>
 <span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a>第8章で Bose 統計から導いた占有因子と、本章でエネルギー量子化から導いた占有因子は、**全く同じ形**になる：</span>
-<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 出発点 <span class="pp">|</span> 占有因子 <span class="pp">|</span></span>
-<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|</span></span>
-<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 第8章：光子の Bose 統計（$\mu = 0$） <span class="pp">|</span> $\bar{n} = 1/(e^{h\nu/k_B T} - 1)$ <span class="pp">|</span></span>
-<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 第10章：振動子のエネルギー量子化 <span class="pp">|</span> $\langle E \rangle / h\nu = 1/(e^{h\nu/k_B T} - 1)$ <span class="pp">|</span></span>
-<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>これは偶然ではない。両者は同じ物理（電磁場の各モードを量子化された調和振動子と見る）の二つの言い方である。第25章で「電磁場の量子化」として整理し直す。</span>
-<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>**観測との対応**：高振動数で $1/(e^{h\nu/k_B T}-1) \sim e^{-h\nu/k_B T}$ が出ることが、観測される黒体スペクトルの**指数減衰**（第1章で見た）の起源である。これが Planck の量子仮説が「観測の必然」として要請された理由である。</span>
-<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a><span class="fu">## 10.4 Wien・Rayleigh–Jeans 両極限の再導出 {#sec-planck-quantum-limits}</span></span>
-<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3-B4｜導出：M1</span><span class="co">]</span></span>
-<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>@eq-planck-quantum-rederived から、第2章 §2.5 で見た両極限がきれいに出る。</span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>u_\nu(T) = g(\nu) \cdot \langle E \rangle = \frac{8\pi h \nu^3}{c^3} \cdot \frac{1}{e^{h\nu/k_B T} - 1}</span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>$$ {#eq-planck-energy-density-quantum}</span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>比強度に直すと</span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>B_\nu(T) = \frac{c}{4\pi} u_\nu = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/k_B T} - 1}</span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>$$ {#eq-planck-quantum-rederived}</span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>**プランク分布が、振動子の量子化から導かれた**。これが Planck (1900) の歴史的論文の核心である。</span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>第8章で Bose 統計から導いた占有因子と、本章でエネルギー量子化から導いた占有因子は、**全く同じ形**になる：</span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 出発点 <span class="pp">|</span> 占有因子 <span class="pp">|</span></span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|</span></span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 第8章：光子の Bose 統計（$\mu = 0$） <span class="pp">|</span> $\bar{n} = 1/(e^{h\nu/k_B T} - 1)$ <span class="pp">|</span></span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 第10章：振動子のエネルギー量子化 <span class="pp">|</span> $\langle E \rangle / h\nu = 1/(e^{h\nu/k_B T} - 1)$ <span class="pp">|</span></span>
 <span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>**低振動数極限**（$h\nu \ll k_B T$）：分母 $e^{h\nu/k_B T} - 1 \simeq h\nu/k_B T$ なので</span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>これは偶然ではない。両者は同じ物理（電磁場の各モードを量子化された調和振動子と見る）の二つの言い方である。第25章で「電磁場の量子化」として整理し直す。</span>
 <span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>B_\nu \to \frac{2\nu^2}{c^2} k_B T</span>
-<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>$$ {#eq-rj-from-planck}</span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>**観測との対応**：高振動数で $1/(e^{h\nu/k_B T}-1) \sim e^{-h\nu/k_B T}$ が出ることが、観測される黒体スペクトルの**指数減衰**（第1章で見た）の起源である。これが Planck の量子仮説が「観測の必然」として要請された理由である。</span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>これは第9章 @eq-rayleigh-jeans-bnu の Rayleigh–Jeans 則と一致する。**$h$ が消える**ことに注意。この極限では古典統計が正しい。</span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a><span class="fu">## 10.4 Wien・Rayleigh–Jeans 両極限の再導出 {#sec-planck-quantum-limits}</span></span>
 <span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>**高振動数極限**（$h\nu \gg k_B T$）：分母 $e^{h\nu/k_B T} - 1 \simeq e^{h\nu/k_B T}$ なので</span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3-B4｜導出：M1</span><span class="co">]</span></span>
 <span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>B_\nu \to \frac{2h\nu^3}{c^2} e^{-h\nu/k_B T}</span>
-<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>$$ {#eq-wien-from-planck}</span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a>@eq-planck-quantum-rederived から、第2章 §2.5 で見た両極限がきれいに出る。</span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>**低振動数極限**（$h\nu \ll k_B T$）：分母 $e^{h\nu/k_B T} - 1 \simeq h\nu/k_B T$ なので</span>
 <span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>これが **Wien の式**である（**Wien's distribution law**）。**$h$ が指数の中と前因子の両方に現れる**ことに注意。</span>
-<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a>両極限の境目は $h\nu \sim k_B T$、すなわち $\nu \sim k_B T/h \simeq 2 \times 10^{10} (T/\text{K})$ Hz である。太陽光（$T \sim 5800$ K）なら境界は近赤外、CMB（2.7 K）なら境界はマイクロ波領域。</span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>B_\nu \to \frac{2\nu^2}{c^2} k_B T</span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a>$$ {#eq-rj-from-planck}</span>
 <span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
-<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>**問い**：なぜ Wien は Planck より先に Wien の式（経験式として）を発見できたのか？</span>
-<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a>**短答**：Wien (1896) は熱力学と次元解析だけで $B_\nu = A\nu^3 f(\nu/T)$ という形（**Wien displacement function**）まで絞り、観測データに当てはめて $f(x) = e^{-\beta x}$ という近似を得た。これが高振動数側に正しい形だが、低振動数では Rayleigh–Jeans の方が観測と合うことが後に判明した。</span>
-<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>**もう一歩**：Planck の真の貢献は、Wien 式（高振動数で正しい）と Rayleigh–Jeans 式（低振動数で正しい）の**両方を補間する単一の式**を、量子仮説という物理的根拠つきで提示したこと。経験式の補間ではなく、物理的に正しい全振動数スペクトルを与えた。</span>
-<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>これは第9章 @eq-rayleigh-jeans-bnu の Rayleigh–Jeans 則と一致する。**$h$ が消える**ことに注意。この極限では古典統計が正しい。</span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a>**高振動数極限**（$h\nu \gg k_B T$）：分母 $e^{h\nu/k_B T} - 1 \simeq e^{h\nu/k_B T}$ なので</span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>B_\nu \to \frac{2h\nu^3}{c^2} e^{-h\nu/k_B T}</span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a>$$ {#eq-wien-from-planck}</span>
 <span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a><span class="fu">## 10.5 歴史的背景と現代的解釈 {#sec-planck-quantum-history}</span></span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a>これが **Wien の式**である（**Wien's distribution law**）。**$h$ が指数の中と前因子の両方に現れる**ことに注意。</span>
 <span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>両極限の境目は $h\nu \sim k_B T$、すなわち $\nu \sim k_B T/h \simeq 2 \times 10^{10} (T/\text{K})$ Hz である。太陽光（$T \sim 5800$ K）なら境界は近赤外、CMB（2.7 K）なら境界はマイクロ波領域。</span>
 <span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>Planck の量子仮説の歴史的・物理的位置づけを整理する。</span>
-<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>**Planck (1900)** ― 黒体スペクトルを再現するために、空洞壁の物質振動子のエネルギーが $h\nu$ の整数倍に限られると仮定。Planck 自身は当初これを**計算上の便法**と見なし、エネルギーが本質的に離散である物理的解釈は留保した。</span>
-<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>**Einstein (1905)** ― 光電効果の解析から、電磁場そのものが量子化された光（**光量子**, light quanta）から成ることを主張。Planck の振動子の量子化と物理的に等価だが、解釈の強度がより強い。第11章で扱う。</span>
-<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>**現代的解釈（場の量子論）**：電磁場の各モードを**量子化された調和振動子**として扱う（第VIII部・第25章）。各モードのエネルギー準位が $E_n = (n + 1/2) h\nu$（零点エネルギー込み）となり、$n$ が「そのモードに含まれる光子の数」を表す。Planck の振動子と Einstein の光量子は、この描像の中で統一される。</span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a>**問い**：なぜ Wien は Planck より先に Wien の式（経験式として）を発見できたのか？</span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>**短答**：Wien (1896) は熱力学と次元解析だけで $B_\nu = A\nu^3 f(\nu/T)$ という形（**Wien displacement function**）まで絞り、観測データに当てはめて $f(x) = e^{-\beta x}$ という近似を得た。これが高振動数側に正しい形だが、低振動数では Rayleigh–Jeans の方が観測と合うことが後に判明した。</span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a>**もう一歩**：Planck の真の貢献は、Wien 式（高振動数で正しい）と Rayleigh–Jeans 式（低振動数で正しい）の**両方を補間する単一の式**を、量子仮説という物理的根拠つきで提示したこと。経験式の補間ではなく、物理的に正しい全振動数スペクトルを与えた。</span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>**観測の意義**：Planck (1900) の論文は、20世紀物理学の出発点と広く認められている。一つの**観測**（黒体スペクトル）から、自然界に普遍的な定数 $h$ が導入され、量子力学・場の量子論が立ち上がる流れの起点となった。本書の三原則「① 逆引き」の象徴的な瞬間とも言える ― 観測が理論を駆動した、その典型例である。</span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a><span class="fu">## 10.5 歴史的背景と現代的解釈 {#sec-planck-quantum-history}</span></span>
 <span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a>**使えるようになった道具**（§10.1〜10.5）：</span>
-<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>エネルギー量子 $\epsilon = h\nu$ という仮定から、量子化振動子の平均エネルギー @eq-mean-energy-quantized が出る</span>
-<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>これにモード密度を組み合わせると、観測されるプランク分布全体形が再構成される</span>
-<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Wien・Rayleigh–Jeans の両極限が一つの式から自然に出る ― 観測される異なる振動数帯のスペクトルが、単一の量子仮説で説明される</span>
-<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>Planck の量子仮説の歴史的・物理的位置づけを整理する。</span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>**Planck (1900)** ― 黒体スペクトルを再現するために、空洞壁の物質振動子のエネルギーが $h\nu$ の整数倍に限られると仮定。Planck 自身は当初これを**計算上の便法**と見なし、エネルギーが本質的に離散である物理的解釈は留保した。</span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>**Einstein (1905)** ― 光電効果の解析から、電磁場そのものが量子化された光（**光量子**, light quanta）から成ることを主張。Planck の振動子の量子化と物理的に等価だが、解釈の強度がより強い。第11章で扱う。</span>
 <span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>**現代的解釈（場の量子論）**：電磁場の各モードを**量子化された調和振動子**として扱う（第VIII部・第25章）。各モードのエネルギー準位が $E_n = (n + 1/2) h\nu$（零点エネルギー込み）となり、$n$ が「そのモードに含まれる光子の数」を表す。Planck の振動子と Einstein の光量子は、この描像の中で統一される。</span>
 <span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-planck-quantum-summary .unnumbered}</span></span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>**観測の意義**：Planck (1900) の論文は、20世紀物理学の出発点と広く認められている。一つの**観測**（黒体スペクトル）から、自然界に普遍的な定数 $h$ が導入され、量子力学・場の量子論が立ち上がる流れの起点となった。本書の三原則「① 逆引き」の象徴的な瞬間とも言える ― 観測が理論を駆動した、その典型例である。</span>
 <span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
-<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る**</span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>**使えるようになった道具**（§10.1〜10.5）：</span>
 <span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>本章で、中心地図プランク関数の **指数の中の $h$**（$h\nu/k_B T$ の項）と、**前因子の $h$**（$2h\nu^3/c^2$）の両方が、Planck の量子仮説 $\epsilon = h\nu$ から必然として出ることを示した。これは中心地図の指数関数因子の量子論的起源を明らかにする。</span>
-<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>ただし、Planck の議論は「空洞壁の物質振動子のエネルギーが量子化される」という形であり、**光そのものが量子化されているかどうか**は留保されたままだった。これを明確にするのが、第11章で扱う Einstein の方法である。</span>
-<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a>**次章へ**：第11章では Einstein (1905, 1916) の議論をたどる。光量子の導入と、自発放出・誘導放出・誘導吸収による詳細釣り合いから、プランク分布を再度導出する。Einstein 係数は線スペクトル（第VII部）の中心概念にもなり、本書の二つの地図（プランク関数地図と水素線地図）をつなぐ要となる。</span>
-<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>エネルギー量子 $\epsilon = h\nu$ という仮定から、量子化振動子の平均エネルギー @eq-mean-energy-quantized が出る</span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>これにモード密度を組み合わせると、観測されるプランク分布全体形が再構成される</span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Wien・Rayleigh–Jeans の両極限が一つの式から自然に出る ― 観測される異なる振動数帯のスペクトルが、単一の量子仮説で説明される</span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-planck-quantum-exercises .unnumbered}</span></span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-planck-quantum-summary .unnumbered}</span></span>
 <span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</span>
-<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 10-1　量子化振動子の分配関数と平均エネルギー {#ex-10-1 .unnumbered}</span></span>
-<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆ </span><span class="co">] [tag:導出補完]</span></span>
-<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a>§10.2 は分配関数 $Z_1=1/(1-e^{-\beta h\nu})$ と平均エネルギー $\langle E\rangle=h\nu/(e^{h\nu/k_BT}-1)$ を「第7章 §7.2 の手法で」与えた。両式を自力で導け。準位は $E_n=nh\nu\ (n=0,1,2,\ldots)$。</span>
-<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>等比級数の和として $Z_1=\sum_{n=0}^\infty e^{-\beta nh\nu}=\dfrac{1}{1-e^{-\beta h\nu}}$ を示せ（収束条件も述べよ）。</span>
-<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$\langle E\rangle=-\partial\ln Z_1/\partial\beta$ を実行して $\langle E\rangle=\dfrac{h\nu}{e^{\beta h\nu}-1}$ を導け。</span>
-<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>古典結果 $\langle E\rangle=k_BT$ と比べ、低振動数極限で一致することを確認せよ。</span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る**</span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>本章で、中心地図プランク関数の **指数の中の $h$**（$h\nu/k_B T$ の項）と、**前因子の $h$**（$2h\nu^3/c^2$）の両方が、Planck の量子仮説 $\epsilon = h\nu$ から必然として出ることを示した。これは中心地図の指数関数因子の量子論的起源を明らかにする。</span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a>ただし、Planck の議論は「空洞壁の物質振動子のエネルギーが量子化される」という形であり、**光そのものが量子化されているかどうか**は留保されたままだった。これを明確にするのが、第11章で扱う Einstein の方法である。</span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a>**次章へ**：第11章では Einstein (1905, 1916) の議論をたどる。光量子の導入と、自発放出・誘導放出・誘導吸収による詳細釣り合いから、プランク分布を再度導出する。Einstein 係数は線スペクトル（第VII部）の中心概念にもなり、本書の二つの地図（プランク関数地図と水素線地図）をつなぐ要となる。</span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-planck-quantum-exercises .unnumbered}</span></span>
 <span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§10.2 振動子の量子化</span><span class="co">](#sec-planck-quantum-oscillator)</span>／手法は<span class="co">[</span><span class="ot">第7章 統計力学</span><span class="co">](../part3/07-statistical-mechanics.qmd)</span>、古典との対比は<span class="co">[</span><span class="ot">演習 9-2</span><span class="co">](../part4/09-classical-failure.qmd#ex-9-2)</span>。</span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</span>
 <span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 10-1）</span></span>
-<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>**(1)** 公比 $r=e^{-\beta h\nu}$ の等比級数。$\beta,h,\nu&gt;0$ より $0&lt;r&lt;1$ で収束し、</span>
-<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>Z_1=\sum_{n=0}^\infty r^n=\frac{1}{1-r}=\frac{1}{1-e^{-\beta h\nu}}.</span>
-<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a>**(2)** $\ln Z_1=-\ln(1-e^{-\beta h\nu})$。$\beta$ で微分：</span>
-<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>\langle E\rangle=-\frac{\partial\ln Z_1}{\partial\beta}=\frac{h\nu\,e^{-\beta h\nu}}{1-e^{-\beta h\nu}}=\frac{h\nu}{e^{\beta h\nu}-1}=\frac{h\nu}{e^{h\nu/k_BT}-1}.</span>
-<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 10-1　量子化振動子の分配関数と平均エネルギー {#ex-10-1 .unnumbered}</span></span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a>§10.2 は分配関数 $Z_1=1/(1-e^{-\beta h\nu})$ と平均エネルギー $\langle E\rangle=h\nu/(e^{h\nu/k_BT}-1)$ を「第7章 §7.2 の手法で」与えた。両式を自力で導け。準位は $E_n=nh\nu\ (n=0,1,2,\ldots)$。</span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>等比級数の和として $Z_1=\sum_{n=0}^\infty e^{-\beta nh\nu}=\dfrac{1}{1-e^{-\beta h\nu}}$ を示せ（収束条件も述べよ）。</span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$\langle E\rangle=-\partial\ln Z_1/\partial\beta$ を実行して $\langle E\rangle=\dfrac{h\nu}{e^{\beta h\nu}-1}$ を導け。</span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>古典結果 $\langle E\rangle=k_BT$ と比べ、低振動数極限で一致することを確認せよ。</span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§10.2 振動子の量子化</span><span class="co">](#sec-planck-quantum-oscillator)</span>／手法は<span class="co">[</span><span class="ot">第7章 統計力学</span><span class="co">](../part3/07-statistical-mechanics.qmd)</span>、古典との対比は<span class="co">[</span><span class="ot">演習 9-2</span><span class="co">](../part4/09-classical-failure.qmd#ex-9-2)</span>。</span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 10-1）</span></span>
 <span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a>**(3)** 低振動数 $x\equiv h\nu/k_BT\ll1$ で $e^x-1\simeq x$ ゆえ $\langle E\rangle\to h\nu/x=k_BT$。古典の等分配と一致する。</span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a>**(1)** 公比 $r=e^{-\beta h\nu}$ の等比級数。$\beta,h,\nu&gt;0$ より $0&lt;r&lt;1$ で収束し、</span>
 <span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a>**答え**：$Z_1=1/(1-e^{-\beta h\nu})$、$\langle E\rangle=h\nu/(e^{h\nu/k_BT}-1)\overset{h\nu\ll k_BT}{\longrightarrow}k_BT$。</span>
-<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 10-2　両極限と「最初の量子補正」 {#ex-10-2 .unnumbered}</span></span>
-<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
-<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>§10.4 はプランク分布の低・高振動数極限を示した。導出を埋め、さらに一歩進める。$x\equiv h\nu/k_BT$ とおく。</span>
-<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>低振動数（$x\ll1$）で $B_\nu\to\dfrac{2\nu^2}{c^2}k_BT$（Rayleigh–Jeans）を導け。</span>
-<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>平均エネルギー $\langle E\rangle=\dfrac{h\nu}{e^x-1}$ を $x$ の小ささで展開し、古典値 $k_BT$ からの **最初の補正項** を求めよ。補正の符号は何を意味するか。</span>
-<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>高振動数（$x\gg1$）で Wien の式 $B_\nu\to\dfrac{2h\nu^3}{c^2}e^{-h\nu/k_BT}$ を導け。</span>
-<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§10.4 Wien・Rayleigh–Jeans 両極限</span><span class="co">](#sec-planck-quantum-limits)</span>／RJ の古典導出は<span class="co">[</span><span class="ot">§9.2</span><span class="co">](../part4/09-classical-failure.qmd#sec-classical-failure-rayleigh-jeans)</span>、観測比較は<span class="co">[</span><span class="ot">§2.5</span><span class="co">](../part1/02-reading-spectra.qmd#sec-reading-spectra-limits)</span>。</span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>Z_1=\sum_{n=0}^\infty r^n=\frac{1}{1-r}=\frac{1}{1-e^{-\beta h\nu}}.</span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>**(2)** $\ln Z_1=-\ln(1-e^{-\beta h\nu})$。$\beta$ で微分：</span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>\langle E\rangle=-\frac{\partial\ln Z_1}{\partial\beta}=\frac{h\nu\,e^{-\beta h\nu}}{1-e^{-\beta h\nu}}=\frac{h\nu}{e^{\beta h\nu}-1}=\frac{h\nu}{e^{h\nu/k_BT}-1}.</span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a>**(3)** 低振動数 $x\equiv h\nu/k_BT\ll1$ で $e^x-1\simeq x$ ゆえ $\langle E\rangle\to h\nu/x=k_BT$。古典の等分配と一致する。</span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a>**答え**：$Z_1=1/(1-e^{-\beta h\nu})$、$\langle E\rangle=h\nu/(e^{h\nu/k_BT}-1)\overset{h\nu\ll k_BT}{\longrightarrow}k_BT$。</span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 10-2）</span></span>
-<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>**(1)** $B_\nu=\dfrac{2h\nu^3}{c^2}\dfrac{1}{e^x-1}$。$x\ll1$ で $e^x-1\simeq x=h\nu/k_BT$ ゆえ $B_\nu\to\dfrac{2h\nu^3}{c^2}\cdot\dfrac{k_BT}{h\nu}=\dfrac{2\nu^2}{c^2}k_BT$。$h$ が消える＝古典極限。</span>
-<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>**(2)** $e^x-1=x\left(1+\dfrac{x}{2}+\dfrac{x^2}{6}+\cdots\right)$ ゆえ</span>
-<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a>\langle E\rangle=\frac{h\nu}{e^x-1}=\frac{k_BT}{1+\frac{x}{2}+\cdots}=k_BT\left(1-\frac{x}{2}+\cdots\right)=k_BT-\frac{h\nu}{2}+\cdots.</span>
-<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a>最初の補正は $-h\nu/2$。**負号**は、量子化により各モードが古典の等分配値より小さいエネルギーしか受け取れない（高振動数ほど効く凍結の始まり）ことを意味する。</span>
-<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a>**(3)** $x\gg1$ で $e^x-1\simeq e^x$ ゆえ $B_\nu\to\dfrac{2h\nu^3}{c^2}e^{-x}=\dfrac{2h\nu^3}{c^2}e^{-h\nu/k_BT}$。これが Wien の式。</span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 10-2　両極限と「最初の量子補正」 {#ex-10-2 .unnumbered}</span></span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a>§10.4 はプランク分布の低・高振動数極限を示した。導出を埋め、さらに一歩進める。$x\equiv h\nu/k_BT$ とおく。</span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>低振動数（$x\ll1$）で $B_\nu\to\dfrac{2\nu^2}{c^2}k_BT$（Rayleigh–Jeans）を導け。</span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>平均エネルギー $\langle E\rangle=\dfrac{h\nu}{e^x-1}$ を $x$ の小ささで展開し、古典値 $k_BT$ からの **最初の補正項** を求めよ。補正の符号は何を意味するか。</span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>高振動数（$x\gg1$）で Wien の式 $B_\nu\to\dfrac{2h\nu^3}{c^2}e^{-h\nu/k_BT}$ を導け。</span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§10.4 Wien・Rayleigh–Jeans 両極限</span><span class="co">](#sec-planck-quantum-limits)</span>／RJ の古典導出は<span class="co">[</span><span class="ot">§9.2</span><span class="co">](../part4/09-classical-failure.qmd#sec-classical-failure-rayleigh-jeans)</span>、観測比較は<span class="co">[</span><span class="ot">§2.5</span><span class="co">](../part1/02-reading-spectra.qmd#sec-reading-spectra-limits)</span>。</span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 10-2）</span></span>
 <span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a>**答え**：低：$2\nu^2k_BT/c^2$；補正 $\langle E\rangle\simeq k_BT-\tfrac12 h\nu$（負＝凍結の兆し）；高：$2h\nu^3e^{-h\nu/k_BT}/c^2$。</span>
-<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 10-3　プランク分布から Stefan–Boltzmann 則 {#ex-10-3 .unnumbered}</span></span>
-<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆☆ </span><span class="co">] [tag:導出補完]</span></span>
-<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>第9章の表で「全エネルギー密度＝$aT^4$（有限）」とあったが、本文は積分を実行していない。プランクのエネルギー密度 $u_\nu=\dfrac{8\pi h\nu^3}{c^3}\dfrac{1}{e^{h\nu/k_BT}-1}$ を全振動数で積分し、$u=aT^4$ を導いて放射定数 $a$ を基本定数で表せ。</span>
-<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$x=h\nu/k_BT$ で変数変換し、$u=\dfrac{8\pi h}{c^3}\left(\dfrac{k_BT}{h}\right)^4\displaystyle\int_0^\infty\frac{x^3}{e^x-1}dx$ を導け。</span>
-<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$\displaystyle\int_0^\infty\frac{x^3}{e^x-1}dx=\frac{\pi^4}{15}$ を用いて $a=\dfrac{8\pi^5 k_B^4}{15c^3h^3}$ を示し、数値（SI）を概算せよ。</span>
-<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>$u=aT^4$ と射出強度 $j=\sigma T^4$ の関係 $a=4\sigma/c$ から、$\sigma$ の値を確認せよ。</span>
-<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§10.3 プランク分布の導出</span><span class="co">](#sec-planck-quantum-derivation)</span>／発散する古典版との対比は<span class="co">[</span><span class="ot">演習 9-3</span><span class="co">](../part4/09-classical-failure.qmd#ex-9-3)</span>、積分公式は<span class="co">[</span><span class="ot">付録A 数学ノート</span><span class="co">](../appendix/A-math-notes.qmd)</span>。</span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a>**(1)** $B_\nu=\dfrac{2h\nu^3}{c^2}\dfrac{1}{e^x-1}$。$x\ll1$ で $e^x-1\simeq x=h\nu/k_BT$ ゆえ $B_\nu\to\dfrac{2h\nu^3}{c^2}\cdot\dfrac{k_BT}{h\nu}=\dfrac{2\nu^2}{c^2}k_BT$。$h$ が消える＝古典極限。</span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>**(2)** $e^x-1=x\left(1+\dfrac{x}{2}+\dfrac{x^2}{6}+\cdots\right)$ ゆえ</span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a>\langle E\rangle=\frac{h\nu}{e^x-1}=\frac{k_BT}{1+\frac{x}{2}+\cdots}=k_BT\left(1-\frac{x}{2}+\cdots\right)=k_BT-\frac{h\nu}{2}+\cdots.</span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a>最初の補正は $-h\nu/2$。**負号**は、量子化により各モードが古典の等分配値より小さいエネルギーしか受け取れない（高振動数ほど効く凍結の始まり）ことを意味する。</span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a>**(3)** $x\gg1$ で $e^x-1\simeq e^x$ ゆえ $B_\nu\to\dfrac{2h\nu^3}{c^2}e^{-x}=\dfrac{2h\nu^3}{c^2}e^{-h\nu/k_BT}$。これが Wien の式。</span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a>**答え**：低：$2\nu^2k_BT/c^2$；補正 $\langle E\rangle\simeq k_BT-\tfrac12 h\nu$（負＝凍結の兆し）；高：$2h\nu^3e^{-h\nu/k_BT}/c^2$。</span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 10-3）</span></span>
-<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a>**(1)** $x=h\nu/k_BT$ より $\nu=k_BTx/h,\ d\nu=(k_BT/h)dx$。代入して</span>
-<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a>u=\frac{8\pi h}{c^3}\left(\frac{k_BT}{h}\right)^4\int_0^\infty\frac{x^3}{e^x-1}dx.</span>
-<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a>**(2)** 積分 $=\pi^4/15$ を入れて</span>
-<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a>u=\frac{8\pi^5 k_B^4}{15c^3h^3}T^4\equiv aT^4,\qquad a=\frac{8\pi^5k_B^4}{15c^3h^3}\approx7.57\times10^{-16}\ \mathrm{J\,m^{-3}\,K^{-4}}.</span>
-<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 10-3　プランク分布から Stefan–Boltzmann 則 {#ex-10-3 .unnumbered}</span></span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a>第9章の表で「全エネルギー密度＝$aT^4$（有限）」とあったが、本文は積分を実行していない。プランクのエネルギー密度 $u_\nu=\dfrac{8\pi h\nu^3}{c^3}\dfrac{1}{e^{h\nu/k_BT}-1}$ を全振動数で積分し、$u=aT^4$ を導いて放射定数 $a$ を基本定数で表せ。</span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$x=h\nu/k_BT$ で変数変換し、$u=\dfrac{8\pi h}{c^3}\left(\dfrac{k_BT}{h}\right)^4\displaystyle\int_0^\infty\frac{x^3}{e^x-1}dx$ を導け。</span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$\displaystyle\int_0^\infty\frac{x^3}{e^x-1}dx=\frac{\pi^4}{15}$ を用いて $a=\dfrac{8\pi^5 k_B^4}{15c^3h^3}$ を示し、数値（SI）を概算せよ。</span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>$u=aT^4$ と射出強度 $j=\sigma T^4$ の関係 $a=4\sigma/c$ から、$\sigma$ の値を確認せよ。</span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§10.3 プランク分布の導出</span><span class="co">](#sec-planck-quantum-derivation)</span>／発散する古典版との対比は<span class="co">[</span><span class="ot">演習 9-3</span><span class="co">](../part4/09-classical-failure.qmd#ex-9-3)</span>、積分公式は<span class="co">[</span><span class="ot">付録A 数学ノート</span><span class="co">](../appendix/A-math-notes.qmd)</span>。</span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 10-3）</span></span>
 <span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a>**(3)** $a=4\sigma/c$ より $\sigma=ac/4=7.57\times10^{-16}\times3.00\times10^8/4\approx5.67\times10^{-8}\ \mathrm{W\,m^{-2}\,K^{-4}}$。既知の Stefan–Boltzmann 定数と一致する。</span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a>**(1)** $x=h\nu/k_BT$ より $\nu=k_BTx/h,\ d\nu=(k_BT/h)dx$。代入して</span>
 <span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a>**答え**：$a=\dfrac{8\pi^5k_B^4}{15c^3h^3}\approx7.57\times10^{-16}\,\mathrm{J\,m^{-3}K^{-4}}$、$\sigma=ac/4\approx5.67\times10^{-8}\,\mathrm{W\,m^{-2}K^{-4}}$。</span>
-<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 10-4　Wien 変位則：ピーク振動数は T に比例 {#ex-10-4 .unnumbered}</span></span>
-<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
-<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a>§10.4 は両極限の境目を $\nu\sim k_BT/h$ と見積もった。プランク分布のピークを正確に求めて「変位則」を導く。</span>
-<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$B_\nu\propto\dfrac{\nu^3}{e^{x}-1}\ (x=h\nu/k_BT)$ を $\nu$ で微分してゼロにおき、$3(1-e^{-x})=x$ という超越方程式を導け。</span>
-<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>数値解 $x_\mathrm{peak}\approx2.821$ を用いて $\nu_\mathrm{peak}=2.821\,k_BT/h$ を示し、$\nu_\mathrm{peak}\propto T$ を確認せよ。</span>
-<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>太陽 $T\simeq5800$ K について $\nu_\mathrm{peak}$ と対応波長を概算せよ（$B_\lambda$ のピーク波長とは係数が異なることに触れよ）。</span>
-<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§10.4 両極限と境界</span><span class="co">](#sec-planck-quantum-limits)</span>／波長表示の Wien 変位則の導出は<span class="co">[</span><span class="ot">演習 2-2</span><span class="co">](../part1/02-reading-spectra.qmd#ex-2-2)</span>、観測スペクトルのピークは<span class="co">[</span><span class="ot">第1章</span><span class="co">](../part1/01-where-blackbody.qmd)</span>。</span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a>u=\frac{8\pi h}{c^3}\left(\frac{k_BT}{h}\right)^4\int_0^\infty\frac{x^3}{e^x-1}dx.</span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a>**(2)** 積分 $=\pi^4/15$ を入れて</span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a>u=\frac{8\pi^5 k_B^4}{15c^3h^3}T^4\equiv aT^4,\qquad a=\frac{8\pi^5k_B^4}{15c^3h^3}\approx7.57\times10^{-16}\ \mathrm{J\,m^{-3}\,K^{-4}}.</span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a>**(3)** $a=4\sigma/c$ より $\sigma=ac/4=7.57\times10^{-16}\times3.00\times10^8/4\approx5.67\times10^{-8}\ \mathrm{W\,m^{-2}\,K^{-4}}$。既知の Stefan–Boltzmann 定数と一致する。</span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a>**答え**：$a=\dfrac{8\pi^5k_B^4}{15c^3h^3}\approx7.57\times10^{-16}\,\mathrm{J\,m^{-3}K^{-4}}$、$\sigma=ac/4\approx5.67\times10^{-8}\,\mathrm{W\,m^{-2}K^{-4}}$。</span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 10-4）</span></span>
-<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a>**(1)** $f(\nu)=\nu^3(e^x-1)^{-1}$、$x=h\nu/k_BT$ なので $dx/d\nu=h/k_BT$。積の微分をゼロとおき、$\nu^2/(e^x-1)$ で割って $h\nu/k_BT=x$ を使うと</span>
-<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a>3-\frac{x e^x}{e^x-1}=0\ \Longrightarrow\ 3(1-e^{-x})=x.</span>
-<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a>**(2)** この超越方程式の非自明解は $x_\mathrm{peak}\approx2.821$。よって $\nu_\mathrm{peak}=x_\mathrm{peak}k_BT/h=2.821\,k_BT/h\propto T$（Wien 変位則）。</span>
-<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a>**(3)** $T=5800$ K で $\nu_\mathrm{peak}\approx3.4\times10^{14}$ Hz、$\lambda=c/\nu_\mathrm{peak}\approx8.8\times10^{2}$ nm（近赤外）。これは $B_\lambda$ を最大化して得る $\lambda_\mathrm{peak}\approx500$ nm とは別物。$B_\nu$ と $B_\lambda$ ではヤコビアン $d\nu=-(c/\lambda^2)d\lambda$ のため最大化条件が異なり（$\lambda$ 側は $x\approx4.965$）、$\nu_\mathrm{peak}\lambda_\mathrm{peak}\ne c$ となる。</span>
-<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a>**答え**：$3(1-e^{-x})=x\Rightarrow x\approx2.821$、$\nu_\mathrm{peak}=2.821k_BT/h\propto T$。太陽で $\nu_\mathrm{peak}\approx3.4\times10^{14}$ Hz（$\sim880$ nm）。$B_\nu$ と $B_\lambda$ のピークは一致しない。</span>
-<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-planck-quantum-further .unnumbered}</span></span>
-<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Planck, "Ueber das Gesetz der Energieverteilung im Normalspectrum", *Annalen der Physik* 309 (1901) — 量子仮説の原論文（独語）</span>
-<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pais, *Subtle is the Lord* (Oxford, 1982) — Planck・Einstein の物理学的位置づけ</span>
-<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Reif, *Fundamentals of Statistical and Thermal Physics* (McGraw-Hill, 1965) — 量子化振動子の標準的扱い</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 10-4　Wien 変位則：ピーク振動数は T に比例 {#ex-10-4 .unnumbered}</span></span>
+<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a>§10.4 は両極限の境目を $\nu\sim k_BT/h$ と見積もった。プランク分布のピークを正確に求めて「変位則」を導く。</span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$B_\nu\propto\dfrac{\nu^3}{e^{x}-1}\ (x=h\nu/k_BT)$ を $\nu$ で微分してゼロにおき、$3(1-e^{-x})=x$ という超越方程式を導け。</span>
+<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>数値解 $x_\mathrm{peak}\approx2.821$ を用いて $\nu_\mathrm{peak}=2.821\,k_BT/h$ を示し、$\nu_\mathrm{peak}\propto T$ を確認せよ。</span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>太陽 $T\simeq5800$ K について $\nu_\mathrm{peak}$ と対応波長を概算せよ（$B_\lambda$ のピーク波長とは係数が異なることに触れよ）。</span>
+<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§10.4 両極限と境界</span><span class="co">](#sec-planck-quantum-limits)</span>／波長表示の Wien 変位則の導出は<span class="co">[</span><span class="ot">演習 2-2</span><span class="co">](../part1/02-reading-spectra.qmd#ex-2-2)</span>、観測スペクトルのピークは<span class="co">[</span><span class="ot">第1章</span><span class="co">](../part1/01-where-blackbody.qmd)</span>。</span>
+<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 10-4）</span></span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a>**(1)** $f(\nu)=\nu^3(e^x-1)^{-1}$、$x=h\nu/k_BT$ なので $dx/d\nu=h/k_BT$。積の微分をゼロとおき、$\nu^2/(e^x-1)$ で割って $h\nu/k_BT=x$ を使うと</span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a>3-\frac{x e^x}{e^x-1}=0\ \Longrightarrow\ 3(1-e^{-x})=x.</span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a>**(2)** この超越方程式の非自明解は $x_\mathrm{peak}\approx2.821$。よって $\nu_\mathrm{peak}=x_\mathrm{peak}k_BT/h=2.821\,k_BT/h\propto T$（Wien 変位則）。</span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>**(3)** $T=5800$ K で $\nu_\mathrm{peak}\approx3.4\times10^{14}$ Hz、$\lambda=c/\nu_\mathrm{peak}\approx8.8\times10^{2}$ nm（近赤外）。これは $B_\lambda$ を最大化して得る $\lambda_\mathrm{peak}\approx500$ nm とは別物。$B_\nu$ と $B_\lambda$ ではヤコビアン $d\nu=-(c/\lambda^2)d\lambda$ のため最大化条件が異なり（$\lambda$ 側は $x\approx4.965$）、$\nu_\mathrm{peak}\lambda_\mathrm{peak}\ne c$ となる。</span>
+<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a>**答え**：$3(1-e^{-x})=x\Rightarrow x\approx2.821$、$\nu_\mathrm{peak}=2.821k_BT/h\propto T$。太陽で $\nu_\mathrm{peak}\approx3.4\times10^{14}$ Hz（$\sim880$ nm）。$B_\nu$ と $B_\lambda$ のピークは一致しない。</span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-planck-quantum-further .unnumbered}</span></span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Planck, "Ueber das Gesetz der Energieverteilung im Normalspectrum", *Annalen der Physik* 309 (1901) — 量子仮説の原論文（独語）</span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pais, *Subtle is the Lord* (Oxford, 1982) — Planck・Einstein の物理学的位置づけ</span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Reif, *Fundamentals of Statistical and Thermal Physics* (McGraw-Hill, 1965) — 量子化振動子の標準的扱い</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
