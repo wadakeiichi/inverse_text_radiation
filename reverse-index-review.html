@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>逆引きレビュー: 分かりにくい箇所と未説明項目</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17202a;
+      --muted: #5b6673;
+      --line: #d9e1e8;
+      --bg: #f7f9fb;
+      --panel: #ffffff;
+      --accent: #0f6f82;
+      --warn: #9a5b00;
+      --bad: #9b1c31;
+      --ok: #2f6f3e;
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+      line-height: 1.72;
+    }
+    header {
+      background: #10252d;
+      color: #fff;
+      padding: 42px 28px 34px;
+    }
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 28px;
+    }
+    h1, h2, h3 { line-height: 1.3; }
+    h1 { margin: 0 0 12px; font-size: clamp(28px, 4vw, 44px); }
+    h2 { margin: 40px 0 14px; border-bottom: 2px solid var(--line); padding-bottom: 8px; }
+    h3 { margin: 26px 0 8px; color: #12313a; }
+    p { margin: 0 0 14px; }
+    .meta { color: #d7e8ec; max-width: 900px; }
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin: 22px 0 8px;
+    }
+    .metric, section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 1px 2px rgba(0,0,0,.04);
+    }
+    .metric { padding: 14px 16px; }
+    .metric b { display: block; font-size: 22px; color: var(--accent); }
+    section { padding: 20px; margin: 18px 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0 22px;
+      font-size: 14px;
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 9px 10px;
+      vertical-align: top;
+    }
+    th {
+      background: #e9f1f4;
+      text-align: left;
+    }
+    code {
+      background: #eef3f5;
+      border: 1px solid #dde7eb;
+      border-radius: 4px;
+      padding: 1px 4px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: .94em;
+    }
+    .tag {
+      display: inline-block;
+      border-radius: 999px;
+      padding: 1px 8px;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .high { background: #ffe4e8; color: var(--bad); }
+    .mid { background: #fff0d6; color: var(--warn); }
+    .low { background: #e6f4ea; color: var(--ok); }
+    .note { color: var(--muted); font-size: 14px; }
+    ul { padding-left: 1.3em; }
+    li { margin: 6px 0; }
+    @media (max-width: 900px) {
+      .summary { grid-template-columns: 1fr 1fr; }
+      table { font-size: 13px; }
+    }
+    @media (max-width: 640px) {
+      main { padding: 16px; }
+      .summary { grid-template-columns: 1fr; }
+      th, td { padding: 7px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>逆引きレビュー: 分かりにくい箇所と未説明項目</h1>
+    <p class="meta">物理学科の大学院生の立場で、本文26章、付録、演習問題HTMLを通読したレビュー。観点は「観測スペクトルから基礎物理へ逆にたどる」というコンセプトに合っているか、本文中で必要な前提が説明されているか、演習問題と模範解答が本文と整合しているか。</p>
+  </header>
+
+  <main>
+    <div class="summary">
+      <div class="metric"><b>105問</b>本文内の演習数</div>
+      <div class="metric"><b>99問</b>部別HTML演習数</div>
+      <div class="metric"><b>31件</b>本文・構成の主要指摘</div>
+      <div class="metric"><b>10件</b>演習・解答の主要指摘</div>
+    </div>
+
+    <section>
+      <h2>総評</h2>
+      <p>全体として「連続スペクトルのプランク関数」と「線スペクトルの吸収係数」を中心地図にして、観測量から統計力学・量子論・電磁気・原子物理・QEDへ戻る構成は成立している。特に第1-5章と第20-24章は、観測量から入る導入が明確で読みやすい。</p>
+      <p>一方で、逆引きのコンセプトに対して弱い箇所は三種類ある。第一に、重要式を「結果のみ」「専門書参照」として置く箇所があり、式の必然性を追う読者にはそこで流れが切れる。第二に、SIを基本としながらCGS/Gaussの式が本文・演習に混在し、前因子の意味が追いにくい。第三に、演習HTMLが本文の現行章番号と同期しておらず、リンク切れと収録漏れがある。</p>
+    </section>
+
+    <section>
+      <h2>最優先で直すべき点</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>優先度</th>
+            <th>場所</th>
+            <th>指摘</th>
+            <th>改善案</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="tag high">高</span></td>
+            <td><code>exercises/演習問題_第VI部_現実の宇宙へ.html:83-110</code></td>
+            <td>第VI部HTMLは「第15〜18章」「全15問」だが、本文第VI部は第15〜19章で、本文内演習は21問。第19章の5問と第17章17-5が外れている。</td>
+            <td>第VI部HTMLを第15〜19章・全21問に更新する。第19章の自由-自由、束縛-自由、Milne、H⁻の演習を部別HTMLにも収録する。</td>
+          </tr>
+          <tr>
+            <td><span class="tag high">高</span></td>
+            <td><code>exercises/演習問題_第VII部_線スペクトル.html:83-120</code></td>
+            <td>第VII部HTMLが旧章番号の第19〜23章を指している。現行本文は第20〜24章。リンクも <code>part7/19-where-lines.html</code> など存在しないパスを指す。</td>
+            <td>章番号を20〜24へ一括更新し、リンクを <code>20-where-lines.html</code> から <code>24-line-applications.html</code> に修正する。</td>
+          </tr>
+          <tr>
+            <td><span class="tag high">高</span></td>
+            <td><code>exercises/演習問題_第VIII部_QEDからの俯瞰.html:111-245</code></td>
+            <td>第VIII部HTMLが第24・25章表記のまま。現行本文では電磁場量子化が第25章、QED見通しが第26章。リンクも <code>part8/24-em-field-quantization.html</code> と <code>part8/25-qed-minimum.html</code> で不一致。</td>
+            <td>第25・26章に更新し、リンクを <code>25-em-field-quantization.html</code> と <code>26-qed-minimum.html</code> に直す。</td>
+          </tr>
+          <tr>
+            <td><span class="tag high">高</span></td>
+            <td><code>appendix/B-units-constants.qmd:165-178</code>, <code>part5/13-electromagnetic-waves.qmd:45-60,160-164</code>, <code>part7/22-atomic-physics.qmd:140-199</code></td>
+            <td>「SIを基本」とする一方で、Poyntingベクトル、線吸収係数、Lorentz振動子前因子がCGS/Gaussで進む。付録では「第13章はSIに統一」と書くが本文はGauss式を含む。</td>
+            <td>中心地図と本文に「この式はCGS形」「SI形はこれ」と併記する。第13章はPoyntingをSI主式にし、CGSを補足に下げる。</td>
+          </tr>
+          <tr>
+            <td><span class="tag high">高</span></td>
+            <td><code>part7/22-atomic-physics.qmd:122-126</code></td>
+            <td>振動子強度の式 <code>f_lu = (2 m_e omega / 3 hbar) |&lt;u|r|l&gt;|^2 / g_l</code> は次元が合わない。SIなら双極子演算子や電荷、場合によって <code>e^2</code> の扱いを明示する必要がある。</td>
+            <td>SI/CGSどちらの式かを明記し、<code>|&lt;u|d|l&gt;|^2</code> で書く形と <code>|&lt;u|r|l&gt;|^2</code> で書く形を分ける。</td>
+          </tr>
+          <tr>
+            <td><span class="tag high">高</span></td>
+            <td><code>part2/04-radiation-field.qmd:94-102</code></td>
+            <td>立体角の表でヘッダ行が二重に入っている。HTML化すると表が崩れる可能性が高い。</td>
+            <td>重複した <code>| 天体 | 視直径 | 立体角 |</code> と区切り行を削除する。</td>
+          </tr>
+          <tr>
+            <td><span class="tag high">高</span></td>
+            <td><code>part5/13-electromagnetic-waves.qmd:59-60</code></td>
+            <td>SIからGaussへの置き換え説明が粗い。電場・磁場・電荷の単位変換は単なる <code>B_SI &lt;-&gt; B_Gauss/c</code> では学生に危険。</td>
+            <td>本文では換算を最小限にし、付録B.4に「式形の対応表」として集約する。</td>
+          </tr>
+          <tr>
+            <td><span class="tag high">高</span></td>
+            <td><code>part8/26-qed-minimum.qmd:57-58</code></td>
+            <td>「構造のみを示し、係数の細部は専門書参照」としつつ、同章の結論で前因子の一致を強調している。原則②「背景物理を曖昧にしない」と衝突する。</td>
+            <td>第26章の主式だけはSIで厳密に揃え、CGS/HLとの差は脚注または付録に回す。</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>本文の分かりにくい箇所</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>場所</th>
+            <th>何が分かりにくいか</th>
+            <th>読者への影響</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>index.qmd:42-52</code></td>
+            <td>「熱的線スペクトル（LTE近似）」を主軸としつつ、non-LTE、21 cm、AGN線も並走対象に入る。射程が広がりすぎて、どこまでが主軸か曖昧。</td>
+            <td>第VII部で「熱的線」と「低密度・非平衡線」の区別を見失いやすい。</td>
+          </tr>
+          <tr>
+            <td><code>part1/01-where-blackbody.qmd:118-131</code>, <code>part6/16-cmb.qmd:45-51</code></td>
+            <td>CMBの「黒体からのずれ」と空間温度ゆらぎ <code>Delta T/T</code> が近い数値で出る。スペクトル歪みと異方性を明確に分けた方がよい。</td>
+            <td>FIRASのスペクトル残差、CMB異方性、将来のmu/y歪みの違いが混同される。</td>
+          </tr>
+          <tr>
+            <td><code>part2/05-radiative-transfer.qmd:61-67</code></td>
+            <td>散乱込みの式が <code>mu dI/ds</code> になっているが、<code>s</code> が光線経路なら <code>mu</code> は不要。平面平行の鉛直座標なら <code>mu dI/dz</code>。</td>
+            <td>放射輸送方程式の幾何と光学的深さの定義が混乱する。</td>
+          </tr>
+          <tr>
+            <td><code>part2/05-radiative-transfer.qmd:198-200</code></td>
+            <td>統計平衡方程式が二準位の概略式なのか多準位の総和式なのか曖昧。両辺に <code>sum_u</code> があり、添字の意味が読み取りにくい。</td>
+            <td>non-LTEの本質を学ぶ節なのに、式の一般性が過大に見える。</td>
+          </tr>
+          <tr>
+            <td><code>part4/09-classical-failure.qmd:43-57</code></td>
+            <td>空洞モード密度を借用するのは構成上やむを得ないが、「天下りを避ける」原則に対して目立つ。</td>
+            <td>第9章で古典論の破綻を納得する前に、最重要因子を未導出で使う形になる。</td>
+          </tr>
+          <tr>
+            <td><code>part6/15-non-blackbody.qmd:80-90</code></td>
+            <td>灰色大気のEddington解を結果だけ引く。逆引きの章なのに、観測されるずれからなぜ <code>T^4=(3/4)T_eff^4(tau+2/3)</code> へ行くかが見えにくい。</td>
+            <td>読者が「式を使う章」と受け取り、逆引きの流れから外れる。</td>
+          </tr>
+          <tr>
+            <td><code>part6/18-accretion-high-energy.qmd:79-91</code></td>
+            <td>円盤スペクトルの <code>F_nu</code> 積分に距離、傾斜角、両面放射、投影が入っていない。比例式として読むべきだが記号が観測フラックスに見える。</td>
+            <td>演習18-1で正規化や幾何をどこまで含めるか迷う。</td>
+          </tr>
+          <tr>
+            <td><code>part6/19-continuum-microprocesses.qmd:68-88</code></td>
+            <td><code>epsilon_nu^ff</code> を「放射係数 <code>j_nu</code> に対応」と書き、比をとって <code>B_nu</code> とする。<code>epsilon</code> が立体角積分済みなら <code>4pi</code> が絡むため定義が必要。</td>
+            <td>Kirchhoff則を素過程で確認する良い箇所だが、単位と係数の不安が残る。</td>
+          </tr>
+          <tr>
+            <td><code>part7/20-where-lines.qmd:128-133</code></td>
+            <td>21 cm線をE1中心地図の <code>f_lu n_l phi</code> 構造で説明する。HTML演習には注意書きがあるが、本文には同じ注意が薄い。</td>
+            <td>21 cm線に <code>pi e^2/m_e c</code> のE1前因子を直接使ってよいと誤解される。</td>
+          </tr>
+          <tr>
+            <td><code>part7/21-line-formation.qmd:104-114</code></td>
+            <td>線放射係数 <code>j_nu</code> に「自発放出 + 誘導放出」とあるが、直後のソース関数は誘導放出を負の吸収に入れる慣用式で、分子に齟齬がある。</td>
+            <td>誘導放出を放射係数に入れる流儀と吸収補正に入れる流儀が混ざる。</td>
+          </tr>
+          <tr>
+            <td><code>part7/22-atomic-physics.qmd:154-160</code></td>
+            <td>「線形ぴーく」という誤字がある。また <code>pi e^2/m_e c</code> はCGS形なので、SI基本方針と緊張する。</td>
+            <td>中心地図の前因子を最終的に理解する節で、表記の信頼感が落ちる。</td>
+          </tr>
+          <tr>
+            <td><code>part7/23-line-shape.qmd:41-50</code></td>
+            <td>自然幅を単一の <code>A_ul</code> で書いている。実際の寿命は上準位から全下準位への全崩壊率の和で決まる。</td>
+            <td>多準位原子や分岐比を扱う際に誤った一般化をしやすい。</td>
+          </tr>
+          <tr>
+            <td><code>part8/26-qed-minimum.qmd:146-147</code></td>
+            <td>「CMB、Halpha Voigt、QSO吸収系、円盤スペクトルすべてが <code>2hnu^3/c^2</code> を含む」と読める表現が強すぎる。</td>
+            <td>線吸収係数の中心地図そのものにこの前因子が入るわけではなく、Einstein係数比を介した関係だという精密さが薄れる。</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>逆引きコンセプトから外れて見える箇所</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>箇所</th>
+            <th>外れて見える理由</th>
+            <th>逆引き化する案</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>第2章冒頭のプランク関数導入</td>
+            <td>観測曲線として受け入れる方針は明記されているが、式が早く出るため「結果を置いた」印象が残る。</td>
+            <td>「観測で測る三特徴: 低周波の傾き、ピーク、Wien側の減衰」から式の三因子へ対応づける小表を追加する。</td>
+          </tr>
+          <tr>
+            <td>第8章のモード密度借用</td>
+            <td>占有因子の章で全プランク分布まで再構成するため、第14章の成果を先取りする。</td>
+            <td>式の見出しを「仮の再構成」とし、第14章で「借用を返す」箇所への往復リンクを強くする。</td>
+          </tr>
+          <tr>
+            <td>第15章の灰色大気</td>
+            <td>観測される黒体からのずれの章なのに、Eddington近似の式が専門書参照で入る。</td>
+            <td>本文に2段落の導出骨格、演習15-1への明示リンク、仮定一覧を入れる。</td>
+          </tr>
+          <tr>
+            <td>第18章の標準円盤</td>
+            <td><code>T(R) propto R^-3/4</code> と <code>nu^(1/3)</code> が観測逆引きというより標準模型の順方向説明になっている。</td>
+            <td>「観測SEDの中間帯が <code>nu^(1/3)</code> に見える → 温度プロファイル指数を逆算」の流れを先に置く。</td>
+          </tr>
+          <tr>
+            <td>第22章のLorentz振動子前因子</td>
+            <td>中心地図の未説明因子を補う重要節だが、古典振動子の計算結果だけが置かれている。</td>
+            <td>短い導出補助を本文に入れるか、付録に「積分吸収断面積」の導出を追加する。</td>
+          </tr>
+          <tr>
+            <td>第26章のQED</td>
+            <td>「構造のみ」とした結果、最終統合の要である前因子の厳密性が弱い。</td>
+            <td>完全導出ではなくても、双極子近似、ゲージ、状態密度、偏光平均の各因子がどこで入るかを1つの表に分解する。</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>本文内で説明不足の概念</h2>
+      <p>以下は、演習や応用章で使われるが、本文だけでは独立に理解しにくい概念である。用語索引に入れるだけでなく、該当章に短い「逆引きメモ」を置くと読みやすくなる。</p>
+      <ul>
+        <li><b>観測SEDの構築</b>: フラックス較正、フィルタ幅、バンド積分、K補正、星間赤化。第2章と第17章で必要。</li>
+        <li><b>輝度温度の限界</b>: Rayleigh-Jeans極限での便利量だが、光学・X線では直観が破綻する。第2章、第17章、第19章で補足がほしい。</li>
+        <li><b>Gaunt因子</b>: 「O(1)の量子補正」と出るが、何を補正しているか、どの精度で効くかの説明が薄い。第17章、第19章。</li>
+        <li><b>分配関数と縮退度</b>: Boltzmann/Sahaを実用するには内部分配関数が必要。第7章、第19章、第24章で橋渡しが必要。</li>
+        <li><b>臨界密度</b>: 第24章で診断量として使うが、<code>n_crit = A_ul/q_ul</code> の形と温度依存を本文に明示したい。</li>
+        <li><b>線の光学的厚さ</b>: 等価幅、curve of growth、吸収線/輝線判定で中心的。第21章で <code>tau_nu = N_l sigma_nu</code> をもっと前面に出すとよい。</li>
+        <li><b>多準位原子</b>: 統計平衡式は二準位から多準位へ飛ぶ。行列形式や分岐比の最小説明があるとnon-LTEが見える。</li>
+        <li><b>双極子近似とゲージ</b>: 第26章で <code>A dot p</code> と <code>d dot E</code> が出るため、同値性と近似条件を一段落で説明したい。</li>
+        <li><b>磁気双極子・電気四重極遷移</b>: 禁制線や21 cmで必須。E1中心地図との違いを本文側に明記する必要がある。</li>
+        <li><b>距離・角度・光度の観測幾何</b>: 第2章、第4章、第18章でフラックス記号が複数の意味を持つため、観測フラックスと面フラックスの記号を分けたい。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>演習問題と模範解答</h2>
+      <h3>収録数の不整合</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>部</th>
+            <th>本文内演習</th>
+            <th>HTML演習</th>
+            <th>問題</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>第I部</td><td>13</td><td>13</td><td>数は一致。ただしHTML末尾に「試作版」表記あり。</td></tr>
+          <tr><td>第II部</td><td>9</td><td>9</td><td>数は一致。</td></tr>
+          <tr><td>第III部</td><td>12</td><td>12</td><td>数は一致。第VII部への旧リンクあり。</td></tr>
+          <tr><td>第IV部</td><td>16</td><td>16</td><td>数は一致。第VIII部への旧章番号リンクあり。</td></tr>
+          <tr><td>第V部</td><td>8</td><td>8</td><td>数は一致。ただしCGSで解く問題がSI方針と衝突。</td></tr>
+          <tr><td>第VI部</td><td>21</td><td>15</td><td>第19章の5問と第17章17-5がHTMLにない。</td></tr>
+          <tr><td>第VII部</td><td>18</td><td>18</td><td>数は一致するが章番号が現行本文より1つ古い。</td></tr>
+          <tr><td>第VIII部</td><td>8</td><td>8</td><td>数は一致するが章番号が現行本文より1つ古い。</td></tr>
+        </tbody>
+      </table>
+
+      <h3>演習で直すべき点</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>場所</th>
+            <th>指摘</th>
+            <th>対応</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>exercises/*.html</code> 末尾</td>
+            <td>全体に「試作版」表記が残っている。本文v0.1のレビュー対象としては、完成度が低く見える。</td>
+            <td>「v0.1演習問題集」などに統一するか、試作版表記を外す。</td>
+          </tr>
+          <tr>
+            <td><code>exercises/演習問題_第IV部_量子論へ.html:693,727,761</code></td>
+            <td>第VIII部へのリンクが旧 <code>part8/24-em-field-quantization.html</code>、<code>part8/25-qed-minimum.html</code> を指す。</td>
+            <td>第25章・第26章へ更新。</td>
+          </tr>
+          <tr>
+            <td><code>exercises/演習問題_第VII部_線スペクトル.html:138,163,188,208-224</code></td>
+            <td>第20章以降の本文リンクが旧ファイル名になっている。章番号も19-23表記。</td>
+            <td>現行の <code>20-where-lines</code> から <code>24-line-applications</code> へ更新。</td>
+          </tr>
+          <tr>
+            <td><code>exercises/演習問題_第VIII部_QEDからの俯瞰.html:129-245</code></td>
+            <td>問題文と解答中の「第24章」「第25章」が現行本文と一致しない。</td>
+            <td>問題番号を25-1〜25-4、26-1〜26-4に修正する。</td>
+          </tr>
+          <tr>
+            <td><code>exercises/演習問題_第V部_電磁気学へ.html:180-181</code>, <code>exercises/演習問題_第VII部_線スペクトル.html:358</code></td>
+            <td>演習はCGSで進めるが、本文・付録ではSI基本を掲げる。学生がどちらで答えるべきか迷う。</td>
+            <td>各問題にSI版の解答も併記するか、「この問題はCGS規約を学ぶ問題」と明示する。</td>
+          </tr>
+          <tr>
+            <td>第VIII部演習のFermi黄金律問題</td>
+            <td>「完全導出ではなく構造を読む」と断っているが、模範解答が前因子の厳密性を確認できるほどではない。</td>
+            <td>状態密度、偏光平均、双極子行列要素、<code>omega^3</code> の出所を箇条書きで分解する。</td>
+          </tr>
+          <tr>
+            <td>第VII部 21 cm演習</td>
+            <td>HTMLではE1中心地図を構造だけ借りる注意があるが、本文側の21 cm節には同じ強さの注意がない。</td>
+            <td>本文第20章にも同じ注意を入れ、演習解答と整合させる。</td>
+          </tr>
+          <tr>
+            <td>第VI部演習</td>
+            <td>本文第19章の連続微視過程は、逆引きコンセプト上かなり重要なのにHTML演習にない。</td>
+            <td>第19章5問をHTMLへ追加し、第VI部を「現実の宇宙＋連続微視過程」まで含む部として整理する。</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>追加するとよい「逆引き」導線</h2>
+      <ul>
+        <li>各応用章の冒頭に「観測で見える特徴 → 最小モデル → 逆引きされる物理量 → 破れる仮定」の4列表を置く。</li>
+        <li>中心地図の各因子について「初出」「仮に借りる場所」「本当に導出する場所」を一覧化する。</li>
+        <li>線スペクトル中心地図には、E1許容線用の式であること、21 cmや禁制線では <code>A_ul</code> や有効遷移強度に読み替えることを明記する。</li>
+        <li>単位系は、本文の主式をSI、天体物理慣用式をCGSの補助式として並べる。前因子を含む式ほど、単位系ラベルを必ず付ける。</li>
+        <li>演習HTMLはQuartoの本文内演習から生成する、または章番号・リンク・問題数をチェックするスクリプトを用意する。</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>日本語教科書としての表現レビュー</title>
+  <style>
+    :root {
+      --bg: #f7f7f4;
+      --paper: #ffffff;
+      --ink: #242424;
+      --muted: #626262;
+      --line: #d9d7d0;
+      --accent: #245a76;
+      --warn: #8b4e17;
+      --bad: #9b2f2f;
+      --good: #2f6b4f;
+      --chip: #eef3f5;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Yu Gothic UI", Meiryo, sans-serif;
+      line-height: 1.75;
+    }
+    header {
+      background: #17384a;
+      color: white;
+      padding: 40px 24px 34px;
+      border-bottom: 6px solid #d7b46a;
+    }
+    main {
+      width: min(1180px, calc(100% - 32px));
+      margin: 28px auto 56px;
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+    h2 {
+      margin: 38px 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--line);
+      color: #17384a;
+      font-size: 24px;
+      letter-spacing: 0;
+    }
+    h3 {
+      margin: 24px 0 8px;
+      color: #17384a;
+      font-size: 18px;
+      letter-spacing: 0;
+    }
+    p { margin: 0 0 14px; }
+    .lead {
+      max-width: 960px;
+      margin: 0;
+      color: #e8eef1;
+      font-size: 16px;
+    }
+    .panel {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 22px;
+      margin: 18px 0;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+    .chip {
+      display: inline-block;
+      border-radius: 999px;
+      background: var(--chip);
+      color: #17384a;
+      padding: 4px 10px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      margin: 14px 0 26px;
+      font-size: 14px;
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 10px 12px;
+      vertical-align: top;
+    }
+    th {
+      background: #eef1ef;
+      color: #17384a;
+      text-align: left;
+      white-space: nowrap;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.93em;
+      background: #f0f0ec;
+      padding: 1px 4px;
+      border-radius: 4px;
+    }
+    .priority-high { color: var(--bad); font-weight: 700; }
+    .priority-mid { color: var(--warn); font-weight: 700; }
+    .priority-low { color: var(--good); font-weight: 700; }
+    .quote {
+      color: #3a3a3a;
+      background: #fbfbf8;
+      border-left: 4px solid #d7b46a;
+      padding: 7px 10px;
+      margin: 4px 0;
+    }
+    ul { margin-top: 8px; }
+    li { margin: 6px 0; }
+    .note {
+      color: var(--muted);
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>日本語教科書としての表現レビュー</h1>
+    <p class="lead">物理学科の大学院生として、本文・演習問題・解答HTMLを読み、専門書として不自然または分かりにくい日本語表現を抽出した。前回の物理内容レビューとは分け、ここでは語調、用語統一、英語混在、演習解答の書きぶりを中心に整理する。</p>
+    <div class="meta">
+      <span class="chip">対象: .qmd 本文</span>
+      <span class="chip">対象: exercises/*.html</span>
+      <span class="chip">観点: 日本語教科書</span>
+      <span class="chip">出力日: 2026-06-26</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>総評</h2>
+      <p>全体として、観測量から物理へ戻る「逆引き」の語り口は一貫している。一方で、口語的な比喩、強い修辞、用語の揺れ、英語をそのまま残す箇所が混在しており、大学教科書としては少し講義ノート寄りに見える箇所がある。</p>
+      <p>最優先は、<code>線形</code>、<code>ソース関数/源泉関数</code>、<code>放射係数/放出係数</code>の統一である。次に、<code>ちょっかい</code>、<code>本丸</code>、<code>白眉</code>などの比喩表現を、物理的な因果を直接述べる文に置き換えると、本文の信頼感が上がる。</p>
+    </section>
+
+    <h2>修正優先度が高い項目</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>優先</th>
+          <th>箇所</th>
+          <th>現状の表現</th>
+          <th>気になる理由</th>
+          <th>推奨</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="priority-high">高</td>
+          <td><code>contents.qmd:57</code><br><code>part7/23-line-shape.qmd:2,7,23</code><br><code>_includes/_hydrogen-map.qmd:25</code></td>
+          <td><div class="quote">線形（line shape）／線形関数</div></td>
+          <td>日本語の物理文脈では「線形」は linear と読まれやすい。索引では <code>線輪郭 | line profile</code> を採用しているため、章題と索引の対応も崩れる。</td>
+          <td><code>線輪郭（line profile）</code>を基本語にする。必要なら初出で「線形（line shape ともいう）」を注記する。</td>
+        </tr>
+        <tr>
+          <td class="priority-high">高</td>
+          <td><code>part2/05-radiative-transfer.qmd:128-137</code><br><code>part6/15-non-blackbody.qmd:120,229,241</code></td>
+          <td><div class="quote">ソース関数（源泉関数とも訳される）／源泉関数値</div></td>
+          <td>第5章では「本書ではソース関数を主に用いる」と宣言しているが、後続章で「源泉関数」が再び普通に出る。逆引き型の教材では、検索語が割れる。</td>
+          <td>本文中は原則 <code>ソース関数</code> に統一する。訳語の揺れは第5章の用語注だけに閉じる。</td>
+        </tr>
+        <tr>
+          <td class="priority-high">高</td>
+          <td><code>part6/19-continuum-microprocesses.qmd:68</code><br><code>appendix/C-glossary.qmd</code></td>
+          <td><div class="quote">放射率（放射係数 <code>j_\nu</code> に対応）</div></td>
+          <td><code>j_\nu</code> は本文・用語索引では放出係数または emission coefficient と整理する方が自然。放射率、放射係数、放出係数が混ざると、単位と立体角積分の有無も曖昧になる。</td>
+          <td><code>放出係数 j_\nu</code>、<code>体積放射率 \epsilon_\nu</code>など、単位に応じて語を固定する。</td>
+        </tr>
+        <tr>
+          <td class="priority-high">高</td>
+          <td><code>part8/25-em-field-quantization.qmd:132</code><br><code>part8/26-qed-minimum.qmd:110,160</code></td>
+          <td><div class="quote">真空揺らぎが励起原子に「ちょっかい」をかけ</div></td>
+          <td>口語としては印象に残るが、大学教科書では軽すぎる。QED の核心を扱う箇所なので、比喩より結合・摂動・遷移確率の語で書いた方がよい。</td>
+          <td>「真空揺らぎとの相互作用が遷移を誘起する」「真空場との結合により自発放出率が非ゼロになる」。</td>
+        </tr>
+        <tr>
+          <td class="priority-high">高</td>
+          <td><code>part6/15-non-blackbody.qmd:122,134,257,268</code><br><code>exercises/演習問題_第VI部_現実の宇宙へ.html:131,143</code></td>
+          <td><div class="quote">emergent flux</div></td>
+          <td>重要な近似名の説明で英語だけが残るため、日本語の読書導線が切れる。</td>
+          <td>初出で「射出フラックス（emergent flux）」または「外向きフラックス」と訳し、以後は日本語を主にする。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>口語的・比喩的で教科書調から浮く表現</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>優先</th>
+          <th>箇所</th>
+          <th>現状の表現</th>
+          <th>コメント</th>
+          <th>推奨表現例</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="priority-mid">中</td>
+          <td><code>part3/08-photon-statistics.qmd:183</code></td>
+          <td><div class="quote">本章の本丸は 占有因子 ... の導出</div></td>
+          <td>「本丸」は講義口調としては有効だが、専門書では比喩がやや強い。</td>
+          <td>「本章の中心課題は」「本章で導くべき量は」。</td>
+        </tr>
+        <tr>
+          <td class="priority-mid">中</td>
+          <td><code>part3/07-statistical-mechanics.qmd:87</code></td>
+          <td><div class="quote">計算の本丸はミクロ状態の和...</div></td>
+          <td>同じ比喩が複数回出ると、意図した強調よりも文体の癖として目立つ。</td>
+          <td>「計算の核心は」「実際の計算は」。</td>
+        </tr>
+        <tr>
+          <td class="priority-mid">中</td>
+          <td><code>part7/24-line-applications.qmd:176</code></td>
+          <td><div class="quote">線スペクトル道具の現代応用の白眉</div></td>
+          <td>「白眉」は文学的で、読者によっては古風に感じる。評価語なので根拠も曖昧。</td>
+          <td>「代表的な現代応用」「特に重要な応用例」。</td>
+        </tr>
+        <tr>
+          <td class="priority-mid">中</td>
+          <td><code>part7/20-where-lines.qmd:172</code></td>
+          <td><div class="quote">線スペクトルの威力の絶頂例</div></td>
+          <td>「絶頂例」は日本語として不自然。強調が先行し、何が優れているかが見えにくい。</td>
+          <td>「線幅から力学量を推定できる代表例」。</td>
+        </tr>
+        <tr>
+          <td class="priority-low">低</td>
+          <td><code>part1/01-where-blackbody.qmd:89</code></td>
+          <td><div class="quote">ざっくりした分類</div></td>
+          <td>初学者向けには分かりやすいが、教科書ではやや口語的。</td>
+          <td>「概略的な分類」「大まかな分類」。</td>
+        </tr>
+        <tr>
+          <td class="priority-low">低</td>
+          <td><code>part8/25-em-field-quantization.qmd:151</code></td>
+          <td><div class="quote">覚えておいて損はない</div></td>
+          <td>講義メモ的な言い回し。重要性の根拠を直接書く方がよい。</td>
+          <td>「第VIII部の内容が宇宙論的観測とも接続する例として重要である」。</td>
+        </tr>
+        <tr>
+          <td class="priority-low">低</td>
+          <td><code>part8/26-qed-minimum.qmd:147</code></td>
+          <td><div class="quote">観測者は知らずに、毎日 QED を観測している</div></td>
+          <td>締めの一文としては印象的だが、ややエッセイ調。主張も強く読める。</td>
+          <td>「日常的な分光観測にも、QED で記述される電磁場のモード構造が反映されている」。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>用語統一・訳語の問題</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>項目</th>
+          <th>該当例</th>
+          <th>問題点</th>
+          <th>統一案</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>line shape / line profile</td>
+          <td><code>contents.qmd:57</code>、<code>part7/23-line-shape.qmd:7</code>、<code>appendix/C-glossary.qmd:93</code></td>
+          <td>章題は「線形」、索引は「線輪郭」。日本語の読者は「線形」を linear と誤読しやすい。</td>
+          <td><code>線輪郭</code>を主見出しにする。英語は初出で <code>line profile / line shape</code> と並記する。</td>
+        </tr>
+        <tr>
+          <td>source function</td>
+          <td><code>part2/05-radiative-transfer.qmd:128-137</code>、<code>part6/15-non-blackbody.qmd:120</code></td>
+          <td>訳語の存在を説明したあとも、複数訳が本文内で混在する。</td>
+          <td><code>ソース関数</code>に統一。索引にも「源泉関数 → ソース関数」を追加する。</td>
+        </tr>
+        <tr>
+          <td>emission coefficient / emissivity</td>
+          <td><code>part6/19-continuum-microprocesses.qmd:68</code></td>
+          <td>放射率、放射係数、放出係数の区別が曖昧。演習で単位確認をすると混乱しやすい。</td>
+          <td><code>放出係数 j_\nu</code>、<code>体積放射率 \epsilon_\nu</code>、<code>単位立体角あたり</code>の有無を明記。</td>
+        </tr>
+        <tr>
+          <td>Local TE</td>
+          <td><code>part1/03-universality.qmd:72</code></td>
+          <td><code>Local TE</code> は略記として不自然で、英語としても中途半端に見える。</td>
+          <td>「局所熱力学平衡（local thermodynamic equilibrium; LTE）」と書く。</td>
+        </tr>
+        <tr>
+          <td>ハード状態・ソフト状態</td>
+          <td><code>part6/18-accretion-high-energy.qmd:130</code></td>
+          <td>専門用語として妥当だが、初出の説明が短い。X線天文学になじみがない読者には状態名だけでは意味が取りにくい。</td>
+          <td>「高エネルギー側が相対的に強いハード状態」「円盤黒体成分が卓越するソフト状態」のように、物理的特徴を添える。</td>
+        </tr>
+        <tr>
+          <td>greybody / modified blackbody</td>
+          <td><code>part6/15-non-blackbody.qmd:154</code></td>
+          <td>「修正黒体」と「greybody」が並ぶが、どちらを本文の標準語にするかが曖昧。</td>
+          <td>「修正黒体（modified blackbody; 文脈によって greybody とも呼ぶ）」とし、以後は修正黒体に統一。</td>
+        </tr>
+        <tr>
+          <td>emissivity index</td>
+          <td><code>part6/15-non-blackbody.qmd:156</code></td>
+          <td>「ダスト emissivity index」は日本語と英語の混在が目立つ。</td>
+          <td>「ダスト放射率指数（emissivity index）」または「ダストの emissivity index」。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>英語混在・カタカナ語の扱い</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>箇所</th>
+          <th>現状</th>
+          <th>気になる点</th>
+          <th>提案</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>part6/15-non-blackbody.qmd:122,134</code></td>
+          <td><code>emergent flux</code></td>
+          <td>式の解釈に必要な語なので、日本語の主語にした方がよい。</td>
+          <td>「射出フラックス（emergent flux）」または「外向きフラックス」。</td>
+        </tr>
+        <tr>
+          <td><code>part6/15-non-blackbody.qmd:191</code></td>
+          <td><code>power-law</code></td>
+          <td>「べき則」と訳されているので、英語は初出だけで十分。</td>
+          <td>以後は「べき則分布」に統一。</td>
+        </tr>
+        <tr>
+          <td><code>part7/21-line-formation.qmd</code> 周辺</td>
+          <td><code>curve of growth</code></td>
+          <td>索引では「成長曲線」を採用している。本文見出しも日本語を主にした方が索引性が高い。</td>
+          <td>「成長曲線（curve of growth）」。</td>
+        </tr>
+        <tr>
+          <td><code>part7/24-line-applications.qmd:173</code></td>
+          <td><code>habitability</code></td>
+          <td>応用項目の箇条書き内で英語だけが残る。</td>
+          <td>「居住可能性（habitability）」。</td>
+        </tr>
+        <tr>
+          <td>演習HTML全般</td>
+          <td><code>Wien 側</code>、<code>Rayleigh-Jeans 側</code>、<code>RJ 側</code>が混在</td>
+          <td>短答では略語が便利だが、解答集としては初出なしの <code>RJ</code> が読みにくい。</td>
+          <td>各部の冒頭で略語を定義するか、解答では「Rayleigh-Jeans 側（RJ側）」にする。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>文の読みやすさ</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>箇所</th>
+          <th>現状</th>
+          <th>問題点</th>
+          <th>修正方針</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>part3/08-photon-statistics.qmd:183</code></td>
+          <td>一文の中に「本章の本丸」「モード密度を借りる理由」「逆引き戦略」が入る。</td>
+          <td>重要なメタ説明だが、情報量が多く、一読で構造を取りにくい。</td>
+          <td>「本章の中心は占有因子である」「ただし観測量にするにはモード密度が必要である」「その導出は第V部で行う」の三文に分ける。</td>
+        </tr>
+        <tr>
+          <td><code>part6/19-continuum-microprocesses.qmd:61</code></td>
+          <td>「熱的」は粒子分布の性質であり、黒体性とは別条件、という重要な注意が一文に詰め込まれている。</td>
+          <td>概念の分離が本書の柱なので、長い一文より箇条書きの方が残りやすい。</td>
+          <td>「熱的 = 粒子分布」「黒体的 = 光学的厚さと熱化」の二項対比にする。</td>
+        </tr>
+        <tr>
+          <td><code>part6/18-accretion-high-energy.qmd:130</code></td>
+          <td>X線連星、ハード状態、コンプトン化、指数、高エネルギーカットオフ、ソフト状態、状態遷移が一段落に入る。</td>
+          <td>情報は正しいが、観測特徴と物理解釈の対応が埋もれる。</td>
+          <td>「観測特徴」「物理的解釈」「状態遷移」の三文または三項目に分ける。</td>
+        </tr>
+        <tr>
+          <td><code>part8/26-qed-minimum.qmd:147</code></td>
+          <td>複数の観測例を列挙したあと、共通因子とQEDへの結論まで一文で接続する。</td>
+          <td>印象的なまとめだが、物理的主張が強く見える。例と結論を分けると誤解が減る。</td>
+          <td>「これらの記述には電磁場モード構造が現れる」と「したがって分光観測はQED的構造と接続する」を分ける。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>演習問題・解答HTMLの表現</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>箇所</th>
+          <th>現状</th>
+          <th>コメント</th>
+          <th>推奨</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>part1/01-where-blackbody.qmd:324</code> ほか各章</td>
+          <td><div class="quote">まず自力で解いてから開くこと。</div></td>
+          <td>指示としては明確だが、やや命令調。教科書本文では少し硬く感じる。</td>
+          <td>「まず自力で解いてから確認すると効果的である。」</td>
+        </tr>
+        <tr>
+          <td><code>exercises/演習問題_第VI部_現実の宇宙へ.html:94</code></td>
+          <td><div class="quote">解答は「▶ 模範解答」で展開 ― まず自力で。</div></td>
+          <td>ダッシュ後の文が省略的で、ウェブ教材としてはよいが、教科書の解答集としては軽い。</td>
+          <td>「解答は『模範解答』を展開して確認できる。まず自力で解いてから参照してほしい。」</td>
+        </tr>
+        <tr>
+          <td>演習HTML全般</td>
+          <td><div class="quote">答え： ...</div></td>
+          <td>短答ボックスとして機能しているが、式だけの解答では「なぜそう言えるか」が残りにくい箇所がある。</td>
+          <td>「解答の要点：」にすると、導出本文との差が明確になる。数値答えだけの箇所は「数値結果：」でもよい。</td>
+        </tr>
+        <tr>
+          <td><code>exercises/演習問題_第VI部_現実の宇宙へ.html:144,169,231</code> など</td>
+          <td>体言止めや省略文が多い。</td>
+          <td>一覧性は高いが、解答だけを読む読者には主語・条件が不足する場合がある。</td>
+          <td>短答でも「したがって」「このため」を補い、物理的条件を一つ添える。</td>
+        </tr>
+        <tr>
+          <td>演習HTML全般</td>
+          <td>本文リンク、部別リンク、外部リンクが同じ段落内に密集する。</td>
+          <td>学習導線としては有用だが、解答の日本語がリンク群に埋もれる。</td>
+          <td>「関連節」を独立した小行にし、問題文・解答本文とは視覚的に分ける。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>章構造ラベルの表現</h2>
+    <div class="panel">
+      <p><code>問い</code>、<code>短答</code>、<code>もう一歩</code>、<code>対応（観測）</code>、<code>使えるようになった道具</code>は、本書の逆引き構造を支える有効な定型である。ただし、日本語教科書としては次の点を整えるとよい。</p>
+      <ul>
+        <li><code>短答</code>はやや硬く、口頭試問のように見える。候補は「要点」「答え」「要約」。</li>
+        <li><code>もう一歩</code>は親しみやすいが、章全体で学術調に寄せるなら「補足」「発展」が安定する。</li>
+        <li><code>対応（観測）</code>は意味が少し取りにくい。「観測との対応」「観測での意味」の方が自然。</li>
+        <li><code>使えるようになった道具</code>は本書の個性として有効。ただし見出しとしては長いので、「この章の道具」でもよい。</li>
+      </ul>
+    </div>
+
+    <h2>句読点・文末の統一</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>項目</th>
+          <th>現状</th>
+          <th>推奨</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>コールアウト末尾</td>
+          <td><code>part6/16-cmb.qmd:89,109,129</code>、<code>part6/15-non-blackbody.qmd:73,136,163</code>などで句点なしの段落がある。</td>
+          <td>本文段落は原則として句点で終える。箇条書きだけ句点なしにする場合は全章で統一する。</td>
+        </tr>
+        <tr>
+          <td>範囲記号</td>
+          <td><code>10〜30</code>、<code>0.5〜1.5</code>、<code>1.5–2</code>などが混在する。</td>
+          <td>日本語本文では <code>〜</code>、数式・英語寄りの範囲では en dash など、ルールを決める。教科書全体では一種類に寄せた方が検索しやすい。</td>
+        </tr>
+        <tr>
+          <td>強調の多さ</td>
+          <td>太字が連続し、どこが最重要か分かりにくい段落がある。</td>
+          <td>初出語、中心式、結論だけを太字にする。評価語の太字は減らす。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>全体編集ルール案</h2>
+    <div class="panel">
+      <ul>
+        <li>専門用語は「日本語主語 + 英語括弧」を初出に置き、以後は日本語に統一する。</li>
+        <li>比喩は章導入と節末まとめに限定し、式の解釈や重要概念では物理語に置き換える。</li>
+        <li>索引語と章題の語を一致させる。逆引き教材では、読者が同じ語で戻れることが重要である。</li>
+        <li>演習の短答は、数値結果だけでなく「どの近似・条件のもとで成り立つか」を一文添える。</li>
+        <li>「本書の射程を超える」「専門書を参照」のような逃がし表現は、必要な場合だけ使い、代わりに「ここでは何を採用するか」を明示する。</li>
+      </ul>
+    </div>
+
+    <p class="note">注: 物理内容の正誤や章番号・演習HTMLの同期問題は、別ファイル <code>reverse-index-review.html</code> に整理済み。このレビューは日本語表現と教科書としての読みやすさに限定した。</p>
+  </main>
+</body>
+</html>
