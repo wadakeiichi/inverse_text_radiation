@@ -1,0 +1,63 @@
+# 付録 D　標準教科書との対応表 {#sec-correspondence .unnumbered}
+
+本書は観測スペクトルから基礎物理へ「逆引き」する独自の構成をとるため、章立てが標準的な放射過程の教科書とは順序が異なる。並行して標準書を参照したい読者のために、主要トピックごとに本書の章節と、代表的な標準教科書の対応箇所を示す。
+
+略号：
+
+- **R&L** … G. B. Rybicki & A. P. Lightman, *Radiative Processes in Astrophysics* (Wiley)。放射過程の定番。**Gauss 単位系**である点に注意（本書は SI 主体、付録 B §B.4 で換算）。章番号は同書の章立てに対応する。
+- **Draine** … B. T. Draine, *Physics of the Interstellar and Intergalactic Medium* (Princeton)。原子・分子線と星間物質。
+- **H&M** … D. Mihalas / Hubeny & Mihalas, *Stellar Atmospheres* / *Theory of Stellar Atmospheres*。放射輸送と non-LTE。
+- **Longair** … M. S. Longair, *High Energy Astrophysics* (Cambridge)。非熱的放射。
+
+> 対応は **トピック単位の目安** であり、版によって節番号は変わりうる。細部は各書の目次・索引で確認してほしい。
+
+## D.1 放射の記述と輸送
+
+| トピック | 本書 | R&L | その他 |
+|---|---|---|---|
+| 比強度・フラックス・放射モーメント | 第4章 | Ch. 1 | H&M（放射場の定義） |
+| 放射輸送方程式・形式解・光学的厚さ | 第5章 | Ch. 1 | H&M（輸送方程式の章） |
+| ソース関数・Kirchhoff の法則 | 第3章, 第5章 | Ch. 1 | H&M |
+| Eddington–Barbier 近似 | 第15章 | Ch. 1 | H&M |
+
+## D.2 黒体放射と統計
+
+| トピック | 本書 | R&L | その他 |
+|---|---|---|---|
+| プランク関数・Wien 則・Stefan–Boltzmann | 第1・2・10章 | §1.5（Ch. 1） | Kittel & Kroemer, *Thermal Physics* |
+| 統計力学・分配関数・Boltzmann 分布 | 第6・7章 | ― | 久保『統計力学』, Kittel & Kroemer |
+| 光子統計・Bose–Einstein・$\mu=0$ | 第8章 | ― | Kittel & Kroemer |
+| 古典論の破綻・Rayleigh–Jeans・紫外破綻 | 第9章 | §1.5 | Kittel & Kroemer |
+| Einstein 係数（$A$, $B$）・詳細釣り合い | 第11章 | §1.6 | H&M, Loudon |
+| 電磁波・偏光・Poynting・モード密度・空洞 | 第13・14章 | Ch. 1（放射場）, Ch. 2 | Jackson, *Classical Electrodynamics* |
+
+## D.3 連続放射の素過程
+
+| トピック | 本書 | R&L | その他 |
+|---|---|---|---|
+| 加速電荷の放射・Larmor 公式・双極子放射 | 第13章 §13.5b | Ch. 3 | Jackson Ch. 14 |
+| 自由-自由放射（熱的制動放射） | 第17・19章 | Ch. 5 | Longair |
+| シンクロトロン放射（非熱的） | 第18章 | Ch. 6 | Longair |
+| コンプトン／逆コンプトン散乱 | 第18章 | Ch. 7 | Longair |
+| 束縛-自由・再結合・Saha 電離平衡 | 第19章, 付録 A §A.3 | Ch. 5, Ch. 10 | Draine, Osterbrock & Ferland |
+
+## D.4 線スペクトルと原子物理
+
+| トピック | 本書 | R&L | その他 |
+|---|---|---|---|
+| 原子構造・Rydberg 公式・エネルギー準位 | 第22章 | Ch. 9 | Draine, Bransden & Joachain |
+| 振動子強度・遷移確率・選択則・禁制線 | 第22章 | Ch. 10 | Draine, Rutten 講義録 |
+| 線輪郭（自然幅・Doppler・衝突幅・Voigt） | 第23章 | Ch. 10 | Draine, H&M |
+| LTE/non-LTE・統計平衡・励起温度・臨界密度 | 第21章 | ― | H&M, Draine |
+| 成長曲線・等価幅・柱密度 | 第21・24章 | ― | Draine, Spitzer |
+| 線比診断（[O III], [S II] 等） | 第24章 | ― | Osterbrock & Ferland |
+
+## D.5 応用と発展
+
+| トピック | 本書 | R&L | その他 |
+|---|---|---|---|
+| CMB・スペクトル歪み・温度異方性 | 第16章 | ― | Dodelson, *Modern Cosmology* |
+| 恒星・惑星・ダストの熱放射 | 第15・17章 | ― | H&M, Draine |
+| 降着円盤・高エネルギー天体 | 第18章 | Ch. 5–7 | Longair, Frank/King/Raine |
+| 電磁場の量子化・光子描像 | 第25章 | ― | Loudon, *The Quantum Theory of Light* |
+| QED 最小限（最小結合・$A$/自然幅/選択則の統一） | 第26章 | ― | Sakurai, *Advanced Quantum Mechanics*; Loudon |

@@ -175,6 +175,19 @@ non-LTE 線形成を扱う数値的枠組み：
 
 これが non-LTE radiative transfer の標準枠組み。
 
+::: {.callout-note appearance="simple"}
+**いつ LTE か ― 二準位原子と臨界密度**：抽象論を、最も簡単な **二準位原子** で数にしてみる。上準位 $u$ から下準位 $l$ への脱励起には二つの経路がある ― **衝突脱励起**（電子との衝突、率 $n_e q_{ul}$。$q_{ul}$ は脱励起の速度係数）と **自発放出**（率 $A_{ul}$）。両者が拮抗する電子密度を **臨界密度**（**critical density**）と呼ぶ：
+
+$$
+n_\text{crit} \equiv \frac{A_{ul}}{q_{ul}}
+$$ {#eq-critical-density}
+
+- $n_e \gg n_\text{crit}$：衝突が放射より速く、占有数は衝突で熱平衡化する → **LTE**（$T_\text{ex}\to T_\text{kin}$）。
+- $n_e \ll n_\text{crit}$：自発放出が先に脱励起してしまい、上準位が熱平衡値より枯れる → **non-LTE**（$T_\text{ex} < T_\text{kin}$、サブサーマル）。
+
+つまり「衝突率 vs 放射率」の大小が LTE/non-LTE を分ける ― review2 が抽象的と感じた統計平衡の中身は、この一本の不等式に凝縮できる。許容線（大きい $A_{ul}$）は $n_\text{crit}$ が高く non-LTE になりやすい一方、**禁制線**（小さい $A_{ul}$、第22章 §22.5）は $n_\text{crit}$ が低く、希薄な星雲でも LTE 的に振る舞いやすい。この臨界密度の差を逆手に取って電子密度を測るのが、第24章 §24.3 の [S II] $\lambda$6716/$\lambda$6731 **線比診断**（多準位の具体例）である。
+:::
+
 ::: {.callout-warning appearance="simple"}
 **注意（観測）**：「LTE 解析からの偏差」は、観測者が誤った結論に至る源。一例として、**恒星大気の Fe I 線** を LTE で解析すると、紫外側で **Fe の over-ionization（過電離）** により占有数が Saha 予測を下回り、組成決定で 0.1〜0.4 dex のずれが生じることが知られている（Asplund 2005 のレビュー）。non-LTE 補正は現代の線スペクトル解析の必須道具となっている
 :::

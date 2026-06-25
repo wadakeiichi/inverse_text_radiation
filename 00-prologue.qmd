@@ -20,6 +20,21 @@ crossref:
 
 前提知識としては、微積分、指数関数と対数、基本的な力学、初歩的な電磁気学。熱力学・量子力学・原子物理の素養があると望ましいが、第I・II部から第III部以降への遡り方は読者の進度に合わせて調整できる。
 
+::: {.callout-note appearance="simple"}
+**前提知識チェックリスト**
+
+各項目に不安があれば、対応する付録 A の節で短く補える。読み始める前に一度確認し、本文で詰まったらここに戻ってほしい。
+
+- □ 微積分（偏微分・指数/対数・簡単な定積分）→ [付録 §A.2](appendix/A-math-notes.qmd#sec-math-gaussian)
+- □ 立体角と球面積分（$d\Omega=\sin\theta\,d\theta\,d\varphi$、半球積分）→ [付録 §A.1](appendix/A-math-notes.qmd#sec-math-solid-angle)
+- □ ガウス積分・ガンマ/ゼータ関数（プランク積分に必要）→ [付録 §A.2](appendix/A-math-notes.qmd#sec-math-gaussian)
+- □ 統計力学の基礎（分配関数・Boltzmann 分布）→ [付録 §A.3](appendix/A-math-notes.qmd#sec-math-combinatorics)／第7章
+- □ Maxwell 方程式とベクトル解析 → [付録 §A.6](appendix/A-math-notes.qmd#sec-math-vector-calc)
+- □ 量子力学の道具（交換関係・生成消滅演算子）※第IV・VIII部で使用 → [付録 §A.5](appendix/A-math-notes.qmd#sec-math-commutators)
+
+第5章で放射輸送方程式（微分方程式）に入る前に、上の微積分・立体角の項目を済ませておくと無理がない。
+:::
+
 ## 0.3 本書の構成 {#sec-prologue-structure}
 
 本書は次の構造をとる。
