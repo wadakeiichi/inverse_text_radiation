@@ -85,6 +85,7 @@ book:
         - part8/25-em-field-quantization.qmd
         - part8/26-qed-minimum.qmd
     - references.qmd
+    - version-history.qmd
 
   appendices:
     - appendix/A-math-notes.qmd

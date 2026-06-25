@@ -65,6 +65,7 @@ crossref:
 ## 参考文献・付録 {.unnumbered}
 
 - [参考文献](references.qmd)
+- [版履歴](version-history.qmd)
 - [付録 A　数学補章](appendix/A-math-notes.qmd)
 - [付録 B　単位と基本定数](appendix/B-units-constants.qmd)
 - [用語索引（和英・英和）](appendix/C-glossary.qmd)
