@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>改訂報告：採用した指摘と非採用・保留の理由</title>
+  <style>
+    :root {
+      --bg: #f7f7f4; --paper: #ffffff; --ink: #242424; --muted: #626262;
+      --line: #d9d7d0; --accent: #245a76; --warn: #8b4e17; --bad: #9b2f2f;
+      --good: #2f6b4f; --chip: #eef3f5;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+      line-height: 1.75; }
+    header { background: #17384a; color: white; padding: 40px 24px 34px; border-bottom: 6px solid #d7b46a; }
+    main { width: min(1100px, calc(100% - 32px)); margin: 28px auto 56px; }
+    h1 { margin: 0 0 10px; font-size: clamp(26px, 4vw, 40px); line-height: 1.25; }
+    h2 { margin: 38px 0 14px; padding-bottom: 8px; border-bottom: 2px solid var(--line); color: #17384a; font-size: 23px; }
+    h3 { margin: 22px 0 8px; color: #17384a; font-size: 17px; }
+    p { margin: 0 0 14px; }
+    .lead { max-width: 940px; margin: 0; color: #e8eef1; font-size: 16px; }
+    .panel { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 20px 22px; margin: 18px 0; }
+    .meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+    .chip { display: inline-block; border-radius: 999px; background: var(--chip); color: #17384a; padding: 4px 10px; font-size: 13px; font-weight: 700; }
+    .summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 22px 0 8px; }
+    .metric { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; }
+    .metric b { display: block; font-size: 24px; color: var(--accent); }
+    table { width: 100%; border-collapse: collapse; background: var(--paper); border: 1px solid var(--line); margin: 14px 0 26px; font-size: 14px; }
+    th, td { border: 1px solid var(--line); padding: 10px 12px; vertical-align: top; }
+    th { background: #eef1ef; color: #17384a; text-align: left; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.9em; background: #f0f0ec; padding: 1px 4px; border-radius: 4px; }
+    .tag { display: inline-block; border-radius: 999px; padding: 1px 9px; font-size: 12px; font-weight: 700; white-space: nowrap; }
+    .adopt { background: #e6f4ea; color: var(--good); }
+    .hold { background: #fff0d6; color: var(--warn); }
+    .reject { background: #ffe4e8; color: var(--bad); }
+    ul { margin-top: 8px; } li { margin: 6px 0; }
+    .note { color: var(--muted); font-size: 13px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>改訂報告：採用した指摘と非採用・保留の理由</h1>
+    <p class="lead">2つのレビュー（<code>japanese-style-review.html</code> 日本語表現／<code>reverse-index-review.html</code> 逆引き・物理内容）の全指摘を検討し、本文 .qmd 全章・付録・includes、および演習HTML（exercises/*.html）を改訂した。本書は「原則すべて採用」の方針で改訂し、採用しなかった／部分採用にとどめた項目のみ、その理由をここに記録する。</p>
+    <div class="meta">
+      <span class="chip">対象: 本文 .qmd 全26章＋付録</span>
+      <span class="chip">対象: 演習HTML 8部</span>
+      <span class="chip">出力日: 2026-06-26</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>総括</h2>
+      <p>両レビューの指摘は、用語統一・口語/比喩表現・英語混在・物理内容の明確化・単位系・演習の章番号同期に整理される。これらは原則としてすべて採用し、全エディタが共通の編集方針シートに従って一貫処理した。下記「非採用・保留」の3件を除き、指摘はすべて反映済みである。</p>
+    </section>
+
+    <div class="summary">
+      <div class="metric"><b>原則採用</b>両レビューの指摘</div>
+      <div class="metric"><b>3件</b>非採用・保留（理由を後述）</div>
+      <div class="metric"><b>33+</b>改訂ファイル数</div>
+      <div class="metric"><b>105問</b>演習を本文と同期</div>
+    </div>
+
+    <h2>非採用・保留にした項目とその理由</h2>
+    <table>
+      <thead>
+        <tr><th>判断</th><th>指摘</th><th>出典</th><th>理由</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="tag reject">現状維持</span></td>
+          <td>章構造ラベル <code>短答</code>／<code>もう一歩</code>／<code>使えるようになった道具</code> の言い換え（「要点」「補足/発展」「この章の道具」等）</td>
+          <td>日本語表現レビュー「章構造ラベルの表現」</td>
+          <td>レビュー自身が「本書の逆引き構造を支える<strong>有効な定型</strong>」「本書の個性として有効」と評価している。これらは全章のコールアウト見出しとして反復し、逆引き教材としての同一性を担っている。全書一括で改名するとラベル/索引/演習HTMLへ波及し、かえって不統一や参照ずれのリスクが高い。一方、意味が取りにくいと指摘された <code>対応（観測）</code> のみは <code>観測との対応</code> に全章統一した（明確に改善するため採用）。</td>
+        </tr>
+        <tr>
+          <td><span class="tag hold">部分採用</span></td>
+          <td>範囲記号を <code>〜</code> に全面統一（<code>10〜30</code> / <code>1.5–2</code> / <code>0.5〜1.5</code> の混在解消）</td>
+          <td>日本語表現レビュー「句読点・文末の統一」</td>
+          <td>本文中の<strong>数値データ範囲</strong>（温度表・密度表など）は <code>〜</code> に統一して採用済み。一方、(1) 章・節参照の範囲（例「§3.4–3.5」「第20–24章」）、(2) 固有名（Stefan–Boltzmann、Rayleigh–Jeans など en dash が正書法）、(3) 単位・べき乗が密に混在する付録の数値表、の3カテゴリは数値範囲とは別物であり、書籍全体で en dash 表記が一貫している。これらを担当範囲ごとに部分変換すると全書で不整合が増えるため、全書一括ルール化を要する作業として保留した。</td>
+        </tr>
+        <tr>
+          <td><span class="tag hold">部分採用</span></td>
+          <td>太字の削減（評価語の強調過多、最重要箇所が埋もれる段落）</td>
+          <td>日本語表現レビュー「句読点・文末の統一（強調の多さ）」</td>
+          <td>レビューが具体的に挙げた箇所、および各章で評価語が連続する箇所は「初出語・中心式・結論」へ限定する方針で調整した。ただし担当各章では強調過多が顕著でない箇所も多く、機械的な一括除去は文意の階層を損なう恐れがあるため、全段落の網羅的な太字見直しは保留した。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>主要な採用項目（反映済み・抜粋）</h2>
+    <h3>用語統一</h3>
+    <table>
+      <thead><tr><th>状態</th><th>内容</th></tr></thead>
+      <tbody>
+        <tr><td><span class="tag adopt">採用</span></td><td><strong>線形（line shape）→ 線輪郭（line profile）</strong>。第23章タイトル・本文、<code>contents.qmd</code>、<code>_includes/_hydrogen-map.qmd</code>、索引を統一。linear の意味の「線形（線形スケール・線形領域・線形成）」は意図的に温存。</td></tr>
+        <tr><td><span class="tag adopt">採用</span></td><td><strong>源泉関数 → ソース関数</strong> に本文統一。訳語併記は第5章の用語注のみに集約し、索引に「源泉関数 → ソース関数」を追加。</td></tr>
+        <tr><td><span class="tag adopt">採用</span></td><td><strong>j<sub>ν</sub> = 放出係数（emission coefficient）</strong>、<strong>ε<sub>ν</sub> = 体積放射率（ε<sub>ν</sub>=4πj<sub>ν</sub>）</strong>と単位・立体角積分の有無を明記。第19章の Kirchhoff 式も 4π 因子を整合。</td></tr>
+        <tr><td><span class="tag adopt">採用</span></td><td>emergent flux → <strong>射出フラックス（emergent flux）</strong>、greybody → <strong>修正黒体（modified blackbody; 文脈により greybody）</strong>、emissivity index → <strong>ダスト放射率指数</strong>、power-law → <strong>べき則</strong>、curve of growth → <strong>成長曲線（curve of growth）</strong>、habitability → <strong>居住可能性</strong>、Local TE → <strong>局所熱力学平衡（LTE）</strong>、RJ → 初出で <strong>Rayleigh-Jeans 側（RJ側）</strong>と定義。</td></tr>
+      </tbody>
+    </table>
+
+    <h3>口語・比喩表現の置換</h3>
+    <table>
+      <thead><tr><th>状態</th><th>内容</th></tr></thead>
+      <tbody>
+        <tr><td><span class="tag adopt">採用</span></td><td>「ちょっかい」→「真空揺らぎとの相互作用が遷移を誘起する／真空場との結合により自発放出率が非ゼロになる」（第12・25・26章）。</td></tr>
+        <tr><td><span class="tag adopt">採用</span></td><td>「本丸」→「中心課題／核心」、「白眉」→「代表的な現代応用」、「絶頂例」→「線幅から力学量を推定できる代表例」、「ざっくりした分類」→「概略的な分類」、「覚えておいて損はない」「観測者は知らずに毎日 QED を観測している」→事実を直接述べる表現に。</td></tr>
+        <tr><td><span class="tag adopt">採用</span></td><td>演習導入「まず自力で解いてから開くこと」→「まず自力で解いてから確認すると効果的である。」</td></tr>
+      </tbody>
+    </table>
+
+    <h3>物理内容・逆引き（reverse-index レビュー）</h3>
+    <table>
+      <thead><tr><th>状態</th><th>内容</th></tr></thead>
+      <tbody>
+        <tr><td><span class="tag adopt">採用</span></td><td>前因子を含む式に <strong>SI形／CGS(Gauss)形</strong>を明記。π e²/m<sub>e</sub>c を Gauss 形と明記し SI 形 e²/(4ε₀m<sub>e</sub>c) を併記（第22章）。付録Bに「B.4.4 SI⇔Gauss 式形対応表」を新設。</td></tr>
+        <tr><td><span class="tag adopt">採用</span></td><td>振動子強度の式を<strong>次元整合</strong>（位置形 |⟨u|r|l⟩|² と双極子形 |⟨u|d|l⟩|² を分離、SI/CGS明記）。誤字「線形ぴーく」→「線輪郭のピーク」。</td></tr>
+        <tr><td><span class="tag adopt">採用</span></td><td>自然幅を<strong>上準位から全下準位への全崩壊率の和</strong> Γ<sub>u</sub>=Σ A<sub>ul'</sub> で定義し分岐比に言及（第23章）。誘導放出は「負の吸収」流儀に統一（第21章）。</td></tr>
+        <tr><td><span class="tag adopt">採用</span></td><td>灰色大気 Eddington 解に<strong>導出骨格＋仮定一覧＋演習リンク</strong>を追加（第15章）。放射輸送方程式の幾何（μ dI/dz）と統計平衡方程式の多準位/二準位を明示（第5章）。立体角の表の重複ヘッダ削除（第4章）。</td></tr>
+        <tr><td><span class="tag adopt">採用</span></td><td>CMB の<strong>スペクトル歪み（FIRAS残差・μ/y）と異方性 ΔT/T</strong> を別軸として区別（第1・16章）。21cm は M1 遷移で E1 前因子を直接使えない注意を本文に追記（第20章）。ハード/ソフト状態を観測特徴・物理解釈・状態遷移に分割（第18章）。円盤 F<sub>ν</sub> は比例関係である旨と観測/面フラックスの区別を明記。</td></tr>
+        <tr><td><span class="tag adopt">採用</span></td><td>双極子近似とゲージ（A·p と d·E の同値性）の説明を追加（第26章）。主式はSIで厳密化し「構造のみ」表現を撤回。応用章に「観測特徴→最小モデル→逆引き物理量→破れる仮定」の4列表、第2章に観測三特徴→プランク三因子の対応表を追加。</td></tr>
+      </tbody>
+    </table>
+
+    <h3>演習HTML（章番号同期・表現）</h3>
+    <table>
+      <thead><tr><th>状態</th><th>内容</th></tr></thead>
+      <tbody>
+        <tr><td><span class="tag adopt">採用</span></td><td><strong>第VI部</strong>：第15〜19章・全21問に更新（第19章5問＋17-5を本文から取り込み追加）。<strong>第VII部</strong>：章番号19〜23→20〜24、リンク全更新。<strong>第VIII部</strong>：章24・25→25・26、リンク全更新。<strong>第III・IV部</strong>：第VII・VIII部への旧リンクを現行に更新。総問題数を 105 問に同期。</td></tr>
+        <tr><td><span class="tag adopt">採用</span></td><td>末尾「試作版」→「v0.1 演習問題集」。解答見出し「答え：」→「解答の要点：／数値結果：」。導入文・体言止め短答・CGS問題の明示・Fermi黄金律の因子分解を反映。</td></tr>
+      </tbody>
+    </table>
+
+    <p class="note">注：本報告は改訂作業の記録である。物理式の改変は次元・単位系を確認のうえ行い、確信が持てない式改変は行っていない。Quarto レンダリングによる最終確認は本環境で未実施のため、ビルド後に図表・相互参照の表示を一度確認することを推奨する。</p>
+  </main>
+</body>
+</html>
