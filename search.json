@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "宇宙の熱的放射",
     "section": "",
-    "text": "版履歴\n詳細な改訂内容は CHANGELOG.md と GitHub Releases。\nオンライン版（GitHub Pages）は main ブランチへの push のたびに自動更新されるため、本ページの内容は 常に最新の作業中ドラフト です。「固定版を引用したい」場合は上記表の DOI（特定の版）を使用してください。",
+    "text": "はじめに ― この本の三つの原則\n本書は、宇宙物理の中心的観測対象である 連続スペクトル（黒体放射） と 線スペクトル を入口に、基礎物理を逆向きに学び直すための教科書である。次の三つの原則を貫く。",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>宇宙の熱的放射</span>"
     ]
@@ -134,7 +134,7 @@
     "href": "contents.html#参考文献付録",
     "title": "目次",
     "section": "参考文献・付録",
-    "text": "参考文献・付録\n\n参考文献\n付録 A　数学補章\n付録 B　単位と基本定数\n用語索引（和英・英和）",
+    "text": "参考文献・付録\n\n参考文献\n版履歴\n付録 A　数学補章\n付録 B　単位と基本定数\n用語索引（和英・英和）",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>目次</span>"
     ]
@@ -5310,6 +5310,16 @@
     "text": "参考文献",
     "crumbs": [
       "<span class='chapter-number'>30</span>  <span class='chapter-title'>参考文献</span>"
+    ]
+  },
+  {
+    "objectID": "version-history.html",
+    "href": "version-history.html",
+    "title": "版履歴",
+    "section": "",
+    "text": "版履歴\n\n\n\n\n\n\n本書はドラフト段階にあり、レビュアーからのフィードバックを反映しながら継続的に改訂中です。\n\n\n\n\n\n\n版\n公開日／生成日\n主な変更\n引用\n\n\n\n\n次版（作業中）\n2026 秋目標\nv0.3 図版（幾何・概念図）、実観測データ図 等\n—\n\n\nv0.2\n2026-06-26（生成日）\n2件のレビューに基づく全面改訂：用語統一（線形→線輪郭、源泉関数→ソース関数、放出係数 j_\\nu／体積放射率 \\varepsilon_\\nu ほか）、口語・比喩表現の刷新、物理の明確化（SI/CGS 併記、振動子強度の次元整合、自然幅＝全崩壊率の和、誘導放出の扱い統一、灰色大気 Eddington 解の導出骨格）、CMB のスペクトル歪みと異方性の区別。逆引き導線の補強（中心地図因子の「初出／借用／導出」一覧、線中心地図への E1 適用範囲注記）。§16.1 に FIRAS スペクトル図を追加し v0.2 図版バッチ 8/8 完了。演習問題 HTML を本文の章番号・リンクに同期し全 105 問に整合、整合チェックスクリプトを追加\n—\n\n\nv0.1.2\n2026-06-23（生成日）\n第19章に図2点を追加（§19.2 自由-自由スペクトル、§19.3–19.4 連続吸収端と再結合連続光）\n—\n\n\nv0.1.1\n2026-06-23（生成日）\n第19章「自由電子が作る連続光 ― 自由-自由・束縛-自由・再結合」を新設、第VII・VIII部を1章ずつ繰り下げ（全 8 部 26 章）\n—\n\n\nv0.1\n2026-06-11\n初版 preprint ― 全 8 部 25 章 + 付録、CC BY 4.0\nDOI 10.5281/zenodo.20635563\n\n\n\n詳細な改訂内容は CHANGELOG.md と GitHub Releases。\nオンライン版（GitHub Pages）は main ブランチへの push のたびに自動更新されるため、本ページの内容は 常に最新の作業中ドラフト です。「固定版を引用したい」場合は上記表の DOI（特定の版）を使用してください。",
+    "crumbs": [
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>版履歴</span>"
     ]
   },
   {
