@@ -414,7 +414,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../part7/23-line-shape.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第23章　線形（line shape）の物理</span></a>
+  <a href="../part7/23-line-shape.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第23章　線輪郭（line profile）の物理</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -654,7 +654,7 @@ Z = \sum_i e^{-E_i / k_B T}
 </tr>
 </tbody>
 </table>
-<p>つまり、<strong>分配関数を計算できれば熱力学はほぼ完結する</strong>。逆に言えば、計算の本丸はミクロ状態の和 <a href="#eq-partition-function" class="quarto-xref">式&nbsp;<span>10.2</span></a> を実行する点にある。</p>
+<p>つまり、<strong>分配関数を計算できれば熱力学はほぼ完結する</strong>。逆に言えば、実際の計算の核心はミクロ状態の和 <a href="#eq-partition-function" class="quarto-xref">式&nbsp;<span>10.2</span></a> を実行する点にある。</p>
 <p><strong>例：N 個の独立な調和振動子</strong></p>
 <p>エネルギー <span class="math inline">\epsilon_n = (n + 1/2)\hbar\omega</span> を持つ独立な振動子 <span class="math inline">N</span> 個の系では、</p>
 <p><span id="eq-partition-oscillator"><span class="math display">
@@ -755,7 +755,7 @@ Z = \prod_{i=1}^N Z_1, \quad Z_1 = \sum_{n=0}^\infty e^{-\beta(n + 1/2)\hbar\ome
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>対応（観測）</strong>：観測される線スペクトル強度比から温度を読むのは、まさにこの Boltzmann 分布が成り立っているという仮定（LTE）に基づいている。LTE が破れる場面（non-LTE、第5章 §5.5）では <a href="#eq-boltzmann-hydrogen" class="quarto-xref">式&nbsp;<span>10.7</span></a> は使えない。</p>
+<p><strong>観測との対応</strong>：観測される線スペクトル強度比から温度を読むのは、まさにこの Boltzmann 分布が成り立っているという仮定（LTE）に基づいている。LTE が破れる場面（non-LTE、第5章 §5.5）では <a href="#eq-boltzmann-hydrogen" class="quarto-xref">式&nbsp;<span>10.7</span></a> は使えない。</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -1542,7 +1542,7 @@ Z_1=e^{-\beta\hbar\omega/2}\sum_{n=0}^\infty e^{-\beta n\hbar\omega}=e^{-\beta\h
 <span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 圧力 $P$ <span class="pp">|</span> $-\partial F / \partial V$ <span class="pp">|</span></span>
 <span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 比熱 $C_V$ <span class="pp">|</span> $\partial \langle E \rangle / \partial T$ <span class="pp">|</span></span>
 <span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>つまり、**分配関数を計算できれば熱力学はほぼ完結する**。逆に言えば、計算の本丸はミクロ状態の和 @eq-partition-function を実行する点にある。</span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>つまり、**分配関数を計算できれば熱力学はほぼ完結する**。逆に言えば、実際の計算の核心はミクロ状態の和 @eq-partition-function を実行する点にある。</span>
 <span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>**例：N 個の独立な調和振動子**</span>
 <span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a></span>
@@ -1608,7 +1608,7 @@ Z_1=e^{-\beta\hbar\omega/2}\sum_{n=0}^\infty e^{-\beta n\hbar\omega}=e^{-\beta\h
 <span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>この比は、第VII部で線スペクトルの強度比から温度を求める基本式になる。</span>
 <span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>**対応（観測）**：観測される線スペクトル強度比から温度を読むのは、まさにこの Boltzmann 分布が成り立っているという仮定（LTE）に基づいている。LTE が破れる場面（non-LTE、第5章 §5.5）では @eq-boltzmann-hydrogen は使えない。</span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>**観測との対応**：観測される線スペクトル強度比から温度を読むのは、まさにこの Boltzmann 分布が成り立っているという仮定（LTE）に基づいている。LTE が破れる場面（non-LTE、第5章 §5.5）では @eq-boltzmann-hydrogen は使えない。</span>
 <span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>

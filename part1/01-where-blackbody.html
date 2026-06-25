@@ -414,7 +414,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../part7/23-line-shape.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第23章　線形（line shape）の物理</span></a>
+  <a href="../part7/23-line-shape.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第23章　線輪郭（line profile）の物理</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -696,43 +696,43 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 <tbody>
 <tr class="odd">
 <td>O</td>
-<td>30,000–50,000</td>
+<td>30,000〜50,000</td>
 <td>青</td>
 <td><span class="math inline">\theta^1</span> Ori C（オリオン大星雲の励起源、O7）</td>
 </tr>
 <tr class="even">
 <td>B</td>
-<td>10,000–30,000</td>
+<td>10,000〜30,000</td>
 <td>青白</td>
 <td>Rigel</td>
 </tr>
 <tr class="odd">
 <td>A</td>
-<td>7,500–10,000</td>
+<td>7,500〜10,000</td>
 <td>白</td>
 <td>Sirius</td>
 </tr>
 <tr class="even">
 <td>F</td>
-<td>6,000–7,500</td>
+<td>6,000〜7,500</td>
 <td>黄白</td>
 <td>Procyon</td>
 </tr>
 <tr class="odd">
 <td>G</td>
-<td>5,200–6,000</td>
+<td>5,200〜6,000</td>
 <td>黄</td>
 <td><strong>太陽</strong></td>
 </tr>
 <tr class="even">
 <td>K</td>
-<td>3,700–5,200</td>
+<td>3,700〜5,200</td>
 <td>橙</td>
 <td>Aldebaran</td>
 </tr>
 <tr class="odd">
 <td>M</td>
-<td>2,400–3,700</td>
+<td>2,400〜3,700</td>
 <td>赤</td>
 <td>Betelgeuse</td>
 </tr>
@@ -749,7 +749,7 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>注意（観測）</strong>：実際の恒星は表層大気の組成・電離状態によって、黒体スペクトルからのずれが大きい。それでも、ざっくりした分類や全体光度の推定には黒体近似が極めて有効である。「<strong>理想からのずれを定量化するために、まず理想がよく定まっている</strong>」という構図に注意したい。</p>
+<p><strong>注意（観測）</strong>：実際の恒星は表層大気の組成・電離状態によって、黒体スペクトルからのずれが大きい。それでも、概略的な分類や全体光度の推定には黒体近似が極めて有効である。「<strong>理想からのずれを定量化するために、まず理想がよく定まっている</strong>」という構図に注意したい。</p>
 </div>
 </div>
 </section>
@@ -769,7 +769,7 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 <tr class="odd">
 <td>地球の昼面</td>
 <td><span class="math inline">\sim 290</span></td>
-<td>中間赤外（10–15 μm）</td>
+<td>中間赤外（10〜15 μm）</td>
 </tr>
 <tr class="even">
 <td>木星</td>
@@ -778,17 +778,17 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 </tr>
 <tr class="odd">
 <td>太陽系外縁天体</td>
-<td>30–50</td>
+<td>30〜50</td>
 <td>遠赤外</td>
 </tr>
 <tr class="even">
 <td>星間ダスト</td>
-<td>10–30</td>
+<td>10〜30</td>
 <td>遠赤外〜サブミリ</td>
 </tr>
 <tr class="odd">
 <td>原始惑星系円盤</td>
-<td>100–数千</td>
+<td>100〜数千</td>
 <td>近赤外〜遠赤外</td>
 </tr>
 </tbody>
@@ -804,9 +804,27 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 <ul>
 <li><strong>温度</strong>：<span class="math inline">T_{\mathrm{CMB}} = 2.725 \pm 0.001\ \mathrm{K}</span></li>
 <li><strong>ピーク波長</strong>：約 1.06 mm（マイクロ波領域。<span class="math inline">B_\lambda</span> ピーク表示）</li>
-<li><strong>黒体スペクトルからのずれ</strong>：rms で <span class="math inline">\Delta I/I \sim 5 \times 10^{-5}</span>、ピーク値 <span class="math inline">|\Delta I/I| &lt; 10^{-4}</span>（COBE/FIRAS, 1990年代）</li>
+<li><strong>黒体スペクトルからのずれ（スペクトル歪み）</strong>：全天平均スペクトルが完全黒体形からずれる量で、COBE/FIRAS（1990年代）は rms <span class="math inline">\Delta I/I \sim 5 \times 10^{-5}</span>、ピーク値 <span class="math inline">|\Delta I/I| &lt; 10^{-4}</span> という上限を与えた</li>
 </ul>
-<p>CMB の黒体性は驚異的である。観測精度の限界まで、CMB スペクトルは理論的な完全黒体スペクトルと一致する。これは「宇宙史上で最も完璧な黒体放射」と呼んでよい。</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+重要
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>二種類の「ずれ」を混同しない</strong>：CMB には性質の異なる二つの「ずれ」がある。</p>
+<ul>
+<li><strong>スペクトル歪み</strong>：全天平均した<strong>スペクトルの形</strong>（強度 vs 振動数）が、完全黒体からどれだけずれるか。FIRAS の残差や、将来観測が狙う <span class="math inline">\mu</span> 歪み・<span class="math inline">y</span> 歪みがこれにあたる。早期宇宙の熱化過程の不完全さを反映する。</li>
+<li><strong>温度ゆらぎ（異方性）</strong>：観測する<strong>方向ごと</strong>に黒体温度がわずかに違う量で、<span class="math inline">\Delta T/T \sim 10^{-5}</span>。各方向のスペクトルは依然として黒体形であり、形そのもののずれではない。初期密度ゆらぎを反映する（第16章）。</li>
+</ul>
+<p>本節で扱うのは前者（スペクトル歪み）である。後者の異方性は §1.9 と第16章で扱う。</p>
+</div>
+</div>
+<p>CMB の黒体性は驚異的である。観測精度の限界まで、全天平均の CMB スペクトルは理論的な完全黒体スペクトルと一致する。これは「宇宙史上で最も完璧な黒体放射」と呼んでよい。</p>
 <p>なぜこれほど完璧な黒体スペクトルが宇宙全体に存在するのか ― この問いは本書全体の重要な動機の一つである。</p>
 <p>熱化（thermalization）と自由伝搬の開始を分けて理解する必要がある：</p>
 <ul>
@@ -824,7 +842,7 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>対応（観測）</strong>：CMB の黒体性は、宇宙が「熱平衡を経た過去」を持つことの直接的証拠である。これは ビッグバン宇宙論の最強の観測的支柱の一つになっている。</p>
+<p><strong>観測との対応</strong>：CMB の黒体性は、宇宙が「熱平衡を経た過去」を持つことの直接的証拠である。これは ビッグバン宇宙論の最強の観測的支柱の一つになっている。</p>
 </div>
 </div>
 <div class="callout callout-style-simple callout-tip">
@@ -865,12 +883,12 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 </tr>
 <tr class="even">
 <td>中性子星表面</td>
-<td><span class="math inline">10^6</span>–<span class="math inline">10^7</span></td>
+<td><span class="math inline">10^6</span>〜<span class="math inline">10^7</span></td>
 <td>軟 X 線</td>
 </tr>
 <tr class="odd">
 <td>降着円盤（連星系・AGN）</td>
-<td><span class="math inline">10^4</span>–<span class="math inline">10^8</span></td>
+<td><span class="math inline">10^4</span>〜<span class="math inline">10^8</span></td>
 <td>紫外〜硬 X 線</td>
 </tr>
 <tr class="even">
@@ -1038,8 +1056,8 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 <li><strong>第IV部</strong>（第9–12章）：量子論への逆引き</li>
 <li><strong>第V部</strong>（第13–14章）：電磁気学への逆引き</li>
 <li><strong>第VI部</strong>（第15–18章）：現実の宇宙へ戻る</li>
-<li><strong>第VII部</strong>（第19–23章）：線スペクトルの逆引き</li>
-<li><strong>第VIII部</strong>（第24–25章）：QED で連続と線を統一</li>
+<li><strong>第VII部</strong>（第20–24章）：線スペクトルの逆引き</li>
+<li><strong>第VIII部</strong>（第25–26章）：QED で連続と線を統一</li>
 </ol>
 <p>各部の冒頭には「<strong>この部で答える問い</strong>」と「<strong>中心地図</strong>」が再掲され、読者は常に自分が中心地図のどの因子を解き明かしている途中かを確認できる。</p>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -1116,7 +1134,7 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 </section>
 <section id="sec-where-blackbody-exercises" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-where-blackbody-exercises">演習問題</h2>
-<p><span class="tag">[導出補完]</span> <strong>模範解答</strong> は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</p>
+<p><span class="tag">[導出補完]</span> <strong>模範解答</strong> は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから確認すると効果的である。</p>
 <section id="ex-1-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ex-1-1">問題 1-1　散らばったデータから Wien 変位定数を逆算する</h3>
 <p>[★ 難易度：☆ ] <span class="tag">[理解を深める]</span></p>
@@ -1781,18 +1799,18 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 <span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> スペクトル型 <span class="pp">|</span> 表面温度 <span class="co">[</span><span class="ot">K</span><span class="co">]</span> <span class="pp">|</span> 見た目の色 <span class="pp">|</span> 代表的な恒星 <span class="pp">|</span></span>
 <span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|---|</span></span>
-<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> O <span class="pp">|</span> 30,000–50,000 <span class="pp">|</span> 青 <span class="pp">|</span> $\theta^1$ Ori C（オリオン大星雲の励起源、O7）<span class="pp">|</span></span>
-<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> B <span class="pp">|</span> 10,000–30,000 <span class="pp">|</span> 青白 <span class="pp">|</span> Rigel <span class="pp">|</span></span>
-<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> A <span class="pp">|</span> 7,500–10,000 <span class="pp">|</span> 白 <span class="pp">|</span> Sirius <span class="pp">|</span></span>
-<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> F <span class="pp">|</span> 6,000–7,500 <span class="pp">|</span> 黄白 <span class="pp">|</span> Procyon <span class="pp">|</span></span>
-<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> G <span class="pp">|</span> 5,200–6,000 <span class="pp">|</span> 黄 <span class="pp">|</span> **太陽** <span class="pp">|</span></span>
-<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> K <span class="pp">|</span> 3,700–5,200 <span class="pp">|</span> 橙 <span class="pp">|</span> Aldebaran <span class="pp">|</span></span>
-<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> M <span class="pp">|</span> 2,400–3,700 <span class="pp">|</span> 赤 <span class="pp">|</span> Betelgeuse <span class="pp">|</span></span>
+<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> O <span class="pp">|</span> 30,000〜50,000 <span class="pp">|</span> 青 <span class="pp">|</span> $\theta^1$ Ori C（オリオン大星雲の励起源、O7）<span class="pp">|</span></span>
+<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> B <span class="pp">|</span> 10,000〜30,000 <span class="pp">|</span> 青白 <span class="pp">|</span> Rigel <span class="pp">|</span></span>
+<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> A <span class="pp">|</span> 7,500〜10,000 <span class="pp">|</span> 白 <span class="pp">|</span> Sirius <span class="pp">|</span></span>
+<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> F <span class="pp">|</span> 6,000〜7,500 <span class="pp">|</span> 黄白 <span class="pp">|</span> Procyon <span class="pp">|</span></span>
+<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> G <span class="pp">|</span> 5,200〜6,000 <span class="pp">|</span> 黄 <span class="pp">|</span> **太陽** <span class="pp">|</span></span>
+<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> K <span class="pp">|</span> 3,700〜5,200 <span class="pp">|</span> 橙 <span class="pp">|</span> Aldebaran <span class="pp">|</span></span>
+<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> M <span class="pp">|</span> 2,400〜3,700 <span class="pp">|</span> 赤 <span class="pp">|</span> Betelgeuse <span class="pp">|</span></span>
 <span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>「色」と「温度」が一対一に対応するのは、**すべての恒星が「黒体に近い」連続スペクトルを示すからこそ**成り立つ。温度が高いとピーク波長が短く（青側に）、低いと長く（赤側に）なる。この対応は、Wien の法則として第2章で定量化する。</span>
 <span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a>**注意（観測）**：実際の恒星は表層大気の組成・電離状態によって、黒体スペクトルからのずれが大きい。それでも、ざっくりした分類や全体光度の推定には黒体近似が極めて有効である。「**理想からのずれを定量化するために、まず理想がよく定まっている**」という構図に注意したい。</span>
+<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a>**注意（観測）**：実際の恒星は表層大気の組成・電離状態によって、黒体スペクトルからのずれが大きい。それでも、概略的な分類や全体光度の推定には黒体近似が極めて有効である。「**理想からのずれを定量化するために、まず理想がよく定まっている**」という構図に注意したい。</span>
 <span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1.4 惑星・地球・ダストの熱放射 {#sec-where-blackbody-cool}</span></span>
@@ -1803,11 +1821,11 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 <span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 天体 <span class="pp">|</span> 温度 <span class="co">[</span><span class="ot">K</span><span class="co">]</span> <span class="pp">|</span> 主な放射帯 <span class="pp">|</span></span>
 <span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
-<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 地球の昼面 <span class="pp">|</span> $\sim 290$ <span class="pp">|</span> 中間赤外（10–15 μm）<span class="pp">|</span></span>
+<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 地球の昼面 <span class="pp">|</span> $\sim 290$ <span class="pp">|</span> 中間赤外（10〜15 μm）<span class="pp">|</span></span>
 <span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 木星 <span class="pp">|</span> $\sim 130$ <span class="pp">|</span> 遠赤外 <span class="pp">|</span></span>
-<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 太陽系外縁天体 <span class="pp">|</span> 30–50 <span class="pp">|</span> 遠赤外 <span class="pp">|</span></span>
-<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 星間ダスト <span class="pp">|</span> 10–30 <span class="pp">|</span> 遠赤外〜サブミリ <span class="pp">|</span></span>
-<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 原始惑星系円盤 <span class="pp">|</span> 100–数千 <span class="pp">|</span> 近赤外〜遠赤外 <span class="pp">|</span></span>
+<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 太陽系外縁天体 <span class="pp">|</span> 30〜50 <span class="pp">|</span> 遠赤外 <span class="pp">|</span></span>
+<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 星間ダスト <span class="pp">|</span> 10〜30 <span class="pp">|</span> 遠赤外〜サブミリ <span class="pp">|</span></span>
+<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 原始惑星系円盤 <span class="pp">|</span> 100〜数千 <span class="pp">|</span> 近赤外〜遠赤外 <span class="pp">|</span></span>
 <span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a>赤外線天文衛星（Herschel・JWST など）は、まさにこの低温熱放射を観測するために設計されている。</span>
 <span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a></span>
@@ -1823,322 +1841,331 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 <span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**温度**：$T_{\mathrm{CMB}} = 2.725 \pm 0.001\ \mathrm{K}$</span>
 <span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**ピーク波長**：約 1.06 mm（マイクロ波領域。$B_\lambda$ ピーク表示）</span>
-<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**黒体スペクトルからのずれ**：rms で $\Delta I/I \sim 5 \times 10^{-5}$、ピーク値 $|\Delta I/I| &lt; 10^{-4}$（COBE/FIRAS, 1990年代）</span>
+<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**黒体スペクトルからのずれ（スペクトル歪み）**：全天平均スペクトルが完全黒体形からずれる量で、COBE/FIRAS（1990年代）は rms $\Delta I/I \sim 5 \times 10^{-5}$、ピーク値 $|\Delta I/I| &lt; 10^{-4}$ という上限を与えた</span>
 <span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a>CMB の黒体性は驚異的である。観測精度の限界まで、CMB スペクトルは理論的な完全黒体スペクトルと一致する。これは「宇宙史上で最も完璧な黒体放射」と呼んでよい。</span>
-<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-124"><a href="#cb3-124" aria-hidden="true" tabindex="-1"></a>なぜこれほど完璧な黒体スペクトルが宇宙全体に存在するのか ― この問いは本書全体の重要な動機の一つである。</span>
-<span id="cb3-125"><a href="#cb3-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-126"><a href="#cb3-126" aria-hidden="true" tabindex="-1"></a>熱化（thermalization）と自由伝搬の開始を分けて理解する必要がある：</span>
+<span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a>::: {.callout-important}</span>
+<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a>**二種類の「ずれ」を混同しない**：CMB には性質の異なる二つの「ずれ」がある。</span>
+<span id="cb3-124"><a href="#cb3-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-125"><a href="#cb3-125" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**スペクトル歪み**：全天平均した**スペクトルの形**（強度 vs 振動数）が、完全黒体からどれだけずれるか。FIRAS の残差や、将来観測が狙う $\mu$ 歪み・$y$ 歪みがこれにあたる。早期宇宙の熱化過程の不完全さを反映する。</span>
+<span id="cb3-126"><a href="#cb3-126" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**温度ゆらぎ（異方性）**：観測する**方向ごと**に黒体温度がわずかに違う量で、$\Delta T/T \sim 10^{-5}$。各方向のスペクトルは依然として黒体形であり、形そのもののずれではない。初期密度ゆらぎを反映する（第16章）。</span>
 <span id="cb3-127"><a href="#cb3-127" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**熱化**：宇宙誕生から再結合期に至るまでの早い時代に、**二重 Compton 散乱・制動放射・Compton 散乱**などの光子と物質の強い相互作用によって、放射場のスペクトルが Planck 形に整えられた。この過程はもっと早期（典型的には宇宙年齢 $\lesssim 10^7$ 秒）に終わる。</span>
-<span id="cb3-129"><a href="#cb3-129" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**再結合期**（宇宙年齢 約 38 万年）：電子と陽子が結合して中性水素になり、光が自由伝搬を始めた時期。これ以降、すでに完成していた黒体スペクトルが膨張で温度を下げながら（形を保ったまま）今日まで届く。</span>
+<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a>本節で扱うのは前者（スペクトル歪み）である。後者の異方性は §1.9 と第16章で扱う。</span>
+<span id="cb3-129"><a href="#cb3-129" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb3-130"><a href="#cb3-130" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-131"><a href="#cb3-131" aria-hidden="true" tabindex="-1"></a>つまり「再結合期に黒体になった」というよりは「**再結合期までに完成した黒体スペクトルが、再結合期に解放された**」と理解するのが正確である。詳しくは第16章で扱う。</span>
+<span id="cb3-131"><a href="#cb3-131" aria-hidden="true" tabindex="-1"></a>CMB の黒体性は驚異的である。観測精度の限界まで、全天平均の CMB スペクトルは理論的な完全黒体スペクトルと一致する。これは「宇宙史上で最も完璧な黒体放射」と呼んでよい。</span>
 <span id="cb3-132"><a href="#cb3-132" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-133"><a href="#cb3-133" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
-<span id="cb3-134"><a href="#cb3-134" aria-hidden="true" tabindex="-1"></a>**対応（観測）**：CMB の黒体性は、宇宙が「熱平衡を経た過去」を持つことの直接的証拠である。これは ビッグバン宇宙論の最強の観測的支柱の一つになっている。</span>
-<span id="cb3-135"><a href="#cb3-135" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-133"><a href="#cb3-133" aria-hidden="true" tabindex="-1"></a>なぜこれほど完璧な黒体スペクトルが宇宙全体に存在するのか ― この問いは本書全体の重要な動機の一つである。</span>
+<span id="cb3-134"><a href="#cb3-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-135"><a href="#cb3-135" aria-hidden="true" tabindex="-1"></a>熱化（thermalization）と自由伝搬の開始を分けて理解する必要がある：</span>
 <span id="cb3-136"><a href="#cb3-136" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-137"><a href="#cb3-137" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
-<span id="cb3-138"><a href="#cb3-138" aria-hidden="true" tabindex="-1"></a>**問い**：なぜ CMB だけがこれほど完全な黒体スペクトルになるのか？</span>
+<span id="cb3-137"><a href="#cb3-137" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**熱化**：宇宙誕生から再結合期に至るまでの早い時代に、**二重 Compton 散乱・制動放射・Compton 散乱**などの光子と物質の強い相互作用によって、放射場のスペクトルが Planck 形に整えられた。この過程はもっと早期（典型的には宇宙年齢 $\lesssim 10^7$ 秒）に終わる。</span>
+<span id="cb3-138"><a href="#cb3-138" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**再結合期**（宇宙年齢 約 38 万年）：電子と陽子が結合して中性水素になり、光が自由伝搬を始めた時期。これ以降、すでに完成していた黒体スペクトルが膨張で温度を下げながら（形を保ったまま）今日まで届く。</span>
 <span id="cb3-139"><a href="#cb3-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-140"><a href="#cb3-140" aria-hidden="true" tabindex="-1"></a>**短答**：宇宙が再結合期（誕生後約 38 万年）まで、放射場と物質が密に相互作用し、長時間・高密度の条件下で完璧な熱平衡を達成したから。光学的にきわめて厚い状況が、宇宙という最大スケールで実現していた。</span>
+<span id="cb3-140"><a href="#cb3-140" aria-hidden="true" tabindex="-1"></a>つまり「再結合期に黒体になった」というよりは「**再結合期までに完成した黒体スペクトルが、再結合期に解放された**」と理解するのが正確である。詳しくは第16章で扱う。</span>
 <span id="cb3-141"><a href="#cb3-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-142"><a href="#cb3-142" aria-hidden="true" tabindex="-1"></a>**もう一歩**：再結合以降、放射と物質が分離（decoupling）したあとも、宇宙膨張は黒体スペクトルの「形」を保存する（断熱不変量としての性質）。だから現在の 2.725 K の CMB も完璧な黒体形を保つ。詳しくは第16章。</span>
-<span id="cb3-143"><a href="#cb3-143" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-144"><a href="#cb3-144" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-145"><a href="#cb3-145" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1.6 降着円盤と高温天体の熱的放射 {#sec-where-blackbody-hot}</span></span>
-<span id="cb3-146"><a href="#cb3-146" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-147"><a href="#cb3-147" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B2</span><span class="co">]</span></span>
+<span id="cb3-142"><a href="#cb3-142" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb3-143"><a href="#cb3-143" aria-hidden="true" tabindex="-1"></a>**観測との対応**：CMB の黒体性は、宇宙が「熱平衡を経た過去」を持つことの直接的証拠である。これは ビッグバン宇宙論の最強の観測的支柱の一つになっている。</span>
+<span id="cb3-144"><a href="#cb3-144" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-145"><a href="#cb3-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-146"><a href="#cb3-146" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
+<span id="cb3-147"><a href="#cb3-147" aria-hidden="true" tabindex="-1"></a>**問い**：なぜ CMB だけがこれほど完全な黒体スペクトルになるのか？</span>
 <span id="cb3-148"><a href="#cb3-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-149"><a href="#cb3-149" aria-hidden="true" tabindex="-1"></a>激しい現象も、局所的にはしばしば黒体に近い。例：</span>
+<span id="cb3-149"><a href="#cb3-149" aria-hidden="true" tabindex="-1"></a>**短答**：宇宙が再結合期（誕生後約 38 万年）まで、放射場と物質が密に相互作用し、長時間・高密度の条件下で完璧な熱平衡を達成したから。光学的にきわめて厚い状況が、宇宙という最大スケールで実現していた。</span>
 <span id="cb3-150"><a href="#cb3-150" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-151"><a href="#cb3-151" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 天体 <span class="pp">|</span> 温度 <span class="co">[</span><span class="ot">K</span><span class="co">]</span> <span class="pp">|</span> 主な放射帯 <span class="pp">|</span></span>
-<span id="cb3-152"><a href="#cb3-152" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
-<span id="cb3-153"><a href="#cb3-153" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 白色矮星表面 <span class="pp">|</span> $\sim 10^4$ <span class="pp">|</span> 紫外〜可視 <span class="pp">|</span></span>
-<span id="cb3-154"><a href="#cb3-154" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 中性子星表面 <span class="pp">|</span> $10^6$–$10^7$ <span class="pp">|</span> 軟 X 線 <span class="pp">|</span></span>
-<span id="cb3-155"><a href="#cb3-155" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 降着円盤（連星系・AGN）<span class="pp">|</span> $10^4$–$10^8$ <span class="pp">|</span> 紫外〜硬 X 線 <span class="pp">|</span></span>
-<span id="cb3-156"><a href="#cb3-156" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> ガンマ線バースト（プロンプト準熱的成分）<span class="pp">|</span> $10^9$ 以上 <span class="pp">|</span> ガンマ線（解釈は議論中）<span class="pp">|</span></span>
+<span id="cb3-151"><a href="#cb3-151" aria-hidden="true" tabindex="-1"></a>**もう一歩**：再結合以降、放射と物質が分離（decoupling）したあとも、宇宙膨張は黒体スペクトルの「形」を保存する（断熱不変量としての性質）。だから現在の 2.725 K の CMB も完璧な黒体形を保つ。詳しくは第16章。</span>
+<span id="cb3-152"><a href="#cb3-152" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-153"><a href="#cb3-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-154"><a href="#cb3-154" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1.6 降着円盤と高温天体の熱的放射 {#sec-where-blackbody-hot}</span></span>
+<span id="cb3-155"><a href="#cb3-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-156"><a href="#cb3-156" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B2</span><span class="co">]</span></span>
 <span id="cb3-157"><a href="#cb3-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-158"><a href="#cb3-158" aria-hidden="true" tabindex="-1"></a>ガンマ線バースト（GRB）の **残光（afterglow）** はシンクロトロン優勢の **非熱的放射** であり、本表の対象外（§1.9 と整合）。本表に含めた GRB プロンプト相は、Band 関数で記述される連続光のうち準熱的成分の解釈に対応する。</span>
+<span id="cb3-158"><a href="#cb3-158" aria-hidden="true" tabindex="-1"></a>激しい現象も、局所的にはしばしば黒体に近い。例：</span>
 <span id="cb3-159"><a href="#cb3-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-160"><a href="#cb3-160" aria-hidden="true" tabindex="-1"></a>降着円盤の場合、半径ごとに異なる温度の黒体スペクトルが合成される。これを **多温度黒体** または **多温度円盤スペクトル** と呼ぶ。各半径では「局所的に黒体近似」が成り立つ、というのが暗黙の仮定であり、第18章で詳しく扱う。</span>
-<span id="cb3-161"><a href="#cb3-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-162"><a href="#cb3-162" aria-hidden="true" tabindex="-1"></a>激しい場でも局所的に黒体近似が成り立つのは、**熱化時間**が**流体力学的時間スケール**より短い限り、放射場と物質が十分に相互作用して熱平衡に近づくからである。この「局所熱平衡」（LTE）という概念は、第5章の放射輸送と、第6章の熱平衡で本格的に扱う。</span>
-<span id="cb3-163"><a href="#cb3-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-164"><a href="#cb3-164" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1.7 「黒体」とは何が理想化されているのか {#sec-where-blackbody-idealization}</span></span>
-<span id="cb3-165"><a href="#cb3-165" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-166"><a href="#cb3-166" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B2</span><span class="co">]</span></span>
-<span id="cb3-167"><a href="#cb3-167" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-168"><a href="#cb3-168" aria-hidden="true" tabindex="-1"></a>これまでの例を振り返ると、「黒体に近い」と言われる天体には、いずれも近似が入っていることがわかる。観測対象としての「黒体」と、概念としての「黒体」を、ここで明確に区別しておきたい。</span>
-<span id="cb3-169"><a href="#cb3-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-170"><a href="#cb3-170" aria-hidden="true" tabindex="-1"></a>**理想化された黒体に課されている三つの条件**：</span>
-<span id="cb3-171"><a href="#cb3-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-172"><a href="#cb3-172" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**完全吸収**：入射するすべての電磁波を、すべての振動数で 100% 吸収する</span>
-<span id="cb3-173"><a href="#cb3-173" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**完全熱化**：内部で十分に物質と光が相互作用し、放射場が単一の温度 $T$ で熱平衡に達している</span>
-<span id="cb3-174"><a href="#cb3-174" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**平衡温度の一意性**：物体全体が同じ温度 $T$ で記述できる</span>
-<span id="cb3-175"><a href="#cb3-175" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-176"><a href="#cb3-176" aria-hidden="true" tabindex="-1"></a>現実の天体は、これらの条件をどこまで満たすかで「黒体に近い」かが決まる：</span>
-<span id="cb3-177"><a href="#cb3-177" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-178"><a href="#cb3-178" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 天体 <span class="pp">|</span> 条件 1（完全吸収）<span class="pp">|</span> 条件 2（熱化）<span class="pp">|</span> 条件 3（単一 T）<span class="pp">|</span></span>
-<span id="cb3-179"><a href="#cb3-179" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|---|</span></span>
-<span id="cb3-180"><a href="#cb3-180" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 太陽 <span class="pp">|</span> △（外層は不完全） <span class="pp">|</span> ◯（光球は熱化）<span class="pp">|</span> △（線吸収あり） <span class="pp">|</span></span>
-<span id="cb3-181"><a href="#cb3-181" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 恒星一般 <span class="pp">|</span> △ <span class="pp">|</span> ◯ <span class="pp">|</span> △ <span class="pp">|</span></span>
-<span id="cb3-182"><a href="#cb3-182" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> ダスト <span class="pp">|</span> ✗（修正黒体）<span class="pp">|</span> ◯ <span class="pp">|</span> △ <span class="pp">|</span></span>
-<span id="cb3-183"><a href="#cb3-183" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> CMB <span class="pp">|</span> ◯ <span class="pp">|</span> ◯ <span class="pp">|</span> ◯ <span class="pp">|</span></span>
-<span id="cb3-184"><a href="#cb3-184" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 降着円盤 <span class="pp">|</span> ◯（局所） <span class="pp">|</span> ◯（局所） <span class="pp">|</span> ✗（多温度） <span class="pp">|</span></span>
-<span id="cb3-185"><a href="#cb3-185" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-186"><a href="#cb3-186" aria-hidden="true" tabindex="-1"></a>つまり、**黒体は実在する物体ではなく、観測スペクトルを比較するための基準**である。本書では各章で、観測スペクトルがこの基準からどれだけ・なぜずれるかを順に解き明かしていく。とりわけ第VI部（第15–18章）は、まさに「黒体からのずれ」を主題にしている。</span>
-<span id="cb3-187"><a href="#cb3-187" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-188"><a href="#cb3-188" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1.8 連続と線 ― 本書が扱う二つの主柱 {#sec-where-blackbody-two-pillars}</span></span>
-<span id="cb3-189"><a href="#cb3-189" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-190"><a href="#cb3-190" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B1</span><span class="co">]</span></span>
-<span id="cb3-191"><a href="#cb3-191" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-192"><a href="#cb3-192" aria-hidden="true" tabindex="-1"></a>ここまで「連続スペクトル」を中心に話してきたが、上の例（特に 1.2 の太陽）で見たように、観測スペクトルにはしばしば **線スペクトル** が重なっている。両者は本書の二つの主柱である：</span>
-<span id="cb3-193"><a href="#cb3-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-194"><a href="#cb3-194" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**連続スペクトル**（**continuous spectrum**, 本書の前半・第I〜VI部の主題）</span>
-<span id="cb3-195"><a href="#cb3-195" aria-hidden="true" tabindex="-1"></a>  黒体放射、修正黒体、自由–自由放射（**free-free emission**, bremsstrahlung）、シンクロトロン放射（**synchrotron radiation**）など、振動数 $\nu$ の滑らかな関数として現れる成分</span>
-<span id="cb3-196"><a href="#cb3-196" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**線スペクトル**（**line spectrum**, 本書の後半・第VII部の主題）</span>
-<span id="cb3-197"><a href="#cb3-197" aria-hidden="true" tabindex="-1"></a>  特定の振動数 $\nu_0$ にピークを持つ細い線として現れる成分。原子・分子の量子準位間の遷移に由来</span>
+<span id="cb3-160"><a href="#cb3-160" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 天体 <span class="pp">|</span> 温度 <span class="co">[</span><span class="ot">K</span><span class="co">]</span> <span class="pp">|</span> 主な放射帯 <span class="pp">|</span></span>
+<span id="cb3-161"><a href="#cb3-161" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb3-162"><a href="#cb3-162" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 白色矮星表面 <span class="pp">|</span> $\sim 10^4$ <span class="pp">|</span> 紫外〜可視 <span class="pp">|</span></span>
+<span id="cb3-163"><a href="#cb3-163" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 中性子星表面 <span class="pp">|</span> $10^6$〜$10^7$ <span class="pp">|</span> 軟 X 線 <span class="pp">|</span></span>
+<span id="cb3-164"><a href="#cb3-164" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 降着円盤（連星系・AGN）<span class="pp">|</span> $10^4$〜$10^8$ <span class="pp">|</span> 紫外〜硬 X 線 <span class="pp">|</span></span>
+<span id="cb3-165"><a href="#cb3-165" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> ガンマ線バースト（プロンプト準熱的成分）<span class="pp">|</span> $10^9$ 以上 <span class="pp">|</span> ガンマ線（解釈は議論中）<span class="pp">|</span></span>
+<span id="cb3-166"><a href="#cb3-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-167"><a href="#cb3-167" aria-hidden="true" tabindex="-1"></a>ガンマ線バースト（GRB）の **残光（afterglow）** はシンクロトロン優勢の **非熱的放射** であり、本表の対象外（§1.9 と整合）。本表に含めた GRB プロンプト相は、Band 関数で記述される連続光のうち準熱的成分の解釈に対応する。</span>
+<span id="cb3-168"><a href="#cb3-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-169"><a href="#cb3-169" aria-hidden="true" tabindex="-1"></a>降着円盤の場合、半径ごとに異なる温度の黒体スペクトルが合成される。これを **多温度黒体** または **多温度円盤スペクトル** と呼ぶ。各半径では「局所的に黒体近似」が成り立つ、というのが暗黙の仮定であり、第18章で詳しく扱う。</span>
+<span id="cb3-170"><a href="#cb3-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-171"><a href="#cb3-171" aria-hidden="true" tabindex="-1"></a>激しい場でも局所的に黒体近似が成り立つのは、**熱化時間**が**流体力学的時間スケール**より短い限り、放射場と物質が十分に相互作用して熱平衡に近づくからである。この「局所熱平衡」（LTE）という概念は、第5章の放射輸送と、第6章の熱平衡で本格的に扱う。</span>
+<span id="cb3-172"><a href="#cb3-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-173"><a href="#cb3-173" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1.7 「黒体」とは何が理想化されているのか {#sec-where-blackbody-idealization}</span></span>
+<span id="cb3-174"><a href="#cb3-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-175"><a href="#cb3-175" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B2</span><span class="co">]</span></span>
+<span id="cb3-176"><a href="#cb3-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-177"><a href="#cb3-177" aria-hidden="true" tabindex="-1"></a>これまでの例を振り返ると、「黒体に近い」と言われる天体には、いずれも近似が入っていることがわかる。観測対象としての「黒体」と、概念としての「黒体」を、ここで明確に区別しておきたい。</span>
+<span id="cb3-178"><a href="#cb3-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-179"><a href="#cb3-179" aria-hidden="true" tabindex="-1"></a>**理想化された黒体に課されている三つの条件**：</span>
+<span id="cb3-180"><a href="#cb3-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-181"><a href="#cb3-181" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**完全吸収**：入射するすべての電磁波を、すべての振動数で 100% 吸収する</span>
+<span id="cb3-182"><a href="#cb3-182" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**完全熱化**：内部で十分に物質と光が相互作用し、放射場が単一の温度 $T$ で熱平衡に達している</span>
+<span id="cb3-183"><a href="#cb3-183" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**平衡温度の一意性**：物体全体が同じ温度 $T$ で記述できる</span>
+<span id="cb3-184"><a href="#cb3-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-185"><a href="#cb3-185" aria-hidden="true" tabindex="-1"></a>現実の天体は、これらの条件をどこまで満たすかで「黒体に近い」かが決まる：</span>
+<span id="cb3-186"><a href="#cb3-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-187"><a href="#cb3-187" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 天体 <span class="pp">|</span> 条件 1（完全吸収）<span class="pp">|</span> 条件 2（熱化）<span class="pp">|</span> 条件 3（単一 T）<span class="pp">|</span></span>
+<span id="cb3-188"><a href="#cb3-188" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|---|</span></span>
+<span id="cb3-189"><a href="#cb3-189" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 太陽 <span class="pp">|</span> △（外層は不完全） <span class="pp">|</span> ◯（光球は熱化）<span class="pp">|</span> △（線吸収あり） <span class="pp">|</span></span>
+<span id="cb3-190"><a href="#cb3-190" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 恒星一般 <span class="pp">|</span> △ <span class="pp">|</span> ◯ <span class="pp">|</span> △ <span class="pp">|</span></span>
+<span id="cb3-191"><a href="#cb3-191" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> ダスト <span class="pp">|</span> ✗（修正黒体）<span class="pp">|</span> ◯ <span class="pp">|</span> △ <span class="pp">|</span></span>
+<span id="cb3-192"><a href="#cb3-192" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> CMB <span class="pp">|</span> ◯ <span class="pp">|</span> ◯ <span class="pp">|</span> ◯ <span class="pp">|</span></span>
+<span id="cb3-193"><a href="#cb3-193" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 降着円盤 <span class="pp">|</span> ◯（局所） <span class="pp">|</span> ◯（局所） <span class="pp">|</span> ✗（多温度） <span class="pp">|</span></span>
+<span id="cb3-194"><a href="#cb3-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-195"><a href="#cb3-195" aria-hidden="true" tabindex="-1"></a>つまり、**黒体は実在する物体ではなく、観測スペクトルを比較するための基準**である。本書では各章で、観測スペクトルがこの基準からどれだけ・なぜずれるかを順に解き明かしていく。とりわけ第VI部（第15–18章）は、まさに「黒体からのずれ」を主題にしている。</span>
+<span id="cb3-196"><a href="#cb3-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-197"><a href="#cb3-197" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1.8 連続と線 ― 本書が扱う二つの主柱 {#sec-where-blackbody-two-pillars}</span></span>
 <span id="cb3-198"><a href="#cb3-198" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-199"><a href="#cb3-199" aria-hidden="true" tabindex="-1"></a>両者は別物に見えるが、第II部の放射輸送方程式（第5章）の上では、**同じ枠組み**で記述される。違いは吸収係数 $\alpha_\nu$ の構造だけである：</span>
+<span id="cb3-199"><a href="#cb3-199" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B1</span><span class="co">]</span></span>
 <span id="cb3-200"><a href="#cb3-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-201"><a href="#cb3-201" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>連続吸収（**continuous absorption**）：$\alpha_\nu$ が $\nu$ に対して滑らかに変化</span>
-<span id="cb3-202"><a href="#cb3-202" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>線吸収（**line absorption**）：$\alpha_\nu$ が $\nu_0$ の周りに鋭いピーク $\phi(\nu - \nu_0)$ を持つ</span>
-<span id="cb3-203"><a href="#cb3-203" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-204"><a href="#cb3-204" aria-hidden="true" tabindex="-1"></a>詳しくは <span class="co">[</span><span class="ot">@sec-radiative-transfer-bridge</span><span class="co">]</span> で扱う。本書の最終章（第VIII部）では、QED の言葉で連続と線が同じ電磁場–物質相互作用の二側面であることが明らかになる。</span>
-<span id="cb3-205"><a href="#cb3-205" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-206"><a href="#cb3-206" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1.9 熱的放射と非熱的放射 ― 本書の焦点 {#sec-where-blackbody-thermal}</span></span>
+<span id="cb3-201"><a href="#cb3-201" aria-hidden="true" tabindex="-1"></a>ここまで「連続スペクトル」を中心に話してきたが、上の例（特に 1.2 の太陽）で見たように、観測スペクトルにはしばしば **線スペクトル** が重なっている。両者は本書の二つの主柱である：</span>
+<span id="cb3-202"><a href="#cb3-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-203"><a href="#cb3-203" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**連続スペクトル**（**continuous spectrum**, 本書の前半・第I〜VI部の主題）</span>
+<span id="cb3-204"><a href="#cb3-204" aria-hidden="true" tabindex="-1"></a>  黒体放射、修正黒体、自由–自由放射（**free-free emission**, bremsstrahlung）、シンクロトロン放射（**synchrotron radiation**）など、振動数 $\nu$ の滑らかな関数として現れる成分</span>
+<span id="cb3-205"><a href="#cb3-205" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**線スペクトル**（**line spectrum**, 本書の後半・第VII部の主題）</span>
+<span id="cb3-206"><a href="#cb3-206" aria-hidden="true" tabindex="-1"></a>  特定の振動数 $\nu_0$ にピークを持つ細い線として現れる成分。原子・分子の量子準位間の遷移に由来</span>
 <span id="cb3-207"><a href="#cb3-207" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-208"><a href="#cb3-208" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B1</span><span class="co">]</span></span>
+<span id="cb3-208"><a href="#cb3-208" aria-hidden="true" tabindex="-1"></a>両者は別物に見えるが、第II部の放射輸送方程式（第5章）の上では、**同じ枠組み**で記述される。違いは吸収係数 $\alpha_\nu$ の構造だけである：</span>
 <span id="cb3-209"><a href="#cb3-209" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-210"><a href="#cb3-210" aria-hidden="true" tabindex="-1"></a>連続スペクトルにはもう一つ重要な区別がある。**熱的放射**（thermal radiation）と**非熱的放射**（non-thermal radiation）である。前節で「連続と線」を本書の二本柱として整理したが、その**連続側にもう一つの軸**が走っている。</span>
-<span id="cb3-211"><a href="#cb3-211" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-212"><a href="#cb3-212" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**熱的放射**：熱平衡（または LTE）にある物質が出す放射。スペクトル形は物質の温度 $T$ だけで決まる。黒体放射が代表例。他に、Maxwell 分布のプラズマからの**自由–自由放射**（熱的制動放射）、再結合放射、LTE 下の線放射などが含まれる。</span>
-<span id="cb3-213"><a href="#cb3-213" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**非熱的放射**：粒子分布が熱平衡から大きく外れた状態 ― 典型的には**べき則分布** $f(E) \propto E^{-p}$ ― の高エネルギー粒子から出る放射。スペクトル形は温度ではなく粒子分布関数で決まる。**シンクロトロン放射**（磁場中の相対論的電子）、逆 Compton 散乱、曲率放射、宇宙線起源の放射などが含まれる。</span>
+<span id="cb3-210"><a href="#cb3-210" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>連続吸収（**continuous absorption**）：$\alpha_\nu$ が $\nu$ に対して滑らかに変化</span>
+<span id="cb3-211"><a href="#cb3-211" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>線吸収（**line absorption**）：$\alpha_\nu$ が $\nu_0$ の周りに鋭いピーク $\phi(\nu - \nu_0)$ を持つ</span>
+<span id="cb3-212"><a href="#cb3-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-213"><a href="#cb3-213" aria-hidden="true" tabindex="-1"></a>詳しくは <span class="co">[</span><span class="ot">@sec-radiative-transfer-bridge</span><span class="co">]</span> で扱う。本書の最終章（第VIII部）では、QED の言葉で連続と線が同じ電磁場–物質相互作用の二側面であることが明らかになる。</span>
 <span id="cb3-214"><a href="#cb3-214" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-215"><a href="#cb3-215" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 区別 <span class="pp">|</span> スペクトル形を決める量 <span class="pp">|</span> 代表例 <span class="pp">|</span></span>
-<span id="cb3-216"><a href="#cb3-216" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
-<span id="cb3-217"><a href="#cb3-217" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **熱的** <span class="pp">|</span> 温度 $T$ のみ <span class="pp">|</span> 黒体放射、熱的自由–自由、LTE 線 <span class="pp">|</span></span>
-<span id="cb3-218"><a href="#cb3-218" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **非熱的** <span class="pp">|</span> 粒子分布 $f(E)$ <span class="pp">|</span> シンクロトロン、逆 Compton、曲率放射 <span class="pp">|</span></span>
-<span id="cb3-219"><a href="#cb3-219" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-220"><a href="#cb3-220" aria-hidden="true" tabindex="-1"></a>**本書の焦点**：本書は**主として熱的放射**を扱う。プランク分布の三層構造（熱平衡・量子化・モード密度）を逆引きするのが第I〜V部、現実の天体での熱的放射の「ずれ」が第VI部、線スペクトル（多くは LTE / non-LTE の枠で扱う）が第VII部、QED 統合が第VIII部。</span>
-<span id="cb3-221"><a href="#cb3-221" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-222"><a href="#cb3-222" aria-hidden="true" tabindex="-1"></a>非熱的放射は本書の中心テーマではないが、観測スペクトルの解釈に必要な範囲で触れる：</span>
+<span id="cb3-215"><a href="#cb3-215" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1.9 熱的放射と非熱的放射 ― 本書の焦点 {#sec-where-blackbody-thermal}</span></span>
+<span id="cb3-216"><a href="#cb3-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-217"><a href="#cb3-217" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B1</span><span class="co">]</span></span>
+<span id="cb3-218"><a href="#cb3-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-219"><a href="#cb3-219" aria-hidden="true" tabindex="-1"></a>連続スペクトルにはもう一つ重要な区別がある。**熱的放射**（thermal radiation）と**非熱的放射**（non-thermal radiation）である。前節で「連続と線」を本書の二本柱として整理したが、その**連続側にもう一つの軸**が走っている。</span>
+<span id="cb3-220"><a href="#cb3-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-221"><a href="#cb3-221" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**熱的放射**：熱平衡（または LTE）にある物質が出す放射。スペクトル形は物質の温度 $T$ だけで決まる。黒体放射が代表例。他に、Maxwell 分布のプラズマからの**自由–自由放射**（熱的制動放射）、再結合放射、LTE 下の線放射などが含まれる。</span>
+<span id="cb3-222"><a href="#cb3-222" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**非熱的放射**：粒子分布が熱平衡から大きく外れた状態 ― 典型的には**べき則分布** $f(E) \propto E^{-p}$ ― の高エネルギー粒子から出る放射。スペクトル形は温度ではなく粒子分布関数で決まる。**シンクロトロン放射**（磁場中の相対論的電子）、逆 Compton 散乱、曲率放射、宇宙線起源の放射などが含まれる。</span>
 <span id="cb3-223"><a href="#cb3-223" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-224"><a href="#cb3-224" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>第15章 §15.6 で「非熱的放射との区別」として</span>
-<span id="cb3-225"><a href="#cb3-225" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>第18章でAGN・降着円盤・コンプトン化・シンクロトロンを軽く</span>
-<span id="cb3-226"><a href="#cb3-226" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-227"><a href="#cb3-227" aria-hidden="true" tabindex="-1"></a>非熱的放射の本格的扱いには、本書を超えた専門書（Rybicki &amp; Lightman の第6章以降、Longair *High Energy Astrophysics* など）に進むのがよい。</span>
+<span id="cb3-224"><a href="#cb3-224" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 区別 <span class="pp">|</span> スペクトル形を決める量 <span class="pp">|</span> 代表例 <span class="pp">|</span></span>
+<span id="cb3-225"><a href="#cb3-225" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb3-226"><a href="#cb3-226" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **熱的** <span class="pp">|</span> 温度 $T$ のみ <span class="pp">|</span> 黒体放射、熱的自由–自由、LTE 線 <span class="pp">|</span></span>
+<span id="cb3-227"><a href="#cb3-227" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **非熱的** <span class="pp">|</span> 粒子分布 $f(E)$ <span class="pp">|</span> シンクロトロン、逆 Compton、曲率放射 <span class="pp">|</span></span>
 <span id="cb3-228"><a href="#cb3-228" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-229"><a href="#cb3-229" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb3-230"><a href="#cb3-230" aria-hidden="true" tabindex="-1"></a>**用語**：「熱的」「非熱的」は astro-dic.jp の標準訳。**LTE / non-LTE** とは別の概念なので注意：</span>
-<span id="cb3-231"><a href="#cb3-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-232"><a href="#cb3-232" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**熱的 / 非熱的**：粒子の**エネルギー分布**が Maxwell 分布か否か</span>
-<span id="cb3-233"><a href="#cb3-233" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**LTE / non-LTE**：原子の**準位占有数**が局所温度だけで決まるか、放射場 $J_\nu$ にも依存するか</span>
-<span id="cb3-234"><a href="#cb3-234" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-235"><a href="#cb3-235" aria-hidden="true" tabindex="-1"></a>非熱的電子（べき則）の集団が出すシンクロトロンの**周りにある原子ガス**は、独立に LTE でも non-LTE でもありうる。両軸は直交する。</span>
-<span id="cb3-236"><a href="#cb3-236" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-229"><a href="#cb3-229" aria-hidden="true" tabindex="-1"></a>**本書の焦点**：本書は**主として熱的放射**を扱う。プランク分布の三層構造（熱平衡・量子化・モード密度）を逆引きするのが第I〜V部、現実の天体での熱的放射の「ずれ」が第VI部、線スペクトル（多くは LTE / non-LTE の枠で扱う）が第VII部、QED 統合が第VIII部。</span>
+<span id="cb3-230"><a href="#cb3-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-231"><a href="#cb3-231" aria-hidden="true" tabindex="-1"></a>非熱的放射は本書の中心テーマではないが、観測スペクトルの解釈に必要な範囲で触れる：</span>
+<span id="cb3-232"><a href="#cb3-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-233"><a href="#cb3-233" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>第15章 §15.6 で「非熱的放射との区別」として</span>
+<span id="cb3-234"><a href="#cb3-234" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>第18章でAGN・降着円盤・コンプトン化・シンクロトロンを軽く</span>
+<span id="cb3-235"><a href="#cb3-235" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-236"><a href="#cb3-236" aria-hidden="true" tabindex="-1"></a>非熱的放射の本格的扱いには、本書を超えた専門書（Rybicki &amp; Lightman の第6章以降、Longair *High Energy Astrophysics* など）に進むのがよい。</span>
 <span id="cb3-237"><a href="#cb3-237" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-238"><a href="#cb3-238" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
-<span id="cb3-239"><a href="#cb3-239" aria-hidden="true" tabindex="-1"></a>**問い**：黒体放射は「熱的」だが、それなら CMB はどう分類すべきか？</span>
+<span id="cb3-238"><a href="#cb3-238" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb3-239"><a href="#cb3-239" aria-hidden="true" tabindex="-1"></a>**用語**：「熱的」「非熱的」は astro-dic.jp の標準訳。**LTE / non-LTE** とは別の概念なので注意：</span>
 <span id="cb3-240"><a href="#cb3-240" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-241"><a href="#cb3-241" aria-hidden="true" tabindex="-1"></a>**短答**：CMB は完全に熱的。再結合期に光子と物質が完全な熱平衡に達し、その黒体スペクトルが膨張で温度を下げながら（形を保ったまま）今日まで残っている。</span>
-<span id="cb3-242"><a href="#cb3-242" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-243"><a href="#cb3-243" aria-hidden="true" tabindex="-1"></a>**もう一歩**：「2.725 K 黒体スペクトル」が宇宙最大スケールの熱的放射の典型例である。一方、CMB の**温度ゆらぎ**（$\Delta T/T \sim 10^{-5}$）は初期宇宙の量子ゆらぎが膨張で増幅されたもので、**熱平衡の統計ゆらぎ起源ではない**が、各方向の**スペクトル形そのもの**は依然として熱的（プランク分布）のまま。「非熱的（粒子のエネルギー分布がべき則）」とは別の意味で「熱起源でない」点に注意 ― **スペクトル（縦軸：強度 vs 振動数）** と **空間ゆらぎ（方向ごとの温度の違い）** を混同しないことが重要。</span>
-<span id="cb3-244"><a href="#cb3-244" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-245"><a href="#cb3-245" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-246"><a href="#cb3-246" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1.10 この本の読み方 ― 観測から理論へ逆にたどる {#sec-where-blackbody-howto}</span></span>
-<span id="cb3-247"><a href="#cb3-247" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-248"><a href="#cb3-248" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B1</span><span class="co">]</span></span>
+<span id="cb3-241"><a href="#cb3-241" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**熱的 / 非熱的**：粒子の**エネルギー分布**が Maxwell 分布か否か</span>
+<span id="cb3-242"><a href="#cb3-242" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**LTE / non-LTE**：原子の**準位占有数**が局所温度だけで決まるか、放射場 $J_\nu$ にも依存するか</span>
+<span id="cb3-243"><a href="#cb3-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-244"><a href="#cb3-244" aria-hidden="true" tabindex="-1"></a>非熱的電子（べき則）の集団が出すシンクロトロンの**周りにある原子ガス**は、独立に LTE でも non-LTE でもありうる。両軸は直交する。</span>
+<span id="cb3-245"><a href="#cb3-245" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-246"><a href="#cb3-246" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-247"><a href="#cb3-247" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
+<span id="cb3-248"><a href="#cb3-248" aria-hidden="true" tabindex="-1"></a>**問い**：黒体放射は「熱的」だが、それなら CMB はどう分類すべきか？</span>
 <span id="cb3-249"><a href="#cb3-249" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-250"><a href="#cb3-250" aria-hidden="true" tabindex="-1"></a>通常の物理教科書は、まず統計力学・量子論・電磁気学を学び、その応用例として黒体放射を最後に扱う。本書はその順序を**反転**させる：</span>
+<span id="cb3-250"><a href="#cb3-250" aria-hidden="true" tabindex="-1"></a>**短答**：CMB は完全に熱的。再結合期に光子と物質が完全な熱平衡に達し、その黒体スペクトルが膨張で温度を下げながら（形を保ったまま）今日まで残っている。</span>
 <span id="cb3-251"><a href="#cb3-251" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-252"><a href="#cb3-252" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb3-253"><a href="#cb3-253" aria-hidden="true" tabindex="-1"></a><span class="in">通常の教科書：</span></span>
-<span id="cb3-254"><a href="#cb3-254" aria-hidden="true" tabindex="-1"></a><span class="in">  基礎物理（統計・量子・電磁気）→ 応用：黒体放射</span></span>
-<span id="cb3-255"><a href="#cb3-255" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-256"><a href="#cb3-256" aria-hidden="true" tabindex="-1"></a><span class="in">本書：</span></span>
-<span id="cb3-257"><a href="#cb3-257" aria-hidden="true" tabindex="-1"></a><span class="in">  観測：黒体スペクトル → 逆引き → 基礎物理</span></span>
-<span id="cb3-258"><a href="#cb3-258" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb3-259"><a href="#cb3-259" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-260"><a href="#cb3-260" aria-hidden="true" tabindex="-1"></a>具体的には次の流れになる：</span>
-<span id="cb3-261"><a href="#cb3-261" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-262"><a href="#cb3-262" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**第I部**（本章＋第2–3章）：観測の現象論</span>
-<span id="cb3-263"><a href="#cb3-263" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**第II部**（第4–5章）：放射場の記述</span>
-<span id="cb3-264"><a href="#cb3-264" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**第III部**（第6–8章）：熱平衡と統計力学への逆引き</span>
-<span id="cb3-265"><a href="#cb3-265" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**第IV部**（第9–12章）：量子論への逆引き</span>
-<span id="cb3-266"><a href="#cb3-266" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**第V部**（第13–14章）：電磁気学への逆引き</span>
-<span id="cb3-267"><a href="#cb3-267" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>**第VI部**（第15–18章）：現実の宇宙へ戻る</span>
-<span id="cb3-268"><a href="#cb3-268" aria-hidden="true" tabindex="-1"></a><span class="ss">7. </span>**第VII部**（第19–23章）：線スペクトルの逆引き</span>
-<span id="cb3-269"><a href="#cb3-269" aria-hidden="true" tabindex="-1"></a><span class="ss">8. </span>**第VIII部**（第24–25章）：QED で連続と線を統一</span>
+<span id="cb3-252"><a href="#cb3-252" aria-hidden="true" tabindex="-1"></a>**もう一歩**：「2.725 K 黒体スペクトル」が宇宙最大スケールの熱的放射の典型例である。一方、CMB の**温度ゆらぎ**（$\Delta T/T \sim 10^{-5}$）は初期宇宙の量子ゆらぎが膨張で増幅されたもので、**熱平衡の統計ゆらぎ起源ではない**が、各方向の**スペクトル形そのもの**は依然として熱的（プランク分布）のまま。「非熱的（粒子のエネルギー分布がべき則）」とは別の意味で「熱起源でない」点に注意 ― **スペクトル（縦軸：強度 vs 振動数）** と **空間ゆらぎ（方向ごとの温度の違い）** を混同しないことが重要。</span>
+<span id="cb3-253"><a href="#cb3-253" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-254"><a href="#cb3-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-255"><a href="#cb3-255" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1.10 この本の読み方 ― 観測から理論へ逆にたどる {#sec-where-blackbody-howto}</span></span>
+<span id="cb3-256"><a href="#cb3-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-257"><a href="#cb3-257" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B1</span><span class="co">]</span></span>
+<span id="cb3-258"><a href="#cb3-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-259"><a href="#cb3-259" aria-hidden="true" tabindex="-1"></a>通常の物理教科書は、まず統計力学・量子論・電磁気学を学び、その応用例として黒体放射を最後に扱う。本書はその順序を**反転**させる：</span>
+<span id="cb3-260"><a href="#cb3-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-261"><a href="#cb3-261" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-262"><a href="#cb3-262" aria-hidden="true" tabindex="-1"></a><span class="in">通常の教科書：</span></span>
+<span id="cb3-263"><a href="#cb3-263" aria-hidden="true" tabindex="-1"></a><span class="in">  基礎物理（統計・量子・電磁気）→ 応用：黒体放射</span></span>
+<span id="cb3-264"><a href="#cb3-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-265"><a href="#cb3-265" aria-hidden="true" tabindex="-1"></a><span class="in">本書：</span></span>
+<span id="cb3-266"><a href="#cb3-266" aria-hidden="true" tabindex="-1"></a><span class="in">  観測：黒体スペクトル → 逆引き → 基礎物理</span></span>
+<span id="cb3-267"><a href="#cb3-267" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-268"><a href="#cb3-268" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-269"><a href="#cb3-269" aria-hidden="true" tabindex="-1"></a>具体的には次の流れになる：</span>
 <span id="cb3-270"><a href="#cb3-270" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-271"><a href="#cb3-271" aria-hidden="true" tabindex="-1"></a>各部の冒頭には「**この部で答える問い**」と「**中心地図**」が再掲され、読者は常に自分が中心地図のどの因子を解き明かしている途中かを確認できる。</span>
-<span id="cb3-272"><a href="#cb3-272" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-273"><a href="#cb3-273" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
-<span id="cb3-274"><a href="#cb3-274" aria-hidden="true" tabindex="-1"></a>**読み方のコツ**：本書は通読できるが、目的によって読む順序を変えてもよい。表紙ページ（<span class="co">[</span><span class="ot">`index.qmd`</span><span class="co">](../index.qmd)</span>）の「読者タイプ別ルート」と、<span class="co">[</span><span class="ot">序章 §0.4</span><span class="co">](../00-prologue.qmd#sec-prologue-reading-routes)</span> を参照。</span>
-<span id="cb3-275"><a href="#cb3-275" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-276"><a href="#cb3-276" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-277"><a href="#cb3-277" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb3-278"><a href="#cb3-278" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-279"><a href="#cb3-279" aria-hidden="true" tabindex="-1"></a><span class="fu">## 計算例：プランク曲線を描いてみる {#sec-where-blackbody-numerical}</span></span>
-<span id="cb3-280"><a href="#cb3-280" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-281"><a href="#cb3-281" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B1</span><span class="co">]</span></span>
-<span id="cb3-282"><a href="#cb3-282" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-283"><a href="#cb3-283" aria-hidden="true" tabindex="-1"></a>「同じ関数形が温度だけで形を変える」ことを実際に見てみよう。次のコードは、太陽（5800 K）、低温の恒星（3000 K）、人体（310 K）、CMB（2.7 K）のプランク曲線を比較する。</span>
-<span id="cb3-284"><a href="#cb3-284" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-285"><a href="#cb3-285" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb3-286"><a href="#cb3-286" aria-hidden="true" tabindex="-1"></a>**注意**：プランク関数 $B_\nu(T)$ の具体的な式は本章では「天下り的には」与えない。式の構造と各因子の意味は第2章で扱う。ここでは、観測される多種多様な「黒体スペクトル」が一つの曲線族にすぎないことを、視覚的に確認するのが目的である。</span>
-<span id="cb3-287"><a href="#cb3-287" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-288"><a href="#cb3-288" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-291"><a href="#cb3-291" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb3-292"><a href="#cb3-292" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-planck-curves</span></span>
-<span id="cb3-293"><a href="#cb3-293" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "多様な温度のプランク曲線。温度だけが形を決め、すべて同じ関数族に属する。"</span></span>
-<span id="cb3-294"><a href="#cb3-294" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: true</span></span>
-<span id="cb3-295"><a href="#cb3-295" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-296"><a href="#cb3-296" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys<span class="op">;</span> sys.path.insert(<span class="dv">0</span>, <span class="st">"../code"</span>)</span>
-<span id="cb3-297"><a href="#cb3-297" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> planck_curve <span class="im">import</span> plot_planck_with_limits</span>
-<span id="cb3-298"><a href="#cb3-298" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-299"><a href="#cb3-299" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plot_planck_with_limits(temperatures<span class="op">=</span>(<span class="fl">2.7</span>, <span class="dv">310</span>, <span class="dv">3000</span>, <span class="dv">5800</span>))</span>
-<span id="cb3-300"><a href="#cb3-300" aria-hidden="true" tabindex="-1"></a>fig</span>
-<span id="cb3-301"><a href="#cb3-301" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb3-302"><a href="#cb3-302" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-303"><a href="#cb3-303" aria-hidden="true" tabindex="-1"></a>ここで重要なのは、4つの曲線が異なる温度（4桁の範囲）にもかかわらず、すべて同じ関数族 $B_\nu(T)$ に属する、という一点である。本書はこの関数族を「中心地図」として、その背後の物理を逆引きで解き明かしていく。</span>
+<span id="cb3-271"><a href="#cb3-271" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**第I部**（本章＋第2–3章）：観測の現象論</span>
+<span id="cb3-272"><a href="#cb3-272" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**第II部**（第4–5章）：放射場の記述</span>
+<span id="cb3-273"><a href="#cb3-273" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**第III部**（第6–8章）：熱平衡と統計力学への逆引き</span>
+<span id="cb3-274"><a href="#cb3-274" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**第IV部**（第9–12章）：量子論への逆引き</span>
+<span id="cb3-275"><a href="#cb3-275" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**第V部**（第13–14章）：電磁気学への逆引き</span>
+<span id="cb3-276"><a href="#cb3-276" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>**第VI部**（第15–18章）：現実の宇宙へ戻る</span>
+<span id="cb3-277"><a href="#cb3-277" aria-hidden="true" tabindex="-1"></a><span class="ss">7. </span>**第VII部**（第20–24章）：線スペクトルの逆引き</span>
+<span id="cb3-278"><a href="#cb3-278" aria-hidden="true" tabindex="-1"></a><span class="ss">8. </span>**第VIII部**（第25–26章）：QED で連続と線を統一</span>
+<span id="cb3-279"><a href="#cb3-279" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-280"><a href="#cb3-280" aria-hidden="true" tabindex="-1"></a>各部の冒頭には「**この部で答える問い**」と「**中心地図**」が再掲され、読者は常に自分が中心地図のどの因子を解き明かしている途中かを確認できる。</span>
+<span id="cb3-281"><a href="#cb3-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-282"><a href="#cb3-282" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb3-283"><a href="#cb3-283" aria-hidden="true" tabindex="-1"></a>**読み方のコツ**：本書は通読できるが、目的によって読む順序を変えてもよい。表紙ページ（<span class="co">[</span><span class="ot">`index.qmd`</span><span class="co">](../index.qmd)</span>）の「読者タイプ別ルート」と、<span class="co">[</span><span class="ot">序章 §0.4</span><span class="co">](../00-prologue.qmd#sec-prologue-reading-routes)</span> を参照。</span>
+<span id="cb3-284"><a href="#cb3-284" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-285"><a href="#cb3-285" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-286"><a href="#cb3-286" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb3-287"><a href="#cb3-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-288"><a href="#cb3-288" aria-hidden="true" tabindex="-1"></a><span class="fu">## 計算例：プランク曲線を描いてみる {#sec-where-blackbody-numerical}</span></span>
+<span id="cb3-289"><a href="#cb3-289" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-290"><a href="#cb3-290" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B1</span><span class="co">]</span></span>
+<span id="cb3-291"><a href="#cb3-291" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-292"><a href="#cb3-292" aria-hidden="true" tabindex="-1"></a>「同じ関数形が温度だけで形を変える」ことを実際に見てみよう。次のコードは、太陽（5800 K）、低温の恒星（3000 K）、人体（310 K）、CMB（2.7 K）のプランク曲線を比較する。</span>
+<span id="cb3-293"><a href="#cb3-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-294"><a href="#cb3-294" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb3-295"><a href="#cb3-295" aria-hidden="true" tabindex="-1"></a>**注意**：プランク関数 $B_\nu(T)$ の具体的な式は本章では「天下り的には」与えない。式の構造と各因子の意味は第2章で扱う。ここでは、観測される多種多様な「黒体スペクトル」が一つの曲線族にすぎないことを、視覚的に確認するのが目的である。</span>
+<span id="cb3-296"><a href="#cb3-296" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-297"><a href="#cb3-297" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-300"><a href="#cb3-300" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb3-301"><a href="#cb3-301" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-planck-curves</span></span>
+<span id="cb3-302"><a href="#cb3-302" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "多様な温度のプランク曲線。温度だけが形を決め、すべて同じ関数族に属する。"</span></span>
+<span id="cb3-303"><a href="#cb3-303" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: true</span></span>
 <span id="cb3-304"><a href="#cb3-304" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-305"><a href="#cb3-305" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb3-306"><a href="#cb3-306" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-307"><a href="#cb3-307" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-where-blackbody-summary .unnumbered}</span></span>
-<span id="cb3-308"><a href="#cb3-308" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-309"><a href="#cb3-309" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
-<span id="cb3-310"><a href="#cb3-310" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る**</span>
+<span id="cb3-305"><a href="#cb3-305" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys<span class="op">;</span> sys.path.insert(<span class="dv">0</span>, <span class="st">"../code"</span>)</span>
+<span id="cb3-306"><a href="#cb3-306" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> planck_curve <span class="im">import</span> plot_planck_with_limits</span>
+<span id="cb3-307"><a href="#cb3-307" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-308"><a href="#cb3-308" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plot_planck_with_limits(temperatures<span class="op">=</span>(<span class="fl">2.7</span>, <span class="dv">310</span>, <span class="dv">3000</span>, <span class="dv">5800</span>))</span>
+<span id="cb3-309"><a href="#cb3-309" aria-hidden="true" tabindex="-1"></a>fig</span>
+<span id="cb3-310"><a href="#cb3-310" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb3-311"><a href="#cb3-311" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-312"><a href="#cb3-312" aria-hidden="true" tabindex="-1"></a>本章では、本書の中心地図であるプランク関数 $B_\nu(T)$ について、その**観測される現れ方**を整理した：</span>
+<span id="cb3-312"><a href="#cb3-312" aria-hidden="true" tabindex="-1"></a>ここで重要なのは、4つの曲線が異なる温度（4桁の範囲）にもかかわらず、すべて同じ関数族 $B_\nu(T)$ に属する、という一点である。本書はこの関数族を「中心地図」として、その背後の物理を逆引きで解き明かしていく。</span>
 <span id="cb3-313"><a href="#cb3-313" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-314"><a href="#cb3-314" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>太陽・恒星 ― 数千 K</span>
-<span id="cb3-315"><a href="#cb3-315" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>惑星・ダスト ― 数十〜数百 K</span>
-<span id="cb3-316"><a href="#cb3-316" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>CMB ― 2.7 K</span>
-<span id="cb3-317"><a href="#cb3-317" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>降着円盤・中性子星 ― 数百万〜数億 K</span>
-<span id="cb3-318"><a href="#cb3-318" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-319"><a href="#cb3-319" aria-hidden="true" tabindex="-1"></a>すべてが同じ「黒体に近い」スペクトル形を示し、温度 $T$ だけが形を決めている。ただし「黒体」は実在する物体ではなく、観測スペクトルを比較するための理想化された基準である。</span>
+<span id="cb3-314"><a href="#cb3-314" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb3-315"><a href="#cb3-315" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-316"><a href="#cb3-316" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-where-blackbody-summary .unnumbered}</span></span>
+<span id="cb3-317"><a href="#cb3-317" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-318"><a href="#cb3-318" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
+<span id="cb3-319"><a href="#cb3-319" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る**</span>
 <span id="cb3-320"><a href="#cb3-320" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-321"><a href="#cb3-321" aria-hidden="true" tabindex="-1"></a>**次章へ**：第2章では、観測スペクトルから温度・半径・光度をどう読み取るかを、Wien 則・Stefan–Boltzmann 則・色温度などの道具を使って具体的に学ぶ。中心地図プランク関数のどの因子がどの観測量に対応するかが、第2章の中心テーマである。</span>
-<span id="cb3-322"><a href="#cb3-322" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-323"><a href="#cb3-323" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-324"><a href="#cb3-324" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-where-blackbody-exercises .unnumbered}</span></span>
-<span id="cb3-325"><a href="#cb3-325" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-326"><a href="#cb3-326" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</span>
+<span id="cb3-321"><a href="#cb3-321" aria-hidden="true" tabindex="-1"></a>本章では、本書の中心地図であるプランク関数 $B_\nu(T)$ について、その**観測される現れ方**を整理した：</span>
+<span id="cb3-322"><a href="#cb3-322" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-323"><a href="#cb3-323" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>太陽・恒星 ― 数千 K</span>
+<span id="cb3-324"><a href="#cb3-324" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>惑星・ダスト ― 数十〜数百 K</span>
+<span id="cb3-325"><a href="#cb3-325" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>CMB ― 2.7 K</span>
+<span id="cb3-326"><a href="#cb3-326" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>降着円盤・中性子星 ― 数百万〜数億 K</span>
 <span id="cb3-327"><a href="#cb3-327" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-328"><a href="#cb3-328" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 1-1　散らばったデータから Wien 変位定数を逆算する {#ex-1-1 .unnumbered}</span></span>
+<span id="cb3-328"><a href="#cb3-328" aria-hidden="true" tabindex="-1"></a>すべてが同じ「黒体に近い」スペクトル形を示し、温度 $T$ だけが形を決めている。ただし「黒体」は実在する物体ではなく、観測スペクトルを比較するための理想化された基準である。</span>
 <span id="cb3-329"><a href="#cb3-329" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-330"><a href="#cb3-330" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆ </span><span class="co">] [tag:理解を深める]</span></span>
-<span id="cb3-331"><a href="#cb3-331" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-332"><a href="#cb3-332" aria-hidden="true" tabindex="-1"></a>本章は §1.2〜§1.5 で温度とピーク波長の組を別々に与えている（太陽 $T_\odot\simeq5778$ K で $\lambda_{\max}\simeq500$ nm、CMB $T=2.725$ K で $\lambda_{\max}\simeq1.06$ mm、地球 $T\simeq290$ K で中間赤外 $\sim10\ \mu$m）。式を使わずに、これらが一つの法則に従うことを確かめる。</span>
-<span id="cb3-333"><a href="#cb3-333" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-334"><a href="#cb3-334" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>3つの組について積 $\lambda_{\max}\cdot T$ を計算し、ほぼ一定値になることを確かめよ。</span>
-<span id="cb3-335"><a href="#cb3-335" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>その共通値（経験的な Wien 変位定数）$b$ を概算せよ。</span>
-<span id="cb3-336"><a href="#cb3-336" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>「温度が4桁違う天体が同じ $b$ を共有する」という事実は、第1章の主張「すべて同じ関数族 $B_\nu(T)$」をどう支持するか述べよ。</span>
-<span id="cb3-337"><a href="#cb3-337" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-338"><a href="#cb3-338" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§1.5 CMB</span><span class="co">](#sec-where-blackbody-cmb)</span>／変位則の正式な扱いは <span class="co">[</span><span class="ot">§2.3 Wien の変位則</span><span class="co">](../part1/02-reading-spectra.qmd#sec-reading-spectra-wien)</span>（導出は<span class="co">[</span><span class="ot">演習 2-2</span><span class="co">](../part1/02-reading-spectra.qmd#ex-2-2)</span>）。</span>
-<span id="cb3-339"><a href="#cb3-339" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-340"><a href="#cb3-340" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb3-341"><a href="#cb3-341" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 1-1）</span></span>
+<span id="cb3-330"><a href="#cb3-330" aria-hidden="true" tabindex="-1"></a>**次章へ**：第2章では、観測スペクトルから温度・半径・光度をどう読み取るかを、Wien 則・Stefan–Boltzmann 則・色温度などの道具を使って具体的に学ぶ。中心地図プランク関数のどの因子がどの観測量に対応するかが、第2章の中心テーマである。</span>
+<span id="cb3-331"><a href="#cb3-331" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-332"><a href="#cb3-332" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-333"><a href="#cb3-333" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-where-blackbody-exercises .unnumbered}</span></span>
+<span id="cb3-334"><a href="#cb3-334" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-335"><a href="#cb3-335" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから確認すると効果的である。</span>
+<span id="cb3-336"><a href="#cb3-336" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-337"><a href="#cb3-337" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 1-1　散らばったデータから Wien 変位定数を逆算する {#ex-1-1 .unnumbered}</span></span>
+<span id="cb3-338"><a href="#cb3-338" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-339"><a href="#cb3-339" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb3-340"><a href="#cb3-340" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-341"><a href="#cb3-341" aria-hidden="true" tabindex="-1"></a>本章は §1.2〜§1.5 で温度とピーク波長の組を別々に与えている（太陽 $T_\odot\simeq5778$ K で $\lambda_{\max}\simeq500$ nm、CMB $T=2.725$ K で $\lambda_{\max}\simeq1.06$ mm、地球 $T\simeq290$ K で中間赤外 $\sim10\ \mu$m）。式を使わずに、これらが一つの法則に従うことを確かめる。</span>
 <span id="cb3-342"><a href="#cb3-342" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-343"><a href="#cb3-343" aria-hidden="true" tabindex="-1"></a>**(1)** 単位を m·K に揃える：</span>
-<span id="cb3-344"><a href="#cb3-344" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-345"><a href="#cb3-345" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 天体 <span class="pp">|</span> $\lambda_{\max}$ <span class="pp">|</span> $T$ <span class="co">[</span><span class="ot">K</span><span class="co">]</span> <span class="pp">|</span> $\lambda_{\max}T$ <span class="co">[</span><span class="ot">m·K</span><span class="co">]</span> <span class="pp">|</span></span>
-<span id="cb3-346"><a href="#cb3-346" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|---|</span></span>
-<span id="cb3-347"><a href="#cb3-347" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 太陽 <span class="pp">|</span> $5.0\times10^{-7}$ m <span class="pp">|</span> 5778 <span class="pp">|</span> $2.89\times10^{-3}$ <span class="pp">|</span></span>
-<span id="cb3-348"><a href="#cb3-348" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> CMB <span class="pp">|</span> $1.06\times10^{-3}$ m <span class="pp">|</span> 2.725 <span class="pp">|</span> $2.89\times10^{-3}$ <span class="pp">|</span></span>
-<span id="cb3-349"><a href="#cb3-349" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 地球 <span class="pp">|</span> $1.0\times10^{-5}$ m <span class="pp">|</span> 290 <span class="pp">|</span> $2.9\times10^{-3}$ <span class="pp">|</span></span>
-<span id="cb3-350"><a href="#cb3-350" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-351"><a href="#cb3-351" aria-hidden="true" tabindex="-1"></a>3桁の精度で同じ値。</span>
-<span id="cb3-352"><a href="#cb3-352" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-353"><a href="#cb3-353" aria-hidden="true" tabindex="-1"></a>**(2)** $b\approx2.9\times10^{-3}$ m·K。これは §2.3 の Wien 変位定数 $b=2.898\times10^{-3}$ m·K と一致する。</span>
-<span id="cb3-354"><a href="#cb3-354" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-355"><a href="#cb3-355" aria-hidden="true" tabindex="-1"></a>**(3)** もし天体ごとにスペクトルの関数形が違えば、「ピーク波長×温度」が天体ごとにバラバラになるはず。4桁の温度差を超えて単一の $b$ を共有することは、ピーク位置の温度依存が全天体で共通＝同一の関数族 $B_\nu(T)$ が温度だけを変えて現れている、という第1章の主張を定量的に裏づける。</span>
-<span id="cb3-356"><a href="#cb3-356" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-357"><a href="#cb3-357" aria-hidden="true" tabindex="-1"></a>**答え**：$\lambda_{\max}T\approx2.9\times10^{-3}$ m·K で一定。単一の関数族が温度パラメータだけで全天体を記述することの証拠。</span>
-<span id="cb3-358"><a href="#cb3-358" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-343"><a href="#cb3-343" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>3つの組について積 $\lambda_{\max}\cdot T$ を計算し、ほぼ一定値になることを確かめよ。</span>
+<span id="cb3-344"><a href="#cb3-344" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>その共通値（経験的な Wien 変位定数）$b$ を概算せよ。</span>
+<span id="cb3-345"><a href="#cb3-345" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>「温度が4桁違う天体が同じ $b$ を共有する」という事実は、第1章の主張「すべて同じ関数族 $B_\nu(T)$」をどう支持するか述べよ。</span>
+<span id="cb3-346"><a href="#cb3-346" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-347"><a href="#cb3-347" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§1.5 CMB</span><span class="co">](#sec-where-blackbody-cmb)</span>／変位則の正式な扱いは <span class="co">[</span><span class="ot">§2.3 Wien の変位則</span><span class="co">](../part1/02-reading-spectra.qmd#sec-reading-spectra-wien)</span>（導出は<span class="co">[</span><span class="ot">演習 2-2</span><span class="co">](../part1/02-reading-spectra.qmd#ex-2-2)</span>）。</span>
+<span id="cb3-348"><a href="#cb3-348" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-349"><a href="#cb3-349" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb3-350"><a href="#cb3-350" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 1-1）</span></span>
+<span id="cb3-351"><a href="#cb3-351" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-352"><a href="#cb3-352" aria-hidden="true" tabindex="-1"></a>**(1)** 単位を m·K に揃える：</span>
+<span id="cb3-353"><a href="#cb3-353" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-354"><a href="#cb3-354" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 天体 <span class="pp">|</span> $\lambda_{\max}$ <span class="pp">|</span> $T$ <span class="co">[</span><span class="ot">K</span><span class="co">]</span> <span class="pp">|</span> $\lambda_{\max}T$ <span class="co">[</span><span class="ot">m·K</span><span class="co">]</span> <span class="pp">|</span></span>
+<span id="cb3-355"><a href="#cb3-355" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|---|</span></span>
+<span id="cb3-356"><a href="#cb3-356" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 太陽 <span class="pp">|</span> $5.0\times10^{-7}$ m <span class="pp">|</span> 5778 <span class="pp">|</span> $2.89\times10^{-3}$ <span class="pp">|</span></span>
+<span id="cb3-357"><a href="#cb3-357" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> CMB <span class="pp">|</span> $1.06\times10^{-3}$ m <span class="pp">|</span> 2.725 <span class="pp">|</span> $2.89\times10^{-3}$ <span class="pp">|</span></span>
+<span id="cb3-358"><a href="#cb3-358" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 地球 <span class="pp">|</span> $1.0\times10^{-5}$ m <span class="pp">|</span> 290 <span class="pp">|</span> $2.9\times10^{-3}$ <span class="pp">|</span></span>
 <span id="cb3-359"><a href="#cb3-359" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-360"><a href="#cb3-360" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 1-2　理想黒体の3条件で現実天体を採点する {#ex-1-2 .unnumbered}</span></span>
+<span id="cb3-360"><a href="#cb3-360" aria-hidden="true" tabindex="-1"></a>3桁の精度で同じ値。</span>
 <span id="cb3-361"><a href="#cb3-361" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-362"><a href="#cb3-362" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb3-362"><a href="#cb3-362" aria-hidden="true" tabindex="-1"></a>**(2)** $b\approx2.9\times10^{-3}$ m·K。これは §2.3 の Wien 変位定数 $b=2.898\times10^{-3}$ m·K と一致する。</span>
 <span id="cb3-363"><a href="#cb3-363" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-364"><a href="#cb3-364" aria-hidden="true" tabindex="-1"></a>§1.7 は理想黒体に課す3条件（① 完全吸収、② 完全熱化、③ 単一温度）を挙げ、天体ごとの達成度を表にした。各天体について「どの条件が破れ、その結果スペクトルにどんな『ずれ』が現れるか」を結びつける。</span>
+<span id="cb3-364"><a href="#cb3-364" aria-hidden="true" tabindex="-1"></a>**(3)** もし天体ごとにスペクトルの関数形が違えば、「ピーク波長×温度」が天体ごとにバラバラになるはず。4桁の温度差を超えて単一の $b$ を共有することは、ピーク位置の温度依存が全天体で共通＝同一の関数族 $B_\nu(T)$ が温度だけを変えて現れている、という第1章の主張を定量的に裏づける。</span>
 <span id="cb3-365"><a href="#cb3-365" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-366"><a href="#cb3-366" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**CMB** がほぼ完璧な黒体である理由を、3条件すべての観点から述べよ。</span>
-<span id="cb3-367"><a href="#cb3-367" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**降着円盤** が破る条件を1つ挙げ、その帰結である「多温度黒体」とは観測上どういうスペクトルになるか述べよ。</span>
-<span id="cb3-368"><a href="#cb3-368" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**星間ダスト** が破る条件を1つ挙げ、その帰結（修正黒体／放射効率の振動数依存）を述べよ。</span>
-<span id="cb3-369"><a href="#cb3-369" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-370"><a href="#cb3-370" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§1.7 理想化の3条件</span><span class="co">](#sec-where-blackbody-idealization)</span>／「ずれ」の整理は <span class="co">[</span><span class="ot">§2.7</span><span class="co">](../part1/02-reading-spectra.qmd#sec-reading-spectra-deviation)</span>、修正黒体は <span class="co">[</span><span class="ot">第15章</span><span class="co">](../part6/15-non-blackbody.qmd)</span>、多温度円盤は <span class="co">[</span><span class="ot">第18章</span><span class="co">](../part6/18-accretion-high-energy.qmd)</span>。</span>
-<span id="cb3-371"><a href="#cb3-371" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-372"><a href="#cb3-372" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb3-373"><a href="#cb3-373" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 1-2）</span></span>
+<span id="cb3-366"><a href="#cb3-366" aria-hidden="true" tabindex="-1"></a>**答え**：$\lambda_{\max}T\approx2.9\times10^{-3}$ m·K で一定。単一の関数族が温度パラメータだけで全天体を記述することの証拠。</span>
+<span id="cb3-367"><a href="#cb3-367" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-368"><a href="#cb3-368" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-369"><a href="#cb3-369" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 1-2　理想黒体の3条件で現実天体を採点する {#ex-1-2 .unnumbered}</span></span>
+<span id="cb3-370"><a href="#cb3-370" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-371"><a href="#cb3-371" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb3-372"><a href="#cb3-372" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-373"><a href="#cb3-373" aria-hidden="true" tabindex="-1"></a>§1.7 は理想黒体に課す3条件（① 完全吸収、② 完全熱化、③ 単一温度）を挙げ、天体ごとの達成度を表にした。各天体について「どの条件が破れ、その結果スペクトルにどんな『ずれ』が現れるか」を結びつける。</span>
 <span id="cb3-374"><a href="#cb3-374" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-375"><a href="#cb3-375" aria-hidden="true" tabindex="-1"></a>**(1)** CMB は ① 再結合期以前に光と物質が密に相互作用して完全吸収・完全熱化に相当する状況を達成、② 長時間・高密度で完璧な熱平衡に到達、③ 宇宙全体が単一温度 2.725 K で記述できる ― 3条件すべてを最もよく満たす。だから $\Delta I/I&lt;10^{-4}$ という観測精度の限界まで黒体形からずれない。</span>
-<span id="cb3-376"><a href="#cb3-376" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-377"><a href="#cb3-377" aria-hidden="true" tabindex="-1"></a>**(2)** 降着円盤は条件③（単一温度）を破る。半径ごとに温度が異なり、各半径の $B_\nu(T(r))$ が重なる。観測スペクトルは単一の $T$ では再現できず、ピークが鈍り高振動数側に裾を引く「多温度黒体（多温度円盤スペクトル）」になる。各半径では局所的に黒体近似が成り立つことが前提。</span>
+<span id="cb3-375"><a href="#cb3-375" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**CMB** がほぼ完璧な黒体である理由を、3条件すべての観点から述べよ。</span>
+<span id="cb3-376"><a href="#cb3-376" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**降着円盤** が破る条件を1つ挙げ、その帰結である「多温度黒体」とは観測上どういうスペクトルになるか述べよ。</span>
+<span id="cb3-377"><a href="#cb3-377" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**星間ダスト** が破る条件を1つ挙げ、その帰結（修正黒体／放射効率の振動数依存）を述べよ。</span>
 <span id="cb3-378"><a href="#cb3-378" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-379"><a href="#cb3-379" aria-hidden="true" tabindex="-1"></a>**(3)** ダストは条件①（完全吸収）を破る。波長によって放射効率 $\epsilon_\nu&lt;1$ が変化するため、黒体に振動数依存のスペクトル指数を掛けた「修正黒体」として観測される。</span>
+<span id="cb3-379"><a href="#cb3-379" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§1.7 理想化の3条件</span><span class="co">](#sec-where-blackbody-idealization)</span>／「ずれ」の整理は <span class="co">[</span><span class="ot">§2.7</span><span class="co">](../part1/02-reading-spectra.qmd#sec-reading-spectra-deviation)</span>、修正黒体は <span class="co">[</span><span class="ot">第15章</span><span class="co">](../part6/15-non-blackbody.qmd)</span>、多温度円盤は <span class="co">[</span><span class="ot">第18章</span><span class="co">](../part6/18-accretion-high-energy.qmd)</span>。</span>
 <span id="cb3-380"><a href="#cb3-380" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-381"><a href="#cb3-381" aria-hidden="true" tabindex="-1"></a>**答え**：CMB＝3条件すべて満たす。円盤＝③単一温度を破る→多温度合成。ダスト＝①完全吸収を破る→修正黒体。</span>
-<span id="cb3-382"><a href="#cb3-382" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-381"><a href="#cb3-381" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb3-382"><a href="#cb3-382" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 1-2）</span></span>
 <span id="cb3-383"><a href="#cb3-383" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-384"><a href="#cb3-384" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 1-3　熱的/非熱的 と LTE/非LTE は直交する {#ex-1-3 .unnumbered}</span></span>
+<span id="cb3-384"><a href="#cb3-384" aria-hidden="true" tabindex="-1"></a>**(1)** CMB は ① 再結合期以前に光と物質が密に相互作用して完全吸収・完全熱化に相当する状況を達成、② 長時間・高密度で完璧な熱平衡に到達、③ 宇宙全体が単一温度 2.725 K で記述できる ― 3条件すべてを最もよく満たす。だから $\Delta I/I&lt;10^{-4}$ という観測精度の限界まで黒体形からずれない。</span>
 <span id="cb3-385"><a href="#cb3-385" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-386"><a href="#cb3-386" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb3-386"><a href="#cb3-386" aria-hidden="true" tabindex="-1"></a>**(2)** 降着円盤は条件③（単一温度）を破る。半径ごとに温度が異なり、各半径の $B_\nu(T(r))$ が重なる。観測スペクトルは単一の $T$ では再現できず、ピークが鈍り高振動数側に裾を引く「多温度黒体（多温度円盤スペクトル）」になる。各半径では局所的に黒体近似が成り立つことが前提。</span>
 <span id="cb3-387"><a href="#cb3-387" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-388"><a href="#cb3-388" aria-hidden="true" tabindex="-1"></a>§1.9 は「熱的/非熱的」（粒子のエネルギー分布が Maxwell 分布か）と「LTE/非LTE」（準位占有が局所温度だけで決まるか）が別概念で直交すると強調した。</span>
+<span id="cb3-388"><a href="#cb3-388" aria-hidden="true" tabindex="-1"></a>**(3)** ダストは条件①（完全吸収）を破る。波長によって放射効率 $\epsilon_\nu&lt;1$ が変化するため、黒体に振動数依存のスペクトル指数を掛けた「修正黒体」として観測される。</span>
 <span id="cb3-389"><a href="#cb3-389" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-390"><a href="#cb3-390" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>「熱的 vs 非熱的」を分ける物理量と、「LTE vs 非LTE」を分ける物理量をそれぞれ一言で述べよ。</span>
-<span id="cb3-391"><a href="#cb3-391" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>次の各放射を「熱的/非熱的」で分類せよ：熱的制動放射、シンクロトロン放射、CMB、LTE 線放射。</span>
-<span id="cb3-392"><a href="#cb3-392" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>CMB の温度ゆらぎ $\Delta T/T\sim10^{-5}$ は「非熱的」放射ではない。なぜか。スペクトル（強度 vs 振動数）と空間ゆらぎ（方向ごとの温度差）の違いに触れて説明せよ。</span>
-<span id="cb3-393"><a href="#cb3-393" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-394"><a href="#cb3-394" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§1.9 熱的放射と非熱的放射</span><span class="co">](#sec-where-blackbody-thermal)</span>／非熱的放射の応用は <span class="co">[</span><span class="ot">第18章</span><span class="co">](../part6/18-accretion-high-energy.qmd)</span>、LTE/非LTE は <span class="co">[</span><span class="ot">§3.2</span><span class="co">](../part1/03-universality.qmd#sec-universality-thermal-equilibrium)</span>。</span>
-<span id="cb3-395"><a href="#cb3-395" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-396"><a href="#cb3-396" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb3-397"><a href="#cb3-397" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 1-3）</span></span>
+<span id="cb3-390"><a href="#cb3-390" aria-hidden="true" tabindex="-1"></a>**答え**：CMB＝3条件すべて満たす。円盤＝③単一温度を破る→多温度合成。ダスト＝①完全吸収を破る→修正黒体。</span>
+<span id="cb3-391"><a href="#cb3-391" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-392"><a href="#cb3-392" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-393"><a href="#cb3-393" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 1-3　熱的/非熱的 と LTE/非LTE は直交する {#ex-1-3 .unnumbered}</span></span>
+<span id="cb3-394"><a href="#cb3-394" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-395"><a href="#cb3-395" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb3-396"><a href="#cb3-396" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-397"><a href="#cb3-397" aria-hidden="true" tabindex="-1"></a>§1.9 は「熱的/非熱的」（粒子のエネルギー分布が Maxwell 分布か）と「LTE/非LTE」（準位占有が局所温度だけで決まるか）が別概念で直交すると強調した。</span>
 <span id="cb3-398"><a href="#cb3-398" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-399"><a href="#cb3-399" aria-hidden="true" tabindex="-1"></a>**(1)** 熱的/非熱的を分けるのは **粒子のエネルギー分布**（Maxwell 分布なら熱的、べき則など非Maxwellなら非熱的）。LTE/非LTE を分けるのは **原子の準位占有数**（局所温度 $T$ だけで決まれば LTE、放射場 $J_\nu$ にも依存すれば非LTE）。</span>
-<span id="cb3-400"><a href="#cb3-400" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-401"><a href="#cb3-401" aria-hidden="true" tabindex="-1"></a>**(2)** 熱的制動放射＝熱的（Maxwell 分布プラズマ）。シンクロトロン＝非熱的（べき則の相対論的電子）。CMB＝熱的（完全な熱平衡）。LTE 線放射＝熱的。</span>
+<span id="cb3-399"><a href="#cb3-399" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>「熱的 vs 非熱的」を分ける物理量と、「LTE vs 非LTE」を分ける物理量をそれぞれ一言で述べよ。</span>
+<span id="cb3-400"><a href="#cb3-400" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>次の各放射を「熱的/非熱的」で分類せよ：熱的制動放射、シンクロトロン放射、CMB、LTE 線放射。</span>
+<span id="cb3-401"><a href="#cb3-401" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>CMB の温度ゆらぎ $\Delta T/T\sim10^{-5}$ は「非熱的」放射ではない。なぜか。スペクトル（強度 vs 振動数）と空間ゆらぎ（方向ごとの温度差）の違いに触れて説明せよ。</span>
 <span id="cb3-402"><a href="#cb3-402" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-403"><a href="#cb3-403" aria-hidden="true" tabindex="-1"></a>**(3)** CMB は各方向で見ると依然として完全なプランク分布（熱的スペクトル）。温度ゆらぎとは「方向ごとに黒体温度がわずかに違う」という **空間的** な差であって、各点の **スペクトル形** が非熱的（べき則）になっているわけではない。「非熱的」は強度 vs 振動数のスペクトル形の話、ゆらぎは方向ごとの温度の話で、軸が異なる。ゆらぎの起源（初期宇宙の量子ゆらぎ）も熱平衡の統計ゆらぎとは別物。</span>
+<span id="cb3-403"><a href="#cb3-403" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§1.9 熱的放射と非熱的放射</span><span class="co">](#sec-where-blackbody-thermal)</span>／非熱的放射の応用は <span class="co">[</span><span class="ot">第18章</span><span class="co">](../part6/18-accretion-high-energy.qmd)</span>、LTE/非LTE は <span class="co">[</span><span class="ot">§3.2</span><span class="co">](../part1/03-universality.qmd#sec-universality-thermal-equilibrium)</span>。</span>
 <span id="cb3-404"><a href="#cb3-404" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-405"><a href="#cb3-405" aria-hidden="true" tabindex="-1"></a>**答え**：分布関数 vs 準位占有という別軸。制動・CMB・LTE線＝熱的、シンクロトロン＝非熱的。CMB ゆらぎはスペクトルでなく空間温度差なので非熱的とは無関係。</span>
-<span id="cb3-406"><a href="#cb3-406" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-405"><a href="#cb3-405" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb3-406"><a href="#cb3-406" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 1-3）</span></span>
 <span id="cb3-407"><a href="#cb3-407" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-408"><a href="#cb3-408" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 1-4　CMB の黒体性：「熱化」と「自由伝搬の開始」を分ける {#ex-1-4 .unnumbered}</span></span>
+<span id="cb3-408"><a href="#cb3-408" aria-hidden="true" tabindex="-1"></a>**(1)** 熱的/非熱的を分けるのは **粒子のエネルギー分布**（Maxwell 分布なら熱的、べき則など非Maxwellなら非熱的）。LTE/非LTE を分けるのは **原子の準位占有数**（局所温度 $T$ だけで決まれば LTE、放射場 $J_\nu$ にも依存すれば非LTE）。</span>
 <span id="cb3-409"><a href="#cb3-409" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-410"><a href="#cb3-410" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb3-410"><a href="#cb3-410" aria-hidden="true" tabindex="-1"></a>**(2)** 熱的制動放射＝熱的（Maxwell 分布プラズマ）。シンクロトロン＝非熱的（べき則の相対論的電子）。CMB＝熱的（完全な熱平衡）。LTE 線放射＝熱的。</span>
 <span id="cb3-411"><a href="#cb3-411" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-412"><a href="#cb3-412" aria-hidden="true" tabindex="-1"></a>§1.5 は「再結合期に黒体になった」という言い方は不正確で、「再結合期 **までに** 完成した黒体スペクトルが再結合期に解放された」と理解せよ、と注意している。</span>
+<span id="cb3-412"><a href="#cb3-412" aria-hidden="true" tabindex="-1"></a>**(3)** CMB は各方向で見ると依然として完全なプランク分布（熱的スペクトル）。温度ゆらぎとは「方向ごとに黒体温度がわずかに違う」という **空間的** な差であって、各点の **スペクトル形** が非熱的（べき則）になっているわけではない。「非熱的」は強度 vs 振動数のスペクトル形の話、ゆらぎは方向ごとの温度の話で、軸が異なる。ゆらぎの起源（初期宇宙の量子ゆらぎ）も熱平衡の統計ゆらぎとは別物。</span>
 <span id="cb3-413"><a href="#cb3-413" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-414"><a href="#cb3-414" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>「熱化（thermalization）」と「自由伝搬の開始（再結合・脱結合）」は、それぞれ宇宙史のいつ起き、何を担う過程か区別して述べよ。</span>
-<span id="cb3-415"><a href="#cb3-415" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>熱化を担った物理過程を §1.5 から挙げよ。</span>
-<span id="cb3-416"><a href="#cb3-416" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>再結合以降、宇宙膨張で温度が下がってもスペクトルが黒体形を保つのはなぜか（断熱不変としての性質に触れて）述べよ。</span>
-<span id="cb3-417"><a href="#cb3-417" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-418"><a href="#cb3-418" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§1.5 CMB</span><span class="co">](#sec-where-blackbody-cmb)</span>／本格的扱いは <span class="co">[</span><span class="ot">第16章 CMB</span><span class="co">](../part6/16-cmb.qmd)</span>、熱平衡の条件は <span class="co">[</span><span class="ot">§3.6</span><span class="co">](../part1/03-universality.qmd#sec-universality-real-objects)</span>。</span>
-<span id="cb3-419"><a href="#cb3-419" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-420"><a href="#cb3-420" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb3-421"><a href="#cb3-421" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 1-4）</span></span>
+<span id="cb3-414"><a href="#cb3-414" aria-hidden="true" tabindex="-1"></a>**答え**：分布関数 vs 準位占有という別軸。制動・CMB・LTE線＝熱的、シンクロトロン＝非熱的。CMB ゆらぎはスペクトルでなく空間温度差なので非熱的とは無関係。</span>
+<span id="cb3-415"><a href="#cb3-415" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-416"><a href="#cb3-416" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-417"><a href="#cb3-417" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 1-4　CMB の黒体性：「熱化」と「自由伝搬の開始」を分ける {#ex-1-4 .unnumbered}</span></span>
+<span id="cb3-418"><a href="#cb3-418" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-419"><a href="#cb3-419" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb3-420"><a href="#cb3-420" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-421"><a href="#cb3-421" aria-hidden="true" tabindex="-1"></a>§1.5 は「再結合期に黒体になった」という言い方は不正確で、「再結合期 **までに** 完成した黒体スペクトルが再結合期に解放された」と理解せよ、と注意している。</span>
 <span id="cb3-422"><a href="#cb3-422" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-423"><a href="#cb3-423" aria-hidden="true" tabindex="-1"></a>**(1)** **熱化**：宇宙ごく初期（典型的に宇宙年齢 $\lesssim10^7$ 秒）に、放射場のスペクトルを Planck 形へ整える過程。**自由伝搬の開始（再結合期、約38万年）**：電子と陽子が結合して中性水素になり、光が散乱されずに直進できるようになる過程。前者がスペクトルの形を作り、後者がそれを「解放」する。両者は時代も役割も別。</span>
-<span id="cb3-424"><a href="#cb3-424" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-425"><a href="#cb3-425" aria-hidden="true" tabindex="-1"></a>**(2)** 二重 Compton 散乱、制動放射、Compton 散乱など、光子と物質の強い相互作用。これらが早期の高密度環境でスペクトルを Planck 形に整えた。</span>
+<span id="cb3-423"><a href="#cb3-423" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>「熱化（thermalization）」と「自由伝搬の開始（再結合・脱結合）」は、それぞれ宇宙史のいつ起き、何を担う過程か区別して述べよ。</span>
+<span id="cb3-424"><a href="#cb3-424" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>熱化を担った物理過程を §1.5 から挙げよ。</span>
+<span id="cb3-425"><a href="#cb3-425" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>再結合以降、宇宙膨張で温度が下がってもスペクトルが黒体形を保つのはなぜか（断熱不変としての性質に触れて）述べよ。</span>
 <span id="cb3-426"><a href="#cb3-426" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-427"><a href="#cb3-427" aria-hidden="true" tabindex="-1"></a>**(3)** 宇宙膨張は黒体スペクトルの「形」を保存する（断熱不変量としての性質）。膨張で各光子の振動数が一様に赤方偏移し、温度パラメータ $T$ が下がるだけで、プランク分布の関数形 $B_\nu(T)$ はそのまま保たれる。だから現在 2.725 K でも完璧な黒体形を示す。</span>
+<span id="cb3-427"><a href="#cb3-427" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§1.5 CMB</span><span class="co">](#sec-where-blackbody-cmb)</span>／本格的扱いは <span class="co">[</span><span class="ot">第16章 CMB</span><span class="co">](../part6/16-cmb.qmd)</span>、熱平衡の条件は <span class="co">[</span><span class="ot">§3.6</span><span class="co">](../part1/03-universality.qmd#sec-universality-real-objects)</span>。</span>
 <span id="cb3-428"><a href="#cb3-428" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-429"><a href="#cb3-429" aria-hidden="true" tabindex="-1"></a>**答え**：熱化＝初期にスペクトルを作る、再結合＝それを解放する、で別過程。膨張は形を保存（断熱不変）するので低温でも黒体のまま。</span>
-<span id="cb3-430"><a href="#cb3-430" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-429"><a href="#cb3-429" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb3-430"><a href="#cb3-430" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 1-4）</span></span>
 <span id="cb3-431"><a href="#cb3-431" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-432"><a href="#cb3-432" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-where-blackbody-further .unnumbered}</span></span>
+<span id="cb3-432"><a href="#cb3-432" aria-hidden="true" tabindex="-1"></a>**(1)** **熱化**：宇宙ごく初期（典型的に宇宙年齢 $\lesssim10^7$ 秒）に、放射場のスペクトルを Planck 形へ整える過程。**自由伝搬の開始（再結合期、約38万年）**：電子と陽子が結合して中性水素になり、光が散乱されずに直進できるようになる過程。前者がスペクトルの形を作り、後者がそれを「解放」する。両者は時代も役割も別。</span>
 <span id="cb3-433"><a href="#cb3-433" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-434"><a href="#cb3-434" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>太陽スペクトルの詳細な観測：Stix, *The Sun* (Springer, 2nd ed., 2004)</span>
-<span id="cb3-435"><a href="#cb3-435" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>恒星のスペクトル分類の歴史：Kaler, *Stars and their Spectra* (Cambridge, 2nd ed., 2011)</span>
-<span id="cb3-436"><a href="#cb3-436" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>CMB の黒体性の発見：Partridge, *3K: The Cosmic Microwave Background Radiation* (Cambridge, 1995)</span>
-<span id="cb3-437"><a href="#cb3-437" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>観測天文学全般の入門：縣 秀彦・嶺重 慎 編『シリーズ現代の天文学』各巻</span>
+<span id="cb3-434"><a href="#cb3-434" aria-hidden="true" tabindex="-1"></a>**(2)** 二重 Compton 散乱、制動放射、Compton 散乱など、光子と物質の強い相互作用。これらが早期の高密度環境でスペクトルを Planck 形に整えた。</span>
+<span id="cb3-435"><a href="#cb3-435" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-436"><a href="#cb3-436" aria-hidden="true" tabindex="-1"></a>**(3)** 宇宙膨張は黒体スペクトルの「形」を保存する（断熱不変量としての性質）。膨張で各光子の振動数が一様に赤方偏移し、温度パラメータ $T$ が下がるだけで、プランク分布の関数形 $B_\nu(T)$ はそのまま保たれる。だから現在 2.725 K でも完璧な黒体形を示す。</span>
+<span id="cb3-437"><a href="#cb3-437" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-438"><a href="#cb3-438" aria-hidden="true" tabindex="-1"></a>**答え**：熱化＝初期にスペクトルを作る、再結合＝それを解放する、で別過程。膨張は形を保存（断熱不変）するので低温でも黒体のまま。</span>
+<span id="cb3-439"><a href="#cb3-439" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-440"><a href="#cb3-440" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-441"><a href="#cb3-441" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-where-blackbody-further .unnumbered}</span></span>
+<span id="cb3-442"><a href="#cb3-442" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-443"><a href="#cb3-443" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>太陽スペクトルの詳細な観測：Stix, *The Sun* (Springer, 2nd ed., 2004)</span>
+<span id="cb3-444"><a href="#cb3-444" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>恒星のスペクトル分類の歴史：Kaler, *Stars and their Spectra* (Cambridge, 2nd ed., 2011)</span>
+<span id="cb3-445"><a href="#cb3-445" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>CMB の黒体性の発見：Partridge, *3K: The Cosmic Microwave Background Radiation* (Cambridge, 1995)</span>
+<span id="cb3-446"><a href="#cb3-446" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>観測天文学全般の入門：縣 秀彦・嶺重 慎 編『シリーズ現代の天文学』各巻</span>
 </code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

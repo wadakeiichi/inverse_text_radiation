@@ -414,7 +414,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../part7/23-line-shape.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第23章　線形（line shape）の物理</span></a>
+  <a href="../part7/23-line-shape.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第23章　線輪郭（line profile）の物理</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -652,7 +652,7 @@ B_\nu(T) = \frac{2 h\, \boxed{\nu^3}}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>対応（観測）</strong>：観測される黒体スペクトルの前因子 <span class="math inline">\nu^3/c^2</span> の <span class="math inline">c^2</span> は、まさに <strong>Maxwell 方程式に含まれる光速 <span class="math inline">c</span></strong> に直接由来する。光速が電磁気の基本定数として現れる ― このことが、後で見るモード密度に <span class="math inline">c</span> が現れる理由でもある。</p>
+<p><strong>観測との対応</strong>：観測される黒体スペクトルの前因子 <span class="math inline">\nu^3/c^2</span> の <span class="math inline">c^2</span> は、まさに <strong>Maxwell 方程式に含まれる光速 <span class="math inline">c</span></strong> に直接由来する。光速が電磁気の基本定数として現れる ― このことが、後で見るモード密度に <span class="math inline">c</span> が現れる理由でもある。</p>
 </div>
 </div>
 </section>
@@ -700,7 +700,7 @@ B_\nu(T) = \frac{2 h\, \boxed{\nu^3}}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>対応（観測）</strong>：この <strong>「2 つの偏光自由度」が、プランク分布の前因子に現れる係数 2 の起源</strong>である。すなわち <span class="math inline">2h\nu^3/c^2</span> の先頭の 2 は、電磁波が三次元空間で横波であることの直接的な帰結。本章の核となる事実。</p>
+<p><strong>観測との対応</strong>：この <strong>「2 つの偏光自由度」が、プランク分布の前因子に現れる係数 2 の起源</strong>である。すなわち <span class="math inline">2h\nu^3/c^2</span> の先頭の 2 は、電磁波が三次元空間で横波であることの直接的な帰結。本章の核となる事実。</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -713,7 +713,7 @@ B_\nu(T) = \frac{2 h\, \boxed{\nu^3}}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>対応（観測）</strong>：偏光は天文学では重要な情報源である：</p>
+<p><strong>観測との対応</strong>：偏光は天文学では重要な情報源である：</p>
 <ul>
 <li><strong>シンクロトロン放射</strong>（非熱的）の偏光 → 磁場の方向診断</li>
 <li><strong>散乱光</strong>の偏光 → 散乱体の幾何</li>
@@ -727,11 +727,11 @@ B_\nu(T) = \frac{2 h\, \boxed{\nu^3}}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 <section id="sec-electromagnetic-waves-poynting" class="level2">
 <h2 class="anchored" data-anchor-id="sec-electromagnetic-waves-poynting">13.5 Poynting ベクトル ― 観測量への接続</h2>
 <p>[本文目安：B3]</p>
-<p>電磁場のエネルギーの流れを表すのが <strong>Poynting ベクトル</strong>（<strong>Poynting vector</strong>）：</p>
+<p>電磁場のエネルギーの流れを表すのが <strong>Poynting ベクトル</strong>（<strong>Poynting vector</strong>）である。本書は SI を主とするので、SI 形を主式とする：</p>
 <p><span id="eq-poynting-vector"><span class="math display">
-\mathbf{S} = \frac{c}{4\pi} \mathbf{E} \times \mathbf{B}
+\mathbf{S} = \frac{1}{\mu_0} \mathbf{E} \times \mathbf{B}
 \tag{16.7}</span></span></p>
-<p>Gauss 単位系での表式。SI 単位では <span class="math inline">\mathbf{S} = (1/\mu_0) \mathbf{E} \times \mathbf{B}</span>。</p>
+<p>Gauss 単位系では <span class="math inline">\mathbf{S} = (c/4\pi)\, \mathbf{E} \times \mathbf{B}</span> と書く（換算の詳細は付録 B §B.4 参照）。以下の平面波の計算は、古典文献との対照のため Gauss 形で進める。</p>
 <p>物理的意味：単位面積・単位時間あたりに通過する電磁エネルギー。すなわち<strong>エネルギー流密度</strong>である。第4章で扱った観測量としてのフラックス <span class="math inline">F_\nu</span> は、この Poynting ベクトルの時間平均を振動数で分解したものに対応する。</p>
 <p>平面波 <a href="#eq-plane-wave" class="quarto-xref">式&nbsp;<span>16.4</span></a> の場合、時間平均された Poynting ベクトルは</p>
 <p><span id="eq-poynting-time-averaged"><span class="math display">
@@ -1475,7 +1475,7 @@ B_\nu(T) = \frac{2 h\, \boxed{\nu^3}}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 <span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>**重要な帰結**：Maxwell 方程式は、その中の定数 $c$ を**光の伝播速度**として持つ波動方程式を生む。電磁波の速度が真空中で $c$ であることは、Maxwell 方程式そのものに組み込まれている。これは観測される光の速さがどの基準系でも $c$ であることの古典的な根拠でもある（→ 特殊相対性理論の出発点、本書の射程外）。</span>
 <span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>**対応（観測）**：観測される黒体スペクトルの前因子 $\nu^3/c^2$ の $c^2$ は、まさに **Maxwell 方程式に含まれる光速 $c$** に直接由来する。光速が電磁気の基本定数として現れる ― このことが、後で見るモード密度に $c$ が現れる理由でもある。</span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>**観測との対応**：観測される黒体スペクトルの前因子 $\nu^3/c^2$ の $c^2$ は、まさに **Maxwell 方程式に含まれる光速 $c$** に直接由来する。光速が電磁気の基本定数として現れる ― このことが、後で見るモード密度に $c$ が現れる理由でもある。</span>
 <span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="fu">## 13.3 平面波解 ― 振動数と波数 {#sec-electromagnetic-waves-plane-wave}</span></span>
@@ -1524,11 +1524,11 @@ B_\nu(T) = \frac{2 h\, \boxed{\nu^3}}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 <span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>任意の偏光は、二つの基底偏光の線形結合で書ける。</span>
 <span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
-<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>**対応（観測）**：この **「2 つの偏光自由度」が、プランク分布の前因子に現れる係数 2 の起源**である。すなわち $2h\nu^3/c^2$ の先頭の 2 は、電磁波が三次元空間で横波であることの直接的な帰結。本章の核となる事実。</span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>**観測との対応**：この **「2 つの偏光自由度」が、プランク分布の前因子に現れる係数 2 の起源**である。すなわち $2h\nu^3/c^2$ の先頭の 2 は、電磁波が三次元空間で横波であることの直接的な帰結。本章の核となる事実。</span>
 <span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>**対応（観測）**：偏光は天文学では重要な情報源である：</span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>**観測との対応**：偏光は天文学では重要な情報源である：</span>
 <span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**シンクロトロン放射**（非熱的）の偏光 → 磁場の方向診断</span>
 <span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**散乱光**の偏光 → 散乱体の幾何</span>
@@ -1542,13 +1542,13 @@ B_\nu(T) = \frac{2 h\, \boxed{\nu^3}}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 <span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
 <span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>電磁場のエネルギーの流れを表すのが **Poynting ベクトル**（**Poynting vector**）：</span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>電磁場のエネルギーの流れを表すのが **Poynting ベクトル**（**Poynting vector**）である。本書は SI を主とするので、SI 形を主式とする：</span>
 <span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a>\mathbf{S} = \frac{c}{4\pi} \mathbf{E} \times \mathbf{B}</span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a>\mathbf{S} = \frac{1}{\mu_0} \mathbf{E} \times \mathbf{B}</span>
 <span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>$$ {#eq-poynting-vector}</span>
 <span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>Gauss 単位系での表式。SI 単位では $\mathbf{S} = (1/\mu_0) \mathbf{E} \times \mathbf{B}$。</span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>Gauss 単位系では $\mathbf{S} = (c/4\pi)\, \mathbf{E} \times \mathbf{B}$ と書く（換算の詳細は付録 B §B.4 参照）。以下の平面波の計算は、古典文献との対照のため Gauss 形で進める。</span>
 <span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a>物理的意味：単位面積・単位時間あたりに通過する電磁エネルギー。すなわち**エネルギー流密度**である。第4章で扱った観測量としてのフラックス $F_\nu$ は、この Poynting ベクトルの時間平均を振動数で分解したものに対応する。</span>
 <span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a></span>

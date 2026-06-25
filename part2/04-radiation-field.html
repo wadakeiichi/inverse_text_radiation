@@ -414,7 +414,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../part7/23-line-shape.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第23章　線形（line shape）の物理</span></a>
+  <a href="../part7/23-line-shape.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第23章　線輪郭（line profile）の物理</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -663,21 +663,11 @@ d\Omega = \sin\theta\, d\theta\, d\varphi
 <thead>
 <tr class="header">
 <th>天体</th>
-<th>視直径</th>
-<th>立体角</th>
+<th>視直径 <span class="math inline">\theta</span></th>
+<th>立体角 <span class="math inline">\Omega \simeq \pi(\theta/2)^2</span></th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td>天体</td>
-<td>視直径 <span class="math inline">\theta</span></td>
-<td>立体角 <span class="math inline">\Omega \simeq \pi(\theta/2)^2</span></td>
-</tr>
-<tr class="even">
-<td>—</td>
-<td>—</td>
-<td>—</td>
-</tr>
 <tr class="odd">
 <td>太陽（地球から）</td>
 <td>約 32 arcmin</td>
@@ -776,7 +766,7 @@ F_\nu^{\text{obs}} = \frac{L_\nu}{4\pi d^2}
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>対応（観測）</strong>：望遠鏡が口径 <span class="math inline">A</span> で立体角 <span class="math inline">\Omega_{\text{beam}}</span> のビームを持つとき：</p>
+<p><strong>観測との対応</strong>：望遠鏡が口径 <span class="math inline">A</span> で立体角 <span class="math inline">\Omega_{\text{beam}}</span> のビームを持つとき：</p>
 <ul>
 <li><strong>点光源</strong>（角度サイズ <span class="math inline">&lt; \Omega_{\text{beam}}</span>）の場合：装置が拾うエネルギーは <span class="math inline">F_\nu \cdot A \cdot d\nu</span></li>
 <li><strong>広がった光源</strong>（角度サイズ <span class="math inline">&gt; \Omega_{\text{beam}}</span>）の場合：拾うエネルギーは <span class="math inline">I_\nu \cdot A \cdot \Omega_{\text{beam}} \cdot d\nu</span></li>
@@ -926,7 +916,7 @@ F_\lambda = F_\nu \cdot \frac{c}{\lambda^2}
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>対応（観測）</strong>：CMB の <span class="math inline">10^{-5}</span> という小さな異方性は、宇宙論的に巨大な情報量を持つ。本書では第16章で扱う。一方で、太陽光の高度な異方性は、地球で日射量を一方向のフラックスとして計算できることを意味する。</p>
+<p><strong>観測との対応</strong>：CMB の <span class="math inline">10^{-5}</span> という小さな異方性は、宇宙論的に巨大な情報量を持つ。本書では第16章で扱う。一方で、太陽光の高度な異方性は、地球で日射量を一方向のフラックスとして計算できることを意味する。</p>
 </div>
 </div>
 </section>
@@ -972,7 +962,7 @@ F_\lambda = F_\nu \cdot \frac{c}{\lambda^2}
 </section>
 <section id="sec-radiation-field-exercises" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-radiation-field-exercises">演習問題</h2>
-<p><span class="tag">[導出補完]</span> <strong>模範解答</strong> は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</p>
+<p><span class="tag">[導出補完]</span> <strong>模範解答</strong> は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから確認すると効果的である。</p>
 <section id="ex-4-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ex-4-1">問題 4-1　等方場で uν=(4π/c)Iν、Fν=0、Pν=uν/3</h3>
 <p>[★ 難易度：☆☆ ] <span class="tag">[導出補完]</span></p>
@@ -1636,352 +1626,350 @@ u=aT^4=7.566\times10^{-15}\times55.1\simeq4.2\times10^{-13}\ \mathrm{erg\,cm^{-3
 <span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>天文学で出会う代表的な立体角の見積もり：</span>
 <span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 天体 <span class="pp">|</span> 視直径 <span class="pp">|</span> 立体角 <span class="pp">|</span></span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 天体 <span class="pp">|</span> 視直径 $\theta$ <span class="pp">|</span> 立体角 $\Omega \simeq \pi(\theta/2)^2$ <span class="pp">|</span></span>
 <span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
-<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 天体 <span class="pp">|</span> 視直径 $\theta$ <span class="pp">|</span> 立体角 $\Omega \simeq \pi(\theta/2)^2$ <span class="pp">|</span></span>
-<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
-<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 太陽（地球から）<span class="pp">|</span> 約 32 arcmin <span class="pp">|</span> $\sim 6.8 \times 10^{-5}$ sr <span class="pp">|</span></span>
-<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 月 <span class="pp">|</span> 約 31 arcmin <span class="pp">|</span> $\sim 6.4 \times 10^{-5}$ sr <span class="pp">|</span></span>
-<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 木星 <span class="pp">|</span> 約 50 arcsec <span class="pp">|</span> $\sim 4.6 \times 10^{-8}$ sr <span class="pp">|</span></span>
-<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> アルファ・ケンタウリ A（最近傍恒星）<span class="pp">|</span> 約 9 mas <span class="pp">|</span> $\sim 1.5 \times 10^{-15}$ sr <span class="pp">|</span></span>
-<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 全天 <span class="pp">|</span> $4\pi$ sr <span class="pp">|</span> $\simeq 12.57$ sr <span class="pp">|</span></span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 太陽（地球から）<span class="pp">|</span> 約 32 arcmin <span class="pp">|</span> $\sim 6.8 \times 10^{-5}$ sr <span class="pp">|</span></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 月 <span class="pp">|</span> 約 31 arcmin <span class="pp">|</span> $\sim 6.4 \times 10^{-5}$ sr <span class="pp">|</span></span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 木星 <span class="pp">|</span> 約 50 arcsec <span class="pp">|</span> $\sim 4.6 \times 10^{-8}$ sr <span class="pp">|</span></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> アルファ・ケンタウリ A（最近傍恒星）<span class="pp">|</span> 約 9 mas <span class="pp">|</span> $\sim 1.5 \times 10^{-15}$ sr <span class="pp">|</span></span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 全天 <span class="pp">|</span> $4\pi$ sr <span class="pp">|</span> $\simeq 12.57$ sr <span class="pp">|</span></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>（各立体角は円形視野 $\Omega = \pi(\theta/2)^2$ で計算した。視直径から立体角を求める統一公式である。）</span>
 <span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>（各立体角は円形視野 $\Omega = \pi(\theta/2)^2$ で計算した。視直径から立体角を求める統一公式である。）</span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>立体角がないと「強度」と「フラックス」が混乱する。**点光源**（立体角が限りなく小さい）と**広がった光源**（立体角が有限）では、観測装置との関係が本質的に違う。</span>
 <span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>立体角がないと「強度」と「フラックス」が混乱する。**点光源**（立体角が限りなく小さい）と**広がった光源**（立体角が有限）では、観測装置との関係が本質的に違う。</span>
-<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>**用語**：天文学では「立体角」「ビーム角」「視野角」など類義語が並ぶ。詳しい用語は <span class="co">[</span><span class="ot">astro-dic.jp</span><span class="co">](https://astro-dic.jp)</span> の標準訳を参照。本書では「立体角」（solid angle）を統一して用いる。</span>
-<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>**用語**：天文学では「立体角」「ビーム角」「視野角」など類義語が並ぶ。詳しい用語は <span class="co">[</span><span class="ot">astro-dic.jp</span><span class="co">](https://astro-dic.jp)</span> の標準訳を参照。本書では「立体角」（solid angle）を統一して用いる。</span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4.3 エネルギー密度 ― 放射場のエネルギー含有量 {#sec-radiation-field-energy-density}</span></span>
 <span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4.3 エネルギー密度 ― 放射場のエネルギー含有量 {#sec-radiation-field-energy-density}</span></span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
 <span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>ある場所での放射場の**単位体積あたりのエネルギー**を、振動数別に表したのが**エネルギー密度**（**energy density**）$u_\nu$ である。比強度 $I_\nu$ と次の関係で結ばれる：</span>
 <span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>ある場所での放射場の**単位体積あたりのエネルギー**を、振動数別に表したのが**エネルギー密度**（**energy density**）$u_\nu$ である。比強度 $I_\nu$ と次の関係で結ばれる：</span>
-<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>u_\nu(\mathbf{r}, t) = \frac{1}{c} \oint I_\nu(\mathbf{r}, \mathbf{n}, t)\, d\Omega</span>
-<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a>$$ {#eq-energy-density-def}</span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>u_\nu(\mathbf{r}, t) = \frac{1}{c} \oint I_\nu(\mathbf{r}, \mathbf{n}, t)\, d\Omega</span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>$$ {#eq-energy-density-def}</span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a>ここで積分は全立体角 $4\pi$ にわたる。意味は単純で、$I_\nu/c$ が「ある方向から単位立体角あたりに供給されるエネルギー密度」になっており、それを全方向に足し上げている。</span>
 <span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>ここで積分は全立体角 $4\pi$ にわたる。意味は単純で、$I_\nu/c$ が「ある方向から単位立体角あたりに供給されるエネルギー密度」になっており、それを全方向に足し上げている。</span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>**等方放射場**（**isotropic radiation field**, $I_\nu$ が方向に依らない）の場合、@eq-energy-density-def は</span>
 <span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>**等方放射場**（**isotropic radiation field**, $I_\nu$ が方向に依らない）の場合、@eq-energy-density-def は</span>
-<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>u_\nu = \frac{4\pi}{c} I_\nu</span>
-<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>$$ {#eq-energy-density-isotropic}</span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a>u_\nu = \frac{4\pi}{c} I_\nu</span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>$$ {#eq-energy-density-isotropic}</span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>となる。たとえば熱平衡の放射場 ― 黒体放射 ― では $I_\nu = B_\nu(T)$ なので、</span>
 <span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>となる。たとえば熱平衡の放射場 ― 黒体放射 ― では $I_\nu = B_\nu(T)$ なので、</span>
-<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>u_\nu^{\text{BB}}(T) = \frac{4\pi}{c} B_\nu(T)</span>
-<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>$$ {#eq-energy-density-bb}</span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>u_\nu^{\text{BB}}(T) = \frac{4\pi}{c} B_\nu(T)</span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>$$ {#eq-energy-density-bb}</span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>である。これを全振動数で積分すると、放射場の全エネルギー密度 $u = \int u_\nu d\nu$ が $a T^4$ となる（$a = 4\sigma/c$）。これは Stefan-Boltzmann 則の別表現で、第6章で詳しく扱う。</span>
 <span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>である。これを全振動数で積分すると、放射場の全エネルギー密度 $u = \int u_\nu d\nu$ が $a T^4$ となる（$a = 4\sigma/c$）。これは Stefan-Boltzmann 則の別表現で、第6章で詳しく扱う。</span>
-<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
-<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>**目安**：CMB（$T = 2.725$ K）の全エネルギー密度は $u = aT^4 \simeq 4.2 \times 10^{-13}$ erg cm$^{-3}$。これは銀河系内の宇宙線や星間磁場のエネルギー密度（いずれも $\sim 10^{-12}$ erg cm$^{-3}$）と同程度のスケールで、宇宙物理の重要な「ベースライン」になる。</span>
-<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>**目安**：CMB（$T = 2.725$ K）の全エネルギー密度は $u = aT^4 \simeq 4.2 \times 10^{-13}$ erg cm$^{-3}$。これは銀河系内の宇宙線や星間磁場のエネルギー密度（いずれも $\sim 10^{-12}$ erg cm$^{-3}$）と同程度のスケールで、宇宙物理の重要な「ベースライン」になる。</span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4.4 フラックス ― 観測される「明るさ」 {#sec-radiation-field-flux}</span></span>
 <span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4.4 フラックス ― 観測される「明るさ」 {#sec-radiation-field-flux}</span></span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
 <span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>ある面を**正味で**通過する単位面積・単位時間あたりのエネルギーを表すのが **フラックス**（**flux**）$F_\nu$ である。$I_\nu$ から次のように構成される：</span>
 <span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>ある面を**正味で**通過する単位面積・単位時間あたりのエネルギーを表すのが **フラックス**（**flux**）$F_\nu$ である。$I_\nu$ から次のように構成される：</span>
-<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a>F_\nu(\mathbf{r}, t) = \oint I_\nu(\mathbf{r}, \mathbf{n}, t) \cos\theta\, d\Omega</span>
-<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>$$ {#eq-flux-def}</span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>F_\nu(\mathbf{r}, t) = \oint I_\nu(\mathbf{r}, \mathbf{n}, t) \cos\theta\, d\Omega</span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>$$ {#eq-flux-def}</span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>ここで $\theta$ は面の法線と方向ベクトル $\mathbf{n}$ の間の角。重要なのは $\cos\theta$ の符号：法線方向に出ていく光は正、戻ってくる光は負を寄与する。</span>
 <span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>ここで $\theta$ は面の法線と方向ベクトル $\mathbf{n}$ の間の角。重要なのは $\cos\theta$ の符号：法線方向に出ていく光は正、戻ってくる光は負を寄与する。</span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>**完全に等方的な放射場**では、$\oint \cos\theta\, d\Omega = 0$ なので $F_\nu = 0$。つまり熱平衡で閉じている空洞の内部からは、正味のフラックスは出ない。</span>
 <span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>**完全に等方的な放射場**では、$\oint \cos\theta\, d\Omega = 0$ なので $F_\nu = 0$。つまり熱平衡で閉じている空洞の内部からは、正味のフラックスは出ない。</span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>**観測者から見た天体のフラックス**：地球から距離 $d$ の場所にある光度 $L_\nu$ の天体からは、</span>
 <span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>**観測者から見た天体のフラックス**：地球から距離 $d$ の場所にある光度 $L_\nu$ の天体からは、</span>
-<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a>F_\nu^{\text{obs}} = \frac{L_\nu}{4\pi d^2}</span>
-<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a>$$ {#eq-flux-observed}</span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>F_\nu^{\text{obs}} = \frac{L_\nu}{4\pi d^2}</span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>$$ {#eq-flux-observed}</span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a>が観測される。これが「明るさ」と俗に呼ばれる量である。</span>
 <span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>が観測される。これが「明るさ」と俗に呼ばれる量である。</span>
-<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a>**対応（観測）**：望遠鏡が口径 $A$ で立体角 $\Omega_{\text{beam}}$ のビームを持つとき：</span>
-<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**点光源**（角度サイズ $&lt; \Omega_{\text{beam}}$）の場合：装置が拾うエネルギーは $F_\nu \cdot A \cdot d\nu$</span>
-<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**広がった光源**（角度サイズ $&gt; \Omega_{\text{beam}}$）の場合：拾うエネルギーは $I_\nu \cdot A \cdot \Omega_{\text{beam}} \cdot d\nu$</span>
-<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a>つまり**点光源ではフラックスが、広がった光源では比強度が**、それぞれの場で意味を持つ。観測の現場で「何を測っているか」を意識すると、この区別が常に問題になる。</span>
-<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
-<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a>**問い**：点光源と広がった光源の境界はどこで切り替わるのか？</span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a>**観測との対応**：望遠鏡が口径 $A$ で立体角 $\Omega_{\text{beam}}$ のビームを持つとき：</span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**点光源**（角度サイズ $&lt; \Omega_{\text{beam}}$）の場合：装置が拾うエネルギーは $F_\nu \cdot A \cdot d\nu$</span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**広がった光源**（角度サイズ $&gt; \Omega_{\text{beam}}$）の場合：拾うエネルギーは $I_\nu \cdot A \cdot \Omega_{\text{beam}} \cdot d\nu$</span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a>つまり**点光源ではフラックスが、広がった光源では比強度が**、それぞれの場で意味を持つ。観測の現場で「何を測っているか」を意識すると、この区別が常に問題になる。</span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>**問い**：点光源と広がった光源の境界はどこで切り替わるのか？</span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a>**短答**：観測装置の角度分解能（ビーム角 $\Omega_\text{beam}$）と天体の角度サイズ $\Omega_\text{source}$ の比較で決まる。$\Omega_\text{source} \ll \Omega_\text{beam}$ なら点光源として扱える。</span>
 <span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>**短答**：観測装置の角度分解能（ビーム角 $\Omega_\text{beam}$）と天体の角度サイズ $\Omega_\text{source}$ の比較で決まる。$\Omega_\text{source} \ll \Omega_\text{beam}$ なら点光源として扱える。</span>
-<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>**もう一歩**：同じ天体でも装置によって扱いが変わる。たとえばアルファ・ケンタウリ A は通常の地上望遠鏡では点光源だが、VLTI 干渉計（角度分解能 $\sim 1$ mas）では円盤として分解される。「点光源か広がった光源か」は天体固有の性質ではなく、**観測装置との関係**である。</span>
-<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>**もう一歩**：同じ天体でも装置によって扱いが変わる。たとえばアルファ・ケンタウリ A は通常の地上望遠鏡では点光源だが、VLTI 干渉計（角度分解能 $\sim 1$ mas）では円盤として分解される。「点光源か広がった光源か」は天体固有の性質ではなく、**観測装置との関係**である。</span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4.5 比強度のモーメント ― $J$, $F$, $P$ {#sec-radiation-field-moments}</span></span>
 <span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4.5 比強度のモーメント ― $J$, $F$, $P$ {#sec-radiation-field-moments}</span></span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
 <span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>比強度 $I_\nu$ から導かれる重要な量は、次の三つの**角度モーメント**として統一的に扱える。</span>
 <span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>比強度 $I_\nu$ から導かれる重要な量は、次の三つの**角度モーメント**として統一的に扱える。</span>
-<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a>J_\nu = \frac{1}{4\pi} \oint I_\nu\, d\Omega \quad \text{（平均強度、0 次モーメント）}</span>
-<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>$$ {#eq-mean-intensity}</span>
-<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>F_\nu = \oint I_\nu \cos\theta\, d\Omega \quad \text{（フラックス、1 次モーメント）}</span>
-<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>$$ {#eq-flux-moment}</span>
-<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>P_\nu = \frac{1}{c} \oint I_\nu \cos^2\theta\, d\Omega \quad \text{（放射圧、2 次モーメント）}</span>
-<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a>$$ {#eq-radiation-pressure}</span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>J_\nu = \frac{1}{4\pi} \oint I_\nu\, d\Omega \quad \text{（平均強度、0 次モーメント）}</span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>$$ {#eq-mean-intensity}</span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>F_\nu = \oint I_\nu \cos\theta\, d\Omega \quad \text{（フラックス、1 次モーメント）}</span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>$$ {#eq-flux-moment}</span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>P_\nu = \frac{1}{c} \oint I_\nu \cos^2\theta\, d\Omega \quad \text{（放射圧、2 次モーメント）}</span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>$$ {#eq-radiation-pressure}</span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a>これらの幾何学的意味は明快である：</span>
 <span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>これらの幾何学的意味は明快である：</span>
-<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$J_\nu$（**平均強度**, **mean intensity**）は、$I_\nu$ の全方向平均。エネルギー密度との関係は $u_\nu = (4\pi/c) J_\nu$。</span>
-<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$F_\nu$（**フラックス**, **flux**）は、方向性をもったエネルギーの正味流。観測量。</span>
-<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$P_\nu$（**放射圧**, **radiation pressure**）は、面の単位面積あたりの運動量フラックス。恒星内部や降着円盤で重要。</span>
-<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>**方針**：本書では特に断らない限り「**フラックス**」を $F_\nu$ で書く。文献によっては $H_\nu = F_\nu/(4\pi)$ や $\pi F_\nu$ という記法も使われるので、別文献を読むときは定義の確認が必要。</span>
-<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$J_\nu$（**平均強度**, **mean intensity**）は、$I_\nu$ の全方向平均。エネルギー密度との関係は $u_\nu = (4\pi/c) J_\nu$。</span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$F_\nu$（**フラックス**, **flux**）は、方向性をもったエネルギーの正味流。観測量。</span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$P_\nu$（**放射圧**, **radiation pressure**）は、面の単位面積あたりの運動量フラックス。恒星内部や降着円盤で重要。</span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>**方針**：本書では特に断らない限り「**フラックス**」を $F_\nu$ で書く。文献によっては $H_\nu = F_\nu/(4\pi)$ や $\pi F_\nu$ という記法も使われるので、別文献を読むときは定義の確認が必要。</span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>熱平衡（等方）の場合、これらは簡単に：</span>
 <span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a>熱平衡（等方）の場合、これらは簡単に：</span>
-<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 量 <span class="pp">|</span> 等方放射場での値 <span class="pp">|</span></span>
-<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|</span></span>
-<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $J_\nu$ <span class="pp">|</span> $B_\nu(T)$ <span class="pp">|</span></span>
-<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $F_\nu$ <span class="pp">|</span> $0$ <span class="pp">|</span></span>
-<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $P_\nu$ <span class="pp">|</span> $\frac{1}{3} u_\nu = \frac{4\pi}{3c} B_\nu(T)$ <span class="pp">|</span></span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 量 <span class="pp">|</span> 等方放射場での値 <span class="pp">|</span></span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|</span></span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $J_\nu$ <span class="pp">|</span> $B_\nu(T)$ <span class="pp">|</span></span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $F_\nu$ <span class="pp">|</span> $0$ <span class="pp">|</span></span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $P_\nu$ <span class="pp">|</span> $\frac{1}{3} u_\nu = \frac{4\pi}{3c} B_\nu(T)$ <span class="pp">|</span></span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>放射圧が $u/3$ になるのは光子気体の状態方程式 $P = u/3$（光子は質量ゼロで等方的）を反映している。第6章・第8章で詳しく扱う。</span>
 <span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>放射圧が $u/3$ になるのは光子気体の状態方程式 $P = u/3$（光子は質量ゼロで等方的）を反映している。第6章・第8章で詳しく扱う。</span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4.6 振動数表示と波長表示の変換 {#sec-radiation-field-nu-lambda}</span></span>
 <span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4.6 振動数表示と波長表示の変換 {#sec-radiation-field-nu-lambda}</span></span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
 <span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a>第2章 §2.2 でプランク関数について見たのと同じ理屈で、**任意のスペクトル量**は振動数表示と波長表示で関数形が異なる。鍵は**同じエネルギーを異なる変数で表す**という事実：</span>
 <span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>第2章 §2.2 でプランク関数について見たのと同じ理屈で、**任意のスペクトル量**は振動数表示と波長表示で関数形が異なる。鍵は**同じエネルギーを異なる変数で表す**という事実：</span>
-<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a>I_\nu\, |d\nu| = I_\lambda\, |d\lambda|</span>
-<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a>$$ {#eq-nu-lambda-equivalence}</span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>I_\nu\, |d\nu| = I_\lambda\, |d\lambda|</span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>$$ {#eq-nu-lambda-equivalence}</span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a>これと $\nu = c/\lambda$ から $|d\nu/d\lambda| = c/\lambda^2$、よって</span>
 <span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>これと $\nu = c/\lambda$ から $|d\nu/d\lambda| = c/\lambda^2$、よって</span>
-<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a>I_\lambda = I_\nu \cdot \frac{c}{\lambda^2}, \qquad I_\nu = I_\lambda \cdot \frac{\lambda^2}{c}</span>
-<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a>$$ {#eq-nu-lambda-conversion-i}</span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a>I_\lambda = I_\nu \cdot \frac{c}{\lambda^2}, \qquad I_\nu = I_\lambda \cdot \frac{\lambda^2}{c}</span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>$$ {#eq-nu-lambda-conversion-i}</span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a>同様にフラックスでも</span>
 <span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>同様にフラックスでも</span>
-<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>F_\lambda = F_\nu \cdot \frac{c}{\lambda^2}</span>
-<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>$$ {#eq-nu-lambda-conversion-f}</span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a>F_\lambda = F_\nu \cdot \frac{c}{\lambda^2}</span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a>$$ {#eq-nu-lambda-conversion-f}</span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>である。エネルギー密度・モーメント全般について同じ関係が成り立つ。</span>
 <span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>である。エネルギー密度・モーメント全般について同じ関係が成り立つ。</span>
-<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a>**注意（観測）**：観測装置の波長分解能・振動数分解能の区別は、本質的にここから来る。電波天文学（GHz 帯）では振動数表示が、光学天文学（nm 帯）では波長表示が、それぞれ自然に好まれる。</span>
-<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a>**注意（観測）**：観測装置の波長分解能・振動数分解能の区別は、本質的にここから来る。電波天文学（GHz 帯）では振動数表示が、光学天文学（nm 帯）では波長表示が、それぞれ自然に好まれる。</span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4.7 異方性と等方性 ― 放射場の方向依存 {#sec-radiation-field-anisotropy}</span></span>
 <span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4.7 異方性と等方性 ― 放射場の方向依存 {#sec-radiation-field-anisotropy}</span></span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
 <span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a>放射場が**等方的**であるとは、$I_\nu$ が方向ベクトル $\mathbf{n}$ に依らないということ。これは強い理想化条件で、現実の天体放射ではほぼ常に破られる。</span>
 <span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a>放射場が**等方的**であるとは、$I_\nu$ が方向ベクトル $\mathbf{n}$ に依らないということ。これは強い理想化条件で、現実の天体放射ではほぼ常に破られる。</span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a>実例で比較：</span>
 <span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a>実例で比較：</span>
-<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 場 <span class="pp">|</span> 異方性の程度 <span class="pp">|</span></span>
-<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|</span></span>
-<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 不透明体内部（深部）<span class="pp">|</span> 完全等方（LTE） <span class="pp">|</span></span>
-<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> CMB <span class="pp">|</span> $\Delta I / I \sim 10^{-5}$（ほぼ等方）<span class="pp">|</span></span>
-<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 太陽の表面光球から見る放射場 <span class="pp">|</span> 中心と縁で異なる（縁減光）<span class="pp">|</span></span>
-<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 地球から見た太陽光 <span class="pp">|</span> 一方向に集中（点光源近似）<span class="pp">|</span></span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 場 <span class="pp">|</span> 異方性の程度 <span class="pp">|</span></span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|</span></span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 不透明体内部（深部）<span class="pp">|</span> 完全等方（LTE） <span class="pp">|</span></span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> CMB <span class="pp">|</span> $\Delta I / I \sim 10^{-5}$（ほぼ等方）<span class="pp">|</span></span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 太陽の表面光球から見る放射場 <span class="pp">|</span> 中心と縁で異なる（縁減光）<span class="pp">|</span></span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 地球から見た太陽光 <span class="pp">|</span> 一方向に集中（点光源近似）<span class="pp">|</span></span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a>**等方放射場の特性**：等方なら $F_\nu = 0$、$J_\nu = I_\nu$、$P_\nu = (1/3)(4\pi/c) I_\nu$ となり、量の間の関係が極端に単純になる。逆に言えば、**異方性こそが「方向性のあるエネルギー流」を生み出す**。観測される放射は必ず異方的である。</span>
 <span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a>**等方放射場の特性**：等方なら $F_\nu = 0$、$J_\nu = I_\nu$、$P_\nu = (1/3)(4\pi/c) I_\nu$ となり、量の間の関係が極端に単純になる。逆に言えば、**異方性こそが「方向性のあるエネルギー流」を生み出す**。観測される放射は必ず異方的である。</span>
-<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
-<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a>**対応（観測）**：CMB の $10^{-5}$ という小さな異方性は、宇宙論的に巨大な情報量を持つ。本書では第16章で扱う。一方で、太陽光の高度な異方性は、地球で日射量を一方向のフラックスとして計算できることを意味する。</span>
-<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a>**観測との対応**：CMB の $10^{-5}$ という小さな異方性は、宇宙論的に巨大な情報量を持つ。本書では第16章で扱う。一方で、太陽光の高度な異方性は、地球で日射量を一方向のフラックスとして計算できることを意味する。</span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4.8 観測で何が測られるか ― 装置と放射場の対応 {#sec-radiation-field-observation}</span></span>
 <span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4.8 観測で何が測られるか ― 装置と放射場の対応 {#sec-radiation-field-observation}</span></span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
 <span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>最後に、観測装置で実際に何が測られているかを整理する。これは本章全体を、観測の言葉に翻訳し直す節である。</span>
 <span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a>最後に、観測装置で実際に何が測られているかを整理する。これは本章全体を、観測の言葉に翻訳し直す節である。</span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a>**点光源**（角度サイズが装置のビームより小さい）の場合：</span>
 <span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a>**点光源**（角度サイズが装置のビームより小さい）の場合：</span>
-<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>観測される量は **フラックス** $F_\nu$（あるいはその波長表示 $F_\lambda$）</span>
-<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>単位エネルギー量は $F_\nu \cdot d\nu \cdot A_\text{eff}$（$A_\text{eff}$ は望遠鏡の有効集光面積）</span>
-<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>例：遠方銀河、QSO、恒星</span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>観測される量は **フラックス** $F_\nu$（あるいはその波長表示 $F_\lambda$）</span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>単位エネルギー量は $F_\nu \cdot d\nu \cdot A_\text{eff}$（$A_\text{eff}$ は望遠鏡の有効集光面積）</span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>例：遠方銀河、QSO、恒星</span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a>**広がった光源**（角度サイズが装置のビームより大きい）の場合：</span>
 <span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a>**広がった光源**（角度サイズが装置のビームより大きい）の場合：</span>
-<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>観測される量は **比強度** $I_\nu$（あるいは輝度温度 $T_b$、第2章 §2.6 で導入）</span>
-<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>装置の角度分解能で空間的に分解できる</span>
-<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>例：CMB、HII 領域、星間ダスト、銀河系</span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>観測される量は **比強度** $I_\nu$（あるいは輝度温度 $T_b$、第2章 §2.6 で導入）</span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>装置の角度分解能で空間的に分解できる</span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>例：CMB、HII 領域、星間ダスト、銀河系</span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a>**スペクトロスコピー**：</span>
 <span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a>**スペクトロスコピー**：</span>
-<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>入射光を振動数（あるいは波長）に分解する装置を使う</span>
-<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>各振動数チャンネルで $F_\nu$ または $I_\nu$ を測る</span>
-<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>線スペクトルと連続スペクトルの双方が同じ装置で観測できる</span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>入射光を振動数（あるいは波長）に分解する装置を使う</span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>各振動数チャンネルで $F_\nu$ または $I_\nu$ を測る</span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>線スペクトルと連続スペクトルの双方が同じ装置で観測できる</span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a>本書を通じて、観測スペクトルの量と物理量を結ぶ橋を見ていくが、その橋はすべて $I_\nu$ から派生した量を介して張られる。</span>
 <span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a>本書を通じて、観測スペクトルの量と物理量を結ぶ橋を見ていくが、その橋はすべて $I_\nu$ から派生した量を介して張られる。</span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-radiation-field-summary .unnumbered}</span></span>
 <span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-radiation-field-summary .unnumbered}</span></span>
-<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
-<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る**</span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る**</span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a>本章で、放射場を記述する**共通の言語**が整った：</span>
 <span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>本章で、放射場を記述する**共通の言語**が整った：</span>
-<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**比強度** $I_\nu$：放射場の最も基本的な量、方向と振動数に依存</span>
-<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**モーメント**（$J_\nu$, $F_\nu$, $P_\nu$）：物理的状況ごとに使い分け</span>
-<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**エネルギー密度** $u_\nu$：体積あたりのエネルギー含量</span>
-<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**観測量**：点光源ではフラックス、広がった光源では比強度</span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**比強度** $I_\nu$：放射場の最も基本的な量、方向と振動数に依存</span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**モーメント**（$J_\nu$, $F_\nu$, $P_\nu$）：物理的状況ごとに使い分け</span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**エネルギー密度** $u_\nu$：体積あたりのエネルギー含量</span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**観測量**：点光源ではフラックス、広がった光源では比強度</span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a>中心地図のプランク関数 $B_\nu(T)$ は、これらの記述枠組みの中で「**熱平衡の比強度**」として位置づけられた。今後第III部以降では、なぜ熱平衡で $I_\nu = B_\nu(T)$ になるのか（光子統計・量子化・モード密度）を逆引きしていく。</span>
 <span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a>中心地図のプランク関数 $B_\nu(T)$ は、これらの記述枠組みの中で「**熱平衡の比強度**」として位置づけられた。今後第III部以降では、なぜ熱平衡で $I_\nu = B_\nu(T)$ になるのか（光子統計・量子化・モード密度）を逆引きしていく。</span>
-<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a>**次章へ**：第5章では、これらの量がどう時間・空間的に変化するか ― つまり光が物質と相互作用しながら伝播するときの**放射輸送方程式** ― を扱う。この方程式は、観測スペクトルを「天体内部の歴史」と結びつける鍵であり、連続スペクトル（第VI部）と線スペクトル（第VII部）の両方の土台となる。</span>
-<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a>**次章へ**：第5章では、これらの量がどう時間・空間的に変化するか ― つまり光が物質と相互作用しながら伝播するときの**放射輸送方程式** ― を扱う。この方程式は、観測スペクトルを「天体内部の歴史」と結びつける鍵であり、連続スペクトル（第VI部）と線スペクトル（第VII部）の両方の土台となる。</span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-radiation-field-exercises .unnumbered}</span></span>
 <span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-radiation-field-exercises .unnumbered}</span></span>
+<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから確認すると効果的である。</span>
 <span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 4-1　等方場で uν=(4π/c)Iν、Fν=0、Pν=uν/3 {#ex-4-1 .unnumbered}</span></span>
 <span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 4-1　等方場で uν=(4π/c)Iν、Fν=0、Pν=uν/3 {#ex-4-1 .unnumbered}</span></span>
+<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
 <span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a>§4.3〜4.5 は等方放射場での値を表で与えた。定義から自分で導く。立体角要素 $d\Omega=\sin\theta\,d\theta\,d\varphi$。等方なら $I_\nu$ は方向に依らず積分の外へ出せる。</span>
 <span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a>§4.3〜4.5 は等方放射場での値を表で与えた。定義から自分で導く。立体角要素 $d\Omega=\sin\theta\,d\theta\,d\varphi$。等方なら $I_\nu$ は方向に依らず積分の外へ出せる。</span>
-<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$u_\nu=\dfrac{1}{c}\displaystyle\oint I_\nu\,d\Omega$ から、等方場で $u_\nu=\dfrac{4\pi}{c}I_\nu$ を示せ。</span>
-<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$F_\nu=\displaystyle\oint I_\nu\cos\theta\,d\Omega$ が等方場でゼロになることを示せ。</span>
-<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>$P_\nu=\dfrac{1}{c}\displaystyle\oint I_\nu\cos^2\theta\,d\Omega$ を計算し、$\displaystyle\oint\cos^2\theta\,d\Omega=\dfrac{4\pi}{3}$ を使って $P_\nu=\dfrac{1}{3}u_\nu$ を導け。これは光子気体の状態方程式 $P=u/3$ に対応する。</span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$u_\nu=\dfrac{1}{c}\displaystyle\oint I_\nu\,d\Omega$ から、等方場で $u_\nu=\dfrac{4\pi}{c}I_\nu$ を示せ。</span>
+<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$F_\nu=\displaystyle\oint I_\nu\cos\theta\,d\Omega$ が等方場でゼロになることを示せ。</span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>$P_\nu=\dfrac{1}{c}\displaystyle\oint I_\nu\cos^2\theta\,d\Omega$ を計算し、$\displaystyle\oint\cos^2\theta\,d\Omega=\dfrac{4\pi}{3}$ を使って $P_\nu=\dfrac{1}{3}u_\nu$ を導け。これは光子気体の状態方程式 $P=u/3$ に対応する。</span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§4.3 エネルギー密度</span><span class="co">](#sec-radiation-field-energy-density)</span>、<span class="co">[</span><span class="ot">§4.5 モーメント</span><span class="co">](#sec-radiation-field-moments)</span>／$P=u/3$ の光子気体としての扱いは<span class="co">[</span><span class="ot">第8章</span><span class="co">](../part3/08-photon-statistics.qmd)</span>。</span>
 <span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§4.3 エネルギー密度</span><span class="co">](#sec-radiation-field-energy-density)</span>、<span class="co">[</span><span class="ot">§4.5 モーメント</span><span class="co">](#sec-radiation-field-moments)</span>／$P=u/3$ の光子気体としての扱いは<span class="co">[</span><span class="ot">第8章</span><span class="co">](../part3/08-photon-statistics.qmd)</span>。</span>
-<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 4-1）</span></span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 4-1）</span></span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a>**(1)** $I_\nu$ を外に出すと $u_\nu=\dfrac{I_\nu}{c}\displaystyle\oint d\Omega=\dfrac{I_\nu}{c}\cdot4\pi=\dfrac{4\pi}{c}I_\nu$。</span>
 <span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a>**(1)** $I_\nu$ を外に出すと $u_\nu=\dfrac{I_\nu}{c}\displaystyle\oint d\Omega=\dfrac{I_\nu}{c}\cdot4\pi=\dfrac{4\pi}{c}I_\nu$。</span>
+<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a>**(2)** $\displaystyle\oint\cos\theta\,d\Omega=\int_0^{2\pi}d\varphi\int_0^{\pi}\cos\theta\sin\theta\,d\theta=2\pi\left<span class="co">[</span><span class="ot">\dfrac{\sin^2\theta}{2}\right</span><span class="co">]</span>_0^{\pi}=2\pi\cdot0=0$。（上半球の正と下半球の負が打ち消す。）よって $F_\nu=I_\nu\cdot0=0$。</span>
 <span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>**(2)** $\displaystyle\oint\cos\theta\,d\Omega=\int_0^{2\pi}d\varphi\int_0^{\pi}\cos\theta\sin\theta\,d\theta=2\pi\left<span class="co">[</span><span class="ot">\dfrac{\sin^2\theta}{2}\right</span><span class="co">]</span>_0^{\pi}=2\pi\cdot0=0$。（上半球の正と下半球の負が打ち消す。）よって $F_\nu=I_\nu\cdot0=0$。</span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>**(3)** $\displaystyle\oint\cos^2\theta\,d\Omega=\int_0^{2\pi}d\varphi\int_0^{\pi}\cos^2\theta\sin\theta\,d\theta=2\pi\left<span class="co">[</span><span class="ot">-\dfrac{\cos^3\theta}{3}\right</span><span class="co">]</span>_0^{\pi}=2\pi\cdot\dfrac{2}{3}=\dfrac{4\pi}{3}$。よって</span>
 <span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a>**(3)** $\displaystyle\oint\cos^2\theta\,d\Omega=\int_0^{2\pi}d\varphi\int_0^{\pi}\cos^2\theta\sin\theta\,d\theta=2\pi\left<span class="co">[</span><span class="ot">-\dfrac{\cos^3\theta}{3}\right</span><span class="co">]</span>_0^{\pi}=2\pi\cdot\dfrac{2}{3}=\dfrac{4\pi}{3}$。よって</span>
-<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a>P_\nu=\frac{I_\nu}{c}\cdot\frac{4\pi}{3}=\frac{1}{3}\cdot\frac{4\pi}{c}I_\nu=\frac{1}{3}u_\nu.</span>
 <span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a>P_\nu=\frac{I_\nu}{c}\cdot\frac{4\pi}{3}=\frac{1}{3}\cdot\frac{4\pi}{c}I_\nu=\frac{1}{3}u_\nu.</span>
-<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a>**答え**：等方場で $u_\nu=\frac{4\pi}{c}I_\nu$、$F_\nu=0$、$P_\nu=\frac13 u_\nu$。最後は光子気体の状態方程式 $P=u/3$。</span>
-<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a>**答え**：等方場で $u_\nu=\frac{4\pi}{c}I_\nu$、$F_\nu=0$、$P_\nu=\frac13 u_\nu$。最後は光子気体の状態方程式 $P=u/3$。</span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 4-2　表面輝度は距離によらない ― Iν 不変、Fν は 1/d² に従う {#ex-4-2 .unnumbered}</span></span>
 <span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 4-2　表面輝度は距離によらない ― Iν 不変、Fν は 1/d² に従う {#ex-4-2 .unnumbered}</span></span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
 <span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>§4.1 は「遠くの星が暗く見えるのは比強度ではなくフラックスが減るから」と述べた。これを定量的に確かめる。</span>
 <span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a>§4.1 は「遠くの星が暗く見えるのは比強度ではなくフラックスが減るから」と述べた。これを定量的に確かめる。</span>
-<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>真空中で比強度 $I_\nu$ が経路に沿って保存することを前提に、距離 $d$ にある半径 $R$ の一様な円盤天体について、観測される比強度 $I_\nu$ が $d$ に依らないことを述べよ。</span>
-<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>その天体が張る立体角が $\Omega\simeq\pi R^2/d^2\propto1/d^2$ であることを示し、観測フラックス $F_\nu\simeq I_\nu\,\Omega\propto1/d^2$ を導け。</span>
-<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>点光源の式 $F_\nu^\mathrm{obs}=L_\nu/4\pi d^2$ と (2) が整合することを、$L_\nu$ を $I_\nu$ と $R$ で表して確かめよ。</span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>真空中で比強度 $I_\nu$ が経路に沿って保存することを前提に、距離 $d$ にある半径 $R$ の一様な円盤天体について、観測される比強度 $I_\nu$ が $d$ に依らないことを述べよ。</span>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>その天体が張る立体角が $\Omega\simeq\pi R^2/d^2\propto1/d^2$ であることを示し、観測フラックス $F_\nu\simeq I_\nu\,\Omega\propto1/d^2$ を導け。</span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>点光源の式 $F_\nu^\mathrm{obs}=L_\nu/4\pi d^2$ と (2) が整合することを、$L_\nu$ を $I_\nu$ と $R$ で表して確かめよ。</span>
+<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§4.1 比強度（保存則）</span><span class="co">](#sec-radiation-field-intensity)</span>、<span class="co">[</span><span class="ot">§4.4 フラックス</span><span class="co">](#sec-radiation-field-flux)</span>／立体角は<span class="co">[</span><span class="ot">§4.2</span><span class="co">](#sec-radiation-field-solid-angle)</span>、光度の定義は<span class="co">[</span><span class="ot">§2.4</span><span class="co">](../part1/02-reading-spectra.qmd#sec-reading-spectra-stefan-boltzmann)</span>。</span>
 <span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§4.1 比強度（保存則）</span><span class="co">](#sec-radiation-field-intensity)</span>、<span class="co">[</span><span class="ot">§4.4 フラックス</span><span class="co">](#sec-radiation-field-flux)</span>／立体角は<span class="co">[</span><span class="ot">§4.2</span><span class="co">](#sec-radiation-field-solid-angle)</span>、光度の定義は<span class="co">[</span><span class="ot">§2.4</span><span class="co">](../part1/02-reading-spectra.qmd#sec-reading-spectra-stefan-boltzmann)</span>。</span>
-<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 4-2）</span></span>
+<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 4-2）</span></span>
+<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a>**(1)** 比強度は真空伝播で保存する（光線一本あたりのエネルギーが不変、位相空間体積保存の帰結）。よって天体表面の比強度と、遠方で観測する比強度は等しく、距離 $d$ に依らない（表面輝度の距離不変）。</span>
 <span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a>**(1)** 比強度は真空伝播で保存する（光線一本あたりのエネルギーが不変、位相空間体積保存の帰結）。よって天体表面の比強度と、遠方で観測する比強度は等しく、距離 $d$ に依らない（表面輝度の距離不変）。</span>
+<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a>**(2)** 半径 $R$ の円盤を距離 $d$ から見ると、見込む角の半径は $\theta\simeq R/d$（$R\ll d$）。立体角は $\Omega\simeq\pi\theta^2=\pi R^2/d^2\propto1/d^2$。観測フラックスは「比強度×天体の立体角」なので $F_\nu\simeq I_\nu\Omega=\pi I_\nu R^2/d^2\propto1/d^2$。</span>
 <span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a>**(2)** 半径 $R$ の円盤を距離 $d$ から見ると、見込む角の半径は $\theta\simeq R/d$（$R\ll d$）。立体角は $\Omega\simeq\pi\theta^2=\pi R^2/d^2\propto1/d^2$。観測フラックスは「比強度×天体の立体角」なので $F_\nu\simeq I_\nu\Omega=\pi I_\nu R^2/d^2\propto1/d^2$。</span>
+<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a>**(3)** 表面フラックス $F_\nu^\mathrm{surf}=\pi I_\nu$（半球射出、§2.4）、光度 $L_\nu=4\pi R^2\cdot F_\nu^\mathrm{surf}=4\pi R^2\cdot\pi I_\nu=4\pi^2 R^2 I_\nu$。点光源式に入れると</span>
 <span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a>**(3)** 表面フラックス $F_\nu^\mathrm{surf}=\pi I_\nu$（半球射出、§2.4）、光度 $L_\nu=4\pi R^2\cdot F_\nu^\mathrm{surf}=4\pi R^2\cdot\pi I_\nu=4\pi^2 R^2 I_\nu$。点光源式に入れると</span>
-<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a>F_\nu^\mathrm{obs}=\frac{L_\nu}{4\pi d^2}=\frac{4\pi^2R^2 I_\nu}{4\pi d^2}=\frac{\pi I_\nu R^2}{d^2},</span>
 <span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a>F_\nu^\mathrm{obs}=\frac{L_\nu}{4\pi d^2}=\frac{4\pi^2R^2 I_\nu}{4\pi d^2}=\frac{\pi I_\nu R^2}{d^2},</span>
-<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a>これは (2) と完全に一致する。$I_\nu$ は不変、$F_\nu$ だけが $1/d^2$ で落ちる。</span>
 <span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a>これは (2) と完全に一致する。$I_\nu$ は不変、$F_\nu$ だけが $1/d^2$ で落ちる。</span>
-<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a>**答え**：$I_\nu$ は距離不変、$\Omega\propto1/d^2$ ゆえ $F_\nu=\pi I_\nu R^2/d^2\propto1/d^2$。点光源式とも一致。</span>
-<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a>**答え**：$I_\nu$ は距離不変、$\Omega\propto1/d^2$ ゆえ $F_\nu=\pi I_\nu R^2/d^2\propto1/d^2$。点光源式とも一致。</span>
+<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 4-3　CMB のエネルギー密度を見積もる {#ex-4-3 .unnumbered}</span></span>
 <span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 4-3　CMB のエネルギー密度を見積もる {#ex-4-3 .unnumbered}</span></span>
+<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆ </span><span class="co">] [tag:理解を深める]</span></span>
 <span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a>§4.3 は熱平衡で $u=\displaystyle\int u_\nu\,d\nu=aT^4$（$a=4\sigma/c$）になると述べ、CMB で $u\simeq4.2\times10^{-13}$ erg cm$^{-3}$ と見積もった。これを確かめる。</span>
 <span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a>§4.3 は熱平衡で $u=\displaystyle\int u_\nu\,d\nu=aT^4$（$a=4\sigma/c$）になると述べ、CMB で $u\simeq4.2\times10^{-13}$ erg cm$^{-3}$ と見積もった。これを確かめる。</span>
-<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>放射定数を CGS で $a=7.566\times10^{-15}$ erg cm$^{-3}$ K$^{-4}$ とし、$T_\mathrm{CMB}=2.725$ K で $u=aT^4$ を計算せよ。</span>
-<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>等方黒体場では $u_\nu=\dfrac{4\pi}{c}B_\nu(T)$、$J_\nu=B_\nu(T)$ となる。なぜ $J_\nu=B_\nu$ なのに $u_\nu$ には $4\pi/c$ が付くのか、定義の違いから一言で述べよ。</span>
-<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>得られた $u$ が、銀河系内の宇宙線・星間磁場のエネルギー密度（$\sim10^{-12}$ erg cm$^{-3}$）と同程度であることを確認し、その含意を一言。</span>
+<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>放射定数を CGS で $a=7.566\times10^{-15}$ erg cm$^{-3}$ K$^{-4}$ とし、$T_\mathrm{CMB}=2.725$ K で $u=aT^4$ を計算せよ。</span>
+<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>等方黒体場では $u_\nu=\dfrac{4\pi}{c}B_\nu(T)$、$J_\nu=B_\nu(T)$ となる。なぜ $J_\nu=B_\nu$ なのに $u_\nu$ には $4\pi/c$ が付くのか、定義の違いから一言で述べよ。</span>
+<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>得られた $u$ が、銀河系内の宇宙線・星間磁場のエネルギー密度（$\sim10^{-12}$ erg cm$^{-3}$）と同程度であることを確認し、その含意を一言。</span>
+<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§4.3 エネルギー密度</span><span class="co">](#sec-radiation-field-energy-density)</span>、<span class="co">[</span><span class="ot">§4.5 平均強度</span><span class="co">](#sec-radiation-field-moments)</span>／$u=aT^4$ の導出は<span class="co">[</span><span class="ot">演習 10-3</span><span class="co">](../part4/10-planck-quantum.qmd#ex-10-3)</span>、<span class="co">[</span><span class="ot">第6章</span><span class="co">](../part3/06-thermal-equilibrium.qmd)</span>。</span>
 <span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§4.3 エネルギー密度</span><span class="co">](#sec-radiation-field-energy-density)</span>、<span class="co">[</span><span class="ot">§4.5 平均強度</span><span class="co">](#sec-radiation-field-moments)</span>／$u=aT^4$ の導出は<span class="co">[</span><span class="ot">演習 10-3</span><span class="co">](../part4/10-planck-quantum.qmd#ex-10-3)</span>、<span class="co">[</span><span class="ot">第6章</span><span class="co">](../part3/06-thermal-equilibrium.qmd)</span>。</span>
-<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 4-3）</span></span>
+<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 4-3）</span></span>
+<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a>**(1)** $T^4=(2.725)^4=55.1$ K$^4$。よって</span>
 <span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a>**(1)** $T^4=(2.725)^4=55.1$ K$^4$。よって</span>
-<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a>u=aT^4=7.566\times10^{-15}\times55.1\simeq4.2\times10^{-13}\ \mathrm{erg\,cm^{-3}}.</span>
 <span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a>u=aT^4=7.566\times10^{-15}\times55.1\simeq4.2\times10^{-13}\ \mathrm{erg\,cm^{-3}}.</span>
-<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a>本文の値と一致。</span>
 <span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a>本文の値と一致。</span>
+<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a>**(2)** $J_\nu$ は比強度の**方向平均**（$\frac{1}{4\pi}\oint I_\nu d\Omega$）なので等方場で $J_\nu=I_\nu=B_\nu$。一方 $u_\nu$ は単位体積あたりの**エネルギー**（$\frac1c\oint I_\nu d\Omega$）で、全立体角の積分 $4\pi$ と $1/c$ が付く。平均か総和か、という定義の違い。実際 $u_\nu=\frac{4\pi}{c}J_\nu$。</span>
 <span id="cb1-397"><a href="#cb1-397" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a>**(2)** $J_\nu$ は比強度の**方向平均**（$\frac{1}{4\pi}\oint I_\nu d\Omega$）なので等方場で $J_\nu=I_\nu=B_\nu$。一方 $u_\nu$ は単位体積あたりの**エネルギー**（$\frac1c\oint I_\nu d\Omega$）で、全立体角の積分 $4\pi$ と $1/c$ が付く。平均か総和か、という定義の違い。実際 $u_\nu=\frac{4\pi}{c}J_\nu$。</span>
+<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a>**(3)** $4.2\times10^{-13}$ と $10^{-12}$ erg cm$^{-3}$ はオーダーで同程度。CMB・宇宙線・星間磁場のエネルギー密度が拮抗していることは、銀河系の星間媒質がこれらの間でエネルギーをやりとりする「準平衡」的な系であることを示唆する（重要なベースライン）。</span>
 <span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a>**(3)** $4.2\times10^{-13}$ と $10^{-12}$ erg cm$^{-3}$ はオーダーで同程度。CMB・宇宙線・星間磁場のエネルギー密度が拮抗していることは、銀河系の星間媒質がこれらの間でエネルギーをやりとりする「準平衡」的な系であることを示唆する（重要なベースライン）。</span>
-<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a>**答え**：$u\simeq4.2\times10^{-13}$ erg cm$^{-3}$。$J_\nu$＝方向平均、$u_\nu$＝体積エネルギー（$4\pi/c$ 倍）。宇宙線・磁場と同オーダー。</span>
-<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a>**答え**：$u\simeq4.2\times10^{-13}$ erg cm$^{-3}$。$J_\nu$＝方向平均、$u_\nu$＝体積エネルギー（$4\pi/c$ 倍）。宇宙線・磁場と同オーダー。</span>
+<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 4-4　点光源か広がった光源か ― 装置との関係で決まる {#ex-4-4 .unnumbered}</span></span>
 <span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 4-4　点光源か広がった光源か ― 装置との関係で決まる {#ex-4-4 .unnumbered}</span></span>
+<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
 <span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a>§4.4・4.8 は「点光源か広がった光源か」は天体固有でなく観測装置との関係で決まると述べた。$\alpha$ Cen A（視直径 $\sim9$ mas）を例に確かめる。</span>
 <span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a>§4.4・4.8 は「点光源か広がった光源か」は天体固有でなく観測装置との関係で決まると述べた。$\alpha$ Cen A（視直径 $\sim9$ mas）を例に確かめる。</span>
-<span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$\alpha$ Cen A を円盤とみて立体角 $\Omega_\mathrm{src}\simeq\pi(\theta/2)^2$ を sr で概算せよ（$\theta=9$ mas）。</span>
-<span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>通常の地上望遠鏡（シーイング $\sim1$ arcsec）のビーム立体角 $\Omega_\mathrm{beam}\simeq\pi(0.5'')^2$ と比べ、点光源として扱える理由を述べよ。</span>
-<span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>VLTI 干渉計（分解能 $\sim1$ mas）ではどうなるか。同じ天体で扱いが変わることが何を意味するか、観測される量（$F_\nu$ か $I_\nu$ か）の観点から述べよ。</span>
+<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$\alpha$ Cen A を円盤とみて立体角 $\Omega_\mathrm{src}\simeq\pi(\theta/2)^2$ を sr で概算せよ（$\theta=9$ mas）。</span>
+<span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>通常の地上望遠鏡（シーイング $\sim1$ arcsec）のビーム立体角 $\Omega_\mathrm{beam}\simeq\pi(0.5'')^2$ と比べ、点光源として扱える理由を述べよ。</span>
+<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>VLTI 干渉計（分解能 $\sim1$ mas）ではどうなるか。同じ天体で扱いが変わることが何を意味するか、観測される量（$F_\nu$ か $I_\nu$ か）の観点から述べよ。</span>
+<span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§4.4 フラックス（点光源/広がった光源）</span><span class="co">](#sec-radiation-field-flux)</span>、<span class="co">[</span><span class="ot">§4.8 装置と放射場</span><span class="co">](#sec-radiation-field-observation)</span>／立体角の見積りは<span class="co">[</span><span class="ot">§4.2</span><span class="co">](#sec-radiation-field-solid-angle)</span>。</span>
 <span id="cb1-414"><a href="#cb1-414" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-415"><a href="#cb1-415" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§4.4 フラックス（点光源/広がった光源）</span><span class="co">](#sec-radiation-field-flux)</span>、<span class="co">[</span><span class="ot">§4.8 装置と放射場</span><span class="co">](#sec-radiation-field-observation)</span>／立体角の見積りは<span class="co">[</span><span class="ot">§4.2</span><span class="co">](#sec-radiation-field-solid-angle)</span>。</span>
-<span id="cb1-416"><a href="#cb1-416" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-417"><a href="#cb1-417" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-418"><a href="#cb1-418" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 4-4）</span></span>
+<span id="cb1-415"><a href="#cb1-415" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-416"><a href="#cb1-416" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 4-4）</span></span>
+<span id="cb1-417"><a href="#cb1-417" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-418"><a href="#cb1-418" aria-hidden="true" tabindex="-1"></a>**(1)** $\theta=9$ mas $=9\times10^{-3}$ arcsec。1 arcsec $=4.85\times10^{-6}$ rad なので $\theta=9\times10^{-3}\times4.85\times10^{-6}=4.4\times10^{-8}$ rad。半径 $\theta/2=2.2\times10^{-8}$ rad。立体角</span>
 <span id="cb1-419"><a href="#cb1-419" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-420"><a href="#cb1-420" aria-hidden="true" tabindex="-1"></a>**(1)** $\theta=9$ mas $=9\times10^{-3}$ arcsec。1 arcsec $=4.85\times10^{-6}$ rad なので $\theta=9\times10^{-3}\times4.85\times10^{-6}=4.4\times10^{-8}$ rad。半径 $\theta/2=2.2\times10^{-8}$ rad。立体角</span>
-<span id="cb1-421"><a href="#cb1-421" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-420"><a href="#cb1-420" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-421"><a href="#cb1-421" aria-hidden="true" tabindex="-1"></a>\Omega_\mathrm{src}\simeq\pi(2.2\times10^{-8})^2\simeq1.5\times10^{-15}\ \mathrm{sr}.</span>
 <span id="cb1-422"><a href="#cb1-422" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-423"><a href="#cb1-423" aria-hidden="true" tabindex="-1"></a>\Omega_\mathrm{src}\simeq\pi(2.2\times10^{-8})^2\simeq1.5\times10^{-15}\ \mathrm{sr}.</span>
-<span id="cb1-424"><a href="#cb1-424" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-423"><a href="#cb1-423" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-424"><a href="#cb1-424" aria-hidden="true" tabindex="-1"></a>（本文の表の値と一致。）</span>
 <span id="cb1-425"><a href="#cb1-425" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-426"><a href="#cb1-426" aria-hidden="true" tabindex="-1"></a>（本文の表の値と一致。）</span>
+<span id="cb1-426"><a href="#cb1-426" aria-hidden="true" tabindex="-1"></a>**(2)** シーイング 1 arcsec のビーム半径 $0.5''=2.4\times10^{-6}$ rad、$\Omega_\mathrm{beam}\simeq\pi(2.4\times10^{-6})^2\simeq1.8\times10^{-11}$ sr。$\Omega_\mathrm{src}/\Omega_\mathrm{beam}\sim10^{-4}\ll1$。天体はビームよりはるかに小さく、空間的に分解できない＝点光源。測れるのはフラックス $F_\nu$ のみ。</span>
 <span id="cb1-427"><a href="#cb1-427" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-428"><a href="#cb1-428" aria-hidden="true" tabindex="-1"></a>**(2)** シーイング 1 arcsec のビーム半径 $0.5''=2.4\times10^{-6}$ rad、$\Omega_\mathrm{beam}\simeq\pi(2.4\times10^{-6})^2\simeq1.8\times10^{-11}$ sr。$\Omega_\mathrm{src}/\Omega_\mathrm{beam}\sim10^{-4}\ll1$。天体はビームよりはるかに小さく、空間的に分解できない＝点光源。測れるのはフラックス $F_\nu$ のみ。</span>
+<span id="cb1-428"><a href="#cb1-428" aria-hidden="true" tabindex="-1"></a>**(3)** VLTI の分解能 $\sim1$ mas は天体視直径 9 mas より小さいので、円盤を空間的に分解できる＝広がった光源として扱え、面上の比強度 $I_\nu$（表面輝度分布）が測れる。同じ天体が装置の分解能次第で点光源にも広がった光源にもなる。すなわち「点か広がりか」は天体の性質でなく装置との関係で決まる。</span>
 <span id="cb1-429"><a href="#cb1-429" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-430"><a href="#cb1-430" aria-hidden="true" tabindex="-1"></a>**(3)** VLTI の分解能 $\sim1$ mas は天体視直径 9 mas より小さいので、円盤を空間的に分解できる＝広がった光源として扱え、面上の比強度 $I_\nu$（表面輝度分布）が測れる。同じ天体が装置の分解能次第で点光源にも広がった光源にもなる。すなわち「点か広がりか」は天体の性質でなく装置との関係で決まる。</span>
-<span id="cb1-431"><a href="#cb1-431" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-432"><a href="#cb1-432" aria-hidden="true" tabindex="-1"></a>**答え**：$\Omega_\mathrm{src}\simeq1.5\times10^{-15}$ sr。シーイング1″では $\ll\Omega_\mathrm{beam}$ ゆえ点光源（$F_\nu$ を測る）。VLTI 1 masでは分解でき広がった光源（$I_\nu$）。装置依存。</span>
-<span id="cb1-433"><a href="#cb1-433" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-430"><a href="#cb1-430" aria-hidden="true" tabindex="-1"></a>**答え**：$\Omega_\mathrm{src}\simeq1.5\times10^{-15}$ sr。シーイング1″では $\ll\Omega_\mathrm{beam}$ ゆえ点光源（$F_\nu$ を測る）。VLTI 1 masでは分解でき広がった光源（$I_\nu$）。装置依存。</span>
+<span id="cb1-431"><a href="#cb1-431" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-432"><a href="#cb1-432" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-433"><a href="#cb1-433" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-radiation-field-further .unnumbered}</span></span>
 <span id="cb1-434"><a href="#cb1-434" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-435"><a href="#cb1-435" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-radiation-field-further .unnumbered}</span></span>
-<span id="cb1-436"><a href="#cb1-436" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-437"><a href="#cb1-437" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rybicki &amp; Lightman, *Radiative Processes in Astrophysics* (Wiley, 1979) — 第1章「Fundamentals of Radiative Transfer」</span>
-<span id="cb1-438"><a href="#cb1-438" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mihalas, *Stellar Atmospheres* (Freeman, 2nd ed., 1978) — 放射場の量の体系的整理</span>
-<span id="cb1-439"><a href="#cb1-439" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Chandrasekhar, *Radiative Transfer* (Dover, 1960) — 古典的だが現在も標準</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-435"><a href="#cb1-435" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rybicki &amp; Lightman, *Radiative Processes in Astrophysics* (Wiley, 1979) — 第1章「Fundamentals of Radiative Transfer」</span>
+<span id="cb1-436"><a href="#cb1-436" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mihalas, *Stellar Atmospheres* (Freeman, 2nd ed., 1978) — 放射場の量の体系的整理</span>
+<span id="cb1-437"><a href="#cb1-437" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Chandrasekhar, *Radiative Transfer* (Dover, 1960) — 古典的だが現在も標準</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

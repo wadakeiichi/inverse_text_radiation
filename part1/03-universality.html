@@ -414,7 +414,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../part7/23-line-shape.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第23章　線形（line shape）の物理</span></a>
+  <a href="../part7/23-line-shape.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第23章　線輪郭（line profile）の物理</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -701,7 +701,7 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 <li><strong>温度の一意性</strong>：物質と放射場が同じ単一の温度 <span class="math inline">T</span> で記述できる</li>
 <li><strong>放射場の等方性</strong>：<span class="math inline">I_\nu</span> が方向に依存しない</li>
 </ol></li>
-<li><strong>LTE（局所熱平衡, Local TE）</strong>：物質の状態（速度分布・電離・励起）が局所温度 <span class="math inline">T</span> で決まる近似。放射場 <span class="math inline">J_\nu</span> は<strong>必ずしも等方や黒体である必要はない</strong>。たとえば恒星大気の表層近傍では、物質は LTE のままで <span class="math inline">J_\nu</span> は異方化していく。</li>
+<li><strong>LTE（局所熱力学平衡, local thermodynamic equilibrium; LTE）</strong>：物質の状態（速度分布・電離・励起）が局所温度 <span class="math inline">T</span> で決まる近似。放射場 <span class="math inline">J_\nu</span> は<strong>必ずしも等方や黒体である必要はない</strong>。たとえば恒星大気の表層近傍では、物質は LTE のままで <span class="math inline">J_\nu</span> は異方化していく。</li>
 </ul>
 <p>本章では、第3節以降の空洞放射の議論において<strong>完全熱平衡</strong>を想定する。LTE と完全熱平衡の区別は、第5章 §5.5 で本格的に扱う。</p>
 <p>完全熱平衡の場での放射スペクトルは、<strong>物質の種類によらず一意に決まる</strong> ― これが第3章の核心である。なぜそうなるかは、次節の空洞放射の議論で明らかになる。</p>
@@ -809,7 +809,7 @@ a_\nu = \epsilon_\nu
 <section id="sec-universality-kirchhoff" class="level2">
 <h2 class="anchored" data-anchor-id="sec-universality-kirchhoff">3.5 Kirchhoff の法則の意味 ― 観測スペクトルへの効き方</h2>
 <p>[本文目安：B2-B3]</p>
-<p>Kirchhoff の法則は、放射輸送（第5章）の <strong>ソース関数</strong>（<strong>source function</strong>, 文献によっては「源泉関数」）の表式に直結する。</p>
+<p>Kirchhoff の法則は、放射輸送（第5章）の <strong>ソース関数</strong>（<strong>source function</strong>）の表式に直結する。</p>
 <p>放射輸送方程式は</p>
 <p><span id="eq-rt-kirchhoff-context"><span class="math display">
 \frac{dI_\nu}{ds} = -\alpha_\nu I_\nu + j_\nu
@@ -830,7 +830,7 @@ S_\nu = B_\nu(T)
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>対応（観測）</strong>：観測される連続スペクトルが黒体に近いかどうかを判定するとき、私たちは暗黙のうちに <span class="math inline">S_\nu = B_\nu(T)</span> が成り立っているか（=その天体が局所熱平衡か）を判定している。星の光球は概ね LTE、星間ダストもダスト粒子内部では LTE。一方、希薄な星間ガスや AGN の輝線領域は非LTE で、<span class="math inline">S_\nu \ne B_\nu</span> になる ― これが線スペクトルの主役となる。詳しくは第21章・第7部で扱う。</p>
+<p><strong>観測との対応</strong>：観測される連続スペクトルが黒体に近いかどうかを判定するとき、私たちは暗黙のうちに <span class="math inline">S_\nu = B_\nu(T)</span> が成り立っているか（=その天体が局所熱平衡か）を判定している。星の光球は概ね LTE、星間ダストもダスト粒子内部では LTE。一方、希薄な星間ガスや AGN の輝線領域は非LTE で、<span class="math inline">S_\nu \ne B_\nu</span> になる ― これが線スペクトルの主役となる。詳しくは第21章・第7部で扱う。</p>
 </div>
 </div>
 </section>
@@ -908,7 +908,7 @@ S_\nu = B_\nu(T)
 </section>
 <section id="sec-universality-exercises" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-universality-exercises">演習問題</h2>
-<p><span class="tag">[導出補完]</span> <strong>模範解答</strong> は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</p>
+<p><span class="tag">[導出補完]</span> <strong>模範解答</strong> は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから確認すると効果的である。</p>
 <section id="ex-3-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ex-3-1">問題 3-1　空洞放射の普遍性を第二法則で証明する</h3>
 <p>[★ 難易度：☆☆ ] <span class="tag">[導出補完]</span></p>
@@ -1542,7 +1542,7 @@ a_\nu B_\nu(T)=\epsilon_\nu B_\nu(T)\ \Rightarrow\ a_\nu=\epsilon_\nu.
 <span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="ss">  1. </span>**詳細釣り合い**：放射の吸収と放出が各振動数で正味ゼロ</span>
 <span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="ss">  2. </span>**温度の一意性**：物質と放射場が同じ単一の温度 $T$ で記述できる</span>
 <span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="ss">  3. </span>**放射場の等方性**：$I_\nu$ が方向に依存しない</span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**LTE（局所熱平衡, Local TE）**：物質の状態（速度分布・電離・励起）が局所温度 $T$ で決まる近似。放射場 $J_\nu$ は**必ずしも等方や黒体である必要はない**。たとえば恒星大気の表層近傍では、物質は LTE のままで $J_\nu$ は異方化していく。</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**LTE（局所熱力学平衡, local thermodynamic equilibrium; LTE）**：物質の状態（速度分布・電離・励起）が局所温度 $T$ で決まる近似。放射場 $J_\nu$ は**必ずしも等方や黒体である必要はない**。たとえば恒星大気の表層近傍では、物質は LTE のままで $J_\nu$ は異方化していく。</span>
 <span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>本章では、第3節以降の空洞放射の議論において**完全熱平衡**を想定する。LTE と完全熱平衡の区別は、第5章 §5.5 で本格的に扱う。</span>
 <span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
@@ -1627,7 +1627,7 @@ a_\nu B_\nu(T)=\epsilon_\nu B_\nu(T)\ \Rightarrow\ a_\nu=\epsilon_\nu.
 <span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B2-B3</span><span class="co">]</span></span>
 <span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>Kirchhoff の法則は、放射輸送（第5章）の **ソース関数**（**source function**, 文献によっては「源泉関数」）の表式に直結する。</span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>Kirchhoff の法則は、放射輸送（第5章）の **ソース関数**（**source function**）の表式に直結する。</span>
 <span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a>放射輸送方程式は</span>
 <span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a></span>
@@ -1646,7 +1646,7 @@ a_\nu B_\nu(T)=\epsilon_\nu B_\nu(T)\ \Rightarrow\ a_\nu=\epsilon_\nu.
 <span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>が成り立つ。つまり「**熱平衡ではソース関数がプランク関数になる**」。これは第5章の放射輸送の議論の中心的な結果で、観測スペクトルが黒体に近づく条件と直結する。</span>
 <span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
-<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>**対応（観測）**：観測される連続スペクトルが黒体に近いかどうかを判定するとき、私たちは暗黙のうちに $S_\nu = B_\nu(T)$ が成り立っているか（=その天体が局所熱平衡か）を判定している。星の光球は概ね LTE、星間ダストもダスト粒子内部では LTE。一方、希薄な星間ガスや AGN の輝線領域は非LTE で、$S_\nu \ne B_\nu$ になる ― これが線スペクトルの主役となる。詳しくは第21章・第7部で扱う。</span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>**観測との対応**：観測される連続スペクトルが黒体に近いかどうかを判定するとき、私たちは暗黙のうちに $S_\nu = B_\nu(T)$ が成り立っているか（=その天体が局所熱平衡か）を判定している。星の光球は概ね LTE、星間ダストもダスト粒子内部では LTE。一方、希薄な星間ガスや AGN の輝線領域は非LTE で、$S_\nu \ne B_\nu$ になる ― これが線スペクトルの主役となる。詳しくは第21章・第7部で扱う。</span>
 <span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3.6 現実の天体はなぜ黒体に近づくのか {#sec-universality-real-objects}</span></span>
@@ -1721,7 +1721,7 @@ a_\nu B_\nu(T)=\epsilon_\nu B_\nu(T)\ \Rightarrow\ a_\nu=\epsilon_\nu.
 <span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-universality-exercises .unnumbered}</span></span>
 <span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから確認すると効果的である。</span>
 <span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 3-1　空洞放射の普遍性を第二法則で証明する {#ex-3-1 .unnumbered}</span></span>
 <span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a></span>

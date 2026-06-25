@@ -414,7 +414,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../part7/23-line-shape.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第23章　線形（line shape）の物理</span></a>
+  <a href="../part7/23-line-shape.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第23章　線輪郭（line profile）の物理</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -509,6 +509,7 @@ window.Quarto = {
   <li><a href="#b.4.1-力学熱の換算" id="toc-b.4.1-力学熱の換算" class="nav-link" data-scroll-target="#b.4.1-力学熱の換算">B.4.1 力学・熱の換算</a></li>
   <li><a href="#b.4.2-電磁気の換算注意" id="toc-b.4.2-電磁気の換算注意" class="nav-link" data-scroll-target="#b.4.2-電磁気の換算注意">B.4.2 電磁気の換算（注意）</a></li>
   <li><a href="#b.4.3-式の形の違い" id="toc-b.4.3-式の形の違い" class="nav-link" data-scroll-target="#b.4.3-式の形の違い">B.4.3 式の形の違い</a></li>
+  <li><a href="#sec-si-gauss-form-table" id="toc-sec-si-gauss-form-table" class="nav-link" data-scroll-target="#sec-si-gauss-form-table">B.4.4 SI ⇔ Gauss 式形対応表（本文の主要式）</a></li>
   </ul></li>
   <li><a href="#sec-order-of-magnitude" id="toc-sec-order-of-magnitude" class="nav-link" data-scroll-target="#sec-order-of-magnitude">B.5 数値の桁感覚 ― オーダー推定のための定数</a>
   <ul class="collapse">
@@ -1272,13 +1273,87 @@ window.Quarto = {
 <p><span class="math display">
 \text{SI:}\quad \text{Ry} = \frac{m_e e^4}{2(4\pi\epsilon_0)^2 \hbar^2}, \quad \text{CGS:}\quad \text{Ry} = \frac{m_e e^4}{2\hbar^2}
 </span></p>
+</section>
+<section id="sec-si-gauss-form-table" class="level3">
+<h3 class="anchored" data-anchor-id="sec-si-gauss-form-table">B.4.4 SI ⇔ Gauss 式形対応表（本文の主要式）</h3>
+<p>本書本文で前因子を含む式は、SI と Gauss（CGS）で次のように対応する。Gauss 形では一般に <span class="math inline">e^2 \to e^2/(4\pi\epsilon_0)</span> の置き換えで SI から移れる（電磁気の前因子が <span class="math inline">4\pi\epsilon_0</span> を介して隠れる）。論文と比較する際はこの表を基準にすること。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>量・式</th>
+<th>SI 形</th>
+<th>Gauss（CGS）形</th>
+<th>本文</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Coulomb 力</td>
+<td><span class="math inline">\dfrac{1}{4\pi\epsilon_0}\dfrac{q_1 q_2}{r^2}</span></td>
+<td><span class="math inline">\dfrac{q_1 q_2}{r^2}</span></td>
+<td>第13章</td>
+</tr>
+<tr class="even">
+<td>微細構造定数 <span class="math inline">\alpha</span></td>
+<td><span class="math inline">\dfrac{e^2}{4\pi\epsilon_0 \hbar c}</span></td>
+<td><span class="math inline">\dfrac{e^2}{\hbar c}</span></td>
+<td>第22章</td>
+</tr>
+<tr class="odd">
+<td>Rydberg エネルギー</td>
+<td><span class="math inline">\dfrac{m_e e^4}{2(4\pi\epsilon_0)^2 \hbar^2}</span></td>
+<td><span class="math inline">\dfrac{m_e e^4}{2\hbar^2}</span></td>
+<td>第22章</td>
+</tr>
+<tr class="even">
+<td>古典電子半径 <span class="math inline">r_e</span></td>
+<td><span class="math inline">\dfrac{e^2}{4\pi\epsilon_0 m_e c^2}</span></td>
+<td><span class="math inline">\dfrac{e^2}{m_e c^2}</span></td>
+<td>第18章</td>
+</tr>
+<tr class="odd">
+<td>Poynting ベクトル</td>
+<td><span class="math inline">\dfrac{1}{\mu_0}\mathbf{E}\times\mathbf{B}</span></td>
+<td><span class="math inline">\dfrac{c}{4\pi}\mathbf{E}\times\mathbf{B}</span></td>
+<td>第13章</td>
+</tr>
+<tr class="even">
+<td>線吸収の積分強度（Lorentz 振動子前因子）</td>
+<td><span class="math inline">\dfrac{\pi e^2}{4\pi\epsilon_0\, m_e c}=\dfrac{e^2}{4\epsilon_0 m_e c}</span></td>
+<td><span class="math inline">\dfrac{\pi e^2}{m_e c}</span></td>
+<td>第22章・水素線地図</td>
+</tr>
+<tr class="odd">
+<td>自発放出率 <span class="math inline">A_{ul}</span></td>
+<td><span class="math inline">\dfrac{\omega^3}{3\pi\epsilon_0 \hbar c^3}\,|\mathbf{d}_{ul}|^2</span></td>
+<td><span class="math inline">\dfrac{4\omega^3}{3\hbar c^3}\,|\mathbf{d}_{ul}|^2</span></td>
+<td>第26章</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>読み方</strong>：天体物理の慣用式（特に線吸収係数の前因子 <span class="math inline">\pi e^2/m_e c</span>、第22章・水素線地図）は Gauss 形である。本書本文ではこれを SI 形 <span class="math inline">e^2/(4\epsilon_0 m_e c)</span> で記し、慣用の Gauss 形を併記する方針をとる。第26章の QED の主式（<a href="../part8/26-qed-minimum.html#eq-A-coefficient-QED" class="quarto-xref">式&nbsp;<span>29.8</span></a> など）は SI 形で厳密に記し、Gauss/HL 形との差はこの表で確認できる。</p>
+</div>
+</div>
+</div>
 <div class="callout callout-style-simple callout-warning">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>注意</strong>：天文学の論文では断りなく CGS が使われていることが多い。数値を比較するときは <strong>必ず単位系を確認</strong> すること。特に電磁気が絡む量（断面積、磁場、Stefan-Boltzmann 定数、…）は要注意</p>
+<p><strong>注意</strong>：天文学の論文では断りなく CGS が使われていることが多い。数値を比較するときは <strong>必ず単位系を確認</strong> すること。特に電磁気が絡む量（断面積、磁場、Stefan-Boltzmann 定数、…）は要注意である。</p>
 </div>
 </div>
 </div>
@@ -1446,7 +1521,7 @@ window.Quarto = {
 </tbody>
 </table>
 <div class="appendix-tip">
-<p><strong>本文での使用</strong>：第15章以降の応用章で「桁感覚」が必要なとき、本表を参照</p>
+<p><strong>本文での使用</strong>：第15章以降の応用章で「桁感覚」が必要なとき、本表を参照してほしい。</p>
 </div>
 <hr>
 </section>
@@ -2160,65 +2235,83 @@ window.Quarto = {
 <span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>\text{SI:}\quad \text{Ry} = \frac{m_e e^4}{2(4\pi\epsilon_0)^2 \hbar^2}, \quad \text{CGS:}\quad \text{Ry} = \frac{m_e e^4}{2\hbar^2}</span>
 <span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning appearance="simple"}</span>
-<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>**注意**：天文学の論文では断りなく CGS が使われていることが多い。数値を比較するときは **必ず単位系を確認** すること。特に電磁気が絡む量（断面積、磁場、Stefan-Boltzmann 定数、…）は要注意</span>
-<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a><span class="fu">### B.4.4 SI ⇔ Gauss 式形対応表（本文の主要式） {#sec-si-gauss-form-table}</span></span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>本書本文で前因子を含む式は、SI と Gauss（CGS）で次のように対応する。Gauss 形では一般に $e^2 \to e^2/(4\pi\epsilon_0)$ の置き換えで SI から移れる（電磁気の前因子が $4\pi\epsilon_0$ を介して隠れる）。論文と比較する際はこの表を基準にすること。</span>
 <span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a><span class="fu">## B.5 数値の桁感覚 ― オーダー推定のための定数 {#sec-order-of-magnitude}</span></span>
-<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>「ざっくり計算」のための桁感覚。</span>
-<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a><span class="fu">### B.5.1 エネルギー目盛り</span></span>
-<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 現象 <span class="pp">|</span> エネルギー <span class="pp">|</span> 特性温度 <span class="pp">|</span> 対応波長 <span class="pp">|</span></span>
-<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|---|</span></span>
-<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 室温の熱運動 <span class="pp">|</span> $0.025$ eV <span class="pp">|</span> 300 K <span class="pp">|</span> 50 µm <span class="pp">|</span></span>
-<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 水素 21 cm 超微細構造 <span class="pp">|</span> $5.9 \times 10^{-6}$ eV <span class="pp">|</span> $0.07$ K <span class="pp">|</span> 21 cm <span class="pp">|</span></span>
-<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> CMB 光子（典型） <span class="pp">|</span> $6.6 \times 10^{-4}$ eV <span class="pp">|</span> 2.725 K <span class="pp">|</span> 1 mm <span class="pp">|</span></span>
-<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 可視光（H$\alpha$） <span class="pp">|</span> $1.89$ eV <span class="pp">|</span> $2.2 \times 10^4$ K <span class="pp">|</span> 656 nm <span class="pp">|</span></span>
-<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 水素 Lyα <span class="pp">|</span> $10.2$ eV <span class="pp">|</span> $1.2 \times 10^5$ K <span class="pp">|</span> 121.6 nm <span class="pp">|</span></span>
-<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 水素電離 <span class="pp">|</span> $13.6$ eV <span class="pp">|</span> $1.6 \times 10^5$ K <span class="pp">|</span> 91.2 nm <span class="pp">|</span></span>
-<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 鉄 K$\alpha$（中性鉄）<span class="pp">|</span> $6.4$ keV <span class="pp">|</span> $7.4 \times 10^7$ K <span class="pp">|</span> 0.19 nm <span class="pp">|</span></span>
-<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 電子静止質量 <span class="pp">|</span> $0.511$ MeV <span class="pp">|</span> $5.9 \times 10^9$ K <span class="pp">|</span> $\lambda_C = 2.4$ pm <span class="pp">|</span></span>
-<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 陽子静止質量 <span class="pp">|</span> $938$ MeV <span class="pp">|</span> $1.1 \times 10^{13}$ K <span class="pp">|</span> $\sim 1.3$ fm <span class="pp">|</span></span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 量・式 <span class="pp">|</span> SI 形 <span class="pp">|</span> Gauss（CGS）形 <span class="pp">|</span> 本文 <span class="pp">|</span></span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|---|</span></span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Coulomb 力 <span class="pp">|</span> $\dfrac{1}{4\pi\epsilon_0}\dfrac{q_1 q_2}{r^2}$ <span class="pp">|</span> $\dfrac{q_1 q_2}{r^2}$ <span class="pp">|</span> 第13章 <span class="pp">|</span></span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 微細構造定数 $\alpha$ <span class="pp">|</span> $\dfrac{e^2}{4\pi\epsilon_0 \hbar c}$ <span class="pp">|</span> $\dfrac{e^2}{\hbar c}$ <span class="pp">|</span> 第22章 <span class="pp">|</span></span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Rydberg エネルギー <span class="pp">|</span> $\dfrac{m_e e^4}{2(4\pi\epsilon_0)^2 \hbar^2}$ <span class="pp">|</span> $\dfrac{m_e e^4}{2\hbar^2}$ <span class="pp">|</span> 第22章 <span class="pp">|</span></span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 古典電子半径 $r_e$ <span class="pp">|</span> $\dfrac{e^2}{4\pi\epsilon_0 m_e c^2}$ <span class="pp">|</span> $\dfrac{e^2}{m_e c^2}$ <span class="pp">|</span> 第18章 <span class="pp">|</span></span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Poynting ベクトル <span class="pp">|</span> $\dfrac{1}{\mu_0}\mathbf{E}\times\mathbf{B}$ <span class="pp">|</span> $\dfrac{c}{4\pi}\mathbf{E}\times\mathbf{B}$ <span class="pp">|</span> 第13章 <span class="pp">|</span></span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 線吸収の積分強度（Lorentz 振動子前因子） <span class="pp">|</span> $\dfrac{\pi e^2}{4\pi\epsilon_0\, m_e c}=\dfrac{e^2}{4\epsilon_0 m_e c}$ <span class="pp">|</span> $\dfrac{\pi e^2}{m_e c}$ <span class="pp">|</span> 第22章・水素線地図 <span class="pp">|</span></span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 自発放出率 $A_{ul}$ <span class="pp">|</span> $\dfrac{\omega^3}{3\pi\epsilon_0 \hbar c^3}\,<span class="pp">|</span>\mathbf{d}_{ul}|^2$ | $\dfrac{4\omega^3}{3\hbar c^3}\,|\mathbf{d}_{ul}<span class="pp">|</span>^2$ <span class="pp">|</span> 第26章 <span class="pp">|</span></span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple"}</span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>**読み方**：天体物理の慣用式（特に線吸収係数の前因子 $\pi e^2/m_e c$、第22章・水素線地図）は Gauss 形である。本書本文ではこれを SI 形 $e^2/(4\epsilon_0 m_e c)$ で記し、慣用の Gauss 形を併記する方針をとる。第26章の QED の主式（@eq-A-coefficient-QED など）は SI 形で厳密に記し、Gauss/HL 形との差はこの表で確認できる。</span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning appearance="simple"}</span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a>**注意**：天文学の論文では断りなく CGS が使われていることが多い。数値を比較するときは **必ず単位系を確認** すること。特に電磁気が絡む量（断面積、磁場、Stefan-Boltzmann 定数、…）は要注意である。</span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a><span class="fu">### B.5.2 重力スケール</span></span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a><span class="fu">## B.5 数値の桁感覚 ― オーダー推定のための定数 {#sec-order-of-magnitude}</span></span>
 <span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 量 <span class="pp">|</span> 計算 <span class="pp">|</span> 例 <span class="pp">|</span></span>
-<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
-<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Schwarzschild 半径 <span class="pp">|</span> $r_s = 2GM/c^2$ <span class="pp">|</span> $r_{s,\odot} \simeq 3$ km, $r_{s,M87} \simeq 2 \times 10^{13}$ m <span class="pp">|</span></span>
-<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 表面重力（恒星） <span class="pp">|</span> $g = GM/R^2$ <span class="pp">|</span> 太陽 $g_\odot = 274$ m s$^{-2}$, 白色矮星 $\sim 10^6$ m s$^{-2}$ <span class="pp">|</span></span>
-<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 自由落下時間 <span class="pp">|</span> $t_\text{ff} = \sqrt{1/G\rho}$ <span class="pp">|</span> 太陽密度 $1.4$ g/cc → $t_\text{ff} \sim 30$ min <span class="pp">|</span></span>
-<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a><span class="fu">### B.5.3 観測的密度</span></span>
-<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 環境 <span class="pp">|</span> 数密度 <span class="co">[</span><span class="ot">cm$^{-3}$</span><span class="co">]</span> <span class="pp">|</span> 温度 <span class="co">[</span><span class="ot">K</span><span class="co">]</span> <span class="pp">|</span></span>
-<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
-<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 銀河間媒質 <span class="pp">|</span> $10^{-6}$ <span class="pp">|</span> $10^5$–$10^7$ <span class="pp">|</span></span>
-<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 暖かい星間ガス（WIM） <span class="pp">|</span> $10^{-1}$ <span class="pp">|</span> $10^4$ <span class="pp">|</span></span>
-<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> HII 領域 <span class="pp">|</span> $10^2$–$10^4$ <span class="pp">|</span> $10^4$ <span class="pp">|</span></span>
-<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 暗黒分子雲 <span class="pp">|</span> $10^3$–$10^5$ <span class="pp">|</span> $10$–$20$ <span class="pp">|</span></span>
-<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 原始惑星系円盤 <span class="pp">|</span> $10^{10}$–$10^{12}$ <span class="pp">|</span> $20$–$1000$ <span class="pp">|</span></span>
-<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 恒星光球 <span class="pp">|</span> $\sim 10^{17}$ <span class="pp">|</span> $\sim 6000$ <span class="pp">|</span></span>
-<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 太陽コロナ <span class="pp">|</span> $10^8$–$10^{10}$ <span class="pp">|</span> $10^6$–$10^7$ <span class="pp">|</span></span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a>「ざっくり計算」のための桁感覚。</span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a><span class="fu">### B.5.1 エネルギー目盛り</span></span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 現象 <span class="pp">|</span> エネルギー <span class="pp">|</span> 特性温度 <span class="pp">|</span> 対応波長 <span class="pp">|</span></span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|---|</span></span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 室温の熱運動 <span class="pp">|</span> $0.025$ eV <span class="pp">|</span> 300 K <span class="pp">|</span> 50 µm <span class="pp">|</span></span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 水素 21 cm 超微細構造 <span class="pp">|</span> $5.9 \times 10^{-6}$ eV <span class="pp">|</span> $0.07$ K <span class="pp">|</span> 21 cm <span class="pp">|</span></span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> CMB 光子（典型） <span class="pp">|</span> $6.6 \times 10^{-4}$ eV <span class="pp">|</span> 2.725 K <span class="pp">|</span> 1 mm <span class="pp">|</span></span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 可視光（H$\alpha$） <span class="pp">|</span> $1.89$ eV <span class="pp">|</span> $2.2 \times 10^4$ K <span class="pp">|</span> 656 nm <span class="pp">|</span></span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 水素 Lyα <span class="pp">|</span> $10.2$ eV <span class="pp">|</span> $1.2 \times 10^5$ K <span class="pp">|</span> 121.6 nm <span class="pp">|</span></span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 水素電離 <span class="pp">|</span> $13.6$ eV <span class="pp">|</span> $1.6 \times 10^5$ K <span class="pp">|</span> 91.2 nm <span class="pp">|</span></span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 鉄 K$\alpha$（中性鉄）<span class="pp">|</span> $6.4$ keV <span class="pp">|</span> $7.4 \times 10^7$ K <span class="pp">|</span> 0.19 nm <span class="pp">|</span></span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 電子静止質量 <span class="pp">|</span> $0.511$ MeV <span class="pp">|</span> $5.9 \times 10^9$ K <span class="pp">|</span> $\lambda_C = 2.4$ pm <span class="pp">|</span></span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 陽子静止質量 <span class="pp">|</span> $938$ MeV <span class="pp">|</span> $1.1 \times 10^{13}$ K <span class="pp">|</span> $\sim 1.3$ fm <span class="pp">|</span></span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a><span class="fu">### B.5.2 重力スケール</span></span>
 <span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a>::: {.appendix-tip}</span>
-<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>**本文での使用**：第15章以降の応用章で「桁感覚」が必要なとき、本表を参照</span>
-<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 量 <span class="pp">|</span> 計算 <span class="pp">|</span> 例 <span class="pp">|</span></span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Schwarzschild 半径 <span class="pp">|</span> $r_s = 2GM/c^2$ <span class="pp">|</span> $r_{s,\odot} \simeq 3$ km, $r_{s,M87} \simeq 2 \times 10^{13}$ m <span class="pp">|</span></span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 表面重力（恒星） <span class="pp">|</span> $g = GM/R^2$ <span class="pp">|</span> 太陽 $g_\odot = 274$ m s$^{-2}$, 白色矮星 $\sim 10^6$ m s$^{-2}$ <span class="pp">|</span></span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 自由落下時間 <span class="pp">|</span> $t_\text{ff} = \sqrt{1/G\rho}$ <span class="pp">|</span> 太陽密度 $1.4$ g/cc → $t_\text{ff} \sim 30$ min <span class="pp">|</span></span>
 <span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a><span class="fu">## B.6 さらに進むための参考文献・データソース {#sec-data-references .unnumbered}</span></span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a><span class="fu">### B.5.3 観測的密度</span></span>
 <span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>CODATA 2018 fundamental physical constants（<span class="ot">&lt;https://physics.nist.gov/cuu/Constants&gt;</span>）</span>
-<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>IAU 2015 nominal values for solar and planetary properties（IAU Resolution B3）</span>
-<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>NIST Atomic Spectra Database（<span class="ot">&lt;https://physics.nist.gov/asd&gt;</span>）</span>
-<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>NIST Molecular Spectroscopy Database</span>
-<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>*Allen's Astrophysical Quantities* (4th ed., Springer, 2000) — 天文定数の定番一覧</span>
-<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>*Particle Data Group*, *Review of Particle Physics* — 素粒子・宇宙論定数（<span class="ot">&lt;https://pdg.lbl.gov&gt;</span>）</span>
-<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Planck Collaboration 2018 results — 宇宙論パラメータ</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 環境 <span class="pp">|</span> 数密度 <span class="co">[</span><span class="ot">cm$^{-3}$</span><span class="co">]</span> <span class="pp">|</span> 温度 <span class="co">[</span><span class="ot">K</span><span class="co">]</span> <span class="pp">|</span></span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 銀河間媒質 <span class="pp">|</span> $10^{-6}$ <span class="pp">|</span> $10^5$–$10^7$ <span class="pp">|</span></span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 暖かい星間ガス（WIM） <span class="pp">|</span> $10^{-1}$ <span class="pp">|</span> $10^4$ <span class="pp">|</span></span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> HII 領域 <span class="pp">|</span> $10^2$–$10^4$ <span class="pp">|</span> $10^4$ <span class="pp">|</span></span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 暗黒分子雲 <span class="pp">|</span> $10^3$–$10^5$ <span class="pp">|</span> $10$–$20$ <span class="pp">|</span></span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 原始惑星系円盤 <span class="pp">|</span> $10^{10}$–$10^{12}$ <span class="pp">|</span> $20$–$1000$ <span class="pp">|</span></span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 恒星光球 <span class="pp">|</span> $\sim 10^{17}$ <span class="pp">|</span> $\sim 6000$ <span class="pp">|</span></span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 太陽コロナ <span class="pp">|</span> $10^8$–$10^{10}$ <span class="pp">|</span> $10^6$–$10^7$ <span class="pp">|</span></span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a>::: {.appendix-tip}</span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a>**本文での使用**：第15章以降の応用章で「桁感覚」が必要なとき、本表を参照してほしい。</span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a><span class="fu">## B.6 さらに進むための参考文献・データソース {#sec-data-references .unnumbered}</span></span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>CODATA 2018 fundamental physical constants（<span class="ot">&lt;https://physics.nist.gov/cuu/Constants&gt;</span>）</span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>IAU 2015 nominal values for solar and planetary properties（IAU Resolution B3）</span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>NIST Atomic Spectra Database（<span class="ot">&lt;https://physics.nist.gov/asd&gt;</span>）</span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>NIST Molecular Spectroscopy Database</span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>*Allen's Astrophysical Quantities* (4th ed., Springer, 2000) — 天文定数の定番一覧</span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>*Particle Data Group*, *Review of Particle Physics* — 素粒子・宇宙論定数（<span class="ot">&lt;https://pdg.lbl.gov&gt;</span>）</span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Planck Collaboration 2018 results — 宇宙論パラメータ</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

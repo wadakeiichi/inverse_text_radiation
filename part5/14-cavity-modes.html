@@ -414,7 +414,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../part7/23-line-shape.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第23章　線形（line shape）の物理</span></a>
+  <a href="../part7/23-line-shape.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第23章　線輪郭（line profile）の物理</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -671,7 +671,7 @@ N_\text{mode}(&lt;k) = 2 \cdot \frac{V k^3}{6\pi^2} = \frac{V k^3}{3\pi^2}
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>対応（観測）</strong>：この因子 2 が、プランク分布の前因子 <span class="math inline">2h\nu^3/c^2</span> の先頭の 2 に直接対応する。観測される黒体スペクトル ― CMB であれ恒星であれ ― は、すべて電磁波が横波であるという<strong>幾何的事実</strong>を反映している。</p>
+<p><strong>観測との対応</strong>：この因子 2 が、プランク分布の前因子 <span class="math inline">2h\nu^3/c^2</span> の先頭の 2 に直接対応する。観測される黒体スペクトル ― CMB であれ恒星であれ ― は、すべて電磁波が横波であるという<strong>幾何的事実</strong>を反映している。</p>
 </div>
 </div>
 </section>
@@ -797,6 +797,56 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/k_BT}-1}
 </tbody>
 </table>
 <p>これで第I〜V部の逆引きが完結する。</p>
+<p><strong>中心地図の各因子 ― 初出・借用・導出の往復</strong>：本書では、いくつかの因子を<strong>先に結果だけ借りて</strong>おき、後の章で<strong>本格的に導出して借用を返す</strong>という往復構造をとった（第8章・第9章で予告した一覧がこれである）。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>因子</th>
+<th>初出（仮に使う）</th>
+<th>仮に借りる場所</th>
+<th>本当に導出する場所</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>占有因子 <span class="math inline">1/(e^{h\nu/k_BT}-1)</span></td>
+<td>第8章</td>
+<td>―（借用なし）</td>
+<td>第8章（Bose 統計＋<span class="math inline">\mu=0</span>）</td>
+</tr>
+<tr class="even">
+<td>エネルギー量子 <span class="math inline">h\nu</span></td>
+<td>第IV部</td>
+<td>第8章（量子化を仮定して使用）</td>
+<td>第10章（Planck の量子仮説）</td>
+</tr>
+<tr class="odd">
+<td>モード密度 <span class="math inline">8\pi\nu^2/c^3</span></td>
+<td>第8章</td>
+<td>第8章 <a href="../part3/08-photon-statistics.html#eq-photon-energy-density" class="quarto-xref">式&nbsp;<span>11.4</span></a>・第9章 <a href="../part4/09-classical-failure.html#eq-mode-density-borrowed" class="quarto-xref">式&nbsp;<span>12.2</span></a></td>
+<td><strong>本章（第14章）</strong></td>
+</tr>
+<tr class="even">
+<td>偏光因子 <span class="math inline">2</span></td>
+<td>第13章</td>
+<td>―（借用なし）</td>
+<td>第13章（横波の2自由度）</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">u_\nu \to B_\nu</span> 変換（<span class="math inline">c/4\pi</span>）</td>
+<td>第4章</td>
+<td>―（借用なし）</td>
+<td>第4章 §4.3</td>
+</tr>
+</tbody>
+</table>
+<p>この往復こそが、本書が「天下りを避ける」と述べた逆引きの実装である。モード密度だけが第8・9章で借用され、本章で返済された。</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -807,7 +857,7 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/k_BT}-1}
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>対応（観測）</strong>：観測される黒体スペクトル ― CMB の 2.725 K の完璧な黒体形、太陽の <span class="math inline">T \simeq 5800</span> K の連続光、降着円盤の多温度合成、ダストの <span class="math inline">30</span> K 修正黒体 ― これらすべてが、上の表のすべての物理（電磁気・量子・統計）の<strong>同時の結果</strong>であることが、本章までの逆引きで明らかになった。<strong>観測スペクトルの一本の曲線</strong>から、現代物理学の主要分野が逆向きに再構成された。これが本書の方法論の到達点である。</p>
+<p><strong>観測との対応</strong>：観測される黒体スペクトル ― CMB の 2.725 K の完璧な黒体形、太陽の <span class="math inline">T \simeq 5800</span> K の連続光、降着円盤の多温度合成、ダストの <span class="math inline">30</span> K 修正黒体 ― これらすべてが、上の表のすべての物理（電磁気・量子・統計）の<strong>同時の結果</strong>であることが、本章までの逆引きで明らかになった。<strong>観測スペクトルの一本の曲線</strong>から、現代物理学の主要分野が逆向きに再構成された。これが本書の方法論の到達点である。</p>
 </div>
 </div>
 </section>
@@ -1583,7 +1633,7 @@ N(&lt;\nu)=\frac{V}{3\pi^2}\left(\frac{2\pi\nu}{c}\right)^3=\frac{8\pi V\nu^3}{3
 <span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>これが波数 $k$ 未満のモードの総数。$V$ に比例するのは、大きな空洞ほどモード数が多いという当然の結果。</span>
 <span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>**対応（観測）**：この因子 2 が、プランク分布の前因子 $2h\nu^3/c^2$ の先頭の 2 に直接対応する。観測される黒体スペクトル ― CMB であれ恒星であれ ― は、すべて電磁波が横波であるという**幾何的事実**を反映している。</span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>**観測との対応**：この因子 2 が、プランク分布の前因子 $2h\nu^3/c^2$ の先頭の 2 に直接対応する。観測される黒体スペクトル ― CMB であれ恒星であれ ― は、すべて電磁波が横波であるという**幾何的事実**を反映している。</span>
 <span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a><span class="fu">## 14.4 振動数空間に変換 ― モード密度の正体 {#sec-cavity-modes-frequency}</span></span>
@@ -1658,174 +1708,186 @@ N(&lt;\nu)=\frac{V}{3\pi^2}\left(\frac{2\pi\nu}{c}\right)^3=\frac{8\pi V\nu^3}{3
 <span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>これで第I〜V部の逆引きが完結する。</span>
 <span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
-<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>**対応（観測）**：観測される黒体スペクトル ― CMB の 2.725 K の完璧な黒体形、太陽の $T \simeq 5800$ K の連続光、降着円盤の多温度合成、ダストの $30$ K 修正黒体 ― これらすべてが、上の表のすべての物理（電磁気・量子・統計）の**同時の結果**であることが、本章までの逆引きで明らかになった。**観測スペクトルの一本の曲線**から、現代物理学の主要分野が逆向きに再構成された。これが本書の方法論の到達点である。</span>
-<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a><span class="fu">## 14.6 空洞放射からの「展望」 ― 第VI〜VIII部への橋 {#sec-cavity-modes-bridge}</span></span>
-<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3-B4</span><span class="co">]</span></span>
-<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a>第I〜V部で確立した中心地図プランク分布を出発点として、本書は次の三方向に進む。</span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>**中心地図の各因子 ― 初出・借用・導出の往復**：本書では、いくつかの因子を**先に結果だけ借りて**おき、後の章で**本格的に導出して借用を返す**という往復構造をとった（第8章・第9章で予告した一覧がこれである）。</span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 因子 <span class="pp">|</span> 初出（仮に使う） <span class="pp">|</span> 仮に借りる場所 <span class="pp">|</span> 本当に導出する場所 <span class="pp">|</span></span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|---|</span></span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 占有因子 $1/(e^{h\nu/k_BT}-1)$ <span class="pp">|</span> 第8章 <span class="pp">|</span> ―（借用なし） <span class="pp">|</span> 第8章（Bose 統計＋$\mu=0$） <span class="pp">|</span></span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> エネルギー量子 $h\nu$ <span class="pp">|</span> 第IV部 <span class="pp">|</span> 第8章（量子化を仮定して使用） <span class="pp">|</span> 第10章（Planck の量子仮説） <span class="pp">|</span></span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> モード密度 $8\pi\nu^2/c^3$ <span class="pp">|</span> 第8章 <span class="pp">|</span> 第8章 @eq-photon-energy-density・第9章 @eq-mode-density-borrowed <span class="pp">|</span> **本章（第14章）** <span class="pp">|</span></span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 偏光因子 $2$ <span class="pp">|</span> 第13章 <span class="pp">|</span> ―（借用なし） <span class="pp">|</span> 第13章（横波の2自由度） <span class="pp">|</span></span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $u_\nu \to B_\nu$ 変換（$c/4\pi$） <span class="pp">|</span> 第4章 <span class="pp">|</span> ―（借用なし） <span class="pp">|</span> 第4章 §4.3 <span class="pp">|</span></span>
 <span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>**第VI部（現実の宇宙へ戻る）**：プランク分布は理想的な完全熱平衡の式。現実の天体スペクトルがどう・なぜずれるかを扱う。修正黒体（ダスト）、灰色大気近似、多温度成分、コンプトン化、非熱的放射の混入 ― 観測スペクトルの解読に必要なすべての「ずれ」の物理。</span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>この往復こそが、本書が「天下りを避ける」と述べた逆引きの実装である。モード密度だけが第8・9章で借用され、本章で返済された。</span>
 <span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>**第VII部（線スペクトル）**：本書のもう一つの主柱。観測される線スペクトルの逆引き ― 原子物理、線形成、線形、観測応用 ― を、プランク分布と平行な構造で展開する。Einstein 係数（第11章）が二つの地図を結ぶ要として再登場する。</span>
-<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a>**第VIII部（QED の見通し）**：本章で行った「モード密度 × 量子振動子」を本格的に再定式化する。各電磁モードが**量子化された調和振動子**であり、励起準位が光子数。これにより本書の二つの中心地図（プランク関数と水素線吸収係数）が、同じ電磁場–物質相互作用の二側面として統合される。本章で借用していた **「ν² モード密度 × $h\nu$ エネルギー量子」** という組合せが、第25章で「電磁場の量子化」として整理し直される。</span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>**観測との対応**：観測される黒体スペクトル ― CMB の 2.725 K の完璧な黒体形、太陽の $T \simeq 5800$ K の連続光、降着円盤の多温度合成、ダストの $30$ K 修正黒体 ― これらすべてが、上の表のすべての物理（電磁気・量子・統計）の**同時の結果**であることが、本章までの逆引きで明らかになった。**観測スペクトルの一本の曲線**から、現代物理学の主要分野が逆向きに再構成された。これが本書の方法論の到達点である。</span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a>**使えるようになった道具**（§14.1〜14.6）：</span>
-<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>空洞内の電磁定在波を境界条件のもとで数え上げる方法（k 空間の格子）</span>
-<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>モード密度 $g(\nu) = 8\pi\nu^2/c^3$ ― 第8〜10章で借用していた式が完全に説明された</span>
-<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>プランク分布の**すべての因子**が、観測から逆向きに既知の物理（電磁気＋統計力学＋量子論）で説明されたという事実</span>
-<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>中心地図プランク関数を「観測の言葉」と「物理の言葉」のあいだの橋として完全に理解する</span>
-<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-cavity-modes-summary .unnumbered}</span></span>
-<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
-<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る・第I〜V部の総まとめ**</span>
-<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a>本章で、プランク分布の前因子 $2h\nu^3/c^2$ の最後のピース ― モード密度 $\nu^2$ ― が逆引きされた。これで中心地図プランク分布の**すべての因子**が、観測から逆向きに既知の物理で説明された。</span>
-<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a>第I部で「観測される黒体スペクトル」として現象を確認し、第II部で放射場の記述を整え、第III部で熱平衡と Bose 統計から指数関数因子を、第IV部でエネルギー量子化から $h\nu$ を、第V部で電磁モード密度から $\nu^2/c^3$ を導出した。観測の一本の曲線から、現代物理学の主要分野が逆向きに再構成されたことになる。</span>
-<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a>**次部以降**：これで第I〜V部の「連続スペクトル（黒体放射）の逆引き」は完結する。</span>
-<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**第VI部** では、現実の天体でこの理想からどうずれるかを扱う</span>
-<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**第VII部** では、もう一つの主柱**線スペクトル**の逆引きを展開する</span>
-<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**第VIII部** では、QED で連続と線の両方の地図を統一する</span>
-<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-cavity-modes-exercises .unnumbered}</span></span>
-<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</span>
-<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 14-1　定在波と境界条件からモード密度 8πν²/c³ {#ex-14-1 .unnumbered}</span></span>
-<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆☆ </span><span class="co">] [tag:導出補完]</span></span>
-<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a>§14.1〜14.4 の数え上げを通しで再現する。辺長 $L$ の完全導体立方体。定在波 $E_x\propto\cos(k_xx)\sin(k_yy)\sin(k_zz)$ など。</span>
-<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>境界条件 $E_\parallel=0$ から許される波数が $k_i=n_i\pi/L$（$n_i=1,2,\dots$）になることを示せ。</span>
-<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$k$ 空間の格子点密度 $V/\pi^3$、第一象限（1/8 球）、偏光2を使い、$|\mathbf k|&lt;k$ のモード数 $N(&lt;k)=\dfrac{Vk^3}{3\pi^2}$ を導け。</span>
-<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>分散関係 $k=2\pi\nu/c$ を代入し $N(&lt;\nu)=\dfrac{8\pi V\nu^3}{3c^3}$、微分して $g(\nu)=\dfrac{1}{V}\dfrac{dN}{d\nu}=\dfrac{8\pi\nu^2}{c^3}$ を導け。</span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a><span class="fu">## 14.6 空洞放射からの「展望」 ― 第VI〜VIII部への橋 {#sec-cavity-modes-bridge}</span></span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3-B4</span><span class="co">]</span></span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>第I〜V部で確立した中心地図プランク分布を出発点として、本書は次の三方向に進む。</span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>**第VI部（現実の宇宙へ戻る）**：プランク分布は理想的な完全熱平衡の式。現実の天体スペクトルがどう・なぜずれるかを扱う。修正黒体（ダスト）、灰色大気近似、多温度成分、コンプトン化、非熱的放射の混入 ― 観測スペクトルの解読に必要なすべての「ずれ」の物理。</span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>**第VII部（線スペクトル）**：本書のもう一つの主柱。観測される線スペクトルの逆引き ― 原子物理、線形成、線形、観測応用 ― を、プランク分布と平行な構造で展開する。Einstein 係数（第11章）が二つの地図を結ぶ要として再登場する。</span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>**第VIII部（QED の見通し）**：本章で行った「モード密度 × 量子振動子」を本格的に再定式化する。各電磁モードが**量子化された調和振動子**であり、励起準位が光子数。これにより本書の二つの中心地図（プランク関数と水素線吸収係数）が、同じ電磁場–物質相互作用の二側面として統合される。本章で借用していた **「ν² モード密度 × $h\nu$ エネルギー量子」** という組合せが、第25章で「電磁場の量子化」として整理し直される。</span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>**使えるようになった道具**（§14.1〜14.6）：</span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>空洞内の電磁定在波を境界条件のもとで数え上げる方法（k 空間の格子）</span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>モード密度 $g(\nu) = 8\pi\nu^2/c^3$ ― 第8〜10章で借用していた式が完全に説明された</span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>プランク分布の**すべての因子**が、観測から逆向きに既知の物理（電磁気＋統計力学＋量子論）で説明されたという事実</span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>中心地図プランク関数を「観測の言葉」と「物理の言葉」のあいだの橋として完全に理解する</span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-cavity-modes-summary .unnumbered}</span></span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る・第I〜V部の総まとめ**</span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>本章で、プランク分布の前因子 $2h\nu^3/c^2$ の最後のピース ― モード密度 $\nu^2$ ― が逆引きされた。これで中心地図プランク分布の**すべての因子**が、観測から逆向きに既知の物理で説明された。</span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a>第I部で「観測される黒体スペクトル」として現象を確認し、第II部で放射場の記述を整え、第III部で熱平衡と Bose 統計から指数関数因子を、第IV部でエネルギー量子化から $h\nu$ を、第V部で電磁モード密度から $\nu^2/c^3$ を導出した。観測の一本の曲線から、現代物理学の主要分野が逆向きに再構成されたことになる。</span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a>**次部以降**：これで第I〜V部の「連続スペクトル（黒体放射）の逆引き」は完結する。</span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**第VI部** では、現実の天体でこの理想からどうずれるかを扱う</span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**第VII部** では、もう一つの主柱**線スペクトル**の逆引きを展開する</span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**第VIII部** では、QED で連続と線の両方の地図を統一する</span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-cavity-modes-exercises .unnumbered}</span></span>
 <span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§14.1 定在波</span><span class="co">](#sec-cavity-modes-standing-waves)</span>、<span class="co">[</span><span class="ot">§14.4 モード密度</span><span class="co">](#sec-cavity-modes-frequency)</span>／同じ式を第9章側から導いたのが<span class="co">[</span><span class="ot">演習 9-1</span><span class="co">](../part4/09-classical-failure.qmd#ex-9-1)</span>。</span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</span>
 <span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 14-1）</span></span>
-<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a>**(1)** 壁 $y=0,L$ と $z=0,L$ で $E_x$ の接線成分がゼロ。$E_x\propto\sin(k_yy)\sin(k_zz)$ が $y,z=0$ で自動的にゼロ、$y,z=L$ でゼロには $\sin(k_iL)=0\Rightarrow k_iL=n_i\pi$。よって $k_i=n_i\pi/L$（$n_i=1,2,\dots$、各軸独立）。</span>
-<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a>**(2)** 格子間隔 $\pi/L$ ゆえ $k$ 空間の格子点密度 $1/(\pi/L)^3=V/\pi^3$（$V=L^3$）。$n_i&gt;0$ なので半径 $k$ の球の第一象限（1/8）のみ：$\frac18\cdot\frac{4\pi k^3}{3}$。偏光2を掛けて</span>
-<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a>N(&lt;k)=2\cdot\frac{V}{\pi^3}\cdot\frac18\cdot\frac{4\pi k^3}{3}=\frac{Vk^3}{3\pi^2}.</span>
-<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a>**(3)** $k=2\pi\nu/c$：</span>
-<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a>N(&lt;\nu)=\frac{V}{3\pi^2}\left(\frac{2\pi\nu}{c}\right)^3=\frac{8\pi V\nu^3}{3c^3},\qquad g(\nu)=\frac1V\frac{dN}{d\nu}=\frac{8\pi\nu^2}{c^3}.</span>
-<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 14-1　定在波と境界条件からモード密度 8πν²/c³ {#ex-14-1 .unnumbered}</span></span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a>§14.1〜14.4 の数え上げを通しで再現する。辺長 $L$ の完全導体立方体。定在波 $E_x\propto\cos(k_xx)\sin(k_yy)\sin(k_zz)$ など。</span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>境界条件 $E_\parallel=0$ から許される波数が $k_i=n_i\pi/L$（$n_i=1,2,\dots$）になることを示せ。</span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$k$ 空間の格子点密度 $V/\pi^3$、第一象限（1/8 球）、偏光2を使い、$|\mathbf k|&lt;k$ のモード数 $N(&lt;k)=\dfrac{Vk^3}{3\pi^2}$ を導け。</span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>分散関係 $k=2\pi\nu/c$ を代入し $N(&lt;\nu)=\dfrac{8\pi V\nu^3}{3c^3}$、微分して $g(\nu)=\dfrac{1}{V}\dfrac{dN}{d\nu}=\dfrac{8\pi\nu^2}{c^3}$ を導け。</span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§14.1 定在波</span><span class="co">](#sec-cavity-modes-standing-waves)</span>、<span class="co">[</span><span class="ot">§14.4 モード密度</span><span class="co">](#sec-cavity-modes-frequency)</span>／同じ式を第9章側から導いたのが<span class="co">[</span><span class="ot">演習 9-1</span><span class="co">](../part4/09-classical-failure.qmd#ex-9-1)</span>。</span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 14-1）</span></span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>**(1)** 壁 $y=0,L$ と $z=0,L$ で $E_x$ の接線成分がゼロ。$E_x\propto\sin(k_yy)\sin(k_zz)$ が $y,z=0$ で自動的にゼロ、$y,z=L$ でゼロには $\sin(k_iL)=0\Rightarrow k_iL=n_i\pi$。よって $k_i=n_i\pi/L$（$n_i=1,2,\dots$、各軸独立）。</span>
 <span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>**答え**：$k_i=n_i\pi/L$、$N(&lt;k)=Vk^3/3\pi^2$、$g(\nu)=8\pi\nu^2/c^3$。第9章の数え上げ（演習 9-1）と一致。</span>
-<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 14-2　なぜ「1/8 倍」か ― ±k の同一視 {#ex-14-2 .unnumbered}</span></span>
-<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
-<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a>§14.2 の問いを掘る。全球 $4\pi k^3/3$ をそのまま使うと過大評価になる。</span>
-<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>なぜ許される $\mathbf k$ は第一象限（$n_x,n_y,n_z&gt;0$）だけなのか。$\mathbf k$ と $-\mathbf k$ が同じ定在波を表すこと（$\cos(k_xx)=\cos(-k_xx)$）を使って説明せよ。</span>
-<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>周期境界条件（壁でなく端をつなぐ）にすると格子間隔が $2\pi/L$、$\mathbf k$ は正負両方をとる。この場合も同じ $g(\nu)$ になることを、両効果（間隔 $2$ 倍＝密度 $1/8$、全球を使う＝$\times8$）が打ち消すことから示せ。</span>
-<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>「壁にどう接続するか」が最終結果に効かないことが、第3章の黒体放射の普遍性とどう整合するか述べよ。</span>
-<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§14.2 波数の数え上げ</span><span class="co">](#sec-cavity-modes-k-counting)</span>／普遍性は<span class="co">[</span><span class="ot">§3.3</span><span class="co">](../part1/03-universality.qmd#sec-universality-cavity)</span>（<span class="co">[</span><span class="ot">演習 3-1</span><span class="co">](../part1/03-universality.qmd#ex-3-1)</span>）。</span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>**(2)** 格子間隔 $\pi/L$ ゆえ $k$ 空間の格子点密度 $1/(\pi/L)^3=V/\pi^3$（$V=L^3$）。$n_i&gt;0$ なので半径 $k$ の球の第一象限（1/8）のみ：$\frac18\cdot\frac{4\pi k^3}{3}$。偏光2を掛けて</span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a>N(&lt;k)=2\cdot\frac{V}{\pi^3}\cdot\frac18\cdot\frac{4\pi k^3}{3}=\frac{Vk^3}{3\pi^2}.</span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a>**(3)** $k=2\pi\nu/c$：</span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a>N(&lt;\nu)=\frac{V}{3\pi^2}\left(\frac{2\pi\nu}{c}\right)^3=\frac{8\pi V\nu^3}{3c^3},\qquad g(\nu)=\frac1V\frac{dN}{d\nu}=\frac{8\pi\nu^2}{c^3}.</span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a>**答え**：$k_i=n_i\pi/L$、$N(&lt;k)=Vk^3/3\pi^2$、$g(\nu)=8\pi\nu^2/c^3$。第9章の数え上げ（演習 9-1）と一致。</span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 14-2）</span></span>
-<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a>**(1)** 定在波は $\cos(k_xx)$ や $\sin(k_xx)$ の形で、$k_x$ と $-k_x$ は同じ関数（偶／奇の符号差は振幅に吸収）を与え、物理的に同一のモード。$n_i$ を正負両方数えると同じモードを重複して数えることになる。独立なモードは $n_i&gt;0$ の第一象限のみ。よって全球の 1/8。</span>
-<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a>**(2)** 周期境界条件では許される $k_i=2\pi n_i/L$（$n_i=0,\pm1,\pm2,\dots$）で格子間隔 $2\pi/L$（壁の場合の2倍）。格子点密度は $(L/2\pi)^3=V/8\pi^3$（壁の $V/\pi^3$ の 1/8）。一方 $\mathbf k$ は正負両方とるので全球 $4\pi k^3/3$（1/8 球の8倍）を使う。密度の $1/8$ と全球の $\times8$ が打ち消し、$N(&lt;k)=2\cdot\frac{V}{8\pi^3}\cdot\frac{4\pi k^3}{3}=\frac{Vk^3}{3\pi^2}$ と同じ。</span>
-<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a>**(3)** 第3章では「空洞放射のスペクトルは壁の材質によらず一意」（熱力学第二法則）と示した。境界条件の選び方（完全導体壁 vs 周期境界）が $g(\nu)$ を変えないのは、まさにこの普遍性の現れ。計算の便宜でどちらを選んでもよく、これは普遍性を逆手にとった計算戦略。</span>
-<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a>**答え**：$\pm\mathbf k$ が同一モードゆえ 1/8 球。周期境界では密度 1/8・全球 ×8 が打ち消し同じ $g(\nu)$。境界の選び方に依らないのは黒体の普遍性の現れ。</span>
-<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 14-2　なぜ「1/8 倍」か ― ±k の同一視 {#ex-14-2 .unnumbered}</span></span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a>§14.2 の問いを掘る。全球 $4\pi k^3/3$ をそのまま使うと過大評価になる。</span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>なぜ許される $\mathbf k$ は第一象限（$n_x,n_y,n_z&gt;0$）だけなのか。$\mathbf k$ と $-\mathbf k$ が同じ定在波を表すこと（$\cos(k_xx)=\cos(-k_xx)$）を使って説明せよ。</span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>周期境界条件（壁でなく端をつなぐ）にすると格子間隔が $2\pi/L$、$\mathbf k$ は正負両方をとる。この場合も同じ $g(\nu)$ になることを、両効果（間隔 $2$ 倍＝密度 $1/8$、全球を使う＝$\times8$）が打ち消すことから示せ。</span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>「壁にどう接続するか」が最終結果に効かないことが、第3章の黒体放射の普遍性とどう整合するか述べよ。</span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§14.2 波数の数え上げ</span><span class="co">](#sec-cavity-modes-k-counting)</span>／普遍性は<span class="co">[</span><span class="ot">§3.3</span><span class="co">](../part1/03-universality.qmd#sec-universality-cavity)</span>（<span class="co">[</span><span class="ot">演習 3-1</span><span class="co">](../part1/03-universality.qmd#ex-3-1)</span>）。</span>
 <span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 14-3　モード密度の次元依存性（d 次元） {#ex-14-3 .unnumbered}</span></span>
-<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
-<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>§14.4 は3次元で $g(\nu)\propto\nu^2$ になる理由が幾何にあると述べた。次元を一般化する。</span>
-<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$d$ 次元で $k$ 空間の球の体積 $\propto k^d$ から、$|\mathbf k|&lt;k$ のモード数 $N(&lt;k)\propto k^d$、よって $g(k)\propto k^{d-1}$、$g(\nu)\propto\nu^{d-1}/c^d$ を示せ。</span>
-<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>3次元・2次元・1次元でモード密度の振動数依存を書き、それぞれ $\nu^2$・$\nu$・定数になることを確かめよ。</span>
-<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>もし宇宙が2次元なら、プランク分布のエネルギー密度 $u_\nu=g(\nu)h\nu\bar n$ は $\nu$ の何乗の前因子を持つか。「観測される黒体スペクトルの形に3次元という情報が組み込まれている」という主張を説明せよ。</span>
-<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§14.4 モード密度の正体</span><span class="co">](#sec-cavity-modes-frequency)</span>／モード密度の幾何は<span class="co">[</span><span class="ot">演習 9-1</span><span class="co">](../part4/09-classical-failure.qmd#ex-9-1)</span>。</span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 14-2）</span></span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a>**(1)** 定在波は $\cos(k_xx)$ や $\sin(k_xx)$ の形で、$k_x$ と $-k_x$ は同じ関数（偶／奇の符号差は振幅に吸収）を与え、物理的に同一のモード。$n_i$ を正負両方数えると同じモードを重複して数えることになる。独立なモードは $n_i&gt;0$ の第一象限のみ。よって全球の 1/8。</span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a>**(2)** 周期境界条件では許される $k_i=2\pi n_i/L$（$n_i=0,\pm1,\pm2,\dots$）で格子間隔 $2\pi/L$（壁の場合の2倍）。格子点密度は $(L/2\pi)^3=V/8\pi^3$（壁の $V/\pi^3$ の 1/8）。一方 $\mathbf k$ は正負両方とるので全球 $4\pi k^3/3$（1/8 球の8倍）を使う。密度の $1/8$ と全球の $\times8$ が打ち消し、$N(&lt;k)=2\cdot\frac{V}{8\pi^3}\cdot\frac{4\pi k^3}{3}=\frac{Vk^3}{3\pi^2}$ と同じ。</span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a>**(3)** 第3章では「空洞放射のスペクトルは壁の材質によらず一意」（熱力学第二法則）と示した。境界条件の選び方（完全導体壁 vs 周期境界）が $g(\nu)$ を変えないのは、まさにこの普遍性の現れ。計算の便宜でどちらを選んでもよく、これは普遍性を逆手にとった計算戦略。</span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a>**答え**：$\pm\mathbf k$ が同一モードゆえ 1/8 球。周期境界では密度 1/8・全球 ×8 が打ち消し同じ $g(\nu)$。境界の選び方に依らないのは黒体の普遍性の現れ。</span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 14-3）</span></span>
-<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a>**(1)** $d$ 次元の球の体積は $\propto k^d$。格子密度 $\propto V/\pi^d$、象限因子・偏光因子は定数なので $N(&lt;k)\propto Vk^d$。微分して $dN/dk\propto k^{d-1}$。$k=2\pi\nu/c$ より $g(\nu)\propto\nu^{d-1}/c^d$。</span>
-<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a>**(2)** 3次元：$g\propto\nu^2/c^3$。2次元：$g\propto\nu/c^2$。1次元：$g\propto\nu^0=$ 定数（$\propto1/c$）。これは「$k$ 空間の球殻 $k^{d-1}$」の幾何そのもの。</span>
-<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a>**(3)** 2次元では $u_\nu=g(\nu)h\nu\bar n\propto\nu\cdot h\nu/(e^{h\nu/kT}-1)=h\nu^2/(e^{h\nu/kT}-1)$、前因子は $\nu^2$（3次元の $\nu^3$ ではない）。スペクトル全体の形（低振動数べき・ピーク位置・全エネルギーの温度依存）が次元で変わる。逆に言えば、観測される黒体スペクトルが $\nu^3$ 前因子を持つこと自体が、我々が3次元空間に住む証拠を含んでいる。</span>
-<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a>**答え**：$g(\nu)\propto\nu^{d-1}/c^d$。3D→$\nu^2$、2D→$\nu$、1D→定数。2次元なら $u_\nu$ 前因子は $\nu^2$。スペクトル形が空間次元を反映。</span>
-<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 14-3　モード密度の次元依存性（d 次元） {#ex-14-3 .unnumbered}</span></span>
+<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a>§14.4 は3次元で $g(\nu)\propto\nu^2$ になる理由が幾何にあると述べた。次元を一般化する。</span>
+<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$d$ 次元で $k$ 空間の球の体積 $\propto k^d$ から、$|\mathbf k|&lt;k$ のモード数 $N(&lt;k)\propto k^d$、よって $g(k)\propto k^{d-1}$、$g(\nu)\propto\nu^{d-1}/c^d$ を示せ。</span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>3次元・2次元・1次元でモード密度の振動数依存を書き、それぞれ $\nu^2$・$\nu$・定数になることを確かめよ。</span>
+<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>もし宇宙が2次元なら、プランク分布のエネルギー密度 $u_\nu=g(\nu)h\nu\bar n$ は $\nu$ の何乗の前因子を持つか。「観測される黒体スペクトルの形に3次元という情報が組み込まれている」という主張を説明せよ。</span>
+<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§14.4 モード密度の正体</span><span class="co">](#sec-cavity-modes-frequency)</span>／モード密度の幾何は<span class="co">[</span><span class="ot">演習 9-1</span><span class="co">](../part4/09-classical-failure.qmd#ex-9-1)</span>。</span>
 <span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 14-4　プランク分布の全因子の合流 ― 第I〜V部の総まとめ {#ex-14-4 .unnumbered}</span></span>
-<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆☆ </span><span class="co">] [tag:導出補完]</span></span>
-<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>§14.5 の総まとめを自分で組み立てる。モード密度 $g(\nu)=8\pi\nu^2/c^3$、各モードの光子エネルギー $h\nu$、平均光子数 $\bar n=1/(e^{h\nu/kT}-1)$。</span>
-<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>エネルギー密度 $u_\nu=g(\nu)\cdot h\nu\cdot\bar n$ を組み立て、$u_\nu=\dfrac{8\pi h\nu^3}{c^3}\dfrac{1}{e^{h\nu/kT}-1}$ を示せ。</span>
-<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>等方場の関係 $B_\nu=\dfrac{c}{4\pi}u_\nu$（第4章）を使い、$B_\nu=\dfrac{2h\nu^3}{c^2}\dfrac{1}{e^{h\nu/kT}-1}$ を導け。</span>
-<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>前因子 $2h\nu^3/c^2$ と指数因子 $1/(e^{h\nu/kT}-1)$ の各部品（2、$\nu^2$、$1/c^3$、$h\nu$、Bose＋$\mu=0$）が、それぞれどの章・どの物理に由来するかを一覧にせよ。</span>
-<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§14.5 前因子への合流</span><span class="co">](#sec-cavity-modes-bnu-derivation)</span>／占有因子は<span class="co">[</span><span class="ot">演習 8-2</span><span class="co">](../part3/08-photon-statistics.qmd#ex-8-2)</span>・<span class="co">[</span><span class="ot">8-3</span><span class="co">](../part3/08-photon-statistics.qmd#ex-8-3)</span>、$h\nu$ 量子化は<span class="co">[</span><span class="ot">演習 10-1</span><span class="co">](../part4/10-planck-quantum.qmd#ex-10-1)</span>、$B_\nu=\frac{c}{4\pi}u_\nu$ は<span class="co">[</span><span class="ot">演習 4-1</span><span class="co">](../part2/04-radiation-field.qmd#ex-4-1)</span>。</span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 14-3）</span></span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a>**(1)** $d$ 次元の球の体積は $\propto k^d$。格子密度 $\propto V/\pi^d$、象限因子・偏光因子は定数なので $N(&lt;k)\propto Vk^d$。微分して $dN/dk\propto k^{d-1}$。$k=2\pi\nu/c$ より $g(\nu)\propto\nu^{d-1}/c^d$。</span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a>**(2)** 3次元：$g\propto\nu^2/c^3$。2次元：$g\propto\nu/c^2$。1次元：$g\propto\nu^0=$ 定数（$\propto1/c$）。これは「$k$ 空間の球殻 $k^{d-1}$」の幾何そのもの。</span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a>**(3)** 2次元では $u_\nu=g(\nu)h\nu\bar n\propto\nu\cdot h\nu/(e^{h\nu/kT}-1)=h\nu^2/(e^{h\nu/kT}-1)$、前因子は $\nu^2$（3次元の $\nu^3$ ではない）。スペクトル全体の形（低振動数べき・ピーク位置・全エネルギーの温度依存）が次元で変わる。逆に言えば、観測される黒体スペクトルが $\nu^3$ 前因子を持つこと自体が、我々が3次元空間に住む証拠を含んでいる。</span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a>**答え**：$g(\nu)\propto\nu^{d-1}/c^d$。3D→$\nu^2$、2D→$\nu$、1D→定数。2次元なら $u_\nu$ 前因子は $\nu^2$。スペクトル形が空間次元を反映。</span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 14-4）</span></span>
-<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a>**(1)** $u_\nu=g(\nu)\cdot h\nu\cdot\bar n=\dfrac{8\pi\nu^2}{c^3}\cdot h\nu\cdot\dfrac{1}{e^{h\nu/kT}-1}=\dfrac{8\pi h\nu^3}{c^3}\dfrac{1}{e^{h\nu/kT}-1}$。</span>
-<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>**(2)** $B_\nu=\dfrac{c}{4\pi}u_\nu=\dfrac{c}{4\pi}\cdot\dfrac{8\pi h\nu^3}{c^3}\dfrac{1}{e^{h\nu/kT}-1}=\dfrac{2h\nu^3}{c^2}\dfrac{1}{e^{h\nu/kT}-1}$。（$\frac{c}{4\pi}\cdot8\pi=2c$、$/c^3=1/c^2$。）</span>
-<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a>**(3)** 各因子の起源：</span>
-<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 因子 <span class="pp">|</span> 起源 <span class="pp">|</span> 章/演習 <span class="pp">|</span></span>
-<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
-<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $1/(e^{h\nu/kT}-1)$ <span class="pp">|</span> 光子の Bose 統計＋$\mu=0$ <span class="pp">|</span> 第8章（8-2,8-3） <span class="pp">|</span></span>
-<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $h\nu$（指数中・前因子中） <span class="pp">|</span> エネルギー量子化 <span class="pp">|</span> 第10章（10-1） <span class="pp">|</span></span>
-<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $\nu^2$ <span class="pp">|</span> 3次元空洞のモード密度 <span class="pp">|</span> 第14章（14-1） <span class="pp">|</span></span>
-<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $1/c^3$ <span class="pp">|</span> 分散関係 $k=2\pi\nu/c$ <span class="pp">|</span> 第13章（13-2） <span class="pp">|</span></span>
-<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $2$ <span class="pp">|</span> 偏光自由度（横波） <span class="pp">|</span> 第13章（13-2,13-4） <span class="pp">|</span></span>
-<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 全体 $1/c^2$ <span class="pp">|</span> $1/c^3\times c$（$u_\nu\to B_\nu$ 変換） <span class="pp">|</span> 第14章/第4章（4-1） <span class="pp">|</span></span>
-<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a>観測される一本の黒体曲線から、統計力学・量子論・電磁気学が逆向きに再構成された。</span>
-<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a>**答え**：$u_\nu=\frac{8\pi h\nu^3}{c^3}\frac{1}{e^{h\nu/kT}-1}$、$B_\nu=\frac{2h\nu^3}{c^2}\frac{1}{e^{h\nu/kT}-1}$。全因子が第8・10・13・14章の物理に分解される。</span>
-<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-cavity-modes-further .unnumbered}</span></span>
-<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Reif, *Fundamentals of Statistical and Thermal Physics* (McGraw-Hill, 1965) — 空洞放射と状態数のクラシック</span>
-<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pathria &amp; Beale, *Statistical Mechanics* (Academic Press, 3rd ed., 2011) — モード密度の体系的扱い</span>
-<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mandl, *Statistical Physics* (Wiley, 2nd ed., 1988) — 学部向け、空洞モードと黒体放射の標準的扱い</span>
-<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Loudon, *The Quantum Theory of Light* (Oxford, 3rd ed., 2000) — 第1〜2章で電磁モードと光子の対応を体系的に</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 14-4　プランク分布の全因子の合流 ― 第I〜V部の総まとめ {#ex-14-4 .unnumbered}</span></span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a>§14.5 の総まとめを自分で組み立てる。モード密度 $g(\nu)=8\pi\nu^2/c^3$、各モードの光子エネルギー $h\nu$、平均光子数 $\bar n=1/(e^{h\nu/kT}-1)$。</span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>エネルギー密度 $u_\nu=g(\nu)\cdot h\nu\cdot\bar n$ を組み立て、$u_\nu=\dfrac{8\pi h\nu^3}{c^3}\dfrac{1}{e^{h\nu/kT}-1}$ を示せ。</span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>等方場の関係 $B_\nu=\dfrac{c}{4\pi}u_\nu$（第4章）を使い、$B_\nu=\dfrac{2h\nu^3}{c^2}\dfrac{1}{e^{h\nu/kT}-1}$ を導け。</span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>前因子 $2h\nu^3/c^2$ と指数因子 $1/(e^{h\nu/kT}-1)$ の各部品（2、$\nu^2$、$1/c^3$、$h\nu$、Bose＋$\mu=0$）が、それぞれどの章・どの物理に由来するかを一覧にせよ。</span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§14.5 前因子への合流</span><span class="co">](#sec-cavity-modes-bnu-derivation)</span>／占有因子は<span class="co">[</span><span class="ot">演習 8-2</span><span class="co">](../part3/08-photon-statistics.qmd#ex-8-2)</span>・<span class="co">[</span><span class="ot">8-3</span><span class="co">](../part3/08-photon-statistics.qmd#ex-8-3)</span>、$h\nu$ 量子化は<span class="co">[</span><span class="ot">演習 10-1</span><span class="co">](../part4/10-planck-quantum.qmd#ex-10-1)</span>、$B_\nu=\frac{c}{4\pi}u_\nu$ は<span class="co">[</span><span class="ot">演習 4-1</span><span class="co">](../part2/04-radiation-field.qmd#ex-4-1)</span>。</span>
+<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 14-4）</span></span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a>**(1)** $u_\nu=g(\nu)\cdot h\nu\cdot\bar n=\dfrac{8\pi\nu^2}{c^3}\cdot h\nu\cdot\dfrac{1}{e^{h\nu/kT}-1}=\dfrac{8\pi h\nu^3}{c^3}\dfrac{1}{e^{h\nu/kT}-1}$。</span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a>**(2)** $B_\nu=\dfrac{c}{4\pi}u_\nu=\dfrac{c}{4\pi}\cdot\dfrac{8\pi h\nu^3}{c^3}\dfrac{1}{e^{h\nu/kT}-1}=\dfrac{2h\nu^3}{c^2}\dfrac{1}{e^{h\nu/kT}-1}$。（$\frac{c}{4\pi}\cdot8\pi=2c$、$/c^3=1/c^2$。）</span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a>**(3)** 各因子の起源：</span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 因子 <span class="pp">|</span> 起源 <span class="pp">|</span> 章/演習 <span class="pp">|</span></span>
+<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $1/(e^{h\nu/kT}-1)$ <span class="pp">|</span> 光子の Bose 統計＋$\mu=0$ <span class="pp">|</span> 第8章（8-2,8-3） <span class="pp">|</span></span>
+<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $h\nu$（指数中・前因子中） <span class="pp">|</span> エネルギー量子化 <span class="pp">|</span> 第10章（10-1） <span class="pp">|</span></span>
+<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $\nu^2$ <span class="pp">|</span> 3次元空洞のモード密度 <span class="pp">|</span> 第14章（14-1） <span class="pp">|</span></span>
+<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $1/c^3$ <span class="pp">|</span> 分散関係 $k=2\pi\nu/c$ <span class="pp">|</span> 第13章（13-2） <span class="pp">|</span></span>
+<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $2$ <span class="pp">|</span> 偏光自由度（横波） <span class="pp">|</span> 第13章（13-2,13-4） <span class="pp">|</span></span>
+<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 全体 $1/c^2$ <span class="pp">|</span> $1/c^3\times c$（$u_\nu\to B_\nu$ 変換） <span class="pp">|</span> 第14章/第4章（4-1） <span class="pp">|</span></span>
+<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a>観測される一本の黒体曲線から、統計力学・量子論・電磁気学が逆向きに再構成された。</span>
+<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a>**答え**：$u_\nu=\frac{8\pi h\nu^3}{c^3}\frac{1}{e^{h\nu/kT}-1}$、$B_\nu=\frac{2h\nu^3}{c^2}\frac{1}{e^{h\nu/kT}-1}$。全因子が第8・10・13・14章の物理に分解される。</span>
+<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-cavity-modes-further .unnumbered}</span></span>
+<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Reif, *Fundamentals of Statistical and Thermal Physics* (McGraw-Hill, 1965) — 空洞放射と状態数のクラシック</span>
+<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pathria &amp; Beale, *Statistical Mechanics* (Academic Press, 3rd ed., 2011) — モード密度の体系的扱い</span>
+<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mandl, *Statistical Physics* (Wiley, 2nd ed., 1988) — 学部向け、空洞モードと黒体放射の標準的扱い</span>
+<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Loudon, *The Quantum Theory of Light* (Oxford, 3rd ed., 2000) — 第1〜2章で電磁モードと光子の対応を体系的に</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

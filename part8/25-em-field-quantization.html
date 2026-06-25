@@ -414,7 +414,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../part7/23-line-shape.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第23章　線形（line shape）の物理</span></a>
+  <a href="../part7/23-line-shape.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第23章　線輪郭（line profile）の物理</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -663,7 +663,7 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 </tr>
 <tr class="odd">
 <td><span class="math inline">\phi(\nu - \nu_0)</span></td>
-<td>線形（自然・Doppler・Voigt）</td>
+<td>線輪郭（自然・Doppler・Voigt）</td>
 <td>第23章</td>
 </tr>
 <tr class="even">
@@ -673,6 +673,7 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 </tr>
 </tbody>
 </table>
+<p><strong>適用範囲（重要）</strong>：この式の前因子 <span class="math inline">\pi e^2/m_e c</span> と振動子強度 <span class="math inline">f_{lu}</span> は、古典 Lorentz 振動子に対応する <strong>電気双極子（E1）許容線</strong> に対するものである。21 cm 線（基底状態超微細構造の <strong>磁気双極子 M1 遷移</strong>）や <strong>禁制線（E2・M1 など）</strong> では、この前因子・<span class="math inline">f_{lu}</span> をそのまま使えない。これらの線では、測定された自発放出率 <span class="math inline">A_{ul}</span> から Einstein 関係を介して有効遷移強度（<span class="math inline">B_{lu}</span>）に読み替える（<a href="26-qed-minimum.html#eq-line-absorption" class="quarto-xref">式&nbsp;<span>29.3</span></a> の構造は保ったまま、強度因子だけを差し替える）。</p>
 </div>
 <div class="callout callout-style-simple callout-tip no-icon">
 <div class="callout-body d-flex">
@@ -770,7 +771,7 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 </tr>
 </tbody>
 </table>
-<p>これらが <strong>同じ枠組み</strong> から出るためには、<strong>電磁場そのものを量子化</strong> する必要がある。これが第VIII部の主題。</p>
+<p>これらが <strong>同じ枠組み</strong> から出るためには、<strong>電磁場そのものを量子化</strong> する必要がある。これが第VIII部の主題である。</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -781,7 +782,7 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>方針</strong>：本章では、量子化の <strong>厳密な手続き</strong>（正準量子化、生成消滅演算子の代数、Fock 空間構成）は最小限に留め、<strong>観測スペクトルとの対応関係</strong> に注力する。厳密な構成は Loudon、Mandel &amp; Wolf、Peskin &amp; Schroeder 等の専門書を参照</p>
+<p><strong>方針</strong>：本章では、量子化の <strong>厳密な手続き</strong>（正準量子化、生成消滅演算子の代数、Fock 空間構成）は最小限に留め、<strong>観測スペクトルとの対応関係</strong> に注力する。厳密な構成は Loudon、Mandel &amp; Wolf、Peskin &amp; Schroeder 等の専門書を参照してほしい。</p>
 </div>
 </div>
 </section>
@@ -846,7 +847,7 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 <li>第8章「光子の Bose 統計」 → 「各モードの調和振動子の熱状態」</li>
 <li>第14章「モード密度 <span class="math inline">g(\nu)</span>」 → 「調和振動子の振動数ごとの個数」</li>
 </ul>
-<p>第I〜VII部で別々の道具と思っていたものが、すべて <strong>「各モード ＝ 調和振動子」</strong> の一行で接続される。これが第VIII部の <strong>最大の効用</strong></p>
+<p>第I〜VII部で別々の道具と思っていたものが、すべて <strong>「各モード ＝ 調和振動子」</strong> の一行で接続される。これが第VIII部の <strong>最大の効用</strong> である。</p>
 </div>
 </div>
 </section>
@@ -864,7 +865,7 @@ E_0 = \sum_{\mathbf{k}, \sigma} \frac{1}{2} \hbar \omega_\mathbf{k}
 <li><strong>自発放出</strong>（<strong>spontaneous emission</strong>, 第11章 §11.2）
 <ul>
 <li>古典論では「ゼロ放射場 → 放出ゼロ」のはず</li>
-<li>量子論では真空揺らぎが励起原子に「ちょっかい」をかけ、放出を誘起</li>
+<li>量子論では真空揺らぎとの相互作用が遷移を誘起し、放出が生じる</li>
 <li><strong>次章 §26.2 で QED から <span class="math inline">A_{ul}</span> を導出</strong></li>
 </ul></li>
 <li><strong>線の自然幅</strong>（第23章 §23.1）
@@ -887,7 +888,7 @@ E_0 = \sum_{\mathbf{k}, \sigma} \frac{1}{2} \hbar \omega_\mathbf{k}
 <div class="callout-body-container">
 <p><strong>問い</strong>：「真空に揺らぎがある」と「真空は粒子で満ちている」は、同じことか違うことか？</p>
 <p><strong>短答</strong>：違う。真空状態 <span class="math inline">|0\rangle</span> は厳密に光子 0 個の状態。観測される「揺らぎ」は、<span class="math inline">\hat{a}</span> と <span class="math inline">\hat{a}^\dagger</span> の非可換性 <span class="math inline">[\hat{a}, \hat{a}^\dagger] = 1</span> から来る、<strong>電場や磁場の期待値の分散</strong> <span class="math inline">\langle (\Delta E)^2 \rangle \neq 0</span> である。</p>
-<p><strong>もう一歩</strong>：粒子描像 <span class="math inline">|n\rangle</span> と場の描像 <span class="math inline">\hat{E}, \hat{B}</span> は、ハイゼンベルクの不確定性関係で双対的に結ばれている。粒子数を定めると場の値が揺らぎ、場の値を定めると粒子数が揺らぐ</p>
+<p><strong>もう一歩</strong>：粒子描像 <span class="math inline">|n\rangle</span> と場の描像 <span class="math inline">\hat{E}, \hat{B}</span> は、ハイゼンベルクの不確定性関係で双対的に結ばれている。粒子数を定めると場の値が揺らぎ、場の値を定めると粒子数が揺らぐ。</p>
 </div>
 </div>
 </div>
@@ -901,7 +902,7 @@ E_0 = \sum_{\mathbf{k}, \sigma} \frac{1}{2} \hbar \omega_\mathbf{k}
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>対応（観測）</strong>：宇宙論との交差点 ― 真空のエネルギー密度を素直に評価すると、観測される <strong>暗黒エネルギー密度</strong> よりおよそ <span class="math inline">10^{120}</span> 倍も大きくなってしまう。これは <strong>宇宙定数問題</strong>（<strong>cosmological constant problem</strong>）と呼ばれ、現代物理学最大の未解決問題のひとつ。本書の射程は超えるが、第VIII部で扱った真空のエネルギーが宇宙論的観測と直接結びついている事実は、覚えておいて損はない</p>
+<p><strong>観測との対応</strong>：宇宙論との交差点 ― 真空のエネルギー密度を素直に評価すると、観測される <strong>暗黒エネルギー密度</strong> よりおよそ <span class="math inline">10^{120}</span> 倍も大きくなってしまう。これは <strong>宇宙定数問題</strong>（<strong>cosmological constant problem</strong>）と呼ばれ、現代物理学最大の未解決問題のひとつである。本書の射程は超えるが、第VIII部で扱った真空のエネルギーが宇宙論的観測とも接続する例として重要である。</p>
 </div>
 </div>
 </section>
@@ -970,7 +971,7 @@ B_\nu(T) = \frac{2h\nu^3}{c^2} \cdot \frac{1}{e^{h\nu/k_B T} - 1}
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>対応（観測）</strong>：第16章で見た CMB の完璧な黒体性は、宇宙が <strong>「電磁場の熱状態」を経験した</strong> ことの直接的観測。これが第I-VIII部全体の到達点 ― <strong>観測スペクトル → 電磁場の量子化された熱状態</strong> という逆引きが完成したことを意味する</p>
+<p><strong>観測との対応</strong>：第16章で見た CMB の完璧な黒体性は、宇宙が <strong>「電磁場の熱状態」を経験した</strong> ことの直接的観測である。これが第I-VIII部全体の到達点であり、<strong>観測スペクトル → 電磁場の量子化された熱状態</strong> という逆引きが完成したことを意味する。</p>
 </div>
 </div>
 </section>
@@ -979,7 +980,7 @@ B_\nu(T) = \frac{2h\nu^3}{c^2} \cdot \frac{1}{e^{h\nu/k_B T} - 1}
 <h2 class="anchored" data-anchor-id="sec-em-field-quantization-bridge">25.5 線スペクトルへの橋</h2>
 <p>[本文目安：M1]</p>
 <p>連続スペクトル側の地図は本章で「電磁場の熱状態」として完成した。線スペクトル側の地図はどうか？</p>
-<p>第VII部の中心地図 <span class="math inline">\alpha_\nu = (\pi e^2/m_e c) f_{lu} n_l \phi(\nu-\nu_0)</span> は、本章まででは原子物理（<span class="math inline">\nu_0, f_{lu}</span>）、占有数（<span class="math inline">n_l</span>）、線形（<span class="math inline">\phi</span>）の <strong>半古典的記述</strong> ― 物質を量子化したが電磁場は古典場として扱う ― にとどまっていた。</p>
+<p>第VII部の中心地図 <span class="math inline">\alpha_\nu = (\pi e^2/m_e c) f_{lu} n_l \phi(\nu-\nu_0)</span> は、本章まででは原子物理（<span class="math inline">\nu_0, f_{lu}</span>）、占有数（<span class="math inline">n_l</span>）、線輪郭（<span class="math inline">\phi</span>）の <strong>半古典的記述</strong> ― 物質を量子化したが電磁場は古典場として扱う ― にとどまっていた。</p>
 <p>第26章では、本章で導入した <strong>電磁場の量子化</strong> と物質側の量子化を <strong>同時に</strong> 扱うことで：</p>
 <ul>
 <li>自発放出率 <span class="math inline">A_{ul}</span> が真空揺らぎから自然に出る（<strong>Fermi の黄金律</strong>）</li>
@@ -1655,10 +1656,10 @@ B_\nu(T) = \frac{2h\nu^3}{c^2} \cdot \frac{1}{e^{h\nu/k_B T} - 1}
 <span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **光子の Bose 統計** <span class="pp">|</span> 第8章 <span class="pp">|</span> 古典場は数えられる粒子ではない <span class="pp">|</span></span>
 <span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **モードあたり光子数の Planck 分布** <span class="pp">|</span> 第8章 <span class="pp">|</span> 「モード = 振動子」の量子化が暗黙の前提 <span class="pp">|</span></span>
 <span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>これらが **同じ枠組み** から出るためには、**電磁場そのものを量子化** する必要がある。これが第VIII部の主題。</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>これらが **同じ枠組み** から出るためには、**電磁場そのものを量子化** する必要がある。これが第VIII部の主題である。</span>
 <span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>**方針**：本章では、量子化の **厳密な手続き**（正準量子化、生成消滅演算子の代数、Fock 空間構成）は最小限に留め、**観測スペクトルとの対応関係** に注力する。厳密な構成は Loudon、Mandel &amp; Wolf、Peskin &amp; Schroeder 等の専門書を参照</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>**方針**：本章では、量子化の **厳密な手続き**（正準量子化、生成消滅演算子の代数、Fock 空間構成）は最小限に留め、**観測スペクトルとの対応関係** に注力する。厳密な構成は Loudon、Mandel &amp; Wolf、Peskin &amp; Schroeder 等の専門書を参照してほしい。</span>
 <span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="fu">## 25.2 各モードは調和振動子 ― 直観的描像 {#sec-em-field-quantization-mode-oscillator}</span></span>
@@ -1694,7 +1695,7 @@ B_\nu(T) = \frac{2h\nu^3}{c^2} \cdot \frac{1}{e^{h\nu/k_B T} - 1}
 <span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>第8章「光子の Bose 統計」 → 「各モードの調和振動子の熱状態」</span>
 <span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>第14章「モード密度 $g(\nu)$」 → 「調和振動子の振動数ごとの個数」</span>
 <span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>第I〜VII部で別々の道具と思っていたものが、すべて **「各モード ＝ 調和振動子」** の一行で接続される。これが第VIII部の **最大の効用**</span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>第I〜VII部で別々の道具と思っていたものが、すべて **「各モード ＝ 調和振動子」** の一行で接続される。これが第VIII部の **最大の効用** である。</span>
 <span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a><span class="fu">## 25.3 真空状態と零点エネルギー ― 「空ではない」真空 {#sec-em-field-quantization-vacuum}</span></span>
@@ -1715,7 +1716,7 @@ B_\nu(T) = \frac{2h\nu^3}{c^2} \cdot \frac{1}{e^{h\nu/k_B T} - 1}
 <span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**自発放出**（**spontaneous emission**, 第11章 §11.2）</span>
 <span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>古典論では「ゼロ放射場 → 放出ゼロ」のはず</span>
-<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>量子論では真空揺らぎが励起原子に「ちょっかい」をかけ、放出を誘起</span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>量子論では真空揺らぎとの相互作用が遷移を誘起し、放出が生じる</span>
 <span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>**次章 §26.2 で QED から $A_{ul}$ を導出**</span>
 <span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**線の自然幅**（第23章 §23.1）</span>
 <span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>励起準位の有限寿命 → 不確定性関係でエネルギー幅 $\Gamma = A_{ul}$</span>
@@ -1730,11 +1731,11 @@ B_\nu(T) = \frac{2h\nu^3}{c^2} \cdot \frac{1}{e^{h\nu/k_B T} - 1}
 <span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>**短答**：違う。真空状態 $|0\rangle$ は厳密に光子 0 個の状態。観測される「揺らぎ」は、$\hat{a}$ と $\hat{a}^\dagger$ の非可換性 $[\hat{a}, \hat{a}^\dagger] = 1$ から来る、**電場や磁場の期待値の分散** $\langle (\Delta E)^2 \rangle \neq 0$ である。</span>
 <span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>**もう一歩**：粒子描像 $|n\rangle$ と場の描像 $\hat{E}, \hat{B}$ は、ハイゼンベルクの不確定性関係で双対的に結ばれている。粒子数を定めると場の値が揺らぎ、場の値を定めると粒子数が揺らぐ</span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>**もう一歩**：粒子描像 $|n\rangle$ と場の描像 $\hat{E}, \hat{B}$ は、ハイゼンベルクの不確定性関係で双対的に結ばれている。粒子数を定めると場の値が揺らぎ、場の値を定めると粒子数が揺らぐ。</span>
 <span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>**対応（観測）**：宇宙論との交差点 ― 真空のエネルギー密度を素直に評価すると、観測される **暗黒エネルギー密度** よりおよそ $10^{120}$ 倍も大きくなってしまう。これは **宇宙定数問題**（**cosmological constant problem**）と呼ばれ、現代物理学最大の未解決問題のひとつ。本書の射程は超えるが、第VIII部で扱った真空のエネルギーが宇宙論的観測と直接結びついている事実は、覚えておいて損はない</span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>**観測との対応**：宇宙論との交差点 ― 真空のエネルギー密度を素直に評価すると、観測される **暗黒エネルギー密度** よりおよそ $10^{120}$ 倍も大きくなってしまう。これは **宇宙定数問題**（**cosmological constant problem**）と呼ばれ、現代物理学最大の未解決問題のひとつである。本書の射程は超えるが、第VIII部で扱った真空のエネルギーが宇宙論的観測とも接続する例として重要である。</span>
 <span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a><span class="fu">## 25.4 黒体放射を電磁場の熱状態として書き直す {#sec-em-field-quantization-blackbody}</span></span>
@@ -1788,7 +1789,7 @@ B_\nu(T) = \frac{2h\nu^3}{c^2} \cdot \frac{1}{e^{h\nu/k_B T} - 1}
 <span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a>これで連続スペクトル側の中心地図は、**「電磁場の熱状態」というひとつの構造** に整理された。</span>
 <span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>**対応（観測）**：第16章で見た CMB の完璧な黒体性は、宇宙が **「電磁場の熱状態」を経験した** ことの直接的観測。これが第I-VIII部全体の到達点 ― **観測スペクトル → 電磁場の量子化された熱状態** という逆引きが完成したことを意味する</span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>**観測との対応**：第16章で見た CMB の完璧な黒体性は、宇宙が **「電磁場の熱状態」を経験した** ことの直接的観測である。これが第I-VIII部全体の到達点であり、**観測スペクトル → 電磁場の量子化された熱状態** という逆引きが完成したことを意味する。</span>
 <span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a><span class="fu">## 25.5 線スペクトルへの橋 {#sec-em-field-quantization-bridge}</span></span>
@@ -1797,7 +1798,7 @@ B_\nu(T) = \frac{2h\nu^3}{c^2} \cdot \frac{1}{e^{h\nu/k_B T} - 1}
 <span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>連続スペクトル側の地図は本章で「電磁場の熱状態」として完成した。線スペクトル側の地図はどうか？</span>
 <span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>第VII部の中心地図 $\alpha_\nu = (\pi e^2/m_e c) f_{lu} n_l \phi(\nu-\nu_0)$ は、本章まででは原子物理（$\nu_0, f_{lu}$）、占有数（$n_l$）、線形（$\phi$）の **半古典的記述** ― 物質を量子化したが電磁場は古典場として扱う ― にとどまっていた。</span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>第VII部の中心地図 $\alpha_\nu = (\pi e^2/m_e c) f_{lu} n_l \phi(\nu-\nu_0)$ は、本章まででは原子物理（$\nu_0, f_{lu}$）、占有数（$n_l$）、線輪郭（$\phi$）の **半古典的記述** ― 物質を量子化したが電磁場は古典場として扱う ― にとどまっていた。</span>
 <span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>第26章では、本章で導入した **電磁場の量子化** と物質側の量子化を **同時に** 扱うことで：</span>
 <span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a></span>

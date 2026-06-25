@@ -414,7 +414,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../part7/23-line-shape.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第23章　線形（line shape）の物理</span></a>
+  <a href="../part7/23-line-shape.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第23章　線輪郭（line profile）の物理</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -723,7 +723,7 @@ W_\text{BE} = \prod_i \frac{(N_i + g_i - 1)!}{N_i!\,(g_i - 1)!}
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>対応（観測）</strong>：CMB のスペクトルが完璧な黒体（<span class="math inline">\mu = 0</span>）であることは、再結合以前に光子と物質が十分に長く相互作用して光子数を「自由に」調整できたことの証拠。もし <span class="math inline">\mu \ne 0</span> なら、CMB スペクトルは Bose–Einstein 分布の形（プランクから外れる）を残すはずで、これを <strong>「<span class="math inline">\mu</span> 歪み」</strong> と呼ぶ。第16章で扱う。</p>
+<p><strong>観測との対応</strong>：CMB のスペクトルが完璧な黒体（<span class="math inline">\mu = 0</span>）であることは、再結合以前に光子と物質が十分に長く相互作用して光子数を「自由に」調整できたことの証拠。もし <span class="math inline">\mu \ne 0</span> なら、CMB スペクトルは Bose–Einstein 分布の形（プランクから外れる）を残すはずで、これを <strong>「<span class="math inline">\mu</span> 歪み」</strong> と呼ぶ。第16章で扱う。</p>
 </div>
 </div>
 <div class="callout callout-style-simple callout-tip">
@@ -770,8 +770,8 @@ u_\nu d\nu = g(\nu)\, h\nu\, \bar{n}(\nu, T)\, d\nu = g(\nu) \cdot \frac{h\nu}{e
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>方針（先取りの注意）</strong>：以下の計算でモード密度 <span class="math inline">g(\nu) = 8\pi\nu^2/c^3</span> を<strong>先取りして借用する</strong>。これは電磁場が三次元空間で離散的な定在波モードを持つことから出る量で、その本格的な導出は<strong>第V部・第14章で行う</strong>。</p>
-<p>本章の本丸は <strong>占有因子 <span class="math inline">1/(e^{h\nu/kT}-1)</span> の導出</strong>（前節 <a href="#eq-photon-occupation" class="quarto-xref">式&nbsp;<span>11.3</span></a>）であって、モード密度を含めた全体形 <span class="math inline">B_\nu(T)</span> ではない。モード密度を借りる理由は、占有因子だけだと放射場のエネルギー密度として観測できる量にはならず、「占有因子＋モード密度」の組合せで初めて Planck 分布全体が見えるからである。<strong>全体形が見えてから、第V部でモード密度の起源に逆引きする</strong>、というのが本書の戦略である。</p>
+<p><strong>方針（先取りの注意）</strong>：以下の計算でモード密度 <span class="math inline">g(\nu) = 8\pi\nu^2/c^3</span> を<strong>先取りして借用する</strong>。これは電磁場が三次元空間で離散的な定在波モードを持つことから出る量で、その本格的な導出は<strong>第V部・第14章で行う</strong>。ここでは結果だけを<strong>仮に借りる</strong>位置づけであり、第14章でこの借用を返す（<a href="#sec-photon-statistics-photon-gas" class="quarto-xref"><span>8.5 光子気体の統計 ― エネルギー密度から圧力まで</span></a> ↔︎ <a href="../part5/14-cavity-modes.html">第14章</a>の往復で確認できる）。</p>
+<p>本章の中心課題は <strong>占有因子 <span class="math inline">1/(e^{h\nu/kT}-1)</span> の導出</strong>（前節 <a href="#eq-photon-occupation" class="quarto-xref">式&nbsp;<span>11.3</span></a>）である。ただしこれを放射場のエネルギー密度として観測できる量にするには、モード密度が必要である。その導出は第V部・第14章で行う。占有因子だけでは観測量にならず、「占有因子＋モード密度」の組合せで初めて Planck 分布全体が見える。<strong>全体形が見えてから、第V部でモード密度の起源に逆引きする</strong>、というのが本書の戦略である。</p>
 </div>
 </div>
 <p>第V部から <span class="math inline">g(\nu) = 8\pi\nu^2/c^3</span> を借りて代入すれば</p>
@@ -803,7 +803,7 @@ P = \frac{1}{3} u = \frac{a T^4}{3}
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>対応（観測）</strong>：恒星内部や降着円盤の中心部では、<strong>放射圧</strong> <span class="math inline">P_\text{rad} = aT^4/3</span> がガス圧 <span class="math inline">P_\text{gas} = n k_B T</span> より大きくなることがある。Eddington 限界はこの放射圧と重力のバランスから決まる量で、星の質量上限を与える。第18章で扱う。</p>
+<p><strong>観測との対応</strong>：恒星内部や降着円盤の中心部では、<strong>放射圧</strong> <span class="math inline">P_\text{rad} = aT^4/3</span> がガス圧 <span class="math inline">P_\text{gas} = n k_B T</span> より大きくなることがある。Eddington 限界はこの放射圧と重力のバランスから決まる量で、星の質量上限を与える。第18章で扱う。</p>
 </div>
 </div>
 </section>
@@ -1568,7 +1568,7 @@ n_\gamma=9.31\times10^{-25}\times1.83\times10^{32}\times2.404\approx4.1\times10^
 <span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>これに対して、原子・分子・電子のような物質粒子は通常の温度・密度では数が保存し（化学反応がないかぎり）、$\mu \ne 0$ となる。</span>
 <span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>**対応（観測）**：CMB のスペクトルが完璧な黒体（$\mu = 0$）であることは、再結合以前に光子と物質が十分に長く相互作用して光子数を「自由に」調整できたことの証拠。もし $\mu \ne 0$ なら、CMB スペクトルは Bose–Einstein 分布の形（プランクから外れる）を残すはずで、これを **「$\mu$ 歪み」** と呼ぶ。第16章で扱う。</span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>**観測との対応**：CMB のスペクトルが完璧な黒体（$\mu = 0$）であることは、再結合以前に光子と物質が十分に長く相互作用して光子数を「自由に」調整できたことの証拠。もし $\mu \ne 0$ なら、CMB スペクトルは Bose–Einstein 分布の形（プランクから外れる）を残すはずで、これを **「$\mu$ 歪み」** と呼ぶ。第16章で扱う。</span>
 <span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
@@ -1596,9 +1596,9 @@ n_\gamma=9.31\times10^{-25}\times1.83\times10^{32}\times2.404\approx4.1\times10^
 <span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>$$ {#eq-photon-energy-density}</span>
 <span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>**方針（先取りの注意）**：以下の計算でモード密度 $g(\nu) = 8\pi\nu^2/c^3$ を**先取りして借用する**。これは電磁場が三次元空間で離散的な定在波モードを持つことから出る量で、その本格的な導出は**第V部・第14章で行う**。</span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>**方針（先取りの注意）**：以下の計算でモード密度 $g(\nu) = 8\pi\nu^2/c^3$ を**先取りして借用する**。これは電磁場が三次元空間で離散的な定在波モードを持つことから出る量で、その本格的な導出は**第V部・第14章で行う**。ここでは結果だけを**仮に借りる**位置づけであり、第14章でこの借用を返す（@sec-photon-statistics-photon-gas ↔ <span class="co">[</span><span class="ot">第14章</span><span class="co">](../part5/14-cavity-modes.qmd)</span>の往復で確認できる）。</span>
 <span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>本章の本丸は **占有因子 $1/(e^{h\nu/kT}-1)$ の導出**（前節 @eq-photon-occupation）であって、モード密度を含めた全体形 $B_\nu(T)$ ではない。モード密度を借りる理由は、占有因子だけだと放射場のエネルギー密度として観測できる量にはならず、「占有因子＋モード密度」の組合せで初めて Planck 分布全体が見えるからである。**全体形が見えてから、第V部でモード密度の起源に逆引きする**、というのが本書の戦略である。</span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>本章の中心課題は **占有因子 $1/(e^{h\nu/kT}-1)$ の導出**（前節 @eq-photon-occupation）である。ただしこれを放射場のエネルギー密度として観測できる量にするには、モード密度が必要である。その導出は第V部・第14章で行う。占有因子だけでは観測量にならず、「占有因子＋モード密度」の組合せで初めて Planck 分布全体が見える。**全体形が見えてから、第V部でモード密度の起源に逆引きする**、というのが本書の戦略である。</span>
 <span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>第V部から $g(\nu) = 8\pi\nu^2/c^3$ を借りて代入すれば</span>
@@ -1632,7 +1632,7 @@ n_\gamma=9.31\times10^{-25}\times1.83\times10^{32}\times2.404\approx4.1\times10^
 <span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>「$P = u/3$」の係数は、光子が質量ゼロ・等方分布の Bose 気体である帰結。気体の状態方程式（理想気体 $PV = N k_B T$）とは異なる。</span>
 <span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>**対応（観測）**：恒星内部や降着円盤の中心部では、**放射圧** $P_\text{rad} = aT^4/3$ がガス圧 $P_\text{gas} = n k_B T$ より大きくなることがある。Eddington 限界はこの放射圧と重力のバランスから決まる量で、星の質量上限を与える。第18章で扱う。</span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>**観測との対応**：恒星内部や降着円盤の中心部では、**放射圧** $P_\text{rad} = aT^4/3$ がガス圧 $P_\text{gas} = n k_B T$ より大きくなることがある。Eddington 限界はこの放射圧と重力のバランスから決まる量で、星の質量上限を与える。第18章で扱う。</span>
 <span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a><span class="fu">## 8.6 統計力学から見たプランク分布 ― 第III部の到達点 {#sec-photon-statistics-summary-section}</span></span>

@@ -414,7 +414,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../part7/23-line-shape.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第23章　線形（line shape）の物理</span></a>
+  <a href="../part7/23-line-shape.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">第23章　線輪郭（line profile）の物理</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -491,20 +491,20 @@ window.Quarto = {
   <li><a href="#sec-line-formation-goals" id="toc-sec-line-formation-goals" class="nav-link" data-scroll-target="#sec-line-formation-goals">到達目標</a></li>
   <li><a href="#sec-line-equivalent-width" id="toc-sec-line-equivalent-width" class="nav-link" data-scroll-target="#sec-line-equivalent-width">21.1 線の観測量 ― 等価幅</a></li>
   <li><a href="#sec-line-three-processes" id="toc-sec-line-three-processes" class="nav-link" data-scroll-target="#sec-line-three-processes">21.2 線の三つの素過程 ― Einstein 係数の再登場</a></li>
-  <li><a href="#sec-line-source-function" id="toc-sec-line-source-function" class="nav-link" data-scroll-target="#sec-line-source-function">21.3 線源泉関数 ― 連続スペクトルから線スペクトルへ</a></li>
-  <li><a href="#sec-LTE-line-formation" id="toc-sec-LTE-line-formation" class="nav-link" data-scroll-target="#sec-LTE-line-formation">21.4 LTE 線形成 ― 線源泉関数 ≈ <span class="math inline">B_\nu(T_\text{kin})</span></a></li>
+  <li><a href="#sec-line-source-function" id="toc-sec-line-source-function" class="nav-link" data-scroll-target="#sec-line-source-function">21.3 線ソース関数 ― 連続スペクトルから線スペクトルへ</a></li>
+  <li><a href="#sec-LTE-line-formation" id="toc-sec-LTE-line-formation" class="nav-link" data-scroll-target="#sec-LTE-line-formation">21.4 LTE 線形成 ― 線ソース関数 ≈ <span class="math inline">B_\nu(T_\text{kin})</span></a></li>
   <li><a href="#sec-non-LTE-line-formation" id="toc-sec-non-LTE-line-formation" class="nav-link" data-scroll-target="#sec-non-LTE-line-formation">21.5 non-LTE 線形成 ― いつ・なぜ LTE が破綻するか</a></li>
-  <li><a href="#sec-curve-of-growth" id="toc-sec-curve-of-growth" class="nav-link" data-scroll-target="#sec-curve-of-growth">21.6 curve of growth ― 等価幅から柱密度を測る</a></li>
+  <li><a href="#sec-curve-of-growth" id="toc-sec-curve-of-growth" class="nav-link" data-scroll-target="#sec-curve-of-growth">21.6 成長曲線（curve of growth） ― 等価幅から柱密度を測る</a></li>
   <li><a href="#sec-line-formation-tools" id="toc-sec-line-formation-tools" class="nav-link" data-scroll-target="#sec-line-formation-tools">21.7 使えるようになった道具</a></li>
   <li><a href="#sec-line-formation-summary" id="toc-sec-line-formation-summary" class="nav-link" data-scroll-target="#sec-line-formation-summary">この章で何がわかったか</a></li>
   <li><a href="#sec-line-formation-exercises" id="toc-sec-line-formation-exercises" class="nav-link" data-scroll-target="#sec-line-formation-exercises">演習問題</a>
   <ul class="collapse">
-  <li><a href="#ex-21-1" id="toc-ex-21-1" class="nav-link" data-scroll-target="#ex-21-1">問題 21-1　線源泉関数が Bν(Tex) になる</a></li>
+  <li><a href="#ex-21-1" id="toc-ex-21-1" class="nav-link" data-scroll-target="#ex-21-1">問題 21-1　線ソース関数が Bν(Tex) になる</a></li>
   </ul></li>
   <li><a href="#模範解答問題-21-1" id="toc-模範解答問題-21-1" class="nav-link" data-scroll-target="#模範解答問題-21-1">模範解答（問題 21-1）</a></li>
   <li><a href="#ex-21-2" id="toc-ex-21-2" class="nav-link" data-scroll-target="#ex-21-2">問題 21-2　誘導放出補正と準位反転（メーザー）</a></li>
   <li><a href="#模範解答問題-21-2" id="toc-模範解答問題-21-2" class="nav-link" data-scroll-target="#模範解答問題-21-2">模範解答（問題 21-2）</a></li>
-  <li><a href="#ex-21-3" id="toc-ex-21-3" class="nav-link" data-scroll-target="#ex-21-3">問題 21-3　等価幅と curve of growth の三領域</a></li>
+  <li><a href="#ex-21-3" id="toc-ex-21-3" class="nav-link" data-scroll-target="#ex-21-3">問題 21-3　等価幅と成長曲線の三領域</a></li>
   <li><a href="#模範解答問題-21-3" id="toc-模範解答問題-21-3" class="nav-link" data-scroll-target="#模範解答問題-21-3">模範解答（問題 21-3）</a></li>
   <li><a href="#ex-21-4" id="toc-ex-21-4" class="nav-link" data-scroll-target="#ex-21-4">問題 21-4　LTE で吸収線になる条件 ― 温度勾配と背景光</a></li>
   <li><a href="#模範解答問題-21-4" id="toc-模範解答問題-21-4" class="nav-link" data-scroll-target="#模範解答問題-21-4">模範解答（問題 21-4）</a></li>
@@ -535,7 +535,7 @@ window.Quarto = {
 
 
 <div class="chapter-overview">
-<p><strong>この章の主題</strong>：第20章で見たさまざまな線スペクトルは、すべて「<strong>原子・分子の離散的遷移と、その場の放射場との相互作用</strong>」の結果として理解できる。本章では、第11章で導入した <strong>Einstein 係数</strong> <span class="math inline">A_{ul}, B_{lu}, B_{ul}</span> を線スペクトルの主役として再登場させ、<strong>線吸収・線輝線・線源泉関数</strong> を逆引きで体系化する。これは連続スペクトルの第4-5章（放射輸送と源泉関数）の <strong>線スペクトル版</strong> にあたる。</p>
+<p><strong>この章の主題</strong>：第20章で見たさまざまな線スペクトルは、すべて「<strong>原子・分子の離散的遷移と、その場の放射場との相互作用</strong>」の結果として理解できる。本章では、第11章で導入した <strong>Einstein 係数</strong> <span class="math inline">A_{ul}, B_{lu}, B_{ul}</span> を線スペクトルの主役として再登場させ、<strong>線吸収・線輝線・線ソース関数</strong> を逆引きで体系化する。これは連続スペクトルの第4-5章（放射輸送とソース関数）の <strong>線スペクトル版</strong> にあたる。</p>
 </div>
 <section id="sec-line-formation-map" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-line-formation-map">この章の中心地図</h2>
@@ -581,7 +581,7 @@ window.Quarto = {
 </tr>
 <tr class="odd">
 <td><span class="math inline">\phi(\nu - \nu_0)</span></td>
-<td>線形（自然・Doppler・Voigt）</td>
+<td>線輪郭（自然・Doppler・Voigt）</td>
 <td>第23章</td>
 </tr>
 <tr class="even">
@@ -591,6 +591,7 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
+<p><strong>適用範囲（重要）</strong>：この式の前因子 <span class="math inline">\pi e^2/m_e c</span> と振動子強度 <span class="math inline">f_{lu}</span> は、古典 Lorentz 振動子に対応する <strong>電気双極子（E1）許容線</strong> に対するものである。21 cm 線（基底状態超微細構造の <strong>磁気双極子 M1 遷移</strong>）や <strong>禁制線（E2・M1 など）</strong> では、この前因子・<span class="math inline">f_{lu}</span> をそのまま使えない。これらの線では、測定された自発放出率 <span class="math inline">A_{ul}</span> から Einstein 関係を介して有効遷移強度（<span class="math inline">B_{lu}</span>）に読み替える（<a href="../part8/26-qed-minimum.html#eq-line-absorption" class="quarto-xref">式&nbsp;<span>29.3</span></a> の構造は保ったまま、強度因子だけを差し替える）。</p>
 </div>
 <div class="callout callout-style-simple callout-tip no-icon">
 <div class="callout-body d-flex">
@@ -623,7 +624,7 @@ window.Quarto = {
 <li>同じ水素 H<span class="math inline">\alpha</span> 線が、太陽では吸収線、HII 領域では輝線になるのはなぜか</li>
 <li>線の等価幅とは何で、なぜ観測量として有用なのか</li>
 <li>LTE では何が単純で、non-LTE では何が複雑になるのか</li>
-<li>curve of growth は何を、どのように測る道具なのか</li>
+<li>成長曲線（curve of growth）は何を、どのように測る道具なのか</li>
 </ul>
 </div>
 </section>
@@ -632,8 +633,8 @@ window.Quarto = {
 <p>この章を読み終えると、読者は次のことができるようになる：</p>
 <ul>
 <li>線の吸収・自発放出・誘導放出を Einstein 係数で表現し、各々の物理的意味を述べられる</li>
-<li>線源泉関数とプランク関数の関係を、LTE と non-LTE で区別して説明できる</li>
-<li>線の等価幅と curve of growth から物理量を読み取る基本手順を理解する</li>
+<li>線ソース関数とプランク関数の関係を、LTE と non-LTE で区別して説明できる</li>
+<li>線の等価幅と成長曲線（curve of growth）から物理量を読み取る基本手順を理解する</li>
 </ul>
 <hr>
 </section>
@@ -657,7 +658,7 @@ W_\lambda \equiv \int_\text{line} \frac{I_c - I_\lambda}{I_c} d\lambda
 <p>ここで <span class="math inline">I_c</span> は線がない場合に予想される連続光強度、<span class="math inline">I_\lambda</span> は実際の観測強度。<span class="math inline">W_\lambda</span> は <strong>「線によって連続光からどれだけ光が引き抜かれたか」を波長単位で表した量</strong>。物理的には：</p>
 <ul>
 <li>浅くて広い線と、深くて狭い線が <strong>同じ <span class="math inline">W_\lambda</span></strong> になる場合がある</li>
-<li>線形（profile）の詳細によらない積分量</li>
+<li>線輪郭（line profile）の詳細によらない積分量</li>
 <li>観測しやすく、理論との比較がしやすい</li>
 </ul>
 <p>輝線についても同様に、連続光からの <strong>余剰光</strong> の積分として等価幅を定義する。</p>
@@ -667,7 +668,7 @@ W_\lambda \equiv \int_\text{line} \frac{I_c - I_\lambda}{I_c} d\lambda
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>注意（観測）</strong>：等価幅は <strong>観測スペクトル分解能の限界以上の線</strong> には鋭敏。一方、強く飽和した線（線芯が完全に黒）では、追加の物質を加えても等価幅はゆっくりとしか増えない（§21.6 の curve of growth の「飽和域」）。等価幅から物理量を読むには、線がどの「成長領域」にあるかを意識する必要がある</p>
+<p><strong>注意（観測）</strong>：等価幅は <strong>観測スペクトル分解能の限界以上の線</strong> には鋭敏である。一方、強く飽和した線（線芯が完全に黒）では、追加の物質を加えても等価幅はゆっくりとしか増えない（§21.6 の成長曲線の「飽和域」）。等価幅から物理量を読むには、線がどの「成長領域」にあるかを意識する必要がある。</p>
 </div>
 </div>
 </div>
@@ -719,21 +720,21 @@ W_\lambda \equiv \int_\text{line} \frac{I_c - I_\lambda}{I_c} d\lambda
 </div>
 </section>
 <section id="sec-line-source-function" class="level2">
-<h2 class="anchored" data-anchor-id="sec-line-source-function">21.3 線源泉関数 ― 連続スペクトルから線スペクトルへ</h2>
+<h2 class="anchored" data-anchor-id="sec-line-source-function">21.3 線ソース関数 ― 連続スペクトルから線スペクトルへ</h2>
 <p>[本文目安：B3]</p>
 <p>第5章 §5.4 で定義した <strong>ソース関数</strong> <span class="math inline">S_\nu</span> は、線スペクトルでは</p>
 <p><span id="eq-line-source-function"><span class="math display">
 S_\nu^\text{line} = \frac{j_\nu^\text{line}}{\alpha_\nu^\text{line}}
 \tag{24.6}</span></span></p>
-<p>の形で構成される。<span class="math inline">j_\nu^\text{line}</span> は線放射係数（自発放出 + 誘導放出からの寄与）、<span class="math inline">\alpha_\nu^\text{line}</span> は線吸収係数。Einstein 係数を使うと、<span class="math inline">\phi(\nu-\nu_0)</span> が両者で共通になる前提のもとで</p>
+<p>の形で構成される。ここで <span class="math inline">j_\nu^\text{line}</span> は線の <strong>放出係数</strong>（<strong>emission coefficient</strong>）で、本書では <strong>自発放出のみ</strong> をその寄与とする。一方、<span class="math inline">\alpha_\nu^\text{line}</span> は線吸収係数で、<strong>誘導放出を「負の吸収」として吸収係数の中に繰り込む流儀</strong>（<a href="#eq-line-absorption-einstein" class="quarto-xref">式&nbsp;<span>24.5</span></a> の補正項 <span class="math inline">[1 - g_l n_u/(g_u n_l)]</span>）を採用する。すなわち本書では一貫して、誘導放出は吸収係数側の補正として扱い、放出係数 <span class="math inline">j_\nu^\text{line}</span> には含めない。Einstein 係数を使うと、<span class="math inline">\phi(\nu-\nu_0)</span> が両者で共通になる前提のもとで</p>
 <p><span id="eq-line-S-explicit"><span class="math display">
 S_\nu^\text{line} = \frac{A_{ul} n_u}{B_{lu} n_l - B_{ul} n_u} = \frac{2h\nu_0^3/c^2}{(g_u n_l)/(g_l n_u) - 1}
 \tag{24.7}</span></span></p>
-<p>これは形式的に <strong>プランク関数と同じ構造</strong> だが、<span class="math inline">h\nu/k_BT</span> の代わりに <span class="math inline">\ln[(g_u n_l)/(g_l n_u)]</span> が指数因子に入っている。これを <strong>「励起温度</strong>」（<strong>excitation temperature</strong>）<span class="math inline">T_\text{ex}</span> を使って</p>
+<p>となる（分子が自発放出 <span class="math inline">A_{ul} n_u</span>、分母が誘導放出を差し引いた正味の吸収 <span class="math inline">B_{lu} n_l - B_{ul} n_u</span>）。これは形式的に <strong>プランク関数と同じ構造</strong> だが、<span class="math inline">h\nu/k_BT</span> の代わりに <span class="math inline">\ln[(g_u n_l)/(g_l n_u)]</span> が指数因子に入っている。これを <strong>「励起温度」</strong>（<strong>excitation temperature</strong>）<span class="math inline">T_\text{ex}</span> を使って</p>
 <p><span id="eq-excitation-temperature"><span class="math display">
 \frac{g_u n_l}{g_l n_u} = e^{h\nu_0/k_B T_\text{ex}}
 \tag{24.8}</span></span></p>
-<p>と書き直すと、<span class="math inline">S_\nu^\text{line} = B_{\nu_0}(T_\text{ex})</span>。すなわち <strong>線源泉関数は、励起温度に対応する黒体スペクトル</strong>。</p>
+<p>と書き直すと、<span class="math inline">S_\nu^\text{line} = B_{\nu_0}(T_\text{ex})</span>。すなわち <strong>線ソース関数は、励起温度に対応する黒体スペクトル</strong> である。</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -744,19 +745,19 @@ S_\nu^\text{line} = \frac{A_{ul} n_u}{B_{lu} n_l - B_{ul} n_u} = \frac{2h\nu_0^3
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>用語</strong>：<strong>励起温度</strong> <span class="math inline">T_\text{ex}</span> は、観測者が観測される線の強度から <strong>逆引き</strong> で求める「上下準位の占有比を Boltzmann 分布で書いたときの温度」。物理的に物質と熱平衡している温度とは限らない（LTE / non-LTE の区別、§21.4-§21.5）</p>
-<p><strong>対応（観測）</strong>：観測される線の輝度温度から <span class="math inline">T_\text{ex}</span> を測れる ― これが線スペクトルから物理状態を逆引きする最初のステップ</p>
+<p><strong>用語</strong>：<strong>励起温度</strong> <span class="math inline">T_\text{ex}</span> は、観測者が観測される線の強度から <strong>逆引き</strong> で求める「上下準位の占有比を Boltzmann 分布で書いたときの温度」である。物理的に物質と熱平衡している温度とは限らない（LTE / non-LTE の区別、§21.4-§21.5）。</p>
+<p><strong>観測との対応</strong>：観測される線の輝度温度から <span class="math inline">T_\text{ex}</span> を測れる ― これが線スペクトルから物理状態を逆引きする最初のステップである。</p>
 </div>
 </div>
 </section>
 <section id="sec-LTE-line-formation" class="level2">
-<h2 class="anchored" data-anchor-id="sec-LTE-line-formation">21.4 LTE 線形成 ― 線源泉関数 ≈ <span class="math inline">B_\nu(T_\text{kin})</span></h2>
+<h2 class="anchored" data-anchor-id="sec-LTE-line-formation">21.4 LTE 線形成 ― 線ソース関数 ≈ <span class="math inline">B_\nu(T_\text{kin})</span></h2>
 <p>[本文目安：B3]</p>
 <p><strong>LTE</strong>（局所熱平衡、第6章 §6.5）が成り立つ環境では、占有数 <span class="math inline">n_l, n_u</span> は局所の <strong>キネティック温度</strong> <span class="math inline">T_\text{kin}</span>（粒子の運動エネルギー由来の温度）に対する Boltzmann 分布で書ける：</p>
 <p><span id="eq-boltzmann"><span class="math display">
 \frac{n_u}{g_u} = \frac{n_l}{g_l} e^{-h\nu_0/k_B T_\text{kin}}
 \tag{24.9}</span></span></p>
-<p>すると <span class="math inline">T_\text{ex} = T_\text{kin}</span> となり、線源泉関数は <strong>キネティック温度のプランク関数</strong>：</p>
+<p>すると <span class="math inline">T_\text{ex} = T_\text{kin}</span> となり、線ソース関数は <strong>キネティック温度のプランク関数</strong> になる：</p>
 <p><span id="eq-LTE-source-function"><span class="math display">
 S_\nu^\text{line, LTE} = B_\nu(T_\text{kin})
 \tag{24.10}</span></span></p>
@@ -779,7 +780,7 @@ S_\nu^\text{line, LTE} = B_\nu(T_\text{kin})
 <img src="../images/line-formation-geometry.svg" class="img-fluid figure-img" style="width:88.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-line-geometry-lte-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;24.3: 同じ原子遷移が観測の幾何条件で吸収線にも輝線にもなる三つのケース（第20章 §20.3 で導入した図を、§21.4 で源泉関数の文脈で再掲）。温度勾配と背景光の組合せがどう線形態を決めるかが視覚的に分かる。
+図&nbsp;24.3: 同じ原子遷移が観測の幾何条件で吸収線にも輝線にもなる三つのケース（第20章 §20.3 で導入した図を、§21.4 でソース関数の文脈で再掲）。温度勾配と背景光の組合せがどう線形態を決めるかが視覚的に分かる。
 </figcaption>
 </figure>
 </div>
@@ -793,7 +794,7 @@ S_\nu^\text{line, LTE} = B_\nu(T_\text{kin})
 <li>強い放射場（放射過程が衝突過程より速い）</li>
 <li>急激な温度勾配（局所平衡が追いつかない）</li>
 </ul>
-<p>このとき、占有数 <span class="math inline">n_l, n_u</span> は Boltzmann 分布から外れ、<strong>励起温度 <span class="math inline">T_\text{ex}</span> がキネティック温度 <span class="math inline">T_\text{kin}</span> と乖離する</strong>。線源泉関数は <span class="math inline">B_\nu(T_\text{ex})</span> のままだが、<span class="math inline">T_\text{ex}</span> が物理温度を反映しない。</p>
+<p>このとき、占有数 <span class="math inline">n_l, n_u</span> は Boltzmann 分布から外れ、<strong>励起温度 <span class="math inline">T_\text{ex}</span> がキネティック温度 <span class="math inline">T_\text{kin}</span> と乖離する</strong>。線ソース関数は <span class="math inline">B_\nu(T_\text{ex})</span> のままだが、<span class="math inline">T_\text{ex}</span> が物理温度を反映しない。</p>
 <p>non-LTE 線形成を扱う数値的枠組み：</p>
 <ol type="1">
 <li><strong>占有数の方程式</strong>：各準位への入力（励起・吸収）＝各準位からの出力（脱励起・放出）の収支</li>
@@ -823,17 +824,17 @@ S_\nu^\text{line, LTE} = B_\nu(T_\text{kin})
 <div class="callout-body-container callout-body">
 <p><strong>用語の整理</strong>（第6章 §6.5 と整合）：</p>
 <ul>
-<li><strong>LTE</strong>：物質側の占有数が局所キネティック温度の Boltzmann/Saha 分布 → 線源泉関数 = <span class="math inline">B_\nu(T_\text{kin})</span></li>
-<li><strong>non-LTE</strong>：物質側の占有数が局所温度の Boltzmann から外れる → 線源泉関数 ≠ <span class="math inline">B_\nu(T_\text{kin})</span>、しかし依然として <span class="math inline">= B_\nu(T_\text{ex})</span></li>
+<li><strong>LTE</strong>：物質側の占有数が局所キネティック温度の Boltzmann/Saha 分布 → 線ソース関数 = <span class="math inline">B_\nu(T_\text{kin})</span></li>
+<li><strong>non-LTE</strong>：物質側の占有数が局所温度の Boltzmann から外れる → 線ソース関数 ≠ <span class="math inline">B_\nu(T_\text{kin})</span>、しかし依然として <span class="math inline">= B_\nu(T_\text{ex})</span></li>
 <li><strong>熱的 vs 非熱的</strong>：粒子のエネルギー分布が Maxwell-Boltzmann か否か。LTE / non-LTE とは別の軸（第15章 §15.1）</li>
 </ul>
 </div>
 </div>
 </section>
 <section id="sec-curve-of-growth" class="level2">
-<h2 class="anchored" data-anchor-id="sec-curve-of-growth">21.6 curve of growth ― 等価幅から柱密度を測る</h2>
+<h2 class="anchored" data-anchor-id="sec-curve-of-growth">21.6 成長曲線（curve of growth） ― 等価幅から柱密度を測る</h2>
 <p>[本文目安：B3]</p>
-<p>弱い吸収線から強い吸収線まで、観測される <strong>等価幅</strong> <span class="math inline">W</span> と <strong>柱密度</strong> <span class="math inline">N \equiv \int n_l\, ds</span> の関係は、<strong>curve of growth</strong>（<strong>等価幅曲線</strong>, <strong>成長曲線</strong>）として知られる：</p>
+<p>弱い吸収線から強い吸収線まで、観測される <strong>等価幅</strong> <span class="math inline">W</span> と <strong>柱密度</strong> <span class="math inline">N \equiv \int n_l\, ds</span> の関係は、<strong>成長曲線</strong>（<strong>curve of growth</strong>、等価幅曲線とも）として知られる：</p>
 <p><span id="eq-curve-of-growth"><span class="math display">
 W(N) = \begin{cases}
 \propto N &amp; \text{(線形領域)} \\
@@ -857,7 +858,7 @@ W(N) = \begin{cases}
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>対応（観測）</strong>：恒星・QSO 吸収線スペクトルの解析で、curve of growth は <strong>観測等価幅 → 柱密度</strong> を求める基本道具。化学組成、QSO 視線方向の星間吸収系の柱密度測定などに使われる。第24章 §24.2 で本格的に応用する</p>
+<p><strong>観測との対応</strong>：恒星・QSO 吸収線スペクトルの解析で、成長曲線は <strong>観測等価幅 → 柱密度</strong> を求める基本道具である。化学組成、QSO 視線方向の星間吸収系の柱密度測定などに使われる。第24章 §24.2 で本格的に応用する。</p>
 </div>
 </div>
 </section>
@@ -876,9 +877,9 @@ W(N) = \begin{cases}
 <ul>
 <li>等価幅 <span class="math inline">W_\lambda</span> ― 線の最も基本的観測量</li>
 <li>Einstein 係数による吸収・輝線・誘導放出の統一記述</li>
-<li>線源泉関数 <span class="math inline">S_\nu^\text{line} = B_\nu(T_\text{ex})</span> と励起温度の概念</li>
+<li>線ソース関数 <span class="math inline">S_\nu^\text{line} = B_\nu(T_\text{ex})</span> と励起温度の概念</li>
 <li>LTE と non-LTE の区別、いつどちらが使えるか</li>
-<li>curve of growth ― <span class="math inline">W \to N</span> の換算手段</li>
+<li>成長曲線（curve of growth）― <span class="math inline">W \to N</span> の換算手段</li>
 </ul>
 </div>
 </div>
@@ -891,8 +892,8 @@ W(N) = \begin{cases}
 <p>本章で、中心地図 <span class="math inline">\alpha_\nu</span> の <strong><span class="math inline">n_l</span> 因子</strong> と <strong>線形成の選択（吸収 or 輝線）</strong> が物理的に解読された：</p>
 <ul>
 <li><span class="math inline">n_l</span> は LTE では Boltzmann/Saha、non-LTE では statistical equilibrium で決まる</li>
-<li>線が吸収か輝線かは、線源泉関数 <span class="math inline">S_\nu^\text{line} = B_\nu(T_\text{ex})</span> と背景の連続光輝度の比較で決まる</li>
-<li>等価幅 <span class="math inline">W</span> と柱密度 <span class="math inline">N</span> は curve of growth で結ばれる</li>
+<li>線が吸収か輝線かは、線ソース関数 <span class="math inline">S_\nu^\text{line} = B_\nu(T_\text{ex})</span> と背景の連続光輝度の比較で決まる</li>
+<li>等価幅 <span class="math inline">W</span> と柱密度 <span class="math inline">N</span> は成長曲線（curve of growth）で結ばれる</li>
 </ul>
 <p>次章では中心地図のもう一つの因子 ― <strong>振動子強度 <span class="math inline">f_{lu}</span></strong> ― を、原子物理から逆引きする。</p>
 </div>
@@ -901,15 +902,15 @@ W(N) = \begin{cases}
 <h2 class="unnumbered anchored" data-anchor-id="sec-line-formation-exercises">演習問題</h2>
 <p><span class="tag">[導出補完]</span> <strong>模範解答</strong> は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</p>
 <section id="ex-21-1" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="ex-21-1">問題 21-1　線源泉関数が Bν(Tex) になる</h3>
+<h3 class="unnumbered anchored" data-anchor-id="ex-21-1">問題 21-1　線ソース関数が Bν(Tex) になる</h3>
 <p>[★ 難易度：☆☆ ] <span class="tag">[導出補完]</span></p>
-<p>§21.3 は線源泉関数を励起温度 <span class="math inline">T_\mathrm{ex}</span> のプランク関数に書き換えた。導出を埋める。<span class="math inline">S_\nu^\mathrm{line}=\dfrac{A_{ul}n_u}{B_{lu}n_l-B_{ul}n_u}</span>、Einstein 関係 <span class="math inline">A_{ul}/B_{ul}=2h\nu_0^3/c^2</span>、<span class="math inline">g_lB_{lu}=g_uB_{ul}</span>。</p>
+<p>§21.3 は線ソース関数を励起温度 <span class="math inline">T_\mathrm{ex}</span> のプランク関数に書き換えた。導出を埋める。<span class="math inline">S_\nu^\mathrm{line}=\dfrac{A_{ul}n_u}{B_{lu}n_l-B_{ul}n_u}</span>、Einstein 関係 <span class="math inline">A_{ul}/B_{ul}=2h\nu_0^3/c^2</span>、<span class="math inline">g_lB_{lu}=g_uB_{ul}</span>。</p>
 <ol type="1">
 <li>Einstein 関係を使って <span class="math inline">S_\nu^\mathrm{line}=\dfrac{2h\nu_0^3/c^2}{(g_un_l)/(g_ln_u)-1}</span> を導け。</li>
 <li>励起温度を <span class="math inline">\dfrac{g_un_l}{g_ln_u}=e^{h\nu_0/k_BT_\mathrm{ex}}</span> で定義し、<span class="math inline">S_\nu^\mathrm{line}=B_{\nu_0}(T_\mathrm{ex})</span> を示せ。</li>
 <li><span class="math inline">T_\mathrm{ex}</span> が物理的なキネティック温度と一致するのはどんな条件か（LTE）。一致しない場合（non-LTE）に <span class="math inline">S_\nu</span> がプランク関数でなくなるわけではない理由を述べよ。</li>
 </ol>
-<p><strong>関連</strong>：<a href="#sec-line-source-function">§21.3 線源泉関数</a>／Einstein 関係の導出は<a href="../part4/11-einstein-method.html#ex-11-1">演習 11-1</a>、ソース関数の基礎は<a href="../part2/05-radiative-transfer.html#ex-5-5">演習 5-5</a>、LTE は<a href="#sec-LTE-line-formation">§21.4</a>。</p>
+<p><strong>関連</strong>：<a href="#sec-line-source-function">§21.3 線ソース関数</a>／Einstein 関係の導出は<a href="../part4/11-einstein-method.html#ex-11-1">演習 11-1</a>、ソース関数の基礎は<a href="../part2/05-radiative-transfer.html#ex-5-5">演習 5-5</a>、LTE は<a href="#sec-LTE-line-formation">§21.4</a>。</p>
 </section>
 </section>
 <section id="模範解答問題-21-1" class="level2 callout-derive" data-collapse="true">
@@ -940,21 +941,21 @@ W(N) = \begin{cases}
 <p><strong>答え</strong>：補正ゼロ＝占有が等しい。負＝準位反転（<span class="math inline">n_u/g_u&gt;n_l/g_l</span>）→<span class="math inline">\alpha_\nu&lt;0</span>＝増幅＝メーザー。観測は非平衡ポンプ機構の証拠。</p>
 </section>
 <section id="ex-21-3" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="ex-21-3">問題 21-3　等価幅と curve of growth の三領域</h3>
+<h3 class="unnumbered anchored" data-anchor-id="ex-21-3">問題 21-3　等価幅と成長曲線の三領域</h3>
 <p>[★ 難易度：☆☆ ] <span class="tag">[理解を深める]</span></p>
-<p>§21.1・20.6 の等価幅 <span class="math inline">W_\lambda=\int\frac{I_c-I_\lambda}{I_c}d\lambda</span> と curve of growth を読む。</p>
+<p>§21.1・20.6 の等価幅 <span class="math inline">W_\lambda=\int\frac{I_c-I_\lambda}{I_c}d\lambda</span> と成長曲線（curve of growth）を読む。</p>
 <ol type="1">
 <li>等価幅が「線の輪郭の詳細によらない積分量」である利点を述べよ。浅く広い線と深く狭い線が同じ <span class="math inline">W</span> になりうる理由は。</li>
-<li>curve of growth の三領域（線形 <span class="math inline">W\propto N</span>、飽和 <span class="math inline">W\propto\sqrt{\ln N}</span>、減衰翼 <span class="math inline">W\propto\sqrt{N}</span>）が、それぞれ光学的深さ <span class="math inline">\tau</span> のどんな状態に対応するか述べよ。</li>
+<li>成長曲線の三領域（線形 <span class="math inline">W\propto N</span>、飽和 <span class="math inline">W\propto\sqrt{\ln N}</span>、減衰翼 <span class="math inline">W\propto\sqrt{N}</span>）が、それぞれ光学的深さ <span class="math inline">\tau</span> のどんな状態に対応するか述べよ。</li>
 <li>飽和領域の線から柱密度 <span class="math inline">N</span> を精度よく決めるのが難しい理由を述べよ。組成解析で複数の強さの線を使う理由と結びつけよ。</li>
 </ol>
-<p><strong>関連</strong>：<a href="#sec-line-equivalent-width">§21.1 等価幅</a>、<a href="#sec-curve-of-growth">§21.6 curve of growth</a>／組成解析は<a href="../part7/24-line-applications.html#sec-line-applications-abundance">§24.2</a>、減衰翼は<a href="../part7/23-line-shape.html#sec-line-shape-natural">§23.1</a>。</p>
+<p><strong>関連</strong>：<a href="#sec-line-equivalent-width">§21.1 等価幅</a>、<a href="#sec-curve-of-growth">§21.6 成長曲線</a>／組成解析は<a href="../part7/24-line-applications.html#sec-line-applications-abundance">§24.2</a>、減衰翼は<a href="../part7/23-line-shape.html#sec-line-shape-natural">§23.1</a>。</p>
 </section>
 <section id="模範解答問題-21-3" class="level2 callout-derive" data-collapse="true">
 <h2 class="anchored" data-anchor-id="模範解答問題-21-3">模範解答（問題 21-3）</h2>
 <p><strong>(1)</strong> 等価幅は「線が連続光から引き抜いた光の総量」を波長幅で表した積分量で、装置の分解能で輪郭がぼやけても保存される。同じ総吸収量なら、浅く広い線も深く狭い線も面積が等しく同じ <span class="math inline">W</span> になる。観測しやすく理論と比べやすい。</p>
 <p><strong>(2)</strong> 線形領域：<span class="math inline">\tau&lt;1</span>（光学的に薄い）、吸収量が柱密度に比例 <span class="math inline">W\propto N</span>。飽和領域：線芯 <span class="math inline">\tau\gg1</span>（完全に黒）で中心はこれ以上吸収できず、<span class="math inline">W</span> は <span class="math inline">\sqrt{\ln N}</span> でしか増えない。減衰翼領域：Lorentz 翼（自然幅・衝突幅）が支配し <span class="math inline">W\propto\sqrt{N}</span>。</p>
-<p><strong>(3)</strong> 飽和領域では <span class="math inline">W</span> が <span class="math inline">N</span> にほとんど鈍感（<span class="math inline">\sqrt{\ln N}</span>）なので、<span class="math inline">W</span> の小さな測定誤差が <span class="math inline">N</span> の大きな誤差になる。だから組成解析では弱い線（線形領域）・中間・強い線（減衰翼）を組み合わせ、curve of growth 全体を観測点で押さえて <span class="math inline">N</span> を精度よく決める。</p>
+<p><strong>(3)</strong> 飽和領域では <span class="math inline">W</span> が <span class="math inline">N</span> にほとんど鈍感（<span class="math inline">\sqrt{\ln N}</span>）なので、<span class="math inline">W</span> の小さな測定誤差が <span class="math inline">N</span> の大きな誤差になる。だから組成解析では弱い線（線形領域）・中間・強い線（減衰翼）を組み合わせ、成長曲線全体を観測点で押さえて <span class="math inline">N</span> を精度よく決める。</p>
 <p><strong>答え</strong>：<span class="math inline">W</span> は輪郭によらぬ積分量。線形(<span class="math inline">\tau&lt;1</span>)→飽和(<span class="math inline">\tau\gg1</span>)→減衰翼。飽和域は <span class="math inline">N</span> に鈍感ゆえ複数の強さの線が必要。</p>
 </section>
 <section id="ex-21-4" class="level3 unnumbered">
@@ -981,7 +982,7 @@ W(N) = \begin{cases}
 <li>Mihalas, <em>Stellar Atmospheres</em> (Freeman, 2nd ed., 1978) — 線形成と non-LTE の古典</li>
 <li>Hubeny &amp; Mihalas, <em>Theory of Stellar Atmospheres</em> (Princeton, 2014) — 現代版、non-LTE radiative transfer の標準書</li>
 <li>Rutten, <em>Radiative Transfer in Stellar Atmospheres</em> (Lecture notes, Utrecht) — 線形成の入門的講義ノート</li>
-<li>Spitzer, <em>Physical Processes in the Interstellar Medium</em> (Wiley, 1978) — curve of growth の標準扱い</li>
+<li>Spitzer, <em>Physical Processes in the Interstellar Medium</em> (Wiley, 1978) — 成長曲線（curve of growth）の標準扱い</li>
 </ul>
 
 
@@ -1464,7 +1465,7 @@ W(N) = \begin{cases}
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>::: {.chapter-overview}</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>**この章の主題**：第20章で見たさまざまな線スペクトルは、すべて「**原子・分子の離散的遷移と、その場の放射場との相互作用**」の結果として理解できる。本章では、第11章で導入した **Einstein 係数** $A_{ul}, B_{lu}, B_{ul}$ を線スペクトルの主役として再登場させ、**線吸収・線輝線・線源泉関数** を逆引きで体系化する。これは連続スペクトルの第4-5章（放射輸送と源泉関数）の **線スペクトル版** にあたる。</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>**この章の主題**：第20章で見たさまざまな線スペクトルは、すべて「**原子・分子の離散的遷移と、その場の放射場との相互作用**」の結果として理解できる。本章では、第11章で導入した **Einstein 係数** $A_{ul}, B_{lu}, B_{ul}$ を線スペクトルの主役として再登場させ、**線吸収・線輝線・線ソース関数** を逆引きで体系化する。これは連続スペクトルの第4-5章（放射輸送とソース関数）の **線スペクトル版** にあたる。</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章の中心地図 {#sec-line-formation-map .unnumbered}</span></span>
@@ -1481,7 +1482,7 @@ W(N) = \begin{cases}
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>同じ水素 H$\alpha$ 線が、太陽では吸収線、HII 領域では輝線になるのはなぜか</span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>線の等価幅とは何で、なぜ観測量として有用なのか</span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>LTE では何が単純で、non-LTE では何が複雑になるのか</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>curve of growth は何を、どのように測る道具なのか</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>成長曲線（curve of growth）は何を、どのように測る道具なのか</span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="fu">## 到達目標 {#sec-line-formation-goals .unnumbered}</span></span>
@@ -1489,8 +1490,8 @@ W(N) = \begin{cases}
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>この章を読み終えると、読者は次のことができるようになる：</span>
 <span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>線の吸収・自発放出・誘導放出を Einstein 係数で表現し、各々の物理的意味を述べられる</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>線源泉関数とプランク関数の関係を、LTE と non-LTE で区別して説明できる</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>線の等価幅と curve of growth から物理量を読み取る基本手順を理解する</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>線ソース関数とプランク関数の関係を、LTE と non-LTE で区別して説明できる</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>線の等価幅と成長曲線（curve of growth）から物理量を読み取る基本手順を理解する</span>
 <span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
@@ -1509,13 +1510,13 @@ W(N) = \begin{cases}
 <span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>ここで $I_c$ は線がない場合に予想される連続光強度、$I_\lambda$ は実際の観測強度。$W_\lambda$ は **「線によって連続光からどれだけ光が引き抜かれたか」を波長単位で表した量**。物理的には：</span>
 <span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>浅くて広い線と、深くて狭い線が **同じ $W_\lambda$** になる場合がある</span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>線形（profile）の詳細によらない積分量</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>線輪郭（line profile）の詳細によらない積分量</span>
 <span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>観測しやすく、理論との比較がしやすい</span>
 <span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>輝線についても同様に、連続光からの **余剰光** の積分として等価幅を定義する。</span>
 <span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning appearance="simple"}</span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>**注意（観測）**：等価幅は **観測スペクトル分解能の限界以上の線** には鋭敏。一方、強く飽和した線（線芯が完全に黒）では、追加の物質を加えても等価幅はゆっくりとしか増えない（§21.6 の curve of growth の「飽和域」）。等価幅から物理量を読むには、線がどの「成長領域」にあるかを意識する必要がある</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>**注意（観測）**：等価幅は **観測スペクトル分解能の限界以上の線** には鋭敏である。一方、強く飽和した線（線芯が完全に黒）では、追加の物質を加えても等価幅はゆっくりとしか増えない（§21.6 の成長曲線の「飽和域」）。等価幅から物理量を読むには、線がどの「成長領域」にあるかを意識する必要がある。</span>
 <span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="fu">## 21.2 線の三つの素過程 ― Einstein 係数の再登場 {#sec-line-three-processes}</span></span>
@@ -1557,7 +1558,7 @@ W(N) = \begin{cases}
 <span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>**もう一歩**：銀河中心の H$_2$O メーザー（22 GHz）、星形成領域の OH メーザー（1.6 GHz）はこの **天然のレーザー** 現象。観測すれば、$n_u/g_u &gt; n_l/g_l$ を実現する非平衡ポンプ機構（衝突、放射ポンプ）の存在が逆引きされる</span>
 <span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a><span class="fu">## 21.3 線源泉関数 ― 連続スペクトルから線スペクトルへ {#sec-line-source-function}</span></span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a><span class="fu">## 21.3 線ソース関数 ― 連続スペクトルから線スペクトルへ {#sec-line-source-function}</span></span>
 <span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
 <span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a></span>
@@ -1567,27 +1568,27 @@ W(N) = \begin{cases}
 <span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>S_\nu^\text{line} = \frac{j_\nu^\text{line}}{\alpha_\nu^\text{line}}</span>
 <span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>$$ {#eq-line-source-function}</span>
 <span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>の形で構成される。$j_\nu^\text{line}$ は線放射係数（自発放出 + 誘導放出からの寄与）、$\alpha_\nu^\text{line}$ は線吸収係数。Einstein 係数を使うと、$\phi(\nu-\nu_0)$ が両者で共通になる前提のもとで</span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>の形で構成される。ここで $j_\nu^\text{line}$ は線の **放出係数**（**emission coefficient**）で、本書では **自発放出のみ** をその寄与とする。一方、$\alpha_\nu^\text{line}$ は線吸収係数で、**誘導放出を「負の吸収」として吸収係数の中に繰り込む流儀**（@eq-line-absorption-einstein の補正項 $<span class="co">[</span><span class="ot">1 - g_l n_u/(g_u n_l)</span><span class="co">]</span>$）を採用する。すなわち本書では一貫して、誘導放出は吸収係数側の補正として扱い、放出係数 $j_\nu^\text{line}$ には含めない。Einstein 係数を使うと、$\phi(\nu-\nu_0)$ が両者で共通になる前提のもとで</span>
 <span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>S_\nu^\text{line} = \frac{A_{ul} n_u}{B_{lu} n_l - B_{ul} n_u} = \frac{2h\nu_0^3/c^2}{(g_u n_l)/(g_l n_u) - 1}</span>
 <span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>$$ {#eq-line-S-explicit}</span>
 <span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>これは形式的に **プランク関数と同じ構造** だが、$h\nu/k_BT$ の代わりに $\ln[(g_u n_l)/(g_l n_u)]$ が指数因子に入っている。これを **「励起温度**」（**excitation temperature**）$T_\text{ex}$ を使って</span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>となる（分子が自発放出 $A_{ul} n_u$、分母が誘導放出を差し引いた正味の吸収 $B_{lu} n_l - B_{ul} n_u$）。これは形式的に **プランク関数と同じ構造** だが、$h\nu/k_BT$ の代わりに $\ln[(g_u n_l)/(g_l n_u)]$ が指数因子に入っている。これを **「励起温度」**（**excitation temperature**）$T_\text{ex}$ を使って</span>
 <span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>\frac{g_u n_l}{g_l n_u} = e^{h\nu_0/k_B T_\text{ex}}</span>
 <span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a>$$ {#eq-excitation-temperature}</span>
 <span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>と書き直すと、$S_\nu^\text{line} = B_{\nu_0}(T_\text{ex})$。すなわち **線源泉関数は、励起温度に対応する黒体スペクトル**。</span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>と書き直すと、$S_\nu^\text{line} = B_{\nu_0}(T_\text{ex})$。すなわち **線ソース関数は、励起温度に対応する黒体スペクトル** である。</span>
 <span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a>**用語**：**励起温度** $T_\text{ex}$ は、観測者が観測される線の強度から **逆引き** で求める「上下準位の占有比を Boltzmann 分布で書いたときの温度」。物理的に物質と熱平衡している温度とは限らない（LTE / non-LTE の区別、§21.4-§21.5）</span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a>**用語**：**励起温度** $T_\text{ex}$ は、観測者が観測される線の強度から **逆引き** で求める「上下準位の占有比を Boltzmann 分布で書いたときの温度」である。物理的に物質と熱平衡している温度とは限らない（LTE / non-LTE の区別、§21.4-§21.5）。</span>
 <span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>**対応（観測）**：観測される線の輝度温度から $T_\text{ex}$ を測れる ― これが線スペクトルから物理状態を逆引きする最初のステップ</span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>**観測との対応**：観測される線の輝度温度から $T_\text{ex}$ を測れる ― これが線スペクトルから物理状態を逆引きする最初のステップである。</span>
 <span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a><span class="fu">## 21.4 LTE 線形成 ― 線源泉関数 ≈ $B_\nu(T_\text{kin})$ {#sec-LTE-line-formation}</span></span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a><span class="fu">## 21.4 LTE 線形成 ― 線ソース関数 ≈ $B_\nu(T_\text{kin})$ {#sec-LTE-line-formation}</span></span>
 <span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
 <span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a></span>
@@ -1597,7 +1598,7 @@ W(N) = \begin{cases}
 <span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>\frac{n_u}{g_u} = \frac{n_l}{g_l} e^{-h\nu_0/k_B T_\text{kin}}</span>
 <span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>$$ {#eq-boltzmann}</span>
 <span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>すると $T_\text{ex} = T_\text{kin}$ となり、線源泉関数は **キネティック温度のプランク関数**：</span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>すると $T_\text{ex} = T_\text{kin}$ となり、線ソース関数は **キネティック温度のプランク関数** になる：</span>
 <span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>S_\nu^\text{line, LTE} = B_\nu(T_\text{kin})</span>
@@ -1613,7 +1614,7 @@ W(N) = \begin{cases}
 <span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>逆に、温度が深さとともに **下がる** 場合（彩層・コロナ）や、観測対象がガス雲そのもの（背景の連続光がない）では、輝線として現れる。**吸収線 ↔ 輝線は、温度構造と背景光の組合せ** で決まる</span>
 <span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a><span class="al">![同じ原子遷移が観測の幾何条件で吸収線にも輝線にもなる三つのケース（第20章 §20.3 で導入した図を、§21.4 で源泉関数の文脈で再掲）。温度勾配と背景光の組合せがどう線形態を決めるかが視覚的に分かる。](../images/line-formation-geometry.svg)</span>{#fig-line-geometry-lte width=88%}</span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a><span class="al">![同じ原子遷移が観測の幾何条件で吸収線にも輝線にもなる三つのケース（第20章 §20.3 で導入した図を、§21.4 でソース関数の文脈で再掲）。温度勾配と背景光の組合せがどう線形態を決めるかが視覚的に分かる。](../images/line-formation-geometry.svg)</span>{#fig-line-geometry-lte width=88%}</span>
 <span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a><span class="fu">## 21.5 non-LTE 線形成 ― いつ・なぜ LTE が破綻するか {#sec-non-LTE-line-formation}</span></span>
 <span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a></span>
@@ -1625,7 +1626,7 @@ W(N) = \begin{cases}
 <span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>強い放射場（放射過程が衝突過程より速い）</span>
 <span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>急激な温度勾配（局所平衡が追いつかない）</span>
 <span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a>このとき、占有数 $n_l, n_u$ は Boltzmann 分布から外れ、**励起温度 $T_\text{ex}$ がキネティック温度 $T_\text{kin}$ と乖離する**。線源泉関数は $B_\nu(T_\text{ex})$ のままだが、$T_\text{ex}$ が物理温度を反映しない。</span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a>このとき、占有数 $n_l, n_u$ は Boltzmann 分布から外れ、**励起温度 $T_\text{ex}$ がキネティック温度 $T_\text{kin}$ と乖離する**。線ソース関数は $B_\nu(T_\text{ex})$ のままだが、$T_\text{ex}$ が物理温度を反映しない。</span>
 <span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a>non-LTE 線形成を扱う数値的枠組み：</span>
 <span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a></span>
@@ -1642,16 +1643,16 @@ W(N) = \begin{cases}
 <span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
 <span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>**用語の整理**（第6章 §6.5 と整合）：</span>
 <span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**LTE**：物質側の占有数が局所キネティック温度の Boltzmann/Saha 分布 → 線源泉関数 = $B_\nu(T_\text{kin})$</span>
-<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**non-LTE**：物質側の占有数が局所温度の Boltzmann から外れる → 線源泉関数 ≠ $B_\nu(T_\text{kin})$、しかし依然として $= B_\nu(T_\text{ex})$</span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**LTE**：物質側の占有数が局所キネティック温度の Boltzmann/Saha 分布 → 線ソース関数 = $B_\nu(T_\text{kin})$</span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**non-LTE**：物質側の占有数が局所温度の Boltzmann から外れる → 線ソース関数 ≠ $B_\nu(T_\text{kin})$、しかし依然として $= B_\nu(T_\text{ex})$</span>
 <span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**熱的 vs 非熱的**：粒子のエネルギー分布が Maxwell-Boltzmann か否か。LTE / non-LTE とは別の軸（第15章 §15.1）</span>
 <span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a><span class="fu">## 21.6 curve of growth ― 等価幅から柱密度を測る {#sec-curve-of-growth}</span></span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a><span class="fu">## 21.6 成長曲線（curve of growth） ― 等価幅から柱密度を測る {#sec-curve-of-growth}</span></span>
 <span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
 <span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>弱い吸収線から強い吸収線まで、観測される **等価幅** $W$ と **柱密度** $N \equiv \int n_l\, ds$ の関係は、**curve of growth**（**等価幅曲線**, **成長曲線**）として知られる：</span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>弱い吸収線から強い吸収線まで、観測される **等価幅** $W$ と **柱密度** $N \equiv \int n_l\, ds$ の関係は、**成長曲線**（**curve of growth**、等価幅曲線とも）として知られる：</span>
 <span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a>W(N) = \begin{cases}</span>
@@ -1668,7 +1669,7 @@ W(N) = \begin{cases}
 <span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**減衰翼領域**：自然幅・衝突幅が支配（第23章）。Lorentz 翼の $\propto \sqrt{N}$ 依存</span>
 <span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a>**対応（観測）**：恒星・QSO 吸収線スペクトルの解析で、curve of growth は **観測等価幅 → 柱密度** を求める基本道具。化学組成、QSO 視線方向の星間吸収系の柱密度測定などに使われる。第24章 §24.2 で本格的に応用する</span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a>**観測との対応**：恒星・QSO 吸収線スペクトルの解析で、成長曲線は **観測等価幅 → 柱密度** を求める基本道具である。化学組成、QSO 視線方向の星間吸収系の柱密度測定などに使われる。第24章 §24.2 で本格的に応用する。</span>
 <span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a><span class="fu">## 21.7 使えるようになった道具 {#sec-line-formation-tools .unnumbered}</span></span>
@@ -1676,9 +1677,9 @@ W(N) = \begin{cases}
 <span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
 <span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>等価幅 $W_\lambda$ ― 線の最も基本的観測量</span>
 <span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Einstein 係数による吸収・輝線・誘導放出の統一記述</span>
-<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>線源泉関数 $S_\nu^\text{line} = B_\nu(T_\text{ex})$ と励起温度の概念</span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>線ソース関数 $S_\nu^\text{line} = B_\nu(T_\text{ex})$ と励起温度の概念</span>
 <span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>LTE と non-LTE の区別、いつどちらが使えるか</span>
-<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>curve of growth ― $W \to N$ の換算手段</span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>成長曲線（curve of growth）― $W \to N$ の換算手段</span>
 <span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>---</span>
@@ -1691,8 +1692,8 @@ W(N) = \begin{cases}
 <span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>本章で、中心地図 $\alpha_\nu$ の **$n_l$ 因子** と **線形成の選択（吸収 or 輝線）** が物理的に解読された：</span>
 <span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$n_l$ は LTE では Boltzmann/Saha、non-LTE では statistical equilibrium で決まる</span>
-<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>線が吸収か輝線かは、線源泉関数 $S_\nu^\text{line} = B_\nu(T_\text{ex})$ と背景の連続光輝度の比較で決まる</span>
-<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>等価幅 $W$ と柱密度 $N$ は curve of growth で結ばれる</span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>線が吸収か輝線かは、線ソース関数 $S_\nu^\text{line} = B_\nu(T_\text{ex})$ と背景の連続光輝度の比較で決まる</span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>等価幅 $W$ と柱密度 $N$ は成長曲線（curve of growth）で結ばれる</span>
 <span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a>次章では中心地図のもう一つの因子 ― **振動子強度 $f_{lu}$** ― を、原子物理から逆引きする。</span>
 <span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>:::</span>
@@ -1701,17 +1702,17 @@ W(N) = \begin{cases}
 <span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</span>
 <span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 21-1　線源泉関数が Bν(Tex) になる {#ex-21-1 .unnumbered}</span></span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 21-1　線ソース関数が Bν(Tex) になる {#ex-21-1 .unnumbered}</span></span>
 <span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
 <span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a>§21.3 は線源泉関数を励起温度 $T_\mathrm{ex}$ のプランク関数に書き換えた。導出を埋める。$S_\nu^\mathrm{line}=\dfrac{A_{ul}n_u}{B_{lu}n_l-B_{ul}n_u}$、Einstein 関係 $A_{ul}/B_{ul}=2h\nu_0^3/c^2$、$g_lB_{lu}=g_uB_{ul}$。</span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a>§21.3 は線ソース関数を励起温度 $T_\mathrm{ex}$ のプランク関数に書き換えた。導出を埋める。$S_\nu^\mathrm{line}=\dfrac{A_{ul}n_u}{B_{lu}n_l-B_{ul}n_u}$、Einstein 関係 $A_{ul}/B_{ul}=2h\nu_0^3/c^2$、$g_lB_{lu}=g_uB_{ul}$。</span>
 <span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Einstein 関係を使って $S_\nu^\mathrm{line}=\dfrac{2h\nu_0^3/c^2}{(g_un_l)/(g_ln_u)-1}$ を導け。</span>
 <span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>励起温度を $\dfrac{g_un_l}{g_ln_u}=e^{h\nu_0/k_BT_\mathrm{ex}}$ で定義し、$S_\nu^\mathrm{line}=B_{\nu_0}(T_\mathrm{ex})$ を示せ。</span>
 <span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>$T_\mathrm{ex}$ が物理的なキネティック温度と一致するのはどんな条件か（LTE）。一致しない場合（non-LTE）に $S_\nu$ がプランク関数でなくなるわけではない理由を述べよ。</span>
 <span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§21.3 線源泉関数</span><span class="co">](#sec-line-source-function)</span>／Einstein 関係の導出は<span class="co">[</span><span class="ot">演習 11-1</span><span class="co">](../part4/11-einstein-method.qmd#ex-11-1)</span>、ソース関数の基礎は<span class="co">[</span><span class="ot">演習 5-5</span><span class="co">](../part2/05-radiative-transfer.qmd#ex-5-5)</span>、LTE は<span class="co">[</span><span class="ot">§21.4</span><span class="co">](#sec-LTE-line-formation)</span>。</span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§21.3 線ソース関数</span><span class="co">](#sec-line-source-function)</span>／Einstein 関係の導出は<span class="co">[</span><span class="ot">演習 11-1</span><span class="co">](../part4/11-einstein-method.qmd#ex-11-1)</span>、ソース関数の基礎は<span class="co">[</span><span class="ot">演習 5-5</span><span class="co">](../part2/05-radiative-transfer.qmd#ex-5-5)</span>、LTE は<span class="co">[</span><span class="ot">§21.4</span><span class="co">](#sec-LTE-line-formation)</span>。</span>
 <span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
 <span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 21-1）</span></span>
@@ -1753,17 +1754,17 @@ W(N) = \begin{cases}
 <span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>**答え**：補正ゼロ＝占有が等しい。負＝準位反転（$n_u/g_u&gt;n_l/g_l$）→$\alpha_\nu&lt;0$＝増幅＝メーザー。観測は非平衡ポンプ機構の証拠。</span>
 <span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 21-3　等価幅と curve of growth の三領域 {#ex-21-3 .unnumbered}</span></span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 21-3　等価幅と成長曲線の三領域 {#ex-21-3 .unnumbered}</span></span>
 <span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
 <span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a>§21.1・20.6 の等価幅 $W_\lambda=\int\frac{I_c-I_\lambda}{I_c}d\lambda$ と curve of growth を読む。</span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a>§21.1・20.6 の等価幅 $W_\lambda=\int\frac{I_c-I_\lambda}{I_c}d\lambda$ と成長曲線（curve of growth）を読む。</span>
 <span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>等価幅が「線の輪郭の詳細によらない積分量」である利点を述べよ。浅く広い線と深く狭い線が同じ $W$ になりうる理由は。</span>
-<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>curve of growth の三領域（線形 $W\propto N$、飽和 $W\propto\sqrt{\ln N}$、減衰翼 $W\propto\sqrt{N}$）が、それぞれ光学的深さ $\tau$ のどんな状態に対応するか述べよ。</span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>成長曲線の三領域（線形 $W\propto N$、飽和 $W\propto\sqrt{\ln N}$、減衰翼 $W\propto\sqrt{N}$）が、それぞれ光学的深さ $\tau$ のどんな状態に対応するか述べよ。</span>
 <span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>飽和領域の線から柱密度 $N$ を精度よく決めるのが難しい理由を述べよ。組成解析で複数の強さの線を使う理由と結びつけよ。</span>
 <span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§21.1 等価幅</span><span class="co">](#sec-line-equivalent-width)</span>、<span class="co">[</span><span class="ot">§21.6 curve of growth</span><span class="co">](#sec-curve-of-growth)</span>／組成解析は<span class="co">[</span><span class="ot">§24.2</span><span class="co">](../part7/24-line-applications.qmd#sec-line-applications-abundance)</span>、減衰翼は<span class="co">[</span><span class="ot">§23.1</span><span class="co">](../part7/23-line-shape.qmd#sec-line-shape-natural)</span>。</span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§21.1 等価幅</span><span class="co">](#sec-line-equivalent-width)</span>、<span class="co">[</span><span class="ot">§21.6 成長曲線</span><span class="co">](#sec-curve-of-growth)</span>／組成解析は<span class="co">[</span><span class="ot">§24.2</span><span class="co">](../part7/24-line-applications.qmd#sec-line-applications-abundance)</span>、減衰翼は<span class="co">[</span><span class="ot">§23.1</span><span class="co">](../part7/23-line-shape.qmd#sec-line-shape-natural)</span>。</span>
 <span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
 <span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 21-3）</span></span>
@@ -1772,7 +1773,7 @@ W(N) = \begin{cases}
 <span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a>**(2)** 線形領域：$\tau&lt;1$（光学的に薄い）、吸収量が柱密度に比例 $W\propto N$。飽和領域：線芯 $\tau\gg1$（完全に黒）で中心はこれ以上吸収できず、$W$ は $\sqrt{\ln N}$ でしか増えない。減衰翼領域：Lorentz 翼（自然幅・衝突幅）が支配し $W\propto\sqrt{N}$。</span>
 <span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a>**(3)** 飽和領域では $W$ が $N$ にほとんど鈍感（$\sqrt{\ln N}$）なので、$W$ の小さな測定誤差が $N$ の大きな誤差になる。だから組成解析では弱い線（線形領域）・中間・強い線（減衰翼）を組み合わせ、curve of growth 全体を観測点で押さえて $N$ を精度よく決める。</span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a>**(3)** 飽和領域では $W$ が $N$ にほとんど鈍感（$\sqrt{\ln N}$）なので、$W$ の小さな測定誤差が $N$ の大きな誤差になる。だから組成解析では弱い線（線形領域）・中間・強い線（減衰翼）を組み合わせ、成長曲線全体を観測点で押さえて $N$ を精度よく決める。</span>
 <span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a>**答え**：$W$ は輪郭によらぬ積分量。線形($\tau&lt;1$)→飽和($\tau\gg1$)→減衰翼。飽和域は $N$ に鈍感ゆえ複数の強さの線が必要。</span>
 <span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a>:::</span>
@@ -1806,7 +1807,7 @@ W(N) = \begin{cases}
 <span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mihalas, *Stellar Atmospheres* (Freeman, 2nd ed., 1978) — 線形成と non-LTE の古典</span>
 <span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Hubeny &amp; Mihalas, *Theory of Stellar Atmospheres* (Princeton, 2014) — 現代版、non-LTE radiative transfer の標準書</span>
 <span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rutten, *Radiative Transfer in Stellar Atmospheres* (Lecture notes, Utrecht) — 線形成の入門的講義ノート</span>
-<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Spitzer, *Physical Processes in the Interstellar Medium* (Wiley, 1978) — curve of growth の標準扱い</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Spitzer, *Physical Processes in the Interstellar Medium* (Wiley, 1978) — 成長曲線（curve of growth）の標準扱い</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
