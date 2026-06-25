@@ -31,9 +31,9 @@
 | ◎ | §2.5/§9.3/§10 | **Planck / RJ / Wien 比較・紫外破綻** | SVG | ✅ `images/uv-catastrophe.svg`（第9章 §9.3 で埋め込み、他章で再利用予定） |
 | ◎ | §4.1 | **比強度の定義の幾何**（dA, θ, dΩ, cosθ） | SVG | ✅ `images/specific-intensity.svg`（第4章で埋め込み） |
 | ◎ | §14.2 | **k 空間の格子と 1/8 球殻** | SVG | ✅ `images/k-space-counting.svg`（第14章で埋め込み） |
-| ◎ | §16.1 | **FIRAS スペクトル**（観測点＋ 2.725K 黒体） | matplotlib | ⏳ code/firas_fit.py 新規予定 |
+| ◎ | §16.1 | **FIRAS スペクトル**（観測点＋ 2.725K 黒体） | matplotlib | ✅ `images/firas-spectrum.svg`（`code/firas_fit.py`、第16章 §16.1 で埋め込み） |
 
-合計 **8 枚**（中心地図 base のみ）。**進捗：7/8 完了（87%）**。v0.2 で「テンプレ確立」を達成。
+合計 **8 枚**（中心地図 base のみ）。**進捗：8/8 完了（100%）**。v0.2 で「テンプレ確立」を達成。
 
 ### 第19章（連続放射の素過程）の図 — v0.1.x で追加済
 
