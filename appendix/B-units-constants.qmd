@@ -220,8 +220,26 @@ $$
 \text{SI:}\quad \text{Ry} = \frac{m_e e^4}{2(4\pi\epsilon_0)^2 \hbar^2}, \quad \text{CGS:}\quad \text{Ry} = \frac{m_e e^4}{2\hbar^2}
 $$
 
+### B.4.4 SI ⇔ Gauss 式形対応表（本文の主要式） {#sec-si-gauss-form-table}
+
+本書本文で前因子を含む式は、SI と Gauss（CGS）で次のように対応する。Gauss 形では一般に $e^2 \to e^2/(4\pi\epsilon_0)$ の置き換えで SI から移れる（電磁気の前因子が $4\pi\epsilon_0$ を介して隠れる）。論文と比較する際はこの表を基準にすること。
+
+| 量・式 | SI 形 | Gauss（CGS）形 | 本文 |
+|---|---|---|---|
+| Coulomb 力 | $\dfrac{1}{4\pi\epsilon_0}\dfrac{q_1 q_2}{r^2}$ | $\dfrac{q_1 q_2}{r^2}$ | 第13章 |
+| 微細構造定数 $\alpha$ | $\dfrac{e^2}{4\pi\epsilon_0 \hbar c}$ | $\dfrac{e^2}{\hbar c}$ | 第22章 |
+| Rydberg エネルギー | $\dfrac{m_e e^4}{2(4\pi\epsilon_0)^2 \hbar^2}$ | $\dfrac{m_e e^4}{2\hbar^2}$ | 第22章 |
+| 古典電子半径 $r_e$ | $\dfrac{e^2}{4\pi\epsilon_0 m_e c^2}$ | $\dfrac{e^2}{m_e c^2}$ | 第18章 |
+| Poynting ベクトル | $\dfrac{1}{\mu_0}\mathbf{E}\times\mathbf{B}$ | $\dfrac{c}{4\pi}\mathbf{E}\times\mathbf{B}$ | 第13章 |
+| 線吸収の積分強度（Lorentz 振動子前因子） | $\dfrac{\pi e^2}{4\pi\epsilon_0\, m_e c}=\dfrac{e^2}{4\epsilon_0 m_e c}$ | $\dfrac{\pi e^2}{m_e c}$ | 第22章・水素線地図 |
+| 自発放出率 $A_{ul}$ | $\dfrac{\omega^3}{3\pi\epsilon_0 \hbar c^3}\,|\mathbf{d}_{ul}|^2$ | $\dfrac{4\omega^3}{3\hbar c^3}\,|\mathbf{d}_{ul}|^2$ | 第26章 |
+
+::: {.callout-note appearance="simple"}
+**読み方**：天体物理の慣用式（特に線吸収係数の前因子 $\pi e^2/m_e c$、第22章・水素線地図）は Gauss 形である。本書本文ではこれを SI 形 $e^2/(4\epsilon_0 m_e c)$ で記し、慣用の Gauss 形を併記する方針をとる。第26章の QED の主式（@eq-A-coefficient-QED など）は SI 形で厳密に記し、Gauss/HL 形との差はこの表で確認できる。
+:::
+
 ::: {.callout-warning appearance="simple"}
-**注意**：天文学の論文では断りなく CGS が使われていることが多い。数値を比較するときは **必ず単位系を確認** すること。特に電磁気が絡む量（断面積、磁場、Stefan-Boltzmann 定数、…）は要注意
+**注意**：天文学の論文では断りなく CGS が使われていることが多い。数値を比較するときは **必ず単位系を確認** すること。特に電磁気が絡む量（断面積、磁場、Stefan-Boltzmann 定数、…）は要注意である。
 :::
 
 ---
@@ -265,7 +283,7 @@ $$
 | 太陽コロナ | $10^8$–$10^{10}$ | $10^6$–$10^7$ |
 
 ::: {.appendix-tip}
-**本文での使用**：第15章以降の応用章で「桁感覚」が必要なとき、本表を参照
+**本文での使用**：第15章以降の応用章で「桁感覚」が必要なとき、本表を参照してほしい。
 :::
 
 ---

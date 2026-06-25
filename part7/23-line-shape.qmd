@@ -1,10 +1,10 @@
 ---
-title: "第23章　線形（line shape）の物理"
+title: "第23章　線輪郭（line profile）の物理"
 lang: ja
 ---
 
 ::: {.chapter-overview}
-**この章の主題**：中心地図 $\alpha_\nu = (\pi e^2/m_e c) f_{lu} n_l \phi(\nu-\nu_0)$ の最後の因子 ― **線形関数 $\phi(\nu-\nu_0)$** ― を逆引きする。観測される線は決して数学的なデルタ関数ではなく、有限の幅を持つ。**自然幅・Doppler 拡がり・衝突拡がり**、そしてそれらの合成である **Voigt プロファイル** の物理を整理し、観測される **線形から物理条件**（温度・密度・速度場・磁場）を逆引きする道具を整える。
+**この章の主題**：中心地図 $\alpha_\nu = (\pi e^2/m_e c) f_{lu} n_l \phi(\nu-\nu_0)$ の最後の因子 ― **線輪郭関数 $\phi(\nu-\nu_0)$**（line profile、line shape ともいう）― を逆引きする。観測される線は決して数学的なデルタ関数ではなく、有限の幅を持つ。**自然幅・Doppler 拡がり・衝突拡がり**、そしてそれらの合成である **Voigt プロファイル** の物理を整理し、観測される **線輪郭から物理条件**（温度・密度・速度場・磁場）を逆引きする道具を整える。
 :::
 
 ## この章の中心地図 {#sec-line-shape-map .unnumbered}
@@ -20,7 +20,7 @@ lang: ja
 ::: {.callout-question}
 - 線の幅は何で決まるのか ― 量子論、運動学、衝突のどれが支配するか
 - なぜ線の中心は Gaussian、翼は Lorentzian という Voigt 形になるのか
-- 観測される線形から、温度・密度・速度場・磁場をどうやって読み取るのか
+- 観測される線輪郭から、温度・密度・速度場・磁場をどうやって読み取るのか
 - マクロな速度場（自転、対流、乱流）の効果は、ミクロな線幅とどう区別されるのか
 :::
 
@@ -38,20 +38,27 @@ lang: ja
 
 [本文目安：B3-B4]
 
-第11章 §11.2 と第12章で見たように、励起準位 $u$ には有限の寿命 $\tau_u = 1/A_{ul}$ がある。励起状態の量子振幅が $e^{-A_{ul} t / 2}$ で減衰することから、エネルギー準位そのものが Lorentzian の形でエネルギー幅を持つ。
+第11章 §11.2 と第12章で見たように、励起準位 $u$ には有限の寿命がある。重要なのは、この寿命を決めるのは **上準位 $u$ から到達可能なすべての下準位 $l'$ への自発放出率の総和** である点である：
+
+$$
+\Gamma_u = \sum_{l'} A_{ul'}
+$$ {#eq-total-decay-rate}
+
+すなわち上準位の全崩壊率 $\Gamma_u$ は、注目している遷移 $u \to l$ の単一の $A_{ul}$ ではなく、$u$ から落ちうるすべての経路の和である。上準位の寿命は $\tau_u = 1/\Gamma_u$ で与えられる。励起状態の量子振幅が $e^{-\Gamma_u t/2}$ で減衰することから、エネルギー準位そのものが Lorentzian の形でエネルギー幅を持つ。観測される線 $u \to l$ のうち、この遷移が全崩壊に占める割合は **分岐比**（**branching ratio**）$A_{ul}/\Gamma_u$ で与えられ、線の強度を決める。
 
 ::: {.callout-note}
 **記号の規約**（混同しやすいので注意）：
 
-- $A_{ul}$ ：自発放出率（**寿命の減衰率**）。次元 [s$^{-1}$]
-- $\Gamma_\text{nat} \equiv A_{ul}$ ：**角振動数単位** の自然幅（**FWHM**, $\omega$ 軸）
-- $\gamma_\text{nat} \equiv A_{ul}/(2\pi)$ ：**振動数単位** の自然幅（**FWHM**, $\nu$ 軸、Hz）
-- HWHM（半値半幅）はこれらの半分：$\Gamma_\text{nat}/2 = A_{ul}/2$（$\omega$）、$\gamma_\text{nat}/2 = A_{ul}/(4\pi)$（$\nu$）
+- $A_{ul}$ ：遷移 $u \to l$ の自発放出率。次元 [s$^{-1}$]
+- $\Gamma_u \equiv \sum_{l'} A_{ul'}$ ：上準位の **全崩壊率**（全下準位への和）。自然幅を決めるのはこれ。下準位 $l$ も励起準位なら、その崩壊率 $\Gamma_l$ も加わり $\Gamma_\text{nat} = \Gamma_u + \Gamma_l$ となる
+- $\Gamma_\text{nat}$ ：**角振動数単位** の自然幅（**FWHM**, $\omega$ 軸）。基底状態への遷移など下準位が安定な場合は $\Gamma_\text{nat} = \Gamma_u$
+- $\gamma_\text{nat} \equiv \Gamma_\text{nat}/(2\pi)$ ：**振動数単位** の自然幅（**FWHM**, $\nu$ 軸、Hz）
+- HWHM（半値半幅）はこれらの半分：$\Gamma_\text{nat}/2$（$\omega$）、$\gamma_\text{nat}/2 = \Gamma_\text{nat}/(4\pi)$（$\nu$）
 
-これらは「**寿命 $\tau_u$ → 振幅減衰 → エネルギー Lorentzian の幅**」という一連の関係から出るもので、$\Delta E \cdot \tau_u \gtrsim \hbar$ という不確定性原理の不等式は **オーダー推定** にすぎず、厳密には等号にならない（古典的減衰振動子の Fourier 変換が Lorentzian になることが厳密な起源、付録 §A.8.2 参照）。
+単一の下準位しか持たない遷移（例：基底状態への共鳴線）では $\Gamma_u = A_{ul}$ となり、$\Gamma_\text{nat} = A_{ul}$ と簡約される。これらは「**寿命 $\tau_u$ → 振幅減衰 → エネルギー Lorentzian の幅**」という一連の関係から出るもので、$\Delta E \cdot \tau_u \gtrsim \hbar$ という不確定性原理の不等式は **オーダー推定** にすぎず、厳密には等号にならない（古典的減衰振動子の Fourier 変換が Lorentzian になることが厳密な起源、付録 §A.8.2 参照）。
 :::
 
-これに対応する規格化された線形関数（**Lorentzian**）は
+これに対応する規格化された線輪郭関数（**Lorentzian**）は
 
 $$
 \phi_L(\nu - \nu_0) = \frac{1}{\pi} \frac{\gamma_\text{nat}/2}{(\nu - \nu_0)^2 + (\gamma_\text{nat}/2)^2}
@@ -66,7 +73,7 @@ $$ {#eq-lorentzian}
 第12章で扱った **古典的調和振動子の減衰モデル** が同じ Lorentzian を与えることが、振動子強度モデルの古典-量子対応を示す。
 
 ::: {.callout-note}
-**対応（観測）**：水素 Ly$\alpha$（$\lambda = 121.6$ nm、$A_{ul} = 6.27 \times 10^8$ s$^{-1}$）の自然幅は、波長単位で $\Delta\lambda_\text{nat} = \lambda^2 A_{ul}/(2\pi c) \simeq 4.9 \times 10^{-5}$ Å。多くの場合、自然幅は他の拡がり（Doppler、衝突）に比べて小さいが、**線の翼**（damping wing）には自然幅の Lorentzian の寄与が現れる。QSO の Ly$\alpha$ 強吸収系（damped Ly$\alpha$ system）で観測される **減衰翼** がその例
+**観測との対応**：水素 Ly$\alpha$（$\lambda = 121.6$ nm）は上準位 $2p$ から基底状態 $1s$ への単一経路で崩壊するため $\Gamma_u = A_{ul} = 6.27 \times 10^8$ s$^{-1}$ となり、自然幅は波長単位で $\Delta\lambda_\text{nat} = \lambda^2 \Gamma_\text{nat}/(2\pi c) \simeq 4.9 \times 10^{-5}$ Å である。多くの場合、自然幅は他の拡がり（Doppler、衝突）に比べて小さいが、**線の翼**（damping wing）には自然幅の Lorentzian の寄与が現れる。QSO の Ly$\alpha$ 強吸収系（damped Ly$\alpha$ system）で観測される **減衰翼** がその例である。
 :::
 
 ## 23.2 Doppler 拡がり ― Gaussian の起源 {#sec-line-shape-doppler}
@@ -79,7 +86,7 @@ $$
 \nu = \nu_0 \left(1 + \frac{v_\parallel}{c}\right)
 $$ {#eq-doppler-shift}
 
-熱的 Maxwell-Boltzmann 速度分布のもとでは、視線速度成分 $v_\parallel$ も Gaussian 分布。これを線形に積分すると、
+熱的 Maxwell-Boltzmann 速度分布のもとでは、視線速度成分 $v_\parallel$ も Gaussian 分布になる。これを線輪郭として積分すると、
 
 $$
 \phi_D(\nu - \nu_0) = \frac{1}{\Delta\nu_D \sqrt{\pi}} \exp\left[-\frac{(\nu - \nu_0)^2}{\Delta\nu_D^2}\right]
@@ -126,7 +133,7 @@ $$ {#eq-collision-width}
 - 圧力に依存することから「圧力 broadening」とも呼ばれる
 
 ::: {.callout-note}
-**対応（観測）**：恒星の **重力（圧力）の感度線** ― 例えば水素線の自然幅 + 衝突幅の合算が重力に強く依存する。Mg I b 線や Na D 線の翼の形を解析することで、**恒星の表面重力 $\log g$** が決まる。これは恒星の質量・半径推定の基本パラメータ
+**観測との対応**：恒星の **重力（圧力）の感度線** ― 例えば水素線の自然幅 + 衝突幅の合算が重力に強く依存する。Mg I b 線や Na D 線の翼の形を解析することで、**恒星の表面重力 $\log g$** が決まる。これは恒星の質量・半径推定の基本パラメータである。
 :::
 
 ## 23.4 Voigt プロファイル ― 二つの拡がりの合成 {#sec-line-shape-voigt}
@@ -135,7 +142,7 @@ $$ {#eq-collision-width}
 
 ![Voigt プロファイル（黒）と、その元となる Gaussian（赤・点線）／Lorentzian（青・破線）の比較。**線形スケール**ではコアの形が、**対数スケール**では翼の形が比較しやすい。**コアは Gaussian で急速に落ち、翼に行くと Lorentzian がべき則 $1/\Delta\nu^2$ で長く伸びる** ― これが Voigt 線の二面性で、観測者がコア（温度）と翼（密度・圧力）を別々のプローブとして使える理由。](../images/voigt-profile.svg){#fig-voigt-profile width=92%}
 
-自然幅 + 衝突幅（合算した Lorentzian、幅 $\gamma$）と Doppler 拡がり（Gaussian、幅 $\Delta\nu_D$）の **両方** が効くのが現実。線形は両者の **畳み込み**：
+自然幅 + 衝突幅（合算した Lorentzian、幅 $\gamma$）と Doppler 拡がり（Gaussian、幅 $\Delta\nu_D$）の **両方** が効くのが現実である。線輪郭は両者の **畳み込み** になる：
 
 $$
 \phi_V(\nu - \nu_0) = \phi_L \otimes \phi_D = \int \phi_L(\nu - \nu' - \nu_0) \phi_D(\nu' - \nu_0) d\nu'
@@ -194,7 +201,7 @@ $$ {#eq-velocity-quadrature-sum}
 :::
 
 ::: {.callout-note}
-**対応（観測）**：太陽の吸収線解析では、$\xi_\text{turb} \simeq 1$〜$2$ km/s のマイクロ乱流と、$\zeta_\text{macro} \simeq 3$〜$5$ km/s のマクロ乱流が経験的に必要。これは対流による速度場の積分量で、3D 数値流体シミュレーションと整合が取れている
+**観測との対応**：太陽の吸収線解析では、$\xi_\text{turb} \simeq 1$〜$2$ km/s のマイクロ乱流と、$\zeta_\text{macro} \simeq 3$〜$5$ km/s のマクロ乱流が経験的に必要である。これは対流による速度場の積分量で、3D 数値流体シミュレーションと整合が取れている。
 :::
 
 ## 23.6 磁場の効果 ― Zeeman 効果 {#sec-line-shape-zeeman}
@@ -209,20 +216,20 @@ $$ {#eq-zeeman-energy}
 
 ここで $g_J$ は Landé $g$ 因子、$\mu_B = e\hbar/2m_e$ は Bohr 磁子。
 
-観測される線形への影響：
+観測される線輪郭への影響：
 
 - 弱磁場：単一線が **三本** に分裂（ノーマル Zeeman）または複数本に分裂（アノーマラス Zeeman）
 - 線分裂は **円偏光** を伴う（縦磁場成分）または **直線偏光**（横磁場成分）
 - 分解できない場合でも、線が **広がって見える**（Zeeman broadening）
 
 ::: {.callout-note}
-**対応（観測）**：太陽黒点の磁場は Fe I $\lambda$6173 線の Zeeman 分裂から測られる。星形成領域での磁場は OH メーザーや CN 線の Zeeman 効果で測られる ― **線スペクトルが磁場の数少ない直接観測手段** であることは、第VII部の応用の重要側面
+**観測との対応**：太陽黒点の磁場は Fe I $\lambda$6173 線の Zeeman 分裂から測られる。星形成領域での磁場は OH メーザーや CN 線の Zeeman 効果で測られる ― **線スペクトルが磁場の数少ない直接観測手段** であることは、第VII部の応用の重要側面である。
 :::
 
 ## 23.7 使えるようになった道具 {#sec-line-shape-tools .unnumbered}
 
 ::: {.callout-note}
-- 自然幅 ― Lorentzian、$\gamma_\text{nat} = A_{ul}/(2\pi)$
+- 自然幅 ― Lorentzian、$\gamma_\text{nat} = \Gamma_\text{nat}/(2\pi)$（$\Gamma_\text{nat} = \sum_{l'} A_{ul'}$ ＝上準位の全崩壊率）
 - Doppler 幅 ― Gaussian、$\Delta\nu_D = \nu_0 \sqrt{2k_BT/m}/c$
 - 衝突幅 ― Lorentzian、密度・圧力に比例
 - Voigt プロファイル ― コア（温度）と翼（密度）を独立にプローブ
@@ -320,7 +327,7 @@ $$ {#eq-zeeman-energy}
 
 **(2)** コア：Doppler 幅 $\Delta\nu_D\propto\sqrt{T/m}$ から**温度**、中心シフトから**視線速度**。翼：Lorentzian 幅 $\gamma=$ 自然幅＋衝突幅で、衝突幅が**密度・圧力**に比例するので翼の形から**密度・圧力**。
 
-**(3)** コアは温度に、翼は密度・圧力に主に依存し、両者は線形の異なる部分に別々に効く。観測されたコアと翼を同時にフィットすると、温度（コア幅）と密度（翼の広がり）を分離して独立に決められる。恒星の表面重力 $\log g$ は翼の解析から得られる。
+**(3)** コアは温度に、翼は密度・圧力に主に依存し、両者は線輪郭の異なる部分に別々に効く。観測されたコアと翼を同時にフィットすると、温度（コア幅）と密度（翼の広がり）を分離して独立に決められる。恒星の表面重力 $\log g$ は翼の解析から得られる。
 
 **答え**：コア＝Gaussian（温度・速度）、翼＝Lorentzian（密度・圧力）。$|x|>5$ で Gaussian は $10^{-11}$ に消え翼が浮かぶ。同時フィットで温度と密度を分離。
 :::
@@ -351,7 +358,7 @@ $$ {#eq-zeeman-energy}
 
 ## さらに学ぶための参考文献 {#sec-line-shape-further .unnumbered}
 
-- Sobelman et al., *Excitation of Atoms and Broadening of Spectral Lines* (Springer, 2nd ed., 1995) — 線形の系統的扱い
-- Gray, *The Observation and Analysis of Stellar Photospheres* (Cambridge, 3rd ed., 2005) — 恒星線形と速度場
+- Sobelman et al., *Excitation of Atoms and Broadening of Spectral Lines* (Springer, 2nd ed., 1995) — 線輪郭の系統的扱い
+- Gray, *The Observation and Analysis of Stellar Photospheres* (Cambridge, 3rd ed., 2005) — 恒星線輪郭と速度場
 - del Toro Iniesta, *Introduction to Spectropolarimetry* (Cambridge, 2003) — Zeeman 効果と偏光分光
 - Mihalas, *Stellar Atmospheres* (Freeman, 2nd ed., 1978) — Voigt プロファイルの解析応用

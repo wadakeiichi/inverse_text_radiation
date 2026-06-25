@@ -112,7 +112,7 @@ footer a{color:var(--primary)}
 
   <div class="intro">
     <h2>この問題集の使い方</h2>
-    <p>本文が定義として与えた基本量どうしの関係を自分で導く<span style="color:#1f4e79">導出補完</span>問題と、観測量との対応や LTE の意味を別角度で掘る<span style="color:#8a6d12">理解を深める</span>問題の二系統です。第II部は「記述の枠組み」を整える部なので、定義から関係式を導く計算と、観測の現場での意味づけが中心になります。各問に本文該当節へのリンクを付けています。解答は「▶ 模範解答」で展開 ― まず自力で。</p>
+    <p>本文が定義として与えた基本量どうしの関係を自分で導く<span style="color:#1f4e79">導出補完</span>問題と、観測量との対応や LTE の意味を別角度で掘る<span style="color:#8a6d12">理解を深める</span>問題の二系統です。第II部は「記述の枠組み」を整える部なので、定義から関係式を導く計算と、観測の現場での意味づけが中心になります。各問に本文該当節へのリンクを付けています。解答は「模範解答」を展開して確認できる。まず自力で解いてから参照してほしい。</p>
     <div class="legend">
       <span class="star">☆</span> 基礎（定義・確認）
       <span class="star">☆☆</span> 標準（関係式の導出・意味づけ）
@@ -166,7 +166,7 @@ footer a{color:var(--primary)}
           <p><b>(2)</b> $\displaystyle\oint\cos\theta\,d\Omega=\int_0^{2\pi}d\varphi\int_0^{\pi}\cos\theta\sin\theta\,d\theta=2\pi\left[\dfrac{\sin^2\theta}{2}\right]_0^{\pi}=2\pi\cdot0=0$。（上半球の正と下半球の負が打ち消す。）よって $F_\nu=I_\nu\cdot0=0$。</p>
           <p><b>(3)</b> $\displaystyle\oint\cos^2\theta\,d\Omega=\int_0^{2\pi}d\varphi\int_0^{\pi}\cos^2\theta\sin\theta\,d\theta=2\pi\left[-\dfrac{\cos^3\theta}{3}\right]_0^{\pi}=2\pi\cdot\dfrac{2}{3}=\dfrac{4\pi}{3}$。よって</p>
           $$P_\nu=\frac{I_\nu}{c}\cdot\frac{4\pi}{3}=\frac{1}{3}\cdot\frac{4\pi}{c}I_\nu=\frac{1}{3}u_\nu.$$
-          <div class="ans"><b>答え：</b> 等方場で $u_\nu=\frac{4\pi}{c}I_\nu$、$F_\nu=0$、$P_\nu=\frac13 u_\nu$。最後は光子気体の状態方程式 $P=u/3$。</div>
+          <div class="ans"><b>解答の要点：</b> 等方場で $u_\nu=\frac{4\pi}{c}I_\nu$、$F_\nu=0$、$P_\nu=\frac13 u_\nu$。最後は光子気体の状態方程式 $P=u/3$。</div>
         </div>
       </details>
     </div>
@@ -199,7 +199,7 @@ footer a{color:var(--primary)}
           <p><b>(3)</b> 表面フラックス $F_\nu^{\rm surf}=\pi I_\nu$（半球射出、§2.4）、光度 $L_\nu=4\pi R^2\cdot F_\nu^{\rm surf}=4\pi R^2\cdot\pi I_\nu=4\pi^2 R^2 I_\nu$。点光源式に入れると</p>
           $$F_\nu^{\rm obs}=\frac{L_\nu}{4\pi d^2}=\frac{4\pi^2R^2 I_\nu}{4\pi d^2}=\frac{\pi I_\nu R^2}{d^2},$$
           <p>これは (2) と完全に一致する。$I_\nu$ は不変、$F_\nu$ だけが $1/d^2$ で落ちる。</p>
-          <div class="ans"><b>答え：</b> $I_\nu$ は距離不変、$\Omega\propto1/d^2$ ゆえ $F_\nu=\pi I_\nu R^2/d^2\propto1/d^2$。点光源式とも一致。</div>
+          <div class="ans"><b>解答の要点：</b> $I_\nu$ は距離不変、$\Omega\propto1/d^2$ ゆえ $F_\nu=\pi I_\nu R^2/d^2\propto1/d^2$。点光源式とも一致。</div>
         </div>
       </details>
     </div>
@@ -232,7 +232,7 @@ footer a{color:var(--primary)}
           <p>本文の値と一致。</p>
           <p><b>(2)</b> $J_\nu$ は比強度の<b>方向平均</b>（$\frac{1}{4\pi}\oint I_\nu d\Omega$）なので等方場で $J_\nu=I_\nu=B_\nu$。一方 $u_\nu$ は単位体積あたりの<b>エネルギー</b>（$\frac1c\oint I_\nu d\Omega$）で、全立体角の積分 $4\pi$ と $1/c$ が付く。平均か総和か、という定義の違い。実際 $u_\nu=\frac{4\pi}{c}J_\nu$。</p>
           <p><b>(3)</b> $4.2\times10^{-13}$ と $10^{-12}$ erg cm$^{-3}$ はオーダーで同程度。CMB・宇宙線・星間磁場のエネルギー密度が拮抗していることは、銀河系の星間媒質がこれらの間でエネルギーをやりとりする「準平衡」的な系であることを示唆する（重要なベースライン）。</p>
-          <div class="ans"><b>答え：</b> $u\simeq4.2\times10^{-13}$ erg cm$^{-3}$。$J_\nu$＝方向平均、$u_\nu$＝体積エネルギー（$4\pi/c$ 倍）。宇宙線・磁場と同オーダー。</div>
+          <div class="ans"><b>解答の要点：</b> $u\simeq4.2\times10^{-13}$ erg cm$^{-3}$。$J_\nu$＝方向平均、$u_\nu$＝体積エネルギー（$4\pi/c$ 倍）。宇宙線・磁場と同オーダー。</div>
         </div>
       </details>
     </div>
@@ -265,7 +265,7 @@ footer a{color:var(--primary)}
           <p>（本文の表の値と一致。）</p>
           <p><b>(2)</b> シーイング 1 arcsec のビーム半径 $0.5''=2.4\times10^{-6}$ rad、$\Omega_{\rm beam}\simeq\pi(2.4\times10^{-6})^2\simeq1.8\times10^{-11}$ sr。$\Omega_{\rm src}/\Omega_{\rm beam}\sim10^{-4}\ll1$。天体はビームよりはるかに小さく、空間的に分解できない＝点光源。測れるのはフラックス $F_\nu$ のみ。</p>
           <p><b>(3)</b> VLTI の分解能 $\sim1$ mas は天体視直径 9 mas より小さいので、円盤を空間的に分解できる＝広がった光源として扱え、面上の比強度 $I_\nu$（表面輝度分布）が測れる。同じ天体が装置の分解能次第で点光源にも広がった光源にもなる。すなわち「点か広がりか」は天体の性質でなく装置との関係で決まる。</p>
-          <div class="ans"><b>答え：</b> $\Omega_{\rm src}\simeq1.5\times10^{-15}$ sr。シーイング1″では $\ll\Omega_{\rm beam}$ ゆえ点光源（$F_\nu$ を測る）。VLTI 1 masでは分解でき広がった光源（$I_\nu$）。装置依存。</div>
+          <div class="ans"><b>解答の要点：</b> $\Omega_{\rm src}\simeq1.5\times10^{-15}$ sr。シーイング1″では $\ll\Omega_{\rm beam}$ ゆえ点光源（$F_\nu$ を測る）。VLTI 1 masでは分解でき広がった光源（$I_\nu$）。装置依存。</div>
         </div>
       </details>
     </div>
@@ -311,7 +311,7 @@ footer a{color:var(--primary)}
           <p>両辺を $e^{\tau_\nu}$ で割る：</p>
           $$I_\nu(\tau_\nu)=I_\nu(0)e^{-\tau_\nu}+\int_0^{\tau_\nu}S_\nu(\tau')e^{-(\tau_\nu-\tau')}d\tau'.$$
           <p><b>(3)</b> 第一項：入射光 $I_\nu(0)$ が経路全体の吸収で $e^{-\tau_\nu}$ 倍に減衰したもの。第二項：各深さ $\tau'$ で放出された光 $S_\nu d\tau'$ が、そこから観測点までの吸収 $e^{-(\tau_\nu-\tau')}$ で減衰しながら積算されたもの。観測スペクトルが「光が経た歴史」を映すとは、この第二項のこと。</p>
-          <div class="ans"><b>答え：</b> 積分因子 $e^{\tau}$ で $\frac{d}{d\tau}(Ie^\tau)=Se^\tau$、積分して形式解。第一項＝初期光の減衰、第二項＝放出の減衰付き積算。</div>
+          <div class="ans"><b>解答の要点：</b> 積分因子 $e^{\tau}$ で $\frac{d}{d\tau}(Ie^\tau)=Se^\tau$、積分して形式解。第一項＝初期光の減衰、第二項＝放出の減衰付き積算。</div>
         </div>
       </details>
     </div>
@@ -344,7 +344,7 @@ footer a{color:var(--primary)}
           <p><b>(2)</b> $\tau\gg1$ で $e^{-\tau}\to0$ ゆえ $I_\nu\to S_\nu$。初期光は完全に消え、比強度はソース関数の値そのものになる。</p>
           <p><b>(3)</b> $\tau\ll1$ で $e^{-\tau}\approx1-\tau$：</p>
           $$I_\nu\approx I_\nu(0)(1-\tau)+S_\nu\tau=I_\nu(0)+\tau(S_\nu-I_\nu(0)).$$
-          <div class="ans"><b>答え：</b> $I_\nu=I_\nu(0)e^{-\tau}+S_\nu(1-e^{-\tau})$。厚い→$S_\nu$、薄い→$I_\nu(0)+\tau(S_\nu-I_\nu(0))$。</div>
+          <div class="ans"><b>解答の要点：</b> $I_\nu=I_\nu(0)e^{-\tau}+S_\nu(1-e^{-\tau})$。厚い→$S_\nu$、薄い→$I_\nu(0)+\tau(S_\nu-I_\nu(0))$。</div>
         </div>
       </details>
     </div>
@@ -368,14 +368,14 @@ footer a{color:var(--primary)}
       <div class="related"><b>関連：</b>
         <a href="https://wadakeiichi.github.io/inverse_text_radiation/part2/05-radiative-transfer.html#sec-radiative-transfer-source" target="_blank" rel="noopener">§5.4 ソース関数</a>、
         <a href="https://wadakeiichi.github.io/inverse_text_radiation/part2/05-radiative-transfer.html#sec-radiative-transfer-thin" target="_blank" rel="noopener">§5.7 薄い極限（輝線天体）</a> ／
-        太陽の連続+線の二重構造は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/01-where-blackbody.html#sec-where-blackbody-sun" target="_blank" rel="noopener">§1.2</a>、線スペクトルは <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/20-line-formation.html" target="_blank" rel="noopener">第20章</a>。
+        太陽の連続+線の二重構造は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/01-where-blackbody.html#sec-where-blackbody-sun" target="_blank" rel="noopener">§1.2</a>、線スペクトルは <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/21-line-formation.html" target="_blank" rel="noopener">第21章</a>。
       </div>
       <details class="sol"><summary>模範解答</summary>
         <div class="solbody">
           <p><b>(1)</b> $S_\nu\lt I_\nu(0)$ なら $S_\nu-I_\nu(0)\lt 0$。線中心で $\tau_\nu$ が大きいほど $I_\nu=I_\nu(0)+\tau_\nu(S_\nu-I_\nu(0))$ は連続光 $I_\nu(0)$ より<b>小さく</b>なる。すなわち連続光を背景にした<b>吸収線</b>として見える。</p>
           <p><b>(2)</b> $S_\nu\gt I_\nu(0)$ なら $S_\nu-I_\nu(0)\gt 0$。線中心で $I_\nu$ は背景より<b>大きく</b>、<b>輝線</b>になる。特に背景光がない（$I_\nu(0)\approx0$）と $I_\nu\approx\tau_\nu S_\nu$ で、線中心だけ明るい純粋な輝線スペクトルになる。</p>
           <p><b>(3)</b> 太陽の Fraunhofer 線：明るい光球（連続光 $I_\nu(0)$ 大）を背景に、外側の低温層（$S_\nu=B_\nu(T_{\rm out})\lt I_\nu(0)$）が吸収する → $S_\nu\lt I_\nu(0)$、吸収線。HII 領域：背景となる連続光がほぼなく、ガス自身の放出だけが見える → $S_\nu\gt I_\nu(0)\approx0$、輝線。線の出方は線中心のソース関数と背景光の大小で決まる。</p>
-          <div class="ans"><b>答え：</b> $S_\nu\lt I_\nu(0)$→吸収線、$S_\nu\gt I_\nu(0)$→輝線。太陽 Fraunhofer＝前者、HII 領域＝後者。</div>
+          <div class="ans"><b>解答の要点：</b> $S_\nu\lt I_\nu(0)$→吸収線、$S_\nu\gt I_\nu(0)$→輝線。太陽 Fraunhofer＝前者、HII 領域＝後者。</div>
         </div>
       </details>
     </div>
@@ -406,7 +406,7 @@ footer a{color:var(--primary)}
           <p><b>(1)</b> 観測点（$\tau_\nu=0$ を外側にとる座標で考えると）に届く放出の重みは $e^{-(\tau_\nu-\tau')}$ で、観測点から光学的厚さが約1以内の層（$\tau\lesssim1$）からの寄与が支配的。それより深い層の光は手前の吸収 $e^{-\tau}$ で強く減衰して届かない。だから「観測点から $\tau\sim1$ の深さ」が実効的な放出層＝「見える表面」になる。</p>
           <p><b>(2)</b> $\ell_{\rm mfp}=1/\alpha_\nu$ は光が一回吸収・散乱されずに進める距離。$\tau\sim1$ は観測点から測って平均自由行程ほぼ1回分の深さで、そこから出た光子はもう吸収されずに脱出できる。それより深い光子は途中で吸収・再放出され「直接は見えない」。よって $\tau\sim1$ が脱出できる最後の深さ＝光球。</p>
           <p><b>(3)</b> $\tau\sim1$ 層が LTE なら $S_\nu=B_\nu(T(\tau\!\sim\!1))$。その層は内側に向かって光学的に厚い（$\tau\gg1$）ので、問題 5-2(2) の厚い極限により出てくる比強度は $I_\nu\to S_\nu=B_\nu(T(\tau\!\sim\!1))$。すなわち観測スペクトルは $\tau\sim1$ 層の温度のプランク関数に近づく。太陽が $B_\nu(5800\text{K})$ に近いのはこのため。</p>
-          <div class="ans"><b>答え：</b> 重み $e^{-(\tau-\tau')}$ ゆえ $\tau\sim1$ 層が実効放出層＝脱出できる最後の深さ＝光球。そこが LTE＋厚いので $I_\nu\to B_\nu(T(\tau\!\sim\!1))$。</div>
+          <div class="ans"><b>解答の要点：</b> 重み $e^{-(\tau-\tau')}$ ゆえ $\tau\sim1$ 層が実効放出層＝脱出できる最後の深さ＝光球。そこが LTE＋厚いので $I_\nu\to B_\nu(T(\tau\!\sim\!1))$。</div>
         </div>
       </details>
     </div>
@@ -436,7 +436,7 @@ footer a{color:var(--primary)}
           <p><b>(1)</b> ソース関数は $S_\nu=j_\nu/\alpha_\nu$。Kirchhoff の法則により、物質が局所温度 $T$ で熱化していれば、放出と吸収の比 $j_\nu/\alpha_\nu$ は<b>その物質の温度 $T$ だけの関数</b> $B_\nu(T)$ になる。$j_\nu$ も $\alpha_\nu$ も局所占有数（Boltzmann 分布、局所 $T$）で決まり、その比は周囲の放射場 $J_\nu$ に依らない。だから $J_\nu$ が異方的でも $J_\nu\ne B_\nu$ でも、物質さえ LTE なら $S_\nu=B_\nu(T)$。</p>
           <p><b>(2)</b> LTE：<b>物質</b>の速度分布・電離・励起が局所 $T$ で決まる（Maxwell・Saha・Boltzmann）。放射場 $J_\nu$ は黒体でも等方でもなくてよい。完全熱平衡：<b>物質も放射場も両方</b>が同一温度で平衡（$J_\nu=B_\nu$ かつ等方、$F_\nu=0$）。LTE は物質だけの条件、完全熱平衡は放射場まで含む強い条件。</p>
           <p><b>(3)</b> 誘導吸収・放出の率は $J_\nu$ に比例する。形式解が示すように $J_\nu(\mathbf r)$ は媒質全体の構造（経路上の温度・密度）を積分した非局所量。だから占有数を決める統計平衡方程式に $J_\nu$ が入ると、占有数＝媒質全体の関数となり非局所性が入る。一方「熱化深さ」より深い領域では放射場がその場で熱化し $J_\nu\to B_\nu(T_{\rm local})$ となるため、統計平衡の解も Boltzmann（局所値）に漸近し $S_\nu\to B_\nu(T_{\rm local})$、実質 LTE に戻る。non-LTE が観測に効くのは薄い領域や中程度 $\tau$ の上層大気。</p>
-          <div class="ans"><b>答え：</b> Kirchhoff が $j/\alpha$ を局所 $T$ だけの関数にするので、放射場が黒体でなくても物質 LTE なら $S_\nu=B_\nu$。完全熱平衡は放射場まで黒体な強い条件。$J_\nu$ 経由で非局所性が入るが、熱化深さより深いと $J_\nu\to B_\nu$ で実質 LTE。</div>
+          <div class="ans"><b>解答の要点：</b> Kirchhoff が $j/\alpha$ を局所 $T$ だけの関数にするので、放射場が黒体でなくても物質 LTE なら $S_\nu=B_\nu$。完全熱平衡は放射場まで黒体な強い条件。$J_\nu$ 経由で非局所性が入るが、熱化深さより深いと $J_\nu\to B_\nu$ で実質 LTE。</div>
         </div>
       </details>
     </div>
@@ -444,7 +444,7 @@ footer a{color:var(--primary)}
 
   <footer>
     <p><b>宇宙の熱的放射</b> ― 連続放射と線スペクトルの背景物理（和田 桂一）<br>
-    演習問題集・第II部（試作版）。本文の各節は
+    v0.1 演習問題集・第II部。本文の各節は
     <a href="https://wadakeiichi.github.io/inverse_text_radiation/" target="_blank" rel="noopener">GitHub Pages 公開版</a>
     にリンクしています。第II部は放射場の記述と輸送が主題のため、定義からの関係式導出（等方場のモーメント、形式解、厚薄の極限）と、観測量・LTE の意味づけを組み合わせました。<br>
     関連演習：<a href="演習問題_第I部_黒体放射の現象論.html">第I部</a> ・ <a href="演習問題_第IV部_量子論へ.html">第IV部</a></p>

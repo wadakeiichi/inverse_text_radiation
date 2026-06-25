@@ -145,7 +145,7 @@ footer a{color:var(--primary)}
 
   <div class="intro">
     <h2>この問題集の使い方</h2>
-    <p>各問題は、本文が「第◯章で扱う」「導出は省く」とした計算を自分で埋める<span style="color:#1f4e79">導出補完</span>問題と、本文で得た道具・観測データを別の角度で使う<span style="color:#8a6d12">理解を深める</span>問題の二系統です。第I部は「観測の現象論」が主題なので、概念の整理・観測データからの推定・普遍性の論証が中心になります。各問に本文該当節へのリンクを付けています。解答は「▶ 模範解答」で展開します ― まず自力で。</p>
+    <p>各問題は、本文が「第◯章で扱う」「導出は省く」とした計算を自分で埋める<span style="color:#1f4e79">導出補完</span>問題と、本文で得た道具・観測データを別の角度で使う<span style="color:#8a6d12">理解を深める</span>問題の二系統です。第I部は「観測の現象論」が主題なので、概念の整理・観測データからの推定・普遍性の論証が中心になります。各問に本文該当節へのリンクを付けています。解答は「模範解答」を展開して確認できる。まず自力で解いてから参照してほしい。</p>
     <div class="legend">
       <span class="star">☆</span> 基礎（本文・データの確認）
       <span class="star">☆☆</span> 標準（導出・推定・論証）
@@ -205,7 +205,7 @@ footer a{color:var(--primary)}
           <p>3桁の精度で同じ値。</p>
           <p><b>(2)</b> $b\approx2.9\times10^{-3}$ m·K。これは §2.3 の Wien 変位定数 $b=2.898\times10^{-3}$ m·K と一致する。</p>
           <p><b>(3)</b> もし天体ごとにスペクトルの関数形が違えば、「ピーク波長×温度」が天体ごとにバラバラになるはず。4桁の温度差を超えて単一の $b$ を共有することは、ピーク位置の温度依存が全天体で共通＝同一の関数族 $B_\nu(T)$ が温度だけを変えて現れている、という第1章の主張を定量的に裏づける。</p>
-          <div class="ans"><b>答え：</b> $\lambda_{\max}T\approx2.9\times10^{-3}$ m·K で一定。単一の関数族が温度パラメータだけで全天体を記述することの証拠。</div>
+          <div class="ans"><b>解答の要点：</b> $\lambda_{\max}T\approx2.9\times10^{-3}$ m·K で一定。単一の関数族が温度パラメータだけで全天体を記述することの証拠。</div>
         </div>
       </details>
     </div>
@@ -235,7 +235,7 @@ footer a{color:var(--primary)}
           <p><b>(1)</b> CMB は ① 再結合期以前に光と物質が密に相互作用して完全吸収・完全熱化に相当する状況を達成、② 長時間・高密度で完璧な熱平衡に到達、③ 平均温度 $T_\mathrm{CMB}=2.7255$ K の黒体スペクトルで全天が非常によく記述できる（厳密には単一温度ではなく、この平均＝monopole に方向ゆらぎ $\Delta T/T\sim10^{-5}$ と微小なスペクトル歪みが重なる。第16章で扱う）― 3条件すべてを最もよく満たす。だから $\Delta I/I\lt 10^{-4}$ という観測精度の限界まで黒体形からずれない。</p>
           <p><b>(2)</b> 降着円盤は条件③（単一温度）を破る。半径ごとに温度が異なり、各半径の $B_\nu(T(r))$ が重なる。観測スペクトルは単一の $T$ では再現できず、ピークが鈍り高振動数側に裾を引く「多温度黒体（多温度円盤スペクトル）」になる。各半径では局所的に黒体近似が成り立つことが前提。</p>
           <p><b>(3)</b> ダストは条件①（完全吸収）を破る。波長によって放射効率 $\epsilon_\nu\lt 1$ が変化するため、黒体に振動数依存のスペクトル指数を掛けた「修正黒体」として観測される。</p>
-          <div class="ans"><b>答え：</b> CMB＝3条件すべて満たす。円盤＝③単一温度を破る→多温度合成。ダスト＝①完全吸収を破る→修正黒体。</div>
+          <div class="ans"><b>解答の要点：</b> CMB＝3条件すべて満たす。円盤＝③単一温度を破る→多温度合成。ダスト＝①完全吸収を破る→修正黒体。</div>
         </div>
       </details>
     </div>
@@ -265,7 +265,7 @@ footer a{color:var(--primary)}
           <p><b>(1)</b> 熱的/非熱的を分けるのは<b>粒子のエネルギー分布</b>（Maxwell 分布なら熱的、べき則など非Maxwellなら非熱的）。LTE/非LTE を分けるのは<b>原子の準位占有数</b>（局所温度 $T$ だけで決まれば LTE、放射場 $J_\nu$ にも依存すれば非LTE）。</p>
           <p><b>(2)</b> 熱的制動放射＝熱的（Maxwell 分布プラズマ）。シンクロトロン＝非熱的（べき則の相対論的電子）。CMB＝熱的（完全な熱平衡）。LTE 線放射＝熱的。</p>
           <p><b>(3)</b> CMB は各方向で見ると依然として完全なプランク分布（熱的スペクトル）。温度ゆらぎとは「方向ごとに黒体温度がわずかに違う」という<b>空間的</b>な差であって、各点の<b>スペクトル形</b>が非熱的（べき則）になっているわけではない。「非熱的」は強度 vs 振動数のスペクトル形の話、ゆらぎは方向ごとの温度の話で、軸が異なる。ゆらぎの起源（初期宇宙の量子ゆらぎ）も熱平衡の統計ゆらぎとは別物。</p>
-          <div class="ans"><b>答え：</b> 分布関数 vs 準位占有という別軸。制動・CMB・LTE線＝熱的、シンクロトロン＝非熱的。CMB ゆらぎはスペクトルでなく空間温度差なので非熱的とは無関係。</div>
+          <div class="ans"><b>解答の要点：</b> 分布関数 vs 準位占有という別軸。制動・CMB・LTE線＝熱的、シンクロトロン＝非熱的。CMB ゆらぎはスペクトルでなく空間温度差なので非熱的とは無関係。</div>
         </div>
       </details>
     </div>
@@ -295,7 +295,7 @@ footer a{color:var(--primary)}
           <p><b>(1)</b> <b>熱化</b>：宇宙ごく初期（典型的に宇宙年齢 $\lesssim10^7$ 秒）に、放射場のスペクトルを Planck 形へ整える過程。<b>自由伝搬の開始（再結合期、約38万年）</b>：電子と陽子が結合して中性水素になり、光が散乱されずに直進できるようになる過程。前者がスペクトルの形を作り、後者がそれを「解放」する。両者は時代も役割も別。</p>
           <p><b>(2)</b> 二重 Compton 散乱、制動放射、Compton 散乱など、光子と物質の強い相互作用。これらが早期の高密度環境でスペクトルを Planck 形に整えた。</p>
           <p><b>(3)</b> 宇宙膨張は黒体スペクトルの「形」を保存する（断熱不変量としての性質）。膨張で各光子の振動数が一様に赤方偏移し、温度パラメータ $T$ が下がるだけで、プランク分布の関数形 $B_\nu(T)$ はそのまま保たれる。だから現在 2.725 K でも完璧な黒体形を示す。</p>
-          <div class="ans"><b>答え：</b> 熱化＝初期にスペクトルを作る、再結合＝それを解放する、で別過程。膨張は形を保存（断熱不変）するので低温でも黒体のまま。</div>
+          <div class="ans"><b>解答の要点：</b> 熱化＝初期にスペクトルを作る、再結合＝それを解放する、で別過程。膨張は形を保存（断熱不変）するので低温でも黒体のまま。</div>
         </div>
       </details>
     </div>
@@ -340,7 +340,7 @@ footer a{color:var(--primary)}
           <p><b>(2)</b> $\nu=c/\lambda$ を代入。前因子：$\dfrac{2h\nu^3}{c^2}\cdot\dfrac{c}{\lambda^2}=\dfrac{2h}{c^2}\dfrac{c^3}{\lambda^3}\dfrac{c}{\lambda^2}=\dfrac{2hc^2}{\lambda^5}$。指数：$h\nu/kT=hc/\lambda kT$。よって</p>
           $$B_\lambda=\frac{2hc^2}{\lambda^5}\frac{1}{e^{hc/\lambda kT}-1}.$$
           <p><b>(3)</b> $B_\nu\propto\nu^3$ にヤコビアン $c/\lambda^2\propto\lambda^{-2}$ が掛かる。$\nu^3\propto\lambda^{-3}$ なので $\lambda^{-3}\cdot\lambda^{-2}=\lambda^{-5}$。冪の差2はヤコビアン由来。</p>
-          <div class="ans"><b>答え：</b> $B_\lambda=B_\nu c/\lambda^2=\dfrac{2hc^2}{\lambda^5}\dfrac{1}{e^{hc/\lambda kT}-1}$。$\lambda^{-5}$ の「5」はヤコビアン $\lambda^{-2}$ が $\nu^3=\lambda^{-3}$ に掛かるため。</div>
+          <div class="ans"><b>解答の要点：</b> $B_\lambda=B_\nu c/\lambda^2=\dfrac{2hc^2}{\lambda^5}\dfrac{1}{e^{hc/\lambda kT}-1}$。$\lambda^{-5}$ の「5」はヤコビアン $\lambda^{-2}$ が $\nu^3=\lambda^{-3}$ に掛かるため。</div>
         </div>
       </details>
     </div>
@@ -375,7 +375,7 @@ footer a{color:var(--primary)}
           $$\lambda_{\max}T=\frac{hc}{x_{\max}k}=\frac{hc}{4.965\,k}.$$
           <p>数値：$hc=6.626\times10^{-34}\times3.00\times10^8=1.988\times10^{-25}$ J·m。$4.965k=4.965\times1.381\times10^{-23}=6.857\times10^{-23}$。よって $b=1.988\times10^{-25}/6.857\times10^{-23}=2.90\times10^{-3}$ m·K。✓</p>
           <p><b>(3)</b> ピークを与える条件は最大化する関数（$B_\lambda$ か $B_\nu$）で異なる。両者はヤコビアン $c/\lambda^2$ だけずれた別関数なので、最大点も別位置になる（$x=4.965$ と $2.821$）。$\lambda_{\max}=hc/4.965kT$、$\nu_{\max}=2.821kT/h$ ゆえ $\lambda_{\max}\nu_{\max}=(2.821/4.965)c\approx0.568\,c\ne c$。同じスペクトルでも「どの変数でピークを測るか」で答えが変わる。</p>
-          <div class="ans"><b>答え：</b> $(5-x)e^x=5\Rightarrow x\approx4.965$、$b=hc/4.965k\approx2.90\times10^{-3}$ m·K。$\lambda_{\max}\nu_{\max}=0.568c\ne c$（ヤコビアンでピークがずれるため）。</div>
+          <div class="ans"><b>解答の要点：</b> $(5-x)e^x=5\Rightarrow x\approx4.965$、$b=hc/4.965k\approx2.90\times10^{-3}$ m·K。$\lambda_{\max}\nu_{\max}=0.568c\ne c$（ヤコビアンでピークがずれるため）。</div>
         </div>
       </details>
     </div>
@@ -407,7 +407,7 @@ footer a{color:var(--primary)}
           <p>よって $F_\nu=\pi B_\nu$。</p>
           <p><b>(2)</b> （i）表面から外へ出る放射だけを数えるので積分は上半球 $2\pi$ sr に限る（下向きは表面内部へ向かい射出に寄与しない）。（ii）フラックスは面を<b>垂直に</b>通る成分なので、法線から $\theta$ 傾いた方向の寄与には射影因子 $\cos\theta$ が掛かる。$\cos\theta$ の角度平均が $1/2$ なので、$2\pi\times\tfrac12=\pi$ となる。</p>
           <p><b>(3)</b> $\int_{\text{半球}}d\Omega=2\pi$ なので値は $2\pi B_\nu$。だがこれは「すべての方向の放射が面を垂直に通る」と誤って数えたことになり、斜め方向の放射が面を通る実効断面が $\cos\theta$ で減る効果を無視している。フラックス（面を通過する正味エネルギー流）の定義に反するので物理的に正しくない。</p>
-          <div class="ans"><b>答え：</b> $\int_{\text{半球}}\cos\theta\,d\Omega=\pi$。半球に限る効果（$2\pi$）×$\cos\theta$ 射影の平均（$1/2$）＝$\pi$。$\cos\theta$ を落とすと $2\pi B_\nu$ となり射影を無視した誤り。</div>
+          <div class="ans"><b>解答の要点：</b> $\int_{\text{半球}}\cos\theta\,d\Omega=\pi$。半球に限る効果（$2\pi$）×$\cos\theta$ 射影の平均（$1/2$）＝$\pi$。$\cos\theta$ を落とすと $2\pi B_\nu$ となり射影を無視した誤り。</div>
         </div>
       </details>
     </div>
@@ -440,7 +440,7 @@ footer a{color:var(--primary)}
           $$F=\frac{2\pi k^4}{c^2h^3}\frac{\pi^4}{15}T^4=\underbrace{\frac{2\pi^5k^4}{15c^2h^3}}_{\sigma}T^4.$$
           <p>数値（SI）：分子 $2\pi^5k^4=2\times306.0\times(1.381\times10^{-23})^4=612.0\times3.64\times10^{-92}=2.23\times10^{-89}$。分母 $15c^2h^3=15\times(3.00\times10^8)^2\times(6.626\times10^{-34})^3=15\times9.00\times10^{16}\times2.91\times10^{-100}=3.93\times10^{-82}$。よって $\sigma\approx5.67\times10^{-8}$ W m$^{-2}$K$^{-4}$。✓</p>
           <p><b>(3)</b> $\dfrac{ac}{4}=\dfrac{1}{4}\cdot\dfrac{8\pi^5k^4}{15c^3h^3}\cdot c=\dfrac{2\pi^5k^4}{15c^2h^3}=\sigma$。確かに $\sigma=ac/4$。エネルギー密度 $u=aT^4$ と射出フラックス $F=\sigma T^4$ が $\sigma=ac/4$ で結ばれる（等方場 $u=4\pi B/c$、$F=\pi B$ から $F=(c/4)u$）。</p>
-          <div class="ans"><b>答え：</b> $\sigma=\dfrac{2\pi^5k^4}{15c^2h^3}\approx5.67\times10^{-8}$ W m$^{-2}$K$^{-4}$。放射定数とは $\sigma=ac/4$。</div>
+          <div class="ans"><b>解答の要点：</b> $\sigma=\dfrac{2\pi^5k^4}{15c^2h^3}\approx5.67\times10^{-8}$ W m$^{-2}$K$^{-4}$。放射定数とは $\sigma=ac/4$。</div>
         </div>
       </details>
     </div>
@@ -472,7 +472,7 @@ footer a{color:var(--primary)}
           <p><b>(3)</b> $\sigma T^4=5.67\times10^{-8}\times(5800)^4=5.67\times10^{-8}\times1.13\times10^{15}=6.41\times10^7$ W m$^{-2}$。</p>
           $$R=\sqrt{\frac{L}{4\pi\sigma T^4}}=\sqrt{\frac{3.82\times10^{26}}{4\pi\times6.41\times10^7}}=\sqrt{\frac{3.82\times10^{26}}{8.05\times10^8}}=\sqrt{4.74\times10^{17}}\approx6.9\times10^8\ \text{m}.$$
           <p>既知値 $6.96\times10^8$ m とよく一致。観測量（ピーク波長・フラックス・距離）だけから太陽の物理量がプランク分布を介して再現できる。</p>
-          <div class="ans"><b>答え：</b> $T\simeq5800$ K、$L_\odot\simeq3.8\times10^{26}$ W、$R_\odot\simeq6.9\times10^8$ m。いずれも実測とよく一致。</div>
+          <div class="ans"><b>解答の要点：</b> $T\simeq5800$ K、$L_\odot\simeq3.8\times10^{26}$ W、$R_\odot\simeq6.9\times10^8$ m。いずれも実測とよく一致。</div>
         </div>
       </details>
     </div>
@@ -514,7 +514,7 @@ footer a{color:var(--primary)}
           <p><b>(1)</b> フィルターは $[\nu,\nu+d\nu]$ の放射だけを通す。もし $u_\nu^A\gt u_\nu^B$ なら、この帯域で A から B へ正味のエネルギーが流れる（逆なら逆向き）。両空洞は同じ温度 $T$ なのに、放射エネルギーが一方向に流れ続ける。</p>
           <p><b>(2)</b> 同一温度の二つの系の間に外部からの仕事なしに正味のエネルギー（熱）が流れることになる。この流れを使えば永久に仕事を取り出せ、「外部に変化を残さず、低温部へ熱を移す以外に熱を仕事に変換し続ける機関は作れない」という熱力学第二法則（Clausius/Kelvin の主張）に反する。よって仮定 $u_\nu^A\ne u_\nu^B$ は誤り。</p>
           <p><b>(3)</b> フィルターで振動数を1つずつ切り出せるので、「もし<b>ある</b>振動数で $u_\nu$ が違えば」その帯域だけで第二法則違反が起こる。したがって違反を避けるには<b>すべての</b>振動数で $u_\nu^A=u_\nu^B$ でなければならない。全エネルギー（積分値）の一致よりも強い、スペクトルの各点での普遍性が示せる。</p>
-          <div class="ans"><b>答え：</b> $u_\nu^A\ne u_\nu^B$ だと同一温度の二系間に正味エネルギー流＝第二法則違反。フィルター議論で各振動数ごとに $u_\nu(T)$ が材質によらず一意と結論。</div>
+          <div class="ans"><b>解答の要点：</b> $u_\nu^A\ne u_\nu^B$ だと同一温度の二系間に正味エネルギー流＝第二法則違反。フィルター議論で各振動数ごとに $u_\nu(T)$ が材質によらず一意と結論。</div>
         </div>
       </details>
     </div>
@@ -547,7 +547,7 @@ footer a{color:var(--primary)}
           $$a_\nu B_\nu(T)=\epsilon_\nu B_\nu(T)\ \Rightarrow\ a_\nu=\epsilon_\nu.$$
           <p>$B_\nu(T)\ne0$ なので約せる。吸収が強い振動数では放出も強い。</p>
           <p><b>(3)</b> もしある振動数で吸収＞放出、別の振動数で吸収＜放出だと、全体では釣り合っていても、物体は前者の振動数で正味エネルギーを受け取り後者で失う。これは空洞放射のスペクトルを各振動数で変えてしまい（あるいは物体内に振動数間のエネルギー輸送を生み）、平衡と矛盾する。第二法則と整合する平衡（詳細釣り合い）は各振動数ごとの釣り合いを要求するので、$a_\nu=\epsilon_\nu$ は振動数ごとに成り立つ。</p>
-          <div class="ans"><b>答え：</b> 平衡で $a_\nu B_\nu=\epsilon_\nu B_\nu\Rightarrow a_\nu=\epsilon_\nu$。詳細釣り合いゆえ各振動数で成立。</div>
+          <div class="ans"><b>解答の要点：</b> 平衡で $a_\nu B_\nu=\epsilon_\nu B_\nu\Rightarrow a_\nu=\epsilon_\nu$。詳細釣り合いゆえ各振動数で成立。</div>
         </div>
       </details>
     </div>
@@ -570,7 +570,7 @@ footer a{color:var(--primary)}
       </div>
       <div class="related"><b>関連：</b>
         <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/03-universality.html#sec-universality-kirchhoff" target="_blank" rel="noopener">§3.5 Kirchhoff とソース関数</a> ／
-        放射輸送の本格的扱いは <a href="https://wadakeiichi.github.io/inverse_text_radiation/part2/05-radiative-transfer.html" target="_blank" rel="noopener">第5章</a>、線形成での再導出は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/20-line-formation.html" target="_blank" rel="noopener">第20章 §20.4</a>。
+        放射輸送の本格的扱いは <a href="https://wadakeiichi.github.io/inverse_text_radiation/part2/05-radiative-transfer.html" target="_blank" rel="noopener">第5章</a>、線形成での再導出は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/21-line-formation.html" target="_blank" rel="noopener">第21章 §21.4</a>。
       </div>
       <details class="sol"><summary>模範解答</summary>
         <div class="solbody">
@@ -578,7 +578,7 @@ footer a{color:var(--primary)}
           $$0=-\alpha_\nu B_\nu(T)+j_\nu\ \Rightarrow\ j_\nu=\alpha_\nu B_\nu(T)\ \Rightarrow\ S_\nu\equiv\frac{j_\nu}{\alpha_\nu}=B_\nu(T).$$
           <p><b>(2)</b> Kirchhoff の法則は放出と吸収の比 $j_\nu/\alpha_\nu$ を<b>物質の温度 $T$ だけ</b>の関数（$=B_\nu(T)$）にする。$j_\nu$ も $\alpha_\nu$ も物質の局所状態（温度 $T$ で熱化した占有数）で決まり、その比は放射場 $I_\nu$ や $J_\nu$ に依らない。だから周囲の放射場が黒体でなく異方的でも、物質さえ局所温度 $T$ で熱化（LTE）していれば $S_\nu=j_\nu/\alpha_\nu=B_\nu(T)$ が成り立つ。</p>
           <p><b>(3)</b> 希薄ガスや AGN 輝線領域では準位占有数が局所温度だけでは決まらず放射場 $J_\nu$ に依存する（非LTE）。すると $j_\nu/\alpha_\nu$ が物質温度だけの関数でなくなり $S_\nu\ne B_\nu$ となる。</p>
-          <div class="ans"><b>答え：</b> 平衡 $dI_\nu/ds=0$ から $S_\nu=j_\nu/\alpha_\nu=B_\nu(T)$。Kirchhoff により比は物質温度だけの関数なので、LTE なら放射場が黒体でなくても成立。非LTEだと崩れる。</div>
+          <div class="ans"><b>解答の要点：</b> 平衡 $dI_\nu/ds=0$ から $S_\nu=j_\nu/\alpha_\nu=B_\nu(T)$。Kirchhoff により比は物質温度だけの関数なので、LTE なら放射場が黒体でなくても成立。非LTEだと崩れる。</div>
         </div>
       </details>
     </div>
@@ -609,7 +609,7 @@ footer a{color:var(--primary)}
           <p><b>(1)</b> 黒体スペクトルは「放射場と物質が相互作用して熱平衡に達した」結果である。完全鏡は光を吸収も放出もしないので、放射場と壁（物質）がエネルギーをやりとりできない。よって放射場は熱平衡に向かわず、内部のスペクトルは「最初に入っていた光」のまま決まらない。平衡に達するには少なくとも一部の吸収（相互作用）が不可欠。</p>
           <p><b>(2)</b> レーザー共振器は高反射率ミラーで吸収が極小なので、定常的な黒体放射を出さず、特定モードの非平衡な光を蓄える。一方、空洞に小穴を開けると、入射光は穴から入って内部で何度も反射・吸収されほぼ確実に吸収される＝実効的に完全吸収体（$a_\nu\to1$）。同時に穴からは内部の熱平衡放射＝黒体スペクトルが出る。</p>
           <p><b>(3)</b> 光学的に厚い（$\tau\gg1$）とは、光が抜ける間に多数回の吸収・再放出を受けること。これにより放射場と物質が十分相互作用して局所的に熱化し、ソース関数が $B_\nu(T)$ に近づく（問題 3-3）。完全鏡（吸収ゼロ、$\tau=0$）は相互作用が皆無で熱化しないのと正反対で、$\tau\gg1$ こそが黒体への接近を保証する。</p>
-          <div class="ans"><b>答え：</b> 吸収ゼロ＝相互作用なし＝熱化せず黒体にならない。小穴空洞は実効完全吸収体で黒体を出す。$\tau\gg1$ は多数回の吸収再放出で熱化を保証し $B_\nu$ に近づける。</div>
+          <div class="ans"><b>解答の要点：</b> 吸収ゼロ＝相互作用なし＝熱化せず黒体にならない。小穴空洞は実効完全吸収体で黒体を出す。$\tau\gg1$ は多数回の吸収再放出で熱化を保証し $B_\nu$ に近づける。</div>
         </div>
       </details>
     </div>
@@ -617,7 +617,7 @@ footer a{color:var(--primary)}
 
   <footer>
     <p><b>宇宙の熱的放射</b> ― 連続放射と線スペクトルの背景物理（和田 桂一）<br>
-    演習問題集・第I部（試作版）。本文の各節は
+    v0.1 演習問題集・第I部。本文の各節は
     <a href="https://wadakeiichi.github.io/inverse_text_radiation/" target="_blank" rel="noopener">GitHub Pages 公開版</a>
     にリンクしています。第I部は観測の現象論が主題のため、概念整理・データからの推定・普遍性の論証を中心に、本文が省いた式の導出（Wien 変位則、$F_\nu=\pi B_\nu$、Stefan–Boltzmann 定数）の補完を組み合わせました。<br>
     関連演習：<a href="演習問題_第IV部_量子論へ.html">第IV部 量子論へ</a></p>

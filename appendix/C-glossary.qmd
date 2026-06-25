@@ -4,7 +4,9 @@
 
 英語見出しの末尾に付した E1 / M1 / E2 などは多重極遷移の慣用記号、(LTE) / (CMB) などは本文で用いた略号である。
 
-本索引の収録語数：156 語。
+なお放射の「出る側」の係数については、**放出係数 $j_\nu$（emission coefficient）は単位立体角あたり** の量、**体積放射率 $\varepsilon_\nu$（volume emissivity）は全立体角 $4\pi$ について積分済み**（$\varepsilon_\nu = 4\pi j_\nu$、等方放射の場合）の量として区別する。両者を「放射率」と一括りにしない。
+
+本索引の収録語数：157 語（ほかに別表記からの参照項目を含む）。
 
 ## C.1 和英索引（五十音順）
 
@@ -40,6 +42,7 @@
 | 空洞放射 | cavity radiation |
 | 空洞モード | cavity mode |
 | 減衰翼 | damping wing |
+| 源泉関数 → ソース関数 | （→ source function を見よ） |
 | 光学的厚さ | optical depth |
 | 光学的に厚い | optically thick |
 | 光学的に薄い | optically thin |
@@ -92,6 +95,7 @@
 | 占有数反転 | population inversion |
 | 線輪郭 | line profile |
 | ソース関数 | source function |
+| 体積放射率 | volume emissivity |
 | 多温度円盤 | multi-temperature disk |
 | ダスト | dust |
 | 中性水素 | neutral hydrogen |
@@ -322,6 +326,7 @@
 | vacuum fluctuations | 真空のゆらぎ |
 | vacuum state | 真空状態 |
 | Voigt profile | Voigt プロファイル |
+| volume emissivity | 体積放射率 |
 | wave equation | 波動方程式 |
 | wave vector | 波数ベクトル |
 | wavelength | 波長 |

@@ -112,7 +112,7 @@ footer a{color:var(--primary)}
 
   <div class="intro">
     <h2>この問題集の使い方</h2>
-    <p>本文が「導出ノート」「Lagrange 未定乗数法で」と省略・要約した統計力学の計算を自力で展開する<span style="color:#1f4e79">導出補完</span>問題と、得た分布を観測（励起温度・放射圧・CMB 光子数）に応用する<span style="color:#8a6d12">理解を深める</span>問題の二系統です。第III部は本書のクライマックス（占有因子の導出）を含むので、計算の密度が上がります。各問に本文該当節へのリンクを付けています。解答は「▶ 模範解答」で展開 ― まず自力で。</p>
+    <p>本文が「導出ノート」「Lagrange 未定乗数法で」と省略・要約した統計力学の計算を自力で展開する<span style="color:#1f4e79">導出補完</span>問題と、得た分布を観測（励起温度・放射圧・CMB 光子数）に応用する<span style="color:#8a6d12">理解を深める</span>問題の二系統です。第III部は本書のクライマックス（占有因子の導出）を含むので、計算の密度が上がります。各問に本文該当節へのリンクを付けています。解答は「模範解答」を展開して確認できる。まず自力で解いてから参照してほしい。</p>
     <div class="legend">
       <span class="star">☆</span> 基礎
       <span class="star">☆☆</span> 標準（導出・応用）
@@ -168,7 +168,7 @@ footer a{color:var(--primary)}
           $$\ln\Omega\simeq\ln\Omega_{\max}-\frac{2x^2}{N}.$$
           <p>すなわち $\Omega\propto e^{-2x^2/N}$。これはガウス型で標準偏差 $\sigma_x=\sqrt{N}/2$。</p>
           <p><b>(3)</b> $\sqrt{\langle x^2\rangle}=\sigma_x=\sqrt N/2$ ゆえ相対揺らぎ $\sigma_x/N=1/(2\sqrt N)\sim1/\sqrt N$。$N=10^{23}$ で $\sim10^{-11.5}$。観測誤差よりはるかに小さく、ほぼすべてのミクロ状態が $N_L\simeq N/2$ のマクロ状態に集中する。だからマクロ状態（最大多重度の状態）だけで物理を語れる。</p>
-          <div class="ans"><b>答え：</b> $N_L=N/2$ で最大、$\Omega\propto e^{-2x^2/N}$（幅 $\sqrt N/2$）。相対揺らぎ $\sim1/\sqrt N\sim10^{-11}$ ゆえマクロ状態で十分。</div>
+          <div class="ans"><b>解答の要点：</b> $N_L=N/2$ で最大、$\Omega\propto e^{-2x^2/N}$（幅 $\sqrt N/2$）。相対揺らぎ $\sim1/\sqrt N\sim10^{-11}$ ゆえマクロ状態で十分。</div>
         </div>
       </details>
     </div>
@@ -200,7 +200,7 @@ footer a{color:var(--primary)}
           $$\frac{dS}{dE_1}=\frac{\partial S_1}{\partial E_1}-\frac{\partial S_2}{\partial E_2}=0\ \Rightarrow\ \frac{\partial S_1}{\partial E_1}=\frac{\partial S_2}{\partial E_2}.$$
           <p>（$dE_2/dE_1=-1$ を使った。）平衡では両系で $\partial S/\partial E$ が一致する。</p>
           <p><b>(3)</b> 熱力学では「二系を接触させて正味のエネルギー流が止まる＝温度が等しい」が平衡。(2) の共通量 $\partial S/\partial E$ がまさに平衡で一致する量なので、これを温度と結びつけるのが自然。次元と符号（エネルギーを加えるとエントロピーが増える）から $1/T\equiv\partial S/\partial E$ と定義すると、熱力学の温度と一致する。</p>
-          <div class="ans"><b>答え：</b> $\Omega=\Omega_1\Omega_2\Rightarrow S=S_1+S_2$。平衡で $\partial S_1/\partial E_1=\partial S_2/\partial E_2$、これを $1/T$ と定義。</div>
+          <div class="ans"><b>解答の要点：</b> $\Omega=\Omega_1\Omega_2\Rightarrow S=S_1+S_2$。平衡で $\partial S_1/\partial E_1=\partial S_2/\partial E_2$、これを $1/T$ と定義。</div>
         </div>
       </details>
     </div>
@@ -234,7 +234,7 @@ footer a{color:var(--primary)}
           $$n_i=\frac{N e^{-\beta E_i}}{\sum_j e^{-\beta E_j}}=\frac{N}{Z}e^{-\beta E_i}.$$
           <p>分母にちょうど分配関数 $Z$ が現れる。</p>
           <p><b>(3)</b> エネルギー制約の Lagrange 乗数 $\beta$ は、エントロピー最大化で「エネルギーを1単位動かしたときのエントロピー変化」に対応する。これは問題 6-2 の $1/T=\partial S/\partial E$ そのもので、$\beta=1/k_BT$ と同定される。</p>
-          <div class="ans"><b>答え：</b> 変分で $n_i\propto e^{-\beta E_i}$、規格化で $n_i=(N/Z)e^{-\beta E_i}$、$Z=\sum e^{-\beta E_j}$。$\beta=1/k_BT$ は温度定義と整合。</div>
+          <div class="ans"><b>解答の要点：</b> 変分で $n_i\propto e^{-\beta E_i}$、規格化で $n_i=(N/Z)e^{-\beta E_i}$、$Z=\sum e^{-\beta E_j}$。$\beta=1/k_BT$ は温度定義と整合。</div>
         </div>
       </details>
     </div>
@@ -266,7 +266,7 @@ footer a{color:var(--primary)}
           <p>（上準位ほど占有が少ないので、上向き遷移率と下向き遷移率の比がこの形になる。）</p>
           <p><b>(2)</b> 「正味流れゼロ」は、たとえば $1\to2\to3\to1$ と一方向に循環する定常流があっても各状態の占有数が一定なら満たされてしまう。詳細釣り合いはより強く、各ペア（$1\!\leftrightarrow\!2$, $2\!\leftrightarrow\!3$, $3\!\leftrightarrow\!1$）で個別に往復が釣り合うことを要求し、そうした循環流を禁じる。これは微視的時間反転対称性の帰結で、真の熱平衡を特徴づける。</p>
           <p><b>(3)</b> 第11章で Einstein は、放射と二準位原子の吸収・自発放出・誘導放出に詳細釣り合いを課し、$J_\nu=B_\nu$ を要求することで Einstein 関係式 $A_{ul}/B_{ul}=2h\nu^3/c^2$ と $g_lB_{lu}=g_uB_{ul}$ を導く。本問の「遷移率の比」が原子と放射の係数の比に具体化される。</p>
-          <div class="ans"><b>答え：</b> $W_{i\to j}/W_{j\to i}=(g_j/g_i)e^{-(E_j-E_i)/k_BT}$。詳細釣り合いは循環流を禁じる強い条件。第11章の Einstein 関係式の基礎。</div>
+          <div class="ans"><b>解答の要点：</b> $W_{i\to j}/W_{j\to i}=(g_j/g_i)e^{-(E_j-E_i)/k_BT}$。詳細釣り合いは循環流を禁じる強い条件。第11章の Einstein 関係式の基礎。</div>
         </div>
       </details>
     </div>
@@ -310,7 +310,7 @@ footer a{color:var(--primary)}
           $$S_{\rm bath}(E_{\rm tot}-E_i)\simeq S_{\rm bath}(E_{\rm tot})-E_i\frac{\partial S_{\rm bath}}{\partial E}=S_{\rm bath}(E_{\rm tot})-\frac{E_i}{T}.$$
           <p>よって $P_i\propto e^{S_{\rm bath}(E_{\rm tot})/k_B}e^{-E_i/k_BT}\propto e^{-E_i/k_BT}$。</p>
           <p><b>(3)</b> $\sum_i P_i=1$ より $P_i=\dfrac{e^{-E_i/k_BT}}{\sum_j e^{-E_j/k_BT}}=\dfrac{e^{-E_i/k_BT}}{Z}$、$Z=\sum_j e^{-E_j/k_BT}$。</p>
-          <div class="ans"><b>答え：</b> $P_i\propto\Omega_{\rm bath}(E_{\rm tot}-E_i)$ を1次展開し $1/T=\partial S/\partial E$ を使うと $P_i=e^{-E_i/k_BT}/Z$。</div>
+          <div class="ans"><b>解答の要点：</b> $P_i\propto\Omega_{\rm bath}(E_{\rm tot}-E_i)$ を1次展開し $1/T=\partial S/\partial E$ を使うと $P_i=e^{-E_i/k_BT}/Z$。</div>
         </div>
       </details>
     </div>
@@ -342,7 +342,7 @@ footer a{color:var(--primary)}
           <p><b>(2)</b> $\ln Z_1=-\dfrac{\beta\hbar\omega}{2}-\ln(1-e^{-\beta\hbar\omega})$。$\beta$ で微分：</p>
           $$\langle\epsilon\rangle=-\frac{\partial\ln Z_1}{\partial\beta}=\frac{\hbar\omega}{2}+\frac{\hbar\omega e^{-\beta\hbar\omega}}{1-e^{-\beta\hbar\omega}}=\frac{\hbar\omega}{2}+\frac{\hbar\omega}{e^{\beta\hbar\omega}-1}.$$
           <p><b>(3)</b> (i) 第二項 $1/(e^{\beta\hbar\omega}-1)$ が占有因子で、零点項 $\hbar\omega/2$ とは独立に現れる。(ii) $\hbar\omega/2$ は温度に依らない定数なので $C=\partial\langle\epsilon\rangle/\partial T$ で微分すると消える。よって観測量（占有因子・比熱・放射スペクトル）は零点項に依らない。Planck（$nh\nu$）と Schrödinger（$(n+\tfrac12)\hbar\omega$）は零点という定数オフセットだけが違い、温度微分・対数微分で消えるので、同じ占有因子＝同じスペクトルを与える。</p>
-          <div class="ans"><b>答え：</b> $Z_1=e^{-\beta\hbar\omega/2}/(1-e^{-\beta\hbar\omega})$、$\langle\epsilon\rangle=\tfrac12\hbar\omega+\hbar\omega/(e^{\beta\hbar\omega}-1)$。零点項は定数ゆえ占有因子・比熱に効かず、$nh\nu$ と $(n+\tfrac12)\hbar\omega$ は同じスペクトル。</div>
+          <div class="ans"><b>解答の要点：</b> $Z_1=e^{-\beta\hbar\omega/2}/(1-e^{-\beta\hbar\omega})$、$\langle\epsilon\rangle=\tfrac12\hbar\omega+\hbar\omega/(e^{\beta\hbar\omega}-1)$。零点項は定数ゆえ占有因子・比熱に効かず、$nh\nu$ と $(n+\tfrac12)\hbar\omega$ は同じスペクトル。</div>
         </div>
       </details>
     </div>
@@ -375,7 +375,7 @@ footer a{color:var(--primary)}
           <p><b>(2)</b> $\partial_\beta=-k_BT^2\partial_T$（$\beta=1/k_BT$ より $d\beta=-dT/k_BT^2$）。よって</p>
           $$\langle(\Delta E)^2\rangle=-\frac{\partial\langle E\rangle}{\partial\beta}=k_BT^2\frac{\partial\langle E\rangle}{\partial T}=k_BT^2 C_V.$$
           <p><b>(3)</b> $\langle E\rangle\propto N$、$C_V\propto N$ なので $\langle(\Delta E)^2\rangle\propto N$、$\sqrt{\langle(\Delta E)^2\rangle}\propto\sqrt N$。相対揺らぎは $\sqrt N/N=1/\sqrt N$。マクロ系で揺らぎが消える理由。</p>
-          <div class="ans"><b>答え：</b> $\langle(\Delta E)^2\rangle=\partial^2\ln Z/\partial\beta^2=k_BT^2C_V$。相対揺らぎ $\propto1/\sqrt N$。</div>
+          <div class="ans"><b>解答の要点：</b> $\langle(\Delta E)^2\rangle=\partial^2\ln Z/\partial\beta^2=k_BT^2C_V$。相対揺らぎ $\propto1/\sqrt N$。</div>
         </div>
       </details>
     </div>
@@ -398,7 +398,7 @@ footer a{color:var(--primary)}
       </div>
       <div class="related"><b>関連：</b>
         <a href="https://wadakeiichi.github.io/inverse_text_radiation/part3/07-statistical-mechanics.html#sec-statistical-mechanics-boltzmann" target="_blank" rel="noopener">§7.3 Boltzmann 分布</a> ／
-        恒星の色と温度は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/01-where-blackbody.html#sec-where-blackbody-stars" target="_blank" rel="noopener">§1.3</a>、線強度からの温度推定は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/23-line-applications.html" target="_blank" rel="noopener">第23章</a>、原子準位は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/21-atomic-physics.html" target="_blank" rel="noopener">第21章</a>。
+        恒星の色と温度は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part1/01-where-blackbody.html#sec-where-blackbody-stars" target="_blank" rel="noopener">§1.3</a>、線強度からの温度推定は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/24-line-applications.html" target="_blank" rel="noopener">第24章</a>、原子準位は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/22-atomic-physics.html" target="_blank" rel="noopener">第22章</a>。
       </div>
       <details class="sol"><summary>模範解答</summary>
         <div class="solbody">
@@ -407,7 +407,7 @@ footer a{color:var(--primary)}
           $T=10000$ K：$k_BT=0.862$ eV。指数 $-10.2/0.862=-11.8$、$e^{-11.8}=7.2\times10^{-6}$。$n_2/n_1=4\times7.2\times10^{-6}\approx2.9\times10^{-5}$。<br>
           比は $2.9\times10^{-5}/5.5\times10^{-9}\approx5300$ 倍。約3〜4桁違う。</p>
           <p><b>(3)</b> Balmer 線は $n=2$ にいる原子が吸収して生じる。太陽（5800 K）では $n=2$ の占有が $\sim10^{-9}$ と極めて少なく、Balmer 線は弱い。A 型星（$\sim10000$ K）では $n=2$ 占有が数千倍に増え、Balmer 線が最強になる。さらに高温（O・B 型）では水素が電離して中性水素自体が減り、Balmer 線は再び弱まる（電離は Saha 式、本問の Boltzmann だけでは表せない別効果）。</p>
-          <div class="ans"><b>答え：</b> $E_2-E_1=10.2$ eV、$g_2/g_1=4$。$n_2/n_1\approx5.5\times10^{-9}$（5800 K）→$2.9\times10^{-5}$（10000 K）で約5300倍。Balmer 線は A 型で最強、さらに高温では電離で弱まる。</div>
+          <div class="ans"><b>解答の要点：</b> $E_2-E_1=10.2$ eV、$g_2/g_1=4$。$n_2/n_1\approx5.5\times10^{-9}$（5800 K）→$2.9\times10^{-5}$（10000 K）で約5300倍。Balmer 線は A 型で最強、さらに高温では電離で弱まる。</div>
         </div>
       </details>
     </div>
@@ -450,7 +450,7 @@ footer a{color:var(--primary)}
           <p><b>(1)</b> $N$ 個の区別できない玉を $g$ 個の状態に分けるのは、$N$ 個の玉と $g-1$ 本の仕切り棒を一列に並べる場合の数に等しい。全 $N+g-1$ 個の位置から玉の位置 $N$ 個を選ぶので $\dbinom{N+g-1}{N}$。</p>
           <p><b>(2)</b> $g=2,N=2$：$\dbinom{2+2-1}{2}=\dbinom{3}{2}=3$。Bose は3通り（(2,0),(1,1),(0,2)）。古典は各粒子が独立に2状態を選べて $2^2=4$。識別不能だと1つ少ない。</p>
           <p><b>(3)</b> 古典では「1 が A・2 が B」と「1 が B・2 が A」を別状態と数えるが、識別不能だと粒子のラベルに意味がなく同一状態に潰れる。この「数え過ぎの打ち消し」が状態数を変え、最大エントロピー分布が Boltzmann（$\propto e^{-\beta E}$）から Bose（$1/(e^{\beta E}-1)$ 型）へずれる起源になる。特に同じ状態に複数入れることが許される効果が分母の $-1$ を生む。</p>
-          <div class="ans"><b>答え：</b> 場合の数 $\binom{N+g-1}{N}$（仕切り棒法）、$g=N=2$ で 3（古典は4）。ラベルの消失が Bose 統計へのずれを生む。</div>
+          <div class="ans"><b>解答の要点：</b> 場合の数 $\binom{N+g-1}{N}$（仕切り棒法）、$g=N=2$ で 3（古典は4）。ラベルの消失が Bose 統計へのずれを生む。</div>
         </div>
       </details>
     </div>
@@ -485,7 +485,7 @@ footer a{color:var(--primary)}
           $$\frac{\partial\Phi}{\partial N_i}=\ln\frac{N_i+g_i}{N_i}-\alpha-\beta E_i=0\ \Rightarrow\ \ln\frac{N_i+g_i}{N_i}=\alpha+\beta E_i.$$
           <p><b>(3)</b> $\dfrac{N_i+g_i}{N_i}=1+\dfrac{g_i}{N_i}=1+\dfrac{1}{\bar n_i}=e^{\alpha+\beta E_i}$ ゆえ $\dfrac{1}{\bar n_i}=e^{\alpha+\beta E_i}-1$、すなわち</p>
           $$\bar n_i=\frac{1}{e^{\alpha+\beta E_i}-1}=\frac{1}{e^{(E_i-\mu)/k_BT}-1}.$$
-          <div class="ans"><b>答え：</b> Stirling＋Lagrange で $\ln\frac{N_i+g_i}{N_i}=\alpha+\beta E_i$、解いて $\bar n_i=1/(e^{(E_i-\mu)/k_BT}-1)$。分母の $-1$ が Bose の特徴。</div>
+          <div class="ans"><b>解答の要点：</b> Stirling＋Lagrange で $\ln\frac{N_i+g_i}{N_i}=\alpha+\beta E_i$、解いて $\bar n_i=1/(e^{(E_i-\mu)/k_BT}-1)$。分母の $-1$ が Bose の特徴。</div>
         </div>
       </details>
     </div>
@@ -518,7 +518,7 @@ footer a{color:var(--primary)}
           <p><b>(3)</b> 積分 $=2.404$。$k_BT/h$ を計算：$k_BT=1.381\times10^{-23}\times2.725=3.76\times10^{-23}$ J、$/h=3.76\times10^{-23}/6.626\times10^{-34}=5.68\times10^{10}$ s$^{-1}$。3乗 $=1.83\times10^{32}$。$8\pi/c^3=25.13/(3.00\times10^8)^3=9.31\times10^{-25}$。掛け合わせ：</p>
           $$n_\gamma=9.31\times10^{-25}\times1.83\times10^{32}\times2.404\approx4.1\times10^8\ \mathrm{m^{-3}}=411\ \mathrm{cm^{-3}}.$$
           <p>観測値とよく一致。$n_\gamma\propto T^3$ は前因子 $(k_BT/h)^3$ から明らか。</p>
-          <div class="ans"><b>答え：</b> 光子数非保存ゆえ $\mu=0$。$n_\gamma=\frac{8\pi}{c^3}(k_BT/h)^3\cdot2.404\approx411$ cm$^{-3}$（$T=2.725$ K）、$\propto T^3$。</div>
+          <div class="ans"><b>解答の要点：</b> 光子数非保存ゆえ $\mu=0$。$n_\gamma=\frac{8\pi}{c^3}(k_BT/h)^3\cdot2.404\approx411$ cm$^{-3}$（$T=2.725$ K）、$\propto T^3$。</div>
         </div>
       </details>
     </div>
@@ -550,7 +550,7 @@ footer a{color:var(--primary)}
           <p><b>(3)</b> $P_{\rm rad}=aT^4/3=7.566\times10^{-16}\times(1.5\times10^7)^4/3$。$(1.5\times10^7)^4=5.06\times10^{28}$。$\times7.566\times10^{-16}=3.83\times10^{13}$、$/3=1.28\times10^{13}$ Pa。<br>
           $P_{\rm gas}=nk_BT=10^{32}\times1.381\times10^{-23}\times1.5\times10^7=2.07\times10^{16}$ Pa。<br>
           比 $P_{\rm rad}/P_{\rm gas}\approx1.28\times10^{13}/2.07\times10^{16}\approx6\times10^{-4}$。太陽中心では放射圧は約0.06%で支配的でない。質量の大きい星ほど中心温度が高く密度が相対的に低いため放射圧が増し、超大質量星では放射圧が支配的になって Eddington 限界（星の質量上限）を与える。</p>
-          <div class="ans"><b>答え：</b> $P_{\rm rad}=aT^4/3$（密度非依存）、$P_{\rm gas}=nk_BT$。等しい条件 $T^3/n=3k_B/a$。太陽中心で $P_{\rm rad}/P_{\rm gas}\approx6\times10^{-4}$（重い星では支配的）。</div>
+          <div class="ans"><b>解答の要点：</b> $P_{\rm rad}=aT^4/3$（密度非依存）、$P_{\rm gas}=nk_BT$。等しい条件 $T^3/n=3k_B/a$。太陽中心で $P_{\rm rad}/P_{\rm gas}\approx6\times10^{-4}$（重い星では支配的）。</div>
         </div>
       </details>
     </div>
@@ -558,7 +558,7 @@ footer a{color:var(--primary)}
 
   <footer>
     <p><b>宇宙の熱的放射</b> ― 連続放射と線スペクトルの背景物理（和田 桂一）<br>
-    演習問題集・第III部（試作版）。本文の各節は
+    v0.1 演習問題集・第III部。本文の各節は
     <a href="https://wadakeiichi.github.io/inverse_text_radiation/" target="_blank" rel="noopener">GitHub Pages 公開版</a>
     にリンクしています。第III部は統計力学への逆引きが主題のため、本文が導出ノートに畳んだ計算（最大エントロピー→Boltzmann、Bose–Einstein 分布）の展開と、得た分布の観測応用（励起温度・CMB 光子数・放射圧）を組み合わせました。<br>
     関連演習：<a href="演習問題_第I部_黒体放射の現象論.html">第I部</a> ・ <a href="演習問題_第II部_放射の記述と輸送.html">第II部</a> ・ <a href="演習問題_第IV部_量子論へ.html">第IV部</a></p>

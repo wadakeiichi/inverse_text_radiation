@@ -84,7 +84,7 @@ $$ {#eq-mean-energy}
 | 圧力 $P$ | $-\partial F / \partial V$ |
 | 比熱 $C_V$ | $\partial \langle E \rangle / \partial T$ |
 
-つまり、**分配関数を計算できれば熱力学はほぼ完結する**。逆に言えば、計算の本丸はミクロ状態の和 @eq-partition-function を実行する点にある。
+つまり、**分配関数を計算できれば熱力学はほぼ完結する**。逆に言えば、実際の計算の核心はミクロ状態の和 @eq-partition-function を実行する点にある。
 
 **例：N 個の独立な調和振動子**
 
@@ -150,7 +150,7 @@ $$ {#eq-boltzmann-hydrogen}
 この比は、第VII部で線スペクトルの強度比から温度を求める基本式になる。
 
 ::: {.callout-note}
-**対応（観測）**：観測される線スペクトル強度比から温度を読むのは、まさにこの Boltzmann 分布が成り立っているという仮定（LTE）に基づいている。LTE が破れる場面（non-LTE、第5章 §5.5）では @eq-boltzmann-hydrogen は使えない。
+**観測との対応**：観測される線スペクトル強度比から温度を読むのは、まさにこの Boltzmann 分布が成り立っているという仮定（LTE）に基づいている。LTE が破れる場面（non-LTE、第5章 §5.5）では @eq-boltzmann-hydrogen は使えない。
 :::
 
 ::: {.callout-note}

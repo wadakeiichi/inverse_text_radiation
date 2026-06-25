@@ -161,7 +161,7 @@ footer a{color:var(--primary)}
 
   <div class="intro">
     <h2>この問題集の使い方</h2>
-    <p>各問題は、第IV部の各節で <b>本文が「整理すると」「§◯で示した手法で」と省略した導出</b> を自分の手で再現するもの（<span style="color:#1f4e79">導出補完</span>）と、<b>本文で得た道具を別の角度から使って理解を深める</b>もの（<span style="color:#8a6d12">理解を深める</span>）の二種類です。各問題には関連する本文の節へのリンクを付けています。解答は「▶ 模範解答」をクリックすると展開します。まず自力で解いてから開いてください。</p>
+    <p>各問題は、第IV部の各節で <b>本文が「整理すると」「§◯で示した手法で」と省略した導出</b> を自分の手で再現するもの（<span style="color:#1f4e79">導出補完</span>）と、<b>本文で得た道具を別の角度から使って理解を深める</b>もの（<span style="color:#8a6d12">理解を深める</span>）の二種類です。各問題には関連する本文の節へのリンクを付けています。解答は「模範解答」を展開して確認できる。まず自力で解いてから参照してほしい。まず自力で解いてから開いてください。</p>
     <div class="legend">
       <span class="star">☆</span> 基礎（本文の確認）
       <span class="star">☆☆</span> 標準（導出の再現・応用）
@@ -219,7 +219,7 @@ footer a{color:var(--primary)}
           $$n(\nu)=\frac{1}{3\pi^2}\left(\frac{2\pi\nu}{c}\right)^3=\frac{8\pi^3\nu^3}{3\pi^2 c^3}=\frac{8\pi\nu^3}{3c^3}.$$
           $$g(\nu)=\frac{dn}{d\nu}=\frac{8\pi\nu^2}{c^3}.$$
           <p><b>(3)</b> $\nu^2$ は3次元波数空間の球殻 $4\pi k^2\,dk$（次元 $d$ なら $k^{d-1}$）に由来する幾何因子。係数の $2$（$8\pi=2\times4\pi$ の $2$）は電磁波の横波2偏光に由来する。</p>
-          <div class="ans"><b>答え：</b> $N(k)=L^3k^3/3\pi^2$、よって $g(\nu)=8\pi\nu^2/c^3$。$\nu^2$＝3次元の幾何、係数の $2$＝偏光自由度。</div>
+          <div class="ans"><b>解答の要点：</b> $N(k)=L^3k^3/3\pi^2$、よって $g(\nu)=8\pi\nu^2/c^3$。$\nu^2$＝3次元の幾何、係数の $2$＝偏光自由度。</div>
         </div>
       </details>
     </div>
@@ -255,7 +255,7 @@ footer a{color:var(--primary)}
           $$\langle E\rangle=-\frac{\partial\ln Z}{\partial\beta}=\frac{1}{\beta}=k_BT.$$
           <p>2つの二次形式（$p^2$ と $q^2$）が各 $\beta^{-1/2}$ を生み、合わせて $\beta^{-1}$ ＝ $k_BT$。</p>
           <p><b>(3)</b> 等分配は「ハミルトニアン中の二次形式1つあたり $\frac12 k_BT$」を与える。自由粒子は運動量の二次形式が3つ（$p_x^2,p_y^2,p_z^2$）で $\frac32 k_BT$。振動子は運動量＋位置で二次形式が2つなので $k_BT$。位置に対する復元力（ポテンシャル項）があることが差を生む。</p>
-          <div class="ans"><b>答え：</b> $Z\propto\beta^{-1}\Rightarrow\langle E\rangle=k_BT$。二次形式2個（運動＋ポテンシャル）ゆえ自由粒子の $\frac32k_BT$ と異なる。</div>
+          <div class="ans"><b>解答の要点：</b> $Z\propto\beta^{-1}\Rightarrow\langle E\rangle=k_BT$。二次形式2個（運動＋ポテンシャル）ゆえ自由粒子の $\frac32k_BT$ と異なる。</div>
         </div>
       </details>
     </div>
@@ -289,7 +289,7 @@ footer a{color:var(--primary)}
           <p><b>(3)</b> プランクでは被積分関数が $\nu\to\infty$ で</p>
           $$\frac{\nu^3}{e^{h\nu/k_BT}-1}\;\sim\;\nu^3 e^{-h\nu/k_BT}\to 0$$
           と指数的に抑えられる。指数減衰は任意の冪 $\nu^3$ に勝つので積分は収束し、有限の $u=aT^4$ を与える（問題 10-3）。量子化によるエネルギー単位 $h\nu$ が高振動数モードを「凍結」させることが、収束の物理的理由である。</p>
-          <div class="ans"><b>答え：</b> $u\propto\nu_{\max}^3$ で発散、寄与は高振動数に集中（＝紫外破綻）。プランクは $\nu^3e^{-h\nu/k_BT}\to0$ で収束。</div>
+          <div class="ans"><b>解答の要点：</b> $u\propto\nu_{\max}^3$ で発散、寄与は高振動数に集中（＝紫外破綻）。プランクは $\nu^3e^{-h\nu/k_BT}\to0$ で収束。</div>
         </div>
       </details>
     </div>
@@ -320,7 +320,7 @@ footer a{color:var(--primary)}
           <p><b>(1)</b> <b>モード密度 $g(\nu)=8\pi\nu^2/c^3$ は変えなくてよい</b>。これは古典電磁気＋境界条件の幾何的結果で、量子論を要しない（実際プランク分布の前因子 $\nu^2$/$\nu^3$ はこれが起源）。<b>変えるべきは各モードの平均エネルギー $\langle E\rangle$</b>。等分配の $k_BT$（エネルギー連続の仮定に依存）を、量子化された $h\nu/(e^{h\nu/k_BT}-1)$ に置き換える必要がある。</p>
           <p><b>(2)</b> ① スペクトルに有限のピークが存在する（古典は単調増加でピークなし）。② 高振動数側が指数的に減衰する（古典は $\nu^2$ で増大）。CMB の完全な黒体形や恒星スペクトルがこれを示す。</p>
           <p><b>(3)</b> 起きない。凍結は「エネルギー単位 $\epsilon(\nu)$ が高振動数で $k_BT$ を超える」ことで生じる。$\epsilon_0$ が定数なら、$\epsilon_0\ll k_BT$ を満たす限りすべての振動数で等分配 $k_BT$ が回復し、$\nu\to\infty$ でもモードが凍結せず発散は残る。$\epsilon\propto\nu$ という<b>振動数に比例して増える単位</b>であることが、高振動数を選択的に止める鍵である。</p>
-          <div class="ans"><b>答え：</b> $g(\nu)$ は不変、$\langle E\rangle$ を量子化。否定する観測＝ピークの存在と指数減衰。$\epsilon\propto\nu$ でないと凍結は起きない。</div>
+          <div class="ans"><b>解答の要点：</b> $g(\nu)$ は不変、$\langle E\rangle$ を量子化。否定する観測＝ピークの存在と指数減衰。$\epsilon\propto\nu$ でないと凍結は起きない。</div>
         </div>
       </details>
     </div>
@@ -366,7 +366,7 @@ footer a{color:var(--primary)}
           <p>分子・分母に $e^{\beta h\nu}$ を掛けて</p>
           $$\langle E\rangle=\frac{h\nu}{e^{\beta h\nu}-1}=\frac{h\nu}{e^{h\nu/k_BT}-1}.$$
           <p><b>(3)</b> 低振動数 $x\equiv h\nu/k_BT\ll1$ で $e^x-1\simeq x$ ゆえ $\langle E\rangle\to h\nu/x=k_BT$。古典の等分配と一致する。</p>
-          <div class="ans"><b>答え：</b> $Z_1=1/(1-e^{-\beta h\nu})$、$\langle E\rangle=h\nu/(e^{h\nu/k_BT}-1)\xrightarrow{h\nu\ll k_BT}k_BT$。</div>
+          <div class="ans"><b>解答の要点：</b> $Z_1=1/(1-e^{-\beta h\nu})$、$\langle E\rangle=h\nu/(e^{h\nu/k_BT}-1)\xrightarrow{h\nu\ll k_BT}k_BT$。</div>
         </div>
       </details>
     </div>
@@ -402,7 +402,7 @@ footer a{color:var(--primary)}
           <p><b>(3)</b> $x\gg1$ で $e^x-1\simeq e^x$ ゆえ</p>
           $$B_\nu\to\frac{2h\nu^3}{c^2}e^{-x}=\frac{2h\nu^3}{c^2}e^{-h\nu/k_BT}.$$
           <p>これが Wien の式。$h$ は指数の中と前因子の両方に現れる。</p>
-          <div class="ans"><b>答え：</b> 低：$2\nu^2k_BT/c^2$；補正 $\langle E\rangle\simeq k_BT-\tfrac12 h\nu$（負＝凍結の兆し）；高：$2h\nu^3e^{-h\nu/k_BT}/c^2$。</div>
+          <div class="ans"><b>解答の要点：</b> 低：$2\nu^2k_BT/c^2$；補正 $\langle E\rangle\simeq k_BT-\tfrac12 h\nu$（負＝凍結の兆し）；高：$2h\nu^3e^{-h\nu/k_BT}/c^2$。</div>
         </div>
       </details>
     </div>
@@ -438,7 +438,7 @@ footer a{color:var(--primary)}
           <p>数値：$k_B=1.381\times10^{-23},\ h=6.626\times10^{-34},\ c=3.00\times10^8$（SI）を入れると</p>
           $$a\approx7.57\times10^{-16}\ \mathrm{J\,m^{-3}\,K^{-4}}.$$
           <p><b>(3)</b> $a=4\sigma/c$ より $\sigma=ac/4=7.57\times10^{-16}\times3.00\times10^8/4\approx5.67\times10^{-8}\ \mathrm{W\,m^{-2}\,K^{-4}}$。Stefan–Boltzmann 定数の既知値と一致する。</p>
-          <div class="ans"><b>答え：</b> $a=\dfrac{8\pi^5k_B^4}{15c^3h^3}\approx7.57\times10^{-16}\,\mathrm{J\,m^{-3}K^{-4}}$、$\sigma=ac/4\approx5.67\times10^{-8}\,\mathrm{W\,m^{-2}K^{-4}}$。</div>
+          <div class="ans"><b>解答の要点：</b> $a=\dfrac{8\pi^5k_B^4}{15c^3h^3}\approx7.57\times10^{-16}\,\mathrm{J\,m^{-3}K^{-4}}$、$\sigma=ac/4\approx5.67\times10^{-8}\,\mathrm{W\,m^{-2}K^{-4}}$。</div>
         </div>
       </details>
     </div>
@@ -473,7 +473,7 @@ footer a{color:var(--primary)}
           $$\nu_{\rm peak}=\frac{x_{\rm peak}k_BT}{h}=2.821\frac{k_BT}{h}\propto T.$$
           <p>温度に比例してピークが動く＝Wien 変位則。</p>
           <p><b>(3)</b> $T=5800$ K：$\nu_{\rm peak}=2.821\times(1.381\times10^{-23}\times5800)/(6.626\times10^{-34})\approx3.4\times10^{14}$ Hz。$\lambda=c/\nu_{\rm peak}\approx8.8\times10^{-7}$ m $\approx 880$ nm（近赤外）。<b>注意：</b>これは $B_\lambda$ を最大化して得る $\lambda_{\rm peak}\approx500$ nm とは別物。$B_\nu$ と $B_\lambda$ ではヤコビアン $d\nu=-(c/\lambda^2)d\lambda$ のため最大化条件が異なり（$\lambda$ 側は $x\approx4.965$）、$\nu_{\rm peak}\lambda_{\rm peak}\ne c$ となる。</p>
-          <div class="ans"><b>答え：</b> $3(1-e^{-x})=x\Rightarrow x\approx2.821$、$\nu_{\rm peak}=2.821k_BT/h\propto T$。太陽で $\nu_{\rm peak}\approx3.4\times10^{14}$ Hz（$\sim880$ nm）。$B_\nu$ と $B_\lambda$ のピークは一致しない。</div>
+          <div class="ans"><b>解答の要点：</b> $3(1-e^{-x})=x\Rightarrow x\approx2.821$、$\nu_{\rm peak}=2.821k_BT/h\propto T$。太陽で $\nu_{\rm peak}\approx3.4\times10^{14}$ Hz（$\sim880$ nm）。$B_\nu$ と $B_\lambda$ のピークは一致しない。</div>
         </div>
       </details>
     </div>
@@ -522,7 +522,7 @@ footer a{color:var(--primary)}
           <p>これを使うと分子は $A_{ul}/B_{ul}$、これがプランクの前因子に等しい：</p>
           $$\frac{A_{ul}}{B_{ul}}=\frac{2h\nu^3}{c^2}.$$
           <p><b>(3)</b> Einstein 係数は $T$ に依らない原子の固有量。一方 $J_\nu=B_\nu(T)$ はすべての $T$ で成り立たねばならない。指数 $e^{h\nu/k_BT}$ は $T$ で連続的に変わるので、「指数の係数＝1」（$T$ 依存項の一致）と「全体の前因子の一致」（$T$ 非依存項の一致）は独立な条件となり、2式を同時に要求する。</p>
-          <div class="ans"><b>答え：</b> $g_lB_{lu}=g_uB_{ul}$ かつ $A_{ul}/B_{ul}=2h\nu^3/c^2$。$T$ 依存・非依存の両部分を一致させるため2式が必要。</div>
+          <div class="ans"><b>解答の要点：</b> $g_lB_{lu}=g_uB_{ul}$ かつ $A_{ul}/B_{ul}=2h\nu^3/c^2$。$T$ 依存・非依存の両部分を一致させるため2式が必要。</div>
         </div>
       </details>
     </div>
@@ -554,7 +554,7 @@ footer a{color:var(--primary)}
           <p><b>(2)</b> 電波（$h\nu\ll k_BT$）：$R\approx h\nu/k_BT\ll1$、誘導放出が自発放出を圧倒。可視・紫外（$h\nu\gg k_BT$）：$R\approx e^{h\nu/k_BT}\gg1$、自発放出が圧倒的に優勢。</p>
           <p><b>(3)</b> $R$ が小さい電波領域では、自発放出という「ロス」に対して誘導放出が相対的に効きやすい。一方、可視・紫外では $R\gg1$（自発放出優勢）のため、増幅（レーザー）には強い反転分布と共振器が必要になる。よって自然界の「メーザー」は電波領域に多い。</p>
           <p><b>ただし重要な注意：</b>誘導放出が自発放出より大きいだけでは増幅にはならない。熱平衡では誘導放出が大きくても<b>誘導吸収も同時に大きく</b>、両者が打ち消すので正味の増幅は起きない。正味増幅（負の吸収係数）には<b>準位反転</b> $n_u/g_u\gt n_l/g_l$ が必須で、これがあって初めて誘導放出が吸収を上回り、線に沿って光が雪崩的に増える。電波領域は「反転が少し作られれば増幅に転じやすい」場であって、反転なしに自動で増幅するわけではない。</p>
-          <div class="ans"><b>答え：</b> $R=e^{h\nu/k_BT}-1$。電波で $R\ll1$（誘導優勢）、可視・紫外で $R\gg1$（自発優勢）。宇宙メーザーが電波に多いことと整合。ただし正味増幅には準位反転 $n_u/g_u\gt n_l/g_l$（負の吸収）が必須。</div>
+          <div class="ans"><b>解答の要点：</b> $R=e^{h\nu/k_BT}-1$。電波で $R\ll1$（誘導優勢）、可視・紫外で $R\gg1$（自発優勢）。宇宙メーザーが電波に多いことと整合。ただし正味増幅には準位反転 $n_u/g_u\gt n_l/g_l$（負の吸収）が必須。</div>
         </div>
       </details>
     </div>
@@ -589,7 +589,7 @@ footer a{color:var(--primary)}
           $$\frac{A_{ul}}{B_{ul}^{(u)}}=\frac{A_{ul}}{(c/4\pi)B_{ul}}=\frac{4\pi}{c}\cdot\frac{A_{ul}}{B_{ul}}=\frac{4\pi}{c}\cdot\frac{2h\nu^3}{c^2}=\frac{8\pi h\nu^3}{c^3}.$$
           <p>これは $u_\nu$ 規約での標準形（量子光学でよく見る $8\pi h\nu^3/c^3$）と一致する。</p>
           <p><b>(3)</b> どちらの規約で書かれた $B$ かを取り違えると、係数の数値が $c/4\pi$（または逆数）倍ずれ、線吸収係数・振動子強度・遷移率の換算がすべて狂う。論文・教科書を読むときは「$B$ が $J_\nu$ に掛かるか $u_\nu$ に掛かるか」を必ず確認する。</p>
-          <div class="ans"><b>答え：</b> $B_{lu}^{(u)}=\tfrac{c}{4\pi}B_{lu}$、$A_{ul}/B_{ul}^{(u)}=8\pi h\nu^3/c^3$。規約取り違えは係数を $4\pi/c$ 倍ずらす。</div>
+          <div class="ans"><b>解答の要点：</b> $B_{lu}^{(u)}=\tfrac{c}{4\pi}B_{lu}$、$A_{ul}/B_{ul}^{(u)}=8\pi h\nu^3/c^3$。規約取り違えは係数を $4\pi/c$ 倍ずらす。</div>
         </div>
       </details>
     </div>
@@ -612,7 +612,7 @@ footer a{color:var(--primary)}
       </div>
       <div class="related"><b>関連：</b>
         <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/11-einstein-method.html#sec-einstein-method-bridge" target="_blank" rel="noopener">§11.4 連続と線の橋</a> ／
-        自然幅の本格的扱いは <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/22-line-shape.html" target="_blank" rel="noopener">第22章 線の形</a>、その量子的起源（零点振動）は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/12-quantum-foundations.html#sec-quantum-foundations-vacuum" target="_blank" rel="noopener">§12.4</a> と問題 12-3。
+        自然幅の本格的扱いは <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/23-line-shape.html" target="_blank" rel="noopener">第23章 線輪郭（line profile）</a>、その量子的起源（零点振動）は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/12-quantum-foundations.html#sec-quantum-foundations-vacuum" target="_blank" rel="noopener">§12.4</a> と問題 12-3。
       </div>
       <details class="sol"><summary>模範解答</summary>
         <div class="solbody">
@@ -621,7 +621,7 @@ footer a{color:var(--primary)}
           <p><b>(3)</b> $\lambda=500$ nm、$\lambda^2/c=(5.0\times10^{-7})^2/(3.0\times10^8)=2.5\times10^{-13}/3.0\times10^8\approx8.3\times10^{-22}$ s·m。よって</p>
           $$\Delta\lambda_{\rm nat}=\frac{\lambda^2}{c}\Delta\nu_{\rm nat}\approx8.3\times10^{-22}\times1.6\times10^7\approx1.3\times10^{-14}\ \mathrm{m}=1.3\times10^{-5}\ \mathrm{nm}.$$
           <p>相対幅 $\Delta\lambda/\lambda\approx1.3\times10^{-14}/5.0\times10^{-7}\approx2.7\times10^{-8}$。きわめて狭い。<b>理由：</b>実際の星間・恒星大気の線は熱運動による<b>ドップラー幅</b>が支配的で、$\Delta\nu_D/\nu\sim v_{\rm th}/c\sim10^{-5}$ 程度と自然幅より3桁ほど広い。自然幅が見えるのは線の遠い翼（ローレンツ翼）や低温・低速度分散の特殊な状況に限られる。</p>
-          <div class="ans"><b>答え：</b> $\tau=10$ ns、$\Delta\nu_{\rm nat}\approx16$ MHz、$\Delta\lambda_{\rm nat}\approx1.3\times10^{-5}$ nm（$\Delta\lambda/\lambda\sim3\times10^{-8}$）。通常はドップラー幅が支配的で自然幅は埋もれる。</div>
+          <div class="ans"><b>解答の要点：</b> $\tau=10$ ns、$\Delta\nu_{\rm nat}\approx16$ MHz、$\Delta\lambda_{\rm nat}\approx1.3\times10^{-5}$ nm（$\Delta\lambda/\lambda\sim3\times10^{-8}$）。通常はドップラー幅が支配的で自然幅は埋もれる。</div>
         </div>
       </details>
     </div>
@@ -668,7 +668,7 @@ footer a{color:var(--primary)}
           $$\therefore\ \hat H=\hbar\omega\left(\hat a^\dagger\hat a+\frac12\right).$$
           <p><b>交換関係：</b> 同様に $\hat a\hat a^\dagger=\dfrac{m\omega}{2\hbar}\hat x^2+\dfrac{1}{2\hbar m\omega}\hat p^2+\dfrac12$。差をとると</p>
           $$[\hat a,\hat a^\dagger]=\hat a\hat a^\dagger-\hat a^\dagger\hat a=\frac12-\left(-\frac12\right)=1.$$
-          <div class="ans"><b>答え：</b> $\hat H=\hbar\omega(\hat a^\dagger\hat a+\tfrac12)$。零点 $\tfrac12\hbar\omega$ は交換子 $[\hat x,\hat p]=i\hbar$ から出る。$[\hat a,\hat a^\dagger]=1$。</div>
+          <div class="ans"><b>解答の要点：</b> $\hat H=\hbar\omega(\hat a^\dagger\hat a+\tfrac12)$。零点 $\tfrac12\hbar\omega$ は交換子 $[\hat x,\hat p]=i\hbar$ から出る。$[\hat a,\hat a^\dagger]=1$。</div>
         </div>
       </details>
     </div>
@@ -690,7 +690,7 @@ footer a{color:var(--primary)}
       </div>
       <div class="related"><b>関連：</b>
         <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/12-quantum-foundations.html#sec-quantum-foundations-oscillator" target="_blank" rel="noopener">§12.2 零点エネルギー</a> ／
-        零点振動の観測的帰結（自発放出・Casimir）は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/12-quantum-foundations.html#sec-quantum-foundations-vacuum" target="_blank" rel="noopener">§12.4</a>、<a href="https://wadakeiichi.github.io/inverse_text_radiation/part8/24-em-field-quantization.html" target="_blank" rel="noopener">第24章</a>。
+        零点振動の観測的帰結（自発放出・Casimir）は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/12-quantum-foundations.html#sec-quantum-foundations-vacuum" target="_blank" rel="noopener">§12.4</a>、<a href="https://wadakeiichi.github.io/inverse_text_radiation/part8/25-em-field-quantization.html" target="_blank" rel="noopener">第25章</a>。
       </div>
       <details class="sol"><summary>模範解答</summary>
         <div class="solbody">
@@ -701,7 +701,7 @@ footer a{color:var(--primary)}
           <p>代入：</p>
           $$E_{\min}=\frac{\hbar^2}{8m}\cdot\frac{2m\omega}{\hbar}+\frac12 m\omega^2\cdot\frac{\hbar}{2m\omega}=\frac{\hbar\omega}{4}+\frac{\hbar\omega}{4}=\frac12\hbar\omega.$$
           <p>運動エネルギーとポテンシャルが各 $\tfrac14\hbar\omega$ ずつ等分される点が最小。</p>
-          <div class="ans"><b>答え：</b> $(\Delta x)^2=\hbar/2m\omega$ で $E_{\min}=\tfrac12\hbar\omega$。完全静止（$\Delta x=0$）は不確定性が禁じる。</div>
+          <div class="ans"><b>解答の要点：</b> $(\Delta x)^2=\hbar/2m\omega$ で $E_{\min}=\tfrac12\hbar\omega$。完全静止（$\Delta x=0$）は不確定性が禁じる。</div>
         </div>
       </details>
     </div>
@@ -724,7 +724,7 @@ footer a{color:var(--primary)}
       </div>
       <div class="related"><b>関連：</b>
         <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/12-quantum-foundations.html#sec-quantum-foundations-vacuum" target="_blank" rel="noopener">§12.4 真空状態</a> ／
-        プランク導出は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/10-planck-quantum.html#sec-planck-quantum-derivation" target="_blank" rel="noopener">§10.3</a>（問題 10-1）、零点の本格的扱いは <a href="https://wadakeiichi.github.io/inverse_text_radiation/part8/24-em-field-quantization.html" target="_blank" rel="noopener">第24章</a>、<a href="https://wadakeiichi.github.io/inverse_text_radiation/part8/25-qed-minimum.html" target="_blank" rel="noopener">第25章</a>。
+        プランク導出は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/10-planck-quantum.html#sec-planck-quantum-derivation" target="_blank" rel="noopener">§10.3</a>（問題 10-1）、零点の本格的扱いは <a href="https://wadakeiichi.github.io/inverse_text_radiation/part8/25-em-field-quantization.html" target="_blank" rel="noopener">第25章</a>、<a href="https://wadakeiichi.github.io/inverse_text_radiation/part8/26-qed-minimum.html" target="_blank" rel="noopener">第26章</a>。
       </div>
       <details class="sol"><summary>模範解答</summary>
         <div class="solbody">
@@ -733,7 +733,7 @@ footer a{color:var(--primary)}
           <p>（$\langle n\rangle=\sum n P_n=1/(e^{\beta\hbar\omega}-1)$ は問題 10-1 の計算と同じ。）</p>
           <p><b>(2)</b> 零点項 $\tfrac12\hbar\omega$ は<b>温度に依らない定数オフセット</b>。放射場のエネルギー密度や物質との熱的なやりとり（吸収・放出）に効くのは、真空（$n=0$）より上の<b>励起分</b> $\hbar\omega\langle n\rangle$ だけである。エネルギーの絶対基準（ハミルトニアンの零点）は物理に効かないので、観測される $u_\nu$ は励起分すなわちプランク分布になる。零点をすべてのモードで足すと発散するが、これは絶対値として観測不能。</p>
           <p><b>(3)</b> 零点の<b>差</b>や<b>変化</b>は観測可能。例：①境界条件でモード構造を変えると真空エネルギーが変化する <b>Casimir 効果</b>。②真空電磁場の揺らぎが励起原子を揺さぶって起こす <b>自発放出</b>（$A_{ul}$ の起源、第11章）。これらは線の自然幅（第22章）として観測スペクトルにも痕跡を残す。</p>
-          <div class="ans"><b>答え：</b> $\langle E\rangle=\tfrac12\hbar\omega+\hbar\omega/(e^{\hbar\omega/k_BT}-1)$。零点は $T$ 非依存の定数オフセットで放射の励起分に効かないため $u_\nu$ に出ない。だが差は Casimir 効果・自発放出として観測可能。</div>
+          <div class="ans"><b>解答の要点：</b> $\langle E\rangle=\tfrac12\hbar\omega+\hbar\omega/(e^{\hbar\omega/k_BT}-1)$。零点は $T$ 非依存の定数オフセットで放射の励起分に効かないため $u_\nu$ に出ない。だが差は Casimir 効果・自発放出として観測可能。</div>
         </div>
       </details>
     </div>
@@ -758,7 +758,7 @@ footer a{color:var(--primary)}
       <div class="related"><b>関連：</b>
         <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/12-quantum-foundations.html#sec-quantum-foundations-operators" target="_blank" rel="noopener">§12.3 生成消滅演算子</a>、
         <a href="https://wadakeiichi.github.io/inverse_text_radiation/part4/12-quantum-foundations.html#sec-quantum-foundations-vacuum" target="_blank" rel="noopener">§12.4 数状態・真空</a> ／
-        電磁場各モードへの拡張は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part8/24-em-field-quantization.html" target="_blank" rel="noopener">第24章 電磁場の量子化</a>。
+        電磁場各モードへの拡張は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part8/25-em-field-quantization.html" target="_blank" rel="noopener">第25章 電磁場の量子化</a>。
       </div>
       <details class="sol"><summary>模範解答</summary>
         <div class="solbody">
@@ -768,7 +768,7 @@ footer a{color:var(--primary)}
           $$\hat a^\dagger|n\rangle=\sqrt{n+1}\,|n+1\rangle.$$
           <p><b>(2)</b> 同様に $\|\hat a|n\rangle\|^2=\langle n|\hat a^\dagger\hat a|n\rangle=\langle n|\hat n|n\rangle=n$ ゆえ $\hat a|n\rangle=\sqrt{n}\,|n-1\rangle$。$n=0$ では係数 $\sqrt0=0$ となり $\hat a|0\rangle=0$。真空はこれ以上下げられない。</p>
           <p><b>(3)</b> 電磁場の各モードをこの調和振動子と同一視すると、$\hat a^\dagger$ はそのモードに光子を1個<b>生成</b>し、$\hat a$ は1個<b>消滅</b>させる。$|n\rangle$ は「光子 $n$ 個の状態」、$|0\rangle$ は光子のない電磁真空に対応する。</p>
-          <div class="ans"><b>答え：</b> $\|\hat a^\dagger|n\rangle\|^2=n+1\Rightarrow\hat a^\dagger|n\rangle=\sqrt{n+1}|n+1\rangle$、$\hat a|n\rangle=\sqrt n|n-1\rangle$、$\hat a|0\rangle=0$。電磁場では光子の生成・消滅。</div>
+          <div class="ans"><b>解答の要点：</b> $\|\hat a^\dagger|n\rangle\|^2=n+1\Rightarrow\hat a^\dagger|n\rangle=\sqrt{n+1}|n+1\rangle$、$\hat a|n\rangle=\sqrt n|n-1\rangle$、$\hat a|0\rangle=0$。電磁場では光子の生成・消滅。</div>
         </div>
       </details>
     </div>
@@ -776,7 +776,7 @@ footer a{color:var(--primary)}
 
   <footer>
     <p><b>宇宙の熱的放射</b> ― 連続放射と線スペクトルの背景物理（和田 桂一）<br>
-    演習問題集・第IV部（試作版）。本文の各節は
+    v0.1 演習問題集・第IV部。本文の各節は
     <a href="https://wadakeiichi.github.io/inverse_text_radiation/" target="_blank" rel="noopener">GitHub Pages 公開版</a>
     にリンクしています。問題はすべて本文の三原則（逆引き／背景物理を曖昧にしない／天下り的に式を与えない）に沿って、本文が省いた導出の補完と理解の深化を目的に作成しました。</p>
   </footer>

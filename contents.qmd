@@ -54,7 +54,7 @@ crossref:
 - [第20章　線スペクトルはどこに現れるか](part7/20-where-lines.qmd)
 - [第21章　線形成 ― 吸収線と輝線の物理](part7/21-line-formation.qmd)
 - [第22章　線スペクトルから原子物理へ](part7/22-atomic-physics.qmd)
-- [第23章　線形（line shape）の物理](part7/23-line-shape.qmd)
+- [第23章　線輪郭（line profile）の物理](part7/23-line-shape.qmd)
 - [第24章　線スペクトルから天体物理を読む](part7/24-line-applications.qmd)
 
 ## 第VIII部　QEDからの俯瞰 ― 連続と線を結ぶ見通し {.unnumbered}

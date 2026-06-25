@@ -91,7 +91,7 @@ footer a{color:var(--primary)}
 
   <div class="intro">
     <h2>この問題集の使い方</h2>
-    <p>本文が「標準的な電磁気学教科書を参照」「結果のみ」とした計算を自力で展開する<span style="color:#1f4e79">導出補完</span>問題と、偏光自由度や次元依存性など物理的意味を掘る<span style="color:#8a6d12">理解を深める</span>問題の二系統です。第V部はプランク分布の前因子の起源（偏光の2、モード密度の $\nu^2$、光速の $c$）を確定させる部なので、幾何的な数え上げが中心になります。各問に本文該当節へのリンクを付けています。解答は「▶ 模範解答」で展開 ― まず自力で。</p>
+    <p>本文が「標準的な電磁気学教科書を参照」「結果のみ」とした計算を自力で展開する<span style="color:#1f4e79">導出補完</span>問題と、偏光自由度や次元依存性など物理的意味を掘る<span style="color:#8a6d12">理解を深める</span>問題の二系統です。第V部はプランク分布の前因子の起源（偏光の2、モード密度の $\nu^2$、光速の $c$）を確定させる部なので、幾何的な数え上げが中心になります。各問に本文該当節へのリンクを付けています。解答は「模範解答」を展開して確認できる。まず自力で解いてから参照してほしい。</p>
     <div class="legend">
       <span class="star">☆</span> 基礎
       <span class="star">☆☆</span> 標準（導出・意味づけ）
@@ -140,7 +140,7 @@ footer a{color:var(--primary)}
           <p><b>(2)</b> $\nabla\times\mathbf B=\dfrac{1}{c^2}\partial_t\mathbf E$ を代入：</p>
           $$-\nabla^2\mathbf E=-\partial_t\left(\frac{1}{c^2}\partial_t\mathbf E\right)=-\frac{1}{c^2}\partial_t^2\mathbf E\ \Rightarrow\ \nabla^2\mathbf E-\frac{1}{c^2}\partial_t^2\mathbf E=0.$$
           <p><b>(3)</b> この波動方程式の波の速さは方程式中の定数 $c=1/\sqrt{\mu_0\epsilon_0}$。電気・磁気の基本定数だけから光速が決まり、光が電磁波であること、その速度が真空中で $c$ であることが Maxwell 方程式に組み込まれている。これがプランク前因子の $c$ の出どころ。</p>
-          <div class="ans"><b>答え：</b> $\nabla^2\mathbf E-\frac{1}{c^2}\partial_t^2\mathbf E=0$。波速 $c=1/\sqrt{\mu_0\epsilon_0}$ が電磁気定数から決まる。</div>
+          <div class="ans"><b>解答の要点：</b> $\nabla^2\mathbf E-\frac{1}{c^2}\partial_t^2\mathbf E=0$。波速 $c=1/\sqrt{\mu_0\epsilon_0}$ が電磁気定数から決まる。</div>
         </div>
       </details>
     </div>
@@ -168,7 +168,7 @@ footer a{color:var(--primary)}
           <p>$\omega=2\pi\nu$、$|\mathbf k|=2\pi/\lambda$ より $\nu=c/\lambda$。</p>
           <p><b>(2)</b> $\nabla\cdot\mathbf E=i\mathbf k\cdot\mathbf E_0\,e^{i(\cdots)}=0\Rightarrow\mathbf k\cdot\mathbf E_0=0$。電場は伝播方向に垂直＝横波。</p>
           <p><b>(3)</b> $\mathbf E_0$ は $\mathbf k$ に垂直な平面（2次元）内で自由。よって独立な基底偏光は2つ（例：直線偏光2方向、または右・左円偏光）。任意の偏光はこの2つの線形結合。この「2」がモード数え上げで各 $\mathbf k$ に2を掛ける根拠となり、プランク前因子の先頭の2になる。</p>
-          <div class="ans"><b>答え：</b> $\omega=c|\mathbf k|$、$\mathbf k\cdot\mathbf E_0=0$。横波ゆえ偏光は2自由度＝前因子の「2」。</div>
+          <div class="ans"><b>解答の要点：</b> $\omega=c|\mathbf k|$、$\mathbf k\cdot\mathbf E_0=0$。横波ゆえ偏光は2自由度＝前因子の「2」。</div>
         </div>
       </details>
     </div>
@@ -178,7 +178,7 @@ footer a{color:var(--primary)}
       <div class="top"><span class="pid">13-3</span><span class="ptitle">Poynting ベクトルの時間平均</span><span class="diff">☆☆</span><span class="tag deriv">導出補完</span></div>
       <div class="body">
         <p>§13.5 は時間平均 Poynting ベクトル $\langle\mathbf S\rangle=\dfrac{c}{8\pi}|\mathbf E_0|^2\hat{\mathbf k}$（Gauss 単位）を結果として与えた。導く。実数の平面波 $\mathbf E=\mathbf E_0\cos(\mathbf k\cdot\mathbf r-\omega t)$、電磁波では $|\mathbf B|=|\mathbf E|$ かつ $\mathbf B=\hat{\mathbf k}\times\mathbf E$（Gauss）。</p>
-        <p><b>単位系の注意：</b>本問は <b>Gauss/CGS 規約</b>（$\mathbf S=\dfrac{c}{4\pi}\mathbf E\times\mathbf B$）で進める。SI では $\mathbf S=\dfrac{1}{\mu_0}\mathbf E\times\mathbf B$、$|\mathbf B|=|\mathbf E|/c$ となり前因子が変わる（時間平均は $\langle\mathbf S\rangle=\tfrac12 c\epsilon_0|\mathbf E_0|^2\hat{\mathbf k}$）。付録 B.4 の SI 統一方針に対し、ここでは現行本文に合わせ CGS で扱う。</p>
+        <p><b>単位系の注意：</b>本問は <b>Gauss/CGS 規約</b>（$\mathbf S=\dfrac{c}{4\pi}\mathbf E\times\mathbf B$）で進める（この問題は CGS 規約の使い方を学ぶ問題でもある）。SI では $\mathbf S=\dfrac{1}{\mu_0}\mathbf E\times\mathbf B$、$|\mathbf B|=|\mathbf E|/c$ となり前因子が変わる（時間平均は $\langle\mathbf S\rangle=\tfrac12 c\epsilon_0|\mathbf E_0|^2\hat{\mathbf k}$）。付録 B.4 の SI 統一方針に対し、ここでは現行本文に合わせ CGS で扱う。</p>
         <ol class="parts">
           <li>$\mathbf S=\dfrac{c}{4\pi}\mathbf E\times\mathbf B$ に代入し、$\mathbf S=\dfrac{c}{4\pi}|\mathbf E_0|^2\cos^2(\mathbf k\cdot\mathbf r-\omega t)\,\hat{\mathbf k}$ を示せ。</li>
           <li>$\cos^2$ の時間平均が $1/2$ であることを使い、$\langle\mathbf S\rangle=\dfrac{c}{8\pi}|\mathbf E_0|^2\hat{\mathbf k}$ を導け。</li>
@@ -196,7 +196,7 @@ footer a{color:var(--primary)}
           <p><b>(2)</b> $\langle\cos^2\rangle=1/2$（1周期平均）ゆえ</p>
           $$\langle\mathbf S\rangle=\frac{c}{4\pi}|\mathbf E_0|^2\cdot\frac12\,\hat{\mathbf k}=\frac{c}{8\pi}|\mathbf E_0|^2\hat{\mathbf k}.$$
           <p><b>(3)</b> エネルギー流は波数方向 $\hat{\mathbf k}$。これは単位面積・単位時間あたりのエネルギー流密度で、振動数分解すれば観測量フラックス $F_\nu$（第4章）に対応する。望遠鏡が検出するのは本質的にこの量。</p>
-          <div class="ans"><b>答え：</b> $\mathbf S=\frac{c}{4\pi}|\mathbf E_0|^2\cos^2(\cdots)\hat{\mathbf k}$、時間平均で $\langle\mathbf S\rangle=\frac{c}{8\pi}|\mathbf E_0|^2\hat{\mathbf k}$。$\hat{\mathbf k}$ 方向のエネルギー流＝フラックス。</div>
+          <div class="ans"><b>解答の要点：</b> $\mathbf S=\frac{c}{4\pi}|\mathbf E_0|^2\cos^2(\cdots)\hat{\mathbf k}$、時間平均で $\langle\mathbf S\rangle=\frac{c}{8\pi}|\mathbf E_0|^2\hat{\mathbf k}$。$\hat{\mathbf k}$ 方向のエネルギー流＝フラックス。</div>
         </div>
       </details>
     </div>
@@ -214,14 +214,14 @@ footer a{color:var(--primary)}
       </div>
       <div class="related"><b>関連：</b>
         <a href="https://wadakeiichi.github.io/inverse_text_radiation/part5/13-electromagnetic-waves.html#sec-electromagnetic-waves-polarization" target="_blank" rel="noopener">§13.4 偏光</a> ／
-        散乱と偏光は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/15-non-blackbody.html#sec-non-blackbody-scattering" target="_blank" rel="noopener">§15.5</a>、Zeeman 効果は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/22-line-shape.html" target="_blank" rel="noopener">第22章</a>。
+        散乱と偏光は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part6/15-non-blackbody.html#sec-non-blackbody-scattering" target="_blank" rel="noopener">§15.5</a>、Zeeman 効果は <a href="https://wadakeiichi.github.io/inverse_text_radiation/part7/23-line-shape.html" target="_blank" rel="noopener">第23章</a>。
       </div>
       <details class="sol"><summary>模範解答</summary>
         <div class="solbody">
           <p><b>(1)</b> 3次元のベクトル場 $\mathbf E_0$ は本来3成分。横波条件 $\mathbf k\cdot\mathbf E_0=0$ が1成分（$\mathbf k$ 方向＝縦波成分）を禁じるので、残り2成分（$\mathbf k$ 垂直面内）が独立。もし縦波が許されれば3自由度だが、Maxwell 方程式（$\nabla\cdot\mathbf E=0$）が縦波を禁じるため実際は2。</p>
           <p><b>(2)</b> シンクロトロン：放射の偏光面から磁場の方向（偏光は磁場に垂直）。散乱光：偏光の向き・度合いから散乱体の幾何（散乱角90°で最大偏光）。Zeeman 効果：線が偏光成分に分裂し、その分裂幅から磁場強度。</p>
           <p><b>(3)</b> 熱平衡放射は多数の独立な放射体（原子・モード）から、あらゆる方向・あらゆる偏光で等確率に放出される。2つの偏光状態が同じ強度で混ざり、方向平均すると正味の偏光は打ち消されてゼロになる。だから黒体放射は等方・無偏光。観測される偏光は、散乱や磁場など等方性を破る機構の存在を示す。</p>
-          <div class="ans"><b>答え：</b> Maxwell が縦波を禁じ自由度2。偏光→磁場方向(シンクロトロン)/散乱幾何/磁場強度(Zeeman)。熱平衡は両偏光が等確率で混ざり無偏光。</div>
+          <div class="ans"><b>解答の要点：</b> Maxwell が縦波を禁じ自由度2。偏光→磁場方向(シンクロトロン)/散乱幾何/磁場強度(Zeeman)。熱平衡は両偏光が等確率で混ざり無偏光。</div>
         </div>
       </details>
     </div>
@@ -261,7 +261,7 @@ footer a{color:var(--primary)}
           $$N(<k)=2\cdot\frac{V}{\pi^3}\cdot\frac18\cdot\frac{4\pi k^3}{3}=\frac{Vk^3}{3\pi^2}.$$
           <p><b>(3)</b> $k=2\pi\nu/c$：</p>
           $$N(<\nu)=\frac{V}{3\pi^2}\left(\frac{2\pi\nu}{c}\right)^3=\frac{8\pi V\nu^3}{3c^3},\qquad g(\nu)=\frac1V\frac{dN}{d\nu}=\frac{8\pi\nu^2}{c^3}.$$
-          <div class="ans"><b>答え：</b> $k_i=n_i\pi/L$、$N(\lt k)=Vk^3/3\pi^2$、$g(\nu)=8\pi\nu^2/c^3$。第9章の数え上げ（演習 9-1）と一致。</div>
+          <div class="ans"><b>解答の要点：</b> $k_i=n_i\pi/L$、$N(\lt k)=Vk^3/3\pi^2$、$g(\nu)=8\pi\nu^2/c^3$。第9章の数え上げ（演習 9-1）と一致。</div>
         </div>
       </details>
     </div>
@@ -286,7 +286,7 @@ footer a{color:var(--primary)}
           <p><b>(1)</b> 定在波は $\cos(k_xx)$ や $\sin(k_xx)$ の形で、$k_x$ と $-k_x$ は同じ関数（偶／奇の符号差は振幅に吸収）を与え、物理的に同一のモード。$n_i$ を正負両方数えると同じモードを重複して数えることになる。独立なモードは $n_i\gt 0$ の第一象限のみ。よって全球の 1/8。</p>
           <p><b>(2)</b> 周期境界条件では許される $k_i=2\pi n_i/L$（$n_i=0,\pm1,\pm2,\dots$）で格子間隔 $2\pi/L$（壁の場合の2倍）。格子点密度は $(L/2\pi)^3=V/8\pi^3$（壁の $V/\pi^3$ の 1/8）。一方 $\mathbf k$ は正負両方とるので全球 $4\pi k^3/3$（1/8 球の8倍）を使う。密度の $1/8$ と全球の $\times8$ が打ち消し、$N(\lt k)=2\cdot\frac{V}{8\pi^3}\cdot\frac{4\pi k^3}{3}=\frac{Vk^3}{3\pi^2}$ と同じ。</p>
           <p><b>(3)</b> 第3章では「空洞放射のスペクトルは壁の材質によらず一意」（熱力学第二法則）と示した。境界条件の選び方（完全導体壁 vs 周期境界）が $g(\nu)$ を変えないのは、まさにこの普遍性の現れ。計算の便宜でどちらを選んでもよく、これは普遍性を逆手にとった計算戦略。</p>
-          <div class="ans"><b>答え：</b> $\pm\mathbf k$ が同一モードゆえ 1/8 球。周期境界では密度 1/8・全球 ×8 が打ち消し同じ $g(\nu)$。境界の選び方に依らないのは黒体の普遍性の現れ。</div>
+          <div class="ans"><b>解答の要点：</b> $\pm\mathbf k$ が同一モードゆえ 1/8 球。周期境界では密度 1/8・全球 ×8 が打ち消し同じ $g(\nu)$。境界の選び方に依らないのは黒体の普遍性の現れ。</div>
         </div>
       </details>
     </div>
@@ -311,7 +311,7 @@ footer a{color:var(--primary)}
           <p><b>(1)</b> $d$ 次元の球の体積は $\propto k^d$。格子密度 $\propto V/\pi^d$、象限因子・偏光因子は定数なので $N(\lt k)\propto Vk^d$。微分して $dN/dk\propto k^{d-1}$。$k=2\pi\nu/c$ より $g(\nu)\propto\nu^{d-1}/c^d$。</p>
           <p><b>(2)</b> 3次元：$g\propto\nu^2/c^3$。2次元：$g\propto\nu/c^2$。1次元：$g\propto\nu^0=$ 定数（$\propto1/c$）。これは「$k$ 空間の球殻 $k^{d-1}$」の幾何そのもの。</p>
           <p><b>(3)</b> 2次元では $u_\nu=g(\nu)h\nu\bar n\propto\nu\cdot h\nu/(e^{h\nu/kT}-1)=h\nu^2/(e^{h\nu/kT}-1)$、前因子は $\nu^2$（3次元の $\nu^3$ ではない）。スペクトル全体の形（低振動数べき・ピーク位置・全エネルギーの温度依存）が次元で変わる。逆に言えば、観測される黒体スペクトルが $\nu^3$ 前因子を持つこと自体が、我々が3次元空間に住む証拠を含んでいる。</p>
-          <div class="ans"><b>答え：</b> $g(\nu)\propto\nu^{d-1}/c^d$。3D→$\nu^2$、2D→$\nu$、1D→定数。2次元なら $u_\nu$ 前因子は $\nu^2$。スペクトル形が空間次元を反映。</div>
+          <div class="ans"><b>解答の要点：</b> $g(\nu)\propto\nu^{d-1}/c^d$。3D→$\nu^2$、2D→$\nu$、1D→定数。2次元なら $u_\nu$ 前因子は $\nu^2$。スペクトル形が空間次元を反映。</div>
         </div>
       </details>
     </div>
@@ -346,7 +346,7 @@ footer a{color:var(--primary)}
             <tr><td>全体 $1/c^2$</td><td>$1/c^3\times c$（$u_\nu\to B_\nu$ 変換）</td><td>第14章/第4章（4-1）</td></tr>
           </table>
           <p>観測される一本の黒体曲線から、統計力学・量子論・電磁気学が逆向きに再構成された。</p>
-          <div class="ans"><b>答え：</b> $u_\nu=\frac{8\pi h\nu^3}{c^3}\frac{1}{e^{h\nu/kT}-1}$、$B_\nu=\frac{2h\nu^3}{c^2}\frac{1}{e^{h\nu/kT}-1}$。全因子が第8・10・13・14章の物理に分解される。</div>
+          <div class="ans"><b>解答の要点：</b> $u_\nu=\frac{8\pi h\nu^3}{c^3}\frac{1}{e^{h\nu/kT}-1}$、$B_\nu=\frac{2h\nu^3}{c^2}\frac{1}{e^{h\nu/kT}-1}$。全因子が第8・10・13・14章の物理に分解される。</div>
         </div>
       </details>
     </div>
@@ -354,7 +354,7 @@ footer a{color:var(--primary)}
 
   <footer>
     <p><b>宇宙の熱的放射</b> ― 連続放射と線スペクトルの背景物理（和田 桂一）<br>
-    演習問題集・第V部（試作版）。本文の各節は
+    v0.1 演習問題集・第V部。本文の各節は
     <a href="https://wadakeiichi.github.io/inverse_text_radiation/" target="_blank" rel="noopener">GitHub Pages 公開版</a>
     にリンクしています。第V部は電磁気学への逆引きが主題のため、Maxwell→波動方程式→偏光の導出と、空洞モードの数え上げ（前因子の完全分解）を組み合わせました。プランク分布の全因子がここで出揃います。<br>
     関連演習：<a href="演習問題_第I部_黒体放射の現象論.html">第I部</a> ・ <a href="演習問題_第II部_放射の記述と輸送.html">第II部</a> ・ <a href="演習問題_第III部_熱力学統計力学へ.html">第III部</a> ・ <a href="演習問題_第IV部_量子論へ.html">第IV部</a></p>
