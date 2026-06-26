@@ -771,6 +771,16 @@ B_\nu(T) = \frac{2 h\, \boxed{\nu^3}}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 P = \frac{2}{3}\frac{e^2 a^2}{c^3} \quad (\text{Gauss 単位系})
 \tag{16.9}</span></span></p>
 <p>SI では <span class="math inline">P = e^2 a^2 / (6\pi\epsilon_0 c^3)</span>。放射の角度分布は加速度方向に対して <span class="math inline">\sin^2\theta</span>（双極子パターン）で、加速度の向きには放射されない。要点は <strong>「加速度の二乗に比例する」</strong> ことである。</p>
+<div id="fig-dipole-larmor" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dipole-larmor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/dipole-larmor.svg" class="img-fluid figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dipole-larmor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+図&nbsp;16.1: 加速電荷の双極子放射と Larmor 公式。放射の角度分布は、加速度 <span class="math inline">a</span> の軸からの角度 <span class="math inline">\theta</span>（点線）について <span class="math inline">\sin^2\theta</span> で、<strong>加速度に垂直な方向で最大、平行な方向ではゼロ</strong>（左右の二つのローブ）。全立体角で積分すると Larmor 公式 <a href="#eq-larmor" class="quarto-xref">式&nbsp;<span>16.9</span></a> が得られる。この一本の式が、自由–自由放射（制動放射、第19章）やシンクロトロン放射（第18章）といった現実の連続放射の古典的な土台になっている。
+</figcaption>
+</figure>
+</div>
 <div class="callout callout-style-simple callout-note">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1618,193 +1628,195 @@ P = \frac{2}{3}\frac{e^2 a^2}{c^3} \quad (\text{Gauss 単位系})
 <span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>SI では $P = e^2 a^2 / (6\pi\epsilon_0 c^3)$。放射の角度分布は加速度方向に対して $\sin^2\theta$（双極子パターン）で、加速度の向きには放射されない。要点は **「加速度の二乗に比例する」** ことである。</span>
 <span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple"}</span>
-<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a>**なぜここで触れるか**：黒体放射そのものはモード密度（第14章）と占有因子（第8章）だけで決まり、Larmor 公式は要らない。しかし **現実の連続放射** の多くは、この一本の式に根を持つ：</span>
-<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**自由-自由放射（制動放射）**：自由電子がイオンの Coulomb 場で曲げられ加速される → 放射（第19章 §19.2）。</span>
-<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**シンクロトロン放射**：相対論的電子が磁場中で旋回加速される → Larmor の相対論的一般化（第18章）。偏光する（§13.4）。</span>
-<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**トムソン/コンプトン散乱**：入射波が電子を揺さぶり（加速し）、その電子が再放射する（第18章）。</span>
-<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a>すなわち本書が第VI部で「与えられたもの」として使う放出係数 $j_\nu$ の **古典的な出どころ** がこの式である。詳しい応用は各章に譲る。</span>
-<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a><span class="fu">## 13.6 境界条件 ― 第14章への入口 {#sec-electromagnetic-waves-boundary}</span></span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a><span class="al">![加速電荷の双極子放射と Larmor 公式。放射の角度分布は、加速度 $a$ の軸からの角度 $\theta$（点線）について $\sin^2\theta$ で、**加速度に垂直な方向で最大、平行な方向ではゼロ**（左右の二つのローブ）。全立体角で積分すると Larmor 公式 @eq-larmor が得られる。この一本の式が、自由–自由放射（制動放射、第19章）やシンクロトロン放射（第18章）といった現実の連続放射の古典的な土台になっている。](../images/dipole-larmor.svg)</span>{#fig-dipole-larmor width=90%}</span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple"}</span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>**なぜここで触れるか**：黒体放射そのものはモード密度（第14章）と占有因子（第8章）だけで決まり、Larmor 公式は要らない。しかし **現実の連続放射** の多くは、この一本の式に根を持つ：</span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**自由-自由放射（制動放射）**：自由電子がイオンの Coulomb 場で曲げられ加速される → 放射（第19章 §19.2）。</span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**シンクロトロン放射**：相対論的電子が磁場中で旋回加速される → Larmor の相対論的一般化（第18章）。偏光する（§13.4）。</span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**トムソン/コンプトン散乱**：入射波が電子を揺さぶり（加速し）、その電子が再放射する（第18章）。</span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>すなわち本書が第VI部で「与えられたもの」として使う放出係数 $j_\nu$ の **古典的な出どころ** がこの式である。詳しい応用は各章に譲る。</span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a><span class="fu">## 13.6 境界条件 ― 第14章への入口 {#sec-electromagnetic-waves-boundary}</span></span>
 <span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a>第14章で扱う空洞放射の準備として、電磁場の **境界条件**（**boundary conditions**）を確認する。</span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
 <span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>**完全導体の表面**（**perfect conductor**）：</span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>第14章で扱う空洞放射の準備として、電磁場の **境界条件**（**boundary conditions**）を確認する。</span>
 <span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**電場の接線成分は連続でゼロ**：$E_\parallel = 0$</span>
-<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>  （物理的には、導体内部の自由電子が瞬時に外部電場を打ち消す）</span>
-<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**磁場の法線成分はゼロ**：$B_\perp = 0$</span>
-<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>  （表面電流の対応から）</span>
-<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>これらが**空洞壁での反射**を導き、内部の電磁場が**定在波**（**standing wave**）の重ね合わせとして表される根拠になる。</span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>**完全導体の表面**（**perfect conductor**）：</span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**電場の接線成分は連続でゼロ**：$E_\parallel = 0$</span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>  （物理的には、導体内部の自由電子が瞬時に外部電場を打ち消す）</span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**磁場の法線成分はゼロ**：$B_\perp = 0$</span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>  （表面電流の対応から）</span>
 <span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a>**方針**：実際の空洞は完全導体ではないが、空洞放射の**スペクトル形は壁の材質によらない**ことを第3章で示した。したがって、計算の便宜上「完全導体壁」を仮定して構わない。これは黒体放射の普遍性を逆手に取った計算戦略である。</span>
-<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>@eq-plane-wave のような自由な平面波は空洞の有限境界では存在できず、境界条件 $E_\parallel = 0$ を満たす**離散的な定在波**だけが許される。この離散化が第14章のモードの数え上げ ― そしてプランク分布の前因子 $\nu^3/c^2$ の起源 ― である。</span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a>これらが**空洞壁での反射**を導き、内部の電磁場が**定在波**（**standing wave**）の重ね合わせとして表される根拠になる。</span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>**方針**：実際の空洞は完全導体ではないが、空洞放射の**スペクトル形は壁の材質によらない**ことを第3章で示した。したがって、計算の便宜上「完全導体壁」を仮定して構わない。これは黒体放射の普遍性を逆手に取った計算戦略である。</span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a>**使えるようになった道具**（§13.1〜13.6）：</span>
-<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Maxwell 方程式から波動方程式 @eq-wave-equation を導き、光速 $c$ がそこに組み込まれていることを確認</span>
-<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>平面波解 @eq-plane-wave と分散関係 $\omega = c|\mathbf{k}|$</span>
-<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>横波条件 @eq-transverse-condition から、偏光自由度が **2** であることを確認 ― これがプランク分布の前因子の係数 2 の正体</span>
-<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Poynting ベクトル @eq-poynting-vector が観測量フラックスに対応すること</span>
-<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Larmor 公式 @eq-larmor ― 加速電荷が放射する事実（制動放射・シンクロトロン・散乱の古典的土台、第VI部）</span>
-<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>完全導体壁での境界条件 ($E_\parallel = 0$) ― 第14章で離散モードを数えるための準備</span>
-<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a>@eq-plane-wave のような自由な平面波は空洞の有限境界では存在できず、境界条件 $E_\parallel = 0$ を満たす**離散的な定在波**だけが許される。この離散化が第14章のモードの数え上げ ― そしてプランク分布の前因子 $\nu^3/c^2$ の起源 ― である。</span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a>**使えるようになった道具**（§13.1〜13.6）：</span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Maxwell 方程式から波動方程式 @eq-wave-equation を導き、光速 $c$ がそこに組み込まれていることを確認</span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>平面波解 @eq-plane-wave と分散関係 $\omega = c|\mathbf{k}|$</span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>横波条件 @eq-transverse-condition から、偏光自由度が **2** であることを確認 ― これがプランク分布の前因子の係数 2 の正体</span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Poynting ベクトル @eq-poynting-vector が観測量フラックスに対応すること</span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Larmor 公式 @eq-larmor ― 加速電荷が放射する事実（制動放射・シンクロトロン・散乱の古典的土台、第VI部）</span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>完全導体壁での境界条件 ($E_\parallel = 0$) ― 第14章で離散モードを数えるための準備</span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-electromagnetic-waves-summary .unnumbered}</span></span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
-<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る**</span>
-<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a>本章で、中心地図プランク関数の前因子 $2h\nu^3/c^2$ のうち、</span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-electromagnetic-waves-summary .unnumbered}</span></span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る**</span>
 <span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**光速 $c$ の出どころ** ― Maxwell 方程式の波動方程式に組み込まれている</span>
-<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**偏光自由度 2** ― 横波条件から出る</span>
-<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a>の二つが明らかになった。残るは $\nu^2$ という振動数依存性で、これは第14章で空洞中の電磁モードの数え上げから出てくる。</span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a>本章で、中心地図プランク関数の前因子 $2h\nu^3/c^2$ のうち、</span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**光速 $c$ の出どころ** ― Maxwell 方程式の波動方程式に組み込まれている</span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**偏光自由度 2** ― 横波条件から出る</span>
 <span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>**次章へ**：第14章では、完全導体壁の空洞中での電磁定在波を数え上げ、**モード密度 $g(\nu) = 8\pi\nu^2/c^3$** を本格的に導出する。第8章・第9章で「借用」していたこの式が、Maxwell 方程式と三次元幾何の帰結として現れる。これで中心地図プランク分布の**全因子**が、観測から逆向きに完全に解き明かされる。</span>
-<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-electromagnetic-waves-exercises .unnumbered}</span></span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>の二つが明らかになった。残るは $\nu^2$ という振動数依存性で、これは第14章で空洞中の電磁モードの数え上げから出てくる。</span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>**次章へ**：第14章では、完全導体壁の空洞中での電磁定在波を数え上げ、**モード密度 $g(\nu) = 8\pi\nu^2/c^3$** を本格的に導出する。第8章・第9章で「借用」していたこの式が、Maxwell 方程式と三次元幾何の帰結として現れる。これで中心地図プランク分布の**全因子**が、観測から逆向きに完全に解き明かされる。</span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-electromagnetic-waves-exercises .unnumbered}</span></span>
 <span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 13-1　Maxwell 方程式から波動方程式を導く {#ex-13-1 .unnumbered}</span></span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</span>
 <span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 13-1　Maxwell 方程式から波動方程式を導く {#ex-13-1 .unnumbered}</span></span>
 <span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a>§13.2 はベクトル恒等式を使うとだけ述べた。真空 Maxwell 方程式から $\mathbf E$ の波動方程式を導く。$\nabla\cdot\mathbf E=0$、$\nabla\times\mathbf E=-\partial_t\mathbf B$、$\nabla\times\mathbf B=\dfrac{1}{c^2}\partial_t\mathbf E$。</span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
 <span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$\nabla\times\mathbf E=-\partial_t\mathbf B$ の両辺に $\nabla\times$ を作用させ、恒等式 $\nabla\times(\nabla\times\mathbf E)=\nabla(\nabla\cdot\mathbf E)-\nabla^2\mathbf E$ を使って $-\nabla^2\mathbf E=-\partial_t(\nabla\times\mathbf B)$ を示せ。</span>
-<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>右辺に $\nabla\times\mathbf B=\dfrac{1}{c^2}\partial_t\mathbf E$ を代入し、$\nabla^2\mathbf E-\dfrac{1}{c^2}\partial_t^2\mathbf E=0$ を導け。</span>
-<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>$c=1/\sqrt{\mu_0\epsilon_0}$ が波の伝播速度としてこの式に現れることの意味（光速が電磁気の基本定数から決まる）を一言で述べよ。</span>
-<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§13.2 波動方程式</span><span class="co">](#sec-electromagnetic-waves-wave-equation)</span>／前因子の $1/c^2$ の起源は<span class="co">[</span><span class="ot">§14.4</span><span class="co">](../part5/14-cavity-modes.qmd#sec-cavity-modes-frequency)</span>（<span class="co">[</span><span class="ot">演習 14-1</span><span class="co">](../part5/14-cavity-modes.qmd#ex-14-1)</span>）。</span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a>§13.2 はベクトル恒等式を使うとだけ述べた。真空 Maxwell 方程式から $\mathbf E$ の波動方程式を導く。$\nabla\cdot\mathbf E=0$、$\nabla\times\mathbf E=-\partial_t\mathbf B$、$\nabla\times\mathbf B=\dfrac{1}{c^2}\partial_t\mathbf E$。</span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$\nabla\times\mathbf E=-\partial_t\mathbf B$ の両辺に $\nabla\times$ を作用させ、恒等式 $\nabla\times(\nabla\times\mathbf E)=\nabla(\nabla\cdot\mathbf E)-\nabla^2\mathbf E$ を使って $-\nabla^2\mathbf E=-\partial_t(\nabla\times\mathbf B)$ を示せ。</span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>右辺に $\nabla\times\mathbf B=\dfrac{1}{c^2}\partial_t\mathbf E$ を代入し、$\nabla^2\mathbf E-\dfrac{1}{c^2}\partial_t^2\mathbf E=0$ を導け。</span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>$c=1/\sqrt{\mu_0\epsilon_0}$ が波の伝播速度としてこの式に現れることの意味（光速が電磁気の基本定数から決まる）を一言で述べよ。</span>
 <span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 13-1）</span></span>
-<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a>**(1)** $\nabla\times(\nabla\times\mathbf E)=-\partial_t(\nabla\times\mathbf B)$。左辺に恒等式を使い、$\nabla\cdot\mathbf E=0$（真空）より $\nabla(\nabla\cdot\mathbf E)=0$ ゆえ</span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§13.2 波動方程式</span><span class="co">](#sec-electromagnetic-waves-wave-equation)</span>／前因子の $1/c^2$ の起源は<span class="co">[</span><span class="ot">§14.4</span><span class="co">](../part5/14-cavity-modes.qmd#sec-cavity-modes-frequency)</span>（<span class="co">[</span><span class="ot">演習 14-1</span><span class="co">](../part5/14-cavity-modes.qmd#ex-14-1)</span>）。</span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 13-1）</span></span>
 <span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a>\nabla(\nabla\cdot\mathbf E)-\nabla^2\mathbf E=-\nabla^2\mathbf E=-\partial_t(\nabla\times\mathbf B).</span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a>**(1)** $\nabla\times(\nabla\times\mathbf E)=-\partial_t(\nabla\times\mathbf B)$。左辺に恒等式を使い、$\nabla\cdot\mathbf E=0$（真空）より $\nabla(\nabla\cdot\mathbf E)=0$ ゆえ</span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a>**(2)** $\nabla\times\mathbf B=\dfrac{1}{c^2}\partial_t\mathbf E$ を代入：</span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a>\nabla(\nabla\cdot\mathbf E)-\nabla^2\mathbf E=-\nabla^2\mathbf E=-\partial_t(\nabla\times\mathbf B).</span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a>-\nabla^2\mathbf E=-\partial_t\left(\frac{1}{c^2}\partial_t\mathbf E\right)=-\frac{1}{c^2}\partial_t^2\mathbf E\ \Rightarrow\ \nabla^2\mathbf E-\frac{1}{c^2}\partial_t^2\mathbf E=0.</span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a>**(2)** $\nabla\times\mathbf B=\dfrac{1}{c^2}\partial_t\mathbf E$ を代入：</span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a>**(3)** この波動方程式の波の速さは方程式中の定数 $c=1/\sqrt{\mu_0\epsilon_0}$。電気・磁気の基本定数だけから光速が決まり、光が電磁波であること、その速度が真空中で $c$ であることが Maxwell 方程式に組み込まれている。これがプランク前因子の $c$ の出どころ。</span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a>-\nabla^2\mathbf E=-\partial_t\left(\frac{1}{c^2}\partial_t\mathbf E\right)=-\frac{1}{c^2}\partial_t^2\mathbf E\ \Rightarrow\ \nabla^2\mathbf E-\frac{1}{c^2}\partial_t^2\mathbf E=0.</span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a>**答え**：$\nabla^2\mathbf E-\frac{1}{c^2}\partial_t^2\mathbf E=0$。波速 $c=1/\sqrt{\mu_0\epsilon_0}$ が電磁気定数から決まる。</span>
-<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 13-2　分散関係と横波条件 ― 偏光自由度2 {#ex-13-2 .unnumbered}</span></span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a>**(3)** この波動方程式の波の速さは方程式中の定数 $c=1/\sqrt{\mu_0\epsilon_0}$。電気・磁気の基本定数だけから光速が決まり、光が電磁波であること、その速度が真空中で $c$ であることが Maxwell 方程式に組み込まれている。これがプランク前因子の $c$ の出どころ。</span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a>**答え**：$\nabla^2\mathbf E-\frac{1}{c^2}\partial_t^2\mathbf E=0$。波速 $c=1/\sqrt{\mu_0\epsilon_0}$ が電磁気定数から決まる。</span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 13-2　分散関係と横波条件 ― 偏光自由度2 {#ex-13-2 .unnumbered}</span></span>
 <span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>平面波 $\mathbf E=\mathbf E_0\,e^{i(\mathbf k\cdot\mathbf r-\omega t)}$ を使う。</span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
 <span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>波動方程式に代入して分散関係 $\omega=c|\mathbf k|$（$\nu=c/\lambda$）を導け。</span>
-<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$\nabla\cdot\mathbf E=0$ に代入して $\mathbf k\cdot\mathbf E_0=0$（横波）を示せ。</span>
-<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>横波条件から、与えられた $\mathbf k$ に対し独立な偏光が2つであることを示し、これがプランク前因子 $2h\nu^3/c^2$ の先頭の「2」の起源であることを述べよ。</span>
-<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§13.3 平面波</span><span class="co">](#sec-electromagnetic-waves-plane-wave)</span>、<span class="co">[</span><span class="ot">§13.4 偏光</span><span class="co">](#sec-electromagnetic-waves-polarization)</span>／モード数え上げでの2倍は<span class="co">[</span><span class="ot">§14.3</span><span class="co">](../part5/14-cavity-modes.qmd#sec-cavity-modes-polarization)</span>。</span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a>平面波 $\mathbf E=\mathbf E_0\,e^{i(\mathbf k\cdot\mathbf r-\omega t)}$ を使う。</span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>波動方程式に代入して分散関係 $\omega=c|\mathbf k|$（$\nu=c/\lambda$）を導け。</span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$\nabla\cdot\mathbf E=0$ に代入して $\mathbf k\cdot\mathbf E_0=0$（横波）を示せ。</span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>横波条件から、与えられた $\mathbf k$ に対し独立な偏光が2つであることを示し、これがプランク前因子 $2h\nu^3/c^2$ の先頭の「2」の起源であることを述べよ。</span>
 <span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 13-2）</span></span>
-<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a>**(1)** $\partial_t\to-i\omega$、$\nabla\to i\mathbf k$ ゆえ $\nabla^2\to-|\mathbf k|^2$、$\partial_t^2\to-\omega^2$。波動方程式は</span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§13.3 平面波</span><span class="co">](#sec-electromagnetic-waves-plane-wave)</span>、<span class="co">[</span><span class="ot">§13.4 偏光</span><span class="co">](#sec-electromagnetic-waves-polarization)</span>／モード数え上げでの2倍は<span class="co">[</span><span class="ot">§14.3</span><span class="co">](../part5/14-cavity-modes.qmd#sec-cavity-modes-polarization)</span>。</span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 13-2）</span></span>
 <span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a>\left(-|\mathbf k|^2+\frac{\omega^2}{c^2}\right)\mathbf E_0=0\ \Rightarrow\ \omega^2=c^2|\mathbf k|^2\ \Rightarrow\ \omega=c|\mathbf k|.</span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a>**(1)** $\partial_t\to-i\omega$、$\nabla\to i\mathbf k$ ゆえ $\nabla^2\to-|\mathbf k|^2$、$\partial_t^2\to-\omega^2$。波動方程式は</span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a>$\omega=2\pi\nu$、$|\mathbf k|=2\pi/\lambda$ より $\nu=c/\lambda$。</span>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a>\left(-|\mathbf k|^2+\frac{\omega^2}{c^2}\right)\mathbf E_0=0\ \Rightarrow\ \omega^2=c^2|\mathbf k|^2\ \Rightarrow\ \omega=c|\mathbf k|.</span>
+<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a>**(2)** $\nabla\cdot\mathbf E=i\mathbf k\cdot\mathbf E_0\,e^{i(\cdots)}=0\Rightarrow\mathbf k\cdot\mathbf E_0=0$。電場は伝播方向に垂直＝横波。</span>
+<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a>$\omega=2\pi\nu$、$|\mathbf k|=2\pi/\lambda$ より $\nu=c/\lambda$。</span>
 <span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a>**(3)** $\mathbf E_0$ は $\mathbf k$ に垂直な平面（2次元）内で自由。よって独立な基底偏光は2つ（例：直線偏光2方向、または右・左円偏光）。任意の偏光はこの2つの線形結合。この「2」がモード数え上げで各 $\mathbf k$ に2を掛ける根拠となり、プランク前因子の先頭の2になる。</span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a>**(2)** $\nabla\cdot\mathbf E=i\mathbf k\cdot\mathbf E_0\,e^{i(\cdots)}=0\Rightarrow\mathbf k\cdot\mathbf E_0=0$。電場は伝播方向に垂直＝横波。</span>
 <span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a>**答え**：$\omega=c|\mathbf k|$、$\mathbf k\cdot\mathbf E_0=0$。横波ゆえ偏光は2自由度＝前因子の「2」。</span>
-<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 13-3　Poynting ベクトルの時間平均 {#ex-13-3 .unnumbered}</span></span>
+<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a>**(3)** $\mathbf E_0$ は $\mathbf k$ に垂直な平面（2次元）内で自由。よって独立な基底偏光は2つ（例：直線偏光2方向、または右・左円偏光）。任意の偏光はこの2つの線形結合。この「2」がモード数え上げで各 $\mathbf k$ に2を掛ける根拠となり、プランク前因子の先頭の2になる。</span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a>**答え**：$\omega=c|\mathbf k|$、$\mathbf k\cdot\mathbf E_0=0$。横波ゆえ偏光は2自由度＝前因子の「2」。</span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 13-3　Poynting ベクトルの時間平均 {#ex-13-3 .unnumbered}</span></span>
 <span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>§13.5 は時間平均 Poynting ベクトル $\langle\mathbf S\rangle=\dfrac{c}{8\pi}|\mathbf E_0|^2\hat{\mathbf k}$（Gauss 単位）を結果として与えた。導く。実数の平面波 $\mathbf E=\mathbf E_0\cos(\mathbf k\cdot\mathbf r-\omega t)$、電磁波では $|\mathbf B|=|\mathbf E|$ かつ $\mathbf B=\hat{\mathbf k}\times\mathbf E$（Gauss）。</span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
 <span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$\mathbf S=\dfrac{c}{4\pi}\mathbf E\times\mathbf B$ に代入し、$\mathbf S=\dfrac{c}{4\pi}|\mathbf E_0|^2\cos^2(\mathbf k\cdot\mathbf r-\omega t)\,\hat{\mathbf k}$ を示せ。</span>
-<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$\cos^2$ の時間平均が $1/2$ であることを使い、$\langle\mathbf S\rangle=\dfrac{c}{8\pi}|\mathbf E_0|^2\hat{\mathbf k}$ を導け。</span>
-<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>エネルギーが波数ベクトル方向 $\hat{\mathbf k}$ に運ばれること、これが観測量フラックス $F_\nu$ に対応することを一言で述べよ。</span>
-<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§13.5 Poynting ベクトル</span><span class="co">](#sec-electromagnetic-waves-poynting)</span>／フラックスの定義は<span class="co">[</span><span class="ot">第4章 §4.4</span><span class="co">](../part2/04-radiation-field.qmd#sec-radiation-field-flux)</span>（<span class="co">[</span><span class="ot">第II部 演習</span><span class="co">](../part2/04-radiation-field.qmd#sec-radiation-field-exercises)</span>）。</span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>§13.5 は時間平均 Poynting ベクトル $\langle\mathbf S\rangle=\dfrac{c}{8\pi}|\mathbf E_0|^2\hat{\mathbf k}$（Gauss 単位）を結果として与えた。導く。実数の平面波 $\mathbf E=\mathbf E_0\cos(\mathbf k\cdot\mathbf r-\omega t)$、電磁波では $|\mathbf B|=|\mathbf E|$ かつ $\mathbf B=\hat{\mathbf k}\times\mathbf E$（Gauss）。</span>
+<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$\mathbf S=\dfrac{c}{4\pi}\mathbf E\times\mathbf B$ に代入し、$\mathbf S=\dfrac{c}{4\pi}|\mathbf E_0|^2\cos^2(\mathbf k\cdot\mathbf r-\omega t)\,\hat{\mathbf k}$ を示せ。</span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$\cos^2$ の時間平均が $1/2$ であることを使い、$\langle\mathbf S\rangle=\dfrac{c}{8\pi}|\mathbf E_0|^2\hat{\mathbf k}$ を導け。</span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>エネルギーが波数ベクトル方向 $\hat{\mathbf k}$ に運ばれること、これが観測量フラックス $F_\nu$ に対応することを一言で述べよ。</span>
 <span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 13-3）</span></span>
-<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a>**(1)** $\mathbf B=\hat{\mathbf k}\times\mathbf E$、$\mathbf E\perp\hat{\mathbf k}$ ゆえ $\mathbf E\times\mathbf B=\mathbf E\times(\hat{\mathbf k}\times\mathbf E)=\hat{\mathbf k}|\mathbf E|^2-\mathbf E(\mathbf E\cdot\hat{\mathbf k})=|\mathbf E|^2\hat{\mathbf k}$（$\mathbf E\cdot\hat{\mathbf k}=0$）。$|\mathbf E|^2=|\mathbf E_0|^2\cos^2(\cdots)$。よって</span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§13.5 Poynting ベクトル</span><span class="co">](#sec-electromagnetic-waves-poynting)</span>／フラックスの定義は<span class="co">[</span><span class="ot">第4章 §4.4</span><span class="co">](../part2/04-radiation-field.qmd#sec-radiation-field-flux)</span>（<span class="co">[</span><span class="ot">第II部 演習</span><span class="co">](../part2/04-radiation-field.qmd#sec-radiation-field-exercises)</span>）。</span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 13-3）</span></span>
 <span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a>\mathbf S=\frac{c}{4\pi}|\mathbf E_0|^2\cos^2(\mathbf k\cdot\mathbf r-\omega t)\,\hat{\mathbf k}.</span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>**(1)** $\mathbf B=\hat{\mathbf k}\times\mathbf E$、$\mathbf E\perp\hat{\mathbf k}$ ゆえ $\mathbf E\times\mathbf B=\mathbf E\times(\hat{\mathbf k}\times\mathbf E)=\hat{\mathbf k}|\mathbf E|^2-\mathbf E(\mathbf E\cdot\hat{\mathbf k})=|\mathbf E|^2\hat{\mathbf k}$（$\mathbf E\cdot\hat{\mathbf k}=0$）。$|\mathbf E|^2=|\mathbf E_0|^2\cos^2(\cdots)$。よって</span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a>**(2)** $\langle\cos^2\rangle=1/2$（1周期平均）ゆえ</span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a>\mathbf S=\frac{c}{4\pi}|\mathbf E_0|^2\cos^2(\mathbf k\cdot\mathbf r-\omega t)\,\hat{\mathbf k}.</span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a>\langle\mathbf S\rangle=\frac{c}{4\pi}|\mathbf E_0|^2\cdot\frac12\,\hat{\mathbf k}=\frac{c}{8\pi}|\mathbf E_0|^2\hat{\mathbf k}.</span>
+<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a>**(2)** $\langle\cos^2\rangle=1/2$（1周期平均）ゆえ</span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a>**(3)** エネルギー流は波数方向 $\hat{\mathbf k}$。これは単位面積・単位時間あたりのエネルギー流密度で、振動数分解すれば観測量フラックス $F_\nu$（第4章）に対応する。望遠鏡が検出するのは本質的にこの量。</span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>\langle\mathbf S\rangle=\frac{c}{4\pi}|\mathbf E_0|^2\cdot\frac12\,\hat{\mathbf k}=\frac{c}{8\pi}|\mathbf E_0|^2\hat{\mathbf k}.</span>
+<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a>**答え**：$\mathbf S=\frac{c}{4\pi}|\mathbf E_0|^2\cos^2(\cdots)\hat{\mathbf k}$、時間平均で $\langle\mathbf S\rangle=\frac{c}{8\pi}|\mathbf E_0|^2\hat{\mathbf k}$。$\hat{\mathbf k}$ 方向のエネルギー流＝フラックス。</span>
-<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 13-4　偏光が運ぶ天文情報 ― なぜ黒体は無偏光か {#ex-13-4 .unnumbered}</span></span>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a>**(3)** エネルギー流は波数方向 $\hat{\mathbf k}$。これは単位面積・単位時間あたりのエネルギー流密度で、振動数分解すれば観測量フラックス $F_\nu$（第4章）に対応する。望遠鏡が検出するのは本質的にこの量。</span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a>**答え**：$\mathbf S=\frac{c}{4\pi}|\mathbf E_0|^2\cos^2(\cdots)\hat{\mathbf k}$、時間平均で $\langle\mathbf S\rangle=\frac{c}{8\pi}|\mathbf E_0|^2\hat{\mathbf k}$。$\hat{\mathbf k}$ 方向のエネルギー流＝フラックス。</span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 13-4　偏光が運ぶ天文情報 ― なぜ黒体は無偏光か {#ex-13-4 .unnumbered}</span></span>
 <span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a>§13.4 は偏光の天文的意義を列挙した。整理する。</span>
+<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
 <span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>偏光自由度が「ちょうど2」になるのは、電磁波が3次元空間で横波だからである。もし縦波成分が許されたら自由度は何個になるか。なぜ実際は2なのか。</span>
-<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>シンクロトロン放射・散乱光・Zeeman 効果が、それぞれ偏光からどんな物理量（磁場方向・散乱幾何・磁場強度）を引き出すか述べよ。</span>
-<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>中心地図のプランク分布そのものは等方・無偏光である。なぜ熱平衡放射は無偏光なのか（多数の方向と偏光の平均）を述べよ。</span>
-<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§13.4 偏光</span><span class="co">](#sec-electromagnetic-waves-polarization)</span>／散乱と偏光は<span class="co">[</span><span class="ot">§15.5</span><span class="co">](../part6/15-non-blackbody.qmd#sec-non-blackbody-scattering)</span>、Zeeman 効果は<span class="co">[</span><span class="ot">第23章</span><span class="co">](../part7/23-line-shape.qmd)</span>。</span>
+<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a>§13.4 は偏光の天文的意義を列挙した。整理する。</span>
+<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>偏光自由度が「ちょうど2」になるのは、電磁波が3次元空間で横波だからである。もし縦波成分が許されたら自由度は何個になるか。なぜ実際は2なのか。</span>
+<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>シンクロトロン放射・散乱光・Zeeman 効果が、それぞれ偏光からどんな物理量（磁場方向・散乱幾何・磁場強度）を引き出すか述べよ。</span>
+<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>中心地図のプランク分布そのものは等方・無偏光である。なぜ熱平衡放射は無偏光なのか（多数の方向と偏光の平均）を述べよ。</span>
 <span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 13-4）</span></span>
-<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a>**(1)** 3次元のベクトル場 $\mathbf E_0$ は本来3成分。横波条件 $\mathbf k\cdot\mathbf E_0=0$ が1成分（$\mathbf k$ 方向＝縦波成分）を禁じるので、残り2成分（$\mathbf k$ 垂直面内）が独立。もし縦波が許されれば3自由度だが、Maxwell 方程式（$\nabla\cdot\mathbf E=0$）が縦波を禁じるため実際は2。</span>
+<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§13.4 偏光</span><span class="co">](#sec-electromagnetic-waves-polarization)</span>／散乱と偏光は<span class="co">[</span><span class="ot">§15.5</span><span class="co">](../part6/15-non-blackbody.qmd#sec-non-blackbody-scattering)</span>、Zeeman 効果は<span class="co">[</span><span class="ot">第23章</span><span class="co">](../part7/23-line-shape.qmd)</span>。</span>
+<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 13-4）</span></span>
 <span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a>**(2)** シンクロトロン：放射の偏光面から磁場の方向（偏光は磁場に垂直）。散乱光：偏光の向き・度合いから散乱体の幾何（散乱角90°で最大偏光）。Zeeman 効果：線が偏光成分に分裂し、その分裂幅から磁場強度。</span>
+<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a>**(1)** 3次元のベクトル場 $\mathbf E_0$ は本来3成分。横波条件 $\mathbf k\cdot\mathbf E_0=0$ が1成分（$\mathbf k$ 方向＝縦波成分）を禁じるので、残り2成分（$\mathbf k$ 垂直面内）が独立。もし縦波が許されれば3自由度だが、Maxwell 方程式（$\nabla\cdot\mathbf E=0$）が縦波を禁じるため実際は2。</span>
 <span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a>**(3)** 熱平衡放射は多数の独立な放射体（原子・モード）から、あらゆる方向・あらゆる偏光で等確率に放出される。2つの偏光状態が同じ強度で混ざり、方向平均すると正味の偏光は打ち消されてゼロになる。だから黒体放射は等方・無偏光。観測される偏光は、散乱や磁場など等方性を破る機構の存在を示す。</span>
+<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a>**(2)** シンクロトロン：放射の偏光面から磁場の方向（偏光は磁場に垂直）。散乱光：偏光の向き・度合いから散乱体の幾何（散乱角90°で最大偏光）。Zeeman 効果：線が偏光成分に分裂し、その分裂幅から磁場強度。</span>
 <span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a>**答え**：Maxwell が縦波を禁じ自由度2。偏光→磁場方向(シンクロトロン)/散乱幾何/磁場強度(Zeeman)。熱平衡は両偏光が等確率で混ざり無偏光。</span>
-<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-electromagnetic-waves-further .unnumbered}</span></span>
+<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a>**(3)** 熱平衡放射は多数の独立な放射体（原子・モード）から、あらゆる方向・あらゆる偏光で等確率に放出される。2つの偏光状態が同じ強度で混ざり、方向平均すると正味の偏光は打ち消されてゼロになる。だから黒体放射は等方・無偏光。観測される偏光は、散乱や磁場など等方性を破る機構の存在を示す。</span>
+<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a>**答え**：Maxwell が縦波を禁じ自由度2。偏光→磁場方向(シンクロトロン)/散乱幾何/磁場強度(Zeeman)。熱平衡は両偏光が等確率で混ざり無偏光。</span>
+<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Jackson, *Classical Electrodynamics* (Wiley, 3rd ed., 1998) — 標準的な電磁気学の決定版</span>
-<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Griffiths, *Introduction to Electrodynamics* (Cambridge, 4th ed., 2017) — 学部向けの平易な入門</span>
-<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>砂川重信『理論電磁気学』（紀伊國屋書店, 第3版, 1999）— 日本語の標準教科書</span>
-<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rybicki &amp; Lightman, *Radiative Processes in Astrophysics* (Wiley, 1979) — 第2章「Electromagnetic Theory」</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-electromagnetic-waves-further .unnumbered}</span></span>
+<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Jackson, *Classical Electrodynamics* (Wiley, 3rd ed., 1998) — 標準的な電磁気学の決定版</span>
+<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Griffiths, *Introduction to Electrodynamics* (Cambridge, 4th ed., 2017) — 学部向けの平易な入門</span>
+<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>砂川重信『理論電磁気学』（紀伊國屋書店, 第3版, 1999）— 日本語の標準教科書</span>
+<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rybicki &amp; Lightman, *Radiative Processes in Astrophysics* (Wiley, 1979) — 第2章「Electromagnetic Theory」</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

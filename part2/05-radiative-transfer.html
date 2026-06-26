@@ -721,6 +721,16 @@ d\tau_\nu = \alpha_\nu\, ds, \qquad \tau_\nu = \int_0^s \alpha_\nu(s')\, ds'
 I_\nu(\tau_\nu) = I_\nu(0)\, e^{-\tau_\nu} + \int_0^{\tau_\nu} S_\nu(\tau')\, e^{-(\tau_\nu - \tau')}\, d\tau'
 \tag{8.4}</span></span></p>
 <p>第一項は「初期光がそのまま <span class="math inline">e^{-\tau}</span> 倍に減衰したもの」、第二項は「経路上で放出された光が、観測点までの吸収で減衰しながら積算されたもの」と読める。<strong>観測されるスペクトルが「光が経た歴史」を映す</strong>とは、この第二項の意味である。</p>
+<div id="fig-radiative-transfer-formal" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-radiative-transfer-formal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/radiative-transfer-formal.svg" class="img-fluid figure-img" style="width:92.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-radiative-transfer-formal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+図&nbsp;8.1: 放射輸送方程式の形式解 <a href="#eq-rt-formal-solution" class="quarto-xref">式&nbsp;<span>8.4</span></a> の幾何。視線に沿って媒質を通る光は、<strong>背景光 <span class="math inline">I_\nu(0)</span> が <span class="math inline">e^{-\tau_\nu}</span> で減衰する項</strong>と、<strong>経路上の各点が放出したソース関数 <span class="math inline">S_\nu</span> を、観測点までの吸収 <span class="math inline">e^{-(\tau_\nu-\tau')}</span> で減衰させながら積算する項</strong>の和になる（各点の寄与は観測者に近いほど大きい）。下段の二つの極限が本書の屋台骨：<strong>光学的に厚い極限</strong>（<span class="math inline">\tau_\nu\gg1</span>）では <span class="math inline">I_\nu\to S_\nu</span> となり、LTE では <span class="math inline">S_\nu=B_\nu</span> なので黒体に漸近する。<strong>光学的に薄い極限</strong>（<span class="math inline">\tau_\nu\ll1</span>）では放出が単純に積算され、輝線や希薄な星雲のスペクトルになる。
+</figcaption>
+</figure>
+</div>
 </section>
 <section id="sec-radiative-transfer-source" class="level2">
 <h2 class="anchored" data-anchor-id="sec-radiative-transfer-source">5.4 ソース関数 ― 輸送方程式の心臓部</h2>
@@ -1758,389 +1768,391 @@ I_\nu\approx I_\nu(0)(1-\tau)+S_\nu\tau=I_\nu(0)+\tau(S_\nu-I_\nu(0)).
 <span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>第一項は「初期光がそのまま $e^{-\tau}$ 倍に減衰したもの」、第二項は「経路上で放出された光が、観測点までの吸収で減衰しながら積算されたもの」と読める。**観測されるスペクトルが「光が経た歴史」を映す**とは、この第二項の意味である。</span>
 <span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5.4 ソース関数 ― 輸送方程式の心臓部 {#sec-radiative-transfer-source}</span></span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a><span class="al">![放射輸送方程式の形式解 @eq-rt-formal-solution の幾何。視線に沿って媒質を通る光は、**背景光 $I_\nu(0)$ が $e^{-\tau_\nu}$ で減衰する項**と、**経路上の各点が放出したソース関数 $S_\nu$ を、観測点までの吸収 $e^{-(\tau_\nu-\tau')}$ で減衰させながら積算する項**の和になる（各点の寄与は観測者に近いほど大きい）。下段の二つの極限が本書の屋台骨：**光学的に厚い極限**（$\tau_\nu\gg1$）では $I_\nu\to S_\nu$ となり、LTE では $S_\nu=B_\nu$ なので黒体に漸近する。**光学的に薄い極限**（$\tau_\nu\ll1$）では放出が単純に積算され、輝線や希薄な星雲のスペクトルになる。](../images/radiative-transfer-formal.svg)</span>{#fig-radiative-transfer-formal width=92%}</span>
 <span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3-B4</span><span class="co">]</span></span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5.4 ソース関数 ― 輸送方程式の心臓部 {#sec-radiative-transfer-source}</span></span>
 <span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>放射輸送方程式に現れた **ソース関数**（**source function**）</span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3-B4</span><span class="co">]</span></span>
 <span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>S_\nu \equiv \frac{j_\nu}{\alpha_\nu}</span>
-<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>$$ {#eq-source-function}</span>
-<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>は、放射輸送において中心的な役割を果たす量である。形式解 @eq-rt-formal-solution を見ると、$I_\nu$ は「ソース関数 $S_\nu$ への緩和の途中にある」量と読める：</span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>放射輸送方程式に現れた **ソース関数**（**source function**）</span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>S_\nu \equiv \frac{j_\nu}{\alpha_\nu}</span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>$$ {#eq-source-function}</span>
 <span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>**用語**：英語 *source function* の日本語訳として「ソース関数」と「**源泉関数**」の両方が使われる（Mihalas 訳系では「源泉関数」、Rybicki-Lightman 翻訳系では「ソース関数」が多い）。指す量は同一。本書では「ソース関数」を主に用いる。</span>
-<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>光学的に薄い極限（$\tau \ll 1$）：$I_\nu \approx I_\nu(0)(1 - \tau_\nu) + S_\nu\, \tau_\nu$ ＝ $I_\nu(0) + \tau_\nu (S_\nu - I_\nu(0))$（背景光の少しの吸収＋少しの放出。$I_\nu(0)$ と $S_\nu$ の大小関係で **吸収線か輝線か** が決まる）</span>
-<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>光学的に厚い極限（$\tau \gg 1$）：$I_\nu \to S_\nu$（**ソース関数の値そのもの**になる）</span>
-<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>つまり $S_\nu$ とは「比強度が漸近する目標値」である。</span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>は、放射輸送において中心的な役割を果たす量である。形式解 @eq-rt-formal-solution を見ると、$I_\nu$ は「ソース関数 $S_\nu$ への緩和の途中にある」量と読める：</span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>**用語**：英語 *source function* の日本語訳として「ソース関数」と「**源泉関数**」の両方が使われる（Mihalas 訳系では「源泉関数」、Rybicki-Lightman 翻訳系では「ソース関数」が多い）。指す量は同一。本書では「ソース関数」を主に用いる。</span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>光学的に薄い極限（$\tau \ll 1$）：$I_\nu \approx I_\nu(0)(1 - \tau_\nu) + S_\nu\, \tau_\nu$ ＝ $I_\nu(0) + \tau_\nu (S_\nu - I_\nu(0))$（背景光の少しの吸収＋少しの放出。$I_\nu(0)$ と $S_\nu$ の大小関係で **吸収線か輝線か** が決まる）</span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>光学的に厚い極限（$\tau \gg 1$）：$I_\nu \to S_\nu$（**ソース関数の値そのもの**になる）</span>
 <span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>**観測との対応**：観測される連続スペクトルが「黒体に近い」かどうかを判定するとき、私たちは暗黙のうちに「光学的に厚い」かつ「$S_\nu = B_\nu(T)$」が成り立つかを判定している。後者の条件こそが、次節で扱う **LTE**（Local Thermodynamic Equilibrium）である。</span>
-<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
-<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>**問い**：ソース関数は常にプランク関数 $B_\nu(T)$ なのか？</span>
-<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>**短答**：いいえ。$S_\nu = B_\nu(T)$ となるのは熱平衡 ― より厳密には **LTE**（次節）― が成り立つときに限る。一般には $S_\nu \neq B_\nu$ で、その内容は物質の準位占有数 $n_l$ から決める必要がある。</span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>つまり $S_\nu$ とは「比強度が漸近する目標値」である。</span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a>**観測との対応**：観測される連続スペクトルが「黒体に近い」かどうかを判定するとき、私たちは暗黙のうちに「光学的に厚い」かつ「$S_\nu = B_\nu(T)$」が成り立つかを判定している。後者の条件こそが、次節で扱う **LTE**（Local Thermodynamic Equilibrium）である。</span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>**問い**：ソース関数は常にプランク関数 $B_\nu(T)$ なのか？</span>
 <span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a>**もう一歩**：第3章の Kirchhoff の法則 @eq-kirchhoff は「熱平衡における吸収率 = 放出率」を主張するが、これは詳細釣り合いという**強い**条件である。これが破れる場面で何が起きるかを、次節 §5.5 で扱う。</span>
-<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5.5 LTE と non-LTE ― 局所温度で状態が決まるか {#sec-radiative-transfer-lte}</span></span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a>**短答**：いいえ。$S_\nu = B_\nu(T)$ となるのは熱平衡 ― より厳密には **LTE**（次節）― が成り立つときに限る。一般には $S_\nu \neq B_\nu$ で、その内容は物質の準位占有数 $n_l$ から決める必要がある。</span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>**もう一歩**：第3章の Kirchhoff の法則 @eq-kirchhoff は「熱平衡における吸収率 = 放出率」を主張するが、これは詳細釣り合いという**強い**条件である。これが破れる場面で何が起きるかを、次節 §5.5 で扱う。</span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3-B4</span><span class="co">]</span></span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5.5 LTE と non-LTE ― 局所温度で状態が決まるか {#sec-radiative-transfer-lte}</span></span>
 <span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>ソース関数 $S_\nu = j_\nu / \alpha_\nu$ の値は、物質の状態 ― 具体的には準位占有数 $n_l$ ― に依存する。準位占有数の決まり方によって、放射輸送には決定的に異なる二つのレジームがある。それが **LTE** と **non-LTE** である。</span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3-B4</span><span class="co">]</span></span>
 <span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 略号 <span class="pp">|</span> フル名 <span class="pp">|</span> 意味 <span class="pp">|</span></span>
-<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
-<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> LTE <span class="pp">|</span> **L**ocal **T**hermodynamic **E**quilibrium | **局所**熱平衡：物質の速度分布・電離・励起が、その点の局所温度 $T$ だけで決まる <span class="pp">|</span></span>
-<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> non-LTE <span class="pp">|</span> **not in LTE**（LTE でない） | LTE が破れた状態。典型的には放射場 $J_\nu$ が準位を決めることで**非局所性**が入る <span class="pp">|</span></span>
-<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>区別の鍵は「準位占有数がその点の **局所量** だけで決まるか、それとも **遠方の情報**（放射場経由）に依存するか」である。「non-」は単に「LTE でない」の意味だが、その**典型的な起源**が放射場経由の非局所性にあると理解するとよい。</span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>ソース関数 $S_\nu = j_\nu / \alpha_\nu$ の値は、物質の状態 ― 具体的には準位占有数 $n_l$ ― に依存する。準位占有数の決まり方によって、放射輸送には決定的に異なる二つのレジームがある。それが **LTE** と **non-LTE** である。</span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 略号 <span class="pp">|</span> フル名 <span class="pp">|</span> 意味 <span class="pp">|</span></span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> LTE <span class="pp">|</span> **L**ocal **T**hermodynamic **E**quilibrium | **局所**熱平衡：物質の速度分布・電離・励起が、その点の局所温度 $T$ だけで決まる <span class="pp">|</span></span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> non-LTE <span class="pp">|</span> **not in LTE**（LTE でない） | LTE が破れた状態。典型的には放射場 $J_\nu$ が準位を決めることで**非局所性**が入る <span class="pp">|</span></span>
 <span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a><span class="fu">### LTE ― 局所温度だけで物質の状態が決まる</span></span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>区別の鍵は「準位占有数がその点の **局所量** だけで決まるか、それとも **遠方の情報**（放射場経由）に依存するか」である。「non-」は単に「LTE でない」の意味だが、その**典型的な起源**が放射場経由の非局所性にあると理解するとよい。</span>
 <span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>ある点の物質の状態 ― 速度分布、電離度、励起準位の占有数 ― が、**その点の局所的な温度 $T$ だけで一意に決まる**近似が LTE である。具体的には次が成り立つ：</span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a><span class="fu">### LTE ― 局所温度だけで物質の状態が決まる</span></span>
 <span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>速度分布が Maxwell 分布（局所 $T$）</span>
-<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>電離平衡が Saha 式（局所 $T$）</span>
-<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>励起平衡が Boltzmann 分布（局所 $T$）</span>
-<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a>これらが満たされれば、第3章で見た Kirchhoff の法則 @eq-kirchhoff によりソース関数は</span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>ある点の物質の状態 ― 速度分布、電離度、励起準位の占有数 ― が、**その点の局所的な温度 $T$ だけで一意に決まる**近似が LTE である。具体的には次が成り立つ：</span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>速度分布が Maxwell 分布（局所 $T$）</span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>電離平衡が Saha 式（局所 $T$）</span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>励起平衡が Boltzmann 分布（局所 $T$）</span>
 <span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a>S_\nu = B_\nu(T) \quad \text{（LTE）}</span>
-<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>$$ {#eq-source-lte}</span>
-<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>となる。重要なのは、**LTE は放射場が黒体である必要を含まない**点である。放射場 $J_\nu$ が異方的でも、$J_\nu \neq B_\nu$ でも、物質側の状態が局所温度で決まっていれば LTE であり、ソース関数（放出と吸収の比）はちょうど $B_\nu(T)$ になる。放射場と物質が**両方**プランク的になっている強い状況は「**完全熱平衡**」（第6章）と呼んで区別する。</span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>これらが満たされれば、第3章で見た Kirchhoff の法則 @eq-kirchhoff によりソース関数は</span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>S_\nu = B_\nu(T) \quad \text{（LTE）}</span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>$$ {#eq-source-lte}</span>
 <span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>LTE が成り立つのは、**衝突遷移率が放射遷移率より十分速い**とき。衝突は局所量（局所密度 $n$、局所温度 $T$）だけで決まるので、それが支配的なら占有数は局所量の関数になる。典型場面：</span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>となる。重要なのは、**LTE は放射場が黒体である必要を含まない**点である。放射場 $J_\nu$ が異方的でも、$J_\nu \neq B_\nu$ でも、物質側の状態が局所温度で決まっていれば LTE であり、ソース関数（放出と吸収の比）はちょうど $B_\nu(T)$ になる。放射場と物質が**両方**プランク的になっている強い状況は「**完全熱平衡**」（第6章）と呼んで区別する。</span>
 <span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>高密度・高温度のプラズマ（恒星内部、光球深部）</span>
-<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>早期宇宙（再結合期以前の電離プラズマ）</span>
-<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a><span class="fu">### non-LTE ― 放射場が占有数を変えることで非局所性が入る</span></span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>LTE が成り立つのは、**衝突遷移率が放射遷移率より十分速い**とき。衝突は局所量（局所密度 $n$、局所温度 $T$）だけで決まるので、それが支配的なら占有数は局所量の関数になる。典型場面：</span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>高密度・高温度のプラズマ（恒星内部、光球深部）</span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>早期宇宙（再結合期以前の電離プラズマ）</span>
 <span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>LTE の前提が崩れる ― すなわち準位占有数を局所温度だけで Boltzmann 分布に決められない ― 状態を **non-LTE** と呼ぶ。多くの場面で、占有数は放射場 $J_\nu$ にも依存し、その結果**遠方の情報が入り込む**ことになる。</span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a><span class="fu">### non-LTE ― 放射場が占有数を変えることで非局所性が入る</span></span>
 <span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>なぜ「非局所」になるのか。形式解 @eq-rt-formal-solution が示すように、ある点での放射場 $J_\nu(\mathbf{r})$ は、**媒質全体の構造**（経路上の温度・密度・組成）を積分した量である。光は遠方からやってきて、その点の物質と相互作用する。したがって、放射遷移率（$J_\nu$ に比例する誘導吸収・誘導放出）が無視できないとき、占有数を決める**統計平衡方程式**は</span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>LTE の前提が崩れる ― すなわち準位占有数を局所温度だけで Boltzmann 分布に決められない ― 状態を **non-LTE** と呼ぶ。多くの場面で、占有数は放射場 $J_\nu$ にも依存し、その結果**遠方の情報が入り込む**ことになる。</span>
 <span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>\sum_{u} \bigl( C_{lu} + B_{lu} J_{\nu_{lu}} \bigr) n_l \;=\; \sum_{u} \bigl( C_{ul} + A_{ul} + B_{ul} J_{\nu_{lu}} \bigr) n_u</span>
-<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a>$$ {#eq-statistical-equilibrium}</span>
-<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a>の形になる。これは **多準位原子** に対する統計平衡方程式で、ある一つの下準位 $l$ に注目し、その占有数 $n_l$ の流入・流出を釣り合わせたものである。和 $\sum_u$ は、$l$ と遷移で結ばれるすべての上準位 $u$ にわたる総和を表す（$\nu_{lu}$ は遷移 $l \leftrightarrow u$ の振動数）。左辺は $l$ から各 $u$ への遷移による $n_l$ の流出、右辺は各 $u$ から $l$ への遷移による流入である（$C_{ij}$ は衝突遷移率、$A_{ul}, B_{ij}$ は Einstein 係数。詳細は第11章で扱う）。最も簡単な **二準位原子**（$u$ が一つだけ）では和が一項に縮約する。**右辺・左辺に $J_{\nu_{lu}}$ が入っていることが、典型的な non-LTE で非局所性が現れる正体**である。占有数は媒質全体の構造の関数となり、その結果ソース関数も $B_\nu(T_\text{local})$ から外れる。</span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a>なぜ「非局所」になるのか。形式解 @eq-rt-formal-solution が示すように、ある点での放射場 $J_\nu(\mathbf{r})$ は、**媒質全体の構造**（経路上の温度・密度・組成）を積分した量である。光は遠方からやってきて、その点の物質と相互作用する。したがって、放射遷移率（$J_\nu$ に比例する誘導吸収・誘導放出）が無視できないとき、占有数を決める**統計平衡方程式**は</span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a>\sum_{u} \bigl( C_{lu} + B_{lu} J_{\nu_{lu}} \bigr) n_l \;=\; \sum_{u} \bigl( C_{ul} + A_{ul} + B_{ul} J_{\nu_{lu}} \bigr) n_u</span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a>$$ {#eq-statistical-equilibrium}</span>
 <span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>衝突率が無視できる極限が「強い non-LTE」、衝突率が放射率より十分速い極限が LTE である。</span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>の形になる。これは **多準位原子** に対する統計平衡方程式で、ある一つの下準位 $l$ に注目し、その占有数 $n_l$ の流入・流出を釣り合わせたものである。和 $\sum_u$ は、$l$ と遷移で結ばれるすべての上準位 $u$ にわたる総和を表す（$\nu_{lu}$ は遷移 $l \leftrightarrow u$ の振動数）。左辺は $l$ から各 $u$ への遷移による $n_l$ の流出、右辺は各 $u$ から $l$ への遷移による流入である（$C_{ij}$ は衝突遷移率、$A_{ul}, B_{ij}$ は Einstein 係数。詳細は第11章で扱う）。最も簡単な **二準位原子**（$u$ が一つだけ）では和が一項に縮約する。**右辺・左辺に $J_{\nu_{lu}}$ が入っていることが、典型的な non-LTE で非局所性が現れる正体**である。占有数は媒質全体の構造の関数となり、その結果ソース関数も $B_\nu(T_\text{local})$ から外れる。</span>
 <span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>**用語**：non-LTE という名前は「LTE でない状態」という消極的な意味で用いられることが多い。Mihalas 以降の標準的解釈は、上記のように「準位占有数が放射場 $J_\nu$ を通じて非局所的になる」状態を指す。本書はこの解釈を採る。</span>
-<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a><span class="fu">### どこで LTE が破れるか</span></span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>衝突率が無視できる極限が「強い non-LTE」、衝突率が放射率より十分速い極限が LTE である。</span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a>**用語**：non-LTE という名前は「LTE でない状態」という消極的な意味で用いられることが多い。Mihalas 以降の標準的解釈は、上記のように「準位占有数が放射場 $J_\nu$ を通じて非局所的になる」状態を指す。本書はこの解釈を採る。</span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>衝突率は密度に比例し、放射率は放射場に比例する。したがって**密度が低いほど non-LTE が効きやすい**。</span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a><span class="fu">### どこで LTE が破れるか</span></span>
 <span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 領域 <span class="pp">|</span> LTE の妥当性 <span class="pp">|</span></span>
-<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|</span></span>
-<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 恒星内部・光球深部 <span class="pp">|</span> LTE がよい近似 <span class="pp">|</span></span>
-<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 恒星上層大気 <span class="pp">|</span> しばしばnon-LTE が重要（特に強い線）<span class="pp">|</span></span>
-<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 希薄な星間ガス（HII 領域、惑星状星雲） <span class="pp">|</span> 強いnon-LTE、禁制線が顕著 <span class="pp">|</span></span>
-<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> AGN 輝線領域・QSO 散光雲 <span class="pp">|</span> 強いnon-LTE <span class="pp">|</span></span>
-<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 早期宇宙（再結合期以前）<span class="pp">|</span> 完全 LTE → CMB の完璧な黒体性 <span class="pp">|</span></span>
-<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>**注意（観測）**：「LTE か non-LTE か」は観測スペクトルの解釈で常に最初に問わなければならない。第III部（統計力学）でこの区別の意味が深まり、第VII部の線スペクトルでは non-LTE の扱いが本格的な主題になる（特に第21章 §21.7）。</span>
-<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
-<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a>**問い**：non-LTE のスペクトルはプランク関数にはならないのか？</span>
-<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>**短答**：そのまま読めば「ならない」。non-LTE ではソース関数が $S_\nu \neq B_\nu(T_\text{local})$ なので、光学的に厚い領域から出てくる比強度も $I_\nu \to S_\nu \neq B_\nu(T_\text{local})$ となり、観測スペクトルは局所温度のプランク関数から外れる。</span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>衝突率は密度に比例し、放射率は放射場に比例する。したがって**密度が低いほど non-LTE が効きやすい**。</span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 領域 <span class="pp">|</span> LTE の妥当性 <span class="pp">|</span></span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|</span></span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 恒星内部・光球深部 <span class="pp">|</span> LTE がよい近似 <span class="pp">|</span></span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 恒星上層大気 <span class="pp">|</span> しばしばnon-LTE が重要（特に強い線）<span class="pp">|</span></span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 希薄な星間ガス（HII 領域、惑星状星雲） <span class="pp">|</span> 強いnon-LTE、禁制線が顕著 <span class="pp">|</span></span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> AGN 輝線領域・QSO 散光雲 <span class="pp">|</span> 強いnon-LTE <span class="pp">|</span></span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 早期宇宙（再結合期以前）<span class="pp">|</span> 完全 LTE → CMB の完璧な黒体性 <span class="pp">|</span></span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>**注意（観測）**：「LTE か non-LTE か」は観測スペクトルの解釈で常に最初に問わなければならない。第III部（統計力学）でこの区別の意味が深まり、第VII部の線スペクトルでは non-LTE の扱いが本格的な主題になる（特に第21章 §21.7）。</span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>**問い**：non-LTE のスペクトルはプランク関数にはならないのか？</span>
 <span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>**もう一歩**：ただし「**熱化深さ**（thermalization depth）」と呼ばれる十分な深さまで沈み込んだ領域では、放射場 $J_\nu$ がその場所で熱化して $J_\nu \to B_\nu(T_\text{local})$ となり、結果として統計平衡方程式 @eq-statistical-equilibrium の占有数も LTE 値に漸近、$S_\nu \to B_\nu(T_\text{local})$ となる。つまり**十分に深い non-LTE 媒質は実質 LTE**になる。non-LTE 効果が顕著に観測スペクトルに現れるのは、光学的に薄い領域や中程度の $\tau$ の上層大気である。詳しくは第VII部 §21.7 で扱う。</span>
-<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5.6 光学的に厚い極限 ― 黒体に近づく仕組み {#sec-radiative-transfer-thick}</span></span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>**短答**：そのまま読めば「ならない」。non-LTE ではソース関数が $S_\nu \neq B_\nu(T_\text{local})$ なので、光学的に厚い領域から出てくる比強度も $I_\nu \to S_\nu \neq B_\nu(T_\text{local})$ となり、観測スペクトルは局所温度のプランク関数から外れる。</span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a>**もう一歩**：ただし「**熱化深さ**（thermalization depth）」と呼ばれる十分な深さまで沈み込んだ領域では、放射場 $J_\nu$ がその場所で熱化して $J_\nu \to B_\nu(T_\text{local})$ となり、結果として統計平衡方程式 @eq-statistical-equilibrium の占有数も LTE 値に漸近、$S_\nu \to B_\nu(T_\text{local})$ となる。つまり**十分に深い non-LTE 媒質は実質 LTE**になる。non-LTE 効果が顕著に観測スペクトルに現れるのは、光学的に薄い領域や中程度の $\tau$ の上層大気である。詳しくは第VII部 §21.7 で扱う。</span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3-B4</span><span class="co">]</span></span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5.6 光学的に厚い極限 ― 黒体に近づく仕組み {#sec-radiative-transfer-thick}</span></span>
 <span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>第3章で「黒体放射の普遍性は熱平衡から来る」と論じたが、これは放射輸送方程式の極限として明示的に示せる。</span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3-B4</span><span class="co">]</span></span>
 <span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a>LTE のもとで $\tau_\nu \gg 1$ の領域から出てくる光を考える。@eq-rt-formal-solution の積分は、$\tau' \sim \tau_\nu - 1$ 付近に強く重み付けされる（実効的な放出領域）。$S_\nu = B_\nu(T)$ がこの領域でほぼ一定なら、</span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a>第3章で「黒体放射の普遍性は熱平衡から来る」と論じたが、これは放射輸送方程式の極限として明示的に示せる。</span>
 <span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a>I_\nu \to B_\nu(T)</span>
-<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a>$$ {#eq-rt-thick-limit}</span>
-<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a>**これが黒体放射である**。恒星の光球が黒体に近いのは、まさにこの極限が成り立つ場所だからだ。</span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a>LTE のもとで $\tau_\nu \gg 1$ の領域から出てくる光を考える。@eq-rt-formal-solution の積分は、$\tau' \sim \tau_\nu - 1$ 付近に強く重み付けされる（実効的な放出領域）。$S_\nu = B_\nu(T)$ がこの領域でほぼ一定なら、</span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a>I_\nu \to B_\nu(T)</span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a>$$ {#eq-rt-thick-limit}</span>
 <span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
-<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a>**観測との対応**：太陽の光球は可視光で $\tau \sim 1$ の付近を見ており、温度が $\sim 5800$ K で LTE 近似がよく成り立つ。結果としてスペクトルは $B_\nu(5800\text{ K})$ に近い。第1章で見た「太陽スペクトルがほぼ黒体」の理由を、放射輸送の言葉で説明し直したことになる。</span>
-<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5.7 光学的に薄い極限 ― 放出の単純な積算 {#sec-radiative-transfer-thin}</span></span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a>**これが黒体放射である**。恒星の光球が黒体に近いのは、まさにこの極限が成り立つ場所だからだ。</span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a>**観測との対応**：太陽の光球は可視光で $\tau \sim 1$ の付近を見ており、温度が $\sim 5800$ K で LTE 近似がよく成り立つ。結果としてスペクトルは $B_\nu(5800\text{ K})$ に近い。第1章で見た「太陽スペクトルがほぼ黒体」の理由を、放射輸送の言葉で説明し直したことになる。</span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3-B4</span><span class="co">]</span></span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5.7 光学的に薄い極限 ― 放出の単純な積算 {#sec-radiative-transfer-thin}</span></span>
 <span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a>逆の極限 $\tau_\nu \ll 1$ では、@eq-rt-formal-solution は</span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3-B4</span><span class="co">]</span></span>
 <span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>I_\nu \approx I_\nu(0) + \int j_\nu\, ds = I_\nu(0) + \tau_\nu S_\nu</span>
-<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a>$$ {#eq-rt-thin-limit}</span>
-<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a>となり、観測される強度は「背景光＋経路上の放出の総和」になる。背景光がなければ $I_\nu \approx \tau_\nu S_\nu$ で、ガスの局所的な状態（密度・温度・組成）を直接反映する。</span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a>逆の極限 $\tau_\nu \ll 1$ では、@eq-rt-formal-solution は</span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a>I_\nu \approx I_\nu(0) + \int j_\nu\, ds = I_\nu(0) + \tau_\nu S_\nu</span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a>$$ {#eq-rt-thin-limit}</span>
 <span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a>光学的に薄い極限が成り立つ場面：</span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a>となり、観測される強度は「背景光＋経路上の放出の総和」になる。背景光がなければ $I_\nu \approx \tau_\nu S_\nu$ で、ガスの局所的な状態（密度・温度・組成）を直接反映する。</span>
 <span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**希薄な星間ガス**：HII 領域、惑星状星雲、超新星残骸の輝線</span>
-<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**コロナや高温プラズマ**：X 線輝線</span>
-<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**AGN 輝線領域**：広輝線・狭輝線の放出</span>
-<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**CMB 観測**：宇宙再結合以降の光は基本的に光学的に薄い</span>
-<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>このとき観測されるスペクトルは黒体ではなく、線スペクトルや特定の連続放射機構（自由–自由放射、シンクロトロン）の形になる。**観測スペクトルが黒体からどう「ずれるか」は、しばしばこの光学的に薄い極限の特徴で決まる**。</span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>光学的に薄い極限が成り立つ場面：</span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**希薄な星間ガス**：HII 領域、惑星状星雲、超新星残骸の輝線</span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**コロナや高温プラズマ**：X 線輝線</span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**AGN 輝線領域**：広輝線・狭輝線の放出</span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**CMB 観測**：宇宙再結合以降の光は基本的に光学的に薄い</span>
 <span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
-<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a>**問い**：背景光がなく $\tau \ll 1$ なら、何も見えないのか？</span>
-<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a>**短答**：いや、**自己発光**が見える。@eq-rt-thin-limit から $I_\nu \approx \tau_\nu S_\nu = \int j_\nu\, ds$ となり、経路上で物質が放出した光が薄く ― しかし確かに ― 見える。これが HII 領域や星雲の輝線スペクトルの正体である。</span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a>このとき観測されるスペクトルは黒体ではなく、線スペクトルや特定の連続放射機構（自由–自由放射、シンクロトロン）の形になる。**観測スペクトルが黒体からどう「ずれるか」は、しばしばこの光学的に薄い極限の特徴で決まる**。</span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a>**問い**：背景光がなく $\tau \ll 1$ なら、何も見えないのか？</span>
 <span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a>**もう一歩**：見える明るさは $\tau_\nu$ に比例するので連続部分は暗いが、特定の振動数（線の中心 $\nu_0$）では $\alpha_\nu^\text{line}$ が大きく、$\tau_\nu$ が局所的に厚くなって**強い線**として見える。これが連続スペクトルがほとんどない場での「**輝線天体**」の見え方であり、第VII部で本格的に扱う線スペクトルの基本構造である。</span>
-<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5.8 連続吸収と線吸収 ― 第VII部への橋渡し {#sec-radiative-transfer-bridge}</span></span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a>**短答**：いや、**自己発光**が見える。@eq-rt-thin-limit から $I_\nu \approx \tau_\nu S_\nu = \int j_\nu\, ds$ となり、経路上で物質が放出した光が薄く ― しかし確かに ― 見える。これが HII 領域や星雲の輝線スペクトルの正体である。</span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a>**もう一歩**：見える明るさは $\tau_\nu$ に比例するので連続部分は暗いが、特定の振動数（線の中心 $\nu_0$）では $\alpha_\nu^\text{line}$ が大きく、$\tau_\nu$ が局所的に厚くなって**強い線**として見える。これが連続スペクトルがほとんどない場での「**輝線天体**」の見え方であり、第VII部で本格的に扱う線スペクトルの基本構造である。</span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3-B4</span><span class="co">]</span></span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5.8 連続吸収と線吸収 ― 第VII部への橋渡し {#sec-radiative-transfer-bridge}</span></span>
 <span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a>ここまで放射輸送方程式 @eq-radiative-transfer を、おもに連続スペクトル（黒体放射と「黒体からのずれ」）を念頭に書いてきた。しかしこの方程式は、観測されるスペクトルが連続か線かを区別していない。違いはすべて、吸収係数 $\alpha_\nu$ と放出係数 $j_\nu$ が振動数 $\nu$ に対してどんな構造を持つかに集約される。</span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3-B4</span><span class="co">]</span></span>
 <span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**連続吸収**：$\alpha_\nu$ が $\nu$ に対して滑らかに変化する成分（自由–自由・自由–束縛・ダストの吸収など）。第VI部で本格的に扱う。</span>
-<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**線吸収**：$\alpha_\nu$ が特定の振動数 $\nu_0$ の周りに鋭いピーク $\phi(\nu - \nu_0)$ を持つ成分（束縛–束縛遷移）。これが線スペクトルの正体である。</span>
-<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a>つまり**線スペクトルは「連続スペクトルとは別の物理」ではなく、同じ放射場の同じ輸送方程式の上に乗る、$\alpha_\nu$ の構造が違うだけの現象**である。第VII部はこの観点から、線吸収係数を</span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a>ここまで放射輸送方程式 @eq-radiative-transfer を、おもに連続スペクトル（黒体放射と「黒体からのずれ」）を念頭に書いてきた。しかしこの方程式は、観測されるスペクトルが連続か線かを区別していない。違いはすべて、吸収係数 $\alpha_\nu$ と放出係数 $j_\nu$ が振動数 $\nu$ に対してどんな構造を持つかに集約される。</span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**連続吸収**：$\alpha_\nu$ が $\nu$ に対して滑らかに変化する成分（自由–自由・自由–束縛・ダストの吸収など）。第VI部で本格的に扱う。</span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**線吸収**：$\alpha_\nu$ が特定の振動数 $\nu_0$ の周りに鋭いピーク $\phi(\nu - \nu_0)$ を持つ成分（束縛–束縛遷移）。これが線スペクトルの正体である。</span>
 <span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>\alpha_\nu^{\text{line}} = \frac{\pi e^2}{m_e c}\, f_{lu}\, n_l\, \phi(\nu - \nu_0)</span>
-<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a>$$ {#eq-line-absorption-preview}</span>
-<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a>の形に分解し、各因子（$\nu_0$, $f_{lu}$, $n_l$, $\phi$）の背後にある原子物理・統計力学・線形機構を、それぞれ逆引きしていく。</span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a>つまり**線スペクトルは「連続スペクトルとは別の物理」ではなく、同じ放射場の同じ輸送方程式の上に乗る、$\alpha_\nu$ の構造が違うだけの現象**である。第VII部はこの観点から、線吸収係数を</span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>\alpha_\nu^{\text{line}} = \frac{\pi e^2}{m_e c}\, f_{lu}\, n_l\, \phi(\nu - \nu_0)</span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a>$$ {#eq-line-absorption-preview}</span>
 <span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a>**読みのコツ**：本書を通読するなら、第II部の輸送方程式を「連続と線の共通の土台」と意識しておくと、第VI部（連続のずれ）と第VII部（線スペクトルの逆引き）の対称性が見えやすい。</span>
-<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5.9 現実の天体スペクトルへの第一歩 {#sec-radiative-transfer-real-spectra}</span></span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a>の形に分解し、各因子（$\nu_0$, $f_{lu}$, $n_l$, $\phi$）の背後にある原子物理・統計力学・線形機構を、それぞれ逆引きしていく。</span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>**読みのコツ**：本書を通読するなら、第II部の輸送方程式を「連続と線の共通の土台」と意識しておくと、第VI部（連続のずれ）と第VII部（線スペクトルの逆引き）の対称性が見えやすい。</span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3-B4</span><span class="co">]</span></span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5.9 現実の天体スペクトルへの第一歩 {#sec-radiative-transfer-real-spectra}</span></span>
 <span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a>放射輸送方程式は形式的にはシンプルだが、現実の天体スペクトルを再現するには、次の三つを具体的に与える必要がある：</span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3-B4</span><span class="co">]</span></span>
 <span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**吸収係数の振動数依存性** $\alpha_\nu(\nu)$ ― 連続成分と線成分の合成</span>
-<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**ソース関数の物理** $S_\nu(\nu, \mathbf{r})$ ― LTE かnon-LTE か、占有数はどう決まるか</span>
-<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**境界条件** ― 「背景光」「天体の内部温度構造」など</span>
-<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a>これら三つを与えるためには、本書の後半が必要になる：</span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a>放射輸送方程式は形式的にはシンプルだが、現実の天体スペクトルを再現するには、次の三つを具体的に与える必要がある：</span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**吸収係数の振動数依存性** $\alpha_\nu(\nu)$ ― 連続成分と線成分の合成</span>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**ソース関数の物理** $S_\nu(\nu, \mathbf{r})$ ― LTE かnon-LTE か、占有数はどう決まるか</span>
+<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**境界条件** ― 「背景光」「天体の内部温度構造」など</span>
 <span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**吸収係数の中身**（@eq-line-absorption-preview の各因子）→ 第VII部の原子物理（第22章）と量子論（第IV部）</span>
-<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**ソース関数の構造**（占有数 $n_l$ の決定）→ 第III部の統計力学</span>
-<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**モード密度の前因子**（$2h\nu^3/c^2$）→ 第V部の電磁気学</span>
-<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**熱史と境界条件**（早期宇宙の CMB、恒星の進化）→ 第VI部の応用</span>
-<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
-<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a>**観測との対応**：観測天文学者が実際にスペクトルを解析するとき、彼らは（明示的または暗黙のうちに）次の手順を踏んでいる：</span>
-<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a>(i) 観測スペクトルから「黒体に近い連続成分＋線特徴＋背景」に分解する</span>
-<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a>(ii) 連続成分から温度・光度を引き出す（第2章の道具）</span>
-<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a>(iii) 線特徴から組成・速度・密度を引き出す（第VII部の道具）</span>
-<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a>本書はこの逆向きに ― 観測から各物理量を引き出す道具立てを ― 順に整える、というロードマップを取っている。</span>
-<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a>これら三つを与えるためには、本書の後半が必要になる：</span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**吸収係数の中身**（@eq-line-absorption-preview の各因子）→ 第VII部の原子物理（第22章）と量子論（第IV部）</span>
+<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**ソース関数の構造**（占有数 $n_l$ の決定）→ 第III部の統計力学</span>
+<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**モード密度の前因子**（$2h\nu^3/c^2$）→ 第V部の電磁気学</span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**熱史と境界条件**（早期宇宙の CMB、恒星の進化）→ 第VI部の応用</span>
+<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a>**観測との対応**：観測天文学者が実際にスペクトルを解析するとき、彼らは（明示的または暗黙のうちに）次の手順を踏んでいる：</span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a>(i) 観測スペクトルから「黒体に近い連続成分＋線特徴＋背景」に分解する</span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>(ii) 連続成分から温度・光度を引き出す（第2章の道具）</span>
+<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a>(iii) 線特徴から組成・速度・密度を引き出す（第VII部の道具）</span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a>本書はこの逆向きに ― 観測から各物理量を引き出す道具立てを ― 順に整える、というロードマップを取っている。</span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-radiative-transfer-summary .unnumbered}</span></span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
-<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る**</span>
-<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a>本章で、本書全体を貫く**放射輸送方程式**</span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-radiative-transfer-summary .unnumbered}</span></span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る**</span>
 <span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a>\frac{dI_\nu}{d\tau_\nu} = -I_\nu + S_\nu</span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>本章で、本書全体を貫く**放射輸送方程式**</span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a>が立ち上がった。この方程式は次の役割を果たす：</span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a>\frac{dI_\nu}{d\tau_\nu} = -I_\nu + S_\nu</span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>観測される比強度 $I_\nu$ を、光学的厚さ $\tau_\nu$ と ソース関数 $S_\nu$ の関数として与える</span>
-<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**光学的に厚い + LTE** の極限で $I_\nu \to B_\nu(T)$ となり、**第3章の「黒体は熱平衡で普遍」**が放射輸送の極限として再現される</span>
-<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**光学的に薄い**極限では、観測スペクトルは経路上の放出の単純な積算となる</span>
-<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>連続と線の区別は、吸収係数 $\alpha_\nu(\nu)$ の構造の違いに集約される（**第VII部への橋渡し**）</span>
-<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a>ここで第I部（観測の現象論）と第II部（放射場の記述と輸送）が一通り揃った。第III部からは、この上に立って、プランク関数の各因子を順に「逆引き」していく。</span>
+<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a>が立ち上がった。この方程式は次の役割を果たす：</span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>観測される比強度 $I_\nu$ を、光学的厚さ $\tau_\nu$ と ソース関数 $S_\nu$ の関数として与える</span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**光学的に厚い + LTE** の極限で $I_\nu \to B_\nu(T)$ となり、**第3章の「黒体は熱平衡で普遍」**が放射輸送の極限として再現される</span>
+<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**光学的に薄い**極限では、観測スペクトルは経路上の放出の単純な積算となる</span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>連続と線の区別は、吸収係数 $\alpha_\nu(\nu)$ の構造の違いに集約される（**第VII部への橋渡し**）</span>
 <span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a>**次章へ**：第6章では、放射輸送のソース関数 $S_\nu = B_\nu(T)$ が成り立つための条件 ― **熱平衡** ― を、改めて統計力学の言葉で取り出す。なぜ温度 $T$ だけが平衡放射場の形を決めるのか。なぜエントロピー最大の状態でプランク分布になるのか。これらは第III部全体を貫く問いになる。</span>
-<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-radiative-transfer-exercises .unnumbered}</span></span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a>ここで第I部（観測の現象論）と第II部（放射場の記述と輸送）が一通り揃った。第III部からは、この上に立って、プランク関数の各因子を順に「逆引き」していく。</span>
+<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a>**次章へ**：第6章では、放射輸送のソース関数 $S_\nu = B_\nu(T)$ が成り立つための条件 ― **熱平衡** ― を、改めて統計力学の言葉で取り出す。なぜ温度 $T$ だけが平衡放射場の形を決めるのか。なぜエントロピー最大の状態でプランク分布になるのか。これらは第III部全体を貫く問いになる。</span>
+<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから確認すると効果的である。</span>
+<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-radiative-transfer-exercises .unnumbered}</span></span>
 <span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 5-1　放射輸送方程式の形式解を導く {#ex-5-1 .unnumbered}</span></span>
+<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから確認すると効果的である。</span>
 <span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 5-1　放射輸送方程式の形式解を導く {#ex-5-1 .unnumbered}</span></span>
 <span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a>§5.3 は形式解 $I_\nu(\tau_\nu)=I_\nu(0)e^{-\tau_\nu}+\displaystyle\int_0^{\tau_\nu}S_\nu(\tau')e^{-(\tau_\nu-\tau')}d\tau'$ を結果として与えた。これを導く。出発点は $\dfrac{dI_\nu}{d\tau_\nu}=-I_\nu+S_\nu$。</span>
+<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
 <span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>積分因子 $e^{\tau_\nu}$ を掛けて左辺を $\dfrac{d}{d\tau_\nu}(I_\nu e^{\tau_\nu})$ にまとめよ。</span>
-<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$0$ から $\tau_\nu$ まで積分して形式解を導け。</span>
-<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>第一項と第二項をそれぞれ物理的に解釈せよ（「初期光の減衰」「経路上の放出の積算」）。</span>
-<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§5.3 放射輸送方程式</span><span class="co">](#sec-radiative-transfer-equation)</span>、<span class="co">[</span><span class="ot">§5.2 光学的厚さ</span><span class="co">](#sec-radiative-transfer-optical-depth)</span>。</span>
+<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a>§5.3 は形式解 $I_\nu(\tau_\nu)=I_\nu(0)e^{-\tau_\nu}+\displaystyle\int_0^{\tau_\nu}S_\nu(\tau')e^{-(\tau_\nu-\tau')}d\tau'$ を結果として与えた。これを導く。出発点は $\dfrac{dI_\nu}{d\tau_\nu}=-I_\nu+S_\nu$。</span>
+<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>積分因子 $e^{\tau_\nu}$ を掛けて左辺を $\dfrac{d}{d\tau_\nu}(I_\nu e^{\tau_\nu})$ にまとめよ。</span>
+<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$0$ から $\tau_\nu$ まで積分して形式解を導け。</span>
+<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>第一項と第二項をそれぞれ物理的に解釈せよ（「初期光の減衰」「経路上の放出の積算」）。</span>
 <span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 5-1）</span></span>
-<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a>**(1)** 両辺に $e^{\tau_\nu}$ を掛ける：$e^{\tau_\nu}\dfrac{dI_\nu}{d\tau_\nu}+e^{\tau_\nu}I_\nu=e^{\tau_\nu}S_\nu$。左辺は積の微分でまとまる：</span>
+<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§5.3 放射輸送方程式</span><span class="co">](#sec-radiative-transfer-equation)</span>、<span class="co">[</span><span class="ot">§5.2 光学的厚さ</span><span class="co">](#sec-radiative-transfer-optical-depth)</span>。</span>
+<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 5-1）</span></span>
 <span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a>\frac{d}{d\tau_\nu}\left(I_\nu e^{\tau_\nu}\right)=S_\nu e^{\tau_\nu}.</span>
+<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a>**(1)** 両辺に $e^{\tau_\nu}$ を掛ける：$e^{\tau_\nu}\dfrac{dI_\nu}{d\tau_\nu}+e^{\tau_\nu}I_\nu=e^{\tau_\nu}S_\nu$。左辺は積の微分でまとまる：</span>
+<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a>**(2)** $0$ から $\tau_\nu$ まで積分：</span>
+<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a>\frac{d}{d\tau_\nu}\left(I_\nu e^{\tau_\nu}\right)=S_\nu e^{\tau_\nu}.</span>
+<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a>I_\nu(\tau_\nu)e^{\tau_\nu}-I_\nu(0)=\int_0^{\tau_\nu}S_\nu(\tau')e^{\tau'}d\tau'.</span>
+<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a>**(2)** $0$ から $\tau_\nu$ まで積分：</span>
+<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a>両辺を $e^{\tau_\nu}$ で割る：</span>
+<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a>I_\nu(\tau_\nu)e^{\tau_\nu}-I_\nu(0)=\int_0^{\tau_\nu}S_\nu(\tau')e^{\tau'}d\tau'.</span>
+<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a>I_\nu(\tau_\nu)=I_\nu(0)e^{-\tau_\nu}+\int_0^{\tau_\nu}S_\nu(\tau')e^{-(\tau_\nu-\tau')}d\tau'.</span>
+<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a>両辺を $e^{\tau_\nu}$ で割る：</span>
+<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a>**(3)** 第一項：入射光 $I_\nu(0)$ が経路全体の吸収で $e^{-\tau_\nu}$ 倍に減衰したもの。第二項：各深さ $\tau'$ で放出された光 $S_\nu d\tau'$ が、そこから観測点までの吸収 $e^{-(\tau_\nu-\tau')}$ で減衰しながら積算されたもの。観測スペクトルが「光が経た歴史」を映すとは、この第二項のこと。</span>
+<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a>I_\nu(\tau_\nu)=I_\nu(0)e^{-\tau_\nu}+\int_0^{\tau_\nu}S_\nu(\tau')e^{-(\tau_\nu-\tau')}d\tau'.</span>
+<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a>**答え**：積分因子 $e^{\tau}$ で $\frac{d}{d\tau}(Ie^\tau)=Se^\tau$、積分して形式解。第一項＝初期光の減衰、第二項＝放出の減衰付き積算。</span>
-<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 5-2　厚い極限と薄い極限を形式解から {#ex-5-2 .unnumbered}</span></span>
+<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a>**(3)** 第一項：入射光 $I_\nu(0)$ が経路全体の吸収で $e^{-\tau_\nu}$ 倍に減衰したもの。第二項：各深さ $\tau'$ で放出された光 $S_\nu d\tau'$ が、そこから観測点までの吸収 $e^{-(\tau_\nu-\tau')}$ で減衰しながら積算されたもの。観測スペクトルが「光が経た歴史」を映すとは、この第二項のこと。</span>
+<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a>**答え**：積分因子 $e^{\tau}$ で $\frac{d}{d\tau}(Ie^\tau)=Se^\tau$、積分して形式解。第一項＝初期光の減衰、第二項＝放出の減衰付き積算。</span>
+<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-397"><a href="#cb1-397" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 5-2　厚い極限と薄い極限を形式解から {#ex-5-2 .unnumbered}</span></span>
 <span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a>§5.6・5.7 は両極限を結果として示した。ソース関数 $S_\nu$ が経路上ほぼ一定の場合について、形式解（問題 5-1）から導け。</span>
+<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
 <span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>一定 $S_\nu$ で形式解の積分を実行し、$I_\nu(\tau)=I_\nu(0)e^{-\tau}+S_\nu(1-e^{-\tau})$ を示せ。</span>
-<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>光学的に厚い極限 $\tau\gg1$ で $I_\nu\to S_\nu$ を導け。</span>
-<span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>光学的に薄い極限 $\tau\ll1$ で $I_\nu\approx I_\nu(0)+\tau(S_\nu-I_\nu(0))$ を導け（$e^{-\tau}\approx1-\tau$）。</span>
-<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§5.6 光学的に厚い極限</span><span class="co">](#sec-radiative-transfer-thick)</span>、<span class="co">[</span><span class="ot">§5.7 光学的に薄い極限</span><span class="co">](#sec-radiative-transfer-thin)</span>。</span>
+<span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a>§5.6・5.7 は両極限を結果として示した。ソース関数 $S_\nu$ が経路上ほぼ一定の場合について、形式解（問題 5-1）から導け。</span>
+<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>一定 $S_\nu$ で形式解の積分を実行し、$I_\nu(\tau)=I_\nu(0)e^{-\tau}+S_\nu(1-e^{-\tau})$ を示せ。</span>
+<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>光学的に厚い極限 $\tau\gg1$ で $I_\nu\to S_\nu$ を導け。</span>
+<span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>光学的に薄い極限 $\tau\ll1$ で $I_\nu\approx I_\nu(0)+\tau(S_\nu-I_\nu(0))$ を導け（$e^{-\tau}\approx1-\tau$）。</span>
 <span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 5-2）</span></span>
-<span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a>**(1)** $S_\nu$ 一定なら積分は</span>
+<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§5.6 光学的に厚い極限</span><span class="co">](#sec-radiative-transfer-thick)</span>、<span class="co">[</span><span class="ot">§5.7 光学的に薄い極限</span><span class="co">](#sec-radiative-transfer-thin)</span>。</span>
+<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 5-2）</span></span>
 <span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-414"><a href="#cb1-414" aria-hidden="true" tabindex="-1"></a>\int_0^{\tau}S_\nu e^{-(\tau-\tau')}d\tau'=S_\nu e^{-\tau}\int_0^{\tau}e^{\tau'}d\tau'=S_\nu e^{-\tau}(e^{\tau}-1)=S_\nu(1-e^{-\tau}).</span>
+<span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a>**(1)** $S_\nu$ 一定なら積分は</span>
+<span id="cb1-414"><a href="#cb1-414" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-415"><a href="#cb1-415" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-416"><a href="#cb1-416" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-417"><a href="#cb1-417" aria-hidden="true" tabindex="-1"></a>よって $I_\nu(\tau)=I_\nu(0)e^{-\tau}+S_\nu(1-e^{-\tau})$。</span>
+<span id="cb1-416"><a href="#cb1-416" aria-hidden="true" tabindex="-1"></a>\int_0^{\tau}S_\nu e^{-(\tau-\tau')}d\tau'=S_\nu e^{-\tau}\int_0^{\tau}e^{\tau'}d\tau'=S_\nu e^{-\tau}(e^{\tau}-1)=S_\nu(1-e^{-\tau}).</span>
+<span id="cb1-417"><a href="#cb1-417" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-418"><a href="#cb1-418" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-419"><a href="#cb1-419" aria-hidden="true" tabindex="-1"></a>**(2)** $\tau\gg1$ で $e^{-\tau}\to0$ ゆえ $I_\nu\to S_\nu$。初期光は完全に消え、比強度はソース関数の値そのものになる。</span>
+<span id="cb1-419"><a href="#cb1-419" aria-hidden="true" tabindex="-1"></a>よって $I_\nu(\tau)=I_\nu(0)e^{-\tau}+S_\nu(1-e^{-\tau})$。</span>
 <span id="cb1-420"><a href="#cb1-420" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-421"><a href="#cb1-421" aria-hidden="true" tabindex="-1"></a>**(3)** $\tau\ll1$ で $e^{-\tau}\approx1-\tau$：</span>
+<span id="cb1-421"><a href="#cb1-421" aria-hidden="true" tabindex="-1"></a>**(2)** $\tau\gg1$ で $e^{-\tau}\to0$ ゆえ $I_\nu\to S_\nu$。初期光は完全に消え、比強度はソース関数の値そのものになる。</span>
 <span id="cb1-422"><a href="#cb1-422" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-423"><a href="#cb1-423" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-424"><a href="#cb1-424" aria-hidden="true" tabindex="-1"></a>I_\nu\approx I_\nu(0)(1-\tau)+S_\nu\tau=I_\nu(0)+\tau(S_\nu-I_\nu(0)).</span>
+<span id="cb1-423"><a href="#cb1-423" aria-hidden="true" tabindex="-1"></a>**(3)** $\tau\ll1$ で $e^{-\tau}\approx1-\tau$：</span>
+<span id="cb1-424"><a href="#cb1-424" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-425"><a href="#cb1-425" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-426"><a href="#cb1-426" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-427"><a href="#cb1-427" aria-hidden="true" tabindex="-1"></a>**答え**：$I_\nu=I_\nu(0)e^{-\tau}+S_\nu(1-e^{-\tau})$。厚い→$S_\nu$、薄い→$I_\nu(0)+\tau(S_\nu-I_\nu(0))$。</span>
-<span id="cb1-428"><a href="#cb1-428" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-429"><a href="#cb1-429" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-430"><a href="#cb1-430" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 5-3　吸収線か輝線か ― ソース関数と背景光の大小 {#ex-5-3 .unnumbered}</span></span>
+<span id="cb1-426"><a href="#cb1-426" aria-hidden="true" tabindex="-1"></a>I_\nu\approx I_\nu(0)(1-\tau)+S_\nu\tau=I_\nu(0)+\tau(S_\nu-I_\nu(0)).</span>
+<span id="cb1-427"><a href="#cb1-427" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-428"><a href="#cb1-428" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-429"><a href="#cb1-429" aria-hidden="true" tabindex="-1"></a>**答え**：$I_\nu=I_\nu(0)e^{-\tau}+S_\nu(1-e^{-\tau})$。厚い→$S_\nu$、薄い→$I_\nu(0)+\tau(S_\nu-I_\nu(0))$。</span>
+<span id="cb1-430"><a href="#cb1-430" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-431"><a href="#cb1-431" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-432"><a href="#cb1-432" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-432"><a href="#cb1-432" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 5-3　吸収線か輝線か ― ソース関数と背景光の大小 {#ex-5-3 .unnumbered}</span></span>
 <span id="cb1-433"><a href="#cb1-433" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-434"><a href="#cb1-434" aria-hidden="true" tabindex="-1"></a>問題 5-2(3) の薄い極限 $I_\nu\approx I_\nu(0)+\tau_\nu(S_\nu-I_\nu(0))$ を使って、線が吸収で見えるか輝線で見えるかを論じる。線の中心 $\nu_0$ では $\alpha_\nu$ が大きく $\tau_\nu$ が局所的に増す。</span>
+<span id="cb1-434"><a href="#cb1-434" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
 <span id="cb1-435"><a href="#cb1-435" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-436"><a href="#cb1-436" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$S_\nu&lt;I_\nu(0)$ のとき、線中心で $I_\nu$ は連続光より大きいか小さいか。これは吸収線・輝線のどちらか。</span>
-<span id="cb1-437"><a href="#cb1-437" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$S_\nu&gt;I_\nu(0)$（特に背景光 $I_\nu(0)\approx0$）のときはどうか。</span>
-<span id="cb1-438"><a href="#cb1-438" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>太陽の Fraunhofer 吸収線（光球の外側ほど温度が下がる）と、HII 領域の輝線スペクトル（背景光なし）が、それぞれどちらの条件に対応するか述べよ。</span>
-<span id="cb1-439"><a href="#cb1-439" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-440"><a href="#cb1-440" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§5.4 ソース関数</span><span class="co">](#sec-radiative-transfer-source)</span>、<span class="co">[</span><span class="ot">§5.7 薄い極限（輝線天体）</span><span class="co">](#sec-radiative-transfer-thin)</span>／太陽の連続+線の二重構造は<span class="co">[</span><span class="ot">§1.2</span><span class="co">](../part1/01-where-blackbody.qmd#sec-where-blackbody-sun)</span>、線スペクトルは<span class="co">[</span><span class="ot">第21章</span><span class="co">](../part7/21-line-formation.qmd)</span>。</span>
+<span id="cb1-436"><a href="#cb1-436" aria-hidden="true" tabindex="-1"></a>問題 5-2(3) の薄い極限 $I_\nu\approx I_\nu(0)+\tau_\nu(S_\nu-I_\nu(0))$ を使って、線が吸収で見えるか輝線で見えるかを論じる。線の中心 $\nu_0$ では $\alpha_\nu$ が大きく $\tau_\nu$ が局所的に増す。</span>
+<span id="cb1-437"><a href="#cb1-437" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-438"><a href="#cb1-438" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$S_\nu&lt;I_\nu(0)$ のとき、線中心で $I_\nu$ は連続光より大きいか小さいか。これは吸収線・輝線のどちらか。</span>
+<span id="cb1-439"><a href="#cb1-439" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$S_\nu&gt;I_\nu(0)$（特に背景光 $I_\nu(0)\approx0$）のときはどうか。</span>
+<span id="cb1-440"><a href="#cb1-440" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>太陽の Fraunhofer 吸収線（光球の外側ほど温度が下がる）と、HII 領域の輝線スペクトル（背景光なし）が、それぞれどちらの条件に対応するか述べよ。</span>
 <span id="cb1-441"><a href="#cb1-441" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-442"><a href="#cb1-442" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-443"><a href="#cb1-443" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 5-3）</span></span>
-<span id="cb1-444"><a href="#cb1-444" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-445"><a href="#cb1-445" aria-hidden="true" tabindex="-1"></a>**(1)** $S_\nu&lt;I_\nu(0)$ なら $S_\nu-I_\nu(0)&lt;0$。線中心で $\tau_\nu$ が大きいほど $I_\nu=I_\nu(0)+\tau_\nu(S_\nu-I_\nu(0))$ は連続光 $I_\nu(0)$ より **小さく** なる。すなわち連続光を背景にした **吸収線** として見える。</span>
+<span id="cb1-442"><a href="#cb1-442" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§5.4 ソース関数</span><span class="co">](#sec-radiative-transfer-source)</span>、<span class="co">[</span><span class="ot">§5.7 薄い極限（輝線天体）</span><span class="co">](#sec-radiative-transfer-thin)</span>／太陽の連続+線の二重構造は<span class="co">[</span><span class="ot">§1.2</span><span class="co">](../part1/01-where-blackbody.qmd#sec-where-blackbody-sun)</span>、線スペクトルは<span class="co">[</span><span class="ot">第21章</span><span class="co">](../part7/21-line-formation.qmd)</span>。</span>
+<span id="cb1-443"><a href="#cb1-443" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-444"><a href="#cb1-444" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-445"><a href="#cb1-445" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 5-3）</span></span>
 <span id="cb1-446"><a href="#cb1-446" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-447"><a href="#cb1-447" aria-hidden="true" tabindex="-1"></a>**(2)** $S_\nu&gt;I_\nu(0)$ なら $S_\nu-I_\nu(0)&gt;0$。線中心で $I_\nu$ は背景より **大きく**、**輝線** になる。特に背景光がない（$I_\nu(0)\approx0$）と $I_\nu\approx\tau_\nu S_\nu$ で、線中心だけ明るい純粋な輝線スペクトルになる。</span>
+<span id="cb1-447"><a href="#cb1-447" aria-hidden="true" tabindex="-1"></a>**(1)** $S_\nu&lt;I_\nu(0)$ なら $S_\nu-I_\nu(0)&lt;0$。線中心で $\tau_\nu$ が大きいほど $I_\nu=I_\nu(0)+\tau_\nu(S_\nu-I_\nu(0))$ は連続光 $I_\nu(0)$ より **小さく** なる。すなわち連続光を背景にした **吸収線** として見える。</span>
 <span id="cb1-448"><a href="#cb1-448" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-449"><a href="#cb1-449" aria-hidden="true" tabindex="-1"></a>**(3)** 太陽の Fraunhofer 線：明るい光球（連続光 $I_\nu(0)$ 大）を背景に、外側の低温層（$S_\nu=B_\nu(T_\mathrm{out})&lt;I_\nu(0)$）が吸収する → $S_\nu&lt;I_\nu(0)$、吸収線。HII 領域：背景となる連続光がほぼなく、ガス自身の放出だけが見える → $S_\nu&gt;I_\nu(0)\approx0$、輝線。線の出方は線中心のソース関数と背景光の大小で決まる。</span>
+<span id="cb1-449"><a href="#cb1-449" aria-hidden="true" tabindex="-1"></a>**(2)** $S_\nu&gt;I_\nu(0)$ なら $S_\nu-I_\nu(0)&gt;0$。線中心で $I_\nu$ は背景より **大きく**、**輝線** になる。特に背景光がない（$I_\nu(0)\approx0$）と $I_\nu\approx\tau_\nu S_\nu$ で、線中心だけ明るい純粋な輝線スペクトルになる。</span>
 <span id="cb1-450"><a href="#cb1-450" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-451"><a href="#cb1-451" aria-hidden="true" tabindex="-1"></a>**答え**：$S_\nu&lt;I_\nu(0)$→吸収線、$S_\nu&gt;I_\nu(0)$→輝線。太陽 Fraunhofer＝前者、HII 領域＝後者。</span>
-<span id="cb1-452"><a href="#cb1-452" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-453"><a href="#cb1-453" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-454"><a href="#cb1-454" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 5-4　τ がほぼ 1 の層はなぜ「光球（見える表面）」か {#ex-5-4 .unnumbered}</span></span>
+<span id="cb1-451"><a href="#cb1-451" aria-hidden="true" tabindex="-1"></a>**(3)** 太陽の Fraunhofer 線：明るい光球（連続光 $I_\nu(0)$ 大）を背景に、外側の低温層（$S_\nu=B_\nu(T_\mathrm{out})&lt;I_\nu(0)$）が吸収する → $S_\nu&lt;I_\nu(0)$、吸収線。HII 領域：背景となる連続光がほぼなく、ガス自身の放出だけが見える → $S_\nu&gt;I_\nu(0)\approx0$、輝線。線の出方は線中心のソース関数と背景光の大小で決まる。</span>
+<span id="cb1-452"><a href="#cb1-452" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-453"><a href="#cb1-453" aria-hidden="true" tabindex="-1"></a>**答え**：$S_\nu&lt;I_\nu(0)$→吸収線、$S_\nu&gt;I_\nu(0)$→輝線。太陽 Fraunhofer＝前者、HII 領域＝後者。</span>
+<span id="cb1-454"><a href="#cb1-454" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-455"><a href="#cb1-455" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-456"><a href="#cb1-456" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-456"><a href="#cb1-456" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 5-4　τ がほぼ 1 の層はなぜ「光球（見える表面）」か {#ex-5-4 .unnumbered}</span></span>
 <span id="cb1-457"><a href="#cb1-457" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-458"><a href="#cb1-458" aria-hidden="true" tabindex="-1"></a>§5.2・5.6 は「太陽の表面とは可視光で $\tau\sim1$ の深さ」と述べた。形式解の重み付けから理由を考える。</span>
+<span id="cb1-458"><a href="#cb1-458" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
 <span id="cb1-459"><a href="#cb1-459" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-460"><a href="#cb1-460" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>外向きに観測する場合、形式解の第二項の重み $e^{-(\tau_\nu-\tau')}$ は $\tau'$ がどの辺りで最大か。なぜ「観測点から光学的厚さ約1の深さ」が実効的な放出層になるか述べよ。</span>
-<span id="cb1-461"><a href="#cb1-461" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>平均自由行程 $\ell_\mathrm{mfp}=1/\alpha_\nu$ を使い、「$\tau\sim1$ は光が散乱・吸収されずに脱出できる最後の深さ」という描像で (1) を言い換えよ。</span>
-<span id="cb1-462"><a href="#cb1-462" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>温度が深さとともに上がる恒星大気で、$\tau\sim1$ の層が LTE なら観測スペクトルが $B_\nu(T(\tau<span class="sc">\!</span>\sim<span class="sc">\!</span>1))$ に近づく理由を、問題 5-2(2) と結びつけて述べよ。</span>
-<span id="cb1-463"><a href="#cb1-463" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-464"><a href="#cb1-464" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§5.2 光学的厚さ</span><span class="co">](#sec-radiative-transfer-optical-depth)</span>、<span class="co">[</span><span class="ot">§5.6 厚い極限</span><span class="co">](#sec-radiative-transfer-thick)</span>／太陽光球が黒体に近い理由は<span class="co">[</span><span class="ot">§3.6</span><span class="co">](../part1/03-universality.qmd#sec-universality-real-objects)</span>（<span class="co">[</span><span class="ot">演習 3-4</span><span class="co">](../part1/03-universality.qmd#ex-3-4)</span>）。</span>
+<span id="cb1-460"><a href="#cb1-460" aria-hidden="true" tabindex="-1"></a>§5.2・5.6 は「太陽の表面とは可視光で $\tau\sim1$ の深さ」と述べた。形式解の重み付けから理由を考える。</span>
+<span id="cb1-461"><a href="#cb1-461" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-462"><a href="#cb1-462" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>外向きに観測する場合、形式解の第二項の重み $e^{-(\tau_\nu-\tau')}$ は $\tau'$ がどの辺りで最大か。なぜ「観測点から光学的厚さ約1の深さ」が実効的な放出層になるか述べよ。</span>
+<span id="cb1-463"><a href="#cb1-463" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>平均自由行程 $\ell_\mathrm{mfp}=1/\alpha_\nu$ を使い、「$\tau\sim1$ は光が散乱・吸収されずに脱出できる最後の深さ」という描像で (1) を言い換えよ。</span>
+<span id="cb1-464"><a href="#cb1-464" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>温度が深さとともに上がる恒星大気で、$\tau\sim1$ の層が LTE なら観測スペクトルが $B_\nu(T(\tau<span class="sc">\!</span>\sim<span class="sc">\!</span>1))$ に近づく理由を、問題 5-2(2) と結びつけて述べよ。</span>
 <span id="cb1-465"><a href="#cb1-465" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-466"><a href="#cb1-466" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-467"><a href="#cb1-467" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 5-4）</span></span>
-<span id="cb1-468"><a href="#cb1-468" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-469"><a href="#cb1-469" aria-hidden="true" tabindex="-1"></a>**(1)** 観測点（$\tau_\nu=0$ を外側にとる座標で考えると）に届く放出の重みは $e^{-(\tau_\nu-\tau')}$ で、観測点から光学的厚さが約1以内の層（$\tau\lesssim1$）からの寄与が支配的。それより深い層の光は手前の吸収 $e^{-\tau}$ で強く減衰して届かない。だから「観測点から $\tau\sim1$ の深さ」が実効的な放出層＝「見える表面」になる。</span>
+<span id="cb1-466"><a href="#cb1-466" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§5.2 光学的厚さ</span><span class="co">](#sec-radiative-transfer-optical-depth)</span>、<span class="co">[</span><span class="ot">§5.6 厚い極限</span><span class="co">](#sec-radiative-transfer-thick)</span>／太陽光球が黒体に近い理由は<span class="co">[</span><span class="ot">§3.6</span><span class="co">](../part1/03-universality.qmd#sec-universality-real-objects)</span>（<span class="co">[</span><span class="ot">演習 3-4</span><span class="co">](../part1/03-universality.qmd#ex-3-4)</span>）。</span>
+<span id="cb1-467"><a href="#cb1-467" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-468"><a href="#cb1-468" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-469"><a href="#cb1-469" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 5-4）</span></span>
 <span id="cb1-470"><a href="#cb1-470" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-471"><a href="#cb1-471" aria-hidden="true" tabindex="-1"></a>**(2)** $\ell_\mathrm{mfp}=1/\alpha_\nu$ は光が一回吸収・散乱されずに進める距離。$\tau\sim1$ は観測点から測って平均自由行程ほぼ1回分の深さで、そこから出た光子はもう吸収されずに脱出できる。それより深い光子は途中で吸収・再放出され「直接は見えない」。よって $\tau\sim1$ が脱出できる最後の深さ＝光球。</span>
+<span id="cb1-471"><a href="#cb1-471" aria-hidden="true" tabindex="-1"></a>**(1)** 観測点（$\tau_\nu=0$ を外側にとる座標で考えると）に届く放出の重みは $e^{-(\tau_\nu-\tau')}$ で、観測点から光学的厚さが約1以内の層（$\tau\lesssim1$）からの寄与が支配的。それより深い層の光は手前の吸収 $e^{-\tau}$ で強く減衰して届かない。だから「観測点から $\tau\sim1$ の深さ」が実効的な放出層＝「見える表面」になる。</span>
 <span id="cb1-472"><a href="#cb1-472" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-473"><a href="#cb1-473" aria-hidden="true" tabindex="-1"></a>**(3)** $\tau\sim1$ 層が LTE なら $S_\nu=B_\nu(T(\tau<span class="sc">\!</span>\sim<span class="sc">\!</span>1))$。その層は内側に向かって光学的に厚い（$\tau\gg1$）ので、問題 5-2(2) の厚い極限により出てくる比強度は $I_\nu\to S_\nu=B_\nu(T(\tau<span class="sc">\!</span>\sim<span class="sc">\!</span>1))$。すなわち観測スペクトルは $\tau\sim1$ 層の温度のプランク関数に近づく。太陽が $B_\nu(5800\text{K})$ に近いのはこのため。</span>
+<span id="cb1-473"><a href="#cb1-473" aria-hidden="true" tabindex="-1"></a>**(2)** $\ell_\mathrm{mfp}=1/\alpha_\nu$ は光が一回吸収・散乱されずに進める距離。$\tau\sim1$ は観測点から測って平均自由行程ほぼ1回分の深さで、そこから出た光子はもう吸収されずに脱出できる。それより深い光子は途中で吸収・再放出され「直接は見えない」。よって $\tau\sim1$ が脱出できる最後の深さ＝光球。</span>
 <span id="cb1-474"><a href="#cb1-474" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-475"><a href="#cb1-475" aria-hidden="true" tabindex="-1"></a>**答え**：重み $e^{-(\tau-\tau')}$ ゆえ $\tau\sim1$ 層が実効放出層＝脱出できる最後の深さ＝光球。そこが LTE＋厚いので $I_\nu\to B_\nu(T(\tau<span class="sc">\!</span>\sim<span class="sc">\!</span>1))$。</span>
-<span id="cb1-476"><a href="#cb1-476" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-477"><a href="#cb1-477" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-478"><a href="#cb1-478" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 5-5　LTE で Sν=Bν ― 放射場は黒体でなくてよい {#ex-5-5 .unnumbered}</span></span>
+<span id="cb1-475"><a href="#cb1-475" aria-hidden="true" tabindex="-1"></a>**(3)** $\tau\sim1$ 層が LTE なら $S_\nu=B_\nu(T(\tau<span class="sc">\!</span>\sim<span class="sc">\!</span>1))$。その層は内側に向かって光学的に厚い（$\tau\gg1$）ので、問題 5-2(2) の厚い極限により出てくる比強度は $I_\nu\to S_\nu=B_\nu(T(\tau<span class="sc">\!</span>\sim<span class="sc">\!</span>1))$。すなわち観測スペクトルは $\tau\sim1$ 層の温度のプランク関数に近づく。太陽が $B_\nu(5800\text{K})$ に近いのはこのため。</span>
+<span id="cb1-476"><a href="#cb1-476" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-477"><a href="#cb1-477" aria-hidden="true" tabindex="-1"></a>**答え**：重み $e^{-(\tau-\tau')}$ ゆえ $\tau\sim1$ 層が実効放出層＝脱出できる最後の深さ＝光球。そこが LTE＋厚いので $I_\nu\to B_\nu(T(\tau<span class="sc">\!</span>\sim<span class="sc">\!</span>1))$。</span>
+<span id="cb1-478"><a href="#cb1-478" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-479"><a href="#cb1-479" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-480"><a href="#cb1-480" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-480"><a href="#cb1-480" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 5-5　LTE で Sν=Bν ― 放射場は黒体でなくてよい {#ex-5-5 .unnumbered}</span></span>
 <span id="cb1-481"><a href="#cb1-481" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-482"><a href="#cb1-482" aria-hidden="true" tabindex="-1"></a>§5.5 の微妙な点を整理する。LTE は「物質の状態が局所温度 $T$ だけで決まる」近似であって、放射場 $J_\nu$ が黒体である必要は含まない。</span>
+<span id="cb1-482"><a href="#cb1-482" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
 <span id="cb1-483"><a href="#cb1-483" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-484"><a href="#cb1-484" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Kirchhoff の法則が「比 $j_\nu/\alpha_\nu$ を物質の局所温度 $T$ だけの関数（$=B_\nu(T)$）にする」ことを使って、$J_\nu\ne B_\nu$ でも LTE なら $S_\nu=B_\nu(T)$ となる理由を述べよ。</span>
-<span id="cb1-485"><a href="#cb1-485" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>「LTE」と「完全熱平衡」の違いを、（物質の状態）と（放射場の状態）の二つの観点で述べよ。</span>
-<span id="cb1-486"><a href="#cb1-486" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>統計平衡方程式に放射場 $J_\nu$ が入る（誘導吸収・放出 $B_{lu}J_\nu, B_{ul}J_\nu$）と、なぜ占有数に「非局所性」が入るのか。逆に「熱化深さ」より深いとなぜ実質 LTE に戻るのか述べよ。</span>
-<span id="cb1-487"><a href="#cb1-487" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-488"><a href="#cb1-488" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§5.5 LTE と non-LTE</span><span class="co">](#sec-radiative-transfer-lte)</span>／Kirchhoff とソース関数は<span class="co">[</span><span class="ot">§3.5</span><span class="co">](../part1/03-universality.qmd#sec-universality-kirchhoff)</span>（<span class="co">[</span><span class="ot">演習 3-3</span><span class="co">](../part1/03-universality.qmd#ex-3-3)</span>）、完全熱平衡は<span class="co">[</span><span class="ot">第6章</span><span class="co">](../part3/06-thermal-equilibrium.qmd)</span>、統計平衡と Einstein 係数は<span class="co">[</span><span class="ot">演習 11-1</span><span class="co">](../part4/11-einstein-method.qmd#ex-11-1)</span>。</span>
+<span id="cb1-484"><a href="#cb1-484" aria-hidden="true" tabindex="-1"></a>§5.5 の微妙な点を整理する。LTE は「物質の状態が局所温度 $T$ だけで決まる」近似であって、放射場 $J_\nu$ が黒体である必要は含まない。</span>
+<span id="cb1-485"><a href="#cb1-485" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-486"><a href="#cb1-486" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Kirchhoff の法則が「比 $j_\nu/\alpha_\nu$ を物質の局所温度 $T$ だけの関数（$=B_\nu(T)$）にする」ことを使って、$J_\nu\ne B_\nu$ でも LTE なら $S_\nu=B_\nu(T)$ となる理由を述べよ。</span>
+<span id="cb1-487"><a href="#cb1-487" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>「LTE」と「完全熱平衡」の違いを、（物質の状態）と（放射場の状態）の二つの観点で述べよ。</span>
+<span id="cb1-488"><a href="#cb1-488" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>統計平衡方程式に放射場 $J_\nu$ が入る（誘導吸収・放出 $B_{lu}J_\nu, B_{ul}J_\nu$）と、なぜ占有数に「非局所性」が入るのか。逆に「熱化深さ」より深いとなぜ実質 LTE に戻るのか述べよ。</span>
 <span id="cb1-489"><a href="#cb1-489" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-490"><a href="#cb1-490" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-491"><a href="#cb1-491" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 5-5）</span></span>
-<span id="cb1-492"><a href="#cb1-492" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-493"><a href="#cb1-493" aria-hidden="true" tabindex="-1"></a>**(1)** ソース関数は $S_\nu=j_\nu/\alpha_\nu$。Kirchhoff の法則により、物質が局所温度 $T$ で熱化していれば、放出と吸収の比 $j_\nu/\alpha_\nu$ は **その物質の温度 $T$ だけの関数** $B_\nu(T)$ になる。$j_\nu$ も $\alpha_\nu$ も局所占有数（Boltzmann 分布、局所 $T$）で決まり、その比は周囲の放射場 $J_\nu$ に依らない。だから $J_\nu$ が異方的でも $J_\nu\ne B_\nu$ でも、物質さえ LTE なら $S_\nu=B_\nu(T)$。</span>
+<span id="cb1-490"><a href="#cb1-490" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§5.5 LTE と non-LTE</span><span class="co">](#sec-radiative-transfer-lte)</span>／Kirchhoff とソース関数は<span class="co">[</span><span class="ot">§3.5</span><span class="co">](../part1/03-universality.qmd#sec-universality-kirchhoff)</span>（<span class="co">[</span><span class="ot">演習 3-3</span><span class="co">](../part1/03-universality.qmd#ex-3-3)</span>）、完全熱平衡は<span class="co">[</span><span class="ot">第6章</span><span class="co">](../part3/06-thermal-equilibrium.qmd)</span>、統計平衡と Einstein 係数は<span class="co">[</span><span class="ot">演習 11-1</span><span class="co">](../part4/11-einstein-method.qmd#ex-11-1)</span>。</span>
+<span id="cb1-491"><a href="#cb1-491" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-492"><a href="#cb1-492" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
+<span id="cb1-493"><a href="#cb1-493" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 5-5）</span></span>
 <span id="cb1-494"><a href="#cb1-494" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-495"><a href="#cb1-495" aria-hidden="true" tabindex="-1"></a>**(2)** LTE：**物質** の速度分布・電離・励起が局所 $T$ で決まる（Maxwell・Saha・Boltzmann）。放射場 $J_\nu$ は黒体でも等方でもなくてよい。完全熱平衡：**物質も放射場も両方** が同一温度で平衡（$J_\nu=B_\nu$ かつ等方、$F_\nu=0$）。LTE は物質だけの条件、完全熱平衡は放射場まで含む強い条件。</span>
+<span id="cb1-495"><a href="#cb1-495" aria-hidden="true" tabindex="-1"></a>**(1)** ソース関数は $S_\nu=j_\nu/\alpha_\nu$。Kirchhoff の法則により、物質が局所温度 $T$ で熱化していれば、放出と吸収の比 $j_\nu/\alpha_\nu$ は **その物質の温度 $T$ だけの関数** $B_\nu(T)$ になる。$j_\nu$ も $\alpha_\nu$ も局所占有数（Boltzmann 分布、局所 $T$）で決まり、その比は周囲の放射場 $J_\nu$ に依らない。だから $J_\nu$ が異方的でも $J_\nu\ne B_\nu$ でも、物質さえ LTE なら $S_\nu=B_\nu(T)$。</span>
 <span id="cb1-496"><a href="#cb1-496" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-497"><a href="#cb1-497" aria-hidden="true" tabindex="-1"></a>**(3)** 誘導吸収・放出の率は $J_\nu$ に比例する。形式解が示すように $J_\nu(\mathbf r)$ は媒質全体の構造（経路上の温度・密度）を積分した非局所量。だから占有数を決める統計平衡方程式に $J_\nu$ が入ると、占有数＝媒質全体の関数となり非局所性が入る。一方「熱化深さ」より深い領域では放射場がその場で熱化し $J_\nu\to B_\nu(T_\mathrm{local})$ となるため、統計平衡の解も Boltzmann（局所値）に漸近し $S_\nu\to B_\nu(T_\mathrm{local})$、実質 LTE に戻る。non-LTE が観測に効くのは薄い領域や中程度 $\tau$ の上層大気。</span>
+<span id="cb1-497"><a href="#cb1-497" aria-hidden="true" tabindex="-1"></a>**(2)** LTE：**物質** の速度分布・電離・励起が局所 $T$ で決まる（Maxwell・Saha・Boltzmann）。放射場 $J_\nu$ は黒体でも等方でもなくてよい。完全熱平衡：**物質も放射場も両方** が同一温度で平衡（$J_\nu=B_\nu$ かつ等方、$F_\nu=0$）。LTE は物質だけの条件、完全熱平衡は放射場まで含む強い条件。</span>
 <span id="cb1-498"><a href="#cb1-498" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-499"><a href="#cb1-499" aria-hidden="true" tabindex="-1"></a>**答え**：Kirchhoff が $j/\alpha$ を局所 $T$ だけの関数にするので、放射場が黒体でなくても物質 LTE なら $S_\nu=B_\nu$。完全熱平衡は放射場まで黒体な強い条件。$J_\nu$ 経由で非局所性が入るが、熱化深さより深いと $J_\nu\to B_\nu$ で実質 LTE。</span>
-<span id="cb1-500"><a href="#cb1-500" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-501"><a href="#cb1-501" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-502"><a href="#cb1-502" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-radiative-transfer-further .unnumbered}</span></span>
+<span id="cb1-499"><a href="#cb1-499" aria-hidden="true" tabindex="-1"></a>**(3)** 誘導吸収・放出の率は $J_\nu$ に比例する。形式解が示すように $J_\nu(\mathbf r)$ は媒質全体の構造（経路上の温度・密度）を積分した非局所量。だから占有数を決める統計平衡方程式に $J_\nu$ が入ると、占有数＝媒質全体の関数となり非局所性が入る。一方「熱化深さ」より深い領域では放射場がその場で熱化し $J_\nu\to B_\nu(T_\mathrm{local})$ となるため、統計平衡の解も Boltzmann（局所値）に漸近し $S_\nu\to B_\nu(T_\mathrm{local})$、実質 LTE に戻る。non-LTE が観測に効くのは薄い領域や中程度 $\tau$ の上層大気。</span>
+<span id="cb1-500"><a href="#cb1-500" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-501"><a href="#cb1-501" aria-hidden="true" tabindex="-1"></a>**答え**：Kirchhoff が $j/\alpha$ を局所 $T$ だけの関数にするので、放射場が黒体でなくても物質 LTE なら $S_\nu=B_\nu$。完全熱平衡は放射場まで黒体な強い条件。$J_\nu$ 経由で非局所性が入るが、熱化深さより深いと $J_\nu\to B_\nu$ で実質 LTE。</span>
+<span id="cb1-502"><a href="#cb1-502" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-503"><a href="#cb1-503" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-504"><a href="#cb1-504" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rybicki &amp; Lightman, *Radiative Processes in Astrophysics* (Wiley, 1979) — 第1章「Fundamentals of Radiative Transfer」</span>
-<span id="cb1-505"><a href="#cb1-505" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mihalas, *Stellar Atmospheres* (Freeman, 2nd ed., 1978) — LTE / non-LTE の本格的扱い</span>
-<span id="cb1-506"><a href="#cb1-506" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Hubeny &amp; Mihalas, *Theory of Stellar Atmospheres* (Princeton, 2014) — 現代的な放射輸送の決定版</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-504"><a href="#cb1-504" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-radiative-transfer-further .unnumbered}</span></span>
+<span id="cb1-505"><a href="#cb1-505" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-506"><a href="#cb1-506" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rybicki &amp; Lightman, *Radiative Processes in Astrophysics* (Wiley, 1979) — 第1章「Fundamentals of Radiative Transfer」</span>
+<span id="cb1-507"><a href="#cb1-507" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mihalas, *Stellar Atmospheres* (Freeman, 2nd ed., 1978) — LTE / non-LTE の本格的扱い</span>
+<span id="cb1-508"><a href="#cb1-508" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Hubeny &amp; Mihalas, *Theory of Stellar Atmospheres* (Princeton, 2014) — 現代的な放射輸送の決定版</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
