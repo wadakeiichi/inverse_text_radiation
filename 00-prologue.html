@@ -666,14 +666,17 @@ window.Quarto = {
 <li><a href="part1/01-where-blackbody.html#fig-planck-map" class="quarto-xref">図&nbsp;<span>4.1</span></a>：プランク関数の各因子と、それを逆引きする各部の対応（中心地図）</li>
 <li><a href="part1/01-where-blackbody.html#fig-planck-curves" class="quarto-xref">図&nbsp;<span>4.2</span></a>：多様な温度のプランク曲線</li>
 <li><a href="part1/02-reading-spectra.html#fig-planck-three-temps" class="quarto-xref">図&nbsp;<span>5.1</span></a>：三つの温度のプランク曲線（ピーク移動と <span class="math inline">T^4</span> 則）</li>
+<li><a href="part1/02-reading-spectra.html#fig-planck-reading" class="quarto-xref">図&nbsp;<span>5.2</span></a>：プランク曲線の読み取り（Wien ピーク移動・面積 = σT⁴・両極限）</li>
 </ul>
 <p><strong>第II部　放射をどう記述するか</strong></p>
 <ul>
 <li><a href="part2/04-radiation-field.html#fig-specific-intensity" class="quarto-xref">図&nbsp;<span>7.1</span></a>：比強度 <span class="math inline">I_\nu</span> の定義の幾何</li>
+<li><a href="part2/05-radiative-transfer.html#fig-radiative-transfer-formal" class="quarto-xref">図&nbsp;<span>8.1</span></a>：放射輸送方程式の形式解の幾何（光学的に厚い/薄い極限の分岐）</li>
 </ul>
 <p><strong>第III部　逆引き1：熱力学・統計力学へ</strong></p>
 <ul>
 <li><a href="part3/07-statistical-mechanics.html#fig-quantum-freezeout" class="quarto-xref">図&nbsp;<span>10.1</span></a>：量子化振動子の平均エネルギーと等分配の比較（高振動数モードの凍結）</li>
+<li><a href="part3/08-photon-statistics.html#fig-occupation-statistics" class="quarto-xref">図&nbsp;<span>11.1</span></a>：Bose–Einstein／Maxwell–Boltzmann／Fermi–Dirac 占有数の比較と古典極限</li>
 </ul>
 <p><strong>第IV部　逆引き2：量子論へ</strong></p>
 <ul>
@@ -684,6 +687,14 @@ window.Quarto = {
 <p><strong>第V部　逆引き3：電磁気学へ</strong></p>
 <ul>
 <li><a href="part5/14-cavity-modes.html#fig-k-space" class="quarto-xref">図&nbsp;<span>17.1</span></a>：<span class="math inline">k</span> 空間の格子点の数え上げ（前因子 <span class="math inline">8\pi\nu^2/c^3</span> の幾何）</li>
+<li><a href="part5/13-electromagnetic-waves.html#fig-dipole-larmor" class="quarto-xref">図&nbsp;<span>16.1</span></a>：加速電荷の双極子放射と Larmor 公式（連続放射の古典的土台）</li>
+</ul>
+<p><strong>第VI部　現実の宇宙へ戻る</strong></p>
+<ul>
+<li><a href="part6/16-cmb.html#fig-firas-spectrum" class="quarto-xref">図&nbsp;<span>19.1</span></a>：COBE/FIRAS が測った CMB の完全黒体スペクトル</li>
+<li><a href="part6/19-continuum-microprocesses.html#fig-continuum-processes" class="quarto-xref">図&nbsp;<span>22.1</span></a>：連続を作る三素過程の準位図（束縛-束縛／束縛-自由／自由-自由）</li>
+<li><a href="part6/19-continuum-microprocesses.html#fig-continuum-ff-spectrum" class="quarto-xref">図&nbsp;<span>22.2</span></a>：自由-自由放射のスペクトル（光学的に厚い→薄いの遷移）</li>
+<li><a href="part6/19-continuum-microprocesses.html#fig-continuum-edges-recomb" class="quarto-xref">図&nbsp;<span>22.3</span></a>：束縛-自由の吸収端と再結合連続（恒星大気↔︎星雲）</li>
 </ul>
 <p><strong>第VII部　線スペクトル ― もう一つの逆引き</strong></p>
 <ul>
@@ -692,7 +703,9 @@ window.Quarto = {
 <li><a href="part7/21-line-formation.html#fig-equivalent-width" class="quarto-xref">図&nbsp;<span>24.1</span></a>：等価幅 <span class="math inline">W_\lambda</span> の幾何的定義</li>
 <li><a href="part7/21-line-formation.html#fig-einstein-three-processes-line" class="quarto-xref">図&nbsp;<span>24.2</span></a>：三つの素過程の準位図（第IV部の再掲）</li>
 <li><a href="part7/21-line-formation.html#fig-line-geometry-lte" class="quarto-xref">図&nbsp;<span>24.3</span></a>：吸収線・輝線の幾何（第20章の再掲、ソース関数の文脈）</li>
+<li><a href="part7/22-atomic-physics.html#fig-hydrogen-levels" class="quarto-xref">図&nbsp;<span>25.1</span></a>：水素のエネルギー準位図と E1 選択則（許容 Δl=±1／禁制 2s→1s／21 cm M1）</li>
 <li><a href="part7/23-line-shape.html#fig-voigt-profile" class="quarto-xref">図&nbsp;<span>26.1</span></a>：Voigt プロファイルと Gaussian／Lorentzian の比較</li>
+<li><a href="part7/24-line-applications.html#fig-curve-of-growth" class="quarto-xref">図&nbsp;<span>27.1</span></a>：成長曲線（等価幅と柱密度：線形→飽和→ダンピング）</li>
 </ul>
 
 
@@ -1289,33 +1302,46 @@ window.Quarto = {
 <span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-planck-map：プランク関数の各因子と、それを逆引きする各部の対応（中心地図）</span>
 <span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-planck-curves：多様な温度のプランク曲線</span>
 <span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-planck-three-temps：三つの温度のプランク曲線（ピーク移動と $T^4$ 則）</span>
-<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>**第II部　放射をどう記述するか**</span>
-<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-specific-intensity：比強度 $I_\nu$ の定義の幾何</span>
-<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>**第III部　逆引き1：熱力学・統計力学へ**</span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-planck-reading：プランク曲線の読み取り（Wien ピーク移動・面積 = σT⁴・両極限）</span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>**第II部　放射をどう記述するか**</span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-specific-intensity：比強度 $I_\nu$ の定義の幾何</span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-radiative-transfer-formal：放射輸送方程式の形式解の幾何（光学的に厚い/薄い極限の分岐）</span>
 <span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-quantum-freezeout：量子化振動子の平均エネルギーと等分配の比較（高振動数モードの凍結）</span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>**第III部　逆引き1：熱力学・統計力学へ**</span>
 <span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>**第IV部　逆引き2：量子論へ**</span>
-<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-uv-catastrophe：紫外破綻 ― Rayleigh–Jeans 則の発散とプランク分布</span>
-<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-quantum-freezeout-ch10：高振動数モードの凍結（第7章の再掲）</span>
-<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-einstein-three-processes：二準位系の三つの素過程と Einstein 係数</span>
-<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>**第V部　逆引き3：電磁気学へ**</span>
-<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-k-space：$k$ 空間の格子点の数え上げ（前因子 $8\pi\nu^2/c^3$ の幾何）</span>
-<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>**第VII部　線スペクトル ― もう一つの逆引き**</span>
-<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-hydrogen-map：水素線吸収係数の各因子と、それを逆引きする章群の対応（中心地図）</span>
-<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-line-geometry：同じ遷移が吸収線にも輝線にも見える幾何（Kirchhoff の三法則）</span>
-<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-equivalent-width：等価幅 $W_\lambda$ の幾何的定義</span>
-<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-einstein-three-processes-line：三つの素過程の準位図（第IV部の再掲）</span>
-<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-line-geometry-lte：吸収線・輝線の幾何（第20章の再掲、ソース関数の文脈）</span>
-<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-voigt-profile：Voigt プロファイルと Gaussian／Lorentzian の比較</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-quantum-freezeout：量子化振動子の平均エネルギーと等分配の比較（高振動数モードの凍結）</span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-occupation-statistics：Bose–Einstein／Maxwell–Boltzmann／Fermi–Dirac 占有数の比較と古典極限</span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>**第IV部　逆引き2：量子論へ**</span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-uv-catastrophe：紫外破綻 ― Rayleigh–Jeans 則の発散とプランク分布</span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-quantum-freezeout-ch10：高振動数モードの凍結（第7章の再掲）</span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-einstein-three-processes：二準位系の三つの素過程と Einstein 係数</span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>**第V部　逆引き3：電磁気学へ**</span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-k-space：$k$ 空間の格子点の数え上げ（前因子 $8\pi\nu^2/c^3$ の幾何）</span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-dipole-larmor：加速電荷の双極子放射と Larmor 公式（連続放射の古典的土台）</span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>**第VI部　現実の宇宙へ戻る**</span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-firas-spectrum：COBE/FIRAS が測った CMB の完全黒体スペクトル</span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-continuum-processes：連続を作る三素過程の準位図（束縛-束縛／束縛-自由／自由-自由）</span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-continuum-ff-spectrum：自由-自由放射のスペクトル（光学的に厚い→薄いの遷移）</span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-continuum-edges-recomb：束縛-自由の吸収端と再結合連続（恒星大気↔星雲）</span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>**第VII部　線スペクトル ― もう一つの逆引き**</span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-hydrogen-map：水素線吸収係数の各因子と、それを逆引きする章群の対応（中心地図）</span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-line-geometry：同じ遷移が吸収線にも輝線にも見える幾何（Kirchhoff の三法則）</span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-equivalent-width：等価幅 $W_\lambda$ の幾何的定義</span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-einstein-three-processes-line：三つの素過程の準位図（第IV部の再掲）</span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-line-geometry-lte：吸収線・輝線の幾何（第20章の再掲、ソース関数の文脈）</span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-hydrogen-levels：水素のエネルギー準位図と E1 選択則（許容 Δl=±1／禁制 2s→1s／21 cm M1）</span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-voigt-profile：Voigt プロファイルと Gaussian／Lorentzian の比較</span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fig-curve-of-growth：成長曲線（等価幅と柱密度：線形→飽和→ダンピング）</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
