@@ -95,6 +95,8 @@ $$ {#eq-bose-einstein}
 
 これが **Bose–Einstein 分布**（**Bose–Einstein distribution**）である。$\bar{n}_i$ は状態 $i$ あたりの平均**占有数**（**occupation number**）。
 
+![三つの占有数分布の比較。横軸 $x=(E-\mu)/k_BT$、縦軸は平均占有数 $\bar n$（対数）。**Bose–Einstein**（$1/(e^x-1)$）は $x\to0$ で発散し、**Fermi–Dirac**（$1/(e^x+1)$）は上限 1 を超えない。両者の中間が古典の **Maxwell–Boltzmann**（$e^{-x}$）。重要なのは右側の網掛け：占有数が小さい（$\bar n\ll1$、高エネルギー側や希薄なガス）と、二つの量子統計はどちらも古典 Boltzmann 統計 $e^{-x}$ に帰着する。本書が物質準位を Boltzmann（第7章）、放射場を Bose（本章）で扱う二つの統計は、この極限で一つにつながる。](../images/occupation-statistics.svg){#fig-occupation-statistics width=88%}
+
 ::: {.callout-derive collapse="true"}
 ## 導出ノート（オンライン版限定）
 

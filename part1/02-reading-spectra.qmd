@@ -128,6 +128,8 @@ $$ {#eq-wien-displacement}
 
 これが **Wien の変位則**（**Wien's displacement law**）である。$b$ は Wien の変位定数。
 
+![プランク曲線の読み取り方。三つの温度（$T$, $1.5T$, $2T$）の $B_\nu$ を重ねた。温度が上がると、**ピーク位置は高振動数側へ移り**（$\nu_\text{peak}\propto T$、Wien の変位則 @eq-wien-displacement）、**曲線下の面積は $T^4$ で増える**（Stefan–Boltzmann 則、§2.4）。さらに低振動数側は $\propto\nu^2$ で立ち上がり（Rayleigh–Jeans、§2.5）、高振動数側は指数関数的に落ちる（Wien 近似）。一枚の曲線から温度・全放射・両極限が読み取れる。](../images/planck-reading.svg){#fig-planck-reading width=88%}
+
 実例：
 
 | 天体 | 温度 $T$ [K] | $\lambda_{\max}$ |
