@@ -2,36 +2,36 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" width="900" height="560" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Noto Sans JP', sans-serif">
 <!-- Free-free spectrum (Ch.19 §19.2/§19.6) | Style matched to planck-map.svg/uv-catastrophe.svg | CC BY 4.0 -->
 <rect width="900" height="560" fill="#fafbfc"/>
-<text x="450" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#0a1929" letter-spacing="0.05em">自由–自由放射のスペクトル ― 電波で黒体、X線で指数カットオフ</text>
-<text x="450" y="66" text-anchor="middle" font-size="14" fill="#5a6a7a">同じ熱的制動放射が、光学的に厚い低ν側と薄い高ν側で姿を変える（両対数・模式図）</text>
+<text x="450" y="40" text-anchor="middle" font-size="24" font-weight="700" fill="#0a1929" letter-spacing="0.05em">自由–自由放射のスペクトル ― 電波で黒体、X線で指数カットオフ</text>
+<text x="450" y="66" text-anchor="middle" font-size="17" fill="#5a6a7a">同じ熱的制動放射が、光学的に厚い低ν側と薄い高ν側で姿を変える（両対数・模式図）</text>
 <line x1="110.0" y1="110" x2="110.0" y2="460" stroke="#e3e9f0" stroke-width="1"/>
-<text x="110.0" y="480" text-anchor="middle" font-size="12" fill="#5a6a7a">10<tspan font-size="9" dy="-5">9</tspan></text>
+<text x="110.0" y="480" text-anchor="middle" font-size="15" fill="#5a6a7a">10<tspan font-size="12" dy="-5">9</tspan></text>
 <line x1="252.0" y1="110" x2="252.0" y2="460" stroke="#e3e9f0" stroke-width="1"/>
-<text x="252.0" y="480" text-anchor="middle" font-size="12" fill="#5a6a7a">10<tspan font-size="9" dy="-5">11</tspan></text>
+<text x="252.0" y="480" text-anchor="middle" font-size="15" fill="#5a6a7a">10<tspan font-size="12" dy="-5">11</tspan></text>
 <line x1="394.0" y1="110" x2="394.0" y2="460" stroke="#e3e9f0" stroke-width="1"/>
-<text x="394.0" y="480" text-anchor="middle" font-size="12" fill="#5a6a7a">10<tspan font-size="9" dy="-5">13</tspan></text>
+<text x="394.0" y="480" text-anchor="middle" font-size="15" fill="#5a6a7a">10<tspan font-size="12" dy="-5">13</tspan></text>
 <line x1="536.0" y1="110" x2="536.0" y2="460" stroke="#e3e9f0" stroke-width="1"/>
-<text x="536.0" y="480" text-anchor="middle" font-size="12" fill="#5a6a7a">10<tspan font-size="9" dy="-5">15</tspan></text>
+<text x="536.0" y="480" text-anchor="middle" font-size="15" fill="#5a6a7a">10<tspan font-size="12" dy="-5">15</tspan></text>
 <line x1="678.0" y1="110" x2="678.0" y2="460" stroke="#e3e9f0" stroke-width="1"/>
-<text x="678.0" y="480" text-anchor="middle" font-size="12" fill="#5a6a7a">10<tspan font-size="9" dy="-5">17</tspan></text>
+<text x="678.0" y="480" text-anchor="middle" font-size="15" fill="#5a6a7a">10<tspan font-size="12" dy="-5">17</tspan></text>
 <line x1="820.0" y1="110" x2="820.0" y2="460" stroke="#e3e9f0" stroke-width="1"/>
-<text x="820.0" y="480" text-anchor="middle" font-size="12" fill="#5a6a7a">10<tspan font-size="9" dy="-5">19</tspan></text>
-<text x="131.3" y="498" text-anchor="middle" font-size="10" fill="#5a6a7a">電波</text>
-<text x="465.0" y="498" text-anchor="middle" font-size="10" fill="#5a6a7a">赤外〜紫外</text>
-<text x="770.3" y="498" text-anchor="middle" font-size="10" fill="#5a6a7a">X線</text>
+<text x="820.0" y="480" text-anchor="middle" font-size="15" fill="#5a6a7a">10<tspan font-size="12" dy="-5">19</tspan></text>
+<text x="131.3" y="498" text-anchor="middle" font-size="13" fill="#5a6a7a">電波</text>
+<text x="465.0" y="498" text-anchor="middle" font-size="13" fill="#5a6a7a">赤外〜紫外</text>
+<text x="770.3" y="498" text-anchor="middle" font-size="13" fill="#5a6a7a">X線</text>
 <line x1="181.0" y1="110" x2="181.0" y2="460" stroke="#5a6a7a" stroke-width="1.2" stroke-dasharray="4,4"/>
-<text x="181.0" y="102" text-anchor="middle" font-size="12" fill="#5a6a7a" font-style="italic" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">ν_t（ターンオーバー）</text>
+<text x="181.0" y="102" text-anchor="middle" font-size="15" fill="#5a6a7a" font-style="italic" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">ν_t（ターンオーバー）</text>
 <line x1="699.3" y1="110" x2="699.3" y2="460" stroke="#5a6a7a" stroke-width="1.2" stroke-dasharray="4,4"/>
-<text x="699.3" y="102" text-anchor="middle" font-size="12" fill="#5a6a7a" font-style="italic" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">hν ≈ kT_e</text>
+<text x="699.3" y="102" text-anchor="middle" font-size="15" fill="#5a6a7a" font-style="italic" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">hν ≈ kT_e</text>
 <path d="M110.0 355.0 L112.8 348.0 L115.7 341.0 L118.5 334.0 L121.4 327.0 L124.2 320.0 L127.0 313.0 L129.9 306.0 L132.7 299.0 L135.6 292.0 L138.4 285.0 L141.2 278.0 L144.1 271.0 L146.9 264.0 L149.8 257.0 L152.6 250.0 L155.4 243.0 L158.3 236.0 L161.1 229.0 L164.0 222.0 L166.8 215.0 L169.6 208.0 L172.5 201.0 L175.3 194.0 L178.2 187.0 L181.0 180.0 L183.8 180.3 L186.7 180.7 L189.5 181.0 L192.4 181.4 L195.2 181.7 L198.0 182.1 L200.9 182.4 L203.7 182.8 L206.6 183.1 L209.4 183.5 L212.2 183.8 L215.1 184.2 L217.9 184.5 L220.8 184.9 L223.6 185.2 L226.4 185.6 L229.3 185.9 L232.1 186.3 L235.0 186.6 L237.8 187.0 L240.6 187.3 L243.5 187.7 L246.3 188.0 L249.2 188.4 L252.0 188.7 L254.8 189.1 L257.7 189.4 L260.5 189.8 L263.4 190.1 L266.2 190.5 L269.0 190.8 L271.9 191.2 L274.7 191.5 L277.6 191.9 L280.4 192.2 L283.2 192.6 L286.1 192.9 L288.9 193.3 L291.8 193.6 L294.6 194.0 L297.4 194.3 L300.3 194.7 L303.1 195.0 L306.0 195.4 L308.8 195.7 L311.6 196.1 L314.5 196.4 L317.3 196.8 L320.2 197.1 L323.0 197.5 L325.8 197.8 L328.7 198.2 L331.5 198.5 L334.4 198.9 L337.2 199.2 L340.0 199.6 L342.9 199.9 L345.7 200.3 L348.6 200.6 L351.4 201.0 L354.2 201.3 L357.1 201.7 L359.9 202.0 L362.8 202.4 L365.6 202.7 L368.4 203.1 L371.3 203.4 L374.1 203.8 L377.0 204.1 L379.8 204.5 L382.6 204.8 L385.5 205.2 L388.3 205.5 L391.2 205.9 L394.0 206.2 L396.8 206.6 L399.7 206.9 L402.5 207.3 L405.4 207.6 L408.2 208.0 L411.0 208.3 L413.9 208.7 L416.7 209.0 L419.6 209.4 L422.4 209.7 L425.2 210.1 L428.1 210.4 L430.9 210.8 L433.8 211.1 L436.6 211.5 L439.4 211.8 L442.3 212.2 L445.1 212.5 L448.0 212.9 L450.8 213.2 L453.6 213.6 L456.5 213.9 L459.3 214.3 L462.2 214.6 L465.0 215.0 L467.8 215.3 L470.7 215.7 L473.5 216.0 L476.4 216.4 L479.2 216.7 L482.0 217.1 L484.9 217.4 L487.7 217.8 L490.6 218.1 L493.4 218.5 L496.2 218.8 L499.1 219.2 L501.9 219.5 L504.8 219.9 L507.6 220.2 L510.4 220.6 L513.3 220.9 L516.1 221.3 L519.0 221.6 L521.8 222.0 L524.6 222.3 L527.5 222.7 L530.3 223.0 L533.2 223.4 L536.0 223.7 L538.8 224.1 L541.7 224.4 L544.5 224.8 L547.4 225.1 L550.2 225.5 L553.0 225.8 L555.9 226.2 L558.7 226.5 L561.6 226.9 L564.4 227.2 L567.2 227.6 L570.1 227.9 L572.9 228.3 L575.8 228.6 L578.6 229.0 L581.4 229.3 L584.3 229.7 L587.1 230.0 L590.0 230.4 L592.8 230.7 L595.6 231.1 L598.5 231.4 L601.3 231.8 L604.2 232.1 L607.0 232.5 L609.8 232.8 L612.7 233.2 L615.5 233.5 L618.4 233.9 L621.2 234.2 L624.0 234.6 L626.9 234.9 L629.7 235.3 L632.6 235.6 L635.4 236.0 L638.2 236.3 L641.1 236.7 L643.9 237.0 L646.8 237.4 L649.6 237.7 L652.4 238.1 L655.3 238.4 L658.1 238.8 L661.0 239.1 L663.8 239.5 L666.6 239.8 L669.5 240.2 L672.3 240.5 L675.2 240.9 L678.0 241.2 L680.8 241.6 L683.7 241.9 L686.5 242.3 L689.4 242.6 L692.2 243.0 L695.0 243.3 L697.9 243.7 L700.7 245.8 L703.6 250.0 L706.4 254.6 L709.2 259.6 L712.1 265.0 L714.9 270.9 L717.8 277.3 L720.6 284.3 L723.4 292.0 L726.3 300.4 L729.1 309.5 L732.0 319.5 L734.8 330.4 L737.6 342.4 L740.5 355.4 L743.3 369.7 L746.2 385.3 L749.0 402.5 L751.8 421.2 L754.7 441.7 L757.5 464.1 L760.4 488.7 L763.2 503.8 L766.0 503.8 L768.9 503.8 L771.7 503.8 L774.6 503.8 L777.4 503.8 L780.2 503.8 L783.1 503.8 L785.9 503.8 L788.8 503.8 L791.6 503.8 L794.4 503.8 L797.3 503.8 L800.1 503.8 L803.0 503.8 L805.8 503.8 L808.6 503.8 L811.5 503.8 L814.3 503.8 L817.2 503.8 L820.0 503.8" fill="none" stroke="#1f4e79" stroke-width="3"/>
-<text x="149.1" y="328.8" text-anchor="start" font-size="12" fill="#1f4e79" font-weight="700">∝ ν²（光学的に厚い</text>
-<text x="149.1" y="344.8" text-anchor="start" font-size="11" fill="#5a6a7a">＝ B_ν(T_e) に飽和）</text>
-<text x="394.0" y="155.5" text-anchor="middle" font-size="12" fill="#0a1929" font-weight="600">ほぼ平坦 ∝ ν⁻⁰·¹（光学的に薄い）</text>
-<text x="720.6" y="285.0" text-anchor="start" font-size="12" fill="#c43f6b" font-weight="700">指数カットオフ</text>
-<text x="720.6" y="301.0" text-anchor="start" font-size="11" fill="#8a1f3e" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif" font-style="italic">e^(−hν/kT_e)</text>
+<text x="149.1" y="328.8" text-anchor="start" font-size="15" fill="#1f4e79" font-weight="700">∝ ν²（光学的に厚い</text>
+<text x="149.1" y="344.8" text-anchor="start" font-size="14" fill="#5a6a7a">＝ B_ν(T_e) に飽和）</text>
+<text x="394.0" y="155.5" text-anchor="middle" font-size="15" fill="#0a1929" font-weight="600">ほぼ平坦 ∝ ν⁻⁰·¹（光学的に薄い）</text>
+<text x="720.6" y="285.0" text-anchor="start" font-size="15" fill="#c43f6b" font-weight="700">指数カットオフ</text>
+<text x="720.6" y="301.0" text-anchor="start" font-size="14" fill="#8a1f3e" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif" font-style="italic">e^(−hν/kT_e)</text>
 <line x1="110" y1="460" x2="820" y2="460" stroke="#0a1929" stroke-width="1.5"/>
 <line x1="110" y1="110" x2="110" y2="460" stroke="#0a1929" stroke-width="1.5"/>
-<text x="465" y="504" text-anchor="middle" font-size="13" fill="#0a1929">振動数 ν [Hz]</text>
-<text x="40" y="285" text-anchor="middle" font-size="13" fill="#0a1929" transform="rotate(-90 40 285)">F_ν（任意単位）</text>
-<text x="450" y="540" text-anchor="middle" font-size="11" fill="#8a99a8">電波 HII 領域（厚い側）と銀河団 X 線（薄い側）は同じ熱的制動放射の両端 ― §19.2・§19.6</text>
+<text x="465" y="504" text-anchor="middle" font-size="16" fill="#0a1929">振動数 ν [Hz]</text>
+<text x="40" y="285" text-anchor="middle" font-size="16" fill="#0a1929" transform="rotate(-90 40 285)">F_ν（任意単位）</text>
+<text x="450" y="540" text-anchor="middle" font-size="14" fill="#8a99a8">電波 HII 領域（厚い側）と銀河団 X 線（薄い側）は同じ熱的制動放射の両端 ― §19.2・§19.6</text>
 </svg>

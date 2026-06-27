@@ -25,10 +25,10 @@
 
   <!-- Title strip -->
   <text x="450" y="38" text-anchor="middle"
-        font-size="20" font-weight="700" fill="#0a1929" letter-spacing="0.08em">
+        font-size="22" font-weight="700" fill="#0a1929" letter-spacing="0.08em">
     CONTINUUM-FORMING PROCESSES
   </text>
-  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#5a6a7a">
+  <text x="450" y="60" text-anchor="middle" font-size="16" fill="#5a6a7a">
     Free electrons make continuous spectra — counterpart of the bound-bound (line) diagram (Ch. 19)
   </text>
 
@@ -44,22 +44,22 @@
   <g transform="translate(165, 108)">
     <rect x="-122" y="0" width="244" height="270" rx="10"
           fill="#ffffff" stroke="#d8e2ec" stroke-width="1.5"/>
-    <text x="0" y="24" text-anchor="middle" font-size="11" font-weight="700"
+    <text x="0" y="24" text-anchor="middle" font-size="14" font-weight="700"
           fill="#0a3260" letter-spacing="0.06em">1 · BOUND–FREE</text>
-    <text x="0" y="44" text-anchor="middle" font-size="9" font-style="italic" fill="#5a6a7a">
+    <text x="0" y="44" text-anchor="middle" font-size="12" font-style="italic" fill="#5a6a7a">
       photoionization (absorption)
     </text>
 
     <!-- continuum band -->
     <rect x="-92" y="66" width="184" height="30" fill="#dbe7f3" opacity="0.7"/>
-    <text x="86" y="62" text-anchor="end" font-size="8.5" font-style="italic" fill="#41617f">continuum (E&gt;0)</text>
+    <text x="86" y="62" text-anchor="end" font-size="11.5" font-style="italic" fill="#41617f">continuum (E&gt;0)</text>
     <!-- E=0 line -->
     <line x1="-92" y1="96" x2="92" y2="96" stroke="#41617f" stroke-width="1" stroke-dasharray="4,3"/>
     <!-- bound levels -->
     <line x1="-78" y1="123" x2="78" y2="123" stroke="#0a1929" stroke-width="1.5"/>
     <line x1="-78" y1="152" x2="78" y2="152" stroke="#0a1929" stroke-width="2"/>
     <line x1="-78" y1="200" x2="78" y2="200" stroke="#0a1929" stroke-width="2"/>
-    <g font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif" font-style="italic" fill="#5a6a7a" font-size="11">
+    <g font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif" font-style="italic" fill="#5a6a7a" font-size="14">
       <text x="-92" y="127" text-anchor="end">n3</text>
       <text x="-92" y="156" text-anchor="end">n2</text>
       <text x="-92" y="204" text-anchor="end">n1</text>
@@ -74,14 +74,14 @@
             fill="none" stroke="#c43f6b" stroke-width="2" marker-end="url(#arrow-rose-c)"/>
     </g>
     <g font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif" font-style="italic" fill="#c43f6b">
-      <text x="-78" y="108" font-size="13">hν</text>
+      <text x="-78" y="108" font-size="16">hν</text>
     </g>
     <!-- transition arrow up into continuum -->
     <line x1="20" y1="146" x2="20" y2="88" stroke="#1f4e79" stroke-width="2.5" marker-end="url(#arrow-blue-c)"/>
 
     <!-- threshold pill -->
     <rect x="-58" y="228" width="116" height="30" rx="8" fill="#eaf1f8" stroke="#1f4e79" stroke-width="1"/>
-    <text x="0" y="248" text-anchor="middle" font-size="11" fill="#0a3260"
+    <text x="0" y="248" text-anchor="middle" font-size="14" fill="#0a3260"
           font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif" font-style="italic">hν ≥ χ</text>
   </g>
 
@@ -89,15 +89,15 @@
   <g transform="translate(450, 108)">
     <rect x="-122" y="0" width="244" height="270" rx="10"
           fill="#ffffff" stroke="#d8e2ec" stroke-width="1.5"/>
-    <text x="0" y="24" text-anchor="middle" font-size="11" font-weight="700"
+    <text x="0" y="24" text-anchor="middle" font-size="14" font-weight="700"
           fill="#0a3260" letter-spacing="0.06em">2 · FREE–FREE</text>
-    <text x="0" y="44" text-anchor="middle" font-size="9" font-style="italic" fill="#5a6a7a">
+    <text x="0" y="44" text-anchor="middle" font-size="12" font-style="italic" fill="#5a6a7a">
       bremsstrahlung (emission shown)
     </text>
 
     <!-- continuum band (taller, since both states are free) -->
     <rect x="-92" y="62" width="184" height="50" fill="#dbe7f3" opacity="0.7"/>
-    <text x="86" y="58" text-anchor="end" font-size="8.5" font-style="italic" fill="#41617f">continuum (E&gt;0)</text>
+    <text x="86" y="58" text-anchor="end" font-size="11.5" font-style="italic" fill="#41617f">continuum (E&gt;0)</text>
     <line x1="-92" y1="112" x2="92" y2="112" stroke="#41617f" stroke-width="1" stroke-dasharray="4,3"/>
     <!-- bound levels (greyed; not involved) -->
     <line x1="-78" y1="140" x2="78" y2="140" stroke="#c2ccd6" stroke-width="1.5"/>
@@ -105,7 +105,7 @@
 
     <!-- ion (fixed charge) -->
     <circle cx="-40" cy="86" r="7" fill="none" stroke="#7a8694" stroke-width="1.5"/>
-    <text x="-40" y="90" text-anchor="middle" font-size="9" fill="#7a8694">+</text>
+    <text x="-40" y="90" text-anchor="middle" font-size="12" fill="#7a8694">+</text>
     <!-- electron: initial high (filled), final lower but still free (open) -->
     <circle cx="20" cy="72" r="5" fill="#0a1929"/>
     <circle cx="20" cy="104" r="5" fill="none" stroke="#0a1929" stroke-width="1.5" stroke-dasharray="2,2"/>
@@ -117,12 +117,12 @@
             fill="none" stroke="#c43f6b" stroke-width="2" marker-end="url(#arrow-rose-c)"/>
     </g>
     <g font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif" font-style="italic" fill="#c43f6b">
-      <text x="74" y="84" font-size="13">hν</text>
+      <text x="74" y="84" font-size="16">hν</text>
     </g>
 
     <!-- range pill -->
     <rect x="-66" y="228" width="132" height="30" rx="8" fill="#eaf1f8" stroke="#1f4e79" stroke-width="1"/>
-    <text x="0" y="248" text-anchor="middle" font-size="10.5" fill="#0a3260"
+    <text x="0" y="248" text-anchor="middle" font-size="13.5" fill="#0a3260"
           font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif" font-style="italic">any ν (no threshold)</text>
   </g>
 
@@ -130,19 +130,19 @@
   <g transform="translate(735, 108)">
     <rect x="-122" y="0" width="244" height="270" rx="10"
           fill="#ffffff" stroke="#d8e2ec" stroke-width="1.5"/>
-    <text x="0" y="24" text-anchor="middle" font-size="11" font-weight="700"
+    <text x="0" y="24" text-anchor="middle" font-size="14" font-weight="700"
           fill="#0a3260" letter-spacing="0.06em">3 · FREE–BOUND</text>
-    <text x="0" y="44" text-anchor="middle" font-size="9" font-style="italic" fill="#5a6a7a">
+    <text x="0" y="44" text-anchor="middle" font-size="12" font-style="italic" fill="#5a6a7a">
       recombination (inverse of 1)
     </text>
 
     <rect x="-92" y="66" width="184" height="30" fill="#dbe7f3" opacity="0.7"/>
-    <text x="86" y="62" text-anchor="end" font-size="8.5" font-style="italic" fill="#41617f">continuum (E&gt;0)</text>
+    <text x="86" y="62" text-anchor="end" font-size="11.5" font-style="italic" fill="#41617f">continuum (E&gt;0)</text>
     <line x1="-92" y1="96" x2="92" y2="96" stroke="#41617f" stroke-width="1" stroke-dasharray="4,3"/>
     <line x1="-78" y1="123" x2="78" y2="123" stroke="#0a1929" stroke-width="1.5"/>
     <line x1="-78" y1="152" x2="78" y2="152" stroke="#0a1929" stroke-width="2"/>
     <line x1="-78" y1="200" x2="78" y2="200" stroke="#0a1929" stroke-width="2"/>
-    <g font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif" font-style="italic" fill="#5a6a7a" font-size="11">
+    <g font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif" font-style="italic" fill="#5a6a7a" font-size="14">
       <text x="-92" y="127" text-anchor="end">n3</text>
       <text x="-92" y="156" text-anchor="end">n2</text>
       <text x="-92" y="204" text-anchor="end">n1</text>
@@ -150,7 +150,7 @@
 
     <!-- ion -->
     <circle cx="-40" cy="80" r="7" fill="none" stroke="#7a8694" stroke-width="1.5"/>
-    <text x="-40" y="84" text-anchor="middle" font-size="9" fill="#7a8694">+</text>
+    <text x="-40" y="84" text-anchor="middle" font-size="12" fill="#7a8694">+</text>
     <!-- initial electron (filled, in band) ; final (open, captured to n2) -->
     <circle cx="20" cy="80" r="5" fill="#0a1929"/>
     <circle cx="20" cy="152" r="5" fill="none" stroke="#0a1929" stroke-width="1.5" stroke-dasharray="2,2"/>
@@ -162,20 +162,20 @@
             fill="none" stroke="#c43f6b" stroke-width="2" marker-end="url(#arrow-rose-c)"/>
     </g>
     <g font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif" font-style="italic" fill="#c43f6b">
-      <text x="74" y="118" font-size="13">hν</text>
+      <text x="74" y="118" font-size="16">hν</text>
     </g>
 
     <!-- energy pill -->
     <rect x="-72" y="228" width="144" height="30" rx="8" fill="#fbe9eb" stroke="#c43f6b" stroke-width="1"/>
-    <text x="0" y="248" text-anchor="middle" font-size="10.5" fill="#8a1f3e"
+    <text x="0" y="248" text-anchor="middle" font-size="13.5" fill="#8a1f3e"
           font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif" font-style="italic">hν = ½mv² + χ</text>
   </g>
 
   <!-- Footer caption -->
-  <text x="450" y="406" text-anchor="middle" font-size="11" fill="#5a6a7a" font-style="italic">
+  <text x="450" y="406" text-anchor="middle" font-size="14" fill="#5a6a7a" font-style="italic">
     Bound–free (1) and free–bound (3) are inverse processes, linked by the Milne relation (§19.4);
   </text>
-  <text x="450" y="424" text-anchor="middle" font-size="11" fill="#5a6a7a" font-style="italic">
+  <text x="450" y="424" text-anchor="middle" font-size="14" fill="#5a6a7a" font-style="italic">
     all three are thermal when the electrons are Maxwellian, and give S_ν = B_ν(T) in LTE (Kirchhoff, §19.2).
   </text>
 </svg>

@@ -4,25 +4,25 @@
 <rect width="900" height="640" fill="#fafbfc"/>
 <line x1="120" y1="560" x2="120" y2="137.09589041095887" stroke="#0a1929" stroke-width="1.6"/>
 <line x1="120" y1="137.09589041095887" x2="120" y2="115.09589041095887" stroke="#0a1929" stroke-width="1.6" marker-end="url(#h-al)"/>
-<text x="52" y="340.0" font-size="17" fill="#0a1929" text-anchor="middle" font-style="italic" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif" transform="rotate(-90 52 340.0)">エネルギー E (eV)</text>
+<text x="52" y="340.0" font-size="20" fill="#0a1929" text-anchor="middle" font-style="italic" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif" transform="rotate(-90 52 340.0)">エネルギー E (eV)</text>
 <line x1="114" y1="551.0" x2="120" y2="551.0" stroke="#0a1929" stroke-width="1.4"/>
-<text x="108" y="555.9589041095891" font-size="14" fill="#5a6a7a" text-anchor="end" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">−13.6</text>
+<text x="108" y="555.9589041095891" font-size="17" fill="#5a6a7a" text-anchor="end" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">−13.6</text>
 <line x1="114" y1="243.6" x2="120" y2="243.6" stroke="#0a1929" stroke-width="1.4"/>
-<text x="108" y="248.56164383561645" font-size="14" fill="#5a6a7a" text-anchor="end" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">−3.4</text>
+<text x="108" y="248.56164383561645" font-size="17" fill="#5a6a7a" text-anchor="end" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">−3.4</text>
 <line x1="114" y1="186.3" x2="120" y2="186.3" stroke="#0a1929" stroke-width="1.4"/>
-<text x="108" y="191.3013698630137" font-size="14" fill="#5a6a7a" text-anchor="end" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">−1.5</text>
+<text x="108" y="191.3013698630137" font-size="17" fill="#5a6a7a" text-anchor="end" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">−1.5</text>
 <line x1="114" y1="141.1" x2="120" y2="141.1" stroke="#0a1929" stroke-width="1.4"/>
-<text x="108" y="146.09589041095887" font-size="14" fill="#5a6a7a" text-anchor="end" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">0</text>
+<text x="108" y="146.09589041095887" font-size="17" fill="#5a6a7a" text-anchor="end" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">0</text>
 <line x1="120" y1="141.1" x2="727" y2="141.1" stroke="#8a99a8" stroke-width="1.3" stroke-dasharray="5,5"/>
-<text x="725" y="133.09589041095887" font-size="14" fill="#5a6a7a" text-anchor="end">電離限界 (n→∞)</text>
-<text x="210" y="94" font-size="22" fill="#0a1929" text-anchor="middle" font-weight="700" font-style="italic" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">s</text>
-<text x="210" y="112" font-size="13" fill="#5a6a7a" text-anchor="middle">l = 0</text>
-<text x="355" y="94" font-size="22" fill="#0a1929" text-anchor="middle" font-weight="700" font-style="italic" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">p</text>
-<text x="355" y="112" font-size="13" fill="#5a6a7a" text-anchor="middle">l = 1</text>
-<text x="500" y="94" font-size="22" fill="#0a1929" text-anchor="middle" font-weight="700" font-style="italic" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">d</text>
-<text x="500" y="112" font-size="13" fill="#5a6a7a" text-anchor="middle">l = 2</text>
-<text x="645" y="94" font-size="22" fill="#0a1929" text-anchor="middle" font-weight="700" font-style="italic" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">f</text>
-<text x="645" y="112" font-size="13" fill="#5a6a7a" text-anchor="middle">l = 3</text>
+<text x="725" y="133.09589041095887" font-size="17" fill="#5a6a7a" text-anchor="end">電離限界 (n→∞)</text>
+<text x="210" y="94" font-size="24" fill="#0a1929" text-anchor="middle" font-weight="700" font-style="italic" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">s</text>
+<text x="210" y="112" font-size="16" fill="#5a6a7a" text-anchor="middle">l = 0</text>
+<text x="355" y="94" font-size="24" fill="#0a1929" text-anchor="middle" font-weight="700" font-style="italic" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">p</text>
+<text x="355" y="112" font-size="16" fill="#5a6a7a" text-anchor="middle">l = 1</text>
+<text x="500" y="94" font-size="24" fill="#0a1929" text-anchor="middle" font-weight="700" font-style="italic" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">d</text>
+<text x="500" y="112" font-size="16" fill="#5a6a7a" text-anchor="middle">l = 2</text>
+<text x="645" y="94" font-size="24" fill="#0a1929" text-anchor="middle" font-weight="700" font-style="italic" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">f</text>
+<text x="645" y="112" font-size="16" fill="#5a6a7a" text-anchor="middle">l = 3</text>
 <line x1="158" y1="157.5" x2="262" y2="157.5" stroke="#e3e9f0" stroke-width="2"/>
 <line x1="303" y1="157.5" x2="407" y2="157.5" stroke="#e3e9f0" stroke-width="2"/>
 <line x1="448" y1="157.5" x2="552" y2="157.5" stroke="#e3e9f0" stroke-width="2"/>
@@ -32,54 +32,54 @@
 <line x1="448" y1="152.5" x2="552" y2="152.5" stroke="#e3e9f0" stroke-width="2"/>
 <line x1="593" y1="152.5" x2="697" y2="152.5" stroke="#e3e9f0" stroke-width="2"/>
 <line x1="158" y1="551.0" x2="262" y2="551.0" stroke="#0a1929" stroke-width="3"/>
-<text x="210" y="543.9589041095891" font-size="14" fill="#0a1929" text-anchor="middle" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">1s</text>
-<text x="150" y="555.9589041095891" font-size="14" fill="#5a6a7a" text-anchor="end" font-weight="700">n=1</text>
+<text x="210" y="543.9589041095891" font-size="17" fill="#0a1929" text-anchor="middle" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">1s</text>
+<text x="150" y="555.9589041095891" font-size="17" fill="#5a6a7a" text-anchor="end" font-weight="700">n=1</text>
 <line x1="158" y1="243.6" x2="262" y2="243.6" stroke="#0a1929" stroke-width="3"/>
-<text x="210" y="236.56164383561645" font-size="14" fill="#0a1929" text-anchor="middle" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">2s</text>
+<text x="210" y="236.56164383561645" font-size="17" fill="#0a1929" text-anchor="middle" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">2s</text>
 <line x1="303" y1="243.6" x2="407" y2="243.6" stroke="#0a1929" stroke-width="3"/>
-<text x="355" y="236.56164383561645" font-size="14" fill="#0a1929" text-anchor="middle" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">2p</text>
-<text x="150" y="248.56164383561645" font-size="14" fill="#5a6a7a" text-anchor="end" font-weight="700">n=2</text>
+<text x="355" y="236.56164383561645" font-size="17" fill="#0a1929" text-anchor="middle" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">2p</text>
+<text x="150" y="248.56164383561645" font-size="17" fill="#5a6a7a" text-anchor="end" font-weight="700">n=2</text>
 <line x1="158" y1="186.6" x2="262" y2="186.6" stroke="#0a1929" stroke-width="3"/>
-<text x="210" y="179.63622526636226" font-size="14" fill="#0a1929" text-anchor="middle" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">3s</text>
+<text x="210" y="179.63622526636226" font-size="17" fill="#0a1929" text-anchor="middle" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">3s</text>
 <line x1="303" y1="186.6" x2="407" y2="186.6" stroke="#0a1929" stroke-width="3"/>
-<text x="355" y="179.63622526636226" font-size="14" fill="#0a1929" text-anchor="middle" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">3p</text>
+<text x="355" y="179.63622526636226" font-size="17" fill="#0a1929" text-anchor="middle" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">3p</text>
 <line x1="448" y1="186.6" x2="552" y2="186.6" stroke="#0a1929" stroke-width="3"/>
-<text x="500" y="179.63622526636226" font-size="14" fill="#0a1929" text-anchor="middle" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">3d</text>
-<text x="150" y="191.63622526636226" font-size="14" fill="#5a6a7a" text-anchor="end" font-weight="700">n=3</text>
+<text x="500" y="179.63622526636226" font-size="17" fill="#0a1929" text-anchor="middle" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">3d</text>
+<text x="150" y="191.63622526636226" font-size="17" fill="#5a6a7a" text-anchor="end" font-weight="700">n=3</text>
 <line x1="158" y1="166.7" x2="262" y2="166.7" stroke="#0a1929" stroke-width="3"/>
-<text x="210" y="159.71232876712327" font-size="14" fill="#0a1929" text-anchor="middle" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">4s</text>
+<text x="210" y="159.71232876712327" font-size="17" fill="#0a1929" text-anchor="middle" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">4s</text>
 <line x1="303" y1="166.7" x2="407" y2="166.7" stroke="#0a1929" stroke-width="3"/>
-<text x="355" y="159.71232876712327" font-size="14" fill="#0a1929" text-anchor="middle" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">4p</text>
+<text x="355" y="159.71232876712327" font-size="17" fill="#0a1929" text-anchor="middle" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">4p</text>
 <line x1="448" y1="166.7" x2="552" y2="166.7" stroke="#0a1929" stroke-width="3"/>
-<text x="500" y="159.71232876712327" font-size="14" fill="#0a1929" text-anchor="middle" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">4d</text>
+<text x="500" y="159.71232876712327" font-size="17" fill="#0a1929" text-anchor="middle" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">4d</text>
 <line x1="593" y1="166.7" x2="697" y2="166.7" stroke="#0a1929" stroke-width="3"/>
-<text x="645" y="159.71232876712327" font-size="14" fill="#0a1929" text-anchor="middle" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">4f</text>
-<text x="150" y="171.71232876712327" font-size="14" fill="#5a6a7a" text-anchor="end" font-weight="700">n=4</text>
+<text x="645" y="159.71232876712327" font-size="17" fill="#0a1929" text-anchor="middle" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">4f</text>
+<text x="150" y="171.71232876712327" font-size="17" fill="#5a6a7a" text-anchor="end" font-weight="700">n=4</text>
 <line x1="337.0" y1="247.6" x2="228.0" y2="547.0" stroke="#1f4e79" stroke-width="2.8" marker-end="url(#h-al)"/>
-<text x="300" y="468" font-size="16" fill="#1f4e79" text-anchor="start" font-weight="700">Lyα</text>
-<text x="300" y="487" font-size="13" fill="#5a6a7a" text-anchor="start">121.6 nm</text>
+<text x="300" y="468" font-size="19" fill="#1f4e79" text-anchor="start" font-weight="700">Lyα</text>
+<text x="300" y="487" font-size="16" fill="#5a6a7a" text-anchor="start">121.6 nm</text>
 <line x1="486.0" y1="190.6" x2="369.0" y2="239.6" stroke="#1f4e79" stroke-width="2.8" marker-end="url(#h-al)"/>
-<text x="516" y="203" font-size="16" fill="#1f4e79" text-anchor="start" font-weight="700">Hα</text>
-<text x="516" y="222" font-size="13" fill="#5a6a7a" text-anchor="start">656 nm</text>
+<text x="516" y="203" font-size="19" fill="#1f4e79" text-anchor="start" font-weight="700">Hα</text>
+<text x="516" y="222" font-size="16" fill="#5a6a7a" text-anchor="start">656 nm</text>
 <line x1="333.0" y1="190.6" x2="232.0" y2="239.6" stroke="#1f4e79" stroke-width="1.8" marker-end="url(#h-al)"/>
 <line x1="240.0" y1="247.6" x2="240.0" y2="547.0" stroke="#8a1f3e" stroke-width="2.6" stroke-dasharray="6,5" marker-end="url(#h-fb)"/>
-<text x="226" y="384" font-size="15" fill="#8a1f3e" text-anchor="end" font-weight="700">禁制</text>
-<text x="226" y="403" font-size="14" fill="#8a1f3e" text-anchor="end" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">2s→1s</text>
-<text x="226" y="422" font-size="13" fill="#5a6a7a" text-anchor="end">(Δl = 0)</text>
+<text x="226" y="384" font-size="18" fill="#8a1f3e" text-anchor="end" font-weight="700">禁制</text>
+<text x="226" y="403" font-size="17" fill="#8a1f3e" text-anchor="end" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">2s→1s</text>
+<text x="226" y="422" font-size="16" fill="#5a6a7a" text-anchor="end">(Δl = 0)</text>
 <line x1="280" y1="541.9589041095891" x2="340" y2="541.9589041095891" stroke="#2e7d5b" stroke-width="2.2"/>
 <line x1="280" y1="559.9589041095891" x2="340" y2="559.9589041095891" stroke="#2e7d5b" stroke-width="2.2"/>
 <line x1="310" y1="559.9589041095891" x2="310" y2="541.9589041095891" stroke="#2e7d5b" stroke-width="2" marker-end="url(#h-m1)"/>
 <line x1="264" y1="550.9589041095891" x2="280" y2="541.9589041095891" stroke="#2e7d5b" stroke-width="1" stroke-dasharray="2,2"/>
 <line x1="264" y1="550.9589041095891" x2="280" y2="559.9589041095891" stroke="#2e7d5b" stroke-width="1" stroke-dasharray="2,2"/>
-<text x="348" y="544.9589041095891" font-size="14" fill="#2e7d5b" text-anchor="start" font-weight="700">21 cm 線</text>
-<text x="348" y="562.9589041095891" font-size="13" fill="#5a6a7a" text-anchor="start">1s 超微細構造 (M1, 禁制)</text>
+<text x="348" y="544.9589041095891" font-size="17" fill="#2e7d5b" text-anchor="start" font-weight="700">21 cm 線</text>
+<text x="348" y="562.9589041095891" font-size="16" fill="#5a6a7a" text-anchor="start">1s 超微細構造 (M1, 禁制)</text>
 <rect x="655" y="150" width="232" height="150" rx="10" fill="#fff" stroke="#1f4e79" stroke-width="1.6"/>
-<text x="771.0" y="178" font-size="16" fill="#1f4e79" text-anchor="middle" font-weight="700">電気双極子 (E1) 選択則</text>
-<text x="771.0" y="208" font-size="19" fill="#0a1929" text-anchor="middle" font-weight="700" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">Δl = ±1,  Δm = 0, ±1</text>
+<text x="771.0" y="178" font-size="19" fill="#1f4e79" text-anchor="middle" font-weight="700">電気双極子 (E1) 選択則</text>
+<text x="771.0" y="208" font-size="22" fill="#0a1929" text-anchor="middle" font-weight="700" font-family="Georgia, 'STIX Two Text', 'Times New Roman', serif">Δl = ±1,  Δm = 0, ±1</text>
 <line x1="677" y1="238" x2="717" y2="238" stroke="#1f4e79" stroke-width="2.8" marker-end="url(#h-al)"/>
-<text x="727" y="243" font-size="14" fill="#0a1929" text-anchor="start">許容 (E1)</text>
+<text x="727" y="243" font-size="17" fill="#0a1929" text-anchor="start">許容 (E1)</text>
 <line x1="677" y1="264" x2="717" y2="264" stroke="#8a1f3e" stroke-width="2.6" stroke-dasharray="6,5" marker-end="url(#h-fb)"/>
-<text x="727" y="269" font-size="14" fill="#0a1929" text-anchor="start">禁制 → M1/E2/2光子</text>
-<text x="771.0" y="292" font-size="12" fill="#5a6a7a" text-anchor="middle">強度 ~ α² で E1 の 1万分の1</text>
-<text x="450.0" y="618" font-size="13" fill="#8a99a8" text-anchor="middle">水素ではエネルギーは n だけで決まる（l 縮退）。多電子原子ではこの縮退が解ける（§22.6）。</text>
+<text x="727" y="269" font-size="17" fill="#0a1929" text-anchor="start">禁制 → M1/E2/2光子</text>
+<text x="771.0" y="292" font-size="15" fill="#5a6a7a" text-anchor="middle">強度 ~ α² で E1 の 1万分の1</text>
+<text x="450.0" y="618" font-size="16" fill="#8a99a8" text-anchor="middle">水素ではエネルギーは n だけで決まる（l 縮退）。多電子原子ではこの縮退が解ける（§22.6）。</text>
 </svg>
