@@ -18,10 +18,10 @@
 
   <!-- Title -->
   <text x="450" y="40" text-anchor="middle"
-        font-size="23" font-weight="700" fill="#0a1929" letter-spacing="0.06em">
+        font-size="25" font-weight="700" fill="#0a1929" letter-spacing="0.06em">
     k 空間でモードを数える
   </text>
-  <text x="450" y="66" text-anchor="middle" font-size="14" fill="#5a6a7a">
+  <text x="450" y="66" text-anchor="middle" font-size="17" fill="#5a6a7a">
     許されるモード ＝ 間隔 π/L の格子点（断面図）。球殻の体積が ν² を生む
   </text>
 
@@ -44,13 +44,13 @@
           stroke="#0a1929" stroke-width="1.5" marker-end="url(#ks-arrow)"/>
     <line x1="120" y1="460" x2="120" y2="115"
           stroke="#0a1929" stroke-width="1.5" marker-end="url(#ks-arrow)"/>
-    <text x="508" y="465" font-size="15" font-style="italic"
+    <text x="508" y="465" font-size="18" font-style="italic"
           font-family="Georgia, 'Times New Roman', serif">k</text>
-    <text x="517" y="470" font-size="10" font-style="italic"
+    <text x="517" y="470" font-size="13" font-style="italic"
           font-family="Georgia, 'Times New Roman', serif">x</text>
-    <text x="106" y="106" font-size="15" font-style="italic"
+    <text x="106" y="106" font-size="18" font-style="italic"
           font-family="Georgia, 'Times New Roman', serif">k</text>
-    <text x="115" y="111" font-size="10" font-style="italic"
+    <text x="115" y="111" font-size="13" font-style="italic"
           font-family="Georgia, 'Times New Roman', serif">y</text>
 
     <!-- lattice points: spacing 36 px, n_x, n_y = 1..9 -->
@@ -70,18 +70,19 @@
     <line x1="156" y1="440" x2="192" y2="440" stroke="#c25e00" stroke-width="1.5"/>
     <line x1="156" y1="435" x2="156" y2="445" stroke="#c25e00" stroke-width="1.5"/>
     <line x1="192" y1="435" x2="192" y2="445" stroke="#c25e00" stroke-width="1.5"/>
-    <text x="174" y="456" text-anchor="middle" font-size="12" font-weight="600"
+    <text x="174" y="456" text-anchor="middle" font-size="15" font-weight="600"
           fill="#c25e00">π/L</text>
 
-    <!-- labels for arcs -->
-    <text x="332" y="262" font-size="13" font-weight="600" fill="#1f4e79"
-          transform="rotate(-45 332 262)">半径 k の球面（断面）</text>
-    <text x="404" y="170" font-size="12" font-weight="600" fill="#1f4e79">球殻 k 〜 k + dk</text>
-    <line x1="400" y1="176" x2="368" y2="200"
-          stroke="#1f4e79" stroke-width="1" stroke-dasharray="3,3"/>
+    <!-- legend for the two arcs and the shell (placed in empty space, clear of lattice points) -->
+    <line x1="345" y1="162" x2="371" y2="162" stroke="#1f4e79" stroke-width="2.6"/>
+    <text x="378" y="167" font-size="14.5" font-weight="600" fill="#1f4e79">半径 k の球面（実線）</text>
+    <line x1="345" y1="190" x2="371" y2="190" stroke="#1f4e79" stroke-width="1.6" stroke-dasharray="5,4"/>
+    <text x="378" y="195" font-size="14.5" font-weight="600" fill="#1f4e79">半径 k + dk（破線）</text>
+    <rect x="345" y="211" width="26" height="13" fill="#1f4e79" fill-opacity="0.18"/>
+    <text x="378" y="221" font-size="12.5" fill="#5a6a7a">網掛け ＝ 球殻（k 〜 k + dk）</text>
 
     <!-- quadrant note -->
-    <text x="150" y="500" font-size="12" fill="#5a6a7a">
+    <text x="150" y="500" font-size="15" fill="#5a6a7a">
       n_x, n_y, n_z は正の整数のみ → 球全体の 1/8（第一象限）だけを数える
     </text>
   </g>
@@ -93,16 +94,16 @@
     <rect x="540" y="110" width="330" height="360" rx="10"
           fill="#ffffff" stroke="#d8e2ec" stroke-width="1.5"/>
     <text x="705" y="140" text-anchor="middle"
-          font-size="15" font-weight="700" fill="#0a1929">数え上げの組み立て</text>
+          font-size="18" font-weight="700" fill="#0a1929">数え上げの組み立て</text>
 
-    <g font-size="13.5" fill="#0a1929">
+    <g font-size="16.5" fill="#0a1929">
       <circle cx="566" cy="172" r="4" fill="#41576d"/>
       <text x="582" y="177">格子点の密度　V/π³</text>
-      <text x="582" y="195" font-size="11" fill="#5a6a7a">（間隔 π/L の格子、V = L³）</text>
+      <text x="582" y="195" font-size="14" fill="#5a6a7a">（間隔 π/L の格子、V = L³）</text>
 
       <circle cx="566" cy="222" r="4" fill="#1f4e79"/>
       <text x="582" y="227">× 球の体積　(4π/3) k³</text>
-      <text x="582" y="245" font-size="11" fill="#5a6a7a">（波数 k 未満のモードを集める）</text>
+      <text x="582" y="245" font-size="14" fill="#5a6a7a">（波数 k 未満のモードを集める）</text>
 
       <circle cx="566" cy="272" r="4" fill="#c25e00"/>
       <text x="582" y="277">× 1/8　（第一象限のみ）</text>
@@ -113,21 +114,21 @@
 
     <line x1="560" y1="330" x2="850" y2="330" stroke="#d8e2ec" stroke-width="1.5"/>
 
-    <g font-size="14" fill="#0a1929">
+    <g font-size="17" fill="#0a1929">
       <text x="705" y="355" text-anchor="middle">N(&lt;k) = V k³ / 3π²</text>
-      <text x="705" y="383" text-anchor="middle" font-size="12" fill="#5a6a7a">
+      <text x="705" y="383" text-anchor="middle" font-size="15" fill="#5a6a7a">
         k = 2πν/c を代入し、ν で微分すると
       </text>
-      <text x="705" y="415" text-anchor="middle" font-size="16" font-weight="700"
+      <text x="705" y="415" text-anchor="middle" font-size="19" font-weight="700"
             fill="#1f4e79">g(ν) = 8πν²/c³</text>
-      <text x="705" y="443" text-anchor="middle" font-size="12" fill="#5a6a7a">
+      <text x="705" y="443" text-anchor="middle" font-size="15" fill="#5a6a7a">
         ν² の起源 ＝ 球殻の体積 4πk²dk（三次元空間）
       </text>
     </g>
   </g>
 
   <!-- Footer -->
-  <text x="450" y="535" text-anchor="middle" font-size="11" fill="#8a99a8">
+  <text x="450" y="535" text-anchor="middle" font-size="14" fill="#8a99a8">
     周期境界条件（間隔 2π/L・全象限）で数えても同じ g(ν) に達する ― §14.2 の「問い」参照。第8・9章で借用した式がここで完結する
   </text>
 </svg>
