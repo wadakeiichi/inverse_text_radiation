@@ -506,6 +506,7 @@ window.Quarto = {
   <li><a href="#sec-thermal-equilibrium-max-entropy" id="toc-sec-thermal-equilibrium-max-entropy" class="nav-link" data-scroll-target="#sec-thermal-equilibrium-max-entropy">6.4 最大エントロピー原理 ― 平衡分布の決定</a></li>
   <li><a href="#sec-thermal-equilibrium-radiation" id="toc-sec-thermal-equilibrium-radiation" class="nav-link" data-scroll-target="#sec-thermal-equilibrium-radiation">6.5 放射場を含む熱平衡 ― 光子と物質の共通の温度</a></li>
   <li><a href="#sec-thermal-equilibrium-detailed-balance" id="toc-sec-thermal-equilibrium-detailed-balance" class="nav-link" data-scroll-target="#sec-thermal-equilibrium-detailed-balance">6.6 詳細釣り合い ― 平衡の局所判定</a></li>
+  <li><a href="#sec-thermal-equilibrium-mass-action" id="toc-sec-thermal-equilibrium-mass-action" class="nav-link" data-scroll-target="#sec-thermal-equilibrium-mass-action">6.7 質量作用の法則 ― 励起・電離・解離を貫く一つの平衡</a></li>
   <li><a href="#sec-thermal-equilibrium-summary" id="toc-sec-thermal-equilibrium-summary" class="nav-link" data-scroll-target="#sec-thermal-equilibrium-summary">この章で何がわかったか</a></li>
   <li><a href="#sec-thermal-equilibrium-exercises" id="toc-sec-thermal-equilibrium-exercises" class="nav-link" data-scroll-target="#sec-thermal-equilibrium-exercises">演習問題</a>
   <ul class="collapse">
@@ -792,6 +793,83 @@ n_i\, W_{i \to j} = n_j\, W_{j \to i}
 </div>
 <div class="callout-body-container callout-body">
 <p><strong>方針</strong>：本章では詳細釣り合いを定義しただけだが、第11章で Einstein がこの原理を放射と物質の相互作用に適用し、<strong>プランク分布を再導出</strong>する場面が出てくる。Einstein の議論は、本書の中心地図のプランク関数を「もう一つの逆引きルート」で立ち上げる重要な道筋である。</p>
+</div>
+</div>
+</section>
+<section id="sec-thermal-equilibrium-mass-action" class="level2">
+<h2 class="anchored" data-anchor-id="sec-thermal-equilibrium-mass-action">6.7 質量作用の法則 ― 励起・電離・解離を貫く一つの平衡</h2>
+<p>[本文目安：B4-M1｜導出：M1]</p>
+<p>詳細釣り合い <a href="#eq-detailed-balance" class="quarto-xref">式&nbsp;<span>9.5</span></a> が「準位ペアごとの釣り合い」だったのに対し、もう一つ、平衡にある<strong>組成</strong>そのものを決める強力な見方がある。それが<strong>質量作用の法則</strong>（<strong>law of mass action</strong>）である。これを使うと、一見ばらばらに見える三つの平衡 ― <strong>励起</strong>（準位間）・<strong>電離</strong>（原子⇄イオン+電子）・<strong>解離</strong>（分子⇄原子）― が、すべて<strong>同じ一つの式</strong>から出ることがわかる。</p>
+<p><strong>反応として書く。</strong>　宇宙では物質が分子・原子・イオン・各励起準位という様々な「形」で混在する。これらの間の平衡を、形式的な反応</p>
+<p><span id="eq-reaction-general"><span class="math display">
+\sum_i a_i A_i = 0
+\tag{9.6}</span></span></p>
+<p>で表す（<span class="math inline">A_i</span> は反応に関わる粒子種、<span class="math inline">a_i</span> は化学量数。実際に反応が進む必要はなく、各形のエネルギーの高さだけが問題になる）。例：</p>
+<ul>
+<li>解離　<span class="math inline">2\mathrm{H}-\mathrm{H_2}=0</span></li>
+<li>電離　<span class="math inline">\mathrm{H}-\mathrm{H^+}-e=0</span></li>
+<li>励起　準位 <span class="math inline">j</span> と準位 <span class="math inline">i</span> の間の遷移 <span class="math inline">\mathrm{H}_i-\mathrm{H}_j=0</span></li>
+</ul>
+<p><strong>平衡条件。</strong>　孤立系（体積一定・エネルギー一定）の熱平衡ではエントロピーが極大になる。これを各種の粒子数 <span class="math inline">N_i</span> の変化 <span class="math inline">dN_i=a_i\,dR</span>（<span class="math inline">R</span> は反応の進み）について書くと、各種の<strong>化学ポテンシャル</strong> <span class="math inline">\mu_i</span> の間に</p>
+<p><span id="eq-chemical-equilibrium"><span class="math display">
+\sum_i a_i \mu_i = 0
+\tag{9.7}</span></span></p>
+<p>が成り立つ（詳細釣り合いが「ミクロな遷移率の釣り合い」なら、これは「自由エネルギー最小＝化学ポテンシャルの釣り合い」という熱力学的表現である）。</p>
+<p><strong>理想気体の化学ポテンシャルを代入。</strong>　天体ではたいてい理想気体でよく、</p>
+<p><span id="eq-chemical-potential"><span class="math display">
+\mu_i = k_B T \ln\!\frac{n_i}{n_{Q,i}\,Z_i},\qquad
+n_{Q,i}=\left(\frac{2\pi m_i k_B T}{h^2}\right)^{3/2}
+\tag{9.8}</span></span></p>
+<p>である（<span class="math inline">n_{Q,i}</span> は<strong>量子濃度</strong>、<span class="math inline">Z_i</span> は内部状態の分配関数）。これを <a href="#eq-chemical-equilibrium" class="quarto-xref">式&nbsp;<span>9.7</span></a> に入れて整理すると、数密度 <span class="math inline">n_i</span> の間の関係</p>
+<p><span id="eq-mass-action"><span class="math display">
+\boxed{\;\prod_i n_i^{\,a_i} = K(T)\;},\qquad
+K(T)=\prod_i \left(n_{Q,i}\,Z_i\right)^{a_i}
+\tag{9.9}</span></span></p>
+<p>が得られる。左辺は数密度だけ、右辺の平衡定数 <span class="math inline">K(T)</span> は温度だけの関数 ― これが<strong>質量作用の法則</strong>である。</p>
+<p><strong>三つの平衡は同じ式の特例。</strong>　<a href="#eq-mass-action" class="quarto-xref">式&nbsp;<span>9.9</span></a> に各反応を代入すると、本書の後章で使う基本式がすべて出る：</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>反応</th>
+<th><a href="#eq-mass-action" class="quarto-xref">式&nbsp;<span>9.9</span></a> から出る式</th>
+<th>使う章</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>励起 <span class="math inline">\mathrm{H}_i-\mathrm{H}_j=0</span></td>
+<td><span class="math inline">\dfrac{n_i}{n_j}=\dfrac{g_i}{g_j}\,e^{-(E_i-E_j)/k_BT}</span>（<strong>Boltzmann 分布</strong>）</td>
+<td>第7章 §7.3</td>
+</tr>
+<tr class="even">
+<td>電離 <span class="math inline">\mathrm{H}-\mathrm{H^+}-e=0</span></td>
+<td><span class="math inline">\dfrac{n_{\rm II}\,n_e}{n_{\rm I}}=\dfrac{2Z_{\rm II}}{Z_{\rm I}}\!\left(\dfrac{2\pi m_e k_BT}{h^2}\right)^{3/2}\!e^{-\chi/k_BT}</span>（<strong>Saha の式</strong>）</td>
+<td>第17・20・22章</td>
+</tr>
+<tr class="odd">
+<td>解離 <span class="math inline">2\mathrm{H}-\mathrm{H_2}=0</span></td>
+<td><span class="math inline">\dfrac{n_{\rm H}^2}{n_{\rm H_2}}=\dfrac{(2\pi m_{\rm H}k_BT/h^2)^{3/2}}{Z_{\rm H_2}/Z_{\rm H}^2}\,e^{-D/k_BT}</span>（<strong>解離平衡</strong>）</td>
+<td>第17章 §17.8</td>
+</tr>
+</tbody>
+</table>
+<p>（<span class="math inline">\chi</span> は電離エネルギー、<span class="math inline">D</span> は解離エネルギー。電子のスピン2状態が Saha の因子2に効く。）</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+ノート
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>逆引きの効きどころ</strong>：励起・電離・解離を別々に暗記するのでなく、<a href="#eq-mass-action" class="quarto-xref">式&nbsp;<span>9.9</span></a> 一本から落とす ― これが「背景物理を曖昧にしない」本書の方針そのものである。観測される線の強さ（励起）、電離度（連続吸収やイオン線）、分子バンドの有無（解離）は、すべて同じ質量作用の法則を温度・密度について逆に解く問題になる。具体的応用は第7章（Boltzmann）、第17章（Saha と分子の解離平衡）、第20・22章（イオン・原子の準位）で扱う。</p>
 </div>
 </div>
 <hr>
@@ -1648,201 +1726,257 @@ n_i=\frac{N e^{-\beta E_i}}{\sum_j e^{-\beta E_j}}=\frac{N}{Z}e^{-\beta E_i}.
 <span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a>**方針**：本章では詳細釣り合いを定義しただけだが、第11章で Einstein がこの原理を放射と物質の相互作用に適用し、**プランク分布を再導出**する場面が出てくる。Einstein の議論は、本書の中心地図のプランク関数を「もう一つの逆引きルート」で立ち上げる重要な道筋である。</span>
 <span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a><span class="fu">## 6.7 質量作用の法則 ― 励起・電離・解離を貫く一つの平衡 {#sec-thermal-equilibrium-mass-action}</span></span>
 <span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-thermal-equilibrium-summary .unnumbered}</span></span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B4-M1｜導出：M1</span><span class="co">]</span></span>
 <span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
-<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る**</span>
-<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a>本章で、中心地図 $B_\nu(T)$ の **「式が熱平衡で成り立つ」という条件の中身**が言語化された：</span>
-<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**温度** $T$ は、エントロピーをエネルギーで微分したものの逆数</span>
-<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**熱平衡** は、最大エントロピー状態であり、詳細釣り合いが各遷移ペアで成り立つ</span>
-<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**物質と放射場の完全な熱平衡（CTE）** は、両者が共通の $T$ で結ばれる状態。これは LTE（物質側だけが局所の $T$ で Boltzmann 分布、放射場は自由に流れる）より **強い条件** で、空洞放射や CMB のような閉じた系でのみ厳密に実現される（区別の整理は §6.5）</span>
-<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a>ただし「プランク分布の具体形」 ― 占有因子 $1/(e^{h\nu/kT}-1)$ がなぜこの形なのか ― はまだ示されていない。これには光子が「区別できない Bose 粒子」であることを使う必要がある。</span>
-<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a>**次章へ**：第7章では、まず古典統計（Boltzmann 分布）を立ち上げ、分配関数と熱力学量の関係を整理する。古典統計の枠組みでどこまでわかり、どこで破綻するかを見たうえで、第8章で「光子の統計」へと進む。</span>
-<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a>詳細釣り合い @eq-detailed-balance が「準位ペアごとの釣り合い」だったのに対し、もう一つ、平衡にある**組成**そのものを決める強力な見方がある。それが**質量作用の法則**（**law of mass action**）である。これを使うと、一見ばらばらに見える三つの平衡 ― **励起**（準位間）・**電離**（原子⇄イオン+電子）・**解離**（分子⇄原子）― が、すべて**同じ一つの式**から出ることがわかる。</span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a>**反応として書く。**　宇宙では物質が分子・原子・イオン・各励起準位という様々な「形」で混在する。これらの間の平衡を、形式的な反応</span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>\sum_i a_i A_i = 0</span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a>$$ {#eq-reaction-general}</span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a>で表す（$A_i$ は反応に関わる粒子種、$a_i$ は化学量数。実際に反応が進む必要はなく、各形のエネルギーの高さだけが問題になる）。例：</span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>解離　$2\mathrm{H}-\mathrm{H_2}=0$</span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>電離　$\mathrm{H}-\mathrm{H^+}-e=0$</span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>励起　準位 $j$ と準位 $i$ の間の遷移 $\mathrm{H}_i-\mathrm{H}_j=0$</span>
 <span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-thermal-equilibrium-exercises .unnumbered}</span></span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a>**平衡条件。**　孤立系（体積一定・エネルギー一定）の熱平衡ではエントロピーが極大になる。これを各種の粒子数 $N_i$ の変化 $dN_i=a_i\,dR$（$R$ は反応の進み）について書くと、各種の**化学ポテンシャル** $\mu_i$ の間に</span>
 <span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **解答例** は章末「解答例」にまとめてある（オンライン版では各問のボタンから開く）。まず自力で解いてから開くこと。</span>
-<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 6-1　多重度の最大と「マクロ状態で十分」な理由 {#ex-6-1 .unnumbered}</span></span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a>\sum_i a_i \mu_i = 0</span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>$$ {#eq-chemical-equilibrium}</span>
 <span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>が成り立つ（詳細釣り合いが「ミクロな遷移率の釣り合い」なら、これは「自由エネルギー最小＝化学ポテンシャルの釣り合い」という熱力学的表現である）。</span>
 <span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a>§6.2 は気体分子を左右に分ける多重度 $\Omega(N_L)=\binom{N}{N_L}$ が $N_L=N/2$ で最大になると述べた。これを示し、揺らぎの幅を見積もる。</span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a>**理想気体の化学ポテンシャルを代入。**　天体ではたいてい理想気体でよく、</span>
 <span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Stirling 近似 $\ln N!\simeq N\ln N-N$ を使い、$\ln\Omega(N_L)$ を最大化して $N_L=N/2$ を導け。</span>
-<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$N_L=N/2+x$ のまわりで $\ln\Omega$ を $x$ の2次まで展開し、$\ln\Omega\simeq\ln\Omega_{\max}-\dfrac{2x^2}{N}$ を示せ（分布が幅 $\sim\sqrt{N}$ のガウス型）。</span>
-<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>相対的な揺らぎ $\sqrt{\langle x^2\rangle}/N\sim1/\sqrt{N}$ が、$N\sim10^{23}$ で $10^{-11}$ 程度になることを確かめ、「マクロ状態だけで温度が語れる」理由を述べよ。</span>
-<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§6.2 マクロ状態とミクロ状態</span><span class="co">](#sec-thermal-equilibrium-macro-micro)</span>／揺らぎの一般論は<span class="co">[</span><span class="ot">§7.4</span><span class="co">](../part3/07-statistical-mechanics.qmd#sec-statistical-mechanics-fluctuations)</span>（<span class="co">[</span><span class="ot">演習 7-3</span><span class="co">](../part3/07-statistical-mechanics.qmd#ex-7-3)</span>）。</span>
-<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
-<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 6-1）</span><span class="co">](#sol-6-1)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
-<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 6-2　エントロピーの加法性と温度 1/T=dS/dE {#ex-6-2 .unnumbered}</span></span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>\mu_i = k_B T \ln<span class="sc">\!</span>\frac{n_i}{n_{Q,i}\,Z_i},\qquad</span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a>n_{Q,i}=\left(\frac{2\pi m_i k_B T}{h^2}\right)^{3/2}</span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a>$$ {#eq-chemical-potential}</span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a>である（$n_{Q,i}$ は**量子濃度**、$Z_i$ は内部状態の分配関数）。これを @eq-chemical-equilibrium に入れて整理すると、数密度 $n_i$ の間の関係</span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>\boxed{\;\prod_i n_i^{\,a_i} = K(T)\;},\qquad</span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a>K(T)=\prod_i \left(n_{Q,i}\,Z_i\right)^{a_i}</span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>$$ {#eq-mass-action}</span>
 <span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>が得られる。左辺は数密度だけ、右辺の平衡定数 $K(T)$ は温度だけの関数 ― これが**質量作用の法則**である。</span>
 <span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a>§6.3 はエントロピー $S=k_B\ln\Omega$ の加法性と温度の定義 $1/T=(\partial S/\partial E)_{V,N}$ を与えた。両方を導く。</span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a>**三つの平衡は同じ式の特例。**　@eq-mass-action に各反応を代入すると、本書の後章で使う基本式がすべて出る：</span>
 <span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>独立な二系 $\Omega=\Omega_1\Omega_2$ から $S=S_1+S_2$（加法性）を示せ。</span>
-<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>エネルギー $E=E_1+E_2$ を分け合う二系を熱接触させ、全多重度 $\Omega_1(E_1)\Omega_2(E_2)$ を最大化する。$\partial S_1/\partial E_1=\partial S_2/\partial E_2$ が平衡条件であることを示せ。</span>
-<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>この共通の値を $1/T$ と定義する根拠（「温度が等しいとき平衡」という熱力学的描像との整合）を述べよ。</span>
-<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§6.3 エントロピー</span><span class="co">](#sec-thermal-equilibrium-entropy)</span>、<span class="co">[</span><span class="ot">§6.1 温度と熱平衡</span><span class="co">](#sec-thermal-equilibrium-temperature)</span>。</span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 反応 <span class="pp">|</span> @eq-mass-action から出る式 <span class="pp">|</span> 使う章 <span class="pp">|</span></span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 励起 $\mathrm{H}_i-\mathrm{H}_j=0$ <span class="pp">|</span> $\dfrac{n_i}{n_j}=\dfrac{g_i}{g_j}\,e^{-(E_i-E_j)/k_BT}$（**Boltzmann 分布**） <span class="pp">|</span> 第7章 §7.3 <span class="pp">|</span></span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 電離 $\mathrm{H}-\mathrm{H^+}-e=0$ <span class="pp">|</span> $\dfrac{n_{\rm II}\,n_e}{n_{\rm I}}=\dfrac{2Z_{\rm II}}{Z_{\rm I}}<span class="sc">\!</span>\left(\dfrac{2\pi m_e k_BT}{h^2}\right)^{3/2}<span class="sc">\!</span>e^{-\chi/k_BT}$（**Saha の式**） <span class="pp">|</span> 第17・20・22章 <span class="pp">|</span></span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 解離 $2\mathrm{H}-\mathrm{H_2}=0$ <span class="pp">|</span> $\dfrac{n_{\rm H}^2}{n_{\rm H_2}}=\dfrac{(2\pi m_{\rm H}k_BT/h^2)^{3/2}}{Z_{\rm H_2}/Z_{\rm H}^2}\,e^{-D/k_BT}$（**解離平衡**） <span class="pp">|</span> 第17章 §17.8 <span class="pp">|</span></span>
 <span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
-<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 6-2）</span><span class="co">](#sol-6-2)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
-<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 6-3　最大エントロピーから Boltzmann 分布を導く {#ex-6-3 .unnumbered}</span></span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a>（$\chi$ は電離エネルギー、$D$ は解離エネルギー。電子のスピン2状態が Saha の因子2に効く。）</span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a>**逆引きの効きどころ**：励起・電離・解離を別々に暗記するのでなく、@eq-mass-action 一本から落とす ― これが「背景物理を曖昧にしない」本書の方針そのものである。観測される線の強さ（励起）、電離度（連続吸収やイオン線）、分子バンドの有無（解離）は、すべて同じ質量作用の法則を温度・密度について逆に解く問題になる。具体的応用は第7章（Boltzmann）、第17章（Saha と分子の解離平衡）、第20・22章（イオン・原子の準位）で扱う。</span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a>§6.4 は Lagrange 未定乗数法で $n_i\propto f(\beta E_i,\alpha)$ になると述べた。識別可能粒子（古典）について具体的に実行する。準位 $<span class="sc">\{</span>E_i<span class="sc">\}</span>$ に $<span class="sc">\{</span>n_i<span class="sc">\}</span>$ 個を配る多重度 $\Omega=\dfrac{N!}{\prod_i n_i!}$。</span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-thermal-equilibrium-summary .unnumbered}</span></span>
 <span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$\ln\Omega$ に Stirling を使い、制約 $\sum n_i=N$、$\sum n_i E_i=E$ のもとで $\dfrac{\partial}{\partial n_i}<span class="co">[</span><span class="ot">\ln\Omega-\alpha\sum n_j-\beta\sum n_j E_j</span><span class="co">]</span>=0$ を解いて $n_i\propto e^{-\beta E_i}$ を導け。</span>
-<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>規格化して $n_i=\dfrac{N e^{-\beta E_i}}{\sum_j e^{-\beta E_j}}$ を示し、分配関数 $Z=\sum_j e^{-\beta E_j}$ が分母に現れることを確認せよ。</span>
-<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>$\beta=1/k_BT$ が問題 6-2 の温度定義と整合する理由を一言で。</span>
-<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§6.4 最大エントロピー原理</span><span class="co">](#sec-thermal-equilibrium-max-entropy)</span>／分配関数の活用は<span class="co">[</span><span class="ot">§7.2</span><span class="co">](../part3/07-statistical-mechanics.qmd#sec-statistical-mechanics-partition)</span>、Bose 版は<span class="co">[</span><span class="ot">§8.3</span><span class="co">](../part3/08-photon-statistics.qmd#sec-photon-statistics-bose-einstein)</span>（<span class="co">[</span><span class="ot">演習 8-2</span><span class="co">](../part3/08-photon-statistics.qmd#ex-8-2)</span>）。</span>
-<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
-<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 6-3）</span><span class="co">](#sol-6-3)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
-<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 6-4　詳細釣り合いと遷移率の比 {#ex-6-4 .unnumbered}</span></span>
-<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る**</span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>本章で、中心地図 $B_\nu(T)$ の **「式が熱平衡で成り立つ」という条件の中身**が言語化された：</span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**温度** $T$ は、エントロピーをエネルギーで微分したものの逆数</span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**熱平衡** は、最大エントロピー状態であり、詳細釣り合いが各遷移ペアで成り立つ</span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**物質と放射場の完全な熱平衡（CTE）** は、両者が共通の $T$ で結ばれる状態。これは LTE（物質側だけが局所の $T$ で Boltzmann 分布、放射場は自由に流れる）より **強い条件** で、空洞放射や CMB のような閉じた系でのみ厳密に実現される（区別の整理は §6.5）</span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a>ただし「プランク分布の具体形」 ― 占有因子 $1/(e^{h\nu/kT}-1)$ がなぜこの形なのか ― はまだ示されていない。これには光子が「区別できない Bose 粒子」であることを使う必要がある。</span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>**次章へ**：第7章では、まず古典統計（Boltzmann 分布）を立ち上げ、分配関数と熱力学量の関係を整理する。古典統計の枠組みでどこまでわかり、どこで破綻するかを見たうえで、第8章で「光子の統計」へと進む。</span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a>§6.6 は詳細釣り合い $n_i W_{i\to j}=n_j W_{j\to i}$ を導入した。これと Boltzmann 分布を組み合わせる。</span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-thermal-equilibrium-exercises .unnumbered}</span></span>
 <span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>熱平衡で $n_i/n_j=(g_i/g_j)e^{-(E_i-E_j)/k_BT}$ を使い、遷移率の比 $W_{i\to j}/W_{j\to i}$ を求めよ。</span>
-<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>「全粒子の正味流れがゼロ」という弱い条件と、「各ペアで個別に釣り合う」詳細釣り合いの違いを、3状態を巡回する流れ（$1\to2\to3\to1$）を例に説明せよ。</span>
-<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>この原理が第11章で Einstein 係数の関係式を導くのにどう使われるか、一言で予告せよ。</span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **解答例** は章末「解答例」にまとめてある（オンライン版では各問のボタンから開く）。まず自力で解いてから開くこと。</span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 6-1　多重度の最大と「マクロ状態で十分」な理由 {#ex-6-1 .unnumbered}</span></span>
 <span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§6.6 詳細釣り合い</span><span class="co">](#sec-thermal-equilibrium-detailed-balance)</span>／Einstein への応用は<span class="co">[</span><span class="ot">§11.3</span><span class="co">](../part4/11-einstein-method.qmd#sec-einstein-method-detailed-balance)</span>（<span class="co">[</span><span class="ot">演習 11-1</span><span class="co">](../part4/11-einstein-method.qmd#ex-11-1)</span>）、Boltzmann 比は<span class="co">[</span><span class="ot">§7.3</span><span class="co">](../part3/07-statistical-mechanics.qmd#sec-statistical-mechanics-boltzmann)</span>。</span>
+<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
 <span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
-<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 6-4）</span><span class="co">](#sol-6-4)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
-<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a><span class="fu">## 解答例 {#sec-thermal-equilibrium-solutions .unnumbered}</span></span>
+<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a>§6.2 は気体分子を左右に分ける多重度 $\Omega(N_L)=\binom{N}{N_L}$ が $N_L=N/2$ で最大になると述べた。これを示し、揺らぎの幅を見積もる。</span>
+<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Stirling 近似 $\ln N!\simeq N\ln N-N$ を使い、$\ln\Omega(N_L)$ を最大化して $N_L=N/2$ を導け。</span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$N_L=N/2+x$ のまわりで $\ln\Omega$ を $x$ の2次まで展開し、$\ln\Omega\simeq\ln\Omega_{\max}-\dfrac{2x^2}{N}$ を示せ（分布が幅 $\sim\sqrt{N}$ のガウス型）。</span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>相対的な揺らぎ $\sqrt{\langle x^2\rangle}/N\sim1/\sqrt{N}$ が、$N\sim10^{23}$ で $10^{-11}$ 程度になることを確かめ、「マクロ状態だけで温度が語れる」理由を述べよ。</span>
 <span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a>各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。</span>
+<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§6.2 マクロ状態とミクロ状態</span><span class="co">](#sec-thermal-equilibrium-macro-micro)</span>／揺らぎの一般論は<span class="co">[</span><span class="ot">§7.4</span><span class="co">](../part3/07-statistical-mechanics.qmd#sec-statistical-mechanics-fluctuations)</span>（<span class="co">[</span><span class="ot">演習 7-3</span><span class="co">](../part3/07-statistical-mechanics.qmd#ex-7-3)</span>）。</span>
 <span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
-<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">問題 6-1</span><span class="co">](#sol-6-1)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 6-2</span><span class="co">](#sol-6-2)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 6-3</span><span class="co">](#sol-6-3)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 6-4</span><span class="co">](#sol-6-4)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 6-1）</span><span class="co">](#sol-6-1)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
 <span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a>::: {#sol-6-1 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-6-1-label"}</span>
-<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
-<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 6-1）**</span><span class="co">]</span>{#sol-6-1-label .offcanvas-title}</span>
-<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
-<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
-<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a>**(1)** $\ln\Omega=\ln N!-\ln N_L!-\ln(N-N_L)!$。Stirling で微分（$N$ 固定）：</span>
-<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>\frac{d\ln\Omega}{dN_L}=-\ln N_L+\ln(N-N_L)=\ln\frac{N-N_L}{N_L}=0\ \Rightarrow\ N_L=N-N_L\ \Rightarrow\ N_L=\frac N2.</span>
-<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 6-2　エントロピーの加法性と温度 1/T=dS/dE {#ex-6-2 .unnumbered}</span></span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a>§6.3 はエントロピー $S=k_B\ln\Omega$ の加法性と温度の定義 $1/T=(\partial S/\partial E)_{V,N}$ を与えた。両方を導く。</span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>独立な二系 $\Omega=\Omega_1\Omega_2$ から $S=S_1+S_2$（加法性）を示せ。</span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>エネルギー $E=E_1+E_2$ を分け合う二系を熱接触させ、全多重度 $\Omega_1(E_1)\Omega_2(E_2)$ を最大化する。$\partial S_1/\partial E_1=\partial S_2/\partial E_2$ が平衡条件であることを示せ。</span>
+<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>この共通の値を $1/T$ と定義する根拠（「温度が等しいとき平衡」という熱力学的描像との整合）を述べよ。</span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§6.3 エントロピー</span><span class="co">](#sec-thermal-equilibrium-entropy)</span>、<span class="co">[</span><span class="ot">§6.1 温度と熱平衡</span><span class="co">](#sec-thermal-equilibrium-temperature)</span>。</span>
 <span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a>**(2)** $N_L=N/2+x$、$N_R=N/2-x$。$\ln\Omega=N\ln N-N_L\ln N_L-N_R\ln N_R$（定数項略）。2次まで展開すると、各 $\ln(N/2\pm x)\simeq\ln(N/2)\pm\frac{2x}{N}-\frac{2x^2}{N^2}$ を使って整理し</span>
-<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a>\ln\Omega\simeq\ln\Omega_{\max}-\frac{2x^2}{N}.</span>
-<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 6-2）</span><span class="co">](#sol-6-2)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 6-3　最大エントロピーから Boltzmann 分布を導く {#ex-6-3 .unnumbered}</span></span>
 <span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a>すなわち $\Omega\propto e^{-2x^2/N}$。これはガウス型で標準偏差 $\sigma_x=\sqrt{N}/2$。</span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆☆ </span><span class="co">] [tag:導出補完]</span></span>
 <span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a>**(3)** $\sqrt{\langle x^2\rangle}=\sigma_x=\sqrt N/2$ ゆえ相対揺らぎ $\sigma_x/N=1/(2\sqrt N)\sim1/\sqrt N$。$N=10^{23}$ で $\sim10^{-11.5}$。観測誤差よりはるかに小さく、ほぼすべてのミクロ状態が $N_L\simeq N/2$ のマクロ状態に集中する。だからマクロ状態（最大多重度の状態）だけで物理を語れる。</span>
+<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a>§6.4 は Lagrange 未定乗数法で $n_i\propto f(\beta E_i,\alpha)$ になると述べた。識別可能粒子（古典）について具体的に実行する。準位 $<span class="sc">\{</span>E_i<span class="sc">\}</span>$ に $<span class="sc">\{</span>n_i<span class="sc">\}</span>$ 個を配る多重度 $\Omega=\dfrac{N!}{\prod_i n_i!}$。</span>
 <span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a>**答え**：$N_L=N/2$ で最大、$\Omega\propto e^{-2x^2/N}$（幅 $\sqrt N/2$）。相対揺らぎ $\sim1/\sqrt N\sim10^{-11}$ ゆえマクロ状態で十分。</span>
-<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$\ln\Omega$ に Stirling を使い、制約 $\sum n_i=N$、$\sum n_i E_i=E$ のもとで $\dfrac{\partial}{\partial n_i}<span class="co">[</span><span class="ot">\ln\Omega-\alpha\sum n_j-\beta\sum n_j E_j</span><span class="co">]</span>=0$ を解いて $n_i\propto e^{-\beta E_i}$ を導け。</span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>規格化して $n_i=\dfrac{N e^{-\beta E_i}}{\sum_j e^{-\beta E_j}}$ を示し、分配関数 $Z=\sum_j e^{-\beta E_j}$ が分母に現れることを確認せよ。</span>
+<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>$\beta=1/k_BT$ が問題 6-2 の温度定義と整合する理由を一言で。</span>
 <span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a>::: {#sol-6-2 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-6-2-label"}</span>
-<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
-<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 6-2）**</span><span class="co">]</span>{#sol-6-2-label .offcanvas-title}</span>
-<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§6.4 最大エントロピー原理</span><span class="co">](#sec-thermal-equilibrium-max-entropy)</span>／分配関数の活用は<span class="co">[</span><span class="ot">§7.2</span><span class="co">](../part3/07-statistical-mechanics.qmd#sec-statistical-mechanics-partition)</span>、Bose 版は<span class="co">[</span><span class="ot">§8.3</span><span class="co">](../part3/08-photon-statistics.qmd#sec-photon-statistics-bose-einstein)</span>（<span class="co">[</span><span class="ot">演習 8-2</span><span class="co">](../part3/08-photon-statistics.qmd#ex-8-2)</span>）。</span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 6-3）</span><span class="co">](#sol-6-3)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
 <span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
-<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a>**(1)** 独立な二系の全多重度は積 $\Omega=\Omega_1\Omega_2$。対数をとると $S=k_B\ln(\Omega_1\Omega_2)=k_B\ln\Omega_1+k_B\ln\Omega_2=S_1+S_2$。エントロピーは加法的（示量的）。</span>
+<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 6-4　詳細釣り合いと遷移率の比 {#ex-6-4 .unnumbered}</span></span>
 <span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a>**(2)** $E_1$ を変数に全エントロピー $S=S_1(E_1)+S_2(E-E_1)$ を最大化：</span>
+<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
 <span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a>\frac{dS}{dE_1}=\frac{\partial S_1}{\partial E_1}-\frac{\partial S_2}{\partial E_2}=0\ \Rightarrow\ \frac{\partial S_1}{\partial E_1}=\frac{\partial S_2}{\partial E_2}.</span>
-<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a>（$dE_2/dE_1=-1$ を使った。）平衡では両系で $\partial S/\partial E$ が一致する。</span>
+<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a>§6.6 は詳細釣り合い $n_i W_{i\to j}=n_j W_{j\to i}$ を導入した。これと Boltzmann 分布を組み合わせる。</span>
+<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>熱平衡で $n_i/n_j=(g_i/g_j)e^{-(E_i-E_j)/k_BT}$ を使い、遷移率の比 $W_{i\to j}/W_{j\to i}$ を求めよ。</span>
+<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>「全粒子の正味流れがゼロ」という弱い条件と、「各ペアで個別に釣り合う」詳細釣り合いの違いを、3状態を巡回する流れ（$1\to2\to3\to1$）を例に説明せよ。</span>
+<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>この原理が第11章で Einstein 係数の関係式を導くのにどう使われるか、一言で予告せよ。</span>
 <span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a>**(3)** 熱力学では「二系を接触させて正味のエネルギー流が止まる＝温度が等しい」が平衡。(2) の共通量 $\partial S/\partial E$ がまさに平衡で一致する量なので、これを温度と結びつけるのが自然。次元と符号（エネルギーを加えるとエントロピーが増える）から $1/T\equiv\partial S/\partial E$ と定義すると、熱力学の温度と一致する。</span>
+<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§6.6 詳細釣り合い</span><span class="co">](#sec-thermal-equilibrium-detailed-balance)</span>／Einstein への応用は<span class="co">[</span><span class="ot">§11.3</span><span class="co">](../part4/11-einstein-method.qmd#sec-einstein-method-detailed-balance)</span>（<span class="co">[</span><span class="ot">演習 11-1</span><span class="co">](../part4/11-einstein-method.qmd#ex-11-1)</span>）、Boltzmann 比は<span class="co">[</span><span class="ot">§7.3</span><span class="co">](../part3/07-statistical-mechanics.qmd#sec-statistical-mechanics-boltzmann)</span>。</span>
 <span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a>**答え**：$\Omega=\Omega_1\Omega_2\Rightarrow S=S_1+S_2$。平衡で $\partial S_1/\partial E_1=\partial S_2/\partial E_2$、これを $1/T$ と定義。</span>
-<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 6-4）</span><span class="co">](#sol-6-4)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
 <span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a>::: {#sol-6-3 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-6-3-label"}</span>
-<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
-<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 6-3）**</span><span class="co">]</span>{#sol-6-3-label .offcanvas-title}</span>
-<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
-<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
-<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a>**(1)** $\ln\Omega=\ln N!-\sum_i\ln n_i!\simeq N\ln N-N-\sum_i(n_i\ln n_i-n_i)$。$n_i$ で微分すると $\partial\ln\Omega/\partial n_i=-\ln n_i$。変分条件：</span>
+<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a><span class="fu">## 解答例 {#sec-thermal-equilibrium-solutions .unnumbered}</span></span>
+<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a>各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。</span>
+<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">問題 6-1</span><span class="co">](#sol-6-1)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 6-2</span><span class="co">](#sol-6-2)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 6-3</span><span class="co">](#sol-6-3)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 6-4</span><span class="co">](#sol-6-4)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a>-\ln n_i-\alpha-\beta E_i=0\ \Rightarrow\ \ln n_i=-\alpha-\beta E_i\ \Rightarrow\ n_i=e^{-\alpha}e^{-\beta E_i}\propto e^{-\beta E_i}.</span>
-<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a>**(2)** $\sum_i n_i=N$ より $e^{-\alpha}\sum_j e^{-\beta E_j}=N$、よって $e^{-\alpha}=N/Z$、$Z=\sum_j e^{-\beta E_j}$。したがって</span>
-<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a>n_i=\frac{N e^{-\beta E_i}}{\sum_j e^{-\beta E_j}}=\frac{N}{Z}e^{-\beta E_i}.</span>
+<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a>::: {#sol-6-1 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-6-1-label"}</span>
+<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 6-1）**</span><span class="co">]</span>{#sol-6-1-label .offcanvas-title}</span>
+<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a>**(1)** $\ln\Omega=\ln N!-\ln N_L!-\ln(N-N_L)!$。Stirling で微分（$N$ 固定）：</span>
+<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a>分母にちょうど分配関数 $Z$ が現れる。</span>
+<span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a>\frac{d\ln\Omega}{dN_L}=-\ln N_L+\ln(N-N_L)=\ln\frac{N-N_L}{N_L}=0\ \Rightarrow\ N_L=N-N_L\ \Rightarrow\ N_L=\frac N2.</span>
+<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a>**(3)** エネルギー制約の Lagrange 乗数 $\beta$ は、エントロピー最大化で「エネルギーを1単位動かしたときのエントロピー変化」に対応する。これは問題 6-2 の $1/T=\partial S/\partial E$ そのもので、$\beta=1/k_BT$ と同定される。</span>
+<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a>**(2)** $N_L=N/2+x$、$N_R=N/2-x$。$\ln\Omega=N\ln N-N_L\ln N_L-N_R\ln N_R$（定数項略）。2次まで展開すると、各 $\ln(N/2\pm x)\simeq\ln(N/2)\pm\frac{2x}{N}-\frac{2x^2}{N^2}$ を使って整理し</span>
 <span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a>**答え**：変分で $n_i\propto e^{-\beta E_i}$、規格化で $n_i=(N/Z)e^{-\beta E_i}$、$Z=\sum e^{-\beta E_j}$。$\beta=1/k_BT$ は温度定義と整合。</span>
-<span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a>\ln\Omega\simeq\ln\Omega_{\max}-\frac{2x^2}{N}.</span>
+<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-397"><a href="#cb1-397" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a>::: {#sol-6-4 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-6-4-label"}</span>
-<span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
-<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 6-4）**</span><span class="co">]</span>{#sol-6-4-label .offcanvas-title}</span>
-<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
-<span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
-<span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a>**(1)** 詳細釣り合いから $W_{i\to j}/W_{j\to i}=n_j/n_i$。Boltzmann 比を代入：</span>
+<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a>すなわち $\Omega\propto e^{-2x^2/N}$。これはガウス型で標準偏差 $\sigma_x=\sqrt{N}/2$。</span>
+<span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a>**(3)** $\sqrt{\langle x^2\rangle}=\sigma_x=\sqrt N/2$ ゆえ相対揺らぎ $\sigma_x/N=1/(2\sqrt N)\sim1/\sqrt N$。$N=10^{23}$ で $\sim10^{-11.5}$。観測誤差よりはるかに小さく、ほぼすべてのミクロ状態が $N_L\simeq N/2$ のマクロ状態に集中する。だからマクロ状態（最大多重度の状態）だけで物理を語れる。</span>
+<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a>**答え**：$N_L=N/2$ で最大、$\Omega\propto e^{-2x^2/N}$（幅 $\sqrt N/2$）。相対揺らぎ $\sim1/\sqrt N\sim10^{-11}$ ゆえマクロ状態で十分。</span>
+<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a>\frac{W_{i\to j}}{W_{j\to i}}=\frac{n_j}{n_i}=\frac{g_j}{g_i}e^{-(E_j-E_i)/k_BT}.</span>
-<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a>（上準位ほど占有が少ないので、上向き遷移率と下向き遷移率の比がこの形になる。）</span>
-<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a>**(2)** 「正味流れゼロ」は、たとえば $1\to2\to3\to1$ と一方向に循環する定常流があっても各状態の占有数が一定なら満たされてしまう。詳細釣り合いはより強く、各ペア（$1<span class="sc">\!</span>\leftrightarrow<span class="sc">\!</span>2$, $2<span class="sc">\!</span>\leftrightarrow<span class="sc">\!</span>3$, $3<span class="sc">\!</span>\leftrightarrow<span class="sc">\!</span>1$）で個別に往復が釣り合うことを要求し、そうした循環流を禁じる。これは微視的時間反転対称性の帰結で、真の熱平衡を特徴づける。</span>
+<span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a>::: {#sol-6-2 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-6-2-label"}</span>
+<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 6-2）**</span><span class="co">]</span>{#sol-6-2-label .offcanvas-title}</span>
+<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a>**(1)** 独立な二系の全多重度は積 $\Omega=\Omega_1\Omega_2$。対数をとると $S=k_B\ln(\Omega_1\Omega_2)=k_B\ln\Omega_1+k_B\ln\Omega_2=S_1+S_2$。エントロピーは加法的（示量的）。</span>
 <span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-414"><a href="#cb1-414" aria-hidden="true" tabindex="-1"></a>**(3)** 第11章で Einstein は、放射と二準位原子の吸収・自発放出・誘導放出に詳細釣り合いを課し、$J_\nu=B_\nu$ を要求することで Einstein 関係式 $A_{ul}/B_{ul}=2h\nu^3/c^2$ と $g_lB_{lu}=g_uB_{ul}$ を導く。本問の「遷移率の比」が原子と放射の係数の比に具体化される。</span>
+<span id="cb1-414"><a href="#cb1-414" aria-hidden="true" tabindex="-1"></a>**(2)** $E_1$ を変数に全エントロピー $S=S_1(E_1)+S_2(E-E_1)$ を最大化：</span>
 <span id="cb1-415"><a href="#cb1-415" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-416"><a href="#cb1-416" aria-hidden="true" tabindex="-1"></a>**答え**：$W_{i\to j}/W_{j\to i}=(g_j/g_i)e^{-(E_j-E_i)/k_BT}$。詳細釣り合いは循環流を禁じる強い条件。第11章の Einstein 関係式の基礎。</span>
-<span id="cb1-417"><a href="#cb1-417" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-418"><a href="#cb1-418" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-416"><a href="#cb1-416" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-417"><a href="#cb1-417" aria-hidden="true" tabindex="-1"></a>\frac{dS}{dE_1}=\frac{\partial S_1}{\partial E_1}-\frac{\partial S_2}{\partial E_2}=0\ \Rightarrow\ \frac{\partial S_1}{\partial E_1}=\frac{\partial S_2}{\partial E_2}.</span>
+<span id="cb1-418"><a href="#cb1-418" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-419"><a href="#cb1-419" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-420"><a href="#cb1-420" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-thermal-equilibrium-further .unnumbered}</span></span>
+<span id="cb1-420"><a href="#cb1-420" aria-hidden="true" tabindex="-1"></a>（$dE_2/dE_1=-1$ を使った。）平衡では両系で $\partial S/\partial E$ が一致する。</span>
 <span id="cb1-421"><a href="#cb1-421" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-422"><a href="#cb1-422" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Reif, *Fundamentals of Statistical and Thermal Physics* (McGraw-Hill, 1965) — 熱平衡とエントロピーの古典的扱い</span>
-<span id="cb1-423"><a href="#cb1-423" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Landau &amp; Lifshitz, *Statistical Physics, Part 1* (Pergamon, 3rd ed., 1980) — エントロピー最大原理の体系的扱い</span>
-<span id="cb1-424"><a href="#cb1-424" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Jaynes, "Information Theory and Statistical Mechanics" (*Physical Review* 106, 620, 1957) — 情報理論側からの再構成</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-422"><a href="#cb1-422" aria-hidden="true" tabindex="-1"></a>**(3)** 熱力学では「二系を接触させて正味のエネルギー流が止まる＝温度が等しい」が平衡。(2) の共通量 $\partial S/\partial E$ がまさに平衡で一致する量なので、これを温度と結びつけるのが自然。次元と符号（エネルギーを加えるとエントロピーが増える）から $1/T\equiv\partial S/\partial E$ と定義すると、熱力学の温度と一致する。</span>
+<span id="cb1-423"><a href="#cb1-423" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-424"><a href="#cb1-424" aria-hidden="true" tabindex="-1"></a>**答え**：$\Omega=\Omega_1\Omega_2\Rightarrow S=S_1+S_2$。平衡で $\partial S_1/\partial E_1=\partial S_2/\partial E_2$、これを $1/T$ と定義。</span>
+<span id="cb1-425"><a href="#cb1-425" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-426"><a href="#cb1-426" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-427"><a href="#cb1-427" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-428"><a href="#cb1-428" aria-hidden="true" tabindex="-1"></a>::: {#sol-6-3 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-6-3-label"}</span>
+<span id="cb1-429"><a href="#cb1-429" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-430"><a href="#cb1-430" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 6-3）**</span><span class="co">]</span>{#sol-6-3-label .offcanvas-title}</span>
+<span id="cb1-431"><a href="#cb1-431" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-432"><a href="#cb1-432" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-433"><a href="#cb1-433" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-434"><a href="#cb1-434" aria-hidden="true" tabindex="-1"></a>**(1)** $\ln\Omega=\ln N!-\sum_i\ln n_i!\simeq N\ln N-N-\sum_i(n_i\ln n_i-n_i)$。$n_i$ で微分すると $\partial\ln\Omega/\partial n_i=-\ln n_i$。変分条件：</span>
+<span id="cb1-435"><a href="#cb1-435" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-436"><a href="#cb1-436" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-437"><a href="#cb1-437" aria-hidden="true" tabindex="-1"></a>-\ln n_i-\alpha-\beta E_i=0\ \Rightarrow\ \ln n_i=-\alpha-\beta E_i\ \Rightarrow\ n_i=e^{-\alpha}e^{-\beta E_i}\propto e^{-\beta E_i}.</span>
+<span id="cb1-438"><a href="#cb1-438" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-439"><a href="#cb1-439" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-440"><a href="#cb1-440" aria-hidden="true" tabindex="-1"></a>**(2)** $\sum_i n_i=N$ より $e^{-\alpha}\sum_j e^{-\beta E_j}=N$、よって $e^{-\alpha}=N/Z$、$Z=\sum_j e^{-\beta E_j}$。したがって</span>
+<span id="cb1-441"><a href="#cb1-441" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-442"><a href="#cb1-442" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-443"><a href="#cb1-443" aria-hidden="true" tabindex="-1"></a>n_i=\frac{N e^{-\beta E_i}}{\sum_j e^{-\beta E_j}}=\frac{N}{Z}e^{-\beta E_i}.</span>
+<span id="cb1-444"><a href="#cb1-444" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-445"><a href="#cb1-445" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-446"><a href="#cb1-446" aria-hidden="true" tabindex="-1"></a>分母にちょうど分配関数 $Z$ が現れる。</span>
+<span id="cb1-447"><a href="#cb1-447" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-448"><a href="#cb1-448" aria-hidden="true" tabindex="-1"></a>**(3)** エネルギー制約の Lagrange 乗数 $\beta$ は、エントロピー最大化で「エネルギーを1単位動かしたときのエントロピー変化」に対応する。これは問題 6-2 の $1/T=\partial S/\partial E$ そのもので、$\beta=1/k_BT$ と同定される。</span>
+<span id="cb1-449"><a href="#cb1-449" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-450"><a href="#cb1-450" aria-hidden="true" tabindex="-1"></a>**答え**：変分で $n_i\propto e^{-\beta E_i}$、規格化で $n_i=(N/Z)e^{-\beta E_i}$、$Z=\sum e^{-\beta E_j}$。$\beta=1/k_BT$ は温度定義と整合。</span>
+<span id="cb1-451"><a href="#cb1-451" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-452"><a href="#cb1-452" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-453"><a href="#cb1-453" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-454"><a href="#cb1-454" aria-hidden="true" tabindex="-1"></a>::: {#sol-6-4 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-6-4-label"}</span>
+<span id="cb1-455"><a href="#cb1-455" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-456"><a href="#cb1-456" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 6-4）**</span><span class="co">]</span>{#sol-6-4-label .offcanvas-title}</span>
+<span id="cb1-457"><a href="#cb1-457" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-458"><a href="#cb1-458" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-459"><a href="#cb1-459" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-460"><a href="#cb1-460" aria-hidden="true" tabindex="-1"></a>**(1)** 詳細釣り合いから $W_{i\to j}/W_{j\to i}=n_j/n_i$。Boltzmann 比を代入：</span>
+<span id="cb1-461"><a href="#cb1-461" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-462"><a href="#cb1-462" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-463"><a href="#cb1-463" aria-hidden="true" tabindex="-1"></a>\frac{W_{i\to j}}{W_{j\to i}}=\frac{n_j}{n_i}=\frac{g_j}{g_i}e^{-(E_j-E_i)/k_BT}.</span>
+<span id="cb1-464"><a href="#cb1-464" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-465"><a href="#cb1-465" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-466"><a href="#cb1-466" aria-hidden="true" tabindex="-1"></a>（上準位ほど占有が少ないので、上向き遷移率と下向き遷移率の比がこの形になる。）</span>
+<span id="cb1-467"><a href="#cb1-467" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-468"><a href="#cb1-468" aria-hidden="true" tabindex="-1"></a>**(2)** 「正味流れゼロ」は、たとえば $1\to2\to3\to1$ と一方向に循環する定常流があっても各状態の占有数が一定なら満たされてしまう。詳細釣り合いはより強く、各ペア（$1<span class="sc">\!</span>\leftrightarrow<span class="sc">\!</span>2$, $2<span class="sc">\!</span>\leftrightarrow<span class="sc">\!</span>3$, $3<span class="sc">\!</span>\leftrightarrow<span class="sc">\!</span>1$）で個別に往復が釣り合うことを要求し、そうした循環流を禁じる。これは微視的時間反転対称性の帰結で、真の熱平衡を特徴づける。</span>
+<span id="cb1-469"><a href="#cb1-469" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-470"><a href="#cb1-470" aria-hidden="true" tabindex="-1"></a>**(3)** 第11章で Einstein は、放射と二準位原子の吸収・自発放出・誘導放出に詳細釣り合いを課し、$J_\nu=B_\nu$ を要求することで Einstein 関係式 $A_{ul}/B_{ul}=2h\nu^3/c^2$ と $g_lB_{lu}=g_uB_{ul}$ を導く。本問の「遷移率の比」が原子と放射の係数の比に具体化される。</span>
+<span id="cb1-471"><a href="#cb1-471" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-472"><a href="#cb1-472" aria-hidden="true" tabindex="-1"></a>**答え**：$W_{i\to j}/W_{j\to i}=(g_j/g_i)e^{-(E_j-E_i)/k_BT}$。詳細釣り合いは循環流を禁じる強い条件。第11章の Einstein 関係式の基礎。</span>
+<span id="cb1-473"><a href="#cb1-473" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-474"><a href="#cb1-474" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-475"><a href="#cb1-475" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-476"><a href="#cb1-476" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-thermal-equilibrium-further .unnumbered}</span></span>
+<span id="cb1-477"><a href="#cb1-477" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-478"><a href="#cb1-478" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Reif, *Fundamentals of Statistical and Thermal Physics* (McGraw-Hill, 1965) — 熱平衡とエントロピーの古典的扱い</span>
+<span id="cb1-479"><a href="#cb1-479" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Landau &amp; Lifshitz, *Statistical Physics, Part 1* (Pergamon, 3rd ed., 1980) — エントロピー最大原理の体系的扱い</span>
+<span id="cb1-480"><a href="#cb1-480" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Jaynes, "Information Theory and Statistical Mechanics" (*Physical Review* 106, 620, 1957) — 情報理論側からの再構成</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
