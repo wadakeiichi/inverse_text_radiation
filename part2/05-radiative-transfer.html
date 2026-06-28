@@ -1078,11 +1078,42 @@ K=\tfrac12\!\int_{-1}^{1}\! \mu^2 I\,d\mu
 \frac{dH}{d\tau}=J-S,\qquad \frac{dK}{d\tau}=H
 \tag{8.15}</span></span></p>
 <p>が得られる。ところが未知数は <span class="math inline">J,H,K</span> の<strong>三つ</strong>、式は<strong>二つ</strong>しかない。この「式の数 &lt; 変数の数」を閉じるために、もう一つ関係を仮定する。</p>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>問い</strong>：なぜわざわざ「モーメント」を取るのか？ 何が嬉しく、何を失うのか？</p>
+<p><strong>短答（なぜ取るか）</strong>：もとの輸送方程式 <a href="#eq-transfer-mu" class="quarto-xref">式&nbsp;<span>8.13</span></a> の未知関数 <span class="math inline">I(\tau,\mu)</span> は、深さ <span class="math inline">\tau</span> と方向 <span class="math inline">\mu</span> の<strong>二変数</strong>関数で、そのままでは扱いにくい。<span class="math inline">\mu</span> について積分（モーメントを取る）すると方向依存性が消え、<span class="math inline">\tau</span> だけの少数の量 <span class="math inline">J,H,K</span> に対する<strong>常微分方程式</strong> <a href="#eq-moment-equations" class="quarto-xref">式&nbsp;<span>8.15</span></a> に化ける。しかもこの三つは、私たちが欲しい物理量そのものである ― <span class="math inline">J</span> は平均強度（加熱・電離率を決め、LTE では <span class="math inline">S</span> に等しい）、<span class="math inline">H</span> はエネルギー流束（<span class="math inline">F=4\pi H</span>＝光度）、<span class="math inline">K</span> は放射圧。<strong>詳しい角度分布を捨てる代わりに、観測量・物理量を直接</strong>手に入れられる。放射平衡も「流束一定 <span class="math inline">dH/d\tau=0</span>」と一行で書ける。</p>
+<p><strong>もう一歩（代償）</strong>：モーメント法には<strong>方程式系が閉じない</strong>という弱点がある。0 次の式は 1 次（<span class="math inline">J\to H</span>）を、1 次の式は 2 次（<span class="math inline">H\to K</span>）を呼び、その次は 3 次… と関係が無限に続く。どこかで<strong>打ち切る</strong>には外から関係を一つ足すしかなく、それが次に置く <span class="math inline">K=J/3</span>（エディントン近似）である。この閉包は放射場が等方のときだけ厳密なので、<strong>異方性が強い大気表面付近では近似</strong>にとどまる（たとえば後で得る <span class="math inline">T_0\simeq0.84\,T_\mathrm{e}</span> は、厳密な輸送計算の <span class="math inline">0.811\,T_\mathrm{e}</span> に対し数 % 高めにずれる）。また、モーメントだけからは<strong>特定方向の比強度</strong>（周縁減光など、図 (a) の <span class="math inline">I(\tau,\mu)</span> そのもの）は復元できない ― それが必要なら形式解 <a href="#eq-rt-formal-solution" class="quarto-xref">式&nbsp;<span>8.6</span></a> に戻る。</p>
+</div>
+</div>
+</div>
 <p><strong>エディントン近似</strong>（<strong>Eddington approximation</strong>）は</p>
 <p><span id="eq-eddington-closure"><span class="math display">
 K(\tau)=\frac13\,J(\tau)
 \tag{8.16}</span></span></p>
 <p>と置く。これは放射場が等方 <span class="math inline">I(\tau,\mu)=I(\tau)</span> のとき<strong>厳密</strong>に成り立つ関係で、深部（ほぼ等方）で正しい性質を浅部にも延長する近似である。</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+ノート
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>エディントン近似は「閉じ方」の一つにすぎない</strong>：モーメント方程式を閉じる関係（<strong>クロージャー</strong>、closure）は <span class="math inline">K=J/3</span> だけではなく、目的に応じて様々な選択肢がある。宇宙物理でよく使われる代表例：</p>
+<ul>
+<li><strong>可変エディントン因子</strong>（variable Eddington factor）：比 <span class="math inline">K/J=f_\text{Edd}(\tau)</span> を <span class="math inline">1/3</span> に固定せず、輸送方程式と反復して<strong>自己無撞着</strong>に決める。恒星大気の精密計算で標準的。</li>
+<li><strong>流束制限拡散</strong>（flux-limited diffusion, FLD）：流束を平均強度の勾配で <span class="math inline">\boldsymbol{F}=-D\,\nabla J</span> と拡散的に表し、光学的に薄い領域でも <span class="math inline">|\boldsymbol{F}|\le cE</span>（因果律）を破らないよう「<strong>流束制限子</strong>（flux limiter）」で抑える。放射流体計算で広く使われるが、放射の指向性を持たないため<strong>影を作れない</strong>のが弱点。</li>
+<li><strong>M1 クロージャー</strong>：2 次モーメント（放射圧テンソル）を <span class="math inline">J</span> と <span class="math inline">\boldsymbol{F}</span> の代数関数で表し、<strong>等方拡散</strong>（<span class="math inline">K=J/3</span>）と<strong>自由伝搬</strong>（ビーム）の間を、規格化流束 <span class="math inline">f=|\boldsymbol{F}|/cE</span> で補間する。指向性を扱え単一ビームの影も作れるため、星形成・超新星・降着流・宇宙再電離などの放射流体シミュレーションで主流。交差するビームの扱いは苦手。</li>
+</ul>
+<p>いずれも「方程式系が閉じない」という同じ問題への異なる処方であり、エディントン近似はその<strong>等方拡散極限に対応する最も簡単な一例</strong>である。本書では解析的に <span class="math inline">T(\tau)</span> を出せる利点から <span class="math inline">K=J/3</span> を採るが、現代の数値輻射輸送では FLD や M1 が主役になる場面が多い。</p>
+</div>
+</div>
 <p><strong>温度構造を解く。</strong>　恒星大気では核反応によるエネルギー生成がないので、各深さで放射の正味の吸収・放出が釣り合う（<strong>放射平衡</strong>）。これは <a href="#eq-moment-equations" class="quarto-xref">式&nbsp;<span>8.15</span></a> の第1式で <span class="math inline">dH/d\tau=0</span>、すなわち</p>
 <p><span id="eq-radiative-equilibrium"><span class="math display">
 H=H_0=\text{一定}
@@ -1104,6 +1135,16 @@ J(\tau)=3H_0\!\left(\tau+\tfrac23\right).
 <li><strong><span class="math inline">T(\tau=2/3)=T_\mathrm{e}</span></strong>：有効温度 <span class="math inline">T_\mathrm{e}</span> は「大気表面の温度」ではなく、<strong>光学的深さ <span class="math inline">\tau=2/3</span> の層の温度</strong>である。</li>
 <li><strong>表面はより冷たい</strong>：<span class="math inline">T(0)^4=\tfrac12 T_\mathrm{e}^4</span>、すなわち <span class="math inline">T_0\simeq0.84\,T_\mathrm{e}</span>。大気の一番外側は有効温度より低温である。</li>
 </ul>
+<div id="fig-eddington-atmosphere" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-eddington-atmosphere-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/eddington-atmosphere.svg" class="img-fluid figure-img" style="width:96.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-eddington-atmosphere-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+図&nbsp;8.2: 平面平行大気とエディントン近似。<strong>(a)</strong> 大気を水平な層の重なりとみなし、鉛直内向きに光学的厚さ <span class="math inline">\tau</span> を測る。光線は鉛直から角度 <span class="math inline">\theta</span>（<span class="math inline">\mu=\cos\theta</span>）で進み、向きごとの比強度 <span class="math inline">I(\tau,\mu)</span> を方向で平均・重み付けしたものが 0・1・2 次モーメント <span class="math inline">J,H,K</span> である。放射場は<strong>深部ほど等方</strong>になり（あらゆる向きから同じ光が来る）、そこで <span class="math inline">K=J/3</span> が厳密に成り立つ ― これがエディントン近似の根拠。最表面では上半球からしか光が出ない。<strong>(b)</strong> 解いて得た温度構造 <a href="#eq-eddington-temperature" class="quarto-xref">式&nbsp;<span>8.19</span></a>。有効温度 <span class="math inline">T_\mathrm{e}</span> は表面温度ではなく <strong><span class="math inline">\tau=2/3</span> の層の温度</strong>であり、最表面はそれより冷たい（<span class="math inline">T_0\simeq0.84\,T_\mathrm{e}</span>）。
+</figcaption>
+</figure>
+</div>
 <p><strong>波長依存性を一本化する ― ロスランド平均。</strong>　実際の吸収係数 <span class="math inline">k_\lambda</span> は波長ごとに違う。温度構造 <a href="#eq-eddington-temperature" class="quarto-xref">式&nbsp;<span>8.19</span></a> を一つの <span class="math inline">\tau</span> で書くには、波長を横断した代表値が要る。これが<strong>ロスランド平均吸収係数</strong>（<strong>Rosseland mean opacity</strong>）<span class="math inline">k_R</span> で、</p>
 <p><span id="eq-rosseland-mean"><span class="math display">
 \frac{1}{k_R}=\frac{\displaystyle\int_0^\infty \frac{1}{k_\lambda}\,\frac{\partial B_\lambda}{\partial T}\,d\lambda}{\displaystyle\int_0^\infty \frac{\partial B_\lambda}{\partial T}\,d\lambda}
@@ -2246,337 +2287,357 @@ I_\nu\approx I_\nu(0)(1-\tau)+S_\nu\tau=I_\nu(0)+\tau(S_\nu-I_\nu(0)).
 <span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a>が得られる。ところが未知数は $J,H,K$ の**三つ**、式は**二つ**しかない。この「式の数 &lt; 変数の数」を閉じるために、もう一つ関係を仮定する。</span>
 <span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a>**エディントン近似**（**Eddington approximation**）は</span>
-<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a>K(\tau)=\frac13\,J(\tau)</span>
-<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a>$$ {#eq-eddington-closure}</span>
-<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a>と置く。これは放射場が等方 $I(\tau,\mu)=I(\tau)$ のとき**厳密**に成り立つ関係で、深部（ほぼ等方）で正しい性質を浅部にも延長する近似である。</span>
+<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
+<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a>**問い**：なぜわざわざ「モーメント」を取るのか？ 何が嬉しく、何を失うのか？</span>
+<span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a>**短答（なぜ取るか）**：もとの輸送方程式 @eq-transfer-mu の未知関数 $I(\tau,\mu)$ は、深さ $\tau$ と方向 $\mu$ の**二変数**関数で、そのままでは扱いにくい。$\mu$ について積分（モーメントを取る）すると方向依存性が消え、$\tau$ だけの少数の量 $J,H,K$ に対する**常微分方程式** @eq-moment-equations に化ける。しかもこの三つは、私たちが欲しい物理量そのものである ― $J$ は平均強度（加熱・電離率を決め、LTE では $S$ に等しい）、$H$ はエネルギー流束（$F=4\pi H$＝光度）、$K$ は放射圧。**詳しい角度分布を捨てる代わりに、観測量・物理量を直接**手に入れられる。放射平衡も「流束一定 $dH/d\tau=0$」と一行で書ける。</span>
+<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a>**もう一歩（代償）**：モーメント法には**方程式系が閉じない**という弱点がある。0 次の式は 1 次（$J\to H$）を、1 次の式は 2 次（$H\to K$）を呼び、その次は 3 次… と関係が無限に続く。どこかで**打ち切る**には外から関係を一つ足すしかなく、それが次に置く $K=J/3$（エディントン近似）である。この閉包は放射場が等方のときだけ厳密なので、**異方性が強い大気表面付近では近似**にとどまる（たとえば後で得る $T_0\simeq0.84\,T_\mathrm{e}$ は、厳密な輸送計算の $0.811\,T_\mathrm{e}$ に対し数 % 高めにずれる）。また、モーメントだけからは**特定方向の比強度**（周縁減光など、図 (a) の $I(\tau,\mu)$ そのもの）は復元できない ― それが必要なら形式解 @eq-rt-formal-solution に戻る。</span>
+<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a>**温度構造を解く。**　恒星大気では核反応によるエネルギー生成がないので、各深さで放射の正味の吸収・放出が釣り合う（**放射平衡**）。これは @eq-moment-equations の第1式で $dH/d\tau=0$、すなわち</span>
+<span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a>**エディントン近似**（**Eddington approximation**）は</span>
 <span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-397"><a href="#cb1-397" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a>H=H_0=\text{一定}</span>
-<span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a>$$ {#eq-radiative-equilibrium}</span>
+<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a>K(\tau)=\frac13\,J(\tau)</span>
+<span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a>$$ {#eq-eddington-closure}</span>
 <span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a>を意味する。第2式 $dK/d\tau=H_0$ を積分し、エディントン近似 @eq-eddington-closure を使うと</span>
+<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a>と置く。これは放射場が等方 $I(\tau,\mu)=I(\tau)$ のとき**厳密**に成り立つ関係で、深部（ほぼ等方）で正しい性質を浅部にも延長する近似である。</span>
 <span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a>K=H_0\tau+\text{const}\;\Rightarrow\; J=3H_0\tau+\text{const}'.</span>
-<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a>積分定数は大気表面 $\tau=0$ で外から差し込む光がないという境界条件から決まり、エディントン近似ではそれが $J(0)=2H_0$ を与える。よって</span>
-<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a>J(\tau)=3H_0<span class="sc">\!</span>\left(\tau+\tfrac23\right).</span>
-<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a>$$ {#eq-J-of-tau}</span>
+<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a>**エディントン近似は「閉じ方」の一つにすぎない**：モーメント方程式を閉じる関係（**クロージャー**、closure）は $K=J/3$ だけではなく、目的に応じて様々な選択肢がある。宇宙物理でよく使われる代表例：</span>
+<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**可変エディントン因子**（variable Eddington factor）：比 $K/J=f_\text{Edd}(\tau)$ を $1/3$ に固定せず、輸送方程式と反復して**自己無撞着**に決める。恒星大気の精密計算で標準的。</span>
+<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**流束制限拡散**（flux-limited diffusion, FLD）：流束を平均強度の勾配で $\boldsymbol{F}=-D\,\nabla J$ と拡散的に表し、光学的に薄い領域でも $|\boldsymbol{F}|\le cE$（因果律）を破らないよう「**流束制限子**（flux limiter）」で抑える。放射流体計算で広く使われるが、放射の指向性を持たないため**影を作れない**のが弱点。</span>
+<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**M1 クロージャー**：2 次モーメント（放射圧テンソル）を $J$ と $\boldsymbol{F}$ の代数関数で表し、**等方拡散**（$K=J/3$）と**自由伝搬**（ビーム）の間を、規格化流束 $f=|\boldsymbol{F}|/cE$ で補間する。指向性を扱え単一ビームの影も作れるため、星形成・超新星・降着流・宇宙再電離などの放射流体シミュレーションで主流。交差するビームの扱いは苦手。</span>
+<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a>いずれも「方程式系が閉じない」という同じ問題への異なる処方であり、エディントン近似はその**等方拡散極限に対応する最も簡単な一例**である。本書では解析的に $T(\tau)$ を出せる利点から $K=J/3$ を採るが、現代の数値輻射輸送では FLD や M1 が主役になる場面が多い。</span>
+<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a>ここで有効温度 $T_\mathrm{e}$ を $F=4\pi H_0=\sigma T_\mathrm{e}^4$ で導入する。LTE では $S=J=B=(\sigma/\pi)T^4$ なので @eq-J-of-tau は温度構造</span>
+<span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a>**温度構造を解く。**　恒星大気では核反応によるエネルギー生成がないので、各深さで放射の正味の吸収・放出が釣り合う（**放射平衡**）。これは @eq-moment-equations の第1式で $dH/d\tau=0$、すなわち</span>
 <span id="cb1-414"><a href="#cb1-414" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-415"><a href="#cb1-415" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-416"><a href="#cb1-416" aria-hidden="true" tabindex="-1"></a>\boxed{\;T(\tau)^4=\frac34\,T_\mathrm{e}^4<span class="sc">\!</span>\left(\tau+\frac23\right)\;}</span>
-<span id="cb1-417"><a href="#cb1-417" aria-hidden="true" tabindex="-1"></a>$$ {#eq-eddington-temperature}</span>
+<span id="cb1-416"><a href="#cb1-416" aria-hidden="true" tabindex="-1"></a>H=H_0=\text{一定}</span>
+<span id="cb1-417"><a href="#cb1-417" aria-hidden="true" tabindex="-1"></a>$$ {#eq-radiative-equilibrium}</span>
 <span id="cb1-418"><a href="#cb1-418" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-419"><a href="#cb1-419" aria-hidden="true" tabindex="-1"></a>を与える。ここから二つの重要な帰結が読める：</span>
+<span id="cb1-419"><a href="#cb1-419" aria-hidden="true" tabindex="-1"></a>を意味する。第2式 $dK/d\tau=H_0$ を積分し、エディントン近似 @eq-eddington-closure を使うと</span>
 <span id="cb1-420"><a href="#cb1-420" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-421"><a href="#cb1-421" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**$T(\tau=2/3)=T_\mathrm{e}$**：有効温度 $T_\mathrm{e}$ は「大気表面の温度」ではなく、**光学的深さ $\tau=2/3$ の層の温度**である。</span>
-<span id="cb1-422"><a href="#cb1-422" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**表面はより冷たい**：$T(0)^4=\tfrac12 T_\mathrm{e}^4$、すなわち $T_0\simeq0.84\,T_\mathrm{e}$。大気の一番外側は有効温度より低温である。</span>
-<span id="cb1-423"><a href="#cb1-423" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-424"><a href="#cb1-424" aria-hidden="true" tabindex="-1"></a>**波長依存性を一本化する ― ロスランド平均。**　実際の吸収係数 $k_\lambda$ は波長ごとに違う。温度構造 @eq-eddington-temperature を一つの $\tau$ で書くには、波長を横断した代表値が要る。これが**ロスランド平均吸収係数**（**Rosseland mean opacity**）$k_R$ で、</span>
-<span id="cb1-425"><a href="#cb1-425" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-426"><a href="#cb1-426" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-427"><a href="#cb1-427" aria-hidden="true" tabindex="-1"></a>\frac{1}{k_R}=\frac{\displaystyle\int_0^\infty \frac{1}{k_\lambda}\,\frac{\partial B_\lambda}{\partial T}\,d\lambda}{\displaystyle\int_0^\infty \frac{\partial B_\lambda}{\partial T}\,d\lambda}</span>
-<span id="cb1-428"><a href="#cb1-428" aria-hidden="true" tabindex="-1"></a>$$ {#eq-rosseland-mean}</span>
-<span id="cb1-429"><a href="#cb1-429" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-430"><a href="#cb1-430" aria-hidden="true" tabindex="-1"></a>と定義される（重み $\partial B_\lambda/\partial T$ つきの**調和平均**）。なぜ調和平均かは、拡散領域で各波長の流束が $F_\lambda\propto(1/k_\lambda)(dB_\lambda/dT)(dT/dx)$ と「吸収が**弱い**窓ほど多く流れる」ためで、総流束は最も透明な窓に支配される。@eq-eddington-temperature の $\tau$ はこの $\tau_R$（$d\tau_R=k_R\,\rho\,dx$）と読む。</span>
-<span id="cb1-431"><a href="#cb1-431" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-432"><a href="#cb1-432" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5.11 「見える深さ」と連続・線スペクトルの統一 {#sec-radiative-transfer-seen-depth}</span></span>
-<span id="cb1-433"><a href="#cb1-433" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-434"><a href="#cb1-434" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B4-M1</span><span class="co">]</span></span>
-<span id="cb1-435"><a href="#cb1-435" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-436"><a href="#cb1-436" aria-hidden="true" tabindex="-1"></a>前節で大気の温度構造 $T(\tau_R)$ が決まった。では、ある波長 $\lambda$ で大気を見たとき、私たちは**どの深さ＝どの温度**を見ているのか。これを押さえると、連続スペクトルの形も吸収線も**一つの式**で説明できる。</span>
-<span id="cb1-437"><a href="#cb1-437" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-438"><a href="#cb1-438" aria-hidden="true" tabindex="-1"></a>**見える深さの直観。**　大気は、その波長での光学的厚さが $\tau_\lambda\simeq2/3$ に達する深さまで見通せる（それより深い光は手前の吸収で届かない、@eq-rt-formal-solution）。幾何学的な深さ $\ell$ に対し $\tau_\lambda=k_\lambda\ell$、$\tau_R=k_R\ell$ だから</span>
-<span id="cb1-439"><a href="#cb1-439" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-440"><a href="#cb1-440" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-441"><a href="#cb1-441" aria-hidden="true" tabindex="-1"></a>\tau_R=\frac{k_R}{k_\lambda}\,\tau_\lambda .</span>
-<span id="cb1-442"><a href="#cb1-442" aria-hidden="true" tabindex="-1"></a>$$ {#eq-tau-ratio}</span>
+<span id="cb1-421"><a href="#cb1-421" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-422"><a href="#cb1-422" aria-hidden="true" tabindex="-1"></a>K=H_0\tau+\text{const}\;\Rightarrow\; J=3H_0\tau+\text{const}'.</span>
+<span id="cb1-423"><a href="#cb1-423" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-424"><a href="#cb1-424" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-425"><a href="#cb1-425" aria-hidden="true" tabindex="-1"></a>積分定数は大気表面 $\tau=0$ で外から差し込む光がないという境界条件から決まり、エディントン近似ではそれが $J(0)=2H_0$ を与える。よって</span>
+<span id="cb1-426"><a href="#cb1-426" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-427"><a href="#cb1-427" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-428"><a href="#cb1-428" aria-hidden="true" tabindex="-1"></a>J(\tau)=3H_0<span class="sc">\!</span>\left(\tau+\tfrac23\right).</span>
+<span id="cb1-429"><a href="#cb1-429" aria-hidden="true" tabindex="-1"></a>$$ {#eq-J-of-tau}</span>
+<span id="cb1-430"><a href="#cb1-430" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-431"><a href="#cb1-431" aria-hidden="true" tabindex="-1"></a>ここで有効温度 $T_\mathrm{e}$ を $F=4\pi H_0=\sigma T_\mathrm{e}^4$ で導入する。LTE では $S=J=B=(\sigma/\pi)T^4$ なので @eq-J-of-tau は温度構造</span>
+<span id="cb1-432"><a href="#cb1-432" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-433"><a href="#cb1-433" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-434"><a href="#cb1-434" aria-hidden="true" tabindex="-1"></a>\boxed{\;T(\tau)^4=\frac34\,T_\mathrm{e}^4<span class="sc">\!</span>\left(\tau+\frac23\right)\;}</span>
+<span id="cb1-435"><a href="#cb1-435" aria-hidden="true" tabindex="-1"></a>$$ {#eq-eddington-temperature}</span>
+<span id="cb1-436"><a href="#cb1-436" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-437"><a href="#cb1-437" aria-hidden="true" tabindex="-1"></a>を与える。ここから二つの重要な帰結が読める：</span>
+<span id="cb1-438"><a href="#cb1-438" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-439"><a href="#cb1-439" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**$T(\tau=2/3)=T_\mathrm{e}$**：有効温度 $T_\mathrm{e}$ は「大気表面の温度」ではなく、**光学的深さ $\tau=2/3$ の層の温度**である。</span>
+<span id="cb1-440"><a href="#cb1-440" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**表面はより冷たい**：$T(0)^4=\tfrac12 T_\mathrm{e}^4$、すなわち $T_0\simeq0.84\,T_\mathrm{e}$。大気の一番外側は有効温度より低温である。</span>
+<span id="cb1-441"><a href="#cb1-441" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-442"><a href="#cb1-442" aria-hidden="true" tabindex="-1"></a><span class="al">![平面平行大気とエディントン近似。**(a)** 大気を水平な層の重なりとみなし、鉛直内向きに光学的厚さ $\tau$ を測る。光線は鉛直から角度 $\theta$（$\mu=\cos\theta$）で進み、向きごとの比強度 $I(\tau,\mu)$ を方向で平均・重み付けしたものが 0・1・2 次モーメント $J,H,K$ である。放射場は**深部ほど等方**になり（あらゆる向きから同じ光が来る）、そこで $K=J/3$ が厳密に成り立つ ― これがエディントン近似の根拠。最表面では上半球からしか光が出ない。**(b)** 解いて得た温度構造 @eq-eddington-temperature。有効温度 $T_\mathrm{e}$ は表面温度ではなく **$\tau=2/3$ の層の温度**であり、最表面はそれより冷たい（$T_0\simeq0.84\,T_\mathrm{e}$）。](../images/eddington-atmosphere.svg)</span>{#fig-eddington-atmosphere width=96%}</span>
 <span id="cb1-443"><a href="#cb1-443" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-444"><a href="#cb1-444" aria-hidden="true" tabindex="-1"></a>したがって「$\lambda$ で見通せる深さ」は、ロスランド光学的深さに直すと $\tau_R=(2/3)(k_R/k_\lambda)$ に相当する。ここで効くのが **$k_\lambda$ と $k_R$ の大小**である：</span>
+<span id="cb1-444"><a href="#cb1-444" aria-hidden="true" tabindex="-1"></a>**波長依存性を一本化する ― ロスランド平均。**　実際の吸収係数 $k_\lambda$ は波長ごとに違う。温度構造 @eq-eddington-temperature を一つの $\tau$ で書くには、波長を横断した代表値が要る。これが**ロスランド平均吸収係数**（**Rosseland mean opacity**）$k_R$ で、</span>
 <span id="cb1-445"><a href="#cb1-445" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-446"><a href="#cb1-446" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$k_\lambda$ が**大きい**（強い吸収、たとえば線の中心）→ **浅い**ところで $\tau_\lambda=2/3$ に達する → **低温**の層しか見えない。</span>
-<span id="cb1-447"><a href="#cb1-447" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$k_\lambda$ が**小さい**（弱い吸収、透明な窓）→ **深い**ところまで見通せる → **高温**の層が見える。</span>
-<span id="cb1-448"><a href="#cb1-448" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-449"><a href="#cb1-449" aria-hidden="true" tabindex="-1"></a>**統一公式。**　表面から出る流束は、エディントン–バルビエの関係により「$\tau_\lambda=2/3$ の層の黒体流束」で与えられる：</span>
-<span id="cb1-450"><a href="#cb1-450" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-451"><a href="#cb1-451" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-452"><a href="#cb1-452" aria-hidden="true" tabindex="-1"></a>F_\lambda=\pi\,B_\lambda<span class="sc">\!</span>\left<span class="co">[</span><span class="ot">\,T\!\left(\tau_\lambda=\tfrac23\right)\right</span><span class="co">]</span>.</span>
-<span id="cb1-453"><a href="#cb1-453" aria-hidden="true" tabindex="-1"></a>$$ {#eq-emergent-flux}</span>
-<span id="cb1-454"><a href="#cb1-454" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-455"><a href="#cb1-455" aria-hidden="true" tabindex="-1"></a>見ている深さ $\tau_R=(2/3)(k_R/k_\lambda)$ を温度構造 @eq-eddington-temperature に代入すると、</span>
-<span id="cb1-456"><a href="#cb1-456" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-457"><a href="#cb1-457" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-458"><a href="#cb1-458" aria-hidden="true" tabindex="-1"></a>T<span class="sc">\!</span>\left(\tau_\lambda=\tfrac23\right)^4=\frac34 T_\mathrm{e}^4<span class="sc">\!</span>\left<span class="co">[</span><span class="ot">\frac23\frac{k_R}{k_\lambda}+\frac23\right</span><span class="co">]</span>=\frac12 T_\mathrm{e}^4<span class="sc">\!</span>\left(1+\frac{k_R}{k_\lambda}\right)</span>
-<span id="cb1-459"><a href="#cb1-459" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-460"><a href="#cb1-460" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-461"><a href="#cb1-461" aria-hidden="true" tabindex="-1"></a>すなわち</span>
-<span id="cb1-462"><a href="#cb1-462" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-463"><a href="#cb1-463" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-464"><a href="#cb1-464" aria-hidden="true" tabindex="-1"></a>\boxed{\;F_\lambda=\pi\,B_\lambda<span class="sc">\!</span>\left(T\right),\qquad</span>
-<span id="cb1-465"><a href="#cb1-465" aria-hidden="true" tabindex="-1"></a>T=T_\mathrm{e}<span class="sc">\!</span>\left<span class="co">[</span><span class="ot">\frac12\!\left(1+\frac{k_R}{k_\lambda}\right)\right</span><span class="co">]</span>^{1/4}\;}</span>
-<span id="cb1-466"><a href="#cb1-466" aria-hidden="true" tabindex="-1"></a>$$ {#eq-unified-spectrum}</span>
-<span id="cb1-467"><a href="#cb1-467" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-468"><a href="#cb1-468" aria-hidden="true" tabindex="-1"></a>を得る。これが本書の二つの中心地図（プランク関数と吸収係数）を結ぶ**統一公式**である。読み方は次のとおり：</span>
-<span id="cb1-469"><a href="#cb1-469" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-470"><a href="#cb1-470" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $k_\lambda$ と $k_R$ <span class="pp">|</span> 見える深さ <span class="pp">|</span> 見える温度 <span class="pp">|</span> スペクトルへの効果 <span class="pp">|</span></span>
-<span id="cb1-471"><a href="#cb1-471" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|---|</span></span>
-<span id="cb1-472"><a href="#cb1-472" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $k_\lambda=k_R$ <span class="pp">|</span> $\tau_R=2/3$ <span class="pp">|</span> $T=T_\mathrm{e}$ <span class="pp">|</span> グレイ大気、$F_\lambda=\pi B_\lambda(T_\mathrm{e})$ <span class="pp">|</span></span>
-<span id="cb1-473"><a href="#cb1-473" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $k_\lambda&gt;k_R$ <span class="pp">|</span> 浅い <span class="pp">|</span> $T&lt;T_\mathrm{e}$ <span class="pp">|</span> 暗い（連続の落ち込み・**吸収線**）<span class="pp">|</span></span>
-<span id="cb1-474"><a href="#cb1-474" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $k_\lambda&lt;k_R$ <span class="pp">|</span> 深い <span class="pp">|</span> $T&gt;T_\mathrm{e}$ <span class="pp">|</span> 明るい（透明窓での増光）<span class="pp">|</span></span>
-<span id="cb1-475"><a href="#cb1-475" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-476"><a href="#cb1-476" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-477"><a href="#cb1-477" aria-hidden="true" tabindex="-1"></a>**二つの中心地図がここで結ばれる**：@eq-unified-spectrum は、**連続スペクトルの形**（$k_\lambda$ が滑らかに変化する成分 ― バルマージャンプ、$\mathrm{H}^-$ による近赤外のコブなど、第15・17・19章）と、**吸収線の出現**（$k_\lambda$ が線中心 $\nu_0$ で鋭く増す成分、第VII部）を、**同じ一つの式**で説明する。「現実の星はなぜ黒体からずれるのか」「なぜ吸収線ができるのか」は、どちらも『どの深さ＝どの温度が見えているか』という一つの問いに帰着する。</span>
-<span id="cb1-478"><a href="#cb1-478" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-479"><a href="#cb1-479" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-480"><a href="#cb1-480" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
-<span id="cb1-481"><a href="#cb1-481" aria-hidden="true" tabindex="-1"></a>**問い**：吸収線の底はどこまで暗くなれるのか？</span>
+<span id="cb1-446"><a href="#cb1-446" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-447"><a href="#cb1-447" aria-hidden="true" tabindex="-1"></a>\frac{1}{k_R}=\frac{\displaystyle\int_0^\infty \frac{1}{k_\lambda}\,\frac{\partial B_\lambda}{\partial T}\,d\lambda}{\displaystyle\int_0^\infty \frac{\partial B_\lambda}{\partial T}\,d\lambda}</span>
+<span id="cb1-448"><a href="#cb1-448" aria-hidden="true" tabindex="-1"></a>$$ {#eq-rosseland-mean}</span>
+<span id="cb1-449"><a href="#cb1-449" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-450"><a href="#cb1-450" aria-hidden="true" tabindex="-1"></a>と定義される（重み $\partial B_\lambda/\partial T$ つきの**調和平均**）。なぜ調和平均かは、拡散領域で各波長の流束が $F_\lambda\propto(1/k_\lambda)(dB_\lambda/dT)(dT/dx)$ と「吸収が**弱い**窓ほど多く流れる」ためで、総流束は最も透明な窓に支配される。@eq-eddington-temperature の $\tau$ はこの $\tau_R$（$d\tau_R=k_R\,\rho\,dx$）と読む。</span>
+<span id="cb1-451"><a href="#cb1-451" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-452"><a href="#cb1-452" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5.11 「見える深さ」と連続・線スペクトルの統一 {#sec-radiative-transfer-seen-depth}</span></span>
+<span id="cb1-453"><a href="#cb1-453" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-454"><a href="#cb1-454" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B4-M1</span><span class="co">]</span></span>
+<span id="cb1-455"><a href="#cb1-455" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-456"><a href="#cb1-456" aria-hidden="true" tabindex="-1"></a>前節で大気の温度構造 $T(\tau_R)$ が決まった。では、ある波長 $\lambda$ で大気を見たとき、私たちは**どの深さ＝どの温度**を見ているのか。これを押さえると、連続スペクトルの形も吸収線も**一つの式**で説明できる。</span>
+<span id="cb1-457"><a href="#cb1-457" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-458"><a href="#cb1-458" aria-hidden="true" tabindex="-1"></a>**見える深さの直観。**　大気は、その波長での光学的厚さが $\tau_\lambda\simeq2/3$ に達する深さまで見通せる（それより深い光は手前の吸収で届かない、@eq-rt-formal-solution）。幾何学的な深さ $\ell$ に対し $\tau_\lambda=k_\lambda\ell$、$\tau_R=k_R\ell$ だから</span>
+<span id="cb1-459"><a href="#cb1-459" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-460"><a href="#cb1-460" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-461"><a href="#cb1-461" aria-hidden="true" tabindex="-1"></a>\tau_R=\frac{k_R}{k_\lambda}\,\tau_\lambda .</span>
+<span id="cb1-462"><a href="#cb1-462" aria-hidden="true" tabindex="-1"></a>$$ {#eq-tau-ratio}</span>
+<span id="cb1-463"><a href="#cb1-463" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-464"><a href="#cb1-464" aria-hidden="true" tabindex="-1"></a>したがって「$\lambda$ で見通せる深さ」は、ロスランド光学的深さに直すと $\tau_R=(2/3)(k_R/k_\lambda)$ に相当する。ここで効くのが **$k_\lambda$ と $k_R$ の大小**である：</span>
+<span id="cb1-465"><a href="#cb1-465" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-466"><a href="#cb1-466" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$k_\lambda$ が**大きい**（強い吸収、たとえば線の中心）→ **浅い**ところで $\tau_\lambda=2/3$ に達する → **低温**の層しか見えない。</span>
+<span id="cb1-467"><a href="#cb1-467" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$k_\lambda$ が**小さい**（弱い吸収、透明な窓）→ **深い**ところまで見通せる → **高温**の層が見える。</span>
+<span id="cb1-468"><a href="#cb1-468" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-469"><a href="#cb1-469" aria-hidden="true" tabindex="-1"></a>**統一公式。**　表面から出る流束は、エディントン–バルビエの関係により「$\tau_\lambda=2/3$ の層の黒体流束」で与えられる：</span>
+<span id="cb1-470"><a href="#cb1-470" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-471"><a href="#cb1-471" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-472"><a href="#cb1-472" aria-hidden="true" tabindex="-1"></a>F_\lambda=\pi\,B_\lambda<span class="sc">\!</span>\left<span class="co">[</span><span class="ot">\,T\!\left(\tau_\lambda=\tfrac23\right)\right</span><span class="co">]</span>.</span>
+<span id="cb1-473"><a href="#cb1-473" aria-hidden="true" tabindex="-1"></a>$$ {#eq-emergent-flux}</span>
+<span id="cb1-474"><a href="#cb1-474" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-475"><a href="#cb1-475" aria-hidden="true" tabindex="-1"></a>見ている深さ $\tau_R=(2/3)(k_R/k_\lambda)$ を温度構造 @eq-eddington-temperature に代入すると、</span>
+<span id="cb1-476"><a href="#cb1-476" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-477"><a href="#cb1-477" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-478"><a href="#cb1-478" aria-hidden="true" tabindex="-1"></a>T<span class="sc">\!</span>\left(\tau_\lambda=\tfrac23\right)^4=\frac34 T_\mathrm{e}^4<span class="sc">\!</span>\left<span class="co">[</span><span class="ot">\frac23\frac{k_R}{k_\lambda}+\frac23\right</span><span class="co">]</span>=\frac12 T_\mathrm{e}^4<span class="sc">\!</span>\left(1+\frac{k_R}{k_\lambda}\right)</span>
+<span id="cb1-479"><a href="#cb1-479" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-480"><a href="#cb1-480" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-481"><a href="#cb1-481" aria-hidden="true" tabindex="-1"></a>すなわち</span>
 <span id="cb1-482"><a href="#cb1-482" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-483"><a href="#cb1-483" aria-hidden="true" tabindex="-1"></a>**短答**：純粋な吸収では、線中心で $k_\lambda\to\infty$ の極限でも見えるのは大気の最表面 $T_0\simeq0.84\,T_\mathrm{e}$（@eq-eddington-temperature の $\tau=0$）までで、線の底は $F_\lambda\to\pi B_\lambda(T_0)$ で頭打ちになる（飽和）。だから強い線でも完全な暗黒にはならない。</span>
-<span id="cb1-484"><a href="#cb1-484" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-485"><a href="#cb1-485" aria-hidden="true" tabindex="-1"></a>**もう一歩**：彩層など外側に高温層があると、その層の放出が線中心に**輝線**として乗る（例：Ca II の H・K 線中心の輝線）。@eq-unified-spectrum は「外側ほど低温」を仮定した結果であり、温度逆転があるとこの単調さが破れる。</span>
-<span id="cb1-486"><a href="#cb1-486" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-483"><a href="#cb1-483" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-484"><a href="#cb1-484" aria-hidden="true" tabindex="-1"></a>\boxed{\;F_\lambda=\pi\,B_\lambda<span class="sc">\!</span>\left(T\right),\qquad</span>
+<span id="cb1-485"><a href="#cb1-485" aria-hidden="true" tabindex="-1"></a>T=T_\mathrm{e}<span class="sc">\!</span>\left<span class="co">[</span><span class="ot">\frac12\!\left(1+\frac{k_R}{k_\lambda}\right)\right</span><span class="co">]</span>^{1/4}\;}</span>
+<span id="cb1-486"><a href="#cb1-486" aria-hidden="true" tabindex="-1"></a>$$ {#eq-unified-spectrum}</span>
 <span id="cb1-487"><a href="#cb1-487" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-488"><a href="#cb1-488" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-489"><a href="#cb1-489" aria-hidden="true" tabindex="-1"></a>**この先の使い道**：@eq-eddington-temperature と @eq-unified-spectrum は、第15章（黒体からのずれ）、第17章（恒星大気と $\mathrm{H}^-$ 吸収）、第19章（連続吸収係数）、第21章（吸収線の形成）で繰り返し参照する。とくに「$T_\mathrm{e}$ は $\tau=2/3$ の温度」という事実は、有効温度を観測スペクトルから読む際の基礎になる。</span>
-<span id="cb1-490"><a href="#cb1-490" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-491"><a href="#cb1-491" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-492"><a href="#cb1-492" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-493"><a href="#cb1-493" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-494"><a href="#cb1-494" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-radiative-transfer-summary .unnumbered}</span></span>
+<span id="cb1-488"><a href="#cb1-488" aria-hidden="true" tabindex="-1"></a>を得る。これが本書の二つの中心地図（プランク関数と吸収係数）を結ぶ**統一公式**である。読み方は次のとおり：</span>
+<span id="cb1-489"><a href="#cb1-489" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-490"><a href="#cb1-490" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $k_\lambda$ と $k_R$ <span class="pp">|</span> 見える深さ <span class="pp">|</span> 見える温度 <span class="pp">|</span> スペクトルへの効果 <span class="pp">|</span></span>
+<span id="cb1-491"><a href="#cb1-491" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|---|</span></span>
+<span id="cb1-492"><a href="#cb1-492" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $k_\lambda=k_R$ <span class="pp">|</span> $\tau_R=2/3$ <span class="pp">|</span> $T=T_\mathrm{e}$ <span class="pp">|</span> グレイ大気、$F_\lambda=\pi B_\lambda(T_\mathrm{e})$ <span class="pp">|</span></span>
+<span id="cb1-493"><a href="#cb1-493" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $k_\lambda&gt;k_R$ <span class="pp">|</span> 浅い <span class="pp">|</span> $T&lt;T_\mathrm{e}$ <span class="pp">|</span> 暗い（連続の落ち込み・**吸収線**）<span class="pp">|</span></span>
+<span id="cb1-494"><a href="#cb1-494" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $k_\lambda&lt;k_R$ <span class="pp">|</span> 深い <span class="pp">|</span> $T&gt;T_\mathrm{e}$ <span class="pp">|</span> 明るい（透明窓での増光）<span class="pp">|</span></span>
 <span id="cb1-495"><a href="#cb1-495" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-496"><a href="#cb1-496" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
-<span id="cb1-497"><a href="#cb1-497" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る**</span>
-<span id="cb1-498"><a href="#cb1-498" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-499"><a href="#cb1-499" aria-hidden="true" tabindex="-1"></a>本章で、本書全体を貫く**放射輸送方程式**</span>
-<span id="cb1-500"><a href="#cb1-500" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-501"><a href="#cb1-501" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-502"><a href="#cb1-502" aria-hidden="true" tabindex="-1"></a>\frac{dI_\nu}{d\tau_\nu} = -I_\nu + S_\nu</span>
-<span id="cb1-503"><a href="#cb1-503" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-496"><a href="#cb1-496" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-497"><a href="#cb1-497" aria-hidden="true" tabindex="-1"></a>**二つの中心地図がここで結ばれる**：@eq-unified-spectrum は、**連続スペクトルの形**（$k_\lambda$ が滑らかに変化する成分 ― バルマージャンプ、$\mathrm{H}^-$ による近赤外のコブなど、第15・17・19章）と、**吸収線の出現**（$k_\lambda$ が線中心 $\nu_0$ で鋭く増す成分、第VII部）を、**同じ一つの式**で説明する。「現実の星はなぜ黒体からずれるのか」「なぜ吸収線ができるのか」は、どちらも『どの深さ＝どの温度が見えているか』という一つの問いに帰着する。</span>
+<span id="cb1-498"><a href="#cb1-498" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-499"><a href="#cb1-499" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-500"><a href="#cb1-500" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
+<span id="cb1-501"><a href="#cb1-501" aria-hidden="true" tabindex="-1"></a>**問い**：吸収線の底はどこまで暗くなれるのか？</span>
+<span id="cb1-502"><a href="#cb1-502" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-503"><a href="#cb1-503" aria-hidden="true" tabindex="-1"></a>**短答**：純粋な吸収では、線中心で $k_\lambda\to\infty$ の極限でも見えるのは大気の最表面 $T_0\simeq0.84\,T_\mathrm{e}$（@eq-eddington-temperature の $\tau=0$）までで、線の底は $F_\lambda\to\pi B_\lambda(T_0)$ で頭打ちになる（飽和）。だから強い線でも完全な暗黒にはならない。</span>
 <span id="cb1-504"><a href="#cb1-504" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-505"><a href="#cb1-505" aria-hidden="true" tabindex="-1"></a>が立ち上がった。この方程式は次の役割を果たす：</span>
-<span id="cb1-506"><a href="#cb1-506" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-507"><a href="#cb1-507" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>観測される比強度 $I_\nu$ を、光学的厚さ $\tau_\nu$ と ソース関数 $S_\nu$ の関数として与える</span>
-<span id="cb1-508"><a href="#cb1-508" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**光学的に厚い + LTE** の極限で $I_\nu \to B_\nu(T)$ となり、**第3章の「黒体は熱平衡で普遍」**が放射輸送の極限として再現される</span>
-<span id="cb1-509"><a href="#cb1-509" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**光学的に薄い**極限では、観測スペクトルは経路上の放出の単純な積算となる</span>
-<span id="cb1-510"><a href="#cb1-510" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>連続と線の区別は、吸収係数 $\alpha_\nu(\nu)$ の構造の違いに集約される（**第VII部への橋渡し**）</span>
+<span id="cb1-505"><a href="#cb1-505" aria-hidden="true" tabindex="-1"></a>**もう一歩**：彩層など外側に高温層があると、その層の放出が線中心に**輝線**として乗る（例：Ca II の H・K 線中心の輝線）。@eq-unified-spectrum は「外側ほど低温」を仮定した結果であり、温度逆転があるとこの単調さが破れる。</span>
+<span id="cb1-506"><a href="#cb1-506" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-507"><a href="#cb1-507" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-508"><a href="#cb1-508" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-509"><a href="#cb1-509" aria-hidden="true" tabindex="-1"></a>**この先の使い道**：@eq-eddington-temperature と @eq-unified-spectrum は、第15章（黒体からのずれ）、第17章（恒星大気と $\mathrm{H}^-$ 吸収）、第19章（連続吸収係数）、第21章（吸収線の形成）で繰り返し参照する。とくに「$T_\mathrm{e}$ は $\tau=2/3$ の温度」という事実は、有効温度を観測スペクトルから読む際の基礎になる。</span>
+<span id="cb1-510"><a href="#cb1-510" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-511"><a href="#cb1-511" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-512"><a href="#cb1-512" aria-hidden="true" tabindex="-1"></a>ここで第I部（観測の現象論）と第II部（放射場の記述と輸送）が一通り揃った。第III部からは、この上に立って、プランク関数の各因子を順に「逆引き」していく。</span>
+<span id="cb1-512"><a href="#cb1-512" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb1-513"><a href="#cb1-513" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-514"><a href="#cb1-514" aria-hidden="true" tabindex="-1"></a>**次章へ**：第6章では、放射輸送のソース関数 $S_\nu = B_\nu(T)$ が成り立つための条件 ― **熱平衡** ― を、改めて統計力学の言葉で取り出す。なぜ温度 $T$ だけが平衡放射場の形を決めるのか。なぜエントロピー最大の状態でプランク分布になるのか。これらは第III部全体を貫く問いになる。</span>
-<span id="cb1-515"><a href="#cb1-515" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-516"><a href="#cb1-516" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-517"><a href="#cb1-517" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-radiative-transfer-exercises .unnumbered}</span></span>
+<span id="cb1-514"><a href="#cb1-514" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-radiative-transfer-summary .unnumbered}</span></span>
+<span id="cb1-515"><a href="#cb1-515" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-516"><a href="#cb1-516" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
+<span id="cb1-517"><a href="#cb1-517" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る**</span>
 <span id="cb1-518"><a href="#cb1-518" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-519"><a href="#cb1-519" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **解答例** は章末「解答例」にまとめてある（オンライン版では各問のボタンから開く）。まず自力で解いてから確認すると効果的である。</span>
+<span id="cb1-519"><a href="#cb1-519" aria-hidden="true" tabindex="-1"></a>本章で、本書全体を貫く**放射輸送方程式**</span>
 <span id="cb1-520"><a href="#cb1-520" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-521"><a href="#cb1-521" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 5-1　放射輸送方程式の形式解を導く {#ex-5-1 .unnumbered}</span></span>
-<span id="cb1-522"><a href="#cb1-522" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-523"><a href="#cb1-523" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-521"><a href="#cb1-521" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-522"><a href="#cb1-522" aria-hidden="true" tabindex="-1"></a>\frac{dI_\nu}{d\tau_\nu} = -I_\nu + S_\nu</span>
+<span id="cb1-523"><a href="#cb1-523" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-524"><a href="#cb1-524" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-525"><a href="#cb1-525" aria-hidden="true" tabindex="-1"></a>§5.3 は形式解 $I_\nu(\tau_\nu)=I_\nu(0)e^{-\tau_\nu}+\displaystyle\int_0^{\tau_\nu}S_\nu(\tau')e^{-(\tau_\nu-\tau')}d\tau'$ を結果として与えた。これを導く。出発点は $\dfrac{dI_\nu}{d\tau_\nu}=-I_\nu+S_\nu$。</span>
+<span id="cb1-525"><a href="#cb1-525" aria-hidden="true" tabindex="-1"></a>が立ち上がった。この方程式は次の役割を果たす：</span>
 <span id="cb1-526"><a href="#cb1-526" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-527"><a href="#cb1-527" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>積分因子 $e^{\tau_\nu}$ を掛けて左辺を $\dfrac{d}{d\tau_\nu}(I_\nu e^{\tau_\nu})$ にまとめよ。</span>
-<span id="cb1-528"><a href="#cb1-528" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$0$ から $\tau_\nu$ まで積分して形式解を導け。</span>
-<span id="cb1-529"><a href="#cb1-529" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>第一項と第二項をそれぞれ物理的に解釈せよ（「初期光の減衰」「経路上の放出の積算」）。</span>
-<span id="cb1-530"><a href="#cb1-530" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-531"><a href="#cb1-531" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§5.3 放射輸送方程式</span><span class="co">](#sec-radiative-transfer-equation)</span>、<span class="co">[</span><span class="ot">§5.2 光学的厚さ</span><span class="co">](#sec-radiative-transfer-optical-depth)</span>。</span>
-<span id="cb1-532"><a href="#cb1-532" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-533"><a href="#cb1-533" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
-<span id="cb1-534"><a href="#cb1-534" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 5-1）</span><span class="co">](#sol-5-1)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-527"><a href="#cb1-527" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>観測される比強度 $I_\nu$ を、光学的厚さ $\tau_\nu$ と ソース関数 $S_\nu$ の関数として与える</span>
+<span id="cb1-528"><a href="#cb1-528" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**光学的に厚い + LTE** の極限で $I_\nu \to B_\nu(T)$ となり、**第3章の「黒体は熱平衡で普遍」**が放射輸送の極限として再現される</span>
+<span id="cb1-529"><a href="#cb1-529" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**光学的に薄い**極限では、観測スペクトルは経路上の放出の単純な積算となる</span>
+<span id="cb1-530"><a href="#cb1-530" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>連続と線の区別は、吸収係数 $\alpha_\nu(\nu)$ の構造の違いに集約される（**第VII部への橋渡し**）</span>
+<span id="cb1-531"><a href="#cb1-531" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-532"><a href="#cb1-532" aria-hidden="true" tabindex="-1"></a>ここで第I部（観測の現象論）と第II部（放射場の記述と輸送）が一通り揃った。第III部からは、この上に立って、プランク関数の各因子を順に「逆引き」していく。</span>
+<span id="cb1-533"><a href="#cb1-533" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-534"><a href="#cb1-534" aria-hidden="true" tabindex="-1"></a>**次章へ**：第6章では、放射輸送のソース関数 $S_\nu = B_\nu(T)$ が成り立つための条件 ― **熱平衡** ― を、改めて統計力学の言葉で取り出す。なぜ温度 $T$ だけが平衡放射場の形を決めるのか。なぜエントロピー最大の状態でプランク分布になるのか。これらは第III部全体を貫く問いになる。</span>
 <span id="cb1-535"><a href="#cb1-535" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-536"><a href="#cb1-536" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-537"><a href="#cb1-537" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 5-2　厚い極限と薄い極限を形式解から {#ex-5-2 .unnumbered}</span></span>
+<span id="cb1-537"><a href="#cb1-537" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-radiative-transfer-exercises .unnumbered}</span></span>
 <span id="cb1-538"><a href="#cb1-538" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-539"><a href="#cb1-539" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-539"><a href="#cb1-539" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **解答例** は章末「解答例」にまとめてある（オンライン版では各問のボタンから開く）。まず自力で解いてから確認すると効果的である。</span>
 <span id="cb1-540"><a href="#cb1-540" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-541"><a href="#cb1-541" aria-hidden="true" tabindex="-1"></a>§5.6・5.7 は両極限を結果として示した。ソース関数 $S_\nu$ が経路上ほぼ一定の場合について、形式解（問題 5-1）から導け。</span>
+<span id="cb1-541"><a href="#cb1-541" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 5-1　放射輸送方程式の形式解を導く {#ex-5-1 .unnumbered}</span></span>
 <span id="cb1-542"><a href="#cb1-542" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-543"><a href="#cb1-543" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>一定 $S_\nu$ で形式解の積分を実行し、$I_\nu(\tau)=I_\nu(0)e^{-\tau}+S_\nu(1-e^{-\tau})$ を示せ。</span>
-<span id="cb1-544"><a href="#cb1-544" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>光学的に厚い極限 $\tau\gg1$ で $I_\nu\to S_\nu$ を導け。</span>
-<span id="cb1-545"><a href="#cb1-545" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>光学的に薄い極限 $\tau\ll1$ で $I_\nu\approx I_\nu(0)+\tau(S_\nu-I_\nu(0))$ を導け（$e^{-\tau}\approx1-\tau$）。</span>
+<span id="cb1-543"><a href="#cb1-543" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-544"><a href="#cb1-544" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-545"><a href="#cb1-545" aria-hidden="true" tabindex="-1"></a>§5.3 は形式解 $I_\nu(\tau_\nu)=I_\nu(0)e^{-\tau_\nu}+\displaystyle\int_0^{\tau_\nu}S_\nu(\tau')e^{-(\tau_\nu-\tau')}d\tau'$ を結果として与えた。これを導く。出発点は $\dfrac{dI_\nu}{d\tau_\nu}=-I_\nu+S_\nu$。</span>
 <span id="cb1-546"><a href="#cb1-546" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-547"><a href="#cb1-547" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§5.6 光学的に厚い極限</span><span class="co">](#sec-radiative-transfer-thick)</span>、<span class="co">[</span><span class="ot">§5.7 光学的に薄い極限</span><span class="co">](#sec-radiative-transfer-thin)</span>。</span>
-<span id="cb1-548"><a href="#cb1-548" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-549"><a href="#cb1-549" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
-<span id="cb1-550"><a href="#cb1-550" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 5-2）</span><span class="co">](#sol-5-2)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
-<span id="cb1-551"><a href="#cb1-551" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-547"><a href="#cb1-547" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>積分因子 $e^{\tau_\nu}$ を掛けて左辺を $\dfrac{d}{d\tau_\nu}(I_\nu e^{\tau_\nu})$ にまとめよ。</span>
+<span id="cb1-548"><a href="#cb1-548" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$0$ から $\tau_\nu$ まで積分して形式解を導け。</span>
+<span id="cb1-549"><a href="#cb1-549" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>第一項と第二項をそれぞれ物理的に解釈せよ（「初期光の減衰」「経路上の放出の積算」）。</span>
+<span id="cb1-550"><a href="#cb1-550" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-551"><a href="#cb1-551" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§5.3 放射輸送方程式</span><span class="co">](#sec-radiative-transfer-equation)</span>、<span class="co">[</span><span class="ot">§5.2 光学的厚さ</span><span class="co">](#sec-radiative-transfer-optical-depth)</span>。</span>
 <span id="cb1-552"><a href="#cb1-552" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-553"><a href="#cb1-553" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 5-3　吸収線か輝線か ― ソース関数と背景光の大小 {#ex-5-3 .unnumbered}</span></span>
-<span id="cb1-554"><a href="#cb1-554" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-555"><a href="#cb1-555" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-553"><a href="#cb1-553" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-554"><a href="#cb1-554" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 5-1）</span><span class="co">](#sol-5-1)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-555"><a href="#cb1-555" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-556"><a href="#cb1-556" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-557"><a href="#cb1-557" aria-hidden="true" tabindex="-1"></a>問題 5-2(3) の薄い極限 $I_\nu\approx I_\nu(0)+\tau_\nu(S_\nu-I_\nu(0))$ を使って、線が吸収で見えるか輝線で見えるかを論じる。線の中心 $\nu_0$ では $\alpha_\nu$ が大きく $\tau_\nu$ が局所的に増す。</span>
+<span id="cb1-557"><a href="#cb1-557" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 5-2　厚い極限と薄い極限を形式解から {#ex-5-2 .unnumbered}</span></span>
 <span id="cb1-558"><a href="#cb1-558" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-559"><a href="#cb1-559" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$S_\nu&lt;I_\nu(0)$ のとき、線中心で $I_\nu$ は連続光より大きいか小さいか。これは吸収線・輝線のどちらか。</span>
-<span id="cb1-560"><a href="#cb1-560" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$S_\nu&gt;I_\nu(0)$（特に背景光 $I_\nu(0)\approx0$）のときはどうか。</span>
-<span id="cb1-561"><a href="#cb1-561" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>太陽の Fraunhofer 吸収線（光球の外側ほど温度が下がる）と、HII 領域の輝線スペクトル（背景光なし）が、それぞれどちらの条件に対応するか述べよ。</span>
+<span id="cb1-559"><a href="#cb1-559" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-560"><a href="#cb1-560" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-561"><a href="#cb1-561" aria-hidden="true" tabindex="-1"></a>§5.6・5.7 は両極限を結果として示した。ソース関数 $S_\nu$ が経路上ほぼ一定の場合について、形式解（問題 5-1）から導け。</span>
 <span id="cb1-562"><a href="#cb1-562" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-563"><a href="#cb1-563" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§5.4 ソース関数</span><span class="co">](#sec-radiative-transfer-source)</span>、<span class="co">[</span><span class="ot">§5.7 薄い極限（輝線天体）</span><span class="co">](#sec-radiative-transfer-thin)</span>／太陽の連続+線の二重構造は<span class="co">[</span><span class="ot">§1.2</span><span class="co">](../part1/01-where-blackbody.qmd#sec-where-blackbody-sun)</span>、線スペクトルは<span class="co">[</span><span class="ot">第21章</span><span class="co">](../part7/21-line-formation.qmd)</span>。</span>
-<span id="cb1-564"><a href="#cb1-564" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-565"><a href="#cb1-565" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
-<span id="cb1-566"><a href="#cb1-566" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 5-3）</span><span class="co">](#sol-5-3)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
-<span id="cb1-567"><a href="#cb1-567" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-563"><a href="#cb1-563" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>一定 $S_\nu$ で形式解の積分を実行し、$I_\nu(\tau)=I_\nu(0)e^{-\tau}+S_\nu(1-e^{-\tau})$ を示せ。</span>
+<span id="cb1-564"><a href="#cb1-564" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>光学的に厚い極限 $\tau\gg1$ で $I_\nu\to S_\nu$ を導け。</span>
+<span id="cb1-565"><a href="#cb1-565" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>光学的に薄い極限 $\tau\ll1$ で $I_\nu\approx I_\nu(0)+\tau(S_\nu-I_\nu(0))$ を導け（$e^{-\tau}\approx1-\tau$）。</span>
+<span id="cb1-566"><a href="#cb1-566" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-567"><a href="#cb1-567" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§5.6 光学的に厚い極限</span><span class="co">](#sec-radiative-transfer-thick)</span>、<span class="co">[</span><span class="ot">§5.7 光学的に薄い極限</span><span class="co">](#sec-radiative-transfer-thin)</span>。</span>
 <span id="cb1-568"><a href="#cb1-568" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-569"><a href="#cb1-569" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 5-4　τ がほぼ 1 の層はなぜ「光球（見える表面）」か {#ex-5-4 .unnumbered}</span></span>
-<span id="cb1-570"><a href="#cb1-570" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-571"><a href="#cb1-571" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-569"><a href="#cb1-569" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-570"><a href="#cb1-570" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 5-2）</span><span class="co">](#sol-5-2)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-571"><a href="#cb1-571" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-572"><a href="#cb1-572" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-573"><a href="#cb1-573" aria-hidden="true" tabindex="-1"></a>§5.2・5.6 は「太陽の表面とは可視光で $\tau\sim1$ の深さ」と述べた。形式解の重み付けから理由を考える。</span>
+<span id="cb1-573"><a href="#cb1-573" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 5-3　吸収線か輝線か ― ソース関数と背景光の大小 {#ex-5-3 .unnumbered}</span></span>
 <span id="cb1-574"><a href="#cb1-574" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-575"><a href="#cb1-575" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>外向きに観測する場合、形式解の第二項の重み $e^{-(\tau_\nu-\tau')}$ は $\tau'$ がどの辺りで最大か。なぜ「観測点から光学的厚さ約1の深さ」が実効的な放出層になるか述べよ。</span>
-<span id="cb1-576"><a href="#cb1-576" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>平均自由行程 $\ell_\mathrm{mfp}=1/\alpha_\nu$ を使い、「$\tau\sim1$ は光が散乱・吸収されずに脱出できる最後の深さ」という描像で (1) を言い換えよ。</span>
-<span id="cb1-577"><a href="#cb1-577" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>温度が深さとともに上がる恒星大気で、$\tau\sim1$ の層が LTE なら観測スペクトルが $B_\nu(T(\tau<span class="sc">\!</span>\sim<span class="sc">\!</span>1))$ に近づく理由を、問題 5-2(2) と結びつけて述べよ。</span>
+<span id="cb1-575"><a href="#cb1-575" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-576"><a href="#cb1-576" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-577"><a href="#cb1-577" aria-hidden="true" tabindex="-1"></a>問題 5-2(3) の薄い極限 $I_\nu\approx I_\nu(0)+\tau_\nu(S_\nu-I_\nu(0))$ を使って、線が吸収で見えるか輝線で見えるかを論じる。線の中心 $\nu_0$ では $\alpha_\nu$ が大きく $\tau_\nu$ が局所的に増す。</span>
 <span id="cb1-578"><a href="#cb1-578" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-579"><a href="#cb1-579" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§5.2 光学的厚さ</span><span class="co">](#sec-radiative-transfer-optical-depth)</span>、<span class="co">[</span><span class="ot">§5.6 厚い極限</span><span class="co">](#sec-radiative-transfer-thick)</span>／太陽光球が黒体に近い理由は<span class="co">[</span><span class="ot">§3.6</span><span class="co">](../part1/03-universality.qmd#sec-universality-real-objects)</span>（<span class="co">[</span><span class="ot">演習 3-4</span><span class="co">](../part1/03-universality.qmd#ex-3-4)</span>）。</span>
-<span id="cb1-580"><a href="#cb1-580" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-581"><a href="#cb1-581" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
-<span id="cb1-582"><a href="#cb1-582" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 5-4）</span><span class="co">](#sol-5-4)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
-<span id="cb1-583"><a href="#cb1-583" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-579"><a href="#cb1-579" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$S_\nu&lt;I_\nu(0)$ のとき、線中心で $I_\nu$ は連続光より大きいか小さいか。これは吸収線・輝線のどちらか。</span>
+<span id="cb1-580"><a href="#cb1-580" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$S_\nu&gt;I_\nu(0)$（特に背景光 $I_\nu(0)\approx0$）のときはどうか。</span>
+<span id="cb1-581"><a href="#cb1-581" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>太陽の Fraunhofer 吸収線（光球の外側ほど温度が下がる）と、HII 領域の輝線スペクトル（背景光なし）が、それぞれどちらの条件に対応するか述べよ。</span>
+<span id="cb1-582"><a href="#cb1-582" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-583"><a href="#cb1-583" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§5.4 ソース関数</span><span class="co">](#sec-radiative-transfer-source)</span>、<span class="co">[</span><span class="ot">§5.7 薄い極限（輝線天体）</span><span class="co">](#sec-radiative-transfer-thin)</span>／太陽の連続+線の二重構造は<span class="co">[</span><span class="ot">§1.2</span><span class="co">](../part1/01-where-blackbody.qmd#sec-where-blackbody-sun)</span>、線スペクトルは<span class="co">[</span><span class="ot">第21章</span><span class="co">](../part7/21-line-formation.qmd)</span>。</span>
 <span id="cb1-584"><a href="#cb1-584" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-585"><a href="#cb1-585" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 5-5　LTE で Sν=Bν ― 放射場は黒体でなくてよい {#ex-5-5 .unnumbered}</span></span>
-<span id="cb1-586"><a href="#cb1-586" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-587"><a href="#cb1-587" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-585"><a href="#cb1-585" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-586"><a href="#cb1-586" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 5-3）</span><span class="co">](#sol-5-3)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-587"><a href="#cb1-587" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-588"><a href="#cb1-588" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-589"><a href="#cb1-589" aria-hidden="true" tabindex="-1"></a>§5.5 の微妙な点を整理する。LTE は「物質の状態が局所温度 $T$ だけで決まる」近似であって、放射場 $J_\nu$ が黒体である必要は含まない。</span>
+<span id="cb1-589"><a href="#cb1-589" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 5-4　τ がほぼ 1 の層はなぜ「光球（見える表面）」か {#ex-5-4 .unnumbered}</span></span>
 <span id="cb1-590"><a href="#cb1-590" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-591"><a href="#cb1-591" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Kirchhoff の法則が「比 $j_\nu/\alpha_\nu$ を物質の局所温度 $T$ だけの関数（$=B_\nu(T)$）にする」ことを使って、$J_\nu\ne B_\nu$ でも LTE なら $S_\nu=B_\nu(T)$ となる理由を述べよ。</span>
-<span id="cb1-592"><a href="#cb1-592" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>「LTE」と「完全熱平衡」の違いを、（物質の状態）と（放射場の状態）の二つの観点で述べよ。</span>
-<span id="cb1-593"><a href="#cb1-593" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>統計平衡方程式に放射場 $J_\nu$ が入る（誘導吸収・放出 $B_{lu}J_\nu, B_{ul}J_\nu$）と、なぜ占有数に「非局所性」が入るのか。逆に「熱化深さ」より深いとなぜ実質 LTE に戻るのか述べよ。</span>
+<span id="cb1-591"><a href="#cb1-591" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-592"><a href="#cb1-592" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-593"><a href="#cb1-593" aria-hidden="true" tabindex="-1"></a>§5.2・5.6 は「太陽の表面とは可視光で $\tau\sim1$ の深さ」と述べた。形式解の重み付けから理由を考える。</span>
 <span id="cb1-594"><a href="#cb1-594" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-595"><a href="#cb1-595" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§5.5 LTE と non-LTE</span><span class="co">](#sec-radiative-transfer-lte)</span>／Kirchhoff とソース関数は<span class="co">[</span><span class="ot">§3.5</span><span class="co">](../part1/03-universality.qmd#sec-universality-kirchhoff)</span>（<span class="co">[</span><span class="ot">演習 3-3</span><span class="co">](../part1/03-universality.qmd#ex-3-3)</span>）、完全熱平衡は<span class="co">[</span><span class="ot">第6章</span><span class="co">](../part3/06-thermal-equilibrium.qmd)</span>、統計平衡と Einstein 係数は<span class="co">[</span><span class="ot">演習 11-1</span><span class="co">](../part4/11-einstein-method.qmd#ex-11-1)</span>。</span>
-<span id="cb1-596"><a href="#cb1-596" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-597"><a href="#cb1-597" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
-<span id="cb1-598"><a href="#cb1-598" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 5-5）</span><span class="co">](#sol-5-5)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
-<span id="cb1-599"><a href="#cb1-599" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-595"><a href="#cb1-595" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>外向きに観測する場合、形式解の第二項の重み $e^{-(\tau_\nu-\tau')}$ は $\tau'$ がどの辺りで最大か。なぜ「観測点から光学的厚さ約1の深さ」が実効的な放出層になるか述べよ。</span>
+<span id="cb1-596"><a href="#cb1-596" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>平均自由行程 $\ell_\mathrm{mfp}=1/\alpha_\nu$ を使い、「$\tau\sim1$ は光が散乱・吸収されずに脱出できる最後の深さ」という描像で (1) を言い換えよ。</span>
+<span id="cb1-597"><a href="#cb1-597" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>温度が深さとともに上がる恒星大気で、$\tau\sim1$ の層が LTE なら観測スペクトルが $B_\nu(T(\tau<span class="sc">\!</span>\sim<span class="sc">\!</span>1))$ に近づく理由を、問題 5-2(2) と結びつけて述べよ。</span>
+<span id="cb1-598"><a href="#cb1-598" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-599"><a href="#cb1-599" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§5.2 光学的厚さ</span><span class="co">](#sec-radiative-transfer-optical-depth)</span>、<span class="co">[</span><span class="ot">§5.6 厚い極限</span><span class="co">](#sec-radiative-transfer-thick)</span>／太陽光球が黒体に近い理由は<span class="co">[</span><span class="ot">§3.6</span><span class="co">](../part1/03-universality.qmd#sec-universality-real-objects)</span>（<span class="co">[</span><span class="ot">演習 3-4</span><span class="co">](../part1/03-universality.qmd#ex-3-4)</span>）。</span>
 <span id="cb1-600"><a href="#cb1-600" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-601"><a href="#cb1-601" aria-hidden="true" tabindex="-1"></a><span class="fu">## 解答例 {#sec-radiative-transfer-solutions .unnumbered}</span></span>
-<span id="cb1-602"><a href="#cb1-602" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-603"><a href="#cb1-603" aria-hidden="true" tabindex="-1"></a>各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。</span>
+<span id="cb1-601"><a href="#cb1-601" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-602"><a href="#cb1-602" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 5-4）</span><span class="co">](#sol-5-4)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-603"><a href="#cb1-603" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-604"><a href="#cb1-604" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-605"><a href="#cb1-605" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
-<span id="cb1-606"><a href="#cb1-606" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">問題 5-1</span><span class="co">](#sol-5-1)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 5-2</span><span class="co">](#sol-5-2)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 5-3</span><span class="co">](#sol-5-3)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 5-4</span><span class="co">](#sol-5-4)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 5-5</span><span class="co">](#sol-5-5)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
-<span id="cb1-607"><a href="#cb1-607" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-605"><a href="#cb1-605" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 5-5　LTE で Sν=Bν ― 放射場は黒体でなくてよい {#ex-5-5 .unnumbered}</span></span>
+<span id="cb1-606"><a href="#cb1-606" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-607"><a href="#cb1-607" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
 <span id="cb1-608"><a href="#cb1-608" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-609"><a href="#cb1-609" aria-hidden="true" tabindex="-1"></a>::: {#sol-5-1 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-5-1-label"}</span>
-<span id="cb1-610"><a href="#cb1-610" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
-<span id="cb1-611"><a href="#cb1-611" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 5-1）**</span><span class="co">]</span>{#sol-5-1-label .offcanvas-title}</span>
-<span id="cb1-612"><a href="#cb1-612" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
-<span id="cb1-613"><a href="#cb1-613" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-614"><a href="#cb1-614" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
-<span id="cb1-615"><a href="#cb1-615" aria-hidden="true" tabindex="-1"></a>**(1)** 両辺に $e^{\tau_\nu}$ を掛ける：$e^{\tau_\nu}\dfrac{dI_\nu}{d\tau_\nu}+e^{\tau_\nu}I_\nu=e^{\tau_\nu}S_\nu$。左辺は積の微分でまとまる：</span>
+<span id="cb1-609"><a href="#cb1-609" aria-hidden="true" tabindex="-1"></a>§5.5 の微妙な点を整理する。LTE は「物質の状態が局所温度 $T$ だけで決まる」近似であって、放射場 $J_\nu$ が黒体である必要は含まない。</span>
+<span id="cb1-610"><a href="#cb1-610" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-611"><a href="#cb1-611" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Kirchhoff の法則が「比 $j_\nu/\alpha_\nu$ を物質の局所温度 $T$ だけの関数（$=B_\nu(T)$）にする」ことを使って、$J_\nu\ne B_\nu$ でも LTE なら $S_\nu=B_\nu(T)$ となる理由を述べよ。</span>
+<span id="cb1-612"><a href="#cb1-612" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>「LTE」と「完全熱平衡」の違いを、（物質の状態）と（放射場の状態）の二つの観点で述べよ。</span>
+<span id="cb1-613"><a href="#cb1-613" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>統計平衡方程式に放射場 $J_\nu$ が入る（誘導吸収・放出 $B_{lu}J_\nu, B_{ul}J_\nu$）と、なぜ占有数に「非局所性」が入るのか。逆に「熱化深さ」より深いとなぜ実質 LTE に戻るのか述べよ。</span>
+<span id="cb1-614"><a href="#cb1-614" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-615"><a href="#cb1-615" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§5.5 LTE と non-LTE</span><span class="co">](#sec-radiative-transfer-lte)</span>／Kirchhoff とソース関数は<span class="co">[</span><span class="ot">§3.5</span><span class="co">](../part1/03-universality.qmd#sec-universality-kirchhoff)</span>（<span class="co">[</span><span class="ot">演習 3-3</span><span class="co">](../part1/03-universality.qmd#ex-3-3)</span>）、完全熱平衡は<span class="co">[</span><span class="ot">第6章</span><span class="co">](../part3/06-thermal-equilibrium.qmd)</span>、統計平衡と Einstein 係数は<span class="co">[</span><span class="ot">演習 11-1</span><span class="co">](../part4/11-einstein-method.qmd#ex-11-1)</span>。</span>
 <span id="cb1-616"><a href="#cb1-616" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-617"><a href="#cb1-617" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-618"><a href="#cb1-618" aria-hidden="true" tabindex="-1"></a>\frac{d}{d\tau_\nu}\left(I_\nu e^{\tau_\nu}\right)=S_\nu e^{\tau_\nu}.</span>
-<span id="cb1-619"><a href="#cb1-619" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-617"><a href="#cb1-617" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-618"><a href="#cb1-618" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 5-5）</span><span class="co">](#sol-5-5)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-619"><a href="#cb1-619" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-620"><a href="#cb1-620" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-621"><a href="#cb1-621" aria-hidden="true" tabindex="-1"></a>**(2)** $0$ から $\tau_\nu$ まで積分：</span>
+<span id="cb1-621"><a href="#cb1-621" aria-hidden="true" tabindex="-1"></a><span class="fu">## 解答例 {#sec-radiative-transfer-solutions .unnumbered}</span></span>
 <span id="cb1-622"><a href="#cb1-622" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-623"><a href="#cb1-623" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-624"><a href="#cb1-624" aria-hidden="true" tabindex="-1"></a>I_\nu(\tau_\nu)e^{\tau_\nu}-I_\nu(0)=\int_0^{\tau_\nu}S_\nu(\tau')e^{\tau'}d\tau'.</span>
-<span id="cb1-625"><a href="#cb1-625" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-626"><a href="#cb1-626" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-627"><a href="#cb1-627" aria-hidden="true" tabindex="-1"></a>両辺を $e^{\tau_\nu}$ で割る：</span>
+<span id="cb1-623"><a href="#cb1-623" aria-hidden="true" tabindex="-1"></a>各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。</span>
+<span id="cb1-624"><a href="#cb1-624" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-625"><a href="#cb1-625" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-626"><a href="#cb1-626" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">問題 5-1</span><span class="co">](#sol-5-1)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 5-2</span><span class="co">](#sol-5-2)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 5-3</span><span class="co">](#sol-5-3)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 5-4</span><span class="co">](#sol-5-4)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 5-5</span><span class="co">](#sol-5-5)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-627"><a href="#cb1-627" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-628"><a href="#cb1-628" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-629"><a href="#cb1-629" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-630"><a href="#cb1-630" aria-hidden="true" tabindex="-1"></a>I_\nu(\tau_\nu)=I_\nu(0)e^{-\tau_\nu}+\int_0^{\tau_\nu}S_\nu(\tau')e^{-(\tau_\nu-\tau')}d\tau'.</span>
-<span id="cb1-631"><a href="#cb1-631" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-632"><a href="#cb1-632" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-633"><a href="#cb1-633" aria-hidden="true" tabindex="-1"></a>**(3)** 第一項：入射光 $I_\nu(0)$ が経路全体の吸収で $e^{-\tau_\nu}$ 倍に減衰したもの。第二項：各深さ $\tau'$ で放出された光 $S_\nu d\tau'$ が、そこから観測点までの吸収 $e^{-(\tau_\nu-\tau')}$ で減衰しながら積算されたもの。観測スペクトルが「光が経た歴史」を映すとは、この第二項のこと。</span>
-<span id="cb1-634"><a href="#cb1-634" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-635"><a href="#cb1-635" aria-hidden="true" tabindex="-1"></a>**答え**：積分因子 $e^{\tau}$ で $\frac{d}{d\tau}(Ie^\tau)=Se^\tau$、積分して形式解。第一項＝初期光の減衰、第二項＝放出の減衰付き積算。</span>
-<span id="cb1-636"><a href="#cb1-636" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-637"><a href="#cb1-637" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-638"><a href="#cb1-638" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-639"><a href="#cb1-639" aria-hidden="true" tabindex="-1"></a>::: {#sol-5-2 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-5-2-label"}</span>
-<span id="cb1-640"><a href="#cb1-640" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
-<span id="cb1-641"><a href="#cb1-641" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 5-2）**</span><span class="co">]</span>{#sol-5-2-label .offcanvas-title}</span>
-<span id="cb1-642"><a href="#cb1-642" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
-<span id="cb1-643"><a href="#cb1-643" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-644"><a href="#cb1-644" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
-<span id="cb1-645"><a href="#cb1-645" aria-hidden="true" tabindex="-1"></a>**(1)** $S_\nu$ 一定なら積分は</span>
+<span id="cb1-629"><a href="#cb1-629" aria-hidden="true" tabindex="-1"></a>::: {#sol-5-1 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-5-1-label"}</span>
+<span id="cb1-630"><a href="#cb1-630" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-631"><a href="#cb1-631" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 5-1）**</span><span class="co">]</span>{#sol-5-1-label .offcanvas-title}</span>
+<span id="cb1-632"><a href="#cb1-632" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-633"><a href="#cb1-633" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-634"><a href="#cb1-634" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-635"><a href="#cb1-635" aria-hidden="true" tabindex="-1"></a>**(1)** 両辺に $e^{\tau_\nu}$ を掛ける：$e^{\tau_\nu}\dfrac{dI_\nu}{d\tau_\nu}+e^{\tau_\nu}I_\nu=e^{\tau_\nu}S_\nu$。左辺は積の微分でまとまる：</span>
+<span id="cb1-636"><a href="#cb1-636" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-637"><a href="#cb1-637" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-638"><a href="#cb1-638" aria-hidden="true" tabindex="-1"></a>\frac{d}{d\tau_\nu}\left(I_\nu e^{\tau_\nu}\right)=S_\nu e^{\tau_\nu}.</span>
+<span id="cb1-639"><a href="#cb1-639" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-640"><a href="#cb1-640" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-641"><a href="#cb1-641" aria-hidden="true" tabindex="-1"></a>**(2)** $0$ から $\tau_\nu$ まで積分：</span>
+<span id="cb1-642"><a href="#cb1-642" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-643"><a href="#cb1-643" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-644"><a href="#cb1-644" aria-hidden="true" tabindex="-1"></a>I_\nu(\tau_\nu)e^{\tau_\nu}-I_\nu(0)=\int_0^{\tau_\nu}S_\nu(\tau')e^{\tau'}d\tau'.</span>
+<span id="cb1-645"><a href="#cb1-645" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-646"><a href="#cb1-646" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-647"><a href="#cb1-647" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-648"><a href="#cb1-648" aria-hidden="true" tabindex="-1"></a>\int_0^{\tau}S_\nu e^{-(\tau-\tau')}d\tau'=S_\nu e^{-\tau}\int_0^{\tau}e^{\tau'}d\tau'=S_\nu e^{-\tau}(e^{\tau}-1)=S_\nu(1-e^{-\tau}).</span>
+<span id="cb1-647"><a href="#cb1-647" aria-hidden="true" tabindex="-1"></a>両辺を $e^{\tau_\nu}$ で割る：</span>
+<span id="cb1-648"><a href="#cb1-648" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-649"><a href="#cb1-649" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-650"><a href="#cb1-650" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-651"><a href="#cb1-651" aria-hidden="true" tabindex="-1"></a>よって $I_\nu(\tau)=I_\nu(0)e^{-\tau}+S_\nu(1-e^{-\tau})$。</span>
+<span id="cb1-650"><a href="#cb1-650" aria-hidden="true" tabindex="-1"></a>I_\nu(\tau_\nu)=I_\nu(0)e^{-\tau_\nu}+\int_0^{\tau_\nu}S_\nu(\tau')e^{-(\tau_\nu-\tau')}d\tau'.</span>
+<span id="cb1-651"><a href="#cb1-651" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-652"><a href="#cb1-652" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-653"><a href="#cb1-653" aria-hidden="true" tabindex="-1"></a>**(2)** $\tau\gg1$ で $e^{-\tau}\to0$ ゆえ $I_\nu\to S_\nu$。初期光は完全に消え、比強度はソース関数の値そのものになる。</span>
+<span id="cb1-653"><a href="#cb1-653" aria-hidden="true" tabindex="-1"></a>**(3)** 第一項：入射光 $I_\nu(0)$ が経路全体の吸収で $e^{-\tau_\nu}$ 倍に減衰したもの。第二項：各深さ $\tau'$ で放出された光 $S_\nu d\tau'$ が、そこから観測点までの吸収 $e^{-(\tau_\nu-\tau')}$ で減衰しながら積算されたもの。観測スペクトルが「光が経た歴史」を映すとは、この第二項のこと。</span>
 <span id="cb1-654"><a href="#cb1-654" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-655"><a href="#cb1-655" aria-hidden="true" tabindex="-1"></a>**(3)** $\tau\ll1$ で $e^{-\tau}\approx1-\tau$：</span>
-<span id="cb1-656"><a href="#cb1-656" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-657"><a href="#cb1-657" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-658"><a href="#cb1-658" aria-hidden="true" tabindex="-1"></a>I_\nu\approx I_\nu(0)(1-\tau)+S_\nu\tau=I_\nu(0)+\tau(S_\nu-I_\nu(0)).</span>
-<span id="cb1-659"><a href="#cb1-659" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-660"><a href="#cb1-660" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-661"><a href="#cb1-661" aria-hidden="true" tabindex="-1"></a>**答え**：$I_\nu=I_\nu(0)e^{-\tau}+S_\nu(1-e^{-\tau})$。厚い→$S_\nu$、薄い→$I_\nu(0)+\tau(S_\nu-I_\nu(0))$。</span>
-<span id="cb1-662"><a href="#cb1-662" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-655"><a href="#cb1-655" aria-hidden="true" tabindex="-1"></a>**答え**：積分因子 $e^{\tau}$ で $\frac{d}{d\tau}(Ie^\tau)=Se^\tau$、積分して形式解。第一項＝初期光の減衰、第二項＝放出の減衰付き積算。</span>
+<span id="cb1-656"><a href="#cb1-656" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-657"><a href="#cb1-657" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-658"><a href="#cb1-658" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-659"><a href="#cb1-659" aria-hidden="true" tabindex="-1"></a>::: {#sol-5-2 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-5-2-label"}</span>
+<span id="cb1-660"><a href="#cb1-660" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-661"><a href="#cb1-661" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 5-2）**</span><span class="co">]</span>{#sol-5-2-label .offcanvas-title}</span>
+<span id="cb1-662"><a href="#cb1-662" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
 <span id="cb1-663"><a href="#cb1-663" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-664"><a href="#cb1-664" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-665"><a href="#cb1-665" aria-hidden="true" tabindex="-1"></a>::: {#sol-5-3 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-5-3-label"}</span>
-<span id="cb1-666"><a href="#cb1-666" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
-<span id="cb1-667"><a href="#cb1-667" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 5-3）**</span><span class="co">]</span>{#sol-5-3-label .offcanvas-title}</span>
-<span id="cb1-668"><a href="#cb1-668" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
-<span id="cb1-669"><a href="#cb1-669" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-670"><a href="#cb1-670" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
-<span id="cb1-671"><a href="#cb1-671" aria-hidden="true" tabindex="-1"></a>**(1)** $S_\nu&lt;I_\nu(0)$ なら $S_\nu-I_\nu(0)&lt;0$。線中心で $\tau_\nu$ が大きいほど $I_\nu=I_\nu(0)+\tau_\nu(S_\nu-I_\nu(0))$ は連続光 $I_\nu(0)$ より **小さく** なる。すなわち連続光を背景にした **吸収線** として見える。</span>
+<span id="cb1-664"><a href="#cb1-664" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-665"><a href="#cb1-665" aria-hidden="true" tabindex="-1"></a>**(1)** $S_\nu$ 一定なら積分は</span>
+<span id="cb1-666"><a href="#cb1-666" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-667"><a href="#cb1-667" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-668"><a href="#cb1-668" aria-hidden="true" tabindex="-1"></a>\int_0^{\tau}S_\nu e^{-(\tau-\tau')}d\tau'=S_\nu e^{-\tau}\int_0^{\tau}e^{\tau'}d\tau'=S_\nu e^{-\tau}(e^{\tau}-1)=S_\nu(1-e^{-\tau}).</span>
+<span id="cb1-669"><a href="#cb1-669" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-670"><a href="#cb1-670" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-671"><a href="#cb1-671" aria-hidden="true" tabindex="-1"></a>よって $I_\nu(\tau)=I_\nu(0)e^{-\tau}+S_\nu(1-e^{-\tau})$。</span>
 <span id="cb1-672"><a href="#cb1-672" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-673"><a href="#cb1-673" aria-hidden="true" tabindex="-1"></a>**(2)** $S_\nu&gt;I_\nu(0)$ なら $S_\nu-I_\nu(0)&gt;0$。線中心で $I_\nu$ は背景より **大きく**、**輝線** になる。特に背景光がない（$I_\nu(0)\approx0$）と $I_\nu\approx\tau_\nu S_\nu$ で、線中心だけ明るい純粋な輝線スペクトルになる。</span>
+<span id="cb1-673"><a href="#cb1-673" aria-hidden="true" tabindex="-1"></a>**(2)** $\tau\gg1$ で $e^{-\tau}\to0$ ゆえ $I_\nu\to S_\nu$。初期光は完全に消え、比強度はソース関数の値そのものになる。</span>
 <span id="cb1-674"><a href="#cb1-674" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-675"><a href="#cb1-675" aria-hidden="true" tabindex="-1"></a>**(3)** 太陽の Fraunhofer 線：明るい光球（連続光 $I_\nu(0)$ 大）を背景に、外側の低温層（$S_\nu=B_\nu(T_\mathrm{out})&lt;I_\nu(0)$）が吸収する → $S_\nu&lt;I_\nu(0)$、吸収線。HII 領域：背景となる連続光がほぼなく、ガス自身の放出だけが見える → $S_\nu&gt;I_\nu(0)\approx0$、輝線。線の出方は線中心のソース関数と背景光の大小で決まる。</span>
+<span id="cb1-675"><a href="#cb1-675" aria-hidden="true" tabindex="-1"></a>**(3)** $\tau\ll1$ で $e^{-\tau}\approx1-\tau$：</span>
 <span id="cb1-676"><a href="#cb1-676" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-677"><a href="#cb1-677" aria-hidden="true" tabindex="-1"></a>**答え**：$S_\nu&lt;I_\nu(0)$→吸収線、$S_\nu&gt;I_\nu(0)$→輝線。太陽 Fraunhofer＝前者、HII 領域＝後者。</span>
-<span id="cb1-678"><a href="#cb1-678" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-679"><a href="#cb1-679" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-677"><a href="#cb1-677" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-678"><a href="#cb1-678" aria-hidden="true" tabindex="-1"></a>I_\nu\approx I_\nu(0)(1-\tau)+S_\nu\tau=I_\nu(0)+\tau(S_\nu-I_\nu(0)).</span>
+<span id="cb1-679"><a href="#cb1-679" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-680"><a href="#cb1-680" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-681"><a href="#cb1-681" aria-hidden="true" tabindex="-1"></a>::: {#sol-5-4 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-5-4-label"}</span>
-<span id="cb1-682"><a href="#cb1-682" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
-<span id="cb1-683"><a href="#cb1-683" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 5-4）**</span><span class="co">]</span>{#sol-5-4-label .offcanvas-title}</span>
-<span id="cb1-684"><a href="#cb1-684" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
-<span id="cb1-685"><a href="#cb1-685" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-686"><a href="#cb1-686" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
-<span id="cb1-687"><a href="#cb1-687" aria-hidden="true" tabindex="-1"></a>**(1)** 観測点（$\tau_\nu=0$ を外側にとる座標で考えると）に届く放出の重みは $e^{-(\tau_\nu-\tau')}$ で、観測点から光学的厚さが約1以内の層（$\tau\lesssim1$）からの寄与が支配的。それより深い層の光は手前の吸収 $e^{-\tau}$ で強く減衰して届かない。だから「観測点から $\tau\sim1$ の深さ」が実効的な放出層＝「見える表面」になる。</span>
-<span id="cb1-688"><a href="#cb1-688" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-689"><a href="#cb1-689" aria-hidden="true" tabindex="-1"></a>**(2)** $\ell_\mathrm{mfp}=1/\alpha_\nu$ は光が一回吸収・散乱されずに進める距離。$\tau\sim1$ は観測点から測って平均自由行程ほぼ1回分の深さで、そこから出た光子はもう吸収されずに脱出できる。それより深い光子は途中で吸収・再放出され「直接は見えない」。よって $\tau\sim1$ が脱出できる最後の深さ＝光球。</span>
-<span id="cb1-690"><a href="#cb1-690" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-691"><a href="#cb1-691" aria-hidden="true" tabindex="-1"></a>**(3)** $\tau\sim1$ 層が LTE なら $S_\nu=B_\nu(T(\tau<span class="sc">\!</span>\sim<span class="sc">\!</span>1))$。その層は内側に向かって光学的に厚い（$\tau\gg1$）ので、問題 5-2(2) の厚い極限により出てくる比強度は $I_\nu\to S_\nu=B_\nu(T(\tau<span class="sc">\!</span>\sim<span class="sc">\!</span>1))$。すなわち観測スペクトルは $\tau\sim1$ 層の温度のプランク関数に近づく。太陽が $B_\nu(5800\text{K})$ に近いのはこのため。</span>
+<span id="cb1-681"><a href="#cb1-681" aria-hidden="true" tabindex="-1"></a>**答え**：$I_\nu=I_\nu(0)e^{-\tau}+S_\nu(1-e^{-\tau})$。厚い→$S_\nu$、薄い→$I_\nu(0)+\tau(S_\nu-I_\nu(0))$。</span>
+<span id="cb1-682"><a href="#cb1-682" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-683"><a href="#cb1-683" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-684"><a href="#cb1-684" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-685"><a href="#cb1-685" aria-hidden="true" tabindex="-1"></a>::: {#sol-5-3 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-5-3-label"}</span>
+<span id="cb1-686"><a href="#cb1-686" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-687"><a href="#cb1-687" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 5-3）**</span><span class="co">]</span>{#sol-5-3-label .offcanvas-title}</span>
+<span id="cb1-688"><a href="#cb1-688" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-689"><a href="#cb1-689" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-690"><a href="#cb1-690" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-691"><a href="#cb1-691" aria-hidden="true" tabindex="-1"></a>**(1)** $S_\nu&lt;I_\nu(0)$ なら $S_\nu-I_\nu(0)&lt;0$。線中心で $\tau_\nu$ が大きいほど $I_\nu=I_\nu(0)+\tau_\nu(S_\nu-I_\nu(0))$ は連続光 $I_\nu(0)$ より **小さく** なる。すなわち連続光を背景にした **吸収線** として見える。</span>
 <span id="cb1-692"><a href="#cb1-692" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-693"><a href="#cb1-693" aria-hidden="true" tabindex="-1"></a>**答え**：重み $e^{-(\tau-\tau')}$ ゆえ $\tau\sim1$ 層が実効放出層＝脱出できる最後の深さ＝光球。そこが LTE＋厚いので $I_\nu\to B_\nu(T(\tau<span class="sc">\!</span>\sim<span class="sc">\!</span>1))$。</span>
-<span id="cb1-694"><a href="#cb1-694" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-695"><a href="#cb1-695" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-693"><a href="#cb1-693" aria-hidden="true" tabindex="-1"></a>**(2)** $S_\nu&gt;I_\nu(0)$ なら $S_\nu-I_\nu(0)&gt;0$。線中心で $I_\nu$ は背景より **大きく**、**輝線** になる。特に背景光がない（$I_\nu(0)\approx0$）と $I_\nu\approx\tau_\nu S_\nu$ で、線中心だけ明るい純粋な輝線スペクトルになる。</span>
+<span id="cb1-694"><a href="#cb1-694" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-695"><a href="#cb1-695" aria-hidden="true" tabindex="-1"></a>**(3)** 太陽の Fraunhofer 線：明るい光球（連続光 $I_\nu(0)$ 大）を背景に、外側の低温層（$S_\nu=B_\nu(T_\mathrm{out})&lt;I_\nu(0)$）が吸収する → $S_\nu&lt;I_\nu(0)$、吸収線。HII 領域：背景となる連続光がほぼなく、ガス自身の放出だけが見える → $S_\nu&gt;I_\nu(0)\approx0$、輝線。線の出方は線中心のソース関数と背景光の大小で決まる。</span>
 <span id="cb1-696"><a href="#cb1-696" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-697"><a href="#cb1-697" aria-hidden="true" tabindex="-1"></a>::: {#sol-5-5 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-5-5-label"}</span>
-<span id="cb1-698"><a href="#cb1-698" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
-<span id="cb1-699"><a href="#cb1-699" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 5-5）**</span><span class="co">]</span>{#sol-5-5-label .offcanvas-title}</span>
-<span id="cb1-700"><a href="#cb1-700" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
-<span id="cb1-701"><a href="#cb1-701" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-702"><a href="#cb1-702" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
-<span id="cb1-703"><a href="#cb1-703" aria-hidden="true" tabindex="-1"></a>**(1)** ソース関数は $S_\nu=j_\nu/\alpha_\nu$。Kirchhoff の法則により、物質が局所温度 $T$ で熱化していれば、放出と吸収の比 $j_\nu/\alpha_\nu$ は **その物質の温度 $T$ だけの関数** $B_\nu(T)$ になる。$j_\nu$ も $\alpha_\nu$ も局所占有数（Boltzmann 分布、局所 $T$）で決まり、その比は周囲の放射場 $J_\nu$ に依らない。だから $J_\nu$ が異方的でも $J_\nu\ne B_\nu$ でも、物質さえ LTE なら $S_\nu=B_\nu(T)$。</span>
-<span id="cb1-704"><a href="#cb1-704" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-705"><a href="#cb1-705" aria-hidden="true" tabindex="-1"></a>**(2)** LTE：**物質** の速度分布・電離・励起が局所 $T$ で決まる（Maxwell・Saha・Boltzmann）。放射場 $J_\nu$ は黒体でも等方でもなくてよい。完全熱平衡：**物質も放射場も両方** が同一温度で平衡（$J_\nu=B_\nu$ かつ等方、$F_\nu=0$）。LTE は物質だけの条件、完全熱平衡は放射場まで含む強い条件。</span>
-<span id="cb1-706"><a href="#cb1-706" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-707"><a href="#cb1-707" aria-hidden="true" tabindex="-1"></a>**(3)** 誘導吸収・放出の率は $J_\nu$ に比例する。形式解が示すように $J_\nu(\mathbf r)$ は媒質全体の構造（経路上の温度・密度）を積分した非局所量。だから占有数を決める統計平衡方程式に $J_\nu$ が入ると、占有数＝媒質全体の関数となり非局所性が入る。一方「熱化深さ」より深い領域では放射場がその場で熱化し $J_\nu\to B_\nu(T_\mathrm{local})$ となるため、統計平衡の解も Boltzmann（局所値）に漸近し $S_\nu\to B_\nu(T_\mathrm{local})$、実質 LTE に戻る。non-LTE が観測に効くのは薄い領域や中程度 $\tau$ の上層大気。</span>
+<span id="cb1-697"><a href="#cb1-697" aria-hidden="true" tabindex="-1"></a>**答え**：$S_\nu&lt;I_\nu(0)$→吸収線、$S_\nu&gt;I_\nu(0)$→輝線。太陽 Fraunhofer＝前者、HII 領域＝後者。</span>
+<span id="cb1-698"><a href="#cb1-698" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-699"><a href="#cb1-699" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-700"><a href="#cb1-700" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-701"><a href="#cb1-701" aria-hidden="true" tabindex="-1"></a>::: {#sol-5-4 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-5-4-label"}</span>
+<span id="cb1-702"><a href="#cb1-702" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-703"><a href="#cb1-703" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 5-4）**</span><span class="co">]</span>{#sol-5-4-label .offcanvas-title}</span>
+<span id="cb1-704"><a href="#cb1-704" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-705"><a href="#cb1-705" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-706"><a href="#cb1-706" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-707"><a href="#cb1-707" aria-hidden="true" tabindex="-1"></a>**(1)** 観測点（$\tau_\nu=0$ を外側にとる座標で考えると）に届く放出の重みは $e^{-(\tau_\nu-\tau')}$ で、観測点から光学的厚さが約1以内の層（$\tau\lesssim1$）からの寄与が支配的。それより深い層の光は手前の吸収 $e^{-\tau}$ で強く減衰して届かない。だから「観測点から $\tau\sim1$ の深さ」が実効的な放出層＝「見える表面」になる。</span>
 <span id="cb1-708"><a href="#cb1-708" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-709"><a href="#cb1-709" aria-hidden="true" tabindex="-1"></a>**答え**：Kirchhoff が $j/\alpha$ を局所 $T$ だけの関数にするので、放射場が黒体でなくても物質 LTE なら $S_\nu=B_\nu$。完全熱平衡は放射場まで黒体な強い条件。$J_\nu$ 経由で非局所性が入るが、熱化深さより深いと $J_\nu\to B_\nu$ で実質 LTE。</span>
-<span id="cb1-710"><a href="#cb1-710" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-711"><a href="#cb1-711" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-709"><a href="#cb1-709" aria-hidden="true" tabindex="-1"></a>**(2)** $\ell_\mathrm{mfp}=1/\alpha_\nu$ は光が一回吸収・散乱されずに進める距離。$\tau\sim1$ は観測点から測って平均自由行程ほぼ1回分の深さで、そこから出た光子はもう吸収されずに脱出できる。それより深い光子は途中で吸収・再放出され「直接は見えない」。よって $\tau\sim1$ が脱出できる最後の深さ＝光球。</span>
+<span id="cb1-710"><a href="#cb1-710" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-711"><a href="#cb1-711" aria-hidden="true" tabindex="-1"></a>**(3)** $\tau\sim1$ 層が LTE なら $S_\nu=B_\nu(T(\tau<span class="sc">\!</span>\sim<span class="sc">\!</span>1))$。その層は内側に向かって光学的に厚い（$\tau\gg1$）ので、問題 5-2(2) の厚い極限により出てくる比強度は $I_\nu\to S_\nu=B_\nu(T(\tau<span class="sc">\!</span>\sim<span class="sc">\!</span>1))$。すなわち観測スペクトルは $\tau\sim1$ 層の温度のプランク関数に近づく。太陽が $B_\nu(5800\text{K})$ に近いのはこのため。</span>
 <span id="cb1-712"><a href="#cb1-712" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-713"><a href="#cb1-713" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-radiative-transfer-further .unnumbered}</span></span>
-<span id="cb1-714"><a href="#cb1-714" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-715"><a href="#cb1-715" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rybicki &amp; Lightman, *Radiative Processes in Astrophysics* (Wiley, 1979) — 第1章「Fundamentals of Radiative Transfer」</span>
-<span id="cb1-716"><a href="#cb1-716" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mihalas, *Stellar Atmospheres* (Freeman, 2nd ed., 1978) — LTE / non-LTE の本格的扱い</span>
-<span id="cb1-717"><a href="#cb1-717" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Hubeny &amp; Mihalas, *Theory of Stellar Atmospheres* (Princeton, 2014) — 現代的な放射輸送の決定版</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-713"><a href="#cb1-713" aria-hidden="true" tabindex="-1"></a>**答え**：重み $e^{-(\tau-\tau')}$ ゆえ $\tau\sim1$ 層が実効放出層＝脱出できる最後の深さ＝光球。そこが LTE＋厚いので $I_\nu\to B_\nu(T(\tau<span class="sc">\!</span>\sim<span class="sc">\!</span>1))$。</span>
+<span id="cb1-714"><a href="#cb1-714" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-715"><a href="#cb1-715" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-716"><a href="#cb1-716" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-717"><a href="#cb1-717" aria-hidden="true" tabindex="-1"></a>::: {#sol-5-5 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-5-5-label"}</span>
+<span id="cb1-718"><a href="#cb1-718" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-719"><a href="#cb1-719" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 5-5）**</span><span class="co">]</span>{#sol-5-5-label .offcanvas-title}</span>
+<span id="cb1-720"><a href="#cb1-720" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-721"><a href="#cb1-721" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-722"><a href="#cb1-722" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-723"><a href="#cb1-723" aria-hidden="true" tabindex="-1"></a>**(1)** ソース関数は $S_\nu=j_\nu/\alpha_\nu$。Kirchhoff の法則により、物質が局所温度 $T$ で熱化していれば、放出と吸収の比 $j_\nu/\alpha_\nu$ は **その物質の温度 $T$ だけの関数** $B_\nu(T)$ になる。$j_\nu$ も $\alpha_\nu$ も局所占有数（Boltzmann 分布、局所 $T$）で決まり、その比は周囲の放射場 $J_\nu$ に依らない。だから $J_\nu$ が異方的でも $J_\nu\ne B_\nu$ でも、物質さえ LTE なら $S_\nu=B_\nu(T)$。</span>
+<span id="cb1-724"><a href="#cb1-724" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-725"><a href="#cb1-725" aria-hidden="true" tabindex="-1"></a>**(2)** LTE：**物質** の速度分布・電離・励起が局所 $T$ で決まる（Maxwell・Saha・Boltzmann）。放射場 $J_\nu$ は黒体でも等方でもなくてよい。完全熱平衡：**物質も放射場も両方** が同一温度で平衡（$J_\nu=B_\nu$ かつ等方、$F_\nu=0$）。LTE は物質だけの条件、完全熱平衡は放射場まで含む強い条件。</span>
+<span id="cb1-726"><a href="#cb1-726" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-727"><a href="#cb1-727" aria-hidden="true" tabindex="-1"></a>**(3)** 誘導吸収・放出の率は $J_\nu$ に比例する。形式解が示すように $J_\nu(\mathbf r)$ は媒質全体の構造（経路上の温度・密度）を積分した非局所量。だから占有数を決める統計平衡方程式に $J_\nu$ が入ると、占有数＝媒質全体の関数となり非局所性が入る。一方「熱化深さ」より深い領域では放射場がその場で熱化し $J_\nu\to B_\nu(T_\mathrm{local})$ となるため、統計平衡の解も Boltzmann（局所値）に漸近し $S_\nu\to B_\nu(T_\mathrm{local})$、実質 LTE に戻る。non-LTE が観測に効くのは薄い領域や中程度 $\tau$ の上層大気。</span>
+<span id="cb1-728"><a href="#cb1-728" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-729"><a href="#cb1-729" aria-hidden="true" tabindex="-1"></a>**答え**：Kirchhoff が $j/\alpha$ を局所 $T$ だけの関数にするので、放射場が黒体でなくても物質 LTE なら $S_\nu=B_\nu$。完全熱平衡は放射場まで黒体な強い条件。$J_\nu$ 経由で非局所性が入るが、熱化深さより深いと $J_\nu\to B_\nu$ で実質 LTE。</span>
+<span id="cb1-730"><a href="#cb1-730" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-731"><a href="#cb1-731" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-732"><a href="#cb1-732" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-733"><a href="#cb1-733" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-radiative-transfer-further .unnumbered}</span></span>
+<span id="cb1-734"><a href="#cb1-734" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-735"><a href="#cb1-735" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rybicki &amp; Lightman, *Radiative Processes in Astrophysics* (Wiley, 1979) — 第1章「Fundamentals of Radiative Transfer」</span>
+<span id="cb1-736"><a href="#cb1-736" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mihalas, *Stellar Atmospheres* (Freeman, 2nd ed., 1978) — LTE / non-LTE の本格的扱い</span>
+<span id="cb1-737"><a href="#cb1-737" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Hubeny &amp; Mihalas, *Theory of Stellar Atmospheres* (Princeton, 2014) — 現代的な放射輸送の決定版</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

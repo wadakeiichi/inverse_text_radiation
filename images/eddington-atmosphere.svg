@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Noto Sans JP', sans-serif">
+<defs>
+<marker id="ed-a" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#2f6cb0"/></marker>
+<marker id="ed-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1f4e79"/></marker>
+<marker id="ed-ax" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#5a6a7a"/></marker>
+</defs>
+<rect width="900" height="500" fill="#fafbfc"/>
+
+<line x1="462" y1="80" x2="462" y2="470" stroke="#dde3ea" stroke-width="1.5"/>
+
+<!-- ===================== Panel A: geometry ===================== -->
+<text x="250" y="58" font-size="18" fill="#1f4e79" text-anchor="middle" font-weight="700">(a) 平面平行大気とモーメント</text>
+
+<!-- layer stack (cool top -> warm bottom) -->
+<rect x="100" y="110" width="300" height="34" fill="#edf3fb"/>
+<rect x="100" y="144" width="300" height="34" fill="#e6eef7"/>
+<rect x="100" y="178" width="300" height="34" fill="#eeebf3"/>
+<rect x="100" y="212" width="300" height="34" fill="#f7ece8"/>
+<rect x="100" y="246" width="300" height="34" fill="#f4e3da"/>
+<rect x="100" y="280" width="300" height="34" fill="#f0dacd"/>
+<rect x="100" y="314" width="300" height="34" fill="#ecd1c1"/>
+<rect x="100" y="110" width="300" height="238" fill="none" stroke="#9bb0c4" stroke-width="1.4"/>
+
+<!-- tau axis -->
+<line x1="80" y1="108" x2="80" y2="356" stroke="#5a6a7a" stroke-width="1.6" marker-end="url(#ed-ax)"/>
+<text x="62" y="238" font-size="20" fill="#5a6a7a" text-anchor="middle" font-style="italic" font-family="Georgia,'STIX Two Text',serif">&#964;</text>
+<text x="104" y="104" font-size="13" fill="#5a6a7a" text-anchor="start">&#964; = 0（表面）</text>
+<text x="104" y="364" font-size="13" fill="#5a6a7a" text-anchor="start">&#964; &#8811; 1（深部）</text>
+<text x="392" y="126" font-size="12.5" fill="#b05a2a" text-anchor="end">低温</text>
+<text x="392" y="338" font-size="12.5" fill="#b05a2a" text-anchor="end">高温</text>
+
+<!-- tau = 2/3 dashed line, label at left -->
+<line x1="100" y1="212" x2="400" y2="212" stroke="#1f4e79" stroke-width="1.4" stroke-dasharray="5,4"/>
+<text x="168" y="205" font-size="12.5" fill="#1f4e79" text-anchor="middle" font-weight="600">&#964; = 2/3（T = T<tspan baseline-shift="sub" font-size="9">e</tspan>）</text>
+
+<!-- surface rosette: upper hemisphere only -->
+<g stroke="#2f6cb0" stroke-width="1.5">
+<line x1="245" y1="127" x2="234" y2="127" marker-end="url(#ed-a)"/>
+<line x1="246.5" y1="123.5" x2="238.7" y2="115.7" marker-end="url(#ed-a)"/>
+<line x1="250" y1="122" x2="250" y2="111" marker-end="url(#ed-a)"/>
+<line x1="253.5" y1="123.5" x2="261.3" y2="115.7" marker-end="url(#ed-a)"/>
+<line x1="255" y1="127" x2="266" y2="127" marker-end="url(#ed-a)"/>
+</g>
+<line x1="225" y1="135" x2="275" y2="135" stroke="#9bb0c4" stroke-width="1"/>
+<text x="250" y="99" font-size="12" fill="#5a6a7a" text-anchor="middle">表面：上半球のみ</text>
+
+<!-- deep rosette: isotropic -->
+<g stroke="#2f6cb0" stroke-width="1.5">
+<line x1="255" y1="331" x2="266" y2="331" marker-end="url(#ed-a)"/>
+<line x1="253.5" y1="334.5" x2="261.3" y2="342.3" marker-end="url(#ed-a)"/>
+<line x1="250" y1="336" x2="250" y2="347" marker-end="url(#ed-a)"/>
+<line x1="246.5" y1="334.5" x2="238.7" y2="342.3" marker-end="url(#ed-a)"/>
+<line x1="245" y1="331" x2="234" y2="331" marker-end="url(#ed-a)"/>
+<line x1="246.5" y1="327.5" x2="238.7" y2="319.7" marker-end="url(#ed-a)"/>
+<line x1="250" y1="326" x2="250" y2="315" marker-end="url(#ed-a)"/>
+<line x1="253.5" y1="327.5" x2="261.3" y2="319.7" marker-end="url(#ed-a)"/>
+</g>
+<text x="250" y="372" font-size="12" fill="#5a6a7a" text-anchor="middle">深部：ほぼ等方 &#8658; K = J/3</text>
+
+<!-- point P, normal, ray, angle (mid layer) -->
+<line x1="250" y1="245" x2="250" y2="162" stroke="#5a6a7a" stroke-width="1.3" stroke-dasharray="4,3"/>
+<text x="256" y="166" font-size="15" fill="#5a6a7a" font-style="italic" font-family="Georgia,'STIX Two Text',serif">n</text>
+<line x1="250" y1="245" x2="336" y2="181" stroke="#1f4e79" stroke-width="2.6" marker-end="url(#ed-r)"/>
+<path d="M 250 221 A 24 24 0 0 1 269.2 230.7" fill="none" stroke="#5a6a7a" stroke-width="1.3"/>
+<text x="266" y="217" font-size="15" fill="#5a6a7a" font-style="italic" font-family="Georgia,'STIX Two Text',serif">&#952;</text>
+<circle cx="250" cy="245" r="3.4" fill="#0a1929"/>
+<text x="298" y="252" font-size="14" fill="#1f4e79" font-style="italic" font-family="Georgia,'STIX Two Text',serif">&#956; = cos&#952;</text>
+<text x="340" y="178" font-size="15" fill="#1f4e79" font-style="italic" font-family="Georgia,'STIX Two Text',serif">I(&#964;,&#956;)</text>
+
+<!-- ===================== Panel B: T(tau) ===================== -->
+<text x="680" y="58" font-size="18" fill="#1f4e79" text-anchor="middle" font-weight="700">(b) 温度構造 T(&#964;)</text>
+
+<line x1="540" y1="430" x2="868" y2="430" stroke="#5a6a7a" stroke-width="1.6" marker-end="url(#ed-ax)"/>
+<line x1="540" y1="430" x2="540" y2="104" stroke="#5a6a7a" stroke-width="1.6" marker-end="url(#ed-ax)"/>
+
+<line x1="540" y1="430" x2="540" y2="435" stroke="#5a6a7a" stroke-width="1.4"/>
+<line x1="643" y1="430" x2="643" y2="435" stroke="#5a6a7a" stroke-width="1.4"/>
+<line x1="747" y1="430" x2="747" y2="435" stroke="#5a6a7a" stroke-width="1.4"/>
+<line x1="850" y1="430" x2="850" y2="435" stroke="#5a6a7a" stroke-width="1.4"/>
+<text x="540" y="448" font-size="13" fill="#5a6a7a" text-anchor="middle">0</text>
+<text x="643" y="448" font-size="13" fill="#5a6a7a" text-anchor="middle">1</text>
+<text x="747" y="448" font-size="13" fill="#5a6a7a" text-anchor="middle">2</text>
+<text x="850" y="448" font-size="13" fill="#5a6a7a" text-anchor="middle">3</text>
+<text x="704" y="468" font-size="13.5" fill="#5a6a7a" text-anchor="middle"><tspan font-style="italic" font-family="Georgia,'STIX Two Text',serif">&#964;</tspan><tspan baseline-shift="sub" font-size="9" font-style="italic" font-family="Georgia,'STIX Two Text',serif">R</tspan>　（ロスランド光学的深さ）</text>
+
+<line x1="535" y1="430" x2="540" y2="430" stroke="#5a6a7a" stroke-width="1.4"/>
+<line x1="535" y1="306" x2="540" y2="306" stroke="#5a6a7a" stroke-width="1.4"/>
+<line x1="535" y1="182" x2="540" y2="182" stroke="#5a6a7a" stroke-width="1.4"/>
+<text x="531" y="434" font-size="12.5" fill="#5a6a7a" text-anchor="end">0.8</text>
+<text x="531" y="310" font-size="12.5" fill="#5a6a7a" text-anchor="end">1.0</text>
+<text x="531" y="186" font-size="12.5" fill="#5a6a7a" text-anchor="end">1.2</text>
+<text x="506" y="270" font-size="14" fill="#5a6a7a" text-anchor="middle" transform="rotate(-90 506 270)" font-style="italic" font-family="Georgia,'STIX Two Text',serif">T / T<tspan baseline-shift="sub" font-size="9">e</tspan></text>
+
+<rect x="588" y="116" width="240" height="32" rx="5" fill="#eef4fb" stroke="#9bb0c4" stroke-width="1"/>
+<text x="708" y="138" font-size="16" fill="#1f4e79" text-anchor="middle" font-style="italic" font-family="Georgia,'STIX Two Text',serif">T(&#964;)&#8308; = &#190;&#8201;T<tspan baseline-shift="sub" font-size="10">e</tspan>&#8308; (&#964; + &#8532;)</text>
+
+<line x1="609" y1="430" x2="609" y2="306" stroke="#c43f6b" stroke-width="1.3" stroke-dasharray="5,4"/>
+<line x1="540" y1="306" x2="609" y2="306" stroke="#c43f6b" stroke-width="1.3" stroke-dasharray="5,4"/>
+<line x1="609" y1="430" x2="609" y2="436" stroke="#c43f6b" stroke-width="1.4"/>
+<text x="609" y="448" font-size="12.5" fill="#c43f6b" text-anchor="middle">2/3</text>
+
+<polyline points="540,405 566,362 609,306 643,271 695,226 747,189 798,157 850,123" fill="none" stroke="#1f4e79" stroke-width="3"/>
+
+<circle cx="609" cy="306" r="4.2" fill="#c43f6b"/>
+<text x="620" y="300" font-size="13" fill="#c43f6b" text-anchor="start" font-weight="600">T = T<tspan baseline-shift="sub" font-size="9">e</tspan>（&#964; = 2/3）</text>
+<circle cx="540" cy="405" r="4.2" fill="#1f4e79"/>
+<line x1="544" y1="405" x2="566" y2="405" stroke="#5a6a7a" stroke-width="1"/>
+<text x="570" y="409" font-size="12.5" fill="#1f4e79" text-anchor="start">T<tspan baseline-shift="sub" font-size="9">0</tspan> &#8776; 0.84&#8201;T<tspan baseline-shift="sub" font-size="9">e</tspan>（表面）</text>
+</svg>
