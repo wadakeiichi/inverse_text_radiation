@@ -509,14 +509,11 @@ window.Quarto = {
   <li><a href="#sec-classical-failure-exercises" id="toc-sec-classical-failure-exercises" class="nav-link" data-scroll-target="#sec-classical-failure-exercises">演習問題</a>
   <ul class="collapse">
   <li><a href="#ex-9-1" id="toc-ex-9-1" class="nav-link" data-scroll-target="#ex-9-1">問題 9-1　空洞モード密度 g(ν)=8πν²/c³ の数え上げ</a></li>
-  </ul></li>
-  <li><a href="#模範解答問題-9-1" id="toc-模範解答問題-9-1" class="nav-link" data-scroll-target="#模範解答問題-9-1">模範解答（問題 9-1）</a></li>
   <li><a href="#ex-9-2" id="toc-ex-9-2" class="nav-link" data-scroll-target="#ex-9-2">問題 9-2　古典分配関数から 1モードの平均エネルギー kBT</a></li>
-  <li><a href="#模範解答問題-9-2" id="toc-模範解答問題-9-2" class="nav-link" data-scroll-target="#模範解答問題-9-2">模範解答（問題 9-2）</a></li>
   <li><a href="#ex-9-3" id="toc-ex-9-3" class="nav-link" data-scroll-target="#ex-9-3">問題 9-3　紫外発散の「次数」とカットオフ依存性</a></li>
-  <li><a href="#模範解答問題-9-3" id="toc-模範解答問題-9-3" class="nav-link" data-scroll-target="#模範解答問題-9-3">模範解答（問題 9-3）</a></li>
   <li><a href="#ex-9-4" id="toc-ex-9-4" class="nav-link" data-scroll-target="#ex-9-4">問題 9-4　破綻の「責任の所在」― モード密度か等分配か</a></li>
-  <li><a href="#模範解答問題-9-4" id="toc-模範解答問題-9-4" class="nav-link" data-scroll-target="#模範解答問題-9-4">模範解答（問題 9-4）</a></li>
+  </ul></li>
+  <li><a href="#sec-classical-failure-solutions" id="toc-sec-classical-failure-solutions" class="nav-link" data-scroll-target="#sec-classical-failure-solutions">解答例</a></li>
   <li><a href="#sec-classical-failure-further" id="toc-sec-classical-failure-further" class="nav-link" data-scroll-target="#sec-classical-failure-further">さらに学ぶための参考文献</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/edit/main/part4/09-classical-failure.qmd" class="toc-action"><i class="bi bi-github"></i>編集</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/blob/main/part4/09-classical-failure.qmd" class="toc-action"><i class="bi empty"></i>ソースコード</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/issues/new" class="toc-action"><i class="bi empty"></i>問題を報告</a></li></ul></div></nav>
@@ -798,7 +795,7 @@ u_\text{classical} = \int_0^\infty u_\nu^\text{RJ} \, d\nu = \frac{8\pi k_B T}{c
 </section>
 <section id="sec-classical-failure-exercises" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-classical-failure-exercises">演習問題</h2>
-<p><span class="tag">[導出補完]</span> <strong>模範解答</strong> は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</p>
+<p><span class="tag">[導出補完]</span> <strong>解答例</strong> は章末「解答例」にまとめてある（オンライン版では各問のボタンから開く）。まず自力で解いてから開くこと。</p>
 <section id="ex-9-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ex-9-1">問題 9-1　空洞モード密度 g(ν)=8πν²/c³ の数え上げ</h3>
 <p>[★ 難易度：☆☆ ] <span class="tag">[導出補完]</span></p>
@@ -812,10 +809,55 @@ u_\text{classical} = \int_0^\infty u_\nu^\text{RJ} \, d\nu = \frac{8\pi k_B T}{c
 <li>係数 <span class="math inline">8\pi</span> のうち、どの因子が「3次元」に、どの因子が「偏光」に由来するか説明せよ。</li>
 </ol>
 <p><strong>関連</strong>：<a href="#sec-classical-failure-modes">§9.1 空洞モードの数え上げ</a>／本格導出は<a href="../part5/14-cavity-modes.html">第14章 空洞モード</a>。</p>
+<p><a href="#sol-9-1" class="btn btn-outline-secondary btn-sm" data-bs-toggle="offcanvas" role="button">解答例を見る（問題 9-1）</a></p>
+</section>
+<section id="ex-9-2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-9-2">問題 9-2　古典分配関数から 1モードの平均エネルギー kBT</h3>
+<p>[★ 難易度：☆ ] <span class="tag">[導出補完]</span></p>
+<p>§9.2 は等分配定理で各モードに <span class="math inline">k_BT</span> が分配されると述べた。これを古典分配関数から直接導け。モードは調和振動子 <span class="math inline">E=\dfrac{p^2}{2m}+\dfrac{1}{2}m\omega^2 q^2</span> と等価である。</p>
+<ol type="1">
+<li>古典分配関数 <span class="math inline">Z=\dfrac{1}{h_0}\displaystyle\int e^{-\beta E}\,dq\,dp</span>（<span class="math inline">\beta=1/k_BT</span>）を計算し、<span class="math inline">Z\propto\beta^{-1}</span> を示せ。</li>
+<li><span class="math inline">\langle E\rangle=-\partial\ln Z/\partial\beta</span> から <span class="math inline">\langle E\rangle=k_BT</span> を導け。</li>
+<li>この「2つの二次形式に各 <span class="math inline">\frac12 k_BT</span>」という結果を、3次元の自由粒子（並進運動エネルギーのみ）の <span class="math inline">\frac32 k_BT</span> と対比して、なぜ振動子は <span class="math inline">k_BT</span> なのかを一言で説明せよ。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-classical-failure-rayleigh-jeans">§9.2 等分配と Rayleigh–Jeans</a>／等分配定理は<a href="../part3/07-statistical-mechanics.html">第7章 §7.6</a>。この古典結果を量子化したものが<a href="../part4/10-planck-quantum.html#sec-planck-quantum-oscillator">§10.2</a>の<a href="../part4/10-planck-quantum.html#ex-10-1">演習 10-1</a>。</p>
+<p><a href="#sol-9-2" class="btn btn-outline-secondary btn-sm" data-bs-toggle="offcanvas" role="button">解答例を見る（問題 9-2）</a></p>
+</section>
+<section id="ex-9-3" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-9-3">問題 9-3　紫外発散の「次数」とカットオフ依存性</h3>
+<p>[★ 難易度：☆☆ ] <span class="tag">[理解を深める]</span></p>
+<p>§9.3 は <span class="math inline">u_\mathrm{classical}=\int_0^\infty u_\nu^\mathrm{RJ}d\nu=\infty</span> を示した。なぜ「紫外線」破綻と呼ぶのかを定量的に確かめる。</p>
+<ol type="1">
+<li>人工的な上限 <span class="math inline">\nu_{\max}</span> を導入し、全エネルギー密度が <span class="math inline">u(\nu_{\max})=\dfrac{8\pi k_BT}{3c^3}\nu_{\max}^3</span> となることを示せ。発散は <span class="math inline">\nu_{\max}\to\infty</span> でどんな冪で増えるか。</li>
+<li>エネルギーがどの振動数帯に集中するかを「<span class="math inline">d u/d\nu\propto\nu^2</span> が単調増加」という事実から論じ、なぜ高振動数（紫外）側が破綻の原因かを述べよ。</li>
+<li>プランク分布 <span class="math inline">u_\nu\propto\nu^3/(e^{h\nu/k_BT}-1)</span> ではこの積分が収束する理由を、被積分関数の <span class="math inline">\nu\to\infty</span> での振る舞いから説明せよ。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-classical-failure-uv-catastrophe">§9.3 紫外線破綻</a>／収束する全積分（Stefan–Boltzmann）は<a href="../part4/10-planck-quantum.html#ex-10-3">演習 10-3</a>、本文<a href="../part4/10-planck-quantum.html#sec-planck-quantum-derivation">§10.3</a>。</p>
+<p><a href="#sol-9-3" class="btn btn-outline-secondary btn-sm" data-bs-toggle="offcanvas" role="button">解答例を見る（問題 9-3）</a></p>
+</section>
+<section id="ex-9-4" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-9-4">問題 9-4　破綻の「責任の所在」― モード密度か等分配か</h3>
+<p>[★ 難易度：☆☆ ] <span class="tag">[理解を深める]</span></p>
+<p>§9.4–9.5 の論理を整理する問いである。</p>
+<ol type="1">
+<li>Rayleigh–Jeans 則 <span class="math inline">u_\nu^\mathrm{RJ}=g(\nu)\langle E\rangle</span> を構成する2因子のうち、量子論で「変えなくてよい」のはどちらで、「変えなければならない」のはどちらか。理由とともに述べよ。</li>
+<li>観測される黒体スペクトル（第1章）が古典論を致命的に否定する2つの特徴を挙げよ。</li>
+<li>もしエネルギー単位が <span class="math inline">\epsilon=h\nu</span>（<span class="math inline">\propto\nu</span>）でなく <span class="math inline">\nu</span> に依らない定数 <span class="math inline">\epsilon_0</span> だったら、高振動数モードの凍結は起きるか。簡潔に論ぜよ。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-classical-failure-missing">§9.4 等分配の前提</a>、<a href="#sec-classical-failure-necessity">§9.5 量子仮説の必然性</a>／観測の特徴は<a href="../part1/01-where-blackbody.html">第1章</a>。</p>
+<p><a href="#sol-9-4" class="btn btn-outline-secondary btn-sm" data-bs-toggle="offcanvas" role="button">解答例を見る（問題 9-4）</a></p>
 </section>
 </section>
-<section id="模範解答問題-9-1" class="level2 callout-derive" data-collapse="true">
-<h2 class="anchored" data-anchor-id="模範解答問題-9-1">模範解答（問題 9-1）</h2>
+<section id="sec-classical-failure-solutions" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sec-classical-failure-solutions">解答例</h2>
+<p>各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。</p>
+<p><a href="#sol-9-1" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 9-1</a> <a href="#sol-9-2" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 9-2</a> <a href="#sol-9-3" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 9-3</a> <a href="#sol-9-4" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 9-4</a></p>
+<div id="sol-9-1" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-9-1-label">
+<p><span class="proof-title"><em>解答 12.1</em>. </span></p>
+<div class="offcanvas-header">
+<p><span id="sol-9-1-label" class="offcanvas-title"><strong>解答例（問題 9-1）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
+</div>
+<div class="offcanvas-body">
 <p><strong>(1)</strong> 各 <span class="math inline">(n_x,n_y,n_z)</span> は正の整数なので、許される波数ベクトルは <span class="math inline">\mathbf{k}</span> 空間で間隔 <span class="math inline">\pi/L</span> の格子点を、第1八分象限（すべて正）に限って占める。1モードあたりの格子セル体積は <span class="math inline">(\pi/L)^3</span>。大きさ <span class="math inline">k</span> 未満の領域は半径 <span class="math inline">k</span> の球の正の八分の一、体積 <span class="math inline">\frac{1}{8}\cdot\frac{4}{3}\pi k^3</span>。偏光2状態を掛けて</p>
 <p><span class="math display">
 N(k)=2\times\frac{\frac{1}{8}\cdot\frac{4}{3}\pi k^3}{(\pi/L)^3}=2\times\frac{\pi k^3 L^3}{6\pi^3}=\frac{L^3 k^3}{3\pi^2}.
@@ -829,20 +871,14 @@ g(\nu)=\frac{dn}{d\nu}=\frac{8\pi\nu^2}{c^3}.
 </span></p>
 <p><strong>(3)</strong> <span class="math inline">\nu^2</span> は3次元波数空間の球殻 <span class="math inline">4\pi k^2\,dk</span>（次元 <span class="math inline">d</span> なら <span class="math inline">k^{d-1}</span>）に由来する幾何因子。係数の <span class="math inline">2</span>（<span class="math inline">8\pi=2\times4\pi</span> の <span class="math inline">2</span>）は電磁波の横波2偏光に由来する。</p>
 <p><strong>答え</strong>：<span class="math inline">N(k)=L^3k^3/3\pi^2</span>、よって <span class="math inline">g(\nu)=8\pi\nu^2/c^3</span>。<span class="math inline">\nu^2</span>＝3次元の幾何、係数の <span class="math inline">2</span>＝偏光自由度。</p>
-</section>
-<section id="ex-9-2" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="ex-9-2">問題 9-2　古典分配関数から 1モードの平均エネルギー kBT</h3>
-<p>[★ 難易度：☆ ] <span class="tag">[導出補完]</span></p>
-<p>§9.2 は等分配定理で各モードに <span class="math inline">k_BT</span> が分配されると述べた。これを古典分配関数から直接導け。モードは調和振動子 <span class="math inline">E=\dfrac{p^2}{2m}+\dfrac{1}{2}m\omega^2 q^2</span> と等価である。</p>
-<ol type="1">
-<li>古典分配関数 <span class="math inline">Z=\dfrac{1}{h_0}\displaystyle\int e^{-\beta E}\,dq\,dp</span>（<span class="math inline">\beta=1/k_BT</span>）を計算し、<span class="math inline">Z\propto\beta^{-1}</span> を示せ。</li>
-<li><span class="math inline">\langle E\rangle=-\partial\ln Z/\partial\beta</span> から <span class="math inline">\langle E\rangle=k_BT</span> を導け。</li>
-<li>この「2つの二次形式に各 <span class="math inline">\frac12 k_BT</span>」という結果を、3次元の自由粒子（並進運動エネルギーのみ）の <span class="math inline">\frac32 k_BT</span> と対比して、なぜ振動子は <span class="math inline">k_BT</span> なのかを一言で説明せよ。</li>
-</ol>
-<p><strong>関連</strong>：<a href="#sec-classical-failure-rayleigh-jeans">§9.2 等分配と Rayleigh–Jeans</a>／等分配定理は<a href="../part3/07-statistical-mechanics.html">第7章 §7.6</a>。この古典結果を量子化したものが<a href="../part4/10-planck-quantum.html#sec-planck-quantum-oscillator">§10.2</a>の<a href="../part4/10-planck-quantum.html#ex-10-1">演習 10-1</a>。</p>
-</section>
-<section id="模範解答問題-9-2" class="level2 callout-derive" data-collapse="true">
-<h2 class="anchored" data-anchor-id="模範解答問題-9-2">模範解答（問題 9-2）</h2>
+</div>
+</div>
+<div id="sol-9-2" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-9-2-label">
+<p><span class="proof-title"><em>解答 12.2</em>. </span></p>
+<div class="offcanvas-header">
+<p><span id="sol-9-2-label" class="offcanvas-title"><strong>解答例（問題 9-2）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
+</div>
+<div class="offcanvas-body">
 <p><strong>(1)</strong> 位置と運動量の積分が分離する：</p>
 <p><span class="math display">
 Z=\frac{1}{h_0}\int_{-\infty}^{\infty}e^{-\beta p^2/2m}dp\int_{-\infty}^{\infty}e^{-\beta m\omega^2 q^2/2}dq.
@@ -858,20 +894,14 @@ Z=\frac{1}{h_0}\sqrt{\frac{2\pi m}{\beta}}\sqrt{\frac{2\pi}{\beta m\omega^2}}=\f
 <p>2つの二次形式（<span class="math inline">p^2</span> と <span class="math inline">q^2</span>）が各 <span class="math inline">\beta^{-1/2}</span> を生み、合わせて <span class="math inline">\beta^{-1}</span> ＝ <span class="math inline">k_BT</span>。</p>
 <p><strong>(3)</strong> 等分配は「ハミルトニアン中の二次形式1つあたり <span class="math inline">\frac12 k_BT</span>」を与える。自由粒子は運動量の二次形式が3つ（<span class="math inline">p_x^2,p_y^2,p_z^2</span>）で <span class="math inline">\frac32 k_BT</span>。振動子は運動量＋位置で二次形式が2つなので <span class="math inline">k_BT</span>。位置に対する復元力（ポテンシャル項）があることが差を生む。</p>
 <p><strong>答え</strong>：<span class="math inline">Z\propto\beta^{-1}\Rightarrow\langle E\rangle=k_BT</span>。二次形式2個（運動＋ポテンシャル）ゆえ自由粒子の <span class="math inline">\frac32k_BT</span> と異なる。</p>
-</section>
-<section id="ex-9-3" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="ex-9-3">問題 9-3　紫外発散の「次数」とカットオフ依存性</h3>
-<p>[★ 難易度：☆☆ ] <span class="tag">[理解を深める]</span></p>
-<p>§9.3 は <span class="math inline">u_\mathrm{classical}=\int_0^\infty u_\nu^\mathrm{RJ}d\nu=\infty</span> を示した。なぜ「紫外線」破綻と呼ぶのかを定量的に確かめる。</p>
-<ol type="1">
-<li>人工的な上限 <span class="math inline">\nu_{\max}</span> を導入し、全エネルギー密度が <span class="math inline">u(\nu_{\max})=\dfrac{8\pi k_BT}{3c^3}\nu_{\max}^3</span> となることを示せ。発散は <span class="math inline">\nu_{\max}\to\infty</span> でどんな冪で増えるか。</li>
-<li>エネルギーがどの振動数帯に集中するかを「<span class="math inline">d u/d\nu\propto\nu^2</span> が単調増加」という事実から論じ、なぜ高振動数（紫外）側が破綻の原因かを述べよ。</li>
-<li>プランク分布 <span class="math inline">u_\nu\propto\nu^3/(e^{h\nu/k_BT}-1)</span> ではこの積分が収束する理由を、被積分関数の <span class="math inline">\nu\to\infty</span> での振る舞いから説明せよ。</li>
-</ol>
-<p><strong>関連</strong>：<a href="#sec-classical-failure-uv-catastrophe">§9.3 紫外線破綻</a>／収束する全積分（Stefan–Boltzmann）は<a href="../part4/10-planck-quantum.html#ex-10-3">演習 10-3</a>、本文<a href="../part4/10-planck-quantum.html#sec-planck-quantum-derivation">§10.3</a>。</p>
-</section>
-<section id="模範解答問題-9-3" class="level2 callout-derive" data-collapse="true">
-<h2 class="anchored" data-anchor-id="模範解答問題-9-3">模範解答（問題 9-3）</h2>
+</div>
+</div>
+<div id="sol-9-3" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-9-3-label">
+<p><span class="proof-title"><em>解答 12.3</em>. </span></p>
+<div class="offcanvas-header">
+<p><span id="sol-9-3-label" class="offcanvas-title"><strong>解答例（問題 9-3）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
+</div>
+<div class="offcanvas-body">
 <p><strong>(1)</strong> <span class="math inline">u_\nu^\mathrm{RJ}=\dfrac{8\pi\nu^2}{c^3}k_BT</span> を <span class="math inline">0</span> から <span class="math inline">\nu_{\max}</span> まで積分：</p>
 <p><span class="math display">
 u(\nu_{\max})=\frac{8\pi k_BT}{c^3}\int_0^{\nu_{\max}}\nu^2 d\nu=\frac{8\pi k_BT}{3c^3}\nu_{\max}^3.
@@ -884,24 +914,20 @@ u(\nu_{\max})=\frac{8\pi k_BT}{c^3}\int_0^{\nu_{\max}}\nu^2 d\nu=\frac{8\pi k_BT
 </span></p>
 <p>と指数的に抑えられる。指数減衰は任意の冪 <span class="math inline">\nu^3</span> に勝つので積分は収束し、有限の <span class="math inline">u=aT^4</span> を与える（<a href="../part4/10-planck-quantum.html#ex-10-3">演習 10-3</a>）。量子化によるエネルギー単位 <span class="math inline">h\nu</span> が高振動数モードを「凍結」させることが、収束の物理的理由である。</p>
 <p><strong>答え</strong>：<span class="math inline">u\propto\nu_{\max}^3</span> で発散、寄与は高振動数に集中（＝紫外破綻）。プランクは <span class="math inline">\nu^3e^{-h\nu/k_BT}\to0</span> で収束。</p>
-</section>
-<section id="ex-9-4" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="ex-9-4">問題 9-4　破綻の「責任の所在」― モード密度か等分配か</h3>
-<p>[★ 難易度：☆☆ ] <span class="tag">[理解を深める]</span></p>
-<p>§9.4–9.5 の論理を整理する問いである。</p>
-<ol type="1">
-<li>Rayleigh–Jeans 則 <span class="math inline">u_\nu^\mathrm{RJ}=g(\nu)\langle E\rangle</span> を構成する2因子のうち、量子論で「変えなくてよい」のはどちらで、「変えなければならない」のはどちらか。理由とともに述べよ。</li>
-<li>観測される黒体スペクトル（第1章）が古典論を致命的に否定する2つの特徴を挙げよ。</li>
-<li>もしエネルギー単位が <span class="math inline">\epsilon=h\nu</span>（<span class="math inline">\propto\nu</span>）でなく <span class="math inline">\nu</span> に依らない定数 <span class="math inline">\epsilon_0</span> だったら、高振動数モードの凍結は起きるか。簡潔に論ぜよ。</li>
-</ol>
-<p><strong>関連</strong>：<a href="#sec-classical-failure-missing">§9.4 等分配の前提</a>、<a href="#sec-classical-failure-necessity">§9.5 量子仮説の必然性</a>／観測の特徴は<a href="../part1/01-where-blackbody.html">第1章</a>。</p>
-</section>
-<section id="模範解答問題-9-4" class="level2 callout-derive" data-collapse="true">
-<h2 class="anchored" data-anchor-id="模範解答問題-9-4">模範解答（問題 9-4）</h2>
+</div>
+</div>
+<div id="sol-9-4" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-9-4-label">
+<p><span class="proof-title"><em>解答 12.4</em>. </span></p>
+<div class="offcanvas-header">
+<p><span id="sol-9-4-label" class="offcanvas-title"><strong>解答例（問題 9-4）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
+</div>
+<div class="offcanvas-body">
 <p><strong>(1)</strong> <strong>モード密度 <span class="math inline">g(\nu)=8\pi\nu^2/c^3</span> は変えなくてよい</strong>。これは古典電磁気＋境界条件の幾何的結果で、量子論を要しない（実際プランク分布の前因子 <span class="math inline">\nu^2</span>/<span class="math inline">\nu^3</span> はこれが起源）。<strong>変えるべきは各モードの平均エネルギー <span class="math inline">\langle E\rangle</span></strong>。等分配の <span class="math inline">k_BT</span>（エネルギー連続の仮定に依存）を、量子化された <span class="math inline">h\nu/(e^{h\nu/k_BT}-1)</span> に置き換える必要がある。</p>
 <p><strong>(2)</strong> ① スペクトルに有限のピークが存在する（古典は単調増加でピークなし）。② 高振動数側が指数的に減衰する（古典は <span class="math inline">\nu^2</span> で増大）。CMB の完全な黒体形や恒星スペクトルがこれを示す。</p>
 <p><strong>(3)</strong> 起きない。凍結は「エネルギー単位 <span class="math inline">\epsilon(\nu)</span> が高振動数で <span class="math inline">k_BT</span> を超える」ことで生じる。<span class="math inline">\epsilon_0</span> が定数なら、<span class="math inline">\epsilon_0\ll k_BT</span> を満たす限りすべての振動数で等分配 <span class="math inline">k_BT</span> が回復し、<span class="math inline">\nu\to\infty</span> でもモードが凍結せず発散は残る。<span class="math inline">\epsilon\propto\nu</span> という<strong>振動数に比例して増える単位</strong>であることが、高振動数を選択的に止める鍵である。</p>
 <p><strong>答え</strong>：<span class="math inline">g(\nu)</span> は不変、<span class="math inline">\langle E\rangle</span> を量子化。否定する観測＝ピークの存在と指数減衰。<span class="math inline">\epsilon\propto\nu</span> でないと凍結は起きない。</p>
+</div>
+</div>
 </section>
 <section id="sec-classical-failure-further" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-classical-failure-further">さらに学ぶための参考文献</h2>
@@ -1579,7 +1605,7 @@ u(\nu_{\max})=\frac{8\pi k_BT}{c^3}\int_0^{\nu_{\max}}\nu^2 d\nu=\frac{8\pi k_BT
 <span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-classical-failure-exercises .unnumbered}</span></span>
 <span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **解答例** は章末「解答例」にまとめてある（オンライン版では各問のボタンから開く）。まず自力で解いてから開くこと。</span>
 <span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 9-1　空洞モード密度 g(ν)=8πν²/c³ の数え上げ {#ex-9-1 .unnumbered}</span></span>
 <span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a></span>
@@ -1597,135 +1623,175 @@ u(\nu_{\max})=\frac{8\pi k_BT}{c^3}\int_0^{\nu_{\max}}\nu^2 d\nu=\frac{8\pi k_BT
 <span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§9.1 空洞モードの数え上げ</span><span class="co">](#sec-classical-failure-modes)</span>／本格導出は<span class="co">[</span><span class="ot">第14章 空洞モード</span><span class="co">](../part5/14-cavity-modes.qmd)</span>。</span>
 <span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 9-1）</span></span>
-<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>**(1)** 各 $(n_x,n_y,n_z)$ は正の整数なので、許される波数ベクトルは $\mathbf{k}$ 空間で間隔 $\pi/L$ の格子点を、第1八分象限（すべて正）に限って占める。1モードあたりの格子セル体積は $(\pi/L)^3$。大きさ $k$ 未満の領域は半径 $k$ の球の正の八分の一、体積 $\frac{1}{8}\cdot\frac{4}{3}\pi k^3$。偏光2状態を掛けて</span>
-<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>N(k)=2\times\frac{\frac{1}{8}\cdot\frac{4}{3}\pi k^3}{(\pi/L)^3}=2\times\frac{\pi k^3 L^3}{6\pi^3}=\frac{L^3 k^3}{3\pi^2}.</span>
-<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a>**(2)** 単位体積あたり $n(k)=N/L^3=k^3/(3\pi^2)$。$k=2\pi\nu/c$ を代入すると</span>
-<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>n(\nu)=\frac{1}{3\pi^2}\left(\frac{2\pi\nu}{c}\right)^3=\frac{8\pi^3\nu^3}{3\pi^2 c^3}=\frac{8\pi\nu^3}{3c^3}.</span>
-<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>g(\nu)=\frac{dn}{d\nu}=\frac{8\pi\nu^2}{c^3}.</span>
-<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a>**(3)** $\nu^2$ は3次元波数空間の球殻 $4\pi k^2\,dk$（次元 $d$ なら $k^{d-1}$）に由来する幾何因子。係数の $2$（$8\pi=2\times4\pi$ の $2$）は電磁波の横波2偏光に由来する。</span>
-<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a>**答え**：$N(k)=L^3k^3/3\pi^2$、よって $g(\nu)=8\pi\nu^2/c^3$。$\nu^2$＝3次元の幾何、係数の $2$＝偏光自由度。</span>
-<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 9-1）</span><span class="co">](#sol-9-1)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 9-2　古典分配関数から 1モードの平均エネルギー kBT {#ex-9-2 .unnumbered}</span></span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a>§9.2 は等分配定理で各モードに $k_BT$ が分配されると述べた。これを古典分配関数から直接導け。モードは調和振動子 $E=\dfrac{p^2}{2m}+\dfrac{1}{2}m\omega^2 q^2$ と等価である。</span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>古典分配関数 $Z=\dfrac{1}{h_0}\displaystyle\int e^{-\beta E}\,dq\,dp$（$\beta=1/k_BT$）を計算し、$Z\propto\beta^{-1}$ を示せ。</span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$\langle E\rangle=-\partial\ln Z/\partial\beta$ から $\langle E\rangle=k_BT$ を導け。</span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>この「2つの二次形式に各 $\frac12 k_BT$」という結果を、3次元の自由粒子（並進運動エネルギーのみ）の $\frac32 k_BT$ と対比して、なぜ振動子は $k_BT$ なのかを一言で説明せよ。</span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§9.2 等分配と Rayleigh–Jeans</span><span class="co">](#sec-classical-failure-rayleigh-jeans)</span>／等分配定理は<span class="co">[</span><span class="ot">第7章 §7.6</span><span class="co">](../part3/07-statistical-mechanics.qmd)</span>。この古典結果を量子化したものが<span class="co">[</span><span class="ot">§10.2</span><span class="co">](../part4/10-planck-quantum.qmd#sec-planck-quantum-oscillator)</span>の<span class="co">[</span><span class="ot">演習 10-1</span><span class="co">](../part4/10-planck-quantum.qmd#ex-10-1)</span>。</span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 9-2）</span><span class="co">](#sol-9-2)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 9-3　紫外発散の「次数」とカットオフ依存性 {#ex-9-3 .unnumbered}</span></span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
 <span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 9-2　古典分配関数から 1モードの平均エネルギー kBT {#ex-9-2 .unnumbered}</span></span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a>§9.3 は $u_\mathrm{classical}=\int_0^\infty u_\nu^\mathrm{RJ}d\nu=\infty$ を示した。なぜ「紫外線」破綻と呼ぶのかを定量的に確かめる。</span>
 <span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆ </span><span class="co">] [tag:導出補完]</span></span>
-<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>§9.2 は等分配定理で各モードに $k_BT$ が分配されると述べた。これを古典分配関数から直接導け。モードは調和振動子 $E=\dfrac{p^2}{2m}+\dfrac{1}{2}m\omega^2 q^2$ と等価である。</span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>人工的な上限 $\nu_{\max}$ を導入し、全エネルギー密度が $u(\nu_{\max})=\dfrac{8\pi k_BT}{3c^3}\nu_{\max}^3$ となることを示せ。発散は $\nu_{\max}\to\infty$ でどんな冪で増えるか。</span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>エネルギーがどの振動数帯に集中するかを「$d u/d\nu\propto\nu^2$ が単調増加」という事実から論じ、なぜ高振動数（紫外）側が破綻の原因かを述べよ。</span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>プランク分布 $u_\nu\propto\nu^3/(e^{h\nu/k_BT}-1)$ ではこの積分が収束する理由を、被積分関数の $\nu\to\infty$ での振る舞いから説明せよ。</span>
 <span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>古典分配関数 $Z=\dfrac{1}{h_0}\displaystyle\int e^{-\beta E}\,dq\,dp$（$\beta=1/k_BT$）を計算し、$Z\propto\beta^{-1}$ を示せ。</span>
-<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$\langle E\rangle=-\partial\ln Z/\partial\beta$ から $\langle E\rangle=k_BT$ を導け。</span>
-<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>この「2つの二次形式に各 $\frac12 k_BT$」という結果を、3次元の自由粒子（並進運動エネルギーのみ）の $\frac32 k_BT$ と対比して、なぜ振動子は $k_BT$ なのかを一言で説明せよ。</span>
-<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§9.2 等分配と Rayleigh–Jeans</span><span class="co">](#sec-classical-failure-rayleigh-jeans)</span>／等分配定理は<span class="co">[</span><span class="ot">第7章 §7.6</span><span class="co">](../part3/07-statistical-mechanics.qmd)</span>。この古典結果を量子化したものが<span class="co">[</span><span class="ot">§10.2</span><span class="co">](../part4/10-planck-quantum.qmd#sec-planck-quantum-oscillator)</span>の<span class="co">[</span><span class="ot">演習 10-1</span><span class="co">](../part4/10-planck-quantum.qmd#ex-10-1)</span>。</span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§9.3 紫外線破綻</span><span class="co">](#sec-classical-failure-uv-catastrophe)</span>／収束する全積分（Stefan–Boltzmann）は<span class="co">[</span><span class="ot">演習 10-3</span><span class="co">](../part4/10-planck-quantum.qmd#ex-10-3)</span>、本文<span class="co">[</span><span class="ot">§10.3</span><span class="co">](../part4/10-planck-quantum.qmd#sec-planck-quantum-derivation)</span>。</span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 9-3）</span><span class="co">](#sol-9-3)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 9-2）</span></span>
-<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>**(1)** 位置と運動量の積分が分離する：</span>
-<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a>Z=\frac{1}{h_0}\int_{-\infty}^{\infty}e^{-\beta p^2/2m}dp\int_{-\infty}^{\infty}e^{-\beta m\omega^2 q^2/2}dq.</span>
-<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a>ガウス積分 $\int e^{-a x^2}dx=\sqrt{\pi/a}$ を用いると、各因子は $\sqrt{2\pi m/\beta}$ と $\sqrt{2\pi/(\beta m\omega^2)}$。積は</span>
-<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a>Z=\frac{1}{h_0}\sqrt{\frac{2\pi m}{\beta}}\sqrt{\frac{2\pi}{\beta m\omega^2}}=\frac{2\pi}{h_0\omega}\cdot\frac{1}{\beta}\;\propto\;\beta^{-1}.</span>
-<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a>**(2)** $\ln Z=-\ln\beta+\text{const}$ なので</span>
-<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a>\langle E\rangle=-\frac{\partial\ln Z}{\partial\beta}=\frac{1}{\beta}=k_BT.</span>
-<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>2つの二次形式（$p^2$ と $q^2$）が各 $\beta^{-1/2}$ を生み、合わせて $\beta^{-1}$ ＝ $k_BT$。</span>
-<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a>**(3)** 等分配は「ハミルトニアン中の二次形式1つあたり $\frac12 k_BT$」を与える。自由粒子は運動量の二次形式が3つ（$p_x^2,p_y^2,p_z^2$）で $\frac32 k_BT$。振動子は運動量＋位置で二次形式が2つなので $k_BT$。位置に対する復元力（ポテンシャル項）があることが差を生む。</span>
-<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a>**答え**：$Z\propto\beta^{-1}\Rightarrow\langle E\rangle=k_BT$。二次形式2個（運動＋ポテンシャル）ゆえ自由粒子の $\frac32k_BT$ と異なる。</span>
-<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 9-3　紫外発散の「次数」とカットオフ依存性 {#ex-9-3 .unnumbered}</span></span>
-<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 9-4　破綻の「責任の所在」― モード密度か等分配か {#ex-9-4 .unnumbered}</span></span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a>§9.4–9.5 の論理を整理する問いである。</span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Rayleigh–Jeans 則 $u_\nu^\mathrm{RJ}=g(\nu)\langle E\rangle$ を構成する2因子のうち、量子論で「変えなくてよい」のはどちらで、「変えなければならない」のはどちらか。理由とともに述べよ。</span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>観測される黒体スペクトル（第1章）が古典論を致命的に否定する2つの特徴を挙げよ。</span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>もしエネルギー単位が $\epsilon=h\nu$（$\propto\nu$）でなく $\nu$ に依らない定数 $\epsilon_0$ だったら、高振動数モードの凍結は起きるか。簡潔に論ぜよ。</span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§9.4 等分配の前提</span><span class="co">](#sec-classical-failure-missing)</span>、<span class="co">[</span><span class="ot">§9.5 量子仮説の必然性</span><span class="co">](#sec-classical-failure-necessity)</span>／観測の特徴は<span class="co">[</span><span class="ot">第1章</span><span class="co">](../part1/01-where-blackbody.qmd)</span>。</span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 9-4）</span><span class="co">](#sol-9-4)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a><span class="fu">## 解答例 {#sec-classical-failure-solutions .unnumbered}</span></span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a>各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。</span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">問題 9-1</span><span class="co">](#sol-9-1)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 9-2</span><span class="co">](#sol-9-2)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 9-3</span><span class="co">](#sol-9-3)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 9-4</span><span class="co">](#sol-9-4)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a>::: {#sol-9-1 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-9-1-label"}</span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 9-1）**</span><span class="co">]</span>{#sol-9-1-label .offcanvas-title}</span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a>**(1)** 各 $(n_x,n_y,n_z)$ は正の整数なので、許される波数ベクトルは $\mathbf{k}$ 空間で間隔 $\pi/L$ の格子点を、第1八分象限（すべて正）に限って占める。1モードあたりの格子セル体積は $(\pi/L)^3$。大きさ $k$ 未満の領域は半径 $k$ の球の正の八分の一、体積 $\frac{1}{8}\cdot\frac{4}{3}\pi k^3$。偏光2状態を掛けて</span>
 <span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a>§9.3 は $u_\mathrm{classical}=\int_0^\infty u_\nu^\mathrm{RJ}d\nu=\infty$ を示した。なぜ「紫外線」破綻と呼ぶのかを定量的に確かめる。</span>
-<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>人工的な上限 $\nu_{\max}$ を導入し、全エネルギー密度が $u(\nu_{\max})=\dfrac{8\pi k_BT}{3c^3}\nu_{\max}^3$ となることを示せ。発散は $\nu_{\max}\to\infty$ でどんな冪で増えるか。</span>
-<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>エネルギーがどの振動数帯に集中するかを「$d u/d\nu\propto\nu^2$ が単調増加」という事実から論じ、なぜ高振動数（紫外）側が破綻の原因かを述べよ。</span>
-<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>プランク分布 $u_\nu\propto\nu^3/(e^{h\nu/k_BT}-1)$ ではこの積分が収束する理由を、被積分関数の $\nu\to\infty$ での振る舞いから説明せよ。</span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a>N(k)=2\times\frac{\frac{1}{8}\cdot\frac{4}{3}\pi k^3}{(\pi/L)^3}=2\times\frac{\pi k^3 L^3}{6\pi^3}=\frac{L^3 k^3}{3\pi^2}.</span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a>**(2)** 単位体積あたり $n(k)=N/L^3=k^3/(3\pi^2)$。$k=2\pi\nu/c$ を代入すると</span>
 <span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§9.3 紫外線破綻</span><span class="co">](#sec-classical-failure-uv-catastrophe)</span>／収束する全積分（Stefan–Boltzmann）は<span class="co">[</span><span class="ot">演習 10-3</span><span class="co">](../part4/10-planck-quantum.qmd#ex-10-3)</span>、本文<span class="co">[</span><span class="ot">§10.3</span><span class="co">](../part4/10-planck-quantum.qmd#sec-planck-quantum-derivation)</span>。</span>
-<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 9-3）</span></span>
-<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a>**(1)** $u_\nu^\mathrm{RJ}=\dfrac{8\pi\nu^2}{c^3}k_BT$ を $0$ から $\nu_{\max}$ まで積分：</span>
-<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>u(\nu_{\max})=\frac{8\pi k_BT}{c^3}\int_0^{\nu_{\max}}\nu^2 d\nu=\frac{8\pi k_BT}{3c^3}\nu_{\max}^3.</span>
-<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a>発散は $\nu_{\max}^3$ の3次冪。カットオフを2倍にすると寄与が8倍になる。</span>
-<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a>**(2)** エネルギー密度の振動数あたり寄与 $du/d\nu\propto\nu^2$ は $\nu$ とともに単調増加し、上限近傍が積分を支配する。すなわちエネルギーは常に「いちばん高い振動数帯」に集中する。古典論には上限がないので、紫外〜X線〜ガンマ線側がいくらでも寄与を積み増し、発散する。これが「紫外線」破綻の名の由来。</span>
-<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a>**(3)** プランクでは被積分関数が $\nu\to\infty$ で</span>
-<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a>\frac{\nu^3}{e^{h\nu/k_BT}-1}\;\sim\;\nu^3 e^{-h\nu/k_BT}\to 0</span>
-<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a>と指数的に抑えられる。指数減衰は任意の冪 $\nu^3$ に勝つので積分は収束し、有限の $u=aT^4$ を与える（<span class="co">[</span><span class="ot">演習 10-3</span><span class="co">](../part4/10-planck-quantum.qmd#ex-10-3)</span>）。量子化によるエネルギー単位 $h\nu$ が高振動数モードを「凍結」させることが、収束の物理的理由である。</span>
-<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a>**答え**：$u\propto\nu_{\max}^3$ で発散、寄与は高振動数に集中（＝紫外破綻）。プランクは $\nu^3e^{-h\nu/k_BT}\to0$ で収束。</span>
-<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a>n(\nu)=\frac{1}{3\pi^2}\left(\frac{2\pi\nu}{c}\right)^3=\frac{8\pi^3\nu^3}{3\pi^2 c^3}=\frac{8\pi\nu^3}{3c^3}.</span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a>g(\nu)=\frac{dn}{d\nu}=\frac{8\pi\nu^2}{c^3}.</span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>**(3)** $\nu^2$ は3次元波数空間の球殻 $4\pi k^2\,dk$（次元 $d$ なら $k^{d-1}$）に由来する幾何因子。係数の $2$（$8\pi=2\times4\pi$ の $2$）は電磁波の横波2偏光に由来する。</span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a>**答え**：$N(k)=L^3k^3/3\pi^2$、よって $g(\nu)=8\pi\nu^2/c^3$。$\nu^2$＝3次元の幾何、係数の $2$＝偏光自由度。</span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>::: {#sol-9-2 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-9-2-label"}</span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 9-2）**</span><span class="co">]</span>{#sol-9-2-label .offcanvas-title}</span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a>**(1)** 位置と運動量の積分が分離する：</span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a>Z=\frac{1}{h_0}\int_{-\infty}^{\infty}e^{-\beta p^2/2m}dp\int_{-\infty}^{\infty}e^{-\beta m\omega^2 q^2/2}dq.</span>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 9-4　破綻の「責任の所在」― モード密度か等分配か {#ex-9-4 .unnumbered}</span></span>
+<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a>ガウス積分 $\int e^{-a x^2}dx=\sqrt{\pi/a}$ を用いると、各因子は $\sqrt{2\pi m/\beta}$ と $\sqrt{2\pi/(\beta m\omega^2)}$。積は</span>
 <span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
-<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a>§9.4–9.5 の論理を整理する問いである。</span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a>Z=\frac{1}{h_0}\sqrt{\frac{2\pi m}{\beta}}\sqrt{\frac{2\pi}{\beta m\omega^2}}=\frac{2\pi}{h_0\omega}\cdot\frac{1}{\beta}\;\propto\;\beta^{-1}.</span>
+<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Rayleigh–Jeans 則 $u_\nu^\mathrm{RJ}=g(\nu)\langle E\rangle$ を構成する2因子のうち、量子論で「変えなくてよい」のはどちらで、「変えなければならない」のはどちらか。理由とともに述べよ。</span>
-<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>観測される黒体スペクトル（第1章）が古典論を致命的に否定する2つの特徴を挙げよ。</span>
-<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>もしエネルギー単位が $\epsilon=h\nu$（$\propto\nu$）でなく $\nu$ に依らない定数 $\epsilon_0$ だったら、高振動数モードの凍結は起きるか。簡潔に論ぜよ。</span>
-<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§9.4 等分配の前提</span><span class="co">](#sec-classical-failure-missing)</span>、<span class="co">[</span><span class="ot">§9.5 量子仮説の必然性</span><span class="co">](#sec-classical-failure-necessity)</span>／観測の特徴は<span class="co">[</span><span class="ot">第1章</span><span class="co">](../part1/01-where-blackbody.qmd)</span>。</span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a>**(2)** $\ln Z=-\ln\beta+\text{const}$ なので</span>
+<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a>\langle E\rangle=-\frac{\partial\ln Z}{\partial\beta}=\frac{1}{\beta}=k_BT.</span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 9-4）</span></span>
-<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a>**(1)** **モード密度 $g(\nu)=8\pi\nu^2/c^3$ は変えなくてよい**。これは古典電磁気＋境界条件の幾何的結果で、量子論を要しない（実際プランク分布の前因子 $\nu^2$/$\nu^3$ はこれが起源）。**変えるべきは各モードの平均エネルギー $\langle E\rangle$**。等分配の $k_BT$（エネルギー連続の仮定に依存）を、量子化された $h\nu/(e^{h\nu/k_BT}-1)$ に置き換える必要がある。</span>
-<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a>**(2)** ① スペクトルに有限のピークが存在する（古典は単調増加でピークなし）。② 高振動数側が指数的に減衰する（古典は $\nu^2$ で増大）。CMB の完全な黒体形や恒星スペクトルがこれを示す。</span>
-<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a>**(3)** 起きない。凍結は「エネルギー単位 $\epsilon(\nu)$ が高振動数で $k_BT$ を超える」ことで生じる。$\epsilon_0$ が定数なら、$\epsilon_0\ll k_BT$ を満たす限りすべての振動数で等分配 $k_BT$ が回復し、$\nu\to\infty$ でもモードが凍結せず発散は残る。$\epsilon\propto\nu$ という**振動数に比例して増える単位**であることが、高振動数を選択的に止める鍵である。</span>
-<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>**答え**：$g(\nu)$ は不変、$\langle E\rangle$ を量子化。否定する観測＝ピークの存在と指数減衰。$\epsilon\propto\nu$ でないと凍結は起きない。</span>
-<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-classical-failure-further .unnumbered}</span></span>
-<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pais, *Subtle is the Lord* (Oxford, 1982) — Planck・Einstein の量子論誕生の歴史的精査</span>
-<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rybicki &amp; Lightman, *Radiative Processes in Astrophysics* (Wiley, 1979) — §1.5「Blackbody Radiation」</span>
-<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Kuhn, *Black-Body Theory and the Quantum Discontinuity, 1894-1912* (Oxford, 1978) — 黒体放射と量子論誕生の科学史</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>2つの二次形式（$p^2$ と $q^2$）が各 $\beta^{-1/2}$ を生み、合わせて $\beta^{-1}$ ＝ $k_BT$。</span>
+<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>**(3)** 等分配は「ハミルトニアン中の二次形式1つあたり $\frac12 k_BT$」を与える。自由粒子は運動量の二次形式が3つ（$p_x^2,p_y^2,p_z^2$）で $\frac32 k_BT$。振動子は運動量＋位置で二次形式が2つなので $k_BT$。位置に対する復元力（ポテンシャル項）があることが差を生む。</span>
+<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a>**答え**：$Z\propto\beta^{-1}\Rightarrow\langle E\rangle=k_BT$。二次形式2個（運動＋ポテンシャル）ゆえ自由粒子の $\frac32k_BT$ と異なる。</span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>::: {#sol-9-3 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-9-3-label"}</span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 9-3）**</span><span class="co">]</span>{#sol-9-3-label .offcanvas-title}</span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a>**(1)** $u_\nu^\mathrm{RJ}=\dfrac{8\pi\nu^2}{c^3}k_BT$ を $0$ から $\nu_{\max}$ まで積分：</span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a>u(\nu_{\max})=\frac{8\pi k_BT}{c^3}\int_0^{\nu_{\max}}\nu^2 d\nu=\frac{8\pi k_BT}{3c^3}\nu_{\max}^3.</span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a>発散は $\nu_{\max}^3$ の3次冪。カットオフを2倍にすると寄与が8倍になる。</span>
+<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>**(2)** エネルギー密度の振動数あたり寄与 $du/d\nu\propto\nu^2$ は $\nu$ とともに単調増加し、上限近傍が積分を支配する。すなわちエネルギーは常に「いちばん高い振動数帯」に集中する。古典論には上限がないので、紫外〜X線〜ガンマ線側がいくらでも寄与を積み増し、発散する。これが「紫外線」破綻の名の由来。</span>
+<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a>**(3)** プランクでは被積分関数が $\nu\to\infty$ で</span>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a>\frac{\nu^3}{e^{h\nu/k_BT}-1}\;\sim\;\nu^3 e^{-h\nu/k_BT}\to 0</span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>と指数的に抑えられる。指数減衰は任意の冪 $\nu^3$ に勝つので積分は収束し、有限の $u=aT^4$ を与える（<span class="co">[</span><span class="ot">演習 10-3</span><span class="co">](../part4/10-planck-quantum.qmd#ex-10-3)</span>）。量子化によるエネルギー単位 $h\nu$ が高振動数モードを「凍結」させることが、収束の物理的理由である。</span>
+<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a>**答え**：$u\propto\nu_{\max}^3$ で発散、寄与は高振動数に集中（＝紫外破綻）。プランクは $\nu^3e^{-h\nu/k_BT}\to0$ で収束。</span>
+<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a>::: {#sol-9-4 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-9-4-label"}</span>
+<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 9-4）**</span><span class="co">]</span>{#sol-9-4-label .offcanvas-title}</span>
+<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a>**(1)** **モード密度 $g(\nu)=8\pi\nu^2/c^3$ は変えなくてよい**。これは古典電磁気＋境界条件の幾何的結果で、量子論を要しない（実際プランク分布の前因子 $\nu^2$/$\nu^3$ はこれが起源）。**変えるべきは各モードの平均エネルギー $\langle E\rangle$**。等分配の $k_BT$（エネルギー連続の仮定に依存）を、量子化された $h\nu/(e^{h\nu/k_BT}-1)$ に置き換える必要がある。</span>
+<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a>**(2)** ① スペクトルに有限のピークが存在する（古典は単調増加でピークなし）。② 高振動数側が指数的に減衰する（古典は $\nu^2$ で増大）。CMB の完全な黒体形や恒星スペクトルがこれを示す。</span>
+<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a>**(3)** 起きない。凍結は「エネルギー単位 $\epsilon(\nu)$ が高振動数で $k_BT$ を超える」ことで生じる。$\epsilon_0$ が定数なら、$\epsilon_0\ll k_BT$ を満たす限りすべての振動数で等分配 $k_BT$ が回復し、$\nu\to\infty$ でもモードが凍結せず発散は残る。$\epsilon\propto\nu$ という**振動数に比例して増える単位**であることが、高振動数を選択的に止める鍵である。</span>
+<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a>**答え**：$g(\nu)$ は不変、$\langle E\rangle$ を量子化。否定する観測＝ピークの存在と指数減衰。$\epsilon\propto\nu$ でないと凍結は起きない。</span>
+<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-classical-failure-further .unnumbered}</span></span>
+<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pais, *Subtle is the Lord* (Oxford, 1982) — Planck・Einstein の量子論誕生の歴史的精査</span>
+<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rybicki &amp; Lightman, *Radiative Processes in Astrophysics* (Wiley, 1979) — §1.5「Blackbody Radiation」</span>
+<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Kuhn, *Black-Body Theory and the Quantum Discontinuity, 1894-1912* (Oxford, 1978) — 黒体放射と量子論誕生の科学史</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

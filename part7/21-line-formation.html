@@ -511,14 +511,11 @@ window.Quarto = {
   <li><a href="#sec-line-formation-exercises" id="toc-sec-line-formation-exercises" class="nav-link" data-scroll-target="#sec-line-formation-exercises">演習問題</a>
   <ul class="collapse">
   <li><a href="#ex-21-1" id="toc-ex-21-1" class="nav-link" data-scroll-target="#ex-21-1">問題 21-1　線ソース関数が Bν(Tex) になる</a></li>
-  </ul></li>
-  <li><a href="#模範解答問題-21-1" id="toc-模範解答問題-21-1" class="nav-link" data-scroll-target="#模範解答問題-21-1">模範解答（問題 21-1）</a></li>
   <li><a href="#ex-21-2" id="toc-ex-21-2" class="nav-link" data-scroll-target="#ex-21-2">問題 21-2　誘導放出補正と準位反転（メーザー）</a></li>
-  <li><a href="#模範解答問題-21-2" id="toc-模範解答問題-21-2" class="nav-link" data-scroll-target="#模範解答問題-21-2">模範解答（問題 21-2）</a></li>
   <li><a href="#ex-21-3" id="toc-ex-21-3" class="nav-link" data-scroll-target="#ex-21-3">問題 21-3　等価幅と成長曲線の三領域</a></li>
-  <li><a href="#模範解答問題-21-3" id="toc-模範解答問題-21-3" class="nav-link" data-scroll-target="#模範解答問題-21-3">模範解答（問題 21-3）</a></li>
   <li><a href="#ex-21-4" id="toc-ex-21-4" class="nav-link" data-scroll-target="#ex-21-4">問題 21-4　LTE で吸収線になる条件 ― 温度勾配と背景光</a></li>
-  <li><a href="#模範解答問題-21-4" id="toc-模範解答問題-21-4" class="nav-link" data-scroll-target="#模範解答問題-21-4">模範解答（問題 21-4）</a></li>
+  </ul></li>
+  <li><a href="#sec-line-formation-solutions" id="toc-sec-line-formation-solutions" class="nav-link" data-scroll-target="#sec-line-formation-solutions">解答例</a></li>
   <li><a href="#sec-line-formation-further" id="toc-sec-line-formation-further" class="nav-link" data-scroll-target="#sec-line-formation-further">さらに学ぶための参考文献</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/edit/main/part7/21-line-formation.qmd" class="toc-action"><i class="bi bi-github"></i>編集</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/blob/main/part7/21-line-formation.qmd" class="toc-action"><i class="bi empty"></i>ソースコード</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/issues/new" class="toc-action"><i class="bi empty"></i>問題を報告</a></li></ul></div></nav>
@@ -929,7 +926,7 @@ W(N) = \begin{cases}
 </section>
 <section id="sec-line-formation-exercises" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-line-formation-exercises">演習問題</h2>
-<p><span class="tag">[導出補完]</span> <strong>模範解答</strong> は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</p>
+<p><span class="tag">[導出補完]</span> <strong>解答例</strong> は章末「解答例」にまとめてある（オンライン版では各問のボタンから開く）。まず自力で解いてから開くこと。</p>
 <section id="ex-21-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ex-21-1">問題 21-1　線ソース関数が Bν(Tex) になる</h3>
 <p>[★ 難易度：☆☆ ] <span class="tag">[導出補完]</span></p>
@@ -940,16 +937,7 @@ W(N) = \begin{cases}
 <li><span class="math inline">T_\mathrm{ex}</span> が物理的なキネティック温度と一致するのはどんな条件か（LTE）。一致しない場合（non-LTE）に <span class="math inline">S_\nu</span> がプランク関数でなくなるわけではない理由を述べよ。</li>
 </ol>
 <p><strong>関連</strong>：<a href="#sec-line-source-function">§21.3 線ソース関数</a>／Einstein 関係の導出は<a href="../part4/11-einstein-method.html#ex-11-1">演習 11-1</a>、ソース関数の基礎は<a href="../part2/05-radiative-transfer.html#ex-5-5">演習 5-5</a>、LTE は<a href="#sec-LTE-line-formation">§21.4</a>。</p>
-</section>
-</section>
-<section id="模範解答問題-21-1" class="level2 callout-derive" data-collapse="true">
-<h2 class="anchored" data-anchor-id="模範解答問題-21-1">模範解答（問題 21-1）</h2>
-<p><strong>(1)</strong> 分子分母を <span class="math inline">B_{ul}n_u</span> で割る。<span class="math inline">g_lB_{lu}=g_uB_{ul}</span> より <span class="math inline">B_{lu}=（g_u/g_l)B_{ul}</span>：</p>
-<p><span class="math display">S_\nu^\mathrm{line}=\frac{A_{ul}n_u}{B_{lu}n_l-B_{ul}n_u}=\frac{A_{ul}/B_{ul}}{\dfrac{B_{lu}n_l}{B_{ul}n_u}-1}=\frac{2h\nu_0^3/c^2}{\dfrac{g_un_l}{g_ln_u}-1}.</span></p>
-<p><strong>(2)</strong> <span class="math inline">\dfrac{g_un_l}{g_ln_u}=e^{h\nu_0/k_BT_\mathrm{ex}}</span> を代入すると分母が <span class="math inline">e^{h\nu_0/k_BT_\mathrm{ex}}-1</span> となり</p>
-<p><span class="math display">S_\nu^\mathrm{line}=\frac{2h\nu_0^3/c^2}{e^{h\nu_0/k_BT_\mathrm{ex}}-1}=B_{\nu_0}(T_\mathrm{ex}).</span></p>
-<p><strong>(3)</strong> 占有数が局所キネティック温度 <span class="math inline">T_\mathrm{kin}</span> の Boltzmann 分布で書ける（LTE）とき <span class="math inline">T_\mathrm{ex}=T_\mathrm{kin}</span>。non-LTE では占有数が Boltzmann から外れて <span class="math inline">T_\mathrm{ex}\ne T_\mathrm{kin}</span> になるが、<span class="math inline">T_\mathrm{ex}</span> を「占有比を Boltzmann 形で書いたときの温度」と<strong>定義</strong>する限り、<span class="math inline">S_\nu=B_\nu(T_\mathrm{ex})</span> は形式的に常に成り立つ。ただし <span class="math inline">T_\mathrm{ex}</span> は物理温度を反映しない。</p>
-<p><strong>答え</strong>：<span class="math inline">S_\nu^\mathrm{line}=\dfrac{2h\nu_0^3/c^2}{(g_un_l)/(g_ln_u)-1}=B_{\nu_0}(T_\mathrm{ex})</span>。LTE で <span class="math inline">T_\mathrm{ex}=T_\mathrm{kin}</span>、non-LTE でも定義上 <span class="math inline">B_\nu(T_\mathrm{ex})</span> の形は保たれる。</p>
+<p><a href="#sol-21-1" class="btn btn-outline-secondary btn-sm" data-bs-toggle="offcanvas" role="button">解答例を見る（問題 21-1）</a></p>
 </section>
 <section id="ex-21-2" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ex-21-2">問題 21-2　誘導放出補正と準位反転（メーザー）</h3>
@@ -961,13 +949,7 @@ W(N) = \begin{cases}
 <li>宇宙メーザー（H<span class="math inline">_2</span>O 22 GHz、OH 1.6 GHz）が観測されることから、何が逆引きできるか述べよ。</li>
 </ol>
 <p><strong>関連</strong>：<a href="#sec-line-three-processes">§21.2 線の三つの素過程</a>／誘導放出は<a href="../part4/11-einstein-method.html#sec-einstein-method-three-processes">§11.2</a>、自発/誘導放出の比は<a href="../part4/11-einstein-method.html#ex-11-2">演習 11-2</a>。</p>
-</section>
-<section id="模範解答問題-21-2" class="level2 callout-derive" data-collapse="true">
-<h2 class="anchored" data-anchor-id="模範解答問題-21-2">模範解答（問題 21-2）</h2>
-<p><strong>(1)</strong> <span class="math inline">\dfrac{g_ln_u}{g_un_l}=1</span> すなわち <span class="math inline">\dfrac{n_u}{g_u}=\dfrac{n_l}{g_l}</span> で補正がゼロ。上下準位の縮重度あたりの占有が等しく、誘導放出が誘導吸収を完全に打ち消す。「これ以上正味で吸収できない」状態。</p>
-<p><strong>(2)</strong> <span class="math inline">\dfrac{g_ln_u}{g_un_l}&gt;1</span> すなわち <span class="math inline">\dfrac{n_u}{g_u}&gt;\dfrac{n_l}{g_l}</span>（<strong>準位反転</strong>）のとき補正項が負になり <span class="math inline">\alpha_\nu&lt;0</span>。負の吸収係数は、光が媒質を通るほど強められる＝<strong>増幅</strong>。これがメーザー／レーザーの原理。</p>
-<p><strong>(3)</strong> 宇宙メーザーが見える＝準位反転 <span class="math inline">n_u/g_u&gt;n_l/g_l</span> が実現している＝熱平衡では起こらない<strong>非平衡なポンプ機構</strong>（衝突ポンプ・放射ポンプ）が働いていることが逆引きできる。星形成領域・恒星質量放出・銀河中心の特殊な物理環境を示す。</p>
-<p><strong>答え</strong>：補正ゼロ＝占有が等しい。負＝準位反転（<span class="math inline">n_u/g_u&gt;n_l/g_l</span>）→<span class="math inline">\alpha_\nu&lt;0</span>＝増幅＝メーザー。観測は非平衡ポンプ機構の証拠。</p>
+<p><a href="#sol-21-2" class="btn btn-outline-secondary btn-sm" data-bs-toggle="offcanvas" role="button">解答例を見る（問題 21-2）</a></p>
 </section>
 <section id="ex-21-3" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ex-21-3">問題 21-3　等価幅と成長曲線の三領域</h3>
@@ -979,13 +961,7 @@ W(N) = \begin{cases}
 <li>飽和領域の線から柱密度 <span class="math inline">N</span> を精度よく決めるのが難しい理由を述べよ。組成解析で複数の強さの線を使う理由と結びつけよ。</li>
 </ol>
 <p><strong>関連</strong>：<a href="#sec-line-equivalent-width">§21.1 等価幅</a>、<a href="#sec-curve-of-growth">§21.6 成長曲線</a>／組成解析は<a href="../part7/24-line-applications.html#sec-line-applications-abundance">§24.2</a>、減衰翼は<a href="../part7/23-line-shape.html#sec-line-shape-natural">§23.1</a>。</p>
-</section>
-<section id="模範解答問題-21-3" class="level2 callout-derive" data-collapse="true">
-<h2 class="anchored" data-anchor-id="模範解答問題-21-3">模範解答（問題 21-3）</h2>
-<p><strong>(1)</strong> 等価幅は「線が連続光から引き抜いた光の総量」を波長幅で表した積分量で、装置の分解能で輪郭がぼやけても保存される。同じ総吸収量なら、浅く広い線も深く狭い線も面積が等しく同じ <span class="math inline">W</span> になる。観測しやすく理論と比べやすい。</p>
-<p><strong>(2)</strong> 線形領域：<span class="math inline">\tau&lt;1</span>（光学的に薄い）、吸収量が柱密度に比例 <span class="math inline">W\propto N</span>。飽和領域：線芯 <span class="math inline">\tau\gg1</span>（完全に黒）で中心はこれ以上吸収できず、<span class="math inline">W</span> は <span class="math inline">\sqrt{\ln N}</span> でしか増えない。減衰翼領域：Lorentz 翼（自然幅・衝突幅）が支配し <span class="math inline">W\propto\sqrt{N}</span>。</p>
-<p><strong>(3)</strong> 飽和領域では <span class="math inline">W</span> が <span class="math inline">N</span> にほとんど鈍感（<span class="math inline">\sqrt{\ln N}</span>）なので、<span class="math inline">W</span> の小さな測定誤差が <span class="math inline">N</span> の大きな誤差になる。だから組成解析では弱い線（線形領域）・中間・強い線（減衰翼）を組み合わせ、成長曲線全体を観測点で押さえて <span class="math inline">N</span> を精度よく決める。</p>
-<p><strong>答え</strong>：<span class="math inline">W</span> は輪郭によらぬ積分量。線形(<span class="math inline">\tau&lt;1</span>)→飽和(<span class="math inline">\tau\gg1</span>)→減衰翼。飽和域は <span class="math inline">N</span> に鈍感ゆえ複数の強さの線が必要。</p>
+<p><a href="#sol-21-3" class="btn btn-outline-secondary btn-sm" data-bs-toggle="offcanvas" role="button">解答例を見る（問題 21-3）</a></p>
 </section>
 <section id="ex-21-4" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ex-21-4">問題 21-4　LTE で吸収線になる条件 ― 温度勾配と背景光</h3>
@@ -997,13 +973,63 @@ W(N) = \begin{cases}
 <li>線の Eddington-Barbier（線で <span class="math inline">\tau_\nu=2/3</span> になる層の <span class="math inline">B_\nu</span>）が、線中心と連続でなぜ違う温度を与えるか、線中心の方が <span class="math inline">\alpha_\nu</span> が大きいことと結びつけて述べよ。</li>
 </ol>
 <p><strong>関連</strong>：<a href="#sec-LTE-line-formation">§21.4 LTE 線形成</a>／吸収線か輝線かは<a href="../part2/05-radiative-transfer.html#ex-5-3">演習 5-3</a>、Eddington-Barbier は<a href="../part6/15-non-blackbody.html#ex-15-1">演習 15-1</a>。</p>
+<p><a href="#sol-21-4" class="btn btn-outline-secondary btn-sm" data-bs-toggle="offcanvas" role="button">解答例を見る（問題 21-4）</a></p>
 </section>
-<section id="模範解答問題-21-4" class="level2 callout-derive" data-collapse="true">
-<h2 class="anchored" data-anchor-id="模範解答問題-21-4">模範解答（問題 21-4）</h2>
+</section>
+<section id="sec-line-formation-solutions" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sec-line-formation-solutions">解答例</h2>
+<p>各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。</p>
+<p><a href="#sol-21-1" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 21-1</a> <a href="#sol-21-2" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 21-2</a> <a href="#sol-21-3" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 21-3</a> <a href="#sol-21-4" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 21-4</a></p>
+<div id="sol-21-1" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-21-1-label">
+<p><span class="proof-title"><em>解答 24.1</em>. </span></p>
+<div class="offcanvas-header">
+<p><span id="sol-21-1-label" class="offcanvas-title"><strong>解答例（問題 21-1）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
+</div>
+<div class="offcanvas-body">
+<p><strong>(1)</strong> 分子分母を <span class="math inline">B_{ul}n_u</span> で割る。<span class="math inline">g_lB_{lu}=g_uB_{ul}</span> より <span class="math inline">B_{lu}=（g_u/g_l)B_{ul}</span>：</p>
+<p><span class="math display">S_\nu^\mathrm{line}=\frac{A_{ul}n_u}{B_{lu}n_l-B_{ul}n_u}=\frac{A_{ul}/B_{ul}}{\dfrac{B_{lu}n_l}{B_{ul}n_u}-1}=\frac{2h\nu_0^3/c^2}{\dfrac{g_un_l}{g_ln_u}-1}.</span></p>
+<p><strong>(2)</strong> <span class="math inline">\dfrac{g_un_l}{g_ln_u}=e^{h\nu_0/k_BT_\mathrm{ex}}</span> を代入すると分母が <span class="math inline">e^{h\nu_0/k_BT_\mathrm{ex}}-1</span> となり</p>
+<p><span class="math display">S_\nu^\mathrm{line}=\frac{2h\nu_0^3/c^2}{e^{h\nu_0/k_BT_\mathrm{ex}}-1}=B_{\nu_0}(T_\mathrm{ex}).</span></p>
+<p><strong>(3)</strong> 占有数が局所キネティック温度 <span class="math inline">T_\mathrm{kin}</span> の Boltzmann 分布で書ける（LTE）とき <span class="math inline">T_\mathrm{ex}=T_\mathrm{kin}</span>。non-LTE では占有数が Boltzmann から外れて <span class="math inline">T_\mathrm{ex}\ne T_\mathrm{kin}</span> になるが、<span class="math inline">T_\mathrm{ex}</span> を「占有比を Boltzmann 形で書いたときの温度」と<strong>定義</strong>する限り、<span class="math inline">S_\nu=B_\nu(T_\mathrm{ex})</span> は形式的に常に成り立つ。ただし <span class="math inline">T_\mathrm{ex}</span> は物理温度を反映しない。</p>
+<p><strong>答え</strong>：<span class="math inline">S_\nu^\mathrm{line}=\dfrac{2h\nu_0^3/c^2}{(g_un_l)/(g_ln_u)-1}=B_{\nu_0}(T_\mathrm{ex})</span>。LTE で <span class="math inline">T_\mathrm{ex}=T_\mathrm{kin}</span>、non-LTE でも定義上 <span class="math inline">B_\nu(T_\mathrm{ex})</span> の形は保たれる。</p>
+</div>
+</div>
+<div id="sol-21-2" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-21-2-label">
+<p><span class="proof-title"><em>解答 24.2</em>. </span></p>
+<div class="offcanvas-header">
+<p><span id="sol-21-2-label" class="offcanvas-title"><strong>解答例（問題 21-2）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
+</div>
+<div class="offcanvas-body">
+<p><strong>(1)</strong> <span class="math inline">\dfrac{g_ln_u}{g_un_l}=1</span> すなわち <span class="math inline">\dfrac{n_u}{g_u}=\dfrac{n_l}{g_l}</span> で補正がゼロ。上下準位の縮重度あたりの占有が等しく、誘導放出が誘導吸収を完全に打ち消す。「これ以上正味で吸収できない」状態。</p>
+<p><strong>(2)</strong> <span class="math inline">\dfrac{g_ln_u}{g_un_l}&gt;1</span> すなわち <span class="math inline">\dfrac{n_u}{g_u}&gt;\dfrac{n_l}{g_l}</span>（<strong>準位反転</strong>）のとき補正項が負になり <span class="math inline">\alpha_\nu&lt;0</span>。負の吸収係数は、光が媒質を通るほど強められる＝<strong>増幅</strong>。これがメーザー／レーザーの原理。</p>
+<p><strong>(3)</strong> 宇宙メーザーが見える＝準位反転 <span class="math inline">n_u/g_u&gt;n_l/g_l</span> が実現している＝熱平衡では起こらない<strong>非平衡なポンプ機構</strong>（衝突ポンプ・放射ポンプ）が働いていることが逆引きできる。星形成領域・恒星質量放出・銀河中心の特殊な物理環境を示す。</p>
+<p><strong>答え</strong>：補正ゼロ＝占有が等しい。負＝準位反転（<span class="math inline">n_u/g_u&gt;n_l/g_l</span>）→<span class="math inline">\alpha_\nu&lt;0</span>＝増幅＝メーザー。観測は非平衡ポンプ機構の証拠。</p>
+</div>
+</div>
+<div id="sol-21-3" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-21-3-label">
+<p><span class="proof-title"><em>解答 24.3</em>. </span></p>
+<div class="offcanvas-header">
+<p><span id="sol-21-3-label" class="offcanvas-title"><strong>解答例（問題 21-3）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
+</div>
+<div class="offcanvas-body">
+<p><strong>(1)</strong> 等価幅は「線が連続光から引き抜いた光の総量」を波長幅で表した積分量で、装置の分解能で輪郭がぼやけても保存される。同じ総吸収量なら、浅く広い線も深く狭い線も面積が等しく同じ <span class="math inline">W</span> になる。観測しやすく理論と比べやすい。</p>
+<p><strong>(2)</strong> 線形領域：<span class="math inline">\tau&lt;1</span>（光学的に薄い）、吸収量が柱密度に比例 <span class="math inline">W\propto N</span>。飽和領域：線芯 <span class="math inline">\tau\gg1</span>（完全に黒）で中心はこれ以上吸収できず、<span class="math inline">W</span> は <span class="math inline">\sqrt{\ln N}</span> でしか増えない。減衰翼領域：Lorentz 翼（自然幅・衝突幅）が支配し <span class="math inline">W\propto\sqrt{N}</span>。</p>
+<p><strong>(3)</strong> 飽和領域では <span class="math inline">W</span> が <span class="math inline">N</span> にほとんど鈍感（<span class="math inline">\sqrt{\ln N}</span>）なので、<span class="math inline">W</span> の小さな測定誤差が <span class="math inline">N</span> の大きな誤差になる。だから組成解析では弱い線（線形領域）・中間・強い線（減衰翼）を組み合わせ、成長曲線全体を観測点で押さえて <span class="math inline">N</span> を精度よく決める。</p>
+<p><strong>答え</strong>：<span class="math inline">W</span> は輪郭によらぬ積分量。線形(<span class="math inline">\tau&lt;1</span>)→飽和(<span class="math inline">\tau\gg1</span>)→減衰翼。飽和域は <span class="math inline">N</span> に鈍感ゆえ複数の強さの線が必要。</p>
+</div>
+</div>
+<div id="sol-21-4" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-21-4-label">
+<p><span class="proof-title"><em>解答 24.4</em>. </span></p>
+<div class="offcanvas-header">
+<p><span id="sol-21-4-label" class="offcanvas-title"><strong>解答例（問題 21-4）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
+</div>
+<div class="offcanvas-body">
 <p><strong>(1)</strong> 線中心は <span class="math inline">\alpha_\nu</span> が大きく光学的厚さがすぐ1に達するので<strong>浅い（外側＝低温）層</strong>を見る。連続光は <span class="math inline">\alpha_\nu</span> が小さく<strong>深い（高温）層</strong>まで見通せる。LTE で <span class="math inline">S_\nu=B_\nu(T)</span> ゆえ、線中心は低温のプランク関数値（暗い）、連続は高温（明るい）。差し引き線中心が連続より暗く＝吸収線。</p>
 <p><strong>(2)</strong> 温度が外側で上がる（彩層・コロナ）と、線中心が見る浅い層の方が高温になり、線中心が連続より明るく＝輝線。あるいは背景連続光がないガス雲では、ガス自身の放出 <span class="math inline">\tau S_\nu</span> だけが見え、線中心で強い輝線になる。</p>
 <p><strong>(3)</strong> Eddington-Barbier 近似では、各振動数で <span class="math inline">\tau_\nu=2/3</span> になる層の <span class="math inline">B_\nu(T)</span> が出てくる。線中心は <span class="math inline">\alpha_\nu</span> が大きいので <span class="math inline">\tau_\nu=2/3</span> に達する幾何的深さが浅い（連続より外側＝別の温度の層）。よって線中心と連続が異なる温度を映し、温度勾配の向きで吸収/輝線が決まる。</p>
 <p><strong>答え</strong>：線中心＝浅い層（<span class="math inline">\alpha_\nu</span> 大）、連続＝深い層。温度が深さで上がれば吸収線、外側で上がる/背景光なしなら輝線。Eddington-Barbier で別温度を映す。</p>
+</div>
+</div>
 </section>
 <section id="sec-line-formation-further" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-line-formation-further">さらに学ぶための参考文献</h2>
@@ -1742,7 +1768,7 @@ W(N) = \begin{cases}
 <span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-line-formation-exercises .unnumbered}</span></span>
 <span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **解答例** は章末「解答例」にまとめてある（オンライン版では各問のボタンから開く）。まず自力で解いてから開くこと。</span>
 <span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 21-1　線ソース関数が Bν(Tex) になる {#ex-21-1 .unnumbered}</span></span>
 <span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a></span>
@@ -1756,100 +1782,140 @@ W(N) = \begin{cases}
 <span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§21.3 線ソース関数</span><span class="co">](#sec-line-source-function)</span>／Einstein 関係の導出は<span class="co">[</span><span class="ot">演習 11-1</span><span class="co">](../part4/11-einstein-method.qmd#ex-11-1)</span>、ソース関数の基礎は<span class="co">[</span><span class="ot">演習 5-5</span><span class="co">](../part2/05-radiative-transfer.qmd#ex-5-5)</span>、LTE は<span class="co">[</span><span class="ot">§21.4</span><span class="co">](#sec-LTE-line-formation)</span>。</span>
 <span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 21-1）</span></span>
-<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a>**(1)** 分子分母を $B_{ul}n_u$ で割る。$g_lB_{lu}=g_uB_{ul}$ より $B_{lu}=（g_u/g_l)B_{ul}$：</span>
-<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a>$$S_\nu^\mathrm{line}=\frac{A_{ul}n_u}{B_{lu}n_l-B_{ul}n_u}=\frac{A_{ul}/B_{ul}}{\dfrac{B_{lu}n_l}{B_{ul}n_u}-1}=\frac{2h\nu_0^3/c^2}{\dfrac{g_un_l}{g_ln_u}-1}.$$</span>
-<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a>**(2)** $\dfrac{g_un_l}{g_ln_u}=e^{h\nu_0/k_BT_\mathrm{ex}}$ を代入すると分母が $e^{h\nu_0/k_BT_\mathrm{ex}}-1$ となり</span>
-<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a>$$S_\nu^\mathrm{line}=\frac{2h\nu_0^3/c^2}{e^{h\nu_0/k_BT_\mathrm{ex}}-1}=B_{\nu_0}(T_\mathrm{ex}).$$</span>
-<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a>**(3)** 占有数が局所キネティック温度 $T_\mathrm{kin}$ の Boltzmann 分布で書ける（LTE）とき $T_\mathrm{ex}=T_\mathrm{kin}$。non-LTE では占有数が Boltzmann から外れて $T_\mathrm{ex}\ne T_\mathrm{kin}$ になるが、$T_\mathrm{ex}$ を「占有比を Boltzmann 形で書いたときの温度」と**定義**する限り、$S_\nu=B_\nu(T_\mathrm{ex})$ は形式的に常に成り立つ。ただし $T_\mathrm{ex}$ は物理温度を反映しない。</span>
-<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a>**答え**：$S_\nu^\mathrm{line}=\dfrac{2h\nu_0^3/c^2}{(g_un_l)/(g_ln_u)-1}=B_{\nu_0}(T_\mathrm{ex})$。LTE で $T_\mathrm{ex}=T_\mathrm{kin}$、non-LTE でも定義上 $B_\nu(T_\mathrm{ex})$ の形は保たれる。</span>
-<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 21-1）</span><span class="co">](#sol-21-1)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 21-2　誘導放出補正と準位反転（メーザー） {#ex-21-2 .unnumbered}</span></span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a>§21.2 の線吸収係数 $\alpha_\nu=\dfrac{h\nu_0}{4\pi}n_lB_{lu}\phi\left<span class="co">[</span><span class="ot">1-\dfrac{g_ln_u}{g_un_l}\right</span><span class="co">]</span>$ の誘導放出補正 $<span class="co">[</span><span class="ot">1-g_ln_u/(g_un_l)</span><span class="co">]</span>$ を読み解く。</span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>補正項がゼロになる条件（$n_u/g_u=n_l/g_l$）の物理的意味を述べよ。</span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>補正項が負になる条件（$n_u/g_u&gt;n_l/g_l$）を求め、そのとき $\alpha_\nu&lt;0$（負の吸収＝増幅）になることを示せ。これが何の現象か。</span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>宇宙メーザー（H$_2$O 22 GHz、OH 1.6 GHz）が観測されることから、何が逆引きできるか述べよ。</span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§21.2 線の三つの素過程</span><span class="co">](#sec-line-three-processes)</span>／誘導放出は<span class="co">[</span><span class="ot">§11.2</span><span class="co">](../part4/11-einstein-method.qmd#sec-einstein-method-three-processes)</span>、自発/誘導放出の比は<span class="co">[</span><span class="ot">演習 11-2</span><span class="co">](../part4/11-einstein-method.qmd#ex-11-2)</span>。</span>
 <span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 21-2　誘導放出補正と準位反転（メーザー） {#ex-21-2 .unnumbered}</span></span>
-<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 21-2）</span><span class="co">](#sol-21-2)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a>§21.2 の線吸収係数 $\alpha_\nu=\dfrac{h\nu_0}{4\pi}n_lB_{lu}\phi\left<span class="co">[</span><span class="ot">1-\dfrac{g_ln_u}{g_un_l}\right</span><span class="co">]</span>$ の誘導放出補正 $<span class="co">[</span><span class="ot">1-g_ln_u/(g_un_l)</span><span class="co">]</span>$ を読み解く。</span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 21-3　等価幅と成長曲線の三領域 {#ex-21-3 .unnumbered}</span></span>
 <span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>補正項がゼロになる条件（$n_u/g_u=n_l/g_l$）の物理的意味を述べよ。</span>
-<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>補正項が負になる条件（$n_u/g_u&gt;n_l/g_l$）を求め、そのとき $\alpha_\nu&lt;0$（負の吸収＝増幅）になることを示せ。これが何の現象か。</span>
-<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>宇宙メーザー（H$_2$O 22 GHz、OH 1.6 GHz）が観測されることから、何が逆引きできるか述べよ。</span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>§21.1・20.6 の等価幅 $W_\lambda=\int\frac{I_c-I_\lambda}{I_c}d\lambda$ と成長曲線（curve of growth）を読む。</span>
 <span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§21.2 線の三つの素過程</span><span class="co">](#sec-line-three-processes)</span>／誘導放出は<span class="co">[</span><span class="ot">§11.2</span><span class="co">](../part4/11-einstein-method.qmd#sec-einstein-method-three-processes)</span>、自発/誘導放出の比は<span class="co">[</span><span class="ot">演習 11-2</span><span class="co">](../part4/11-einstein-method.qmd#ex-11-2)</span>。</span>
-<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 21-2）</span></span>
-<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a>**(1)** $\dfrac{g_ln_u}{g_un_l}=1$ すなわち $\dfrac{n_u}{g_u}=\dfrac{n_l}{g_l}$ で補正がゼロ。上下準位の縮重度あたりの占有が等しく、誘導放出が誘導吸収を完全に打ち消す。「これ以上正味で吸収できない」状態。</span>
-<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a>**(2)** $\dfrac{g_ln_u}{g_un_l}&gt;1$ すなわち $\dfrac{n_u}{g_u}&gt;\dfrac{n_l}{g_l}$（**準位反転**）のとき補正項が負になり $\alpha_\nu&lt;0$。負の吸収係数は、光が媒質を通るほど強められる＝**増幅**。これがメーザー／レーザーの原理。</span>
-<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a>**(3)** 宇宙メーザーが見える＝準位反転 $n_u/g_u&gt;n_l/g_l$ が実現している＝熱平衡では起こらない**非平衡なポンプ機構**（衝突ポンプ・放射ポンプ）が働いていることが逆引きできる。星形成領域・恒星質量放出・銀河中心の特殊な物理環境を示す。</span>
-<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a>**答え**：補正ゼロ＝占有が等しい。負＝準位反転（$n_u/g_u&gt;n_l/g_l$）→$\alpha_\nu&lt;0$＝増幅＝メーザー。観測は非平衡ポンプ機構の証拠。</span>
-<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>等価幅が「線の輪郭の詳細によらない積分量」である利点を述べよ。浅く広い線と深く狭い線が同じ $W$ になりうる理由は。</span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>成長曲線の三領域（線形 $W\propto N$、飽和 $W\propto\sqrt{\ln N}$、減衰翼 $W\propto\sqrt{N}$）が、それぞれ光学的深さ $\tau$ のどんな状態に対応するか述べよ。</span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>飽和領域の線から柱密度 $N$ を精度よく決めるのが難しい理由を述べよ。組成解析で複数の強さの線を使う理由と結びつけよ。</span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§21.1 等価幅</span><span class="co">](#sec-line-equivalent-width)</span>、<span class="co">[</span><span class="ot">§21.6 成長曲線</span><span class="co">](#sec-curve-of-growth)</span>／組成解析は<span class="co">[</span><span class="ot">§24.2</span><span class="co">](../part7/24-line-applications.qmd#sec-line-applications-abundance)</span>、減衰翼は<span class="co">[</span><span class="ot">§23.1</span><span class="co">](../part7/23-line-shape.qmd#sec-line-shape-natural)</span>。</span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 21-3）</span><span class="co">](#sol-21-3)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 21-4　LTE で吸収線になる条件 ― 温度勾配と背景光 {#ex-21-4 .unnumbered}</span></span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
 <span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 21-3　等価幅と成長曲線の三領域 {#ex-21-3 .unnumbered}</span></span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a>§21.4 は線が吸収か輝線かが温度構造と背景光で決まると述べた。LTE（$S_\nu=B_\nu(T)$）で考える。</span>
 <span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
-<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a>§21.1・20.6 の等価幅 $W_\lambda=\int\frac{I_c-I_\lambda}{I_c}d\lambda$ と成長曲線（curve of growth）を読む。</span>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>恒星大気のように温度が深さとともに上がる場合、線中心と連続光がそれぞれどの深さ（温度）を見ているか述べ、なぜ吸収線になるか説明せよ。</span>
+<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>彩層・コロナのように温度が外側で上がる、あるいは背景連続光がないガス雲では、なぜ輝線になるか述べよ。</span>
+<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>線の Eddington-Barbier（線で $\tau_\nu=2/3$ になる層の $B_\nu$）が、線中心と連続でなぜ違う温度を与えるか、線中心の方が $\alpha_\nu$ が大きいことと結びつけて述べよ。</span>
 <span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>等価幅が「線の輪郭の詳細によらない積分量」である利点を述べよ。浅く広い線と深く狭い線が同じ $W$ になりうる理由は。</span>
-<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>成長曲線の三領域（線形 $W\propto N$、飽和 $W\propto\sqrt{\ln N}$、減衰翼 $W\propto\sqrt{N}$）が、それぞれ光学的深さ $\tau$ のどんな状態に対応するか述べよ。</span>
-<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>飽和領域の線から柱密度 $N$ を精度よく決めるのが難しい理由を述べよ。組成解析で複数の強さの線を使う理由と結びつけよ。</span>
-<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§21.1 等価幅</span><span class="co">](#sec-line-equivalent-width)</span>、<span class="co">[</span><span class="ot">§21.6 成長曲線</span><span class="co">](#sec-curve-of-growth)</span>／組成解析は<span class="co">[</span><span class="ot">§24.2</span><span class="co">](../part7/24-line-applications.qmd#sec-line-applications-abundance)</span>、減衰翼は<span class="co">[</span><span class="ot">§23.1</span><span class="co">](../part7/23-line-shape.qmd#sec-line-shape-natural)</span>。</span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§21.4 LTE 線形成</span><span class="co">](#sec-LTE-line-formation)</span>／吸収線か輝線かは<span class="co">[</span><span class="ot">演習 5-3</span><span class="co">](../part2/05-radiative-transfer.qmd#ex-5-3)</span>、Eddington-Barbier は<span class="co">[</span><span class="ot">演習 15-1</span><span class="co">](../part6/15-non-blackbody.qmd#ex-15-1)</span>。</span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 21-4）</span><span class="co">](#sol-21-4)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 21-3）</span></span>
-<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a>**(1)** 等価幅は「線が連続光から引き抜いた光の総量」を波長幅で表した積分量で、装置の分解能で輪郭がぼやけても保存される。同じ総吸収量なら、浅く広い線も深く狭い線も面積が等しく同じ $W$ になる。観測しやすく理論と比べやすい。</span>
-<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a>**(2)** 線形領域：$\tau&lt;1$（光学的に薄い）、吸収量が柱密度に比例 $W\propto N$。飽和領域：線芯 $\tau\gg1$（完全に黒）で中心はこれ以上吸収できず、$W$ は $\sqrt{\ln N}$ でしか増えない。減衰翼領域：Lorentz 翼（自然幅・衝突幅）が支配し $W\propto\sqrt{N}$。</span>
-<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a>**(3)** 飽和領域では $W$ が $N$ にほとんど鈍感（$\sqrt{\ln N}$）なので、$W$ の小さな測定誤差が $N$ の大きな誤差になる。だから組成解析では弱い線（線形領域）・中間・強い線（減衰翼）を組み合わせ、成長曲線全体を観測点で押さえて $N$ を精度よく決める。</span>
-<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a>**答え**：$W$ は輪郭によらぬ積分量。線形($\tau&lt;1$)→飽和($\tau\gg1$)→減衰翼。飽和域は $N$ に鈍感ゆえ複数の強さの線が必要。</span>
-<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 21-4　LTE で吸収線になる条件 ― 温度勾配と背景光 {#ex-21-4 .unnumbered}</span></span>
-<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a><span class="fu">## 解答例 {#sec-line-formation-solutions .unnumbered}</span></span>
+<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a>各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。</span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">問題 21-1</span><span class="co">](#sol-21-1)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 21-2</span><span class="co">](#sol-21-2)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 21-3</span><span class="co">](#sol-21-3)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 21-4</span><span class="co">](#sol-21-4)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a>::: {#sol-21-1 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-21-1-label"}</span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 21-1）**</span><span class="co">]</span>{#sol-21-1-label .offcanvas-title}</span>
+<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a>**(1)** 分子分母を $B_{ul}n_u$ で割る。$g_lB_{lu}=g_uB_{ul}$ より $B_{lu}=（g_u/g_l)B_{ul}$：</span>
 <span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a>§21.4 は線が吸収か輝線かが温度構造と背景光で決まると述べた。LTE（$S_\nu=B_\nu(T)$）で考える。</span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a>$$S_\nu^\mathrm{line}=\frac{A_{ul}n_u}{B_{lu}n_l-B_{ul}n_u}=\frac{A_{ul}/B_{ul}}{\dfrac{B_{lu}n_l}{B_{ul}n_u}-1}=\frac{2h\nu_0^3/c^2}{\dfrac{g_un_l}{g_ln_u}-1}.$$</span>
 <span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>恒星大気のように温度が深さとともに上がる場合、線中心と連続光がそれぞれどの深さ（温度）を見ているか述べ、なぜ吸収線になるか説明せよ。</span>
-<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>彩層・コロナのように温度が外側で上がる、あるいは背景連続光がないガス雲では、なぜ輝線になるか述べよ。</span>
-<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>線の Eddington-Barbier（線で $\tau_\nu=2/3$ になる層の $B_\nu$）が、線中心と連続でなぜ違う温度を与えるか、線中心の方が $\alpha_\nu$ が大きいことと結びつけて述べよ。</span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a>**(2)** $\dfrac{g_un_l}{g_ln_u}=e^{h\nu_0/k_BT_\mathrm{ex}}$ を代入すると分母が $e^{h\nu_0/k_BT_\mathrm{ex}}-1$ となり</span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a>$$S_\nu^\mathrm{line}=\frac{2h\nu_0^3/c^2}{e^{h\nu_0/k_BT_\mathrm{ex}}-1}=B_{\nu_0}(T_\mathrm{ex}).$$</span>
 <span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§21.4 LTE 線形成</span><span class="co">](#sec-LTE-line-formation)</span>／吸収線か輝線かは<span class="co">[</span><span class="ot">演習 5-3</span><span class="co">](../part2/05-radiative-transfer.qmd#ex-5-3)</span>、Eddington-Barbier は<span class="co">[</span><span class="ot">演習 15-1</span><span class="co">](../part6/15-non-blackbody.qmd#ex-15-1)</span>。</span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a>**(3)** 占有数が局所キネティック温度 $T_\mathrm{kin}$ の Boltzmann 分布で書ける（LTE）とき $T_\mathrm{ex}=T_\mathrm{kin}$。non-LTE では占有数が Boltzmann から外れて $T_\mathrm{ex}\ne T_\mathrm{kin}$ になるが、$T_\mathrm{ex}$ を「占有比を Boltzmann 形で書いたときの温度」と**定義**する限り、$S_\nu=B_\nu(T_\mathrm{ex})$ は形式的に常に成り立つ。ただし $T_\mathrm{ex}$ は物理温度を反映しない。</span>
 <span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 21-4）</span></span>
-<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a>**(1)** 線中心は $\alpha_\nu$ が大きく光学的厚さがすぐ1に達するので**浅い（外側＝低温）層**を見る。連続光は $\alpha_\nu$ が小さく**深い（高温）層**まで見通せる。LTE で $S_\nu=B_\nu(T)$ ゆえ、線中心は低温のプランク関数値（暗い）、連続は高温（明るい）。差し引き線中心が連続より暗く＝吸収線。</span>
-<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a>**(2)** 温度が外側で上がる（彩層・コロナ）と、線中心が見る浅い層の方が高温になり、線中心が連続より明るく＝輝線。あるいは背景連続光がないガス雲では、ガス自身の放出 $\tau S_\nu$ だけが見え、線中心で強い輝線になる。</span>
-<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a>**(3)** Eddington-Barbier 近似では、各振動数で $\tau_\nu=2/3$ になる層の $B_\nu(T)$ が出てくる。線中心は $\alpha_\nu$ が大きいので $\tau_\nu=2/3$ に達する幾何的深さが浅い（連続より外側＝別の温度の層）。よって線中心と連続が異なる温度を映し、温度勾配の向きで吸収/輝線が決まる。</span>
-<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a>**答え**：線中心＝浅い層（$\alpha_\nu$ 大）、連続＝深い層。温度が深さで上がれば吸収線、外側で上がる/背景光なしなら輝線。Eddington-Barbier で別温度を映す。</span>
-<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a>**答え**：$S_\nu^\mathrm{line}=\dfrac{2h\nu_0^3/c^2}{(g_un_l)/(g_ln_u)-1}=B_{\nu_0}(T_\mathrm{ex})$。LTE で $T_\mathrm{ex}=T_\mathrm{kin}$、non-LTE でも定義上 $B_\nu(T_\mathrm{ex})$ の形は保たれる。</span>
+<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a>::: {#sol-21-2 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-21-2-label"}</span>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 21-2）**</span><span class="co">]</span>{#sol-21-2-label .offcanvas-title}</span>
+<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>**(1)** $\dfrac{g_ln_u}{g_un_l}=1$ すなわち $\dfrac{n_u}{g_u}=\dfrac{n_l}{g_l}$ で補正がゼロ。上下準位の縮重度あたりの占有が等しく、誘導放出が誘導吸収を完全に打ち消す。「これ以上正味で吸収できない」状態。</span>
 <span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-line-formation-further .unnumbered}</span></span>
+<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a>**(2)** $\dfrac{g_ln_u}{g_un_l}&gt;1$ すなわち $\dfrac{n_u}{g_u}&gt;\dfrac{n_l}{g_l}$（**準位反転**）のとき補正項が負になり $\alpha_\nu&lt;0$。負の吸収係数は、光が媒質を通るほど強められる＝**増幅**。これがメーザー／レーザーの原理。</span>
 <span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mihalas, *Stellar Atmospheres* (Freeman, 2nd ed., 1978) — 線形成と non-LTE の古典</span>
-<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Hubeny &amp; Mihalas, *Theory of Stellar Atmospheres* (Princeton, 2014) — 現代版、non-LTE radiative transfer の標準書</span>
-<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rutten, *Radiative Transfer in Stellar Atmospheres* (Lecture notes, Utrecht) — 線形成の入門的講義ノート</span>
-<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Spitzer, *Physical Processes in the Interstellar Medium* (Wiley, 1978) — 成長曲線（curve of growth）の標準扱い</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a>**(3)** 宇宙メーザーが見える＝準位反転 $n_u/g_u&gt;n_l/g_l$ が実現している＝熱平衡では起こらない**非平衡なポンプ機構**（衝突ポンプ・放射ポンプ）が働いていることが逆引きできる。星形成領域・恒星質量放出・銀河中心の特殊な物理環境を示す。</span>
+<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a>**答え**：補正ゼロ＝占有が等しい。負＝準位反転（$n_u/g_u&gt;n_l/g_l$）→$\alpha_\nu&lt;0$＝増幅＝メーザー。観測は非平衡ポンプ機構の証拠。</span>
+<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a>::: {#sol-21-3 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-21-3-label"}</span>
+<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 21-3）**</span><span class="co">]</span>{#sol-21-3-label .offcanvas-title}</span>
+<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a>**(1)** 等価幅は「線が連続光から引き抜いた光の総量」を波長幅で表した積分量で、装置の分解能で輪郭がぼやけても保存される。同じ総吸収量なら、浅く広い線も深く狭い線も面積が等しく同じ $W$ になる。観測しやすく理論と比べやすい。</span>
+<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a>**(2)** 線形領域：$\tau&lt;1$（光学的に薄い）、吸収量が柱密度に比例 $W\propto N$。飽和領域：線芯 $\tau\gg1$（完全に黒）で中心はこれ以上吸収できず、$W$ は $\sqrt{\ln N}$ でしか増えない。減衰翼領域：Lorentz 翼（自然幅・衝突幅）が支配し $W\propto\sqrt{N}$。</span>
+<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a>**(3)** 飽和領域では $W$ が $N$ にほとんど鈍感（$\sqrt{\ln N}$）なので、$W$ の小さな測定誤差が $N$ の大きな誤差になる。だから組成解析では弱い線（線形領域）・中間・強い線（減衰翼）を組み合わせ、成長曲線全体を観測点で押さえて $N$ を精度よく決める。</span>
+<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a>**答え**：$W$ は輪郭によらぬ積分量。線形($\tau&lt;1$)→飽和($\tau\gg1$)→減衰翼。飽和域は $N$ に鈍感ゆえ複数の強さの線が必要。</span>
+<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a>::: {#sol-21-4 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-21-4-label"}</span>
+<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 21-4）**</span><span class="co">]</span>{#sol-21-4-label .offcanvas-title}</span>
+<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a>**(1)** 線中心は $\alpha_\nu$ が大きく光学的厚さがすぐ1に達するので**浅い（外側＝低温）層**を見る。連続光は $\alpha_\nu$ が小さく**深い（高温）層**まで見通せる。LTE で $S_\nu=B_\nu(T)$ ゆえ、線中心は低温のプランク関数値（暗い）、連続は高温（明るい）。差し引き線中心が連続より暗く＝吸収線。</span>
+<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a>**(2)** 温度が外側で上がる（彩層・コロナ）と、線中心が見る浅い層の方が高温になり、線中心が連続より明るく＝輝線。あるいは背景連続光がないガス雲では、ガス自身の放出 $\tau S_\nu$ だけが見え、線中心で強い輝線になる。</span>
+<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a>**(3)** Eddington-Barbier 近似では、各振動数で $\tau_\nu=2/3$ になる層の $B_\nu(T)$ が出てくる。線中心は $\alpha_\nu$ が大きいので $\tau_\nu=2/3$ に達する幾何的深さが浅い（連続より外側＝別の温度の層）。よって線中心と連続が異なる温度を映し、温度勾配の向きで吸収/輝線が決まる。</span>
+<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a>**答え**：線中心＝浅い層（$\alpha_\nu$ 大）、連続＝深い層。温度が深さで上がれば吸収線、外側で上がる/背景光なしなら輝線。Eddington-Barbier で別温度を映す。</span>
+<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-397"><a href="#cb1-397" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-line-formation-further .unnumbered}</span></span>
+<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mihalas, *Stellar Atmospheres* (Freeman, 2nd ed., 1978) — 線形成と non-LTE の古典</span>
+<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Hubeny &amp; Mihalas, *Theory of Stellar Atmospheres* (Princeton, 2014) — 現代版、non-LTE radiative transfer の標準書</span>
+<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rutten, *Radiative Transfer in Stellar Atmospheres* (Lecture notes, Utrecht) — 線形成の入門的講義ノート</span>
+<span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Spitzer, *Physical Processes in the Interstellar Medium* (Wiley, 1978) — 成長曲線（curve of growth）の標準扱い</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

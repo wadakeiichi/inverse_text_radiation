@@ -512,14 +512,11 @@ window.Quarto = {
   <li><a href="#sec-radiation-field-exercises" id="toc-sec-radiation-field-exercises" class="nav-link" data-scroll-target="#sec-radiation-field-exercises">演習問題</a>
   <ul class="collapse">
   <li><a href="#ex-4-1" id="toc-ex-4-1" class="nav-link" data-scroll-target="#ex-4-1">問題 4-1　等方場で uν=(4π/c)Iν、Fν=0、Pν=uν/3</a></li>
-  </ul></li>
-  <li><a href="#模範解答問題-4-1" id="toc-模範解答問題-4-1" class="nav-link" data-scroll-target="#模範解答問題-4-1">模範解答（問題 4-1）</a></li>
   <li><a href="#ex-4-2" id="toc-ex-4-2" class="nav-link" data-scroll-target="#ex-4-2">問題 4-2　表面輝度は距離によらない ― Iν 不変、Fν は 1/d² に従う</a></li>
-  <li><a href="#模範解答問題-4-2" id="toc-模範解答問題-4-2" class="nav-link" data-scroll-target="#模範解答問題-4-2">模範解答（問題 4-2）</a></li>
   <li><a href="#ex-4-3" id="toc-ex-4-3" class="nav-link" data-scroll-target="#ex-4-3">問題 4-3　CMB のエネルギー密度を見積もる</a></li>
-  <li><a href="#模範解答問題-4-3" id="toc-模範解答問題-4-3" class="nav-link" data-scroll-target="#模範解答問題-4-3">模範解答（問題 4-3）</a></li>
   <li><a href="#ex-4-4" id="toc-ex-4-4" class="nav-link" data-scroll-target="#ex-4-4">問題 4-4　点光源か広がった光源か ― 装置との関係で決まる</a></li>
-  <li><a href="#模範解答問題-4-4" id="toc-模範解答問題-4-4" class="nav-link" data-scroll-target="#模範解答問題-4-4">模範解答（問題 4-4）</a></li>
+  </ul></li>
+  <li><a href="#sec-radiation-field-solutions" id="toc-sec-radiation-field-solutions" class="nav-link" data-scroll-target="#sec-radiation-field-solutions">解答例</a></li>
   <li><a href="#sec-radiation-field-further" id="toc-sec-radiation-field-further" class="nav-link" data-scroll-target="#sec-radiation-field-further">さらに学ぶための参考文献</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/edit/main/part2/04-radiation-field.qmd" class="toc-action"><i class="bi bi-github"></i>編集</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/blob/main/part2/04-radiation-field.qmd" class="toc-action"><i class="bi empty"></i>ソースコード</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/issues/new" class="toc-action"><i class="bi empty"></i>問題を報告</a></li></ul></div></nav>
@@ -973,7 +970,7 @@ F_\lambda = F_\nu \cdot \frac{c}{\lambda^2}
 </section>
 <section id="sec-radiation-field-exercises" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-radiation-field-exercises">演習問題</h2>
-<p><span class="tag">[導出補完]</span> <strong>模範解答</strong> は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから確認すると効果的である。</p>
+<p><span class="tag">[導出補完]</span> <strong>解答例</strong> は章末「解答例」にまとめてある（オンライン版では各問のボタンから開く）。まず自力で解いてから確認すると効果的である。</p>
 <section id="ex-4-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ex-4-1">問題 4-1　等方場で uν=(4π/c)Iν、Fν=0、Pν=uν/3</h3>
 <p>[★ 難易度：☆☆ ] <span class="tag">[導出補完]</span></p>
@@ -984,17 +981,7 @@ F_\lambda = F_\nu \cdot \frac{c}{\lambda^2}
 <li><span class="math inline">P_\nu=\dfrac{1}{c}\displaystyle\oint I_\nu\cos^2\theta\,d\Omega</span> を計算し、<span class="math inline">\displaystyle\oint\cos^2\theta\,d\Omega=\dfrac{4\pi}{3}</span> を使って <span class="math inline">P_\nu=\dfrac{1}{3}u_\nu</span> を導け。これは光子気体の状態方程式 <span class="math inline">P=u/3</span> に対応する。</li>
 </ol>
 <p><strong>関連</strong>：<a href="#sec-radiation-field-energy-density">§4.3 エネルギー密度</a>、<a href="#sec-radiation-field-moments">§4.5 モーメント</a>／<span class="math inline">P=u/3</span> の光子気体としての扱いは<a href="../part3/08-photon-statistics.html">第8章</a>。</p>
-</section>
-</section>
-<section id="模範解答問題-4-1" class="level2 callout-derive" data-collapse="true">
-<h2 class="anchored" data-anchor-id="模範解答問題-4-1">模範解答（問題 4-1）</h2>
-<p><strong>(1)</strong> <span class="math inline">I_\nu</span> を外に出すと <span class="math inline">u_\nu=\dfrac{I_\nu}{c}\displaystyle\oint d\Omega=\dfrac{I_\nu}{c}\cdot4\pi=\dfrac{4\pi}{c}I_\nu</span>。</p>
-<p><strong>(2)</strong> <span class="math inline">\displaystyle\oint\cos\theta\,d\Omega=\int_0^{2\pi}d\varphi\int_0^{\pi}\cos\theta\sin\theta\,d\theta=2\pi\left[\dfrac{\sin^2\theta}{2}\right]_0^{\pi}=2\pi\cdot0=0</span>。（上半球の正と下半球の負が打ち消す。）よって <span class="math inline">F_\nu=I_\nu\cdot0=0</span>。</p>
-<p><strong>(3)</strong> <span class="math inline">\displaystyle\oint\cos^2\theta\,d\Omega=\int_0^{2\pi}d\varphi\int_0^{\pi}\cos^2\theta\sin\theta\,d\theta=2\pi\left[-\dfrac{\cos^3\theta}{3}\right]_0^{\pi}=2\pi\cdot\dfrac{2}{3}=\dfrac{4\pi}{3}</span>。よって</p>
-<p><span class="math display">
-P_\nu=\frac{I_\nu}{c}\cdot\frac{4\pi}{3}=\frac{1}{3}\cdot\frac{4\pi}{c}I_\nu=\frac{1}{3}u_\nu.
-</span></p>
-<p><strong>答え</strong>：等方場で <span class="math inline">u_\nu=\frac{4\pi}{c}I_\nu</span>、<span class="math inline">F_\nu=0</span>、<span class="math inline">P_\nu=\frac13 u_\nu</span>。最後は光子気体の状態方程式 <span class="math inline">P=u/3</span>。</p>
+<p><a href="#sol-4-1" class="btn btn-outline-secondary btn-sm" data-bs-toggle="offcanvas" role="button">解答例を見る（問題 4-1）</a></p>
 </section>
 <section id="ex-4-2" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ex-4-2">問題 4-2　表面輝度は距離によらない ― Iν 不変、Fν は 1/d² に従う</h3>
@@ -1006,17 +993,7 @@ P_\nu=\frac{I_\nu}{c}\cdot\frac{4\pi}{3}=\frac{1}{3}\cdot\frac{4\pi}{c}I_\nu=\fr
 <li>点光源の式 <span class="math inline">F_\nu^\mathrm{obs}=L_\nu/4\pi d^2</span> と (2) が整合することを、<span class="math inline">L_\nu</span> を <span class="math inline">I_\nu</span> と <span class="math inline">R</span> で表して確かめよ。</li>
 </ol>
 <p><strong>関連</strong>：<a href="#sec-radiation-field-intensity">§4.1 比強度（保存則）</a>、<a href="#sec-radiation-field-flux">§4.4 フラックス</a>／立体角は<a href="#sec-radiation-field-solid-angle">§4.2</a>、光度の定義は<a href="../part1/02-reading-spectra.html#sec-reading-spectra-stefan-boltzmann">§2.4</a>。</p>
-</section>
-<section id="模範解答問題-4-2" class="level2 callout-derive" data-collapse="true">
-<h2 class="anchored" data-anchor-id="模範解答問題-4-2">模範解答（問題 4-2）</h2>
-<p><strong>(1)</strong> 比強度は真空伝播で保存する（光線一本あたりのエネルギーが不変、位相空間体積保存の帰結）。よって天体表面の比強度と、遠方で観測する比強度は等しく、距離 <span class="math inline">d</span> に依らない（表面輝度の距離不変）。</p>
-<p><strong>(2)</strong> 半径 <span class="math inline">R</span> の円盤を距離 <span class="math inline">d</span> から見ると、見込む角の半径は <span class="math inline">\theta\simeq R/d</span>（<span class="math inline">R\ll d</span>）。立体角は <span class="math inline">\Omega\simeq\pi\theta^2=\pi R^2/d^2\propto1/d^2</span>。観測フラックスは「比強度×天体の立体角」なので <span class="math inline">F_\nu\simeq I_\nu\Omega=\pi I_\nu R^2/d^2\propto1/d^2</span>。</p>
-<p><strong>(3)</strong> 表面フラックス <span class="math inline">F_\nu^\mathrm{surf}=\pi I_\nu</span>（半球射出、§2.4）、光度 <span class="math inline">L_\nu=4\pi R^2\cdot F_\nu^\mathrm{surf}=4\pi R^2\cdot\pi I_\nu=4\pi^2 R^2 I_\nu</span>。点光源式に入れると</p>
-<p><span class="math display">
-F_\nu^\mathrm{obs}=\frac{L_\nu}{4\pi d^2}=\frac{4\pi^2R^2 I_\nu}{4\pi d^2}=\frac{\pi I_\nu R^2}{d^2},
-</span></p>
-<p>これは (2) と完全に一致する。<span class="math inline">I_\nu</span> は不変、<span class="math inline">F_\nu</span> だけが <span class="math inline">1/d^2</span> で落ちる。</p>
-<p><strong>答え</strong>：<span class="math inline">I_\nu</span> は距離不変、<span class="math inline">\Omega\propto1/d^2</span> ゆえ <span class="math inline">F_\nu=\pi I_\nu R^2/d^2\propto1/d^2</span>。点光源式とも一致。</p>
+<p><a href="#sol-4-2" class="btn btn-outline-secondary btn-sm" data-bs-toggle="offcanvas" role="button">解答例を見る（問題 4-2）</a></p>
 </section>
 <section id="ex-4-3" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ex-4-3">問題 4-3　CMB のエネルギー密度を見積もる</h3>
@@ -1028,17 +1005,7 @@ F_\nu^\mathrm{obs}=\frac{L_\nu}{4\pi d^2}=\frac{4\pi^2R^2 I_\nu}{4\pi d^2}=\frac
 <li>得られた <span class="math inline">u</span> が、銀河系内の宇宙線・星間磁場のエネルギー密度（<span class="math inline">\sim10^{-12}</span> erg cm<span class="math inline">^{-3}</span>）と同程度であることを確認し、その含意を一言。</li>
 </ol>
 <p><strong>関連</strong>：<a href="#sec-radiation-field-energy-density">§4.3 エネルギー密度</a>、<a href="#sec-radiation-field-moments">§4.5 平均強度</a>／<span class="math inline">u=aT^4</span> の導出は<a href="../part4/10-planck-quantum.html#ex-10-3">演習 10-3</a>、<a href="../part3/06-thermal-equilibrium.html">第6章</a>。</p>
-</section>
-<section id="模範解答問題-4-3" class="level2 callout-derive" data-collapse="true">
-<h2 class="anchored" data-anchor-id="模範解答問題-4-3">模範解答（問題 4-3）</h2>
-<p><strong>(1)</strong> <span class="math inline">T^4=(2.725)^4=55.1</span> K<span class="math inline">^4</span>。よって</p>
-<p><span class="math display">
-u=aT^4=7.566\times10^{-15}\times55.1\simeq4.2\times10^{-13}\ \mathrm{erg\,cm^{-3}}.
-</span></p>
-<p>本文の値と一致。</p>
-<p><strong>(2)</strong> <span class="math inline">J_\nu</span> は比強度の<strong>方向平均</strong>（<span class="math inline">\frac{1}{4\pi}\oint I_\nu d\Omega</span>）なので等方場で <span class="math inline">J_\nu=I_\nu=B_\nu</span>。一方 <span class="math inline">u_\nu</span> は単位体積あたりの<strong>エネルギー</strong>（<span class="math inline">\frac1c\oint I_\nu d\Omega</span>）で、全立体角の積分 <span class="math inline">4\pi</span> と <span class="math inline">1/c</span> が付く。平均か総和か、という定義の違い。実際 <span class="math inline">u_\nu=\frac{4\pi}{c}J_\nu</span>。</p>
-<p><strong>(3)</strong> <span class="math inline">4.2\times10^{-13}</span> と <span class="math inline">10^{-12}</span> erg cm<span class="math inline">^{-3}</span> はオーダーで同程度。CMB・宇宙線・星間磁場のエネルギー密度が拮抗していることは、銀河系の星間媒質がこれらの間でエネルギーをやりとりする「準平衡」的な系であることを示唆する（重要なベースライン）。</p>
-<p><strong>答え</strong>：<span class="math inline">u\simeq4.2\times10^{-13}</span> erg cm<span class="math inline">^{-3}</span>。<span class="math inline">J_\nu</span>＝方向平均、<span class="math inline">u_\nu</span>＝体積エネルギー（<span class="math inline">4\pi/c</span> 倍）。宇宙線・磁場と同オーダー。</p>
+<p><a href="#sol-4-3" class="btn btn-outline-secondary btn-sm" data-bs-toggle="offcanvas" role="button">解答例を見る（問題 4-3）</a></p>
 </section>
 <section id="ex-4-4" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ex-4-4">問題 4-4　点光源か広がった光源か ― 装置との関係で決まる</h3>
@@ -1050,9 +1017,66 @@ u=aT^4=7.566\times10^{-15}\times55.1\simeq4.2\times10^{-13}\ \mathrm{erg\,cm^{-3
 <li>VLTI 干渉計（分解能 <span class="math inline">\sim1</span> mas）ではどうなるか。同じ天体で扱いが変わることが何を意味するか、観測される量（<span class="math inline">F_\nu</span> か <span class="math inline">I_\nu</span> か）の観点から述べよ。</li>
 </ol>
 <p><strong>関連</strong>：<a href="#sec-radiation-field-flux">§4.4 フラックス（点光源/広がった光源）</a>、<a href="#sec-radiation-field-observation">§4.8 装置と放射場</a>／立体角の見積りは<a href="#sec-radiation-field-solid-angle">§4.2</a>。</p>
+<p><a href="#sol-4-4" class="btn btn-outline-secondary btn-sm" data-bs-toggle="offcanvas" role="button">解答例を見る（問題 4-4）</a></p>
 </section>
-<section id="模範解答問題-4-4" class="level2 callout-derive" data-collapse="true">
-<h2 class="anchored" data-anchor-id="模範解答問題-4-4">模範解答（問題 4-4）</h2>
+</section>
+<section id="sec-radiation-field-solutions" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sec-radiation-field-solutions">解答例</h2>
+<p>各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。</p>
+<p><a href="#sol-4-1" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 4-1</a> <a href="#sol-4-2" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 4-2</a> <a href="#sol-4-3" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 4-3</a> <a href="#sol-4-4" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 4-4</a></p>
+<div id="sol-4-1" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-4-1-label">
+<p><span class="proof-title"><em>解答 7.1</em>. </span></p>
+<div class="offcanvas-header">
+<p><span id="sol-4-1-label" class="offcanvas-title"><strong>解答例（問題 4-1）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
+</div>
+<div class="offcanvas-body">
+<p><strong>(1)</strong> <span class="math inline">I_\nu</span> を外に出すと <span class="math inline">u_\nu=\dfrac{I_\nu}{c}\displaystyle\oint d\Omega=\dfrac{I_\nu}{c}\cdot4\pi=\dfrac{4\pi}{c}I_\nu</span>。</p>
+<p><strong>(2)</strong> <span class="math inline">\displaystyle\oint\cos\theta\,d\Omega=\int_0^{2\pi}d\varphi\int_0^{\pi}\cos\theta\sin\theta\,d\theta=2\pi\left[\dfrac{\sin^2\theta}{2}\right]_0^{\pi}=2\pi\cdot0=0</span>。（上半球の正と下半球の負が打ち消す。）よって <span class="math inline">F_\nu=I_\nu\cdot0=0</span>。</p>
+<p><strong>(3)</strong> <span class="math inline">\displaystyle\oint\cos^2\theta\,d\Omega=\int_0^{2\pi}d\varphi\int_0^{\pi}\cos^2\theta\sin\theta\,d\theta=2\pi\left[-\dfrac{\cos^3\theta}{3}\right]_0^{\pi}=2\pi\cdot\dfrac{2}{3}=\dfrac{4\pi}{3}</span>。よって</p>
+<p><span class="math display">
+P_\nu=\frac{I_\nu}{c}\cdot\frac{4\pi}{3}=\frac{1}{3}\cdot\frac{4\pi}{c}I_\nu=\frac{1}{3}u_\nu.
+</span></p>
+<p><strong>答え</strong>：等方場で <span class="math inline">u_\nu=\frac{4\pi}{c}I_\nu</span>、<span class="math inline">F_\nu=0</span>、<span class="math inline">P_\nu=\frac13 u_\nu</span>。最後は光子気体の状態方程式 <span class="math inline">P=u/3</span>。</p>
+</div>
+</div>
+<div id="sol-4-2" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-4-2-label">
+<p><span class="proof-title"><em>解答 7.2</em>. </span></p>
+<div class="offcanvas-header">
+<p><span id="sol-4-2-label" class="offcanvas-title"><strong>解答例（問題 4-2）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
+</div>
+<div class="offcanvas-body">
+<p><strong>(1)</strong> 比強度は真空伝播で保存する（光線一本あたりのエネルギーが不変、位相空間体積保存の帰結）。よって天体表面の比強度と、遠方で観測する比強度は等しく、距離 <span class="math inline">d</span> に依らない（表面輝度の距離不変）。</p>
+<p><strong>(2)</strong> 半径 <span class="math inline">R</span> の円盤を距離 <span class="math inline">d</span> から見ると、見込む角の半径は <span class="math inline">\theta\simeq R/d</span>（<span class="math inline">R\ll d</span>）。立体角は <span class="math inline">\Omega\simeq\pi\theta^2=\pi R^2/d^2\propto1/d^2</span>。観測フラックスは「比強度×天体の立体角」なので <span class="math inline">F_\nu\simeq I_\nu\Omega=\pi I_\nu R^2/d^2\propto1/d^2</span>。</p>
+<p><strong>(3)</strong> 表面フラックス <span class="math inline">F_\nu^\mathrm{surf}=\pi I_\nu</span>（半球射出、§2.4）、光度 <span class="math inline">L_\nu=4\pi R^2\cdot F_\nu^\mathrm{surf}=4\pi R^2\cdot\pi I_\nu=4\pi^2 R^2 I_\nu</span>。点光源式に入れると</p>
+<p><span class="math display">
+F_\nu^\mathrm{obs}=\frac{L_\nu}{4\pi d^2}=\frac{4\pi^2R^2 I_\nu}{4\pi d^2}=\frac{\pi I_\nu R^2}{d^2},
+</span></p>
+<p>これは (2) と完全に一致する。<span class="math inline">I_\nu</span> は不変、<span class="math inline">F_\nu</span> だけが <span class="math inline">1/d^2</span> で落ちる。</p>
+<p><strong>答え</strong>：<span class="math inline">I_\nu</span> は距離不変、<span class="math inline">\Omega\propto1/d^2</span> ゆえ <span class="math inline">F_\nu=\pi I_\nu R^2/d^2\propto1/d^2</span>。点光源式とも一致。</p>
+</div>
+</div>
+<div id="sol-4-3" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-4-3-label">
+<p><span class="proof-title"><em>解答 7.3</em>. </span></p>
+<div class="offcanvas-header">
+<p><span id="sol-4-3-label" class="offcanvas-title"><strong>解答例（問題 4-3）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
+</div>
+<div class="offcanvas-body">
+<p><strong>(1)</strong> <span class="math inline">T^4=(2.725)^4=55.1</span> K<span class="math inline">^4</span>。よって</p>
+<p><span class="math display">
+u=aT^4=7.566\times10^{-15}\times55.1\simeq4.2\times10^{-13}\ \mathrm{erg\,cm^{-3}}.
+</span></p>
+<p>本文の値と一致。</p>
+<p><strong>(2)</strong> <span class="math inline">J_\nu</span> は比強度の<strong>方向平均</strong>（<span class="math inline">\frac{1}{4\pi}\oint I_\nu d\Omega</span>）なので等方場で <span class="math inline">J_\nu=I_\nu=B_\nu</span>。一方 <span class="math inline">u_\nu</span> は単位体積あたりの<strong>エネルギー</strong>（<span class="math inline">\frac1c\oint I_\nu d\Omega</span>）で、全立体角の積分 <span class="math inline">4\pi</span> と <span class="math inline">1/c</span> が付く。平均か総和か、という定義の違い。実際 <span class="math inline">u_\nu=\frac{4\pi}{c}J_\nu</span>。</p>
+<p><strong>(3)</strong> <span class="math inline">4.2\times10^{-13}</span> と <span class="math inline">10^{-12}</span> erg cm<span class="math inline">^{-3}</span> はオーダーで同程度。CMB・宇宙線・星間磁場のエネルギー密度が拮抗していることは、銀河系の星間媒質がこれらの間でエネルギーをやりとりする「準平衡」的な系であることを示唆する（重要なベースライン）。</p>
+<p><strong>答え</strong>：<span class="math inline">u\simeq4.2\times10^{-13}</span> erg cm<span class="math inline">^{-3}</span>。<span class="math inline">J_\nu</span>＝方向平均、<span class="math inline">u_\nu</span>＝体積エネルギー（<span class="math inline">4\pi/c</span> 倍）。宇宙線・磁場と同オーダー。</p>
+</div>
+</div>
+<div id="sol-4-4" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-4-4-label">
+<p><span class="proof-title"><em>解答 7.4</em>. </span></p>
+<div class="offcanvas-header">
+<p><span id="sol-4-4-label" class="offcanvas-title"><strong>解答例（問題 4-4）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
+</div>
+<div class="offcanvas-body">
 <p><strong>(1)</strong> <span class="math inline">\theta=9</span> mas <span class="math inline">=9\times10^{-3}</span> arcsec。1 arcsec <span class="math inline">=4.85\times10^{-6}</span> rad なので <span class="math inline">\theta=9\times10^{-3}\times4.85\times10^{-6}=4.4\times10^{-8}</span> rad。半径 <span class="math inline">\theta/2=2.2\times10^{-8}</span> rad。立体角</p>
 <p><span class="math display">
 \Omega_\mathrm{src}\simeq\pi(2.2\times10^{-8})^2\simeq1.5\times10^{-15}\ \mathrm{sr}.
@@ -1061,6 +1085,8 @@ u=aT^4=7.566\times10^{-15}\times55.1\simeq4.2\times10^{-13}\ \mathrm{erg\,cm^{-3
 <p><strong>(2)</strong> シーイング 1 arcsec のビーム半径 <span class="math inline">0.5''=2.4\times10^{-6}</span> rad、<span class="math inline">\Omega_\mathrm{beam}\simeq\pi(2.4\times10^{-6})^2\simeq1.8\times10^{-11}</span> sr。<span class="math inline">\Omega_\mathrm{src}/\Omega_\mathrm{beam}\sim10^{-4}\ll1</span>。天体はビームよりはるかに小さく、空間的に分解できない＝点光源。測れるのはフラックス <span class="math inline">F_\nu</span> のみ。</p>
 <p><strong>(3)</strong> VLTI の分解能 <span class="math inline">\sim1</span> mas は天体視直径 9 mas より小さいので、円盤を空間的に分解できる＝広がった光源として扱え、面上の比強度 <span class="math inline">I_\nu</span>（表面輝度分布）が測れる。同じ天体が装置の分解能次第で点光源にも広がった光源にもなる。すなわち「点か広がりか」は天体の性質でなく装置との関係で決まる。</p>
 <p><strong>答え</strong>：<span class="math inline">\Omega_\mathrm{src}\simeq1.5\times10^{-15}</span> sr。シーイング1″では <span class="math inline">\ll\Omega_\mathrm{beam}</span> ゆえ点光源（<span class="math inline">F_\nu</span> を測る）。VLTI 1 masでは分解でき広がった光源（<span class="math inline">I_\nu</span>）。装置依存。</p>
+</div>
+</div>
 </section>
 <section id="sec-radiation-field-further" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-radiation-field-further">さらに学ぶための参考文献</h2>
@@ -1856,7 +1882,7 @@ u=aT^4=7.566\times10^{-15}\times55.1\simeq4.2\times10^{-13}\ \mathrm{erg\,cm^{-3
 <span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-radiation-field-exercises .unnumbered}</span></span>
 <span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから確認すると効果的である。</span>
+<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **解答例** は章末「解答例」にまとめてある（オンライン版では各問のボタンから開く）。まず自力で解いてから確認すると効果的である。</span>
 <span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 4-1　等方場で uν=(4π/c)Iν、Fν=0、Pν=uν/3 {#ex-4-1 .unnumbered}</span></span>
 <span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a></span>
@@ -1870,117 +1896,157 @@ u=aT^4=7.566\times10^{-15}\times55.1\simeq4.2\times10^{-13}\ \mathrm{erg\,cm^{-3
 <span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§4.3 エネルギー密度</span><span class="co">](#sec-radiation-field-energy-density)</span>、<span class="co">[</span><span class="ot">§4.5 モーメント</span><span class="co">](#sec-radiation-field-moments)</span>／$P=u/3$ の光子気体としての扱いは<span class="co">[</span><span class="ot">第8章</span><span class="co">](../part3/08-photon-statistics.qmd)</span>。</span>
 <span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 4-1）</span></span>
-<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a>**(1)** $I_\nu$ を外に出すと $u_\nu=\dfrac{I_\nu}{c}\displaystyle\oint d\Omega=\dfrac{I_\nu}{c}\cdot4\pi=\dfrac{4\pi}{c}I_\nu$。</span>
-<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a>**(2)** $\displaystyle\oint\cos\theta\,d\Omega=\int_0^{2\pi}d\varphi\int_0^{\pi}\cos\theta\sin\theta\,d\theta=2\pi\left<span class="co">[</span><span class="ot">\dfrac{\sin^2\theta}{2}\right</span><span class="co">]</span>_0^{\pi}=2\pi\cdot0=0$。（上半球の正と下半球の負が打ち消す。）よって $F_\nu=I_\nu\cdot0=0$。</span>
-<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>**(3)** $\displaystyle\oint\cos^2\theta\,d\Omega=\int_0^{2\pi}d\varphi\int_0^{\pi}\cos^2\theta\sin\theta\,d\theta=2\pi\left<span class="co">[</span><span class="ot">-\dfrac{\cos^3\theta}{3}\right</span><span class="co">]</span>_0^{\pi}=2\pi\cdot\dfrac{2}{3}=\dfrac{4\pi}{3}$。よって</span>
-<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a>P_\nu=\frac{I_\nu}{c}\cdot\frac{4\pi}{3}=\frac{1}{3}\cdot\frac{4\pi}{c}I_\nu=\frac{1}{3}u_\nu.</span>
-<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a>**答え**：等方場で $u_\nu=\frac{4\pi}{c}I_\nu$、$F_\nu=0$、$P_\nu=\frac13 u_\nu$。最後は光子気体の状態方程式 $P=u/3$。</span>
-<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 4-1）</span><span class="co">](#sol-4-1)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 4-2　表面輝度は距離によらない ― Iν 不変、Fν は 1/d² に従う {#ex-4-2 .unnumbered}</span></span>
+<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a>§4.1 は「遠くの星が暗く見えるのは比強度ではなくフラックスが減るから」と述べた。これを定量的に確かめる。</span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>真空中で比強度 $I_\nu$ が経路に沿って保存することを前提に、距離 $d$ にある半径 $R$ の一様な円盤天体について、観測される比強度 $I_\nu$ が $d$ に依らないことを述べよ。</span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>その天体が張る立体角が $\Omega\simeq\pi R^2/d^2\propto1/d^2$ であることを示し、観測フラックス $F_\nu\simeq I_\nu\,\Omega\propto1/d^2$ を導け。</span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>点光源の式 $F_\nu^\mathrm{obs}=L_\nu/4\pi d^2$ と (2) が整合することを、$L_\nu$ を $I_\nu$ と $R$ で表して確かめよ。</span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§4.1 比強度（保存則）</span><span class="co">](#sec-radiation-field-intensity)</span>、<span class="co">[</span><span class="ot">§4.4 フラックス</span><span class="co">](#sec-radiation-field-flux)</span>／立体角は<span class="co">[</span><span class="ot">§4.2</span><span class="co">](#sec-radiation-field-solid-angle)</span>、光度の定義は<span class="co">[</span><span class="ot">§2.4</span><span class="co">](../part1/02-reading-spectra.qmd#sec-reading-spectra-stefan-boltzmann)</span>。</span>
 <span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 4-2　表面輝度は距離によらない ― Iν 不変、Fν は 1/d² に従う {#ex-4-2 .unnumbered}</span></span>
-<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 4-2）</span><span class="co">](#sol-4-2)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>§4.1 は「遠くの星が暗く見えるのは比強度ではなくフラックスが減るから」と述べた。これを定量的に確かめる。</span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 4-3　CMB のエネルギー密度を見積もる {#ex-4-3 .unnumbered}</span></span>
 <span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>真空中で比強度 $I_\nu$ が経路に沿って保存することを前提に、距離 $d$ にある半径 $R$ の一様な円盤天体について、観測される比強度 $I_\nu$ が $d$ に依らないことを述べよ。</span>
-<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>その天体が張る立体角が $\Omega\simeq\pi R^2/d^2\propto1/d^2$ であることを示し、観測フラックス $F_\nu\simeq I_\nu\,\Omega\propto1/d^2$ を導け。</span>
-<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>点光源の式 $F_\nu^\mathrm{obs}=L_\nu/4\pi d^2$ と (2) が整合することを、$L_\nu$ を $I_\nu$ と $R$ で表して確かめよ。</span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a>§4.3 は熱平衡で $u=\displaystyle\int u_\nu\,d\nu=aT^4$（$a=4\sigma/c$）になると述べ、CMB で $u\simeq4.2\times10^{-13}$ erg cm$^{-3}$ と見積もった。これを確かめる。</span>
 <span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§4.1 比強度（保存則）</span><span class="co">](#sec-radiation-field-intensity)</span>、<span class="co">[</span><span class="ot">§4.4 フラックス</span><span class="co">](#sec-radiation-field-flux)</span>／立体角は<span class="co">[</span><span class="ot">§4.2</span><span class="co">](#sec-radiation-field-solid-angle)</span>、光度の定義は<span class="co">[</span><span class="ot">§2.4</span><span class="co">](../part1/02-reading-spectra.qmd#sec-reading-spectra-stefan-boltzmann)</span>。</span>
-<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 4-2）</span></span>
-<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a>**(1)** 比強度は真空伝播で保存する（光線一本あたりのエネルギーが不変、位相空間体積保存の帰結）。よって天体表面の比強度と、遠方で観測する比強度は等しく、距離 $d$ に依らない（表面輝度の距離不変）。</span>
-<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a>**(2)** 半径 $R$ の円盤を距離 $d$ から見ると、見込む角の半径は $\theta\simeq R/d$（$R\ll d$）。立体角は $\Omega\simeq\pi\theta^2=\pi R^2/d^2\propto1/d^2$。観測フラックスは「比強度×天体の立体角」なので $F_\nu\simeq I_\nu\Omega=\pi I_\nu R^2/d^2\propto1/d^2$。</span>
-<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a>**(3)** 表面フラックス $F_\nu^\mathrm{surf}=\pi I_\nu$（半球射出、§2.4）、光度 $L_\nu=4\pi R^2\cdot F_\nu^\mathrm{surf}=4\pi R^2\cdot\pi I_\nu=4\pi^2 R^2 I_\nu$。点光源式に入れると</span>
-<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a>F_\nu^\mathrm{obs}=\frac{L_\nu}{4\pi d^2}=\frac{4\pi^2R^2 I_\nu}{4\pi d^2}=\frac{\pi I_\nu R^2}{d^2},</span>
-<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a>これは (2) と完全に一致する。$I_\nu$ は不変、$F_\nu$ だけが $1/d^2$ で落ちる。</span>
-<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a>**答え**：$I_\nu$ は距離不変、$\Omega\propto1/d^2$ ゆえ $F_\nu=\pi I_\nu R^2/d^2\propto1/d^2$。点光源式とも一致。</span>
-<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>放射定数を CGS で $a=7.566\times10^{-15}$ erg cm$^{-3}$ K$^{-4}$ とし、$T_\mathrm{CMB}=2.725$ K で $u=aT^4$ を計算せよ。</span>
+<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>等方黒体場では $u_\nu=\dfrac{4\pi}{c}B_\nu(T)$、$J_\nu=B_\nu(T)$ となる。なぜ $J_\nu=B_\nu$ なのに $u_\nu$ には $4\pi/c$ が付くのか、定義の違いから一言で述べよ。</span>
+<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>得られた $u$ が、銀河系内の宇宙線・星間磁場のエネルギー密度（$\sim10^{-12}$ erg cm$^{-3}$）と同程度であることを確認し、その含意を一言。</span>
+<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§4.3 エネルギー密度</span><span class="co">](#sec-radiation-field-energy-density)</span>、<span class="co">[</span><span class="ot">§4.5 平均強度</span><span class="co">](#sec-radiation-field-moments)</span>／$u=aT^4$ の導出は<span class="co">[</span><span class="ot">演習 10-3</span><span class="co">](../part4/10-planck-quantum.qmd#ex-10-3)</span>、<span class="co">[</span><span class="ot">第6章</span><span class="co">](../part3/06-thermal-equilibrium.qmd)</span>。</span>
+<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 4-3）</span><span class="co">](#sol-4-3)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 4-4　点光源か広がった光源か ― 装置との関係で決まる {#ex-4-4 .unnumbered}</span></span>
+<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a>§4.4・4.8 は「点光源か広がった光源か」は天体固有でなく観測装置との関係で決まると述べた。$\alpha$ Cen A（視直径 $\sim9$ mas）を例に確かめる。</span>
+<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$\alpha$ Cen A を円盤とみて立体角 $\Omega_\mathrm{src}\simeq\pi(\theta/2)^2$ を sr で概算せよ（$\theta=9$ mas）。</span>
+<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>通常の地上望遠鏡（シーイング $\sim1$ arcsec）のビーム立体角 $\Omega_\mathrm{beam}\simeq\pi(0.5'')^2$ と比べ、点光源として扱える理由を述べよ。</span>
+<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>VLTI 干渉計（分解能 $\sim1$ mas）ではどうなるか。同じ天体で扱いが変わることが何を意味するか、観測される量（$F_\nu$ か $I_\nu$ か）の観点から述べよ。</span>
 <span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 4-3　CMB のエネルギー密度を見積もる {#ex-4-3 .unnumbered}</span></span>
+<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§4.4 フラックス（点光源/広がった光源）</span><span class="co">](#sec-radiation-field-flux)</span>、<span class="co">[</span><span class="ot">§4.8 装置と放射場</span><span class="co">](#sec-radiation-field-observation)</span>／立体角の見積りは<span class="co">[</span><span class="ot">§4.2</span><span class="co">](#sec-radiation-field-solid-angle)</span>。</span>
 <span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆ </span><span class="co">] [tag:理解を深める]</span></span>
-<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a>§4.3 は熱平衡で $u=\displaystyle\int u_\nu\,d\nu=aT^4$（$a=4\sigma/c$）になると述べ、CMB で $u\simeq4.2\times10^{-13}$ erg cm$^{-3}$ と見積もった。これを確かめる。</span>
+<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 4-4）</span><span class="co">](#sol-4-4)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>放射定数を CGS で $a=7.566\times10^{-15}$ erg cm$^{-3}$ K$^{-4}$ とし、$T_\mathrm{CMB}=2.725$ K で $u=aT^4$ を計算せよ。</span>
-<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>等方黒体場では $u_\nu=\dfrac{4\pi}{c}B_\nu(T)$、$J_\nu=B_\nu(T)$ となる。なぜ $J_\nu=B_\nu$ なのに $u_\nu$ には $4\pi/c$ が付くのか、定義の違いから一言で述べよ。</span>
-<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>得られた $u$ が、銀河系内の宇宙線・星間磁場のエネルギー密度（$\sim10^{-12}$ erg cm$^{-3}$）と同程度であることを確認し、その含意を一言。</span>
+<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a><span class="fu">## 解答例 {#sec-radiation-field-solutions .unnumbered}</span></span>
+<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a>各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。</span>
 <span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§4.3 エネルギー密度</span><span class="co">](#sec-radiation-field-energy-density)</span>、<span class="co">[</span><span class="ot">§4.5 平均強度</span><span class="co">](#sec-radiation-field-moments)</span>／$u=aT^4$ の導出は<span class="co">[</span><span class="ot">演習 10-3</span><span class="co">](../part4/10-planck-quantum.qmd#ex-10-3)</span>、<span class="co">[</span><span class="ot">第6章</span><span class="co">](../part3/06-thermal-equilibrium.qmd)</span>。</span>
-<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 4-3）</span></span>
-<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a>**(1)** $T^4=(2.725)^4=55.1$ K$^4$。よって</span>
-<span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a>u=aT^4=7.566\times10^{-15}\times55.1\simeq4.2\times10^{-13}\ \mathrm{erg\,cm^{-3}}.</span>
-<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a>本文の値と一致。</span>
-<span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a>**(2)** $J_\nu$ は比強度の**方向平均**（$\frac{1}{4\pi}\oint I_\nu d\Omega$）なので等方場で $J_\nu=I_\nu=B_\nu$。一方 $u_\nu$ は単位体積あたりの**エネルギー**（$\frac1c\oint I_\nu d\Omega$）で、全立体角の積分 $4\pi$ と $1/c$ が付く。平均か総和か、という定義の違い。実際 $u_\nu=\frac{4\pi}{c}J_\nu$。</span>
-<span id="cb1-397"><a href="#cb1-397" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a>**(3)** $4.2\times10^{-13}$ と $10^{-12}$ erg cm$^{-3}$ はオーダーで同程度。CMB・宇宙線・星間磁場のエネルギー密度が拮抗していることは、銀河系の星間媒質がこれらの間でエネルギーをやりとりする「準平衡」的な系であることを示唆する（重要なベースライン）。</span>
-<span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a>**答え**：$u\simeq4.2\times10^{-13}$ erg cm$^{-3}$。$J_\nu$＝方向平均、$u_\nu$＝体積エネルギー（$4\pi/c$ 倍）。宇宙線・磁場と同オーダー。</span>
-<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">問題 4-1</span><span class="co">](#sol-4-1)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 4-2</span><span class="co">](#sol-4-2)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 4-3</span><span class="co">](#sol-4-3)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 4-4</span><span class="co">](#sol-4-4)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a>::: {#sol-4-1 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-4-1-label"}</span>
+<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 4-1）**</span><span class="co">]</span>{#sol-4-1-label .offcanvas-title}</span>
+<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a>**(1)** $I_\nu$ を外に出すと $u_\nu=\dfrac{I_\nu}{c}\displaystyle\oint d\Omega=\dfrac{I_\nu}{c}\cdot4\pi=\dfrac{4\pi}{c}I_\nu$。</span>
+<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a>**(2)** $\displaystyle\oint\cos\theta\,d\Omega=\int_0^{2\pi}d\varphi\int_0^{\pi}\cos\theta\sin\theta\,d\theta=2\pi\left<span class="co">[</span><span class="ot">\dfrac{\sin^2\theta}{2}\right</span><span class="co">]</span>_0^{\pi}=2\pi\cdot0=0$。（上半球の正と下半球の負が打ち消す。）よって $F_\nu=I_\nu\cdot0=0$。</span>
+<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-397"><a href="#cb1-397" aria-hidden="true" tabindex="-1"></a>**(3)** $\displaystyle\oint\cos^2\theta\,d\Omega=\int_0^{2\pi}d\varphi\int_0^{\pi}\cos^2\theta\sin\theta\,d\theta=2\pi\left<span class="co">[</span><span class="ot">-\dfrac{\cos^3\theta}{3}\right</span><span class="co">]</span>_0^{\pi}=2\pi\cdot\dfrac{2}{3}=\dfrac{4\pi}{3}$。よって</span>
+<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a>P_\nu=\frac{I_\nu}{c}\cdot\frac{4\pi}{3}=\frac{1}{3}\cdot\frac{4\pi}{c}I_\nu=\frac{1}{3}u_\nu.</span>
+<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 4-4　点光源か広がった光源か ― 装置との関係で決まる {#ex-4-4 .unnumbered}</span></span>
-<span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a>**答え**：等方場で $u_\nu=\frac{4\pi}{c}I_\nu$、$F_\nu=0$、$P_\nu=\frac13 u_\nu$。最後は光子気体の状態方程式 $P=u/3$。</span>
+<span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a>§4.4・4.8 は「点光源か広がった光源か」は天体固有でなく観測装置との関係で決まると述べた。$\alpha$ Cen A（視直径 $\sim9$ mas）を例に確かめる。</span>
-<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$\alpha$ Cen A を円盤とみて立体角 $\Omega_\mathrm{src}\simeq\pi(\theta/2)^2$ を sr で概算せよ（$\theta=9$ mas）。</span>
-<span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>通常の地上望遠鏡（シーイング $\sim1$ arcsec）のビーム立体角 $\Omega_\mathrm{beam}\simeq\pi(0.5'')^2$ と比べ、点光源として扱える理由を述べよ。</span>
-<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>VLTI 干渉計（分解能 $\sim1$ mas）ではどうなるか。同じ天体で扱いが変わることが何を意味するか、観測される量（$F_\nu$ か $I_\nu$ か）の観点から述べよ。</span>
-<span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§4.4 フラックス（点光源/広がった光源）</span><span class="co">](#sec-radiation-field-flux)</span>、<span class="co">[</span><span class="ot">§4.8 装置と放射場</span><span class="co">](#sec-radiation-field-observation)</span>／立体角の見積りは<span class="co">[</span><span class="ot">§4.2</span><span class="co">](#sec-radiation-field-solid-angle)</span>。</span>
+<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a>::: {#sol-4-2 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-4-2-label"}</span>
+<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 4-2）**</span><span class="co">]</span>{#sol-4-2-label .offcanvas-title}</span>
+<span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a>**(1)** 比強度は真空伝播で保存する（光線一本あたりのエネルギーが不変、位相空間体積保存の帰結）。よって天体表面の比強度と、遠方で観測する比強度は等しく、距離 $d$ に依らない（表面輝度の距離不変）。</span>
 <span id="cb1-414"><a href="#cb1-414" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-415"><a href="#cb1-415" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-416"><a href="#cb1-416" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 4-4）</span></span>
-<span id="cb1-417"><a href="#cb1-417" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-418"><a href="#cb1-418" aria-hidden="true" tabindex="-1"></a>**(1)** $\theta=9$ mas $=9\times10^{-3}$ arcsec。1 arcsec $=4.85\times10^{-6}$ rad なので $\theta=9\times10^{-3}\times4.85\times10^{-6}=4.4\times10^{-8}$ rad。半径 $\theta/2=2.2\times10^{-8}$ rad。立体角</span>
-<span id="cb1-419"><a href="#cb1-419" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-420"><a href="#cb1-420" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-421"><a href="#cb1-421" aria-hidden="true" tabindex="-1"></a>\Omega_\mathrm{src}\simeq\pi(2.2\times10^{-8})^2\simeq1.5\times10^{-15}\ \mathrm{sr}.</span>
-<span id="cb1-422"><a href="#cb1-422" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-423"><a href="#cb1-423" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-424"><a href="#cb1-424" aria-hidden="true" tabindex="-1"></a>（本文の表の値と一致。）</span>
-<span id="cb1-425"><a href="#cb1-425" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-426"><a href="#cb1-426" aria-hidden="true" tabindex="-1"></a>**(2)** シーイング 1 arcsec のビーム半径 $0.5''=2.4\times10^{-6}$ rad、$\Omega_\mathrm{beam}\simeq\pi(2.4\times10^{-6})^2\simeq1.8\times10^{-11}$ sr。$\Omega_\mathrm{src}/\Omega_\mathrm{beam}\sim10^{-4}\ll1$。天体はビームよりはるかに小さく、空間的に分解できない＝点光源。測れるのはフラックス $F_\nu$ のみ。</span>
-<span id="cb1-427"><a href="#cb1-427" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-428"><a href="#cb1-428" aria-hidden="true" tabindex="-1"></a>**(3)** VLTI の分解能 $\sim1$ mas は天体視直径 9 mas より小さいので、円盤を空間的に分解できる＝広がった光源として扱え、面上の比強度 $I_\nu$（表面輝度分布）が測れる。同じ天体が装置の分解能次第で点光源にも広がった光源にもなる。すなわち「点か広がりか」は天体の性質でなく装置との関係で決まる。</span>
-<span id="cb1-429"><a href="#cb1-429" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-430"><a href="#cb1-430" aria-hidden="true" tabindex="-1"></a>**答え**：$\Omega_\mathrm{src}\simeq1.5\times10^{-15}$ sr。シーイング1″では $\ll\Omega_\mathrm{beam}$ ゆえ点光源（$F_\nu$ を測る）。VLTI 1 masでは分解でき広がった光源（$I_\nu$）。装置依存。</span>
-<span id="cb1-431"><a href="#cb1-431" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-432"><a href="#cb1-432" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-433"><a href="#cb1-433" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-radiation-field-further .unnumbered}</span></span>
-<span id="cb1-434"><a href="#cb1-434" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-435"><a href="#cb1-435" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rybicki &amp; Lightman, *Radiative Processes in Astrophysics* (Wiley, 1979) — 第1章「Fundamentals of Radiative Transfer」</span>
-<span id="cb1-436"><a href="#cb1-436" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mihalas, *Stellar Atmospheres* (Freeman, 2nd ed., 1978) — 放射場の量の体系的整理</span>
-<span id="cb1-437"><a href="#cb1-437" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Chandrasekhar, *Radiative Transfer* (Dover, 1960) — 古典的だが現在も標準</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-415"><a href="#cb1-415" aria-hidden="true" tabindex="-1"></a>**(2)** 半径 $R$ の円盤を距離 $d$ から見ると、見込む角の半径は $\theta\simeq R/d$（$R\ll d$）。立体角は $\Omega\simeq\pi\theta^2=\pi R^2/d^2\propto1/d^2$。観測フラックスは「比強度×天体の立体角」なので $F_\nu\simeq I_\nu\Omega=\pi I_\nu R^2/d^2\propto1/d^2$。</span>
+<span id="cb1-416"><a href="#cb1-416" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-417"><a href="#cb1-417" aria-hidden="true" tabindex="-1"></a>**(3)** 表面フラックス $F_\nu^\mathrm{surf}=\pi I_\nu$（半球射出、§2.4）、光度 $L_\nu=4\pi R^2\cdot F_\nu^\mathrm{surf}=4\pi R^2\cdot\pi I_\nu=4\pi^2 R^2 I_\nu$。点光源式に入れると</span>
+<span id="cb1-418"><a href="#cb1-418" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-419"><a href="#cb1-419" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-420"><a href="#cb1-420" aria-hidden="true" tabindex="-1"></a>F_\nu^\mathrm{obs}=\frac{L_\nu}{4\pi d^2}=\frac{4\pi^2R^2 I_\nu}{4\pi d^2}=\frac{\pi I_\nu R^2}{d^2},</span>
+<span id="cb1-421"><a href="#cb1-421" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-422"><a href="#cb1-422" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-423"><a href="#cb1-423" aria-hidden="true" tabindex="-1"></a>これは (2) と完全に一致する。$I_\nu$ は不変、$F_\nu$ だけが $1/d^2$ で落ちる。</span>
+<span id="cb1-424"><a href="#cb1-424" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-425"><a href="#cb1-425" aria-hidden="true" tabindex="-1"></a>**答え**：$I_\nu$ は距離不変、$\Omega\propto1/d^2$ ゆえ $F_\nu=\pi I_\nu R^2/d^2\propto1/d^2$。点光源式とも一致。</span>
+<span id="cb1-426"><a href="#cb1-426" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-427"><a href="#cb1-427" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-428"><a href="#cb1-428" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-429"><a href="#cb1-429" aria-hidden="true" tabindex="-1"></a>::: {#sol-4-3 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-4-3-label"}</span>
+<span id="cb1-430"><a href="#cb1-430" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-431"><a href="#cb1-431" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 4-3）**</span><span class="co">]</span>{#sol-4-3-label .offcanvas-title}</span>
+<span id="cb1-432"><a href="#cb1-432" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-433"><a href="#cb1-433" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-434"><a href="#cb1-434" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-435"><a href="#cb1-435" aria-hidden="true" tabindex="-1"></a>**(1)** $T^4=(2.725)^4=55.1$ K$^4$。よって</span>
+<span id="cb1-436"><a href="#cb1-436" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-437"><a href="#cb1-437" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-438"><a href="#cb1-438" aria-hidden="true" tabindex="-1"></a>u=aT^4=7.566\times10^{-15}\times55.1\simeq4.2\times10^{-13}\ \mathrm{erg\,cm^{-3}}.</span>
+<span id="cb1-439"><a href="#cb1-439" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-440"><a href="#cb1-440" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-441"><a href="#cb1-441" aria-hidden="true" tabindex="-1"></a>本文の値と一致。</span>
+<span id="cb1-442"><a href="#cb1-442" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-443"><a href="#cb1-443" aria-hidden="true" tabindex="-1"></a>**(2)** $J_\nu$ は比強度の**方向平均**（$\frac{1}{4\pi}\oint I_\nu d\Omega$）なので等方場で $J_\nu=I_\nu=B_\nu$。一方 $u_\nu$ は単位体積あたりの**エネルギー**（$\frac1c\oint I_\nu d\Omega$）で、全立体角の積分 $4\pi$ と $1/c$ が付く。平均か総和か、という定義の違い。実際 $u_\nu=\frac{4\pi}{c}J_\nu$。</span>
+<span id="cb1-444"><a href="#cb1-444" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-445"><a href="#cb1-445" aria-hidden="true" tabindex="-1"></a>**(3)** $4.2\times10^{-13}$ と $10^{-12}$ erg cm$^{-3}$ はオーダーで同程度。CMB・宇宙線・星間磁場のエネルギー密度が拮抗していることは、銀河系の星間媒質がこれらの間でエネルギーをやりとりする「準平衡」的な系であることを示唆する（重要なベースライン）。</span>
+<span id="cb1-446"><a href="#cb1-446" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-447"><a href="#cb1-447" aria-hidden="true" tabindex="-1"></a>**答え**：$u\simeq4.2\times10^{-13}$ erg cm$^{-3}$。$J_\nu$＝方向平均、$u_\nu$＝体積エネルギー（$4\pi/c$ 倍）。宇宙線・磁場と同オーダー。</span>
+<span id="cb1-448"><a href="#cb1-448" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-449"><a href="#cb1-449" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-450"><a href="#cb1-450" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-451"><a href="#cb1-451" aria-hidden="true" tabindex="-1"></a>::: {#sol-4-4 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-4-4-label"}</span>
+<span id="cb1-452"><a href="#cb1-452" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-453"><a href="#cb1-453" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 4-4）**</span><span class="co">]</span>{#sol-4-4-label .offcanvas-title}</span>
+<span id="cb1-454"><a href="#cb1-454" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-455"><a href="#cb1-455" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-456"><a href="#cb1-456" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-457"><a href="#cb1-457" aria-hidden="true" tabindex="-1"></a>**(1)** $\theta=9$ mas $=9\times10^{-3}$ arcsec。1 arcsec $=4.85\times10^{-6}$ rad なので $\theta=9\times10^{-3}\times4.85\times10^{-6}=4.4\times10^{-8}$ rad。半径 $\theta/2=2.2\times10^{-8}$ rad。立体角</span>
+<span id="cb1-458"><a href="#cb1-458" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-459"><a href="#cb1-459" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-460"><a href="#cb1-460" aria-hidden="true" tabindex="-1"></a>\Omega_\mathrm{src}\simeq\pi(2.2\times10^{-8})^2\simeq1.5\times10^{-15}\ \mathrm{sr}.</span>
+<span id="cb1-461"><a href="#cb1-461" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-462"><a href="#cb1-462" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-463"><a href="#cb1-463" aria-hidden="true" tabindex="-1"></a>（本文の表の値と一致。）</span>
+<span id="cb1-464"><a href="#cb1-464" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-465"><a href="#cb1-465" aria-hidden="true" tabindex="-1"></a>**(2)** シーイング 1 arcsec のビーム半径 $0.5''=2.4\times10^{-6}$ rad、$\Omega_\mathrm{beam}\simeq\pi(2.4\times10^{-6})^2\simeq1.8\times10^{-11}$ sr。$\Omega_\mathrm{src}/\Omega_\mathrm{beam}\sim10^{-4}\ll1$。天体はビームよりはるかに小さく、空間的に分解できない＝点光源。測れるのはフラックス $F_\nu$ のみ。</span>
+<span id="cb1-466"><a href="#cb1-466" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-467"><a href="#cb1-467" aria-hidden="true" tabindex="-1"></a>**(3)** VLTI の分解能 $\sim1$ mas は天体視直径 9 mas より小さいので、円盤を空間的に分解できる＝広がった光源として扱え、面上の比強度 $I_\nu$（表面輝度分布）が測れる。同じ天体が装置の分解能次第で点光源にも広がった光源にもなる。すなわち「点か広がりか」は天体の性質でなく装置との関係で決まる。</span>
+<span id="cb1-468"><a href="#cb1-468" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-469"><a href="#cb1-469" aria-hidden="true" tabindex="-1"></a>**答え**：$\Omega_\mathrm{src}\simeq1.5\times10^{-15}$ sr。シーイング1″では $\ll\Omega_\mathrm{beam}$ ゆえ点光源（$F_\nu$ を測る）。VLTI 1 masでは分解でき広がった光源（$I_\nu$）。装置依存。</span>
+<span id="cb1-470"><a href="#cb1-470" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-471"><a href="#cb1-471" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-472"><a href="#cb1-472" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-473"><a href="#cb1-473" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-radiation-field-further .unnumbered}</span></span>
+<span id="cb1-474"><a href="#cb1-474" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-475"><a href="#cb1-475" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rybicki &amp; Lightman, *Radiative Processes in Astrophysics* (Wiley, 1979) — 第1章「Fundamentals of Radiative Transfer」</span>
+<span id="cb1-476"><a href="#cb1-476" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mihalas, *Stellar Atmospheres* (Freeman, 2nd ed., 1978) — 放射場の量の体系的整理</span>
+<span id="cb1-477"><a href="#cb1-477" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Chandrasekhar, *Radiative Transfer* (Dover, 1960) — 古典的だが現在も標準</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

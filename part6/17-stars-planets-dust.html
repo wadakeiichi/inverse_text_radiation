@@ -511,16 +511,12 @@ window.Quarto = {
   <li><a href="#sec-stars-planets-dust-exercises" id="toc-sec-stars-planets-dust-exercises" class="nav-link" data-scroll-target="#sec-stars-planets-dust-exercises">演習問題</a>
   <ul class="collapse">
   <li><a href="#ex-17-1" id="toc-ex-17-1" class="nav-link" data-scroll-target="#ex-17-1">問題 17-1　惑星の平衡温度を入出力バランスから</a></li>
-  </ul></li>
-  <li><a href="#模範解答問題-17-1" id="toc-模範解答問題-17-1" class="nav-link" data-scroll-target="#模範解答問題-17-1">模範解答（問題 17-1）</a></li>
   <li><a href="#ex-17-2" id="toc-ex-17-2" class="nav-link" data-scroll-target="#ex-17-2">問題 17-2　二温度天体の同一波長明るさ比</a></li>
-  <li><a href="#模範解答問題-17-2" id="toc-模範解答問題-17-2" class="nav-link" data-scroll-target="#模範解答問題-17-2">模範解答（問題 17-2）</a></li>
   <li><a href="#ex-17-3" id="toc-ex-17-3" class="nav-link" data-scroll-target="#ex-17-3">問題 17-3　ダスト修正黒体から3物理量を読む</a></li>
-  <li><a href="#模範解答問題-17-3" id="toc-模範解答問題-17-3" class="nav-link" data-scroll-target="#模範解答問題-17-3">模範解答（問題 17-3）</a></li>
   <li><a href="#ex-17-4" id="toc-ex-17-4" class="nav-link" data-scroll-target="#ex-17-4">問題 17-4　ダストのピーク波長と観測施設</a></li>
-  <li><a href="#模範解答問題-17-4" id="toc-模範解答問題-17-4" class="nav-link" data-scroll-target="#模範解答問題-17-4">模範解答（問題 17-4）</a></li>
   <li><a href="#ex-17-5" id="toc-ex-17-5" class="nav-link" data-scroll-target="#ex-17-5">問題 17-5　電波HII領域の自由–自由スペクトルのターンオーバー</a></li>
-  <li><a href="#模範解答問題-17-5" id="toc-模範解答問題-17-5" class="nav-link" data-scroll-target="#模範解答問題-17-5">模範解答（問題 17-5）</a></li>
+  </ul></li>
+  <li><a href="#sec-stars-planets-dust-solutions" id="toc-sec-stars-planets-dust-solutions" class="nav-link" data-scroll-target="#sec-stars-planets-dust-solutions">解答例</a></li>
   <li><a href="#sec-stars-planets-dust-further" id="toc-sec-stars-planets-dust-further" class="nav-link" data-scroll-target="#sec-stars-planets-dust-further">さらに学ぶための参考文献</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/edit/main/part6/17-stars-planets-dust.qmd" class="toc-action"><i class="bi bi-github"></i>編集</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/blob/main/part6/17-stars-planets-dust.qmd" class="toc-action"><i class="bi empty"></i>ソースコード</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/issues/new" class="toc-action"><i class="bi empty"></i>問題を報告</a></li></ul></div></nav>
@@ -914,7 +910,7 @@ T_b(\nu)=T_e\left(1-e^{-\tau_\nu}\right)
 </section>
 <section id="sec-stars-planets-dust-exercises" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-stars-planets-dust-exercises">演習問題</h2>
-<p><span class="tag">[導出補完]</span> <strong>模範解答</strong> は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</p>
+<p><span class="tag">[導出補完]</span> <strong>解答例</strong> は章末「解答例」にまとめてある（オンライン版では各問のボタンから開く）。まず自力で解いてから開くこと。</p>
 <section id="ex-17-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ex-17-1">問題 17-1　惑星の平衡温度を入出力バランスから</h3>
 <p>[★ 難易度：☆☆ ] <span class="tag">[導出補完]</span></p>
@@ -925,16 +921,7 @@ T_b(\nu)=T_e\left(1-e^{-\tau_\nu}\right)
 <li>地球（<span class="math inline">T_\star=5778</span> K、<span class="math inline">R_\star/d=1/214</span>、<span class="math inline">A=0.3</span>）で <span class="math inline">T_\mathrm{eq}</span> を計算し、実際の地表温度（+15 °C）とのずれの原因を述べよ。</li>
 </ol>
 <p><strong>関連</strong>：<a href="#sec-planet-equilibrium">§17.2 惑星の平衡温度</a>／Stefan-Boltzmann と光度は<a href="../part1/02-reading-spectra.html#sec-reading-spectra-stefan-boltzmann">§2.4</a>（<a href="../part1/02-reading-spectra.html#ex-2-5">演習 2-5</a>）。</p>
-</section>
-</section>
-<section id="模範解答問題-17-1" class="level2 callout-derive" data-collapse="true">
-<h2 class="anchored" data-anchor-id="模範解答問題-17-1">模範解答（問題 17-1）</h2>
-<p><strong>(1)</strong> 等置：<span class="math inline">(1-A)\dfrac{L_\star}{4\pi d^2}\pi R_p^2=4\pi R_p^2\sigma T_\mathrm{eq}^4</span>。<span class="math inline">\pi R_p^2</span> を消し、<span class="math inline">L_\star=4\pi R_\star^2\sigma T_\star^4</span> を代入：</p>
-<p><span class="math display">(1-A)\frac{4\pi R_\star^2\sigma T_\star^4}{4\pi d^2}\cdot\frac14=\sigma T_\mathrm{eq}^4\ \Rightarrow\ T_\mathrm{eq}^4=(1-A)\frac{R_\star^2}{4d^2}T_\star^4.</span></p>
-<p><span class="math display">T_\mathrm{eq}=T_\star\left(\frac{R_\star}{2d}\right)^{1/2}(1-A)^{1/4}.</span></p>
-<p><strong>(2)</strong> 惑星は断面 <span class="math inline">\pi R_p^2</span> で恒星光を受け、全表面 <span class="math inline">4\pi R_p^2</span> から再放射する。比 <span class="math inline">4\pi R_p^2/\pi R_p^2=4</span> が右辺の <span class="math inline">1/4</span>（すなわち <span class="math inline">\sqrt{1/4}=1/2</span> が <span class="math inline">R_\star/2d</span> の 2）として効く。自転が速く全球で均一再放射する近似。</p>
-<p><strong>(3)</strong> <span class="math inline">T_\mathrm{eq}=5778\times(1/(2\times214))^{1/2}\times(0.7)^{1/4}=5778\times(2.34\times10^{-3})^{1/2}\times0.915=5778\times0.0483\times0.915\simeq255</span> K（<span class="math inline">-18</span>°C）。実際の +15°C との 33 K の差は温室効果（大気の赤外不透明度）。この式は大気なし近似。</p>
-<p><strong>答え</strong>：<span class="math inline">T_\mathrm{eq}=T_\star\sqrt{R_\star/2d}\,(1-A)^{1/4}</span>。地球で 255 K。実測との 33 K 差は温室効果。</p>
+<p><a href="#sol-17-1" class="btn btn-outline-secondary btn-sm" data-bs-toggle="offcanvas" role="button">解答例を見る（問題 17-1）</a></p>
 </section>
 <section id="ex-17-2" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ex-17-2">問題 17-2　二温度天体の同一波長明るさ比</h3>
@@ -946,14 +933,7 @@ T_b(\nu)=T_e\left(1-e^{-\tau_\nu}\right)
 <li>赤外 <span class="math inline">\lambda=5\ \mu</span>m での比を計算し（約1.85倍）、Rayleigh-Jeans 側では温度比のみが効くことを確認せよ。</li>
 </ol>
 <p><strong>関連</strong>：<a href="#sec-stars-effective-temperature">§17.1 恒星の有効温度</a>／両極限は<a href="../part1/02-reading-spectra.html#sec-reading-spectra-limits">§2.5</a>、恒星の色は<a href="../part1/01-where-blackbody.html#sec-where-blackbody-stars">§1.3</a>。</p>
-</section>
-<section id="模範解答問題-17-2" class="level2 callout-derive" data-collapse="true">
-<h2 class="anchored" data-anchor-id="模範解答問題-17-2">模範解答（問題 17-2）</h2>
-<p><span class="math inline">x=hc/\lambda kT</span>、<span class="math inline">hc/k=1.439\times10^{-2}</span> m·K。比 <span class="math inline">=\dfrac{e^{x_1}-1}{e^{x_2}-1}</span>（<span class="math inline">x_1</span>＝太陽、<span class="math inline">x_2</span>＝Vega、<span class="math inline">x_1&gt;x_2</span>）。</p>
-<p><strong>(1)</strong> <span class="math inline">\lambda=500</span> nm：<span class="math inline">hc/\lambda k=1.439\times10^{-2}/5.0\times10^{-7}=2.88\times10^4</span> K。<span class="math inline">x_1=28800/5778=4.98</span>、<span class="math inline">x_2=28800/9602=3.00</span>。比 <span class="math inline">=\dfrac{e^{4.98}-1}{e^{3.00}-1}=\dfrac{144.4}{19.1}\simeq7.6</span>。Vega が約7.6倍明るい。</p>
-<p><strong>(2)</strong> <span class="math inline">\lambda=250</span> nm：<span class="math inline">hc/\lambda k=5.76\times10^4</span> K。<span class="math inline">x_1=9.96</span>、<span class="math inline">x_2=5.99</span>。比 <span class="math inline">=\dfrac{e^{9.96}-1}{e^{5.99}-1}=\dfrac{21100}{399}\simeq53</span>。紫外は両者とも Wien 側で指数 <span class="math inline">e^{x}</span> が支配し、温度差が指数的に増幅されるため比が大きい。</p>
-<p><strong>(3)</strong> <span class="math inline">\lambda=5\ \mu</span>m：<span class="math inline">hc/\lambda k=2.88\times10^3</span> K。<span class="math inline">x_1=0.498</span>、<span class="math inline">x_2=0.300</span>。比 <span class="math inline">=\dfrac{e^{0.498}-1}{e^{0.300}-1}=\dfrac{0.645}{0.350}\simeq1.85</span>。<span class="math inline">x\ll1</span> で <span class="math inline">e^x-1\simeq x</span> ゆえ比 <span class="math inline">\simeq x_1/x_2=T_2/T_1=9602/5778=1.66</span> に近く、Rayleigh-Jeans 側では温度比のみが効く（指数増幅なし）。</p>
-<p><strong>答え</strong>：比は可視 7.6、紫外 53、赤外 1.85。Wien 側（紫外）ほど温度差が指数的に効き、RJ 側（赤外）は温度比のみ。</p>
+<p><a href="#sol-17-2" class="btn btn-outline-secondary btn-sm" data-bs-toggle="offcanvas" role="button">解答例を見る（問題 17-2）</a></p>
 </section>
 <section id="ex-17-3" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ex-17-3">問題 17-3　ダスト修正黒体から3物理量を読む</h3>
@@ -965,13 +945,7 @@ T_b(\nu)=T_e\left(1-e^{-\tau_\nu}\right)
 <li>多温度フィットで「冷たい成分の質量」を推定するとき、温度との縮退に注意が要る。長波長観測点がこの縮退を解く理由を、修正黒体の RJ 側（<a href="../part6/15-non-blackbody.html#ex-15-2">演習 15-2</a>）と結びつけて述べよ。</li>
 </ol>
 <p><strong>関連</strong>：<a href="#sec-dust-modified-blackbody">§17.3 ダストの修正黒体</a>、<a href="#sec-multi-temperature">§17.5 多温度合成</a>／修正黒体のべきは<a href="../part6/15-non-blackbody.html#ex-15-2">演習 15-2</a>、修正黒体の定義は<a href="../part6/15-non-blackbody.html#sec-non-blackbody-modified">§15.4</a>。</p>
-</section>
-<section id="模範解答問題-17-3" class="level2 callout-derive" data-collapse="true">
-<h2 class="anchored" data-anchor-id="模範解答問題-17-3">模範解答（問題 17-3）</h2>
-<p><strong>(1)</strong> <span class="math inline">T_d</span>：Wien 側の指数減衰の鋭さ、または SED のピーク位置（Wien 則）から。<span class="math inline">\beta</span>：Rayleigh-Jeans 側（長波長）の勾配の急さ（<span class="math inline">I_\nu\propto\nu^{2+\beta}</span>）から。ダスト質量：全光度を <span class="math inline">B_\nu(T_d)</span> で割ったときの規格化定数から（不透明度の仮定が必要）。</p>
-<p><strong>(2)</strong> <span class="math inline">\beta</span> が小さいほど粒子が大きい（粒子サイズ≈波長の極限で <span class="math inline">\beta\to0</span>）。円盤中心部ほど <span class="math inline">\beta</span> が小さい＝粒子が大きく成長している。これは円盤内でダストが集積・成長して惑星形成へ向かう過程の直接観測的証拠。</p>
-<p><strong>(3)</strong> 同じピーク位置でも（高温・少量）と（低温・大量）で似た SED を作れる縮退がある。RJ 側の勾配 <span class="math inline">\nu^{2+\beta}</span> と絶対強度は温度・質量・<span class="math inline">\beta</span> に異なる依存をするので、ピークより長波長（サブミリ・ミリ）の観測点を加えると、RJ 側の形が温度と質量を分離して縮退を解く。だから長波長観測が鍵。</p>
-<p><strong>答え</strong>：<span class="math inline">T_d</span>＝Wien側/ピーク、<span class="math inline">\beta</span>＝RJ側勾配、質量＝規格化。中心部の小 <span class="math inline">\beta</span>＝粒子成長＝惑星形成の証拠。長波長点が温度-質量縮退を解く。</p>
+<p><a href="#sol-17-3" class="btn btn-outline-secondary btn-sm" data-bs-toggle="offcanvas" role="button">解答例を見る（問題 17-3）</a></p>
 </section>
 <section id="ex-17-4" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ex-17-4">問題 17-4　ダストのピーク波長と観測施設</h3>
@@ -983,13 +957,7 @@ T_b(\nu)=T_e\left(1-e^{-\tau_\nu}\right)
 <li>銀河の重元素の半分がダストに閉じ込められ、その熱放射が遠赤外〜サブミリにピークを持つ。なぜ赤外・サブミリ天文学（Herschel/ALMA）が宇宙の物質収支に決定的なのか述べよ。</li>
 </ol>
 <p><strong>関連</strong>：<a href="#sec-multi-temperature">§17.5 多温度合成</a>、<a href="#sec-infrared-astronomy">§17.4 赤外線天文学</a>／Wien 変位則は<a href="../part1/02-reading-spectra.html#ex-2-2">演習 2-2</a>。</p>
-</section>
-<section id="模範解答問題-17-4" class="level2 callout-derive" data-collapse="true">
-<h2 class="anchored" data-anchor-id="模範解答問題-17-4">模範解答（問題 17-4）</h2>
-<p><strong>(1)</strong> <span class="math inline">\lambda_\mathrm{peak}=2898/20=145\ \mu</span>m。これは Herschel（SPIRE/PACS、60〜600 μm）の主帯域。冷たい星間ダストの観測が Herschel で飛躍したのはこのため。</p>
-<p><strong>(2)</strong> <span class="math inline">T_d=100</span> K：<span class="math inline">\lambda_\mathrm{peak}=2898/100=29\ \mu</span>m（中間赤外、Spitzer/JWST）。<span class="math inline">T_d=15</span> K：<span class="math inline">\lambda_\mathrm{peak}=2898/15=193\ \mu</span>m（サブミリ、Herschel/ALMA）。</p>
-<p><strong>(3)</strong> ダスト（<span class="math inline">T\sim15</span>〜<span class="math inline">30</span> K）の熱放射ピークは遠赤外〜サブミリ。銀河の重元素の半分がダストに閉じ込められているので、可視・紫外だけ見ると物質の半分を見落とす。遠赤外・サブミリ（Herschel/ALMA）でこの放射を捉えて初めて、銀河の星間物質・ダスト質量・星形成の全体像（物質収支）が分かる。</p>
-<p><strong>答え</strong>：20 K→145 μm（Herschel）、100 K→29 μm、15 K→193 μm。重元素の半分がダスト＝遠赤外/サブミリ観測が物質収支に必須。</p>
+<p><a href="#sol-17-4" class="btn btn-outline-secondary btn-sm" data-bs-toggle="offcanvas" role="button">解答例を見る（問題 17-4）</a></p>
 </section>
 <section id="ex-17-5" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ex-17-5">問題 17-5　電波HII領域の自由–自由スペクトルのターンオーバー</h3>
@@ -1001,13 +969,76 @@ T_b(\nu)=T_e\left(1-e^{-\tau_\nu}\right)
 <li>「自由–自由放射は熱的なのに、全帯域で単一の黒体にはならない」のはなぜか。低 <span class="math inline">\nu</span> 側と高 <span class="math inline">\nu</span> 側で何が違うかを一言で述べよ。</li>
 </ol>
 <p><strong>関連</strong>：<a href="#sec-free-free-ionized">§17.6 電離ガスの自由–自由放射</a>／光学的に厚い極限は<a href="../part2/05-radiative-transfer.html#sec-radiative-transfer-thick">§5.6</a>（<a href="../part2/05-radiative-transfer.html#ex-5-2">演習 5-2</a>）、輝度温度は<a href="../part1/02-reading-spectra.html#sec-reading-spectra-temperatures">§2.6</a>、熱的/非熱的は<a href="../part1/01-where-blackbody.html#sec-where-blackbody-thermal">§1.9</a>、X 線制動放射は<a href="../part6/18-accretion-high-energy.html">第18章</a>。</p>
+<p><a href="#sol-17-5" class="btn btn-outline-secondary btn-sm" data-bs-toggle="offcanvas" role="button">解答例を見る（問題 17-5）</a></p>
 </section>
-<section id="模範解答問題-17-5" class="level2 callout-derive" data-collapse="true">
-<h2 class="anchored" data-anchor-id="模範解答問題-17-5">模範解答（問題 17-5）</h2>
+</section>
+<section id="sec-stars-planets-dust-solutions" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sec-stars-planets-dust-solutions">解答例</h2>
+<p>各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。</p>
+<p><a href="#sol-17-1" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 17-1</a> <a href="#sol-17-2" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 17-2</a> <a href="#sol-17-3" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 17-3</a> <a href="#sol-17-4" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 17-4</a> <a href="#sol-17-5" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 17-5</a></p>
+<div id="sol-17-1" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-17-1-label">
+<p><span class="proof-title"><em>解答 20.1</em>. </span></p>
+<div class="offcanvas-header">
+<p><span id="sol-17-1-label" class="offcanvas-title"><strong>解答例（問題 17-1）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
+</div>
+<div class="offcanvas-body">
+<p><strong>(1)</strong> 等置：<span class="math inline">(1-A)\dfrac{L_\star}{4\pi d^2}\pi R_p^2=4\pi R_p^2\sigma T_\mathrm{eq}^4</span>。<span class="math inline">\pi R_p^2</span> を消し、<span class="math inline">L_\star=4\pi R_\star^2\sigma T_\star^4</span> を代入：</p>
+<p><span class="math display">(1-A)\frac{4\pi R_\star^2\sigma T_\star^4}{4\pi d^2}\cdot\frac14=\sigma T_\mathrm{eq}^4\ \Rightarrow\ T_\mathrm{eq}^4=(1-A)\frac{R_\star^2}{4d^2}T_\star^4.</span></p>
+<p><span class="math display">T_\mathrm{eq}=T_\star\left(\frac{R_\star}{2d}\right)^{1/2}(1-A)^{1/4}.</span></p>
+<p><strong>(2)</strong> 惑星は断面 <span class="math inline">\pi R_p^2</span> で恒星光を受け、全表面 <span class="math inline">4\pi R_p^2</span> から再放射する。比 <span class="math inline">4\pi R_p^2/\pi R_p^2=4</span> が右辺の <span class="math inline">1/4</span>（すなわち <span class="math inline">\sqrt{1/4}=1/2</span> が <span class="math inline">R_\star/2d</span> の 2）として効く。自転が速く全球で均一再放射する近似。</p>
+<p><strong>(3)</strong> <span class="math inline">T_\mathrm{eq}=5778\times(1/(2\times214))^{1/2}\times(0.7)^{1/4}=5778\times(2.34\times10^{-3})^{1/2}\times0.915=5778\times0.0483\times0.915\simeq255</span> K（<span class="math inline">-18</span>°C）。実際の +15°C との 33 K の差は温室効果（大気の赤外不透明度）。この式は大気なし近似。</p>
+<p><strong>答え</strong>：<span class="math inline">T_\mathrm{eq}=T_\star\sqrt{R_\star/2d}\,(1-A)^{1/4}</span>。地球で 255 K。実測との 33 K 差は温室効果。</p>
+</div>
+</div>
+<div id="sol-17-2" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-17-2-label">
+<p><span class="proof-title"><em>解答 20.2</em>. </span></p>
+<div class="offcanvas-header">
+<p><span id="sol-17-2-label" class="offcanvas-title"><strong>解答例（問題 17-2）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
+</div>
+<div class="offcanvas-body">
+<p><span class="math inline">x=hc/\lambda kT</span>、<span class="math inline">hc/k=1.439\times10^{-2}</span> m·K。比 <span class="math inline">=\dfrac{e^{x_1}-1}{e^{x_2}-1}</span>（<span class="math inline">x_1</span>＝太陽、<span class="math inline">x_2</span>＝Vega、<span class="math inline">x_1&gt;x_2</span>）。</p>
+<p><strong>(1)</strong> <span class="math inline">\lambda=500</span> nm：<span class="math inline">hc/\lambda k=1.439\times10^{-2}/5.0\times10^{-7}=2.88\times10^4</span> K。<span class="math inline">x_1=28800/5778=4.98</span>、<span class="math inline">x_2=28800/9602=3.00</span>。比 <span class="math inline">=\dfrac{e^{4.98}-1}{e^{3.00}-1}=\dfrac{144.4}{19.1}\simeq7.6</span>。Vega が約7.6倍明るい。</p>
+<p><strong>(2)</strong> <span class="math inline">\lambda=250</span> nm：<span class="math inline">hc/\lambda k=5.76\times10^4</span> K。<span class="math inline">x_1=9.96</span>、<span class="math inline">x_2=5.99</span>。比 <span class="math inline">=\dfrac{e^{9.96}-1}{e^{5.99}-1}=\dfrac{21100}{399}\simeq53</span>。紫外は両者とも Wien 側で指数 <span class="math inline">e^{x}</span> が支配し、温度差が指数的に増幅されるため比が大きい。</p>
+<p><strong>(3)</strong> <span class="math inline">\lambda=5\ \mu</span>m：<span class="math inline">hc/\lambda k=2.88\times10^3</span> K。<span class="math inline">x_1=0.498</span>、<span class="math inline">x_2=0.300</span>。比 <span class="math inline">=\dfrac{e^{0.498}-1}{e^{0.300}-1}=\dfrac{0.645}{0.350}\simeq1.85</span>。<span class="math inline">x\ll1</span> で <span class="math inline">e^x-1\simeq x</span> ゆえ比 <span class="math inline">\simeq x_1/x_2=T_2/T_1=9602/5778=1.66</span> に近く、Rayleigh-Jeans 側では温度比のみが効く（指数増幅なし）。</p>
+<p><strong>答え</strong>：比は可視 7.6、紫外 53、赤外 1.85。Wien 側（紫外）ほど温度差が指数的に効き、RJ 側（赤外）は温度比のみ。</p>
+</div>
+</div>
+<div id="sol-17-3" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-17-3-label">
+<p><span class="proof-title"><em>解答 20.3</em>. </span></p>
+<div class="offcanvas-header">
+<p><span id="sol-17-3-label" class="offcanvas-title"><strong>解答例（問題 17-3）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
+</div>
+<div class="offcanvas-body">
+<p><strong>(1)</strong> <span class="math inline">T_d</span>：Wien 側の指数減衰の鋭さ、または SED のピーク位置（Wien 則）から。<span class="math inline">\beta</span>：Rayleigh-Jeans 側（長波長）の勾配の急さ（<span class="math inline">I_\nu\propto\nu^{2+\beta}</span>）から。ダスト質量：全光度を <span class="math inline">B_\nu(T_d)</span> で割ったときの規格化定数から（不透明度の仮定が必要）。</p>
+<p><strong>(2)</strong> <span class="math inline">\beta</span> が小さいほど粒子が大きい（粒子サイズ≈波長の極限で <span class="math inline">\beta\to0</span>）。円盤中心部ほど <span class="math inline">\beta</span> が小さい＝粒子が大きく成長している。これは円盤内でダストが集積・成長して惑星形成へ向かう過程の直接観測的証拠。</p>
+<p><strong>(3)</strong> 同じピーク位置でも（高温・少量）と（低温・大量）で似た SED を作れる縮退がある。RJ 側の勾配 <span class="math inline">\nu^{2+\beta}</span> と絶対強度は温度・質量・<span class="math inline">\beta</span> に異なる依存をするので、ピークより長波長（サブミリ・ミリ）の観測点を加えると、RJ 側の形が温度と質量を分離して縮退を解く。だから長波長観測が鍵。</p>
+<p><strong>答え</strong>：<span class="math inline">T_d</span>＝Wien側/ピーク、<span class="math inline">\beta</span>＝RJ側勾配、質量＝規格化。中心部の小 <span class="math inline">\beta</span>＝粒子成長＝惑星形成の証拠。長波長点が温度-質量縮退を解く。</p>
+</div>
+</div>
+<div id="sol-17-4" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-17-4-label">
+<p><span class="proof-title"><em>解答 20.4</em>. </span></p>
+<div class="offcanvas-header">
+<p><span id="sol-17-4-label" class="offcanvas-title"><strong>解答例（問題 17-4）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
+</div>
+<div class="offcanvas-body">
+<p><strong>(1)</strong> <span class="math inline">\lambda_\mathrm{peak}=2898/20=145\ \mu</span>m。これは Herschel（SPIRE/PACS、60〜600 μm）の主帯域。冷たい星間ダストの観測が Herschel で飛躍したのはこのため。</p>
+<p><strong>(2)</strong> <span class="math inline">T_d=100</span> K：<span class="math inline">\lambda_\mathrm{peak}=2898/100=29\ \mu</span>m（中間赤外、Spitzer/JWST）。<span class="math inline">T_d=15</span> K：<span class="math inline">\lambda_\mathrm{peak}=2898/15=193\ \mu</span>m（サブミリ、Herschel/ALMA）。</p>
+<p><strong>(3)</strong> ダスト（<span class="math inline">T\sim15</span>〜<span class="math inline">30</span> K）の熱放射ピークは遠赤外〜サブミリ。銀河の重元素の半分がダストに閉じ込められているので、可視・紫外だけ見ると物質の半分を見落とす。遠赤外・サブミリ（Herschel/ALMA）でこの放射を捉えて初めて、銀河の星間物質・ダスト質量・星形成の全体像（物質収支）が分かる。</p>
+<p><strong>答え</strong>：20 K→145 μm（Herschel）、100 K→29 μm、15 K→193 μm。重元素の半分がダスト＝遠赤外/サブミリ観測が物質収支に必須。</p>
+</div>
+</div>
+<div id="sol-17-5" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-17-5-label">
+<p><span class="proof-title"><em>解答 20.5</em>. </span></p>
+<div class="offcanvas-header">
+<p><span id="sol-17-5-label" class="offcanvas-title"><strong>解答例（問題 17-5）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
+</div>
+<div class="offcanvas-body">
 <p><strong>(1)</strong> <span class="math inline">\tau_\nu\gg1</span> で <span class="math inline">1-e^{-\tau_\nu}\to1</span> ゆえ <span class="math inline">T_b\to T_e</span>、すなわち <span class="math inline">I_\nu=B_\nu(T_e)(1-e^{-\tau_\nu})\to B_\nu(T_e)</span>。これは第5章 §5.6 の「光学的に厚い極限で <span class="math inline">I_\nu\to S_\nu=B_\nu(T)</span>」そのもの（LTE で <span class="math inline">S_\nu=B_\nu(T_e)</span>）。電波帯は <span class="math inline">h\nu\ll k_BT_e</span> なので <span class="math inline">B_\nu(T_e)\simeq2\nu^2k_BT_e/c^2</span>（Rayleigh–Jeans）、よって <span class="math inline">F_\nu\propto\nu^2</span>。観測されるのは電子温度 <span class="math inline">T_e</span> の黒体の RJ 裾。</p>
 <p><strong>(2)</strong> <span class="math inline">\tau_\nu\ll1</span> で <span class="math inline">1-e^{-\tau_\nu}\simeq\tau_\nu</span> ゆえ <span class="math inline">T_b\to T_e\tau_\nu\propto\nu^{-2.1}</span>。フラックスは RJ で <span class="math inline">F_\nu\propto\nu^2 T_b\propto\nu^2\cdot\nu^{-2.1}=\nu^{-0.1}</span>（ほぼ平坦）。</p>
 <p><strong>(3)</strong> 黒体になるのは光学的に厚い低 <span class="math inline">\nu</span> 側だけ。高 <span class="math inline">\nu</span> 側は光学的に薄く <span class="math inline">I_\nu\approx\tau_\nu B_\nu(T_e)\ll B_\nu(T_e)</span> で黒体から下にずれる。「熱的（粒子が Maxwell 分布）」と「黒体（光学的に厚い）」は別条件で、自由–自由放射は前者を常に、後者を低 <span class="math inline">\nu</span> 側でのみ満たす。</p>
 <p><strong>答え</strong>：低 <span class="math inline">\nu</span>（厚い）→ <span class="math inline">T_b\to T_e</span>、<span class="math inline">I_\nu\to B_\nu(T_e)</span>、<span class="math inline">F_\nu\propto\nu^2</span>（<span class="math inline">T_e</span> の黒体）。高 <span class="math inline">\nu</span>（薄い）→ <span class="math inline">F_\nu\propto\nu^{-0.1}</span>。黒体化は光学的に厚い低 <span class="math inline">\nu</span> 側のみ。</p>
+</div>
+</div>
 </section>
 <section id="sec-stars-planets-dust-further" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-stars-planets-dust-further">さらに学ぶための参考文献</h2>
@@ -1756,7 +1787,7 @@ T_b(\nu)=T_e\left(1-e^{-\tau_\nu}\right)
 <span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-stars-planets-dust-exercises .unnumbered}</span></span>
 <span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **解答例** は章末「解答例」にまとめてある（オンライン版では各問のボタンから開く）。まず自力で解いてから開くこと。</span>
 <span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 17-1　惑星の平衡温度を入出力バランスから {#ex-17-1 .unnumbered}</span></span>
 <span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a></span>
@@ -1770,128 +1801,176 @@ T_b(\nu)=T_e\left(1-e^{-\tau_\nu}\right)
 <span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§17.2 惑星の平衡温度</span><span class="co">](#sec-planet-equilibrium)</span>／Stefan-Boltzmann と光度は<span class="co">[</span><span class="ot">§2.4</span><span class="co">](../part1/02-reading-spectra.qmd#sec-reading-spectra-stefan-boltzmann)</span>（<span class="co">[</span><span class="ot">演習 2-5</span><span class="co">](../part1/02-reading-spectra.qmd#ex-2-5)</span>）。</span>
 <span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 17-1）</span></span>
-<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a>**(1)** 等置：$(1-A)\dfrac{L_\star}{4\pi d^2}\pi R_p^2=4\pi R_p^2\sigma T_\mathrm{eq}^4$。$\pi R_p^2$ を消し、$L_\star=4\pi R_\star^2\sigma T_\star^4$ を代入：</span>
-<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a>$$(1-A)\frac{4\pi R_\star^2\sigma T_\star^4}{4\pi d^2}\cdot\frac14=\sigma T_\mathrm{eq}^4\ \Rightarrow\ T_\mathrm{eq}^4=(1-A)\frac{R_\star^2}{4d^2}T_\star^4.$$</span>
-<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a>$$T_\mathrm{eq}=T_\star\left(\frac{R_\star}{2d}\right)^{1/2}(1-A)^{1/4}.$$</span>
-<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a>**(2)** 惑星は断面 $\pi R_p^2$ で恒星光を受け、全表面 $4\pi R_p^2$ から再放射する。比 $4\pi R_p^2/\pi R_p^2=4$ が右辺の $1/4$（すなわち $\sqrt{1/4}=1/2$ が $R_\star/2d$ の 2）として効く。自転が速く全球で均一再放射する近似。</span>
-<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a>**(3)** $T_\mathrm{eq}=5778\times(1/(2\times214))^{1/2}\times(0.7)^{1/4}=5778\times(2.34\times10^{-3})^{1/2}\times0.915=5778\times0.0483\times0.915\simeq255$ K（$-18$°C）。実際の +15°C との 33 K の差は温室効果（大気の赤外不透明度）。この式は大気なし近似。</span>
-<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a>**答え**：$T_\mathrm{eq}=T_\star\sqrt{R_\star/2d}\,(1-A)^{1/4}$。地球で 255 K。実測との 33 K 差は温室効果。</span>
-<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 17-1）</span><span class="co">](#sol-17-1)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 17-2　二温度天体の同一波長明るさ比 {#ex-17-2 .unnumbered}</span></span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a>§17.1 の問いを数値で解く。太陽（$T_1=5778$ K）と Vega（$T_2=9602$ K）を半径・距離同じと仮定。同一振動数での比強度比 $\dfrac{B_\nu(T_2)}{B_\nu(T_1)}=\dfrac{e^{h\nu/kT_1}-1}{e^{h\nu/kT_2}-1}$ を使う。便利な関係 $h\nu/k=hc/\lambda k$、$hc/k=1.439\times10^{-2}$ m·K。</span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>可視 $\lambda=500$ nm で $x_i=hc/\lambda kT_i$ を求め、明るさ比を計算せよ（約7.6倍）。</span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>紫外 $\lambda=250$ nm で同様に計算せよ（約53倍）。なぜ紫外ほど比が大きいか。</span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>赤外 $\lambda=5\ \mu$m での比を計算し（約1.85倍）、Rayleigh-Jeans 側では温度比のみが効くことを確認せよ。</span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§17.1 恒星の有効温度</span><span class="co">](#sec-stars-effective-temperature)</span>／両極限は<span class="co">[</span><span class="ot">§2.5</span><span class="co">](../part1/02-reading-spectra.qmd#sec-reading-spectra-limits)</span>、恒星の色は<span class="co">[</span><span class="ot">§1.3</span><span class="co">](../part1/01-where-blackbody.qmd#sec-where-blackbody-stars)</span>。</span>
 <span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 17-2　二温度天体の同一波長明るさ比 {#ex-17-2 .unnumbered}</span></span>
-<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 17-2）</span><span class="co">](#sol-17-2)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a>§17.1 の問いを数値で解く。太陽（$T_1=5778$ K）と Vega（$T_2=9602$ K）を半径・距離同じと仮定。同一振動数での比強度比 $\dfrac{B_\nu(T_2)}{B_\nu(T_1)}=\dfrac{e^{h\nu/kT_1}-1}{e^{h\nu/kT_2}-1}$ を使う。便利な関係 $h\nu/k=hc/\lambda k$、$hc/k=1.439\times10^{-2}$ m·K。</span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 17-3　ダスト修正黒体から3物理量を読む {#ex-17-3 .unnumbered}</span></span>
 <span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>可視 $\lambda=500$ nm で $x_i=hc/\lambda kT_i$ を求め、明るさ比を計算せよ（約7.6倍）。</span>
-<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>紫外 $\lambda=250$ nm で同様に計算せよ（約53倍）。なぜ紫外ほど比が大きいか。</span>
-<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>赤外 $\lambda=5\ \mu$m での比を計算し（約1.85倍）、Rayleigh-Jeans 側では温度比のみが効くことを確認せよ。</span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>§17.3 の修正黒体 $I_\nu=Q_\nu B_\nu(T_d)$、$Q_\nu\propto\nu^\beta$。観測 SED から3つの物理量を読む手順を整理する。</span>
 <span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§17.1 恒星の有効温度</span><span class="co">](#sec-stars-effective-temperature)</span>／両極限は<span class="co">[</span><span class="ot">§2.5</span><span class="co">](../part1/02-reading-spectra.qmd#sec-reading-spectra-limits)</span>、恒星の色は<span class="co">[</span><span class="ot">§1.3</span><span class="co">](../part1/01-where-blackbody.qmd#sec-where-blackbody-stars)</span>。</span>
-<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 17-2）</span></span>
-<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a>$x=hc/\lambda kT$、$hc/k=1.439\times10^{-2}$ m·K。比 $=\dfrac{e^{x_1}-1}{e^{x_2}-1}$（$x_1$＝太陽、$x_2$＝Vega、$x_1&gt;x_2$）。</span>
-<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a>**(1)** $\lambda=500$ nm：$hc/\lambda k=1.439\times10^{-2}/5.0\times10^{-7}=2.88\times10^4$ K。$x_1=28800/5778=4.98$、$x_2=28800/9602=3.00$。比 $=\dfrac{e^{4.98}-1}{e^{3.00}-1}=\dfrac{144.4}{19.1}\simeq7.6$。Vega が約7.6倍明るい。</span>
-<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a>**(2)** $\lambda=250$ nm：$hc/\lambda k=5.76\times10^4$ K。$x_1=9.96$、$x_2=5.99$。比 $=\dfrac{e^{9.96}-1}{e^{5.99}-1}=\dfrac{21100}{399}\simeq53$。紫外は両者とも Wien 側で指数 $e^{x}$ が支配し、温度差が指数的に増幅されるため比が大きい。</span>
-<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a>**(3)** $\lambda=5\ \mu$m：$hc/\lambda k=2.88\times10^3$ K。$x_1=0.498$、$x_2=0.300$。比 $=\dfrac{e^{0.498}-1}{e^{0.300}-1}=\dfrac{0.645}{0.350}\simeq1.85$。$x\ll1$ で $e^x-1\simeq x$ ゆえ比 $\simeq x_1/x_2=T_2/T_1=9602/5778=1.66$ に近く、Rayleigh-Jeans 側では温度比のみが効く（指数増幅なし）。</span>
-<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a>**答え**：比は可視 7.6、紫外 53、赤外 1.85。Wien 側（紫外）ほど温度差が指数的に効き、RJ 側（赤外）は温度比のみ。</span>
-<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>ダスト温度 $T_d$、ダスト放射率指数 $\beta$、ダスト質量 がそれぞれ SED のどの特徴から読めるか述べよ。</span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$\beta$ の値が粒子サイズを反映する（大粒子 $\beta\to0$、小結晶 $\beta\to2$）。ALMA で原始惑星系円盤の中心部ほど $\beta$ が小さい観測が、何を示すか述べよ。</span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>多温度フィットで「冷たい成分の質量」を推定するとき、温度との縮退に注意が要る。長波長観測点がこの縮退を解く理由を、修正黒体の RJ 側（<span class="co">[</span><span class="ot">演習 15-2</span><span class="co">](../part6/15-non-blackbody.qmd#ex-15-2)</span>）と結びつけて述べよ。</span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§17.3 ダストの修正黒体</span><span class="co">](#sec-dust-modified-blackbody)</span>、<span class="co">[</span><span class="ot">§17.5 多温度合成</span><span class="co">](#sec-multi-temperature)</span>／修正黒体のべきは<span class="co">[</span><span class="ot">演習 15-2</span><span class="co">](../part6/15-non-blackbody.qmd#ex-15-2)</span>、修正黒体の定義は<span class="co">[</span><span class="ot">§15.4</span><span class="co">](../part6/15-non-blackbody.qmd#sec-non-blackbody-modified)</span>。</span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 17-3）</span><span class="co">](#sol-17-3)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 17-4　ダストのピーク波長と観測施設 {#ex-17-4 .unnumbered}</span></span>
+<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a>§17.5 の問いを一般化する。Wien 則 $\lambda_\mathrm{peak}=b/T$（$b=2898\ \mu$m·K）。</span>
 <span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 17-3　ダスト修正黒体から3物理量を読む {#ex-17-3 .unnumbered}</span></span>
-<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$T_d=20$ K の冷たいダストのピーク波長を求め、どの観測施設の帯域か述べよ。</span>
+<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>暖かいダスト $T_d=100$ K、ごく冷たいダスト $T_d=15$ K のピーク波長も求めよ。</span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>銀河の重元素の半分がダストに閉じ込められ、その熱放射が遠赤外〜サブミリにピークを持つ。なぜ赤外・サブミリ天文学（Herschel/ALMA）が宇宙の物質収支に決定的なのか述べよ。</span>
 <span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a>§17.3 の修正黒体 $I_\nu=Q_\nu B_\nu(T_d)$、$Q_\nu\propto\nu^\beta$。観測 SED から3つの物理量を読む手順を整理する。</span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§17.5 多温度合成</span><span class="co">](#sec-multi-temperature)</span>、<span class="co">[</span><span class="ot">§17.4 赤外線天文学</span><span class="co">](#sec-infrared-astronomy)</span>／Wien 変位則は<span class="co">[</span><span class="ot">演習 2-2</span><span class="co">](../part1/02-reading-spectra.qmd#ex-2-2)</span>。</span>
 <span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>ダスト温度 $T_d$、ダスト放射率指数 $\beta$、ダスト質量 がそれぞれ SED のどの特徴から読めるか述べよ。</span>
-<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$\beta$ の値が粒子サイズを反映する（大粒子 $\beta\to0$、小結晶 $\beta\to2$）。ALMA で原始惑星系円盤の中心部ほど $\beta$ が小さい観測が、何を示すか述べよ。</span>
-<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>多温度フィットで「冷たい成分の質量」を推定するとき、温度との縮退に注意が要る。長波長観測点がこの縮退を解く理由を、修正黒体の RJ 側（<span class="co">[</span><span class="ot">演習 15-2</span><span class="co">](../part6/15-non-blackbody.qmd#ex-15-2)</span>）と結びつけて述べよ。</span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 17-4）</span><span class="co">](#sol-17-4)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§17.3 ダストの修正黒体</span><span class="co">](#sec-dust-modified-blackbody)</span>、<span class="co">[</span><span class="ot">§17.5 多温度合成</span><span class="co">](#sec-multi-temperature)</span>／修正黒体のべきは<span class="co">[</span><span class="ot">演習 15-2</span><span class="co">](../part6/15-non-blackbody.qmd#ex-15-2)</span>、修正黒体の定義は<span class="co">[</span><span class="ot">§15.4</span><span class="co">](../part6/15-non-blackbody.qmd#sec-non-blackbody-modified)</span>。</span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 17-5　電波HII領域の自由–自由スペクトルのターンオーバー {#ex-17-5 .unnumbered}</span></span>
 <span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 17-3）</span></span>
-<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>**(1)** $T_d$：Wien 側の指数減衰の鋭さ、または SED のピーク位置（Wien 則）から。$\beta$：Rayleigh-Jeans 側（長波長）の勾配の急さ（$I_\nu\propto\nu^{2+\beta}$）から。ダスト質量：全光度を $B_\nu(T_d)$ で割ったときの規格化定数から（不透明度の仮定が必要）。</span>
-<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a>**(2)** $\beta$ が小さいほど粒子が大きい（粒子サイズ≈波長の極限で $\beta\to0$）。円盤中心部ほど $\beta$ が小さい＝粒子が大きく成長している。これは円盤内でダストが集積・成長して惑星形成へ向かう過程の直接観測的証拠。</span>
-<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>**(3)** 同じピーク位置でも（高温・少量）と（低温・大量）で似た SED を作れる縮退がある。RJ 側の勾配 $\nu^{2+\beta}$ と絶対強度は温度・質量・$\beta$ に異なる依存をするので、ピークより長波長（サブミリ・ミリ）の観測点を加えると、RJ 側の形が温度と質量を分離して縮退を解く。だから長波長観測が鍵。</span>
-<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a>**答え**：$T_d$＝Wien側/ピーク、$\beta$＝RJ側勾配、質量＝規格化。中心部の小 $\beta$＝粒子成長＝惑星形成の証拠。長波長点が温度-質量縮退を解く。</span>
-<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 17-4　ダストのピーク波長と観測施設 {#ex-17-4 .unnumbered}</span></span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>§17.6 の電離ガスの自由–自由放射を扱う。等温スラブ（電子温度 $T_e$、LTE）の輝度温度 $T_b(\nu)=T_e(1-e^{-\tau_\nu})$、自由–自由の光学的厚さ $\tau_\nu\propto\nu^{-2.1}$（電波帯）とする。</span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>低振動数（光学的に厚い、$\tau_\nu\gg1$）で $T_b\to T_e$、$I_\nu\to B_\nu(T_e)$、フラックスが $F_\nu\propto\nu^2$ になることを示せ。これが「電子温度 $T_e$ の黒体（Rayleigh–Jeans 裾）」である理由を、第5章 §5.6 と結びつけて述べよ。</span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>高振動数（光学的に薄い、$\tau_\nu\ll1$）で $T_b\to T_e\tau_\nu$、$F_\nu\propto\nu^{-0.1}$ になることを示せ（Rayleigh–Jeans で $F_\nu\propto\nu^2 T_b$ を使う）。</span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>「自由–自由放射は熱的なのに、全帯域で単一の黒体にはならない」のはなぜか。低 $\nu$ 側と高 $\nu$ 側で何が違うかを一言で述べよ。</span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§17.6 電離ガスの自由–自由放射</span><span class="co">](#sec-free-free-ionized)</span>／光学的に厚い極限は<span class="co">[</span><span class="ot">§5.6</span><span class="co">](../part2/05-radiative-transfer.qmd#sec-radiative-transfer-thick)</span>（<span class="co">[</span><span class="ot">演習 5-2</span><span class="co">](../part2/05-radiative-transfer.qmd#ex-5-2)</span>）、輝度温度は<span class="co">[</span><span class="ot">§2.6</span><span class="co">](../part1/02-reading-spectra.qmd#sec-reading-spectra-temperatures)</span>、熱的/非熱的は<span class="co">[</span><span class="ot">§1.9</span><span class="co">](../part1/01-where-blackbody.qmd#sec-where-blackbody-thermal)</span>、X 線制動放射は<span class="co">[</span><span class="ot">第18章</span><span class="co">](../part6/18-accretion-high-energy.qmd)</span>。</span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 17-5）</span><span class="co">](#sol-17-5)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a><span class="fu">## 解答例 {#sec-stars-planets-dust-solutions .unnumbered}</span></span>
 <span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>§17.5 の問いを一般化する。Wien 則 $\lambda_\mathrm{peak}=b/T$（$b=2898\ \mu$m·K）。</span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。</span>
 <span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$T_d=20$ K の冷たいダストのピーク波長を求め、どの観測施設の帯域か述べよ。</span>
-<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>暖かいダスト $T_d=100$ K、ごく冷たいダスト $T_d=15$ K のピーク波長も求めよ。</span>
-<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>銀河の重元素の半分がダストに閉じ込められ、その熱放射が遠赤外〜サブミリにピークを持つ。なぜ赤外・サブミリ天文学（Herschel/ALMA）が宇宙の物質収支に決定的なのか述べよ。</span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">問題 17-1</span><span class="co">](#sol-17-1)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 17-2</span><span class="co">](#sol-17-2)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 17-3</span><span class="co">](#sol-17-3)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 17-4</span><span class="co">](#sol-17-4)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 17-5</span><span class="co">](#sol-17-5)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§17.5 多温度合成</span><span class="co">](#sec-multi-temperature)</span>、<span class="co">[</span><span class="ot">§17.4 赤外線天文学</span><span class="co">](#sec-infrared-astronomy)</span>／Wien 変位則は<span class="co">[</span><span class="ot">演習 2-2</span><span class="co">](../part1/02-reading-spectra.qmd#ex-2-2)</span>。</span>
-<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 17-4）</span></span>
-<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a>**(1)** $\lambda_\mathrm{peak}=2898/20=145\ \mu$m。これは Herschel（SPIRE/PACS、60〜600 μm）の主帯域。冷たい星間ダストの観測が Herschel で飛躍したのはこのため。</span>
-<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a>**(2)** $T_d=100$ K：$\lambda_\mathrm{peak}=2898/100=29\ \mu$m（中間赤外、Spitzer/JWST）。$T_d=15$ K：$\lambda_\mathrm{peak}=2898/15=193\ \mu$m（サブミリ、Herschel/ALMA）。</span>
-<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a>**(3)** ダスト（$T\sim15$〜$30$ K）の熱放射ピークは遠赤外〜サブミリ。銀河の重元素の半分がダストに閉じ込められているので、可視・紫外だけ見ると物質の半分を見落とす。遠赤外・サブミリ（Herschel/ALMA）でこの放射を捉えて初めて、銀河の星間物質・ダスト質量・星形成の全体像（物質収支）が分かる。</span>
-<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a>**答え**：20 K→145 μm（Herschel）、100 K→29 μm、15 K→193 μm。重元素の半分がダスト＝遠赤外/サブミリ観測が物質収支に必須。</span>
-<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a>::: {#sol-17-1 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-17-1-label"}</span>
+<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 17-1）**</span><span class="co">]</span>{#sol-17-1-label .offcanvas-title}</span>
+<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a>**(1)** 等置：$(1-A)\dfrac{L_\star}{4\pi d^2}\pi R_p^2=4\pi R_p^2\sigma T_\mathrm{eq}^4$。$\pi R_p^2$ を消し、$L_\star=4\pi R_\star^2\sigma T_\star^4$ を代入：</span>
+<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a>$$(1-A)\frac{4\pi R_\star^2\sigma T_\star^4}{4\pi d^2}\cdot\frac14=\sigma T_\mathrm{eq}^4\ \Rightarrow\ T_\mathrm{eq}^4=(1-A)\frac{R_\star^2}{4d^2}T_\star^4.$$</span>
+<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a>$$T_\mathrm{eq}=T_\star\left(\frac{R_\star}{2d}\right)^{1/2}(1-A)^{1/4}.$$</span>
+<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a>**(2)** 惑星は断面 $\pi R_p^2$ で恒星光を受け、全表面 $4\pi R_p^2$ から再放射する。比 $4\pi R_p^2/\pi R_p^2=4$ が右辺の $1/4$（すなわち $\sqrt{1/4}=1/2$ が $R_\star/2d$ の 2）として効く。自転が速く全球で均一再放射する近似。</span>
 <span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 17-5　電波HII領域の自由–自由スペクトルのターンオーバー {#ex-17-5 .unnumbered}</span></span>
+<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a>**(3)** $T_\mathrm{eq}=5778\times(1/(2\times214))^{1/2}\times(0.7)^{1/4}=5778\times(2.34\times10^{-3})^{1/2}\times0.915=5778\times0.0483\times0.915\simeq255$ K（$-18$°C）。実際の +15°C との 33 K の差は温室効果（大気の赤外不透明度）。この式は大気なし近似。</span>
 <span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
-<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a>§17.6 の電離ガスの自由–自由放射を扱う。等温スラブ（電子温度 $T_e$、LTE）の輝度温度 $T_b(\nu)=T_e(1-e^{-\tau_\nu})$、自由–自由の光学的厚さ $\tau_\nu\propto\nu^{-2.1}$（電波帯）とする。</span>
+<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a>**答え**：$T_\mathrm{eq}=T_\star\sqrt{R_\star/2d}\,(1-A)^{1/4}$。地球で 255 K。実測との 33 K 差は温室効果。</span>
+<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>低振動数（光学的に厚い、$\tau_\nu\gg1$）で $T_b\to T_e$、$I_\nu\to B_\nu(T_e)$、フラックスが $F_\nu\propto\nu^2$ になることを示せ。これが「電子温度 $T_e$ の黒体（Rayleigh–Jeans 裾）」である理由を、第5章 §5.6 と結びつけて述べよ。</span>
-<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>高振動数（光学的に薄い、$\tau_\nu\ll1$）で $T_b\to T_e\tau_\nu$、$F_\nu\propto\nu^{-0.1}$ になることを示せ（Rayleigh–Jeans で $F_\nu\propto\nu^2 T_b$ を使う）。</span>
-<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>「自由–自由放射は熱的なのに、全帯域で単一の黒体にはならない」のはなぜか。低 $\nu$ 側と高 $\nu$ 側で何が違うかを一言で述べよ。</span>
-<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§17.6 電離ガスの自由–自由放射</span><span class="co">](#sec-free-free-ionized)</span>／光学的に厚い極限は<span class="co">[</span><span class="ot">§5.6</span><span class="co">](../part2/05-radiative-transfer.qmd#sec-radiative-transfer-thick)</span>（<span class="co">[</span><span class="ot">演習 5-2</span><span class="co">](../part2/05-radiative-transfer.qmd#ex-5-2)</span>）、輝度温度は<span class="co">[</span><span class="ot">§2.6</span><span class="co">](../part1/02-reading-spectra.qmd#sec-reading-spectra-temperatures)</span>、熱的/非熱的は<span class="co">[</span><span class="ot">§1.9</span><span class="co">](../part1/01-where-blackbody.qmd#sec-where-blackbody-thermal)</span>、X 線制動放射は<span class="co">[</span><span class="ot">第18章</span><span class="co">](../part6/18-accretion-high-energy.qmd)</span>。</span>
-<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 17-5）</span></span>
-<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a>**(1)** $\tau_\nu\gg1$ で $1-e^{-\tau_\nu}\to1$ ゆえ $T_b\to T_e$、すなわち $I_\nu=B_\nu(T_e)(1-e^{-\tau_\nu})\to B_\nu(T_e)$。これは第5章 §5.6 の「光学的に厚い極限で $I_\nu\to S_\nu=B_\nu(T)$」そのもの（LTE で $S_\nu=B_\nu(T_e)$）。電波帯は $h\nu\ll k_BT_e$ なので $B_\nu(T_e)\simeq2\nu^2k_BT_e/c^2$（Rayleigh–Jeans）、よって $F_\nu\propto\nu^2$。観測されるのは電子温度 $T_e$ の黒体の RJ 裾。</span>
-<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a>**(2)** $\tau_\nu\ll1$ で $1-e^{-\tau_\nu}\simeq\tau_\nu$ ゆえ $T_b\to T_e\tau_\nu\propto\nu^{-2.1}$。フラックスは RJ で $F_\nu\propto\nu^2 T_b\propto\nu^2\cdot\nu^{-2.1}=\nu^{-0.1}$（ほぼ平坦）。</span>
-<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a>**(3)** 黒体になるのは光学的に厚い低 $\nu$ 側だけ。高 $\nu$ 側は光学的に薄く $I_\nu\approx\tau_\nu B_\nu(T_e)\ll B_\nu(T_e)$ で黒体から下にずれる。「熱的（粒子が Maxwell 分布）」と「黒体（光学的に厚い）」は別条件で、自由–自由放射は前者を常に、後者を低 $\nu$ 側でのみ満たす。</span>
-<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a>**答え**：低 $\nu$（厚い）→ $T_b\to T_e$、$I_\nu\to B_\nu(T_e)$、$F_\nu\propto\nu^2$（$T_e$ の黒体）。高 $\nu$（薄い）→ $F_\nu\propto\nu^{-0.1}$。黒体化は光学的に厚い低 $\nu$ 側のみ。</span>
+<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a>::: {#sol-17-2 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-17-2-label"}</span>
+<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 17-2）**</span><span class="co">]</span>{#sol-17-2-label .offcanvas-title}</span>
+<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a>$x=hc/\lambda kT$、$hc/k=1.439\times10^{-2}$ m·K。比 $=\dfrac{e^{x_1}-1}{e^{x_2}-1}$（$x_1$＝太陽、$x_2$＝Vega、$x_1&gt;x_2$）。</span>
+<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a>**(1)** $\lambda=500$ nm：$hc/\lambda k=1.439\times10^{-2}/5.0\times10^{-7}=2.88\times10^4$ K。$x_1=28800/5778=4.98$、$x_2=28800/9602=3.00$。比 $=\dfrac{e^{4.98}-1}{e^{3.00}-1}=\dfrac{144.4}{19.1}\simeq7.6$。Vega が約7.6倍明るい。</span>
+<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a>**(2)** $\lambda=250$ nm：$hc/\lambda k=5.76\times10^4$ K。$x_1=9.96$、$x_2=5.99$。比 $=\dfrac{e^{9.96}-1}{e^{5.99}-1}=\dfrac{21100}{399}\simeq53$。紫外は両者とも Wien 側で指数 $e^{x}$ が支配し、温度差が指数的に増幅されるため比が大きい。</span>
+<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a>**(3)** $\lambda=5\ \mu$m：$hc/\lambda k=2.88\times10^3$ K。$x_1=0.498$、$x_2=0.300$。比 $=\dfrac{e^{0.498}-1}{e^{0.300}-1}=\dfrac{0.645}{0.350}\simeq1.85$。$x\ll1$ で $e^x-1\simeq x$ ゆえ比 $\simeq x_1/x_2=T_2/T_1=9602/5778=1.66$ に近く、Rayleigh-Jeans 側では温度比のみが効く（指数増幅なし）。</span>
+<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a>**答え**：比は可視 7.6、紫外 53、赤外 1.85。Wien 側（紫外）ほど温度差が指数的に効き、RJ 側（赤外）は温度比のみ。</span>
+<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-stars-planets-dust-further .unnumbered}</span></span>
-<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Carroll &amp; Ostlie, *An Introduction to Modern Astrophysics* (Cambridge, 2nd ed., 2017) — 恒星・惑星・銀河の標準的扱い</span>
-<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pierrehumbert, *Principles of Planetary Climate* (Cambridge, 2010) — 惑星平衡温度と温室効果の物理</span>
-<span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Draine, *Physics of the Interstellar and Intergalactic Medium* (Princeton, 2011) — ダストの放射、$\beta$、修正黒体</span>
-<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Galametz et al. の SED フィッティングのレビュー（A&amp;A, 2012）— 多温度 SED の実用解析</span>
-<span id="cb1-397"><a href="#cb1-397" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Wilson, Rohlfs &amp; Hüttemeister, *Tools of Radio Astronomy* (Springer, 6th ed., 2013) — 電波連続光・自由–自由放射と HII 領域のスペクトル</span>
-<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rybicki &amp; Lightman, *Radiative Processes in Astrophysics* (Wiley, 1979) — 第5章「Bremsstrahlung」（自由–自由放射の断面積と吸収）</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a>::: {#sol-17-3 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-17-3-label"}</span>
+<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 17-3）**</span><span class="co">]</span>{#sol-17-3-label .offcanvas-title}</span>
+<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-397"><a href="#cb1-397" aria-hidden="true" tabindex="-1"></a>**(1)** $T_d$：Wien 側の指数減衰の鋭さ、または SED のピーク位置（Wien 則）から。$\beta$：Rayleigh-Jeans 側（長波長）の勾配の急さ（$I_\nu\propto\nu^{2+\beta}$）から。ダスト質量：全光度を $B_\nu(T_d)$ で割ったときの規格化定数から（不透明度の仮定が必要）。</span>
+<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a>**(2)** $\beta$ が小さいほど粒子が大きい（粒子サイズ≈波長の極限で $\beta\to0$）。円盤中心部ほど $\beta$ が小さい＝粒子が大きく成長している。これは円盤内でダストが集積・成長して惑星形成へ向かう過程の直接観測的証拠。</span>
+<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a>**(3)** 同じピーク位置でも（高温・少量）と（低温・大量）で似た SED を作れる縮退がある。RJ 側の勾配 $\nu^{2+\beta}$ と絶対強度は温度・質量・$\beta$ に異なる依存をするので、ピークより長波長（サブミリ・ミリ）の観測点を加えると、RJ 側の形が温度と質量を分離して縮退を解く。だから長波長観測が鍵。</span>
+<span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a>**答え**：$T_d$＝Wien側/ピーク、$\beta$＝RJ側勾配、質量＝規格化。中心部の小 $\beta$＝粒子成長＝惑星形成の証拠。長波長点が温度-質量縮退を解く。</span>
+<span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a>::: {#sol-17-4 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-17-4-label"}</span>
+<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 17-4）**</span><span class="co">]</span>{#sol-17-4-label .offcanvas-title}</span>
+<span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a>**(1)** $\lambda_\mathrm{peak}=2898/20=145\ \mu$m。これは Herschel（SPIRE/PACS、60〜600 μm）の主帯域。冷たい星間ダストの観測が Herschel で飛躍したのはこのため。</span>
+<span id="cb1-414"><a href="#cb1-414" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-415"><a href="#cb1-415" aria-hidden="true" tabindex="-1"></a>**(2)** $T_d=100$ K：$\lambda_\mathrm{peak}=2898/100=29\ \mu$m（中間赤外、Spitzer/JWST）。$T_d=15$ K：$\lambda_\mathrm{peak}=2898/15=193\ \mu$m（サブミリ、Herschel/ALMA）。</span>
+<span id="cb1-416"><a href="#cb1-416" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-417"><a href="#cb1-417" aria-hidden="true" tabindex="-1"></a>**(3)** ダスト（$T\sim15$〜$30$ K）の熱放射ピークは遠赤外〜サブミリ。銀河の重元素の半分がダストに閉じ込められているので、可視・紫外だけ見ると物質の半分を見落とす。遠赤外・サブミリ（Herschel/ALMA）でこの放射を捉えて初めて、銀河の星間物質・ダスト質量・星形成の全体像（物質収支）が分かる。</span>
+<span id="cb1-418"><a href="#cb1-418" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-419"><a href="#cb1-419" aria-hidden="true" tabindex="-1"></a>**答え**：20 K→145 μm（Herschel）、100 K→29 μm、15 K→193 μm。重元素の半分がダスト＝遠赤外/サブミリ観測が物質収支に必須。</span>
+<span id="cb1-420"><a href="#cb1-420" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-421"><a href="#cb1-421" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-422"><a href="#cb1-422" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-423"><a href="#cb1-423" aria-hidden="true" tabindex="-1"></a>::: {#sol-17-5 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-17-5-label"}</span>
+<span id="cb1-424"><a href="#cb1-424" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-425"><a href="#cb1-425" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 17-5）**</span><span class="co">]</span>{#sol-17-5-label .offcanvas-title}</span>
+<span id="cb1-426"><a href="#cb1-426" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-427"><a href="#cb1-427" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-428"><a href="#cb1-428" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-429"><a href="#cb1-429" aria-hidden="true" tabindex="-1"></a>**(1)** $\tau_\nu\gg1$ で $1-e^{-\tau_\nu}\to1$ ゆえ $T_b\to T_e$、すなわち $I_\nu=B_\nu(T_e)(1-e^{-\tau_\nu})\to B_\nu(T_e)$。これは第5章 §5.6 の「光学的に厚い極限で $I_\nu\to S_\nu=B_\nu(T)$」そのもの（LTE で $S_\nu=B_\nu(T_e)$）。電波帯は $h\nu\ll k_BT_e$ なので $B_\nu(T_e)\simeq2\nu^2k_BT_e/c^2$（Rayleigh–Jeans）、よって $F_\nu\propto\nu^2$。観測されるのは電子温度 $T_e$ の黒体の RJ 裾。</span>
+<span id="cb1-430"><a href="#cb1-430" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-431"><a href="#cb1-431" aria-hidden="true" tabindex="-1"></a>**(2)** $\tau_\nu\ll1$ で $1-e^{-\tau_\nu}\simeq\tau_\nu$ ゆえ $T_b\to T_e\tau_\nu\propto\nu^{-2.1}$。フラックスは RJ で $F_\nu\propto\nu^2 T_b\propto\nu^2\cdot\nu^{-2.1}=\nu^{-0.1}$（ほぼ平坦）。</span>
+<span id="cb1-432"><a href="#cb1-432" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-433"><a href="#cb1-433" aria-hidden="true" tabindex="-1"></a>**(3)** 黒体になるのは光学的に厚い低 $\nu$ 側だけ。高 $\nu$ 側は光学的に薄く $I_\nu\approx\tau_\nu B_\nu(T_e)\ll B_\nu(T_e)$ で黒体から下にずれる。「熱的（粒子が Maxwell 分布）」と「黒体（光学的に厚い）」は別条件で、自由–自由放射は前者を常に、後者を低 $\nu$ 側でのみ満たす。</span>
+<span id="cb1-434"><a href="#cb1-434" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-435"><a href="#cb1-435" aria-hidden="true" tabindex="-1"></a>**答え**：低 $\nu$（厚い）→ $T_b\to T_e$、$I_\nu\to B_\nu(T_e)$、$F_\nu\propto\nu^2$（$T_e$ の黒体）。高 $\nu$（薄い）→ $F_\nu\propto\nu^{-0.1}$。黒体化は光学的に厚い低 $\nu$ 側のみ。</span>
+<span id="cb1-436"><a href="#cb1-436" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-437"><a href="#cb1-437" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-438"><a href="#cb1-438" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-439"><a href="#cb1-439" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-stars-planets-dust-further .unnumbered}</span></span>
+<span id="cb1-440"><a href="#cb1-440" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-441"><a href="#cb1-441" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Carroll &amp; Ostlie, *An Introduction to Modern Astrophysics* (Cambridge, 2nd ed., 2017) — 恒星・惑星・銀河の標準的扱い</span>
+<span id="cb1-442"><a href="#cb1-442" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pierrehumbert, *Principles of Planetary Climate* (Cambridge, 2010) — 惑星平衡温度と温室効果の物理</span>
+<span id="cb1-443"><a href="#cb1-443" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Draine, *Physics of the Interstellar and Intergalactic Medium* (Princeton, 2011) — ダストの放射、$\beta$、修正黒体</span>
+<span id="cb1-444"><a href="#cb1-444" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Galametz et al. の SED フィッティングのレビュー（A&amp;A, 2012）— 多温度 SED の実用解析</span>
+<span id="cb1-445"><a href="#cb1-445" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Wilson, Rohlfs &amp; Hüttemeister, *Tools of Radio Astronomy* (Springer, 6th ed., 2013) — 電波連続光・自由–自由放射と HII 領域のスペクトル</span>
+<span id="cb1-446"><a href="#cb1-446" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rybicki &amp; Lightman, *Radiative Processes in Astrophysics* (Wiley, 1979) — 第5章「Bremsstrahlung」（自由–自由放射の断面積と吸収）</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

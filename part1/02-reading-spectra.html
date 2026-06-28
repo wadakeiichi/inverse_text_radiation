@@ -517,16 +517,12 @@ window.Quarto = {
   <li><a href="#sec-reading-spectra-exercises" id="toc-sec-reading-spectra-exercises" class="nav-link" data-scroll-target="#sec-reading-spectra-exercises">演習問題</a>
   <ul class="collapse">
   <li><a href="#ex-2-1" id="toc-ex-2-1" class="nav-link" data-scroll-target="#ex-2-1">問題 2-1　Bν から Bλ への変換とヤコビアン</a></li>
-  </ul></li>
-  <li><a href="#模範解答問題-2-1" id="toc-模範解答問題-2-1" class="nav-link" data-scroll-target="#模範解答問題-2-1">模範解答（問題 2-1）</a></li>
   <li><a href="#ex-2-2" id="toc-ex-2-2" class="nav-link" data-scroll-target="#ex-2-2">問題 2-2　Wien 変位則の導出 ― 超越方程式と b の値</a></li>
-  <li><a href="#模範解答問題-2-2" id="toc-模範解答問題-2-2" class="nav-link" data-scroll-target="#模範解答問題-2-2">模範解答（問題 2-2）</a></li>
   <li><a href="#ex-2-3" id="toc-ex-2-3" class="nav-link" data-scroll-target="#ex-2-3">問題 2-3　Fν=πBν ― 半球積分はなぜ 4π でなく π か</a></li>
-  <li><a href="#模範解答問題-2-3" id="toc-模範解答問題-2-3" class="nav-link" data-scroll-target="#模範解答問題-2-3">模範解答（問題 2-3）</a></li>
   <li><a href="#ex-2-4" id="toc-ex-2-4" class="nav-link" data-scroll-target="#ex-2-4">問題 2-4　Stefan–Boltzmann 定数 σ を基本定数で表す</a></li>
-  <li><a href="#模範解答問題-2-4" id="toc-模範解答問題-2-4" class="nav-link" data-scroll-target="#模範解答問題-2-4">模範解答（問題 2-4）</a></li>
   <li><a href="#ex-2-5" id="toc-ex-2-5" class="nav-link" data-scroll-target="#ex-2-5">問題 2-5　観測データから太陽の温度・光度・半径を引き出す</a></li>
-  <li><a href="#模範解答問題-2-5" id="toc-模範解答問題-2-5" class="nav-link" data-scroll-target="#模範解答問題-2-5">模範解答（問題 2-5）</a></li>
+  </ul></li>
+  <li><a href="#sec-reading-spectra-solutions" id="toc-sec-reading-spectra-solutions" class="nav-link" data-scroll-target="#sec-reading-spectra-solutions">解答例</a></li>
   <li><a href="#sec-reading-spectra-further" id="toc-sec-reading-spectra-further" class="nav-link" data-scroll-target="#sec-reading-spectra-further">さらに学ぶための参考文献</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/edit/main/part1/02-reading-spectra.qmd" class="toc-action"><i class="bi bi-github"></i>編集</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/blob/main/part1/02-reading-spectra.qmd" class="toc-action"><i class="bi empty"></i>ソースコード</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/issues/new" class="toc-action"><i class="bi empty"></i>問題を報告</a></li></ul></div></nav>
@@ -1078,7 +1074,7 @@ B_\nu(T) \underset{h\nu \gg kT}{\longrightarrow} \frac{2 h \nu^3}{c^2} e^{-h\nu/
 </section>
 <section id="sec-reading-spectra-exercises" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-reading-spectra-exercises">演習問題</h2>
-<p><span class="tag">[導出補完]</span> <strong>模範解答</strong> は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから確認すると効果的である。</p>
+<p><span class="tag">[導出補完]</span> <strong>解答例</strong> は章末「解答例」にまとめてある（オンライン版では各問のボタンから開く）。まず自力で解いてから確認すると効果的である。</p>
 <section id="ex-2-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ex-2-1">問題 2-1　Bν から Bλ への変換とヤコビアン</h3>
 <p>[★ 難易度：☆☆ ] <span class="tag">[導出補完]</span></p>
@@ -1089,21 +1085,7 @@ B_\nu(T) \underset{h\nu \gg kT}{\longrightarrow} \frac{2 h \nu^3}{c^2} e^{-h\nu/
 <li>なぜ <span class="math inline">B_\nu</span> は <span class="math inline">\nu^3</span>、<span class="math inline">B_\lambda</span> は <span class="math inline">\lambda^{-5}</span> なのか（冪が3と5でずれる理由）をヤコビアンの観点から一言で述べよ。</li>
 </ol>
 <p><strong>関連</strong>：<a href="#sec-reading-spectra-nu-lambda">§2.2 振動数表示と波長表示</a>／ピーク位置のずれは<a href="#ex-2-2">演習 2-2</a>、比強度の定義は <a href="../part2/04-radiation-field.html">第4章</a>。</p>
-</section>
-</section>
-<section id="模範解答問題-2-1" class="level2 callout-derive" data-collapse="true">
-<h2 class="anchored" data-anchor-id="模範解答問題-2-1">模範解答（問題 2-1）</h2>
-<p><strong>(1)</strong> <span class="math inline">\nu=c/\lambda</span> を微分して <span class="math inline">d\nu=-(c/\lambda^2)d\lambda</span>。<span class="math inline">\nu</span> が増えると <span class="math inline">\lambda</span> が減るので負号がつく。物理量（エネルギー）は正なので、刻みの向きを合わせるために <span class="math inline">B_\nu\,d\nu=-B_\lambda\,d\lambda</span> と書く。これに <span class="math inline">d\nu=-(c/\lambda^2)d\lambda</span> を入れると</p>
-<p><span class="math display">
-B_\nu\left(-\frac{c}{\lambda^2}\right)d\lambda=-B_\lambda\,d\lambda\ \Rightarrow\ B_\lambda=B_\nu\frac{c}{\lambda^2}.
-</span></p>
-<p>両辺の負号が打ち消し、最終式は正になる。</p>
-<p><strong>(2)</strong> <span class="math inline">\nu=c/\lambda</span> を代入。前因子：<span class="math inline">\dfrac{2h\nu^3}{c^2}\cdot\dfrac{c}{\lambda^2}=\dfrac{2h}{c^2}\dfrac{c^3}{\lambda^3}\dfrac{c}{\lambda^2}=\dfrac{2hc^2}{\lambda^5}</span>。指数：<span class="math inline">h\nu/kT=hc/\lambda kT</span>。よって</p>
-<p><span class="math display">
-B_\lambda=\frac{2hc^2}{\lambda^5}\frac{1}{e^{hc/\lambda kT}-1}.
-</span></p>
-<p><strong>(3)</strong> <span class="math inline">B_\nu\propto\nu^3</span> にヤコビアン <span class="math inline">c/\lambda^2\propto\lambda^{-2}</span> が掛かる。<span class="math inline">\nu^3\propto\lambda^{-3}</span> なので <span class="math inline">\lambda^{-3}\cdot\lambda^{-2}=\lambda^{-5}</span>。冪の差2はヤコビアン由来。</p>
-<p><strong>答え</strong>：<span class="math inline">B_\lambda=B_\nu c/\lambda^2=\dfrac{2hc^2}{\lambda^5}\dfrac{1}{e^{hc/\lambda kT}-1}</span>。<span class="math inline">\lambda^{-5}</span> の「5」はヤコビアン <span class="math inline">\lambda^{-2}</span> が <span class="math inline">\nu^3=\lambda^{-3}</span> に掛かるため。</p>
+<p><a href="#sol-2-1" class="btn btn-outline-secondary btn-sm" data-bs-toggle="offcanvas" role="button">解答例を見る（問題 2-1）</a></p>
 </section>
 <section id="ex-2-2" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ex-2-2">問題 2-2　Wien 変位則の導出 ― 超越方程式と b の値</h3>
@@ -1115,9 +1097,74 @@ B_\lambda=\frac{2hc^2}{\lambda^5}\frac{1}{e^{hc/\lambda kT}-1}.
 <li>振動数表示のピークは <span class="math inline">h\nu/kT\approx2.821</span>（§2.2、第10章の問題で導出）。なぜ <span class="math inline">\lambda_{\max}\nu_{\max}\ne c</span> となるのか、ヤコビアンの観点から説明せよ。</li>
 </ol>
 <p><strong>関連</strong>：<a href="#sec-reading-spectra-wien">§2.3 Wien の変位則</a>／振動数表示ピーク 2.821 の導出は<a href="../part4/10-planck-quantum.html#ex-10-4">演習 10-4</a>、データ照合は<a href="../part1/01-where-blackbody.html#ex-1-1">演習 1-1</a>。</p>
+<p><a href="#sol-2-2" class="btn btn-outline-secondary btn-sm" data-bs-toggle="offcanvas" role="button">解答例を見る（問題 2-2）</a></p>
 </section>
-<section id="模範解答問題-2-2" class="level2 callout-derive" data-collapse="true">
-<h2 class="anchored" data-anchor-id="模範解答問題-2-2">模範解答（問題 2-2）</h2>
+<section id="ex-2-3" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-2-3">問題 2-3　Fν=πBν ― 半球積分はなぜ 4π でなく π か</h3>
+<p>[★ 難易度：☆☆ ] <span class="tag">[導出補完]</span></p>
+<p>§2.4 は黒体表面の射出フラックスが <span class="math inline">F_\nu=\displaystyle\int_{\text{半球}}B_\nu\cos\theta\,d\Omega=\pi B_\nu</span> になると述べ、立体角積分の値だけ示した。これを自分で実行する。</p>
+<ol type="1">
+<li>立体角要素 <span class="math inline">d\Omega=\sin\theta\,d\theta\,d\varphi</span> を使い、外向き半球（<span class="math inline">0\le\theta\le\pi/2</span>）で <span class="math inline">\displaystyle\int\cos\theta\,d\Omega</span> を計算して <span class="math inline">\pi</span> を得よ。</li>
+<li>「全立体角 <span class="math inline">4\pi</span>」でも「半球 <span class="math inline">2\pi</span>」でもなく <span class="math inline">\pi</span> になる理由を、（i）半球に限ること と（ii）<span class="math inline">\cos\theta</span> 射影、の二つに分けて説明せよ。</li>
+<li>もし <span class="math inline">\cos\theta</span> を落として <span class="math inline">\int_{\text{半球}}B_\nu d\Omega</span> としたら値はいくつか。なぜそれは物理的に正しくないか。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-reading-spectra-stefan-boltzmann">§2.4 Stefan–Boltzmann 則</a>／フラックスと比強度の正式な定義（<span class="math inline">\cos\theta</span> の由来）は <a href="../part2/04-radiation-field.html">第4章 放射場</a>。</p>
+<p><a href="#sol-2-3" class="btn btn-outline-secondary btn-sm" data-bs-toggle="offcanvas" role="button">解答例を見る（問題 2-3）</a></p>
+</section>
+<section id="ex-2-4" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-2-4">問題 2-4　Stefan–Boltzmann 定数 σ を基本定数で表す</h3>
+<p>[★ 難易度：☆☆☆ ] <span class="tag">[導出補完]</span></p>
+<p>§2.4 は <span class="math inline">\sigma</span> の数値だけ与え、導出を第6・8章に委ねた。<span class="math inline">F=\pi\displaystyle\int_0^\infty B_\nu\,d\nu</span> から直接 <span class="math inline">\sigma</span> を基本定数で表す。</p>
+<ol type="1">
+<li><span class="math inline">F=\pi\displaystyle\int_0^\infty\frac{2h\nu^3}{c^2}\frac{d\nu}{e^{h\nu/kT}-1}</span> で <span class="math inline">x=h\nu/kT</span> と変数変換し、<span class="math inline">F=\dfrac{2\pi k^4}{c^2h^3}T^4\displaystyle\int_0^\infty\frac{x^3}{e^x-1}dx</span> を導け。</li>
+<li><span class="math inline">\displaystyle\int_0^\infty\frac{x^3}{e^x-1}dx=\frac{\pi^4}{15}</span> を用いて <span class="math inline">\sigma=\dfrac{2\pi^5 k^4}{15c^2h^3}</span> を示し、SI で数値（<span class="math inline">\approx5.67\times10^{-8}</span> W m<span class="math inline">^{-2}</span>K<span class="math inline">^{-4}</span>）を確認せよ。</li>
+<li>第IV部の問題で導いた放射定数 <span class="math inline">a=\dfrac{8\pi^5k^4}{15c^3h^3}</span> と、<span class="math inline">\sigma=ac/4</span> の関係を確かめよ。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-reading-spectra-stefan-boltzmann">§2.4 Stefan–Boltzmann 則</a>／<span class="math inline">a=4\sigma/c</span> と <span class="math inline">a</span> の導出は<a href="../part4/10-planck-quantum.html#ex-10-3">演習 10-3</a>、本文 <a href="../part4/10-planck-quantum.html#sec-planck-quantum-derivation">§10.3</a>。積分公式は <a href="../appendix/A-math-notes.html">付録A 数学ノート</a>。</p>
+<p><a href="#sol-2-4" class="btn btn-outline-secondary btn-sm" data-bs-toggle="offcanvas" role="button">解答例を見る（問題 2-4）</a></p>
+</section>
+<section id="ex-2-5" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-2-5">問題 2-5　観測データから太陽の温度・光度・半径を引き出す</h3>
+<p>[★ 難易度：☆☆☆ ] <span class="tag">[理解を深める]</span></p>
+<p>§2.8 のワークフローを数値で実行する。観測量：ピーク波長 <span class="math inline">\lambda_{\max}\simeq500</span> nm、地球での太陽定数 <span class="math inline">f\simeq1.36\times10^3</span> W m<span class="math inline">^{-2}</span>、距離 <span class="math inline">d=1</span> AU <span class="math inline">=1.496\times10^{11}</span> m。</p>
+<ol type="1">
+<li>Wien の式（<span class="math inline">b=2.898\times10^{-3}</span> m·K）から有効温度 <span class="math inline">T</span> を求めよ。</li>
+<li><span class="math inline">L=4\pi d^2 f</span> から太陽光度 <span class="math inline">L_\odot</span> を求めよ。</li>
+<li>Stefan–Boltzmann <span class="math inline">L=4\pi R^2\sigma T^4</span> を逆算して半径 <span class="math inline">R_\odot=\sqrt{L/(4\pi\sigma T^4)}</span> を求め、既知値（<span class="math inline">R_\odot\simeq6.96\times10^8</span> m）と比べよ。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-reading-spectra-estimation">§2.8 観測データから推定</a>／各道具は <a href="#sec-reading-spectra-wien">§2.3</a>・<a href="#sec-reading-spectra-stefan-boltzmann">§2.4</a>、<span class="math inline">\sigma</span> の導出は<a href="#ex-2-4">演習 2-4</a>。</p>
+<p><a href="#sol-2-5" class="btn btn-outline-secondary btn-sm" data-bs-toggle="offcanvas" role="button">解答例を見る（問題 2-5）</a></p>
+</section>
+</section>
+<section id="sec-reading-spectra-solutions" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sec-reading-spectra-solutions">解答例</h2>
+<p>各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。</p>
+<p><a href="#sol-2-1" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 2-1</a> <a href="#sol-2-2" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 2-2</a> <a href="#sol-2-3" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 2-3</a> <a href="#sol-2-4" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 2-4</a> <a href="#sol-2-5" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 2-5</a></p>
+<div id="sol-2-1" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-2-1-label">
+<p><span class="proof-title"><em>解答 5.1</em>. </span></p>
+<div class="offcanvas-header">
+<p><span id="sol-2-1-label" class="offcanvas-title"><strong>解答例（問題 2-1）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
+</div>
+<div class="offcanvas-body">
+<p><strong>(1)</strong> <span class="math inline">\nu=c/\lambda</span> を微分して <span class="math inline">d\nu=-(c/\lambda^2)d\lambda</span>。<span class="math inline">\nu</span> が増えると <span class="math inline">\lambda</span> が減るので負号がつく。物理量（エネルギー）は正なので、刻みの向きを合わせるために <span class="math inline">B_\nu\,d\nu=-B_\lambda\,d\lambda</span> と書く。これに <span class="math inline">d\nu=-(c/\lambda^2)d\lambda</span> を入れると</p>
+<p><span class="math display">
+B_\nu\left(-\frac{c}{\lambda^2}\right)d\lambda=-B_\lambda\,d\lambda\ \Rightarrow\ B_\lambda=B_\nu\frac{c}{\lambda^2}.
+</span></p>
+<p>両辺の負号が打ち消し、最終式は正になる。</p>
+<p><strong>(2)</strong> <span class="math inline">\nu=c/\lambda</span> を代入。前因子：<span class="math inline">\dfrac{2h\nu^3}{c^2}\cdot\dfrac{c}{\lambda^2}=\dfrac{2h}{c^2}\dfrac{c^3}{\lambda^3}\dfrac{c}{\lambda^2}=\dfrac{2hc^2}{\lambda^5}</span>。指数：<span class="math inline">h\nu/kT=hc/\lambda kT</span>。よって</p>
+<p><span class="math display">
+B_\lambda=\frac{2hc^2}{\lambda^5}\frac{1}{e^{hc/\lambda kT}-1}.
+</span></p>
+<p><strong>(3)</strong> <span class="math inline">B_\nu\propto\nu^3</span> にヤコビアン <span class="math inline">c/\lambda^2\propto\lambda^{-2}</span> が掛かる。<span class="math inline">\nu^3\propto\lambda^{-3}</span> なので <span class="math inline">\lambda^{-3}\cdot\lambda^{-2}=\lambda^{-5}</span>。冪の差2はヤコビアン由来。</p>
+<p><strong>答え</strong>：<span class="math inline">B_\lambda=B_\nu c/\lambda^2=\dfrac{2hc^2}{\lambda^5}\dfrac{1}{e^{hc/\lambda kT}-1}</span>。<span class="math inline">\lambda^{-5}</span> の「5」はヤコビアン <span class="math inline">\lambda^{-2}</span> が <span class="math inline">\nu^3=\lambda^{-3}</span> に掛かるため。</p>
+</div>
+</div>
+<div id="sol-2-2" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-2-2-label">
+<p><span class="proof-title"><em>解答 5.2</em>. </span></p>
+<div class="offcanvas-header">
+<p><span id="sol-2-2-label" class="offcanvas-title"><strong>解答例（問題 2-2）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
+</div>
+<div class="offcanvas-body">
 <p><strong>(1)</strong> <span class="math inline">f(\lambda)=\lambda^{-5}(e^{x}-1)^{-1}</span>、<span class="math inline">x=hc/\lambda kT</span> なので <span class="math inline">dx/d\lambda=-x/\lambda</span>。積の微分：</p>
 <p><span class="math display">
 f'=-5\lambda^{-6}(e^x-1)^{-1}-\lambda^{-5}\frac{e^x}{(e^x-1)^2}\frac{dx}{d\lambda}=0.
@@ -1133,20 +1180,14 @@ f'=-5\lambda^{-6}(e^x-1)^{-1}-\lambda^{-5}\frac{e^x}{(e^x-1)^2}\frac{dx}{d\lambd
 <p>数値：<span class="math inline">hc=6.626\times10^{-34}\times3.00\times10^8=1.988\times10^{-25}</span> J·m。<span class="math inline">4.965k=4.965\times1.381\times10^{-23}=6.857\times10^{-23}</span>。よって <span class="math inline">b=1.988\times10^{-25}/6.857\times10^{-23}=2.90\times10^{-3}</span> m·K。✓</p>
 <p><strong>(3)</strong> ピークを与える条件は最大化する関数（<span class="math inline">B_\lambda</span> か <span class="math inline">B_\nu</span>）で異なる。両者はヤコビアン <span class="math inline">c/\lambda^2</span> だけずれた別関数なので、最大点も別位置になる（<span class="math inline">x=4.965</span> と <span class="math inline">2.821</span>）。<span class="math inline">\lambda_{\max}=hc/4.965kT</span>、<span class="math inline">\nu_{\max}=2.821kT/h</span> ゆえ <span class="math inline">\lambda_{\max}\nu_{\max}=(2.821/4.965)c\approx0.568\,c\ne c</span>。同じスペクトルでも「どの変数でピークを測るか」で答えが変わる。</p>
 <p><strong>答え</strong>：<span class="math inline">(5-x)e^x=5\Rightarrow x\approx4.965</span>、<span class="math inline">b=hc/4.965k\approx2.90\times10^{-3}</span> m·K。<span class="math inline">\lambda_{\max}\nu_{\max}=0.568c\ne c</span>（ヤコビアンでピークがずれるため）。</p>
-</section>
-<section id="ex-2-3" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="ex-2-3">問題 2-3　Fν=πBν ― 半球積分はなぜ 4π でなく π か</h3>
-<p>[★ 難易度：☆☆ ] <span class="tag">[導出補完]</span></p>
-<p>§2.4 は黒体表面の射出フラックスが <span class="math inline">F_\nu=\displaystyle\int_{\text{半球}}B_\nu\cos\theta\,d\Omega=\pi B_\nu</span> になると述べ、立体角積分の値だけ示した。これを自分で実行する。</p>
-<ol type="1">
-<li>立体角要素 <span class="math inline">d\Omega=\sin\theta\,d\theta\,d\varphi</span> を使い、外向き半球（<span class="math inline">0\le\theta\le\pi/2</span>）で <span class="math inline">\displaystyle\int\cos\theta\,d\Omega</span> を計算して <span class="math inline">\pi</span> を得よ。</li>
-<li>「全立体角 <span class="math inline">4\pi</span>」でも「半球 <span class="math inline">2\pi</span>」でもなく <span class="math inline">\pi</span> になる理由を、（i）半球に限ること と（ii）<span class="math inline">\cos\theta</span> 射影、の二つに分けて説明せよ。</li>
-<li>もし <span class="math inline">\cos\theta</span> を落として <span class="math inline">\int_{\text{半球}}B_\nu d\Omega</span> としたら値はいくつか。なぜそれは物理的に正しくないか。</li>
-</ol>
-<p><strong>関連</strong>：<a href="#sec-reading-spectra-stefan-boltzmann">§2.4 Stefan–Boltzmann 則</a>／フラックスと比強度の正式な定義（<span class="math inline">\cos\theta</span> の由来）は <a href="../part2/04-radiation-field.html">第4章 放射場</a>。</p>
-</section>
-<section id="模範解答問題-2-3" class="level2 callout-derive" data-collapse="true">
-<h2 class="anchored" data-anchor-id="模範解答問題-2-3">模範解答（問題 2-3）</h2>
+</div>
+</div>
+<div id="sol-2-3" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-2-3-label">
+<p><span class="proof-title"><em>解答 5.3</em>. </span></p>
+<div class="offcanvas-header">
+<p><span id="sol-2-3-label" class="offcanvas-title"><strong>解答例（問題 2-3）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
+</div>
+<div class="offcanvas-body">
 <p><strong>(1)</strong> 黒体は等方なので <span class="math inline">B_\nu</span> は方向に依らず積分の外へ：</p>
 <p><span class="math display">
 \int_{\text{半球}}\cos\theta\,d\Omega=\int_0^{2\pi}d\varphi\int_0^{\pi/2}\cos\theta\sin\theta\,d\theta=2\pi\left[\frac{\sin^2\theta}{2}\right]_0^{\pi/2}=2\pi\cdot\frac12=\pi.
@@ -1155,20 +1196,14 @@ f'=-5\lambda^{-6}(e^x-1)^{-1}-\lambda^{-5}\frac{e^x}{(e^x-1)^2}\frac{dx}{d\lambd
 <p><strong>(2)</strong> （i）表面から外へ出る放射だけを数えるので積分は上半球 <span class="math inline">2\pi</span> sr に限る（下向きは表面内部へ向かい射出に寄与しない）。（ii）フラックスは面を <strong>垂直に</strong> 通る成分なので、法線から <span class="math inline">\theta</span> 傾いた方向の寄与には射影因子 <span class="math inline">\cos\theta</span> が掛かる。<span class="math inline">\cos\theta</span> の角度平均が <span class="math inline">1/2</span> なので、<span class="math inline">2\pi\times\tfrac12=\pi</span> となる。</p>
 <p><strong>(3)</strong> <span class="math inline">\int_{\text{半球}}d\Omega=2\pi</span> なので値は <span class="math inline">2\pi B_\nu</span>。だがこれは「すべての方向の放射が面を垂直に通る」と誤って数えたことになり、斜め方向の放射が面を通る実効断面が <span class="math inline">\cos\theta</span> で減る効果を無視している。フラックス（面を通過する正味エネルギー流）の定義に反するので物理的に正しくない。</p>
 <p><strong>答え</strong>：<span class="math inline">\int_{\text{半球}}\cos\theta\,d\Omega=\pi</span>。半球に限る効果（<span class="math inline">2\pi</span>）×<span class="math inline">\cos\theta</span> 射影の平均（<span class="math inline">1/2</span>）＝<span class="math inline">\pi</span>。<span class="math inline">\cos\theta</span> を落とすと <span class="math inline">2\pi B_\nu</span> となり射影を無視した誤り。</p>
-</section>
-<section id="ex-2-4" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="ex-2-4">問題 2-4　Stefan–Boltzmann 定数 σ を基本定数で表す</h3>
-<p>[★ 難易度：☆☆☆ ] <span class="tag">[導出補完]</span></p>
-<p>§2.4 は <span class="math inline">\sigma</span> の数値だけ与え、導出を第6・8章に委ねた。<span class="math inline">F=\pi\displaystyle\int_0^\infty B_\nu\,d\nu</span> から直接 <span class="math inline">\sigma</span> を基本定数で表す。</p>
-<ol type="1">
-<li><span class="math inline">F=\pi\displaystyle\int_0^\infty\frac{2h\nu^3}{c^2}\frac{d\nu}{e^{h\nu/kT}-1}</span> で <span class="math inline">x=h\nu/kT</span> と変数変換し、<span class="math inline">F=\dfrac{2\pi k^4}{c^2h^3}T^4\displaystyle\int_0^\infty\frac{x^3}{e^x-1}dx</span> を導け。</li>
-<li><span class="math inline">\displaystyle\int_0^\infty\frac{x^3}{e^x-1}dx=\frac{\pi^4}{15}</span> を用いて <span class="math inline">\sigma=\dfrac{2\pi^5 k^4}{15c^2h^3}</span> を示し、SI で数値（<span class="math inline">\approx5.67\times10^{-8}</span> W m<span class="math inline">^{-2}</span>K<span class="math inline">^{-4}</span>）を確認せよ。</li>
-<li>第IV部の問題で導いた放射定数 <span class="math inline">a=\dfrac{8\pi^5k^4}{15c^3h^3}</span> と、<span class="math inline">\sigma=ac/4</span> の関係を確かめよ。</li>
-</ol>
-<p><strong>関連</strong>：<a href="#sec-reading-spectra-stefan-boltzmann">§2.4 Stefan–Boltzmann 則</a>／<span class="math inline">a=4\sigma/c</span> と <span class="math inline">a</span> の導出は<a href="../part4/10-planck-quantum.html#ex-10-3">演習 10-3</a>、本文 <a href="../part4/10-planck-quantum.html#sec-planck-quantum-derivation">§10.3</a>。積分公式は <a href="../appendix/A-math-notes.html">付録A 数学ノート</a>。</p>
-</section>
-<section id="模範解答問題-2-4" class="level2 callout-derive" data-collapse="true">
-<h2 class="anchored" data-anchor-id="模範解答問題-2-4">模範解答（問題 2-4）</h2>
+</div>
+</div>
+<div id="sol-2-4" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-2-4-label">
+<p><span class="proof-title"><em>解答 5.4</em>. </span></p>
+<div class="offcanvas-header">
+<p><span id="sol-2-4-label" class="offcanvas-title"><strong>解答例（問題 2-4）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
+</div>
+<div class="offcanvas-body">
 <p><strong>(1)</strong> <span class="math inline">x=h\nu/kT</span>、<span class="math inline">\nu=kTx/h</span>、<span class="math inline">d\nu=(kT/h)dx</span>。前因子 <span class="math inline">\dfrac{2h}{c^2}\nu^3=\dfrac{2h}{c^2}\left(\dfrac{kT}{h}\right)^3x^3</span>。<span class="math inline">d\nu</span> の <span class="math inline">(kT/h)</span> と合わせて</p>
 <p><span class="math display">
 F=\pi\cdot\frac{2h}{c^2}\left(\frac{kT}{h}\right)^4\int_0^\infty\frac{x^3}{e^x-1}dx=\frac{2\pi k^4}{c^2h^3}T^4\int_0^\infty\frac{x^3}{e^x-1}dx.
@@ -1180,20 +1215,14 @@ F=\frac{2\pi k^4}{c^2h^3}\frac{\pi^4}{15}T^4=\underbrace{\frac{2\pi^5k^4}{15c^2h
 <p>数値（SI）：分子 <span class="math inline">2\pi^5k^4=2\times306.0\times(1.381\times10^{-23})^4=612.0\times3.64\times10^{-92}=2.23\times10^{-89}</span>。分母 <span class="math inline">15c^2h^3=15\times(3.00\times10^8)^2\times(6.626\times10^{-34})^3=15\times9.00\times10^{16}\times2.91\times10^{-100}=3.93\times10^{-82}</span>。よって <span class="math inline">\sigma\approx5.67\times10^{-8}</span> W m<span class="math inline">^{-2}</span>K<span class="math inline">^{-4}</span>。✓</p>
 <p><strong>(3)</strong> <span class="math inline">\dfrac{ac}{4}=\dfrac{1}{4}\cdot\dfrac{8\pi^5k^4}{15c^3h^3}\cdot c=\dfrac{2\pi^5k^4}{15c^2h^3}=\sigma</span>。確かに <span class="math inline">\sigma=ac/4</span>。エネルギー密度 <span class="math inline">u=aT^4</span> と射出フラックス <span class="math inline">F=\sigma T^4</span> が <span class="math inline">\sigma=ac/4</span> で結ばれる（等方場 <span class="math inline">u=4\pi B/c</span>、<span class="math inline">F=\pi B</span> から <span class="math inline">F=(c/4)u</span>）。</p>
 <p><strong>答え</strong>：<span class="math inline">\sigma=\dfrac{2\pi^5k^4}{15c^2h^3}\approx5.67\times10^{-8}</span> W m<span class="math inline">^{-2}</span>K<span class="math inline">^{-4}</span>。放射定数とは <span class="math inline">\sigma=ac/4</span>。</p>
-</section>
-<section id="ex-2-5" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="ex-2-5">問題 2-5　観測データから太陽の温度・光度・半径を引き出す</h3>
-<p>[★ 難易度：☆☆☆ ] <span class="tag">[理解を深める]</span></p>
-<p>§2.8 のワークフローを数値で実行する。観測量：ピーク波長 <span class="math inline">\lambda_{\max}\simeq500</span> nm、地球での太陽定数 <span class="math inline">f\simeq1.36\times10^3</span> W m<span class="math inline">^{-2}</span>、距離 <span class="math inline">d=1</span> AU <span class="math inline">=1.496\times10^{11}</span> m。</p>
-<ol type="1">
-<li>Wien の式（<span class="math inline">b=2.898\times10^{-3}</span> m·K）から有効温度 <span class="math inline">T</span> を求めよ。</li>
-<li><span class="math inline">L=4\pi d^2 f</span> から太陽光度 <span class="math inline">L_\odot</span> を求めよ。</li>
-<li>Stefan–Boltzmann <span class="math inline">L=4\pi R^2\sigma T^4</span> を逆算して半径 <span class="math inline">R_\odot=\sqrt{L/(4\pi\sigma T^4)}</span> を求め、既知値（<span class="math inline">R_\odot\simeq6.96\times10^8</span> m）と比べよ。</li>
-</ol>
-<p><strong>関連</strong>：<a href="#sec-reading-spectra-estimation">§2.8 観測データから推定</a>／各道具は <a href="#sec-reading-spectra-wien">§2.3</a>・<a href="#sec-reading-spectra-stefan-boltzmann">§2.4</a>、<span class="math inline">\sigma</span> の導出は<a href="#ex-2-4">演習 2-4</a>。</p>
-</section>
-<section id="模範解答問題-2-5" class="level2 callout-derive" data-collapse="true">
-<h2 class="anchored" data-anchor-id="模範解答問題-2-5">模範解答（問題 2-5）</h2>
+</div>
+</div>
+<div id="sol-2-5" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-2-5-label">
+<p><span class="proof-title"><em>解答 5.5</em>. </span></p>
+<div class="offcanvas-header">
+<p><span id="sol-2-5-label" class="offcanvas-title"><strong>解答例（問題 2-5）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
+</div>
+<div class="offcanvas-body">
 <p><strong>(1)</strong> <span class="math inline">T=b/\lambda_{\max}=2.898\times10^{-3}/5.00\times10^{-7}=5.80\times10^3</span> K。（有効温度 <span class="math inline">\simeq5800</span> K）</p>
 <p><strong>(2)</strong> <span class="math inline">L=4\pi d^2 f=4\pi(1.496\times10^{11})^2\times1.36\times10^3</span>。<span class="math inline">d^2=2.238\times10^{22}</span>、<span class="math inline">4\pi d^2=2.812\times10^{23}</span>、<span class="math inline">\times f=3.82\times10^{26}</span> W。すなわち <span class="math inline">L_\odot\simeq3.8\times10^{26}</span> W（既知 <span class="math inline">3.83\times10^{26}</span> W と一致）。</p>
 <p><strong>(3)</strong> <span class="math inline">\sigma T^4=5.67\times10^{-8}\times(5800)^4=5.67\times10^{-8}\times1.13\times10^{15}=6.41\times10^7</span> W m<span class="math inline">^{-2}</span>。</p>
@@ -1202,6 +1231,8 @@ R=\sqrt{\frac{L}{4\pi\sigma T^4}}=\sqrt{\frac{3.82\times10^{26}}{4\pi\times6.41\
 </span></p>
 <p>既知値 <span class="math inline">6.96\times10^8</span> m とよく一致。観測量（ピーク波長・フラックス・距離）だけから太陽の物理量がプランク分布を介して再現できる。</p>
 <p><strong>答え</strong>：<span class="math inline">T\simeq5800</span> K、<span class="math inline">L_\odot\simeq3.8\times10^{26}</span> W、<span class="math inline">R_\odot\simeq6.9\times10^8</span> m。いずれも実測とよく一致。</p>
+</div>
+</div>
 </section>
 <section id="sec-reading-spectra-further" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-reading-spectra-further">さらに学ぶための参考文献</h2>
@@ -1999,7 +2030,7 @@ R=\sqrt{\frac{L}{4\pi\sigma T^4}}=\sqrt{\frac{3.82\times10^{26}}{4\pi\times6.41\
 <span id="cb2-314"><a href="#cb2-314" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-315"><a href="#cb2-315" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-reading-spectra-exercises .unnumbered}</span></span>
 <span id="cb2-316"><a href="#cb2-316" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-317"><a href="#cb2-317" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから確認すると効果的である。</span>
+<span id="cb2-317"><a href="#cb2-317" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **解答例** は章末「解答例」にまとめてある（オンライン版では各問のボタンから開く）。まず自力で解いてから確認すると効果的である。</span>
 <span id="cb2-318"><a href="#cb2-318" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-319"><a href="#cb2-319" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 2-1　Bν から Bλ への変換とヤコビアン {#ex-2-1 .unnumbered}</span></span>
 <span id="cb2-320"><a href="#cb2-320" aria-hidden="true" tabindex="-1"></a></span>
@@ -2013,167 +2044,215 @@ R=\sqrt{\frac{L}{4\pi\sigma T^4}}=\sqrt{\frac{3.82\times10^{26}}{4\pi\times6.41\
 <span id="cb2-328"><a href="#cb2-328" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-329"><a href="#cb2-329" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§2.2 振動数表示と波長表示</span><span class="co">](#sec-reading-spectra-nu-lambda)</span>／ピーク位置のずれは<span class="co">[</span><span class="ot">演習 2-2</span><span class="co">](#ex-2-2)</span>、比強度の定義は <span class="co">[</span><span class="ot">第4章</span><span class="co">](../part2/04-radiation-field.qmd)</span>。</span>
 <span id="cb2-330"><a href="#cb2-330" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-331"><a href="#cb2-331" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb2-332"><a href="#cb2-332" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 2-1）</span></span>
-<span id="cb2-333"><a href="#cb2-333" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-334"><a href="#cb2-334" aria-hidden="true" tabindex="-1"></a>**(1)** $\nu=c/\lambda$ を微分して $d\nu=-(c/\lambda^2)d\lambda$。$\nu$ が増えると $\lambda$ が減るので負号がつく。物理量（エネルギー）は正なので、刻みの向きを合わせるために $B_\nu\,d\nu=-B_\lambda\,d\lambda$ と書く。これに $d\nu=-(c/\lambda^2)d\lambda$ を入れると</span>
-<span id="cb2-335"><a href="#cb2-335" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-336"><a href="#cb2-336" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb2-337"><a href="#cb2-337" aria-hidden="true" tabindex="-1"></a>B_\nu\left(-\frac{c}{\lambda^2}\right)d\lambda=-B_\lambda\,d\lambda\ \Rightarrow\ B_\lambda=B_\nu\frac{c}{\lambda^2}.</span>
-<span id="cb2-338"><a href="#cb2-338" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb2-339"><a href="#cb2-339" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-340"><a href="#cb2-340" aria-hidden="true" tabindex="-1"></a>両辺の負号が打ち消し、最終式は正になる。</span>
-<span id="cb2-341"><a href="#cb2-341" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-342"><a href="#cb2-342" aria-hidden="true" tabindex="-1"></a>**(2)** $\nu=c/\lambda$ を代入。前因子：$\dfrac{2h\nu^3}{c^2}\cdot\dfrac{c}{\lambda^2}=\dfrac{2h}{c^2}\dfrac{c^3}{\lambda^3}\dfrac{c}{\lambda^2}=\dfrac{2hc^2}{\lambda^5}$。指数：$h\nu/kT=hc/\lambda kT$。よって</span>
-<span id="cb2-343"><a href="#cb2-343" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-344"><a href="#cb2-344" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb2-345"><a href="#cb2-345" aria-hidden="true" tabindex="-1"></a>B_\lambda=\frac{2hc^2}{\lambda^5}\frac{1}{e^{hc/\lambda kT}-1}.</span>
-<span id="cb2-346"><a href="#cb2-346" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb2-347"><a href="#cb2-347" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-348"><a href="#cb2-348" aria-hidden="true" tabindex="-1"></a>**(3)** $B_\nu\propto\nu^3$ にヤコビアン $c/\lambda^2\propto\lambda^{-2}$ が掛かる。$\nu^3\propto\lambda^{-3}$ なので $\lambda^{-3}\cdot\lambda^{-2}=\lambda^{-5}$。冪の差2はヤコビアン由来。</span>
-<span id="cb2-349"><a href="#cb2-349" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-350"><a href="#cb2-350" aria-hidden="true" tabindex="-1"></a>**答え**：$B_\lambda=B_\nu c/\lambda^2=\dfrac{2hc^2}{\lambda^5}\dfrac{1}{e^{hc/\lambda kT}-1}$。$\lambda^{-5}$ の「5」はヤコビアン $\lambda^{-2}$ が $\nu^3=\lambda^{-3}$ に掛かるため。</span>
-<span id="cb2-351"><a href="#cb2-351" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-331"><a href="#cb2-331" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb2-332"><a href="#cb2-332" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 2-1）</span><span class="co">](#sol-2-1)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb2-333"><a href="#cb2-333" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-334"><a href="#cb2-334" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-335"><a href="#cb2-335" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 2-2　Wien 変位則の導出 ― 超越方程式と b の値 {#ex-2-2 .unnumbered}</span></span>
+<span id="cb2-336"><a href="#cb2-336" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-337"><a href="#cb2-337" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb2-338"><a href="#cb2-338" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-339"><a href="#cb2-339" aria-hidden="true" tabindex="-1"></a>§2.3 は $\lambda_{\max}T=b\simeq2.898\times10^{-3}$ m·K を結果として与えた。$B_\lambda$ を最大化して導く。$x\equiv hc/\lambda kT$ とおく。</span>
+<span id="cb2-340"><a href="#cb2-340" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-341"><a href="#cb2-341" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$B_\lambda\propto\lambda^{-5}(e^{x}-1)^{-1}$ を $\lambda$ で微分してゼロとおき、$(5-x)e^{x}=5$、すなわち $x=5(1-e^{-x})$ を導け。</span>
+<span id="cb2-342"><a href="#cb2-342" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>数値解 $x_{\max}\approx4.965$ を用いて $b=\dfrac{hc}{4.965\,k}$ を示し、数値を計算して $2.90\times10^{-3}$ m·K を確認せよ。</span>
+<span id="cb2-343"><a href="#cb2-343" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>振動数表示のピークは $h\nu/kT\approx2.821$（§2.2、第10章の問題で導出）。なぜ $\lambda_{\max}\nu_{\max}\ne c$ となるのか、ヤコビアンの観点から説明せよ。</span>
+<span id="cb2-344"><a href="#cb2-344" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-345"><a href="#cb2-345" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§2.3 Wien の変位則</span><span class="co">](#sec-reading-spectra-wien)</span>／振動数表示ピーク 2.821 の導出は<span class="co">[</span><span class="ot">演習 10-4</span><span class="co">](../part4/10-planck-quantum.qmd#ex-10-4)</span>、データ照合は<span class="co">[</span><span class="ot">演習 1-1</span><span class="co">](../part1/01-where-blackbody.qmd#ex-1-1)</span>。</span>
+<span id="cb2-346"><a href="#cb2-346" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-347"><a href="#cb2-347" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb2-348"><a href="#cb2-348" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 2-2）</span><span class="co">](#sol-2-2)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb2-349"><a href="#cb2-349" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-350"><a href="#cb2-350" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-351"><a href="#cb2-351" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 2-3　Fν=πBν ― 半球積分はなぜ 4π でなく π か {#ex-2-3 .unnumbered}</span></span>
 <span id="cb2-352"><a href="#cb2-352" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-353"><a href="#cb2-353" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 2-2　Wien 変位則の導出 ― 超越方程式と b の値 {#ex-2-2 .unnumbered}</span></span>
+<span id="cb2-353"><a href="#cb2-353" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
 <span id="cb2-354"><a href="#cb2-354" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-355"><a href="#cb2-355" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb2-355"><a href="#cb2-355" aria-hidden="true" tabindex="-1"></a>§2.4 は黒体表面の射出フラックスが $F_\nu=\displaystyle\int_{\text{半球}}B_\nu\cos\theta\,d\Omega=\pi B_\nu$ になると述べ、立体角積分の値だけ示した。これを自分で実行する。</span>
 <span id="cb2-356"><a href="#cb2-356" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-357"><a href="#cb2-357" aria-hidden="true" tabindex="-1"></a>§2.3 は $\lambda_{\max}T=b\simeq2.898\times10^{-3}$ m·K を結果として与えた。$B_\lambda$ を最大化して導く。$x\equiv hc/\lambda kT$ とおく。</span>
-<span id="cb2-358"><a href="#cb2-358" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-359"><a href="#cb2-359" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$B_\lambda\propto\lambda^{-5}(e^{x}-1)^{-1}$ を $\lambda$ で微分してゼロとおき、$(5-x)e^{x}=5$、すなわち $x=5(1-e^{-x})$ を導け。</span>
-<span id="cb2-360"><a href="#cb2-360" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>数値解 $x_{\max}\approx4.965$ を用いて $b=\dfrac{hc}{4.965\,k}$ を示し、数値を計算して $2.90\times10^{-3}$ m·K を確認せよ。</span>
-<span id="cb2-361"><a href="#cb2-361" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>振動数表示のピークは $h\nu/kT\approx2.821$（§2.2、第10章の問題で導出）。なぜ $\lambda_{\max}\nu_{\max}\ne c$ となるのか、ヤコビアンの観点から説明せよ。</span>
+<span id="cb2-357"><a href="#cb2-357" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>立体角要素 $d\Omega=\sin\theta\,d\theta\,d\varphi$ を使い、外向き半球（$0\le\theta\le\pi/2$）で $\displaystyle\int\cos\theta\,d\Omega$ を計算して $\pi$ を得よ。</span>
+<span id="cb2-358"><a href="#cb2-358" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>「全立体角 $4\pi$」でも「半球 $2\pi$」でもなく $\pi$ になる理由を、（i）半球に限ること と（ii）$\cos\theta$ 射影、の二つに分けて説明せよ。</span>
+<span id="cb2-359"><a href="#cb2-359" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>もし $\cos\theta$ を落として $\int_{\text{半球}}B_\nu d\Omega$ としたら値はいくつか。なぜそれは物理的に正しくないか。</span>
+<span id="cb2-360"><a href="#cb2-360" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-361"><a href="#cb2-361" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§2.4 Stefan–Boltzmann 則</span><span class="co">](#sec-reading-spectra-stefan-boltzmann)</span>／フラックスと比強度の正式な定義（$\cos\theta$ の由来）は <span class="co">[</span><span class="ot">第4章 放射場</span><span class="co">](../part2/04-radiation-field.qmd)</span>。</span>
 <span id="cb2-362"><a href="#cb2-362" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-363"><a href="#cb2-363" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§2.3 Wien の変位則</span><span class="co">](#sec-reading-spectra-wien)</span>／振動数表示ピーク 2.821 の導出は<span class="co">[</span><span class="ot">演習 10-4</span><span class="co">](../part4/10-planck-quantum.qmd#ex-10-4)</span>、データ照合は<span class="co">[</span><span class="ot">演習 1-1</span><span class="co">](../part1/01-where-blackbody.qmd#ex-1-1)</span>。</span>
-<span id="cb2-364"><a href="#cb2-364" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-365"><a href="#cb2-365" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb2-366"><a href="#cb2-366" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 2-2）</span></span>
-<span id="cb2-367"><a href="#cb2-367" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-368"><a href="#cb2-368" aria-hidden="true" tabindex="-1"></a>**(1)** $f(\lambda)=\lambda^{-5}(e^{x}-1)^{-1}$、$x=hc/\lambda kT$ なので $dx/d\lambda=-x/\lambda$。積の微分：</span>
-<span id="cb2-369"><a href="#cb2-369" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-370"><a href="#cb2-370" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb2-371"><a href="#cb2-371" aria-hidden="true" tabindex="-1"></a>f'=-5\lambda^{-6}(e^x-1)^{-1}-\lambda^{-5}\frac{e^x}{(e^x-1)^2}\frac{dx}{d\lambda}=0.</span>
-<span id="cb2-372"><a href="#cb2-372" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb2-373"><a href="#cb2-373" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-374"><a href="#cb2-374" aria-hidden="true" tabindex="-1"></a>$dx/d\lambda=-x/\lambda$ を代入し、$\lambda^{-6}(e^x-1)^{-1}$ で割ると</span>
-<span id="cb2-375"><a href="#cb2-375" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-376"><a href="#cb2-376" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb2-377"><a href="#cb2-377" aria-hidden="true" tabindex="-1"></a>-5+\frac{x e^x}{e^x-1}=0\ \Rightarrow\ x e^x=5(e^x-1)\ \Rightarrow\ (5-x)e^x=5,\ \text{即ち}\ x=5(1-e^{-x}).</span>
-<span id="cb2-378"><a href="#cb2-378" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb2-379"><a href="#cb2-379" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-380"><a href="#cb2-380" aria-hidden="true" tabindex="-1"></a>**(2)** 非自明解は $x_{\max}\approx4.965$。$x=hc/\lambda_{\max}kT$ より</span>
-<span id="cb2-381"><a href="#cb2-381" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-382"><a href="#cb2-382" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb2-383"><a href="#cb2-383" aria-hidden="true" tabindex="-1"></a>\lambda_{\max}T=\frac{hc}{x_{\max}k}=\frac{hc}{4.965\,k}.</span>
-<span id="cb2-384"><a href="#cb2-384" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb2-385"><a href="#cb2-385" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-386"><a href="#cb2-386" aria-hidden="true" tabindex="-1"></a>数値：$hc=6.626\times10^{-34}\times3.00\times10^8=1.988\times10^{-25}$ J·m。$4.965k=4.965\times1.381\times10^{-23}=6.857\times10^{-23}$。よって $b=1.988\times10^{-25}/6.857\times10^{-23}=2.90\times10^{-3}$ m·K。✓</span>
-<span id="cb2-387"><a href="#cb2-387" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-388"><a href="#cb2-388" aria-hidden="true" tabindex="-1"></a>**(3)** ピークを与える条件は最大化する関数（$B_\lambda$ か $B_\nu$）で異なる。両者はヤコビアン $c/\lambda^2$ だけずれた別関数なので、最大点も別位置になる（$x=4.965$ と $2.821$）。$\lambda_{\max}=hc/4.965kT$、$\nu_{\max}=2.821kT/h$ ゆえ $\lambda_{\max}\nu_{\max}=(2.821/4.965)c\approx0.568\,c\ne c$。同じスペクトルでも「どの変数でピークを測るか」で答えが変わる。</span>
-<span id="cb2-389"><a href="#cb2-389" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-390"><a href="#cb2-390" aria-hidden="true" tabindex="-1"></a>**答え**：$(5-x)e^x=5\Rightarrow x\approx4.965$、$b=hc/4.965k\approx2.90\times10^{-3}$ m·K。$\lambda_{\max}\nu_{\max}=0.568c\ne c$（ヤコビアンでピークがずれるため）。</span>
-<span id="cb2-391"><a href="#cb2-391" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-363"><a href="#cb2-363" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb2-364"><a href="#cb2-364" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 2-3）</span><span class="co">](#sol-2-3)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb2-365"><a href="#cb2-365" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-366"><a href="#cb2-366" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-367"><a href="#cb2-367" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 2-4　Stefan–Boltzmann 定数 σ を基本定数で表す {#ex-2-4 .unnumbered}</span></span>
+<span id="cb2-368"><a href="#cb2-368" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-369"><a href="#cb2-369" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb2-370"><a href="#cb2-370" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-371"><a href="#cb2-371" aria-hidden="true" tabindex="-1"></a>§2.4 は $\sigma$ の数値だけ与え、導出を第6・8章に委ねた。$F=\pi\displaystyle\int_0^\infty B_\nu\,d\nu$ から直接 $\sigma$ を基本定数で表す。</span>
+<span id="cb2-372"><a href="#cb2-372" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-373"><a href="#cb2-373" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$F=\pi\displaystyle\int_0^\infty\frac{2h\nu^3}{c^2}\frac{d\nu}{e^{h\nu/kT}-1}$ で $x=h\nu/kT$ と変数変換し、$F=\dfrac{2\pi k^4}{c^2h^3}T^4\displaystyle\int_0^\infty\frac{x^3}{e^x-1}dx$ を導け。</span>
+<span id="cb2-374"><a href="#cb2-374" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$\displaystyle\int_0^\infty\frac{x^3}{e^x-1}dx=\frac{\pi^4}{15}$ を用いて $\sigma=\dfrac{2\pi^5 k^4}{15c^2h^3}$ を示し、SI で数値（$\approx5.67\times10^{-8}$ W m$^{-2}$K$^{-4}$）を確認せよ。</span>
+<span id="cb2-375"><a href="#cb2-375" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>第IV部の問題で導いた放射定数 $a=\dfrac{8\pi^5k^4}{15c^3h^3}$ と、$\sigma=ac/4$ の関係を確かめよ。</span>
+<span id="cb2-376"><a href="#cb2-376" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-377"><a href="#cb2-377" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§2.4 Stefan–Boltzmann 則</span><span class="co">](#sec-reading-spectra-stefan-boltzmann)</span>／$a=4\sigma/c$ と $a$ の導出は<span class="co">[</span><span class="ot">演習 10-3</span><span class="co">](../part4/10-planck-quantum.qmd#ex-10-3)</span>、本文 <span class="co">[</span><span class="ot">§10.3</span><span class="co">](../part4/10-planck-quantum.qmd#sec-planck-quantum-derivation)</span>。積分公式は <span class="co">[</span><span class="ot">付録A 数学ノート</span><span class="co">](../appendix/A-math-notes.qmd)</span>。</span>
+<span id="cb2-378"><a href="#cb2-378" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-379"><a href="#cb2-379" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb2-380"><a href="#cb2-380" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 2-4）</span><span class="co">](#sol-2-4)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb2-381"><a href="#cb2-381" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-382"><a href="#cb2-382" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-383"><a href="#cb2-383" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 2-5　観測データから太陽の温度・光度・半径を引き出す {#ex-2-5 .unnumbered}</span></span>
+<span id="cb2-384"><a href="#cb2-384" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-385"><a href="#cb2-385" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb2-386"><a href="#cb2-386" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-387"><a href="#cb2-387" aria-hidden="true" tabindex="-1"></a>§2.8 のワークフローを数値で実行する。観測量：ピーク波長 $\lambda_{\max}\simeq500$ nm、地球での太陽定数 $f\simeq1.36\times10^3$ W m$^{-2}$、距離 $d=1$ AU $=1.496\times10^{11}$ m。</span>
+<span id="cb2-388"><a href="#cb2-388" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-389"><a href="#cb2-389" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Wien の式（$b=2.898\times10^{-3}$ m·K）から有効温度 $T$ を求めよ。</span>
+<span id="cb2-390"><a href="#cb2-390" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$L=4\pi d^2 f$ から太陽光度 $L_\odot$ を求めよ。</span>
+<span id="cb2-391"><a href="#cb2-391" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Stefan–Boltzmann $L=4\pi R^2\sigma T^4$ を逆算して半径 $R_\odot=\sqrt{L/(4\pi\sigma T^4)}$ を求め、既知値（$R_\odot\simeq6.96\times10^8$ m）と比べよ。</span>
 <span id="cb2-392"><a href="#cb2-392" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-393"><a href="#cb2-393" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 2-3　Fν=πBν ― 半球積分はなぜ 4π でなく π か {#ex-2-3 .unnumbered}</span></span>
+<span id="cb2-393"><a href="#cb2-393" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§2.8 観測データから推定</span><span class="co">](#sec-reading-spectra-estimation)</span>／各道具は <span class="co">[</span><span class="ot">§2.3</span><span class="co">](#sec-reading-spectra-wien)</span>・<span class="co">[</span><span class="ot">§2.4</span><span class="co">](#sec-reading-spectra-stefan-boltzmann)</span>、$\sigma$ の導出は<span class="co">[</span><span class="ot">演習 2-4</span><span class="co">](#ex-2-4)</span>。</span>
 <span id="cb2-394"><a href="#cb2-394" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-395"><a href="#cb2-395" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
-<span id="cb2-396"><a href="#cb2-396" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-397"><a href="#cb2-397" aria-hidden="true" tabindex="-1"></a>§2.4 は黒体表面の射出フラックスが $F_\nu=\displaystyle\int_{\text{半球}}B_\nu\cos\theta\,d\Omega=\pi B_\nu$ になると述べ、立体角積分の値だけ示した。これを自分で実行する。</span>
+<span id="cb2-395"><a href="#cb2-395" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb2-396"><a href="#cb2-396" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 2-5）</span><span class="co">](#sol-2-5)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb2-397"><a href="#cb2-397" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb2-398"><a href="#cb2-398" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-399"><a href="#cb2-399" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>立体角要素 $d\Omega=\sin\theta\,d\theta\,d\varphi$ を使い、外向き半球（$0\le\theta\le\pi/2$）で $\displaystyle\int\cos\theta\,d\Omega$ を計算して $\pi$ を得よ。</span>
-<span id="cb2-400"><a href="#cb2-400" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>「全立体角 $4\pi$」でも「半球 $2\pi$」でもなく $\pi$ になる理由を、（i）半球に限ること と（ii）$\cos\theta$ 射影、の二つに分けて説明せよ。</span>
-<span id="cb2-401"><a href="#cb2-401" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>もし $\cos\theta$ を落として $\int_{\text{半球}}B_\nu d\Omega$ としたら値はいくつか。なぜそれは物理的に正しくないか。</span>
+<span id="cb2-399"><a href="#cb2-399" aria-hidden="true" tabindex="-1"></a><span class="fu">## 解答例 {#sec-reading-spectra-solutions .unnumbered}</span></span>
+<span id="cb2-400"><a href="#cb2-400" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-401"><a href="#cb2-401" aria-hidden="true" tabindex="-1"></a>各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。</span>
 <span id="cb2-402"><a href="#cb2-402" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-403"><a href="#cb2-403" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§2.4 Stefan–Boltzmann 則</span><span class="co">](#sec-reading-spectra-stefan-boltzmann)</span>／フラックスと比強度の正式な定義（$\cos\theta$ の由来）は <span class="co">[</span><span class="ot">第4章 放射場</span><span class="co">](../part2/04-radiation-field.qmd)</span>。</span>
-<span id="cb2-404"><a href="#cb2-404" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-405"><a href="#cb2-405" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb2-406"><a href="#cb2-406" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 2-3）</span></span>
-<span id="cb2-407"><a href="#cb2-407" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-408"><a href="#cb2-408" aria-hidden="true" tabindex="-1"></a>**(1)** 黒体は等方なので $B_\nu$ は方向に依らず積分の外へ：</span>
-<span id="cb2-409"><a href="#cb2-409" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-410"><a href="#cb2-410" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb2-411"><a href="#cb2-411" aria-hidden="true" tabindex="-1"></a>\int_{\text{半球}}\cos\theta\,d\Omega=\int_0^{2\pi}d\varphi\int_0^{\pi/2}\cos\theta\sin\theta\,d\theta=2\pi\left<span class="co">[</span><span class="ot">\frac{\sin^2\theta}{2}\right</span><span class="co">]</span>_0^{\pi/2}=2\pi\cdot\frac12=\pi.</span>
-<span id="cb2-412"><a href="#cb2-412" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb2-413"><a href="#cb2-413" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-414"><a href="#cb2-414" aria-hidden="true" tabindex="-1"></a>よって $F_\nu=\pi B_\nu$。</span>
-<span id="cb2-415"><a href="#cb2-415" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-416"><a href="#cb2-416" aria-hidden="true" tabindex="-1"></a>**(2)** （i）表面から外へ出る放射だけを数えるので積分は上半球 $2\pi$ sr に限る（下向きは表面内部へ向かい射出に寄与しない）。（ii）フラックスは面を **垂直に** 通る成分なので、法線から $\theta$ 傾いた方向の寄与には射影因子 $\cos\theta$ が掛かる。$\cos\theta$ の角度平均が $1/2$ なので、$2\pi\times\tfrac12=\pi$ となる。</span>
-<span id="cb2-417"><a href="#cb2-417" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-418"><a href="#cb2-418" aria-hidden="true" tabindex="-1"></a>**(3)** $\int_{\text{半球}}d\Omega=2\pi$ なので値は $2\pi B_\nu$。だがこれは「すべての方向の放射が面を垂直に通る」と誤って数えたことになり、斜め方向の放射が面を通る実効断面が $\cos\theta$ で減る効果を無視している。フラックス（面を通過する正味エネルギー流）の定義に反するので物理的に正しくない。</span>
-<span id="cb2-419"><a href="#cb2-419" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-420"><a href="#cb2-420" aria-hidden="true" tabindex="-1"></a>**答え**：$\int_{\text{半球}}\cos\theta\,d\Omega=\pi$。半球に限る効果（$2\pi$）×$\cos\theta$ 射影の平均（$1/2$）＝$\pi$。$\cos\theta$ を落とすと $2\pi B_\nu$ となり射影を無視した誤り。</span>
-<span id="cb2-421"><a href="#cb2-421" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-403"><a href="#cb2-403" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb2-404"><a href="#cb2-404" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">問題 2-1</span><span class="co">](#sol-2-1)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 2-2</span><span class="co">](#sol-2-2)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 2-3</span><span class="co">](#sol-2-3)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 2-4</span><span class="co">](#sol-2-4)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 2-5</span><span class="co">](#sol-2-5)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb2-405"><a href="#cb2-405" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-406"><a href="#cb2-406" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-407"><a href="#cb2-407" aria-hidden="true" tabindex="-1"></a>::: {#sol-2-1 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-2-1-label"}</span>
+<span id="cb2-408"><a href="#cb2-408" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb2-409"><a href="#cb2-409" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 2-1）**</span><span class="co">]</span>{#sol-2-1-label .offcanvas-title}</span>
+<span id="cb2-410"><a href="#cb2-410" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb2-411"><a href="#cb2-411" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-412"><a href="#cb2-412" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb2-413"><a href="#cb2-413" aria-hidden="true" tabindex="-1"></a>**(1)** $\nu=c/\lambda$ を微分して $d\nu=-(c/\lambda^2)d\lambda$。$\nu$ が増えると $\lambda$ が減るので負号がつく。物理量（エネルギー）は正なので、刻みの向きを合わせるために $B_\nu\,d\nu=-B_\lambda\,d\lambda$ と書く。これに $d\nu=-(c/\lambda^2)d\lambda$ を入れると</span>
+<span id="cb2-414"><a href="#cb2-414" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-415"><a href="#cb2-415" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb2-416"><a href="#cb2-416" aria-hidden="true" tabindex="-1"></a>B_\nu\left(-\frac{c}{\lambda^2}\right)d\lambda=-B_\lambda\,d\lambda\ \Rightarrow\ B_\lambda=B_\nu\frac{c}{\lambda^2}.</span>
+<span id="cb2-417"><a href="#cb2-417" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb2-418"><a href="#cb2-418" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-419"><a href="#cb2-419" aria-hidden="true" tabindex="-1"></a>両辺の負号が打ち消し、最終式は正になる。</span>
+<span id="cb2-420"><a href="#cb2-420" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-421"><a href="#cb2-421" aria-hidden="true" tabindex="-1"></a>**(2)** $\nu=c/\lambda$ を代入。前因子：$\dfrac{2h\nu^3}{c^2}\cdot\dfrac{c}{\lambda^2}=\dfrac{2h}{c^2}\dfrac{c^3}{\lambda^3}\dfrac{c}{\lambda^2}=\dfrac{2hc^2}{\lambda^5}$。指数：$h\nu/kT=hc/\lambda kT$。よって</span>
 <span id="cb2-422"><a href="#cb2-422" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-423"><a href="#cb2-423" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 2-4　Stefan–Boltzmann 定数 σ を基本定数で表す {#ex-2-4 .unnumbered}</span></span>
-<span id="cb2-424"><a href="#cb2-424" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-425"><a href="#cb2-425" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb2-423"><a href="#cb2-423" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb2-424"><a href="#cb2-424" aria-hidden="true" tabindex="-1"></a>B_\lambda=\frac{2hc^2}{\lambda^5}\frac{1}{e^{hc/\lambda kT}-1}.</span>
+<span id="cb2-425"><a href="#cb2-425" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb2-426"><a href="#cb2-426" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-427"><a href="#cb2-427" aria-hidden="true" tabindex="-1"></a>§2.4 は $\sigma$ の数値だけ与え、導出を第6・8章に委ねた。$F=\pi\displaystyle\int_0^\infty B_\nu\,d\nu$ から直接 $\sigma$ を基本定数で表す。</span>
+<span id="cb2-427"><a href="#cb2-427" aria-hidden="true" tabindex="-1"></a>**(3)** $B_\nu\propto\nu^3$ にヤコビアン $c/\lambda^2\propto\lambda^{-2}$ が掛かる。$\nu^3\propto\lambda^{-3}$ なので $\lambda^{-3}\cdot\lambda^{-2}=\lambda^{-5}$。冪の差2はヤコビアン由来。</span>
 <span id="cb2-428"><a href="#cb2-428" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-429"><a href="#cb2-429" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$F=\pi\displaystyle\int_0^\infty\frac{2h\nu^3}{c^2}\frac{d\nu}{e^{h\nu/kT}-1}$ で $x=h\nu/kT$ と変数変換し、$F=\dfrac{2\pi k^4}{c^2h^3}T^4\displaystyle\int_0^\infty\frac{x^3}{e^x-1}dx$ を導け。</span>
-<span id="cb2-430"><a href="#cb2-430" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$\displaystyle\int_0^\infty\frac{x^3}{e^x-1}dx=\frac{\pi^4}{15}$ を用いて $\sigma=\dfrac{2\pi^5 k^4}{15c^2h^3}$ を示し、SI で数値（$\approx5.67\times10^{-8}$ W m$^{-2}$K$^{-4}$）を確認せよ。</span>
-<span id="cb2-431"><a href="#cb2-431" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>第IV部の問題で導いた放射定数 $a=\dfrac{8\pi^5k^4}{15c^3h^3}$ と、$\sigma=ac/4$ の関係を確かめよ。</span>
+<span id="cb2-429"><a href="#cb2-429" aria-hidden="true" tabindex="-1"></a>**答え**：$B_\lambda=B_\nu c/\lambda^2=\dfrac{2hc^2}{\lambda^5}\dfrac{1}{e^{hc/\lambda kT}-1}$。$\lambda^{-5}$ の「5」はヤコビアン $\lambda^{-2}$ が $\nu^3=\lambda^{-3}$ に掛かるため。</span>
+<span id="cb2-430"><a href="#cb2-430" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-431"><a href="#cb2-431" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb2-432"><a href="#cb2-432" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-433"><a href="#cb2-433" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§2.4 Stefan–Boltzmann 則</span><span class="co">](#sec-reading-spectra-stefan-boltzmann)</span>／$a=4\sigma/c$ と $a$ の導出は<span class="co">[</span><span class="ot">演習 10-3</span><span class="co">](../part4/10-planck-quantum.qmd#ex-10-3)</span>、本文 <span class="co">[</span><span class="ot">§10.3</span><span class="co">](../part4/10-planck-quantum.qmd#sec-planck-quantum-derivation)</span>。積分公式は <span class="co">[</span><span class="ot">付録A 数学ノート</span><span class="co">](../appendix/A-math-notes.qmd)</span>。</span>
-<span id="cb2-434"><a href="#cb2-434" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-435"><a href="#cb2-435" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb2-436"><a href="#cb2-436" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 2-4）</span></span>
-<span id="cb2-437"><a href="#cb2-437" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-438"><a href="#cb2-438" aria-hidden="true" tabindex="-1"></a>**(1)** $x=h\nu/kT$、$\nu=kTx/h$、$d\nu=(kT/h)dx$。前因子 $\dfrac{2h}{c^2}\nu^3=\dfrac{2h}{c^2}\left(\dfrac{kT}{h}\right)^3x^3$。$d\nu$ の $(kT/h)$ と合わせて</span>
-<span id="cb2-439"><a href="#cb2-439" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-440"><a href="#cb2-440" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb2-441"><a href="#cb2-441" aria-hidden="true" tabindex="-1"></a>F=\pi\cdot\frac{2h}{c^2}\left(\frac{kT}{h}\right)^4\int_0^\infty\frac{x^3}{e^x-1}dx=\frac{2\pi k^4}{c^2h^3}T^4\int_0^\infty\frac{x^3}{e^x-1}dx.</span>
-<span id="cb2-442"><a href="#cb2-442" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb2-443"><a href="#cb2-443" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-444"><a href="#cb2-444" aria-hidden="true" tabindex="-1"></a>**(2)** 積分 $=\pi^4/15$ を代入：</span>
-<span id="cb2-445"><a href="#cb2-445" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-446"><a href="#cb2-446" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb2-447"><a href="#cb2-447" aria-hidden="true" tabindex="-1"></a>F=\frac{2\pi k^4}{c^2h^3}\frac{\pi^4}{15}T^4=\underbrace{\frac{2\pi^5k^4}{15c^2h^3}}_{\sigma}T^4.</span>
-<span id="cb2-448"><a href="#cb2-448" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb2-449"><a href="#cb2-449" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-450"><a href="#cb2-450" aria-hidden="true" tabindex="-1"></a>数値（SI）：分子 $2\pi^5k^4=2\times306.0\times(1.381\times10^{-23})^4=612.0\times3.64\times10^{-92}=2.23\times10^{-89}$。分母 $15c^2h^3=15\times(3.00\times10^8)^2\times(6.626\times10^{-34})^3=15\times9.00\times10^{16}\times2.91\times10^{-100}=3.93\times10^{-82}$。よって $\sigma\approx5.67\times10^{-8}$ W m$^{-2}$K$^{-4}$。✓</span>
-<span id="cb2-451"><a href="#cb2-451" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-452"><a href="#cb2-452" aria-hidden="true" tabindex="-1"></a>**(3)** $\dfrac{ac}{4}=\dfrac{1}{4}\cdot\dfrac{8\pi^5k^4}{15c^3h^3}\cdot c=\dfrac{2\pi^5k^4}{15c^2h^3}=\sigma$。確かに $\sigma=ac/4$。エネルギー密度 $u=aT^4$ と射出フラックス $F=\sigma T^4$ が $\sigma=ac/4$ で結ばれる（等方場 $u=4\pi B/c$、$F=\pi B$ から $F=(c/4)u$）。</span>
-<span id="cb2-453"><a href="#cb2-453" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-454"><a href="#cb2-454" aria-hidden="true" tabindex="-1"></a>**答え**：$\sigma=\dfrac{2\pi^5k^4}{15c^2h^3}\approx5.67\times10^{-8}$ W m$^{-2}$K$^{-4}$。放射定数とは $\sigma=ac/4$。</span>
-<span id="cb2-455"><a href="#cb2-455" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-433"><a href="#cb2-433" aria-hidden="true" tabindex="-1"></a>::: {#sol-2-2 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-2-2-label"}</span>
+<span id="cb2-434"><a href="#cb2-434" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb2-435"><a href="#cb2-435" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 2-2）**</span><span class="co">]</span>{#sol-2-2-label .offcanvas-title}</span>
+<span id="cb2-436"><a href="#cb2-436" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb2-437"><a href="#cb2-437" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-438"><a href="#cb2-438" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb2-439"><a href="#cb2-439" aria-hidden="true" tabindex="-1"></a>**(1)** $f(\lambda)=\lambda^{-5}(e^{x}-1)^{-1}$、$x=hc/\lambda kT$ なので $dx/d\lambda=-x/\lambda$。積の微分：</span>
+<span id="cb2-440"><a href="#cb2-440" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-441"><a href="#cb2-441" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb2-442"><a href="#cb2-442" aria-hidden="true" tabindex="-1"></a>f'=-5\lambda^{-6}(e^x-1)^{-1}-\lambda^{-5}\frac{e^x}{(e^x-1)^2}\frac{dx}{d\lambda}=0.</span>
+<span id="cb2-443"><a href="#cb2-443" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb2-444"><a href="#cb2-444" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-445"><a href="#cb2-445" aria-hidden="true" tabindex="-1"></a>$dx/d\lambda=-x/\lambda$ を代入し、$\lambda^{-6}(e^x-1)^{-1}$ で割ると</span>
+<span id="cb2-446"><a href="#cb2-446" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-447"><a href="#cb2-447" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb2-448"><a href="#cb2-448" aria-hidden="true" tabindex="-1"></a>-5+\frac{x e^x}{e^x-1}=0\ \Rightarrow\ x e^x=5(e^x-1)\ \Rightarrow\ (5-x)e^x=5,\ \text{即ち}\ x=5(1-e^{-x}).</span>
+<span id="cb2-449"><a href="#cb2-449" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb2-450"><a href="#cb2-450" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-451"><a href="#cb2-451" aria-hidden="true" tabindex="-1"></a>**(2)** 非自明解は $x_{\max}\approx4.965$。$x=hc/\lambda_{\max}kT$ より</span>
+<span id="cb2-452"><a href="#cb2-452" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-453"><a href="#cb2-453" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb2-454"><a href="#cb2-454" aria-hidden="true" tabindex="-1"></a>\lambda_{\max}T=\frac{hc}{x_{\max}k}=\frac{hc}{4.965\,k}.</span>
+<span id="cb2-455"><a href="#cb2-455" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb2-456"><a href="#cb2-456" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-457"><a href="#cb2-457" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 2-5　観測データから太陽の温度・光度・半径を引き出す {#ex-2-5 .unnumbered}</span></span>
+<span id="cb2-457"><a href="#cb2-457" aria-hidden="true" tabindex="-1"></a>数値：$hc=6.626\times10^{-34}\times3.00\times10^8=1.988\times10^{-25}$ J·m。$4.965k=4.965\times1.381\times10^{-23}=6.857\times10^{-23}$。よって $b=1.988\times10^{-25}/6.857\times10^{-23}=2.90\times10^{-3}$ m·K。✓</span>
 <span id="cb2-458"><a href="#cb2-458" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-459"><a href="#cb2-459" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb2-459"><a href="#cb2-459" aria-hidden="true" tabindex="-1"></a>**(3)** ピークを与える条件は最大化する関数（$B_\lambda$ か $B_\nu$）で異なる。両者はヤコビアン $c/\lambda^2$ だけずれた別関数なので、最大点も別位置になる（$x=4.965$ と $2.821$）。$\lambda_{\max}=hc/4.965kT$、$\nu_{\max}=2.821kT/h$ ゆえ $\lambda_{\max}\nu_{\max}=(2.821/4.965)c\approx0.568\,c\ne c$。同じスペクトルでも「どの変数でピークを測るか」で答えが変わる。</span>
 <span id="cb2-460"><a href="#cb2-460" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-461"><a href="#cb2-461" aria-hidden="true" tabindex="-1"></a>§2.8 のワークフローを数値で実行する。観測量：ピーク波長 $\lambda_{\max}\simeq500$ nm、地球での太陽定数 $f\simeq1.36\times10^3$ W m$^{-2}$、距離 $d=1$ AU $=1.496\times10^{11}$ m。</span>
-<span id="cb2-462"><a href="#cb2-462" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-463"><a href="#cb2-463" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Wien の式（$b=2.898\times10^{-3}$ m·K）から有効温度 $T$ を求めよ。</span>
-<span id="cb2-464"><a href="#cb2-464" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$L=4\pi d^2 f$ から太陽光度 $L_\odot$ を求めよ。</span>
-<span id="cb2-465"><a href="#cb2-465" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Stefan–Boltzmann $L=4\pi R^2\sigma T^4$ を逆算して半径 $R_\odot=\sqrt{L/(4\pi\sigma T^4)}$ を求め、既知値（$R_\odot\simeq6.96\times10^8$ m）と比べよ。</span>
-<span id="cb2-466"><a href="#cb2-466" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-467"><a href="#cb2-467" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§2.8 観測データから推定</span><span class="co">](#sec-reading-spectra-estimation)</span>／各道具は <span class="co">[</span><span class="ot">§2.3</span><span class="co">](#sec-reading-spectra-wien)</span>・<span class="co">[</span><span class="ot">§2.4</span><span class="co">](#sec-reading-spectra-stefan-boltzmann)</span>、$\sigma$ の導出は<span class="co">[</span><span class="ot">演習 2-4</span><span class="co">](#ex-2-4)</span>。</span>
-<span id="cb2-468"><a href="#cb2-468" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-469"><a href="#cb2-469" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb2-470"><a href="#cb2-470" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 2-5）</span></span>
-<span id="cb2-471"><a href="#cb2-471" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-472"><a href="#cb2-472" aria-hidden="true" tabindex="-1"></a>**(1)** $T=b/\lambda_{\max}=2.898\times10^{-3}/5.00\times10^{-7}=5.80\times10^3$ K。（有効温度 $\simeq5800$ K）</span>
-<span id="cb2-473"><a href="#cb2-473" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-474"><a href="#cb2-474" aria-hidden="true" tabindex="-1"></a>**(2)** $L=4\pi d^2 f=4\pi(1.496\times10^{11})^2\times1.36\times10^3$。$d^2=2.238\times10^{22}$、$4\pi d^2=2.812\times10^{23}$、$\times f=3.82\times10^{26}$ W。すなわち $L_\odot\simeq3.8\times10^{26}$ W（既知 $3.83\times10^{26}$ W と一致）。</span>
-<span id="cb2-475"><a href="#cb2-475" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-476"><a href="#cb2-476" aria-hidden="true" tabindex="-1"></a>**(3)** $\sigma T^4=5.67\times10^{-8}\times(5800)^4=5.67\times10^{-8}\times1.13\times10^{15}=6.41\times10^7$ W m$^{-2}$。</span>
-<span id="cb2-477"><a href="#cb2-477" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-478"><a href="#cb2-478" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb2-479"><a href="#cb2-479" aria-hidden="true" tabindex="-1"></a>R=\sqrt{\frac{L}{4\pi\sigma T^4}}=\sqrt{\frac{3.82\times10^{26}}{4\pi\times6.41\times10^7}}=\sqrt{\frac{3.82\times10^{26}}{8.05\times10^8}}=\sqrt{4.74\times10^{17}}\approx6.9\times10^8\ \text{m}.</span>
-<span id="cb2-480"><a href="#cb2-480" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb2-481"><a href="#cb2-481" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-482"><a href="#cb2-482" aria-hidden="true" tabindex="-1"></a>既知値 $6.96\times10^8$ m とよく一致。観測量（ピーク波長・フラックス・距離）だけから太陽の物理量がプランク分布を介して再現できる。</span>
-<span id="cb2-483"><a href="#cb2-483" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-484"><a href="#cb2-484" aria-hidden="true" tabindex="-1"></a>**答え**：$T\simeq5800$ K、$L_\odot\simeq3.8\times10^{26}$ W、$R_\odot\simeq6.9\times10^8$ m。いずれも実測とよく一致。</span>
+<span id="cb2-461"><a href="#cb2-461" aria-hidden="true" tabindex="-1"></a>**答え**：$(5-x)e^x=5\Rightarrow x\approx4.965$、$b=hc/4.965k\approx2.90\times10^{-3}$ m·K。$\lambda_{\max}\nu_{\max}=0.568c\ne c$（ヤコビアンでピークがずれるため）。</span>
+<span id="cb2-462"><a href="#cb2-462" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-463"><a href="#cb2-463" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-464"><a href="#cb2-464" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-465"><a href="#cb2-465" aria-hidden="true" tabindex="-1"></a>::: {#sol-2-3 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-2-3-label"}</span>
+<span id="cb2-466"><a href="#cb2-466" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb2-467"><a href="#cb2-467" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 2-3）**</span><span class="co">]</span>{#sol-2-3-label .offcanvas-title}</span>
+<span id="cb2-468"><a href="#cb2-468" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb2-469"><a href="#cb2-469" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-470"><a href="#cb2-470" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb2-471"><a href="#cb2-471" aria-hidden="true" tabindex="-1"></a>**(1)** 黒体は等方なので $B_\nu$ は方向に依らず積分の外へ：</span>
+<span id="cb2-472"><a href="#cb2-472" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-473"><a href="#cb2-473" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb2-474"><a href="#cb2-474" aria-hidden="true" tabindex="-1"></a>\int_{\text{半球}}\cos\theta\,d\Omega=\int_0^{2\pi}d\varphi\int_0^{\pi/2}\cos\theta\sin\theta\,d\theta=2\pi\left<span class="co">[</span><span class="ot">\frac{\sin^2\theta}{2}\right</span><span class="co">]</span>_0^{\pi/2}=2\pi\cdot\frac12=\pi.</span>
+<span id="cb2-475"><a href="#cb2-475" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb2-476"><a href="#cb2-476" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-477"><a href="#cb2-477" aria-hidden="true" tabindex="-1"></a>よって $F_\nu=\pi B_\nu$。</span>
+<span id="cb2-478"><a href="#cb2-478" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-479"><a href="#cb2-479" aria-hidden="true" tabindex="-1"></a>**(2)** （i）表面から外へ出る放射だけを数えるので積分は上半球 $2\pi$ sr に限る（下向きは表面内部へ向かい射出に寄与しない）。（ii）フラックスは面を **垂直に** 通る成分なので、法線から $\theta$ 傾いた方向の寄与には射影因子 $\cos\theta$ が掛かる。$\cos\theta$ の角度平均が $1/2$ なので、$2\pi\times\tfrac12=\pi$ となる。</span>
+<span id="cb2-480"><a href="#cb2-480" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-481"><a href="#cb2-481" aria-hidden="true" tabindex="-1"></a>**(3)** $\int_{\text{半球}}d\Omega=2\pi$ なので値は $2\pi B_\nu$。だがこれは「すべての方向の放射が面を垂直に通る」と誤って数えたことになり、斜め方向の放射が面を通る実効断面が $\cos\theta$ で減る効果を無視している。フラックス（面を通過する正味エネルギー流）の定義に反するので物理的に正しくない。</span>
+<span id="cb2-482"><a href="#cb2-482" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-483"><a href="#cb2-483" aria-hidden="true" tabindex="-1"></a>**答え**：$\int_{\text{半球}}\cos\theta\,d\Omega=\pi$。半球に限る効果（$2\pi$）×$\cos\theta$ 射影の平均（$1/2$）＝$\pi$。$\cos\theta$ を落とすと $2\pi B_\nu$ となり射影を無視した誤り。</span>
+<span id="cb2-484"><a href="#cb2-484" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb2-485"><a href="#cb2-485" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb2-486"><a href="#cb2-486" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-487"><a href="#cb2-487" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-reading-spectra-further .unnumbered}</span></span>
-<span id="cb2-488"><a href="#cb2-488" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-489"><a href="#cb2-489" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rybicki &amp; Lightman, *Radiative Processes in Astrophysics* (Wiley, 1979) — 1.5 節「Blackbody Radiation」</span>
-<span id="cb2-490"><a href="#cb2-490" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>嶺重 慎 編『宇宙流体力学の基礎』（日本評論社, 2014）— 放射場の記述に関する章</span>
-<span id="cb2-491"><a href="#cb2-491" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Karttunen et al., *Fundamental Astronomy* (Springer, 6th ed., 2017) — 黒体放射と光度・色温度の基礎</span>
+<span id="cb2-487"><a href="#cb2-487" aria-hidden="true" tabindex="-1"></a>::: {#sol-2-4 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-2-4-label"}</span>
+<span id="cb2-488"><a href="#cb2-488" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb2-489"><a href="#cb2-489" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 2-4）**</span><span class="co">]</span>{#sol-2-4-label .offcanvas-title}</span>
+<span id="cb2-490"><a href="#cb2-490" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb2-491"><a href="#cb2-491" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-492"><a href="#cb2-492" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb2-493"><a href="#cb2-493" aria-hidden="true" tabindex="-1"></a>**(1)** $x=h\nu/kT$、$\nu=kTx/h$、$d\nu=(kT/h)dx$。前因子 $\dfrac{2h}{c^2}\nu^3=\dfrac{2h}{c^2}\left(\dfrac{kT}{h}\right)^3x^3$。$d\nu$ の $(kT/h)$ と合わせて</span>
+<span id="cb2-494"><a href="#cb2-494" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-495"><a href="#cb2-495" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb2-496"><a href="#cb2-496" aria-hidden="true" tabindex="-1"></a>F=\pi\cdot\frac{2h}{c^2}\left(\frac{kT}{h}\right)^4\int_0^\infty\frac{x^3}{e^x-1}dx=\frac{2\pi k^4}{c^2h^3}T^4\int_0^\infty\frac{x^3}{e^x-1}dx.</span>
+<span id="cb2-497"><a href="#cb2-497" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb2-498"><a href="#cb2-498" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-499"><a href="#cb2-499" aria-hidden="true" tabindex="-1"></a>**(2)** 積分 $=\pi^4/15$ を代入：</span>
+<span id="cb2-500"><a href="#cb2-500" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-501"><a href="#cb2-501" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb2-502"><a href="#cb2-502" aria-hidden="true" tabindex="-1"></a>F=\frac{2\pi k^4}{c^2h^3}\frac{\pi^4}{15}T^4=\underbrace{\frac{2\pi^5k^4}{15c^2h^3}}_{\sigma}T^4.</span>
+<span id="cb2-503"><a href="#cb2-503" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb2-504"><a href="#cb2-504" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-505"><a href="#cb2-505" aria-hidden="true" tabindex="-1"></a>数値（SI）：分子 $2\pi^5k^4=2\times306.0\times(1.381\times10^{-23})^4=612.0\times3.64\times10^{-92}=2.23\times10^{-89}$。分母 $15c^2h^3=15\times(3.00\times10^8)^2\times(6.626\times10^{-34})^3=15\times9.00\times10^{16}\times2.91\times10^{-100}=3.93\times10^{-82}$。よって $\sigma\approx5.67\times10^{-8}$ W m$^{-2}$K$^{-4}$。✓</span>
+<span id="cb2-506"><a href="#cb2-506" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-507"><a href="#cb2-507" aria-hidden="true" tabindex="-1"></a>**(3)** $\dfrac{ac}{4}=\dfrac{1}{4}\cdot\dfrac{8\pi^5k^4}{15c^3h^3}\cdot c=\dfrac{2\pi^5k^4}{15c^2h^3}=\sigma$。確かに $\sigma=ac/4$。エネルギー密度 $u=aT^4$ と射出フラックス $F=\sigma T^4$ が $\sigma=ac/4$ で結ばれる（等方場 $u=4\pi B/c$、$F=\pi B$ から $F=(c/4)u$）。</span>
+<span id="cb2-508"><a href="#cb2-508" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-509"><a href="#cb2-509" aria-hidden="true" tabindex="-1"></a>**答え**：$\sigma=\dfrac{2\pi^5k^4}{15c^2h^3}\approx5.67\times10^{-8}$ W m$^{-2}$K$^{-4}$。放射定数とは $\sigma=ac/4$。</span>
+<span id="cb2-510"><a href="#cb2-510" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-511"><a href="#cb2-511" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-512"><a href="#cb2-512" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-513"><a href="#cb2-513" aria-hidden="true" tabindex="-1"></a>::: {#sol-2-5 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-2-5-label"}</span>
+<span id="cb2-514"><a href="#cb2-514" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb2-515"><a href="#cb2-515" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 2-5）**</span><span class="co">]</span>{#sol-2-5-label .offcanvas-title}</span>
+<span id="cb2-516"><a href="#cb2-516" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb2-517"><a href="#cb2-517" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-518"><a href="#cb2-518" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb2-519"><a href="#cb2-519" aria-hidden="true" tabindex="-1"></a>**(1)** $T=b/\lambda_{\max}=2.898\times10^{-3}/5.00\times10^{-7}=5.80\times10^3$ K。（有効温度 $\simeq5800$ K）</span>
+<span id="cb2-520"><a href="#cb2-520" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-521"><a href="#cb2-521" aria-hidden="true" tabindex="-1"></a>**(2)** $L=4\pi d^2 f=4\pi(1.496\times10^{11})^2\times1.36\times10^3$。$d^2=2.238\times10^{22}$、$4\pi d^2=2.812\times10^{23}$、$\times f=3.82\times10^{26}$ W。すなわち $L_\odot\simeq3.8\times10^{26}$ W（既知 $3.83\times10^{26}$ W と一致）。</span>
+<span id="cb2-522"><a href="#cb2-522" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-523"><a href="#cb2-523" aria-hidden="true" tabindex="-1"></a>**(3)** $\sigma T^4=5.67\times10^{-8}\times(5800)^4=5.67\times10^{-8}\times1.13\times10^{15}=6.41\times10^7$ W m$^{-2}$。</span>
+<span id="cb2-524"><a href="#cb2-524" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-525"><a href="#cb2-525" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb2-526"><a href="#cb2-526" aria-hidden="true" tabindex="-1"></a>R=\sqrt{\frac{L}{4\pi\sigma T^4}}=\sqrt{\frac{3.82\times10^{26}}{4\pi\times6.41\times10^7}}=\sqrt{\frac{3.82\times10^{26}}{8.05\times10^8}}=\sqrt{4.74\times10^{17}}\approx6.9\times10^8\ \text{m}.</span>
+<span id="cb2-527"><a href="#cb2-527" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb2-528"><a href="#cb2-528" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-529"><a href="#cb2-529" aria-hidden="true" tabindex="-1"></a>既知値 $6.96\times10^8$ m とよく一致。観測量（ピーク波長・フラックス・距離）だけから太陽の物理量がプランク分布を介して再現できる。</span>
+<span id="cb2-530"><a href="#cb2-530" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-531"><a href="#cb2-531" aria-hidden="true" tabindex="-1"></a>**答え**：$T\simeq5800$ K、$L_\odot\simeq3.8\times10^{26}$ W、$R_\odot\simeq6.9\times10^8$ m。いずれも実測とよく一致。</span>
+<span id="cb2-532"><a href="#cb2-532" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-533"><a href="#cb2-533" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-534"><a href="#cb2-534" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-535"><a href="#cb2-535" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-reading-spectra-further .unnumbered}</span></span>
+<span id="cb2-536"><a href="#cb2-536" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-537"><a href="#cb2-537" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rybicki &amp; Lightman, *Radiative Processes in Astrophysics* (Wiley, 1979) — 1.5 節「Blackbody Radiation」</span>
+<span id="cb2-538"><a href="#cb2-538" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>嶺重 慎 編『宇宙流体力学の基礎』（日本評論社, 2014）— 放射場の記述に関する章</span>
+<span id="cb2-539"><a href="#cb2-539" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Karttunen et al., *Fundamental Astronomy* (Springer, 6th ed., 2017) — 黒体放射と光度・色温度の基礎</span>
 </code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

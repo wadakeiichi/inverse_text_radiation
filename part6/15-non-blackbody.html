@@ -511,12 +511,10 @@ window.Quarto = {
   <li><a href="#sec-non-blackbody-exercises" id="toc-sec-non-blackbody-exercises" class="nav-link" data-scroll-target="#sec-non-blackbody-exercises">演習問題</a>
   <ul class="collapse">
   <li><a href="#ex-15-1" id="toc-ex-15-1" class="nav-link" data-scroll-target="#ex-15-1">問題 15-1　灰色大気の温度構造と「見える深さ」</a></li>
-  </ul></li>
-  <li><a href="#模範解答問題-15-1" id="toc-模範解答問題-15-1" class="nav-link" data-scroll-target="#模範解答問題-15-1">模範解答（問題 15-1）</a></li>
   <li><a href="#ex-15-2" id="toc-ex-15-2" class="nav-link" data-scroll-target="#ex-15-2">問題 15-2　修正黒体のべき ― なぜ β は Rayleigh-Jeans 側でしか見えないか</a></li>
-  <li><a href="#模範解答問題-15-2" id="toc-模範解答問題-15-2" class="nav-link" data-scroll-target="#模範解答問題-15-2">模範解答（問題 15-2）</a></li>
   <li><a href="#ex-15-3" id="toc-ex-15-3" class="nav-link" data-scroll-target="#ex-15-3">問題 15-3　散乱を含むソース関数と偏光</a></li>
-  <li><a href="#模範解答問題-15-3" id="toc-模範解答問題-15-3" class="nav-link" data-scroll-target="#模範解答問題-15-3">模範解答（問題 15-3）</a></li>
+  </ul></li>
+  <li><a href="#sec-non-blackbody-solutions" id="toc-sec-non-blackbody-solutions" class="nav-link" data-scroll-target="#sec-non-blackbody-solutions">解答例</a></li>
   <li><a href="#sec-non-blackbody-further" id="toc-sec-non-blackbody-further" class="nav-link" data-scroll-target="#sec-non-blackbody-further">さらに学ぶための参考文献</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/edit/main/part6/15-non-blackbody.qmd" class="toc-action"><i class="bi bi-github"></i>編集</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/blob/main/part6/15-non-blackbody.qmd" class="toc-action"><i class="bi empty"></i>ソースコード</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/issues/new" class="toc-action"><i class="bi empty"></i>問題を報告</a></li></ul></div></nav>
@@ -937,7 +935,7 @@ S_\nu = \frac{\kappa_\nu^\text{abs} B_\nu(T) + \sigma_\nu \langle J_\nu \rangle}
 </section>
 <section id="sec-non-blackbody-exercises" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-non-blackbody-exercises">演習問題</h2>
-<p><span class="tag">[導出補完]</span> <strong>模範解答</strong> は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</p>
+<p><span class="tag">[導出補完]</span> <strong>解答例</strong> は章末「解答例」にまとめてある（オンライン版では各問のボタンから開く）。まず自力で解いてから開くこと。</p>
 <section id="ex-15-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ex-15-1">問題 15-1　灰色大気の温度構造と「見える深さ」</h3>
 <p>[★ 難易度：☆☆ ] <span class="tag">[導出補完]</span></p>
@@ -950,14 +948,7 @@ S_\nu = \frac{\kappa_\nu^\text{abs} B_\nu(T) + \sigma_\nu \langle J_\nu \rangle}
 </ol></li>
 </ol>
 <p><strong>関連</strong>：<a href="#sec-non-blackbody-grey">§15.2 灰色大気</a>、<a href="#sec-non-blackbody-frequency-opacity">§15.3 Eddington-Barbier</a> ／ <span class="math inline">\tau\sim1</span> と光球は<a href="../part2/05-radiative-transfer.html#ex-5-4">第II部 演習 5-4</a>、有効温度は<a href="../part6/17-stars-planets-dust.html#sec-stars-effective-temperature">§17.1</a>。</p>
-</section>
-</section>
-<section id="模範解答問題-15-1" class="level2 callout-derive" data-collapse="true">
-<h2 class="anchored" data-anchor-id="模範解答問題-15-1">模範解答（問題 15-1）</h2>
-<p><strong>(1)</strong> <span class="math inline">\tau=0</span>：<span class="math inline">T^4(0)=\dfrac34 T_\mathrm{eff}^4\cdot\dfrac23=\dfrac12 T_\mathrm{eff}^4</span>。よって <span class="math inline">T(0)=(1/2)^{1/4}T_\mathrm{eff}=0.841\,T_\mathrm{eff}</span>。表面は有効温度より約16%低い。</p>
-<p><strong>(2)</strong> <span class="math inline">T^4(\tau)=T_\mathrm{eff}^4</span> とおく：<span class="math inline">\dfrac34(\tau+\dfrac23)=1\Rightarrow\tau+\dfrac23=\dfrac43\Rightarrow\tau=\dfrac23</span>。</p>
-<p><strong>(3)</strong> 射出フラックスの Eddington-Barbier 近似 <span class="math inline">F_\nu\approx\pi S_\nu(\tau_\nu=2/3)</span> は「<span class="math inline">\tau=2/3</span> 層のソース関数が観測フラックスを代表する」。灰色大気ではちょうどこの層で <span class="math inline">T=T_\mathrm{eff}</span> なので、LTE（<span class="math inline">S_\nu=B_\nu</span>）の下で観測される連続光は <span class="math inline">B_\nu(T_\mathrm{eff})</span> に近い。観測スペクトルは「<span class="math inline">\tau\simeq2/3</span> の層」を映している。</p>
-<p><strong>答え</strong>：<span class="math inline">T(0)=(1/2)^{1/4}T_\mathrm{eff}\simeq0.84T_\mathrm{eff}</span>、<span class="math inline">T=T_\mathrm{eff}</span> は <span class="math inline">\tau=2/3</span>。これが Eddington-Barbier の見える深さ。</p>
+<p><a href="#sol-15-1" class="btn btn-outline-secondary btn-sm" data-bs-toggle="offcanvas" role="button">解答例を見る（問題 15-1）</a></p>
 </section>
 <section id="ex-15-2" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ex-15-2">問題 15-2　修正黒体のべき ― なぜ β は Rayleigh-Jeans 側でしか見えないか</h3>
@@ -969,13 +960,7 @@ S_\nu = \frac{\kappa_\nu^\text{abs} B_\nu(T) + \sigma_\nu \langle J_\nu \rangle}
 <li>「<span class="math inline">\beta</span> は Rayleigh-Jeans 側でのみ見える」という非対称性が、観測でダストの <span class="math inline">\beta</span> を決めるとき長波長（サブミリ・ミリ）観測を必要とする理由を述べよ。</li>
 </ol>
 <p><strong>関連</strong>：<a href="#sec-non-blackbody-modified">§15.4 修正黒体</a> ／ 両極限は<a href="../part1/02-reading-spectra.html#sec-reading-spectra-limits">§2.5</a>（<a href="../part4/10-planck-quantum.html#ex-10-2">第IV部 演習 10-2</a>）、ダスト解析は<a href="../part6/17-stars-planets-dust.html#sec-dust-modified-blackbody">§17.3</a>（<a href="../part6/17-stars-planets-dust.html#ex-17-3">演習 17-3</a>）。</p>
-</section>
-<section id="模範解答問題-15-2" class="level2 callout-derive" data-collapse="true">
-<h2 class="anchored" data-anchor-id="模範解答問題-15-2">模範解答（問題 15-2）</h2>
-<p><strong>(1)</strong> RJ 側 <span class="math inline">B_\nu\propto\nu^2</span>。<span class="math inline">I_\nu=Q_\nu B_\nu\propto\nu^\beta\cdot\nu^2=\nu^{2+\beta}</span>。<span class="math inline">\beta=2</span> なら <span class="math inline">I_\nu\propto\nu^4</span>、<span class="math inline">\beta=1</span> なら <span class="math inline">\nu^3</span>。低振動数側の勾配が黒体（<span class="math inline">\nu^2</span>）より急になる。</p>
-<p><strong>(2)</strong> Wien 側 <span class="math inline">B_\nu\propto\nu^3e^{-h\nu/kT}</span> で指数減衰が支配的。<span class="math inline">Q_\nu\propto\nu^\beta</span> の冪は指数関数に比べて緩やかで、スペクトルの落ち方をほとんど変えない。したがって Wien 側の形からは <span class="math inline">\beta</span> をほぼ読めない。</p>
-<p><strong>(3)</strong> <span class="math inline">\beta</span> は RJ 側の勾配 <span class="math inline">\nu^{2+\beta}</span> にしか現れない。ダスト（<span class="math inline">T\sim10</span>〜<span class="math inline">30</span> K）の RJ 側は遠赤外〜サブミリ・ミリ波に来る。よって <span class="math inline">\beta</span> を測るには、ピークより長波長側のサブミリ・ミリ（Herschel/ALMA）観測点が必要。Wien 側（近赤外）だけでは <span class="math inline">\beta</span> が決まらない。</p>
-<p><strong>答え</strong>：RJ 側 <span class="math inline">I_\nu\propto\nu^{2+\beta}</span>（<span class="math inline">\beta=2</span> で <span class="math inline">\nu^4</span>）。Wien 側は指数減衰が支配で <span class="math inline">\beta</span> が見えない。ゆえに <span class="math inline">\beta</span> 決定には長波長観測が必須。</p>
+<p><a href="#sol-15-2" class="btn btn-outline-secondary btn-sm" data-bs-toggle="offcanvas" role="button">解答例を見る（問題 15-2）</a></p>
 </section>
 <section id="ex-15-3" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ex-15-3">問題 15-3　散乱を含むソース関数と偏光</h3>
@@ -987,13 +972,49 @@ S_\nu = \frac{\kappa_\nu^\text{abs} B_\nu(T) + \sigma_\nu \langle J_\nu \rangle}
 <li>熱平衡放射は無偏光なのに、散乱が偏光を生む。観測される偏光が「散乱が無視できない」ことの直接の証拠になる理由を述べ、例を1つ挙げよ。</li>
 </ol>
 <p><strong>関連</strong>：<a href="#sec-non-blackbody-scattering">§15.5 散乱の効果</a> ／ ソース関数の基礎は<a href="../part2/05-radiative-transfer.html#sec-radiative-transfer-source">§5.4</a>（<a href="../part2/05-radiative-transfer.html#sec-radiative-transfer-exercises">第II部 演習</a>）、偏光は<a href="../part5/13-electromagnetic-waves.html#ex-13-4">第V部 演習 13-4</a>。</p>
+<p><a href="#sol-15-3" class="btn btn-outline-secondary btn-sm" data-bs-toggle="offcanvas" role="button">解答例を見る（問題 15-3）</a></p>
 </section>
-<section id="模範解答問題-15-3" class="level2 callout-derive" data-collapse="true">
-<h2 class="anchored" data-anchor-id="模範解答問題-15-3">模範解答（問題 15-3）</h2>
+</section>
+<section id="sec-non-blackbody-solutions" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sec-non-blackbody-solutions">解答例</h2>
+<p>各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。</p>
+<p><a href="#sol-15-1" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 15-1</a> <a href="#sol-15-2" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 15-2</a> <a href="#sol-15-3" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 15-3</a></p>
+<div id="sol-15-1" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-15-1-label">
+<p><span class="proof-title"><em>解答 18.1</em>. </span></p>
+<div class="offcanvas-header">
+<p><span id="sol-15-1-label" class="offcanvas-title"><strong>解答例（問題 15-1）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
+</div>
+<div class="offcanvas-body">
+<p><strong>(1)</strong> <span class="math inline">\tau=0</span>：<span class="math inline">T^4(0)=\dfrac34 T_\mathrm{eff}^4\cdot\dfrac23=\dfrac12 T_\mathrm{eff}^4</span>。よって <span class="math inline">T(0)=(1/2)^{1/4}T_\mathrm{eff}=0.841\,T_\mathrm{eff}</span>。表面は有効温度より約16%低い。</p>
+<p><strong>(2)</strong> <span class="math inline">T^4(\tau)=T_\mathrm{eff}^4</span> とおく：<span class="math inline">\dfrac34(\tau+\dfrac23)=1\Rightarrow\tau+\dfrac23=\dfrac43\Rightarrow\tau=\dfrac23</span>。</p>
+<p><strong>(3)</strong> 射出フラックスの Eddington-Barbier 近似 <span class="math inline">F_\nu\approx\pi S_\nu(\tau_\nu=2/3)</span> は「<span class="math inline">\tau=2/3</span> 層のソース関数が観測フラックスを代表する」。灰色大気ではちょうどこの層で <span class="math inline">T=T_\mathrm{eff}</span> なので、LTE（<span class="math inline">S_\nu=B_\nu</span>）の下で観測される連続光は <span class="math inline">B_\nu(T_\mathrm{eff})</span> に近い。観測スペクトルは「<span class="math inline">\tau\simeq2/3</span> の層」を映している。</p>
+<p><strong>答え</strong>：<span class="math inline">T(0)=(1/2)^{1/4}T_\mathrm{eff}\simeq0.84T_\mathrm{eff}</span>、<span class="math inline">T=T_\mathrm{eff}</span> は <span class="math inline">\tau=2/3</span>。これが Eddington-Barbier の見える深さ。</p>
+</div>
+</div>
+<div id="sol-15-2" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-15-2-label">
+<p><span class="proof-title"><em>解答 18.2</em>. </span></p>
+<div class="offcanvas-header">
+<p><span id="sol-15-2-label" class="offcanvas-title"><strong>解答例（問題 15-2）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
+</div>
+<div class="offcanvas-body">
+<p><strong>(1)</strong> RJ 側 <span class="math inline">B_\nu\propto\nu^2</span>。<span class="math inline">I_\nu=Q_\nu B_\nu\propto\nu^\beta\cdot\nu^2=\nu^{2+\beta}</span>。<span class="math inline">\beta=2</span> なら <span class="math inline">I_\nu\propto\nu^4</span>、<span class="math inline">\beta=1</span> なら <span class="math inline">\nu^3</span>。低振動数側の勾配が黒体（<span class="math inline">\nu^2</span>）より急になる。</p>
+<p><strong>(2)</strong> Wien 側 <span class="math inline">B_\nu\propto\nu^3e^{-h\nu/kT}</span> で指数減衰が支配的。<span class="math inline">Q_\nu\propto\nu^\beta</span> の冪は指数関数に比べて緩やかで、スペクトルの落ち方をほとんど変えない。したがって Wien 側の形からは <span class="math inline">\beta</span> をほぼ読めない。</p>
+<p><strong>(3)</strong> <span class="math inline">\beta</span> は RJ 側の勾配 <span class="math inline">\nu^{2+\beta}</span> にしか現れない。ダスト（<span class="math inline">T\sim10</span>〜<span class="math inline">30</span> K）の RJ 側は遠赤外〜サブミリ・ミリ波に来る。よって <span class="math inline">\beta</span> を測るには、ピークより長波長側のサブミリ・ミリ（Herschel/ALMA）観測点が必要。Wien 側（近赤外）だけでは <span class="math inline">\beta</span> が決まらない。</p>
+<p><strong>答え</strong>：RJ 側 <span class="math inline">I_\nu\propto\nu^{2+\beta}</span>（<span class="math inline">\beta=2</span> で <span class="math inline">\nu^4</span>）。Wien 側は指数減衰が支配で <span class="math inline">\beta</span> が見えない。ゆえに <span class="math inline">\beta</span> 決定には長波長観測が必須。</p>
+</div>
+</div>
+<div id="sol-15-3" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-15-3-label">
+<p><span class="proof-title"><em>解答 18.3</em>. </span></p>
+<div class="offcanvas-header">
+<p><span id="sol-15-3-label" class="offcanvas-title"><strong>解答例（問題 15-3）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
+</div>
+<div class="offcanvas-body">
 <p><strong>(1)</strong> 分子分母を <span class="math inline">\kappa^\mathrm{abs}+\sigma</span> で割る：<span class="math inline">S_\nu=\dfrac{\kappa^\mathrm{abs}}{\kappa^\mathrm{abs}+\sigma}B_\nu+\dfrac{\sigma}{\kappa^\mathrm{abs}+\sigma}\langle J_\nu\rangle=(1-\tilde\omega_\nu)B_\nu+\tilde\omega_\nu\langle J_\nu\rangle</span>。</p>
 <p><strong>(2)</strong> 純吸収 <span class="math inline">\tilde\omega=0</span>：<span class="math inline">S_\nu=B_\nu(T)</span>（LTE、局所プランク）。純散乱 <span class="math inline">\tilde\omega=1</span>：<span class="math inline">S_\nu=\langle J_\nu\rangle</span>（平均強度そのもの）。後者は局所の温度 <span class="math inline">T</span> ではなく、媒質全体から散乱されてきた放射場 <span class="math inline">\langle J_\nu\rangle</span> で決まるので、局所プランク関数 <span class="math inline">B_\nu(T_\mathrm{local})</span> から外れる（非局所）。</p>
 <p><strong>(3)</strong> 熱平衡放射は両偏光が等確率で混ざり無偏光。散乱（特に Thomson・Rayleigh 散乱）は散乱角に依存して特定偏光を優先的に散乱し、偏光を生む。よって観測される偏光は、その光が散乱を経たこと＝散乱が無視できないことの直接証拠。例：CMB の偏光（再結合期の Thomson 散乱）、太陽コロナの偏光、惑星間ダストの散乱光。</p>
 <p><strong>答え</strong>：<span class="math inline">S_\nu=(1-\tilde\omega)B_\nu+\tilde\omega\langle J_\nu\rangle</span>。純散乱で <span class="math inline">S_\nu=\langle J_\nu\rangle</span>（非局所）。偏光の存在＝散乱卓越の証拠（CMB 偏光など）。</p>
+</div>
+</div>
 </section>
 <section id="sec-non-blackbody-further" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-non-blackbody-further">さらに学ぶための参考文献</h2>
@@ -1747,7 +1768,7 @@ S_\nu = \frac{\kappa_\nu^\text{abs} B_\nu(T) + \sigma_\nu \langle J_\nu \rangle}
 <span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-non-blackbody-exercises .unnumbered}</span></span>
 <span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **解答例** は章末「解答例」にまとめてある（オンライン版では各問のボタンから開く）。まず自力で解いてから開くこと。</span>
 <span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 15-1　灰色大気の温度構造と「見える深さ」 {#ex-15-1 .unnumbered}</span></span>
 <span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a></span>
@@ -1761,72 +1782,104 @@ S_\nu = \frac{\kappa_\nu^\text{abs} B_\nu(T) + \sigma_\nu \langle J_\nu \rangle}
 <span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§15.2 灰色大気</span><span class="co">](#sec-non-blackbody-grey)</span>、<span class="co">[</span><span class="ot">§15.3 Eddington-Barbier</span><span class="co">](#sec-non-blackbody-frequency-opacity)</span> ／ $\tau\sim1$ と光球は<span class="co">[</span><span class="ot">第II部 演習 5-4</span><span class="co">](../part2/05-radiative-transfer.qmd#ex-5-4)</span>、有効温度は<span class="co">[</span><span class="ot">§17.1</span><span class="co">](../part6/17-stars-planets-dust.qmd#sec-stars-effective-temperature)</span>。</span>
 <span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 15-1）</span></span>
-<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a>**(1)** $\tau=0$：$T^4(0)=\dfrac34 T_\mathrm{eff}^4\cdot\dfrac23=\dfrac12 T_\mathrm{eff}^4$。よって $T(0)=(1/2)^{1/4}T_\mathrm{eff}=0.841\,T_\mathrm{eff}$。表面は有効温度より約16%低い。</span>
-<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a>**(2)** $T^4(\tau)=T_\mathrm{eff}^4$ とおく：$\dfrac34(\tau+\dfrac23)=1\Rightarrow\tau+\dfrac23=\dfrac43\Rightarrow\tau=\dfrac23$。</span>
-<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a>**(3)** 射出フラックスの Eddington-Barbier 近似 $F_\nu\approx\pi S_\nu(\tau_\nu=2/3)$ は「$\tau=2/3$ 層のソース関数が観測フラックスを代表する」。灰色大気ではちょうどこの層で $T=T_\mathrm{eff}$ なので、LTE（$S_\nu=B_\nu$）の下で観測される連続光は $B_\nu(T_\mathrm{eff})$ に近い。観測スペクトルは「$\tau\simeq2/3$ の層」を映している。</span>
-<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>**答え**：$T(0)=(1/2)^{1/4}T_\mathrm{eff}\simeq0.84T_\mathrm{eff}$、$T=T_\mathrm{eff}$ は $\tau=2/3$。これが Eddington-Barbier の見える深さ。</span>
-<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 15-2　修正黒体のべき ― なぜ β は Rayleigh-Jeans 側でしか見えないか {#ex-15-2 .unnumbered}</span></span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 15-1）</span><span class="co">](#sol-15-1)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 15-2　修正黒体のべき ― なぜ β は Rayleigh-Jeans 側でしか見えないか {#ex-15-2 .unnumbered}</span></span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a>§15.4 の修正黒体 $I_\nu=Q_\nu B_\nu(T)$、$Q_\nu\propto\nu^\beta$（長波長極限）。</span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Rayleigh-Jeans 側（$h\nu\ll kT$、$B_\nu\propto\nu^2$）で、$\beta=2$ のとき観測される $I_\nu$ は $\nu$ の何乗に比例するか。$\beta=1$ なら？</span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Wien 側（$h\nu\gg kT$）では $Q_\nu\propto\nu^\beta$ の冪は指数減衰に対してほぼ効かないことを説明せよ。</span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>「$\beta$ は Rayleigh-Jeans 側でのみ見える」という非対称性が、観測でダストの $\beta$ を決めるとき長波長（サブミリ・ミリ）観測を必要とする理由を述べよ。</span>
 <span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§15.4 修正黒体</span><span class="co">](#sec-non-blackbody-modified)</span> ／ 両極限は<span class="co">[</span><span class="ot">§2.5</span><span class="co">](../part1/02-reading-spectra.qmd#sec-reading-spectra-limits)</span>（<span class="co">[</span><span class="ot">第IV部 演習 10-2</span><span class="co">](../part4/10-planck-quantum.qmd#ex-10-2)</span>）、ダスト解析は<span class="co">[</span><span class="ot">§17.3</span><span class="co">](../part6/17-stars-planets-dust.qmd#sec-dust-modified-blackbody)</span>（<span class="co">[</span><span class="ot">演習 17-3</span><span class="co">](../part6/17-stars-planets-dust.qmd#ex-17-3)</span>）。</span>
 <span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a>§15.4 の修正黒体 $I_\nu=Q_\nu B_\nu(T)$、$Q_\nu\propto\nu^\beta$（長波長極限）。</span>
-<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Rayleigh-Jeans 側（$h\nu\ll kT$、$B_\nu\propto\nu^2$）で、$\beta=2$ のとき観測される $I_\nu$ は $\nu$ の何乗に比例するか。$\beta=1$ なら？</span>
-<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Wien 側（$h\nu\gg kT$）では $Q_\nu\propto\nu^\beta$ の冪は指数減衰に対してほぼ効かないことを説明せよ。</span>
-<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>「$\beta$ は Rayleigh-Jeans 側でのみ見える」という非対称性が、観測でダストの $\beta$ を決めるとき長波長（サブミリ・ミリ）観測を必要とする理由を述べよ。</span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 15-2）</span><span class="co">](#sol-15-2)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 15-3　散乱を含むソース関数と偏光 {#ex-15-3 .unnumbered}</span></span>
 <span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§15.4 修正黒体</span><span class="co">](#sec-non-blackbody-modified)</span> ／ 両極限は<span class="co">[</span><span class="ot">§2.5</span><span class="co">](../part1/02-reading-spectra.qmd#sec-reading-spectra-limits)</span>（<span class="co">[</span><span class="ot">第IV部 演習 10-2</span><span class="co">](../part4/10-planck-quantum.qmd#ex-10-2)</span>）、ダスト解析は<span class="co">[</span><span class="ot">§17.3</span><span class="co">](../part6/17-stars-planets-dust.qmd#sec-dust-modified-blackbody)</span>（<span class="co">[</span><span class="ot">演習 17-3</span><span class="co">](../part6/17-stars-planets-dust.qmd#ex-17-3)</span>）。</span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
 <span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 15-2）</span></span>
-<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a>**(1)** RJ 側 $B_\nu\propto\nu^2$。$I_\nu=Q_\nu B_\nu\propto\nu^\beta\cdot\nu^2=\nu^{2+\beta}$。$\beta=2$ なら $I_\nu\propto\nu^4$、$\beta=1$ なら $\nu^3$。低振動数側の勾配が黒体（$\nu^2$）より急になる。</span>
-<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a>**(2)** Wien 側 $B_\nu\propto\nu^3e^{-h\nu/kT}$ で指数減衰が支配的。$Q_\nu\propto\nu^\beta$ の冪は指数関数に比べて緩やかで、スペクトルの落ち方をほとんど変えない。したがって Wien 側の形からは $\beta$ をほぼ読めない。</span>
-<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a>**(3)** $\beta$ は RJ 側の勾配 $\nu^{2+\beta}$ にしか現れない。ダスト（$T\sim10$〜$30$ K）の RJ 側は遠赤外〜サブミリ・ミリ波に来る。よって $\beta$ を測るには、ピークより長波長側のサブミリ・ミリ（Herschel/ALMA）観測点が必要。Wien 側（近赤外）だけでは $\beta$ が決まらない。</span>
-<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a>**答え**：RJ 側 $I_\nu\propto\nu^{2+\beta}$（$\beta=2$ で $\nu^4$）。Wien 側は指数減衰が支配で $\beta$ が見えない。ゆえに $\beta$ 決定には長波長観測が必須。</span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a>§15.5 のソース関数 $S_\nu=\dfrac{\kappa_\nu^\mathrm{abs}B_\nu(T)+\sigma_\nu\langle J_\nu\rangle}{\kappa_\nu^\mathrm{abs}+\sigma_\nu}$ を読み解く。単一散乱アルベド $\tilde\omega_\nu\equiv\dfrac{\sigma_\nu}{\kappa_\nu^\mathrm{abs}+\sigma_\nu}$。</span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$S_\nu$ を $\tilde\omega_\nu$ で書き直し、$S_\nu=(1-\tilde\omega_\nu)B_\nu+\tilde\omega_\nu\langle J_\nu\rangle$ を示せ。</span>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>純吸収（$\tilde\omega_\nu=0$）と純散乱（$\tilde\omega_\nu=1$）の極限で $S_\nu$ がそれぞれ何になるか述べ、後者で局所プランク関数から外れる理由を述べよ。</span>
+<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>熱平衡放射は無偏光なのに、散乱が偏光を生む。観測される偏光が「散乱が無視できない」ことの直接の証拠になる理由を述べ、例を1つ挙げよ。</span>
+<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§15.5 散乱の効果</span><span class="co">](#sec-non-blackbody-scattering)</span> ／ ソース関数の基礎は<span class="co">[</span><span class="ot">§5.4</span><span class="co">](../part2/05-radiative-transfer.qmd#sec-radiative-transfer-source)</span>（<span class="co">[</span><span class="ot">第II部 演習</span><span class="co">](../part2/05-radiative-transfer.qmd#sec-radiative-transfer-exercises)</span>）、偏光は<span class="co">[</span><span class="ot">第V部 演習 13-4</span><span class="co">](../part5/13-electromagnetic-waves.qmd#ex-13-4)</span>。</span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 15-3）</span><span class="co">](#sol-15-3)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
 <span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 15-3　散乱を含むソース関数と偏光 {#ex-15-3 .unnumbered}</span></span>
+<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a><span class="fu">## 解答例 {#sec-non-blackbody-solutions .unnumbered}</span></span>
 <span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a>各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。</span>
 <span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a>§15.5 のソース関数 $S_\nu=\dfrac{\kappa_\nu^\mathrm{abs}B_\nu(T)+\sigma_\nu\langle J_\nu\rangle}{\kappa_\nu^\mathrm{abs}+\sigma_\nu}$ を読み解く。単一散乱アルベド $\tilde\omega_\nu\equiv\dfrac{\sigma_\nu}{\kappa_\nu^\mathrm{abs}+\sigma_\nu}$。</span>
-<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$S_\nu$ を $\tilde\omega_\nu$ で書き直し、$S_\nu=(1-\tilde\omega_\nu)B_\nu+\tilde\omega_\nu\langle J_\nu\rangle$ を示せ。</span>
-<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>純吸収（$\tilde\omega_\nu=0$）と純散乱（$\tilde\omega_\nu=1$）の極限で $S_\nu$ がそれぞれ何になるか述べ、後者で局所プランク関数から外れる理由を述べよ。</span>
-<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>熱平衡放射は無偏光なのに、散乱が偏光を生む。観測される偏光が「散乱が無視できない」ことの直接の証拠になる理由を述べ、例を1つ挙げよ。</span>
-<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§15.5 散乱の効果</span><span class="co">](#sec-non-blackbody-scattering)</span> ／ ソース関数の基礎は<span class="co">[</span><span class="ot">§5.4</span><span class="co">](../part2/05-radiative-transfer.qmd#sec-radiative-transfer-source)</span>（<span class="co">[</span><span class="ot">第II部 演習</span><span class="co">](../part2/05-radiative-transfer.qmd#sec-radiative-transfer-exercises)</span>）、偏光は<span class="co">[</span><span class="ot">第V部 演習 13-4</span><span class="co">](../part5/13-electromagnetic-waves.qmd#ex-13-4)</span>。</span>
-<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 15-3）</span></span>
-<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a>**(1)** 分子分母を $\kappa^\mathrm{abs}+\sigma$ で割る：$S_\nu=\dfrac{\kappa^\mathrm{abs}}{\kappa^\mathrm{abs}+\sigma}B_\nu+\dfrac{\sigma}{\kappa^\mathrm{abs}+\sigma}\langle J_\nu\rangle=(1-\tilde\omega_\nu)B_\nu+\tilde\omega_\nu\langle J_\nu\rangle$。</span>
-<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a>**(2)** 純吸収 $\tilde\omega=0$：$S_\nu=B_\nu(T)$（LTE、局所プランク）。純散乱 $\tilde\omega=1$：$S_\nu=\langle J_\nu\rangle$（平均強度そのもの）。後者は局所の温度 $T$ ではなく、媒質全体から散乱されてきた放射場 $\langle J_\nu\rangle$ で決まるので、局所プランク関数 $B_\nu(T_\mathrm{local})$ から外れる（非局所）。</span>
-<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a>**(3)** 熱平衡放射は両偏光が等確率で混ざり無偏光。散乱（特に Thomson・Rayleigh 散乱）は散乱角に依存して特定偏光を優先的に散乱し、偏光を生む。よって観測される偏光は、その光が散乱を経たこと＝散乱が無視できないことの直接証拠。例：CMB の偏光（再結合期の Thomson 散乱）、太陽コロナの偏光、惑星間ダストの散乱光。</span>
-<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a>**答え**：$S_\nu=(1-\tilde\omega)B_\nu+\tilde\omega\langle J_\nu\rangle$。純散乱で $S_\nu=\langle J_\nu\rangle$（非局所）。偏光の存在＝散乱卓越の証拠（CMB 偏光など）。</span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">問題 15-1</span><span class="co">](#sol-15-1)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 15-2</span><span class="co">](#sol-15-2)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 15-3</span><span class="co">](#sol-15-3)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a>::: {#sol-15-1 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-15-1-label"}</span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 15-1）**</span><span class="co">]</span>{#sol-15-1-label .offcanvas-title}</span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>**(1)** $\tau=0$：$T^4(0)=\dfrac34 T_\mathrm{eff}^4\cdot\dfrac23=\dfrac12 T_\mathrm{eff}^4$。よって $T(0)=(1/2)^{1/4}T_\mathrm{eff}=0.841\,T_\mathrm{eff}$。表面は有効温度より約16%低い。</span>
+<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a>**(2)** $T^4(\tau)=T_\mathrm{eff}^4$ とおく：$\dfrac34(\tau+\dfrac23)=1\Rightarrow\tau+\dfrac23=\dfrac43\Rightarrow\tau=\dfrac23$。</span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>**(3)** 射出フラックスの Eddington-Barbier 近似 $F_\nu\approx\pi S_\nu(\tau_\nu=2/3)$ は「$\tau=2/3$ 層のソース関数が観測フラックスを代表する」。灰色大気ではちょうどこの層で $T=T_\mathrm{eff}$ なので、LTE（$S_\nu=B_\nu$）の下で観測される連続光は $B_\nu(T_\mathrm{eff})$ に近い。観測スペクトルは「$\tau\simeq2/3$ の層」を映している。</span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a>**答え**：$T(0)=(1/2)^{1/4}T_\mathrm{eff}\simeq0.84T_\mathrm{eff}$、$T=T_\mathrm{eff}$ は $\tau=2/3$。これが Eddington-Barbier の見える深さ。</span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-non-blackbody-further .unnumbered}</span></span>
-<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mihalas, *Stellar Atmospheres* (W.H. Freeman, 2nd ed., 1978) — 灰色大気・振動数依存不透明度の古典</span>
-<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Hubeny &amp; Mihalas, *Theory of Stellar Atmospheres* (Princeton, 2014) — 現代的な放射輸送と恒星大気</span>
-<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rybicki &amp; Lightman, *Radiative Processes in Astrophysics* (Wiley, 1979) — 修正黒体・散乱・非熱的放射の基礎</span>
-<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Draine, *Physics of the Interstellar and Intergalactic Medium* (Princeton, 2011) — ダストの放射と修正黒体</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a>::: {#sol-15-2 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-15-2-label"}</span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 15-2）**</span><span class="co">]</span>{#sol-15-2-label .offcanvas-title}</span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a>**(1)** RJ 側 $B_\nu\propto\nu^2$。$I_\nu=Q_\nu B_\nu\propto\nu^\beta\cdot\nu^2=\nu^{2+\beta}$。$\beta=2$ なら $I_\nu\propto\nu^4$、$\beta=1$ なら $\nu^3$。低振動数側の勾配が黒体（$\nu^2$）より急になる。</span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a>**(2)** Wien 側 $B_\nu\propto\nu^3e^{-h\nu/kT}$ で指数減衰が支配的。$Q_\nu\propto\nu^\beta$ の冪は指数関数に比べて緩やかで、スペクトルの落ち方をほとんど変えない。したがって Wien 側の形からは $\beta$ をほぼ読めない。</span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a>**(3)** $\beta$ は RJ 側の勾配 $\nu^{2+\beta}$ にしか現れない。ダスト（$T\sim10$〜$30$ K）の RJ 側は遠赤外〜サブミリ・ミリ波に来る。よって $\beta$ を測るには、ピークより長波長側のサブミリ・ミリ（Herschel/ALMA）観測点が必要。Wien 側（近赤外）だけでは $\beta$ が決まらない。</span>
+<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a>**答え**：RJ 側 $I_\nu\propto\nu^{2+\beta}$（$\beta=2$ で $\nu^4$）。Wien 側は指数減衰が支配で $\beta$ が見えない。ゆえに $\beta$ 決定には長波長観測が必須。</span>
+<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a>::: {#sol-15-3 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-15-3-label"}</span>
+<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 15-3）**</span><span class="co">]</span>{#sol-15-3-label .offcanvas-title}</span>
+<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a>**(1)** 分子分母を $\kappa^\mathrm{abs}+\sigma$ で割る：$S_\nu=\dfrac{\kappa^\mathrm{abs}}{\kappa^\mathrm{abs}+\sigma}B_\nu+\dfrac{\sigma}{\kappa^\mathrm{abs}+\sigma}\langle J_\nu\rangle=(1-\tilde\omega_\nu)B_\nu+\tilde\omega_\nu\langle J_\nu\rangle$。</span>
+<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a>**(2)** 純吸収 $\tilde\omega=0$：$S_\nu=B_\nu(T)$（LTE、局所プランク）。純散乱 $\tilde\omega=1$：$S_\nu=\langle J_\nu\rangle$（平均強度そのもの）。後者は局所の温度 $T$ ではなく、媒質全体から散乱されてきた放射場 $\langle J_\nu\rangle$ で決まるので、局所プランク関数 $B_\nu(T_\mathrm{local})$ から外れる（非局所）。</span>
+<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a>**(3)** 熱平衡放射は両偏光が等確率で混ざり無偏光。散乱（特に Thomson・Rayleigh 散乱）は散乱角に依存して特定偏光を優先的に散乱し、偏光を生む。よって観測される偏光は、その光が散乱を経たこと＝散乱が無視できないことの直接証拠。例：CMB の偏光（再結合期の Thomson 散乱）、太陽コロナの偏光、惑星間ダストの散乱光。</span>
+<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a>**答え**：$S_\nu=(1-\tilde\omega)B_\nu+\tilde\omega\langle J_\nu\rangle$。純散乱で $S_\nu=\langle J_\nu\rangle$（非局所）。偏光の存在＝散乱卓越の証拠（CMB 偏光など）。</span>
+<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-non-blackbody-further .unnumbered}</span></span>
+<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mihalas, *Stellar Atmospheres* (W.H. Freeman, 2nd ed., 1978) — 灰色大気・振動数依存不透明度の古典</span>
+<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Hubeny &amp; Mihalas, *Theory of Stellar Atmospheres* (Princeton, 2014) — 現代的な放射輸送と恒星大気</span>
+<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rybicki &amp; Lightman, *Radiative Processes in Astrophysics* (Wiley, 1979) — 修正黒体・散乱・非熱的放射の基礎</span>
+<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Draine, *Physics of the Interstellar and Intergalactic Medium* (Princeton, 2011) — ダストの放射と修正黒体</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

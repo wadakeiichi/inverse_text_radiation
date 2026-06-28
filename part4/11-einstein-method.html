@@ -509,14 +509,11 @@ window.Quarto = {
   <li><a href="#sec-einstein-method-exercises" id="toc-sec-einstein-method-exercises" class="nav-link" data-scroll-target="#sec-einstein-method-exercises">演習問題</a>
   <ul class="collapse">
   <li><a href="#ex-11-1" id="toc-ex-11-1" class="nav-link" data-scroll-target="#ex-11-1">問題 11-1　詳細釣り合いから Einstein 関係式</a></li>
-  </ul></li>
-  <li><a href="#模範解答問題-11-1" id="toc-模範解答問題-11-1" class="nav-link" data-scroll-target="#模範解答問題-11-1">模範解答（問題 11-1）</a></li>
   <li><a href="#ex-11-2" id="toc-ex-11-2" class="nav-link" data-scroll-target="#ex-11-2">問題 11-2　自発放出と誘導放出の比</a></li>
-  <li><a href="#模範解答問題-11-2" id="toc-模範解答問題-11-2" class="nav-link" data-scroll-target="#模範解答問題-11-2">模範解答（問題 11-2）</a></li>
   <li><a href="#ex-11-3" id="toc-ex-11-3" class="nav-link" data-scroll-target="#ex-11-3">問題 11-3　B 係数の規約変換（Jν 規約と uν 規約）</a></li>
-  <li><a href="#模範解答問題-11-3" id="toc-模範解答問題-11-3" class="nav-link" data-scroll-target="#模範解答問題-11-3">模範解答（問題 11-3）</a></li>
   <li><a href="#ex-11-4" id="toc-ex-11-4" class="nav-link" data-scroll-target="#ex-11-4">問題 11-4　Aul から励起寿命・自然幅・波長幅</a></li>
-  <li><a href="#模範解答問題-11-4" id="toc-模範解答問題-11-4" class="nav-link" data-scroll-target="#模範解答問題-11-4">模範解答（問題 11-4）</a></li>
+  </ul></li>
+  <li><a href="#sec-einstein-method-solutions" id="toc-sec-einstein-method-solutions" class="nav-link" data-scroll-target="#sec-einstein-method-solutions">解答例</a></li>
   <li><a href="#sec-einstein-method-further" id="toc-sec-einstein-method-further" class="nav-link" data-scroll-target="#sec-einstein-method-further">さらに学ぶための参考文献</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/edit/main/part4/11-einstein-method.qmd" class="toc-action"><i class="bi bi-github"></i>編集</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/blob/main/part4/11-einstein-method.qmd" class="toc-action"><i class="bi empty"></i>ソースコード</a></li><li><a href="https://github.com/wadakeiichi/inverse_text_radiation/issues/new" class="toc-action"><i class="bi empty"></i>問題を報告</a></li></ul></div></nav>
@@ -861,7 +858,7 @@ g_l B_{lu} = g_u B_{ul}
 </section>
 <section id="sec-einstein-method-exercises" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-einstein-method-exercises">演習問題</h2>
-<p><span class="tag">[導出補完]</span> <strong>模範解答</strong> は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</p>
+<p><span class="tag">[導出補完]</span> <strong>解答例</strong> は章末「解答例」にまとめてある（オンライン版では各問のボタンから開く）。まず自力で解いてから開くこと。</p>
 <section id="ex-11-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="ex-11-1">問題 11-1　詳細釣り合いから Einstein 関係式</h3>
 <p>[★ 難易度：☆☆ ] <span class="tag">[導出補完]</span></p>
@@ -875,10 +872,57 @@ n_l B_{lu}J_\nu=n_u(A_{ul}+B_{ul}J_\nu),\qquad \frac{n_u}{n_l}=\frac{g_u}{g_l}e^
 <li>なぜ「任意の <span class="math inline">T</span> で」一致させることが2式を同時に要求するのか説明せよ。</li>
 </ol>
 <p><strong>関連</strong>：<a href="#sec-einstein-method-detailed-balance">§11.3 詳細釣り合い</a>／詳細釣り合いの原理は<a href="../part3/06-thermal-equilibrium.html">第6章 §6.6</a>、同じ占有因子の別ルートは<a href="../part3/08-photon-statistics.html">第8章</a>と<a href="../part4/10-planck-quantum.html#ex-10-1">演習 10-1</a>。</p>
+<p><a href="#sol-11-1" class="btn btn-outline-secondary btn-sm" data-bs-toggle="offcanvas" role="button">解答例を見る（問題 11-1）</a></p>
+</section>
+<section id="ex-11-2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-11-2">問題 11-2　自発放出と誘導放出の比</h3>
+<p>[★ 難易度：☆ ] <span class="tag">[理解を深める]</span></p>
+<p>熱放射場の中で、1個の上準位原子が起こす自発放出率と誘導放出率の比を求め、どの波長帯でどちらが優勢かを論じる。</p>
+<ol type="1">
+<li>比 <span class="math inline">R=A_{ul}/(B_{ul}J_\nu)</span> を、熱平衡 <span class="math inline">J_\nu=B_\nu(T)</span> と Einstein 関係 <span class="math inline">A_{ul}/B_{ul}=2h\nu^3/c^2</span> を使って簡単化し、<span class="math inline">R=e^{h\nu/k_BT}-1</span> を示せ。</li>
+<li>電波領域（<span class="math inline">h\nu\ll k_BT</span>）と可視・紫外（<span class="math inline">h\nu\gg k_BT</span>）で <span class="math inline">R</span> の大小を評価し、それぞれどちらの放出が優勢かを述べよ。</li>
+<li><ol start="2" type="1">
+<li>の結果が、宇宙メーザー（誘導放出の卓越）が電波領域に多い理由とどう関係するか簡潔に述べよ。</li>
+</ol></li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-einstein-method-three-processes">§11.2 三つの素過程</a>、<a href="#sec-einstein-method-astrophysics">§11.5 メーザー</a>。</p>
+<p><a href="#sol-11-2" class="btn btn-outline-secondary btn-sm" data-bs-toggle="offcanvas" role="button">解答例を見る（問題 11-2）</a></p>
+</section>
+<section id="ex-11-3" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-11-3">問題 11-3　B 係数の規約変換（Jν 規約と uν 規約）</h3>
+<p>[★ 難易度：☆☆ ] <span class="tag">[導出補完]</span></p>
+<p>§11.3 のコラムは2つの規約を併記し <span class="math inline">B_{lu}^{(u)}=(c/4\pi)B_{lu}</span> とだけ述べた。これを導く。等方場では <span class="math inline">u_\nu=(4\pi/c)J_\nu</span>。</p>
+<ol type="1">
+<li>遷移率は規約に依らず物理的に同一であること、すなわち <span class="math inline">B_{lu}J_\nu=B_{lu}^{(u)}u_\nu</span> を出発点に、<span class="math inline">B_{lu}^{(u)}=(c/4\pi)B_{lu}</span> を導け。</li>
+<li><span class="math inline">J_\nu</span> 規約での <span class="math inline">A_{ul}/B_{ul}=2h\nu^3/c^2</span> から、<span class="math inline">u_\nu</span> 規約での比 <span class="math inline">A_{ul}/B_{ul}^{(u)}=8\pi h\nu^3/c^3</span> を導け。</li>
+<li>論文を読むとき規約の取り違えがどんな誤りを生むか（係数の数値が <span class="math inline">4\pi/c</span> 倍ずれる等）を一言で述べよ。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-einstein-method-detailed-balance">§11.3 係数の規約コラム</a>／平均強度 <span class="math inline">J_\nu</span> とエネルギー密度 <span class="math inline">u_\nu</span> の定義は<a href="../part2/04-radiation-field.html">第4章 放射場</a>。</p>
+<p><a href="#sol-11-3" class="btn btn-outline-secondary btn-sm" data-bs-toggle="offcanvas" role="button">解答例を見る（問題 11-3）</a></p>
+</section>
+<section id="ex-11-4" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ex-11-4">問題 11-4　Aul から励起寿命・自然幅・波長幅</h3>
+<p>[★ 難易度：☆☆☆ ] <span class="tag">[理解を深める]</span></p>
+<p>§11.4 は「<span class="math inline">A_{ul}</span> は線の自然幅と直結、<span class="math inline">\tau=1/A_{ul}</span>、<span class="math inline">\Delta\nu_\mathrm{nat}=A_{ul}/2\pi</span>」とだけ述べた。典型的な許容遷移 <span class="math inline">A_{ul}=1\times10^8\ \mathrm{s^{-1}}</span>、波長 <span class="math inline">\lambda=500</span> nm の線について数値評価せよ。</p>
+<ol type="1">
+<li>励起寿命 <span class="math inline">\tau</span> を求めよ。</li>
+<li>自然幅 <span class="math inline">\Delta\nu_\mathrm{nat}=A_{ul}/2\pi</span> を Hz で求めよ。</li>
+<li>対応する波長幅 <span class="math inline">\Delta\lambda_\mathrm{nat}=(\lambda^2/c)\Delta\nu_\mathrm{nat}</span> を求め、線中心波長との相対幅 <span class="math inline">\Delta\lambda/\lambda</span> を評価せよ。なぜ自然幅は実際の観測線幅より普通ずっと狭いのか（ドップラー幅との対比）を一言で述べよ。</li>
+</ol>
+<p><strong>関連</strong>：<a href="#sec-einstein-method-bridge">§11.4 連続と線の橋</a>／自然幅の本格的扱いは<a href="../part7/23-line-shape.html">第23章 線の形</a>、その量子的起源（零点振動）は<a href="../part4/12-quantum-foundations.html#sec-quantum-foundations-vacuum">§12.4</a>と<a href="../part4/12-quantum-foundations.html#ex-12-3">演習 12-3</a>。</p>
+<p><a href="#sol-11-4" class="btn btn-outline-secondary btn-sm" data-bs-toggle="offcanvas" role="button">解答例を見る（問題 11-4）</a></p>
 </section>
 </section>
-<section id="模範解答問題-11-1" class="level2 callout-derive" data-collapse="true">
-<h2 class="anchored" data-anchor-id="模範解答問題-11-1">模範解答（問題 11-1）</h2>
+<section id="sec-einstein-method-solutions" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sec-einstein-method-solutions">解答例</h2>
+<p>各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。</p>
+<p><a href="#sol-11-1" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 11-1</a> <a href="#sol-11-2" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 11-2</a> <a href="#sol-11-3" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 11-3</a> <a href="#sol-11-4" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 11-4</a></p>
+<div id="sol-11-1" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-11-1-label">
+<p><span class="proof-title"><em>解答 14.1</em>. </span></p>
+<div class="offcanvas-header">
+<p><span id="sol-11-1-label" class="offcanvas-title"><strong>解答例（問題 11-1）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
+</div>
+<div class="offcanvas-body">
 <p><strong>(1)</strong> <span class="math inline">J_\nu</span> の項を集める：</p>
 <p><span class="math display">
 n_l B_{lu}J_\nu-n_u B_{ul}J_\nu=n_u A_{ul}\ \Rightarrow\ J_\nu=\frac{n_u A_{ul}}{n_l B_{lu}-n_u B_{ul}}=\frac{A_{ul}/B_{ul}}{\dfrac{n_l}{n_u}\dfrac{B_{lu}}{B_{ul}}-1}.
@@ -897,22 +941,14 @@ J_\nu=\frac{A_{ul}/B_{ul}}{\dfrac{g_lB_{lu}}{g_uB_{ul}}e^{h\nu/k_BT}-1}.
 </span></p>
 <p><strong>(3)</strong> Einstein 係数は <span class="math inline">T</span> に依らない原子の固有量。一方 <span class="math inline">J_\nu=B_\nu(T)</span> はすべての <span class="math inline">T</span> で成り立たねばならない。指数 <span class="math inline">e^{h\nu/k_BT}</span> は <span class="math inline">T</span> で連続的に変わるので、「指数の係数＝1」（<span class="math inline">T</span> 依存項の一致）と「全体の前因子の一致」（<span class="math inline">T</span> 非依存項の一致）は独立な条件となり、2式を同時に要求する。</p>
 <p><strong>答え</strong>：<span class="math inline">g_lB_{lu}=g_uB_{ul}</span> かつ <span class="math inline">A_{ul}/B_{ul}=2h\nu^3/c^2</span>。<span class="math inline">T</span> 依存・非依存の両部分を一致させるため2式が必要。</p>
-</section>
-<section id="ex-11-2" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="ex-11-2">問題 11-2　自発放出と誘導放出の比</h3>
-<p>[★ 難易度：☆ ] <span class="tag">[理解を深める]</span></p>
-<p>熱放射場の中で、1個の上準位原子が起こす自発放出率と誘導放出率の比を求め、どの波長帯でどちらが優勢かを論じる。</p>
-<ol type="1">
-<li>比 <span class="math inline">R=A_{ul}/(B_{ul}J_\nu)</span> を、熱平衡 <span class="math inline">J_\nu=B_\nu(T)</span> と Einstein 関係 <span class="math inline">A_{ul}/B_{ul}=2h\nu^3/c^2</span> を使って簡単化し、<span class="math inline">R=e^{h\nu/k_BT}-1</span> を示せ。</li>
-<li>電波領域（<span class="math inline">h\nu\ll k_BT</span>）と可視・紫外（<span class="math inline">h\nu\gg k_BT</span>）で <span class="math inline">R</span> の大小を評価し、それぞれどちらの放出が優勢かを述べよ。</li>
-<li><ol start="2" type="1">
-<li>の結果が、宇宙メーザー（誘導放出の卓越）が電波領域に多い理由とどう関係するか簡潔に述べよ。</li>
-</ol></li>
-</ol>
-<p><strong>関連</strong>：<a href="#sec-einstein-method-three-processes">§11.2 三つの素過程</a>、<a href="#sec-einstein-method-astrophysics">§11.5 メーザー</a>。</p>
-</section>
-<section id="模範解答問題-11-2" class="level2 callout-derive" data-collapse="true">
-<h2 class="anchored" data-anchor-id="模範解答問題-11-2">模範解答（問題 11-2）</h2>
+</div>
+</div>
+<div id="sol-11-2" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-11-2-label">
+<p><span class="proof-title"><em>解答 14.2</em>. </span></p>
+<div class="offcanvas-header">
+<p><span id="sol-11-2-label" class="offcanvas-title"><strong>解答例（問題 11-2）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
+</div>
+<div class="offcanvas-body">
 <p><strong>(1)</strong> 熱場で <span class="math inline">J_\nu=B_\nu=\dfrac{2h\nu^3/c^2}{e^{h\nu/k_BT}-1}</span>。よって</p>
 <p><span class="math display">
 R=\frac{A_{ul}}{B_{ul}J_\nu}=\frac{A_{ul}/B_{ul}}{B_\nu}=\frac{2h\nu^3/c^2}{\dfrac{2h\nu^3/c^2}{e^{h\nu/k_BT}-1}}=e^{h\nu/k_BT}-1.
@@ -920,20 +956,14 @@ R=\frac{A_{ul}}{B_{ul}J_\nu}=\frac{A_{ul}/B_{ul}}{B_\nu}=\frac{2h\nu^3/c^2}{\dfr
 <p><strong>(2)</strong> 電波（<span class="math inline">h\nu\ll k_BT</span>）：<span class="math inline">R\approx h\nu/k_BT\ll1</span>、誘導放出が自発放出を圧倒。可視・紫外（<span class="math inline">h\nu\gg k_BT</span>）：<span class="math inline">R\approx e^{h\nu/k_BT}\gg1</span>、自発放出が圧倒的に優勢。</p>
 <p><strong>(3)</strong> メーザーは誘導放出が自発放出を上回ることで増幅が成立する。<span class="math inline">R</span> が小さい電波領域では、もともと熱場でも誘導放出が優勢になりやすく、反転分布が少し作られれば誘導放出が雪崩的に効く。一方、可視・紫外では <span class="math inline">R\gg1</span>（自発放出優勢）のため、増幅（レーザー）には強い反転分布と共振器が必要になる。よって自然界の「メーザー」は電波領域に多い。</p>
 <p><strong>答え</strong>：<span class="math inline">R=e^{h\nu/k_BT}-1</span>。電波で <span class="math inline">R\ll1</span>（誘導優勢）、可視・紫外で <span class="math inline">R\gg1</span>（自発優勢）。宇宙メーザーが電波に多いことと整合。</p>
-</section>
-<section id="ex-11-3" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="ex-11-3">問題 11-3　B 係数の規約変換（Jν 規約と uν 規約）</h3>
-<p>[★ 難易度：☆☆ ] <span class="tag">[導出補完]</span></p>
-<p>§11.3 のコラムは2つの規約を併記し <span class="math inline">B_{lu}^{(u)}=(c/4\pi)B_{lu}</span> とだけ述べた。これを導く。等方場では <span class="math inline">u_\nu=(4\pi/c)J_\nu</span>。</p>
-<ol type="1">
-<li>遷移率は規約に依らず物理的に同一であること、すなわち <span class="math inline">B_{lu}J_\nu=B_{lu}^{(u)}u_\nu</span> を出発点に、<span class="math inline">B_{lu}^{(u)}=(c/4\pi)B_{lu}</span> を導け。</li>
-<li><span class="math inline">J_\nu</span> 規約での <span class="math inline">A_{ul}/B_{ul}=2h\nu^3/c^2</span> から、<span class="math inline">u_\nu</span> 規約での比 <span class="math inline">A_{ul}/B_{ul}^{(u)}=8\pi h\nu^3/c^3</span> を導け。</li>
-<li>論文を読むとき規約の取り違えがどんな誤りを生むか（係数の数値が <span class="math inline">4\pi/c</span> 倍ずれる等）を一言で述べよ。</li>
-</ol>
-<p><strong>関連</strong>：<a href="#sec-einstein-method-detailed-balance">§11.3 係数の規約コラム</a>／平均強度 <span class="math inline">J_\nu</span> とエネルギー密度 <span class="math inline">u_\nu</span> の定義は<a href="../part2/04-radiation-field.html">第4章 放射場</a>。</p>
-</section>
-<section id="模範解答問題-11-3" class="level2 callout-derive" data-collapse="true">
-<h2 class="anchored" data-anchor-id="模範解答問題-11-3">模範解答（問題 11-3）</h2>
+</div>
+</div>
+<div id="sol-11-3" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-11-3-label">
+<p><span class="proof-title"><em>解答 14.3</em>. </span></p>
+<div class="offcanvas-header">
+<p><span id="sol-11-3-label" class="offcanvas-title"><strong>解答例（問題 11-3）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
+</div>
+<div class="offcanvas-body">
 <p><strong>(1)</strong> 同じ物理過程（吸収率 [s<span class="math inline">^{-1}</span>]）を2つの規約で書いた量は等しい：</p>
 <p><span class="math display">
 B_{lu}J_\nu=B_{lu}^{(u)}u_\nu.
@@ -949,20 +979,14 @@ B_{lu}J_\nu=B_{lu}^{(u)}\frac{4\pi}{c}J_\nu\ \Rightarrow\ B_{lu}^{(u)}=\frac{c}{
 <p>これは <span class="math inline">u_\nu</span> 規約での標準形（量子光学でよく見る <span class="math inline">8\pi h\nu^3/c^3</span>）と一致する。</p>
 <p><strong>(3)</strong> どちらの規約で書かれた <span class="math inline">B</span> かを取り違えると、係数の数値が <span class="math inline">c/4\pi</span>（または逆数）倍ずれ、線吸収係数・振動子強度・遷移率の換算がすべて狂う。論文・教科書を読むときは「<span class="math inline">B</span> が <span class="math inline">J_\nu</span> に掛かるか <span class="math inline">u_\nu</span> に掛かるか」を必ず確認する。</p>
 <p><strong>答え</strong>：<span class="math inline">B_{lu}^{(u)}=\tfrac{c}{4\pi}B_{lu}</span>、<span class="math inline">A_{ul}/B_{ul}^{(u)}=8\pi h\nu^3/c^3</span>。規約取り違えは係数を <span class="math inline">4\pi/c</span> 倍ずらす。</p>
-</section>
-<section id="ex-11-4" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="ex-11-4">問題 11-4　Aul から励起寿命・自然幅・波長幅</h3>
-<p>[★ 難易度：☆☆☆ ] <span class="tag">[理解を深める]</span></p>
-<p>§11.4 は「<span class="math inline">A_{ul}</span> は線の自然幅と直結、<span class="math inline">\tau=1/A_{ul}</span>、<span class="math inline">\Delta\nu_\mathrm{nat}=A_{ul}/2\pi</span>」とだけ述べた。典型的な許容遷移 <span class="math inline">A_{ul}=1\times10^8\ \mathrm{s^{-1}}</span>、波長 <span class="math inline">\lambda=500</span> nm の線について数値評価せよ。</p>
-<ol type="1">
-<li>励起寿命 <span class="math inline">\tau</span> を求めよ。</li>
-<li>自然幅 <span class="math inline">\Delta\nu_\mathrm{nat}=A_{ul}/2\pi</span> を Hz で求めよ。</li>
-<li>対応する波長幅 <span class="math inline">\Delta\lambda_\mathrm{nat}=(\lambda^2/c)\Delta\nu_\mathrm{nat}</span> を求め、線中心波長との相対幅 <span class="math inline">\Delta\lambda/\lambda</span> を評価せよ。なぜ自然幅は実際の観測線幅より普通ずっと狭いのか（ドップラー幅との対比）を一言で述べよ。</li>
-</ol>
-<p><strong>関連</strong>：<a href="#sec-einstein-method-bridge">§11.4 連続と線の橋</a>／自然幅の本格的扱いは<a href="../part7/23-line-shape.html">第23章 線の形</a>、その量子的起源（零点振動）は<a href="../part4/12-quantum-foundations.html#sec-quantum-foundations-vacuum">§12.4</a>と<a href="../part4/12-quantum-foundations.html#ex-12-3">演習 12-3</a>。</p>
-</section>
-<section id="模範解答問題-11-4" class="level2 callout-derive" data-collapse="true">
-<h2 class="anchored" data-anchor-id="模範解答問題-11-4">模範解答（問題 11-4）</h2>
+</div>
+</div>
+<div id="sol-11-4" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-11-4-label">
+<p><span class="proof-title"><em>解答 14.4</em>. </span></p>
+<div class="offcanvas-header">
+<p><span id="sol-11-4-label" class="offcanvas-title"><strong>解答例（問題 11-4）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
+</div>
+<div class="offcanvas-body">
 <p><strong>(1)</strong> <span class="math inline">\tau=1/A_{ul}=1/10^8=1\times10^{-8}</span> s <span class="math inline">=10</span> ns。</p>
 <p><strong>(2)</strong> <span class="math inline">\Delta\nu_\mathrm{nat}=A_{ul}/2\pi=10^8/(2\pi)\approx1.6\times10^7</span> Hz <span class="math inline">\approx16</span> MHz。</p>
 <p><strong>(3)</strong> <span class="math inline">\lambda=500</span> nm、<span class="math inline">\lambda^2/c=(5.0\times10^{-7})^2/(3.0\times10^8)=2.5\times10^{-13}/3.0\times10^8\approx8.3\times10^{-22}</span> s·m。よって</p>
@@ -971,6 +995,8 @@ B_{lu}J_\nu=B_{lu}^{(u)}\frac{4\pi}{c}J_\nu\ \Rightarrow\ B_{lu}^{(u)}=\frac{c}{
 </span></p>
 <p>相対幅 <span class="math inline">\Delta\lambda/\lambda\approx1.3\times10^{-14}/5.0\times10^{-7}\approx2.7\times10^{-8}</span>。きわめて狭い。<strong>理由</strong>：実際の星間・恒星大気の線は熱運動による<strong>ドップラー幅</strong>が支配的で、<span class="math inline">\Delta\nu_D/\nu\sim v_\mathrm{th}/c\sim10^{-5}</span> 程度と自然幅より3桁ほど広い。自然幅が見えるのは線の遠い翼（ローレンツ翼）や低温・低速度分散の特殊な状況に限られる。</p>
 <p><strong>答え</strong>：<span class="math inline">\tau=10</span> ns、<span class="math inline">\Delta\nu_\mathrm{nat}\approx16</span> MHz、<span class="math inline">\Delta\lambda_\mathrm{nat}\approx1.3\times10^{-5}</span> nm（<span class="math inline">\Delta\lambda/\lambda\sim3\times10^{-8}</span>）。通常はドップラー幅が支配的で自然幅は埋もれる。</p>
+</div>
+</div>
 </section>
 <section id="sec-einstein-method-further" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="sec-einstein-method-further">さらに学ぶための参考文献</h2>
@@ -1679,7 +1705,7 @@ B_{lu}J_\nu=B_{lu}^{(u)}\frac{4\pi}{c}J_\nu\ \Rightarrow\ B_{lu}^{(u)}=\frac{c}{
 <span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-einstein-method-exercises .unnumbered}</span></span>
 <span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。</span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **解答例** は章末「解答例」にまとめてある（オンライン版では各問のボタンから開く）。まず自力で解いてから開くこと。</span>
 <span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 11-1　詳細釣り合いから Einstein 関係式 {#ex-11-1 .unnumbered}</span></span>
 <span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a></span>
@@ -1697,142 +1723,182 @@ B_{lu}J_\nu=B_{lu}^{(u)}\frac{4\pi}{c}J_\nu\ \Rightarrow\ B_{lu}^{(u)}=\frac{c}{
 <span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§11.3 詳細釣り合い</span><span class="co">](#sec-einstein-method-detailed-balance)</span>／詳細釣り合いの原理は<span class="co">[</span><span class="ot">第6章 §6.6</span><span class="co">](../part3/06-thermal-equilibrium.qmd)</span>、同じ占有因子の別ルートは<span class="co">[</span><span class="ot">第8章</span><span class="co">](../part3/08-photon-statistics.qmd)</span>と<span class="co">[</span><span class="ot">演習 10-1</span><span class="co">](../part4/10-planck-quantum.qmd#ex-10-1)</span>。</span>
 <span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 11-1）</span></span>
-<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a>**(1)** $J_\nu$ の項を集める：</span>
-<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a>n_l B_{lu}J_\nu-n_u B_{ul}J_\nu=n_u A_{ul}\ \Rightarrow\ J_\nu=\frac{n_u A_{ul}}{n_l B_{lu}-n_u B_{ul}}=\frac{A_{ul}/B_{ul}}{\dfrac{n_l}{n_u}\dfrac{B_{lu}}{B_{ul}}-1}.</span>
-<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>$n_l/n_u=(g_l/g_u)e^{+h\nu/k_BT}$ を代入：</span>
-<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a>J_\nu=\frac{A_{ul}/B_{ul}}{\dfrac{g_lB_{lu}}{g_uB_{ul}}e^{h\nu/k_BT}-1}.</span>
-<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a>**(2)** プランク分布 $B_\nu=\dfrac{2h\nu^3/c^2}{e^{h\nu/k_BT}-1}$ と項ごとに比較する。分母の指数の係数が $1$ であるためには</span>
-<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a>\frac{g_lB_{lu}}{g_uB_{ul}}=1\ \Longrightarrow\ g_lB_{lu}=g_uB_{ul}.</span>
-<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a>これを使うと分子は $A_{ul}/B_{ul}$、これがプランクの前因子に等しい：</span>
-<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a>\frac{A_{ul}}{B_{ul}}=\frac{2h\nu^3}{c^2}.</span>
-<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>**(3)** Einstein 係数は $T$ に依らない原子の固有量。一方 $J_\nu=B_\nu(T)$ はすべての $T$ で成り立たねばならない。指数 $e^{h\nu/k_BT}$ は $T$ で連続的に変わるので、「指数の係数＝1」（$T$ 依存項の一致）と「全体の前因子の一致」（$T$ 非依存項の一致）は独立な条件となり、2式を同時に要求する。</span>
-<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a>**答え**：$g_lB_{lu}=g_uB_{ul}$ かつ $A_{ul}/B_{ul}=2h\nu^3/c^2$。$T$ 依存・非依存の両部分を一致させるため2式が必要。</span>
-<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 11-1）</span><span class="co">](#sol-11-1)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 11-2　自発放出と誘導放出の比 {#ex-11-2 .unnumbered}</span></span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a>熱放射場の中で、1個の上準位原子が起こす自発放出率と誘導放出率の比を求め、どの波長帯でどちらが優勢かを論じる。</span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>比 $R=A_{ul}/(B_{ul}J_\nu)$ を、熱平衡 $J_\nu=B_\nu(T)$ と Einstein 関係 $A_{ul}/B_{ul}=2h\nu^3/c^2$ を使って簡単化し、$R=e^{h\nu/k_BT}-1$ を示せ。</span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>電波領域（$h\nu\ll k_BT$）と可視・紫外（$h\nu\gg k_BT$）で $R$ の大小を評価し、それぞれどちらの放出が優勢かを述べよ。</span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>(2) の結果が、宇宙メーザー（誘導放出の卓越）が電波領域に多い理由とどう関係するか簡潔に述べよ。</span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§11.2 三つの素過程</span><span class="co">](#sec-einstein-method-three-processes)</span>、<span class="co">[</span><span class="ot">§11.5 メーザー</span><span class="co">](#sec-einstein-method-astrophysics)</span>。</span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 11-2）</span><span class="co">](#sol-11-2)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 11-3　B 係数の規約変換（Jν 規約と uν 規約） {#ex-11-3 .unnumbered}</span></span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a>§11.3 のコラムは2つの規約を併記し $B_{lu}^{(u)}=(c/4\pi)B_{lu}$ とだけ述べた。これを導く。等方場では $u_\nu=(4\pi/c)J_\nu$。</span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>遷移率は規約に依らず物理的に同一であること、すなわち $B_{lu}J_\nu=B_{lu}^{(u)}u_\nu$ を出発点に、$B_{lu}^{(u)}=(c/4\pi)B_{lu}$ を導け。</span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$J_\nu$ 規約での $A_{ul}/B_{ul}=2h\nu^3/c^2$ から、$u_\nu$ 規約での比 $A_{ul}/B_{ul}^{(u)}=8\pi h\nu^3/c^3$ を導け。</span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>論文を読むとき規約の取り違えがどんな誤りを生むか（係数の数値が $4\pi/c$ 倍ずれる等）を一言で述べよ。</span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§11.3 係数の規約コラム</span><span class="co">](#sec-einstein-method-detailed-balance)</span>／平均強度 $J_\nu$ とエネルギー密度 $u_\nu$ の定義は<span class="co">[</span><span class="ot">第4章 放射場</span><span class="co">](../part2/04-radiation-field.qmd)</span>。</span>
 <span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 11-2　自発放出と誘導放出の比 {#ex-11-2 .unnumbered}</span></span>
-<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 11-3）</span><span class="co">](#sol-11-3)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a>熱放射場の中で、1個の上準位原子が起こす自発放出率と誘導放出率の比を求め、どの波長帯でどちらが優勢かを論じる。</span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 11-4　Aul から励起寿命・自然幅・波長幅 {#ex-11-4 .unnumbered}</span></span>
 <span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>比 $R=A_{ul}/(B_{ul}J_\nu)$ を、熱平衡 $J_\nu=B_\nu(T)$ と Einstein 関係 $A_{ul}/B_{ul}=2h\nu^3/c^2$ を使って簡単化し、$R=e^{h\nu/k_BT}-1$ を示せ。</span>
-<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>電波領域（$h\nu\ll k_BT$）と可視・紫外（$h\nu\gg k_BT$）で $R$ の大小を評価し、それぞれどちらの放出が優勢かを述べよ。</span>
-<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>(2) の結果が、宇宙メーザー（誘導放出の卓越）が電波領域に多い理由とどう関係するか簡潔に述べよ。</span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a>§11.4 は「$A_{ul}$ は線の自然幅と直結、$\tau=1/A_{ul}$、$\Delta\nu_\mathrm{nat}=A_{ul}/2\pi$」とだけ述べた。典型的な許容遷移 $A_{ul}=1\times10^8\ \mathrm{s^{-1}}$、波長 $\lambda=500$ nm の線について数値評価せよ。</span>
 <span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§11.2 三つの素過程</span><span class="co">](#sec-einstein-method-three-processes)</span>、<span class="co">[</span><span class="ot">§11.5 メーザー</span><span class="co">](#sec-einstein-method-astrophysics)</span>。</span>
-<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 11-2）</span></span>
-<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a>**(1)** 熱場で $J_\nu=B_\nu=\dfrac{2h\nu^3/c^2}{e^{h\nu/k_BT}-1}$。よって</span>
-<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>R=\frac{A_{ul}}{B_{ul}J_\nu}=\frac{A_{ul}/B_{ul}}{B_\nu}=\frac{2h\nu^3/c^2}{\dfrac{2h\nu^3/c^2}{e^{h\nu/k_BT}-1}}=e^{h\nu/k_BT}-1.</span>
-<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a>**(2)** 電波（$h\nu\ll k_BT$）：$R\approx h\nu/k_BT\ll1$、誘導放出が自発放出を圧倒。可視・紫外（$h\nu\gg k_BT$）：$R\approx e^{h\nu/k_BT}\gg1$、自発放出が圧倒的に優勢。</span>
-<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a>**(3)** メーザーは誘導放出が自発放出を上回ることで増幅が成立する。$R$ が小さい電波領域では、もともと熱場でも誘導放出が優勢になりやすく、反転分布が少し作られれば誘導放出が雪崩的に効く。一方、可視・紫外では $R\gg1$（自発放出優勢）のため、増幅（レーザー）には強い反転分布と共振器が必要になる。よって自然界の「メーザー」は電波領域に多い。</span>
-<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a>**答え**：$R=e^{h\nu/k_BT}-1$。電波で $R\ll1$（誘導優勢）、可視・紫外で $R\gg1$（自発優勢）。宇宙メーザーが電波に多いことと整合。</span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>励起寿命 $\tau$ を求めよ。</span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>自然幅 $\Delta\nu_\mathrm{nat}=A_{ul}/2\pi$ を Hz で求めよ。</span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>対応する波長幅 $\Delta\lambda_\mathrm{nat}=(\lambda^2/c)\Delta\nu_\mathrm{nat}$ を求め、線中心波長との相対幅 $\Delta\lambda/\lambda$ を評価せよ。なぜ自然幅は実際の観測線幅より普通ずっと狭いのか（ドップラー幅との対比）を一言で述べよ。</span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§11.4 連続と線の橋</span><span class="co">](#sec-einstein-method-bridge)</span>／自然幅の本格的扱いは<span class="co">[</span><span class="ot">第23章 線の形</span><span class="co">](../part7/23-line-shape.qmd)</span>、その量子的起源（零点振動）は<span class="co">[</span><span class="ot">§12.4</span><span class="co">](../part4/12-quantum-foundations.qmd#sec-quantum-foundations-vacuum)</span>と<span class="co">[</span><span class="ot">演習 12-3</span><span class="co">](../part4/12-quantum-foundations.qmd#ex-12-3)</span>。</span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 11-4）</span><span class="co">](#sol-11-4)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a><span class="fu">## 解答例 {#sec-einstein-method-solutions .unnumbered}</span></span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a>各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。</span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">問題 11-1</span><span class="co">](#sol-11-1)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 11-2</span><span class="co">](#sol-11-2)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 11-3</span><span class="co">](#sol-11-3)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 11-4</span><span class="co">](#sol-11-4)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
 <span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 11-3　B 係数の規約変換（Jν 規約と uν 規約） {#ex-11-3 .unnumbered}</span></span>
-<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
-<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a>§11.3 のコラムは2つの規約を併記し $B_{lu}^{(u)}=(c/4\pi)B_{lu}$ とだけ述べた。これを導く。等方場では $u_\nu=(4\pi/c)J_\nu$。</span>
-<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>遷移率は規約に依らず物理的に同一であること、すなわち $B_{lu}J_\nu=B_{lu}^{(u)}u_\nu$ を出発点に、$B_{lu}^{(u)}=(c/4\pi)B_{lu}$ を導け。</span>
-<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$J_\nu$ 規約での $A_{ul}/B_{ul}=2h\nu^3/c^2$ から、$u_\nu$ 規約での比 $A_{ul}/B_{ul}^{(u)}=8\pi h\nu^3/c^3$ を導け。</span>
-<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>論文を読むとき規約の取り違えがどんな誤りを生むか（係数の数値が $4\pi/c$ 倍ずれる等）を一言で述べよ。</span>
-<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§11.3 係数の規約コラム</span><span class="co">](#sec-einstein-method-detailed-balance)</span>／平均強度 $J_\nu$ とエネルギー密度 $u_\nu$ の定義は<span class="co">[</span><span class="ot">第4章 放射場</span><span class="co">](../part2/04-radiation-field.qmd)</span>。</span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a>::: {#sol-11-1 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-11-1-label"}</span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 11-1）**</span><span class="co">]</span>{#sol-11-1-label .offcanvas-title}</span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a>**(1)** $J_\nu$ の項を集める：</span>
+<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a>n_l B_{lu}J_\nu-n_u B_{ul}J_\nu=n_u A_{ul}\ \Rightarrow\ J_\nu=\frac{n_u A_{ul}}{n_l B_{lu}-n_u B_{ul}}=\frac{A_{ul}/B_{ul}}{\dfrac{n_l}{n_u}\dfrac{B_{lu}}{B_{ul}}-1}.</span>
+<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 11-3）</span></span>
-<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a>**(1)** 同じ物理過程（吸収率 <span class="co">[</span><span class="ot">s$^{-1}$</span><span class="co">]</span>）を2つの規約で書いた量は等しい：</span>
-<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a>B_{lu}J_\nu=B_{lu}^{(u)}u_\nu.</span>
-<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a>$u_\nu=(4\pi/c)J_\nu$ を代入して $J_\nu$ を消すと</span>
-<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>B_{lu}J_\nu=B_{lu}^{(u)}\frac{4\pi}{c}J_\nu\ \Rightarrow\ B_{lu}^{(u)}=\frac{c}{4\pi}B_{lu}.</span>
-<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a>**(2)** $B_{ul}$ も同様に $B_{ul}^{(u)}=(c/4\pi)B_{ul}$。よって</span>
-<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>\frac{A_{ul}}{B_{ul}^{(u)}}=\frac{A_{ul}}{(c/4\pi)B_{ul}}=\frac{4\pi}{c}\cdot\frac{A_{ul}}{B_{ul}}=\frac{4\pi}{c}\cdot\frac{2h\nu^3}{c^2}=\frac{8\pi h\nu^3}{c^3}.</span>
-<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a>これは $u_\nu$ 規約での標準形（量子光学でよく見る $8\pi h\nu^3/c^3$）と一致する。</span>
-<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>**(3)** どちらの規約で書かれた $B$ かを取り違えると、係数の数値が $c/4\pi$（または逆数）倍ずれ、線吸収係数・振動子強度・遷移率の換算がすべて狂う。論文・教科書を読むときは「$B$ が $J_\nu$ に掛かるか $u_\nu$ に掛かるか」を必ず確認する。</span>
-<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a>**答え**：$B_{lu}^{(u)}=\tfrac{c}{4\pi}B_{lu}$、$A_{ul}/B_{ul}^{(u)}=8\pi h\nu^3/c^3$。規約取り違えは係数を $4\pi/c$ 倍ずらす。</span>
-<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 11-4　Aul から励起寿命・自然幅・波長幅 {#ex-11-4 .unnumbered}</span></span>
-<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a>$n_l/n_u=(g_l/g_u)e^{+h\nu/k_BT}$ を代入：</span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a>J_\nu=\frac{A_{ul}/B_{ul}}{\dfrac{g_lB_{lu}}{g_uB_{ul}}e^{h\nu/k_BT}-1}.</span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a>**(2)** プランク分布 $B_\nu=\dfrac{2h\nu^3/c^2}{e^{h\nu/k_BT}-1}$ と項ごとに比較する。分母の指数の係数が $1$ であるためには</span>
+<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a>\frac{g_lB_{lu}}{g_uB_{ul}}=1\ \Longrightarrow\ g_lB_{lu}=g_uB_{ul}.</span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>これを使うと分子は $A_{ul}/B_{ul}$、これがプランクの前因子に等しい：</span>
+<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a>\frac{A_{ul}}{B_{ul}}=\frac{2h\nu^3}{c^2}.</span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>**(3)** Einstein 係数は $T$ に依らない原子の固有量。一方 $J_\nu=B_\nu(T)$ はすべての $T$ で成り立たねばならない。指数 $e^{h\nu/k_BT}$ は $T$ で連続的に変わるので、「指数の係数＝1」（$T$ 依存項の一致）と「全体の前因子の一致」（$T$ 非依存項の一致）は独立な条件となり、2式を同時に要求する。</span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a>**答え**：$g_lB_{lu}=g_uB_{ul}$ かつ $A_{ul}/B_{ul}=2h\nu^3/c^2$。$T$ 依存・非依存の両部分を一致させるため2式が必要。</span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a>::: {#sol-11-2 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-11-2-label"}</span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 11-2）**</span><span class="co">]</span>{#sol-11-2-label .offcanvas-title}</span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a>**(1)** 熱場で $J_\nu=B_\nu=\dfrac{2h\nu^3/c^2}{e^{h\nu/k_BT}-1}$。よって</span>
 <span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>§11.4 は「$A_{ul}$ は線の自然幅と直結、$\tau=1/A_{ul}$、$\Delta\nu_\mathrm{nat}=A_{ul}/2\pi$」とだけ述べた。典型的な許容遷移 $A_{ul}=1\times10^8\ \mathrm{s^{-1}}$、波長 $\lambda=500$ nm の線について数値評価せよ。</span>
-<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>励起寿命 $\tau$ を求めよ。</span>
-<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>自然幅 $\Delta\nu_\mathrm{nat}=A_{ul}/2\pi$ を Hz で求めよ。</span>
-<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>対応する波長幅 $\Delta\lambda_\mathrm{nat}=(\lambda^2/c)\Delta\nu_\mathrm{nat}$ を求め、線中心波長との相対幅 $\Delta\lambda/\lambda$ を評価せよ。なぜ自然幅は実際の観測線幅より普通ずっと狭いのか（ドップラー幅との対比）を一言で述べよ。</span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a>R=\frac{A_{ul}}{B_{ul}J_\nu}=\frac{A_{ul}/B_{ul}}{B_\nu}=\frac{2h\nu^3/c^2}{\dfrac{2h\nu^3/c^2}{e^{h\nu/k_BT}-1}}=e^{h\nu/k_BT}-1.</span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a>**(2)** 電波（$h\nu\ll k_BT$）：$R\approx h\nu/k_BT\ll1$、誘導放出が自発放出を圧倒。可視・紫外（$h\nu\gg k_BT$）：$R\approx e^{h\nu/k_BT}\gg1$、自発放出が圧倒的に優勢。</span>
 <span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§11.4 連続と線の橋</span><span class="co">](#sec-einstein-method-bridge)</span>／自然幅の本格的扱いは<span class="co">[</span><span class="ot">第23章 線の形</span><span class="co">](../part7/23-line-shape.qmd)</span>、その量子的起源（零点振動）は<span class="co">[</span><span class="ot">§12.4</span><span class="co">](../part4/12-quantum-foundations.qmd#sec-quantum-foundations-vacuum)</span>と<span class="co">[</span><span class="ot">演習 12-3</span><span class="co">](../part4/12-quantum-foundations.qmd#ex-12-3)</span>。</span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a>**(3)** メーザーは誘導放出が自発放出を上回ることで増幅が成立する。$R$ が小さい電波領域では、もともと熱場でも誘導放出が優勢になりやすく、反転分布が少し作られれば誘導放出が雪崩的に効く。一方、可視・紫外では $R\gg1$（自発放出優勢）のため、増幅（レーザー）には強い反転分布と共振器が必要になる。よって自然界の「メーザー」は電波領域に多い。</span>
 <span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>::: {.callout-derive collapse="true"}</span>
-<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a><span class="fu">## 模範解答（問題 11-4）</span></span>
-<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a>**(1)** $\tau=1/A_{ul}=1/10^8=1\times10^{-8}$ s $=10$ ns。</span>
-<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a>**(2)** $\Delta\nu_\mathrm{nat}=A_{ul}/2\pi=10^8/(2\pi)\approx1.6\times10^7$ Hz $\approx16$ MHz。</span>
-<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a>**(3)** $\lambda=500$ nm、$\lambda^2/c=(5.0\times10^{-7})^2/(3.0\times10^8)=2.5\times10^{-13}/3.0\times10^8\approx8.3\times10^{-22}$ s·m。よって</span>
-<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a>\Delta\lambda_\mathrm{nat}=\frac{\lambda^2}{c}\Delta\nu_\mathrm{nat}\approx8.3\times10^{-22}\times1.6\times10^7\approx1.3\times10^{-14}\ \mathrm{m}=1.3\times10^{-5}\ \mathrm{nm}.</span>
-<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a>相対幅 $\Delta\lambda/\lambda\approx1.3\times10^{-14}/5.0\times10^{-7}\approx2.7\times10^{-8}$。きわめて狭い。**理由**：実際の星間・恒星大気の線は熱運動による**ドップラー幅**が支配的で、$\Delta\nu_D/\nu\sim v_\mathrm{th}/c\sim10^{-5}$ 程度と自然幅より3桁ほど広い。自然幅が見えるのは線の遠い翼（ローレンツ翼）や低温・低速度分散の特殊な状況に限られる。</span>
-<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a>**答え**：$\tau=10$ ns、$\Delta\nu_\mathrm{nat}\approx16$ MHz、$\Delta\lambda_\mathrm{nat}\approx1.3\times10^{-5}$ nm（$\Delta\lambda/\lambda\sim3\times10^{-8}$）。通常はドップラー幅が支配的で自然幅は埋もれる。</span>
-<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>**答え**：$R=e^{h\nu/k_BT}-1$。電波で $R\ll1$（誘導優勢）、可視・紫外で $R\gg1$（自発優勢）。宇宙メーザーが電波に多いことと整合。</span>
+<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a>::: {#sol-11-3 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-11-3-label"}</span>
+<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 11-3）**</span><span class="co">]</span>{#sol-11-3-label .offcanvas-title}</span>
+<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a>**(1)** 同じ物理過程（吸収率 <span class="co">[</span><span class="ot">s$^{-1}$</span><span class="co">]</span>）を2つの規約で書いた量は等しい：</span>
+<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a>B_{lu}J_\nu=B_{lu}^{(u)}u_\nu.</span>
+<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a>$u_\nu=(4\pi/c)J_\nu$ を代入して $J_\nu$ を消すと</span>
 <span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-einstein-method-further .unnumbered}</span></span>
-<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Einstein, "Zur Quantentheorie der Strahlung", *Physikalische Zeitschrift* 18 (1917) — Einstein 係数の原論文（独語）</span>
-<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rybicki &amp; Lightman, *Radiative Processes in Astrophysics* (Wiley, 1979) — 第1章「Einstein Coefficients」と線輸送</span>
-<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Loudon, *The Quantum Theory of Light* (Oxford, 3rd ed., 2000) — Einstein 係数の量子光学的扱い</span>
-<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Hilborn, "Einstein coefficients, cross sections, f values, dipole moments, and all that", *American Journal of Physics* 50, 982 (1982) — 係数間の換算公式の決定版</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a>B_{lu}J_\nu=B_{lu}^{(u)}\frac{4\pi}{c}J_\nu\ \Rightarrow\ B_{lu}^{(u)}=\frac{c}{4\pi}B_{lu}.</span>
+<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a>**(2)** $B_{ul}$ も同様に $B_{ul}^{(u)}=(c/4\pi)B_{ul}$。よって</span>
+<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a>\frac{A_{ul}}{B_{ul}^{(u)}}=\frac{A_{ul}}{(c/4\pi)B_{ul}}=\frac{4\pi}{c}\cdot\frac{A_{ul}}{B_{ul}}=\frac{4\pi}{c}\cdot\frac{2h\nu^3}{c^2}=\frac{8\pi h\nu^3}{c^3}.</span>
+<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a>これは $u_\nu$ 規約での標準形（量子光学でよく見る $8\pi h\nu^3/c^3$）と一致する。</span>
+<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a>**(3)** どちらの規約で書かれた $B$ かを取り違えると、係数の数値が $c/4\pi$（または逆数）倍ずれ、線吸収係数・振動子強度・遷移率の換算がすべて狂う。論文・教科書を読むときは「$B$ が $J_\nu$ に掛かるか $u_\nu$ に掛かるか」を必ず確認する。</span>
+<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a>**答え**：$B_{lu}^{(u)}=\tfrac{c}{4\pi}B_{lu}$、$A_{ul}/B_{ul}^{(u)}=8\pi h\nu^3/c^3$。規約取り違えは係数を $4\pi/c$ 倍ずらす。</span>
+<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a>::: {#sol-11-4 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-11-4-label"}</span>
+<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 11-4）**</span><span class="co">]</span>{#sol-11-4-label .offcanvas-title}</span>
+<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-397"><a href="#cb1-397" aria-hidden="true" tabindex="-1"></a>**(1)** $\tau=1/A_{ul}=1/10^8=1\times10^{-8}$ s $=10$ ns。</span>
+<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a>**(2)** $\Delta\nu_\mathrm{nat}=A_{ul}/2\pi=10^8/(2\pi)\approx1.6\times10^7$ Hz $\approx16$ MHz。</span>
+<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a>**(3)** $\lambda=500$ nm、$\lambda^2/c=(5.0\times10^{-7})^2/(3.0\times10^8)=2.5\times10^{-13}/3.0\times10^8\approx8.3\times10^{-22}$ s·m。よって</span>
+<span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a>\Delta\lambda_\mathrm{nat}=\frac{\lambda^2}{c}\Delta\nu_\mathrm{nat}\approx8.3\times10^{-22}\times1.6\times10^7\approx1.3\times10^{-14}\ \mathrm{m}=1.3\times10^{-5}\ \mathrm{nm}.</span>
+<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a>相対幅 $\Delta\lambda/\lambda\approx1.3\times10^{-14}/5.0\times10^{-7}\approx2.7\times10^{-8}$。きわめて狭い。**理由**：実際の星間・恒星大気の線は熱運動による**ドップラー幅**が支配的で、$\Delta\nu_D/\nu\sim v_\mathrm{th}/c\sim10^{-5}$ 程度と自然幅より3桁ほど広い。自然幅が見えるのは線の遠い翼（ローレンツ翼）や低温・低速度分散の特殊な状況に限られる。</span>
+<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a>**答え**：$\tau=10$ ns、$\Delta\nu_\mathrm{nat}\approx16$ MHz、$\Delta\lambda_\mathrm{nat}\approx1.3\times10^{-5}$ nm（$\Delta\lambda/\lambda\sim3\times10^{-8}$）。通常はドップラー幅が支配的で自然幅は埋もれる。</span>
+<span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-einstein-method-further .unnumbered}</span></span>
+<span id="cb1-414"><a href="#cb1-414" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-415"><a href="#cb1-415" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Einstein, "Zur Quantentheorie der Strahlung", *Physikalische Zeitschrift* 18 (1917) — Einstein 係数の原論文（独語）</span>
+<span id="cb1-416"><a href="#cb1-416" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rybicki &amp; Lightman, *Radiative Processes in Astrophysics* (Wiley, 1979) — 第1章「Einstein Coefficients」と線輸送</span>
+<span id="cb1-417"><a href="#cb1-417" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Loudon, *The Quantum Theory of Light* (Oxford, 3rd ed., 2000) — Einstein 係数の量子光学的扱い</span>
+<span id="cb1-418"><a href="#cb1-418" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Hilborn, "Einstein coefficients, cross sections, f values, dipole moments, and all that", *American Journal of Physics* 50, 982 (1982) — 係数間の換算公式の決定版</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
