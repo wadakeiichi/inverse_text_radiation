@@ -227,6 +227,11 @@ window.Quarto = {
   <a href="../00-prologue.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">序章　この本の目的と歩き方</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../acknowledgments.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">謝辞</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
@@ -593,7 +598,7 @@ B_\nu(T) = \frac{2\, \boxed{h}\, \nu^3}{c^2} \cdot \frac{1}{e^{\boxed{h}\nu/kT} 
 <p>第9章で見た古典の破綻を救うには、エネルギーの離散単位 <span class="math inline">\epsilon(\nu)</span> を導入する必要があった。Planck (1900) はこの単位として</p>
 <p><span id="eq-planck-quantum-epsilon"><span class="math display">
 \epsilon = h\nu
-\tag{13.1}</span></span></p>
+\tag{14.1}</span></span></p>
 <p>を仮定した。<span class="math inline">h</span> は新しい普遍定数で、後に <strong>Planck 定数</strong>（<strong>Planck constant</strong>）と呼ばれる。現在の値は</p>
 <p><span class="math display">
 h = 6.626 \times 10^{-27}\ \mathrm{erg \cdot s} = 6.626 \times 10^{-34}\ \mathrm{J \cdot s}
@@ -621,17 +626,17 @@ h = 6.626 \times 10^{-27}\ \mathrm{erg \cdot s} = 6.626 \times 10^{-34}\ \mathrm
 <section id="sec-planck-quantum-oscillator" class="level2">
 <h2 class="anchored" data-anchor-id="sec-planck-quantum-oscillator">10.2 振動子の量子化 ― 統計力学の組み直し</h2>
 <p>[本文目安：B3]</p>
-<p>エネルギー量子 <a href="#eq-planck-quantum-epsilon" class="quarto-xref">式&nbsp;<span>13.1</span></a> を仮定すると、第7章 §7.2 の手順で振動子の分配関数を組み直せる。エネルギー準位が <span class="math inline">E_n = n h\nu</span>（<span class="math inline">n = 0, 1, 2, \ldots</span>）で離散化された場合、分配関数は</p>
+<p>エネルギー量子 <a href="#eq-planck-quantum-epsilon" class="quarto-xref">式&nbsp;<span>14.1</span></a> を仮定すると、第7章 §7.2 の手順で振動子の分配関数を組み直せる。エネルギー準位が <span class="math inline">E_n = n h\nu</span>（<span class="math inline">n = 0, 1, 2, \ldots</span>）で離散化された場合、分配関数は</p>
 <p><span id="eq-partition-quantized-oscillator"><span class="math display">
 Z_1(\beta) = \sum_{n=0}^{\infty} e^{-\beta n h\nu} = \frac{1}{1 - e^{-\beta h\nu}}
-\tag{13.2}</span></span></p>
+\tag{14.2}</span></span></p>
 <p>ここで <span class="math inline">\beta = 1/k_B T</span>。これは無限等比級数の和である（古典の連続積分なら <span class="math inline">\int_0^\infty e^{-\beta E} dE = 1/\beta = k_B T</span> が出る）。</p>
 <p>分配関数の対数から平均エネルギーが求まる（第7章 §7.2 の手法）：</p>
 <p><span id="eq-mean-energy-quantized"><span class="math display">
 \langle E \rangle = -\frac{\partial \ln Z_1}{\partial \beta} = \frac{h\nu}{e^{h\nu/k_B T} - 1}
-\tag{13.3}</span></span></p>
-<p>これが<strong>量子化された振動子のひとつあたりの平均エネルギー</strong>である。第7章 §7.2 の <a href="../part3/07-statistical-mechanics.html#eq-mean-energy-oscillator" class="quarto-xref">式&nbsp;<span>10.5</span></a> で既に見た形だが、ここでは Planck の量子仮説から直接出ている。</p>
-<p><a href="#eq-mean-energy-quantized" class="quarto-xref">式&nbsp;<span>13.3</span></a> を古典の等分配 <span class="math inline">\langle E \rangle_\text{classical} = k_B T</span> と比較すると：</p>
+\tag{14.3}</span></span></p>
+<p>これが<strong>量子化された振動子のひとつあたりの平均エネルギー</strong>である。第7章 §7.2 の <a href="../part3/07-statistical-mechanics.html#eq-mean-energy-oscillator" class="quarto-xref">式&nbsp;<span>11.5</span></a> で既に見た形だが、ここでは Planck の量子仮説から直接出ている。</p>
+<p><a href="#eq-mean-energy-quantized" class="quarto-xref">式&nbsp;<span>14.3</span></a> を古典の等分配 <span class="math inline">\langle E \rangle_\text{classical} = k_B T</span> と比較すると：</p>
 <ul>
 <li>低振動数極限（<span class="math inline">h\nu \ll k_B T</span>）：<span class="math inline">\langle E \rangle \to k_B T</span> ― <strong>古典と一致</strong></li>
 <li>高振動数極限（<span class="math inline">h\nu \gg k_B T</span>）：<span class="math inline">\langle E \rangle \to h\nu \, e^{-h\nu/k_B T} \to 0</span> ― <strong>古典より遥かに小さい</strong></li>
@@ -642,7 +647,7 @@ Z_1(\beta) = \sum_{n=0}^{\infty} e^{-\beta n h\nu} = \frac{1}{1 - e^{-\beta h\nu
 <img src="../images/quantum-freeze-out.svg" class="img-fluid figure-img" style="width:88.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-quantum-freezeout-ch10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;13.1: 量子化振動子 1 個の平均エネルギーと古典の等分配の比較（第7章 §7.2 で初出した図を、Planck 量子仮説の文脈で再掲）。<strong>高振動数モードが「凍結」する仕組み</strong> こそ、紫外破綻（第9章 §9.3）を回避してプランク分布を生む鍵である。
+図&nbsp;14.1: 量子化振動子 1 個の平均エネルギーと古典の等分配の比較（第7章 §7.2 で初出した図を、Planck 量子仮説の文脈で再掲）。<strong>高振動数モードが「凍結」する仕組み</strong> こそ、紫外破綻（第9章 §9.3）を回避してプランク分布を生む鍵である。
 </figcaption>
 </figure>
 </div>
@@ -653,7 +658,7 @@ Z_1(\beta) = \sum_{n=0}^{\infty} e^{-\beta n h\nu} = \frac{1}{1 - e^{-\beta h\nu
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>数値で見る凍結</strong>：温度 <span class="math inline">T</span> を固定し、三つのモードの平均エネルギー <a href="#eq-mean-energy-quantized" class="quarto-xref">式&nbsp;<span>13.3</span></a> を <span class="math inline">k_B T</span> を単位にして並べる（<span class="math inline">x \equiv h\nu/k_B T</span>）。</p>
+<p><strong>数値で見る凍結</strong>：温度 <span class="math inline">T</span> を固定し、三つのモードの平均エネルギー <a href="#eq-mean-energy-quantized" class="quarto-xref">式&nbsp;<span>14.3</span></a> を <span class="math inline">k_B T</span> を単位にして並べる（<span class="math inline">x \equiv h\nu/k_B T</span>）。</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -705,14 +710,14 @@ Z_1(\beta) = \sum_{n=0}^{\infty} e^{-\beta n h\nu} = \frac{1}{1 - e^{-\beta h\nu
 <section id="sec-planck-quantum-derivation" class="level2">
 <h2 class="anchored" data-anchor-id="sec-planck-quantum-derivation">10.3 プランク分布の導出 ― 量子振動子 × モード密度</h2>
 <p>[本文目安：B3-B4｜導出：M1]</p>
-<p><a href="#eq-mean-energy-quantized" class="quarto-xref">式&nbsp;<span>13.3</span></a> と、第9章 <a href="09-classical-failure.html#eq-mode-density-borrowed" class="quarto-xref">式&nbsp;<span>12.2</span></a> のモード密度 <span class="math inline">g(\nu) = 8\pi\nu^2/c^3</span> を組み合わせると、放射場の振動数あたりエネルギー密度は</p>
+<p><a href="#eq-mean-energy-quantized" class="quarto-xref">式&nbsp;<span>14.3</span></a> と、第9章 <a href="09-classical-failure.html#eq-mode-density-borrowed" class="quarto-xref">式&nbsp;<span>13.2</span></a> のモード密度 <span class="math inline">g(\nu) = 8\pi\nu^2/c^3</span> を組み合わせると、放射場の振動数あたりエネルギー密度は</p>
 <p><span id="eq-planck-energy-density-quantum"><span class="math display">
 u_\nu(T) = g(\nu) \cdot \langle E \rangle = \frac{8\pi h \nu^3}{c^3} \cdot \frac{1}{e^{h\nu/k_B T} - 1}
-\tag{13.4}</span></span></p>
+\tag{14.4}</span></span></p>
 <p>比強度に直すと</p>
 <p><span id="eq-planck-quantum-rederived"><span class="math display">
 B_\nu(T) = \frac{c}{4\pi} u_\nu = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/k_B T} - 1}
-\tag{13.5}</span></span></p>
+\tag{14.5}</span></span></p>
 <p><strong>プランク分布が、振動子の量子化から導かれた</strong>。これが Planck (1900) の歴史的論文の核心である。</p>
 <p>第8章で Bose 統計から導いた占有因子と、本章でエネルギー量子化から導いた占有因子は、<strong>全く同じ形</strong>になる：</p>
 <table class="caption-top table">
@@ -755,16 +760,16 @@ B_\nu(T) = \frac{c}{4\pi} u_\nu = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/k
 <section id="sec-planck-quantum-limits" class="level2">
 <h2 class="anchored" data-anchor-id="sec-planck-quantum-limits">10.4 Wien・Rayleigh–Jeans 両極限の再導出</h2>
 <p>[本文目安：B3-B4｜導出：M1]</p>
-<p><a href="#eq-planck-quantum-rederived" class="quarto-xref">式&nbsp;<span>13.5</span></a> から、第2章 §2.5 で見た両極限がきれいに出る。</p>
+<p><a href="#eq-planck-quantum-rederived" class="quarto-xref">式&nbsp;<span>14.5</span></a> から、第2章 §2.5 で見た両極限がきれいに出る。</p>
 <p><strong>低振動数極限</strong>（<span class="math inline">h\nu \ll k_B T</span>）：分母 <span class="math inline">e^{h\nu/k_B T} - 1 \simeq h\nu/k_B T</span> なので</p>
 <p><span id="eq-rj-from-planck"><span class="math display">
 B_\nu \to \frac{2\nu^2}{c^2} k_B T
-\tag{13.6}</span></span></p>
-<p>これは第9章 <a href="09-classical-failure.html#eq-rayleigh-jeans-bnu" class="quarto-xref">式&nbsp;<span>12.5</span></a> の Rayleigh–Jeans 則と一致する。<strong><span class="math inline">h</span> が消える</strong>ことに注意。この極限では古典統計が正しい。</p>
+\tag{14.6}</span></span></p>
+<p>これは第9章 <a href="09-classical-failure.html#eq-rayleigh-jeans-bnu" class="quarto-xref">式&nbsp;<span>13.5</span></a> の Rayleigh–Jeans 則と一致する。<strong><span class="math inline">h</span> が消える</strong>ことに注意。この極限では古典統計が正しい。</p>
 <p><strong>高振動数極限</strong>（<span class="math inline">h\nu \gg k_B T</span>）：分母 <span class="math inline">e^{h\nu/k_B T} - 1 \simeq e^{h\nu/k_B T}</span> なので</p>
 <p><span id="eq-wien-from-planck"><span class="math display">
 B_\nu \to \frac{2h\nu^3}{c^2} e^{-h\nu/k_B T}
-\tag{13.7}</span></span></p>
+\tag{14.7}</span></span></p>
 <p>これが <strong>Wien の式</strong>である（<strong>Wien’s distribution law</strong>）。<strong><span class="math inline">h</span> が指数の中と前因子の両方に現れる</strong>ことに注意。</p>
 <p>両極限の境目は <span class="math inline">h\nu \sim k_B T</span>、すなわち <span class="math inline">\nu \sim k_B T/h \simeq 2 \times 10^{10} (T/\text{K})</span> Hz である。太陽光（<span class="math inline">T \sim 5800</span> K）なら境界は近赤外、CMB（2.7 K）なら境界はマイクロ波領域。</p>
 <div class="callout callout-style-simple callout-tip">
@@ -800,7 +805,7 @@ B_\nu \to \frac{2h\nu^3}{c^2} e^{-h\nu/k_B T}
 <div class="callout-body-container callout-body">
 <p><strong>使えるようになった道具</strong>（§10.1〜10.5）：</p>
 <ul>
-<li>エネルギー量子 <span class="math inline">\epsilon = h\nu</span> という仮定から、量子化振動子の平均エネルギー <a href="#eq-mean-energy-quantized" class="quarto-xref">式&nbsp;<span>13.3</span></a> が出る</li>
+<li>エネルギー量子 <span class="math inline">\epsilon = h\nu</span> という仮定から、量子化振動子の平均エネルギー <a href="#eq-mean-energy-quantized" class="quarto-xref">式&nbsp;<span>14.3</span></a> が出る</li>
 <li>これにモード密度を組み合わせると、観測されるプランク分布全体形が再構成される</li>
 <li>Wien・Rayleigh–Jeans の両極限が一つの式から自然に出る ― 観測される異なる振動数帯のスペクトルが、単一の量子仮説で説明される</li>
 </ul>
@@ -874,7 +879,7 @@ B_\nu \to \frac{2h\nu^3}{c^2} e^{-h\nu/k_B T}
 <p>各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。</p>
 <p><a href="#sol-10-1" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 10-1</a> <a href="#sol-10-2" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 10-2</a> <a href="#sol-10-3" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 10-3</a> <a href="#sol-10-4" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 10-4</a></p>
 <div id="sol-10-1" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-10-1-label">
-<p><span class="proof-title"><em>解答 13.1</em>. </span></p>
+<p><span class="proof-title"><em>解答 14.1</em>. </span></p>
 <div class="offcanvas-header">
 <p><span id="sol-10-1-label" class="offcanvas-title"><strong>解答例（問題 10-1）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
 </div>
@@ -892,7 +897,7 @@ Z_1=\sum_{n=0}^\infty r^n=\frac{1}{1-r}=\frac{1}{1-e^{-\beta h\nu}}.
 </div>
 </div>
 <div id="sol-10-2" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-10-2-label">
-<p><span class="proof-title"><em>解答 13.2</em>. </span></p>
+<p><span class="proof-title"><em>解答 14.2</em>. </span></p>
 <div class="offcanvas-header">
 <p><span id="sol-10-2-label" class="offcanvas-title"><strong>解答例（問題 10-2）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
 </div>
@@ -908,7 +913,7 @@ Z_1=\sum_{n=0}^\infty r^n=\frac{1}{1-r}=\frac{1}{1-e^{-\beta h\nu}}.
 </div>
 </div>
 <div id="sol-10-3" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-10-3-label">
-<p><span class="proof-title"><em>解答 13.3</em>. </span></p>
+<p><span class="proof-title"><em>解答 14.3</em>. </span></p>
 <div class="offcanvas-header">
 <p><span id="sol-10-3-label" class="offcanvas-title"><strong>解答例（問題 10-3）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
 </div>
@@ -926,7 +931,7 @@ u=\frac{8\pi^5 k_B^4}{15c^3h^3}T^4\equiv aT^4,\qquad a=\frac{8\pi^5k_B^4}{15c^3h
 </div>
 </div>
 <div id="sol-10-4" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-10-4-label">
-<p><span class="proof-title"><em>解答 13.4</em>. </span></p>
+<p><span class="proof-title"><em>解答 14.4</em>. </span></p>
 <div class="offcanvas-header">
 <p><span id="sol-10-4-label" class="offcanvas-title"><strong>解答例（問題 10-4）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
 </div>

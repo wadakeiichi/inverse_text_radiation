@@ -227,6 +227,11 @@ window.Quarto = {
   <a href="../00-prologue.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">序章　この本の目的と歩き方</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../acknowledgments.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">謝辞</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
@@ -558,12 +563,12 @@ window.Quarto = {
 <p><strong>第一層：イコニック・アンカー（リュードベリ公式）</strong></p>
 <p><span id="eq-rydberg"><span class="math display">
 \frac{1}{\lambda} = R_\mathrm{H} \left( \frac{1}{n_1^2} - \frac{1}{n_2^2} \right)
-\tag{25.1}</span></span></p>
+\tag{26.1}</span></span></p>
 <p>線スペクトルの「骨格」を一目で示す。<span class="math inline">R_\mathrm{H}</span> は基本定数の組合せ、<span class="math inline">1/n^2</span> は束縛状態のエネルギー、離散性が「線が存在する理由」を語る。</p>
 <p><strong>第二層：構造的マップ（Hα を標準例とした線吸収係数）</strong></p>
 <p><span id="eq-line-absorption"><span class="math display">
 \alpha_\nu = \frac{\pi e^2}{m_e c} \, f_{lu} \, n_l \, \phi(\nu - \nu_0)
-\tag{25.2}</span></span></p>
+\tag{26.2}</span></span></p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -605,7 +610,7 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<p><strong>適用範囲（重要）</strong>：この式の前因子 <span class="math inline">\pi e^2/m_e c</span> と振動子強度 <span class="math inline">f_{lu}</span> は、古典 Lorentz 振動子に対応する <strong>電気双極子（E1）許容線</strong> に対するものである。21 cm 線（基底状態超微細構造の <strong>磁気双極子 M1 遷移</strong>）や <strong>禁制線（E2・M1 など）</strong> では、この前因子・<span class="math inline">f_{lu}</span> をそのまま使えない。これらの線では、測定された自発放出率 <span class="math inline">A_{ul}</span> から Einstein 関係を介して有効遷移強度（<span class="math inline">B_{lu}</span>）に読み替える（<a href="../part8/26-qed-minimum.html#eq-line-absorption" class="quarto-xref">式&nbsp;<span>29.3</span></a> の構造は保ったまま、強度因子だけを差し替える）。</p>
+<p><strong>適用範囲（重要）</strong>：この式の前因子 <span class="math inline">\pi e^2/m_e c</span> と振動子強度 <span class="math inline">f_{lu}</span> は、古典 Lorentz 振動子に対応する <strong>電気双極子（E1）許容線</strong> に対するものである。21 cm 線（基底状態超微細構造の <strong>磁気双極子 M1 遷移</strong>）や <strong>禁制線（E2・M1 など）</strong> では、この前因子・<span class="math inline">f_{lu}</span> をそのまま使えない。これらの線では、測定された自発放出率 <span class="math inline">A_{ul}</span> から Einstein 関係を介して有効遷移強度（<span class="math inline">B_{lu}</span>）に読み替える（<a href="../part8/26-qed-minimum.html#eq-line-absorption" class="quarto-xref">式&nbsp;<span>30.3</span></a> の構造は保ったまま、強度因子だけを差し替える）。</p>
 </div>
 <div class="callout callout-style-simple callout-tip no-icon">
 <div class="callout-body d-flex">
@@ -613,7 +618,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>地図の使い方</strong>：第VII部の各章はこの式の異なる因子を解き明かす。プランク関数地図と並べて読めば、本書を貫く二つの逆引きが同時に把握できる。第VIII部の QED で、両者は前因子 <span class="math inline">2h\nu^3/c^2</span> を介して統一される（<a href="../part8/26-qed-minimum.html#eq-einstein-A" class="quarto-xref">式&nbsp;<span>29.4</span></a> 参照）。</p>
+<p><strong>地図の使い方</strong>：第VII部の各章はこの式の異なる因子を解き明かす。プランク関数地図と並べて読めば、本書を貫く二つの逆引きが同時に把握できる。第VIII部の QED で、両者は前因子 <span class="math inline">2h\nu^3/c^2</span> を介して統一される（<a href="../part8/26-qed-minimum.html#eq-einstein-A" class="quarto-xref">式&nbsp;<span>30.4</span></a> 参照）。</p>
 </div>
 </div>
 </div>
@@ -658,7 +663,7 @@ window.Quarto = {
 <p>第20章 §20.1 で見た太陽の Fraunhofer C 線（<span class="math inline">\lambda = 656</span> nm, H<span class="math inline">\alpha</span>）と、それに続く水素線系列の振動数は、すべて <strong>Rydberg 公式</strong> で書ける：</p>
 <p><span id="eq-rydberg-formula"><span class="math display">
 \frac{1}{\lambda} = R_H \left(\frac{1}{n_l^2} - \frac{1}{n_u^2}\right)
-\tag{25.3}</span></span></p>
+\tag{26.3}</span></span></p>
 <p>ここで <span class="math inline">R_H \simeq 1.097 \times 10^7</span> m<span class="math inline">^{-1}</span> は Rydberg 定数、<span class="math inline">n_l, n_u</span> は主量子数。</p>
 <ul>
 <li><strong>Lyman 系列</strong>（<span class="math inline">n_l = 1</span>）：紫外、<span class="math inline">\lambda &lt; 122</span> nm</li>
@@ -687,15 +692,15 @@ window.Quarto = {
 <p>Bohr（1913）は、Rutherford の原子模型に <strong>角運動量量子化</strong> を導入した：</p>
 <p><span id="eq-bohr-quantization"><span class="math display">
 L = n\hbar, \quad n = 1, 2, 3, \ldots
-\tag{25.4}</span></span></p>
+\tag{26.4}</span></span></p>
 <p>これと古典電磁気の Coulomb 力 + Newton 運動方程式を組み合わせると、エネルギー準位</p>
 <p><span id="eq-bohr-energy"><span class="math display">
 E_n = -\frac{1}{2} \frac{m_e e^4}{(4\pi\epsilon_0)^2 \hbar^2} \frac{1}{n^2} = -\frac{13.6\,\text{eV}}{n^2}
-\tag{25.5}</span></span></p>
+\tag{26.5}</span></span></p>
 <p>が出る。線振動数は <span class="math inline">h\nu = E_u - E_l</span> から</p>
 <p><span id="eq-bohr-rydberg"><span class="math display">
 \frac{1}{\lambda} = \frac{m_e e^4}{(4\pi\epsilon_0)^2 \cdot 4\pi \hbar^3 c} \left(\frac{1}{n_l^2} - \frac{1}{n_u^2}\right) = R_H \left(\frac{1}{n_l^2} - \frac{1}{n_u^2}\right)
-\tag{25.6}</span></span></p>
+\tag{26.6}</span></span></p>
 <p>これで Rydberg 公式が量子物理から <strong>逆引き</strong> された。</p>
 <div class="callout callout-style-simple callout-warning">
 <div class="callout-body d-flex">
@@ -714,11 +719,11 @@ E_n = -\frac{1}{2} \frac{m_e e^4}{(4\pi\epsilon_0)^2 \hbar^2} \frac{1}{n^2} = -\
 <p>電子の波動的性質を取り入れた Schrödinger 方程式（1926）を Coulomb ポテンシャル <span class="math inline">V(r) = -e^2/(4\pi\epsilon_0 r)</span> の下で解くと、波動関数</p>
 <p><span id="eq-hydrogen-wavefunction"><span class="math display">
 \psi_{nlm}(r, \theta, \phi) = R_{nl}(r) Y_{lm}(\theta, \phi)
-\tag{25.7}</span></span></p>
+\tag{26.7}</span></span></p>
 <p>が得られる。ここで <span class="math inline">n, l, m</span> は主量子数・軌道角運動量量子数・磁気量子数。エネルギーは（非相対論的・スピン無視）</p>
 <p><span id="eq-schrodinger-energy"><span class="math display">
 E_n = -\frac{13.6\,\text{eV}}{n^2}
-\tag{25.8}</span></span></p>
+\tag{26.8}</span></span></p>
 <p>Bohr 模型と <strong>同じエネルギー</strong> だが、構造が深い：</p>
 <ol type="1">
 <li><strong>縮退</strong>：<span class="math inline">n</span> が同じで <span class="math inline">l, m</span> が違う状態はエネルギーが等しい（Coulomb ポテンシャル固有の縮退）</li>
@@ -745,11 +750,11 @@ E_n = -\frac{13.6\,\text{eV}}{n^2}
 <p><strong>位置演算子で書く形</strong>（<span class="math inline">\langle u|\mathbf{r}|l\rangle</span> は長さの次元。電荷 <span class="math inline">e</span> を前因子に別出ししてあるため、SI・CGS で同形）：</p>
 <p><span id="eq-oscillator-strength"><span class="math display">
 f_{lu} = \frac{2 m_e \omega_{ul}}{3 \hbar\, g_l} \,|\langle u | \mathbf{r} | l \rangle|^2
-\tag{25.9}</span></span></p>
+\tag{26.9}</span></span></p>
 <p><strong>電気双極子モーメントで書く形</strong>（<span class="math inline">\mathbf{d} = e\mathbf{r}</span>、SI では C·m、CGS(Gauss) では esu·cm の次元。<span class="math inline">e^2</span> を分母に置くことで両単位系とも無次元になり、<span class="math inline">\epsilon_0</span> は現れない）：</p>
 <p><span id="eq-oscillator-strength-dipole"><span class="math display">
 f_{lu} = \frac{2 m_e \omega_{ul}}{3 \hbar\, g_l\, e^2} \,|\langle u | \mathbf{d} | l \rangle|^2
-\tag{25.10}</span></span></p>
+\tag{26.10}</span></span></p>
 <p>ここで <span class="math inline">\langle u | \mathbf{r} | l \rangle</span> は <strong>電気双極子遷移行列要素</strong>（位置表示）、<span class="math inline">\omega_{ul} = (E_u - E_l)/\hbar</span>。いずれの形でも <span class="math inline">f_{lu}</span> は無次元である。物理的解釈：</p>
 <ul>
 <li><span class="math inline">f_{lu}</span> は古典的振動子の <strong>強度を表す無次元量</strong> で、<span class="math inline">\sum_u f_{lu} = N_\text{electrons}</span>（<strong>Thomas-Reiche-Kuhn 和則</strong>）</li>
@@ -780,11 +785,11 @@ f_{lu} = \frac{2 m_e \omega_{ul}}{3 \hbar\, g_l\, e^2} \,|\langle u | \mathbf{d}
 <p>電場 <span class="math inline">\mathbf{E}(t) = \mathbf{E}_0 e^{-i\omega t}</span> に弱く減衰する束縛電子（質量 <span class="math inline">m_e</span>、電荷 <span class="math inline">-e</span>、固有角振動数 <span class="math inline">\omega_0</span>、減衰率 <span class="math inline">\gamma</span>）の運動方程式：</p>
 <p><span id="eq-lorentz-oscillator"><span class="math display">
 \ddot{\mathbf{r}} + \gamma \dot{\mathbf{r}} + \omega_0^2 \mathbf{r} = -\frac{e}{m_e}\mathbf{E}(t)
-\tag{25.11}</span></span></p>
+\tag{26.11}</span></span></p>
 <p>定常解の振幅から、振動電子による双極子モーメント <span class="math inline">\mathbf{p}(t)</span> を求め、これに対する <strong>吸収断面積</strong>（時間平均パワー吸収率を入射エネルギーフラックスで割ったもの）を計算すると、振動数積分された値は</p>
 <p><span id="eq-classical-integrated-cross-section"><span class="math display">
 \int_0^\infty \sigma_\text{cl}(\nu)\, d\nu = \frac{\pi e^2}{m_e c} \quad (\text{CGS(Gauss) 形})
-\tag{25.12}</span></span></p>
+\tag{26.12}</span></span></p>
 <p>である（<strong>SI 形</strong> では <span class="math inline">\dfrac{\pi e^2}{4\pi\epsilon_0 m_e c} = \dfrac{e^2}{4\epsilon_0 m_e c}</span>）。ここで前因子 <span class="math inline">\pi e^2/m_e c</span> は <strong>減衰率 <span class="math inline">\gamma</span> にも線輪郭のピークの位置にもよらない普遍量</strong> であり、古典電磁気の力学パラメータのみで決まる。</p>
 </section>
 <section id="量子論への橋-振動子強度-f_lu-の登場" class="level3">
@@ -792,31 +797,31 @@ f_{lu} = \frac{2 m_e \omega_{ul}}{3 \hbar\, g_l\, e^2} \,|\langle u | \mathbf{d}
 <p>実際の原子は古典振動子ではなく、量子的な多準位系である。各遷移 <span class="math inline">l \to u</span> の <strong>実効的な吸収強度</strong> は、古典的振動子の振動数積分断面積に <strong>無次元の補正係数</strong> <span class="math inline">f_{lu}</span>（振動子強度、第21.4節）を掛けたものとして書ける：</p>
 <p><span id="eq-quantum-integrated-cross-section"><span class="math display">
 \int_0^\infty \sigma_{lu}(\nu)\, d\nu = \frac{\pi e^2}{m_e c} \cdot f_{lu} \quad (\text{CGS(Gauss) 形})
-\tag{25.13}</span></span></p>
-<p><span class="math inline">f_{lu}</span> は量子力学の遷移行列要素 <a href="#eq-oscillator-strength" class="quarto-xref">式&nbsp;<span>25.9</span></a> から計算される（SI 形では前因子を <span class="math inline">e^2/(4\epsilon_0 m_e c)</span> に置き換える）。Thomas-Reiche-Kuhn 和則 <span class="math inline">\sum_u f_{lu} = N_\text{electrons}</span> は、「すべての遷移を足し合わせると、古典的に予想される総吸収量に戻る」という意味で、古典-量子対応を定量的に保証する。</p>
+\tag{26.13}</span></span></p>
+<p><span class="math inline">f_{lu}</span> は量子力学の遷移行列要素 <a href="#eq-oscillator-strength" class="quarto-xref">式&nbsp;<span>26.9</span></a> から計算される（SI 形では前因子を <span class="math inline">e^2/(4\epsilon_0 m_e c)</span> に置き換える）。Thomas-Reiche-Kuhn 和則 <span class="math inline">\sum_u f_{lu} = N_\text{electrons}</span> は、「すべての遷移を足し合わせると、古典的に予想される総吸収量に戻る」という意味で、古典-量子対応を定量的に保証する。</p>
 <p>線輪郭 <span class="math inline">\phi(\nu-\nu_0)</span>（規格化 <span class="math inline">\int \phi\, d\nu = 1</span>）を使って、吸収断面積を振動数依存の形に展開する：</p>
 <p><span id="eq-cross-section-line"><span class="math display">
 \sigma_{lu}(\nu) = \frac{\pi e^2}{m_e c} f_{lu}\, \phi(\nu - \nu_0) \quad (\text{CGS(Gauss) 形})
-\tag{25.14}</span></span></p>
+\tag{26.14}</span></span></p>
 <p>これを <strong>柱密度 × 断面積 = 吸収係数</strong> の関係に代入して、中心地図</p>
 <p><span id="eq-line-absorption-coefficient-complete"><span class="math display">
 \boxed{
 \alpha_\nu = \frac{\pi e^2}{m_e c}\, f_{lu}\, n_l\, \phi(\nu - \nu_0)
 }\quad (\text{CGS(Gauss) 形})
-\tag{25.15}</span></span></p>
+\tag{26.15}</span></span></p>
 <p>を再現する（第VII部冒頭で経験式として受け入れていたこの式が、いま完全に逆引きされた）。SI 形では前因子を <span class="math inline">e^2/(4\epsilon_0 m_e c)</span> に置き換えればよい。</p>
 </section>
 <section id="einstein-b-係数との換算" class="level3">
 <h3 class="anchored" data-anchor-id="einstein-b-係数との換算">Einstein <span class="math inline">B</span> 係数との換算</h3>
-<p>第21章 §21.2 で導入した Einstein 関係 <span class="math inline">\alpha_\nu = (h\nu_0/4\pi) n_l B_{lu} \phi(\nu-\nu_0)</span> と本節の <a href="#eq-line-absorption-coefficient-complete" class="quarto-xref">式&nbsp;<span>25.15</span></a> を比べると、両者は <strong>同一の物理量を別の言葉で書いたもの</strong> であり、</p>
+<p>第21章 §21.2 で導入した Einstein 関係 <span class="math inline">\alpha_\nu = (h\nu_0/4\pi) n_l B_{lu} \phi(\nu-\nu_0)</span> と本節の <a href="#eq-line-absorption-coefficient-complete" class="quarto-xref">式&nbsp;<span>26.15</span></a> を比べると、両者は <strong>同一の物理量を別の言葉で書いたもの</strong> であり、</p>
 <p><span id="eq-B-f-conversion"><span class="math display">
 B_{lu} = \frac{4\pi^2 e^2}{m_e c h\nu_0}\, f_{lu} \quad (\text{CGS(Gauss) 形})
-\tag{25.16}</span></span></p>
+\tag{26.16}</span></span></p>
 <p>の換算で結ばれる（<span class="math inline">J_\nu</span> 規約、§11.3。SI 形では <span class="math inline">e^2 \to e^2/(4\pi\epsilon_0)</span>）。さらに Einstein 関係 <span class="math inline">A_{ul} = (2h\nu^3/c^2) B_{ul} = (2h\nu^3/c^2)(g_l/g_u) B_{lu}</span> と組合せて、自発放出率 <span class="math inline">A_{ul}</span> も振動子強度から得られる：</p>
 <p><span id="eq-A-f-conversion"><span class="math display">
 A_{ul} = \frac{8\pi^2 e^2 \nu_0^2}{m_e c^3}\, \frac{g_l}{g_u}\, f_{lu} \quad (\text{CGS(Gauss) 形})
-\tag{25.17}</span></span></p>
-<p>である（SI 形では <span class="math inline">e^2 \to e^2/(4\pi\epsilon_0)</span>）。この <span class="math inline">A_{ul}</span> と <span class="math inline">f_{lu}</span> の関係は電気双極子（E1）遷移を前提とするが、<span class="math inline">A_{ul}</span> を一般の遷移（M1・E2 等）の測定値で与えれば、<a href="#eq-B-f-conversion" class="quarto-xref">式&nbsp;<span>25.16</span></a> を逆に解いて実効的な <span class="math inline">B_{lu}</span> を得る読み替えが可能である（21 cm 線の扱い、§20.4）。</p>
+\tag{26.17}</span></span></p>
+<p>である（SI 形では <span class="math inline">e^2 \to e^2/(4\pi\epsilon_0)</span>）。この <span class="math inline">A_{ul}</span> と <span class="math inline">f_{lu}</span> の関係は電気双極子（E1）遷移を前提とするが、<span class="math inline">A_{ul}</span> を一般の遷移（M1・E2 等）の測定値で与えれば、<a href="#eq-B-f-conversion" class="quarto-xref">式&nbsp;<span>26.16</span></a> を逆に解いて実効的な <span class="math inline">B_{lu}</span> を得る読み替えが可能である（21 cm 線の扱い、§20.4）。</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -880,7 +885,7 @@ A_{ul} = \frac{8\pi^2 e^2 \nu_0^2}{m_e c^3}\, \frac{g_l}{g_u}\, f_{lu} \quad (\t
 <p>電気双極子遷移は、波動関数のパリティと角運動量の選択則を持つ：</p>
 <p><span id="eq-selection-rules-E1"><span class="math display">
 \Delta l = \pm 1, \quad \Delta m = 0, \pm 1
-\tag{25.18}</span></span></p>
+\tag{26.18}</span></span></p>
 <p>これらを満たさない遷移は、電気双極子では起こらない ― 「<strong>禁制</strong>」（<strong>forbidden</strong>）。</p>
 <p>しかし、より高次の遷移は弱いながら可能：</p>
 <ul>
@@ -895,7 +900,7 @@ A_{ul} = \frac{8\pi^2 e^2 \nu_0^2}{m_e c^3}\, \frac{g_l}{g_u}\, f_{lu} \quad (\t
 <img src="../images/hydrogen-levels.svg" class="img-fluid figure-img" style="width:92.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hydrogen-levels-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;25.1: 水素のエネルギー準位図（Grotrian 図）。横軸は軌道角運動量 <span class="math inline">l</span>（s, p, d, f）、縦軸はエネルギー <span class="math inline">E_n = -13.6/n^2</span> eV。<strong>電気双極子（E1）で許される遷移は、隣り合う <span class="math inline">l</span> 列どうし（<span class="math inline">\Delta l = \pm 1</span>）を結ぶ</strong> ― Lyα（2p→1s）や Hα（3d→2p）はこの規則を満たす。一方、同じ列内の <strong>2s→1s（<span class="math inline">\Delta l = 0</span>）は E1 禁制</strong>で、2s は準安定準位として 2 光子放出でしか脱励起できない。基底状態 1s の超微細構造間の <strong>21 cm 線は磁気双極子（M1）遷移</strong>で、これも E1 禁制だが、宇宙に水素原子が大量にあるため観測できる。なぜこの選択則になるのかの物理（双極子演算子のパリティと角運動量）は第26章 §26.5 で行列要素から見通す。水素ではエネルギーが <span class="math inline">n</span> だけで決まる（<span class="math inline">l</span> 縮退）点にも注意。
+図&nbsp;26.1: 水素のエネルギー準位図（Grotrian 図）。横軸は軌道角運動量 <span class="math inline">l</span>（s, p, d, f）、縦軸はエネルギー <span class="math inline">E_n = -13.6/n^2</span> eV。<strong>電気双極子（E1）で許される遷移は、隣り合う <span class="math inline">l</span> 列どうし（<span class="math inline">\Delta l = \pm 1</span>）を結ぶ</strong> ― Lyα（2p→1s）や Hα（3d→2p）はこの規則を満たす。一方、同じ列内の <strong>2s→1s（<span class="math inline">\Delta l = 0</span>）は E1 禁制</strong>で、2s は準安定準位として 2 光子放出でしか脱励起できない。基底状態 1s の超微細構造間の <strong>21 cm 線は磁気双極子（M1）遷移</strong>で、これも E1 禁制だが、宇宙に水素原子が大量にあるため観測できる。なぜこの選択則になるのかの物理（双極子演算子のパリティと角運動量）は第26章 §26.5 で行列要素から見通す。水素ではエネルギーが <span class="math inline">n</span> だけで決まる（<span class="math inline">l</span> 縮退）点にも注意。
 </figcaption>
 </figure>
 </div>
@@ -905,7 +910,7 @@ A_{ul} = \frac{8\pi^2 e^2 \nu_0^2}{m_e c^3}\, \frac{g_l}{g_u}\, f_{lu} \quad (\t
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>前因子の読み替え ― 禁制線・21 cm をどう中心地図に乗せるか</strong>：中心地図の前因子 <span class="math inline">\pi e^2/m_e c</span> は古典 Lorentz 振動子＝<strong>電気双極子（E1）遷移</strong> に対応する（§22.4b）。M1・E2 の禁制線や 21 cm 線（基底状態超微細構造の M1）は E1 ではないので、この前因子と通常の振動子強度 <span class="math inline">f_{lu}</span> をそのまま当てはめられない。実務では順序を逆にする ― <strong>測定（または計算）された自発放出率 <span class="math inline">A_{ul}</span> を出発点に</strong>、Einstein 関係 <a href="#eq-A-f-conversion" class="quarto-xref">式&nbsp;<span>25.17</span></a> を E1 に限らず一般化して逆に解き、実効的な <span class="math inline">B_{lu}</span>（あるいは実効振動子強度 <span class="math inline">f_{lu}\sim\alpha^2 f_{E1}</span>）を得る。こうして禁制線も 21 cm 線も同じ中心地図 <span class="math inline">\alpha_\nu=(\pi e^2/m_e c)f_{lu}n_l\phi</span> の枠に乗る。21 cm 線への具体的な適用は第20章 §20.4 を参照。</p>
+<p><strong>前因子の読み替え ― 禁制線・21 cm をどう中心地図に乗せるか</strong>：中心地図の前因子 <span class="math inline">\pi e^2/m_e c</span> は古典 Lorentz 振動子＝<strong>電気双極子（E1）遷移</strong> に対応する（§22.4b）。M1・E2 の禁制線や 21 cm 線（基底状態超微細構造の M1）は E1 ではないので、この前因子と通常の振動子強度 <span class="math inline">f_{lu}</span> をそのまま当てはめられない。実務では順序を逆にする ― <strong>測定（または計算）された自発放出率 <span class="math inline">A_{ul}</span> を出発点に</strong>、Einstein 関係 <a href="#eq-A-f-conversion" class="quarto-xref">式&nbsp;<span>26.17</span></a> を E1 に限らず一般化して逆に解き、実効的な <span class="math inline">B_{lu}</span>（あるいは実効振動子強度 <span class="math inline">f_{lu}\sim\alpha^2 f_{E1}</span>）を得る。こうして禁制線も 21 cm 線も同じ中心地図 <span class="math inline">\alpha_\nu=(\pi e^2/m_e c)f_{lu}n_l\phi</span> の枠に乗る。21 cm 線への具体的な適用は第20章 §20.4 を参照。</p>
 </div>
 </div>
 </div>
@@ -1043,7 +1048,7 @@ A_{ul} = \frac{8\pi^2 e^2 \nu_0^2}{m_e c^3}\, \frac{g_l}{g_u}\, f_{lu} \quad (\t
 <p>各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。</p>
 <p><a href="#sol-22-1" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 22-1</a> <a href="#sol-22-2" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 22-2</a> <a href="#sol-22-3" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 22-3</a> <a href="#sol-22-4" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 22-4</a></p>
 <div id="sol-22-1" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-22-1-label">
-<p><span class="proof-title"><em>解答 25.1</em>. </span></p>
+<p><span class="proof-title"><em>解答 26.1</em>. </span></p>
 <div class="offcanvas-header">
 <p><span id="sol-22-1-label" class="offcanvas-title"><strong>解答例（問題 22-1）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
 </div>
@@ -1055,7 +1060,7 @@ A_{ul} = \frac{8\pi^2 e^2 \nu_0^2}{m_e c^3}\, \frac{g_l}{g_u}\, f_{lu} \quad (\t
 </div>
 </div>
 <div id="sol-22-2" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-22-2-label">
-<p><span class="proof-title"><em>解答 25.2</em>. </span></p>
+<p><span class="proof-title"><em>解答 26.2</em>. </span></p>
 <div class="offcanvas-header">
 <p><span id="sol-22-2-label" class="offcanvas-title"><strong>解答例（問題 22-2）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
 </div>
@@ -1070,7 +1075,7 @@ A_{ul} = \frac{8\pi^2 e^2 \nu_0^2}{m_e c^3}\, \frac{g_l}{g_u}\, f_{lu} \quad (\t
 </div>
 </div>
 <div id="sol-22-3" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-22-3-label">
-<p><span class="proof-title"><em>解答 25.3</em>. </span></p>
+<p><span class="proof-title"><em>解答 26.3</em>. </span></p>
 <div class="offcanvas-header">
 <p><span id="sol-22-3-label" class="offcanvas-title"><strong>解答例（問題 22-3）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
 </div>
@@ -1082,7 +1087,7 @@ A_{ul} = \frac{8\pi^2 e^2 \nu_0^2}{m_e c^3}\, \frac{g_l}{g_u}\, f_{lu} \quad (\t
 </div>
 </div>
 <div id="sol-22-4" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-22-4-label">
-<p><span class="proof-title"><em>解答 25.4</em>. </span></p>
+<p><span class="proof-title"><em>解答 26.4</em>. </span></p>
 <div class="offcanvas-header">
 <p><span id="sol-22-4-label" class="offcanvas-title"><strong>解答例（問題 22-4）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
 </div>

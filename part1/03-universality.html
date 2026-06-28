@@ -227,6 +227,11 @@ window.Quarto = {
   <a href="../00-prologue.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">序章　この本の目的と歩き方</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../acknowledgments.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">謝辞</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -564,7 +569,7 @@ window.Quarto = {
 -->
 <p><span id="eq-planck-function"><span class="math display">
 B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
-\tag{6.1}</span></span></p>
+\tag{7.1}</span></span></p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -786,7 +791,7 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 <p>両者の関係は <strong>Kirchhoff の法則</strong>（次節で本格的に）で結ばれ、熱平衡では</p>
 <p><span id="eq-kirchhoff"><span class="math display">
 a_\nu = \epsilon_\nu
-\tag{6.2}</span></span></p>
+\tag{7.2}</span></span></p>
 <p>が成り立つ。つまり吸収が強い振動数では放出も強く、吸収が弱い振動数では放出も弱い。</p>
 <p>具体例：</p>
 <ul>
@@ -821,12 +826,12 @@ a_\nu = \epsilon_\nu
 <p>放射輸送方程式は</p>
 <p><span id="eq-rt-kirchhoff-context"><span class="math display">
 \frac{dI_\nu}{ds} = -\alpha_\nu I_\nu + j_\nu
-\tag{6.3}</span></span></p>
+\tag{7.3}</span></span></p>
 <p>の形で、ソース関数を <span class="math inline">S_\nu \equiv j_\nu / \alpha_\nu</span> と定義する。</p>
-<p><strong>局所熱平衡</strong>（<strong>LTE</strong>: <strong>L</strong>ocal <strong>T</strong>hermodynamic <strong>E</strong>quilibrium）では、Kirchhoff の法則 <a href="#eq-kirchhoff" class="quarto-xref">式&nbsp;<span>6.2</span></a> から</p>
+<p><strong>局所熱平衡</strong>（<strong>LTE</strong>: <strong>L</strong>ocal <strong>T</strong>hermodynamic <strong>E</strong>quilibrium）では、Kirchhoff の法則 <a href="#eq-kirchhoff" class="quarto-xref">式&nbsp;<span>7.2</span></a> から</p>
 <p><span id="eq-source-equals-planck"><span class="math display">
 S_\nu = B_\nu(T)
-\tag{6.4}</span></span></p>
+\tag{7.4}</span></span></p>
 <p>が成り立つ。つまり「<strong>熱平衡ではソース関数がプランク関数になる</strong>」。これは第5章の放射輸送の議論の中心的な結果で、観測スペクトルが黒体に近づく条件と直結する。</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -971,7 +976,7 @@ S_\nu = B_\nu(T)
 <p>各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。</p>
 <p><a href="#sol-3-1" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 3-1</a> <a href="#sol-3-2" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 3-2</a> <a href="#sol-3-3" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 3-3</a> <a href="#sol-3-4" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 3-4</a></p>
 <div id="sol-3-1" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-3-1-label">
-<p><span class="proof-title"><em>解答 6.1</em>. </span></p>
+<p><span class="proof-title"><em>解答 7.1</em>. </span></p>
 <div class="offcanvas-header">
 <p><span id="sol-3-1-label" class="offcanvas-title"><strong>解答例（問題 3-1）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
 </div>
@@ -983,7 +988,7 @@ S_\nu = B_\nu(T)
 </div>
 </div>
 <div id="sol-3-2" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-3-2-label">
-<p><span class="proof-title"><em>解答 6.2</em>. </span></p>
+<p><span class="proof-title"><em>解答 7.2</em>. </span></p>
 <div class="offcanvas-header">
 <p><span id="sol-3-2-label" class="offcanvas-title"><strong>解答例（問題 3-2）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
 </div>
@@ -999,7 +1004,7 @@ a_\nu B_\nu(T)=\epsilon_\nu B_\nu(T)\ \Rightarrow\ a_\nu=\epsilon_\nu.
 </div>
 </div>
 <div id="sol-3-3" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-3-3-label">
-<p><span class="proof-title"><em>解答 6.3</em>. </span></p>
+<p><span class="proof-title"><em>解答 7.3</em>. </span></p>
 <div class="offcanvas-header">
 <p><span id="sol-3-3-label" class="offcanvas-title"><strong>解答例（問題 3-3）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
 </div>
@@ -1014,7 +1019,7 @@ a_\nu B_\nu(T)=\epsilon_\nu B_\nu(T)\ \Rightarrow\ a_\nu=\epsilon_\nu.
 </div>
 </div>
 <div id="sol-3-4" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-3-4-label">
-<p><span class="proof-title"><em>解答 6.4</em>. </span></p>
+<p><span class="proof-title"><em>解答 7.4</em>. </span></p>
 <div class="offcanvas-header">
 <p><span id="sol-3-4-label" class="offcanvas-title"><strong>解答例（問題 3-4）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
 </div>

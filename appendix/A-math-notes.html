@@ -227,6 +227,11 @@ window.Quarto = {
   <a href="../00-prologue.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">序章　この本の目的と歩き方</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../acknowledgments.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">謝辞</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
@@ -627,7 +632,7 @@ d\mu = -\sin\theta\, d\theta, \quad d\Omega = -d\mu\, d\phi
 <p><span id="eq-mean-intensity-mu"><span class="math display">
 J \equiv \frac{1}{4\pi}\int I\, d\Omega = \frac{1}{2}\int_{-1}^{1} I\, d\mu
 \tag{A.5}</span></span></p>
-<p>これが第4章 §4.5 の <span class="math inline">J_\nu</span> の定義（<a href="../part2/04-radiation-field.html#eq-mean-intensity" class="quarto-xref">式&nbsp;<span>7.8</span></a>）を、<span class="math inline">\mu=\cos\theta</span> 表示で書き直したもの。</p>
+<p>これが第4章 §4.5 の <span class="math inline">J_\nu</span> の定義（<a href="../part2/04-radiation-field.html#eq-mean-intensity" class="quarto-xref">式&nbsp;<span>8.8</span></a>）を、<span class="math inline">\mu=\cos\theta</span> 表示で書き直したもの。</p>
 <hr>
 </section>
 </section>
@@ -678,10 +683,10 @@ J \equiv \frac{1}{4\pi}\int I\, d\Omega = \frac{1}{2}\int_{-1}^{1} I\, d\mu
 \int_0^\infty \frac{x^3}{e^x - 1}\, dx = \Gamma(4)\zeta(4) = 6 \cdot \frac{\pi^4}{90} = \frac{\pi^4}{15}
 \tag{A.10}</span></span></p>
 <p>これからプランク分布の全エネルギー密度</p>
-<p><span id="eq-energy-density-T4"><span class="math display">
+<p><span id="eq-energy-density-T4-explicit"><span class="math display">
 u(T) = \int_0^\infty u_\nu\, d\nu = \frac{8\pi^5 k_B^4}{15 h^3 c^3} T^4 = aT^4
 \tag{A.11}</span></span></p>
-<p>放射定数 <span class="math inline">a \simeq 7.566 \times 10^{-16}</span> J m<span class="math inline">^{-3}</span> K<span class="math inline">^{-4}</span>。フラックス側では <span class="math inline">\sigma = ac/4</span> で Stefan-Boltzmann 定数。</p>
+<p>これは第8章 <a href="../part3/08-photon-statistics.html#eq-energy-density-T4" class="quarto-xref">式&nbsp;<span>12.7</span></a> の放射定数 <span class="math inline">a</span> を明示した形。放射定数 <span class="math inline">a \simeq 7.566 \times 10^{-16}</span> J m<span class="math inline">^{-3}</span> K<span class="math inline">^{-4}</span>。フラックス側では <span class="math inline">\sigma = ac/4</span> で Stefan-Boltzmann 定数。</p>
 <div class="appendix-tip">
 <p><strong>本文での使用</strong>：第4章 §4.4、第14章 §14.5、第17章 §17.1（恒星の有効温度）</p>
 </div>
@@ -1543,9 +1548,9 @@ Y_{lm}(\theta, \phi) = \sqrt{\frac{(2l+1)}{4\pi}\frac{(l-m)!}{(l+m)!}} P_l^m(\co
 <span id="cb3-125"><a href="#cb3-125" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-126"><a href="#cb3-126" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb3-127"><a href="#cb3-127" aria-hidden="true" tabindex="-1"></a>u(T) = \int_0^\infty u_\nu\, d\nu = \frac{8\pi^5 k_B^4}{15 h^3 c^3} T^4 = aT^4</span>
-<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a>$$ {#eq-energy-density-T4}</span>
+<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a>$$ {#eq-energy-density-T4-explicit}</span>
 <span id="cb3-129"><a href="#cb3-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-130"><a href="#cb3-130" aria-hidden="true" tabindex="-1"></a>放射定数 $a \simeq 7.566 \times 10^{-16}$ J m$^{-3}$ K$^{-4}$。フラックス側では $\sigma = ac/4$ で Stefan-Boltzmann 定数。</span>
+<span id="cb3-130"><a href="#cb3-130" aria-hidden="true" tabindex="-1"></a>これは第8章 @eq-energy-density-T4 の放射定数 $a$ を明示した形。放射定数 $a \simeq 7.566 \times 10^{-16}$ J m$^{-3}$ K$^{-4}$。フラックス側では $\sigma = ac/4$ で Stefan-Boltzmann 定数。</span>
 <span id="cb3-131"><a href="#cb3-131" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-132"><a href="#cb3-132" aria-hidden="true" tabindex="-1"></a>::: {.appendix-tip}</span>
 <span id="cb3-133"><a href="#cb3-133" aria-hidden="true" tabindex="-1"></a>**本文での使用**：第4章 §4.4、第14章 §14.5、第17章 §17.1（恒星の有効温度）</span>

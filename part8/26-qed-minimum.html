@@ -227,6 +227,11 @@ window.Quarto = {
   <a href="../00-prologue.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">序章　この本の目的と歩き方</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../acknowledgments.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">謝辞</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
@@ -583,7 +588,7 @@ window.Quarto = {
 -->
 <p><span id="eq-planck-function"><span class="math display">
 B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
-\tag{29.1}</span></span></p>
+\tag{30.1}</span></span></p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -636,12 +641,12 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 <p><strong>第一層：イコニック・アンカー（リュードベリ公式）</strong></p>
 <p><span id="eq-rydberg"><span class="math display">
 \frac{1}{\lambda} = R_\mathrm{H} \left( \frac{1}{n_1^2} - \frac{1}{n_2^2} \right)
-\tag{29.2}</span></span></p>
+\tag{30.2}</span></span></p>
 <p>線スペクトルの「骨格」を一目で示す。<span class="math inline">R_\mathrm{H}</span> は基本定数の組合せ、<span class="math inline">1/n^2</span> は束縛状態のエネルギー、離散性が「線が存在する理由」を語る。</p>
 <p><strong>第二層：構造的マップ（Hα を標準例とした線吸収係数）</strong></p>
 <p><span id="eq-line-absorption"><span class="math display">
 \alpha_\nu = \frac{\pi e^2}{m_e c} \, f_{lu} \, n_l \, \phi(\nu - \nu_0)
-\tag{29.3}</span></span></p>
+\tag{30.3}</span></span></p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -683,7 +688,7 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 </tr>
 </tbody>
 </table>
-<p><strong>適用範囲（重要）</strong>：この式の前因子 <span class="math inline">\pi e^2/m_e c</span> と振動子強度 <span class="math inline">f_{lu}</span> は、古典 Lorentz 振動子に対応する <strong>電気双極子（E1）許容線</strong> に対するものである。21 cm 線（基底状態超微細構造の <strong>磁気双極子 M1 遷移</strong>）や <strong>禁制線（E2・M1 など）</strong> では、この前因子・<span class="math inline">f_{lu}</span> をそのまま使えない。これらの線では、測定された自発放出率 <span class="math inline">A_{ul}</span> から Einstein 関係を介して有効遷移強度（<span class="math inline">B_{lu}</span>）に読み替える（<a href="#eq-line-absorption" class="quarto-xref">式&nbsp;<span>29.3</span></a> の構造は保ったまま、強度因子だけを差し替える）。</p>
+<p><strong>適用範囲（重要）</strong>：この式の前因子 <span class="math inline">\pi e^2/m_e c</span> と振動子強度 <span class="math inline">f_{lu}</span> は、古典 Lorentz 振動子に対応する <strong>電気双極子（E1）許容線</strong> に対するものである。21 cm 線（基底状態超微細構造の <strong>磁気双極子 M1 遷移</strong>）や <strong>禁制線（E2・M1 など）</strong> では、この前因子・<span class="math inline">f_{lu}</span> をそのまま使えない。これらの線では、測定された自発放出率 <span class="math inline">A_{ul}</span> から Einstein 関係を介して有効遷移強度（<span class="math inline">B_{lu}</span>）に読み替える（<a href="#eq-line-absorption" class="quarto-xref">式&nbsp;<span>30.3</span></a> の構造は保ったまま、強度因子だけを差し替える）。</p>
 </div>
 <div class="callout callout-style-simple callout-tip no-icon">
 <div class="callout-body d-flex">
@@ -691,7 +696,7 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>地図の使い方</strong>：第VII部の各章はこの式の異なる因子を解き明かす。プランク関数地図と並べて読めば、本書を貫く二つの逆引きが同時に把握できる。第VIII部の QED で、両者は前因子 <span class="math inline">2h\nu^3/c^2</span> を介して統一される（<a href="#eq-einstein-A" class="quarto-xref">式&nbsp;<span>29.4</span></a> 参照）。</p>
+<p><strong>地図の使い方</strong>：第VII部の各章はこの式の異なる因子を解き明かす。プランク関数地図と並べて読めば、本書を貫く二つの逆引きが同時に把握できる。第VIII部の QED で、両者は前因子 <span class="math inline">2h\nu^3/c^2</span> を介して統一される（<a href="#eq-einstein-A" class="quarto-xref">式&nbsp;<span>30.4</span></a> 参照）。</p>
 </div>
 </div>
 </div>
@@ -700,9 +705,9 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 <p><strong>Einstein 係数の関係 ― 連続と線を結ぶ式</strong></p>
 <p><span id="eq-einstein-A"><span class="math display">
 A_{ul} = \frac{2 h \nu^3}{c^2} \cdot \frac{g_l}{g_u} \cdot B_{lu}
-\tag{29.4}</span></span></p>
+\tag{30.4}</span></span></p>
 <p>（添字 <span class="math inline">u</span> は upper、<span class="math inline">l</span> は lower。本書の本文表記と統一。古典文献では <span class="math inline">A_{21}, B_{12}, g_1/g_2</span> と書かれることが多い。）</p>
-<p>強調した前因子 <span class="math inline">2h\nu^3/c^2</span> は、プランク関数（<a href="#eq-planck-function" class="quarto-xref">式&nbsp;<span>29.1</span></a>）と<strong>まったく同じ形</strong>で現れる。これは連続放射と線スペクトルが、同じ電磁場–物質相互作用の二側面であることを示す数学的証拠である。本書全体が、この式によって QED で締めくくられる。</p>
+<p>強調した前因子 <span class="math inline">2h\nu^3/c^2</span> は、プランク関数（<a href="#eq-planck-function" class="quarto-xref">式&nbsp;<span>30.1</span></a>）と<strong>まったく同じ形</strong>で現れる。これは連続放射と線スペクトルが、同じ電磁場–物質相互作用の二側面であることを示す数学的証拠である。本書全体が、この式によって QED で締めくくられる。</p>
 </div>
 </section>
 <section id="sec-qed-minimum-questions" class="level2 unnumbered">
@@ -740,13 +745,13 @@ A_{ul} = \frac{2 h \nu^3}{c^2} \cdot \frac{g_l}{g_u} \cdot B_{lu}
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>本章の単位系について</strong>：本章は <strong>QED の構造を見通すことが主目的</strong> であるが、本章の主式 <a href="#eq-interaction-hamiltonian" class="quarto-xref">式&nbsp;<span>29.5</span></a>、<a href="#eq-vector-potential-quantized" class="quarto-xref">式&nbsp;<span>29.6</span></a>、<a href="#eq-A-coefficient-QED" class="quarto-xref">式&nbsp;<span>29.8</span></a> は <strong>本書の方針どおり SI で厳密に記す</strong>（前因子 <span class="math inline">4\pi\epsilon_0</span>、<span class="math inline">1/c</span> などを略さずに含める）。一方、QED の標準文献は Gauss/Heaviside-Lorentz 単位系を用いるものも多く、同じ式でも前因子の見かけが異なる。<strong>SI と Gauss/HL の式形の対応は付録 B §B.4 に集約した</strong> ので、論文と比較する際はそちらと Loudon 第 4 章を参照し、必ず単位系を確認してほしい。各係数の詳細な導出は専門書（Loudon、Sakurai、Cohen-Tannoudji）に譲る。</p>
+<p><strong>本章の単位系について</strong>：本章は <strong>QED の構造を見通すことが主目的</strong> であるが、本章の主式 <a href="#eq-interaction-hamiltonian" class="quarto-xref">式&nbsp;<span>30.5</span></a>、<a href="#eq-vector-potential-quantized" class="quarto-xref">式&nbsp;<span>30.6</span></a>、<a href="#eq-A-coefficient-QED" class="quarto-xref">式&nbsp;<span>30.8</span></a> は <strong>本書の方針どおり SI で厳密に記す</strong>（前因子 <span class="math inline">4\pi\epsilon_0</span>、<span class="math inline">1/c</span> などを略さずに含める）。一方、QED の標準文献は Gauss/Heaviside-Lorentz 単位系を用いるものも多く、同じ式でも前因子の見かけが異なる。<strong>SI と Gauss/HL の式形の対応は付録 B §B.4 に集約した</strong> ので、論文と比較する際はそちらと Loudon 第 4 章を参照し、必ず単位系を確認してほしい。各係数の詳細な導出は専門書（Loudon、Sakurai、Cohen-Tannoudji）に譲る。</p>
 </div>
 </div>
 <p>QED の言葉で、原子と電磁場の相互作用は次の Hamiltonian で記述される（最低次、非相対論的、SI 系の代表形）：</p>
 <p><span id="eq-interaction-hamiltonian"><span class="math display">
 \hat{H}_\text{int} = -\frac{e}{m_e} \hat{\mathbf{A}} \cdot \hat{\mathbf{p}} + (\text{higher orders})
-\tag{29.5}</span></span></p>
+\tag{30.5}</span></span></p>
 <p>ここで：</p>
 <ul>
 <li><span class="math inline">\hat{\mathbf{p}}</span> は <strong>電子の運動量演算子</strong>（第22章で扱った原子の波動関数に作用）</li>
@@ -755,7 +760,7 @@ A_{ul} = \frac{2 h \nu^3}{c^2} \cdot \frac{g_l}{g_u} \cdot B_{lu}
 <p><span class="math inline">\hat{\mathbf{A}}</span> は生成消滅演算子で書き下せる：</p>
 <p><span id="eq-vector-potential-quantized"><span class="math display">
 \hat{\mathbf{A}}(\mathbf{r}, t) = \sum_{\mathbf{k}, \sigma} \sqrt{\frac{\hbar}{2\epsilon_0 \omega_\mathbf{k} V}} \left[\hat{a}_{\mathbf{k}\sigma} \boldsymbol{\epsilon}_{\mathbf{k}\sigma} e^{i\mathbf{k}\cdot\mathbf{r} - i\omega t} + \text{h.c.}\right]
-\tag{29.6}</span></span></p>
+\tag{30.6}</span></span></p>
 <p><span class="math inline">\boldsymbol{\epsilon}_{\mathbf{k}\sigma}</span> は偏光ベクトル、<span class="math inline">V</span> は規格化体積、「h.c.」は Hermitian 共役（生成項）。</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -780,7 +785,7 @@ A_{ul} = \frac{2 h \nu^3}{c^2} \cdot \frac{g_l}{g_u} \cdot B_{lu}
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>双極子近似とゲージ</strong>：相互作用は上のように速度形（<span class="math inline">\hat{\mathbf{A}}\cdot\hat{\mathbf{p}}</span>、Coulomb ゲージ）でも、長さ形（<span class="math inline">-\hat{\mathbf{d}}\cdot\hat{\mathbf{E}}</span>、<span class="math inline">\hat{\mathbf{d}}=-e\hat{\mathbf{r}}</span>）でも書ける。両者はゲージ変換（Power-Zienau-Woolley 変換）で結ばれた <strong>同値な記述</strong> であり、エネルギー保存則を満たす遷移（実遷移）に対しては同じ遷移率を与える。本章で <span class="math inline">A_{ul}</span> を電気双極子モーメント <span class="math inline">\hat{\mathbf{d}}</span> で書く（<a href="#eq-A-coefficient-QED" class="quarto-xref">式&nbsp;<span>29.8</span></a>）のは、原子の大きさ <span class="math inline">a_0</span> が放出光の波長 <span class="math inline">\lambda</span> より十分小さく（<span class="math inline">a_0 \ll \lambda</span>）、<span class="math inline">e^{i\mathbf{k}\cdot\mathbf{r}}\simeq 1</span> と置ける <strong>長波長（電気双極子）近似</strong> が成り立つためである。この近似が破れる高次の項が、後の磁気双極子（M1）・電気四重極（E2）遷移（§26.5）に対応する。</p>
+<p><strong>双極子近似とゲージ</strong>：相互作用は上のように速度形（<span class="math inline">\hat{\mathbf{A}}\cdot\hat{\mathbf{p}}</span>、Coulomb ゲージ）でも、長さ形（<span class="math inline">-\hat{\mathbf{d}}\cdot\hat{\mathbf{E}}</span>、<span class="math inline">\hat{\mathbf{d}}=-e\hat{\mathbf{r}}</span>）でも書ける。両者はゲージ変換（Power-Zienau-Woolley 変換）で結ばれた <strong>同値な記述</strong> であり、エネルギー保存則を満たす遷移（実遷移）に対しては同じ遷移率を与える。本章で <span class="math inline">A_{ul}</span> を電気双極子モーメント <span class="math inline">\hat{\mathbf{d}}</span> で書く（<a href="#eq-A-coefficient-QED" class="quarto-xref">式&nbsp;<span>30.8</span></a>）のは、原子の大きさ <span class="math inline">a_0</span> が放出光の波長 <span class="math inline">\lambda</span> より十分小さく（<span class="math inline">a_0 \ll \lambda</span>）、<span class="math inline">e^{i\mathbf{k}\cdot\mathbf{r}}\simeq 1</span> と置ける <strong>長波長（電気双極子）近似</strong> が成り立つためである。この近似が破れる高次の項が、後の磁気双極子（M1）・電気四重極（E2）遷移（§26.5）に対応する。</p>
 </div>
 </div>
 </section>
@@ -795,17 +800,17 @@ A_{ul} = \frac{2 h \nu^3}{c^2} \cdot \frac{g_l}{g_u} \cdot B_{lu}
 <p>遷移率は <strong>Fermi の黄金律</strong>：</p>
 <p><span id="eq-fermi-golden-rule"><span class="math display">
 \Gamma_{u \to l} = \frac{2\pi}{\hbar} |\langle l; 1_{\mathbf{k}\sigma} | \hat{H}_\text{int} | u; 0\rangle|^2 \cdot \rho(\omega)
-\tag{29.7}</span></span></p>
+\tag{30.7}</span></span></p>
 <p>ここで <span class="math inline">\rho(\omega)</span> は終状態のモード密度。第14章で逆引きしたモード密度を使うと、</p>
 <p><span id="eq-A-coefficient-QED"><span class="math display">
 A_{ul} = \frac{\omega^3}{3\pi\epsilon_0 \hbar c^3} |\langle l | \hat{\mathbf{d}} | u \rangle|^2
-\tag{29.8}</span></span></p>
+\tag{30.8}</span></span></p>
 <p><span class="math inline">\hat{\mathbf{d}} = -e\hat{\mathbf{r}}</span> は <strong>電気双極子演算子</strong>。</p>
 <p>ここで本書全体の流れが閉じる：</p>
 <ul>
 <li>真空 <span class="math inline">|0\rangle</span> から光子を生成する <span class="math inline">\hat{a}^\dagger</span> の <strong>真空揺らぎ</strong> が、自発放出の <strong>物理的駆動力</strong> である</li>
 <li>古典電磁気では「ゼロ放射場 → 放出ゼロ」だったが、QED では真空場との結合により自発放出率が非ゼロになり、<span class="math inline">A_{ul} \neq 0</span> を生む</li>
-<li><a href="#eq-A-coefficient-QED" class="quarto-xref">式&nbsp;<span>29.8</span></a> の前因子 <span class="math inline">\omega^3</span> は、<strong>モード密度 <span class="math inline">\propto \nu^2</span> × エネルギー量子 <span class="math inline">h\nu</span></strong> の積から来ており、これは第25章でプランク関数の前因子に出てきた <strong><span class="math inline">2h\nu^3/c^2</span> と同じ構造</strong></li>
+<li><a href="#eq-A-coefficient-QED" class="quarto-xref">式&nbsp;<span>30.8</span></a> の前因子 <span class="math inline">\omega^3</span> は、<strong>モード密度 <span class="math inline">\propto \nu^2</span> × エネルギー量子 <span class="math inline">h\nu</span></strong> の積から来ており、これは第25章でプランク関数の前因子に出てきた <strong><span class="math inline">2h\nu^3/c^2</span> と同じ構造</strong></li>
 </ul>
 <div class="callout callout-style-simple callout-tip">
 <div class="callout-body d-flex">
@@ -926,11 +931,11 @@ A_{ul} = \frac{\omega^3}{3\pi\epsilon_0 \hbar c^3} |\langle l | \hat{\mathbf{d}}
 <p>第22章 §22.5 で「許される遷移」と「禁制遷移」を扱った。本節ではこれを QED の <strong>電気双極子行列要素</strong></p>
 <p><span id="eq-dipole-matrix-element"><span class="math display">
 \mathbf{d}_{ul} \equiv \langle u | \hat{\mathbf{d}} | l \rangle = -e \langle u | \hat{\mathbf{r}} | l \rangle
-\tag{29.9}</span></span></p>
+\tag{30.9}</span></span></p>
 <p>から見通す。</p>
 <p>QED の構造から：</p>
 <ul>
-<li>電場と原子の相互作用は <strong>最低次で電気双極子</strong> <span class="math inline">\hat{\mathbf{d}}</span> を介する（<a href="#eq-interaction-hamiltonian" class="quarto-xref">式&nbsp;<span>29.5</span></a> の長波長極限）</li>
+<li>電場と原子の相互作用は <strong>最低次で電気双極子</strong> <span class="math inline">\hat{\mathbf{d}}</span> を介する（<a href="#eq-interaction-hamiltonian" class="quarto-xref">式&nbsp;<span>30.5</span></a> の長波長極限）</li>
 <li><span class="math inline">\langle u | \hat{\mathbf{d}} | l \rangle = 0</span> の遷移は最低次で禁止 → <strong>電気双極子禁制（E1 forbidden）遷移</strong></li>
 <li>パリティと角運動量の保存から、<span class="math inline">\Delta l = \pm 1</span>、<span class="math inline">\Delta m = 0, \pm 1</span> の選択則が自然に導かれる</li>
 <li>禁制遷移は完全に消えるわけではなく、<strong>磁気双極子（M1）・電気四重極（E2）など高次過程</strong> として残り、観測上は弱いがゼロではない</li>
@@ -1030,7 +1035,7 @@ A_{ul} = \frac{\omega^3}{3\pi\epsilon_0 \hbar c^3} |\langle l | \hat{\mathbf{d}}
 \boxed{
 \frac{A_{ul}}{B_{ul}} = \frac{2h\nu^3}{c^2} = \text{(モード密度)} \times \text{(偏光自由度)} \times \text{(エネルギー量子)}
 }
-\tag{29.10}</span></span></p>
+\tag{30.10}</span></span></p>
 <p><strong>プランク関数と水素線スペクトルは、同じ電磁場の同じモード構造を、それぞれ「電磁場側から」「物質側から」眺めたものに他ならない。</strong></p>
 <p>これが、本書を「逆引き」で進めてきた到達点である。連続も線も、宇宙のスペクトルとして観測される「結果」から出発して、それぞれの背後にある物理を逐次明らかにし、最終的に QED で <strong>ひとつに収束</strong> する。</p>
 <section id="八部構成の総括" class="level3">
@@ -1193,7 +1198,7 @@ A_{ul} = \frac{\omega^3}{3\pi\epsilon_0 \hbar c^3} |\langle l | \hat{\mathbf{d}}
 <p>各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。</p>
 <p><a href="#sol-26-1" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 26-1</a> <a href="#sol-26-2" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 26-2</a> <a href="#sol-26-3" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 26-3</a> <a href="#sol-26-4" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 26-4</a></p>
 <div id="sol-26-1" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-26-1-label">
-<p><span class="proof-title"><em>解答 29.1</em>. </span></p>
+<p><span class="proof-title"><em>解答 30.1</em>. </span></p>
 <div class="offcanvas-header">
 <p><span id="sol-26-1-label" class="offcanvas-title"><strong>解答例（問題 26-1）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
 </div>
@@ -1205,7 +1210,7 @@ A_{ul} = \frac{\omega^3}{3\pi\epsilon_0 \hbar c^3} |\langle l | \hat{\mathbf{d}}
 </div>
 </div>
 <div id="sol-26-2" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-26-2-label">
-<p><span class="proof-title"><em>解答 29.2</em>. </span></p>
+<p><span class="proof-title"><em>解答 30.2</em>. </span></p>
 <div class="offcanvas-header">
 <p><span id="sol-26-2-label" class="offcanvas-title"><strong>解答例（問題 26-2）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
 </div>
@@ -1254,7 +1259,7 @@ A_{ul} = \frac{\omega^3}{3\pi\epsilon_0 \hbar c^3} |\langle l | \hat{\mathbf{d}}
 </div>
 </div>
 <div id="sol-26-3" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-26-3-label">
-<p><span class="proof-title"><em>解答 29.3</em>. </span></p>
+<p><span class="proof-title"><em>解答 30.3</em>. </span></p>
 <div class="offcanvas-header">
 <p><span id="sol-26-3-label" class="offcanvas-title"><strong>解答例（問題 26-3）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
 </div>
@@ -1266,7 +1271,7 @@ A_{ul} = \frac{\omega^3}{3\pi\epsilon_0 \hbar c^3} |\langle l | \hat{\mathbf{d}}
 </div>
 </div>
 <div id="sol-26-4" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-26-4-label">
-<p><span class="proof-title"><em>解答 29.4</em>. </span></p>
+<p><span class="proof-title"><em>解答 30.4</em>. </span></p>
 <div class="offcanvas-header">
 <p><span id="sol-26-4-label" class="offcanvas-title"><strong>解答例（問題 26-4）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
 </div>

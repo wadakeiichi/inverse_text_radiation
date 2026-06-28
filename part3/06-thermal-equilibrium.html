@@ -227,6 +227,11 @@ window.Quarto = {
   <a href="../00-prologue.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">序章　この本の目的と歩き方</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../acknowledgments.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">謝辞</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
@@ -630,7 +635,7 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \boxed{\frac{1}{e^{h\nu/kT} - 1}}
 <p>理想気体 <span class="math inline">N</span> 個の分子を二つの体積に分けるとき、分子が左 <span class="math inline">N_L</span>、右 <span class="math inline">N_R = N - N_L</span> で分かれるマクロ状態の多重度は</p>
 <p><span id="eq-multiplicity-gas"><span class="math display">
 \Omega(N_L) = \binom{N}{N_L} = \frac{N!}{N_L!\, N_R!}
-\tag{9.1}</span></span></p>
+\tag{10.1}</span></span></p>
 <p>これは <span class="math inline">N_L = N/2</span> で最大になる。<strong>等しく分かれる状態が圧倒的に多いミクロ状態を持つ</strong>ことが、気体が均一に広がる理由である。</p>
 <p><strong>例：放射場のモード</strong></p>
 <p>第V部で本格的に扱うが、空洞中の電磁場は離散的なモードの集まりとみなせる。各モードに何個の光子が入っているかで、放射場のミクロ状態が決まる。同じ全エネルギー <span class="math inline">E</span> を、これらのモードに<strong>どう分配するか</strong>でミクロ状態が変わる。マクロ状態（全エネルギー、温度）が決まっても、ミクロ状態には多くの選択肢がある。</p>
@@ -653,7 +658,7 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \boxed{\frac{1}{e^{h\nu/kT} - 1}}
 <p>多重度 <span class="math inline">\Omega</span> を直接扱うと、桁が極端に大きくなって扱いにくい（<span class="math inline">10^{10^{23}}</span> など）。対数をとった量</p>
 <p><span id="eq-entropy-boltzmann"><span class="math display">
 S = k_B \ln \Omega
-\tag{9.2}</span></span></p>
+\tag{10.2}</span></span></p>
 <p>を <strong>エントロピー</strong>（<strong>entropy</strong>）と呼ぶ。これが Boltzmann の関係である（彼の墓碑にこの式が刻まれている）。</p>
 <p>エントロピーには重要な性質がある：</p>
 <ol type="1">
@@ -678,7 +683,7 @@ S = k_B \ln \Omega
 <p><strong>温度との関係</strong>：エントロピー <span class="math inline">S</span> をエネルギー <span class="math inline">E</span> の関数として書くと、温度はその偏微分で定まる：</p>
 <p><span id="eq-temperature-entropy"><span class="math display">
 \frac{1}{T} = \left(\frac{\partial S}{\partial E}\right)_{V, N}
-\tag{9.3}</span></span></p>
+\tag{10.3}</span></span></p>
 <p>つまり「温度」とは、エネルギーを少し加えたときにエントロピーがどれだけ増えるかの<strong>逆数</strong>である。これが熱力学的な温度の最も本質的な定義になる。</p>
 </section>
 <section id="sec-thermal-equilibrium-max-entropy" class="level2">
@@ -695,7 +700,7 @@ S = k_B \ln \Omega
 <p>これらの制約のもとで多重度 <span class="math inline">\Omega(\{n_i\})</span> を最大化するのが最大エントロピー原理。具体的にはラグランジュの未定乗数法（乗数 <span class="math inline">\alpha, \beta</span>）を使い、</p>
 <p><span id="eq-lagrange"><span class="math display">
 \frac{\partial}{\partial n_i}\left[ \ln \Omega - \alpha \sum_j n_j - \beta \sum_j n_j E_j \right] = 0
-\tag{9.4}</span></span></p>
+\tag{10.4}</span></span></p>
 <p>を解く。<span class="math inline">\Omega</span> の具体形は粒子の統計（古典・Bose・Fermi）で変わるが、いずれも</p>
 <p><span class="math display">
 n_i \propto f(\beta E_i, \alpha)
@@ -706,7 +711,7 @@ n_i \propto f(\beta E_i, \alpha)
 <li><strong>Bose 統計</strong>：<span class="math inline">n_i = 1/(e^{\alpha + \beta E_i} - 1)</span>（第8章）</li>
 <li><strong>Fermi 統計</strong>：<span class="math inline">n_i = 1/(e^{\alpha + \beta E_i} + 1)</span></li>
 </ul>
-<p>ここで <span class="math inline">\beta = 1/k_B T</span> が温度の逆数になることが、<a href="#eq-temperature-entropy" class="quarto-xref">式&nbsp;<span>9.3</span></a> と整合する。<span class="math inline">\alpha</span> は化学ポテンシャル <span class="math inline">\mu</span> と <span class="math inline">\alpha = -\mu/k_B T</span> で対応する。</p>
+<p>ここで <span class="math inline">\beta = 1/k_B T</span> が温度の逆数になることが、<a href="#eq-temperature-entropy" class="quarto-xref">式&nbsp;<span>10.3</span></a> と整合する。<span class="math inline">\alpha</span> は化学ポテンシャル <span class="math inline">\mu</span> と <span class="math inline">\alpha = -\mu/k_B T</span> で対応する。</p>
 <div class="callout callout-style-simple callout-tip">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -777,7 +782,7 @@ n_i \propto f(\beta E_i, \alpha)
 <p>すなわち</p>
 <p><span id="eq-detailed-balance"><span class="math display">
 n_i\, W_{i \to j} = n_j\, W_{j \to i}
-\tag{9.5}</span></span></p>
+\tag{10.5}</span></span></p>
 <p>ここで <span class="math inline">W_{i \to j}</span> は単位時間あたりの遷移確率、<span class="math inline">n_i</span> は状態 <span class="math inline">i</span> の占有数。この関係は、各準位ペア <span class="math inline">(i, j)</span> について個別に成立する。</p>
 <p><strong>なぜ詳細釣り合いが効くのか</strong>：</p>
 <p>熱平衡を「全粒子の正味の流れがゼロ」と定義しても矛盾はないが、それだけでは「ある複雑な閉じた経路を回る流れ」を排除できない。詳細釣り合いはこれより強い条件で、<strong>任意のペアで個別に釣り合う</strong>ことを要請する。</p>
@@ -799,11 +804,11 @@ n_i\, W_{i \to j} = n_j\, W_{j \to i}
 <section id="sec-thermal-equilibrium-mass-action" class="level2">
 <h2 class="anchored" data-anchor-id="sec-thermal-equilibrium-mass-action">6.7 質量作用の法則 ― 励起・電離・解離を貫く一つの平衡</h2>
 <p>[本文目安：B4-M1｜導出：M1]</p>
-<p>詳細釣り合い <a href="#eq-detailed-balance" class="quarto-xref">式&nbsp;<span>9.5</span></a> が「準位ペアごとの釣り合い」だったのに対し、もう一つ、平衡にある<strong>組成</strong>そのものを決める強力な見方がある。それが<strong>質量作用の法則</strong>（<strong>law of mass action</strong>）である。これを使うと、一見ばらばらに見える三つの平衡 ― <strong>励起</strong>（準位間）・<strong>電離</strong>（原子⇄イオン+電子）・<strong>解離</strong>（分子⇄原子）― が、すべて<strong>同じ一つの式</strong>から出ることがわかる。</p>
+<p>詳細釣り合い <a href="#eq-detailed-balance" class="quarto-xref">式&nbsp;<span>10.5</span></a> が「準位ペアごとの釣り合い」だったのに対し、もう一つ、平衡にある<strong>組成</strong>そのものを決める強力な見方がある。それが<strong>質量作用の法則</strong>（<strong>law of mass action</strong>）である。これを使うと、一見ばらばらに見える三つの平衡 ― <strong>励起</strong>（準位間）・<strong>電離</strong>（原子⇄イオン+電子）・<strong>解離</strong>（分子⇄原子）― が、すべて<strong>同じ一つの式</strong>から出ることがわかる。</p>
 <p><strong>反応として書く。</strong>　宇宙では物質が分子・原子・イオン・各励起準位という様々な「形」で混在する。これらの間の平衡を、形式的な反応</p>
 <p><span id="eq-reaction-general"><span class="math display">
 \sum_i a_i A_i = 0
-\tag{9.6}</span></span></p>
+\tag{10.6}</span></span></p>
 <p>で表す（<span class="math inline">A_i</span> は反応に関わる粒子種、<span class="math inline">a_i</span> は化学量数。実際に反応が進む必要はなく、各形のエネルギーの高さだけが問題になる）。例：</p>
 <ul>
 <li>解離　<span class="math inline">2\mathrm{H}-\mathrm{H_2}=0</span></li>
@@ -813,20 +818,20 @@ n_i\, W_{i \to j} = n_j\, W_{j \to i}
 <p><strong>平衡条件。</strong>　孤立系（体積一定・エネルギー一定）の熱平衡ではエントロピーが極大になる。これを各種の粒子数 <span class="math inline">N_i</span> の変化 <span class="math inline">dN_i=a_i\,dR</span>（<span class="math inline">R</span> は反応の進み）について書くと、各種の<strong>化学ポテンシャル</strong> <span class="math inline">\mu_i</span> の間に</p>
 <p><span id="eq-chemical-equilibrium"><span class="math display">
 \sum_i a_i \mu_i = 0
-\tag{9.7}</span></span></p>
+\tag{10.7}</span></span></p>
 <p>が成り立つ（詳細釣り合いが「ミクロな遷移率の釣り合い」なら、これは「自由エネルギー最小＝化学ポテンシャルの釣り合い」という熱力学的表現である）。</p>
 <p><strong>理想気体の化学ポテンシャルを代入。</strong>　天体ではたいてい理想気体でよく、</p>
 <p><span id="eq-chemical-potential"><span class="math display">
 \mu_i = k_B T \ln\!\frac{n_i}{n_{Q,i}\,Z_i},\qquad
 n_{Q,i}=\left(\frac{2\pi m_i k_B T}{h^2}\right)^{3/2}
-\tag{9.8}</span></span></p>
-<p>である（<span class="math inline">n_{Q,i}</span> は<strong>量子濃度</strong>、<span class="math inline">Z_i</span> は内部状態の分配関数）。これを <a href="#eq-chemical-equilibrium" class="quarto-xref">式&nbsp;<span>9.7</span></a> に入れて整理すると、数密度 <span class="math inline">n_i</span> の間の関係</p>
+\tag{10.8}</span></span></p>
+<p>である（<span class="math inline">n_{Q,i}</span> は<strong>量子濃度</strong>、<span class="math inline">Z_i</span> は内部状態の分配関数）。これを <a href="#eq-chemical-equilibrium" class="quarto-xref">式&nbsp;<span>10.7</span></a> に入れて整理すると、数密度 <span class="math inline">n_i</span> の間の関係</p>
 <p><span id="eq-mass-action"><span class="math display">
 \boxed{\;\prod_i n_i^{\,a_i} = K(T)\;},\qquad
 K(T)=\prod_i \left(n_{Q,i}\,Z_i\right)^{a_i}
-\tag{9.9}</span></span></p>
+\tag{10.9}</span></span></p>
 <p>が得られる。左辺は数密度だけ、右辺の平衡定数 <span class="math inline">K(T)</span> は温度だけの関数 ― これが<strong>質量作用の法則</strong>である。</p>
-<p><strong>三つの平衡は同じ式の特例。</strong>　<a href="#eq-mass-action" class="quarto-xref">式&nbsp;<span>9.9</span></a> に各反応を代入すると、本書の後章で使う基本式がすべて出る：</p>
+<p><strong>三つの平衡は同じ式の特例。</strong>　<a href="#eq-mass-action" class="quarto-xref">式&nbsp;<span>10.9</span></a> に各反応を代入すると、本書の後章で使う基本式がすべて出る：</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -836,7 +841,7 @@ K(T)=\prod_i \left(n_{Q,i}\,Z_i\right)^{a_i}
 <thead>
 <tr class="header">
 <th>反応</th>
-<th><a href="#eq-mass-action" class="quarto-xref">式&nbsp;<span>9.9</span></a> から出る式</th>
+<th><a href="#eq-mass-action" class="quarto-xref">式&nbsp;<span>10.9</span></a> から出る式</th>
 <th>使う章</th>
 </tr>
 </thead>
@@ -869,7 +874,7 @@ K(T)=\prod_i \left(n_{Q,i}\,Z_i\right)^{a_i}
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>逆引きの効きどころ</strong>：励起・電離・解離を別々に暗記するのでなく、<a href="#eq-mass-action" class="quarto-xref">式&nbsp;<span>9.9</span></a> 一本から落とす ― これが「背景物理を曖昧にしない」本書の方針そのものである。観測される線の強さ（励起）、電離度（連続吸収やイオン線）、分子バンドの有無（解離）は、すべて同じ質量作用の法則を温度・密度について逆に解く問題になる。具体的応用は第7章（Boltzmann）、第17章（Saha と分子の解離平衡）、第20・22章（イオン・原子の準位）で扱う。</p>
+<p><strong>逆引きの効きどころ</strong>：励起・電離・解離を別々に暗記するのでなく、<a href="#eq-mass-action" class="quarto-xref">式&nbsp;<span>10.9</span></a> 一本から落とす ― これが「背景物理を曖昧にしない」本書の方針そのものである。観測される線の強さ（励起）、電離度（連続吸収やイオン線）、分子バンドの有無（解離）は、すべて同じ質量作用の法則を温度・密度について逆に解く問題になる。具体的応用は第7章（Boltzmann）、第17章（Saha と分子の解離平衡）、第20・22章（イオン・原子の準位）で扱う。</p>
 </div>
 </div>
 <hr>
@@ -945,7 +950,7 @@ K(T)=\prod_i \left(n_{Q,i}\,Z_i\right)^{a_i}
 <p>各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。</p>
 <p><a href="#sol-6-1" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 6-1</a> <a href="#sol-6-2" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 6-2</a> <a href="#sol-6-3" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 6-3</a> <a href="#sol-6-4" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 6-4</a></p>
 <div id="sol-6-1" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-6-1-label">
-<p><span class="proof-title"><em>解答 9.1</em>. </span></p>
+<p><span class="proof-title"><em>解答 10.1</em>. </span></p>
 <div class="offcanvas-header">
 <p><span id="sol-6-1-label" class="offcanvas-title"><strong>解答例（問題 6-1）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
 </div>
@@ -964,7 +969,7 @@ K(T)=\prod_i \left(n_{Q,i}\,Z_i\right)^{a_i}
 </div>
 </div>
 <div id="sol-6-2" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-6-2-label">
-<p><span class="proof-title"><em>解答 9.2</em>. </span></p>
+<p><span class="proof-title"><em>解答 10.2</em>. </span></p>
 <div class="offcanvas-header">
 <p><span id="sol-6-2-label" class="offcanvas-title"><strong>解答例（問題 6-2）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
 </div>
@@ -980,7 +985,7 @@ K(T)=\prod_i \left(n_{Q,i}\,Z_i\right)^{a_i}
 </div>
 </div>
 <div id="sol-6-3" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-6-3-label">
-<p><span class="proof-title"><em>解答 9.3</em>. </span></p>
+<p><span class="proof-title"><em>解答 10.3</em>. </span></p>
 <div class="offcanvas-header">
 <p><span id="sol-6-3-label" class="offcanvas-title"><strong>解答例（問題 6-3）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
 </div>
@@ -999,7 +1004,7 @@ n_i=\frac{N e^{-\beta E_i}}{\sum_j e^{-\beta E_j}}=\frac{N}{Z}e^{-\beta E_i}.
 </div>
 </div>
 <div id="sol-6-4" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-6-4-label">
-<p><span class="proof-title"><em>解答 9.4</em>. </span></p>
+<p><span class="proof-title"><em>解答 10.4</em>. </span></p>
 <div class="offcanvas-header">
 <p><span id="sol-6-4-label" class="offcanvas-title"><strong>解答例（問題 6-4）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
 </div>

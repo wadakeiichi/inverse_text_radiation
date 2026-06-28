@@ -227,6 +227,11 @@ window.Quarto = {
   <a href="../00-prologue.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">序章　この本の目的と歩き方</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../acknowledgments.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">謝辞</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
@@ -594,12 +599,12 @@ B_\nu(T) = \frac{2\, \boxed{h}\, \nu^3}{c^2} \cdot \frac{1}{e^{\boxed{h}\nu/kT} 
 <p>辺長 <span class="math inline">L</span> の立方体空洞を考え、壁が完全導体だと仮定する。電場が壁面で消えるという境界条件から、許される定在波の波数は</p>
 <p><span id="eq-cavity-wavevector"><span class="math display">
 \mathbf{k} = \frac{\pi}{L} (n_x, n_y, n_z), \qquad n_x, n_y, n_z = 1, 2, 3, \ldots
-\tag{12.1}</span></span></p>
+\tag{13.1}</span></span></p>
 <p>の形に制限される。波数 <span class="math inline">k = |\mathbf{k}|</span> が <span class="math inline">k</span> 未満であるモード数を数えると、立体角を考慮した結果として、<strong>波数空間の体積</strong>を使って数えられる。</p>
 <p>詳細は<strong>第14章で導出</strong>する（ここでは仮に借りる）。<strong>本章では結果だけを借用し</strong>、第14章でこの借用を返す（<a href="#sec-classical-failure-modes" class="quarto-xref"><span>9.1 空洞モードの数え上げ ― 古典電磁気の準備</span></a> ↔︎ <a href="../part5/14-cavity-modes.html">第14章 空洞モード</a>の往復で確認できる）。<strong>振動数 <span class="math inline">\nu</span> あたりの単位体積あたりのモード数</strong>は</p>
 <p><span id="eq-mode-density-borrowed"><span class="math display">
 g(\nu) = \frac{8\pi \nu^2}{c^3}
-\tag{12.2}</span></span></p>
+\tag{13.2}</span></span></p>
 <p>である。係数 <span class="math inline">8\pi</span> には電磁波の<strong>偏光自由度 <span class="math inline">\times 2</span></strong> が入っている。この <span class="math inline">\nu^2</span> という振動数の冪が、本章の議論の核心になる。</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -611,7 +616,7 @@ g(\nu) = \frac{8\pi \nu^2}{c^3}
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>方針（仮に借りる）</strong>：<a href="#eq-mode-density-borrowed" class="quarto-xref">式&nbsp;<span>12.2</span></a> の導出には<strong>量子論は一切要らない</strong>。古典電磁気と境界条件だけで出る幾何的な数え上げである。本格的な導出は<strong>第14章で行う</strong>ので、本章では「古典電磁気が許す結果」として一度受け入れ（仮に借り）、第14章で借用を返す。中心地図の各因子について「初出／仮に借りる場所／本当に導出する場所」は第14章で一覧化される。</p>
+<p><strong>方針（仮に借りる）</strong>：<a href="#eq-mode-density-borrowed" class="quarto-xref">式&nbsp;<span>13.2</span></a> の導出には<strong>量子論は一切要らない</strong>。古典電磁気と境界条件だけで出る幾何的な数え上げである。本格的な導出は<strong>第14章で行う</strong>ので、本章では「古典電磁気が許す結果」として一度受け入れ（仮に借り）、第14章で借用を返す。中心地図の各因子について「初出／仮に借りる場所／本当に導出する場所」は第14章で一覧化される。</p>
 </div>
 </div>
 <div class="callout callout-style-simple callout-tip">
@@ -634,15 +639,15 @@ g(\nu) = \frac{8\pi \nu^2}{c^3}
 <p>古典統計力学の中心定理 ― <strong>エネルギー等分配定理</strong>（<strong>equipartition theorem</strong>, 第7章 §7.6）― によれば、二次形式で書ける自由度ひとつあたりに <span class="math inline">\frac{1}{2} k_B T</span> が分配される。電磁波の各モードは調和振動子と等価で、<span class="math inline">E = \frac{1}{2}(p^2/m) + \frac{1}{2}(m\omega^2 q^2)</span> という <strong>二つの二次形式の和</strong>（運動量項と位置項）― あるいは電磁場の言葉では電場と磁場のエネルギー密度 <span class="math inline">\frac{\epsilon_0}{2}|\mathbf{E}|^2 + \frac{1}{2\mu_0}|\mathbf{B}|^2</span> の二つ ― として書ける。それぞれに <span class="math inline">\frac{1}{2}k_B T</span> が分配されるので、<strong>各モードに合計 <span class="math inline">k_B T</span> が分配される</strong>：</p>
 <p><span id="eq-equipartition-mode"><span class="math display">
 \langle E_\text{mode} \rangle_\text{classical} = k_B T
-\tag{12.3}</span></span></p>
-<p>これと <a href="#eq-mode-density-borrowed" class="quarto-xref">式&nbsp;<span>12.2</span></a> を組み合わせると、振動数 <span class="math inline">\nu</span> あたりのエネルギー密度は</p>
+\tag{13.3}</span></span></p>
+<p>これと <a href="#eq-mode-density-borrowed" class="quarto-xref">式&nbsp;<span>13.2</span></a> を組み合わせると、振動数 <span class="math inline">\nu</span> あたりのエネルギー密度は</p>
 <p><span id="eq-rayleigh-jeans-energy-density"><span class="math display">
 u_\nu^\text{RJ}(T) = g(\nu) \cdot \langle E_\text{mode} \rangle = \frac{8\pi \nu^2}{c^3} \cdot k_B T
-\tag{12.4}</span></span></p>
+\tag{13.4}</span></span></p>
 <p>そして比強度に直すと</p>
 <p><span id="eq-rayleigh-jeans-bnu"><span class="math display">
 B_\nu^\text{RJ}(T) = \frac{c}{4\pi} u_\nu^\text{RJ} = \frac{2\nu^2}{c^2} k_B T
-\tag{12.5}</span></span></p>
+\tag{13.5}</span></span></p>
 <p>これが <strong>Rayleigh–Jeans 則</strong>（<strong>Rayleigh–Jeans law</strong>）である。古典電磁気＋古典統計だけから出た、放射場のスペクトルの予言である。</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -654,7 +659,7 @@ B_\nu^\text{RJ}(T) = \frac{c}{4\pi} u_\nu^\text{RJ} = \frac{2\nu^2}{c^2} k_B T
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>観測との対応</strong>：第2章 §2.5 で見たように、<a href="#eq-rayleigh-jeans-bnu" class="quarto-xref">式&nbsp;<span>12.5</span></a> は<strong>観測されるプランク分布の低振動数極限 <span class="math inline">h\nu \ll k_B T</span> と一致する</strong>。電波天文学はほぼ常にこの極限で観測しており、Rayleigh–Jeans は実用的に正しい。問題は次節で見るように、<strong>高振動数側で破綻する</strong>こと。</p>
+<p><strong>観測との対応</strong>：第2章 §2.5 で見たように、<a href="#eq-rayleigh-jeans-bnu" class="quarto-xref">式&nbsp;<span>13.5</span></a> は<strong>観測されるプランク分布の低振動数極限 <span class="math inline">h\nu \ll k_B T</span> と一致する</strong>。電波天文学はほぼ常にこの極限で観測しており、Rayleigh–Jeans は実用的に正しい。問題は次節で見るように、<strong>高振動数側で破綻する</strong>こと。</p>
 </div>
 </div>
 </section>
@@ -667,14 +672,14 @@ B_\nu^\text{RJ}(T) = \frac{c}{4\pi} u_\nu^\text{RJ} = \frac{2\nu^2}{c^2} k_B T
 <img src="../images/uv-catastrophe.svg" class="img-fluid figure-img" style="width:90.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-uv-catastrophe-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;12.1: 紫外線破綻 ― 古典の Rayleigh–Jeans 則（<strong><span class="math inline">u_\nu \propto \nu^2</span>、青破線</strong>）が高振動数で発散する一方、観測されるプランク分布（<strong>黒実線</strong>）は Wien 則的に指数的減衰する。両者は <strong><span class="math inline">h\nu \approx k_B T</span></strong> の境界帯（網かけ）で分かれる。本図は §2.5（Planck/RJ/Wien 比較）と §10 の量子仮説導入とも共用する基準図。
+図&nbsp;13.1: 紫外線破綻 ― 古典の Rayleigh–Jeans 則（<strong><span class="math inline">u_\nu \propto \nu^2</span>、青破線</strong>）が高振動数で発散する一方、観測されるプランク分布（<strong>黒実線</strong>）は Wien 則的に指数的減衰する。両者は <strong><span class="math inline">h\nu \approx k_B T</span></strong> の境界帯（網かけ）で分かれる。本図は §2.5（Planck/RJ/Wien 比較）と §10 の量子仮説導入とも共用する基準図。
 </figcaption>
 </figure>
 </div>
-<p><a href="#eq-rayleigh-jeans-energy-density" class="quarto-xref">式&nbsp;<span>12.4</span></a> を<strong>全振動数で積分</strong>して、放射場の全エネルギー密度 <span class="math inline">u</span> を計算しようとすると</p>
+<p><a href="#eq-rayleigh-jeans-energy-density" class="quarto-xref">式&nbsp;<span>13.4</span></a> を<strong>全振動数で積分</strong>して、放射場の全エネルギー密度 <span class="math inline">u</span> を計算しようとすると</p>
 <p><span id="eq-uv-catastrophe"><span class="math display">
 u_\text{classical} = \int_0^\infty u_\nu^\text{RJ} \, d\nu = \frac{8\pi k_B T}{c^3} \int_0^\infty \nu^2 \, d\nu = \infty
-\tag{12.6}</span></span></p>
+\tag{13.6}</span></span></p>
 <p>積分は高振動数（紫外〜X線〜ガンマ線）側で<strong>発散</strong>する。これが <strong>紫外線破綻</strong>（<strong>ultraviolet catastrophe</strong>）である。</p>
 <p>物理的にこれが意味するのは、「温度 <span class="math inline">T</span> の空洞は無限大のエネルギー密度を持つ」「電球を点けたら無限の紫外線・X 線が出る」 ― 観測される現実とまったく合わない結論である。</p>
 <p>観測との矛盾を具体的に見ると：</p>
@@ -726,7 +731,7 @@ u_\text{classical} = \int_0^\infty u_\nu^\text{RJ} \, d\nu = \frac{8\pi k_B T}{c
 <section id="sec-classical-failure-missing" class="level2">
 <h2 class="anchored" data-anchor-id="sec-classical-failure-missing">9.4 何が足りなかったのか ― 等分配の物理的前提</h2>
 <p>[本文目安：B3]</p>
-<p>紫外線破綻はどこから来たか。<a href="#eq-equipartition-mode" class="quarto-xref">式&nbsp;<span>12.3</span></a> の「各モードに <span class="math inline">k_B T</span>」という等分配定理に<strong>穴がある</strong>。等分配定理が成立する前提は：</p>
+<p>紫外線破綻はどこから来たか。<a href="#eq-equipartition-mode" class="quarto-xref">式&nbsp;<span>13.3</span></a> の「各モードに <span class="math inline">k_B T</span>」という等分配定理に<strong>穴がある</strong>。等分配定理が成立する前提は：</p>
 <ol type="1">
 <li><strong>エネルギーが連続的にやりとりできる</strong>：粒子間の衝突や相互作用で、任意の小さなエネルギー単位でやりとりが起きる</li>
 <li><strong>エネルギーが Maxwell-Boltzmann 分布に従う</strong>：状態数密度が均一で、状態間の遷移が自由</li>
@@ -777,7 +782,7 @@ u_\text{classical} = \int_0^\infty u_\nu^\text{RJ} \, d\nu = \frac{8\pi k_B T}{c
 <p><strong>使えるようになった道具</strong>（§9.1〜9.5）：</p>
 <ul>
 <li>空洞の電磁モード密度 <span class="math inline">g(\nu) = 8\pi\nu^2/c^3</span> は古典電磁気の結果として理解できる（第V部で本格導出）</li>
-<li>Rayleigh–Jeans 則 <a href="#eq-rayleigh-jeans-bnu" class="quarto-xref">式&nbsp;<span>12.5</span></a> は等分配定理から出る古典の結果で、低振動数極限では観測と合う</li>
+<li>Rayleigh–Jeans 則 <a href="#eq-rayleigh-jeans-bnu" class="quarto-xref">式&nbsp;<span>13.5</span></a> は等分配定理から出る古典の結果で、低振動数極限では観測と合う</li>
 <li>紫外線破綻は等分配定理が高振動数モードに無条件で適用されることに由来する。これを救う鍵は <strong>エネルギーの離散化</strong></li>
 </ul>
 </div>
@@ -853,7 +858,7 @@ u_\text{classical} = \int_0^\infty u_\nu^\text{RJ} \, d\nu = \frac{8\pi k_B T}{c
 <p>各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。</p>
 <p><a href="#sol-9-1" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 9-1</a> <a href="#sol-9-2" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 9-2</a> <a href="#sol-9-3" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 9-3</a> <a href="#sol-9-4" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 9-4</a></p>
 <div id="sol-9-1" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-9-1-label">
-<p><span class="proof-title"><em>解答 12.1</em>. </span></p>
+<p><span class="proof-title"><em>解答 13.1</em>. </span></p>
 <div class="offcanvas-header">
 <p><span id="sol-9-1-label" class="offcanvas-title"><strong>解答例（問題 9-1）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
 </div>
@@ -874,7 +879,7 @@ g(\nu)=\frac{dn}{d\nu}=\frac{8\pi\nu^2}{c^3}.
 </div>
 </div>
 <div id="sol-9-2" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-9-2-label">
-<p><span class="proof-title"><em>解答 12.2</em>. </span></p>
+<p><span class="proof-title"><em>解答 13.2</em>. </span></p>
 <div class="offcanvas-header">
 <p><span id="sol-9-2-label" class="offcanvas-title"><strong>解答例（問題 9-2）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
 </div>
@@ -897,7 +902,7 @@ Z=\frac{1}{h_0}\sqrt{\frac{2\pi m}{\beta}}\sqrt{\frac{2\pi}{\beta m\omega^2}}=\f
 </div>
 </div>
 <div id="sol-9-3" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-9-3-label">
-<p><span class="proof-title"><em>解答 12.3</em>. </span></p>
+<p><span class="proof-title"><em>解答 13.3</em>. </span></p>
 <div class="offcanvas-header">
 <p><span id="sol-9-3-label" class="offcanvas-title"><strong>解答例（問題 9-3）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
 </div>
@@ -917,7 +922,7 @@ u(\nu_{\max})=\frac{8\pi k_BT}{c^3}\int_0^{\nu_{\max}}\nu^2 d\nu=\frac{8\pi k_BT
 </div>
 </div>
 <div id="sol-9-4" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-9-4-label">
-<p><span class="proof-title"><em>解答 12.4</em>. </span></p>
+<p><span class="proof-title"><em>解答 13.4</em>. </span></p>
 <div class="offcanvas-header">
 <p><span id="sol-9-4-label" class="offcanvas-title"><strong>解答例（問題 9-4）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
 </div>

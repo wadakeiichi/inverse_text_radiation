@@ -227,6 +227,11 @@ window.Quarto = {
   <a href="../00-prologue.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">序章　この本の目的と歩き方</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../acknowledgments.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">謝辞</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
@@ -551,12 +556,12 @@ window.Quarto = {
 <p><strong>第一層：イコニック・アンカー（リュードベリ公式）</strong></p>
 <p><span id="eq-rydberg"><span class="math display">
 \frac{1}{\lambda} = R_\mathrm{H} \left( \frac{1}{n_1^2} - \frac{1}{n_2^2} \right)
-\tag{27.1}</span></span></p>
+\tag{28.1}</span></span></p>
 <p>線スペクトルの「骨格」を一目で示す。<span class="math inline">R_\mathrm{H}</span> は基本定数の組合せ、<span class="math inline">1/n^2</span> は束縛状態のエネルギー、離散性が「線が存在する理由」を語る。</p>
 <p><strong>第二層：構造的マップ（Hα を標準例とした線吸収係数）</strong></p>
 <p><span id="eq-line-absorption"><span class="math display">
 \alpha_\nu = \frac{\pi e^2}{m_e c} \, f_{lu} \, n_l \, \phi(\nu - \nu_0)
-\tag{27.2}</span></span></p>
+\tag{28.2}</span></span></p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -598,7 +603,7 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<p><strong>適用範囲（重要）</strong>：この式の前因子 <span class="math inline">\pi e^2/m_e c</span> と振動子強度 <span class="math inline">f_{lu}</span> は、古典 Lorentz 振動子に対応する <strong>電気双極子（E1）許容線</strong> に対するものである。21 cm 線（基底状態超微細構造の <strong>磁気双極子 M1 遷移</strong>）や <strong>禁制線（E2・M1 など）</strong> では、この前因子・<span class="math inline">f_{lu}</span> をそのまま使えない。これらの線では、測定された自発放出率 <span class="math inline">A_{ul}</span> から Einstein 関係を介して有効遷移強度（<span class="math inline">B_{lu}</span>）に読み替える（<a href="../part8/26-qed-minimum.html#eq-line-absorption" class="quarto-xref">式&nbsp;<span>29.3</span></a> の構造は保ったまま、強度因子だけを差し替える）。</p>
+<p><strong>適用範囲（重要）</strong>：この式の前因子 <span class="math inline">\pi e^2/m_e c</span> と振動子強度 <span class="math inline">f_{lu}</span> は、古典 Lorentz 振動子に対応する <strong>電気双極子（E1）許容線</strong> に対するものである。21 cm 線（基底状態超微細構造の <strong>磁気双極子 M1 遷移</strong>）や <strong>禁制線（E2・M1 など）</strong> では、この前因子・<span class="math inline">f_{lu}</span> をそのまま使えない。これらの線では、測定された自発放出率 <span class="math inline">A_{ul}</span> から Einstein 関係を介して有効遷移強度（<span class="math inline">B_{lu}</span>）に読み替える（<a href="../part8/26-qed-minimum.html#eq-line-absorption" class="quarto-xref">式&nbsp;<span>30.3</span></a> の構造は保ったまま、強度因子だけを差し替える）。</p>
 </div>
 <div class="callout callout-style-simple callout-tip no-icon">
 <div class="callout-body d-flex">
@@ -606,7 +611,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>地図の使い方</strong>：第VII部の各章はこの式の異なる因子を解き明かす。プランク関数地図と並べて読めば、本書を貫く二つの逆引きが同時に把握できる。第VIII部の QED で、両者は前因子 <span class="math inline">2h\nu^3/c^2</span> を介して統一される（<a href="../part8/26-qed-minimum.html#eq-einstein-A" class="quarto-xref">式&nbsp;<span>29.4</span></a> 参照）。</p>
+<p><strong>地図の使い方</strong>：第VII部の各章はこの式の異なる因子を解き明かす。プランク関数地図と並べて読めば、本書を貫く二つの逆引きが同時に把握できる。第VIII部の QED で、両者は前因子 <span class="math inline">2h\nu^3/c^2</span> を介して統一される（<a href="../part8/26-qed-minimum.html#eq-einstein-A" class="quarto-xref">式&nbsp;<span>30.4</span></a> 参照）。</p>
 </div>
 </div>
 </div>
@@ -702,7 +707,7 @@ window.Quarto = {
 <p>線スペクトルの最も基本的応用は <strong>視線速度測定</strong>：観測される線中心 <span class="math inline">\nu_\text{obs}</span> と実験室での既知の値 <span class="math inline">\nu_0</span> の比較から、Doppler シフト</p>
 <p><span id="eq-doppler-velocity"><span class="math display">
 \frac{v_\parallel}{c} = \frac{\nu_0 - \nu_\text{obs}}{\nu_0} \quad (\text{非相対論的})
-\tag{27.3}</span></span></p>
+\tag{28.3}</span></span></p>
 <p>これだけで多くの応用が可能：</p>
 <ul>
 <li><strong>連星系の軌道</strong>：成分星の視線速度変化 → 質量比、傾き → 質量</li>
@@ -753,7 +758,7 @@ window.Quarto = {
 <img src="../images/curve-of-growth.svg" class="img-fluid figure-img" style="width:88.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-curve-of-growth-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;27.1: 成長曲線（curve of growth）― 等価幅 <span class="math inline">W_\lambda</span> と柱密度 <span class="math inline">N</span>（<span class="math inline">\times f\lambda</span>）の関係。三つの領域がある：<strong>線形部</strong>（弱い線、<span class="math inline">W\propto N</span>。光学的に薄くコアが線形に成長）、<strong>平坦部</strong>（飽和。Doppler コアが飽和し <span class="math inline">W\propto\sqrt{\ln N}</span> でほとんど増えない）、<strong>ダンピング部</strong>（強い線、<span class="math inline">W\propto\sqrt{N}</span>。Lorentz 減衰翼が成長）。同じ等価幅でも線がどの領域にあるかで密度感度が変わるため、組成解析では弱・中・強の複数の線で曲線全体を押さえる。
+図&nbsp;28.1: 成長曲線（curve of growth）― 等価幅 <span class="math inline">W_\lambda</span> と柱密度 <span class="math inline">N</span>（<span class="math inline">\times f\lambda</span>）の関係。三つの領域がある：<strong>線形部</strong>（弱い線、<span class="math inline">W\propto N</span>。光学的に薄くコアが線形に成長）、<strong>平坦部</strong>（飽和。Doppler コアが飽和し <span class="math inline">W\propto\sqrt{\ln N}</span> でほとんど増えない）、<strong>ダンピング部</strong>（強い線、<span class="math inline">W\propto\sqrt{N}</span>。Lorentz 減衰翼が成長）。同じ等価幅でも線がどの領域にあるかで密度感度が変わるため、組成解析では弱・中・強の複数の線で曲線全体を押さえる。
 </figcaption>
 </figure>
 </div>
@@ -1032,7 +1037,7 @@ window.Quarto = {
 <p>各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。</p>
 <p><a href="#sol-24-1" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 24-1</a> <a href="#sol-24-2" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 24-2</a> <a href="#sol-24-3" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 24-3</a></p>
 <div id="sol-24-1" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-24-1-label">
-<p><span class="proof-title"><em>解答 27.1</em>. </span></p>
+<p><span class="proof-title"><em>解答 28.1</em>. </span></p>
 <div class="offcanvas-header">
 <p><span id="sol-24-1-label" class="offcanvas-title"><strong>解答例（問題 24-1）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
 </div>
@@ -1044,7 +1049,7 @@ window.Quarto = {
 </div>
 </div>
 <div id="sol-24-2" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-24-2-label">
-<p><span class="proof-title"><em>解答 27.2</em>. </span></p>
+<p><span class="proof-title"><em>解答 28.2</em>. </span></p>
 <div class="offcanvas-header">
 <p><span id="sol-24-2-label" class="offcanvas-title"><strong>解答例（問題 24-2）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
 </div>
@@ -1056,7 +1061,7 @@ window.Quarto = {
 </div>
 </div>
 <div id="sol-24-3" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-24-3-label">
-<p><span class="proof-title"><em>解答 27.3</em>. </span></p>
+<p><span class="proof-title"><em>解答 28.3</em>. </span></p>
 <div class="offcanvas-header">
 <p><span id="sol-24-3-label" class="offcanvas-title"><strong>解答例（問題 24-3）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
 </div>

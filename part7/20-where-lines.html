@@ -227,6 +227,11 @@ window.Quarto = {
   <a href="../00-prologue.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">序章　この本の目的と歩き方</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../acknowledgments.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">謝辞</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
@@ -552,7 +557,7 @@ window.Quarto = {
 <img src="../images/hydrogen-map.svg" class="img-fluid figure-img" style="width:90.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hydrogen-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;23.1: 水素線吸収係数 <span class="math inline">\alpha_\nu</span> の各因子と、それを逆引きする章群の対応。<strong>因子の色＝担当する章/部の色</strong>で結ばれており、矢印に頼らず読み取れる設計。第VII部の§19-23と、線スペクトルが連続側と統合される第VIII部までの流れを一望できる。
+図&nbsp;24.1: 水素線吸収係数 <span class="math inline">\alpha_\nu</span> の各因子と、それを逆引きする章群の対応。<strong>因子の色＝担当する章/部の色</strong>で結ばれており、矢印に頼らず読み取れる設計。第VII部の§19-23と、線スペクトルが連続側と統合される第VIII部までの流れを一望できる。
 </figcaption>
 </figure>
 </div>
@@ -561,12 +566,12 @@ window.Quarto = {
 <p><strong>第一層：イコニック・アンカー（リュードベリ公式）</strong></p>
 <p><span id="eq-rydberg"><span class="math display">
 \frac{1}{\lambda} = R_\mathrm{H} \left( \frac{1}{n_1^2} - \frac{1}{n_2^2} \right)
-\tag{23.1}</span></span></p>
+\tag{24.1}</span></span></p>
 <p>線スペクトルの「骨格」を一目で示す。<span class="math inline">R_\mathrm{H}</span> は基本定数の組合せ、<span class="math inline">1/n^2</span> は束縛状態のエネルギー、離散性が「線が存在する理由」を語る。</p>
 <p><strong>第二層：構造的マップ（Hα を標準例とした線吸収係数）</strong></p>
 <p><span id="eq-line-absorption"><span class="math display">
 \alpha_\nu = \frac{\pi e^2}{m_e c} \, f_{lu} \, n_l \, \phi(\nu - \nu_0)
-\tag{23.2}</span></span></p>
+\tag{24.2}</span></span></p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -608,7 +613,7 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<p><strong>適用範囲（重要）</strong>：この式の前因子 <span class="math inline">\pi e^2/m_e c</span> と振動子強度 <span class="math inline">f_{lu}</span> は、古典 Lorentz 振動子に対応する <strong>電気双極子（E1）許容線</strong> に対するものである。21 cm 線（基底状態超微細構造の <strong>磁気双極子 M1 遷移</strong>）や <strong>禁制線（E2・M1 など）</strong> では、この前因子・<span class="math inline">f_{lu}</span> をそのまま使えない。これらの線では、測定された自発放出率 <span class="math inline">A_{ul}</span> から Einstein 関係を介して有効遷移強度（<span class="math inline">B_{lu}</span>）に読み替える（<a href="../part8/26-qed-minimum.html#eq-line-absorption" class="quarto-xref">式&nbsp;<span>29.3</span></a> の構造は保ったまま、強度因子だけを差し替える）。</p>
+<p><strong>適用範囲（重要）</strong>：この式の前因子 <span class="math inline">\pi e^2/m_e c</span> と振動子強度 <span class="math inline">f_{lu}</span> は、古典 Lorentz 振動子に対応する <strong>電気双極子（E1）許容線</strong> に対するものである。21 cm 線（基底状態超微細構造の <strong>磁気双極子 M1 遷移</strong>）や <strong>禁制線（E2・M1 など）</strong> では、この前因子・<span class="math inline">f_{lu}</span> をそのまま使えない。これらの線では、測定された自発放出率 <span class="math inline">A_{ul}</span> から Einstein 関係を介して有効遷移強度（<span class="math inline">B_{lu}</span>）に読み替える（<a href="../part8/26-qed-minimum.html#eq-line-absorption" class="quarto-xref">式&nbsp;<span>30.3</span></a> の構造は保ったまま、強度因子だけを差し替える）。</p>
 </div>
 <div class="callout callout-style-simple callout-tip no-icon">
 <div class="callout-body d-flex">
@@ -616,7 +621,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>地図の使い方</strong>：第VII部の各章はこの式の異なる因子を解き明かす。プランク関数地図と並べて読めば、本書を貫く二つの逆引きが同時に把握できる。第VIII部の QED で、両者は前因子 <span class="math inline">2h\nu^3/c^2</span> を介して統一される（<a href="../part8/26-qed-minimum.html#eq-einstein-A" class="quarto-xref">式&nbsp;<span>29.4</span></a> 参照）。</p>
+<p><strong>地図の使い方</strong>：第VII部の各章はこの式の異なる因子を解き明かす。プランク関数地図と並べて読めば、本書を貫く二つの逆引きが同時に把握できる。第VIII部の QED で、両者は前因子 <span class="math inline">2h\nu^3/c^2</span> を介して統一される（<a href="../part8/26-qed-minimum.html#eq-einstein-A" class="quarto-xref">式&nbsp;<span>30.4</span></a> 参照）。</p>
 </div>
 </div>
 </div>
@@ -767,7 +772,7 @@ window.Quarto = {
 <img src="../images/line-formation-geometry.svg" class="img-fluid figure-img" style="width:92.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-line-geometry-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-図&nbsp;23.2: 同じ原子遷移が、観測の幾何条件によって <strong>吸収線</strong> にも <strong>輝線</strong> にも見える仕組み。(a) 背後に明るい連続光源があってその前を冷たいガスが覆う → 吸収線（恒星大気）、(b) 背景に連続光がなく、励起されたガス自体を観測 → 輝線（星雲）、(c) 温度勾配のある大気 → 表面付近では冷たく見えるため吸収線。Kirchhoff の三法則の現代的視覚化、§21.4 でも再登場する。
+図&nbsp;24.2: 同じ原子遷移が、観測の幾何条件によって <strong>吸収線</strong> にも <strong>輝線</strong> にも見える仕組み。(a) 背後に明るい連続光源があってその前を冷たいガスが覆う → 吸収線（恒星大気）、(b) 背景に連続光がなく、励起されたガス自体を観測 → 輝線（星雲）、(c) 温度勾配のある大気 → 表面付近では冷たく見えるため吸収線。Kirchhoff の三法則の現代的視覚化、§21.4 でも再登場する。
 </figcaption>
 </figure>
 </div>
@@ -794,7 +799,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>用語</strong>：<strong>禁制線</strong>（<strong>forbidden line</strong>）― [O III] $$5007 のように、四角括弧で囲んだ線。原子物理の選択則（第22章 §22.5）では本来「禁じられた」遷移だが、地上では衝突で先に脱励起されるため見えない一方、<strong>極低密度</strong> の星雲環境では時間が許されて自発放出が起こる。HII 領域の代表線である [O III] が「禁制線」を冠するのは、<strong>星雲が地上では実現できない希薄環境であることの直接観測的証拠</strong></p>
+<p><strong>用語</strong>：<strong>禁制線</strong>（<strong>forbidden line</strong>）― [O III] $$5007 のように、四角括弧で囲んだ線。原子物理の選択則（第22章 §22.5）では本来「禁じられた」遷移だが、地上では衝突で先に脱励起されるため見えない一方、<strong>極低密度</strong> の星雲環境では時間が許されて自発放出が起こる。HII 領域の代表線である [O III] が「禁制線」を冠するのは、<strong>星雲が地上では実現できない希薄環境であることの直接観測的証拠</strong>。定量的には、自発放出率 <span class="math inline">A_{ul}</span> と衝突脱励起率が拮抗する<strong>臨界密度</strong> <span class="math inline">n_\mathrm{crit}=A_{ul}/q_{ul}</span> より低密度かどうかで禁制線の見え方が決まる（§21.5、<a href="#ex-20-2">演習 20-2</a>）</p>
 <p><strong>観測との対応</strong>：禁制線は <strong>通常の実験室条件（高密度）では衝突脱励起で潰されて見えにくい遷移</strong>。ただし極低密度の系では地球上でも観測される ― 例えば <strong>オーロラの <span class="math inline">[\text{O I}]</span> $$5577</strong>（緑光）は地球超高層大気の典型的な禁制線で、EBIT 等の希薄プラズマ実験室でも測られる。むしろ「禁制線が出る <span class="math inline">\Leftrightarrow</span> 低密度」という関係を読みとる手段として、星雲・上層大気・宇宙環境の共通の道具になる。第24章 §24.3 で電子密度・温度の診断に活躍する</p>
 </div>
 </div>
@@ -805,7 +810,7 @@ window.Quarto = {
 <p>水素原子の基底状態 (<span class="math inline">n=1</span>) には、電子スピン ↑ と陽子スピン ↑ が <strong>平行か反平行か</strong> で微小なエネルギー差がある（<strong>超微細構造</strong>, <strong>hyperfine structure</strong>）。エネルギー差はわずか <span class="math inline">\Delta E \simeq 5.9 \times 10^{-6}</span> eV、対応する振動数は</p>
 <p><span id="eq-21cm-frequency"><span class="math display">
 \nu_{21\text{cm}} = 1420.405\,\text{MHz} \quad (\lambda = 21.106\,\text{cm})
-\tag{23.3}</span></span></p>
+\tag{24.3}</span></span></p>
 <p>これが <strong>21 cm 線</strong>（<strong>21 cm line</strong>, <strong>HI line</strong>）。</p>
 <p>宇宙物理での 21 cm 線の特別な役割：</p>
 <ul>
@@ -823,7 +828,7 @@ window.Quarto = {
 <p><strong>問い</strong>：21 cm 線の自発放出確率 <span class="math inline">A_{ul} \simeq 2.9 \times 10^{-15}</span> s<span class="math inline">^{-1}</span> は、可視光の水素線（例：Ly<span class="math inline">\alpha</span> の <span class="math inline">A \simeq 6.3 \times 10^8</span> s<span class="math inline">^{-1}</span>）より <span class="math inline">\sim 10^{23}</span> 倍も小さい。それでも観測できるのはなぜか？</p>
 <p><strong>短答</strong>：圧倒的に多くの <strong>中性水素が宇宙に存在する</strong> から。第VII部の中心地図 <span class="math inline">\alpha_\nu = (\pi e^2/m_e c) f_{lu} n_l \phi(\nu-\nu_0)</span> の <span class="math inline">n_l</span> が非常に大きいので、実効的な吸収強度が極端に小さくても観測可能な吸収（または輝線）として現れる。</p>
 <p><strong>もう一歩</strong>：個別の水素原子では一千万年に一度しか脱励起しない遷移も、宇宙的スケールの大量の中性水素が積算すれば、地上で測れる電波信号になる。「弱い遷移＋膨大な物質量」の組合せが 21 cm 線を宇宙物理ツールにしている。</p>
-<p><strong>注意（前因子の扱い）</strong>：中心地図の前因子 <span class="math inline">\pi e^2/m_e c</span> は、古典 Lorentz 振動子に対応する <strong>電気双極子（E1）遷移</strong> の積分吸収断面積である（§22.4b）。21 cm 線は基底状態超微細構造の <strong>磁気双極子（M1）遷移</strong> なので、この前因子と通常の振動子強度 <span class="math inline">f_{lu}</span> をそのまま当てはめることはできない。21 cm 線の吸収・放出強度は、測定された自発放出率 <span class="math inline">A_{ul} \simeq 2.9 \times 10^{-15}</span> s<span class="math inline">^{-1}</span> から Einstein 関係を介して読み替える（<a href="22-atomic-physics.html#eq-A-f-conversion" class="quarto-xref">式&nbsp;<span>25.17</span></a> の関係を E1 に限らず一般化し、<span class="math inline">A_{ul}</span> ベースで <span class="math inline">B_{lu}</span> を求める）必要がある。</p>
+<p><strong>注意（前因子の扱い）</strong>：中心地図の前因子 <span class="math inline">\pi e^2/m_e c</span> は、古典 Lorentz 振動子に対応する <strong>電気双極子（E1）遷移</strong> の積分吸収断面積である（§22.4b）。21 cm 線は基底状態超微細構造の <strong>磁気双極子（M1）遷移</strong> なので、この前因子と通常の振動子強度 <span class="math inline">f_{lu}</span> をそのまま当てはめることはできない。21 cm 線の吸収・放出強度は、測定された自発放出率 <span class="math inline">A_{ul} \simeq 2.9 \times 10^{-15}</span> s<span class="math inline">^{-1}</span> から Einstein 関係を介して読み替える（<a href="22-atomic-physics.html#eq-A-f-conversion" class="quarto-xref">式&nbsp;<span>26.17</span></a> の関係を E1 に限らず一般化し、<span class="math inline">A_{ul}</span> ベースで <span class="math inline">B_{lu}</span> を求める）必要がある。</p>
 </div>
 </div>
 </div>
@@ -1006,7 +1011,7 @@ window.Quarto = {
 <p>各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。</p>
 <p><a href="#sol-20-1" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 20-1</a> <a href="#sol-20-2" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 20-2</a> <a href="#sol-20-3" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 20-3</a></p>
 <div id="sol-20-1" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-20-1-label">
-<p><span class="proof-title"><em>解答 23.1</em>. </span></p>
+<p><span class="proof-title"><em>解答 24.1</em>. </span></p>
 <div class="offcanvas-header">
 <p><span id="sol-20-1-label" class="offcanvas-title"><strong>解答例（問題 20-1）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
 </div>
@@ -1018,7 +1023,7 @@ window.Quarto = {
 </div>
 </div>
 <div id="sol-20-2" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-20-2-label">
-<p><span class="proof-title"><em>解答 23.2</em>. </span></p>
+<p><span class="proof-title"><em>解答 24.2</em>. </span></p>
 <div class="offcanvas-header">
 <p><span id="sol-20-2-label" class="offcanvas-title"><strong>解答例（問題 20-2）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
 </div>
@@ -1030,7 +1035,7 @@ window.Quarto = {
 </div>
 </div>
 <div id="sol-20-3" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-20-3-label">
-<p><span class="proof-title"><em>解答 23.3</em>. </span></p>
+<p><span class="proof-title"><em>解答 24.3</em>. </span></p>
 <div class="offcanvas-header">
 <p><span id="sol-20-3-label" class="offcanvas-title"><strong>解答例（問題 20-3）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
 </div>
@@ -1628,7 +1633,7 @@ window.Quarto = {
 <span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>連続光は、星雲ガス自体が比較的低密度・低温で熱平衡的な連続放射を作れないため、相対的に弱い。</span>
 <span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>**用語**：**禁制線**（**forbidden line**）― [O III] $\lambda$5007 のように、四角括弧で囲んだ線。原子物理の選択則（第22章 §22.5）では本来「禁じられた」遷移だが、地上では衝突で先に脱励起されるため見えない一方、**極低密度** の星雲環境では時間が許されて自発放出が起こる。HII 領域の代表線である [O III] が「禁制線」を冠するのは、**星雲が地上では実現できない希薄環境であることの直接観測的証拠**</span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>**用語**：**禁制線**（**forbidden line**）― [O III] $\lambda$5007 のように、四角括弧で囲んだ線。原子物理の選択則（第22章 §22.5）では本来「禁じられた」遷移だが、地上では衝突で先に脱励起されるため見えない一方、**極低密度** の星雲環境では時間が許されて自発放出が起こる。HII 領域の代表線である [O III] が「禁制線」を冠するのは、**星雲が地上では実現できない希薄環境であることの直接観測的証拠**。定量的には、自発放出率 $A_{ul}$ と衝突脱励起率が拮抗する**臨界密度** $n_\mathrm{crit}=A_{ul}/q_{ul}$ より低密度かどうかで禁制線の見え方が決まる（§21.5、<span class="co">[</span><span class="ot">演習 20-2</span><span class="co">](#ex-20-2)</span>）</span>
 <span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>**観測との対応**：禁制線は **通常の実験室条件（高密度）では衝突脱励起で潰されて見えにくい遷移**。ただし極低密度の系では地球上でも観測される ― 例えば **オーロラの $[\text{O I}]$ $\lambda$5577**（緑光）は地球超高層大気の典型的な禁制線で、EBIT 等の希薄プラズマ実験室でも測られる。むしろ「禁制線が出る $\Leftrightarrow$ 低密度」という関係を読みとる手段として、星雲・上層大気・宇宙環境の共通の道具になる。第24章 §24.3 で電子密度・温度の診断に活躍する</span>
 <span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>:::</span>

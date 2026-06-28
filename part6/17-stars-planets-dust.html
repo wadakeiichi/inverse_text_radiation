@@ -227,6 +227,11 @@ window.Quarto = {
   <a href="../00-prologue.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">序章　この本の目的と歩き方</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../acknowledgments.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">謝辞</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
@@ -650,7 +655,7 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1} \quad \overset{
 <p>恒星のスペクトルは、第15章 §15.2-§15.3 で扱った <strong>「振動数依存不透明度を持つ恒星大気」</strong> の典型例。完全な黒体ではないが、十分な近似で次のように書ける：</p>
 <p><span id="eq-stefan-boltzmann-star"><span class="math display">
 L_\star = 4\pi R_\star^2 \sigma T_\text{eff}^4
-\tag{20.1}</span></span></p>
+\tag{21.1}</span></span></p>
 <p>ここで <span class="math inline">L_\star</span> は全光度、<span class="math inline">R_\star</span> は恒星半径、<span class="math inline">T_\text{eff}</span> は <strong>有効温度</strong>。これは Stefan-Boltzmann 則（第2章 §2.4）の観測的応用：「もし恒星表面が温度 <span class="math inline">T_\text{eff}</span> の理想黒体だったとしたら、観測される全光度が同じになるような温度」と定義する。</p>
 <div class="callout callout-style-simple callout-warning">
 <div class="callout-body d-flex">
@@ -688,11 +693,11 @@ L_\star = 4\pi R_\star^2 \sigma T_\text{eff}^4
 <p>エネルギー収支：</p>
 <p><span id="eq-planet-balance"><span class="math display">
 \underbrace{(1-A) \cdot \frac{L_\star}{4\pi d^2} \cdot \pi R_p^2}_\text{吸収光} = \underbrace{4\pi R_p^2 \cdot \sigma T_\text{eq}^4}_\text{再放射}
-\tag{20.2}</span></span></p>
+\tag{21.2}</span></span></p>
 <p>ここで <span class="math inline">A</span> はアルベド（反射率）、<span class="math inline">d</span> は恒星-惑星距離、<span class="math inline">R_p</span> は惑星半径。解いて</p>
 <p><span id="eq-planet-temperature"><span class="math display">
 T_\text{eq} = T_\star \left(\frac{R_\star}{2d}\right)^{1/2} (1-A)^{1/4}
-\tag{20.3}</span></span></p>
+\tag{21.3}</span></span></p>
 <p>地球の場合（<span class="math inline">T_\star = 5778</span> K, <span class="math inline">R_\star/d = 1/214</span>, <span class="math inline">A = 0.3</span>）：<span class="math inline">T_\text{eq} \simeq 255</span> K <span class="math inline">\simeq -18</span> °C。</p>
 <div class="callout callout-style-simple callout-warning">
 <div class="callout-body d-flex">
@@ -700,7 +705,7 @@ T_\text{eq} = T_\star \left(\frac{R_\star}{2d}\right)^{1/2} (1-A)^{1/4}
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>注意（観測）</strong>：実際の地球表面温度は約 +15 °C で、平衡温度より 33 K 高い。これは <strong>温室効果</strong>（大気の赤外不透明度）による。<a href="#eq-planet-temperature" class="quarto-xref">式&nbsp;<span>20.3</span></a> は <strong>「大気がない」近似</strong> で、地球のように大気のある惑星では大きく外れる。</p>
+<p><strong>注意（観測）</strong>：実際の地球表面温度は約 +15 °C で、平衡温度より 33 K 高い。これは <strong>温室効果</strong>（大気の赤外不透明度）による。<a href="#eq-planet-temperature" class="quarto-xref">式&nbsp;<span>21.3</span></a> は <strong>「大気がない」近似</strong> で、地球のように大気のある惑星では大きく外れる。</p>
 <p>しかし「平衡温度」は次のような実用的価値を持つ：</p>
 <ul>
 <li>多くの太陽系外惑星では大気がよくわからない → 平衡温度が <strong>最初の温度推定値</strong> として使われる</li>
@@ -716,7 +721,7 @@ T_\text{eq} = T_\star \left(\frac{R_\star}{2d}\right)^{1/2} (1-A)^{1/4}
 <p>星間ダスト、原始惑星系円盤の塵、星形成領域の冷たい塵 ― これらの熱放射は、第15章 §15.4 の <strong>修正黒体スペクトル</strong></p>
 <p><span id="eq-modified-blackbody-applied"><span class="math display">
 I_\nu^\text{dust} = Q_\nu \cdot B_\nu(T_d), \quad Q_\nu \propto \nu^\beta \text{ (long wavelength)}
-\tag{20.4}</span></span></p>
+\tag{21.4}</span></span></p>
 <p>で記述される。観測される <span class="math inline">I_\nu</span> から、三つの物理量が読み取れる：</p>
 <ol type="1">
 <li><strong>ダスト温度 <span class="math inline">T_d</span></strong> ― Wien 側の指数的減衰の鋭さ、または SED のピーク位置から</li>
@@ -796,7 +801,7 @@ I_\nu^\text{dust} = Q_\nu \cdot B_\nu(T_d), \quad Q_\nu \propto \nu^\beta \text{
 <p>全 SED は</p>
 <p><span id="eq-multi-temperature-sed"><span class="math display">
 I_\nu^\text{total} = \sum_i I_{\nu, \text{star}, i} + \sum_j Q_\nu(\beta_j)\, B_\nu(T_j)\, M_j + I_\nu^\text{lines} + I_\nu^\text{ff} + \ldots
-\tag{20.5}</span></span></p>
+\tag{21.5}</span></span></p>
 <p>の形で組み立てる。フィッティングは温度・質量・<span class="math inline">\beta</span> の組合せを観測波長点と適合させ、<span class="math inline">\chi^2</span> 最小化や Bayesian inference で求める。</p>
 <div class="callout callout-style-simple callout-warning">
 <div class="callout-body d-flex">
@@ -827,21 +832,21 @@ I_\nu^\text{total} = \sum_i I_{\nu, \text{star}, i} + \sum_j Q_\nu(\beta_j)\, B_
 <p>鍵は、<strong>自由–自由吸収係数が低振動数ほど大きい</strong>ことである：</p>
 <p><span id="eq-ff-absorption"><span class="math display">
 \alpha_\nu^{\mathrm{ff}} \propto n_e\, n_i\, T_e^{-3/2}\, \nu^{-2}\, \bar g_{\mathrm{ff}}(\nu,T_e)
-\tag{20.6}</span></span></p>
+\tag{21.6}</span></span></p>
 <p>ここで <span class="math inline">n_e, n_i</span> は電子・イオン数密度、<span class="math inline">\bar g_{\mathrm{ff}}</span> は Gaunt 因子（<span class="math inline">\nu,T_e</span> にゆるやかに依存）。自由–自由の放出係数・吸収係数の微視的な導出と、両者を結ぶ Kirchhoff の関係 <span class="math inline">S_\nu=B_\nu(T_e)</span>、Gaunt 因子の起源は<a href="../part6/19-continuum-microprocesses.html#sec-continuum-free-free">第19章 §19.2</a>で扱う。</p>
 <p>これを視線方向に積分したものが光学的厚さ <span class="math inline">\tau_\nu=\int\alpha_\nu^{\mathrm{ff}}\,ds</span> である。密度の寄与は <strong>発光量度</strong>（<strong>emission measure</strong>）</p>
 <p><span id="eq-emission-measure"><span class="math display">
 \mathrm{EM}\equiv\int n_e^2\,ds \qquad(\text{水素プラズマでは } n_i\simeq n_e)
-\tag{20.7}</span></span></p>
-<p>にまとまる。残る振動数・温度依存は、<a href="#eq-ff-absorption" class="quarto-xref">式&nbsp;<span>20.6</span></a> の <span class="math inline">\nu^{-2}\,T_e^{-3/2}</span> に Gaunt 因子のゆるやかな依存（<span class="math inline">\bar g_{\mathrm{ff}}\propto\nu^{-0.1}\,T_e^{0.15}</span> 程度）が重なったもので、実用的な近似形は</p>
+\tag{21.7}</span></span></p>
+<p>にまとまる。残る振動数・温度依存は、<a href="#eq-ff-absorption" class="quarto-xref">式&nbsp;<span>21.6</span></a> の <span class="math inline">\nu^{-2}\,T_e^{-3/2}</span> に Gaunt 因子のゆるやかな依存（<span class="math inline">\bar g_{\mathrm{ff}}\propto\nu^{-0.1}\,T_e^{0.15}</span> 程度）が重なったもので、実用的な近似形は</p>
 <p><span id="eq-ff-optical-depth"><span class="math display">
 \tau_\nu \;\propto\; \mathrm{EM}\,\nu^{-2.1}\,T_e^{-1.35}
-\tag{20.8}</span></span></p>
+\tag{21.8}</span></span></p>
 <p>となる。<span class="math inline">\mathrm{EM}</span> は吸収の強さ（密度の寄与）を、指数 <span class="math inline">\nu^{-2.1}</span> はその振動数依存を与える。後者が支配的で、<span class="math inline">\tau_\nu\propto\nu^{-2.1}</span> のため <strong>低振動数で光学的に厚く、高振動数で薄い</strong>。</p>
 <p>等温スラブ（温度 <span class="math inline">T_e</span>、LTE）の射出強度は第5章の解 <span class="math inline">I_\nu=B_\nu(T_e)(1-e^{-\tau_\nu})</span>。電波帯では <span class="math inline">h\nu\ll k_BT_e</span> なので Rayleigh–Jeans が使え、輝度温度 <span class="math inline">T_b\equiv c^2 I_\nu/(2\nu^2 k_B)</span> で書くと</p>
 <p><span id="eq-ff-brightness-temp"><span class="math display">
 T_b(\nu)=T_e\left(1-e^{-\tau_\nu}\right)
-\tag{20.9}</span></span></p>
+\tag{21.9}</span></span></p>
 <p><strong>低振動数側（光学的に厚い、<span class="math inline">\tau_\nu\gg1</span>）</strong>：<span class="math inline">T_b\to T_e</span> に飽和し、<span class="math inline">I_\nu\to B_\nu(T_e)</span>。これは第5章 §5.6 の「光学的に厚い極限で <span class="math inline">I_\nu\to B_\nu(T)</span>」そのもので、観測されるのは <strong>電子温度 <span class="math inline">T_e</span> の黒体（の Rayleigh–Jeans 裾）</strong> である。フラックスは <span class="math inline">F_\nu\propto\nu^2</span>。</p>
 <p><strong>高振動数側（光学的に薄い、<span class="math inline">\tau_\nu\ll1</span>）</strong>：<span class="math inline">T_b\to T_e\,\tau_\nu\propto\nu^{-2.1}</span> なので <span class="math inline">F_\nu\propto\nu^2\cdot\nu^{-2.1}=\nu^{-0.1}</span> ― ほぼ平坦。</p>
 <p>両者の境目（<span class="math inline">\tau_\nu\simeq1</span> となる <strong>ターンオーバー振動数</strong> <span class="math inline">\nu_t</span>）は <span class="math inline">\mathrm{EM}</span> と <span class="math inline">T_e</span> で決まる。したがって電波 HII 領域の連続スペクトルは、<strong>低 <span class="math inline">\nu</span> 側 <span class="math inline">F_\nu\propto\nu^2</span>（黒体的）→ 高 <span class="math inline">\nu</span> 側 <span class="math inline">F_\nu\propto\nu^{-0.1}</span>（薄い）</strong> という特徴的な折れ曲がりを示す。</p>
@@ -874,12 +879,12 @@ T_b(\nu)=T_e\left(1-e^{-\tau_\nu}\right)
 <section id="sec-greenhouse" class="level2">
 <h2 class="anchored" data-anchor-id="sec-greenhouse">17.7 温室効果 ― 惑星大気をエディントン大気として</h2>
 <p>[本文目安：B4-M1]</p>
-<p>§17.2 の平衡温度 <a href="#eq-planet-temperature" class="quarto-xref">式&nbsp;<span>20.3</span></a> は「大気なし」近似で、地球では実測より 33 K 低い。この差 ― <strong>温室効果</strong> ― は、第5章 §5.10 で恒星大気に使ったエディントン近似を、<strong>地球を一つの星とみなして</strong> そのまま適用すると定量的に理解できる。</p>
-<p><strong>模型。</strong>　大気は可視光に透明で太陽光 <span class="math inline">F_\odot</span> を地表まで通し、赤外には不透明（吸収係数 <span class="math inline">k_\lambda</span>）とする。地表は温度 <span class="math inline">T_g</span> で赤外を <span class="math inline">\sigma T_g^4</span> で放射し、大気はそれを吸収・再放射する。宇宙へ逃げる正味の赤外流束は、入射太陽光の吸収分に等しく <span class="math inline">\sigma T_\mathrm{eq}^4</span>（<span class="math inline">T_\mathrm{eq}</span> は <a href="#eq-planet-temperature" class="quarto-xref">式&nbsp;<span>20.3</span></a> の平衡温度）。下から温められる平面平行大気のエディントン解（<a href="../part2/05-radiative-transfer.html#eq-eddington-temperature" class="quarto-xref">式&nbsp;<span>8.19</span></a> と同型）は、大気上端から地表までの<strong>赤外ロスランド光学的厚さ</strong> <span class="math inline">\tau_R^{\,G}</span> を使って</p>
+<p>§17.2 の平衡温度 <a href="#eq-planet-temperature" class="quarto-xref">式&nbsp;<span>21.3</span></a> は「大気なし」近似で、地球では実測より 33 K 低い。この差 ― <strong>温室効果</strong> ― は、第5章 §5.10 で恒星大気に使ったエディントン近似を、<strong>地球を一つの星とみなして</strong> そのまま適用すると定量的に理解できる。</p>
+<p><strong>模型。</strong>　大気は可視光に透明で太陽光 <span class="math inline">F_\odot</span> を地表まで通し、赤外には不透明（吸収係数 <span class="math inline">k_\lambda</span>）とする。地表は温度 <span class="math inline">T_g</span> で赤外を <span class="math inline">\sigma T_g^4</span> で放射し、大気はそれを吸収・再放射する。宇宙へ逃げる正味の赤外流束は、入射太陽光の吸収分に等しく <span class="math inline">\sigma T_\mathrm{eq}^4</span>（<span class="math inline">T_\mathrm{eq}</span> は <a href="#eq-planet-temperature" class="quarto-xref">式&nbsp;<span>21.3</span></a> の平衡温度）。下から温められる平面平行大気のエディントン解（<a href="../part2/05-radiative-transfer.html#eq-eddington-temperature" class="quarto-xref">式&nbsp;<span>9.19</span></a> と同型）は、大気上端から地表までの<strong>赤外ロスランド光学的厚さ</strong> <span class="math inline">\tau_R^{\,G}</span> を使って</p>
 <p><span id="eq-greenhouse-surface"><span class="math display">
 T_g^4 \simeq T_\mathrm{eq}^4\left(1+\frac32\,\tau_R^{\,G}\right)
-\tag{20.10}</span></span></p>
-<p>を与える。<span class="math inline">\tau_R^{\,G}</span> が大きいほど地表は熱くなる。地球大気の赤外 <span class="math inline">\tau_R^{\,G}</span> はおよそ <span class="math inline">0.5</span>–<span class="math inline">0.6</span> で、<a href="#eq-greenhouse-surface" class="quarto-xref">式&nbsp;<span>20.10</span></a> は実測の数十 K の昇温をおおむね説明する（精密値は雲・対流・湿度に依存する）。「宇宙へ放射するのは赤外で <span class="math inline">\tau\simeq2/3</span> になる<strong>上空の冷たい層</strong>、地表はそれより下にあるぶん熱い」という、§5.11 の<strong>見える深さ</strong>そのものの帰結である。</p>
+\tag{21.10}</span></span></p>
+<p>を与える。<span class="math inline">\tau_R^{\,G}</span> が大きいほど地表は熱くなる。地球大気の赤外 <span class="math inline">\tau_R^{\,G}</span> はおよそ <span class="math inline">0.5</span>–<span class="math inline">0.6</span> で、<a href="#eq-greenhouse-surface" class="quarto-xref">式&nbsp;<span>21.10</span></a> は実測の数十 K の昇温をおおむね説明する（精密値は雲・対流・湿度に依存する）。「宇宙へ放射するのは赤外で <span class="math inline">\tau\simeq2/3</span> になる<strong>上空の冷たい層</strong>、地表はそれより下にあるぶん熱い」という、§5.11 の<strong>見える深さ</strong>そのものの帰結である。</p>
 <div class="callout callout-style-simple callout-tip">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -887,7 +892,7 @@ T_g^4 \simeq T_\mathrm{eq}^4\left(1+\frac32\,\tau_R^{\,G}\right)
 </div>
 <div class="callout-body-container">
 <p><strong>問い</strong>：CO₂ はすでに主要な吸収帯の中心で「飽和」している。それでも増やすと温暖化するのはなぜか？</p>
-<p><strong>短答</strong>：効くのは飽和したバンド<strong>中心</strong>ではなく、これまで透明だったバンドの<strong>縁（ウイング）</strong>である。中心は <span class="math inline">\tau\gg1</span> で、増やしても宇宙へ放射する高度（<span class="math inline">\tau\simeq2/3</span> の冷たい上空）がわずかに上がるだけで地表放射の逃げ道はもともと塞がっている。一方、縁は <span class="math inline">\tau\lesssim1</span> の半透明な窓で、CO₂ を増やすとここが不透明化し、ロスランド平均 <span class="math inline">\tau_R^{\,G}</span>（<a href="../part2/05-radiative-transfer.html#eq-rosseland-mean" class="quarto-xref">式&nbsp;<span>8.20</span></a>、透明な窓に支配される調和平均）が増える。<a href="#eq-greenhouse-surface" class="quarto-xref">式&nbsp;<span>20.10</span></a> の <span class="math inline">\tau_R^{\,G}</span> 増加分が昇温になる。</p>
+<p><strong>短答</strong>：効くのは飽和したバンド<strong>中心</strong>ではなく、これまで透明だったバンドの<strong>縁（ウイング）</strong>である。中心は <span class="math inline">\tau\gg1</span> で、増やしても宇宙へ放射する高度（<span class="math inline">\tau\simeq2/3</span> の冷たい上空）がわずかに上がるだけで地表放射の逃げ道はもともと塞がっている。一方、縁は <span class="math inline">\tau\lesssim1</span> の半透明な窓で、CO₂ を増やすとここが不透明化し、ロスランド平均 <span class="math inline">\tau_R^{\,G}</span>（<a href="../part2/05-radiative-transfer.html#eq-rosseland-mean" class="quarto-xref">式&nbsp;<span>9.20</span></a>、透明な窓に支配される調和平均）が増える。<a href="#eq-greenhouse-surface" class="quarto-xref">式&nbsp;<span>21.10</span></a> の <span class="math inline">\tau_R^{\,G}</span> 増加分が昇温になる。</p>
 <p><strong>もう一歩</strong>：簡単なエディントン模型で CO₂ を倍にすると <span class="math inline">\tau_R^{\,G}\simeq0.36\to0.39</span>、地表温度はおよそ <span class="math inline">+2</span>–<span class="math inline">3</span> K 上がる。「CO₂ は飽和しているから効かない」という主張は、ロスランド平均が<strong>最も透明な波長に支配される</strong>ことを見落としている。水蒸気も <span class="math inline">\tau_R^{\,G}</span> への寄与が大きく、温暖化・乾燥のフィードバックに関わる。</p>
 </div>
 </div>
@@ -902,17 +907,17 @@ T_g^4 \simeq T_\mathrm{eq}^4\left(1+\frac32\,\tau_R^{\,G}\right)
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>一つの枠組みで星から惑星まで</strong>：<a href="#eq-greenhouse-surface" class="quarto-xref">式&nbsp;<span>20.10</span></a> は、第5章のエディントン大気（<a href="../part2/05-radiative-transfer.html#eq-eddington-temperature" class="quarto-xref">式&nbsp;<span>8.19</span></a>）・ロスランド平均（<a href="../part2/05-radiative-transfer.html#eq-rosseland-mean" class="quarto-xref">式&nbsp;<span>8.20</span></a>）・「見える深さ」（§5.11）を、恒星から地球気候へそのまま延長したものである。放射輸送の同じ物理が、恒星スペクトルの形と惑星の地表温度を同時に説明する。</p>
+<p><strong>一つの枠組みで星から惑星まで</strong>：<a href="#eq-greenhouse-surface" class="quarto-xref">式&nbsp;<span>21.10</span></a> は、第5章のエディントン大気（<a href="../part2/05-radiative-transfer.html#eq-eddington-temperature" class="quarto-xref">式&nbsp;<span>9.19</span></a>）・ロスランド平均（<a href="../part2/05-radiative-transfer.html#eq-rosseland-mean" class="quarto-xref">式&nbsp;<span>9.20</span></a>）・「見える深さ」（§5.11）を、恒星から地球気候へそのまま延長したものである。放射輸送の同じ物理が、恒星スペクトルの形と惑星の地表温度を同時に説明する。</p>
 </div>
 </div>
 </section>
 <section id="sec-molecular-dissociation" class="level2">
 <h2 class="anchored" data-anchor-id="sec-molecular-dissociation">17.8 分子の解離平衡 ― 低温星の CO・H₂O・TiO</h2>
 <p>[本文目安：B4-M1]</p>
-<p>有効温度が <span class="math inline">\sim4000</span> K より低い晩期型星（K・M 型）や分子雲では、原子が結合して<strong>分子</strong>を作る。どの分子がどれだけできるかは、第6章 §6.7 の質量作用の法則 <a href="../part3/06-thermal-equilibrium.html#eq-mass-action" class="quarto-xref">式&nbsp;<span>9.9</span></a> の<strong>解離平衡</strong>の場合で決まる。例えば水素分子なら <span class="math inline">2\mathrm{H}-\mathrm{H_2}=0</span> から</p>
+<p>有効温度が <span class="math inline">\sim4000</span> K より低い晩期型星（K・M 型）や分子雲では、原子が結合して<strong>分子</strong>を作る。どの分子がどれだけできるかは、第6章 §6.7 の質量作用の法則 <a href="../part3/06-thermal-equilibrium.html#eq-mass-action" class="quarto-xref">式&nbsp;<span>10.9</span></a> の<strong>解離平衡</strong>の場合で決まる。例えば水素分子なら <span class="math inline">2\mathrm{H}-\mathrm{H_2}=0</span> から</p>
 <p><span id="eq-h2-dissociation"><span class="math display">
 \frac{n_{\rm H}^2}{n_{\rm H_2}} = \frac{(2\pi m_{\rm H}k_BT/h^2)^{3/2}}{Z_{\rm H_2}/Z_{\rm H}^2}\;e^{-D/k_BT}
-\tag{20.11}</span></span></p>
+\tag{21.11}</span></span></p>
 <p>（<span class="math inline">D</span> は解離エネルギー）で、温度が下がるほど右辺が小さく ＝ 分子側に寄る。</p>
 <p><strong>CO が鍵を握る。</strong>　一酸化炭素 CO は解離エネルギーが <span class="math inline">\simeq11</span> eV と飛び抜けて大きく、低温でまっさきに作られる。その結果、<strong>C と O のうち存在量の少ない方が CO に取り込まれて使い果たされ、多い方の余りが残りの分子を支配する</strong>：</p>
 <ul>
@@ -930,7 +935,7 @@ T_g^4 \simeq T_\mathrm{eq}^4\left(1+\frac32\,\tau_R^{\,G}\right)
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>逆引きと連続・線への接続</strong>：観測される分子バンドの有無・強さから、温度と C/O 比を逆に解くのが晩期型星・系外惑星大気の分光の出発点である。分子吸収は連続吸収（第19章の <span class="math inline">\mathrm{H}^-</span> ほか）に<strong>新たな波長依存の層</strong>を重ね、§5.11 の統一公式 <a href="../part2/05-radiative-transfer.html#eq-unified-spectrum" class="quarto-xref">式&nbsp;<span>8.23</span></a> でいう <span class="math inline">k_\lambda</span> の構造を一段複雑にする。分子線そのものの扱いは第20章（線の起源）・第22章（原子・分子準位）に続く。</p>
+<p><strong>逆引きと連続・線への接続</strong>：観測される分子バンドの有無・強さから、温度と C/O 比を逆に解くのが晩期型星・系外惑星大気の分光の出発点である。分子吸収は連続吸収（第19章の <span class="math inline">\mathrm{H}^-</span> ほか）に<strong>新たな波長依存の層</strong>を重ね、§5.11 の統一公式 <a href="../part2/05-radiative-transfer.html#eq-unified-spectrum" class="quarto-xref">式&nbsp;<span>9.23</span></a> でいう <span class="math inline">k_\lambda</span> の構造を一段複雑にする。分子線そのものの扱いは第20章（線の起源）・第22章（原子・分子準位）に続く。</p>
 </div>
 </div>
 </section>
@@ -1044,7 +1049,7 @@ T_g^4 \simeq T_\mathrm{eq}^4\left(1+\frac32\,\tau_R^{\,G}\right)
 <p>各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。</p>
 <p><a href="#sol-17-1" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 17-1</a> <a href="#sol-17-2" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 17-2</a> <a href="#sol-17-3" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 17-3</a> <a href="#sol-17-4" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 17-4</a> <a href="#sol-17-5" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" role="button">問題 17-5</a></p>
 <div id="sol-17-1" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-17-1-label">
-<p><span class="proof-title"><em>解答 20.1</em>. </span></p>
+<p><span class="proof-title"><em>解答 21.1</em>. </span></p>
 <div class="offcanvas-header">
 <p><span id="sol-17-1-label" class="offcanvas-title"><strong>解答例（問題 17-1）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
 </div>
@@ -1058,7 +1063,7 @@ T_g^4 \simeq T_\mathrm{eq}^4\left(1+\frac32\,\tau_R^{\,G}\right)
 </div>
 </div>
 <div id="sol-17-2" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-17-2-label">
-<p><span class="proof-title"><em>解答 20.2</em>. </span></p>
+<p><span class="proof-title"><em>解答 21.2</em>. </span></p>
 <div class="offcanvas-header">
 <p><span id="sol-17-2-label" class="offcanvas-title"><strong>解答例（問題 17-2）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
 </div>
@@ -1071,7 +1076,7 @@ T_g^4 \simeq T_\mathrm{eq}^4\left(1+\frac32\,\tau_R^{\,G}\right)
 </div>
 </div>
 <div id="sol-17-3" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-17-3-label">
-<p><span class="proof-title"><em>解答 20.3</em>. </span></p>
+<p><span class="proof-title"><em>解答 21.3</em>. </span></p>
 <div class="offcanvas-header">
 <p><span id="sol-17-3-label" class="offcanvas-title"><strong>解答例（問題 17-3）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
 </div>
@@ -1083,7 +1088,7 @@ T_g^4 \simeq T_\mathrm{eq}^4\left(1+\frac32\,\tau_R^{\,G}\right)
 </div>
 </div>
 <div id="sol-17-4" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-17-4-label">
-<p><span class="proof-title"><em>解答 20.4</em>. </span></p>
+<p><span class="proof-title"><em>解答 21.4</em>. </span></p>
 <div class="offcanvas-header">
 <p><span id="sol-17-4-label" class="offcanvas-title"><strong>解答例（問題 17-4）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
 </div>
@@ -1095,7 +1100,7 @@ T_g^4 \simeq T_\mathrm{eq}^4\left(1+\frac32\,\tau_R^{\,G}\right)
 </div>
 </div>
 <div id="sol-17-5" class="offcanvas offcanvas-end proof solution" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-17-5-label">
-<p><span class="proof-title"><em>解答 20.5</em>. </span></p>
+<p><span class="proof-title"><em>解答 21.5</em>. </span></p>
 <div class="offcanvas-header">
 <p><span id="sol-17-5-label" class="offcanvas-title"><strong>解答例（問題 17-5）</strong></span> <span class="btn-close" data-bs-dismiss="offcanvas" aria-label="閉じる"></span></p>
 </div>
