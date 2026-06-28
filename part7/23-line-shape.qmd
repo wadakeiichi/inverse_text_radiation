@@ -354,7 +354,7 @@ $$ {#eq-zeeman-energy}
 
 [★ 難易度：☆☆ ] [tag:理解を深める]
 
-§23.5・22.6 のマクロ速度場と磁場。Gaussian 成分の二乗和 $\Delta\nu_{D,\mathrm{total}}^2=\Delta\nu_{D,\mathrm{thermal}}^2+\Delta\nu_{D,\mathrm{turb}}^2$、Zeeman 分裂 $\Delta E=g_J\mu_B B m_J$。
+§23.5・23.6 のマクロ速度場と磁場。Gaussian 成分の二乗和 $\Delta\nu_{D,\mathrm{total}}^2=\Delta\nu_{D,\mathrm{thermal}}^2+\Delta\nu_{D,\mathrm{turb}}^2$、Zeeman 分裂 $\Delta E=g_J\mu_B B m_J$。
 
 1. 熱的成分（$\propto1/\sqrt m$）と乱流成分（元素質量に依らない）が、異なる質量の元素の線幅比較でどう分離できるか述べよ。
 2. マイクロ乱流とマクロ乱流で数学的扱いが異なる理由（速度場のスケールと光子平均自由行程の大小）を一言で述べよ。

@@ -125,9 +125,9 @@ $$ {#eq-planck-integral}
 
 $$
 u(T) = \int_0^\infty u_\nu\, d\nu = \frac{8\pi^5 k_B^4}{15 h^3 c^3} T^4 = aT^4
-$$ {#eq-energy-density-T4}
+$$ {#eq-energy-density-T4-explicit}
 
-放射定数 $a \simeq 7.566 \times 10^{-16}$ J m$^{-3}$ K$^{-4}$。フラックス側では $\sigma = ac/4$ で Stefan-Boltzmann 定数。
+これは第8章 @eq-energy-density-T4 の放射定数 $a$ を明示した形。放射定数 $a \simeq 7.566 \times 10^{-16}$ J m$^{-3}$ K$^{-4}$。フラックス側では $\sigma = ac/4$ で Stefan-Boltzmann 定数。
 
 ::: {.appendix-tip}
 **本文での使用**：第4章 §4.4、第14章 §14.5、第17章 §17.1（恒星の有効温度）

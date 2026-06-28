@@ -42,6 +42,7 @@ book:
     - index.qmd
     - contents.qmd
     - 00-prologue.qmd
+    - acknowledgments.qmd
     - part: "第I部　宇宙に満ちる黒体放射"
       chapters:
         - part1/01-where-blackbody.qmd

@@ -127,6 +127,8 @@ $$
 \frac{\Delta \nu}{\nu} \simeq \frac{4 k_B T_e}{m_e c^2}
 $$ {#eq-compton-gain-per-scattering}
 
+係数 4 は天下りではない。熱運動する電子（速さ $v$、$k_B T_e\sim m_e v^2$）に光子が散乱されると、**二次のドップラー押し上げ** $\sim(v/c)^2$ を受ける。これを等方な Maxwell 分布で平均すると、種光子が十分冷たい（$h\nu_\text{seed}\ll k_B T_e$）極限で $\langle\Delta\nu/\nu\rangle\simeq 4k_BT_e/m_ec^2$ となる（より正確には、1 回散乱の平均利得が $\langle\Delta\varepsilon/\varepsilon\rangle=(4k_BT_e-\varepsilon)/m_ec^2$ で、$\varepsilon=h\nu\ll k_BT_e$ の極限を残したもの。後者の $-\varepsilon$ 項は逆に高エネルギー光子が電子へエネルギーを渡す通常の Compton 冷却を表す）。詳しい導出は Rybicki–Lightman 第7章を参照。
+
 光子が脱出までに $N$ 回散乱すると、累積利得 ${(1 + \Delta\nu/\nu)}^N$。コロナの光学的深さ $\tau_e$ と温度から見積もる **Compton $y$ パラメータ**：
 
 $$
