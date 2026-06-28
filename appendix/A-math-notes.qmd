@@ -63,9 +63,9 @@ $$
 
 $$
 J \equiv \frac{1}{4\pi}\int I\, d\Omega = \frac{1}{2}\int_{-1}^{1} I\, d\mu
-$$ {#eq-mean-intensity}
+$$ {#eq-mean-intensity-mu}
 
-これが第4章 §4.5 の $J_\nu$ の定義。
+これが第4章 §4.5 の $J_\nu$ の定義（@eq-mean-intensity）を、$\mu=\cos\theta$ 表示で書き直したもの。
 
 ---
 
