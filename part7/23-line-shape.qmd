@@ -76,6 +76,48 @@ $$ {#eq-lorentzian}
 **観測との対応**：水素 Ly$\alpha$（$\lambda = 121.6$ nm）は上準位 $2p$ から基底状態 $1s$ への単一経路で崩壊するため $\Gamma_u = A_{ul} = 6.27 \times 10^8$ s$^{-1}$ となり、自然幅は波長単位で $\Delta\lambda_\text{nat} = \lambda^2 \Gamma_\text{nat}/(2\pi c) \simeq 4.9 \times 10^{-5}$ Å である。多くの場合、自然幅は他の拡がり（Doppler、衝突）に比べて小さいが、**線の翼**（damping wing）には自然幅の Lorentzian の寄与が現れる。QSO の Ly$\alpha$ 強吸収系（damped Ly$\alpha$ system）で観測される **減衰翼** がその例である。
 :::
 
+::: {.callout-derive collapse="true"}
+## 導出ノート：古典振動子から吸収断面積と振動子強度 $f$ へ（オンライン版）
+
+第VII部で繰り返し使う線吸収係数 @eq-line-absorption-preview の前因子 $\pi e^2/m_e c$ と振動子強度 $f$ が、どこから来るのかを古典模型から積み上げておく。これは「式を天下りに与えない」ための一筋であり、自然幅の Lorentzian（@eq-lorentzian）と同じ起源を吸収の側から見たものである。
+
+**原子をばねに乗った電子（電気双極子）とみなす。**　入射電磁波の振動電場 $E=E_0 e^{i\omega t}$ に対し、固有角振動数 $\omega_0$・減衰率 $\gamma$ の電子の運動方程式は
+
+$$
+\ddot z + \gamma\,\dot z + \omega_0^2\, z = -\frac{e}{m}E_0 e^{i\omega t}.
+$$
+
+定常解の振幅から、電子が電磁波から吸収して摩擦（＝再放射）で散逸する仕事率を計算し、それを入射エネルギー流束 $F=(c/8\pi)E_0^2$ で割ると、**古典的な吸収断面積**
+
+$$
+\sigma(\nu) = \frac{e^2}{m_e c}\,\frac{\gamma/4\pi}{(\nu-\nu_0)^2+(\gamma/4\pi)^2}
+$$ {#eq-classical-cross-section}
+
+が得られる（$\nu\simeq\nu_0$ の共鳴近似）。これは @eq-lorentzian と同じ Lorentzian 形である。振動数で積分すると、形によらず
+
+$$
+\int_0^\infty \sigma(\nu)\,d\nu = \frac{\pi e^2}{m_e c} = 2.654\times10^{-2}\ \text{cm}^2\,\text{s}^{-1}
+$$ {#eq-integrated-cross-section}
+
+となり、$\gamma$ にも $\nu_0$ にもよらない**普遍定数**になる。
+
+**古典の矛盾と量子補正 $f$。**　@eq-integrated-cross-section が普遍ということは、古典論ではすべての線の積分吸収が同じ＝**どの線も同じ強さ**になってしまう。これは観測（線ごとに強さが違う）と矛盾する。量子力学で双極子の吸収を計算すると、この古典断面積に遷移ごとに異なる無次元係数 $f$ を掛ければよいことがわかる：
+
+$$
+\int_0^\infty \sigma(\nu)\,d\nu = \frac{\pi e^2}{m_e c}\,f.
+$$ {#eq-fvalue-integral}
+
+この $f$ が**振動子強度**（**oscillator strength**、$f$ 値）で、線の強さを決める。線吸収係数は単位体積あたり $\alpha_\nu^\text{line}=n_l\,\sigma(\nu)=\dfrac{\pi e^2}{m_e c}f\,n_l\,\phi(\nu-\nu_0)$ となり、第5章 @eq-line-absorption-preview の形に一致する ― 前因子 $\pi e^2/m_e c$ の正体がこの古典断面積、$f$ がその量子補正である。
+
+**等価幅へのつながり。**　弱い線（光学的に薄い）では、柱密度 $N_l=\int n_l\,d\ell$ の原子による等価幅（§21.1）は
+
+$$
+W_\lambda \simeq \frac{\pi e^2}{m_e c}\,\frac{\lambda^2}{c}\,N_l\,f
+$$ {#eq-weak-line-W}
+
+と $N_l f$ に比例する（成長曲線 §21.6 の**線形部分**）。$f$ が既知なら $W_\lambda$ から柱密度 $N_l$ が逆引きできる ― これが吸収線分光の最も基本的な定量の出発点である。
+:::
+
 ## 23.2 Doppler 拡がり ― Gaussian の起源 {#sec-line-shape-doppler}
 
 [本文目安：B2-B3]

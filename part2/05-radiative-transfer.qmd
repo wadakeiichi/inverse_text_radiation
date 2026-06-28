@@ -93,6 +93,30 @@ $$ {#eq-optical-depth}
 **目安**：太陽の光球で可視光の $\tau \sim 1$ となる深さが「光球表面」の定義。これが「太陽の表面」と呼ぶ場所である。地表の大気では晴天時に $\tau_\text{可視} \sim 0.1$、曇天で $\tau \sim 1$ 以上。
 :::
 
+::: {.callout-derive collapse="true"}
+## 導出ノート：被覆率から指数減衰 $T=e^{-\tau}$ を導く（オンライン版）
+
+@eq-optical-depth は光学的厚さを定義するだけで、「なぜ透過率がちょうど $e^{-\tau}$ という指数関数になるのか」は天下りに見えるかもしれない。これを、粒子の**被覆率**（**covering fraction**）から積み上げて理解しておこう。
+
+断面積 $\sigma$ の粒子が数密度 $n$ で詰まった厚さ $dx$ の薄層を、光線方向から見る。面積 $S$ の正面に投影された粒子の総断面積は $\Sigma = \sigma\,(n S\, dx)$ で、層が十分薄く粒子の重なりが無視できるなら、視野を覆う割合（被覆率）は
+
+$$
+C = \frac{\Sigma}{S} = \sigma n\, dx = d\tau
+$$ {#eq-covering-fraction}
+
+となる。すなわち薄層の透過率は $1-d\tau$。これは @eq-optical-depth の $d\tau=\alpha\,dx$（$\alpha=n\sigma$）にほかならない。
+
+層が厚くなると粒子が重なり合い、被覆率は $\sigma n\,dx$ を単純に足し合わせた値より小さくなる。これを正しく扱うには、全体を $N$ 枚の薄層に分けて**積**で考える。光学的厚さ $\tau$ の媒質を $N$ 等分すると各層の透過率は $1-\tau/N$ だから、全透過率は
+
+$$
+T_N = \left(1-\frac{\tau}{N}\right)^{N} \xrightarrow{\;N\to\infty\;} e^{-\tau}
+$$ {#eq-transmission-exp}
+
+となる。これが透過率 $e^{-\tau}$ の出どころである。薄い極限 $\tau\ll1$ では $T\approx1-\tau$（被覆率そのもの）に戻る。
+
+**紙片モデル**：面積 $S$ の不透明な紙を $N$ 個の小片に切って板の上にばらまくと想像するとよい。1片の面積は $\sigma=S/N$、1層の被覆率は $1/N$、透過率は $1-1/N$。$N$ 層重ねれば $T_N=(1-1/N)^N\to1/e$。指数減衰は「重なりを許した被覆率の極限」として**必然的に**現れる ― 暗記すべき式ではなく、数え上げの帰結である。
+:::
+
 ## 5.3 放射輸送方程式 ― 光の伝播の支配方程式 {#sec-radiative-transfer-equation}
 
 [本文目安：B3-B4]
@@ -326,6 +350,143 @@ $$ {#eq-line-absorption-preview}
 (iii) 線特徴から組成・速度・密度を引き出す（第VII部の道具）
 
 本書はこの逆向きに ― 観測から各物理量を引き出す道具立てを ― 順に整える、というロードマップを取っている。
+:::
+
+## 5.10 平面平行大気とエディントン近似 ― 恒星大気の温度構造 {#sec-radiative-transfer-eddington}
+
+[本文目安：B4-M1]　[導出：M1]
+
+::: {.callout-note}
+**この節と次節は発展（第VI・VII部の土台）**：形式解 @eq-rt-formal-solution は「ソース関数 $S_\nu(\tau)$ を与えれば $I_\nu$ が出る」ことを示すが、恒星では LTE により $S_\nu=B_\nu\!\left(T(\tau)\right)$ なので、結局**温度が深さとともにどう変わるか** $T(\tau)$ を知らなければスペクトルは出せない。この $T(\tau)$ を初等的に決めるのが**エディントン近似**である。第15章（黒体からのずれ）・第17章（恒星大気）・第21章（線形成）の共通の土台になる。
+:::
+
+恒星大気は半径に比べて薄いので、**平面平行大気**（**plane-parallel atmosphere**）と近似し、鉛直内向きに測った光学的厚さ $\tau$ の関数として物理量を扱う。光線方向と鉛直のなす角の余弦を $\mu=\cos\theta$ とすると、輸送方程式 @eq-radiative-transfer-tau は
+
+$$
+\mu\,\frac{dI(\tau,\mu)}{d\tau} = I(\tau,\mu) - S(\tau)
+$$ {#eq-transfer-mu}
+
+と書ける（ここでは振動数で積分した全強度を念頭に置き、添字 $\nu$ を省く）。
+
+**モーメントを取る。**　軸対称な放射場 $I(\tau,\mu)$ に対し、平均強度 $J$・流束（の $4\pi$ 分の1）$H$・$K$ を
+
+$$
+J=\tfrac12\!\int_{-1}^{1}\! I\,d\mu,\quad
+H=\tfrac12\!\int_{-1}^{1}\! \mu I\,d\mu,\quad
+K=\tfrac12\!\int_{-1}^{1}\! \mu^2 I\,d\mu
+$$ {#eq-moments-JHK}
+
+で定義する（$F=4\pi H$ がエネルギー流束）。@eq-transfer-mu に $\tfrac12\,d\mu$ と $\tfrac12\,\mu\,d\mu$ を掛けて $\mu$ で積分すると、二つのモーメント方程式
+
+$$
+\frac{dH}{d\tau}=J-S,\qquad \frac{dK}{d\tau}=H
+$$ {#eq-moment-equations}
+
+が得られる。ところが未知数は $J,H,K$ の**三つ**、式は**二つ**しかない。この「式の数 < 変数の数」を閉じるために、もう一つ関係を仮定する。
+
+**エディントン近似**（**Eddington approximation**）は
+
+$$
+K(\tau)=\frac13\,J(\tau)
+$$ {#eq-eddington-closure}
+
+と置く。これは放射場が等方 $I(\tau,\mu)=I(\tau)$ のとき**厳密**に成り立つ関係で、深部（ほぼ等方）で正しい性質を浅部にも延長する近似である。
+
+**温度構造を解く。**　恒星大気では核反応によるエネルギー生成がないので、各深さで放射の正味の吸収・放出が釣り合う（**放射平衡**）。これは @eq-moment-equations の第1式で $dH/d\tau=0$、すなわち
+
+$$
+H=H_0=\text{一定}
+$$ {#eq-radiative-equilibrium}
+
+を意味する。第2式 $dK/d\tau=H_0$ を積分し、エディントン近似 @eq-eddington-closure を使うと
+
+$$
+K=H_0\tau+\text{const}\;\Rightarrow\; J=3H_0\tau+\text{const}'.
+$$
+
+積分定数は大気表面 $\tau=0$ で外から差し込む光がないという境界条件から決まり、エディントン近似ではそれが $J(0)=2H_0$ を与える。よって
+
+$$
+J(\tau)=3H_0\!\left(\tau+\tfrac23\right).
+$$ {#eq-J-of-tau}
+
+ここで有効温度 $T_\mathrm{e}$ を $F=4\pi H_0=\sigma T_\mathrm{e}^4$ で導入する。LTE では $S=J=B=(\sigma/\pi)T^4$ なので @eq-J-of-tau は温度構造
+
+$$
+\boxed{\;T(\tau)^4=\frac34\,T_\mathrm{e}^4\!\left(\tau+\frac23\right)\;}
+$$ {#eq-eddington-temperature}
+
+を与える。ここから二つの重要な帰結が読める：
+
+- **$T(\tau=2/3)=T_\mathrm{e}$**：有効温度 $T_\mathrm{e}$ は「大気表面の温度」ではなく、**光学的深さ $\tau=2/3$ の層の温度**である。
+- **表面はより冷たい**：$T(0)^4=\tfrac12 T_\mathrm{e}^4$、すなわち $T_0\simeq0.84\,T_\mathrm{e}$。大気の一番外側は有効温度より低温である。
+
+**波長依存性を一本化する ― ロスランド平均。**　実際の吸収係数 $k_\lambda$ は波長ごとに違う。温度構造 @eq-eddington-temperature を一つの $\tau$ で書くには、波長を横断した代表値が要る。これが**ロスランド平均吸収係数**（**Rosseland mean opacity**）$k_R$ で、
+
+$$
+\frac{1}{k_R}=\frac{\displaystyle\int_0^\infty \frac{1}{k_\lambda}\,\frac{\partial B_\lambda}{\partial T}\,d\lambda}{\displaystyle\int_0^\infty \frac{\partial B_\lambda}{\partial T}\,d\lambda}
+$$ {#eq-rosseland-mean}
+
+と定義される（重み $\partial B_\lambda/\partial T$ つきの**調和平均**）。なぜ調和平均かは、拡散領域で各波長の流束が $F_\lambda\propto(1/k_\lambda)(dB_\lambda/dT)(dT/dx)$ と「吸収が**弱い**窓ほど多く流れる」ためで、総流束は最も透明な窓に支配される。@eq-eddington-temperature の $\tau$ はこの $\tau_R$（$d\tau_R=k_R\,\rho\,dx$）と読む。
+
+## 5.11 「見える深さ」と連続・線スペクトルの統一 {#sec-radiative-transfer-seen-depth}
+
+[本文目安：B4-M1]
+
+前節で大気の温度構造 $T(\tau_R)$ が決まった。では、ある波長 $\lambda$ で大気を見たとき、私たちは**どの深さ＝どの温度**を見ているのか。これを押さえると、連続スペクトルの形も吸収線も**一つの式**で説明できる。
+
+**見える深さの直観。**　大気は、その波長での光学的厚さが $\tau_\lambda\simeq2/3$ に達する深さまで見通せる（それより深い光は手前の吸収で届かない、@eq-rt-formal-solution）。幾何学的な深さ $\ell$ に対し $\tau_\lambda=k_\lambda\ell$、$\tau_R=k_R\ell$ だから
+
+$$
+\tau_R=\frac{k_R}{k_\lambda}\,\tau_\lambda .
+$$ {#eq-tau-ratio}
+
+したがって「$\lambda$ で見通せる深さ」は、ロスランド光学的深さに直すと $\tau_R=(2/3)(k_R/k_\lambda)$ に相当する。ここで効くのが **$k_\lambda$ と $k_R$ の大小**である：
+
+- $k_\lambda$ が**大きい**（強い吸収、たとえば線の中心）→ **浅い**ところで $\tau_\lambda=2/3$ に達する → **低温**の層しか見えない。
+- $k_\lambda$ が**小さい**（弱い吸収、透明な窓）→ **深い**ところまで見通せる → **高温**の層が見える。
+
+**統一公式。**　表面から出る流束は、エディントン–バルビエの関係により「$\tau_\lambda=2/3$ の層の黒体流束」で与えられる：
+
+$$
+F_\lambda=\pi\,B_\lambda\!\left[\,T\!\left(\tau_\lambda=\tfrac23\right)\right].
+$$ {#eq-emergent-flux}
+
+見ている深さ $\tau_R=(2/3)(k_R/k_\lambda)$ を温度構造 @eq-eddington-temperature に代入すると、
+
+$$
+T\!\left(\tau_\lambda=\tfrac23\right)^4=\frac34 T_\mathrm{e}^4\!\left[\frac23\frac{k_R}{k_\lambda}+\frac23\right]=\frac12 T_\mathrm{e}^4\!\left(1+\frac{k_R}{k_\lambda}\right)
+$$
+
+すなわち
+
+$$
+\boxed{\;F_\lambda=\pi\,B_\lambda\!\left(T\right),\qquad
+T=T_\mathrm{e}\!\left[\frac12\!\left(1+\frac{k_R}{k_\lambda}\right)\right]^{1/4}\;}
+$$ {#eq-unified-spectrum}
+
+を得る。これが本書の二つの中心地図（プランク関数と吸収係数）を結ぶ**統一公式**である。読み方は次のとおり：
+
+| $k_\lambda$ と $k_R$ | 見える深さ | 見える温度 | スペクトルへの効果 |
+|---|---|---|---|
+| $k_\lambda=k_R$ | $\tau_R=2/3$ | $T=T_\mathrm{e}$ | グレイ大気、$F_\lambda=\pi B_\lambda(T_\mathrm{e})$ |
+| $k_\lambda>k_R$ | 浅い | $T<T_\mathrm{e}$ | 暗い（連続の落ち込み・**吸収線**）|
+| $k_\lambda<k_R$ | 深い | $T>T_\mathrm{e}$ | 明るい（透明窓での増光）|
+
+::: {.callout-note}
+**二つの中心地図がここで結ばれる**：@eq-unified-spectrum は、**連続スペクトルの形**（$k_\lambda$ が滑らかに変化する成分 ― バルマージャンプ、$\mathrm{H}^-$ による近赤外のコブなど、第15・17・19章）と、**吸収線の出現**（$k_\lambda$ が線中心 $\nu_0$ で鋭く増す成分、第VII部）を、**同じ一つの式**で説明する。「現実の星はなぜ黒体からずれるのか」「なぜ吸収線ができるのか」は、どちらも『どの深さ＝どの温度が見えているか』という一つの問いに帰着する。
+:::
+
+::: {.callout-tip appearance="simple"}
+**問い**：吸収線の底はどこまで暗くなれるのか？
+
+**短答**：純粋な吸収では、線中心で $k_\lambda\to\infty$ の極限でも見えるのは大気の最表面 $T_0\simeq0.84\,T_\mathrm{e}$（@eq-eddington-temperature の $\tau=0$）までで、線の底は $F_\lambda\to\pi B_\lambda(T_0)$ で頭打ちになる（飽和）。だから強い線でも完全な暗黒にはならない。
+
+**もう一歩**：彩層など外側に高温層があると、その層の放出が線中心に**輝線**として乗る（例：Ca II の H・K 線中心の輝線）。@eq-unified-spectrum は「外側ほど低温」を仮定した結果であり、温度逆転があるとこの単調さが破れる。
+:::
+
+::: {.callout-note}
+**この先の使い道**：@eq-eddington-temperature と @eq-unified-spectrum は、第15章（黒体からのずれ）、第17章（恒星大気と $\mathrm{H}^-$ 吸収）、第19章（連続吸収係数）、第21章（吸収線の形成）で繰り返し参照する。とくに「$T_\mathrm{e}$ は $\tau=2/3$ の温度」という事実は、有効温度を観測スペクトルから読む際の基礎になる。
 :::
 
 ---

@@ -155,6 +155,10 @@ $$ {#eq-LTE-source-function}
 
 ![同じ原子遷移が観測の幾何条件で吸収線にも輝線にもなる三つのケース（第20章 §20.3 で導入した図を、§21.4 でソース関数の文脈で再掲）。温度勾配と背景光の組合せがどう線形態を決めるかが視覚的に分かる。](../images/line-formation-geometry.svg){#fig-line-geometry-lte width=88%}
 
+::: {.callout-note}
+**統一公式から見た吸収線**：吸収線が暗く見えるのは、第5章 §5.11 の統一公式 @eq-unified-spectrum で $k_\lambda$ が線中心 $\nu_0$ で大きくなる（$k_\lambda>k_R$）ためである。このとき見える温度は $T=T_\mathrm{e}[\tfrac12(1+k_R/k_\lambda)]^{1/4}<T_\mathrm{e}$ となり、線中心では**浅く低温の層**しか見通せないので連続光より暗くなる。連続吸収（滑らかな $k_\lambda$）と線吸収（鋭い $k_\lambda(\nu_0)$）は、同じ式の $k_\lambda$ の構造の違いにすぎない ― これが第15章（連続のずれ）と本章（線）を貫く視点である。線中心で $k_\lambda\to\infty$ でも、見えるのは最表面 $T_0\simeq0.84\,T_\mathrm{e}$ までで線の底は飽和する（§5.11 の問い）。
+:::
+
 ## 21.5 non-LTE 線形成 ― いつ・なぜ LTE が破綻するか {#sec-non-LTE-line-formation}
 
 [本文目安：B3-B4]

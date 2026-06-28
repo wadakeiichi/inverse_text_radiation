@@ -116,6 +116,16 @@ $$ {#eq-eddington-grey}
 **注意（観測）**：灰色大気近似は「形は黒体」と予想するが、実際の恒星スペクトルは形そのものが歪んでいる（特に紫外側で水素のバルマー連続吸収による段差）。これは振動数依存不透明度のため。灰色大気は **全光度の正しい目安は与えるが、スペクトル形の正しい記述ではない**
 :::
 
+::: {.callout-note}
+**「形の歪み」を式で読む**：振動数依存不透明度がスペクトル形を歪める仕組みは、第5章 §5.11 の統一公式 @eq-unified-spectrum
+
+$$
+F_\lambda=\pi\,B_\lambda\!\left(T\right),\qquad T=T_\mathrm{e}\!\left[\tfrac12\!\left(1+\tfrac{k_R}{k_\lambda}\right)\right]^{1/4}
+$$
+
+で定量化できる。次節で見る「吸収が強い波長」は $k_\lambda>k_R$ に対応し、見える温度 $T<T_\mathrm{e}$ となって暗くなる（連続の落ち込み・吸収端）。逆に透明な窓（$k_\lambda<k_R$）では $T>T_\mathrm{e}$ で明るい。灰色大気（$k_\lambda=k_R$）はちょうど $T=T_\mathrm{e}$ で歪みが消える極限である。温度構造 @eq-eddington-temperature とあわせて読むとよい。
+:::
+
 ## 15.3 振動数依存不透明度 ― 形が歪む {#sec-non-blackbody-frequency-opacity}
 
 [本文目安：B3-B4]
