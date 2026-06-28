@@ -251,7 +251,7 @@ $$ {#eq-planck-quantum-field}
 
 ## 演習問題 {#sec-em-field-quantization-exercises .unnumbered}
 
-以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。
+以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **解答例** は章末「解答例」にまとめてある（オンライン版では各問のボタンから開く）。まず自力で解いてから開くこと。
 
 ### 問題 25-1　各モード＝量子調和振動子という置き換え {#ex-25-1 .unnumbered}
 
@@ -265,16 +265,8 @@ $$ {#eq-planck-quantum-field}
 
 **関連**：[§25.2 各モードは調和振動子](#sec-em-field-quantization-mode-oscillator)／生成消滅演算子は[演習 12-1](../part4/12-quantum-foundations.qmd#ex-12-1)・[演習 12-4](../part4/12-quantum-foundations.qmd#ex-12-4)、モード密度は[演習 14-1](../part5/14-cavity-modes.qmd#ex-14-1)、Bose 統計は[演習 8-2](../part3/08-photon-statistics.qmd#ex-8-2)。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 25-1）
-
-**(1)** $\hat a^\dagger_{\mathbf k\sigma}$：モード $(\mathbf k,\sigma)$ に光子を1個生成＝放出。$\hat a_{\mathbf k\sigma}$：光子を1個消滅＝吸収。$\hat n=\hat a^\dagger\hat a$：そのモードの光子数（固有値 $n=0,1,2,\dots$）＝観測量。
-
-**(2)** 励起準位 $|n\rangle$ のエネルギーは $E_n=(n+\tfrac12)\hbar\omega$ で、隣接準位差 $\hbar\omega=h\nu$＝第10章のエネルギー量子。各モードを熱平衡の調和振動子とみた平均励起数 $\langle n\rangle=1/(e^{h\nu/kT}-1)$＝第8章の Bose 占有数。振動数 $\nu$ 近傍のモードの個数＝第14章のモード密度 $g(\nu)$。
-
-**(3)** エネルギー量子化（第10章）、光子の Bose 統計（第8章）、モード密度（第14章）、自発放出（第11章）― これらは別々の物理に見えたが、すべて「各モード＝量子化された調和振動子」という一つの構造の異なる側面である。一行の置き換えで、観測される連続スペクトルの全因子が単一の枠組みに収まる。
-
-**答え**：$\hat a^\dagger$＝放出、$\hat a$＝吸収、$\hat n$＝光子数。$|n\rangle$＝光子 $n$ 個。量子化・Bose 統計・モード密度・自発放出がすべて「モード＝量子振動子」の一構造の側面。
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 25-1）](#sol-25-1){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
 :::
 
 ### 問題 25-2　黒体放射を電磁場の熱状態として書き直す {#ex-25-2 .unnumbered}
@@ -289,16 +281,8 @@ $$ {#eq-planck-quantum-field}
 
 **関連**：[§25.4 電磁場の熱状態](#sec-em-field-quantization-blackbody)／Bose 占有数は[演習 8-2](../part3/08-photon-statistics.qmd#ex-8-2)・[演習 8-3](../part3/08-photon-statistics.qmd#ex-8-3)、全因子の合流は[演習 14-4](../part5/14-cavity-modes.qmd#ex-14-4)。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 25-2）
-
-**(1)** 単一モードの熱平均 $\bar n=\sum_n n\,e^{-n\hbar\omega/kT}/\sum_n e^{-n\hbar\omega/kT}=1/(e^{\hbar\omega/kT}-1)=1/(e^{h\nu/kT}-1)$。これは第III部の Bose 占有数（$\mu=0$）と同一。光子は数が保存しない（吸収・放出で生成消滅）ので $\mu=0$。
-
-**(2)** $u_\nu=g(\nu)\cdot h\nu\cdot\bar n=\dfrac{8\pi\nu^2}{c^3}\cdot h\nu\cdot\dfrac{1}{e^{h\nu/kT}-1}=\dfrac{8\pi h\nu^3}{c^3}\dfrac{1}{e^{h\nu/kT}-1}$。等方場で $B_\nu=\dfrac{c}{4\pi}u_\nu=\dfrac{2h\nu^3}{c^2}\dfrac{1}{e^{h\nu/kT}-1}$。
-
-**(3)** 「光子気体の Bose 統計」（第8章）、「量子化振動子の熱平均」（第10章）、「モード密度×熱励起」（第14章）は出発点も言葉も違うが、すべて「温度 $T$ の熱浴と平衡にある電磁場（各モード＝調和振動子）の熱状態」を別の角度から記述したもの。同じ密度行列 $\hat\rho_\mathrm{th}$ から同じプランク分布が出る。
-
-**答え**：$\bar n=1/(e^{h\nu/kT}-1)$（$\mu=0$）。$B_\nu=\frac{2h\nu^3}{c^2}\frac{1}{e^{h\nu/kT}-1}$。三つの導出は電磁場の熱状態の同一構造の異なる側面。
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 25-2）](#sol-25-2){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
 :::
 
 ### 問題 25-3　真空の零点エネルギーと観測可能な帰結 {#ex-25-3 .unnumbered}
@@ -313,16 +297,8 @@ $$ {#eq-planck-quantum-field}
 
 **関連**：[§25.3 真空状態と零点エネルギー](#sec-em-field-quantization-vacuum)／零点が観測量に効かないことは[演習 7-2](../part3/07-statistical-mechanics.qmd#ex-7-2)・[演習 12-3](../part4/12-quantum-foundations.qmd#ex-12-3)、自然幅は[§26.4](../part8/26-qed-minimum.qmd#sec-qed-minimum-natural-width)。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 25-3）
-
-**(1)** 零点エネルギーはエネルギーの絶対基準（定数オフセット）で、その絶対値は観測できない。観測できるのは零点エネルギーの**差や変化**（境界条件の変化など）で、これは有限。プランク分布に零点項 $\tfrac12\hbar\omega$ が現れないのも、それが温度非依存の定数で放射の励起分（物質とやりとりする部分）に効かないから（演習 12-3）。
-
-**(2)** ① 自発放出（真空揺らぎが励起原子を揺さぶる、§26.2）。② 線の自然幅（励起準位の有限寿命、$\Gamma=A_{ul}$）。③ Casimir 効果（二枚の金属板間で許されるモードが減り、板間の零点エネルギーが板外より小さくなり引力 $F\propto1/L^4$ が生じる）。
-
-**(3)** 違う。真空 $|0\rangle$ は厳密に光子0個の状態（$\hat n|0\rangle=0$）。観測される「揺らぎ」は粒子がいることではなく、$[\hat a,\hat a^\dagger]=1$ の非可換性から来る電場・磁場の期待値の分散 $\langle(\Delta E)^2\rangle\neq0$。粒子数を定めると場の値が揺らぎ、場の値を定めると粒子数が揺らぐ（不確定性関係の双対）。
-
-**答え**：零点の絶対値は観測不能、差は有限。帰結＝自発放出・自然幅・Casimir($F\propto1/L^4$)。揺らぎ＝場の分散($[\hat a,\hat a^\dagger]=1$)で、粒子で満ちているのとは別。
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 25-3）](#sol-25-3){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
 :::
 
 ### 問題 25-4　なぜ電磁場の量子化が必要だったか {#ex-25-4 .unnumbered}
@@ -337,9 +313,72 @@ $$ {#eq-planck-quantum-field}
 
 **関連**：[§25.1 なぜ量子化が必要か](#sec-em-field-quantization-why)／自発放出は[演習 11-1](../part4/11-einstein-method.qmd#ex-11-1)、Bose 統計は[演習 8-1](../part3/08-photon-statistics.qmd#ex-8-1)。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 25-4）
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 25-4）](#sol-25-4){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
 
+## 解答例 {#sec-em-field-quantization-solutions .unnumbered}
+
+各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。
+
+::: {.content-visible when-format="html"}
+[問題 25-1](#sol-25-1){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 25-2](#sol-25-2){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 25-3](#sol-25-3){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 25-4](#sol-25-4){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
+
+::: {#sol-25-1 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-25-1-label"}
+::: {.offcanvas-header}
+[**解答例（問題 25-1）**]{#sol-25-1-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
+**(1)** $\hat a^\dagger_{\mathbf k\sigma}$：モード $(\mathbf k,\sigma)$ に光子を1個生成＝放出。$\hat a_{\mathbf k\sigma}$：光子を1個消滅＝吸収。$\hat n=\hat a^\dagger\hat a$：そのモードの光子数（固有値 $n=0,1,2,\dots$）＝観測量。
+
+**(2)** 励起準位 $|n\rangle$ のエネルギーは $E_n=(n+\tfrac12)\hbar\omega$ で、隣接準位差 $\hbar\omega=h\nu$＝第10章のエネルギー量子。各モードを熱平衡の調和振動子とみた平均励起数 $\langle n\rangle=1/(e^{h\nu/kT}-1)$＝第8章の Bose 占有数。振動数 $\nu$ 近傍のモードの個数＝第14章のモード密度 $g(\nu)$。
+
+**(3)** エネルギー量子化（第10章）、光子の Bose 統計（第8章）、モード密度（第14章）、自発放出（第11章）― これらは別々の物理に見えたが、すべて「各モード＝量子化された調和振動子」という一つの構造の異なる側面である。一行の置き換えで、観測される連続スペクトルの全因子が単一の枠組みに収まる。
+
+**答え**：$\hat a^\dagger$＝放出、$\hat a$＝吸収、$\hat n$＝光子数。$|n\rangle$＝光子 $n$ 個。量子化・Bose 統計・モード密度・自発放出がすべて「モード＝量子振動子」の一構造の側面。
+:::
+:::
+
+::: {#sol-25-2 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-25-2-label"}
+::: {.offcanvas-header}
+[**解答例（問題 25-2）**]{#sol-25-2-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
+**(1)** 単一モードの熱平均 $\bar n=\sum_n n\,e^{-n\hbar\omega/kT}/\sum_n e^{-n\hbar\omega/kT}=1/(e^{\hbar\omega/kT}-1)=1/(e^{h\nu/kT}-1)$。これは第III部の Bose 占有数（$\mu=0$）と同一。光子は数が保存しない（吸収・放出で生成消滅）ので $\mu=0$。
+
+**(2)** $u_\nu=g(\nu)\cdot h\nu\cdot\bar n=\dfrac{8\pi\nu^2}{c^3}\cdot h\nu\cdot\dfrac{1}{e^{h\nu/kT}-1}=\dfrac{8\pi h\nu^3}{c^3}\dfrac{1}{e^{h\nu/kT}-1}$。等方場で $B_\nu=\dfrac{c}{4\pi}u_\nu=\dfrac{2h\nu^3}{c^2}\dfrac{1}{e^{h\nu/kT}-1}$。
+
+**(3)** 「光子気体の Bose 統計」（第8章）、「量子化振動子の熱平均」（第10章）、「モード密度×熱励起」（第14章）は出発点も言葉も違うが、すべて「温度 $T$ の熱浴と平衡にある電磁場（各モード＝調和振動子）の熱状態」を別の角度から記述したもの。同じ密度行列 $\hat\rho_\mathrm{th}$ から同じプランク分布が出る。
+
+**答え**：$\bar n=1/(e^{h\nu/kT}-1)$（$\mu=0$）。$B_\nu=\frac{2h\nu^3}{c^2}\frac{1}{e^{h\nu/kT}-1}$。三つの導出は電磁場の熱状態の同一構造の異なる側面。
+:::
+:::
+
+::: {#sol-25-3 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-25-3-label"}
+::: {.offcanvas-header}
+[**解答例（問題 25-3）**]{#sol-25-3-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
+**(1)** 零点エネルギーはエネルギーの絶対基準（定数オフセット）で、その絶対値は観測できない。観測できるのは零点エネルギーの**差や変化**（境界条件の変化など）で、これは有限。プランク分布に零点項 $\tfrac12\hbar\omega$ が現れないのも、それが温度非依存の定数で放射の励起分（物質とやりとりする部分）に効かないから（演習 12-3）。
+
+**(2)** ① 自発放出（真空揺らぎが励起原子を揺さぶる、§26.2）。② 線の自然幅（励起準位の有限寿命、$\Gamma=A_{ul}$）。③ Casimir 効果（二枚の金属板間で許されるモードが減り、板間の零点エネルギーが板外より小さくなり引力 $F\propto1/L^4$ が生じる）。
+
+**(3)** 違う。真空 $|0\rangle$ は厳密に光子0個の状態（$\hat n|0\rangle=0$）。観測される「揺らぎ」は粒子がいることではなく、$[\hat a,\hat a^\dagger]=1$ の非可換性から来る電場・磁場の期待値の分散 $\langle(\Delta E)^2\rangle\neq0$。粒子数を定めると場の値が揺らぎ、場の値を定めると粒子数が揺らぐ（不確定性関係の双対）。
+
+**答え**：零点の絶対値は観測不能、差は有限。帰結＝自発放出・自然幅・Casimir($F\propto1/L^4$)。揺らぎ＝場の分散($[\hat a,\hat a^\dagger]=1$)で、粒子で満ちているのとは別。
+:::
+:::
+
+::: {#sol-25-4 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-25-4-label"}
+::: {.offcanvas-header}
+[**解答例（問題 25-4）**]{#sol-25-4-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
 **(1)** エネルギー量子化：古典波には離散性がない。自発放出：古典では「ゼロ放射場→放出ゼロ」で減衰の起源がない。自然幅：励起準位の有限寿命を古典電子モデルでは「決め打ち」するしかない。Bose 統計：古典場は数えられる粒子ではなく、識別不能粒子の統計が出てこない。
 
 **(2)** 第I〜VII部で別々に逆引きしてきた断片（量子化・統計・自発放出・自然幅）が、「電磁場を量子化する」という一つの枠組みからすべて出る。観測スペクトルから出発した逆引きが、最終的に単一の物理基盤（QED）に収束する ― これが到達点。
@@ -347,6 +386,7 @@ $$ {#eq-planck-quantum-field}
 **(3)** 第IV部は物質（原子）を量子化したが電磁場は古典場、第V部は電磁場を古典的に扱った。第VIII部で電磁場と物質を**同時に**量子化することで、両者の相互作用（自発放出・Einstein 関係・選択則）が一貫した枠組みで現れ、連続スペクトルと線スペクトルが統一される。
 
 **答え**：量子化・自発放出・自然幅・Bose 統計は古典場では出ない。電磁場量子化で全断片が一基盤に収束。第VIII部は電磁場と物質を同時量子化して両スペクトルを統一。
+:::
 :::
 
 ## さらに学ぶための参考文献 {#sec-em-field-quantization-further .unnumbered}

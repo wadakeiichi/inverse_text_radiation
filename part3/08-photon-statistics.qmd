@@ -273,7 +273,7 @@ $$
 
 ## 演習問題 {#sec-photon-statistics-exercises .unnumbered}
 
-以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。
+以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **解答例** は章末「解答例」にまとめてある（オンライン版では各問のボタンから開く）。まず自力で解いてから開くこと。
 
 ### 問題 8-1　識別可能 vs 不能 ― 数え上げの違い {#ex-8-1 .unnumbered}
 
@@ -287,16 +287,8 @@ $$
 
 **関連**：[§8.1 区別できない粒子](#sec-photon-statistics-indistinguishable)、[§8.2 Bose と Fermi](#sec-photon-statistics-bose-fermi)／識別不能性の量子論的根拠は[第12章](../part4/12-quantum-foundations.qmd)。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 8-1）
-
-**(1)** $N$ 個の区別できない玉を $g$ 個の状態に分けるのは、$N$ 個の玉と $g-1$ 本の仕切り棒を一列に並べる場合の数に等しい。全 $N+g-1$ 個の位置から玉の位置 $N$ 個を選ぶので $\binom{N+g-1}{N}$。
-
-**(2)** $g=2,N=2$：$\binom{2+2-1}{2}=\binom{3}{2}=3$。Bose は3通り（(2,0),(1,1),(0,2)）。古典は各粒子が独立に2状態を選べて $2^2=4$。識別不能だと1つ少ない。
-
-**(3)** 古典では「1 が A・2 が B」と「1 が B・2 が A」を別状態と数えるが、識別不能だと粒子のラベルに意味がなく同一状態に潰れる。この「数え過ぎの打ち消し」が状態数を変え、最大エントロピー分布が Boltzmann（$\propto e^{-\beta E}$）から Bose（$1/(e^{\beta E}-1)$ 型）へずれる起源になる。特に同じ状態に複数入れることが許される効果が分母の $-1$ を生む。
-
-**答え**：場合の数 $\binom{N+g-1}{N}$（仕切り棒法）、$g=N=2$ で 3（古典は4）。ラベルの消失が Bose 統計へのずれを生む。
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 8-1）](#sol-8-1){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
 :::
 
 ### 問題 8-2　Bose–Einstein 分布の導出 {#ex-8-2 .unnumbered}
@@ -311,9 +303,72 @@ $$
 
 **関連**：[§8.3 Bose–Einstein 分布](#sec-photon-statistics-bose-einstein)／Lagrange 法の枠組みは[§6.4](../part3/06-thermal-equilibrium.qmd#sec-thermal-equilibrium-max-entropy)（[演習 6-3](../part3/06-thermal-equilibrium.qmd#ex-6-3)）、$\mu=0$ は[演習 8-3](#ex-8-3)。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 8-2）
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 8-2）](#sol-8-2){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
 
+### 問題 8-3　光子の μ=0 と CMB 光子数密度（T³ 則） {#ex-8-3 .unnumbered}
+
+[★ 難易度：☆☆☆ ] [tag:理解を深める]
+
+§8.4 は光子の化学ポテンシャルが $\mu=0$ で $\bar n=1/(e^{h\nu/kT}-1)$ になり、$n_\gamma\propto T^3$ と述べた。確かめる。
+
+1. なぜ光子は $\mu=0$ なのか、粒子数の保存／非保存の観点から述べよ。
+2. 光子数密度 $n_\gamma=\displaystyle\int_0^\infty g(\nu)\bar n(\nu)\,d\nu$（$g(\nu)=8\pi\nu^2/c^3$）で $x=h\nu/k_BT$ と置換し、$n_\gamma=\dfrac{8\pi}{c^3}\left(\dfrac{k_BT}{h}\right)^3\displaystyle\int_0^\infty\frac{x^2}{e^x-1}dx$ を導け。
+3. $\displaystyle\int_0^\infty\frac{x^2}{e^x-1}dx=2\zeta(3)\approx2.404$ を用い、$T_\mathrm{CMB}=2.725$ K で $n_\gamma$ を計算して $\approx411$ cm$^{-3}$ を確認せよ。
+
+**関連**：[§8.4 光子の化学ポテンシャル](#sec-photon-statistics-mu-zero)／$\mu$ 歪みと CMB は[第16章](../part6/16-cmb.qmd)、モード密度 $g(\nu)$ の導出は[第14章](../part5/14-cavity-modes.qmd)、$\int x^3$ 版（エネルギー密度）は[演習 10-3](../part4/10-planck-quantum.qmd#ex-10-3)。
+
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 8-3）](#sol-8-3){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
+
+### 問題 8-4　光子気体の P=u/3 と放射圧 vs ガス圧 {#ex-8-4 .unnumbered}
+
+[★ 難易度：☆☆ ] [tag:理解を深める]
+
+§8.5 は光子気体の圧力 $P=u/3=aT^4/3$ を与えた。理想気体と比べ、放射圧が効く条件を探る。
+
+1. 等方放射場では $P_\nu=u_\nu/3$（演習 4-1）。これが理想気体 $P_\mathrm{gas}=nk_BT$ と「温度・密度への依存」でどう違うか述べよ。
+2. 放射圧 $P_\mathrm{rad}=aT^4/3$ とガス圧 $P_\mathrm{gas}=nk_BT$ が等しくなる条件 $T^3/n=3k_B/a$ を導け。これは高温・低密度で放射圧が優勢になることを示す。
+3. 太陽中心（$T\simeq1.5\times10^7$ K、$n\simeq10^{32}$ m$^{-3}$）で $P_\mathrm{rad}/P_\mathrm{gas}$ を概算し、放射圧が支配的でない（がより重い星では効く）ことを確認せよ。$a=7.566\times10^{-16}$ J m$^{-3}$K$^{-4}$。
+
+**関連**：[§8.5 光子気体の統計](#sec-photon-statistics-photon-gas)／$P_\nu=u_\nu/3$ の導出は[演習 4-1](../part2/04-radiation-field.qmd#ex-4-1)、Eddington 限界・降着は[第18章](../part6/18-accretion-high-energy.qmd)。
+
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 8-4）](#sol-8-4){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
+
+## 解答例 {#sec-photon-statistics-solutions .unnumbered}
+
+各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。
+
+::: {.content-visible when-format="html"}
+[問題 8-1](#sol-8-1){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 8-2](#sol-8-2){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 8-3](#sol-8-3){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 8-4](#sol-8-4){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
+
+::: {#sol-8-1 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-8-1-label"}
+::: {.offcanvas-header}
+[**解答例（問題 8-1）**]{#sol-8-1-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
+**(1)** $N$ 個の区別できない玉を $g$ 個の状態に分けるのは、$N$ 個の玉と $g-1$ 本の仕切り棒を一列に並べる場合の数に等しい。全 $N+g-1$ 個の位置から玉の位置 $N$ 個を選ぶので $\binom{N+g-1}{N}$。
+
+**(2)** $g=2,N=2$：$\binom{2+2-1}{2}=\binom{3}{2}=3$。Bose は3通り（(2,0),(1,1),(0,2)）。古典は各粒子が独立に2状態を選べて $2^2=4$。識別不能だと1つ少ない。
+
+**(3)** 古典では「1 が A・2 が B」と「1 が B・2 が A」を別状態と数えるが、識別不能だと粒子のラベルに意味がなく同一状態に潰れる。この「数え過ぎの打ち消し」が状態数を変え、最大エントロピー分布が Boltzmann（$\propto e^{-\beta E}$）から Bose（$1/(e^{\beta E}-1)$ 型）へずれる起源になる。特に同じ状態に複数入れることが許される効果が分母の $-1$ を生む。
+
+**答え**：場合の数 $\binom{N+g-1}{N}$（仕切り棒法）、$g=N=2$ で 3（古典は4）。ラベルの消失が Bose 統計へのずれを生む。
+:::
+:::
+
+::: {#sol-8-2 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-8-2-label"}
+::: {.offcanvas-header}
+[**解答例（問題 8-2）**]{#sol-8-2-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
 **(1)** $\ln W=\sum_i[\ln(N_i+g_i-1)!-\ln N_i!-\ln(g_i-1)!]$。Stirling $\ln x!\simeq x\ln x-x$ と $g_i-1\approx g_i$ を使うと、$-x$ の項は制約で打ち消し合い
 
 $$
@@ -338,22 +393,14 @@ $$
 
 **答え**：Stirling＋Lagrange で $\ln\frac{N_i+g_i}{N_i}=\alpha+\beta E_i$、解いて $\bar n_i=1/(e^{(E_i-\mu)/k_BT}-1)$。分母の $-1$ が Bose の特徴。
 :::
+:::
 
-### 問題 8-3　光子の μ=0 と CMB 光子数密度（T³ 則） {#ex-8-3 .unnumbered}
-
-[★ 難易度：☆☆☆ ] [tag:理解を深める]
-
-§8.4 は光子の化学ポテンシャルが $\mu=0$ で $\bar n=1/(e^{h\nu/kT}-1)$ になり、$n_\gamma\propto T^3$ と述べた。確かめる。
-
-1. なぜ光子は $\mu=0$ なのか、粒子数の保存／非保存の観点から述べよ。
-2. 光子数密度 $n_\gamma=\displaystyle\int_0^\infty g(\nu)\bar n(\nu)\,d\nu$（$g(\nu)=8\pi\nu^2/c^3$）で $x=h\nu/k_BT$ と置換し、$n_\gamma=\dfrac{8\pi}{c^3}\left(\dfrac{k_BT}{h}\right)^3\displaystyle\int_0^\infty\frac{x^2}{e^x-1}dx$ を導け。
-3. $\displaystyle\int_0^\infty\frac{x^2}{e^x-1}dx=2\zeta(3)\approx2.404$ を用い、$T_\mathrm{CMB}=2.725$ K で $n_\gamma$ を計算して $\approx411$ cm$^{-3}$ を確認せよ。
-
-**関連**：[§8.4 光子の化学ポテンシャル](#sec-photon-statistics-mu-zero)／$\mu$ 歪みと CMB は[第16章](../part6/16-cmb.qmd)、モード密度 $g(\nu)$ の導出は[第14章](../part5/14-cavity-modes.qmd)、$\int x^3$ 版（エネルギー密度）は[演習 10-3](../part4/10-planck-quantum.qmd#ex-10-3)。
-
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 8-3）
-
+::: {#sol-8-3 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-8-3-label"}
+::: {.offcanvas-header}
+[**解答例（問題 8-3）**]{#sol-8-3-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
 **(1)** 化学ポテンシャルは粒子数 $N$ が保存量のときに意味を持つ「粒子1個追加の自由エネルギー代償」。光子は物質との吸収・放出で生成・消滅し、総数が保存しない。熱平衡では $N_\gamma$ が温度・体積から自動的に決まる従属量となり、追加の代償がない＝$\mu=0$。
 
 **(2)** $x=h\nu/k_BT$、$\nu=k_BTx/h$、$d\nu=(k_BT/h)dx$：
@@ -372,22 +419,14 @@ $$
 
 **答え**：光子数非保存ゆえ $\mu=0$。$n_\gamma=\frac{8\pi}{c^3}(k_BT/h)^3\cdot2.404\approx411$ cm$^{-3}$（$T=2.725$ K）、$\propto T^3$。
 :::
+:::
 
-### 問題 8-4　光子気体の P=u/3 と放射圧 vs ガス圧 {#ex-8-4 .unnumbered}
-
-[★ 難易度：☆☆ ] [tag:理解を深める]
-
-§8.5 は光子気体の圧力 $P=u/3=aT^4/3$ を与えた。理想気体と比べ、放射圧が効く条件を探る。
-
-1. 等方放射場では $P_\nu=u_\nu/3$（演習 4-1）。これが理想気体 $P_\mathrm{gas}=nk_BT$ と「温度・密度への依存」でどう違うか述べよ。
-2. 放射圧 $P_\mathrm{rad}=aT^4/3$ とガス圧 $P_\mathrm{gas}=nk_BT$ が等しくなる条件 $T^3/n=3k_B/a$ を導け。これは高温・低密度で放射圧が優勢になることを示す。
-3. 太陽中心（$T\simeq1.5\times10^7$ K、$n\simeq10^{32}$ m$^{-3}$）で $P_\mathrm{rad}/P_\mathrm{gas}$ を概算し、放射圧が支配的でない（がより重い星では効く）ことを確認せよ。$a=7.566\times10^{-16}$ J m$^{-3}$K$^{-4}$。
-
-**関連**：[§8.5 光子気体の統計](#sec-photon-statistics-photon-gas)／$P_\nu=u_\nu/3$ の導出は[演習 4-1](../part2/04-radiation-field.qmd#ex-4-1)、Eddington 限界・降着は[第18章](../part6/18-accretion-high-energy.qmd)。
-
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 8-4）
-
+::: {#sol-8-4 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-8-4-label"}
+::: {.offcanvas-header}
+[**解答例（問題 8-4）**]{#sol-8-4-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
 **(1)** 放射圧 $P_\mathrm{rad}=u/3=aT^4/3$ は**温度の4乗**に効き密度には依らない（光子数自体が $T^3$ で決まる）。理想気体 $P_\mathrm{gas}=nk_BT$ は密度 $n$ に比例し温度には1乗。よって温度を上げ密度を下げるほど放射圧が相対的に強くなる。
 
 **(2)** $P_\mathrm{rad}=P_\mathrm{gas}$ とおく：$\dfrac{aT^4}{3}=nk_BT\Rightarrow\dfrac{T^3}{n}=\dfrac{3k_B}{a}$。左辺が大きい（高温・低密度）ほど放射圧優勢。
@@ -397,6 +436,7 @@ $P_\mathrm{gas}=nk_BT=10^{32}\times1.381\times10^{-23}\times1.5\times10^7=2.07\t
 比 $P_\mathrm{rad}/P_\mathrm{gas}\approx1.28\times10^{13}/2.07\times10^{16}\approx6\times10^{-4}$。太陽中心では放射圧は約0.06%で支配的でない。質量の大きい星ほど中心温度が高く密度が相対的に低いため放射圧が増し、超大質量星では放射圧が支配的になって Eddington 限界（星の質量上限）を与える。
 
 **答え**：$P_\mathrm{rad}=aT^4/3$（密度非依存）、$P_\mathrm{gas}=nk_BT$。等しい条件 $T^3/n=3k_B/a$。太陽中心で $P_\mathrm{rad}/P_\mathrm{gas}\approx6\times10^{-4}$（重い星では支配的）。
+:::
 :::
 
 ## さらに学ぶための参考文献 {#sec-photon-statistics-further .unnumbered}

@@ -260,7 +260,7 @@ $$ {#eq-ff-brightness-temp}
 
 ## 演習問題 {#sec-stars-planets-dust-exercises .unnumbered}
 
-以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。
+以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **解答例** は章末「解答例」にまとめてある（オンライン版では各問のボタンから開く）。まず自力で解いてから開くこと。
 
 ### 問題 17-1　惑星の平衡温度を入出力バランスから {#ex-17-1 .unnumbered}
 
@@ -274,20 +274,8 @@ $$ {#eq-ff-brightness-temp}
 
 **関連**：[§17.2 惑星の平衡温度](#sec-planet-equilibrium)／Stefan-Boltzmann と光度は[§2.4](../part1/02-reading-spectra.qmd#sec-reading-spectra-stefan-boltzmann)（[演習 2-5](../part1/02-reading-spectra.qmd#ex-2-5)）。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 17-1）
-
-**(1)** 等置：$(1-A)\dfrac{L_\star}{4\pi d^2}\pi R_p^2=4\pi R_p^2\sigma T_\mathrm{eq}^4$。$\pi R_p^2$ を消し、$L_\star=4\pi R_\star^2\sigma T_\star^4$ を代入：
-
-$$(1-A)\frac{4\pi R_\star^2\sigma T_\star^4}{4\pi d^2}\cdot\frac14=\sigma T_\mathrm{eq}^4\ \Rightarrow\ T_\mathrm{eq}^4=(1-A)\frac{R_\star^2}{4d^2}T_\star^4.$$
-
-$$T_\mathrm{eq}=T_\star\left(\frac{R_\star}{2d}\right)^{1/2}(1-A)^{1/4}.$$
-
-**(2)** 惑星は断面 $\pi R_p^2$ で恒星光を受け、全表面 $4\pi R_p^2$ から再放射する。比 $4\pi R_p^2/\pi R_p^2=4$ が右辺の $1/4$（すなわち $\sqrt{1/4}=1/2$ が $R_\star/2d$ の 2）として効く。自転が速く全球で均一再放射する近似。
-
-**(3)** $T_\mathrm{eq}=5778\times(1/(2\times214))^{1/2}\times(0.7)^{1/4}=5778\times(2.34\times10^{-3})^{1/2}\times0.915=5778\times0.0483\times0.915\simeq255$ K（$-18$°C）。実際の +15°C との 33 K の差は温室効果（大気の赤外不透明度）。この式は大気なし近似。
-
-**答え**：$T_\mathrm{eq}=T_\star\sqrt{R_\star/2d}\,(1-A)^{1/4}$。地球で 255 K。実測との 33 K 差は温室効果。
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 17-1）](#sol-17-1){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
 :::
 
 ### 問題 17-2　二温度天体の同一波長明るさ比 {#ex-17-2 .unnumbered}
@@ -302,18 +290,8 @@ $$T_\mathrm{eq}=T_\star\left(\frac{R_\star}{2d}\right)^{1/2}(1-A)^{1/4}.$$
 
 **関連**：[§17.1 恒星の有効温度](#sec-stars-effective-temperature)／両極限は[§2.5](../part1/02-reading-spectra.qmd#sec-reading-spectra-limits)、恒星の色は[§1.3](../part1/01-where-blackbody.qmd#sec-where-blackbody-stars)。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 17-2）
-
-$x=hc/\lambda kT$、$hc/k=1.439\times10^{-2}$ m·K。比 $=\dfrac{e^{x_1}-1}{e^{x_2}-1}$（$x_1$＝太陽、$x_2$＝Vega、$x_1>x_2$）。
-
-**(1)** $\lambda=500$ nm：$hc/\lambda k=1.439\times10^{-2}/5.0\times10^{-7}=2.88\times10^4$ K。$x_1=28800/5778=4.98$、$x_2=28800/9602=3.00$。比 $=\dfrac{e^{4.98}-1}{e^{3.00}-1}=\dfrac{144.4}{19.1}\simeq7.6$。Vega が約7.6倍明るい。
-
-**(2)** $\lambda=250$ nm：$hc/\lambda k=5.76\times10^4$ K。$x_1=9.96$、$x_2=5.99$。比 $=\dfrac{e^{9.96}-1}{e^{5.99}-1}=\dfrac{21100}{399}\simeq53$。紫外は両者とも Wien 側で指数 $e^{x}$ が支配し、温度差が指数的に増幅されるため比が大きい。
-
-**(3)** $\lambda=5\ \mu$m：$hc/\lambda k=2.88\times10^3$ K。$x_1=0.498$、$x_2=0.300$。比 $=\dfrac{e^{0.498}-1}{e^{0.300}-1}=\dfrac{0.645}{0.350}\simeq1.85$。$x\ll1$ で $e^x-1\simeq x$ ゆえ比 $\simeq x_1/x_2=T_2/T_1=9602/5778=1.66$ に近く、Rayleigh-Jeans 側では温度比のみが効く（指数増幅なし）。
-
-**答え**：比は可視 7.6、紫外 53、赤外 1.85。Wien 側（紫外）ほど温度差が指数的に効き、RJ 側（赤外）は温度比のみ。
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 17-2）](#sol-17-2){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
 :::
 
 ### 問題 17-3　ダスト修正黒体から3物理量を読む {#ex-17-3 .unnumbered}
@@ -328,16 +306,8 @@ $x=hc/\lambda kT$、$hc/k=1.439\times10^{-2}$ m·K。比 $=\dfrac{e^{x_1}-1}{e^{
 
 **関連**：[§17.3 ダストの修正黒体](#sec-dust-modified-blackbody)、[§17.5 多温度合成](#sec-multi-temperature)／修正黒体のべきは[演習 15-2](../part6/15-non-blackbody.qmd#ex-15-2)、修正黒体の定義は[§15.4](../part6/15-non-blackbody.qmd#sec-non-blackbody-modified)。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 17-3）
-
-**(1)** $T_d$：Wien 側の指数減衰の鋭さ、または SED のピーク位置（Wien 則）から。$\beta$：Rayleigh-Jeans 側（長波長）の勾配の急さ（$I_\nu\propto\nu^{2+\beta}$）から。ダスト質量：全光度を $B_\nu(T_d)$ で割ったときの規格化定数から（不透明度の仮定が必要）。
-
-**(2)** $\beta$ が小さいほど粒子が大きい（粒子サイズ≈波長の極限で $\beta\to0$）。円盤中心部ほど $\beta$ が小さい＝粒子が大きく成長している。これは円盤内でダストが集積・成長して惑星形成へ向かう過程の直接観測的証拠。
-
-**(3)** 同じピーク位置でも（高温・少量）と（低温・大量）で似た SED を作れる縮退がある。RJ 側の勾配 $\nu^{2+\beta}$ と絶対強度は温度・質量・$\beta$ に異なる依存をするので、ピークより長波長（サブミリ・ミリ）の観測点を加えると、RJ 側の形が温度と質量を分離して縮退を解く。だから長波長観測が鍵。
-
-**答え**：$T_d$＝Wien側/ピーク、$\beta$＝RJ側勾配、質量＝規格化。中心部の小 $\beta$＝粒子成長＝惑星形成の証拠。長波長点が温度-質量縮退を解く。
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 17-3）](#sol-17-3){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
 :::
 
 ### 問題 17-4　ダストのピーク波長と観測施設 {#ex-17-4 .unnumbered}
@@ -352,16 +322,8 @@ $x=hc/\lambda kT$、$hc/k=1.439\times10^{-2}$ m·K。比 $=\dfrac{e^{x_1}-1}{e^{
 
 **関連**：[§17.5 多温度合成](#sec-multi-temperature)、[§17.4 赤外線天文学](#sec-infrared-astronomy)／Wien 変位則は[演習 2-2](../part1/02-reading-spectra.qmd#ex-2-2)。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 17-4）
-
-**(1)** $\lambda_\mathrm{peak}=2898/20=145\ \mu$m。これは Herschel（SPIRE/PACS、60〜600 μm）の主帯域。冷たい星間ダストの観測が Herschel で飛躍したのはこのため。
-
-**(2)** $T_d=100$ K：$\lambda_\mathrm{peak}=2898/100=29\ \mu$m（中間赤外、Spitzer/JWST）。$T_d=15$ K：$\lambda_\mathrm{peak}=2898/15=193\ \mu$m（サブミリ、Herschel/ALMA）。
-
-**(3)** ダスト（$T\sim15$〜$30$ K）の熱放射ピークは遠赤外〜サブミリ。銀河の重元素の半分がダストに閉じ込められているので、可視・紫外だけ見ると物質の半分を見落とす。遠赤外・サブミリ（Herschel/ALMA）でこの放射を捉えて初めて、銀河の星間物質・ダスト質量・星形成の全体像（物質収支）が分かる。
-
-**答え**：20 K→145 μm（Herschel）、100 K→29 μm、15 K→193 μm。重元素の半分がダスト＝遠赤外/サブミリ観測が物質収支に必須。
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 17-4）](#sol-17-4){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
 :::
 
 ### 問題 17-5　電波HII領域の自由–自由スペクトルのターンオーバー {#ex-17-5 .unnumbered}
@@ -376,9 +338,94 @@ $x=hc/\lambda kT$、$hc/k=1.439\times10^{-2}$ m·K。比 $=\dfrac{e^{x_1}-1}{e^{
 
 **関連**：[§17.6 電離ガスの自由–自由放射](#sec-free-free-ionized)／光学的に厚い極限は[§5.6](../part2/05-radiative-transfer.qmd#sec-radiative-transfer-thick)（[演習 5-2](../part2/05-radiative-transfer.qmd#ex-5-2)）、輝度温度は[§2.6](../part1/02-reading-spectra.qmd#sec-reading-spectra-temperatures)、熱的/非熱的は[§1.9](../part1/01-where-blackbody.qmd#sec-where-blackbody-thermal)、X 線制動放射は[第18章](../part6/18-accretion-high-energy.qmd)。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 17-5）
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 17-5）](#sol-17-5){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
 
+## 解答例 {#sec-stars-planets-dust-solutions .unnumbered}
+
+各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。
+
+::: {.content-visible when-format="html"}
+[問題 17-1](#sol-17-1){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 17-2](#sol-17-2){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 17-3](#sol-17-3){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 17-4](#sol-17-4){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 17-5](#sol-17-5){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
+
+::: {#sol-17-1 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-17-1-label"}
+::: {.offcanvas-header}
+[**解答例（問題 17-1）**]{#sol-17-1-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
+**(1)** 等置：$(1-A)\dfrac{L_\star}{4\pi d^2}\pi R_p^2=4\pi R_p^2\sigma T_\mathrm{eq}^4$。$\pi R_p^2$ を消し、$L_\star=4\pi R_\star^2\sigma T_\star^4$ を代入：
+
+$$(1-A)\frac{4\pi R_\star^2\sigma T_\star^4}{4\pi d^2}\cdot\frac14=\sigma T_\mathrm{eq}^4\ \Rightarrow\ T_\mathrm{eq}^4=(1-A)\frac{R_\star^2}{4d^2}T_\star^4.$$
+
+$$T_\mathrm{eq}=T_\star\left(\frac{R_\star}{2d}\right)^{1/2}(1-A)^{1/4}.$$
+
+**(2)** 惑星は断面 $\pi R_p^2$ で恒星光を受け、全表面 $4\pi R_p^2$ から再放射する。比 $4\pi R_p^2/\pi R_p^2=4$ が右辺の $1/4$（すなわち $\sqrt{1/4}=1/2$ が $R_\star/2d$ の 2）として効く。自転が速く全球で均一再放射する近似。
+
+**(3)** $T_\mathrm{eq}=5778\times(1/(2\times214))^{1/2}\times(0.7)^{1/4}=5778\times(2.34\times10^{-3})^{1/2}\times0.915=5778\times0.0483\times0.915\simeq255$ K（$-18$°C）。実際の +15°C との 33 K の差は温室効果（大気の赤外不透明度）。この式は大気なし近似。
+
+**答え**：$T_\mathrm{eq}=T_\star\sqrt{R_\star/2d}\,(1-A)^{1/4}$。地球で 255 K。実測との 33 K 差は温室効果。
+:::
+:::
+
+::: {#sol-17-2 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-17-2-label"}
+::: {.offcanvas-header}
+[**解答例（問題 17-2）**]{#sol-17-2-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
+$x=hc/\lambda kT$、$hc/k=1.439\times10^{-2}$ m·K。比 $=\dfrac{e^{x_1}-1}{e^{x_2}-1}$（$x_1$＝太陽、$x_2$＝Vega、$x_1>x_2$）。
+
+**(1)** $\lambda=500$ nm：$hc/\lambda k=1.439\times10^{-2}/5.0\times10^{-7}=2.88\times10^4$ K。$x_1=28800/5778=4.98$、$x_2=28800/9602=3.00$。比 $=\dfrac{e^{4.98}-1}{e^{3.00}-1}=\dfrac{144.4}{19.1}\simeq7.6$。Vega が約7.6倍明るい。
+
+**(2)** $\lambda=250$ nm：$hc/\lambda k=5.76\times10^4$ K。$x_1=9.96$、$x_2=5.99$。比 $=\dfrac{e^{9.96}-1}{e^{5.99}-1}=\dfrac{21100}{399}\simeq53$。紫外は両者とも Wien 側で指数 $e^{x}$ が支配し、温度差が指数的に増幅されるため比が大きい。
+
+**(3)** $\lambda=5\ \mu$m：$hc/\lambda k=2.88\times10^3$ K。$x_1=0.498$、$x_2=0.300$。比 $=\dfrac{e^{0.498}-1}{e^{0.300}-1}=\dfrac{0.645}{0.350}\simeq1.85$。$x\ll1$ で $e^x-1\simeq x$ ゆえ比 $\simeq x_1/x_2=T_2/T_1=9602/5778=1.66$ に近く、Rayleigh-Jeans 側では温度比のみが効く（指数増幅なし）。
+
+**答え**：比は可視 7.6、紫外 53、赤外 1.85。Wien 側（紫外）ほど温度差が指数的に効き、RJ 側（赤外）は温度比のみ。
+:::
+:::
+
+::: {#sol-17-3 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-17-3-label"}
+::: {.offcanvas-header}
+[**解答例（問題 17-3）**]{#sol-17-3-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
+**(1)** $T_d$：Wien 側の指数減衰の鋭さ、または SED のピーク位置（Wien 則）から。$\beta$：Rayleigh-Jeans 側（長波長）の勾配の急さ（$I_\nu\propto\nu^{2+\beta}$）から。ダスト質量：全光度を $B_\nu(T_d)$ で割ったときの規格化定数から（不透明度の仮定が必要）。
+
+**(2)** $\beta$ が小さいほど粒子が大きい（粒子サイズ≈波長の極限で $\beta\to0$）。円盤中心部ほど $\beta$ が小さい＝粒子が大きく成長している。これは円盤内でダストが集積・成長して惑星形成へ向かう過程の直接観測的証拠。
+
+**(3)** 同じピーク位置でも（高温・少量）と（低温・大量）で似た SED を作れる縮退がある。RJ 側の勾配 $\nu^{2+\beta}$ と絶対強度は温度・質量・$\beta$ に異なる依存をするので、ピークより長波長（サブミリ・ミリ）の観測点を加えると、RJ 側の形が温度と質量を分離して縮退を解く。だから長波長観測が鍵。
+
+**答え**：$T_d$＝Wien側/ピーク、$\beta$＝RJ側勾配、質量＝規格化。中心部の小 $\beta$＝粒子成長＝惑星形成の証拠。長波長点が温度-質量縮退を解く。
+:::
+:::
+
+::: {#sol-17-4 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-17-4-label"}
+::: {.offcanvas-header}
+[**解答例（問題 17-4）**]{#sol-17-4-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
+**(1)** $\lambda_\mathrm{peak}=2898/20=145\ \mu$m。これは Herschel（SPIRE/PACS、60〜600 μm）の主帯域。冷たい星間ダストの観測が Herschel で飛躍したのはこのため。
+
+**(2)** $T_d=100$ K：$\lambda_\mathrm{peak}=2898/100=29\ \mu$m（中間赤外、Spitzer/JWST）。$T_d=15$ K：$\lambda_\mathrm{peak}=2898/15=193\ \mu$m（サブミリ、Herschel/ALMA）。
+
+**(3)** ダスト（$T\sim15$〜$30$ K）の熱放射ピークは遠赤外〜サブミリ。銀河の重元素の半分がダストに閉じ込められているので、可視・紫外だけ見ると物質の半分を見落とす。遠赤外・サブミリ（Herschel/ALMA）でこの放射を捉えて初めて、銀河の星間物質・ダスト質量・星形成の全体像（物質収支）が分かる。
+
+**答え**：20 K→145 μm（Herschel）、100 K→29 μm、15 K→193 μm。重元素の半分がダスト＝遠赤外/サブミリ観測が物質収支に必須。
+:::
+:::
+
+::: {#sol-17-5 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-17-5-label"}
+::: {.offcanvas-header}
+[**解答例（問題 17-5）**]{#sol-17-5-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
 **(1)** $\tau_\nu\gg1$ で $1-e^{-\tau_\nu}\to1$ ゆえ $T_b\to T_e$、すなわち $I_\nu=B_\nu(T_e)(1-e^{-\tau_\nu})\to B_\nu(T_e)$。これは第5章 §5.6 の「光学的に厚い極限で $I_\nu\to S_\nu=B_\nu(T)$」そのもの（LTE で $S_\nu=B_\nu(T_e)$）。電波帯は $h\nu\ll k_BT_e$ なので $B_\nu(T_e)\simeq2\nu^2k_BT_e/c^2$（Rayleigh–Jeans）、よって $F_\nu\propto\nu^2$。観測されるのは電子温度 $T_e$ の黒体の RJ 裾。
 
 **(2)** $\tau_\nu\ll1$ で $1-e^{-\tau_\nu}\simeq\tau_\nu$ ゆえ $T_b\to T_e\tau_\nu\propto\nu^{-2.1}$。フラックスは RJ で $F_\nu\propto\nu^2 T_b\propto\nu^2\cdot\nu^{-2.1}=\nu^{-0.1}$（ほぼ平坦）。
@@ -386,6 +433,7 @@ $x=hc/\lambda kT$、$hc/k=1.439\times10^{-2}$ m·K。比 $=\dfrac{e^{x_1}-1}{e^{
 **(3)** 黒体になるのは光学的に厚い低 $\nu$ 側だけ。高 $\nu$ 側は光学的に薄く $I_\nu\approx\tau_\nu B_\nu(T_e)\ll B_\nu(T_e)$ で黒体から下にずれる。「熱的（粒子が Maxwell 分布）」と「黒体（光学的に厚い）」は別条件で、自由–自由放射は前者を常に、後者を低 $\nu$ 側でのみ満たす。
 
 **答え**：低 $\nu$（厚い）→ $T_b\to T_e$、$I_\nu\to B_\nu(T_e)$、$F_\nu\propto\nu^2$（$T_e$ の黒体）。高 $\nu$（薄い）→ $F_\nu\propto\nu^{-0.1}$。黒体化は光学的に厚い低 $\nu$ 側のみ。
+:::
 :::
 
 ## さらに学ぶための参考文献 {#sec-stars-planets-dust-further .unnumbered}

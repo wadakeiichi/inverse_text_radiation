@@ -238,7 +238,7 @@ $$
 
 ## 演習問題 {#sec-line-applications-exercises .unnumbered}
 
-以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。
+以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **解答例** は章末「解答例」にまとめてある（オンライン版では各問のボタンから開く）。まず自力で解いてから開くこと。
 
 ### 問題 24-1　視線速度と系外惑星の検出 {#ex-24-1 .unnumbered}
 
@@ -252,16 +252,8 @@ $$
 
 **関連**：[§24.1 視線速度](#sec-line-applications-velocity)／Doppler シフトは[§23.2](../part7/23-line-shape.qmd#sec-line-shape-doppler)、宇宙膨張と赤方偏移は[演習 16-2](../part6/16-cmb.qmd#ex-16-2)。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 24-1）
-
-**(1)** $v_\star=（M_p/M_\star)v_p=10^{-3}\times30$ km/s $=0.03$ km/s $=30$ m/s。
-
-**(2)** 30 m/s は HARPS/ESPRESSO（サブ m/s〜数 m/s）で十分検出可能。地球質量惑星なら $M_p/M_\star\simeq3\times10^{-6}$ ゆえ $v_\star\simeq3\times10^{-6}\times30$ km/s $\simeq0.09$ m/s $\simeq10$ cm/s 感度が必要で、これは現在の最先端。
-
-**(3)** $z\simeq v/c$ は $z\ll1$ でのみ成立。一般には宇宙論的赤方偏移は時空のスケール因子比 $1+z=a(t_\mathrm{obs})/a(t_\mathrm{emit})$ で定義され、単純な後退速度ではない。$z\gtrsim0.1$ では特殊相対論的 Doppler 公式や宇宙論モデル依存の距離-赤方偏移関係が要る。
-
-**答え**：$v_\star=30$ m/s（検出可能）。地球質量には $\sim10$ cm/s 感度。$z=v/c$ は低赤方偏移近似のみ、本来は $1+z=a_\mathrm{obs}/a_\mathrm{emit}$。
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 24-1）](#sol-24-1){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
 :::
 
 ### 問題 24-2　線比による温度・密度診断 {#ex-24-2 .unnumbered}
@@ -276,16 +268,8 @@ $$
 
 **関連**：[§24.3 温度・密度診断](#sec-line-applications-diagnostics)／禁制線と臨界密度は[演習 20-2](../part7/20-where-lines.qmd#ex-20-2)、Boltzmann 占有は[演習 7-4](../part3/07-statistical-mechanics.qmd#ex-7-4)。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 24-2）
-
-**(1)** [O III] $\lambda$4363 と $\lambda$5007 は上準位のエネルギーが大きく異なる。上準位の占有比は Boltzmann 因子 $e^{-\Delta E/k_BT_e}$ で決まり、エネルギー差 $\Delta E$ が大きいほど温度に敏感。両線の強度比はこの占有比を反映し、電子温度 $T_e$ に強く依存する。
-
-**(2)** [S II] $\lambda$6716 と $\lambda$6731 は上準位エネルギーが近い（温度に鈍感）が、各上準位の臨界密度が異なる。電子密度が両者の臨界密度の中間（$n_e\sim10^2$–$10^4$ cm$^{-3}$）にあると、密度に応じて衝突脱励起の効き方が変わり、強度比が密度の関数になる。
-
-**(3)** [O III] 比は温度のみ、[S II] 比は密度のみに主に依存し互いに鈍感なので、二つの線比を独立な方程式として連立すれば、温度と密度を別々に解ける。これが星雲の電子温度・密度を分離して測る標準法。
-
-**答え**：[O III] は上準位エネルギー差大→温度敏感、[S II] は臨界密度差→密度敏感。互いに鈍感ゆえ温度と密度を分離して測れる。
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 24-2）](#sol-24-2){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
 :::
 
 ### 問題 24-3　高赤方偏移宇宙 ― Lyα 森と 21 cm {#ex-24-3 .unnumbered}
@@ -300,9 +284,56 @@ $$
 
 **関連**：[§24.5 宇宙論的応用](#sec-line-applications-cosmology)／CMB は[第16章](../part6/16-cmb.qmd)（[第VI部 演習](../part6/16-cmb.qmd)）、21 cm の起源は[§20.4](../part7/20-where-lines.qmd#sec-where-lines-21cm)（[演習 20-1](../part7/20-where-lines.qmd#ex-20-1)）。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 24-3）
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 24-3）](#sol-24-3){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
 
+## 解答例 {#sec-line-applications-solutions .unnumbered}
+
+各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。
+
+::: {.content-visible when-format="html"}
+[問題 24-1](#sol-24-1){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 24-2](#sol-24-2){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 24-3](#sol-24-3){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
+
+::: {#sol-24-1 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-24-1-label"}
+::: {.offcanvas-header}
+[**解答例（問題 24-1）**]{#sol-24-1-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
+**(1)** $v_\star=（M_p/M_\star)v_p=10^{-3}\times30$ km/s $=0.03$ km/s $=30$ m/s。
+
+**(2)** 30 m/s は HARPS/ESPRESSO（サブ m/s〜数 m/s）で十分検出可能。地球質量惑星なら $M_p/M_\star\simeq3\times10^{-6}$ ゆえ $v_\star\simeq3\times10^{-6}\times30$ km/s $\simeq0.09$ m/s $\simeq10$ cm/s 感度が必要で、これは現在の最先端。
+
+**(3)** $z\simeq v/c$ は $z\ll1$ でのみ成立。一般には宇宙論的赤方偏移は時空のスケール因子比 $1+z=a(t_\mathrm{obs})/a(t_\mathrm{emit})$ で定義され、単純な後退速度ではない。$z\gtrsim0.1$ では特殊相対論的 Doppler 公式や宇宙論モデル依存の距離-赤方偏移関係が要る。
+
+**答え**：$v_\star=30$ m/s（検出可能）。地球質量には $\sim10$ cm/s 感度。$z=v/c$ は低赤方偏移近似のみ、本来は $1+z=a_\mathrm{obs}/a_\mathrm{emit}$。
+:::
+:::
+
+::: {#sol-24-2 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-24-2-label"}
+::: {.offcanvas-header}
+[**解答例（問題 24-2）**]{#sol-24-2-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
+**(1)** [O III] $\lambda$4363 と $\lambda$5007 は上準位のエネルギーが大きく異なる。上準位の占有比は Boltzmann 因子 $e^{-\Delta E/k_BT_e}$ で決まり、エネルギー差 $\Delta E$ が大きいほど温度に敏感。両線の強度比はこの占有比を反映し、電子温度 $T_e$ に強く依存する。
+
+**(2)** [S II] $\lambda$6716 と $\lambda$6731 は上準位エネルギーが近い（温度に鈍感）が、各上準位の臨界密度が異なる。電子密度が両者の臨界密度の中間（$n_e\sim10^2$–$10^4$ cm$^{-3}$）にあると、密度に応じて衝突脱励起の効き方が変わり、強度比が密度の関数になる。
+
+**(3)** [O III] 比は温度のみ、[S II] 比は密度のみに主に依存し互いに鈍感なので、二つの線比を独立な方程式として連立すれば、温度と密度を別々に解ける。これが星雲の電子温度・密度を分離して測る標準法。
+
+**答え**：[O III] は上準位エネルギー差大→温度敏感、[S II] は臨界密度差→密度敏感。互いに鈍感ゆえ温度と密度を分離して測れる。
+:::
+:::
+
+::: {#sol-24-3 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-24-3-label"}
+::: {.offcanvas-header}
+[**解答例（問題 24-3）**]{#sol-24-3-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
 **(1)** Ly$\alpha$ 森：低柱密度の中性水素による多数の吸収線＝宇宙のバリオン分布マップ。DLA（damped Ly$\alpha$）：高柱密度系＝高赤方偏移銀河の前駆体。金属吸収系（C IV, Mg II 等）：宇宙初期の化学進化・銀河流出の記録。
 
 **(2)** $\lambda_\mathrm{obs}=(1+z)\times0.211$ m。$z=7$：$8\times0.211=1.69$ m。$z=6$：$7\times0.211=1.48$ m。$z=20$：$21\times0.211=4.43$ m。再電離期は約 1.5〜4.4 m（SKA の標的帯）。
@@ -310,6 +341,7 @@ $$
 **(3)** CMB は連続スペクトル（黒体）で宇宙の**温度の歴史**（熱化・膨張）を語る。Ly$\alpha$/21 cm は線スペクトルで**構造形成・電離・化学進化の歴史**を語る。両者は宇宙物理学の二つの主柱として相補的に、初期宇宙から現在までの異なる側面を逆引きさせる。
 
 **答え**：Ly$\alpha$ 森＝バリオン分布、DLA＝銀河前駆体、金属系＝化学進化。21 cm($z=7$)＝1.69 m（$z=6$:1.48、$z=20$:4.43 m）。CMB＝温度史、線＝構造・電離・化学史で相補的。
+:::
 :::
 
 ## さらに学ぶための参考文献 {#sec-line-applications-further .unnumbered}

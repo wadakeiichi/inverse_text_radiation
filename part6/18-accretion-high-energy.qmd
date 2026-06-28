@@ -234,7 +234,7 @@ $$ {#eq-grdisk-flux}
 
 ## 演習問題 {#sec-accretion-high-energy-exercises .unnumbered}
 
-以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。
+以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **解答例** は章末「解答例」にまとめてある（オンライン版では各問のボタンから開く）。まず自力で解いてから開くこと。
 
 ### 問題 18-1　多温度円盤の 1/3 乗べき則 {#ex-18-1 .unnumbered}
 
@@ -248,20 +248,8 @@ $$ {#eq-grdisk-flux}
 
 **関連**：[§18.2 多温度円盤](#sec-disk-multi-temperature)／局所黒体は[§18.1](#sec-disk-local-blackbody)（[演習 18-3](#ex-18-3)）、RJ 極限は[§2.5](../part1/02-reading-spectra.qmd#sec-reading-spectra-limits)。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 18-1）
-
-**(1)** $T\propto R^{-3/4}\Rightarrow R\propto T^{-4/3}$。$dR\propto T^{-7/3}dT$。$2\pi R\,dR\propto T^{-4/3}\cdot T^{-7/3}dT=T^{-11/3}dT$。
-
-**(2)** 中間帯で各半径の RJ 側 $B_\nu\propto\nu^2 T$。よって
-
-$$F_\nu\propto\int\nu^2 T\cdot T^{-11/3}dT=\nu^2\int T^{-8/3}dT.$$
-
-$x=h\nu/kT$ で $T=h\nu/kx$、$dT\propto-\nu\,x^{-2}dx$、$T^{-8/3}\propto\nu^{-8/3}x^{8/3}$。よって $\int T^{-8/3}dT\propto\nu^{-8/3}\cdot\nu\int x^{8/3-2}dx=\nu^{-5/3}\int x^{2/3}dx$。中間帯では積分は $\nu$ に依らない定数（端の寄与が効かない範囲）。したがって $F_\nu\propto\nu^2\cdot\nu^{-5/3}=\nu^{1/3}$。
-
-**(3)** 一般に $T\propto R^{-\alpha}\Rightarrow R\propto T^{-1/\alpha}$、$2\pi R\,dR\propto T^{-2/\alpha}dT$。$F_\nu\propto\nu^2\int T\cdot T^{-2/\alpha}dT=\nu^2\int T^{1-2/\alpha}dT$。$x=h\nu/kT$ 変換で $F_\nu\propto\nu^2\cdot\nu^{(1-2/\alpha)+1}\cdot(\text{const})\cdot\nu^{-1}$… 整理すると指数は $(3\alpha-2)/\alpha$。$\alpha=3/4$ で $(9/4-2)/(3/4)=(1/4)/(3/4)=1/3$。
-
-**答え**：$2\pi R\,dR\propto T^{-11/3}dT$、中間帯で $F_\nu\propto\nu^{1/3}$。一般に $T\propto R^{-\alpha}$ で $F_\nu\propto\nu^{(3\alpha-2)/\alpha}$、$\alpha=3/4$ で $1/3$。
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 18-1）](#sol-18-1){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
 :::
 
 ### 問題 18-2　コンプトン y パラメータ {#ex-18-2 .unnumbered}
@@ -276,16 +264,8 @@ $x=h\nu/kT$ で $T=h\nu/kx$、$dT\propto-\nu\,x^{-2}dx$、$T^{-8/3}\propto\nu^{-
 
 **関連**：[§18.3 コンプトン化](#sec-comptonization)／CMB の $y$ 歪みは[§16.5](../part6/16-cmb.qmd#sec-cmb-distortions)（[演習 16-4](../part6/16-cmb.qmd#ex-16-4)）。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 18-2）
-
-**(1)** $\dfrac{\Delta\nu}{\nu}=\dfrac{4k_BT_e}{m_ec^2}=\dfrac{4\times86\ \text{keV}}{511\ \text{keV}}=\dfrac{344}{511}\simeq0.67$。1回の散乱で振動数が約 67% 増える。（$k_BT_e=8.617\times10^{-5}\times10^9=8.6\times10^4$ eV $=86$ keV。）
-
-**(2)** $y\ll1$：光子はわずかにエネルギーを得るだけ＝元の黒体形に弱い Wien 側テイルが付く。$y\gtrsim1$：光子がコロナで完全に再分配され、Wien 分布に近い高温化スペクトル。中間域：べき則 $F_\nu\propto\nu^{-\alpha}$ が現れ、高エネルギー側は Wien カットオフで切れる。
-
-**(3)** どちらも高温電子と光子の逆コンプトン散乱で、$y=\dfrac{4k_BT_e}{m_ec^2}\max(\tau,\tau^2)$ という同じパラメータでスペクトル変形を測る。X 線連星のコロナ（銀河近傍スケール）も、銀河団ガス（宇宙論スケール）も、同じ物理。違うのはスケール（$T_e$、$\tau$ の値と対象の大きさ）だけ。
-
-**答え**：$\Delta\nu/\nu\simeq0.67$（$T_e=10^9$ K）。$y\ll1$ 弱テイル、$y\gtrsim1$ Wien 化、中間でべき則。CMB の $y$ 歪み（SZ 効果）と同物理。
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 18-2）](#sol-18-2){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
 :::
 
 ### 問題 18-3　局所黒体仮定とその限界 {#ex-18-3 .unnumbered}
@@ -300,16 +280,8 @@ $x=h\nu/kT$ で $T=h\nu/kx$、$dT\propto-\nu\,x^{-2}dx$、$T^{-8/3}\propto\nu^{-
 
 **関連**：[§18.1 局所黒体近似](#sec-disk-local-blackbody)／黒体化条件は[§3.6](../part1/03-universality.qmd#sec-universality-real-objects)（[演習 3-4](../part1/03-universality.qmd#ex-3-4)）、LTE は[§5.5](../part2/05-radiative-transfer.qmd#sec-radiative-transfer-lte)、散乱ソース関数は[演習 15-3](../part6/15-non-blackbody.qmd#ex-15-3)。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 18-3）
-
-**(1)** ① 熱化時間が円盤の力学的時間より短い（局所的に熱平衡に達する）、② 各半径で鉛直方向に光学的に厚い（$\tau\gg1$、吸収・再放出が十分）、③ その半径内では単一温度 $T(R)$ で記述できる。これらが満たされれば各半径が $B_\nu(T(R))$ で放射する（第3章 §3.6、第5章 §5.6）。
-
-**(2)** 例：高温・希薄なコロナ層（局所熱平衡を破る）、不透明度の振動数依存（修正黒体的なずれ）、電子散乱が吸収より卓越（純黒体から外れる）。
-
-**(3)** 電子散乱卓越ではソース関数 $S_\nu=(1-\tilde\omega)B_\nu+\tilde\omega\langle J_\nu\rangle$（[演習 15-3](../part6/15-non-blackbody.qmd#ex-15-3)）が局所プランクから外れ、光子は吸収で熱化されにくく深部の高温を反映したまま散乱で抜ける。結果、見かけの色温度が実効温度より高くなり、$f_\mathrm{col}\simeq1.5$〜$2$ の補正が要る。
-
-**答え**：局所熱平衡・光学的厚・単一温度が必要。破れ＝コロナ／振動数依存不透明度／電子散乱卓越。散乱卓越は熱化を妨げ色温度を上げる（$f_\mathrm{col}\sim1.5$〜$2$）。
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 18-3）](#sol-18-3){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
 :::
 
 ### 問題 18-4　中性子星表面の重力赤方偏移 {#ex-18-4 .unnumbered}
@@ -324,9 +296,76 @@ $x=h\nu/kT$ で $T=h\nu/kx$、$dT\propto-\nu\,x^{-2}dx$、$T^{-8/3}\propto\nu^{-
 
 **関連**：[§18.4 中性子星表面](#sec-neutron-star-surface)／Fermi 縮退は[§8.2](../part3/08-photon-statistics.qmd#sec-photon-statistics-bose-fermi)、相対論的修正は[§18.5](#sec-black-hole-effects)。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 18-4）
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 18-4）](#sol-18-4){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
 
+## 解答例 {#sec-accretion-high-energy-solutions .unnumbered}
+
+各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。
+
+::: {.content-visible when-format="html"}
+[問題 18-1](#sol-18-1){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 18-2](#sol-18-2){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 18-3](#sol-18-3){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 18-4](#sol-18-4){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
+
+::: {#sol-18-1 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-18-1-label"}
+::: {.offcanvas-header}
+[**解答例（問題 18-1）**]{#sol-18-1-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
+**(1)** $T\propto R^{-3/4}\Rightarrow R\propto T^{-4/3}$。$dR\propto T^{-7/3}dT$。$2\pi R\,dR\propto T^{-4/3}\cdot T^{-7/3}dT=T^{-11/3}dT$。
+
+**(2)** 中間帯で各半径の RJ 側 $B_\nu\propto\nu^2 T$。よって
+
+$$F_\nu\propto\int\nu^2 T\cdot T^{-11/3}dT=\nu^2\int T^{-8/3}dT.$$
+
+$x=h\nu/kT$ で $T=h\nu/kx$、$dT\propto-\nu\,x^{-2}dx$、$T^{-8/3}\propto\nu^{-8/3}x^{8/3}$。よって $\int T^{-8/3}dT\propto\nu^{-8/3}\cdot\nu\int x^{8/3-2}dx=\nu^{-5/3}\int x^{2/3}dx$。中間帯では積分は $\nu$ に依らない定数（端の寄与が効かない範囲）。したがって $F_\nu\propto\nu^2\cdot\nu^{-5/3}=\nu^{1/3}$。
+
+**(3)** 一般に $T\propto R^{-\alpha}\Rightarrow R\propto T^{-1/\alpha}$、$2\pi R\,dR\propto T^{-2/\alpha}dT$。$F_\nu\propto\nu^2\int T\cdot T^{-2/\alpha}dT=\nu^2\int T^{1-2/\alpha}dT$。$x=h\nu/kT$ 変換で $F_\nu\propto\nu^2\cdot\nu^{(1-2/\alpha)+1}\cdot(\text{const})\cdot\nu^{-1}$… 整理すると指数は $(3\alpha-2)/\alpha$。$\alpha=3/4$ で $(9/4-2)/(3/4)=(1/4)/(3/4)=1/3$。
+
+**答え**：$2\pi R\,dR\propto T^{-11/3}dT$、中間帯で $F_\nu\propto\nu^{1/3}$。一般に $T\propto R^{-\alpha}$ で $F_\nu\propto\nu^{(3\alpha-2)/\alpha}$、$\alpha=3/4$ で $1/3$。
+:::
+:::
+
+::: {#sol-18-2 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-18-2-label"}
+::: {.offcanvas-header}
+[**解答例（問題 18-2）**]{#sol-18-2-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
+**(1)** $\dfrac{\Delta\nu}{\nu}=\dfrac{4k_BT_e}{m_ec^2}=\dfrac{4\times86\ \text{keV}}{511\ \text{keV}}=\dfrac{344}{511}\simeq0.67$。1回の散乱で振動数が約 67% 増える。（$k_BT_e=8.617\times10^{-5}\times10^9=8.6\times10^4$ eV $=86$ keV。）
+
+**(2)** $y\ll1$：光子はわずかにエネルギーを得るだけ＝元の黒体形に弱い Wien 側テイルが付く。$y\gtrsim1$：光子がコロナで完全に再分配され、Wien 分布に近い高温化スペクトル。中間域：べき則 $F_\nu\propto\nu^{-\alpha}$ が現れ、高エネルギー側は Wien カットオフで切れる。
+
+**(3)** どちらも高温電子と光子の逆コンプトン散乱で、$y=\dfrac{4k_BT_e}{m_ec^2}\max(\tau,\tau^2)$ という同じパラメータでスペクトル変形を測る。X 線連星のコロナ（銀河近傍スケール）も、銀河団ガス（宇宙論スケール）も、同じ物理。違うのはスケール（$T_e$、$\tau$ の値と対象の大きさ）だけ。
+
+**答え**：$\Delta\nu/\nu\simeq0.67$（$T_e=10^9$ K）。$y\ll1$ 弱テイル、$y\gtrsim1$ Wien 化、中間でべき則。CMB の $y$ 歪み（SZ 効果）と同物理。
+:::
+:::
+
+::: {#sol-18-3 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-18-3-label"}
+::: {.offcanvas-header}
+[**解答例（問題 18-3）**]{#sol-18-3-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
+**(1)** ① 熱化時間が円盤の力学的時間より短い（局所的に熱平衡に達する）、② 各半径で鉛直方向に光学的に厚い（$\tau\gg1$、吸収・再放出が十分）、③ その半径内では単一温度 $T(R)$ で記述できる。これらが満たされれば各半径が $B_\nu(T(R))$ で放射する（第3章 §3.6、第5章 §5.6）。
+
+**(2)** 例：高温・希薄なコロナ層（局所熱平衡を破る）、不透明度の振動数依存（修正黒体的なずれ）、電子散乱が吸収より卓越（純黒体から外れる）。
+
+**(3)** 電子散乱卓越ではソース関数 $S_\nu=(1-\tilde\omega)B_\nu+\tilde\omega\langle J_\nu\rangle$（[演習 15-3](../part6/15-non-blackbody.qmd#ex-15-3)）が局所プランクから外れ、光子は吸収で熱化されにくく深部の高温を反映したまま散乱で抜ける。結果、見かけの色温度が実効温度より高くなり、$f_\mathrm{col}\simeq1.5$〜$2$ の補正が要る。
+
+**答え**：局所熱平衡・光学的厚・単一温度が必要。破れ＝コロナ／振動数依存不透明度／電子散乱卓越。散乱卓越は熱化を妨げ色温度を上げる（$f_\mathrm{col}\sim1.5$〜$2$）。
+:::
+:::
+
+::: {#sol-18-4 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-18-4-label"}
+::: {.offcanvas-header}
+[**解答例（問題 18-4）**]{#sol-18-4-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
 **(1)** $\dfrac{2GM}{Rc^2}=\dfrac{2\times6.674\times10^{-11}\times2.78\times10^{30}}{1.0\times10^4\times(3\times10^8)^2}=\dfrac{3.71\times10^{20}}{9.0\times10^{20}}=0.412$。
 
 **(2)** $z_g=(1-0.412)^{-1/2}-1=(0.588)^{-1/2}-1=1.304-1=0.304\simeq0.30$。
@@ -334,6 +373,7 @@ $x=h\nu/kT$ で $T=h\nu/kx$、$dT\propto-\nu\,x^{-2}dx$、$T^{-8/3}\propto\nu^{-
 **(3)** $T_\infty=T/(1+z_g)=10^7/1.30=7.7\times10^6$ K。観測される温度は表面温度より約23%低い。重力赤方偏移 $z_g$ は $M/R$ に依存し、Stefan-Boltzmann で得る放射半径は $M,R$ の別の組合せに依存するので、両者を連立すると $M$ と $R$ を独立に制約できる。NICER はこれにパルス時間プロファイルを加えて核物質の状態方程式を制約している。
 
 **答え**：$2GM/Rc^2=0.41$、$z_g\simeq0.30$、$T_\infty=7.7\times10^6$ K。$z_g$ と Stefan-Boltzmann の連立で $M,R$ を制約（NICER）。
+:::
 :::
 
 ## さらに学ぶための参考文献 {#sec-accretion-high-energy-further .unnumbered}

@@ -190,7 +190,7 @@ $$ {#eq-creation-annihilation-action}
 
 ## 演習問題 {#sec-quantum-foundations-exercises .unnumbered}
 
-以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。
+以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **解答例** は章末「解答例」にまとめてある（オンライン版では各問のボタンから開く）。まず自力で解いてから開くこと。
 
 ### 問題 12-1　生成消滅演算子でハミルトニアンを対角化 {#ex-12-1 .unnumbered}
 
@@ -206,9 +206,71 @@ $$
 
 **関連**：[§12.3 生成消滅演算子](#sec-quantum-foundations-operators)、[§12.2 調和振動子](#sec-quantum-foundations-oscillator)／準位 $E_n=(n+\tfrac12)\hbar\omega$ は第10章のエネルギー量子 $h\nu$ の量子力学的根拠（[演習 10-1](../part4/10-planck-quantum.qmd#ex-10-1)）。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 12-1）
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 12-1）](#sol-12-1){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
 
+### 問題 12-2　零点エネルギーを不確定性原理から導く {#ex-12-2 .unnumbered}
+
+[★ 難易度：☆ ] [tag:導出補完]
+
+§12.2 は「不確定性原理から完全静止が許されず $E_0=\tfrac12\hbar\omega$」と述べた。これを最小化問題として導け。基底状態では $\langle\hat x\rangle=\langle\hat p\rangle=0$ なので $\langle\hat x^2\rangle=(\Delta x)^2,\ \langle\hat p^2\rangle=(\Delta p)^2$。
+
+1. エネルギー期待値 $E=\dfrac{(\Delta p)^2}{2m}+\dfrac12 m\omega^2(\Delta x)^2$ に、最小不確定 $\Delta p=\dfrac{\hbar}{2\Delta x}$ を代入せよ。
+2. $\Delta x$ について最小化し、$E_{\min}=\tfrac12\hbar\omega$ と最適な $\Delta x$ を求めよ。
+
+**関連**：[§12.2 零点エネルギー](#sec-quantum-foundations-oscillator)／零点振動の観測的帰結（自発放出・Casimir）は[§12.4](#sec-quantum-foundations-vacuum)、[第25章](../part8/25-em-field-quantization.qmd)。
+
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 12-2）](#sol-12-2){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
+
+### 問題 12-3　零点エネルギーはなぜプランク分布に現れないのか {#ex-12-3 .unnumbered}
+
+[★ 難易度：☆☆ ] [tag:理解を深める]
+
+第10章の量子化振動子では $\langle E\rangle=h\nu/(e^x-1)$ を使ったが、完全な量子力学では $E_n=(n+\tfrac12)\hbar\omega$ で零点 $\tfrac12\hbar\omega$ がある。両者の整合を考える。
+
+1. 準位 $E_n=(n+\tfrac12)\hbar\omega$ の熱平均が $\langle E\rangle=\tfrac12\hbar\omega+\dfrac{\hbar\omega}{e^{\hbar\omega/k_BT}-1}$ となることを、占有数 $\langle n\rangle=1/(e^{\hbar\omega/k_BT}-1)$ を使って示せ。
+2. なぜ観測される放射エネルギー密度 $u_\nu$（プランク分布）に零点項 $\tfrac12\hbar\omega$ が現れないのか。物理的理由を述べよ（ヒント：定数オフセット、エネルギーの基準）。
+3. では零点エネルギーは「観測できない」のか。観測可能な帰結の例を §12.4 から2つ挙げよ。
+
+**関連**：[§12.4 真空状態](#sec-quantum-foundations-vacuum)／プランク導出は[§10.3](../part4/10-planck-quantum.qmd#sec-planck-quantum-derivation)（[演習 10-1](../part4/10-planck-quantum.qmd#ex-10-1)）、零点の本格的扱いは[第25章](../part8/25-em-field-quantization.qmd)、[第26章](../part8/26-qed-minimum.qmd)。
+
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 12-3）](#sol-12-3){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
+
+### 問題 12-4　生成消滅演算子の作用の係数 {#ex-12-4 .unnumbered}
+
+[★ 難易度：☆☆ ] [tag:導出補完]
+
+§12.3 は係数を結果として与えた。$[\hat a,\hat a^\dagger]=1$ と数演算子 $\hat n=\hat a^\dagger\hat a$（$\hat n|n\rangle=n|n\rangle$、$|n\rangle$ は規格化）から、上昇・下降の係数を導け。
+
+1. $\hat a^\dagger|n\rangle$ のノルムの2乗 $\langle n|\hat a\hat a^\dagger|n\rangle$ を計算し、$\hat a^\dagger|n\rangle=\sqrt{n+1}\,|n+1\rangle$ を示せ。
+2. 同様に $\hat a|n\rangle=\sqrt{n}\,|n-1\rangle$ を示し、$\hat a|0\rangle=0$（真空は消滅で潰れる）を確認せよ。
+3. これらが電磁場の文脈で「光子の生成・消滅」に対応することを一言で述べよ。
+
+**関連**：[§12.3 生成消滅演算子](#sec-quantum-foundations-operators)、[§12.4 数状態・真空](#sec-quantum-foundations-vacuum)／電磁場各モードへの拡張は[第25章 電磁場の量子化](../part8/25-em-field-quantization.qmd)。
+
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 12-4）](#sol-12-4){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
+
+## 解答例 {#sec-quantum-foundations-solutions .unnumbered}
+
+各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。
+
+::: {.content-visible when-format="html"}
+[問題 12-1](#sol-12-1){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 12-2](#sol-12-2){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 12-3](#sol-12-3){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 12-4](#sol-12-4){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
+
+::: {#sol-12-1 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-12-1-label"}
+::: {.offcanvas-header}
+[**解答例（問題 12-1）**]{#sol-12-1-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
 $\hat a^\dagger\hat a$ を展開する：
 
 $$
@@ -239,21 +301,14 @@ $$
 
 **答え**：$\hat H=\hbar\omega(\hat a^\dagger\hat a+\tfrac12)$。零点 $\tfrac12\hbar\omega$ は交換子 $[\hat x,\hat p]=i\hbar$ から出る。$[\hat a,\hat a^\dagger]=1$。
 :::
+:::
 
-### 問題 12-2　零点エネルギーを不確定性原理から導く {#ex-12-2 .unnumbered}
-
-[★ 難易度：☆ ] [tag:導出補完]
-
-§12.2 は「不確定性原理から完全静止が許されず $E_0=\tfrac12\hbar\omega$」と述べた。これを最小化問題として導け。基底状態では $\langle\hat x\rangle=\langle\hat p\rangle=0$ なので $\langle\hat x^2\rangle=(\Delta x)^2,\ \langle\hat p^2\rangle=(\Delta p)^2$。
-
-1. エネルギー期待値 $E=\dfrac{(\Delta p)^2}{2m}+\dfrac12 m\omega^2(\Delta x)^2$ に、最小不確定 $\Delta p=\dfrac{\hbar}{2\Delta x}$ を代入せよ。
-2. $\Delta x$ について最小化し、$E_{\min}=\tfrac12\hbar\omega$ と最適な $\Delta x$ を求めよ。
-
-**関連**：[§12.2 零点エネルギー](#sec-quantum-foundations-oscillator)／零点振動の観測的帰結（自発放出・Casimir）は[§12.4](#sec-quantum-foundations-vacuum)、[第25章](../part8/25-em-field-quantization.qmd)。
-
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 12-2）
-
+::: {#sol-12-2 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-12-2-label"}
+::: {.offcanvas-header}
+[**解答例（問題 12-2）**]{#sol-12-2-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
 **(1)** $\Delta p=\hbar/(2\Delta x)$ を代入：
 
 $$
@@ -276,22 +331,14 @@ $$
 
 **答え**：$(\Delta x)^2=\hbar/2m\omega$ で $E_{\min}=\tfrac12\hbar\omega$。完全静止（$\Delta x=0$）は不確定性が禁じる。
 :::
+:::
 
-### 問題 12-3　零点エネルギーはなぜプランク分布に現れないのか {#ex-12-3 .unnumbered}
-
-[★ 難易度：☆☆ ] [tag:理解を深める]
-
-第10章の量子化振動子では $\langle E\rangle=h\nu/(e^x-1)$ を使ったが、完全な量子力学では $E_n=(n+\tfrac12)\hbar\omega$ で零点 $\tfrac12\hbar\omega$ がある。両者の整合を考える。
-
-1. 準位 $E_n=(n+\tfrac12)\hbar\omega$ の熱平均が $\langle E\rangle=\tfrac12\hbar\omega+\dfrac{\hbar\omega}{e^{\hbar\omega/k_BT}-1}$ となることを、占有数 $\langle n\rangle=1/(e^{\hbar\omega/k_BT}-1)$ を使って示せ。
-2. なぜ観測される放射エネルギー密度 $u_\nu$（プランク分布）に零点項 $\tfrac12\hbar\omega$ が現れないのか。物理的理由を述べよ（ヒント：定数オフセット、エネルギーの基準）。
-3. では零点エネルギーは「観測できない」のか。観測可能な帰結の例を §12.4 から2つ挙げよ。
-
-**関連**：[§12.4 真空状態](#sec-quantum-foundations-vacuum)／プランク導出は[§10.3](../part4/10-planck-quantum.qmd#sec-planck-quantum-derivation)（[演習 10-1](../part4/10-planck-quantum.qmd#ex-10-1)）、零点の本格的扱いは[第25章](../part8/25-em-field-quantization.qmd)、[第26章](../part8/26-qed-minimum.qmd)。
-
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 12-3）
-
+::: {#sol-12-3 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-12-3-label"}
+::: {.offcanvas-header}
+[**解答例（問題 12-3）**]{#sol-12-3-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
 **(1)** Boltzmann 重み $P_n=e^{-\beta E_n}/Z$。$E_n=(n+\tfrac12)\hbar\omega$ なので
 
 $$
@@ -306,22 +353,14 @@ $$
 
 **答え**：$\langle E\rangle=\tfrac12\hbar\omega+\hbar\omega/(e^{\hbar\omega/k_BT}-1)$。零点は $T$ 非依存の定数オフセットで放射の励起分に効かないため $u_\nu$ に出ない。だが差は Casimir 効果・自発放出として観測可能。
 :::
+:::
 
-### 問題 12-4　生成消滅演算子の作用の係数 {#ex-12-4 .unnumbered}
-
-[★ 難易度：☆☆ ] [tag:導出補完]
-
-§12.3 は係数を結果として与えた。$[\hat a,\hat a^\dagger]=1$ と数演算子 $\hat n=\hat a^\dagger\hat a$（$\hat n|n\rangle=n|n\rangle$、$|n\rangle$ は規格化）から、上昇・下降の係数を導け。
-
-1. $\hat a^\dagger|n\rangle$ のノルムの2乗 $\langle n|\hat a\hat a^\dagger|n\rangle$ を計算し、$\hat a^\dagger|n\rangle=\sqrt{n+1}\,|n+1\rangle$ を示せ。
-2. 同様に $\hat a|n\rangle=\sqrt{n}\,|n-1\rangle$ を示し、$\hat a|0\rangle=0$（真空は消滅で潰れる）を確認せよ。
-3. これらが電磁場の文脈で「光子の生成・消滅」に対応することを一言で述べよ。
-
-**関連**：[§12.3 生成消滅演算子](#sec-quantum-foundations-operators)、[§12.4 数状態・真空](#sec-quantum-foundations-vacuum)／電磁場各モードへの拡張は[第25章 電磁場の量子化](../part8/25-em-field-quantization.qmd)。
-
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 12-4）
-
+::: {#sol-12-4 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-12-4-label"}
+::: {.offcanvas-header}
+[**解答例（問題 12-4）**]{#sol-12-4-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
 **(1)** $\hat a\hat a^\dagger=\hat a^\dagger\hat a+[\hat a,\hat a^\dagger]=\hat n+1$ ゆえ
 
 $$
@@ -339,6 +378,7 @@ $$
 **(3)** 電磁場の各モードをこの調和振動子と同一視すると、$\hat a^\dagger$ はそのモードに光子を1個**生成**し、$\hat a$ は1個**消滅**させる。$|n\rangle$ は「光子 $n$ 個の状態」、$|0\rangle$ は光子のない電磁真空に対応する。
 
 **答え**：$\|\hat a^\dagger|n\rangle\|^2=n+1\Rightarrow\hat a^\dagger|n\rangle=\sqrt{n+1}|n+1\rangle$、$\hat a|n\rangle=\sqrt n|n-1\rangle$、$\hat a|0\rangle=0$。電磁場では光子の生成・消滅。
+:::
 :::
 
 ## さらに学ぶための参考文献 {#sec-quantum-foundations-further .unnumbered}

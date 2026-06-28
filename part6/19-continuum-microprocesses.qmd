@@ -279,7 +279,7 @@ $$
 
 ## 演習問題 {#sec-continuum-micro-exercises .unnumbered}
 
-以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。
+以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **解答例** は章末「解答例」にまとめてある（オンライン版では各問のボタンから開く）。まず自力で解いてから開くこと。
 
 ### 問題 19-1　電波 HII 領域のターンオーバー（自由-自由の逆引き） {#ex-19-1 .unnumbered}
 
@@ -293,16 +293,8 @@ $$
 
 **関連**：[§19.2 自由-自由](#sec-continuum-free-free)／電波の漸近は[第17章 §17.6](../part6/17-stars-planets-dust.qmd#sec-free-free-ionized)（[演習 17-5](../part6/17-stars-planets-dust.qmd#ex-17-5)）、光学的に厚い極限は[§5.6](../part2/05-radiative-transfer.qmd#sec-radiative-transfer-thick)。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 19-1）
-
-**(1)** $\tau_\nu\gg1$ で $1-e^{-\tau_\nu}\to1$ ゆえ $I_\nu\to B_\nu(T_e)$。電波帯 $h\nu\ll k_BT_e$ では $B_\nu\simeq2\nu^2k_BT_e/c^2\propto\nu^2$、よって $F_\nu\propto\nu^2$。観測される輝度温度は $T_b\to T_e$ に飽和する。
-
-**(2)** $\tau_\nu\ll1$ で $1-e^{-\tau_\nu}\simeq\tau_\nu\propto\nu^{-2.1}$。$F_\nu\propto\nu^2\cdot\nu^{-2.1}=\nu^{-0.1}$ でほぼ平坦。
-
-**(3)** $\nu_t$ は $\tau_{\nu_t}\simeq1$ で決まり、$\tau_\nu\propto\mathrm{EM}\,\nu^{-2.1}T_e^{-1.35}$ なので、飽和値から $T_e$、$\nu_t$ から発光量度 $\mathrm{EM}=\int n_e^2 ds$（密度 × 経路長）が読める。
-
-**答え**：低 $\nu$ で $F_\nu\propto\nu^2$（$T_b\to T_e$）、高 $\nu$ で $\propto\nu^{-0.1}$。飽和から $T_e$、$\nu_t$ から $\mathrm{EM}$。
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 19-1）](#sol-19-1){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
 :::
 
 ### 問題 19-2　Balmer 連続光ジャンプ ― 吸収端と放出端 {#ex-19-2 .unnumbered}
@@ -317,16 +309,8 @@ $$
 
 **関連**：[§19.3 束縛-自由](#sec-continuum-bound-free)、[§19.4 再結合](#sec-continuum-recombination)／吸収線と輝線の幾何は[第20章 §20.3](../part7/20-where-lines.qmd#sec-where-lines-emission)、線のソース関数は[第21章 §21.3](../part7/21-line-formation.qmd#sec-line-source-function)。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 19-2）
-
-**(1)** $\lambda=hc/\chi_2=(1.24\times10^4\ \mathrm{eV\,\AA})/3.40\ \mathrm{eV}=3647$ Å。Balmer 端（$3646$ Å）に一致。
-
-**(2)** 恒星大気は背後に明るい連続光源（深層）があり、Balmer 端より青では $n=2$ からの光電離吸収（§19.3）で不透明度が跳ね上がるため、より浅い（冷たい）層しか見えず暗くなる＝吸収段差。星雲は背景連続光がなく、$n=2$ への再結合（§19.4）で出る自由-束縛放射そのものを見るため、しきい $3646$ Å の高振動数側に放出のジャンプが立つ。同じしきい値が幾何条件で吸収にも放出にも見える。
-
-**(3)** 再結合連続光の形（ジャンプ高さと裾の傾き）は電子の Maxwell 分布の温度を反映するので、$T_e$ に依存する。輝線比とは独立な温度診断になる。
-
-**答え**：$3647$ Å。背景光ありで吸収段差、なしで再結合の放出ジャンプ。ジャンプ形が $T_e$ 依存。
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 19-2）](#sol-19-2){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
 :::
 
 ### 問題 19-3　Milne 関係と再結合係数の温度依存 {#ex-19-3 .unnumbered}
@@ -341,16 +325,8 @@ $$
 
 **関連**：[§19.4 再結合](#sec-continuum-recombination)／詳細つり合いの論法は[第11章 §11.3](../part4/11-einstein-method.qmd#sec-einstein-method-detailed-balance)、Maxwell 分布は[第7章 §7.3](../part3/07-statistical-mechanics.qmd#sec-statistical-mechanics-boltzmann)。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 19-3）
-
-**(1)** Milne 関係 $\sigma_{\mathrm{rec}}\propto (h\nu)^2 v^{-2}\sigma_{\mathrm{bf}}$ で、しきい近傍 $h\nu\simeq\chi_n$（定数）とすれば $\sigma_{\mathrm{rec}}\propto v^{-2}\sigma_{\mathrm{bf}}(\nu_{\mathrm{th}})$。
-
-**(2)** $\sigma_{\mathrm{rec}}v\propto v^{-2}\cdot v=v^{-1}$。Maxwell 平均 $\langle v^{-1}\rangle=\int v^{-1}f(v)dv$ は $f(v)\propto v^2 e^{-m_ev^2/2k_BT}$ で、変数を $x=v/\sqrt{k_BT/m_e}$ にとると $\langle v^{-1}\rangle\propto(k_BT)^{-1/2}$。よって $\alpha_n(T)\propto T^{-1/2}$。
-
-**(3)** 高温では電子の典型速度が大きく、イオンの近くを速く通り過ぎて捕まりにくい（相互作用時間が短い）ため、再結合係数が小さくなる。
-
-**答え**：$\sigma_{\mathrm{rec}}\propto v^{-2}\sigma_{\mathrm{bf}}$、$\alpha_n\propto T^{-1/2}$。高温ほど速く通り過ぎ捕まりにくい。
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 19-3）](#sol-19-3){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
 :::
 
 ### 問題 19-4　X 線制動放射で銀河団温度 {#ex-19-4 .unnumbered}
@@ -365,16 +341,8 @@ $$
 
 **関連**：[§19.2 自由-自由](#sec-continuum-free-free)／高温降着・銀河団は[第18章](../part6/18-accretion-high-energy.qmd)。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 19-4）
-
-**(1)** カットオフは $h\nu\sim k_BT_e$ で効く。$k_BT_e\sim8$ keV $\Rightarrow T_e\sim8\times10^3\,\mathrm{eV}/(8.617\times10^{-5}\,\mathrm{eV/K})\simeq9\times10^7$ K。
-
-**(2)** $9\times10^7$ K は $10^7$〜$10^8$ K の範囲。これだけ高温だと熱的制動放射のピークが X 線帯に来るので、銀河団ガスは X 線で明るく光る。
-
-**(3)** 電波 HII 領域は低 $\nu$ で **光学的に厚く** 黒体に漸近するが、銀河団 X 線は高温・希薄で全帯域 **光学的に薄い** ため、放射率の形（指数カットオフ）がそのまま観測される。同じ熱的自由-自由でも光学的厚さで見え方が変わる。
-
-**答え**：$T_e\sim9\times10^7$ K（$10^7$〜$10^8$ K）。高温ゆえ X 線で光る。電波は厚い／X 線は薄いの違い。
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 19-4）](#sol-19-4){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
 :::
 
 ### 問題 19-5　H⁻ のしきい値と太陽光球の連続不透明度 {#ex-19-5 .unnumbered}
@@ -389,9 +357,88 @@ $$
 
 **関連**：[§19.3 H⁻](#sec-continuum-bound-free)、[§19.5 Saha](#sec-continuum-saha)／恒星大気の振動数依存不透明度は[第15章 §15.3](../part6/15-non-blackbody.qmd#sec-non-blackbody-frequency-opacity)。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 19-5）
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 19-5）](#sol-19-5){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
 
+## 解答例 {#sec-continuum-micro-solutions .unnumbered}
+
+各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。
+
+::: {.content-visible when-format="html"}
+[問題 19-1](#sol-19-1){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 19-2](#sol-19-2){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 19-3](#sol-19-3){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 19-4](#sol-19-4){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 19-5](#sol-19-5){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
+
+::: {#sol-19-1 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-19-1-label"}
+::: {.offcanvas-header}
+[**解答例（問題 19-1）**]{#sol-19-1-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
+**(1)** $\tau_\nu\gg1$ で $1-e^{-\tau_\nu}\to1$ ゆえ $I_\nu\to B_\nu(T_e)$。電波帯 $h\nu\ll k_BT_e$ では $B_\nu\simeq2\nu^2k_BT_e/c^2\propto\nu^2$、よって $F_\nu\propto\nu^2$。観測される輝度温度は $T_b\to T_e$ に飽和する。
+
+**(2)** $\tau_\nu\ll1$ で $1-e^{-\tau_\nu}\simeq\tau_\nu\propto\nu^{-2.1}$。$F_\nu\propto\nu^2\cdot\nu^{-2.1}=\nu^{-0.1}$ でほぼ平坦。
+
+**(3)** $\nu_t$ は $\tau_{\nu_t}\simeq1$ で決まり、$\tau_\nu\propto\mathrm{EM}\,\nu^{-2.1}T_e^{-1.35}$ なので、飽和値から $T_e$、$\nu_t$ から発光量度 $\mathrm{EM}=\int n_e^2 ds$（密度 × 経路長）が読める。
+
+**答え**：低 $\nu$ で $F_\nu\propto\nu^2$（$T_b\to T_e$）、高 $\nu$ で $\propto\nu^{-0.1}$。飽和から $T_e$、$\nu_t$ から $\mathrm{EM}$。
+:::
+:::
+
+::: {#sol-19-2 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-19-2-label"}
+::: {.offcanvas-header}
+[**解答例（問題 19-2）**]{#sol-19-2-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
+**(1)** $\lambda=hc/\chi_2=(1.24\times10^4\ \mathrm{eV\,\AA})/3.40\ \mathrm{eV}=3647$ Å。Balmer 端（$3646$ Å）に一致。
+
+**(2)** 恒星大気は背後に明るい連続光源（深層）があり、Balmer 端より青では $n=2$ からの光電離吸収（§19.3）で不透明度が跳ね上がるため、より浅い（冷たい）層しか見えず暗くなる＝吸収段差。星雲は背景連続光がなく、$n=2$ への再結合（§19.4）で出る自由-束縛放射そのものを見るため、しきい $3646$ Å の高振動数側に放出のジャンプが立つ。同じしきい値が幾何条件で吸収にも放出にも見える。
+
+**(3)** 再結合連続光の形（ジャンプ高さと裾の傾き）は電子の Maxwell 分布の温度を反映するので、$T_e$ に依存する。輝線比とは独立な温度診断になる。
+
+**答え**：$3647$ Å。背景光ありで吸収段差、なしで再結合の放出ジャンプ。ジャンプ形が $T_e$ 依存。
+:::
+:::
+
+::: {#sol-19-3 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-19-3-label"}
+::: {.offcanvas-header}
+[**解答例（問題 19-3）**]{#sol-19-3-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
+**(1)** Milne 関係 $\sigma_{\mathrm{rec}}\propto (h\nu)^2 v^{-2}\sigma_{\mathrm{bf}}$ で、しきい近傍 $h\nu\simeq\chi_n$（定数）とすれば $\sigma_{\mathrm{rec}}\propto v^{-2}\sigma_{\mathrm{bf}}(\nu_{\mathrm{th}})$。
+
+**(2)** $\sigma_{\mathrm{rec}}v\propto v^{-2}\cdot v=v^{-1}$。Maxwell 平均 $\langle v^{-1}\rangle=\int v^{-1}f(v)dv$ は $f(v)\propto v^2 e^{-m_ev^2/2k_BT}$ で、変数を $x=v/\sqrt{k_BT/m_e}$ にとると $\langle v^{-1}\rangle\propto(k_BT)^{-1/2}$。よって $\alpha_n(T)\propto T^{-1/2}$。
+
+**(3)** 高温では電子の典型速度が大きく、イオンの近くを速く通り過ぎて捕まりにくい（相互作用時間が短い）ため、再結合係数が小さくなる。
+
+**答え**：$\sigma_{\mathrm{rec}}\propto v^{-2}\sigma_{\mathrm{bf}}$、$\alpha_n\propto T^{-1/2}$。高温ほど速く通り過ぎ捕まりにくい。
+:::
+:::
+
+::: {#sol-19-4 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-19-4-label"}
+::: {.offcanvas-header}
+[**解答例（問題 19-4）**]{#sol-19-4-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
+**(1)** カットオフは $h\nu\sim k_BT_e$ で効く。$k_BT_e\sim8$ keV $\Rightarrow T_e\sim8\times10^3\,\mathrm{eV}/(8.617\times10^{-5}\,\mathrm{eV/K})\simeq9\times10^7$ K。
+
+**(2)** $9\times10^7$ K は $10^7$〜$10^8$ K の範囲。これだけ高温だと熱的制動放射のピークが X 線帯に来るので、銀河団ガスは X 線で明るく光る。
+
+**(3)** 電波 HII 領域は低 $\nu$ で **光学的に厚く** 黒体に漸近するが、銀河団 X 線は高温・希薄で全帯域 **光学的に薄い** ため、放射率の形（指数カットオフ）がそのまま観測される。同じ熱的自由-自由でも光学的厚さで見え方が変わる。
+
+**答え**：$T_e\sim9\times10^7$ K（$10^7$〜$10^8$ K）。高温ゆえ X 線で光る。電波は厚い／X 線は薄いの違い。
+:::
+:::
+
+::: {#sol-19-5 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-19-5-label"}
+::: {.offcanvas-header}
+[**解答例（問題 19-5）**]{#sol-19-5-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
 **(1)** $\lambda_{\mathrm{th}}=1.24\times10^4\ \mathrm{eV\,\AA}/0.754\ \mathrm{eV}=1.64\times10^4$ Å $=1.64\ \mu$m。
 
 **(2)** $1.64\ \mu$m より短い可視〜近赤外の全域で H⁻ の光電離吸収が効く（ピーク $\sim0.85\ \mu$m）。中性 H の束縛-自由端は紫外（Lyman/Balmer）にしかないので可視を説明できないが、H⁻ が可視連続不透明度を担うため光球は可視で不透明になる。さらに長波長では H⁻ 自由-自由が続く。
@@ -399,6 +446,7 @@ $$
 **(3)** H⁻ には (i) 素材の中性 H と (ii) 余分な電子の供給源（自由電子）が要る。低温星では水素はほとんど中性で豊富、自由電子は電離ポテンシャルの低い金属の電離が供給する。高温星では水素が電離して中性 H が枯れ、H⁻ も作れない（自由電子は豊富でも素材がない）。よって主役は H・He の束縛-自由／自由-自由と電子散乱に移る。
 
 **答え**：$1.64\ \mu$m。H⁻ が可視連続不透明度を担う。低温星は中性 H 豊富＋金属由来電子で H⁻ が効くが、高温星は H 電離で素材が枯れる。
+:::
 :::
 
 ## さらに学ぶための参考文献 {#sec-continuum-micro-further .unnumbered}

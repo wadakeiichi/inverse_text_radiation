@@ -258,7 +258,7 @@ $$ {#eq-zeeman-energy}
 
 ## 演習問題 {#sec-line-shape-exercises .unnumbered}
 
-以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。
+以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **解答例** は章末「解答例」にまとめてある（オンライン版では各問のボタンから開く）。まず自力で解いてから開くこと。
 
 ### 問題 23-1　Doppler 幅 ― 熱運動の Gaussian {#ex-23-1 .unnumbered}
 
@@ -272,16 +272,8 @@ $$ {#eq-zeeman-energy}
 
 **関連**：[§23.2 Doppler 拡がり](#sec-line-shape-doppler)／Maxwell 分布は[第III部 演習](../part3/07-statistical-mechanics.qmd)、マクロ速度場は[§23.5](#sec-line-shape-macro)（[演習 23-4](#ex-23-4)）。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 23-1）
-
-**(1)** $\Delta v_D=\sqrt{2k_BT/m_p}=\sqrt{2\times1.381\times10^{-23}\times10^4/1.67\times10^{-27}}=\sqrt{1.654\times10^8}=1.29\times10^4$ m/s $=12.9$ km/s。
-
-**(2)** FWHM $=2\sqrt{\ln2}\times12.9=2\times0.833\times12.9=21.4$ km/s。
-
-**(3)** $\Delta\nu_D\propto1/\sqrt{m}$ ゆえ鉄は $\sqrt{56}\simeq7.5$ 倍狭い。観測で「重い元素の線ほど狭い」なら熱的拡がりが支配（質量依存）。一方、乱流・自転などマクロ速度場は元素質量に依らないので、異なる質量の元素の線幅を比べると、熱的成分と非熱的（質量無依存）成分を分離できる。
-
-**答え**：$\Delta v_D=12.9$ km/s、FWHM $=21.4$ km/s。鉄は $\sqrt{56}\simeq7.5$ 倍狭い。質量依存性で熱的と乱流を分離。
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 23-1）](#sol-23-1){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
 :::
 
 ### 問題 23-2　自然幅 ― 寿命から Lorentzian {#ex-23-2 .unnumbered}
@@ -296,16 +288,8 @@ $$ {#eq-zeeman-energy}
 
 **関連**：[§23.1 自然幅](#sec-line-shape-natural)／$A_{ul}$ と自然幅は[演習 11-4](../part4/11-einstein-method.qmd#ex-11-4)、真空揺らぎとの関係は[§26.4](../part8/26-qed-minimum.qmd#sec-qed-minimum-natural-width)（[第VIII部 演習](../part8/26-qed-minimum.qmd)）。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 23-2）
-
-**(1)** $\tau_u=1/A_{ul}=1/(6.27\times10^8)=1.6\times10^{-9}$ s（1.6 ns）。$\gamma_\mathrm{nat}=A_{ul}/(2\pi)=6.27\times10^8/6.283=9.98\times10^7\simeq10^8$ Hz。
-
-**(2)** $\Delta\lambda_\mathrm{nat}=\dfrac{\lambda^2 A_{ul}}{2\pi c}=\dfrac{(1.216\times10^{-7})^2\times6.27\times10^8}{2\pi\times3\times10^8}=\dfrac{1.479\times10^{-14}\times6.27\times10^8}{1.885\times10^9}=\dfrac{9.27\times10^{-6}}{1.885\times10^9}=4.9\times10^{-15}$ m $=4.9\times10^{-5}$ Å。✓
-
-**(3)** 線中心は Doppler の Gaussian コアが支配し（指数減衰で狭い）、自然幅 Lorentzian は埋もれる。しかし Lorentzian の翼は $1/(\Delta\nu)^2$ でべき的に緩く伸びるため、中心から十分離れた翼では Gaussian（$e^{-(\Delta\nu)^2}$）が先に消えて Lorentzian が浮かび上がる。よって自然幅は線翼（damping wing）で重要。
-
-**答え**：$\tau_u=1.6$ ns、$\gamma_\mathrm{nat}\simeq10^8$ Hz、$\Delta\lambda_\mathrm{nat}=4.9\times10^{-5}$ Å。Lorentzian 翼が $1/\Delta\nu^2$ で伸びるため翼で支配的。
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 23-2）](#sol-23-2){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
 :::
 
 ### 問題 23-3　Voigt プロファイル ― コアと翼を別プローブに {#ex-23-3 .unnumbered}
@@ -320,16 +304,8 @@ $$ {#eq-zeeman-energy}
 
 **関連**：[§23.4 Voigt プロファイル](#sec-line-shape-voigt)、[§23.3 衝突拡がり](#sec-line-shape-pressure)／恒星の $\log g$ 決定は[§23.3](#sec-line-shape-pressure)、curve of growth の減衰翼は[演習 21-3](../part7/21-line-formation.qmd#ex-21-3)。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 23-3）
-
-**(1)** コア（$|x|<3$ 程度）は Gaussian（Doppler）が支配。翼（$|x|\gg1$）は Lorentzian が支配。$|x|=5$ で Gaussian は $e^{-x^2}=e^{-25}\simeq1.4\times10^{-11}$ とほぼ消え、$1/x^2$ で緩く減衰する Lorentz 翼だけが残る。
-
-**(2)** コア：Doppler 幅 $\Delta\nu_D\propto\sqrt{T/m}$ から**温度**、中心シフトから**視線速度**。翼：Lorentzian 幅 $\gamma=$ 自然幅＋衝突幅で、衝突幅が**密度・圧力**に比例するので翼の形から**密度・圧力**。
-
-**(3)** コアは温度に、翼は密度・圧力に主に依存し、両者は線輪郭の異なる部分に別々に効く。観測されたコアと翼を同時にフィットすると、温度（コア幅）と密度（翼の広がり）を分離して独立に決められる。恒星の表面重力 $\log g$ は翼の解析から得られる。
-
-**答え**：コア＝Gaussian（温度・速度）、翼＝Lorentzian（密度・圧力）。$|x|>5$ で Gaussian は $10^{-11}$ に消え翼が浮かぶ。同時フィットで温度と密度を分離。
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 23-3）](#sol-23-3){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
 :::
 
 ### 問題 23-4　熱的幅と乱流の分離、Zeeman で磁場 {#ex-23-4 .unnumbered}
@@ -344,9 +320,72 @@ $$ {#eq-zeeman-energy}
 
 **関連**：[§23.5 マクロな速度場](#sec-line-shape-macro)、[§23.6 Zeeman 効果](#sec-line-shape-zeeman)／偏光は[演習 13-4](../part5/13-electromagnetic-waves.qmd#ex-13-4)。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 23-4）
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 23-4）](#sol-23-4){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
 
+## 解答例 {#sec-line-shape-solutions .unnumbered}
+
+各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。
+
+::: {.content-visible when-format="html"}
+[問題 23-1](#sol-23-1){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 23-2](#sol-23-2){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 23-3](#sol-23-3){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 23-4](#sol-23-4){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
+
+::: {#sol-23-1 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-23-1-label"}
+::: {.offcanvas-header}
+[**解答例（問題 23-1）**]{#sol-23-1-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
+**(1)** $\Delta v_D=\sqrt{2k_BT/m_p}=\sqrt{2\times1.381\times10^{-23}\times10^4/1.67\times10^{-27}}=\sqrt{1.654\times10^8}=1.29\times10^4$ m/s $=12.9$ km/s。
+
+**(2)** FWHM $=2\sqrt{\ln2}\times12.9=2\times0.833\times12.9=21.4$ km/s。
+
+**(3)** $\Delta\nu_D\propto1/\sqrt{m}$ ゆえ鉄は $\sqrt{56}\simeq7.5$ 倍狭い。観測で「重い元素の線ほど狭い」なら熱的拡がりが支配（質量依存）。一方、乱流・自転などマクロ速度場は元素質量に依らないので、異なる質量の元素の線幅を比べると、熱的成分と非熱的（質量無依存）成分を分離できる。
+
+**答え**：$\Delta v_D=12.9$ km/s、FWHM $=21.4$ km/s。鉄は $\sqrt{56}\simeq7.5$ 倍狭い。質量依存性で熱的と乱流を分離。
+:::
+:::
+
+::: {#sol-23-2 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-23-2-label"}
+::: {.offcanvas-header}
+[**解答例（問題 23-2）**]{#sol-23-2-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
+**(1)** $\tau_u=1/A_{ul}=1/(6.27\times10^8)=1.6\times10^{-9}$ s（1.6 ns）。$\gamma_\mathrm{nat}=A_{ul}/(2\pi)=6.27\times10^8/6.283=9.98\times10^7\simeq10^8$ Hz。
+
+**(2)** $\Delta\lambda_\mathrm{nat}=\dfrac{\lambda^2 A_{ul}}{2\pi c}=\dfrac{(1.216\times10^{-7})^2\times6.27\times10^8}{2\pi\times3\times10^8}=\dfrac{1.479\times10^{-14}\times6.27\times10^8}{1.885\times10^9}=\dfrac{9.27\times10^{-6}}{1.885\times10^9}=4.9\times10^{-15}$ m $=4.9\times10^{-5}$ Å。✓
+
+**(3)** 線中心は Doppler の Gaussian コアが支配し（指数減衰で狭い）、自然幅 Lorentzian は埋もれる。しかし Lorentzian の翼は $1/(\Delta\nu)^2$ でべき的に緩く伸びるため、中心から十分離れた翼では Gaussian（$e^{-(\Delta\nu)^2}$）が先に消えて Lorentzian が浮かび上がる。よって自然幅は線翼（damping wing）で重要。
+
+**答え**：$\tau_u=1.6$ ns、$\gamma_\mathrm{nat}\simeq10^8$ Hz、$\Delta\lambda_\mathrm{nat}=4.9\times10^{-5}$ Å。Lorentzian 翼が $1/\Delta\nu^2$ で伸びるため翼で支配的。
+:::
+:::
+
+::: {#sol-23-3 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-23-3-label"}
+::: {.offcanvas-header}
+[**解答例（問題 23-3）**]{#sol-23-3-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
+**(1)** コア（$|x|<3$ 程度）は Gaussian（Doppler）が支配。翼（$|x|\gg1$）は Lorentzian が支配。$|x|=5$ で Gaussian は $e^{-x^2}=e^{-25}\simeq1.4\times10^{-11}$ とほぼ消え、$1/x^2$ で緩く減衰する Lorentz 翼だけが残る。
+
+**(2)** コア：Doppler 幅 $\Delta\nu_D\propto\sqrt{T/m}$ から**温度**、中心シフトから**視線速度**。翼：Lorentzian 幅 $\gamma=$ 自然幅＋衝突幅で、衝突幅が**密度・圧力**に比例するので翼の形から**密度・圧力**。
+
+**(3)** コアは温度に、翼は密度・圧力に主に依存し、両者は線輪郭の異なる部分に別々に効く。観測されたコアと翼を同時にフィットすると、温度（コア幅）と密度（翼の広がり）を分離して独立に決められる。恒星の表面重力 $\log g$ は翼の解析から得られる。
+
+**答え**：コア＝Gaussian（温度・速度）、翼＝Lorentzian（密度・圧力）。$|x|>5$ で Gaussian は $10^{-11}$ に消え翼が浮かぶ。同時フィットで温度と密度を分離。
+:::
+:::
+
+::: {#sol-23-4 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-23-4-label"}
+::: {.offcanvas-header}
+[**解答例（問題 23-4）**]{#sol-23-4-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
 **(1)** 熱的 Doppler 幅は $\Delta v_\mathrm{th}\propto1/\sqrt m$ で重い元素ほど狭い。乱流は等方ランダム速度で元素質量に依らず一定。複数の元素（軽い H と重い Fe など）の線幅を測り、$\Delta v^2=\Delta v_\mathrm{th}^2(m)+\xi_\mathrm{turb}^2$ を質量に対してプロットすると、質量依存部分（熱的）と一定部分（乱流 $\xi_\mathrm{turb}$）に分離できる。
 
 **(2)** 速度場のスケールが光子の平均自由行程より**小さい**＝マイクロ乱流：線吸収係数 $\alpha_\nu$ 自体に織り込まれ、$\Delta\nu_D$ の単純拡張で扱える。**大きい**＝マクロ乱流：線形成は局所的に進み、最後に射出スペクトルへの畳み込みとして効く。扱う段階が違う。
@@ -354,6 +393,7 @@ $$ {#eq-zeeman-energy}
 **(3)** 磁場は放射スペクトルに直接の連続的痕跡を残しにくいが、Zeeman 効果は準位を $m_J$ に応じて分裂させ（分裂幅 $\propto B$）、円偏光・直線偏光を伴うので、線の分裂・偏光から磁場の強度と方向を直接測れる。例：太陽黒点（Fe I $\lambda$6173）、星形成領域（OH メーザー・CN 線）。
 
 **答え**：熱的（$\propto1/\sqrt m$）と乱流（質量無依存）は元素質量比較で分離。マイクロ/マクロは平均自由行程との大小で扱いが違う。Zeeman 分裂・偏光が磁場の直接手段（太陽黒点など）。
+:::
 :::
 
 ## さらに学ぶための参考文献 {#sec-line-shape-further .unnumbered}

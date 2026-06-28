@@ -312,7 +312,7 @@ $$ {#eq-wien-limit}
 
 ## 演習問題 {#sec-reading-spectra-exercises .unnumbered}
 
-以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから確認すると効果的である。
+以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **解答例** は章末「解答例」にまとめてある（オンライン版では各問のボタンから開く）。まず自力で解いてから確認すると効果的である。
 
 ### 問題 2-1　Bν から Bλ への変換とヤコビアン {#ex-2-1 .unnumbered}
 
@@ -326,9 +326,88 @@ $$ {#eq-wien-limit}
 
 **関連**：[§2.2 振動数表示と波長表示](#sec-reading-spectra-nu-lambda)／ピーク位置のずれは[演習 2-2](#ex-2-2)、比強度の定義は [第4章](../part2/04-radiation-field.qmd)。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 2-1）
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 2-1）](#sol-2-1){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
 
+### 問題 2-2　Wien 変位則の導出 ― 超越方程式と b の値 {#ex-2-2 .unnumbered}
+
+[★ 難易度：☆☆☆ ] [tag:導出補完]
+
+§2.3 は $\lambda_{\max}T=b\simeq2.898\times10^{-3}$ m·K を結果として与えた。$B_\lambda$ を最大化して導く。$x\equiv hc/\lambda kT$ とおく。
+
+1. $B_\lambda\propto\lambda^{-5}(e^{x}-1)^{-1}$ を $\lambda$ で微分してゼロとおき、$(5-x)e^{x}=5$、すなわち $x=5(1-e^{-x})$ を導け。
+2. 数値解 $x_{\max}\approx4.965$ を用いて $b=\dfrac{hc}{4.965\,k}$ を示し、数値を計算して $2.90\times10^{-3}$ m·K を確認せよ。
+3. 振動数表示のピークは $h\nu/kT\approx2.821$（§2.2、第10章の問題で導出）。なぜ $\lambda_{\max}\nu_{\max}\ne c$ となるのか、ヤコビアンの観点から説明せよ。
+
+**関連**：[§2.3 Wien の変位則](#sec-reading-spectra-wien)／振動数表示ピーク 2.821 の導出は[演習 10-4](../part4/10-planck-quantum.qmd#ex-10-4)、データ照合は[演習 1-1](../part1/01-where-blackbody.qmd#ex-1-1)。
+
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 2-2）](#sol-2-2){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
+
+### 問題 2-3　Fν=πBν ― 半球積分はなぜ 4π でなく π か {#ex-2-3 .unnumbered}
+
+[★ 難易度：☆☆ ] [tag:導出補完]
+
+§2.4 は黒体表面の射出フラックスが $F_\nu=\displaystyle\int_{\text{半球}}B_\nu\cos\theta\,d\Omega=\pi B_\nu$ になると述べ、立体角積分の値だけ示した。これを自分で実行する。
+
+1. 立体角要素 $d\Omega=\sin\theta\,d\theta\,d\varphi$ を使い、外向き半球（$0\le\theta\le\pi/2$）で $\displaystyle\int\cos\theta\,d\Omega$ を計算して $\pi$ を得よ。
+2. 「全立体角 $4\pi$」でも「半球 $2\pi$」でもなく $\pi$ になる理由を、（i）半球に限ること と（ii）$\cos\theta$ 射影、の二つに分けて説明せよ。
+3. もし $\cos\theta$ を落として $\int_{\text{半球}}B_\nu d\Omega$ としたら値はいくつか。なぜそれは物理的に正しくないか。
+
+**関連**：[§2.4 Stefan–Boltzmann 則](#sec-reading-spectra-stefan-boltzmann)／フラックスと比強度の正式な定義（$\cos\theta$ の由来）は [第4章 放射場](../part2/04-radiation-field.qmd)。
+
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 2-3）](#sol-2-3){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
+
+### 問題 2-4　Stefan–Boltzmann 定数 σ を基本定数で表す {#ex-2-4 .unnumbered}
+
+[★ 難易度：☆☆☆ ] [tag:導出補完]
+
+§2.4 は $\sigma$ の数値だけ与え、導出を第6・8章に委ねた。$F=\pi\displaystyle\int_0^\infty B_\nu\,d\nu$ から直接 $\sigma$ を基本定数で表す。
+
+1. $F=\pi\displaystyle\int_0^\infty\frac{2h\nu^3}{c^2}\frac{d\nu}{e^{h\nu/kT}-1}$ で $x=h\nu/kT$ と変数変換し、$F=\dfrac{2\pi k^4}{c^2h^3}T^4\displaystyle\int_0^\infty\frac{x^3}{e^x-1}dx$ を導け。
+2. $\displaystyle\int_0^\infty\frac{x^3}{e^x-1}dx=\frac{\pi^4}{15}$ を用いて $\sigma=\dfrac{2\pi^5 k^4}{15c^2h^3}$ を示し、SI で数値（$\approx5.67\times10^{-8}$ W m$^{-2}$K$^{-4}$）を確認せよ。
+3. 第IV部の問題で導いた放射定数 $a=\dfrac{8\pi^5k^4}{15c^3h^3}$ と、$\sigma=ac/4$ の関係を確かめよ。
+
+**関連**：[§2.4 Stefan–Boltzmann 則](#sec-reading-spectra-stefan-boltzmann)／$a=4\sigma/c$ と $a$ の導出は[演習 10-3](../part4/10-planck-quantum.qmd#ex-10-3)、本文 [§10.3](../part4/10-planck-quantum.qmd#sec-planck-quantum-derivation)。積分公式は [付録A 数学ノート](../appendix/A-math-notes.qmd)。
+
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 2-4）](#sol-2-4){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
+
+### 問題 2-5　観測データから太陽の温度・光度・半径を引き出す {#ex-2-5 .unnumbered}
+
+[★ 難易度：☆☆☆ ] [tag:理解を深める]
+
+§2.8 のワークフローを数値で実行する。観測量：ピーク波長 $\lambda_{\max}\simeq500$ nm、地球での太陽定数 $f\simeq1.36\times10^3$ W m$^{-2}$、距離 $d=1$ AU $=1.496\times10^{11}$ m。
+
+1. Wien の式（$b=2.898\times10^{-3}$ m·K）から有効温度 $T$ を求めよ。
+2. $L=4\pi d^2 f$ から太陽光度 $L_\odot$ を求めよ。
+3. Stefan–Boltzmann $L=4\pi R^2\sigma T^4$ を逆算して半径 $R_\odot=\sqrt{L/(4\pi\sigma T^4)}$ を求め、既知値（$R_\odot\simeq6.96\times10^8$ m）と比べよ。
+
+**関連**：[§2.8 観測データから推定](#sec-reading-spectra-estimation)／各道具は [§2.3](#sec-reading-spectra-wien)・[§2.4](#sec-reading-spectra-stefan-boltzmann)、$\sigma$ の導出は[演習 2-4](#ex-2-4)。
+
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 2-5）](#sol-2-5){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
+
+## 解答例 {#sec-reading-spectra-solutions .unnumbered}
+
+各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。
+
+::: {.content-visible when-format="html"}
+[問題 2-1](#sol-2-1){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 2-2](#sol-2-2){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 2-3](#sol-2-3){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 2-4](#sol-2-4){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 2-5](#sol-2-5){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
+
+::: {#sol-2-1 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-2-1-label"}
+::: {.offcanvas-header}
+[**解答例（問題 2-1）**]{#sol-2-1-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
 **(1)** $\nu=c/\lambda$ を微分して $d\nu=-(c/\lambda^2)d\lambda$。$\nu$ が増えると $\lambda$ が減るので負号がつく。物理量（エネルギー）は正なので、刻みの向きを合わせるために $B_\nu\,d\nu=-B_\lambda\,d\lambda$ と書く。これに $d\nu=-(c/\lambda^2)d\lambda$ を入れると
 
 $$
@@ -347,22 +426,14 @@ $$
 
 **答え**：$B_\lambda=B_\nu c/\lambda^2=\dfrac{2hc^2}{\lambda^5}\dfrac{1}{e^{hc/\lambda kT}-1}$。$\lambda^{-5}$ の「5」はヤコビアン $\lambda^{-2}$ が $\nu^3=\lambda^{-3}$ に掛かるため。
 :::
+:::
 
-### 問題 2-2　Wien 変位則の導出 ― 超越方程式と b の値 {#ex-2-2 .unnumbered}
-
-[★ 難易度：☆☆☆ ] [tag:導出補完]
-
-§2.3 は $\lambda_{\max}T=b\simeq2.898\times10^{-3}$ m·K を結果として与えた。$B_\lambda$ を最大化して導く。$x\equiv hc/\lambda kT$ とおく。
-
-1. $B_\lambda\propto\lambda^{-5}(e^{x}-1)^{-1}$ を $\lambda$ で微分してゼロとおき、$(5-x)e^{x}=5$、すなわち $x=5(1-e^{-x})$ を導け。
-2. 数値解 $x_{\max}\approx4.965$ を用いて $b=\dfrac{hc}{4.965\,k}$ を示し、数値を計算して $2.90\times10^{-3}$ m·K を確認せよ。
-3. 振動数表示のピークは $h\nu/kT\approx2.821$（§2.2、第10章の問題で導出）。なぜ $\lambda_{\max}\nu_{\max}\ne c$ となるのか、ヤコビアンの観点から説明せよ。
-
-**関連**：[§2.3 Wien の変位則](#sec-reading-spectra-wien)／振動数表示ピーク 2.821 の導出は[演習 10-4](../part4/10-planck-quantum.qmd#ex-10-4)、データ照合は[演習 1-1](../part1/01-where-blackbody.qmd#ex-1-1)。
-
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 2-2）
-
+::: {#sol-2-2 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-2-2-label"}
+::: {.offcanvas-header}
+[**解答例（問題 2-2）**]{#sol-2-2-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
 **(1)** $f(\lambda)=\lambda^{-5}(e^{x}-1)^{-1}$、$x=hc/\lambda kT$ なので $dx/d\lambda=-x/\lambda$。積の微分：
 
 $$
@@ -387,22 +458,14 @@ $$
 
 **答え**：$(5-x)e^x=5\Rightarrow x\approx4.965$、$b=hc/4.965k\approx2.90\times10^{-3}$ m·K。$\lambda_{\max}\nu_{\max}=0.568c\ne c$（ヤコビアンでピークがずれるため）。
 :::
+:::
 
-### 問題 2-3　Fν=πBν ― 半球積分はなぜ 4π でなく π か {#ex-2-3 .unnumbered}
-
-[★ 難易度：☆☆ ] [tag:導出補完]
-
-§2.4 は黒体表面の射出フラックスが $F_\nu=\displaystyle\int_{\text{半球}}B_\nu\cos\theta\,d\Omega=\pi B_\nu$ になると述べ、立体角積分の値だけ示した。これを自分で実行する。
-
-1. 立体角要素 $d\Omega=\sin\theta\,d\theta\,d\varphi$ を使い、外向き半球（$0\le\theta\le\pi/2$）で $\displaystyle\int\cos\theta\,d\Omega$ を計算して $\pi$ を得よ。
-2. 「全立体角 $4\pi$」でも「半球 $2\pi$」でもなく $\pi$ になる理由を、（i）半球に限ること と（ii）$\cos\theta$ 射影、の二つに分けて説明せよ。
-3. もし $\cos\theta$ を落として $\int_{\text{半球}}B_\nu d\Omega$ としたら値はいくつか。なぜそれは物理的に正しくないか。
-
-**関連**：[§2.4 Stefan–Boltzmann 則](#sec-reading-spectra-stefan-boltzmann)／フラックスと比強度の正式な定義（$\cos\theta$ の由来）は [第4章 放射場](../part2/04-radiation-field.qmd)。
-
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 2-3）
-
+::: {#sol-2-3 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-2-3-label"}
+::: {.offcanvas-header}
+[**解答例（問題 2-3）**]{#sol-2-3-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
 **(1)** 黒体は等方なので $B_\nu$ は方向に依らず積分の外へ：
 
 $$
@@ -417,22 +480,14 @@ $$
 
 **答え**：$\int_{\text{半球}}\cos\theta\,d\Omega=\pi$。半球に限る効果（$2\pi$）×$\cos\theta$ 射影の平均（$1/2$）＝$\pi$。$\cos\theta$ を落とすと $2\pi B_\nu$ となり射影を無視した誤り。
 :::
+:::
 
-### 問題 2-4　Stefan–Boltzmann 定数 σ を基本定数で表す {#ex-2-4 .unnumbered}
-
-[★ 難易度：☆☆☆ ] [tag:導出補完]
-
-§2.4 は $\sigma$ の数値だけ与え、導出を第6・8章に委ねた。$F=\pi\displaystyle\int_0^\infty B_\nu\,d\nu$ から直接 $\sigma$ を基本定数で表す。
-
-1. $F=\pi\displaystyle\int_0^\infty\frac{2h\nu^3}{c^2}\frac{d\nu}{e^{h\nu/kT}-1}$ で $x=h\nu/kT$ と変数変換し、$F=\dfrac{2\pi k^4}{c^2h^3}T^4\displaystyle\int_0^\infty\frac{x^3}{e^x-1}dx$ を導け。
-2. $\displaystyle\int_0^\infty\frac{x^3}{e^x-1}dx=\frac{\pi^4}{15}$ を用いて $\sigma=\dfrac{2\pi^5 k^4}{15c^2h^3}$ を示し、SI で数値（$\approx5.67\times10^{-8}$ W m$^{-2}$K$^{-4}$）を確認せよ。
-3. 第IV部の問題で導いた放射定数 $a=\dfrac{8\pi^5k^4}{15c^3h^3}$ と、$\sigma=ac/4$ の関係を確かめよ。
-
-**関連**：[§2.4 Stefan–Boltzmann 則](#sec-reading-spectra-stefan-boltzmann)／$a=4\sigma/c$ と $a$ の導出は[演習 10-3](../part4/10-planck-quantum.qmd#ex-10-3)、本文 [§10.3](../part4/10-planck-quantum.qmd#sec-planck-quantum-derivation)。積分公式は [付録A 数学ノート](../appendix/A-math-notes.qmd)。
-
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 2-4）
-
+::: {#sol-2-4 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-2-4-label"}
+::: {.offcanvas-header}
+[**解答例（問題 2-4）**]{#sol-2-4-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
 **(1)** $x=h\nu/kT$、$\nu=kTx/h$、$d\nu=(kT/h)dx$。前因子 $\dfrac{2h}{c^2}\nu^3=\dfrac{2h}{c^2}\left(\dfrac{kT}{h}\right)^3x^3$。$d\nu$ の $(kT/h)$ と合わせて
 
 $$
@@ -451,22 +506,14 @@ $$
 
 **答え**：$\sigma=\dfrac{2\pi^5k^4}{15c^2h^3}\approx5.67\times10^{-8}$ W m$^{-2}$K$^{-4}$。放射定数とは $\sigma=ac/4$。
 :::
+:::
 
-### 問題 2-5　観測データから太陽の温度・光度・半径を引き出す {#ex-2-5 .unnumbered}
-
-[★ 難易度：☆☆☆ ] [tag:理解を深める]
-
-§2.8 のワークフローを数値で実行する。観測量：ピーク波長 $\lambda_{\max}\simeq500$ nm、地球での太陽定数 $f\simeq1.36\times10^3$ W m$^{-2}$、距離 $d=1$ AU $=1.496\times10^{11}$ m。
-
-1. Wien の式（$b=2.898\times10^{-3}$ m·K）から有効温度 $T$ を求めよ。
-2. $L=4\pi d^2 f$ から太陽光度 $L_\odot$ を求めよ。
-3. Stefan–Boltzmann $L=4\pi R^2\sigma T^4$ を逆算して半径 $R_\odot=\sqrt{L/(4\pi\sigma T^4)}$ を求め、既知値（$R_\odot\simeq6.96\times10^8$ m）と比べよ。
-
-**関連**：[§2.8 観測データから推定](#sec-reading-spectra-estimation)／各道具は [§2.3](#sec-reading-spectra-wien)・[§2.4](#sec-reading-spectra-stefan-boltzmann)、$\sigma$ の導出は[演習 2-4](#ex-2-4)。
-
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 2-5）
-
+::: {#sol-2-5 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-2-5-label"}
+::: {.offcanvas-header}
+[**解答例（問題 2-5）**]{#sol-2-5-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
 **(1)** $T=b/\lambda_{\max}=2.898\times10^{-3}/5.00\times10^{-7}=5.80\times10^3$ K。（有効温度 $\simeq5800$ K）
 
 **(2)** $L=4\pi d^2 f=4\pi(1.496\times10^{11})^2\times1.36\times10^3$。$d^2=2.238\times10^{22}$、$4\pi d^2=2.812\times10^{23}$、$\times f=3.82\times10^{26}$ W。すなわち $L_\odot\simeq3.8\times10^{26}$ W（既知 $3.83\times10^{26}$ W と一致）。
@@ -480,6 +527,7 @@ $$
 既知値 $6.96\times10^8$ m とよく一致。観測量（ピーク波長・フラックス・距離）だけから太陽の物理量がプランク分布を介して再現できる。
 
 **答え**：$T\simeq5800$ K、$L_\odot\simeq3.8\times10^{26}$ W、$R_\odot\simeq6.9\times10^8$ m。いずれも実測とよく一致。
+:::
 :::
 
 ## さらに学ぶための参考文献 {#sec-reading-spectra-further .unnumbered}

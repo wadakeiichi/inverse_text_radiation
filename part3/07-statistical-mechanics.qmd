@@ -265,7 +265,7 @@ $$ {#eq-rj-classical}
 
 ## 演習問題 {#sec-statistical-mechanics-exercises .unnumbered}
 
-以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。
+以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **解答例** は章末「解答例」にまとめてある（オンライン版では各問のボタンから開く）。まず自力で解いてから開くこと。
 
 ### 問題 7-1　熱浴との接触から Boltzmann 確率を導く {#ex-7-1 .unnumbered}
 
@@ -279,22 +279,8 @@ $$ {#eq-rj-classical}
 
 **関連**：[§7.1 状態数と確率](#sec-statistical-mechanics-states)／温度の定義は[§6.3](../part3/06-thermal-equilibrium.qmd#sec-thermal-equilibrium-entropy)（[演習 6-2](../part3/06-thermal-equilibrium.qmd#ex-6-2)）。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 7-1）
-
-**(1)** 系が状態 $i$（エネルギー $E_i$）にあるとき、全体のミクロ状態数は熱浴の多重度 $\Omega_\mathrm{bath}(E_\mathrm{tot}-E_i)$ に等しい。等確率の原理から $P_i\propto\Omega_\mathrm{bath}(E_\mathrm{tot}-E_i)=e^{S_\mathrm{bath}(E_\mathrm{tot}-E_i)/k_B}$。
-
-**(2)** $E_i\ll E_\mathrm{tot}$ で Taylor 展開：
-
-$$
-S_\mathrm{bath}(E_\mathrm{tot}-E_i)\simeq S_\mathrm{bath}(E_\mathrm{tot})-E_i\frac{\partial S_\mathrm{bath}}{\partial E}=S_\mathrm{bath}(E_\mathrm{tot})-\frac{E_i}{T}.
-$$
-
-よって $P_i\propto e^{S_\mathrm{bath}(E_\mathrm{tot})/k_B}e^{-E_i/k_BT}\propto e^{-E_i/k_BT}$。
-
-**(3)** $\sum_i P_i=1$ より $P_i=\dfrac{e^{-E_i/k_BT}}{\sum_j e^{-E_j/k_BT}}=\dfrac{e^{-E_i/k_BT}}{Z}$、$Z=\sum_j e^{-E_j/k_BT}$。
-
-**答え**：$P_i\propto\Omega_\mathrm{bath}(E_\mathrm{tot}-E_i)$ を1次展開し $1/T=\partial S/\partial E$ を使うと $P_i=e^{-E_i/k_BT}/Z$。
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 7-1）](#sol-7-1){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
 :::
 
 ### 問題 7-2　振動子の分配関数と、零点項が占有因子に効かないこと {#ex-7-2 .unnumbered}
@@ -309,9 +295,78 @@ $$
 
 **関連**：[§7.2 分配関数](#sec-statistical-mechanics-partition)／Planck の量子仮説からの導出は[§10.2](../part4/10-planck-quantum.qmd#sec-planck-quantum-oscillator)（[演習 10-1](../part4/10-planck-quantum.qmd#ex-10-1)）、零点エネルギーは[§12.2](../part4/12-quantum-foundations.qmd#sec-quantum-foundations-oscillator)。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 7-2）
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 7-2）](#sol-7-2){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
 
+### 問題 7-3　エネルギー揺らぎ (ΔE)²=kBT²Cv {#ex-7-3 .unnumbered}
+
+[★ 難易度：☆☆ ] [tag:導出補完]
+
+§7.4 は揺らぎの式を結果として与えた。分配関数から導く。$\beta=1/k_BT$。
+
+1. $\langle E\rangle=-\dfrac{\partial\ln Z}{\partial\beta}$、$\langle E^2\rangle=\dfrac{1}{Z}\dfrac{\partial^2 Z}{\partial\beta^2}$ を使い、$\langle(\Delta E)^2\rangle=\dfrac{\partial^2\ln Z}{\partial\beta^2}=-\dfrac{\partial\langle E\rangle}{\partial\beta}$ を示せ。
+2. $\dfrac{\partial}{\partial\beta}=-k_BT^2\dfrac{\partial}{\partial T}$ を使い、$\langle(\Delta E)^2\rangle=k_BT^2 C_V$ を導け（$C_V=\partial\langle E\rangle/\partial T$）。
+3. $\langle E\rangle\propto N$、$C_V\propto N$ から相対揺らぎ $\sqrt{\langle(\Delta E)^2\rangle}/\langle E\rangle\propto1/\sqrt N$ を示せ。
+
+**関連**：[§7.4 平均値と揺らぎ](#sec-statistical-mechanics-fluctuations)／多重度の揺らぎ幅は[演習 6-1](../part3/06-thermal-equilibrium.qmd#ex-6-1)、CMB スペクトル歪みは[第16章](../part6/16-cmb.qmd)。
+
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 7-3）](#sol-7-3){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
+
+### 問題 7-4　水素準位の Boltzmann 占有と Balmer 線の温度依存 {#ex-7-4 .unnumbered}
+
+[★ 難易度：☆☆☆ ] [tag:理解を深める]
+
+§7.3 の Boltzmann 分布 $n_2/n_1=(g_2/g_1)e^{-(E_2-E_1)/k_BT}$ を水素に応用する。$E_n=-13.6/n^2$ eV、$g_n=2n^2$、$k_B=8.617\times10^{-5}$ eV/K。
+
+1. $n=1\to2$ の励起エネルギー $E_2-E_1$ と縮退度比 $g_2/g_1$ を求めよ。
+2. $T=5800$ K（太陽光球）と $T=10000$ K（A 型星）で占有数比 $n_2/n_1$ を計算し、何桁違うか述べよ。
+3. Balmer 線（$n=2$ から始まる可視吸収線）が低温の太陽で弱く、A 型星（$\sim10000$ K）で強くなる理由を述べよ。さらに高温では弱まる（電離が効く）ことに一言触れよ。
+
+**関連**：[§7.3 Boltzmann 分布](#sec-statistical-mechanics-boltzmann)／恒星の色と温度は[§1.3](../part1/01-where-blackbody.qmd#sec-where-blackbody-stars)、線強度からの温度推定は[第24章](../part7/24-line-applications.qmd)、原子準位は[第22章](../part7/22-atomic-physics.qmd)。
+
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 7-4）](#sol-7-4){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
+
+## 解答例 {#sec-statistical-mechanics-solutions .unnumbered}
+
+各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。
+
+::: {.content-visible when-format="html"}
+[問題 7-1](#sol-7-1){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 7-2](#sol-7-2){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 7-3](#sol-7-3){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 7-4](#sol-7-4){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
+
+::: {#sol-7-1 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-7-1-label"}
+::: {.offcanvas-header}
+[**解答例（問題 7-1）**]{#sol-7-1-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
+**(1)** 系が状態 $i$（エネルギー $E_i$）にあるとき、全体のミクロ状態数は熱浴の多重度 $\Omega_\mathrm{bath}(E_\mathrm{tot}-E_i)$ に等しい。等確率の原理から $P_i\propto\Omega_\mathrm{bath}(E_\mathrm{tot}-E_i)=e^{S_\mathrm{bath}(E_\mathrm{tot}-E_i)/k_B}$。
+
+**(2)** $E_i\ll E_\mathrm{tot}$ で Taylor 展開：
+
+$$
+S_\mathrm{bath}(E_\mathrm{tot}-E_i)\simeq S_\mathrm{bath}(E_\mathrm{tot})-E_i\frac{\partial S_\mathrm{bath}}{\partial E}=S_\mathrm{bath}(E_\mathrm{tot})-\frac{E_i}{T}.
+$$
+
+よって $P_i\propto e^{S_\mathrm{bath}(E_\mathrm{tot})/k_B}e^{-E_i/k_BT}\propto e^{-E_i/k_BT}$。
+
+**(3)** $\sum_i P_i=1$ より $P_i=\dfrac{e^{-E_i/k_BT}}{\sum_j e^{-E_j/k_BT}}=\dfrac{e^{-E_i/k_BT}}{Z}$、$Z=\sum_j e^{-E_j/k_BT}$。
+
+**答え**：$P_i\propto\Omega_\mathrm{bath}(E_\mathrm{tot}-E_i)$ を1次展開し $1/T=\partial S/\partial E$ を使うと $P_i=e^{-E_i/k_BT}/Z$。
+:::
+:::
+
+::: {#sol-7-2 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-7-2-label"}
+::: {.offcanvas-header}
+[**解答例（問題 7-2）**]{#sol-7-2-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
 **(1)** 共通因子 $e^{-\beta\hbar\omega/2}$ を括り出すと等比級数：
 
 $$
@@ -328,22 +383,14 @@ $$
 
 **答え**：$Z_1=e^{-\beta\hbar\omega/2}/(1-e^{-\beta\hbar\omega})$、$\langle\epsilon\rangle=\tfrac12\hbar\omega+\hbar\omega/(e^{\beta\hbar\omega}-1)$。零点項は定数ゆえ占有因子・比熱に効かず、$nh\nu$ と $(n+\tfrac12)\hbar\omega$ は同じスペクトル。
 :::
+:::
 
-### 問題 7-3　エネルギー揺らぎ (ΔE)²=kBT²Cv {#ex-7-3 .unnumbered}
-
-[★ 難易度：☆☆ ] [tag:導出補完]
-
-§7.4 は揺らぎの式を結果として与えた。分配関数から導く。$\beta=1/k_BT$。
-
-1. $\langle E\rangle=-\dfrac{\partial\ln Z}{\partial\beta}$、$\langle E^2\rangle=\dfrac{1}{Z}\dfrac{\partial^2 Z}{\partial\beta^2}$ を使い、$\langle(\Delta E)^2\rangle=\dfrac{\partial^2\ln Z}{\partial\beta^2}=-\dfrac{\partial\langle E\rangle}{\partial\beta}$ を示せ。
-2. $\dfrac{\partial}{\partial\beta}=-k_BT^2\dfrac{\partial}{\partial T}$ を使い、$\langle(\Delta E)^2\rangle=k_BT^2 C_V$ を導け（$C_V=\partial\langle E\rangle/\partial T$）。
-3. $\langle E\rangle\propto N$、$C_V\propto N$ から相対揺らぎ $\sqrt{\langle(\Delta E)^2\rangle}/\langle E\rangle\propto1/\sqrt N$ を示せ。
-
-**関連**：[§7.4 平均値と揺らぎ](#sec-statistical-mechanics-fluctuations)／多重度の揺らぎ幅は[演習 6-1](../part3/06-thermal-equilibrium.qmd#ex-6-1)、CMB スペクトル歪みは[第16章](../part6/16-cmb.qmd)。
-
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 7-3）
-
+::: {#sol-7-3 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-7-3-label"}
+::: {.offcanvas-header}
+[**解答例（問題 7-3）**]{#sol-7-3-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
 **(1)** $\langle E^2\rangle-\langle E\rangle^2$ を計算する。$\langle E\rangle=-\partial_\beta\ln Z=-\dfrac{1}{Z}\partial_\beta Z$。もう一度微分：
 
 $$
@@ -362,22 +409,14 @@ $$
 
 **答え**：$\langle(\Delta E)^2\rangle=\partial^2\ln Z/\partial\beta^2=k_BT^2C_V$。相対揺らぎ $\propto1/\sqrt N$。
 :::
+:::
 
-### 問題 7-4　水素準位の Boltzmann 占有と Balmer 線の温度依存 {#ex-7-4 .unnumbered}
-
-[★ 難易度：☆☆☆ ] [tag:理解を深める]
-
-§7.3 の Boltzmann 分布 $n_2/n_1=(g_2/g_1)e^{-(E_2-E_1)/k_BT}$ を水素に応用する。$E_n=-13.6/n^2$ eV、$g_n=2n^2$、$k_B=8.617\times10^{-5}$ eV/K。
-
-1. $n=1\to2$ の励起エネルギー $E_2-E_1$ と縮退度比 $g_2/g_1$ を求めよ。
-2. $T=5800$ K（太陽光球）と $T=10000$ K（A 型星）で占有数比 $n_2/n_1$ を計算し、何桁違うか述べよ。
-3. Balmer 線（$n=2$ から始まる可視吸収線）が低温の太陽で弱く、A 型星（$\sim10000$ K）で強くなる理由を述べよ。さらに高温では弱まる（電離が効く）ことに一言触れよ。
-
-**関連**：[§7.3 Boltzmann 分布](#sec-statistical-mechanics-boltzmann)／恒星の色と温度は[§1.3](../part1/01-where-blackbody.qmd#sec-where-blackbody-stars)、線強度からの温度推定は[第24章](../part7/24-line-applications.qmd)、原子準位は[第22章](../part7/22-atomic-physics.qmd)。
-
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 7-4）
-
+::: {#sol-7-4 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-7-4-label"}
+::: {.offcanvas-header}
+[**解答例（問題 7-4）**]{#sol-7-4-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
 **(1)** $E_2-E_1=-13.6/4-(-13.6/1)=-3.4+13.6=10.2$ eV。$g_2/g_1=2\cdot2^2/(2\cdot1^2)=8/2=4$。
 
 **(2)** $T=5800$ K：$k_BT=8.617\times10^{-5}\times5800=0.500$ eV。指数 $-10.2/0.500=-20.4$、$e^{-20.4}=1.37\times10^{-9}$。$n_2/n_1=4\times1.37\times10^{-9}\approx5.5\times10^{-9}$。
@@ -387,6 +426,7 @@ $T=10000$ K：$k_BT=0.862$ eV。指数 $-10.2/0.862=-11.8$、$e^{-11.8}=7.2\time
 **(3)** Balmer 線は $n=2$ にいる原子が吸収して生じる。太陽（5800 K）では $n=2$ の占有が $\sim10^{-9}$ と極めて少なく、Balmer 線は弱い。A 型星（$\sim10000$ K）では $n=2$ 占有が数千倍に増え、Balmer 線が最強になる。さらに高温（O・B 型）では水素が電離して中性水素自体が減り、Balmer 線は再び弱まる（電離は Saha 式、本問の Boltzmann だけでは表せない別効果）。
 
 **答え**：$E_2-E_1=10.2$ eV、$g_2/g_1=4$。$n_2/n_1\approx5.5\times10^{-9}$（5800 K）→$2.9\times10^{-5}$（10000 K）で約5300倍。Balmer 線は A 型で最強、さらに高温では電離で弱まる。
+:::
 :::
 
 ## さらに学ぶための参考文献 {#sec-statistical-mechanics-further .unnumbered}

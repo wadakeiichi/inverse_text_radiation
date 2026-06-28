@@ -355,7 +355,7 @@ $$
 
 ## 演習問題 {#sec-radiative-transfer-exercises .unnumbered}
 
-以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから確認すると効果的である。
+以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **解答例** は章末「解答例」にまとめてある（オンライン版では各問のボタンから開く）。まず自力で解いてから確認すると効果的である。
 
 ### 問題 5-1　放射輸送方程式の形式解を導く {#ex-5-1 .unnumbered}
 
@@ -369,9 +369,88 @@ $$
 
 **関連**：[§5.3 放射輸送方程式](#sec-radiative-transfer-equation)、[§5.2 光学的厚さ](#sec-radiative-transfer-optical-depth)。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 5-1）
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 5-1）](#sol-5-1){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
 
+### 問題 5-2　厚い極限と薄い極限を形式解から {#ex-5-2 .unnumbered}
+
+[★ 難易度：☆☆ ] [tag:導出補完]
+
+§5.6・5.7 は両極限を結果として示した。ソース関数 $S_\nu$ が経路上ほぼ一定の場合について、形式解（問題 5-1）から導け。
+
+1. 一定 $S_\nu$ で形式解の積分を実行し、$I_\nu(\tau)=I_\nu(0)e^{-\tau}+S_\nu(1-e^{-\tau})$ を示せ。
+2. 光学的に厚い極限 $\tau\gg1$ で $I_\nu\to S_\nu$ を導け。
+3. 光学的に薄い極限 $\tau\ll1$ で $I_\nu\approx I_\nu(0)+\tau(S_\nu-I_\nu(0))$ を導け（$e^{-\tau}\approx1-\tau$）。
+
+**関連**：[§5.6 光学的に厚い極限](#sec-radiative-transfer-thick)、[§5.7 光学的に薄い極限](#sec-radiative-transfer-thin)。
+
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 5-2）](#sol-5-2){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
+
+### 問題 5-3　吸収線か輝線か ― ソース関数と背景光の大小 {#ex-5-3 .unnumbered}
+
+[★ 難易度：☆☆ ] [tag:理解を深める]
+
+問題 5-2(3) の薄い極限 $I_\nu\approx I_\nu(0)+\tau_\nu(S_\nu-I_\nu(0))$ を使って、線が吸収で見えるか輝線で見えるかを論じる。線の中心 $\nu_0$ では $\alpha_\nu$ が大きく $\tau_\nu$ が局所的に増す。
+
+1. $S_\nu<I_\nu(0)$ のとき、線中心で $I_\nu$ は連続光より大きいか小さいか。これは吸収線・輝線のどちらか。
+2. $S_\nu>I_\nu(0)$（特に背景光 $I_\nu(0)\approx0$）のときはどうか。
+3. 太陽の Fraunhofer 吸収線（光球の外側ほど温度が下がる）と、HII 領域の輝線スペクトル（背景光なし）が、それぞれどちらの条件に対応するか述べよ。
+
+**関連**：[§5.4 ソース関数](#sec-radiative-transfer-source)、[§5.7 薄い極限（輝線天体）](#sec-radiative-transfer-thin)／太陽の連続+線の二重構造は[§1.2](../part1/01-where-blackbody.qmd#sec-where-blackbody-sun)、線スペクトルは[第21章](../part7/21-line-formation.qmd)。
+
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 5-3）](#sol-5-3){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
+
+### 問題 5-4　τ がほぼ 1 の層はなぜ「光球（見える表面）」か {#ex-5-4 .unnumbered}
+
+[★ 難易度：☆☆ ] [tag:理解を深める]
+
+§5.2・5.6 は「太陽の表面とは可視光で $\tau\sim1$ の深さ」と述べた。形式解の重み付けから理由を考える。
+
+1. 外向きに観測する場合、形式解の第二項の重み $e^{-(\tau_\nu-\tau')}$ は $\tau'$ がどの辺りで最大か。なぜ「観測点から光学的厚さ約1の深さ」が実効的な放出層になるか述べよ。
+2. 平均自由行程 $\ell_\mathrm{mfp}=1/\alpha_\nu$ を使い、「$\tau\sim1$ は光が散乱・吸収されずに脱出できる最後の深さ」という描像で (1) を言い換えよ。
+3. 温度が深さとともに上がる恒星大気で、$\tau\sim1$ の層が LTE なら観測スペクトルが $B_\nu(T(\tau\!\sim\!1))$ に近づく理由を、問題 5-2(2) と結びつけて述べよ。
+
+**関連**：[§5.2 光学的厚さ](#sec-radiative-transfer-optical-depth)、[§5.6 厚い極限](#sec-radiative-transfer-thick)／太陽光球が黒体に近い理由は[§3.6](../part1/03-universality.qmd#sec-universality-real-objects)（[演習 3-4](../part1/03-universality.qmd#ex-3-4)）。
+
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 5-4）](#sol-5-4){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
+
+### 問題 5-5　LTE で Sν=Bν ― 放射場は黒体でなくてよい {#ex-5-5 .unnumbered}
+
+[★ 難易度：☆☆☆ ] [tag:理解を深める]
+
+§5.5 の微妙な点を整理する。LTE は「物質の状態が局所温度 $T$ だけで決まる」近似であって、放射場 $J_\nu$ が黒体である必要は含まない。
+
+1. Kirchhoff の法則が「比 $j_\nu/\alpha_\nu$ を物質の局所温度 $T$ だけの関数（$=B_\nu(T)$）にする」ことを使って、$J_\nu\ne B_\nu$ でも LTE なら $S_\nu=B_\nu(T)$ となる理由を述べよ。
+2. 「LTE」と「完全熱平衡」の違いを、（物質の状態）と（放射場の状態）の二つの観点で述べよ。
+3. 統計平衡方程式に放射場 $J_\nu$ が入る（誘導吸収・放出 $B_{lu}J_\nu, B_{ul}J_\nu$）と、なぜ占有数に「非局所性」が入るのか。逆に「熱化深さ」より深いとなぜ実質 LTE に戻るのか述べよ。
+
+**関連**：[§5.5 LTE と non-LTE](#sec-radiative-transfer-lte)／Kirchhoff とソース関数は[§3.5](../part1/03-universality.qmd#sec-universality-kirchhoff)（[演習 3-3](../part1/03-universality.qmd#ex-3-3)）、完全熱平衡は[第6章](../part3/06-thermal-equilibrium.qmd)、統計平衡と Einstein 係数は[演習 11-1](../part4/11-einstein-method.qmd#ex-11-1)。
+
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 5-5）](#sol-5-5){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
+
+## 解答例 {#sec-radiative-transfer-solutions .unnumbered}
+
+各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。
+
+::: {.content-visible when-format="html"}
+[問題 5-1](#sol-5-1){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 5-2](#sol-5-2){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 5-3](#sol-5-3){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 5-4](#sol-5-4){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 5-5](#sol-5-5){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
+
+::: {#sol-5-1 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-5-1-label"}
+::: {.offcanvas-header}
+[**解答例（問題 5-1）**]{#sol-5-1-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
 **(1)** 両辺に $e^{\tau_\nu}$ を掛ける：$e^{\tau_\nu}\dfrac{dI_\nu}{d\tau_\nu}+e^{\tau_\nu}I_\nu=e^{\tau_\nu}S_\nu$。左辺は積の微分でまとまる：
 
 $$
@@ -394,22 +473,14 @@ $$
 
 **答え**：積分因子 $e^{\tau}$ で $\frac{d}{d\tau}(Ie^\tau)=Se^\tau$、積分して形式解。第一項＝初期光の減衰、第二項＝放出の減衰付き積算。
 :::
+:::
 
-### 問題 5-2　厚い極限と薄い極限を形式解から {#ex-5-2 .unnumbered}
-
-[★ 難易度：☆☆ ] [tag:導出補完]
-
-§5.6・5.7 は両極限を結果として示した。ソース関数 $S_\nu$ が経路上ほぼ一定の場合について、形式解（問題 5-1）から導け。
-
-1. 一定 $S_\nu$ で形式解の積分を実行し、$I_\nu(\tau)=I_\nu(0)e^{-\tau}+S_\nu(1-e^{-\tau})$ を示せ。
-2. 光学的に厚い極限 $\tau\gg1$ で $I_\nu\to S_\nu$ を導け。
-3. 光学的に薄い極限 $\tau\ll1$ で $I_\nu\approx I_\nu(0)+\tau(S_\nu-I_\nu(0))$ を導け（$e^{-\tau}\approx1-\tau$）。
-
-**関連**：[§5.6 光学的に厚い極限](#sec-radiative-transfer-thick)、[§5.7 光学的に薄い極限](#sec-radiative-transfer-thin)。
-
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 5-2）
-
+::: {#sol-5-2 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-5-2-label"}
+::: {.offcanvas-header}
+[**解答例（問題 5-2）**]{#sol-5-2-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
 **(1)** $S_\nu$ 一定なら積分は
 
 $$
@@ -428,22 +499,14 @@ $$
 
 **答え**：$I_\nu=I_\nu(0)e^{-\tau}+S_\nu(1-e^{-\tau})$。厚い→$S_\nu$、薄い→$I_\nu(0)+\tau(S_\nu-I_\nu(0))$。
 :::
+:::
 
-### 問題 5-3　吸収線か輝線か ― ソース関数と背景光の大小 {#ex-5-3 .unnumbered}
-
-[★ 難易度：☆☆ ] [tag:理解を深める]
-
-問題 5-2(3) の薄い極限 $I_\nu\approx I_\nu(0)+\tau_\nu(S_\nu-I_\nu(0))$ を使って、線が吸収で見えるか輝線で見えるかを論じる。線の中心 $\nu_0$ では $\alpha_\nu$ が大きく $\tau_\nu$ が局所的に増す。
-
-1. $S_\nu<I_\nu(0)$ のとき、線中心で $I_\nu$ は連続光より大きいか小さいか。これは吸収線・輝線のどちらか。
-2. $S_\nu>I_\nu(0)$（特に背景光 $I_\nu(0)\approx0$）のときはどうか。
-3. 太陽の Fraunhofer 吸収線（光球の外側ほど温度が下がる）と、HII 領域の輝線スペクトル（背景光なし）が、それぞれどちらの条件に対応するか述べよ。
-
-**関連**：[§5.4 ソース関数](#sec-radiative-transfer-source)、[§5.7 薄い極限（輝線天体）](#sec-radiative-transfer-thin)／太陽の連続+線の二重構造は[§1.2](../part1/01-where-blackbody.qmd#sec-where-blackbody-sun)、線スペクトルは[第21章](../part7/21-line-formation.qmd)。
-
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 5-3）
-
+::: {#sol-5-3 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-5-3-label"}
+::: {.offcanvas-header}
+[**解答例（問題 5-3）**]{#sol-5-3-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
 **(1)** $S_\nu<I_\nu(0)$ なら $S_\nu-I_\nu(0)<0$。線中心で $\tau_\nu$ が大きいほど $I_\nu=I_\nu(0)+\tau_\nu(S_\nu-I_\nu(0))$ は連続光 $I_\nu(0)$ より **小さく** なる。すなわち連続光を背景にした **吸収線** として見える。
 
 **(2)** $S_\nu>I_\nu(0)$ なら $S_\nu-I_\nu(0)>0$。線中心で $I_\nu$ は背景より **大きく**、**輝線** になる。特に背景光がない（$I_\nu(0)\approx0$）と $I_\nu\approx\tau_\nu S_\nu$ で、線中心だけ明るい純粋な輝線スペクトルになる。
@@ -452,22 +515,14 @@ $$
 
 **答え**：$S_\nu<I_\nu(0)$→吸収線、$S_\nu>I_\nu(0)$→輝線。太陽 Fraunhofer＝前者、HII 領域＝後者。
 :::
+:::
 
-### 問題 5-4　τ がほぼ 1 の層はなぜ「光球（見える表面）」か {#ex-5-4 .unnumbered}
-
-[★ 難易度：☆☆ ] [tag:理解を深める]
-
-§5.2・5.6 は「太陽の表面とは可視光で $\tau\sim1$ の深さ」と述べた。形式解の重み付けから理由を考える。
-
-1. 外向きに観測する場合、形式解の第二項の重み $e^{-(\tau_\nu-\tau')}$ は $\tau'$ がどの辺りで最大か。なぜ「観測点から光学的厚さ約1の深さ」が実効的な放出層になるか述べよ。
-2. 平均自由行程 $\ell_\mathrm{mfp}=1/\alpha_\nu$ を使い、「$\tau\sim1$ は光が散乱・吸収されずに脱出できる最後の深さ」という描像で (1) を言い換えよ。
-3. 温度が深さとともに上がる恒星大気で、$\tau\sim1$ の層が LTE なら観測スペクトルが $B_\nu(T(\tau\!\sim\!1))$ に近づく理由を、問題 5-2(2) と結びつけて述べよ。
-
-**関連**：[§5.2 光学的厚さ](#sec-radiative-transfer-optical-depth)、[§5.6 厚い極限](#sec-radiative-transfer-thick)／太陽光球が黒体に近い理由は[§3.6](../part1/03-universality.qmd#sec-universality-real-objects)（[演習 3-4](../part1/03-universality.qmd#ex-3-4)）。
-
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 5-4）
-
+::: {#sol-5-4 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-5-4-label"}
+::: {.offcanvas-header}
+[**解答例（問題 5-4）**]{#sol-5-4-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
 **(1)** 観測点（$\tau_\nu=0$ を外側にとる座標で考えると）に届く放出の重みは $e^{-(\tau_\nu-\tau')}$ で、観測点から光学的厚さが約1以内の層（$\tau\lesssim1$）からの寄与が支配的。それより深い層の光は手前の吸収 $e^{-\tau}$ で強く減衰して届かない。だから「観測点から $\tau\sim1$ の深さ」が実効的な放出層＝「見える表面」になる。
 
 **(2)** $\ell_\mathrm{mfp}=1/\alpha_\nu$ は光が一回吸収・散乱されずに進める距離。$\tau\sim1$ は観測点から測って平均自由行程ほぼ1回分の深さで、そこから出た光子はもう吸収されずに脱出できる。それより深い光子は途中で吸収・再放出され「直接は見えない」。よって $\tau\sim1$ が脱出できる最後の深さ＝光球。
@@ -476,22 +531,14 @@ $$
 
 **答え**：重み $e^{-(\tau-\tau')}$ ゆえ $\tau\sim1$ 層が実効放出層＝脱出できる最後の深さ＝光球。そこが LTE＋厚いので $I_\nu\to B_\nu(T(\tau\!\sim\!1))$。
 :::
+:::
 
-### 問題 5-5　LTE で Sν=Bν ― 放射場は黒体でなくてよい {#ex-5-5 .unnumbered}
-
-[★ 難易度：☆☆☆ ] [tag:理解を深める]
-
-§5.5 の微妙な点を整理する。LTE は「物質の状態が局所温度 $T$ だけで決まる」近似であって、放射場 $J_\nu$ が黒体である必要は含まない。
-
-1. Kirchhoff の法則が「比 $j_\nu/\alpha_\nu$ を物質の局所温度 $T$ だけの関数（$=B_\nu(T)$）にする」ことを使って、$J_\nu\ne B_\nu$ でも LTE なら $S_\nu=B_\nu(T)$ となる理由を述べよ。
-2. 「LTE」と「完全熱平衡」の違いを、（物質の状態）と（放射場の状態）の二つの観点で述べよ。
-3. 統計平衡方程式に放射場 $J_\nu$ が入る（誘導吸収・放出 $B_{lu}J_\nu, B_{ul}J_\nu$）と、なぜ占有数に「非局所性」が入るのか。逆に「熱化深さ」より深いとなぜ実質 LTE に戻るのか述べよ。
-
-**関連**：[§5.5 LTE と non-LTE](#sec-radiative-transfer-lte)／Kirchhoff とソース関数は[§3.5](../part1/03-universality.qmd#sec-universality-kirchhoff)（[演習 3-3](../part1/03-universality.qmd#ex-3-3)）、完全熱平衡は[第6章](../part3/06-thermal-equilibrium.qmd)、統計平衡と Einstein 係数は[演習 11-1](../part4/11-einstein-method.qmd#ex-11-1)。
-
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 5-5）
-
+::: {#sol-5-5 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-5-5-label"}
+::: {.offcanvas-header}
+[**解答例（問題 5-5）**]{#sol-5-5-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
 **(1)** ソース関数は $S_\nu=j_\nu/\alpha_\nu$。Kirchhoff の法則により、物質が局所温度 $T$ で熱化していれば、放出と吸収の比 $j_\nu/\alpha_\nu$ は **その物質の温度 $T$ だけの関数** $B_\nu(T)$ になる。$j_\nu$ も $\alpha_\nu$ も局所占有数（Boltzmann 分布、局所 $T$）で決まり、その比は周囲の放射場 $J_\nu$ に依らない。だから $J_\nu$ が異方的でも $J_\nu\ne B_\nu$ でも、物質さえ LTE なら $S_\nu=B_\nu(T)$。
 
 **(2)** LTE：**物質** の速度分布・電離・励起が局所 $T$ で決まる（Maxwell・Saha・Boltzmann）。放射場 $J_\nu$ は黒体でも等方でもなくてよい。完全熱平衡：**物質も放射場も両方** が同一温度で平衡（$J_\nu=B_\nu$ かつ等方、$F_\nu=0$）。LTE は物質だけの条件、完全熱平衡は放射場まで含む強い条件。
@@ -499,6 +546,7 @@ $$
 **(3)** 誘導吸収・放出の率は $J_\nu$ に比例する。形式解が示すように $J_\nu(\mathbf r)$ は媒質全体の構造（経路上の温度・密度）を積分した非局所量。だから占有数を決める統計平衡方程式に $J_\nu$ が入ると、占有数＝媒質全体の関数となり非局所性が入る。一方「熱化深さ」より深い領域では放射場がその場で熱化し $J_\nu\to B_\nu(T_\mathrm{local})$ となるため、統計平衡の解も Boltzmann（局所値）に漸近し $S_\nu\to B_\nu(T_\mathrm{local})$、実質 LTE に戻る。non-LTE が観測に効くのは薄い領域や中程度 $\tau$ の上層大気。
 
 **答え**：Kirchhoff が $j/\alpha$ を局所 $T$ だけの関数にするので、放射場が黒体でなくても物質 LTE なら $S_\nu=B_\nu$。完全熱平衡は放射場まで黒体な強い条件。$J_\nu$ 経由で非局所性が入るが、熱化深さより深いと $J_\nu\to B_\nu$ で実質 LTE。
+:::
 :::
 
 ## さらに学ぶための参考文献 {#sec-radiative-transfer-further .unnumbered}

@@ -172,7 +172,7 @@ CMB は、中心地図プランク分布の **ずれ因子 $f_\text{dev}$ が事
 
 ## 演習問題 {#sec-cmb-exercises .unnumbered}
 
-以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。
+以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **解答例** は章末「解答例」にまとめてある（オンライン版では各問のボタンから開く）。まず自力で解いてから開くこと。
 
 ### 問題 16-1　なぜ宇宙膨張で黒体形が崩れないか ― T は 1/a に比例 {#ex-16-1 .unnumbered}
 
@@ -186,16 +186,8 @@ CMB は、中心地図プランク分布の **ずれ因子 $f_\text{dev}$ が事
 
 **関連**：[§16.4 宇宙膨張と温度](#sec-cmb-expansion)／Stefan-Boltzmann は[演習 10-3](../part4/10-planck-quantum.qmd#ex-10-3)、光子数密度 $\propto T^3$ は[演習 8-3](../part3/08-photon-statistics.qmd#ex-8-3)。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 16-1）
-
-**(1)** 膨張で各モードの振動数は $\nu\to\nu/a$。指数 $h\nu/k_BT$ が不変であるには、$\nu$ が $1/a$ で減るのと同じ割合で $T$ も減らねばならない：$T\propto1/a$。このとき各振動数で占有因子 $1/(e^{h\nu/k_BT}-1)$ が保たれ、スペクトル形（プランク分布）は温度だけが下がる形で保存される。
-
-**(2)** $u\propto T^4\propto(a^{-1})^4=a^{-4}$。
-
-**(3)** 光子数密度 $n_\gamma\propto T^3\propto a^{-3}$（体積膨張で薄まる）。1光子あたりのエネルギー $h\nu\propto a^{-1}$（赤方偏移）。積 $u=n_\gamma\cdot\langle h\nu\rangle\propto a^{-3}\cdot a^{-1}=a^{-4}$。物質（$\rho\propto a^{-3}$）より1段速く薄まるのが放射の特徴。
-
-**答え**：指数不変には $T\propto1/a$。すると $u\propto T^4\propto a^{-4}=a^{-3}$(数密度)×$a^{-1}$(光子エネルギー)。形は保たれ温度だけ下がる。
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 16-1）](#sol-16-1){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
 :::
 
 ### 問題 16-2　高赤方偏移の CMB 温度 {#ex-16-2 .unnumbered}
@@ -210,16 +202,8 @@ CMB は、中心地図プランク分布の **ずれ因子 $f_\text{dev}$ が事
 
 **関連**：[§16.4 宇宙膨張と温度](#sec-cmb-expansion)／Wien 則は[演習 2-2](../part1/02-reading-spectra.qmd#ex-2-2)。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 16-2）
-
-**(1)** $T_\mathrm{CMB}(3)=(1+3)\times2.725=4\times2.725=10.9$ K。
-
-**(2)** 現在 $z=0$：$\lambda_\mathrm{peak}=2.898\times10^{-3}/2.725=1.06\times10^{-3}$ m $=1.06$ mm（マイクロ波）。$z=3$：$\lambda_\mathrm{peak}=2.898\times10^{-3}/10.9=2.66\times10^{-4}$ m $=266\ \mu$m（遠赤外）。過去はピークが短波長側。比はちょうど $(1+z)=4$ 倍。
-
-**(3)** 高赤方偏移銀河中の原子・分子の励起温度（CMB 光子で励起される準位比から測る温度計）が $(1+z)T_0$ と一致することは、「過去ほど宇宙が熱かった」こと、すなわち $T\propto1/a$（膨張で冷える黒体）という標準宇宙論の予言の直接観測的確認になる。
-
-**答え**：$T(z=3)=10.9$ K。$\lambda_\mathrm{peak}$ は 1.06 mm→266 μm（$1+z=4$ 倍短く）。$T\propto1/a$ の直接確認。
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 16-2）](#sol-16-2){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
 :::
 
 ### 問題 16-3　熱化と再結合の区別 ― 「撮影時刻」と「黒体化」 {#ex-16-3 .unnumbered}
@@ -234,16 +218,8 @@ CMB は、中心地図プランク分布の **ずれ因子 $f_\text{dev}$ が事
 
 **関連**：[§16.2 熱化の三段階](#sec-cmb-thermalization)、[§16.3 再結合](#sec-cmb-recombination)／$\mu=0$ の物理は[演習 8-3](../part3/08-photon-statistics.qmd#ex-8-3)、第1章の動機は[§1.5](../part1/01-where-blackbody.qmd#sec-where-blackbody-cmb)（[演習 1-4](../part1/01-where-blackbody.qmd#ex-1-4)）。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 16-3）
-
-**(1)** 熱化：$z\gtrsim2\times10^6$ までに完了。放射のスペクトルを Planck 形（$\mu\to0$）に整える過程。再結合：$z\simeq1100$。電子と陽子が中性水素になり光が自由伝搬を始める（最終散乱＝CMB の「撮影時刻」）。前者が黒体スペクトルを作り、後者がそれを解放する。
-
-**(2)** 二重コンプトン散乱（$e^-+\gamma\to e^-+2\gamma$）と制動放射が光子数を変えられる。コンプトン散乱はエネルギー再分配のみで数を変えない。$\mu=0$（化学ポテンシャルゼロ＝光子数が自由に調整される）には光子数を増減できる過程が必要なので、二重コンプトン散乱が本質的。
-
-**(3)** $T_0=T_\mathrm{rec}/(1+z_\mathrm{rec})$ は $T\propto1/a$（$1+z=1/a$）という恒等式。元素組成が変わって再結合温度 $T_\mathrm{rec}$ が変われば、それに応じて $z_\mathrm{rec}$ も変わり、比 $T_\mathrm{rec}/(1+z_\mathrm{rec})=T_0$ は恒等的に保たれる。$T_0$ を実際に決めるのは光子数密度の歴史（バリオン-光子比など）で、再結合の詳細は最終散乱面の位置だけを左右する。
-
-**答え**：熱化（$z\gtrsim2\times10^6$、黒体化）と再結合（$z\simeq1100$、撮影）は別過程。二重コンプトンが光子数を変え $\mu=0$ を作る。$T_0$ は $T\propto1/a$ の恒等式ゆえ再結合温度に依らない。
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 16-3）](#sol-16-3){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
 :::
 
 ### 問題 16-4　μ 歪みと y 歪み ― いつの何を見るか {#ex-16-4 .unnumbered}
@@ -258,9 +234,72 @@ CMB は、中心地図プランク分布の **ずれ因子 $f_\text{dev}$ が事
 
 **関連**：[§16.5 スペクトル歪み](#sec-cmb-distortions)／コンプトン化の同じ物理は[§18.3](../part6/18-accretion-high-energy.qmd#sec-comptonization)（[演習 18-2](../part6/18-accretion-high-energy.qmd#ex-18-2)）。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 16-4）
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 16-4）](#sol-16-4){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
 
+## 解答例 {#sec-cmb-solutions .unnumbered}
+
+各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。
+
+::: {.content-visible when-format="html"}
+[問題 16-1](#sol-16-1){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 16-2](#sol-16-2){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 16-3](#sol-16-3){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 16-4](#sol-16-4){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
+
+::: {#sol-16-1 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-16-1-label"}
+::: {.offcanvas-header}
+[**解答例（問題 16-1）**]{#sol-16-1-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
+**(1)** 膨張で各モードの振動数は $\nu\to\nu/a$。指数 $h\nu/k_BT$ が不変であるには、$\nu$ が $1/a$ で減るのと同じ割合で $T$ も減らねばならない：$T\propto1/a$。このとき各振動数で占有因子 $1/(e^{h\nu/k_BT}-1)$ が保たれ、スペクトル形（プランク分布）は温度だけが下がる形で保存される。
+
+**(2)** $u\propto T^4\propto(a^{-1})^4=a^{-4}$。
+
+**(3)** 光子数密度 $n_\gamma\propto T^3\propto a^{-3}$（体積膨張で薄まる）。1光子あたりのエネルギー $h\nu\propto a^{-1}$（赤方偏移）。積 $u=n_\gamma\cdot\langle h\nu\rangle\propto a^{-3}\cdot a^{-1}=a^{-4}$。物質（$\rho\propto a^{-3}$）より1段速く薄まるのが放射の特徴。
+
+**答え**：指数不変には $T\propto1/a$。すると $u\propto T^4\propto a^{-4}=a^{-3}$(数密度)×$a^{-1}$(光子エネルギー)。形は保たれ温度だけ下がる。
+:::
+:::
+
+::: {#sol-16-2 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-16-2-label"}
+::: {.offcanvas-header}
+[**解答例（問題 16-2）**]{#sol-16-2-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
+**(1)** $T_\mathrm{CMB}(3)=(1+3)\times2.725=4\times2.725=10.9$ K。
+
+**(2)** 現在 $z=0$：$\lambda_\mathrm{peak}=2.898\times10^{-3}/2.725=1.06\times10^{-3}$ m $=1.06$ mm（マイクロ波）。$z=3$：$\lambda_\mathrm{peak}=2.898\times10^{-3}/10.9=2.66\times10^{-4}$ m $=266\ \mu$m（遠赤外）。過去はピークが短波長側。比はちょうど $(1+z)=4$ 倍。
+
+**(3)** 高赤方偏移銀河中の原子・分子の励起温度（CMB 光子で励起される準位比から測る温度計）が $(1+z)T_0$ と一致することは、「過去ほど宇宙が熱かった」こと、すなわち $T\propto1/a$（膨張で冷える黒体）という標準宇宙論の予言の直接観測的確認になる。
+
+**答え**：$T(z=3)=10.9$ K。$\lambda_\mathrm{peak}$ は 1.06 mm→266 μm（$1+z=4$ 倍短く）。$T\propto1/a$ の直接確認。
+:::
+:::
+
+::: {#sol-16-3 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-16-3-label"}
+::: {.offcanvas-header}
+[**解答例（問題 16-3）**]{#sol-16-3-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
+**(1)** 熱化：$z\gtrsim2\times10^6$ までに完了。放射のスペクトルを Planck 形（$\mu\to0$）に整える過程。再結合：$z\simeq1100$。電子と陽子が中性水素になり光が自由伝搬を始める（最終散乱＝CMB の「撮影時刻」）。前者が黒体スペクトルを作り、後者がそれを解放する。
+
+**(2)** 二重コンプトン散乱（$e^-+\gamma\to e^-+2\gamma$）と制動放射が光子数を変えられる。コンプトン散乱はエネルギー再分配のみで数を変えない。$\mu=0$（化学ポテンシャルゼロ＝光子数が自由に調整される）には光子数を増減できる過程が必要なので、二重コンプトン散乱が本質的。
+
+**(3)** $T_0=T_\mathrm{rec}/(1+z_\mathrm{rec})$ は $T\propto1/a$（$1+z=1/a$）という恒等式。元素組成が変わって再結合温度 $T_\mathrm{rec}$ が変われば、それに応じて $z_\mathrm{rec}$ も変わり、比 $T_\mathrm{rec}/(1+z_\mathrm{rec})=T_0$ は恒等的に保たれる。$T_0$ を実際に決めるのは光子数密度の歴史（バリオン-光子比など）で、再結合の詳細は最終散乱面の位置だけを左右する。
+
+**答え**：熱化（$z\gtrsim2\times10^6$、黒体化）と再結合（$z\simeq1100$、撮影）は別過程。二重コンプトンが光子数を変え $\mu=0$ を作る。$T_0$ は $T\propto1/a$ の恒等式ゆえ再結合温度に依らない。
+:::
+:::
+
+::: {#sol-16-4 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-16-4-label"}
+::: {.offcanvas-header}
+[**解答例（問題 16-4）**]{#sol-16-4-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
 **(1)** $\mu$ 歪み：$z\sim5\times10^4$〜$2\times10^6$ のエネルギー注入を記録。この時期は二重コンプトンが無効化（光子数を変えられない）だがコンプトン散乱は有効（エネルギー再分配可能）。$y$ 歪み：$z\lesssim10^4$（コンプトン散乱も非効率化して以降、現在まで含む）の高温電子との散乱を記録。熱化過程が効率を失う順序（光子数生成→エネルギー再分配）に対応する。
 
 **(2)** $\mu$ 歪みの時期は、コンプトン散乱がエネルギーを完全に再分配して平衡分布に達するが、光子数を変えられない。粒子数が保存される Bose 気体の平衡は $\mu\neq0$ の Bose-Einstein 分布（第8章）。だからプランク（$\mu=0$）からずれた $\mu\neq0$ の形になる。
@@ -268,6 +307,7 @@ CMB は、中心地図プランク分布の **ずれ因子 $f_\text{dev}$ が事
 **(3)** $y$ 歪みは高温電子と CMB 光子の逆コンプトン散乱で、スペクトル全体が高振動数側へ引きずられる。これは銀河団中の高温ガスで起こる Sunyaev-Zel'dovich 効果と同じ物理（スケールが宇宙論的か銀河団かの違いのみ）。低振動数側が暗く（ディップ）、高振動数側が明るく（バンプ）、その境界の約 217 GHz がヌル点。
 
 **答え**：$\mu$ 歪み＝$z\sim5\times10^4$〜$2\times10^6$（光子数凍結、BE 分布）、$y$ 歪み＝$z\lesssim10^4$（高温電子散乱）。$y$ は SZ 効果と同物理、217 GHz がヌル点。
+:::
 :::
 
 ## さらに学ぶための参考文献 {#sec-cmb-further .unnumbered}

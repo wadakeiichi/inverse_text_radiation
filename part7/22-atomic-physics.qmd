@@ -309,7 +309,7 @@ $$ {#eq-selection-rules-E1}
 
 ## 演習問題 {#sec-atomic-physics-exercises .unnumbered}
 
-以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **模範解答** は折りたたみを展開して確認できる（オンライン版）。まず自力で解いてから開くこと。
+以下の問題は、本文で省いた式の導出を補う問題（[tag:導出補完]）と、本文で得た道具を別の角度から使って理解を深める問題（[tag:理解を深める]）から成る。各問の **解答例** は章末「解答例」にまとめてある（オンライン版では各問のボタンから開く）。まず自力で解いてから開くこと。
 
 ### 問題 22-1　Rydberg 公式と Hα の波長 {#ex-22-1 .unnumbered}
 
@@ -323,16 +323,8 @@ $$ {#eq-selection-rules-E1}
 
 **関連**：[§22.1 Rydberg 公式](#sec-atomic-rydberg)、[§22.2 Bohr 模型](#sec-atomic-bohr)／準位の量子力学的起源は[§12.1](../part4/12-quantum-foundations.qmd#sec-quantum-foundations-states)、Boltzmann 占有は[演習 7-4](../part3/07-statistical-mechanics.qmd#ex-7-4)。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 22-1）
-
-**(1)** $h\nu=E_u-E_l=-\dfrac{13.6}{n_u^2}-\left(-\dfrac{13.6}{n_l^2}\right)=13.6\,\text{eV}\left(\dfrac{1}{n_l^2}-\dfrac{1}{n_u^2}\right)$。$\nu=c/\lambda$ より $\dfrac{1}{\lambda}=\dfrac{13.6\,\text{eV}}{hc}\left(\dfrac{1}{n_l^2}-\dfrac{1}{n_u^2}\right)=R_H\left(\dfrac{1}{n_l^2}-\dfrac{1}{n_u^2}\right)$。
-
-**(2)** $\dfrac{1}{\lambda}=1.097\times10^7\left(\dfrac14-\dfrac19\right)=1.097\times10^7\times0.1389=1.524\times10^6$ m$^{-1}$。$\lambda=6.56\times10^{-7}$ m $=656$ nm。✓（太陽 Fraunhofer C 線）
-
-**(3)** $n_u\to\infty$、$n_l=1$：$\dfrac{1}{\lambda}=R_H\times1=1.097\times10^7$ m$^{-1}$、$\lambda=91.2$ nm。対応エネルギー $E=hc/\lambda=1.986\times10^{-25}/9.12\times10^{-8}=2.18\times10^{-18}$ J $=13.6$ eV。これは基底状態（$n=1$）からの電離エネルギーに一致。
-
-**答え**：$h\nu=E_u-E_l$ から Rydberg 公式。H$\alpha$＝656 nm。Lyman 極限 91.2 nm＝13.6 eV（電離エネルギー）。
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 22-1）](#sol-22-1){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
 :::
 
 ### 問題 22-2　Einstein 係数と振動子強度の換算 {#ex-22-2 .unnumbered}
@@ -347,22 +339,8 @@ $$ {#eq-selection-rules-E1}
 
 **関連**：[§22.4b 前因子の逆引き](#sec-atomic-lorentz-prefactor)、[§22.4 振動子強度](#sec-atomic-oscillator-strength)／Einstein 関係は[演習 11-1](../part4/11-einstein-method.qmd#ex-11-1)、QED からの $A_{ul}$ は[§26.2](../part8/26-qed-minimum.qmd#sec-qed-minimum-spontaneous)。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 22-2）
-
-**(1)** 両式の $n_l\phi$ を消して係数を等置：$\dfrac{\pi e^2}{m_ec}f_{lu}=\dfrac{h\nu_0}{4\pi}B_{lu}$。$B_{lu}$ について解く：
-
-$$B_{lu}=\frac{4\pi}{h\nu_0}\cdot\frac{\pi e^2}{m_ec}f_{lu}=\frac{4\pi^2e^2}{m_ec\,h\nu_0}f_{lu}.$$
-
-**(2)** $B_{ul}=（g_l/g_u)B_{lu}$ を $A_{ul}=\dfrac{2h\nu_0^3}{c^2}B_{ul}$ に代入：
-
-$$A_{ul}=\frac{2h\nu_0^3}{c^2}\frac{g_l}{g_u}\frac{4\pi^2e^2}{m_ec\,h\nu_0}f_{lu}=\frac{8\pi^2e^2\nu_0^2}{m_ec^3}\frac{g_l}{g_u}f_{lu}.$$
-
-（$h$ が消え、$\nu_0^3/\nu_0=\nu_0^2$。）
-
-**(3)** $\pi e^2/m_ec$ は古典の減衰調和振動子（Lorentz 振動子）が与える振動数積分吸収断面積で、減衰率にもピーク位置にもよらない普遍量。実際の原子はこれに無次元の量子補正 $f_{lu}$ を掛けたもので、全遷移の和 $\sum_u f_{lu}=N_\mathrm{electrons}$（TRK 和則）が「すべて足すと古典総吸収量に戻る」ことを保証する。古典-量子の橋。
-
-**答え**：$B_{lu}=\dfrac{4\pi^2e^2}{m_ech\nu_0}f_{lu}$、$A_{ul}=\dfrac{8\pi^2e^2\nu_0^2}{m_ec^3}\dfrac{g_l}{g_u}f_{lu}$。$\pi e^2/m_ec$＝古典積分断面積、$f_{lu}$＝量子補正（TRK 和則）。
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 22-2）](#sol-22-2){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
 :::
 
 ### 問題 22-3　選択則と禁制線の次数 {#ex-22-3 .unnumbered}
@@ -377,16 +355,8 @@ $$A_{ul}=\frac{2h\nu_0^3}{c^2}\frac{g_l}{g_u}\frac{4\pi^2e^2}{m_ec\,h\nu_0}f_{lu
 
 **関連**：[§22.5 選択則と禁制線](#sec-atomic-selection-rules)／QED からの選択則は[§26.5](../part8/26-qed-minimum.qmd#sec-qed-minimum-selection)、禁制線と低密度は[演習 20-2](../part7/20-where-lines.qmd#ex-20-2)、密度診断は[§24.3](../part7/24-line-applications.qmd#sec-line-applications-diagnostics)。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 22-3）
-
-**(1)** E1 遷移強度は電気双極子行列要素 $\langle u|\mathbf r|l\rangle$ で決まる。パリティと角運動量の保存から、$\Delta l=\pm1$ 等を満たさない遷移ではこの行列要素がゼロになり、最低次（E1）では遷移が起こらない。これが「禁制」。
-
-**(2)** M1・E2 は次数が一つ高い過程で、典型的に振幅が微細構造定数 $\alpha$ 程度小さく、強度（振幅の2乗）が $\alpha^2\simeq(1/137)^2\simeq5.3\times10^{-5}\sim10^{-4}$ 倍。$\alpha$ は電磁相互作用の結合定数で、より高次の多重極展開の各段で $\alpha$ のべきが効く。
-
-**(3)** 禁制線は $A_{ul}$ が極端に小さく長寿命。地上の高密度では自発放出より衝突脱励起が先に起こり消える（[演習 20-2](../part7/20-where-lines.qmd#ex-20-2)）。星間の極低密度では衝突が稀で自発放出が間に合い観測できる。21 cm 線は水素基底状態の超微細構造の M1 禁制遷移で、$A_{ul}\sim10^{-15}$ s$^{-1}$ と極小だが膨大な中性水素のおかげで観測される。
-
-**答え**：E1 選択則違反＝行列要素ゼロ＝禁制。M1/E2 は $\alpha^2\sim10^{-4}$ 倍。低密度の星間でのみ観測（21 cm も M1 禁制）。
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 22-3）](#sol-22-3){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
 :::
 
 ### 問題 22-4　なぜ Bohr 模型では線強度が出ないか {#ex-22-4 .unnumbered}
@@ -401,9 +371,78 @@ $$A_{ul}=\frac{2h\nu_0^3}{c^2}\frac{g_l}{g_u}\frac{4\pi^2e^2}{m_ec\,h\nu_0}f_{lu
 
 **関連**：[§22.3 Schrödinger 方程式](#sec-atomic-schrodinger)／固有値問題は[§12.1](../part4/12-quantum-foundations.qmd#sec-quantum-foundations-states)、振動子強度の換算は[演習 22-2](#ex-22-2)。
 
-::: {.callout-derive collapse="true"}
-## 模範解答（問題 22-4）
+::: {.content-visible when-format="html"}
+[解答例を見る（問題 22-4）](#sol-22-4){.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
 
+## 解答例 {#sec-atomic-physics-solutions .unnumbered}
+
+各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。
+
+::: {.content-visible when-format="html"}
+[問題 22-1](#sol-22-1){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 22-2](#sol-22-2){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 22-3](#sol-22-3){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} [問題 22-4](#sol-22-4){.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"}
+:::
+
+::: {#sol-22-1 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-22-1-label"}
+::: {.offcanvas-header}
+[**解答例（問題 22-1）**]{#sol-22-1-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
+**(1)** $h\nu=E_u-E_l=-\dfrac{13.6}{n_u^2}-\left(-\dfrac{13.6}{n_l^2}\right)=13.6\,\text{eV}\left(\dfrac{1}{n_l^2}-\dfrac{1}{n_u^2}\right)$。$\nu=c/\lambda$ より $\dfrac{1}{\lambda}=\dfrac{13.6\,\text{eV}}{hc}\left(\dfrac{1}{n_l^2}-\dfrac{1}{n_u^2}\right)=R_H\left(\dfrac{1}{n_l^2}-\dfrac{1}{n_u^2}\right)$。
+
+**(2)** $\dfrac{1}{\lambda}=1.097\times10^7\left(\dfrac14-\dfrac19\right)=1.097\times10^7\times0.1389=1.524\times10^6$ m$^{-1}$。$\lambda=6.56\times10^{-7}$ m $=656$ nm。✓（太陽 Fraunhofer C 線）
+
+**(3)** $n_u\to\infty$、$n_l=1$：$\dfrac{1}{\lambda}=R_H\times1=1.097\times10^7$ m$^{-1}$、$\lambda=91.2$ nm。対応エネルギー $E=hc/\lambda=1.986\times10^{-25}/9.12\times10^{-8}=2.18\times10^{-18}$ J $=13.6$ eV。これは基底状態（$n=1$）からの電離エネルギーに一致。
+
+**答え**：$h\nu=E_u-E_l$ から Rydberg 公式。H$\alpha$＝656 nm。Lyman 極限 91.2 nm＝13.6 eV（電離エネルギー）。
+:::
+:::
+
+::: {#sol-22-2 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-22-2-label"}
+::: {.offcanvas-header}
+[**解答例（問題 22-2）**]{#sol-22-2-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
+**(1)** 両式の $n_l\phi$ を消して係数を等置：$\dfrac{\pi e^2}{m_ec}f_{lu}=\dfrac{h\nu_0}{4\pi}B_{lu}$。$B_{lu}$ について解く：
+
+$$B_{lu}=\frac{4\pi}{h\nu_0}\cdot\frac{\pi e^2}{m_ec}f_{lu}=\frac{4\pi^2e^2}{m_ec\,h\nu_0}f_{lu}.$$
+
+**(2)** $B_{ul}=（g_l/g_u)B_{lu}$ を $A_{ul}=\dfrac{2h\nu_0^3}{c^2}B_{ul}$ に代入：
+
+$$A_{ul}=\frac{2h\nu_0^3}{c^2}\frac{g_l}{g_u}\frac{4\pi^2e^2}{m_ec\,h\nu_0}f_{lu}=\frac{8\pi^2e^2\nu_0^2}{m_ec^3}\frac{g_l}{g_u}f_{lu}.$$
+
+（$h$ が消え、$\nu_0^3/\nu_0=\nu_0^2$。）
+
+**(3)** $\pi e^2/m_ec$ は古典の減衰調和振動子（Lorentz 振動子）が与える振動数積分吸収断面積で、減衰率にもピーク位置にもよらない普遍量。実際の原子はこれに無次元の量子補正 $f_{lu}$ を掛けたもので、全遷移の和 $\sum_u f_{lu}=N_\mathrm{electrons}$（TRK 和則）が「すべて足すと古典総吸収量に戻る」ことを保証する。古典-量子の橋。
+
+**答え**：$B_{lu}=\dfrac{4\pi^2e^2}{m_ech\nu_0}f_{lu}$、$A_{ul}=\dfrac{8\pi^2e^2\nu_0^2}{m_ec^3}\dfrac{g_l}{g_u}f_{lu}$。$\pi e^2/m_ec$＝古典積分断面積、$f_{lu}$＝量子補正（TRK 和則）。
+:::
+:::
+
+::: {#sol-22-3 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-22-3-label"}
+::: {.offcanvas-header}
+[**解答例（問題 22-3）**]{#sol-22-3-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
+**(1)** E1 遷移強度は電気双極子行列要素 $\langle u|\mathbf r|l\rangle$ で決まる。パリティと角運動量の保存から、$\Delta l=\pm1$ 等を満たさない遷移ではこの行列要素がゼロになり、最低次（E1）では遷移が起こらない。これが「禁制」。
+
+**(2)** M1・E2 は次数が一つ高い過程で、典型的に振幅が微細構造定数 $\alpha$ 程度小さく、強度（振幅の2乗）が $\alpha^2\simeq(1/137)^2\simeq5.3\times10^{-5}\sim10^{-4}$ 倍。$\alpha$ は電磁相互作用の結合定数で、より高次の多重極展開の各段で $\alpha$ のべきが効く。
+
+**(3)** 禁制線は $A_{ul}$ が極端に小さく長寿命。地上の高密度では自発放出より衝突脱励起が先に起こり消える（[演習 20-2](../part7/20-where-lines.qmd#ex-20-2)）。星間の極低密度では衝突が稀で自発放出が間に合い観測できる。21 cm 線は水素基底状態の超微細構造の M1 禁制遷移で、$A_{ul}\sim10^{-15}$ s$^{-1}$ と極小だが膨大な中性水素のおかげで観測される。
+
+**答え**：E1 選択則違反＝行列要素ゼロ＝禁制。M1/E2 は $\alpha^2\sim10^{-4}$ 倍。低密度の星間でのみ観測（21 cm も M1 禁制）。
+:::
+:::
+
+::: {#sol-22-4 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-22-4-label"}
+::: {.offcanvas-header}
+[**解答例（問題 22-4）**]{#sol-22-4-label .offcanvas-title}
+[ ]{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}
+:::
+::: {.offcanvas-body}
 **(1)** 一致：エネルギー準位 $E_n=-13.6/n^2$ eV（線振動数を正しく与える）。異なる：Bohr は電子を許される軌道上に「正確に」置く描像で波動関数を持たず、角運動量を $L=n\hbar$ とする（Schrödinger は $L^2=l(l+1)\hbar^2$）。Schrödinger は同じ $n$ で $l,m$ の異なる縮退状態と、空間に広がる存在確率分布（波動関数）を持つ。
 
 **(2)** $f_{lu}$ は上下準位の波動関数の重なり $\langle u|\mathbf r|l\rangle=\int\psi_u^*\,\mathbf r\,\psi_l\,d^3r$ から計算される。Bohr 模型は波動関数を持たないので、この積分を実行できず $f_{lu}$ を予言できない。
@@ -411,6 +450,7 @@ $$A_{ul}=\frac{2h\nu_0^3}{c^2}\frac{g_l}{g_u}\frac{4\pi^2e^2}{m_ec\,h\nu_0}f_{lu
 **(3)** 中心地図 $\alpha_\nu=(\pi e^2/m_ec)f_{lu}n_l\phi(\nu-\nu_0)$ で、$\nu_0$（線振動数＝準位差）は Bohr 模型でも出るが、$f_{lu}$（線強度を決める振動子強度）は波動関数の行列要素ゆえ Schrödinger 方程式が要る。線の「位置」と「強さ」で必要な理論の深さが違う。
 
 **答え**：エネルギー（$\nu_0$）は一致するが、Bohr は波動関数を持たず $f_{lu}=|\langle u|\mathbf r|l\rangle|^2$ を計算できない。線強度には Schrödinger が必要。
+:::
 :::
 
 ## さらに学ぶための参考文献 {#sec-atomic-physics-further .unnumbered}
