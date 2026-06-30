@@ -7,8 +7,8 @@ authors:
     given-names: "桂一"
     email: "wada@astrophysics.jp"
 type: book
-version: "v0.3"
-date-released: 2026-06-28
+version: "v0.31"
+date-released: 2026-06-30
 license: CC-BY-4.0
 doi: 10.5281/zenodo.20635563
 url: "https://github.com/wadakeiichi/inverse_text_radiation"
