@@ -506,7 +506,11 @@ window.Quarto = {
   <li><a href="#sec-accretion-high-energy-questions" id="toc-sec-accretion-high-energy-questions" class="nav-link" data-scroll-target="#sec-accretion-high-energy-questions">この章で答える問い</a></li>
   <li><a href="#sec-accretion-high-energy-goals" id="toc-sec-accretion-high-energy-goals" class="nav-link" data-scroll-target="#sec-accretion-high-energy-goals">到達目標</a></li>
   <li><a href="#sec-disk-local-blackbody" id="toc-sec-disk-local-blackbody" class="nav-link" data-scroll-target="#sec-disk-local-blackbody">18.1 局所黒体近似 ― 各半径に温度を割り当てる</a></li>
-  <li><a href="#sec-disk-multi-temperature" id="toc-sec-disk-multi-temperature" class="nav-link" data-scroll-target="#sec-disk-multi-temperature">18.2 多温度円盤 ― <span class="math inline">\nu^{1/3}</span> べき則の出現</a></li>
+  <li><a href="#sec-disk-multi-temperature" id="toc-sec-disk-multi-temperature" class="nav-link" data-scroll-target="#sec-disk-multi-temperature">18.2 多温度円盤 ― <span class="math inline">\nu^{1/3}</span> べき則の出現</a>
+  <ul class="collapse">
+  <li><a href="#標準降着円盤の温度則-なぜ温度は半径の-34-乗で下がるか" id="toc-標準降着円盤の温度則-なぜ温度は半径の-34-乗で下がるか" class="nav-link" data-scroll-target="#標準降着円盤の温度則-なぜ温度は半径の-34-乗で下がるか">標準降着円盤の温度則 ― なぜ温度は半径の 3/4 乗で下がるか</a></li>
+  <li><a href="#多温度の黒体を足す-べき則の出どころ" id="toc-多温度の黒体を足す-べき則の出どころ" class="nav-link" data-scroll-target="#多温度の黒体を足す-べき則の出どころ">多温度の黒体を足す ― べき則の出どころ</a></li>
+  </ul></li>
   <li><a href="#sec-comptonization" id="toc-sec-comptonization" class="nav-link" data-scroll-target="#sec-comptonization">18.3 コンプトン化 ― 高温電子からの逆風</a></li>
   <li><a href="#sec-neutron-star-surface" id="toc-sec-neutron-star-surface" class="nav-link" data-scroll-target="#sec-neutron-star-surface">18.4 中性子星表面と強磁場</a></li>
   <li><a href="#sec-black-hole-effects" id="toc-sec-black-hole-effects" class="nav-link" data-scroll-target="#sec-black-hole-effects">18.5 ブラックホール近傍 ― 一般相対論的修正</a></li>
@@ -678,21 +682,57 @@ I_\nu(R) = B_\nu(T(R))
 <section id="sec-disk-multi-temperature" class="level2">
 <h2 class="anchored" data-anchor-id="sec-disk-multi-temperature">18.2 多温度円盤 ― <span class="math inline">\nu^{1/3}</span> べき則の出現</h2>
 <p>[本文目安：B4]</p>
-<p>標準降着円盤では、エネルギー収支から温度の半径依存が</p>
+<section id="標準降着円盤の温度則-なぜ温度は半径の-34-乗で下がるか" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="標準降着円盤の温度則-なぜ温度は半径の-34-乗で下がるか">標準降着円盤の温度則 ― なぜ温度は半径の 3/4 乗で下がるか</h3>
+<p>§18.1 の <strong>標準降着円盤</strong>（Shakura-Sunyaev 1973）は、各半径 <span class="math inline">R</span> が局所黒体（<a href="#eq-disk-local-blackbody" class="quarto-xref">式&nbsp;<span>22.1</span></a>）であるうえに、<strong>定常で薄い円盤</strong>を仮定する。この二つから温度則が一意に決まる。出発点は <strong>エネルギー収支</strong> ― 各半径の円環がどれだけのエネルギーを単位面積あたり放出するか（散逸率 <span class="math inline">D(R)</span>）である。</p>
+<p>定常円盤では、降着率 <span class="math inline">\dot{M}</span>（単位時間に内側へ落ちる質量）が半径によらず一定で、ガスが内側へ移動するにつれ解放される重力エネルギーが、粘性によってその場で熱に変わる。標準モデルの結果は</p>
+<p><span id="eq-disk-dissipation"><span class="math display">
+D(R) = \frac{3 G M \dot{M}}{8\pi R^{3}}\left[\,1 - \sqrt{\frac{R_\text{in}}{R}}\,\right]
+\tag{22.2}</span></span></p>
+<p>で、<span class="math inline">R \gg R_\text{in}</span>（内縁から十分外側）では角括弧が <span class="math inline">1</span> に近づき、<strong><span class="math inline">D(R) \propto R^{-3}</span></strong> という単純なべきになる（係数の <span class="math inline">3</span> や角括弧の導出は Frank, King &amp; Raine 第 5 章。ここで使うのは半径依存 <span class="math inline">R^{-3}</span> だけでよい）。</p>
+<p>各円環は表裏の二面から黒体放射する。単位面積あたりの放出は Stefan-Boltzmann 則で <span class="math inline">\sigma T(R)^4</span> だから、<strong>局所的なエネルギー収支</strong>「散逸 ＝ 放射」は</p>
+<p><span id="eq-disk-sb-balance"><span class="math display">
+\sigma\, T(R)^4 \;=\; D(R) \;\propto\; R^{-3}
+\tag{22.3}</span></span></p>
+<p>両辺を <span class="math inline">1/4</span> 乗すれば、ただちに</p>
 <p><span id="eq-disk-temperature-profile"><span class="math display">
 T(R) \propto R^{-3/4}
-\tag{22.2}</span></span></p>
-<p>となる（薄い円盤の Stefan-Boltzmann バランス）。内側ほど高温、外側ほど低温。</p>
-<p>全円盤からの合成スペクトルは、円盤面の各半径からの放射を面積分した形で</p>
+\tag{22.4}</span></span></p>
+<p>が出る。<strong>内側ほど高温、外側ほど低温</strong>で、温度は半径の緩やかなべきで下がる。これが次に見る多温度合成スペクトルの素になる。</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>内縁での振る舞い</strong>：<a href="#eq-disk-dissipation" class="quarto-xref">式&nbsp;<span>22.2</span></a> の角括弧は <span class="math inline">R = R_\text{in}</span> で <span class="math inline">0</span> になる（内縁ではトルクがかからず散逸が消える）ため、温度は内縁ちょうどではなく <span class="math inline">R \simeq 1.36\,R_\text{in}</span> で最大 <span class="math inline">T_\text{max}</span> をとる。スペクトルの高振動数端を決めるのはこの <span class="math inline">T_\text{max}</span> である。</p>
+</div>
+</div>
+</div>
+</section>
+<section id="多温度の黒体を足す-べき則の出どころ" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="多温度の黒体を足す-べき則の出どころ">多温度の黒体を足す ― べき則の出どころ</h3>
+<p>円盤は<strong>単一温度の黒体ではない</strong>。<a href="#eq-disk-temperature-profile" class="quarto-xref">式&nbsp;<span>22.4</span></a> のとおり半径ごとに温度が違い、各円環がそれぞれ別の温度の黒体（<a href="#eq-disk-local-blackbody" class="quarto-xref">式&nbsp;<span>22.1</span></a>）を放つ。全円盤からの合成スペクトルは、各半径からの放射を円盤面で面積分した形</p>
 <p><span id="eq-disk-total-flux"><span class="math display">
 F_\nu \propto \int_{R_\text{in}}^{R_\text{out}} 2\pi R \cdot B_\nu(T(R))\, dR
-\tag{22.3}</span></span></p>
-<p>と書ける。ここで <span class="math inline">F_\nu</span> は <strong>比例関係</strong> として理解すべき量で、右辺には観測者までの距離 <span class="math inline">d</span>、円盤の傾斜角 <span class="math inline">i</span>（投影 <span class="math inline">\cos i</span>）、両面放射の有無といった幾何因子を含めていない。実際に観測されるフラックス <span class="math inline">F_\nu^\text{obs}</span> は、面フラックス（円盤単位面積あたりの放射）にこれらの幾何因子を掛けたもので、たとえば <span class="math inline">F_\nu^\text{obs} \simeq (\cos i / d^2)\int 2\pi R\, B_\nu(T(R))\, dR</span> のように書ける。本節で着目するのは絶対値ではなく振動数依存（スペクトルの形）なので、以下では比例関係で扱う。</p>
-<p>ここで重要なのは <strong>中間振動数帯</strong> の振る舞い。<span class="math inline">k_B T(R_\text{in}) \gg h\nu \gg k_B T(R_\text{out})</span>（あるいは同値に <span class="math inline">T(R_\text{in}) \gg h\nu/k_B \gg T(R_\text{out})</span>）となる振動数では、温度分布が積分を支配する。</p>
-<p><a href="#eq-disk-temperature-profile" class="quarto-xref">式&nbsp;<span>22.2</span></a> を使って変数変換すると（導出概略は下記の問い、丁寧な計算は Frank, King &amp; Raine 第 5 章参照）</p>
+\tag{22.5}</span></span></p>
+<p>になる。<strong>黒体の和がべき則になる</strong>というのが直観に反するので、<a href="#fig-disk-multicolor" class="quarto-xref">図&nbsp;<span>22.1</span></a> で図解しよう。</p>
+<div id="fig-disk-multicolor" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-disk-multicolor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/disk-multicolor-spectrum.svg" class="img-fluid figure-img" style="width:96.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-disk-multicolor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+図&nbsp;22.1: <strong>両対数（log-log）プロット。</strong> <strong>(a)</strong> 標準降着円盤は同心の円環に分かれ、内側ほど高温・外側ほど低温（<a href="#eq-disk-temperature-profile" class="quarto-xref">式&nbsp;<span>22.4</span></a>）。<strong>各半径が「1つの温度の黒体」</strong>で、色が温度に対応する。<strong>(b)</strong> 各円環の黒体（細線、色は左図の円環と対応）は、両対数では<strong>左側が傾き <span class="math inline">+2</span> の直線</strong>（Rayleigh–Jeans 裾 <span class="math inline">B_\nu\propto\nu^2</span>）、<strong>右側が Wien の指数で急落する非対称な形</strong>をもち、温度が高いほどピークが右上へ移る。破線はその<strong>ピークの軌跡</strong>で、傾き <span class="math inline">1/3</span> をなす。これらを足し合わせた合成（太線）は三つの帯に分かれる：<strong>低振動数</strong>は最も冷たい外縁の RJ 裾で <span class="math inline">F_\nu\propto\nu^2</span>、<strong>高振動数</strong>は最も熱い内縁（<span class="math inline">T_\text{max}</span>）の Wien 指数カットオフ、その<strong>中間帯</strong>でピーク軌跡に沿って <span class="math inline">F_\nu\propto\nu^{1/3}</span> のべき則になる。べき則は1本の黒体ではなく、<strong>温度の幅をもつ黒体の集まり</strong>から生まれる。
+</figcaption>
+</figure>
+</div>
+<p>ここで <span class="math inline">F_\nu</span> は <strong>比例関係</strong> として理解すべき量で、右辺には観測者までの距離 <span class="math inline">d</span>、円盤の傾斜角 <span class="math inline">i</span>（投影 <span class="math inline">\cos i</span>）、両面放射の有無といった幾何因子を含めていない。実際に観測されるフラックス <span class="math inline">F_\nu^\text{obs}</span> は、面フラックス（円盤単位面積あたりの放射）にこれらの幾何因子を掛けたもので、たとえば <span class="math inline">F_\nu^\text{obs} \simeq (\cos i / d^2)\int 2\pi R\, B_\nu(T(R))\, dR</span> のように書ける。本節で着目するのは絶対値ではなく振動数依存（スペクトルの形）なので、以下では比例関係で扱う。</p>
+<p><strong>なぜ和がべき則になるのか</strong>（<a href="#fig-disk-multicolor" class="quarto-xref">図&nbsp;<span>22.1</span></a> (b) の三帯）。ある観測振動数 <span class="math inline">\nu</span> を固定して、どの円環がそこに効くかを考える。ある円環の黒体は、自分のピーク振動数 <span class="math inline">\nu_\text{peak}\sim k_B T(R)/h</span> より高振動数側では Wien 的に<strong>指数で消える</strong>ため、<span class="math inline">h\nu \gg k_B T(R)</span> の冷たい円環（外側）は寄与しない。逆に <span class="math inline">h\nu \ll k_B T(R)</span> の熱い円環（内側）は、その黒体の Rayleigh–Jeans 裾 <span class="math inline">B_\nu\propto\nu^2 T</span> で<strong>緩やかに</strong>寄与する。したがって観測振動数 <span class="math inline">\nu</span> には、おおむね <span class="math inline">k_B T(R)\sim h\nu</span> を満たす半径（その振動数で「ちょうどピーク付近」の円環）が最も強く効き、そこより内側は RJ 裾を足し込む。<span class="math inline">\nu</span> を上げると効く円環がより内側（高温・小面積）へ移る ― この<strong>ピークの移動と面積の重みの釣り合い</strong>が、単独の黒体の <span class="math inline">\nu^2</span> よりずっとフラットに近いべき則の <span class="math inline">\nu^{1/3}</span> を生む。式で見れば、<a href="#eq-disk-temperature-profile" class="quarto-xref">式&nbsp;<span>22.4</span></a> から <span class="math inline">R\propto T^{-4/3}</span>、<span class="math inline">2\pi R\,dR\propto T^{-11/3}dT</span> で、中間帯の RJ 寄与 <span class="math inline">B_\nu\propto\nu^2 T</span> を温度について積分すると <span class="math inline">\nu^{1/3}</span> になる（下の問いに骨子）。</p>
+<p>この <span class="math inline">\nu^{1/3}</span> が現れるのは、温度分布が積分を支配する <strong>中間振動数帯</strong> ― すなわち <span class="math inline">k_B T(R_\text{in}) \gg h\nu \gg k_B T(R_\text{out})</span>（同値に <span class="math inline">T(R_\text{in}) \gg h\nu/k_B \gg T(R_\text{out})</span>）の範囲である。この帯を上の積分で丁寧に評価すると（骨子は下記の問い、詳しくは Frank, King &amp; Raine 第 5 章）</p>
 <p><span id="eq-disk-13-powerlaw"><span class="math display">
 F_\nu \propto \nu^{1/3} \quad \text{(中間帯)}
-\tag{22.4}</span></span></p>
+\tag{22.6}</span></span></p>
 <p>この <strong><span class="math inline">\nu^{1/3}</span> べき則</strong> は、多温度円盤の <strong>特徴的シグネチャ</strong>。観測される X 線連星や活動銀河中心核 (AGN) の連続光に、この勾配が広い範囲で見られる。</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -720,6 +760,7 @@ F_\nu \propto \nu^{1/3} \quad \text{(中間帯)}
 </div>
 </div>
 </section>
+</section>
 <section id="sec-comptonization" class="level2">
 <h2 class="anchored" data-anchor-id="sec-comptonization">18.3 コンプトン化 ― 高温電子からの逆風</h2>
 <p>[本文目安：B4]</p>
@@ -727,12 +768,12 @@ F_\nu \propto \nu^{1/3} \quad \text{(中間帯)}
 <p>低温の黒体光子（種光子、<span class="math inline">h\nu_\text{seed}</span>）が熱い電子（<span class="math inline">k_B T_e \gg h\nu_\text{seed}</span>）と散乱した一回あたりのエネルギー利得：</p>
 <p><span id="eq-compton-gain-per-scattering"><span class="math display">
 \frac{\Delta \nu}{\nu} \simeq \frac{4 k_B T_e}{m_e c^2}
-\tag{22.5}</span></span></p>
+\tag{22.7}</span></span></p>
 <p>係数 4 は天下りではない。熱運動する電子（速さ <span class="math inline">v</span>、<span class="math inline">k_B T_e\sim m_e v^2</span>）に光子が散乱されると、<strong>二次のドップラー押し上げ</strong> <span class="math inline">\sim(v/c)^2</span> を受ける。これを等方な Maxwell 分布で平均すると、種光子が十分冷たい（<span class="math inline">h\nu_\text{seed}\ll k_B T_e</span>）極限で <span class="math inline">\langle\Delta\nu/\nu\rangle\simeq 4k_BT_e/m_ec^2</span> となる（より正確には、1 回散乱の平均利得が <span class="math inline">\langle\Delta\varepsilon/\varepsilon\rangle=(4k_BT_e-\varepsilon)/m_ec^2</span> で、<span class="math inline">\varepsilon=h\nu\ll k_BT_e</span> の極限を残したもの。後者の <span class="math inline">-\varepsilon</span> 項は逆に高エネルギー光子が電子へエネルギーを渡す通常の Compton 冷却を表す）。詳しい導出は Rybicki–Lightman 第7章を参照。</p>
 <p>光子が脱出までに <span class="math inline">N</span> 回散乱すると、累積利得 <span class="math inline">{(1 + \Delta\nu/\nu)}^N</span>。コロナの光学的深さ <span class="math inline">\tau_e</span> と温度から見積もる <strong>Compton <span class="math inline">y</span> パラメータ</strong>：</p>
 <p><span id="eq-compton-y"><span class="math display">
 y \equiv \frac{4 k_B T_e}{m_e c^2} \max(\tau_e, \tau_e^2)
-\tag{22.6}</span></span></p>
+\tag{22.8}</span></span></p>
 <ul>
 <li><span class="math inline">y \ll 1</span>：光子はわずかにエネルギー利得 ― 元の黒体形のわずかな歪み（<strong>Wien 側へのテイル</strong>）</li>
 <li><span class="math inline">y \gtrsim 1</span>：光子はコロナで完全に再分配される ― <strong>Wien 分布</strong> に近い高温化スペクトル</li>
@@ -799,7 +840,7 @@ y \equiv \frac{4 k_B T_e}{m_e c^2} \max(\tau_e, \tau_e^2)
 <p>これらの効果は、第13章 §13.4 の偏光自由度や §18.1 の局所黒体仮定の <strong>上に重ねて</strong> 効く。観測される SED は</p>
 <p><span id="eq-grdisk-flux"><span class="math display">
 F_\nu^\text{obs} = \int B_\nu(T(R, \phi)) \cdot g^3(R, \phi) \cdot dA_\text{proper}
-\tag{22.7}</span></span></p>
+\tag{22.9}</span></span></p>
 <p>の形（<span class="math inline">g</span> は赤方偏移因子、<span class="math inline">dA_\text{proper}</span> は固有面積）。一般相対論的計算が必要。</p>
 <p>特に重要な観測量は <strong>広線輪郭</strong> ― 鉄輝線 (6.4 keV) が、円盤の高速回転と重力赤方偏移により、特徴的な非対称形状（青翼が高く、赤翼が長く伸びる）に変形される。これがブラックホールスピンの測定に使われる。</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -1531,314 +1572,342 @@ F_\nu^\text{obs} = \int B_\nu(T(R, \phi)) \cdot g^3(R, \phi) \cdot dA_\text{prop
 <span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B4</span><span class="co">]</span></span>
 <span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>標準降着円盤では、エネルギー収支から温度の半径依存が</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a><span class="fu">### 標準降着円盤の温度則 ― なぜ温度は半径の 3/4 乗で下がるか {.unnumbered}</span></span>
 <span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>T(R) \propto R^{-3/4}</span>
-<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>$$ {#eq-disk-temperature-profile}</span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>§18.1 の **標準降着円盤**（Shakura-Sunyaev 1973）は、各半径 $R$ が局所黒体（@eq-disk-local-blackbody）であるうえに、**定常で薄い円盤**を仮定する。この二つから温度則が一意に決まる。出発点は **エネルギー収支** ― 各半径の円環がどれだけのエネルギーを単位面積あたり放出するか（散逸率 $D(R)$）である。</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>定常円盤では、降着率 $\dot{M}$（単位時間に内側へ落ちる質量）が半径によらず一定で、ガスが内側へ移動するにつれ解放される重力エネルギーが、粘性によってその場で熱に変わる。標準モデルの結果は</span>
 <span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>となる（薄い円盤の Stefan-Boltzmann バランス）。内側ほど高温、外側ほど低温。</span>
-<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>全円盤からの合成スペクトルは、円盤面の各半径からの放射を面積分した形で</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>D(R) = \frac{3 G M \dot{M}}{8\pi R^{3}}\left<span class="co">[</span><span class="ot">\,1 - \sqrt{\frac{R_\text{in}}{R}}\,\right</span><span class="co">]</span></span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>$$ {#eq-disk-dissipation}</span>
 <span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>F_\nu \propto \int_{R_\text{in}}^{R_\text{out}} 2\pi R \cdot B_\nu(T(R))\, dR</span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>$$ {#eq-disk-total-flux}</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>で、$R \gg R_\text{in}$（内縁から十分外側）では角括弧が $1$ に近づき、**$D(R) \propto R^{-3}$** という単純なべきになる（係数の $3$ や角括弧の導出は Frank, King &amp; Raine 第 5 章。ここで使うのは半径依存 $R^{-3}$ だけでよい）。</span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>各円環は表裏の二面から黒体放射する。単位面積あたりの放出は Stefan-Boltzmann 則で $\sigma T(R)^4$ だから、**局所的なエネルギー収支**「散逸 ＝ 放射」は</span>
 <span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>と書ける。ここで $F_\nu$ は **比例関係** として理解すべき量で、右辺には観測者までの距離 $d$、円盤の傾斜角 $i$（投影 $\cos i$）、両面放射の有無といった幾何因子を含めていない。実際に観測されるフラックス $F_\nu^\text{obs}$ は、面フラックス（円盤単位面積あたりの放射）にこれらの幾何因子を掛けたもので、たとえば $F_\nu^\text{obs} \simeq (\cos i / d^2)\int 2\pi R\, B_\nu(T(R))\, dR$ のように書ける。本節で着目するのは絶対値ではなく振動数依存（スペクトルの形）なので、以下では比例関係で扱う。</span>
-<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>ここで重要なのは **中間振動数帯** の振る舞い。$k_B T(R_\text{in}) \gg h\nu \gg k_B T(R_\text{out})$（あるいは同値に $T(R_\text{in}) \gg h\nu/k_B \gg T(R_\text{out})$）となる振動数では、温度分布が積分を支配する。</span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>\sigma\, T(R)^4 \;=\; D(R) \;\propto\; R^{-3}</span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>$$ {#eq-disk-sb-balance}</span>
 <span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>@eq-disk-temperature-profile を使って変数変換すると（導出概略は下記の問い、丁寧な計算は Frank, King &amp; Raine 第 5 章参照）</span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>両辺を $1/4$ 乗すれば、ただちに</span>
 <span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>F_\nu \propto \nu^{1/3} \quad \text{(中間帯)}</span>
-<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>$$ {#eq-disk-13-powerlaw}</span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>T(R) \propto R^{-3/4}</span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>$$ {#eq-disk-temperature-profile}</span>
 <span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>この **$\nu^{1/3}$ べき則** は、多温度円盤の **特徴的シグネチャ**。観測される X 線連星や活動銀河中心核 (AGN) の連続光に、この勾配が広い範囲で見られる。</span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>が出る。**内側ほど高温、外側ほど低温**で、温度は半径の緩やかなべきで下がる。これが次に見る多温度合成スペクトルの素になる。</span>
 <span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>**観測との対応**：「べき則 $\nu^{1/3}$」を見たら、**多数の異なる温度の黒体成分の合成** を疑う ― これは熱的物理の結果。同じく「べき則」と見えるが、非熱的シンクロトロンや逆コンプトン (§18.3) では指数が違うので、区別がつく</span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple"}</span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>**内縁での振る舞い**：@eq-disk-dissipation の角括弧は $R = R_\text{in}$ で $0$ になる（内縁ではトルクがかからず散逸が消える）ため、温度は内縁ちょうどではなく $R \simeq 1.36\,R_\text{in}$ で最大 $T_\text{max}$ をとる。スペクトルの高振動数端を決めるのはこの $T_\text{max}$ である。</span>
 <span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
-<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>**問い**：$\nu^{1/3}$ という指数 1/3 は、どこから来るか？</span>
-<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>**短答**：$T \propto R^{-3/4}$ より $R \propto T^{-4/3}$、$2\pi R\, dR \propto T^{-11/3} dT$。中間振動数帯では Rayleigh-Jeans 側（$B_\nu \propto \nu^2 T$。以下 RJ 側）が支配する範囲があり、$\int T \cdot T^{-11/3} dT$ で適度な温度範囲を積分すると、最終的に $F_\nu \propto \nu^{1/3}$ となる。</span>
-<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>**もう一歩**：もし温度プロファイルが $T \propto R^{-\alpha}$ なら、$F_\nu \propto \nu^{(3\alpha - 2)/\alpha} $ という形になり、$\alpha = 3/4$ で $\nu^{1/3}$、$\alpha = 1$ で $\nu^1$ など、円盤の物理に応じて勾配が変わる</span>
-<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a><span class="fu">### 多温度の黒体を足す ― べき則の出どころ {.unnumbered}</span></span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>円盤は**単一温度の黒体ではない**。@eq-disk-temperature-profile のとおり半径ごとに温度が違い、各円環がそれぞれ別の温度の黒体（@eq-disk-local-blackbody）を放つ。全円盤からの合成スペクトルは、各半径からの放射を円盤面で面積分した形</span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>F_\nu \propto \int_{R_\text{in}}^{R_\text{out}} 2\pi R \cdot B_\nu(T(R))\, dR</span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>$$ {#eq-disk-total-flux}</span>
 <span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a><span class="fu">## 18.3 コンプトン化 ― 高温電子からの逆風 {#sec-comptonization}</span></span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>になる。**黒体の和がべき則になる**というのが直観に反するので、@fig-disk-multicolor で図解しよう。</span>
 <span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B4</span><span class="co">]</span></span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a><span class="al">![**両対数（log-log）プロット。** **(a)** 標準降着円盤は同心の円環に分かれ、内側ほど高温・外側ほど低温（@eq-disk-temperature-profile）。**各半径が「1つの温度の黒体」**で、色が温度に対応する。**(b)** 各円環の黒体（細線、色は左図の円環と対応）は、両対数では**左側が傾き $+2$ の直線**（Rayleigh–Jeans 裾 $B_\nu\propto\nu^2$）、**右側が Wien の指数で急落する非対称な形**をもち、温度が高いほどピークが右上へ移る。破線はその**ピークの軌跡**で、傾き $1/3$ をなす。これらを足し合わせた合成（太線）は三つの帯に分かれる：**低振動数**は最も冷たい外縁の RJ 裾で $F_\nu\propto\nu^2$、**高振動数**は最も熱い内縁（$T_\text{max}$）の Wien 指数カットオフ、その**中間帯**でピーク軌跡に沿って $F_\nu\propto\nu^{1/3}$ のべき則になる。べき則は1本の黒体ではなく、**温度の幅をもつ黒体の集まり**から生まれる。](../images/disk-multicolor-spectrum.svg)</span>{#fig-disk-multicolor width=96%}</span>
 <span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>降着円盤の中心近くには、しばしば **高温電子コロナ**（$T_e \sim 10^8$〜$10^9$ K、$\sim 100$ keV）が存在する。低エネルギーのプランク光子がこのコロナを通過すると、**逆コンプトン散乱**（**inverse Compton scattering**）で電子からエネルギーを受け取る。</span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>ここで $F_\nu$ は **比例関係** として理解すべき量で、右辺には観測者までの距離 $d$、円盤の傾斜角 $i$（投影 $\cos i$）、両面放射の有無といった幾何因子を含めていない。実際に観測されるフラックス $F_\nu^\text{obs}$ は、面フラックス（円盤単位面積あたりの放射）にこれらの幾何因子を掛けたもので、たとえば $F_\nu^\text{obs} \simeq (\cos i / d^2)\int 2\pi R\, B_\nu(T(R))\, dR$ のように書ける。本節で着目するのは絶対値ではなく振動数依存（スペクトルの形）なので、以下では比例関係で扱う。</span>
 <span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>低温の黒体光子（種光子、$h\nu_\text{seed}$）が熱い電子（$k_B T_e \gg h\nu_\text{seed}$）と散乱した一回あたりのエネルギー利得：</span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>**なぜ和がべき則になるのか**（@fig-disk-multicolor (b) の三帯）。ある観測振動数 $\nu$ を固定して、どの円環がそこに効くかを考える。ある円環の黒体は、自分のピーク振動数 $\nu_\text{peak}\sim k_B T(R)/h$ より高振動数側では Wien 的に**指数で消える**ため、$h\nu \gg k_B T(R)$ の冷たい円環（外側）は寄与しない。逆に $h\nu \ll k_B T(R)$ の熱い円環（内側）は、その黒体の Rayleigh–Jeans 裾 $B_\nu\propto\nu^2 T$ で**緩やかに**寄与する。したがって観測振動数 $\nu$ には、おおむね $k_B T(R)\sim h\nu$ を満たす半径（その振動数で「ちょうどピーク付近」の円環）が最も強く効き、そこより内側は RJ 裾を足し込む。$\nu$ を上げると効く円環がより内側（高温・小面積）へ移る ― この**ピークの移動と面積の重みの釣り合い**が、単独の黒体の $\nu^2$ よりずっとフラットに近いべき則の $\nu^{1/3}$ を生む。式で見れば、@eq-disk-temperature-profile から $R\propto T^{-4/3}$、$2\pi R\,dR\propto T^{-11/3}dT$ で、中間帯の RJ 寄与 $B_\nu\propto\nu^2 T$ を温度について積分すると $\nu^{1/3}$ になる（下の問いに骨子）。</span>
 <span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>\frac{\Delta \nu}{\nu} \simeq \frac{4 k_B T_e}{m_e c^2}</span>
-<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>$$ {#eq-compton-gain-per-scattering}</span>
-<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>係数 4 は天下りではない。熱運動する電子（速さ $v$、$k_B T_e\sim m_e v^2$）に光子が散乱されると、**二次のドップラー押し上げ** $\sim(v/c)^2$ を受ける。これを等方な Maxwell 分布で平均すると、種光子が十分冷たい（$h\nu_\text{seed}\ll k_B T_e$）極限で $\langle\Delta\nu/\nu\rangle\simeq 4k_BT_e/m_ec^2$ となる（より正確には、1 回散乱の平均利得が $\langle\Delta\varepsilon/\varepsilon\rangle=(4k_BT_e-\varepsilon)/m_ec^2$ で、$\varepsilon=h\nu\ll k_BT_e$ の極限を残したもの。後者の $-\varepsilon$ 項は逆に高エネルギー光子が電子へエネルギーを渡す通常の Compton 冷却を表す）。詳しい導出は Rybicki–Lightman 第7章を参照。</span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>この $\nu^{1/3}$ が現れるのは、温度分布が積分を支配する **中間振動数帯** ― すなわち $k_B T(R_\text{in}) \gg h\nu \gg k_B T(R_\text{out})$（同値に $T(R_\text{in}) \gg h\nu/k_B \gg T(R_\text{out})$）の範囲である。この帯を上の積分で丁寧に評価すると（骨子は下記の問い、詳しくは Frank, King &amp; Raine 第 5 章）</span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a>F_\nu \propto \nu^{1/3} \quad \text{(中間帯)}</span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>$$ {#eq-disk-13-powerlaw}</span>
 <span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>光子が脱出までに $N$ 回散乱すると、累積利得 ${(1 + \Delta\nu/\nu)}^N$。コロナの光学的深さ $\tau_e$ と温度から見積もる **Compton $y$ パラメータ**：</span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>この **$\nu^{1/3}$ べき則** は、多温度円盤の **特徴的シグネチャ**。観測される X 線連星や活動銀河中心核 (AGN) の連続光に、この勾配が広い範囲で見られる。</span>
 <span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>y \equiv \frac{4 k_B T_e}{m_e c^2} \max(\tau_e, \tau_e^2)</span>
-<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>$$ {#eq-compton-y}</span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>**観測との対応**：「べき則 $\nu^{1/3}$」を見たら、**多数の異なる温度の黒体成分の合成** を疑う ― これは熱的物理の結果。同じく「べき則」と見えるが、非熱的シンクロトロンや逆コンプトン (§18.3) では指数が違うので、区別がつく</span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$y \ll 1$：光子はわずかにエネルギー利得 ― 元の黒体形のわずかな歪み（**Wien 側へのテイル**）</span>
-<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$y \gtrsim 1$：光子はコロナで完全に再分配される ― **Wien 分布** に近い高温化スペクトル</span>
-<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>中間域：**べき則 $F_\nu \propto \nu^{-\alpha}$** が現れ、Wien カットオフで切れる</span>
-<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>**観測との対応**：X 線連星のスペクトルは、二つの状態とその間の遷移として整理できる。</span>
-<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**観測特徴**：**ハード状態**（hard state）は高エネルギー側（硬 X 線）が相対的に強い状態で、観測される指数 $\alpha \simeq 0.5$〜$1.5$ のべき則と $\sim 100$ keV の急速減衰を示す。**ソフト状態**（soft state）は円盤黒体成分が卓越し、軟 X 線側が強い状態である。</span>
-<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**物理的解釈**：ハード状態は高温電子コロナによるコンプトン化が支配的で、$T_e$・$\tau_e$ の組合せがスペクトルを決める。ソフト状態は多温度円盤（§18.2）の熱的放射が支配的である。</span>
-<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**状態遷移**：両状態の間の遷移は、コロナと円盤の幾何（内縁半径・コロナの量）の変化を反映すると解釈される。</span>
-<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>**問い**：$\nu^{1/3}$ という指数 1/3 は、どこから来るか？</span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a>**短答**：$T \propto R^{-3/4}$ より $R \propto T^{-4/3}$、$2\pi R\, dR \propto T^{-11/3} dT$。中間振動数帯では Rayleigh-Jeans 側（$B_\nu \propto \nu^2 T$。以下 RJ 側）が支配する範囲があり、$\int T \cdot T^{-11/3} dT$ で適度な温度範囲を積分すると、最終的に $F_\nu \propto \nu^{1/3}$ となる。</span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>**もう一歩**：もし温度プロファイルが $T \propto R^{-\alpha}$ なら、$F_\nu \propto \nu^{(3\alpha - 2)/\alpha} $ という形になり、$\alpha = 3/4$ で $\nu^{1/3}$、$\alpha = 1$ で $\nu^1$ など、円盤の物理に応じて勾配が変わる</span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a><span class="fu">## 18.3 コンプトン化 ― 高温電子からの逆風 {#sec-comptonization}</span></span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B4</span><span class="co">]</span></span>
 <span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>第16章 §16.5 の **$y$ 歪み**（CMB）と本節の $y$ パラメータは **完全に同じ物理**。スケールが宇宙論的か、銀河近傍かの違いだけ。</span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>降着円盤の中心近くには、しばしば **高温電子コロナ**（$T_e \sim 10^8$〜$10^9$ K、$\sim 100$ keV）が存在する。低エネルギーのプランク光子がこのコロナを通過すると、**逆コンプトン散乱**（**inverse Compton scattering**）で電子からエネルギーを受け取る。</span>
 <span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a><span class="fu">## 18.4 中性子星表面と強磁場 {#sec-neutron-star-surface}</span></span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>低温の黒体光子（種光子、$h\nu_\text{seed}$）が熱い電子（$k_B T_e \gg h\nu_\text{seed}$）と散乱した一回あたりのエネルギー利得：</span>
 <span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B4｜M1</span><span class="co">]</span></span>
-<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>中性子星表面からの X 線熱放射は、原理的にはプランク分布。しかし強い物理条件が複合する：</span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a>\frac{\Delta \nu}{\nu} \simeq \frac{4 k_B T_e}{m_e c^2}</span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>$$ {#eq-compton-gain-per-scattering}</span>
 <span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**温度** $T \sim 10^6$〜$10^7$ K → ピークは X 線帯</span>
-<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**重力赤方偏移** $z_g = (1-2GM/Rc^2)^{-1/2} - 1 \simeq 0.3$ → 観測温度は $T_\infty = T / (1+z_g) \simeq T/1.3$</span>
-<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**強磁場** $B \sim 10^{12}$ G（パルサー）〜$10^{15}$ G（マグネター）：**サイクロトロン共鳴吸収線**、量子効果による不透明度変形</span>
-<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**大気組成** ：水素薄層、ヘリウム、重元素 → 振動数依存不透明度</span>
-<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a>観測される X 線スペクトルは、これら効果が重ねあわされた **「修正黒体」** とも呼ぶべき形状。観測から逆引きされる物理量：</span>
-<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>表面有効温度 $T_\infty$</span>
-<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>質量と半径の組合せ（重力赤方偏移と Stefan-Boltzmann を連立）</span>
-<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>磁場の方向と大きさ（サイクロトロン線の振動数）</span>
-<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>大気組成（吸収線パターン）</span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>係数 4 は天下りではない。熱運動する電子（速さ $v$、$k_B T_e\sim m_e v^2$）に光子が散乱されると、**二次のドップラー押し上げ** $\sim(v/c)^2$ を受ける。これを等方な Maxwell 分布で平均すると、種光子が十分冷たい（$h\nu_\text{seed}\ll k_B T_e$）極限で $\langle\Delta\nu/\nu\rangle\simeq 4k_BT_e/m_ec^2$ となる（より正確には、1 回散乱の平均利得が $\langle\Delta\varepsilon/\varepsilon\rangle=(4k_BT_e-\varepsilon)/m_ec^2$ で、$\varepsilon=h\nu\ll k_BT_e$ の極限を残したもの。後者の $-\varepsilon$ 項は逆に高エネルギー光子が電子へエネルギーを渡す通常の Compton 冷却を表す）。詳しい導出は Rybicki–Lightman 第7章を参照。</span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a>光子が脱出までに $N$ 回散乱すると、累積利得 ${(1 + \Delta\nu/\nu)}^N$。コロナの光学的深さ $\tau_e$ と温度から見積もる **Compton $y$ パラメータ**：</span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a>y \equiv \frac{4 k_B T_e}{m_e c^2} \max(\tau_e, \tau_e^2)</span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>$$ {#eq-compton-y}</span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$y \ll 1$：光子はわずかにエネルギー利得 ― 元の黒体形のわずかな歪み（**Wien 側へのテイル**）</span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$y \gtrsim 1$：光子はコロナで完全に再分配される ― **Wien 分布** に近い高温化スペクトル</span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>中間域：**べき則 $F_\nu \propto \nu^{-\alpha}$** が現れ、Wien カットオフで切れる</span>
 <span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning appearance="simple"}</span>
-<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>**注意（観測）**：**中性子星半径の精密測定** は核物質の状態方程式を制約する重要な物理。NICER 衛星（2017〜）はパルサーの X 線スペクトルと時間プロファイルから $R$ と $M$ を独立に測定する観測戦略を採用している。本書の射程である「スペクトルから物理を逆引き」の最も精密な現代例</span>
-<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a><span class="fu">## 18.5 ブラックホール近傍 ― 一般相対論的修正 {#sec-black-hole-effects}</span></span>
-<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：M1-M2</span><span class="co">]</span></span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>**観測との対応**：X 線連星のスペクトルは、二つの状態とその間の遷移として整理できる。</span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**観測特徴**：**ハード状態**（hard state）は高エネルギー側（硬 X 線）が相対的に強い状態で、観測される指数 $\alpha \simeq 0.5$〜$1.5$ のべき則と $\sim 100$ keV の急速減衰を示す。**ソフト状態**（soft state）は円盤黒体成分が卓越し、軟 X 線側が強い状態である。</span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**物理的解釈**：ハード状態は高温電子コロナによるコンプトン化が支配的で、$T_e$・$\tau_e$ の組合せがスペクトルを決める。ソフト状態は多温度円盤（§18.2）の熱的放射が支配的である。</span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**状態遷移**：両状態の間の遷移は、コロナと円盤の幾何（内縁半径・コロナの量）の変化を反映すると解釈される。</span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>ブラックホール降着円盤の最も内側（$R \sim 10\,GM/c^2$）では、一般相対論的効果が無視できない：</span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>第16章 §16.5 の **$y$ 歪み**（CMB）と本節の $y$ パラメータは **完全に同じ物理**。スケールが宇宙論的か、銀河近傍かの違いだけ。</span>
 <span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**重力赤方偏移**：光子のエネルギーが減る $\nu \to \nu(1 - 2GM/Rc^2)^{1/2}$</span>
-<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**特殊相対論的ビーミング**：円盤のケプラー回転速度 $v \to c$ で、近づく側が明るく・遠ざかる側が暗くなる</span>
-<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**光線の曲がり**：円盤の裏側が見える、Einstein リング</span>
-<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**時間遅れ**：円盤内側ほど時間がゆっくり進む</span>
-<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>これらの効果は、第13章 §13.4 の偏光自由度や §18.1 の局所黒体仮定の **上に重ねて** 効く。観測される SED は</span>
-<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a>F_\nu^\text{obs} = \int B_\nu(T(R, \phi)) \cdot g^3(R, \phi) \cdot dA_\text{proper}</span>
-<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>$$ {#eq-grdisk-flux}</span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a><span class="fu">## 18.4 中性子星表面と強磁場 {#sec-neutron-star-surface}</span></span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B4｜M1</span><span class="co">]</span></span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>中性子星表面からの X 線熱放射は、原理的にはプランク分布。しかし強い物理条件が複合する：</span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**温度** $T \sim 10^6$〜$10^7$ K → ピークは X 線帯</span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**重力赤方偏移** $z_g = (1-2GM/Rc^2)^{-1/2} - 1 \simeq 0.3$ → 観測温度は $T_\infty = T / (1+z_g) \simeq T/1.3$</span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**強磁場** $B \sim 10^{12}$ G（パルサー）〜$10^{15}$ G（マグネター）：**サイクロトロン共鳴吸収線**、量子効果による不透明度変形</span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**大気組成** ：水素薄層、ヘリウム、重元素 → 振動数依存不透明度</span>
 <span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>の形（$g$ は赤方偏移因子、$dA_\text{proper}$ は固有面積）。一般相対論的計算が必要。</span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>観測される X 線スペクトルは、これら効果が重ねあわされた **「修正黒体」** とも呼ぶべき形状。観測から逆引きされる物理量：</span>
 <span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>特に重要な観測量は **広線輪郭** ― 鉄輝線 (6.4 keV) が、円盤の高速回転と重力赤方偏移により、特徴的な非対称形状（青翼が高く、赤翼が長く伸びる）に変形される。これがブラックホールスピンの測定に使われる。</span>
-<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>**観測との対応**：第VII部の主題である **線スペクトル** が、ここで連続スペクトルと再会する。鉄 K$\alpha$ 線（中性鉄 6.4 keV）の輪郭は、原子物理（線のエネルギーと振動子強度）＋ 円盤運動学（Doppler 効果）＋ 一般相対論（重力赤方偏移）の **三層の物理** が刻まれた観測量。第VII部では原子物理側を、本章では円盤物理側を別々に整理しておく</span>
-<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a><span class="fu">## 18.6 第V部までの道具で見える限界と次への橋 {#sec-accretion-bridge}</span></span>
-<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
-<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a>本章で扱った高エネルギー天体は、本書の第I〜V部の枠組み（プランク分布＋ずれ因子）で観測の **大半が** 記述できることを示した。しかし：</span>
-<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**コロナでのコンプトン化** ― 電子分布が熱的かほぼ熱的だが、放射過程は QED 的（第VIII部で本格議論）</span>
-<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**シンクロトロン放射** ― AGN ジェットやマグネター磁気圏では、非熱的電子分布と強磁場が組合さって、本書の枠組み外の物理が支配的</span>
-<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**線スペクトルの広がり** ― 第VII部の主題と、本章の運動学的・重力的効果が組合さる</span>
-<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a>**使えるようになった道具**（§18.1〜§18.5）：</span>
-<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>局所黒体仮定とその限界</span>
-<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>多温度円盤の $\nu^{1/3}$ べき則（合成スペクトルの特徴シグネチャ）</span>
-<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Compton 化と $y$ パラメータ（X 線連星のハード状態スペクトル）</span>
-<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>中性子星表面物理（重力赤方偏移、強磁場、大気組成）</span>
-<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>ブラックホール近傍の一般相対論的修正</span>
-<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>表面有効温度 $T_\infty$</span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>質量と半径の組合せ（重力赤方偏移と Stefan-Boltzmann を連立）</span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>磁場の方向と大きさ（サイクロトロン線の振動数）</span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>大気組成（吸収線パターン）</span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning appearance="simple"}</span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>**注意（観測）**：**中性子星半径の精密測定** は核物質の状態方程式を制約する重要な物理。NICER 衛星（2017〜）はパルサーの X 線スペクトルと時間プロファイルから $R$ と $M$ を独立に測定する観測戦略を採用している。本書の射程である「スペクトルから物理を逆引き」の最も精密な現代例</span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a><span class="fu">## 18.5 ブラックホール近傍 ― 一般相対論的修正 {#sec-black-hole-effects}</span></span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：M1-M2</span><span class="co">]</span></span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>ブラックホール降着円盤の最も内側（$R \sim 10\,GM/c^2$）では、一般相対論的効果が無視できない：</span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**重力赤方偏移**：光子のエネルギーが減る $\nu \to \nu(1 - 2GM/Rc^2)^{1/2}$</span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**特殊相対論的ビーミング**：円盤のケプラー回転速度 $v \to c$ で、近づく側が明るく・遠ざかる側が暗くなる</span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**光線の曲がり**：円盤の裏側が見える、Einstein リング</span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**時間遅れ**：円盤内側ほど時間がゆっくり進む</span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a>これらの効果は、第13章 §13.4 の偏光自由度や §18.1 の局所黒体仮定の **上に重ねて** 効く。観測される SED は</span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>F_\nu^\text{obs} = \int B_\nu(T(R, \phi)) \cdot g^3(R, \phi) \cdot dA_\text{proper}</span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>$$ {#eq-grdisk-flux}</span>
 <span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>の形（$g$ は赤方偏移因子、$dA_\text{proper}$ は固有面積）。一般相対論的計算が必要。</span>
 <span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-accretion-high-energy-summary .unnumbered}</span></span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a>特に重要な観測量は **広線輪郭** ― 鉄輝線 (6.4 keV) が、円盤の高速回転と重力赤方偏移により、特徴的な非対称形状（青翼が高く、赤翼が長く伸びる）に変形される。これがブラックホールスピンの測定に使われる。</span>
 <span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
-<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る・第I〜VI部の総まとめ**</span>
-<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a>本章で、プランク分布の枠組みが、もっとも極端な物理条件（強重力場・強磁場・相対論的速度）の下でも、**局所黒体 ＋ 大域的修正** の組合せとして大きく適用できることを見た。</span>
-<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a>第I〜V部で逆引きしてきたプランク分布の理解 ― 統計的源泉、量子的源泉、電磁気的源泉 ― が、第VI部の応用章群で次々と観測スペクトルの解読に動員された：</span>
-<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>CMB（第16章）：完璧な黒体、熱化の証拠</span>
-<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>恒星・惑星・ダスト（第17章）：振動数依存不透明度、修正黒体、平衡温度</span>
-<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>降着円盤（第18章）：局所黒体、多温度合成、コンプトン化、相対論的修正</span>
-<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a>これで第I〜VI部は完結。**第VII部** では、本書のもう一つの主柱 ― **線スペクトル** ― の逆引きが始まる。Einstein 係数（第11章）と水素線吸収係数の地図が再登場する</span>
-<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>**観測との対応**：第VII部の主題である **線スペクトル** が、ここで連続スペクトルと再会する。鉄 K$\alpha$ 線（中性鉄 6.4 keV）の輪郭は、原子物理（線のエネルギーと振動子強度）＋ 円盤運動学（Doppler 効果）＋ 一般相対論（重力赤方偏移）の **三層の物理** が刻まれた観測量。第VII部では原子物理側を、本章では円盤物理側を別々に整理しておく</span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a><span class="fu">## 18.6 第V部までの道具で見える限界と次への橋 {#sec-accretion-bridge}</span></span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">本文目安：B3</span><span class="co">]</span></span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>本章で扱った高エネルギー天体は、本書の第I〜V部の枠組み（プランク分布＋ずれ因子）で観測の **大半が** 記述できることを示した。しかし：</span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**コロナでのコンプトン化** ― 電子分布が熱的かほぼ熱的だが、放射過程は QED 的（第VIII部で本格議論）</span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**シンクロトロン放射** ― AGN ジェットやマグネター磁気圏では、非熱的電子分布と強磁場が組合さって、本書の枠組み外の物理が支配的</span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**線スペクトルの広がり** ― 第VII部の主題と、本章の運動学的・重力的効果が組合さる</span>
 <span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-accretion-high-energy-exercises .unnumbered}</span></span>
-<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **解答例** は章末「解答例」にまとめてある（オンライン版では各問のボタンから開く）。まず自力で解いてから開くこと。</span>
-<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 18-1　多温度円盤の 1/3 乗べき則 {#ex-18-1 .unnumbered}</span></span>
-<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆☆ </span><span class="co">] [tag:導出補完]</span></span>
-<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a>§18.2 は標準降着円盤の中間振動数帯で $F_\nu\propto\nu^{1/3}$ になると述べた。導出の骨子を埋める。温度プロファイル $T(R)\propto R^{-3/4}$、合成フラックス $F_\nu=\displaystyle\int_{R_\mathrm{in}}^{R_\mathrm{out}}2\pi R\,B_\nu(T(R))\,dR$。</span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>**使えるようになった道具**（§18.1〜§18.5）：</span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>局所黒体仮定とその限界</span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>多温度円盤の $\nu^{1/3}$ べき則（合成スペクトルの特徴シグネチャ）</span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Compton 化と $y$ パラメータ（X 線連星のハード状態スペクトル）</span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>中性子星表面物理（重力赤方偏移、強磁場、大気組成）</span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>ブラックホール近傍の一般相対論的修正</span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$T\propto R^{-3/4}$ から $R\propto T^{-4/3}$、$2\pi R\,dR\propto T^{-11/3}\,dT$ を示せ。</span>
-<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>中間帯（$kT(R_\mathrm{in})\gg h\nu\gg kT(R_\mathrm{out})$）では各半径の Rayleigh-Jeans 側 $B_\nu\propto\nu^2 T$ が効く。$F_\nu\propto\nu^2\displaystyle\int T\cdot T^{-11/3}\,dT=\nu^2\int T^{-8/3}dT$ を変数 $x=h\nu/kT$ に変換し、$F_\nu\propto\nu^{1/3}$ を導け。</span>
-<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>温度プロファイルが一般に $T\propto R^{-\alpha}$ なら $F_\nu\propto\nu^{(3\alpha-2)/\alpha}$ となることを確かめ、$\alpha=3/4$ で $1/3$ になることを示せ。</span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a><span class="fu">## この章で何がわかったか {#sec-accretion-high-energy-summary .unnumbered}</span></span>
 <span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§18.2 多温度円盤</span><span class="co">](#sec-disk-multi-temperature)</span>／局所黒体は<span class="co">[</span><span class="ot">§18.1</span><span class="co">](#sec-disk-local-blackbody)</span>（<span class="co">[</span><span class="ot">演習 18-3</span><span class="co">](#ex-18-3)</span>）、RJ 極限は<span class="co">[</span><span class="ot">§2.5</span><span class="co">](../part1/02-reading-spectra.qmd#sec-reading-spectra-limits)</span>。</span>
-<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
-<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 18-1）</span><span class="co">](#sol-18-1)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
-<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 18-2　コンプトン y パラメータ {#ex-18-2 .unnumbered}</span></span>
-<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
-<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a>§18.3 のコンプトン化を読み解く。種光子（低温黒体）が高温電子コロナ（$T_e$）を通過する。1回散乱あたりのエネルギー利得 $\dfrac{\Delta\nu}{\nu}\simeq\dfrac{4k_BT_e}{m_ec^2}$、$y\equiv\dfrac{4k_BT_e}{m_ec^2}\max(\tau_e,\tau_e^2)$。$m_ec^2=511$ keV。</span>
-<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$T_e=10^9$ K（$k_BT_e\simeq86$ keV）で1回あたりのエネルギー利得 $\Delta\nu/\nu$ を求めよ。</span>
-<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$y\ll1$、$y\gtrsim1$、中間域で観測スペクトルがどう変わるか（弱い Wien テイル／Wien 分布化／べき則）述べよ。</span>
-<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>この $y$ パラメータが第16章 CMB の $y$ 歪み（Sunyaev-Zel'dovich 効果）と同じ物理であること、スケールの違いだけであることを述べよ。</span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a>::: {.callout-summary}</span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>**中心地図に戻る・第I〜VI部の総まとめ**</span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>本章で、プランク分布の枠組みが、もっとも極端な物理条件（強重力場・強磁場・相対論的速度）の下でも、**局所黒体 ＋ 大域的修正** の組合せとして大きく適用できることを見た。</span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a>第I〜V部で逆引きしてきたプランク分布の理解 ― 統計的源泉、量子的源泉、電磁気的源泉 ― が、第VI部の応用章群で次々と観測スペクトルの解読に動員された：</span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>CMB（第16章）：完璧な黒体、熱化の証拠</span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>恒星・惑星・ダスト（第17章）：振動数依存不透明度、修正黒体、平衡温度</span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>降着円盤（第18章）：局所黒体、多温度合成、コンプトン化、相対論的修正</span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a>これで第I〜VI部は完結。**第VII部** では、本書のもう一つの主柱 ― **線スペクトル** ― の逆引きが始まる。Einstein 係数（第11章）と水素線吸収係数の地図が再登場する</span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a><span class="fu">## 演習問題 {#sec-accretion-high-energy-exercises .unnumbered}</span></span>
 <span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§18.3 コンプトン化</span><span class="co">](#sec-comptonization)</span>／CMB の $y$ 歪みは<span class="co">[</span><span class="ot">§16.5</span><span class="co">](../part6/16-cmb.qmd#sec-cmb-distortions)</span>（<span class="co">[</span><span class="ot">演習 16-4</span><span class="co">](../part6/16-cmb.qmd#ex-16-4)</span>）。</span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a>以下の問題は、本文で省いた式の導出を補う問題（<span class="co">[</span><span class="ot">tag:導出補完</span><span class="co">]</span>）と、本文で得た道具を別の角度から使って理解を深める問題（<span class="co">[</span><span class="ot">tag:理解を深める</span><span class="co">]</span>）から成る。各問の **解答例** は章末「解答例」にまとめてある（オンライン版では各問のボタンから開く）。まず自力で解いてから開くこと。</span>
 <span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
-<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 18-2）</span><span class="co">](#sol-18-2)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
-<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 18-1　多温度円盤の 1/3 乗べき則 {#ex-18-1 .unnumbered}</span></span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆☆ </span><span class="co">] [tag:導出補完]</span></span>
 <span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 18-3　局所黒体仮定とその限界 {#ex-18-3 .unnumbered}</span></span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a>§18.2 は標準降着円盤の中間振動数帯で $F_\nu\propto\nu^{1/3}$ になると述べた。導出の骨子を埋める。温度プロファイル $T(R)\propto R^{-3/4}$、合成フラックス $F_\nu=\displaystyle\int_{R_\mathrm{in}}^{R_\mathrm{out}}2\pi R\,B_\nu(T(R))\,dR$。</span>
 <span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
-<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a>§18.1 は標準降着円盤が「各半径で局所的に黒体」と仮定する。この仮定が成り立つ条件と破れ方を整理する。</span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$T\propto R^{-3/4}$ から $R\propto T^{-4/3}$、$2\pi R\,dR\propto T^{-11/3}\,dT$ を示せ。</span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>中間帯（$kT(R_\mathrm{in})\gg h\nu\gg kT(R_\mathrm{out})$）では各半径の Rayleigh-Jeans 側 $B_\nu\propto\nu^2 T$ が効く。$F_\nu\propto\nu^2\displaystyle\int T\cdot T^{-11/3}\,dT=\nu^2\int T^{-8/3}dT$ を変数 $x=h\nu/kT$ に変換し、$F_\nu\propto\nu^{1/3}$ を導け。</span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>温度プロファイルが一般に $T\propto R^{-\alpha}$ なら $F_\nu\propto\nu^{(3\alpha-2)/\alpha}$ となることを確かめ、$\alpha=3/4$ で $1/3$ になることを示せ。</span>
 <span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>各半径が温度 $T(R)$ の黒体として放射するには、第3章・第5章のどんな条件（熱化時間、光学的厚さ、単一温度）が局所的に満たされる必要があるか述べよ。</span>
-<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>実際の円盤で局所黒体から外れる要因を2つ挙げよ（高温コロナ、振動数依存不透明度、電子散乱卓越など）。</span>
-<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>電子散乱が吸収より卓越する高温体では、観測される色温度 $T_\mathrm{col}$ が実効温度 $T(R)$ より高くなり、補正係数 $f_\mathrm{col}\simeq1.5$〜$2$ が経験的に要る。なぜ散乱卓越が色温度を上げるのか、<span class="co">[</span><span class="ot">演習 15-3</span><span class="co">](../part6/15-non-blackbody.qmd#ex-15-3)</span> のソース関数と結びつけて一言で述べよ。</span>
-<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§18.1 局所黒体近似</span><span class="co">](#sec-disk-local-blackbody)</span>／黒体化条件は<span class="co">[</span><span class="ot">§3.6</span><span class="co">](../part1/03-universality.qmd#sec-universality-real-objects)</span>（<span class="co">[</span><span class="ot">演習 3-4</span><span class="co">](../part1/03-universality.qmd#ex-3-4)</span>）、LTE は<span class="co">[</span><span class="ot">§5.5</span><span class="co">](../part2/05-radiative-transfer.qmd#sec-radiative-transfer-lte)</span>、散乱ソース関数は<span class="co">[</span><span class="ot">演習 15-3</span><span class="co">](../part6/15-non-blackbody.qmd#ex-15-3)</span>。</span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§18.2 多温度円盤</span><span class="co">](#sec-disk-multi-temperature)</span>／局所黒体は<span class="co">[</span><span class="ot">§18.1</span><span class="co">](#sec-disk-local-blackbody)</span>（<span class="co">[</span><span class="ot">演習 18-3</span><span class="co">](#ex-18-3)</span>）、RJ 極限は<span class="co">[</span><span class="ot">§2.5</span><span class="co">](../part1/02-reading-spectra.qmd#sec-reading-spectra-limits)</span>。</span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 18-1）</span><span class="co">](#sol-18-1)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
-<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 18-3）</span><span class="co">](#sol-18-3)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
-<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 18-2　コンプトン y パラメータ {#ex-18-2 .unnumbered}</span></span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
 <span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 18-4　中性子星表面の重力赤方偏移 {#ex-18-4 .unnumbered}</span></span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a>§18.3 のコンプトン化を読み解く。種光子（低温黒体）が高温電子コロナ（$T_e$）を通過する。1回散乱あたりのエネルギー利得 $\dfrac{\Delta\nu}{\nu}\simeq\dfrac{4k_BT_e}{m_ec^2}$、$y\equiv\dfrac{4k_BT_e}{m_ec^2}\max(\tau_e,\tau_e^2)$。$m_ec^2=511$ keV。</span>
 <span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
-<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>§18.4 は中性子星の観測温度が重力赤方偏移を受けると述べた。$z_g=(1-2GM/Rc^2)^{-1/2}-1$、観測温度 $T_\infty=T/(1+z_g)$。$M=1.4M_\odot=2.78\times10^{30}$ kg、$R=10$ km、$G=6.674\times10^{-11}$、$c=3\times10^8$ m/s。</span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>$T_e=10^9$ K（$k_BT_e\simeq86$ keV）で1回あたりのエネルギー利得 $\Delta\nu/\nu$ を求めよ。</span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$y\ll1$、$y\gtrsim1$、中間域で観測スペクトルがどう変わるか（弱い Wien テイル／Wien 分布化／べき則）述べよ。</span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>この $y$ パラメータが第16章 CMB の $y$ 歪み（Sunyaev-Zel'dovich 効果）と同じ物理であること、スケールの違いだけであることを述べよ。</span>
 <span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>コンパクトネス $2GM/Rc^2$ を計算せよ。</span>
-<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>重力赤方偏移 $z_g$ を求め、$z_g\simeq0.3$ を確かめよ。</span>
-<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>表面温度 $T=10^7$ K の中性子星の観測温度 $T_\infty$ を求めよ。重力赤方偏移と Stefan-Boltzmann を連立すると質量と半径の組合せが制約できる（NICER の戦略）ことに一言触れよ。</span>
-<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§18.4 中性子星表面</span><span class="co">](#sec-neutron-star-surface)</span>／Fermi 縮退は<span class="co">[</span><span class="ot">§8.2</span><span class="co">](../part3/08-photon-statistics.qmd#sec-photon-statistics-bose-fermi)</span>、相対論的修正は<span class="co">[</span><span class="ot">§18.5</span><span class="co">](#sec-black-hole-effects)</span>。</span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§18.3 コンプトン化</span><span class="co">](#sec-comptonization)</span>／CMB の $y$ 歪みは<span class="co">[</span><span class="ot">§16.5</span><span class="co">](../part6/16-cmb.qmd#sec-cmb-distortions)</span>（<span class="co">[</span><span class="ot">演習 16-4</span><span class="co">](../part6/16-cmb.qmd#ex-16-4)</span>）。</span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 18-2）</span><span class="co">](#sol-18-2)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
-<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 18-4）</span><span class="co">](#sol-18-4)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
-<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 18-3　局所黒体仮定とその限界 {#ex-18-3 .unnumbered}</span></span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:理解を深める]</span></span>
 <span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a><span class="fu">## 解答例 {#sec-accretion-high-energy-solutions .unnumbered}</span></span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a>§18.1 は標準降着円盤が「各半径で局所的に黒体」と仮定する。この仮定が成り立つ条件と破れ方を整理する。</span>
 <span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a>各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。</span>
-<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
-<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">問題 18-1</span><span class="co">](#sol-18-1)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 18-2</span><span class="co">](#sol-18-2)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 18-3</span><span class="co">](#sol-18-3)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 18-4</span><span class="co">](#sol-18-4)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
-<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>各半径が温度 $T(R)$ の黒体として放射するには、第3章・第5章のどんな条件（熱化時間、光学的厚さ、単一温度）が局所的に満たされる必要があるか述べよ。</span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>実際の円盤で局所黒体から外れる要因を2つ挙げよ（高温コロナ、振動数依存不透明度、電子散乱卓越など）。</span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>電子散乱が吸収より卓越する高温体では、観測される色温度 $T_\mathrm{col}$ が実効温度 $T(R)$ より高くなり、補正係数 $f_\mathrm{col}\simeq1.5$〜$2$ が経験的に要る。なぜ散乱卓越が色温度を上げるのか、<span class="co">[</span><span class="ot">演習 15-3</span><span class="co">](../part6/15-non-blackbody.qmd#ex-15-3)</span> のソース関数と結びつけて一言で述べよ。</span>
+<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§18.1 局所黒体近似</span><span class="co">](#sec-disk-local-blackbody)</span>／黒体化条件は<span class="co">[</span><span class="ot">§3.6</span><span class="co">](../part1/03-universality.qmd#sec-universality-real-objects)</span>（<span class="co">[</span><span class="ot">演習 3-4</span><span class="co">](../part1/03-universality.qmd#ex-3-4)</span>）、LTE は<span class="co">[</span><span class="ot">§5.5</span><span class="co">](../part2/05-radiative-transfer.qmd#sec-radiative-transfer-lte)</span>、散乱ソース関数は<span class="co">[</span><span class="ot">演習 15-3</span><span class="co">](../part6/15-non-blackbody.qmd#ex-15-3)</span>。</span>
 <span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a>::: {#sol-18-1 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-18-1-label"}</span>
-<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
-<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 18-1）**</span><span class="co">]</span>{#sol-18-1-label .offcanvas-title}</span>
-<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
-<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
-<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a>**(1)** $T\propto R^{-3/4}\Rightarrow R\propto T^{-4/3}$。$dR\propto T^{-7/3}dT$。$2\pi R\,dR\propto T^{-4/3}\cdot T^{-7/3}dT=T^{-11/3}dT$。</span>
+<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 18-3）</span><span class="co">](#sol-18-3)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a><span class="fu">### 問題 18-4　中性子星表面の重力赤方偏移 {#ex-18-4 .unnumbered}</span></span>
+<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">★ 難易度：☆☆ </span><span class="co">] [tag:導出補完]</span></span>
 <span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a>**(2)** 中間帯で各半径の RJ 側 $B_\nu\propto\nu^2 T$。よって</span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a>§18.4 は中性子星の観測温度が重力赤方偏移を受けると述べた。$z_g=(1-2GM/Rc^2)^{-1/2}-1$、観測温度 $T_\infty=T/(1+z_g)$。$M=1.4M_\odot=2.78\times10^{30}$ kg、$R=10$ km、$G=6.674\times10^{-11}$、$c=3\times10^8$ m/s。</span>
 <span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a>$$F_\nu\propto\int\nu^2 T\cdot T^{-11/3}dT=\nu^2\int T^{-8/3}dT.$$</span>
-<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>$x=h\nu/kT$ で $T=h\nu/kx$、$dT\propto-\nu\,x^{-2}dx$、$T^{-8/3}\propto\nu^{-8/3}x^{8/3}$。よって $\int T^{-8/3}dT\propto\nu^{-8/3}\cdot\nu\int x^{8/3-2}dx=\nu^{-5/3}\int x^{2/3}dx$。中間帯では積分は $\nu$ に依らない定数（端の寄与が効かない範囲）。したがって $F_\nu\propto\nu^2\cdot\nu^{-5/3}=\nu^{1/3}$。</span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>コンパクトネス $2GM/Rc^2$ を計算せよ。</span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>重力赤方偏移 $z_g$ を求め、$z_g\simeq0.3$ を確かめよ。</span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>表面温度 $T=10^7$ K の中性子星の観測温度 $T_\infty$ を求めよ。重力赤方偏移と Stefan-Boltzmann を連立すると質量と半径の組合せが制約できる（NICER の戦略）ことに一言触れよ。</span>
 <span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>**(3)** 一般に $T\propto R^{-\alpha}\Rightarrow R\propto T^{-1/\alpha}$、$2\pi R\,dR\propto T^{-2/\alpha}dT$。$F_\nu\propto\nu^2\int T\cdot T^{-2/\alpha}dT=\nu^2\int T^{1-2/\alpha}dT$。$x=h\nu/kT$ 変換で $F_\nu\propto\nu^2\cdot\nu^{(1-2/\alpha)+1}\cdot(\text{const})\cdot\nu^{-1}$… 整理すると指数は $(3\alpha-2)/\alpha$。$\alpha=3/4$ で $(9/4-2)/(3/4)=(1/4)/(3/4)=1/3$。</span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§18.4 中性子星表面</span><span class="co">](#sec-neutron-star-surface)</span>／Fermi 縮退は<span class="co">[</span><span class="ot">§8.2</span><span class="co">](../part3/08-photon-statistics.qmd#sec-photon-statistics-bose-fermi)</span>、相対論的修正は<span class="co">[</span><span class="ot">§18.5</span><span class="co">](#sec-black-hole-effects)</span>。</span>
 <span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a>**答え**：$2\pi R\,dR\propto T^{-11/3}dT$、中間帯で $F_\nu\propto\nu^{1/3}$。一般に $T\propto R^{-\alpha}$ で $F_\nu\propto\nu^{(3\alpha-2)/\alpha}$、$\alpha=3/4$ で $1/3$。</span>
-<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">解答例を見る（問題 18-4）</span><span class="co">](#sol-18-4)</span>{.btn .btn-outline-secondary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
 <span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>::: {#sol-18-2 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-18-2-label"}</span>
-<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
-<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 18-2）**</span><span class="co">]</span>{#sol-18-2-label .offcanvas-title}</span>
-<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
-<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
-<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a>**(1)** $\dfrac{\Delta\nu}{\nu}=\dfrac{4k_BT_e}{m_ec^2}=\dfrac{4\times86\ \text{keV}}{511\ \text{keV}}=\dfrac{344}{511}\simeq0.67$。1回の散乱で振動数が約 67% 増える。（$k_BT_e=8.617\times10^{-5}\times10^9=8.6\times10^4$ eV $=86$ keV。）</span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a><span class="fu">## 解答例 {#sec-accretion-high-energy-solutions .unnumbered}</span></span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a>各問の「解答例を見る」ボタンを押すと、右側のパネルに解答例が表示され、問題文と見比べられる（背景は暗くならず本文はそのまま読める）。印刷版・EPUB版では下に順に掲載される。</span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">問題 18-1</span><span class="co">](#sol-18-1)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 18-2</span><span class="co">](#sol-18-2)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 18-3</span><span class="co">](#sol-18-3)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"} <span class="co">[</span><span class="ot">問題 18-4</span><span class="co">](#sol-18-4)</span>{.btn .btn-outline-primary .btn-sm data-bs-toggle="offcanvas" role="button"}</span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a>**(2)** $y\ll1$：光子はわずかにエネルギーを得るだけ＝元の黒体形に弱い Wien 側テイルが付く。$y\gtrsim1$：光子がコロナで完全に再分配され、Wien 分布に近い高温化スペクトル。中間域：べき則 $F_\nu\propto\nu^{-\alpha}$ が現れ、高エネルギー側は Wien カットオフで切れる。</span>
-<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a>**(3)** どちらも高温電子と光子の逆コンプトン散乱で、$y=\dfrac{4k_BT_e}{m_ec^2}\max(\tau,\tau^2)$ という同じパラメータでスペクトル変形を測る。X 線連星のコロナ（銀河近傍スケール）も、銀河団ガス（宇宙論スケール）も、同じ物理。違うのはスケール（$T_e$、$\tau$ の値と対象の大きさ）だけ。</span>
-<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a>**答え**：$\Delta\nu/\nu\simeq0.67$（$T_e=10^9$ K）。$y\ll1$ 弱テイル、$y\gtrsim1$ Wien 化、中間でべき則。CMB の $y$ 歪み（SZ 効果）と同物理。</span>
-<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a>::: {#sol-18-1 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-18-1-label"}</span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 18-1）**</span><span class="co">]</span>{#sol-18-1-label .offcanvas-title}</span>
+<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>**(1)** $T\propto R^{-3/4}\Rightarrow R\propto T^{-4/3}$。$dR\propto T^{-7/3}dT$。$2\pi R\,dR\propto T^{-4/3}\cdot T^{-7/3}dT=T^{-11/3}dT$。</span>
 <span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a>::: {#sol-18-3 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-18-3-label"}</span>
-<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
-<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 18-3）**</span><span class="co">]</span>{#sol-18-3-label .offcanvas-title}</span>
-<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
-<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
-<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>**(1)** ① 熱化時間が円盤の力学的時間より短い（局所的に熱平衡に達する）、② 各半径で鉛直方向に光学的に厚い（$\tau\gg1$、吸収・再放出が十分）、③ その半径内では単一温度 $T(R)$ で記述できる。これらが満たされれば各半径が $B_\nu(T(R))$ で放射する（第3章 §3.6、第5章 §5.6）。</span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a>**(2)** 中間帯で各半径の RJ 側 $B_\nu\propto\nu^2 T$。よって</span>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a>$$F_\nu\propto\int\nu^2 T\cdot T^{-11/3}dT=\nu^2\int T^{-8/3}dT.$$</span>
+<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a>$x=h\nu/kT$ で $T=h\nu/kx$、$dT\propto-\nu\,x^{-2}dx$、$T^{-8/3}\propto\nu^{-8/3}x^{8/3}$。よって $\int T^{-8/3}dT\propto\nu^{-8/3}\cdot\nu\int x^{8/3-2}dx=\nu^{-5/3}\int x^{2/3}dx$。中間帯では積分は $\nu$ に依らない定数（端の寄与が効かない範囲）。したがって $F_\nu\propto\nu^2\cdot\nu^{-5/3}=\nu^{1/3}$。</span>
+<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>**(3)** 一般に $T\propto R^{-\alpha}\Rightarrow R\propto T^{-1/\alpha}$、$2\pi R\,dR\propto T^{-2/\alpha}dT$。$F_\nu\propto\nu^2\int T\cdot T^{-2/\alpha}dT=\nu^2\int T^{1-2/\alpha}dT$。$x=h\nu/kT$ 変換で $F_\nu\propto\nu^2\cdot\nu^{(1-2/\alpha)+1}\cdot(\text{const})\cdot\nu^{-1}$… 整理すると指数は $(3\alpha-2)/\alpha$。$\alpha=3/4$ で $(9/4-2)/(3/4)=(1/4)/(3/4)=1/3$。</span>
 <span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a>**(2)** 例：高温・希薄なコロナ層（局所熱平衡を破る）、不透明度の振動数依存（修正黒体的なずれ）、電子散乱が吸収より卓越（純黒体から外れる）。</span>
-<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a>**(3)** 電子散乱卓越ではソース関数 $S_\nu=(1-\tilde\omega)B_\nu+\tilde\omega\langle J_\nu\rangle$（<span class="co">[</span><span class="ot">演習 15-3</span><span class="co">](../part6/15-non-blackbody.qmd#ex-15-3)</span>）が局所プランクから外れ、光子は吸収で熱化されにくく深部の高温を反映したまま散乱で抜ける。結果、見かけの色温度が実効温度より高くなり、$f_\mathrm{col}\simeq1.5$〜$2$ の補正が要る。</span>
+<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a>**答え**：$2\pi R\,dR\propto T^{-11/3}dT$、中間帯で $F_\nu\propto\nu^{1/3}$。一般に $T\propto R^{-\alpha}$ で $F_\nu\propto\nu^{(3\alpha-2)/\alpha}$、$\alpha=3/4$ で $1/3$。</span>
+<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a>**答え**：局所熱平衡・光学的厚・単一温度が必要。破れ＝コロナ／振動数依存不透明度／電子散乱卓越。散乱卓越は熱化を妨げ色温度を上げる（$f_\mathrm{col}\sim1.5$〜$2$）。</span>
-<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a>::: {#sol-18-4 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-18-4-label"}</span>
-<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
-<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 18-4）**</span><span class="co">]</span>{#sol-18-4-label .offcanvas-title}</span>
-<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
-<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
-<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a>**(1)** $\dfrac{2GM}{Rc^2}=\dfrac{2\times6.674\times10^{-11}\times2.78\times10^{30}}{1.0\times10^4\times(3\times10^8)^2}=\dfrac{3.71\times10^{20}}{9.0\times10^{20}}=0.412$。</span>
+<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a>::: {#sol-18-2 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-18-2-label"}</span>
+<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 18-2）**</span><span class="co">]</span>{#sol-18-2-label .offcanvas-title}</span>
+<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a>**(1)** $\dfrac{\Delta\nu}{\nu}=\dfrac{4k_BT_e}{m_ec^2}=\dfrac{4\times86\ \text{keV}}{511\ \text{keV}}=\dfrac{344}{511}\simeq0.67$。1回の散乱で振動数が約 67% 増える。（$k_BT_e=8.617\times10^{-5}\times10^9=8.6\times10^4$ eV $=86$ keV。）</span>
+<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a>**(2)** $y\ll1$：光子はわずかにエネルギーを得るだけ＝元の黒体形に弱い Wien 側テイルが付く。$y\gtrsim1$：光子がコロナで完全に再分配され、Wien 分布に近い高温化スペクトル。中間域：べき則 $F_\nu\propto\nu^{-\alpha}$ が現れ、高エネルギー側は Wien カットオフで切れる。</span>
+<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a>**(3)** どちらも高温電子と光子の逆コンプトン散乱で、$y=\dfrac{4k_BT_e}{m_ec^2}\max(\tau,\tau^2)$ という同じパラメータでスペクトル変形を測る。X 線連星のコロナ（銀河近傍スケール）も、銀河団ガス（宇宙論スケール）も、同じ物理。違うのはスケール（$T_e$、$\tau$ の値と対象の大きさ）だけ。</span>
 <span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a>**(2)** $z_g=(1-0.412)^{-1/2}-1=(0.588)^{-1/2}-1=1.304-1=0.304\simeq0.30$。</span>
-<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a>**(3)** $T_\infty=T/(1+z_g)=10^7/1.30=7.7\times10^6$ K。観測される温度は表面温度より約23%低い。重力赤方偏移 $z_g$ は $M/R$ に依存し、Stefan-Boltzmann で得る放射半径は $M,R$ の別の組合せに依存するので、両者を連立すると $M$ と $R$ を独立に制約できる。NICER はこれにパルス時間プロファイルを加えて核物質の状態方程式を制約している。</span>
+<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a>**答え**：$\Delta\nu/\nu\simeq0.67$（$T_e=10^9$ K）。$y\ll1$ 弱テイル、$y\gtrsim1$ Wien 化、中間でべき則。CMB の $y$ 歪み（SZ 効果）と同物理。</span>
+<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a>**答え**：$2GM/Rc^2=0.41$、$z_g\simeq0.30$、$T_\infty=7.7\times10^6$ K。$z_g$ と Stefan-Boltzmann の連立で $M,R$ を制約（NICER）。</span>
-<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-accretion-high-energy-further .unnumbered}</span></span>
-<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Frank, King &amp; Raine, *Accretion Power in Astrophysics* (Cambridge, 3rd ed., 2002) — 降着円盤と高エネルギー天体の標準教科書</span>
-<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Shakura &amp; Sunyaev, A&amp;A 24 (1973) 337 — 標準円盤モデルの原論文</span>
-<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rybicki &amp; Lightman, *Radiative Processes in Astrophysics* (Wiley, 1979) — コンプトン化、シンクロトロン放射</span>
-<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Kompaneets, JETP 4 (1957) 730 — コンプトン化方程式の原論文</span>
-<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Bambi, *Black Holes: A Laboratory for Testing Strong Gravity* (Springer, 2017) — BH近傍の相対論的放射過程</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a>::: {#sol-18-3 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-18-3-label"}</span>
+<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 18-3）**</span><span class="co">]</span>{#sol-18-3-label .offcanvas-title}</span>
+<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a>**(1)** ① 熱化時間が円盤の力学的時間より短い（局所的に熱平衡に達する）、② 各半径で鉛直方向に光学的に厚い（$\tau\gg1$、吸収・再放出が十分）、③ その半径内では単一温度 $T(R)$ で記述できる。これらが満たされれば各半径が $B_\nu(T(R))$ で放射する（第3章 §3.6、第5章 §5.6）。</span>
+<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a>**(2)** 例：高温・希薄なコロナ層（局所熱平衡を破る）、不透明度の振動数依存（修正黒体的なずれ）、電子散乱が吸収より卓越（純黒体から外れる）。</span>
+<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a>**(3)** 電子散乱卓越ではソース関数 $S_\nu=(1-\tilde\omega)B_\nu+\tilde\omega\langle J_\nu\rangle$（<span class="co">[</span><span class="ot">演習 15-3</span><span class="co">](../part6/15-non-blackbody.qmd#ex-15-3)</span>）が局所プランクから外れ、光子は吸収で熱化されにくく深部の高温を反映したまま散乱で抜ける。結果、見かけの色温度が実効温度より高くなり、$f_\mathrm{col}\simeq1.5$〜$2$ の補正が要る。</span>
+<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a>**答え**：局所熱平衡・光学的厚・単一温度が必要。破れ＝コロナ／振動数依存不透明度／電子散乱卓越。散乱卓越は熱化を妨げ色温度を上げる（$f_\mathrm{col}\sim1.5$〜$2$）。</span>
+<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a>::: {#sol-18-4 .offcanvas .offcanvas-end tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="sol-18-4-label"}</span>
+<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-header}</span>
+<span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**解答例（問題 18-4）**</span><span class="co">]</span>{#sol-18-4-label .offcanvas-title}</span>
+<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span>{.btn-close data-bs-dismiss="offcanvas" aria-label="閉じる"}</span>
+<span id="cb1-397"><a href="#cb1-397" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
+<span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a>**(1)** $\dfrac{2GM}{Rc^2}=\dfrac{2\times6.674\times10^{-11}\times2.78\times10^{30}}{1.0\times10^4\times(3\times10^8)^2}=\dfrac{3.71\times10^{20}}{9.0\times10^{20}}=0.412$。</span>
+<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a>**(2)** $z_g=(1-0.412)^{-1/2}-1=(0.588)^{-1/2}-1=1.304-1=0.304\simeq0.30$。</span>
+<span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a>**(3)** $T_\infty=T/(1+z_g)=10^7/1.30=7.7\times10^6$ K。観測される温度は表面温度より約23%低い。重力赤方偏移 $z_g$ は $M/R$ に依存し、Stefan-Boltzmann で得る放射半径は $M,R$ の別の組合せに依存するので、両者を連立すると $M$ と $R$ を独立に制約できる。NICER はこれにパルス時間プロファイルを加えて核物質の状態方程式を制約している。</span>
+<span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a>**答え**：$2GM/Rc^2=0.41$、$z_g\simeq0.30$、$T_\infty=7.7\times10^6$ K。$z_g$ と Stefan-Boltzmann の連立で $M,R$ を制約（NICER）。</span>
+<span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a><span class="fu">## さらに学ぶための参考文献 {#sec-accretion-high-energy-further .unnumbered}</span></span>
+<span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Frank, King &amp; Raine, *Accretion Power in Astrophysics* (Cambridge, 3rd ed., 2002) — 降着円盤と高エネルギー天体の標準教科書</span>
+<span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Shakura &amp; Sunyaev, A&amp;A 24 (1973) 337 — 標準円盤モデルの原論文</span>
+<span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rybicki &amp; Lightman, *Radiative Processes in Astrophysics* (Wiley, 1979) — コンプトン化、シンクロトロン放射</span>
+<span id="cb1-414"><a href="#cb1-414" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Kompaneets, JETP 4 (1957) 730 — コンプトン化方程式の原論文</span>
+<span id="cb1-415"><a href="#cb1-415" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Bambi, *Black Holes: A Laboratory for Testing Strong Gravity* (Springer, 2017) — BH近傍の相対論的放射過程</span></code></pre></div><button title="コピー" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
