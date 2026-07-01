@@ -30,13 +30,13 @@
        ============================================================ -->
   <g>
     <!-- shell between radius 280 and 312 (k .. k+dk), first quadrant -->
-    <path d="M 432 460 A 312 312 0 0 1 120 148 L 120 180 A 280 280 0 0 0 400 460 Z"
+    <path d="M 432 460 A 312 312 0 0 0 120 148 L 120 180 A 280 280 0 0 1 400 460 Z"
           fill="#1f4e79" fill-opacity="0.10" stroke="none"/>
     <!-- inner arc (sphere of radius k) -->
-    <path d="M 400 460 A 280 280 0 0 1 120 180"
+    <path d="M 400 460 A 280 280 0 0 0 120 180"
           fill="none" stroke="#1f4e79" stroke-width="2"/>
     <!-- outer arc (k + dk) -->
-    <path d="M 432 460 A 312 312 0 0 1 120 148"
+    <path d="M 432 460 A 312 312 0 0 0 120 148"
           fill="none" stroke="#1f4e79" stroke-width="1.2" stroke-dasharray="5,4"/>
 
     <!-- axes -->

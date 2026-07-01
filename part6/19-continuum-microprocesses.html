@@ -665,16 +665,16 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1} \quad \overset{
 \varepsilon_\nu^{\mathrm{ff}} \;\propto\; n_e\,n_i\,Z^2\,T_e^{-1/2}\,e^{-h\nu/k_BT_e}\,\bar g_{\mathrm{ff}}(\nu,T_e)
 \tag{23.1}</span></span></p>
 <p>の形をとる（自由-自由放射は等方なので、放出係数は <span class="math inline">j_\nu^{\mathrm{ff}} = \varepsilon_\nu^{\mathrm{ff}}/4\pi</span>）。<span class="math inline">Z</span> はイオンの電荷、<span class="math inline">\bar g_{\mathrm{ff}}</span> は <strong>Gaunt 因子</strong>（量子補正、<span class="math inline">\nu,T_e</span> にゆるやかに依存し <span class="math inline">O(1)</span>）。指数因子 <span class="math inline">e^{-h\nu/k_BT_e}</span> は、振動数 <span class="math inline">\nu</span> の光子を出すには電子が少なくとも <span class="math inline">h\nu</span> の運動エネルギーを持たねばならず、その割合が Maxwell 分布で抑えられることを表す。</p>
-<p>対応する <strong>吸収係数</strong> は、第17章 §17.6 で見たように</p>
+<p>対応する <strong>吸収係数</strong> の一般形は</p>
 <p><span id="eq-ff-absorption-micro"><span class="math display">
-\alpha_\nu^{\mathrm{ff}} \;\propto\; n_e\,n_i\,Z^2\,T_e^{-3/2}\,\nu^{-2}\,\bar g_{\mathrm{ff}}\,\bigl(1-e^{-h\nu/k_BT_e}\bigr)
+\alpha_\nu^{\mathrm{ff}} \;\propto\; n_e\,n_i\,Z^2\,T_e^{-1/2}\,\nu^{-3}\,\bar g_{\mathrm{ff}}\,\bigl(1-e^{-h\nu/k_BT_e}\bigr)
 \tag{23.2}</span></span></p>
-<p>括弧の <span class="math inline">(1-e^{-h\nu/k_BT_e})</span> は <strong>誘導放出補正</strong>（第11章・第21章 §21.2 と同じ因子）である。ソース関数は放出係数（単位立体角あたり）と吸収係数の比 <span class="math inline">S_\nu = j_\nu/\alpha_\nu</span> で定義されるので、等方放射で <span class="math inline">j_\nu^{\mathrm{ff}} = \varepsilon_\nu^{\mathrm{ff}}/4\pi</span> を用いる。<a href="#eq-ff-emissivity" class="quarto-xref">式&nbsp;<span>23.1</span></a> と <a href="#eq-ff-absorption-micro" class="quarto-xref">式&nbsp;<span>23.2</span></a> の比をとると、<span class="math inline">n_e,n_i</span> も <span class="math inline">\bar g_{\mathrm{ff}}</span> も消えて</p>
+<p>である。括弧の <span class="math inline">(1-e^{-h\nu/k_BT_e})</span> は <strong>誘導放出補正</strong>（第11章・第21章 §21.2 と同じ因子）である。低振動数（Rayleigh–Jeans 側、<span class="math inline">h\nu\ll k_BT_e</span>）ではこの括弧が <span class="math inline">\approx h\nu/k_BT_e</span> と展開でき、それを吸収した実効形が第17章 §17.6 で使った電波領域の <span class="math inline">\alpha_\nu^{\mathrm{ff}}\propto T_e^{-3/2}\nu^{-2}</span> である ― 指数がひとつずつずれて見えるのは誘導放出補正を「中に畳み込んだか、外に出して書いたか」の違いにすぎない。ソース関数は放出係数（単位立体角あたり）と吸収係数の比 <span class="math inline">S_\nu = j_\nu/\alpha_\nu</span> で定義されるので、等方放射で <span class="math inline">j_\nu^{\mathrm{ff}} = \varepsilon_\nu^{\mathrm{ff}}/4\pi</span> を用いる。<a href="#eq-ff-emissivity" class="quarto-xref">式&nbsp;<span>23.1</span></a> と <a href="#eq-ff-absorption-micro" class="quarto-xref">式&nbsp;<span>23.2</span></a> の比をとると、<span class="math inline">n_e,n_i</span> も <span class="math inline">\bar g_{\mathrm{ff}}</span> も消えて</p>
 <p><span id="eq-ff-kirchhoff"><span class="math display">
 S_\nu^{\mathrm{ff}} = \frac{j_\nu^{\mathrm{ff}}}{\alpha_\nu^{\mathrm{ff}}} = \frac{1}{4\pi}\frac{\varepsilon_\nu^{\mathrm{ff}}}{\alpha_\nu^{\mathrm{ff}}} = \frac{2h\nu^3}{c^2}\frac{1}{e^{h\nu/k_BT_e}-1} = B_\nu(T_e)
 \tag{23.3}</span></span></p>
 <p>となり、<strong>Kirchhoff の法則</strong> <span class="math inline">S_\nu=B_\nu(T_e)</span> が素過程のレベルで確かめられる（第3章・第5章）。立体角因子 <span class="math inline">4\pi</span> は <span class="math inline">j_\nu</span> と <span class="math inline">\varepsilon_\nu</span> の換算に現れるが、係数の振動数・温度依存はそのまま <span class="math inline">B_\nu(T_e)</span> を再現する。すなわち自由-自由放射のソース関数は、つねに電子温度の黒体である。</p>
-<p>観測スペクトルの形を決めるのは、ここから先の <strong>光学的厚さ</strong> <span class="math inline">\tau_\nu=\int\alpha_\nu^{\mathrm{ff}}\,ds</span> である。<a href="#eq-ff-absorption-micro" class="quarto-xref">式&nbsp;<span>23.2</span></a> の <span class="math inline">\nu^{-2}</span> により、</p>
+<p>観測スペクトルの形を決めるのは、ここから先の <strong>光学的厚さ</strong> <span class="math inline">\tau_\nu=\int\alpha_\nu^{\mathrm{ff}}\,ds</span> である。<a href="#eq-ff-absorption-micro" class="quarto-xref">式&nbsp;<span>23.2</span></a> が低振動数側で <span class="math inline">\nu^{-2}</span>（RJ 極限の実効形）として効くことにより、</p>
 <ul>
 <li><strong>低振動数（電波）</strong>：<span class="math inline">\alpha_\nu^{\mathrm{ff}}</span> が大きく光学的に厚い → <span class="math inline">I_\nu\to B_\nu(T_e)</span>。HII 領域の電波連続光が黒体に漸近する（第17章 §17.6 のターンオーバー）。</li>
 <li><strong>高振動数・高温・希薄（X 線）</strong>：光学的に薄く、観測される <span class="math inline">F_\nu\propto e^{-h\nu/k_BT_e}</span> の <strong>指数カットオフ</strong>。銀河団の高温ガス（<span class="math inline">T_e\sim10^7</span>〜<span class="math inline">10^8</span> K）が典型（第18章）。</li>
@@ -1591,13 +1591,13 @@ e^- + \mathrm{H}^+ \;\longrightarrow\; \mathrm{H}(n)\ \underbrace{+\,h\nu_{\math
 <span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>の形をとる（自由-自由放射は等方なので、放出係数は $j_\nu^{\mathrm{ff}} = \varepsilon_\nu^{\mathrm{ff}}/4\pi$）。$Z$ はイオンの電荷、$\bar g_{\mathrm{ff}}$ は **Gaunt 因子**（量子補正、$\nu,T_e$ にゆるやかに依存し $O(1)$）。指数因子 $e^{-h\nu/k_BT_e}$ は、振動数 $\nu$ の光子を出すには電子が少なくとも $h\nu$ の運動エネルギーを持たねばならず、その割合が Maxwell 分布で抑えられることを表す。</span>
 <span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>対応する **吸収係数** は、第17章 §17.6 で見たように</span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>対応する **吸収係数** の一般形は</span>
 <span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>\alpha_\nu^{\mathrm{ff}} \;\propto\; n_e\,n_i\,Z^2\,T_e^{-3/2}\,\nu^{-2}\,\bar g_{\mathrm{ff}}\,\bigl(1-e^{-h\nu/k_BT_e}\bigr)</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>\alpha_\nu^{\mathrm{ff}} \;\propto\; n_e\,n_i\,Z^2\,T_e^{-1/2}\,\nu^{-3}\,\bar g_{\mathrm{ff}}\,\bigl(1-e^{-h\nu/k_BT_e}\bigr)</span>
 <span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>$$ {#eq-ff-absorption-micro}</span>
 <span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>括弧の $(1-e^{-h\nu/k_BT_e})$ は **誘導放出補正**（第11章・第21章 §21.2 と同じ因子）である。ソース関数は放出係数（単位立体角あたり）と吸収係数の比 $S_\nu = j_\nu/\alpha_\nu$ で定義されるので、等方放射で $j_\nu^{\mathrm{ff}} = \varepsilon_\nu^{\mathrm{ff}}/4\pi$ を用いる。@eq-ff-emissivity と @eq-ff-absorption-micro の比をとると、$n_e,n_i$ も $\bar g_{\mathrm{ff}}$ も消えて</span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>である。括弧の $(1-e^{-h\nu/k_BT_e})$ は **誘導放出補正**（第11章・第21章 §21.2 と同じ因子）である。低振動数（Rayleigh–Jeans 側、$h\nu\ll k_BT_e$）ではこの括弧が $\approx h\nu/k_BT_e$ と展開でき、それを吸収した実効形が第17章 §17.6 で使った電波領域の $\alpha_\nu^{\mathrm{ff}}\propto T_e^{-3/2}\nu^{-2}$ である ― 指数がひとつずつずれて見えるのは誘導放出補正を「中に畳み込んだか、外に出して書いたか」の違いにすぎない。ソース関数は放出係数（単位立体角あたり）と吸収係数の比 $S_\nu = j_\nu/\alpha_\nu$ で定義されるので、等方放射で $j_\nu^{\mathrm{ff}} = \varepsilon_\nu^{\mathrm{ff}}/4\pi$ を用いる。@eq-ff-emissivity と @eq-ff-absorption-micro の比をとると、$n_e,n_i$ も $\bar g_{\mathrm{ff}}$ も消えて</span>
 <span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>S_\nu^{\mathrm{ff}} = \frac{j_\nu^{\mathrm{ff}}}{\alpha_\nu^{\mathrm{ff}}} = \frac{1}{4\pi}\frac{\varepsilon_\nu^{\mathrm{ff}}}{\alpha_\nu^{\mathrm{ff}}} = \frac{2h\nu^3}{c^2}\frac{1}{e^{h\nu/k_BT_e}-1} = B_\nu(T_e)</span>
@@ -1605,7 +1605,7 @@ e^- + \mathrm{H}^+ \;\longrightarrow\; \mathrm{H}(n)\ \underbrace{+\,h\nu_{\math
 <span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>となり、**Kirchhoff の法則** $S_\nu=B_\nu(T_e)$ が素過程のレベルで確かめられる（第3章・第5章）。立体角因子 $4\pi$ は $j_\nu$ と $\varepsilon_\nu$ の換算に現れるが、係数の振動数・温度依存はそのまま $B_\nu(T_e)$ を再現する。すなわち自由-自由放射のソース関数は、つねに電子温度の黒体である。</span>
 <span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>観測スペクトルの形を決めるのは、ここから先の **光学的厚さ** $\tau_\nu=\int\alpha_\nu^{\mathrm{ff}}\,ds$ である。@eq-ff-absorption-micro の $\nu^{-2}$ により、</span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>観測スペクトルの形を決めるのは、ここから先の **光学的厚さ** $\tau_\nu=\int\alpha_\nu^{\mathrm{ff}}\,ds$ である。@eq-ff-absorption-micro が低振動数側で $\nu^{-2}$（RJ 極限の実効形）として効くことにより、</span>
 <span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**低振動数（電波）**：$\alpha_\nu^{\mathrm{ff}}$ が大きく光学的に厚い → $I_\nu\to B_\nu(T_e)$。HII 領域の電波連続光が黒体に漸近する（第17章 §17.6 のターンオーバー）。</span>
 <span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**高振動数・高温・希薄（X 線）**：光学的に薄く、観測される $F_\nu\propto e^{-h\nu/k_BT_e}$ の **指数カットオフ**。銀河団の高温ガス（$T_e\sim10^7$〜$10^8$ K）が典型（第18章）。</span>

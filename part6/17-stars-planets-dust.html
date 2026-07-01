@@ -880,11 +880,11 @@ T_b(\nu)=T_e\left(1-e^{-\tau_\nu}\right)
 <h2 class="anchored" data-anchor-id="sec-greenhouse">17.7 温室効果 ― 惑星大気をエディントン大気として</h2>
 <p>[本文目安：B4-M1]</p>
 <p>§17.2 の平衡温度 <a href="#eq-planet-temperature" class="quarto-xref">式&nbsp;<span>21.3</span></a> は「大気なし」近似で、地球では実測より 33 K 低い。この差 ― <strong>温室効果</strong> ― は、第5章 §5.10 で恒星大気に使ったエディントン近似を、<strong>地球を一つの星とみなして</strong> そのまま適用すると定量的に理解できる。</p>
-<p><strong>模型。</strong>　大気は可視光に透明で太陽光 <span class="math inline">F_\odot</span> を地表まで通し、赤外には不透明（吸収係数 <span class="math inline">k_\lambda</span>）とする。地表は温度 <span class="math inline">T_g</span> で赤外を <span class="math inline">\sigma T_g^4</span> で放射し、大気はそれを吸収・再放射する。宇宙へ逃げる正味の赤外流束は、入射太陽光の吸収分に等しく <span class="math inline">\sigma T_\mathrm{eq}^4</span>（<span class="math inline">T_\mathrm{eq}</span> は <a href="#eq-planet-temperature" class="quarto-xref">式&nbsp;<span>21.3</span></a> の平衡温度）。下から温められる平面平行大気のエディントン解（<a href="../part2/05-radiative-transfer.html#eq-eddington-temperature" class="quarto-xref">式&nbsp;<span>9.19</span></a> と同型）は、大気上端から地表までの<strong>赤外ロスランド光学的厚さ</strong> <span class="math inline">\tau_R^{\,G}</span> を使って</p>
+<p><strong>模型。</strong>　大気は可視光に透明で太陽光 <span class="math inline">F_\odot</span> を地表まで通し、赤外には不透明（吸収係数 <span class="math inline">k_\lambda</span>）とする。地表は温度 <span class="math inline">T_g</span> で赤外を <span class="math inline">\sigma T_g^4</span> で放射し、大気はそれを吸収・再放射する。宇宙へ逃げる正味の赤外流束は、入射太陽光の吸収分に等しく <span class="math inline">\sigma T_\mathrm{eq}^4</span>（<span class="math inline">T_\mathrm{eq}</span> は <a href="#eq-planet-temperature" class="quarto-xref">式&nbsp;<span>21.3</span></a> の平衡温度）。下から温められる平面平行大気のエディントン解は <a href="../part2/05-radiative-transfer.html#eq-eddington-temperature" class="quarto-xref">式&nbsp;<span>9.19</span></a> と同型で、大気上端から測った赤外光学的深さ <span class="math inline">\tau</span> の層の温度は <span class="math inline">T^4(\tau)=\tfrac34 T_\mathrm{eq}^4\left(\tau+\tfrac23\right)</span>、下ほど熱い。地表はさらに一段熱い ― 大気最下層（<span class="math inline">\tau=\tau_R^{\,G}</span>、<span class="math inline">\tau_R^{\,G}</span> は大気全体の<strong>赤外ロスランド光学的厚さ</strong>）に接する地表で放射収支（上からの下向き赤外＋太陽光の吸収 ＝ <span class="math inline">\sigma T_g^4</span> の放出）を組むと、境界特有の不連続分 <span class="math inline">\sigma T_\mathrm{eq}^4/2</span> が乗って</p>
 <p><span id="eq-greenhouse-surface"><span class="math display">
-T_g^4 \simeq T_\mathrm{eq}^4\left(1+\frac32\,\tau_R^{\,G}\right)
+T_g^4 \simeq T_\mathrm{eq}^4\left(1+\frac34\,\tau_R^{\,G}\right)
 \tag{21.10}</span></span></p>
-<p>を与える。<span class="math inline">\tau_R^{\,G}</span> が大きいほど地表は熱くなる。地球大気の赤外 <span class="math inline">\tau_R^{\,G}</span> はおよそ <span class="math inline">0.5</span>–<span class="math inline">0.6</span> で、<a href="#eq-greenhouse-surface" class="quarto-xref">式&nbsp;<span>21.10</span></a> は実測の数十 K の昇温をおおむね説明する（精密値は雲・対流・湿度に依存する）。「宇宙へ放射するのは赤外で <span class="math inline">\tau\simeq2/3</span> になる<strong>上空の冷たい層</strong>、地表はそれより下にあるぶん熱い」という、§5.11 の<strong>見える深さ</strong>そのものの帰結である。</p>
+<p>を得る（導出は演習 5-5 のエディントン大気と同じ道具立て。地表温度が直上の大気温度より高い「地表不連続」は放射平衡大気の一般的特徴である）。<span class="math inline">\tau_R^{\,G}</span> が大きいほど地表は熱くなる。実測の昇温 <span class="math inline">+33</span> K（<span class="math inline">T_g=288</span> K、<span class="math inline">T_\mathrm{eq}=255</span> K、<span class="math inline">(T_g/T_\mathrm{eq})^4\simeq1.63</span>）を <a href="#eq-greenhouse-surface" class="quarto-xref">式&nbsp;<span>21.10</span></a> で再現するのは <span class="math inline">\tau_R^{\,G}\simeq0.84</span> ― 雲・対流・湿度の効果を灰色一枚の実効値に畳み込んだ値としては妥当な大きさである（精密値はこれらの過程に依存する）。「宇宙へ放射するのは赤外で <span class="math inline">\tau\simeq2/3</span> になる<strong>上空の冷たい層</strong>、地表はそれより下にあるぶん熱い」という、§5.11 の<strong>見える深さ</strong>そのものの帰結である。</p>
 <div class="callout callout-style-simple callout-tip">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -893,7 +893,7 @@ T_g^4 \simeq T_\mathrm{eq}^4\left(1+\frac32\,\tau_R^{\,G}\right)
 <div class="callout-body-container">
 <p><strong>問い</strong>：CO₂ はすでに主要な吸収帯の中心で「飽和」している。それでも増やすと温暖化するのはなぜか？</p>
 <p><strong>短答</strong>：効くのは飽和したバンド<strong>中心</strong>ではなく、これまで透明だったバンドの<strong>縁（ウイング）</strong>である。中心は <span class="math inline">\tau\gg1</span> で、増やしても宇宙へ放射する高度（<span class="math inline">\tau\simeq2/3</span> の冷たい上空）がわずかに上がるだけで地表放射の逃げ道はもともと塞がっている。一方、縁は <span class="math inline">\tau\lesssim1</span> の半透明な窓で、CO₂ を増やすとここが不透明化し、ロスランド平均 <span class="math inline">\tau_R^{\,G}</span>（<a href="../part2/05-radiative-transfer.html#eq-rosseland-mean" class="quarto-xref">式&nbsp;<span>9.20</span></a>、透明な窓に支配される調和平均）が増える。<a href="#eq-greenhouse-surface" class="quarto-xref">式&nbsp;<span>21.10</span></a> の <span class="math inline">\tau_R^{\,G}</span> 増加分が昇温になる。</p>
-<p><strong>もう一歩</strong>：簡単なエディントン模型で CO₂ を倍にすると <span class="math inline">\tau_R^{\,G}\simeq0.36\to0.39</span>、地表温度はおよそ <span class="math inline">+2</span>–<span class="math inline">3</span> K 上がる。「CO₂ は飽和しているから効かない」という主張は、ロスランド平均が<strong>最も透明な波長に支配される</strong>ことを見落としている。水蒸気も <span class="math inline">\tau_R^{\,G}</span> への寄与が大きく、温暖化・乾燥のフィードバックに関わる。</p>
+<p><strong>もう一歩</strong>：簡単なエディントン模型で CO₂ 倍増を <span class="math inline">\tau_R^{\,G}\simeq0.84\to0.88</span> の増加とみなすと、<a href="#eq-greenhouse-surface" class="quarto-xref">式&nbsp;<span>21.10</span></a> から地表温度はおよそ <span class="math inline">+1.3</span> K 上がる ― フィードバックを含まない放射だけの標準値（<span class="math inline">\sim+1.2</span> K）と同程度である。実際の気候感度（<span class="math inline">+2.5</span>–<span class="math inline">4</span> K）には水蒸気・雲のフィードバックが上乗せされる。「CO₂ は飽和しているから効かない」という主張は、ロスランド平均が<strong>最も透明な波長に支配される</strong>ことを見落としている。水蒸気も <span class="math inline">\tau_R^{\,G}</span> への寄与が大きく、温暖化・乾燥のフィードバックに関わる。</p>
 </div>
 </div>
 </div>
@@ -916,9 +916,9 @@ T_g^4 \simeq T_\mathrm{eq}^4\left(1+\frac32\,\tau_R^{\,G}\right)
 <p>[本文目安：B4-M1]</p>
 <p>有効温度が <span class="math inline">\sim4000</span> K より低い晩期型星（K・M 型）や分子雲では、原子が結合して<strong>分子</strong>を作る。どの分子がどれだけできるかは、第6章 §6.7 の質量作用の法則 <a href="../part3/06-thermal-equilibrium.html#eq-mass-action" class="quarto-xref">式&nbsp;<span>10.9</span></a> の<strong>解離平衡</strong>の場合で決まる。例えば水素分子なら <span class="math inline">2\mathrm{H}-\mathrm{H_2}=0</span> から</p>
 <p><span id="eq-h2-dissociation"><span class="math display">
-\frac{n_{\rm H}^2}{n_{\rm H_2}} = \frac{(2\pi m_{\rm H}k_BT/h^2)^{3/2}}{Z_{\rm H_2}/Z_{\rm H}^2}\;e^{-D/k_BT}
+\frac{n_{\rm H}^2}{n_{\rm H_2}} = \frac{(\pi m_{\rm H}k_BT/h^2)^{3/2}}{Z_{\rm H_2}/Z_{\rm H}^2}\;e^{-D/k_BT}
 \tag{21.11}</span></span></p>
-<p>（<span class="math inline">D</span> は解離エネルギー）で、温度が下がるほど右辺が小さく ＝ 分子側に寄る。</p>
+<p>（<span class="math inline">D</span> は解離エネルギー、<span class="math inline">Z</span> は内部分配関数。並進因子の <span class="math inline">\pi m_{\rm H}</span> は換算質量 <span class="math inline">m_{\rm H}/2</span> の帰結、第6章 §6.7）で、温度が下がるほど右辺が小さく ＝ 分子側に寄る。</p>
 <p><strong>CO が鍵を握る。</strong>　一酸化炭素 CO は解離エネルギーが <span class="math inline">\simeq11</span> eV と飛び抜けて大きく、低温でまっさきに作られる。その結果、<strong>C と O のうち存在量の少ない方が CO に取り込まれて使い果たされ、多い方の余りが残りの分子を支配する</strong>：</p>
 <ul>
 <li><strong>酸素過剰</strong>（O &gt; C、通常の星）：余った O が <span class="math inline">\mathrm{H_2O}</span>・TiO・各種酸化物を作る → <strong>M 型星の TiO バンド・水蒸気吸収</strong>。</li>
@@ -958,7 +958,7 @@ T_g^4 \simeq T_\mathrm{eq}^4\left(1+\frac32\,\tau_R^{\,G}\right)
 <li>多温度 SED フィッティングの構造と縮退性</li>
 <li>観測波長帯（赤外・サブミリ・ミリ）と各観測施設の対応関係</li>
 <li>電離ガスの自由–自由放射：低 <span class="math inline">\nu</span> 側は <span class="math inline">T_e</span> の黒体（Rayleigh–Jeans）、高 <span class="math inline">\nu</span> 側は <span class="math inline">F_\nu\propto\nu^{-0.1}</span>、ターンオーバーから <span class="math inline">\mathrm{EM}</span> と <span class="math inline">T_e</span></li>
-<li>温室効果：惑星をエディントン大気とみなし <span class="math inline">T_g^4\simeq T_\mathrm{eq}^4(1+\tfrac32\tau_R^{\,G})</span>、CO₂ 倍化はバンド縁の不透明化で効く</li>
+<li>温室効果：惑星をエディントン大気とみなし <span class="math inline">T_g^4\simeq T_\mathrm{eq}^4(1+\tfrac34\tau_R^{\,G})</span>、CO₂ 倍化はバンド縁の不透明化で効く</li>
 <li>分子の解離平衡：CO が C/O の少数側を使い果たし、余りが M 型（TiO・H₂O）か炭素星かを決める</li>
 </ul>
 </div>
@@ -1834,20 +1834,20 @@ T_g^4 \simeq T_\mathrm{eq}^4\left(1+\frac32\,\tau_R^{\,G}\right)
 <span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a>§17.2 の平衡温度 @eq-planet-temperature は「大気なし」近似で、地球では実測より 33 K 低い。この差 ― **温室効果** ― は、第5章 §5.10 で恒星大気に使ったエディントン近似を、**地球を一つの星とみなして** そのまま適用すると定量的に理解できる。</span>
 <span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>**模型。**　大気は可視光に透明で太陽光 $F_\odot$ を地表まで通し、赤外には不透明（吸収係数 $k_\lambda$）とする。地表は温度 $T_g$ で赤外を $\sigma T_g^4$ で放射し、大気はそれを吸収・再放射する。宇宙へ逃げる正味の赤外流束は、入射太陽光の吸収分に等しく $\sigma T_\mathrm{eq}^4$（$T_\mathrm{eq}$ は @eq-planet-temperature の平衡温度）。下から温められる平面平行大気のエディントン解（@eq-eddington-temperature と同型）は、大気上端から地表までの**赤外ロスランド光学的厚さ** $\tau_R^{\,G}$ を使って</span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>**模型。**　大気は可視光に透明で太陽光 $F_\odot$ を地表まで通し、赤外には不透明（吸収係数 $k_\lambda$）とする。地表は温度 $T_g$ で赤外を $\sigma T_g^4$ で放射し、大気はそれを吸収・再放射する。宇宙へ逃げる正味の赤外流束は、入射太陽光の吸収分に等しく $\sigma T_\mathrm{eq}^4$（$T_\mathrm{eq}$ は @eq-planet-temperature の平衡温度）。下から温められる平面平行大気のエディントン解は @eq-eddington-temperature と同型で、大気上端から測った赤外光学的深さ $\tau$ の層の温度は $T^4(\tau)=\tfrac34 T_\mathrm{eq}^4\left(\tau+\tfrac23\right)$、下ほど熱い。地表はさらに一段熱い ― 大気最下層（$\tau=\tau_R^{\,G}$、$\tau_R^{\,G}$ は大気全体の**赤外ロスランド光学的厚さ**）に接する地表で放射収支（上からの下向き赤外＋太陽光の吸収 ＝ $\sigma T_g^4$ の放出）を組むと、境界特有の不連続分 $\sigma T_\mathrm{eq}^4/2$ が乗って</span>
 <span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>T_g^4 \simeq T_\mathrm{eq}^4\left(1+\frac32\,\tau_R^{\,G}\right)</span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>T_g^4 \simeq T_\mathrm{eq}^4\left(1+\frac34\,\tau_R^{\,G}\right)</span>
 <span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a>$$ {#eq-greenhouse-surface}</span>
 <span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a>を与える。$\tau_R^{\,G}$ が大きいほど地表は熱くなる。地球大気の赤外 $\tau_R^{\,G}$ はおよそ $0.5$–$0.6$ で、@eq-greenhouse-surface は実測の数十 K の昇温をおおむね説明する（精密値は雲・対流・湿度に依存する）。「宇宙へ放射するのは赤外で $\tau\simeq2/3$ になる**上空の冷たい層**、地表はそれより下にあるぶん熱い」という、§5.11 の**見える深さ**そのものの帰結である。</span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a>を得る（導出は演習 5-5 のエディントン大気と同じ道具立て。地表温度が直上の大気温度より高い「地表不連続」は放射平衡大気の一般的特徴である）。$\tau_R^{\,G}$ が大きいほど地表は熱くなる。実測の昇温 $+33$ K（$T_g=288$ K、$T_\mathrm{eq}=255$ K、$(T_g/T_\mathrm{eq})^4\simeq1.63$）を @eq-greenhouse-surface で再現するのは $\tau_R^{\,G}\simeq0.84$ ― 雲・対流・湿度の効果を灰色一枚の実効値に畳み込んだ値としては妥当な大きさである（精密値はこれらの過程に依存する）。「宇宙へ放射するのは赤外で $\tau\simeq2/3$ になる**上空の冷たい層**、地表はそれより下にあるぶん熱い」という、§5.11 の**見える深さ**そのものの帰結である。</span>
 <span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
 <span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a>**問い**：CO₂ はすでに主要な吸収帯の中心で「飽和」している。それでも増やすと温暖化するのはなぜか？</span>
 <span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a>**短答**：効くのは飽和したバンド**中心**ではなく、これまで透明だったバンドの**縁（ウイング）**である。中心は $\tau\gg1$ で、増やしても宇宙へ放射する高度（$\tau\simeq2/3$ の冷たい上空）がわずかに上がるだけで地表放射の逃げ道はもともと塞がっている。一方、縁は $\tau\lesssim1$ の半透明な窓で、CO₂ を増やすとここが不透明化し、ロスランド平均 $\tau_R^{\,G}$（@eq-rosseland-mean、透明な窓に支配される調和平均）が増える。@eq-greenhouse-surface の $\tau_R^{\,G}$ 増加分が昇温になる。</span>
 <span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a>**もう一歩**：簡単なエディントン模型で CO₂ を倍にすると $\tau_R^{\,G}\simeq0.36\to0.39$、地表温度はおよそ $+2$–$3$ K 上がる。「CO₂ は飽和しているから効かない」という主張は、ロスランド平均が**最も透明な波長に支配される**ことを見落としている。水蒸気も $\tau_R^{\,G}$ への寄与が大きく、温暖化・乾燥のフィードバックに関わる。</span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a>**もう一歩**：簡単なエディントン模型で CO₂ 倍増を $\tau_R^{\,G}\simeq0.84\to0.88$ の増加とみなすと、@eq-greenhouse-surface から地表温度はおよそ $+1.3$ K 上がる ― フィードバックを含まない放射だけの標準値（$\sim+1.2$ K）と同程度である。実際の気候感度（$+2.5$–$4$ K）には水蒸気・雲のフィードバックが上乗せされる。「CO₂ は飽和しているから効かない」という主張は、ロスランド平均が**最も透明な波長に支配される**ことを見落としている。水蒸気も $\tau_R^{\,G}$ への寄与が大きく、温暖化・乾燥のフィードバックに関わる。</span>
 <span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
@@ -1861,10 +1861,10 @@ T_g^4 \simeq T_\mathrm{eq}^4\left(1+\frac32\,\tau_R^{\,G}\right)
 <span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a>有効温度が $\sim4000$ K より低い晩期型星（K・M 型）や分子雲では、原子が結合して**分子**を作る。どの分子がどれだけできるかは、第6章 §6.7 の質量作用の法則 @eq-mass-action の**解離平衡**の場合で決まる。例えば水素分子なら $2\mathrm{H}-\mathrm{H_2}=0$ から</span>
 <span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a>\frac{n_{\rm H}^2}{n_{\rm H_2}} = \frac{(2\pi m_{\rm H}k_BT/h^2)^{3/2}}{Z_{\rm H_2}/Z_{\rm H}^2}\;e^{-D/k_BT}</span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a>\frac{n_{\rm H}^2}{n_{\rm H_2}} = \frac{(\pi m_{\rm H}k_BT/h^2)^{3/2}}{Z_{\rm H_2}/Z_{\rm H}^2}\;e^{-D/k_BT}</span>
 <span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>$$ {#eq-h2-dissociation}</span>
 <span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>（$D$ は解離エネルギー）で、温度が下がるほど右辺が小さく ＝ 分子側に寄る。</span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>（$D$ は解離エネルギー、$Z$ は内部分配関数。並進因子の $\pi m_{\rm H}$ は換算質量 $m_{\rm H}/2$ の帰結、第6章 §6.7）で、温度が下がるほど右辺が小さく ＝ 分子側に寄る。</span>
 <span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>**CO が鍵を握る。**　一酸化炭素 CO は解離エネルギーが $\simeq11$ eV と飛び抜けて大きく、低温でまっさきに作られる。その結果、**C と O のうち存在量の少ない方が CO に取り込まれて使い果たされ、多い方の余りが残りの分子を支配する**：</span>
 <span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a></span>
@@ -1886,7 +1886,7 @@ T_g^4 \simeq T_\mathrm{eq}^4\left(1+\frac32\,\tau_R^{\,G}\right)
 <span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>多温度 SED フィッティングの構造と縮退性</span>
 <span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>観測波長帯（赤外・サブミリ・ミリ）と各観測施設の対応関係</span>
 <span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>電離ガスの自由–自由放射：低 $\nu$ 側は $T_e$ の黒体（Rayleigh–Jeans）、高 $\nu$ 側は $F_\nu\propto\nu^{-0.1}$、ターンオーバーから $\mathrm{EM}$ と $T_e$</span>
-<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>温室効果：惑星をエディントン大気とみなし $T_g^4\simeq T_\mathrm{eq}^4(1+\tfrac32\tau_R^{\,G})$、CO₂ 倍化はバンド縁の不透明化で効く</span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>温室効果：惑星をエディントン大気とみなし $T_g^4\simeq T_\mathrm{eq}^4(1+\tfrac34\tau_R^{\,G})$、CO₂ 倍化はバンド縁の不透明化で効く</span>
 <span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>分子の解離平衡：CO が C/O の少数側を使い果たし、余りが M 型（TiO・H₂O）か炭素星かを決める</span>
 <span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a></span>
