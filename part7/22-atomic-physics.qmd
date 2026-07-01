@@ -169,7 +169,7 @@ $$ {#eq-classical-integrated-cross-section}
 
 ### 量子論への橋 ― 振動子強度 $f_{lu}$ の登場
 
-実際の原子は古典振動子ではなく、量子的な多準位系である。各遷移 $l \to u$ の **実効的な吸収強度** は、古典的振動子の振動数積分断面積に **無次元の補正係数** $f_{lu}$（振動子強度、第21.4節）を掛けたものとして書ける：
+実際の原子は古典振動子ではなく、量子的な多準位系である。各遷移 $l \to u$ の **実効的な吸収強度** は、古典的振動子の振動数積分断面積に **無次元の補正係数** $f_{lu}$（振動子強度、§22.4）を掛けたものとして書ける：
 
 $$
 \int_0^\infty \sigma_{lu}(\nu)\, d\nu = \frac{\pi e^2}{m_e c} \cdot f_{lu} \quad (\text{CGS(Gauss) 形})
@@ -315,7 +315,7 @@ $$ {#eq-selection-rules-E1}
 
 [★ 難易度：☆☆ ] [tag:導出補完]
 
-§22.1・21.2 の Rydberg 公式 $\dfrac{1}{\lambda}=R_H\left(\dfrac{1}{n_l^2}-\dfrac{1}{n_u^2}\right)$、$R_H=1.097\times10^7$ m$^{-1}$、Bohr エネルギー $E_n=-13.6/n^2$ eV。
+§22.1・22.2 の Rydberg 公式 $\dfrac{1}{\lambda}=R_H\left(\dfrac{1}{n_l^2}-\dfrac{1}{n_u^2}\right)$、$R_H=1.097\times10^7$ m$^{-1}$、Bohr エネルギー $E_n=-13.6/n^2$ eV。
 
 1. $h\nu=E_u-E_l$ から Rydberg 公式の形が出ることを示せ。
 2. Balmer 系列の H$\alpha$（$n_l=2\to n_u=3$）の波長を計算し、656 nm を確かめよ。
@@ -363,7 +363,7 @@ $$ {#eq-selection-rules-E1}
 
 [★ 難易度：☆ ] [tag:理解を深める]
 
-§22.2・21.3 は Bohr 模型と Schrödinger 方程式が同じエネルギーを与えるのに、後者が「正しい」量子力学だと述べた。
+§22.2・22.3 は Bohr 模型と Schrödinger 方程式が同じエネルギーを与えるのに、後者が「正しい」量子力学だと述べた。
 
 1. Bohr 模型と Schrödinger 方程式が一致する点（エネルギー準位）と、異なる点（波動関数・縮退・角運動量）を述べよ。
 2. 振動子強度 $f_{lu}\propto|\langle u|\mathbf r|l\rangle|^2$ がなぜ Bohr 模型では計算できないか述べよ。

@@ -189,7 +189,7 @@ $$ {#eq-critical-density}
 - $n_e \gg n_\text{crit}$：衝突が放射より速く、占有数は衝突で熱平衡化する → **LTE**（$T_\text{ex}\to T_\text{kin}$）。
 - $n_e \ll n_\text{crit}$：自発放出が先に脱励起してしまい、上準位が熱平衡値より枯れる → **non-LTE**（$T_\text{ex} < T_\text{kin}$、サブサーマル）。
 
-つまり「衝突率 vs 放射率」の大小が LTE/non-LTE を分ける ― review2 が抽象的と感じた統計平衡の中身は、この一本の不等式に凝縮できる。許容線（大きい $A_{ul}$）は $n_\text{crit}$ が高く non-LTE になりやすい一方、**禁制線**（小さい $A_{ul}$、第22章 §22.5）は $n_\text{crit}$ が低く、希薄な星雲でも LTE 的に振る舞いやすい。この臨界密度の差を逆手に取って電子密度を測るのが、第24章 §24.3 の [S II] $\lambda$6716/$\lambda$6731 **線比診断**（多準位の具体例）である。
+つまり「衝突率 vs 放射率」の大小が LTE/non-LTE を分ける ― 統計平衡の抽象論の中身は、この一本の不等式に凝縮できる。許容線（大きい $A_{ul}$）は $n_\text{crit}$ が高く non-LTE になりやすい一方、**禁制線**（小さい $A_{ul}$、第22章 §22.5）は $n_\text{crit}$ が低く、希薄な星雲でも LTE 的に振る舞いやすい。この臨界密度の差を逆手に取って電子密度を測るのが、第24章 §24.3 の [S II] $\lambda$6716/$\lambda$6731 **線比診断**（多準位の具体例）である。
 :::
 
 ::: {.callout-warning appearance="simple"}
@@ -294,7 +294,7 @@ $$ {#eq-curve-of-growth}
 
 [★ 難易度：☆☆ ] [tag:理解を深める]
 
-§21.1・20.6 の等価幅 $W_\lambda=\int\frac{I_c-I_\lambda}{I_c}d\lambda$ と成長曲線（curve of growth）を読む。
+§21.1・21.6 の等価幅 $W_\lambda=\int\frac{I_c-I_\lambda}{I_c}d\lambda$ と成長曲線（curve of growth）を読む。
 
 1. 等価幅が「線の輪郭の詳細によらない積分量」である利点を述べよ。浅く広い線と深く狭い線が同じ $W$ になりうる理由は。
 2. 成長曲線の三領域（線形 $W\propto N$、飽和 $W\propto\sqrt{\ln N}$、減衰翼 $W\propto\sqrt{N}$）が、それぞれ光学的深さ $\tau$ のどんな状態に対応するか述べよ。

@@ -121,7 +121,7 @@ $$ {#eq-disk-total-flux}
 
 ここで $F_\nu$ は **比例関係** として理解すべき量で、右辺には観測者までの距離 $d$、円盤の傾斜角 $i$（投影 $\cos i$）、両面放射の有無といった幾何因子を含めていない。実際に観測されるフラックス $F_\nu^\text{obs}$ は、面フラックス（円盤単位面積あたりの放射）にこれらの幾何因子を掛けたもので、たとえば $F_\nu^\text{obs} \simeq (\cos i / d^2)\int 2\pi R\, B_\nu(T(R))\, dR$ のように書ける。本節で着目するのは絶対値ではなく振動数依存（スペクトルの形）なので、以下では比例関係で扱う。
 
-**なぜ和がべき則になるのか**（@fig-disk-multicolor (b) の三帯）。ある観測振動数 $\nu$ を固定して、どの円環がそこに効くかを考える。ある円環の黒体は、自分のピーク振動数 $\nu_\text{peak}\sim k_B T(R)/h$ より高振動数側では Wien 的に**指数で消える**ため、$h\nu \gg k_B T(R)$ の冷たい円環（外側）は寄与しない。逆に $h\nu \ll k_B T(R)$ の熱い円環（内側）は、その黒体の Rayleigh–Jeans 裾 $B_\nu\propto\nu^2 T$ で**緩やかに**寄与する。したがって観測振動数 $\nu$ には、おおむね $k_B T(R)\sim h\nu$ を満たす半径（その振動数で「ちょうどピーク付近」の円環）が最も強く効き、そこより内側は RJ 裾を足し込む。$\nu$ を上げると効く円環がより内側（高温・小面積）へ移る ― この**ピークの移動と面積の重みの釣り合い**が、単独の黒体の $\nu^2$ よりずっとフラットに近いべき則の $\nu^{1/3}$ を生む。式で見れば、@eq-disk-temperature-profile から $R\propto T^{-4/3}$、$2\pi R\,dR\propto T^{-11/3}dT$ で、中間帯の RJ 寄与 $B_\nu\propto\nu^2 T$ を温度について積分すると $\nu^{1/3}$ になる（下の問いに骨子）。
+**なぜ和がべき則になるのか**（@fig-disk-multicolor (b) の三帯）。ある観測振動数 $\nu$ を固定して、どの円環がそこに効くかを考える。ある円環の黒体は、自分のピーク振動数 $\nu_\text{peak}\sim k_B T(R)/h$ より高振動数側では Wien 的に**指数で消える**ため、$h\nu \gg k_B T(R)$ の冷たい円環（外側）は寄与しない。逆に $h\nu \ll k_B T(R)$ の熱い円環（内側）は、その黒体の Rayleigh–Jeans 裾 $B_\nu\propto\nu^2 T$ で**緩やかに**寄与する。したがって観測振動数 $\nu$ には、おおむね $k_B T(R)\sim h\nu$ を満たす半径（その振動数で「ちょうどピーク付近」の円環）が最も強く効き、そこより内側は RJ 裾を足し込む。$\nu$ を上げると効く円環がより内側（高温・小面積）へ移る ― この**ピークの移動と面積の重みの釣り合い**が、単独の黒体の $\nu^2$ よりずっとフラットに近いべき則の $\nu^{1/3}$ を生む。式で見れば、@eq-disk-temperature-profile から $R\propto T^{-4/3}$、$2\pi R\,dR\propto T^{-11/3}dT$ で、RJ 寄与 $B_\nu\propto\nu^2 T$ を温度で積分すると $\nu^2\int T^{-8/3}dT$。この積分は指数が $-1$ より小さいので**下端（最も冷たい寄与円環）が支配**し、その下端こそ Wien 抑制が決める $T\sim h\nu/k_B$ である。よって積分は $\propto(h\nu/k_B)^{-5/3}\propto\nu^{-5/3}$ となり、掛け合わせて $F_\nu\propto\nu^2\cdot\nu^{-5/3}=\nu^{1/3}$（下の問いに骨子）。RJ 裾と Wien カットオフの**両方**が要る ― どちらか片方だけでは $\nu^2$ か $0$ にしかならない。
 
 この $\nu^{1/3}$ が現れるのは、温度分布が積分を支配する **中間振動数帯** ― すなわち $k_B T(R_\text{in}) \gg h\nu \gg k_B T(R_\text{out})$（同値に $T(R_\text{in}) \gg h\nu/k_B \gg T(R_\text{out})$）の範囲である。この帯を上の積分で丁寧に評価すると（骨子は下記の問い、詳しくは Frank, King & Raine 第 5 章）
 
@@ -138,7 +138,7 @@ $$ {#eq-disk-13-powerlaw}
 ::: {.callout-tip appearance="simple"}
 **問い**：$\nu^{1/3}$ という指数 1/3 は、どこから来るか？
 
-**短答**：$T \propto R^{-3/4}$ より $R \propto T^{-4/3}$、$2\pi R\, dR \propto T^{-11/3} dT$。中間振動数帯では Rayleigh-Jeans 側（$B_\nu \propto \nu^2 T$。以下 RJ 側）が支配する範囲があり、$\int T \cdot T^{-11/3} dT$ で適度な温度範囲を積分すると、最終的に $F_\nu \propto \nu^{1/3}$ となる。
+**短答**：$T \propto R^{-3/4}$ より $R \propto T^{-4/3}$、$2\pi R\, dR \propto T^{-11/3} dT$。振動数 $\nu$ に効くのは $T\gtrsim h\nu/k_B$ の円環だけ（それより冷たい円環は Wien 抑制で消える）で、その範囲では Rayleigh–Jeans 側 $B_\nu\propto\nu^2 T$ が効く。$F_\nu\propto\nu^2\int_{\sim h\nu/k_B}^{T_\text{in}} T^{-8/3}dT$ は下端支配で $\propto\nu^2\cdot\nu^{-5/3}=\nu^{1/3}$。厳密には変数を $x=h\nu/k_BT$ に替えると $F_\nu\propto\nu^{1/3}\int_0^\infty x^{5/3}/(e^x-1)\,dx$（収束する定数）となり、同じ指数が出る。
 
 **もう一歩**：もし温度プロファイルが $T \propto R^{-\alpha}$ なら、$F_\nu \propto \nu^{(3\alpha - 2)/\alpha} $ という形になり、$\alpha = 3/4$ で $\nu^{1/3}$、$\alpha = 1$ で $\nu^1$ など、円盤の物理に応じて勾配が変わる
 :::
@@ -346,11 +346,11 @@ $$ {#eq-grdisk-flux}
 ::: {.offcanvas-body}
 **(1)** $T\propto R^{-3/4}\Rightarrow R\propto T^{-4/3}$。$dR\propto T^{-7/3}dT$。$2\pi R\,dR\propto T^{-4/3}\cdot T^{-7/3}dT=T^{-11/3}dT$。
 
-**(2)** 中間帯で各半径の RJ 側 $B_\nu\propto\nu^2 T$。よって
+**(2)** 各円環の寄与を完全なプランク形のまま書き、$x=h\nu/k_BT$ に変数変換する：$B_\nu\propto\nu^3/(e^x-1)$、$T^{-11/3}\propto\nu^{-11/3}x^{11/3}$、$dT\propto\nu\,x^{-2}dx$ より
 
-$$F_\nu\propto\int\nu^2 T\cdot T^{-11/3}dT=\nu^2\int T^{-8/3}dT.$$
+$$F_\nu\propto\int B_\nu(T)\,T^{-11/3}dT\;\propto\;\nu^{1/3}\int_{x_\text{in}}^{x_\text{out}}\frac{x^{5/3}}{e^x-1}\,dx.$$
 
-$x=h\nu/kT$ で $T=h\nu/kx$、$dT\propto-\nu\,x^{-2}dx$、$T^{-8/3}\propto\nu^{-8/3}x^{8/3}$。よって $\int T^{-8/3}dT\propto\nu^{-8/3}\cdot\nu\int x^{8/3-2}dx=\nu^{-5/3}\int x^{2/3}dx$。中間帯では積分は $\nu$ に依らない定数（端の寄与が効かない範囲）。したがって $F_\nu\propto\nu^2\cdot\nu^{-5/3}=\nu^{1/3}$。
+中間帯（$x_\text{in}=h\nu/k_BT_\text{in}\ll1$、$x_\text{out}=h\nu/k_BT_\text{out}\gg1$）では積分区間を $0\to\infty$ に広げてよく、$\int_0^\infty x^{5/3}(e^x-1)^{-1}dx=\Gamma(8/3)\,\zeta(8/3)\simeq1.93$ は $\nu$ に依らない定数。したがって $F_\nu\propto\nu^{1/3}$。注意：RJ 近似 $B_\nu\propto\nu^2T$ **だけ**で積分すると $\nu^2\int T^{-8/3}dT$ は低温端（外縁）支配になり $\nu^2$ を与えてしまう。低温円環を消しているのは分母 $e^x-1$ の Wien 抑制で、これが実質的な下限 $T\sim h\nu/k_B$ を与えて指数を $2$ から $1/3$ に変える（本文 §18.2 の議論を式にしたのが上の変数変換である）。
 
 **(3)** 一般に $T\propto R^{-\alpha}\Rightarrow R\propto T^{-1/\alpha}$、$2\pi R\,dR\propto T^{-2/\alpha}dT$。$F_\nu\propto\nu^2\int T\cdot T^{-2/\alpha}dT=\nu^2\int T^{1-2/\alpha}dT$。$x=h\nu/kT$ 変換で $F_\nu\propto\nu^2\cdot\nu^{(1-2/\alpha)+1}\cdot(\text{const})\cdot\nu^{-1}$… 整理すると指数は $(3\alpha-2)/\alpha$。$\alpha=3/4$ で $(9/4-2)/(3/4)=(1/4)/(3/4)=1/3$。
 

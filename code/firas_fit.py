@@ -96,7 +96,7 @@ def main() -> None:
     # ピーク近傍の注記
     ipk = int(np.argmax(monopole))
     ax.annotate(
-        r"peak $\approx$ 160 GHz (5.45 cm$^{-1}$)",
+        r"peak $\approx$ 160 GHz (5.35 cm$^{-1}$)",
         xy=(freq_ghz[ipk], monopole[ipk]),
         xytext=(freq_ghz[ipk] + 90, monopole[ipk] - 60),
         fontsize=10, color=NAVY,
