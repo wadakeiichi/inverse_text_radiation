@@ -624,6 +624,11 @@ window.Quarto = {
 B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 \tag{1}</span></span></p>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>因子</th>
@@ -648,8 +653,8 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 <td>第IV部</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\nu^3/c^2</span></td>
-<td>電磁場のモード密度</td>
+<td><span class="math inline">2\nu^2/c^2</span>（<span class="math inline">=8\pi\nu^2/c^3\times\dfrac{c}{4\pi}</span>）</td>
+<td>電磁場のモード密度 × 比強度への換算</td>
 <td>第V部</td>
 </tr>
 <tr class="odd">
@@ -725,7 +730,7 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 </tr>
 </tbody>
 </table>
-<p><strong>適用範囲（重要）</strong>：この式の前因子 <span class="math inline">\pi e^2/m_e c</span> と振動子強度 <span class="math inline">f_{lu}</span> は、古典 Lorentz 振動子に対応する <strong>電気双極子（E1）許容線</strong> に対するものである。21 cm 線（基底状態超微細構造の <strong>磁気双極子 M1 遷移</strong>）や <strong>禁制線（E2・M1 など）</strong> では、この前因子・<span class="math inline">f_{lu}</span> をそのまま使えない。これらの線では、測定された自発放出率 <span class="math inline">A_{ul}</span> から Einstein 関係を介して有効遷移強度（<span class="math inline">B_{lu}</span>）に読み替える（<a href="part8/26-qed-minimum.html#eq-line-absorption" class="quarto-xref">式&nbsp;<span>30.3</span></a> の構造は保ったまま、強度因子だけを差し替える）。</p>
+<p><strong>適用範囲（重要）</strong>：この式は <strong>真吸収</strong> の係数であり、正味の吸収係数では誘導放出補正 <span class="math inline">[1-(g_l n_u)/(g_u n_l)]</span> が掛かる（第21章 §21.2）。可視・UV の恒星吸収線では補正は数%以下だが、<span class="math inline">h\nu\ll k_BT</span> の電波・分子線（21 cm 線、CO 回転線など）では桁で効く。また、この式の前因子 <span class="math inline">\pi e^2/m_e c</span> と振動子強度 <span class="math inline">f_{lu}</span> は、古典 Lorentz 振動子に対応する <strong>電気双極子（E1）許容線</strong> に対するものである。21 cm 線（基底状態超微細構造の <strong>磁気双極子 M1 遷移</strong>）や <strong>禁制線（E2・M1 など）</strong> では、この前因子・<span class="math inline">f_{lu}</span> をそのまま使えない。これらの線では、測定された自発放出率 <span class="math inline">A_{ul}</span> から Einstein 関係を介して有効遷移強度（<span class="math inline">B_{lu}</span>）に読み替える（<a href="part8/26-qed-minimum.html#eq-line-absorption" class="quarto-xref">式&nbsp;<span>30.3</span></a> の構造は保ったまま、強度因子だけを差し替える）。</p>
 </div>
 <div class="callout callout-style-simple callout-tip no-icon">
 <div class="callout-body d-flex">

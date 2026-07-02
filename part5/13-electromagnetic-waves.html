@@ -558,7 +558,7 @@ window.Quarto = {
 <p><span class="math display">
 B_\nu(T) = \frac{2 h\, \boxed{\nu^3}}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 </span></p>
-<p>強調されている <strong><span class="math inline">\nu^3</span></strong>（より精確には <span class="math inline">\nu^2/c^3</span> の振動数依存と、エネルギー量子 <span class="math inline">h\nu</span> の積）が、第V部で逆引きする対象である。これは空洞中の電磁場が三次元空間で離散的な定在波モードを持ち、振動数 <span class="math inline">\nu</span> あたりのモード密度が <span class="math inline">\nu^2</span> に比例するという、電磁気学＋幾何の帰結である。第14章で本格的に導く。</p>
+<p>強調されている <strong><span class="math inline">\nu^3</span></strong>（より精確には、モード密度 <span class="math inline">8\pi\nu^2/c^3</span> に由来する <span class="math inline">\nu^2</span> と、エネルギー量子 <span class="math inline">h\nu</span> の積。比強度への換算 <span class="math inline">c/4\pi</span> で <span class="math inline">c</span> が一つ戻り、前因子 <span class="math inline">2h\nu^3/c^2</span> になる）が、第V部で逆引きする対象である。これは空洞中の電磁場が三次元空間で離散的な定在波モードを持ち、振動数 <span class="math inline">\nu</span> あたりのモード密度が <span class="math inline">\nu^2</span> に比例するという、電磁気学＋幾何の帰結である。第14章で本格的に導く。</p>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -807,7 +807,7 @@ P = \frac{2}{3}\frac{e^2 a^2}{c^3} \quad (\text{Gauss 単位系})
 <p><strong>完全導体の表面</strong>（<strong>perfect conductor</strong>）：</p>
 <ul>
 <li><strong>電場の接線成分は連続でゼロ</strong>：<span class="math inline">E_\parallel = 0</span> （物理的には、導体内部の自由電子が瞬時に外部電場を打ち消す）</li>
-<li><strong>磁場の法線成分はゼロ</strong>：<span class="math inline">B_\perp = 0</span> （表面電流の対応から）</li>
+<li><strong>磁場の法線成分はゼロ</strong>：<span class="math inline">B_\perp = 0</span> （<span class="math inline">\nabla\cdot\mathbf{B}=0</span> より法線成分は境界で連続。完全導体内部では場が排除され <span class="math inline">\mathbf{B}=0</span> なので、表面でも <span class="math inline">B_\perp=0</span>。表面電流が不連続にできるのは接線成分 <span class="math inline">B_\parallel</span> の側である）</li>
 </ul>
 <p>これらが<strong>空洞壁での反射</strong>を導き、内部の電磁場が<strong>定在波</strong>（<strong>standing wave</strong>）の重ね合わせとして表される根拠になる。</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -1682,7 +1682,7 @@ P = \frac{2}{3}\frac{e^2 a^2}{c^3} \quad (\text{Gauss 単位系})
 <span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**電場の接線成分は連続でゼロ**：$E_\parallel = 0$</span>
 <span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>  （物理的には、導体内部の自由電子が瞬時に外部電場を打ち消す）</span>
 <span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**磁場の法線成分はゼロ**：$B_\perp = 0$</span>
-<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>  （表面電流の対応から）</span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>  （$\nabla\cdot\mathbf{B}=0$ より法線成分は境界で連続。完全導体内部では場が排除され $\mathbf{B}=0$ なので、表面でも $B_\perp=0$。表面電流が不連続にできるのは接線成分 $B_\parallel$ の側である）</span>
 <span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a>これらが**空洞壁での反射**を導き、内部の電磁場が**定在波**（**standing wave**）の重ね合わせとして表される根拠になる。</span>
 <span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a></span>

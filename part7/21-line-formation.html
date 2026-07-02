@@ -604,7 +604,7 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<p><strong>適用範囲（重要）</strong>：この式の前因子 <span class="math inline">\pi e^2/m_e c</span> と振動子強度 <span class="math inline">f_{lu}</span> は、古典 Lorentz 振動子に対応する <strong>電気双極子（E1）許容線</strong> に対するものである。21 cm 線（基底状態超微細構造の <strong>磁気双極子 M1 遷移</strong>）や <strong>禁制線（E2・M1 など）</strong> では、この前因子・<span class="math inline">f_{lu}</span> をそのまま使えない。これらの線では、測定された自発放出率 <span class="math inline">A_{ul}</span> から Einstein 関係を介して有効遷移強度（<span class="math inline">B_{lu}</span>）に読み替える（<a href="../part8/26-qed-minimum.html#eq-line-absorption" class="quarto-xref">式&nbsp;<span>30.3</span></a> の構造は保ったまま、強度因子だけを差し替える）。</p>
+<p><strong>適用範囲（重要）</strong>：この式は <strong>真吸収</strong> の係数であり、正味の吸収係数では誘導放出補正 <span class="math inline">[1-(g_l n_u)/(g_u n_l)]</span> が掛かる（第21章 §21.2）。可視・UV の恒星吸収線では補正は数%以下だが、<span class="math inline">h\nu\ll k_BT</span> の電波・分子線（21 cm 線、CO 回転線など）では桁で効く。また、この式の前因子 <span class="math inline">\pi e^2/m_e c</span> と振動子強度 <span class="math inline">f_{lu}</span> は、古典 Lorentz 振動子に対応する <strong>電気双極子（E1）許容線</strong> に対するものである。21 cm 線（基底状態超微細構造の <strong>磁気双極子 M1 遷移</strong>）や <strong>禁制線（E2・M1 など）</strong> では、この前因子・<span class="math inline">f_{lu}</span> をそのまま使えない。これらの線では、測定された自発放出率 <span class="math inline">A_{ul}</span> から Einstein 関係を介して有効遷移強度（<span class="math inline">B_{lu}</span>）に読み替える（<a href="../part8/26-qed-minimum.html#eq-line-absorption" class="quarto-xref">式&nbsp;<span>30.3</span></a> の構造は保ったまま、強度因子だけを差し替える）。</p>
 </div>
 <div class="callout callout-style-simple callout-tip no-icon">
 <div class="callout-body d-flex">
@@ -842,7 +842,7 @@ n_\text{crit} \equiv \frac{A_{ul}}{q_{ul}}
 <li><span class="math inline">n_e \gg n_\text{crit}</span>：衝突が放射より速く、占有数は衝突で熱平衡化する → <strong>LTE</strong>（<span class="math inline">T_\text{ex}\to T_\text{kin}</span>）。</li>
 <li><span class="math inline">n_e \ll n_\text{crit}</span>：自発放出が先に脱励起してしまい、上準位が熱平衡値より枯れる → <strong>non-LTE</strong>（<span class="math inline">T_\text{ex} &lt; T_\text{kin}</span>、サブサーマル）。</li>
 </ul>
-<p>つまり「衝突率 vs 放射率」の大小が LTE/non-LTE を分ける ― 統計平衡の抽象論の中身は、この一本の不等式に凝縮できる。許容線（大きい <span class="math inline">A_{ul}</span>）は <span class="math inline">n_\text{crit}</span> が高く non-LTE になりやすい一方、<strong>禁制線</strong>（小さい <span class="math inline">A_{ul}</span>、第22章 §22.5）は <span class="math inline">n_\text{crit}</span> が低く、希薄な星雲でも LTE 的に振る舞いやすい。この臨界密度の差を逆手に取って電子密度を測るのが、第24章 §24.3 の [S II] $<span class="math inline">6716/</span>$6731 <strong>線比診断</strong>（多準位の具体例）である。</p>
+<p>つまり「衝突率 vs 放射率」の大小が LTE/non-LTE を分ける ― 統計平衡の抽象論の中身は、この一本の不等式に凝縮できる。許容線（大きい <span class="math inline">A_{ul}</span>）は <span class="math inline">n_\text{crit}</span> が高く non-LTE になりやすい一方、<strong>禁制線</strong>（小さい <span class="math inline">A_{ul}</span>、第22章 §22.5）は <span class="math inline">n_\text{crit}</span> が低く、より低い密度で熱平衡化に近づく。ただし典型的な電離星雲（<span class="math inline">n_e\sim10^2</span>–<span class="math inline">10^4</span> cm<span class="math inline">^{-3}</span>）では、多くの禁制線もなお <span class="math inline">n_e\lesssim n_\text{crit}</span>（例：[O III] $$5007 で <span class="math inline">n_\text{crit}\simeq7\times10^5</span> cm<span class="math inline">^{-3}</span>）の non-LTE 側にある。むしろ <span class="math inline">n_e\sim n_\text{crit}</span> の <strong>遷移域にあること</strong> こそが使い道で、この域でだけ線強度が密度に敏感になる ― これを逆手に取って電子密度を測るのが、第24章 §24.3 の [S II] $<span class="math inline">6716/</span>$6731 <strong>線比診断</strong>（多準位の具体例）である。</p>
 </div>
 </div>
 </div>
@@ -1723,7 +1723,7 @@ W(N) = \begin{cases}
 <span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$n_e \gg n_\text{crit}$：衝突が放射より速く、占有数は衝突で熱平衡化する → **LTE**（$T_\text{ex}\to T_\text{kin}$）。</span>
 <span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$n_e \ll n_\text{crit}$：自発放出が先に脱励起してしまい、上準位が熱平衡値より枯れる → **non-LTE**（$T_\text{ex} &lt; T_\text{kin}$、サブサーマル）。</span>
 <span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>つまり「衝突率 vs 放射率」の大小が LTE/non-LTE を分ける ― 統計平衡の抽象論の中身は、この一本の不等式に凝縮できる。許容線（大きい $A_{ul}$）は $n_\text{crit}$ が高く non-LTE になりやすい一方、**禁制線**（小さい $A_{ul}$、第22章 §22.5）は $n_\text{crit}$ が低く、希薄な星雲でも LTE 的に振る舞いやすい。この臨界密度の差を逆手に取って電子密度を測るのが、第24章 §24.3 の [S II] $\lambda$6716/$\lambda$6731 **線比診断**（多準位の具体例）である。</span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>つまり「衝突率 vs 放射率」の大小が LTE/non-LTE を分ける ― 統計平衡の抽象論の中身は、この一本の不等式に凝縮できる。許容線（大きい $A_{ul}$）は $n_\text{crit}$ が高く non-LTE になりやすい一方、**禁制線**（小さい $A_{ul}$、第22章 §22.5）は $n_\text{crit}$ が低く、より低い密度で熱平衡化に近づく。ただし典型的な電離星雲（$n_e\sim10^2$–$10^4$ cm$^{-3}$）では、多くの禁制線もなお $n_e\lesssim n_\text{crit}$（例：[O III] $\lambda$5007 で $n_\text{crit}\simeq7\times10^5$ cm$^{-3}$）の non-LTE 側にある。むしろ $n_e\sim n_\text{crit}$ の **遷移域にあること** こそが使い道で、この域でだけ線強度が密度に敏感になる ― これを逆手に取って電子密度を測るのが、第24章 §24.3 の [S II] $\lambda$6716/$\lambda$6731 **線比診断**（多準位の具体例）である。</span>
 <span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning appearance="simple"}</span>

@@ -605,7 +605,7 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<p><strong>適用範囲（重要）</strong>：この式の前因子 <span class="math inline">\pi e^2/m_e c</span> と振動子強度 <span class="math inline">f_{lu}</span> は、古典 Lorentz 振動子に対応する <strong>電気双極子（E1）許容線</strong> に対するものである。21 cm 線（基底状態超微細構造の <strong>磁気双極子 M1 遷移</strong>）や <strong>禁制線（E2・M1 など）</strong> では、この前因子・<span class="math inline">f_{lu}</span> をそのまま使えない。これらの線では、測定された自発放出率 <span class="math inline">A_{ul}</span> から Einstein 関係を介して有効遷移強度（<span class="math inline">B_{lu}</span>）に読み替える（<a href="../part8/26-qed-minimum.html#eq-line-absorption" class="quarto-xref">式&nbsp;<span>30.3</span></a> の構造は保ったまま、強度因子だけを差し替える）。</p>
+<p><strong>適用範囲（重要）</strong>：この式は <strong>真吸収</strong> の係数であり、正味の吸収係数では誘導放出補正 <span class="math inline">[1-(g_l n_u)/(g_u n_l)]</span> が掛かる（第21章 §21.2）。可視・UV の恒星吸収線では補正は数%以下だが、<span class="math inline">h\nu\ll k_BT</span> の電波・分子線（21 cm 線、CO 回転線など）では桁で効く。また、この式の前因子 <span class="math inline">\pi e^2/m_e c</span> と振動子強度 <span class="math inline">f_{lu}</span> は、古典 Lorentz 振動子に対応する <strong>電気双極子（E1）許容線</strong> に対するものである。21 cm 線（基底状態超微細構造の <strong>磁気双極子 M1 遷移</strong>）や <strong>禁制線（E2・M1 など）</strong> では、この前因子・<span class="math inline">f_{lu}</span> をそのまま使えない。これらの線では、測定された自発放出率 <span class="math inline">A_{ul}</span> から Einstein 関係を介して有効遷移強度（<span class="math inline">B_{lu}</span>）に読み替える（<a href="../part8/26-qed-minimum.html#eq-line-absorption" class="quarto-xref">式&nbsp;<span>30.3</span></a> の構造は保ったまま、強度因子だけを差し替える）。</p>
 </div>
 <div class="callout callout-style-simple callout-tip no-icon">
 <div class="callout-body d-flex">
@@ -726,7 +726,7 @@ window.Quarto = {
 <p><span id="eq-fvalue-integral"><span class="math display">
 \int_0^\infty \sigma(\nu)\,d\nu = \frac{\pi e^2}{m_e c}\,f.
 \tag{27.7}</span></span></p>
-<p>この <span class="math inline">f</span> が<strong>振動子強度</strong>（<strong>oscillator strength</strong>、<span class="math inline">f</span> 値）で、線の強さを決める。線吸収係数は単位体積あたり <span class="math inline">\alpha_\nu^\text{line}=n_l\,\sigma(\nu)=\dfrac{\pi e^2}{m_e c}f\,n_l\,\phi(\nu-\nu_0)</span> となり、第5章 <a href="../part2/05-radiative-transfer.html#eq-line-absorption-preview" class="quarto-xref">式&nbsp;<span>9.12</span></a> の形に一致する ― 前因子 <span class="math inline">\pi e^2/m_e c</span> の正体がこの古典断面積、<span class="math inline">f</span> がその量子補正である。</p>
+<p>この <span class="math inline">f</span> が<strong>振動子強度</strong>（<strong>oscillator strength</strong>、<span class="math inline">f</span> 値）で、線の強さを決める。線吸収係数は単位体積あたり <span class="math inline">\alpha_\nu^\text{line}=n_l\,\sigma(\nu)=\dfrac{\pi e^2}{m_e c}f\,n_l\,\phi(\nu-\nu_0)</span> となり、第5章 <a href="../part2/05-radiative-transfer.html#eq-line-absorption-preview" class="quarto-xref">式&nbsp;<span>9.12</span></a> の形に一致する ― 前因子 <span class="math inline">\pi e^2/m_e c</span> の正体がこの古典断面積、<span class="math inline">f</span> がその量子補正である（上準位占有を無視した真吸収。<span class="math inline">n_u\approx0</span> は可視・UV 吸収線で標準的な近似で、一般形は第21章 <a href="21-line-formation.html#eq-line-absorption-einstein" class="quarto-xref">式&nbsp;<span>25.5</span></a>）。</p>
 <p><strong>等価幅へのつながり。</strong>　弱い線（光学的に薄い）では、柱密度 <span class="math inline">N_l=\int n_l\,d\ell</span> の原子による等価幅（§21.1）は</p>
 <p><span id="eq-weak-line-W"><span class="math display">
 W_\lambda \simeq \frac{\pi e^2}{m_e c}\,\frac{\lambda^2}{c}\,N_l\,f
@@ -762,7 +762,7 @@ W_\lambda \simeq \frac{\pi e^2}{m_e c}\,\frac{\lambda^2}{c}\,N_l\,f
 </div>
 <div class="callout-body-container">
 <p><strong>問い</strong>：温度 <span class="math inline">T = 10^4</span> K の HII 領域における、水素 H<span class="math inline">\alpha</span> の Doppler 幅（FWHM）を km/s で求めよ。</p>
-<p><strong>短答</strong>：<span class="math inline">\Delta v_D \simeq \sqrt{2k_B T/m_p} \simeq 12.8</span> km/s（標準偏差）、FWHM = <span class="math inline">2\sqrt{\ln 2} \cdot \Delta v_D \simeq 21</span> km/s。</p>
+<p><strong>短答</strong>：<span class="math inline">\Delta v_D \simeq \sqrt{2k_B T/m_p} \simeq 12.8</span> km/s（<strong>最確速度</strong>＝Doppler パラメータ <span class="math inline">b</span>。標準偏差は <span class="math inline">b/\sqrt2\simeq9.1</span> km/s）、FWHM = <span class="math inline">2\sqrt{\ln 2} \cdot \Delta v_D \simeq 21</span> km/s。</p>
 <p><strong>もう一歩</strong>：同じ温度の鉄（<span class="math inline">m = 56 m_p</span>）の線幅は <span class="math inline">\sqrt{56} \simeq 7.5</span> 倍狭い。観測される線幅の元素質量依存性から <strong>熱的拡がり vs 他の拡がり</strong> を区別できる ― これは観測解析の鍵</p>
 </div>
 </div>
@@ -973,7 +973,7 @@ a = \frac{\gamma}{2\Delta\nu_D}, \quad x = \frac{\nu - \nu_0}{\Delta\nu_D}
 <p>[★ 難易度：☆☆ ] <span class="tag">[導出補完]</span></p>
 <p>§23.2 の Doppler 幅 <span class="math inline">\Delta\nu_D=\dfrac{\nu_0}{c}\sqrt{\dfrac{2k_BT}{m}}</span>。HII 領域（<span class="math inline">T=10^4</span> K）の水素 H<span class="math inline">\alpha</span> について。</p>
 <ol type="1">
-<li>速度の標準偏差に相当する <span class="math inline">\Delta v_D=\sqrt{2k_BT/m_p}</span> を km/s で求めよ（<span class="math inline">m_p=1.67\times10^{-27}</span> kg）。</li>
+<li>視線速度分布の最確速度（Doppler パラメータ <span class="math inline">b</span>）に相当する <span class="math inline">\Delta v_D=\sqrt{2k_BT/m_p}</span> を km/s で求めよ（<span class="math inline">m_p=1.67\times10^{-27}</span> kg。標準偏差は <span class="math inline">b/\sqrt2</span>）。</li>
 <li>FWHM <span class="math inline">=2\sqrt{\ln2}\,\Delta v_D</span> を求めよ。</li>
 <li>同じ温度の鉄（<span class="math inline">m=56\,m_p</span>）の Doppler 幅は水素の何倍か。観測線幅の元素質量依存性から熱的拡がりと他の拡がりをどう区別できるか述べよ。</li>
 </ol>
@@ -1662,7 +1662,7 @@ a = \frac{\gamma}{2\Delta\nu_D}, \quad x = \frac{\nu - \nu_0}{\Delta\nu_D}
 <span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>\int_0^\infty \sigma(\nu)\,d\nu = \frac{\pi e^2}{m_e c}\,f.</span>
 <span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>$$ {#eq-fvalue-integral}</span>
 <span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>この $f$ が**振動子強度**（**oscillator strength**、$f$ 値）で、線の強さを決める。線吸収係数は単位体積あたり $\alpha_\nu^\text{line}=n_l\,\sigma(\nu)=\dfrac{\pi e^2}{m_e c}f\,n_l\,\phi(\nu-\nu_0)$ となり、第5章 @eq-line-absorption-preview の形に一致する ― 前因子 $\pi e^2/m_e c$ の正体がこの古典断面積、$f$ がその量子補正である。</span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>この $f$ が**振動子強度**（**oscillator strength**、$f$ 値）で、線の強さを決める。線吸収係数は単位体積あたり $\alpha_\nu^\text{line}=n_l\,\sigma(\nu)=\dfrac{\pi e^2}{m_e c}f\,n_l\,\phi(\nu-\nu_0)$ となり、第5章 @eq-line-absorption-preview の形に一致する ― 前因子 $\pi e^2/m_e c$ の正体がこの古典断面積、$f$ がその量子補正である（上準位占有を無視した真吸収。$n_u\approx0$ は可視・UV 吸収線で標準的な近似で、一般形は第21章 @eq-line-absorption-einstein）。</span>
 <span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>**等価幅へのつながり。**　弱い線（光学的に薄い）では、柱密度 $N_l=\int n_l\,d\ell$ の原子による等価幅（§21.1）は</span>
 <span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a></span>
@@ -1706,7 +1706,7 @@ a = \frac{\gamma}{2\Delta\nu_D}, \quad x = \frac{\nu - \nu_0}{\Delta\nu_D}
 <span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
 <span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>**問い**：温度 $T = 10^4$ K の HII 領域における、水素 H$\alpha$ の Doppler 幅（FWHM）を km/s で求めよ。</span>
 <span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>**短答**：$\Delta v_D \simeq \sqrt{2k_B T/m_p} \simeq 12.8$ km/s（標準偏差）、FWHM = $2\sqrt{\ln 2} \cdot \Delta v_D \simeq 21$ km/s。</span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>**短答**：$\Delta v_D \simeq \sqrt{2k_B T/m_p} \simeq 12.8$ km/s（**最確速度**＝Doppler パラメータ $b$。標準偏差は $b/\sqrt2\simeq9.1$ km/s）、FWHM = $2\sqrt{\ln 2} \cdot \Delta v_D \simeq 21$ km/s。</span>
 <span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>**もう一歩**：同じ温度の鉄（$m = 56 m_p$）の線幅は $\sqrt{56} \simeq 7.5$ 倍狭い。観測される線幅の元素質量依存性から **熱的拡がり vs 他の拡がり** を区別できる ― これは観測解析の鍵</span>
 <span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>:::</span>
@@ -1863,7 +1863,7 @@ a = \frac{\gamma}{2\Delta\nu_D}, \quad x = \frac{\nu - \nu_0}{\Delta\nu_D}
 <span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a>§23.2 の Doppler 幅 $\Delta\nu_D=\dfrac{\nu_0}{c}\sqrt{\dfrac{2k_BT}{m}}$。HII 領域（$T=10^4$ K）の水素 H$\alpha$ について。</span>
 <span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>速度の標準偏差に相当する $\Delta v_D=\sqrt{2k_BT/m_p}$ を km/s で求めよ（$m_p=1.67\times10^{-27}$ kg）。</span>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>視線速度分布の最確速度（Doppler パラメータ $b$）に相当する $\Delta v_D=\sqrt{2k_BT/m_p}$ を km/s で求めよ（$m_p=1.67\times10^{-27}$ kg。標準偏差は $b/\sqrt2$）。</span>
 <span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>FWHM $=2\sqrt{\ln2}\,\Delta v_D$ を求めよ。</span>
 <span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>同じ温度の鉄（$m=56\,m_p$）の Doppler 幅は水素の何倍か。観測線幅の元素質量依存性から熱的拡がりと他の拡がりをどう区別できるか述べよ。</span>
 <span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a></span>

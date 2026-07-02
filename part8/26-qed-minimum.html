@@ -590,6 +590,11 @@ window.Quarto = {
 B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 \tag{30.1}</span></span></p>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>因子</th>
@@ -614,8 +619,8 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 <td>第IV部</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\nu^3/c^2</span></td>
-<td>電磁場のモード密度</td>
+<td><span class="math inline">2\nu^2/c^2</span>（<span class="math inline">=8\pi\nu^2/c^3\times\dfrac{c}{4\pi}</span>）</td>
+<td>電磁場のモード密度 × 比強度への換算</td>
 <td>第V部</td>
 </tr>
 <tr class="odd">
@@ -688,7 +693,7 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 </tr>
 </tbody>
 </table>
-<p><strong>適用範囲（重要）</strong>：この式の前因子 <span class="math inline">\pi e^2/m_e c</span> と振動子強度 <span class="math inline">f_{lu}</span> は、古典 Lorentz 振動子に対応する <strong>電気双極子（E1）許容線</strong> に対するものである。21 cm 線（基底状態超微細構造の <strong>磁気双極子 M1 遷移</strong>）や <strong>禁制線（E2・M1 など）</strong> では、この前因子・<span class="math inline">f_{lu}</span> をそのまま使えない。これらの線では、測定された自発放出率 <span class="math inline">A_{ul}</span> から Einstein 関係を介して有効遷移強度（<span class="math inline">B_{lu}</span>）に読み替える（<a href="#eq-line-absorption" class="quarto-xref">式&nbsp;<span>30.3</span></a> の構造は保ったまま、強度因子だけを差し替える）。</p>
+<p><strong>適用範囲（重要）</strong>：この式は <strong>真吸収</strong> の係数であり、正味の吸収係数では誘導放出補正 <span class="math inline">[1-(g_l n_u)/(g_u n_l)]</span> が掛かる（第21章 §21.2）。可視・UV の恒星吸収線では補正は数%以下だが、<span class="math inline">h\nu\ll k_BT</span> の電波・分子線（21 cm 線、CO 回転線など）では桁で効く。また、この式の前因子 <span class="math inline">\pi e^2/m_e c</span> と振動子強度 <span class="math inline">f_{lu}</span> は、古典 Lorentz 振動子に対応する <strong>電気双極子（E1）許容線</strong> に対するものである。21 cm 線（基底状態超微細構造の <strong>磁気双極子 M1 遷移</strong>）や <strong>禁制線（E2・M1 など）</strong> では、この前因子・<span class="math inline">f_{lu}</span> をそのまま使えない。これらの線では、測定された自発放出率 <span class="math inline">A_{ul}</span> から Einstein 関係を介して有効遷移強度（<span class="math inline">B_{lu}</span>）に読み替える（<a href="#eq-line-absorption" class="quarto-xref">式&nbsp;<span>30.3</span></a> の構造は保ったまま、強度因子だけを差し替える）。</p>
 </div>
 <div class="callout callout-style-simple callout-tip no-icon">
 <div class="callout-body d-flex">
@@ -1149,9 +1154,9 @@ A_{ul} = \frac{\omega^3}{3\pi\epsilon_0 \hbar c^3} |\langle l | \hat{\mathbf{d}}
 <p>[★ 難易度：☆☆ ] <span class="tag">[導出補完]</span></p>
 <p>§26.2 は Fermi の黄金律 <span class="math inline">\Gamma_{u\to l}=\dfrac{2\pi}{\hbar}|\langle l;1_{\mathbf k\sigma}|\hat H_\mathrm{int}|u;0\rangle|^2\rho(\omega)</span> から <span class="math inline">A_{ul}=\dfrac{\omega^3}{3\pi\epsilon_0\hbar c^3}|\langle l|\hat{\mathbf d}|u\rangle|^2</span> が出るとした。構造を読む。</p>
 <ol type="1">
-<li>自発放出の始状態 <span class="math inline">|u;0\rangle</span>（原子上準位＋電磁場真空）と終状態 <span class="math inline">|l;1_{\mathbf k\sigma}\rangle</span>（原子下準位＋光子1個）を述べ、なぜ「真空から光子を生成する」過程なのか説明せよ。</li>
-<li><span class="math inline">A_{ul}</span> の前因子 <span class="math inline">\omega^3</span> が「モード密度 <span class="math inline">\propto\nu^2</span> × エネルギー量子 <span class="math inline">h\nu</span>」の構造から来ることを述べ、これが第25章でプランク前因子に出た <span class="math inline">2h\nu^3/c^2</span> と同じ構造であることを指摘せよ。</li>
-<li>古典電磁気では自発放出が起こらないのに QED では <span class="math inline">A_{ul}\neq0</span> になる物理的理由（真空揺らぎ）を述べよ。</li>
+<li>自発放出の始状態 <span class="math inline">|u;0\rangle</span> と終状態 <span class="math inline">|l;1_{\mathbf k\sigma}\rangle</span> が、それぞれ原子と電磁場のどんな状態を表すか述べ、なぜ「真空から光子を生成する」過程と言えるのか説明せよ。</li>
+<li><span class="math inline">A_{ul}</span> の前因子 <span class="math inline">\omega^3</span> は、どの二つの物理的因子の積に分解できるか。第25章でプランク関数の前因子 <span class="math inline">2h\nu^3/c^2</span> に現れた構造と比較せよ。</li>
+<li>古典電磁気では自発放出が起こらないのに、QED では <span class="math inline">A_{ul}\neq0</span> になる。その物理的理由を述べよ。</li>
 </ol>
 <p><strong>関連</strong>：<a href="#sec-qed-minimum-spontaneous">§26.2 Fermi の黄金律</a>／振動子強度との関係は<a href="../part7/22-atomic-physics.html#ex-22-2">演習 22-2</a>、Einstein 係数は<a href="../part4/11-einstein-method.html#ex-11-1">演習 11-1</a>。</p>
 <p><a href="#sol-26-1" class="btn btn-outline-secondary btn-sm" data-bs-toggle="offcanvas" role="button">解答例を見る（問題 26-1）</a></p>
@@ -2083,9 +2088,9 @@ A_{ul} = \frac{\omega^3}{3\pi\epsilon_0 \hbar c^3} |\langle l | \hat{\mathbf{d}}
 <span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a>§26.2 は Fermi の黄金律 $\Gamma_{u\to l}=\dfrac{2\pi}{\hbar}|\langle l;1_{\mathbf k\sigma}|\hat H_\mathrm{int}|u;0\rangle|^2\rho(\omega)$ から $A_{ul}=\dfrac{\omega^3}{3\pi\epsilon_0\hbar c^3}|\langle l|\hat{\mathbf d}|u\rangle|^2$ が出るとした。構造を読む。</span>
 <span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>自発放出の始状態 $|u;0\rangle$（原子上準位＋電磁場真空）と終状態 $|l;1_{\mathbf k\sigma}\rangle$（原子下準位＋光子1個）を述べ、なぜ「真空から光子を生成する」過程なのか説明せよ。</span>
-<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$A_{ul}$ の前因子 $\omega^3$ が「モード密度 $\propto\nu^2$ × エネルギー量子 $h\nu$」の構造から来ることを述べ、これが第25章でプランク前因子に出た $2h\nu^3/c^2$ と同じ構造であることを指摘せよ。</span>
-<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>古典電磁気では自発放出が起こらないのに QED では $A_{ul}\neq0$ になる物理的理由（真空揺らぎ）を述べよ。</span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>自発放出の始状態 $|u;0\rangle$ と終状態 $|l;1_{\mathbf k\sigma}\rangle$ が、それぞれ原子と電磁場のどんな状態を表すか述べ、なぜ「真空から光子を生成する」過程と言えるのか説明せよ。</span>
+<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>$A_{ul}$ の前因子 $\omega^3$ は、どの二つの物理的因子の積に分解できるか。第25章でプランク関数の前因子 $2h\nu^3/c^2$ に現れた構造と比較せよ。</span>
+<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>古典電磁気では自発放出が起こらないのに、QED では $A_{ul}\neq0$ になる。その物理的理由を述べよ。</span>
 <span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a>**関連**：<span class="co">[</span><span class="ot">§26.2 Fermi の黄金律</span><span class="co">](#sec-qed-minimum-spontaneous)</span>／振動子強度との関係は<span class="co">[</span><span class="ot">演習 22-2</span><span class="co">](../part7/22-atomic-physics.qmd#ex-22-2)</span>、Einstein 係数は<span class="co">[</span><span class="ot">演習 11-1</span><span class="co">](../part4/11-einstein-method.qmd#ex-11-1)</span>。</span>
 <span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a></span>

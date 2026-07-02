@@ -603,7 +603,7 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<p><strong>適用範囲（重要）</strong>：この式の前因子 <span class="math inline">\pi e^2/m_e c</span> と振動子強度 <span class="math inline">f_{lu}</span> は、古典 Lorentz 振動子に対応する <strong>電気双極子（E1）許容線</strong> に対するものである。21 cm 線（基底状態超微細構造の <strong>磁気双極子 M1 遷移</strong>）や <strong>禁制線（E2・M1 など）</strong> では、この前因子・<span class="math inline">f_{lu}</span> をそのまま使えない。これらの線では、測定された自発放出率 <span class="math inline">A_{ul}</span> から Einstein 関係を介して有効遷移強度（<span class="math inline">B_{lu}</span>）に読み替える（<a href="../part8/26-qed-minimum.html#eq-line-absorption" class="quarto-xref">式&nbsp;<span>30.3</span></a> の構造は保ったまま、強度因子だけを差し替える）。</p>
+<p><strong>適用範囲（重要）</strong>：この式は <strong>真吸収</strong> の係数であり、正味の吸収係数では誘導放出補正 <span class="math inline">[1-(g_l n_u)/(g_u n_l)]</span> が掛かる（第21章 §21.2）。可視・UV の恒星吸収線では補正は数%以下だが、<span class="math inline">h\nu\ll k_BT</span> の電波・分子線（21 cm 線、CO 回転線など）では桁で効く。また、この式の前因子 <span class="math inline">\pi e^2/m_e c</span> と振動子強度 <span class="math inline">f_{lu}</span> は、古典 Lorentz 振動子に対応する <strong>電気双極子（E1）許容線</strong> に対するものである。21 cm 線（基底状態超微細構造の <strong>磁気双極子 M1 遷移</strong>）や <strong>禁制線（E2・M1 など）</strong> では、この前因子・<span class="math inline">f_{lu}</span> をそのまま使えない。これらの線では、測定された自発放出率 <span class="math inline">A_{ul}</span> から Einstein 関係を介して有効遷移強度（<span class="math inline">B_{lu}</span>）に読み替える（<a href="../part8/26-qed-minimum.html#eq-line-absorption" class="quarto-xref">式&nbsp;<span>30.3</span></a> の構造は保ったまま、強度因子だけを差し替える）。</p>
 </div>
 <div class="callout callout-style-simple callout-tip no-icon">
 <div class="callout-body d-flex">
@@ -809,7 +809,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>用語</strong>：これらは <strong>禁制線</strong>（第20章 §20.3、第22章 §22.5）。禁制線が <strong>密度に敏感</strong> なのは、衝突脱励起が許容線に比べて短時間で起こるため。極低密度では禁制線が強く、高密度では衝突脱励起で弱まる。<strong>「禁制線の存在自体が低密度の証拠」</strong> とも言える</p>
+<p><strong>用語</strong>：これらは <strong>禁制線</strong>（第20章 §20.3、第22章 §22.5）。禁制線が <strong>密度に敏感</strong> なのは、<span class="math inline">A_{ul}</span> が小さいために臨界密度 <span class="math inline">n_\text{crit}=A_{ul}/q_{ul}</span>（§21.5、演習 20-2）が星雲の密度域まで下がり、<span class="math inline">n_e\sim n_\text{crit}</span> の <strong>遷移域</strong> に入るため ― この域でだけ、衝突脱励起と自発放出の競合を通じて線強度比が密度に応答する。低密度極限（<span class="math inline">n_e\ll n_\text{crit}</span>）では衝突励起のたびに光子が出て禁制線は効率よく光り、高密度側（<span class="math inline">n_e\gg n_\text{crit}</span>）では衝突脱励起が勝って弱まる。<strong>「禁制線の存在自体が低密度の証拠」</strong> とも言える</p>
 <p><strong>観測との対応</strong>：HII 領域・惑星状星雲・AGN の電子温度・密度を測る現代的標準ツールである。観測の波長分解能と感度の進歩により、<span class="math inline">\delta T_e \sim 100</span> K、<span class="math inline">\delta \log n_e \sim 0.1</span> レベルの精度が達成されている。</p>
 </div>
 </div>
@@ -1687,7 +1687,7 @@ window.Quarto = {
 <span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>観測 $\lambda$6716/$\lambda$6731 比 → $n_e \sim 10^2$〜$10^4$ cm$^{-3}$</span>
 <span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>**用語**：これらは **禁制線**（第20章 §20.3、第22章 §22.5）。禁制線が **密度に敏感** なのは、衝突脱励起が許容線に比べて短時間で起こるため。極低密度では禁制線が強く、高密度では衝突脱励起で弱まる。**「禁制線の存在自体が低密度の証拠」** とも言える</span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>**用語**：これらは **禁制線**（第20章 §20.3、第22章 §22.5）。禁制線が **密度に敏感** なのは、$A_{ul}$ が小さいために臨界密度 $n_\text{crit}=A_{ul}/q_{ul}$（§21.5、演習 20-2）が星雲の密度域まで下がり、$n_e\sim n_\text{crit}$ の **遷移域** に入るため ― この域でだけ、衝突脱励起と自発放出の競合を通じて線強度比が密度に応答する。低密度極限（$n_e\ll n_\text{crit}$）では衝突励起のたびに光子が出て禁制線は効率よく光り、高密度側（$n_e\gg n_\text{crit}$）では衝突脱励起が勝って弱まる。**「禁制線の存在自体が低密度の証拠」** とも言える</span>
 <span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>**観測との対応**：HII 領域・惑星状星雲・AGN の電子温度・密度を測る現代的標準ツールである。観測の波長分解能と感度の進歩により、$\delta T_e \sim 100$ K、$\delta \log n_e \sim 0.1$ レベルの精度が達成されている。</span>
 <span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>:::</span>

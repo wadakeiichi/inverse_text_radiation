@@ -588,6 +588,11 @@ window.Quarto = {
 B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 \tag{29.1}</span></span></p>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>因子</th>
@@ -612,8 +617,8 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 <td>第IV部</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\nu^3/c^2</span></td>
-<td>電磁場のモード密度</td>
+<td><span class="math inline">2\nu^2/c^2</span>（<span class="math inline">=8\pi\nu^2/c^3\times\dfrac{c}{4\pi}</span>）</td>
+<td>電磁場のモード密度 × 比強度への換算</td>
 <td>第V部</td>
 </tr>
 <tr class="odd">
@@ -686,7 +691,7 @@ B_\nu(T) = \frac{2 h \nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT} - 1}
 </tr>
 </tbody>
 </table>
-<p><strong>適用範囲（重要）</strong>：この式の前因子 <span class="math inline">\pi e^2/m_e c</span> と振動子強度 <span class="math inline">f_{lu}</span> は、古典 Lorentz 振動子に対応する <strong>電気双極子（E1）許容線</strong> に対するものである。21 cm 線（基底状態超微細構造の <strong>磁気双極子 M1 遷移</strong>）や <strong>禁制線（E2・M1 など）</strong> では、この前因子・<span class="math inline">f_{lu}</span> をそのまま使えない。これらの線では、測定された自発放出率 <span class="math inline">A_{ul}</span> から Einstein 関係を介して有効遷移強度（<span class="math inline">B_{lu}</span>）に読み替える（<a href="26-qed-minimum.html#eq-line-absorption" class="quarto-xref">式&nbsp;<span>30.3</span></a> の構造は保ったまま、強度因子だけを差し替える）。</p>
+<p><strong>適用範囲（重要）</strong>：この式は <strong>真吸収</strong> の係数であり、正味の吸収係数では誘導放出補正 <span class="math inline">[1-(g_l n_u)/(g_u n_l)]</span> が掛かる（第21章 §21.2）。可視・UV の恒星吸収線では補正は数%以下だが、<span class="math inline">h\nu\ll k_BT</span> の電波・分子線（21 cm 線、CO 回転線など）では桁で効く。また、この式の前因子 <span class="math inline">\pi e^2/m_e c</span> と振動子強度 <span class="math inline">f_{lu}</span> は、古典 Lorentz 振動子に対応する <strong>電気双極子（E1）許容線</strong> に対するものである。21 cm 線（基底状態超微細構造の <strong>磁気双極子 M1 遷移</strong>）や <strong>禁制線（E2・M1 など）</strong> では、この前因子・<span class="math inline">f_{lu}</span> をそのまま使えない。これらの線では、測定された自発放出率 <span class="math inline">A_{ul}</span> から Einstein 関係を介して有効遷移強度（<span class="math inline">B_{lu}</span>）に読み替える（<a href="26-qed-minimum.html#eq-line-absorption" class="quarto-xref">式&nbsp;<span>30.3</span></a> の構造は保ったまま、強度因子だけを差し替える）。</p>
 </div>
 <div class="callout callout-style-simple callout-tip no-icon">
 <div class="callout-body d-flex">
@@ -1125,7 +1130,7 @@ B_\nu(T) = \frac{2h\nu^3}{c^2} \cdot \frac{1}{e^{h\nu/k_B T} - 1}
 </div>
 <div class="offcanvas-body">
 <p><strong>(1)</strong> 零点エネルギーはエネルギーの絶対基準（定数オフセット）で、その絶対値は観測できない。観測できるのは零点エネルギーの<strong>差や変化</strong>（境界条件の変化など）で、これは有限。プランク分布に零点項 <span class="math inline">\tfrac12\hbar\omega</span> が現れないのも、それが温度非依存の定数で放射の励起分（物質とやりとりする部分）に効かないから（演習 12-3）。</p>
-<p><strong>(2)</strong> ① 自発放出（真空揺らぎが励起原子を揺さぶる、§26.2）。② 線の自然幅（励起準位の有限寿命、<span class="math inline">\Gamma=A_{ul}</span>）。③ Casimir 効果（二枚の金属板間で許されるモードが減り、板間の零点エネルギーが板外より小さくなり引力 <span class="math inline">F\propto1/L^4</span> が生じる）。</p>
+<p><strong>(2)</strong> ① 自発放出（真空揺らぎが励起原子を揺さぶる、§26.2）。② 線の自然幅（励起準位の有限寿命。角振動数軸の FWHM で <span class="math inline">\Gamma_\text{nat}=A_{ul}</span>、振動数軸では <span class="math inline">\gamma_\text{nat}=A_{ul}/2\pi</span>、エネルギー幅 <span class="math inline">\Delta E=\hbar A_{ul}</span>。第23章 §23.1）。③ Casimir 効果（二枚の金属板間で許されるモードが減り、板間の零点エネルギーが板外より小さくなり引力 <span class="math inline">F\propto1/L^4</span> が生じる）。</p>
 <p><strong>(3)</strong> 違う。真空 <span class="math inline">|0\rangle</span> は厳密に光子0個の状態（<span class="math inline">\hat n|0\rangle=0</span>）。観測される「揺らぎ」は粒子がいることではなく、<span class="math inline">[\hat a,\hat a^\dagger]=1</span> の非可換性から来る電場・磁場の期待値の分散 <span class="math inline">\langle(\Delta E)^2\rangle\neq0</span>。粒子数を定めると場の値が揺らぎ、場の値を定めると粒子数が揺らぐ（不確定性関係の双対）。</p>
 <p><strong>答え</strong>：零点の絶対値は観測不能、差は有限。帰結＝自発放出・自然幅・Casimir(<span class="math inline">F\propto1/L^4</span>)。揺らぎ＝場の分散(<span class="math inline">[\hat a,\hat a^\dagger]=1</span>)で、粒子で満ちているのとは別。</p>
 </div>
@@ -1994,7 +1999,7 @@ B_\nu(T) = \frac{2h\nu^3}{c^2} \cdot \frac{1}{e^{h\nu/k_B T} - 1}
 <span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a>::: {.offcanvas-body}</span>
 <span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a>**(1)** 零点エネルギーはエネルギーの絶対基準（定数オフセット）で、その絶対値は観測できない。観測できるのは零点エネルギーの**差や変化**（境界条件の変化など）で、これは有限。プランク分布に零点項 $\tfrac12\hbar\omega$ が現れないのも、それが温度非依存の定数で放射の励起分（物質とやりとりする部分）に効かないから（演習 12-3）。</span>
 <span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a>**(2)** ① 自発放出（真空揺らぎが励起原子を揺さぶる、§26.2）。② 線の自然幅（励起準位の有限寿命、$\Gamma=A_{ul}$）。③ Casimir 効果（二枚の金属板間で許されるモードが減り、板間の零点エネルギーが板外より小さくなり引力 $F\propto1/L^4$ が生じる）。</span>
+<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a>**(2)** ① 自発放出（真空揺らぎが励起原子を揺さぶる、§26.2）。② 線の自然幅（励起準位の有限寿命。角振動数軸の FWHM で $\Gamma_\text{nat}=A_{ul}$、振動数軸では $\gamma_\text{nat}=A_{ul}/2\pi$、エネルギー幅 $\Delta E=\hbar A_{ul}$。第23章 §23.1）。③ Casimir 効果（二枚の金属板間で許されるモードが減り、板間の零点エネルギーが板外より小さくなり引力 $F\propto1/L^4$ が生じる）。</span>
 <span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a>**(3)** 違う。真空 $|0\rangle$ は厳密に光子0個の状態（$\hat n|0\rangle=0$）。観測される「揺らぎ」は粒子がいることではなく、$<span class="co">[</span><span class="ot">\hat a,\hat a^\dagger</span><span class="co">]</span>=1$ の非可換性から来る電場・磁場の期待値の分散 $\langle(\Delta E)^2\rangle\neq0$。粒子数を定めると場の値が揺らぎ、場の値を定めると粒子数が揺らぐ（不確定性関係の双対）。</span>
 <span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a></span>
