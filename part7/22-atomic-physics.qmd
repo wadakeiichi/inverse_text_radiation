@@ -191,11 +191,11 @@ $$
 }\quad (\text{CGS(Gauss) 形})
 $$ {#eq-line-absorption-coefficient-complete}
 
-を再現する（第VII部冒頭で経験式として受け入れていたこの式が、いま完全に逆引きされた）。SI 形では前因子を $e^2/(4\epsilon_0 m_e c)$ に置き換えればよい。
+を再現する（第VII部冒頭で経験式として受け入れていたこの式が、いま完全に逆引きされた）。SI 形では前因子を $e^2/(4\epsilon_0 m_e c)$ に置き換えればよい。なおこの $\alpha_\nu$ は **真吸収** の係数である ― 正味の吸収係数では誘導放出補正 $[1-(g_l n_u)/(g_u n_l)]$ が掛かる（第21章 @eq-line-absorption-einstein）。可視・UV の恒星吸収線では補正は数%以下だが、$h\nu\ll k_BT$ の電波・分子線（21 cm 線、CO 回転線など）では補正が桁で効くため省略できない。
 
 ### Einstein $B$ 係数との換算
 
-第21章 §21.2 で導入した Einstein 関係 $\alpha_\nu = (h\nu_0/4\pi) n_l B_{lu} \phi(\nu-\nu_0)$ と本節の @eq-line-absorption-coefficient-complete を比べると、両者は **同一の物理量を別の言葉で書いたもの** であり、
+第21章 §21.2 で導入した Einstein 関係の真吸収部分 $\alpha_\nu = (h\nu_0/4\pi) n_l B_{lu} \phi(\nu-\nu_0)$（@eq-line-absorption-einstein から誘導放出補正を除いた部分）と本節の @eq-line-absorption-coefficient-complete を比べると、両者は **同一の物理量を別の言葉で書いたもの** であり、
 
 $$
 B_{lu} = \frac{4\pi^2 e^2}{m_e c h\nu_0}\, f_{lu} \quad (\text{CGS(Gauss) 形})
@@ -239,6 +239,8 @@ $$ {#eq-selection-rules-E1}
 
 - **電気四重極遷移**（**E2**）：$f \sim \alpha^2 f_{E1} \sim 10^{-4}$ 倍
 - **磁気双極子遷移**（**M1**）：$f \sim \alpha^2 f_{E1} \sim 10^{-4}$ 倍
+
+ただし $\alpha^2$ 倍はあくまで次数の目安で、実際の禁制線はさらに小さいことが多い。例えば [O III] $\lambda$5007（M1）の $A_{ul}\sim10^{-2}$ s$^{-1}$ は、可視 E1 の典型値 $A\sim10^8$ s$^{-1}$ の $\alpha^2$ 倍（$\sim10^4$ s$^{-1}$）よりさらに 6 桁小さい ― これはスピン多重度を変える遷移（$^1$D$_2\to{}^3$P、**スピン禁制**）としての追加抑制が重なるためである（LS 結合が破れる相対論的補正を介してのみ進む）。
 
 これらの弱い遷移は、地上の実験室では **衝突脱励起** で先に消されて観測できないが、**極低密度の宇宙環境** では時間が許されて自発放出が起こる。
 

@@ -213,10 +213,10 @@ $$ {#eq-compton-y}
 これらの効果は、第13章 §13.4 の偏光自由度や §18.1 の局所黒体仮定の **上に重ねて** 効く。観測される SED は
 
 $$
-F_\nu^\text{obs} = \int B_\nu(T(R, \phi)) \cdot g^3(R, \phi) \cdot dA_\text{proper}
+F_\nu^\text{obs} = \int g^3(R, \phi)\, B_{\nu/g}\big(T(R, \phi)\big) \cdot dA_\text{proper}
 $$ {#eq-grdisk-flux}
 
-の形（$g$ は赤方偏移因子、$dA_\text{proper}$ は固有面積）。一般相対論的計算が必要。
+の形（$g$ は赤方偏移因子、$dA_\text{proper}$ は固有面積）。比強度は $I_\nu/\nu^3$ の組合せが不変量として振動数のシフトに乗って運ばれる（$I_\nu/\nu^3$ は光子の占有数に比例する ― プランク形が $\nu^3\times$占有因子 という構造をもつことの裏返し）。したがって $g^3$ を掛けると同時に、プランク関数は **放射時の振動数** $\nu/g$ で評価する。プランク関数ではこれは $g^3 B_{\nu/g}(T)=B_\nu(gT)$、つまり「温度が $g$ 倍に見える」ことと等価である。一般相対論的計算が必要。
 
 特に重要な観測量は **広線輪郭** ― 鉄輝線 (6.4 keV) が、円盤の高速回転と重力赤方偏移により、特徴的な非対称形状（青翼が高く、赤翼が長く伸びる）に変形される。これがブラックホールスピンの測定に使われる。
 
@@ -352,7 +352,11 @@ $$F_\nu\propto\int B_\nu(T)\,T^{-11/3}dT\;\propto\;\nu^{1/3}\int_{x_\text{in}}^{
 
 中間帯（$x_\text{in}=h\nu/k_BT_\text{in}\ll1$、$x_\text{out}=h\nu/k_BT_\text{out}\gg1$）では積分区間を $0\to\infty$ に広げてよく、$\int_0^\infty x^{5/3}(e^x-1)^{-1}dx=\Gamma(8/3)\,\zeta(8/3)\simeq1.93$ は $\nu$ に依らない定数。したがって $F_\nu\propto\nu^{1/3}$。注意：RJ 近似 $B_\nu\propto\nu^2T$ **だけ**で積分すると $\nu^2\int T^{-8/3}dT$ は低温端（外縁）支配になり $\nu^2$ を与えてしまう。低温円環を消しているのは分母 $e^x-1$ の Wien 抑制で、これが実質的な下限 $T\sim h\nu/k_B$ を与えて指数を $2$ から $1/3$ に変える（本文 §18.2 の議論を式にしたのが上の変数変換である）。
 
-**(3)** 一般に $T\propto R^{-\alpha}\Rightarrow R\propto T^{-1/\alpha}$、$2\pi R\,dR\propto T^{-2/\alpha}dT$。$F_\nu\propto\nu^2\int T\cdot T^{-2/\alpha}dT=\nu^2\int T^{1-2/\alpha}dT$。$x=h\nu/kT$ 変換で $F_\nu\propto\nu^2\cdot\nu^{(1-2/\alpha)+1}\cdot(\text{const})\cdot\nu^{-1}$… 整理すると指数は $(3\alpha-2)/\alpha$。$\alpha=3/4$ で $(9/4-2)/(3/4)=(1/4)/(3/4)=1/3$。
+**(3)** 一般に $T\propto R^{-\alpha}\Rightarrow R\propto T^{-1/\alpha}$、(1)と同様に $2\pi R\,dR\propto T^{-2/\alpha-1}dT$。(2)と同じ手順で完全なプランク形のまま $x=h\nu/k_BT$ に変数変換すると
+
+$$F_\nu\propto\int B_\nu(T)\,T^{-2/\alpha-1}dT\;\propto\;\nu^{3-2/\alpha}\int\frac{x^{2/\alpha-1}}{e^x-1}\,dx$$
+
+で、積分は中間帯では $\nu$ に依らない定数。したがって指数は $3-2/\alpha=(3\alpha-2)/\alpha$。$\alpha=3/4$ で $3-8/3=1/3$（(2)の $x^{5/3}$ 積分と整合）。
 
 **答え**：$2\pi R\,dR\propto T^{-11/3}dT$、中間帯で $F_\nu\propto\nu^{1/3}$。一般に $T\propto R^{-\alpha}$ で $F_\nu\propto\nu^{(3\alpha-2)/\alpha}$、$\alpha=3/4$ で $1/3$。
 :::

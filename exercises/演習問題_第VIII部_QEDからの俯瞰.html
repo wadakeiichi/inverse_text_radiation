@@ -190,7 +190,7 @@ footer a{color:var(--primary)}
       <details class="sol"><summary>模範解答</summary>
         <div class="solbody">
           <p><b>(1)</b> 零点エネルギーはエネルギーの絶対基準（定数オフセット）で、その絶対値は観測できない。観測できるのは零点エネルギーの<b>差や変化</b>（境界条件の変化など）で、これは有限。プランク分布に零点項 $\tfrac12\hbar\omega$ が現れないのも、それが温度非依存の定数で放射の励起分（物質とやりとりする部分）に効かないから（演習 12-3）。</p>
-          <p><b>(2)</b> ① 自発放出（真空揺らぎが励起原子を揺さぶる、§26.2）。② 線の自然幅（励起準位の有限寿命、$\Gamma=A_{ul}$）。③ Casimir 効果（二枚の金属板間で許されるモードが減り、板間の零点エネルギーが板外より小さくなり引力 $F\propto1/L^4$ が生じる）。</p>
+          <p><b>(2)</b> ① 自発放出（真空揺らぎが励起原子を揺さぶる、§26.2）。② 線の自然幅（励起準位の有限寿命。角振動数軸の FWHM で $\Gamma_{\rm nat}=A_{ul}$、振動数軸では $\gamma_{\rm nat}=A_{ul}/2\pi$、エネルギー幅 $\Delta E=\hbar A_{ul}$。第23章 §23.1）。③ Casimir 効果（二枚の金属板間で許されるモードが減り、板間の零点エネルギーが板外より小さくなり引力 $F\propto1/L^4$ が生じる）。</p>
           <p><b>(3)</b> 違う。真空 $|0\rangle$ は厳密に光子0個の状態（$\hat n|0\rangle=0$）。観測される「揺らぎ」は粒子がいることではなく、$[\hat a,\hat a^\dagger]=1$ の非可換性から来る電場・磁場の期待値の分散 $\langle(\Delta E)^2\rangle\neq0$。粒子数を定めると場の値が揺らぎ、場の値を定めると粒子数が揺らぐ（不確定性関係の双対）。</p>
           <div class="ans"><b>解答の要点：</b> 零点の絶対値は観測不能、差は有限。帰結＝自発放出・自然幅・Casimir($F\propto1/L^4$)。揺らぎ＝場の分散($[\hat a,\hat a^\dagger]=1$)で、粒子で満ちているのとは別。</div>
         </div>
@@ -239,19 +239,11 @@ footer a{color:var(--primary)}
       <div class="top"><span class="pid">26-1</span><span class="ptitle">Fermi の黄金律から自発放出率 $A_{ul}$</span><span class="diff">☆☆</span><span class="tag deriv">導出補完</span></div>
       <div class="body">
         <p>§26.2 は Fermi の黄金律 $\Gamma_{u\to l}=\dfrac{2\pi}{\hbar}|\langle l;1_{\mathbf k\sigma}|\hat H_{\rm int}|u;0\rangle|^2\rho(\omega)$ から $A_{ul}=\dfrac{\omega^3}{3\pi\epsilon_0\hbar c^3}|\langle l|\hat{\mathbf d}|u\rangle|^2$ が出るとした。構造を読む。</p>
-        <p><b>レベル：</b>[本文目安：M1｜発展：M2+]。本問は Fermi の黄金律・QED 行列要素の<b>完全導出ではなく、$\omega^3$ 前因子がどんな物理から組み上がるかの構造を読む</b>問題。行列要素の評価そのものは M2+ 相当。</p>
-        <p><b>$\omega^3$ 前因子の出所（箇条書き分解）：</b>Fermi の黄金律 $\Gamma=\dfrac{2\pi}{\hbar}|\langle f|\hat H_{\rm int}|i\rangle|^2\rho(\omega)$ の各因子を、$A_{ul}$ の前因子へ次のように対応づけて読むとよい。</p>
-        <ul>
-          <li><b>状態密度 $\rho(\omega)\propto\omega^2$</b>：終状態の光子モード密度（第14章のモード密度 $\propto\nu^2$）。$\omega^3$ のうち $\omega^2$ を担う。</li>
-          <li><b>双極子行列要素 $|\langle l|\hat{\mathbf d}|u\rangle|^2$</b>：原子側の遷移強度。振動子強度 $f_{lu}$（第VII部 演習 22-2）に対応し、選択則を与える。</li>
-          <li><b>真空場1光子振幅の二乗 $|E_{\rm vac}|^2\propto\hbar\omega$</b>：$\hat H_{\rm int}\propto\hat{\mathbf A}$ の零点電場振幅 $E_{\rm vac}\propto\sqrt{\hbar\omega/2\epsilon_0 V}$ の二乗。$\omega^3$ の残り $\omega$ を担う（見通しでは「エネルギー量子 $h\nu$」に対応）。</li>
-          <li><b>偏光平均（横波2自由度）</b>：放出光子の2偏光状態にわたる和・平均。前因子 $2h\nu^3/c^2$ の $2$（および $1/3$ の角度平均）に対応する。</li>
-        </ul>
-        <p>以上の積 $\omega^2\cdot\omega=\omega^3$ がプランク前因子 $2h\nu^3/c^2$ の $\nu^3$ と同じ構造である。</p>
+        <p><b>レベル：</b>[本文目安：M1｜発展：M2+]。本問は Fermi の黄金律・QED 行列要素の<b>完全導出ではなく、$\omega^3$ 前因子がどんな物理から組み上がるかの構造を読む</b>問題。行列要素の評価そのものは M2+ 相当。黄金律 $\Gamma=\dfrac{2\pi}{\hbar}|\langle f|\hat H_{\rm int}|i\rangle|^2\rho(\omega)$ のどの因子が $\omega^3$ のどの部分を担うかを、自分で対応づけてみること。</p>
         <ol class="parts">
-          <li>自発放出の始状態 $|u;0\rangle$（原子上準位＋電磁場真空）と終状態 $|l;1_{\mathbf k\sigma}\rangle$（原子下準位＋光子1個）を述べ、なぜ「真空から光子を生成する」過程なのか説明せよ。</li>
-          <li>$A_{ul}$ の前因子 $\omega^3$ が「モード密度 $\propto\nu^2$ × エネルギー量子 $h\nu$」の構造から来ることを述べ、これが第25章でプランク前因子に出た $2h\nu^3/c^2$ と同じ構造であることを指摘せよ。</li>
-          <li>古典電磁気では自発放出が起こらないのに QED では $A_{ul}\neq0$ になる物理的理由（真空揺らぎ）を述べよ。</li>
+          <li>自発放出の始状態 $|u;0\rangle$ と終状態 $|l;1_{\mathbf k\sigma}\rangle$ が、それぞれ原子と電磁場のどんな状態を表すか述べ、なぜ「真空から光子を生成する」過程と言えるのか説明せよ。</li>
+          <li>$A_{ul}$ の前因子 $\omega^3$ は、どの二つの物理的因子の積に分解できるか。第25章でプランク関数の前因子 $2h\nu^3/c^2$ に現れた構造と比較せよ。</li>
+          <li>古典電磁気では自発放出が起こらないのに、QED では $A_{ul}\neq0$ になる。その物理的理由を述べよ。</li>
         </ol>
       </div>
       <div class="related"><b>関連：</b>

@@ -107,7 +107,7 @@ $$
 \int_0^\infty \sigma(\nu)\,d\nu = \frac{\pi e^2}{m_e c}\,f.
 $$ {#eq-fvalue-integral}
 
-この $f$ が**振動子強度**（**oscillator strength**、$f$ 値）で、線の強さを決める。線吸収係数は単位体積あたり $\alpha_\nu^\text{line}=n_l\,\sigma(\nu)=\dfrac{\pi e^2}{m_e c}f\,n_l\,\phi(\nu-\nu_0)$ となり、第5章 @eq-line-absorption-preview の形に一致する ― 前因子 $\pi e^2/m_e c$ の正体がこの古典断面積、$f$ がその量子補正である。
+この $f$ が**振動子強度**（**oscillator strength**、$f$ 値）で、線の強さを決める。線吸収係数は単位体積あたり $\alpha_\nu^\text{line}=n_l\,\sigma(\nu)=\dfrac{\pi e^2}{m_e c}f\,n_l\,\phi(\nu-\nu_0)$ となり、第5章 @eq-line-absorption-preview の形に一致する ― 前因子 $\pi e^2/m_e c$ の正体がこの古典断面積、$f$ がその量子補正である（上準位占有を無視した真吸収。$n_u\approx0$ は可視・UV 吸収線で標準的な近似で、一般形は第21章 @eq-line-absorption-einstein）。
 
 **等価幅へのつながり。**　弱い線（光学的に薄い）では、柱密度 $N_l=\int n_l\,d\ell$ の原子による等価幅（§21.1）は
 
@@ -151,7 +151,7 @@ $m$ は原子・分子質量。
 ::: {.callout-tip appearance="simple"}
 **問い**：温度 $T = 10^4$ K の HII 領域における、水素 H$\alpha$ の Doppler 幅（FWHM）を km/s で求めよ。
 
-**短答**：$\Delta v_D \simeq \sqrt{2k_B T/m_p} \simeq 12.8$ km/s（標準偏差）、FWHM = $2\sqrt{\ln 2} \cdot \Delta v_D \simeq 21$ km/s。
+**短答**：$\Delta v_D \simeq \sqrt{2k_B T/m_p} \simeq 12.8$ km/s（**最確速度**＝Doppler パラメータ $b$。標準偏差は $b/\sqrt2\simeq9.1$ km/s）、FWHM = $2\sqrt{\ln 2} \cdot \Delta v_D \simeq 21$ km/s。
 
 **もう一歩**：同じ温度の鉄（$m = 56 m_p$）の線幅は $\sqrt{56} \simeq 7.5$ 倍狭い。観測される線幅の元素質量依存性から **熱的拡がり vs 他の拡がり** を区別できる ― これは観測解析の鍵
 :::
@@ -308,7 +308,7 @@ $$ {#eq-zeeman-energy}
 
 §23.2 の Doppler 幅 $\Delta\nu_D=\dfrac{\nu_0}{c}\sqrt{\dfrac{2k_BT}{m}}$。HII 領域（$T=10^4$ K）の水素 H$\alpha$ について。
 
-1. 速度の標準偏差に相当する $\Delta v_D=\sqrt{2k_BT/m_p}$ を km/s で求めよ（$m_p=1.67\times10^{-27}$ kg）。
+1. 視線速度分布の最確速度（Doppler パラメータ $b$）に相当する $\Delta v_D=\sqrt{2k_BT/m_p}$ を km/s で求めよ（$m_p=1.67\times10^{-27}$ kg。標準偏差は $b/\sqrt2$）。
 2. FWHM $=2\sqrt{\ln2}\,\Delta v_D$ を求めよ。
 3. 同じ温度の鉄（$m=56\,m_p$）の Doppler 幅は水素の何倍か。観測線幅の元素質量依存性から熱的拡がりと他の拡がりをどう区別できるか述べよ。
 

@@ -313,9 +313,9 @@ $$ {#eq-prefactor-unification}
 
 §26.2 は Fermi の黄金律 $\Gamma_{u\to l}=\dfrac{2\pi}{\hbar}|\langle l;1_{\mathbf k\sigma}|\hat H_\mathrm{int}|u;0\rangle|^2\rho(\omega)$ から $A_{ul}=\dfrac{\omega^3}{3\pi\epsilon_0\hbar c^3}|\langle l|\hat{\mathbf d}|u\rangle|^2$ が出るとした。構造を読む。
 
-1. 自発放出の始状態 $|u;0\rangle$（原子上準位＋電磁場真空）と終状態 $|l;1_{\mathbf k\sigma}\rangle$（原子下準位＋光子1個）を述べ、なぜ「真空から光子を生成する」過程なのか説明せよ。
-2. $A_{ul}$ の前因子 $\omega^3$ が「モード密度 $\propto\nu^2$ × エネルギー量子 $h\nu$」の構造から来ることを述べ、これが第25章でプランク前因子に出た $2h\nu^3/c^2$ と同じ構造であることを指摘せよ。
-3. 古典電磁気では自発放出が起こらないのに QED では $A_{ul}\neq0$ になる物理的理由（真空揺らぎ）を述べよ。
+1. 自発放出の始状態 $|u;0\rangle$ と終状態 $|l;1_{\mathbf k\sigma}\rangle$ が、それぞれ原子と電磁場のどんな状態を表すか述べ、なぜ「真空から光子を生成する」過程と言えるのか説明せよ。
+2. $A_{ul}$ の前因子 $\omega^3$ は、どの二つの物理的因子の積に分解できるか。第25章でプランク関数の前因子 $2h\nu^3/c^2$ に現れた構造と比較せよ。
+3. 古典電磁気では自発放出が起こらないのに、QED では $A_{ul}\neq0$ になる。その物理的理由を述べよ。
 
 **関連**：[§26.2 Fermi の黄金律](#sec-qed-minimum-spontaneous)／振動子強度との関係は[演習 22-2](../part7/22-atomic-physics.qmd#ex-22-2)、Einstein 係数は[演習 11-1](../part4/11-einstein-method.qmd#ex-11-1)。
 
